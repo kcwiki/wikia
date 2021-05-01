@@ -1,0 +1,213 @@
+__NOTOC__
+==Introduction==
+
+For the following tables, each row designates a build for a particular set of kanmusu as indicated in the mini-rows.
+
+If a ★ rating below the equipment is given, it indicates that upgrade level with [[Akashi's Improvement Arsenal]] is required to achieve the damage numbers given in the notes - fewer ★ lead to lower numbers, but the base functionality of the setup will still work. Replacing equipment with easier-to-obtain equipment pieces as stated in the notes may also reduce the damage numbers. Higher ★ lead to greater numbers than displayed.
+
+If no ★ are given it means either that there is no damage estimate given in the notes, or that the upgrade level of that piece of equipment will have no effect on damage (but may still affect other statistics like AA, LOS or accuracy), or that piece of equipment is unupgradeable.
+
+If an [[Aircraft Proficiency]] rating is given below a squadron it means it is capable of gaining said ranks.
+
+Finally, all daytime damage numbers assume Parallel Engagement form unless otherwise stated, as Green T is too rare to base builds around and Head-on engagement is rare enough that sacrificing accuracy for enough firepower to achieve this (which will not help parallel engagement cases at all) will end up being inefficient for most builds.
+
+If you realise you do not have the recommended equipment type in your inventory, click on the Substitution tab. Once the refurbishment operation is complete every single recommended equipment in all the builds below will be in the Substitution tab, where you can find the 'next best thing' in the list to equip to approach the 'optimal' builds below. The Glossary is open by default as making all the build categories even fit in one line will be impossible otherwise, and overlapping tabs is just Not Nice to use.
+
+<tabber>
+Glossary=
+
+To shorten tab length, some acronyms have been used. They are as follows:
+*ASW = Anti-Submarine Warfare
+*AACI = Anti-Air Cut-In
+*IAS = Initial Air Strike
+*ITS = Initial Torpedo Strike
+*dSGCI = Day Secondary Gun Cut-In
+*dDA = Day Double Attack
+*APCI = Armor-Piercing Shell Cut-In
+*nDA = Night Double Attack
+*nMCI = Night Mixed Cut-In
+*nSGCI = Night Secondary Gun Cut-In
+*nMGCI = Night Main Gun Cut-In
+*nTCI = Night Torpedo Cut-In
+*T3 = Anti-Installation Type 3 Shell Attacks
+
+|-|Acquisition=
+
+These recommendations aim to maximise combat potential while minimising the number of Akashi upgrades and blueprints required - and so they use the various equipment obtained from blueprint-locked ships only once, and assumes the Admiral has access to exactly one of every single ship. The equipment types that may require repeated ship-levelling in order to acquire from remodelled forms of repeated ships are:
+*LSC Main Source
+**{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=40px}} - x1 from Mikuma Kai lvl 30. Do not repeat Kinugasa Kai Ni for this as it will be a waste of XP in the long run (43,500 xp). 2 Firepower 1 AA over 20.3cm.
+**{{EquipmentCardKai|Daihatsu Landing Craft|size=40px}} - No levelling necessary, x1 initial equipment of Akitsu Maru.
+**{{EquipmentCardKai|Ka Type Observation Autogyro|size=40px}} - x1 from Akitsu Maru Kai lvl 25 (30,000 xp). 5 ASW more than Zuiuns (and 4 ASW more than most conventional bomber squadrons).
+**{{EquipmentCardKai|Prototype Seiran|size=40px}} - x1 from I-401 Kai lvl 35 (59,500 xp).
+*Event Main Source
+**{{EquipmentCardKai|12.7cm Twin Gun Mount Model B Kai 2|size=40px}} - x1 from Umikaze Kai, Kawakaze Kai, Harusame Kai lvl 30 (43,500 xp).
+**{{EquipmentCardKai|12.7cm Twin High-angle Gun Mount (Late Model)|size=40px}} - x1 from Tokitsukaze Kai lvl 30 (43,500 xp), Arashi Kai, Asagumo Kai, Hagikaze Kai, Urakaze Kai, Nowaki Kai and Yamagumo Kai lvl 35 (59,500 xp), x1 from Asashimo Kai and Isokaze Kai lvl 45 (99,000 xp). The last two remodels are optional due to high XP requirement, while remodelling Tokitsukaze Kai is virtually compulsory.
+**{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=40px}} - x2 from Akizuki, Teruzuki and Hatsuzuki lvl 40 (78,000 xp). Triggers special AACI.
+**{{EquipmentCardKai|WG42 (Wurfgerät 42)|size=40px}} - No levelling necessary, x1 initial equipment of U-511.
+**{{EquipmentCardKai|Prototype FaT Type 95 Oxygen Torpedo Kai|size=40px}} - x1 from Ro-500 lvl 55 (149,500 xp). 4 Torpedo 7 Accuracy 2 Evasion over Quad O2.
+*Common Drop Source
+**{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=40px}} - x3 from Ashigara Kai Ni lvl 65 (73,166 xp per gun). 1 Firepower 1 Accuracy over 20.3cm.
+**{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=40px}} - x1 from Kitakami Kai Ni and Ooi Kai Ni lvl 50 (122,500 xp). Do not repeat Kiso Kai Ni for this. 2 Torpedo 1 Accuracy over Quad O2.
+**{{EquipmentCardKai|Prototype 41cm Triple Gun Mount|size=40px}} - x1 from Yamashiro Kai Ni and Fusou Kai Ni lvl 80 (383,000 xp) in exchange for a Blueprint. Use of Yamashiro Kai Ni is recommended as she gives an additional [[Searchlight]].
+**{{EquipmentCardKai|Type 99 Dive Bomber (Egusa Squadron)|size=40px}} - x1 from Souryuu Kai Ni lvl 78 (356,200 xp). 4 Accuracy 2 LoS 2 ASW over Suisei 12A.
+
+All other equipment types are obtainable in sufficient numbers for the below builds to be installed on every ship that would use them ([[Searchlight]] and Aircraft squadrons will be swapped between the ships that use them, as only one of the former may ever trigger in any given battle, while the latter has hard limits on special squadron types).
+
+|-|Blueprints=
+
+Assuming you already have spare blueprints for new BP-ships, you've already blueprinted one of each ship and given each blueprint is also worth 16 screws (4 screws/medal, 4 medals/BP),
+
+The top candidates for repeat-blueprinting for equipment are:
+#Choukai (219,500xp) - Skilled Lookouts (43,500xp on Takanami/Kazagumo), Searchlight (181,500xp on Sendai), T22 Radar Kai 4 (29 screws minimum), No.2 gun (73,167xp on Ashigara per gun).<br/>Profit on blueprinting: 13 screws, 78,667xp. '''Recommended.'''
+#Yamashiro (383,000xp) - Searchlight (181,500xp on Sendai), Proto-41cm (unobtainable otherwise, power ~ 41cm twin gun 4★, 8 screws), Zuiun Model 12 (unobtainable, no equivalent).<br/>Profit on blueprinting: Zuiun Model 12, -8 screws, -201,500xp.<br/>'''Recommended.'''
+#Roma (59,500xp) - 381mm Kai x1 (31 screws minimum), 90mm HA (unobtainable otherwise, function ~ 12.7cm HA+AAFD, 29 screws minimum, 265,000xp).<br/>Profit in blueprinting = 205,500xp, 44 screws.<br/>'''Recommended for all duplicate Roma drops, but this method is gated by the rarity of Roma drops to begin with.'''
+#Bismarck (319,000xp, 2 BP) - 38cm Kai x2 (30 screws minimum each), 3.7cm FlaK x2 (265,000 xp on Z3 per gun), 2cm FlaK (265,000 xp on Z1).<br/>Profit in blueprinting without AAg = 28 screws, -319,000xp.<br/>Profit in blueprinting with AAg = 28 screws, 476,000xp.<br/>'''No longer recommended as Proto 35.6s are similar to 38 Kai, and use far fewer screws and much more easily obtainable equipment for upgrades.'''
+
+Note that if following the above equipment guide, you will find you have only ever used screws on 2 35.6cm max★. This is by design. If you ever decide to upgrade all guns to Bismarck's 38cm Kai for all ships, you'll be doing a second blueprinted Bismarck for a total of 10 38cm Kai max★. Keep the second Bismarck to evade shiplocks. This means you'll have 10 38cm Kai max★ and 2 35.6cm max★ for 6 ships. You'll probably place the 35.6 on Kirishima and 38cm Kai on all the other fBBs, while the Proto can serve as a third gun should any of them ever need to do triple-gun maingun CIs.
+
+The top candidates for repeat-blueprinting for repeats of the ship itself to work around ship-locks are:
+#Abukuma - Top-tier CL with initial torpedo
+#Bismarck - Top-tier fBB
+#Choukai - Top-tier CA
+
+If you need '''none''' of these drops, medals will be best spent on screws instead. However, due to the power of the T22K4 radar, especially for DD, repeat-BP Choukai is generally the best use of medals in the game once you have one of each ship in their maxed remodel states.
+
+|-|Substitution=
+
+If you don't have the following equipment used in the guide in sufficient numbers, substitute them in descending order of viability.
+
+{{User_blog:Hayashi_H/Advanced_Equipment_Guide/Substitution|Substitution}}
+
+|-|Luck-modernisation=
+
+ALL factors considered, for the sake of raising your fleet's overall battle potential as fast as possible, this is probably the most efficient way to allocate [[Maruyu|Maruyu Kai]] luck-modernisation:
+#{{ShipBattleCardKai|Abukuma/Kai Ni}} 20 to 60 (5 sets)
+#{{ShipBattleCardKai|Haruna/Kai Ni}} 41 to 49 (1 set)
+#{{ShipBattleCardKai|Ayanami/Kai Ni}} 40 to 56 (2 sets)
+#{{ShipBattleCardKai|Shigure/Kai Ni}} 50 to 58 (1 set)
+#{{ShipBattleCardKai|Hatsushimo/Kai Ni}} 53 to 69 (2 sets)
+#{{ShipBattleCardKai|Prinz Eugen/Kai}} 40 to 56 (2 sets) 
+#{{ShipBattleCardKai|Myoukou/Kai Ni}} 32 to 56 (3 sets)
+#{{ShipBattleCardKai|Shimakaze/Kai}} 12 to 59 (6 sets) '''max'''
+#{{ShipBattleCardKai|Kiso/Kai Ni}} 13 to 61 (6 sets)
+#{{ShipBattleCardKai|Bismarck/drei}} 22 to 70 (6 sets)
+#{{ShipBattleCardKai|Yuudachi/Kai Ni}} 20 to 59 (5 sets) '''max'''
+#{{ShipBattleCardKai|Akatsuki/Kai Ni}} 15 to 55 (5 sets)
+#{{ShipBattleCardKai|Kitakami/Kai Ni}} 30 to 70 (5 sets)
+#{{ShipBattleCardKai|Ushio/Kai Ni}} 32 to 64 (4 sets)
+If you have already achieved all of these we can discuss it then, but the total without considering submarines is already 53 sets - or 263 Maruyus. Assuming a relatively high LSC rate of one Maruyu a day, it'll take more than half a year to achieve these.
+
+'''USE [[Maruyu|MARUYU KAI]] ONLY IN HER KAI FORM!'''
+
+The main rationale of luck-modernisation allocation is as follows:
+#Any ship that will trigger a cut-in at night with its 'maximum viability build' for day battle use has priority.
+#Any ship that is close to its luck cap (50 for gun, 60 for torp, 70 for mixed) by default has priority so you can make several optimal ships for the price of luck modding one that starts at a low value.
+#Any ship that has no other special attack available at night has priority if you expect to use it. (Subverted for submarines as submarines are generally not used for events.)
+#Any ship that is viable with double attack builds has reduced priority.
+#Any ship that cannot cut in at night has the lowest priorities, as accuracy will be the main effect.
+#Among those in rule #5, ships that have more attacks per battle have priority (ergo, an aircraft carrier that attacks 6 times in a battle has priority over a ship that can only double attack twice for 4 total attacks).
+#Finally, ships that are used more often have priority over those that are not (ergo, waifus have priority over lvl 99 ships).
+
+|-|Upgrading Q&A=
+
+'''Should I upgrade a [[Type 91 Armor Piercing Shell|T91 AP Shell]] to [[Type 1 Armor Piercing Shell|T1 AP Shell]]?'''
+
+No, unless you intend to upgrade the [[Type 1 Armor Piercing Shell|T1 AP Shell]] to 6★ or beyond and have absolutely nothing left to upgrade (this is not true of the vast majority of Admirals). Upgrading beyond 6★ takes a [[Type 1 Armor Piercing Shell|T1 AP Shell]] per ★ and is hideously expensive.
+
+'''If the [[Type 91 Armor Piercing Shell|T91 AP Shell]](9★) and [[Type 1 Armor Piercing Shell|T1 AP Shell]](4★) are about the same power, which should I use?'''
+
+The former uses more screws (9) and fewer shells (3), the latter uses more shells (8) and fewer screws (4). Quests award 2x [[Type 1 Armor Piercing Shell|T1 AP Shells]]. In the long run you might want those two upgraded to 6★, and the remaining shells to be [[Type 91 Armor Piercing Shell|T91 AP Shells]](MAX★) for maximum accuracy, where the former will be probably be slightly more accurate than the latter (though people are still debating the exact value of the accuracy multiplier).
+
+In the above builds, Admirals with no intent to (or who do not possess the [[Prototype 51cm Twin Gun Mount]] necessary to) build the yasen/head-on focused builds for the Yamato/Nagato classes respectively may wish to use one [[Type 1 Armor Piercing Shell|T1 AP Shell]](★) for Bismarck, and one [[Type 1 Armor Piercing Shell|T1 AP Shell]](4★) for Kirishima instead, while building the rest with the specified upgrade levels of [[Type 91 Armor Piercing Shell|T91 AP Shell]], in order to use the two that came with the quests most effectively.
+
+'''Should I upgrade a [[Searchlight]] to [[Type 96 150cm Searchlight]]?'''
+
+No, unless you already possess a 50 luck {{ShipBattleCardKai|Bismarck/drei}} AND you have spare [[Skilled Lookouts]] AND you have TWO [[Searchlight]](MAX★), as you'll still need one of them.
+
+'''Should I upgrade [[61cm Quadruple (Oxygen) Torpedo Mount]] to [[61cm Quintuple (Oxygen) Torpedo Mount]]?'''
+
+Never. Just grind additional Ooi/Kitakami drops to lvl 50, take the torpedo and scrap the ships.
+
+'''Should I upgrade [[Type 91 Anti-Aircraft Fire Director]] to [[Type 94 Anti-Aircraft Fire Director]]?'''
+
+If you have more time to play and less days until the next event, just farm the T94s directly from Kai Ni DDs. If you have less time to play and more days until the next event, yes.
+
+'''Should I create the [[12.7cm High-angle Gun + Anti-Aircraft Fire Director]]?'''
+
+Unless you really want the card unlocked in your equipment list, no. The only AACIs you should be using on anything that is not a DD are on Maya Kai Ni and Isuzu Kai Ni (only if ASW is ALSO needed), and the AAFD component is needed in neither case. Plus the [[90mm Single High-angle Gun Mount]] is superior. Just wait for Roma/Littorio to be available in another event and use that gun instead, or else just use the [[8cm High-angle Gun]] from Agano-classes or [[10cm Twin High-angle Gun Mount (Carriage)]] from {{ShipBattleCardKai|Ooyodo}} in the meantime.
+
+'''Should I use my [[Type 22 Surface Radar]] drops on [[Type 22 Surface Radar Kai 4]] or [[Type 32 Surface Radar Kai]]?'''
+
+The former is good for DDs, but in Combined Fleets where you'll only generally only bring three destroyers at max, you only really need 3 of the former at maximum, and a quest and {{ShipBattleCardKai|Choukai/Kai Ni}} already gives you two of those. In contrast you'll be using the latter radar type on basically every CA that doesn't need to carry a [[Type 3 Shell]]. The LOS from the latter also increases Artillery Spotting rates, while the former has lower LOS. So prioritise the latter radar until you have about 5 or 6 of them at 4★+ before creating more of the former.
+
+|-|Arsenal=
+
+Because the upgrade lists change from day to day it's difficult to give a precise answer so the following general principles apply:
+#Always make sure you upgrade something every day to get the daily screw. That quest is non-negotiable, though all other repeatable quests are optional and whether they're worth doing depends on how much time you have to spend on KanColle.
+#Of the various things you can upgrade for each day, choose the one that has the fewest number of days it can be upgraded.
+#Of those that match the above, choose the item that has the smallest number of stars.
+#For those that match the above, prioritise the following criteria:
+*Get {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=40px}} x4 as a first priority. This gives you AACI that allows you to reach a boss behind a {{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship}} preboss node wall.
+*Then upgrade the Battleship guns and {{EquipmentCardKai|Type 91 Armor Piercing Shell|size=40px}} for the BBs in your fleet. See above list for details as to what is optimal for each battleship in the Artillery Spotting + Night Double Attack list until all BBs in your possession are optimised. This allows you to sink the vast majority of bosses in the game. '''Before proceeding, please note that at the moment, some shitaraba-based preliminary information indicates that [[20.3cm (No.2) Twin Gun Mount]] may not have the CA fit-bonus for accuracy in Night Battle; the sample size at the moment is too low for me to trust explicitly, but the possibility of this being a concern deserves a mention. Proceeding to upgrade it means you are aware of this possible problem.'''
+*Then upgrade all {{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=40px}}{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=40px}} to ★.
+*Then upgrade all {{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=40px}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=40px}} to ★.
+*Then upgrade all {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=40px}}{{EquipmentCardKai|12.7cm Twin Gun Mount Model B Kai 2|size=40px}} to ★.
+*Then upgrade all {{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=40px}}{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=40px}} to ★.
+*Then upgrade all {{EquipmentCardKai|Type 22 Surface Radar Kai 4|size=40px}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=40px}}{{EquipmentCardKai|Type 32 Surface Radar|size=40px}} to ★.
+*Then upgrade the same number of {{EquipmentCardKai|Type 13 Air Radar Kai|size=40px}} as the number of {{ShipBattleCardKai|Akizuki/Kai}}{{ShipBattleCardKai|Teruzuki/Kai}} in your possession to ★.
+*Then upgrade a single {{EquipmentCardKai|Searchlight|size=40px}} to MAX★. You'll be transferring this between all your DD/CA flagships using night cut-in attacks. No more than one can trigger at once, so do not upgrade more than just one.
+*Then upgrade all {{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=40px}}{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=40px}} to 4★.
+*Then upgrade all {{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=40px}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=40px}} to 4★.
+*Then upgrade all {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=40px}}{{EquipmentCardKai|12.7cm Twin Gun Mount Model B Kai 2|size=40px}} to 4★.
+*Then upgrade all {{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=40px}}{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=40px}} to 4★.
+*Then upgrade all {{EquipmentCardKai|Type 22 Surface Radar Kai 4|size=40px}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=40px}}{{EquipmentCardKai|Type 32 Surface Radar|size=40px}} to 4★.
+*Then upgrade the same number of {{EquipmentCardKai|Type 13 Air Radar Kai|size=40px}} as the number of {{ShipBattleCardKai|Akizuki/Kai}}{{ShipBattleCardKai|Teruzuki/Kai}} in your possession to 4★.
+*Then upgrade all {{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=40px}}{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=40px}} to 6★.
+*Then upgrade all {{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=40px}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=40px}} to MAX★.
+*Then upgrade all {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=40px}} to MAX★ and {{EquipmentCardKai|12.7cm Twin Gun Mount Model B Kai 2|size=40px}} to 6★.
+*Then upgrade all {{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=40px}} to MAX★.
+*Then upgrade all {{EquipmentCardKai|Type 22 Surface Radar Kai 4|size=40px}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=40px}}{{EquipmentCardKai|Type 32 Surface Radar|size=40px}} to 6★.
+*Then upgrade the same number of {{EquipmentCardKai|Type 13 Air Radar Kai|size=40px}} as the number of {{ShipBattleCardKai|Akizuki/Kai}}{{ShipBattleCardKai|Teruzuki/Kai}} in your possession to MAX★.
+*Then upgrade the Battleship guns for the BBs in your fleet until they are optimised in the Artillery Spotting + Night Anti-Installation Double Attack list.
+*Then upgrade a single {{EquipmentCardKai|Type 21 Air Radar|size=40px}} to {{EquipmentCardKai|Type 21 Air Radar Kai|size=40px}} and then upgrade it to MAX★, and replace the {{EquipmentCardKai|Type 14 Air Radar|size=40px}} on Maya with it.
+*Then upgrade {{EquipmentCardKai|Type 32 Surface Radar|size=40px}} to {{EquipmentCardKai|Type 32 Surface Radar Kai|size=40px}} and then upgrade them to 6★.
+*Then upgrade a single {{EquipmentCardKai|Type 22 Surface Radar|size=40px}} to {{EquipmentCardKai|Type 22 Surface Radar Kai 4|size=40px}} and then upgrade it to 6★.
+*If you have completed all of the above, your battle potential is now at a high enough level that you have the luxury of upgrading whatever you wish. Sonars and Depth Charges are probably a good place to start, but you'll already be able to clear any map.
+
+'''Finally, note that you should never do multiple upgrades on the same day, unless you are sure you have enough screws such that there is not a single day in which you cannot do the upgrading daily quest. This quest is the largest continuous source of screws in the game and should not be missed.'''
+</tabber>
+
+<tabview>
+User Blog:Hayashi H/Advanced Equipment Guide/Setups|Setups
+</tabview>
+
+==Further Reading==
+
+*[[Combat]]
+*[[Equipment]]
+
+===Other Guides===
+
+*[[User_blog:Hayashi_H/Advanced_Mechanics_Guide|Advanced game mechanics, like overweight mechanisms and more]]
+*[[User blog:Hayashi H/Abyssal OHKO Chart|How much firepower is TRULY enough?]]
+*[[User blog:Hayashi H/Anti-BWS Fleets|How to survive attacks by firepower-capped targets like the BWS]]
+*[[User blog:Hayashi H/Grinding DDs and CLs on 3-2A|Levelling your CLs and DDs quickly and cheaply]]
+*[[User_blog:Hayashi_H/Max-efficiency_Map-clear_Formations|Efficient formations used in repeated quests and EOs]]
+*[[User_blog:Hayashi_H/Max_efficiency_expedition_setups|Recovering resources at maximum rates]]
+*[[Guides|Guides Home]]
+
+==Credits==
+
+*[[User:Tennousu|Tennousu]], [[User:Zeraphix|Zeraphix]] and [[User:Erupi|Erupi]] for spotting error re: AV-torps in an earlier version.
+*[[User:AbsoluteLuck|AbsoluteLuck]] for correcting me re: the lack of overweight mechanics in Support Expeditions.
+*[[User:Tennousu|Tennousu]] for spotting error re: sec-gun mixed cut-in on KTKM/Ooi in an earlier version.
+*[[User:Nekomahjong|Nekomahjong]] for spotting case of impossible recommendations due to maximum luck stat restrictions.
+*[[User:Fackifiknow|Fackifiknow]] for spotting error in Ayanami luck-value in Maruyu list.
+*[[User:Nekomahjong|Nekomahjong]] for triggering discussion of WG42 mechanics in Night Battle and [[User:McDerp|McDerp]] for running tests to confirm them.
+*[[User:Crazy teitoku|Crazy teitoku]] for help on tabber-conversion of this entire guide.
+
+==Technical Design FAQ==
+
+;What's up with the single-tab tabview? Can't you just transclude the thing?
+:No, because when all parts are added together, this guide is actually the longest page in the wiki by a very far margin, and uses the most LUA modules at once by an even further margin. It is so long that LUA will give a timeout error should transclusion be used, or if everything was written in one page - in order to prevent everything from breaking down, the only way is to use tabview since it loads LUA modules independently of the page, while transclusion loads them simultaneously causing the timeout. These ugly double-tabs are the only way to make this thing work because of the sheer scale of this guide.
+[[Category:Blog posts]]

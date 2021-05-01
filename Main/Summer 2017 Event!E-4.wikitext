@@ -1,0 +1,153 @@
+{{Event/MapPageHeader
+|form = cQV5LYHbD7Ll22Jx2
+|spreadsheet = 1JxgSvE1XXJ36LW1MhpQU33idXiQO8Fb3r3pwBlLtV-I
+|thread = 
+}}
+{{Event/MapInfo
+|en = The Distant Suez
+|jp = 遥かなるスエズ
+|romaji = Harukanaru Suezu
+|tag = E4
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Land Base Aerial Support@Land Base Aerial Support, LoS Check@Events/Mechanics#LoS_Check, Ship Locking@Events/Mechanics#Ship_Locking, 
+<!--
+|transport = true
+-->
+|no_hp = true
+|hp_all = 1190 HP + 3650 HP
+|show_kills = true
+|kills_all = 3.5 + 5
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+|reward_all = {{ShipBattleCardKai|Richelieu}}
+|reward_easy_1 = [[File:Medal.png|50px|link=Medal]]
+|reward_easy_1_x = 1
+|reward_medium_1 = [[File:Screw.png|50px|link=Screw]]
+|reward_medium_1_x = 4
+|reward_medium_2 = [[File:Medal.png|50px|link=Medal]]
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Spitfire Mk.I|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = [[File:Screw.png|50px|link=Screw]]
+|reward_hard_1_x = 5
+|reward_hard_2 = [[File:Medal.png|50px|link=Medal]]
+|reward_hard_2_x = 1
+|reward_hard_3 = [[File:Skilled Crew Member Icon.png{{!}}50px{{!}}link=Skilled Crew Member]]
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Spitfire Mk.V|size=50px}}
+|reward_hard_4_x = 1
+}}
+{{MapBranchingTable
+|title = E-4 Branching Rules
+
+|0 -> A = 
+* Carrier Task Force + 2nd Boss Phase???
+* Meet all of the following requirements:
+** Carrier Task Force
+** Amount of (F)BB(V) + CV(B) ≦ 3 in Main Fleet
+** Amount of (F)BB(V) + CV(L/B) ≦ 4
+|0 -> D = 
+* Transport Escort Fleet
+* Surface Task Force
+* Do not meet the requirements to go to A.
+
+|B -> C = * Pass the LoS check
+|B -> E/empty = * Fail the LoS check
+
+|D -> A = 
+* Meeting one of the following requirements forces A no matter what:
+** First Boss Phase
+** Amount of (F)BB(V) ≧ 4 in Main Fleet
+** Amount of CV(B) ≧ 2
+** Amount of (F)BB(V) + CV(L/B) ≧ 5 in Main Fleet
+** Amount of CLT ≧ 3
+|D -> G/empty = 
+* Second Boss Phase
+* Map Cleared
+
+|G/empty -> F/empty = 
+* Do not meet the requirements to go to H.
+|G/empty -> H/empty = 
+* Meet all of the following requirements:
+** Pass the LoS check
+** Combined Fleet contains no SS(V)
+
+|H/empty -> I = 
+* First Boss Phase
+* Carrier Task Force
+* Transport Escort Fleet
+|H/empty -> J = * Do not meet the requirements to go to I.
+
+|K -> L = 
+* Do not meet the requirements to go to M
+* Meeting one of the following requirements forces L no matter what:
+** Amount of CLT ≧ 2
+** Amount of (F)BB(V) + CVL ≧ 5 in Main Fleet
+** Fleet contains CV(B)
+|K -> M = 
+* Amount of European ships in fleet ≧ 1/2/3 on Easy/Medium/Hard
+* If you do not meet the historical requirements:
+** No CLT allowed
+}}
+===Historical Fleet: European Ships===
+All the ships used in historical routing are from European countries:
+* CA(V): {{ShipLink|Pola}}, {{ShipLink|Prinz Eugen}}, {{ShipLink|Zara}}
+* (F)BB(V): {{ShipLink|Bismarck|Bismarck drei|text=Bismarck}}, {{ShipLink|Richelieu}}, {{ShipLink|Roma}}, {{ShipLink|Littorio|text=Littorio/Italia}}, {{ShipLink|Warspite}}
+* CV(L): {{ShipLink|Aquila}}, {{ShipLink|Ark Royal}}, {{ShipLink|Graf Zeppelin}}
+* AV: {{ShipLink|Commandant Teste}}
+* DD: {{ShipLink|Z1}}, {{ShipLink|Z3}}, {{ShipLink|Libeccio}}
+
+Meeting the historical requirement allows you to bring a CLT in your fleet while still being able to skip a node.
+
+==Map Guide==
+*This is a combined fleet map.
+*Node D is a submarine node.
+*This map has two phases, each requiring you to defeat the following bosses:
+** The first boss is {{ShipLink|Aircraft Carrier Summer Demon}} at Node I
+** The second boss is {{ShipLink|French Battleship Princess}} at Node N
+*Path from Node D to G is not available during the first phase, necessitating the player's fleet to take the long route to boss node I.
+* One [[Land Base Aerial Support]] is available for sortie in this map.
+** 3 range minimum is required to reach the 1st phase boss node I.
+** 6 range minimum is required to reach the 2nd phase boss node N.
+
+===Tips===
+*There does not appear to be any speed-based branching on this map. It is a good place to use your slow BB(V)s and slow CVLs.
+**It is especially the last map you can use your best slow ships for the main battle. Starting from E-5, there will be several restrictions on usage of Slow-Ships.
+***If you have saved your {{ShipLink|Yamato}} and/or {{ShipLink|Musashi}}, it is recommended that you use them in this map, as the next Extra Operation maps will have slow-ship based restrictive branching rules.
+*CTF with the proper requirements starts at A, while a STF always starts at D. As the routing always forces you to go D -> A during the first phase, starting at node A is more advantageous.
+** Using 1 BB 2 CA 2 CVL 1 CV in your first fleet as a CTF can be changed to a STF with only one substitution (swap the CV for another BB) allowing to avoid shiplocking more ships than necessary.
+**However, after unlocking the 2nd phase, using TCF and CTF will force you to node I. This also means that you cannot complete E-4 without the use of a STF.
+** After you unlock the 2nd phase, D -> A routing is no longer forced. This makes node I a very attractive farming spot, as you only have to go through a sub node and 2 empty nodes to be able to reach the boss.
+
+===Possible Fleet Composition===
+*'''Phase I'''
+**{{Event/Route|D|red|A|red|B|red|C|red|G|blue|H|blue|I|red}}:
+***Surface Task Force
+****2 (F)BB(V) / 2 CA(V) / 2 CVL + CL / 2 CA / 3 DD
+**{{Event/Route|A|red|B|red|C|red|G|blue|H|blue|I|red}}
+***Carrier Task Force
+****1 (F)BB(V) / 3 CA(V) / 2 CV  + 1 CL / 2 CA(V) / 1 CLT / 2 DD
+****1 (F)BB(V) / 3 CA(V) / 2 CV + 1 CL / 1 FBB / 2 CLT / 2 DD
+
+*'''Phase II'''
+**{{Event/Route|D|red|G|blue|H|blue|J|red|K|red|M|red|N|red}}
+***Surface Task Force
+****2 (F)BB(V) / 2 CA(V) / 2 CVL + CL / 2 CA(V) / 3 DD
+****2 (F)BB(V) / 1 CA(V) / 2 CVL /  LHA  + CL / 2 CA(V) / 3 DD
+***European Surface Task Force (Must have European Ships of 3 for Hard, 2 for Medium, 1 for Easy)
+****2 (F)BB(V) / 2 CA(V) / 2 CVL + 1 CL / 2 CA(V) / 1 CLT / 2 DD
+****4 BB / [[Akitsu Maru]] / [[Commandant Teste]] + 1 CL / 1 CA(V) / 1 FBB / 1 CLT / 2 DD
+****4 BB / 1 CA(V) / [[Akitsu Maru]] + 1 CL / 2 CA(V) / 1 CLT / 2 DD
+**{{Event/Route|D|red|G|blue|H|blue|I|red}} '''(for farming node I)'''
+***Transport Escort Fleet
+****4 DD 2 XX + 1 CL 3 DD 2 XX
+
+===Ship Special Buff Effect===
+*All European ships have post cap damage bonus against {{ShipLink|French Battleship Princess}}
+*Most noticeable with {{ShipLink|Prinz Eugen}} setup with Torpedo Cut-In.
+**Also noticeable with {{ShipLink|Warspite}} and {{ShipLink|Bismarck}}.
+***Estimated to be at least 1.3x
+
+===LBAS Flight Range===
+[[File:Spring 2017 E4 LBAS flight range.jpg|500px|center]]
+{{Event/MapPageFooter}}

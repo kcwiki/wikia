@@ -1,0 +1,195 @@
+===Vanguard Formation (警戒陣) - Event Exclusive ===
+<gallery type="slideshow" widths="150">
+vanguardformation.PNG|Vanguard Formation
+SFVanguardformation.png|Striking Force Vanguard Formation
+</gallery> Introduced in [[Fall 2017 Event]] for the first time along with the Strike Force mechanic, the vanguard is a defensive formation which affects the ships based on how they are positioned in the fleet.
+*Vanguard Formation is '''available only during event period'''. However, it is usable on all maps during that period.
+
+<tabber>
+Modifiers={| class="article-table" style="text-align:center; font-size:12px"
+|-
+! scope="col" style="text-align:center;" rowspan="3" |Fleet Halves
+! scope="col" style="text-align:center;" colspan="5" |Damage Modifier
+! scope="col" style="text-align:center;" rowspan="3" |Evasion Bonus?
+! scope="col" style="text-align:center;" rowspan="3" |{{Tooltip|Aggro?|Ship will be attacked by the enemies more often}}
+|-
+! scope="col" style="text-align:center;" colspan="5" |Accuracy Modifier
+|-
+! scope="col" style="text-align:center;" |<abbr title="Day Shelling/Bombing">Shelling</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Day Opening/Closing Torpedo">Torpedo</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Anti-Submarine">ASW</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Night Battle">Night</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Opening Airstrikes">Aerial</abbr>
+|-
+|rowspan="2"|{{Tooltip|Top half|Rounded down if uneven fleet members. (e.g. 3 out of 7 and 2 out of 4 fleet members)}}
+|style="color:grey;"|50%
+|100%
+|100%
+|style="color:grey;"|50%
+|100%
+|rowspan="2" style="color:green;"|'''✓'''
+|rowspan="2" style="color:red;"|'''✘'''
+|-
+|style="color:grey;"|80%
+|style="color:grey;"|???
+|style="color:grey;"|???
+|style="color:grey;"|???
+|style="color:grey;"|???
+|-
+|rowspan="2"|{{Tooltip|Bottom half|The rest of the fleet that are not in the first half}}
+|100%
+|100%
+|style="color:grey;"|60%
+|100%
+|100%
+|rowspan="2" style="color:green;"|'''✓'''
+|rowspan="2" style="color:green;"|'''✓'''
+|-
+|125%
+|???
+|???
+|???
+|???
+|}
+
+As shown above, vanguard formation has two modifier values divided between the '''Top half''' and the '''Bottom half''' which split differently depending on the number of ships.
+*'''For 4 (or 5 ships)'''
+**'''Top half''': Position #1-2
+**'''Bottom half''': Position #3-4 (and 5)
+*'''For 6 (or 7 ships)'''
+**'''Top half''': Position #1-3
+**'''Bottom half''': Position #4-6 (and 7)
+
+'''Vanguard and Support Expedition'''
+
+Note that in the scenario that a [[Expedition/Support Expedition|Shelling Support]] is used, the Shelling Support will receive a 50% firepower modifier as well when Vanguard is selected. 
+*This is applied to '''the whole support fleet''', so placing weaker ships at the top will not solve this problem. Therefore, using support expedition when you rely majorly on vanguard formation to survive will not be as efficient however still usable.
+|-|Evasion bonus & Aggro effect=
+When the Vanguard formation is selected, all your ships in the fleet will obtain a post-cap evasion bonus [https://twitter.com/Xe_UCH/status/969448508943081473]. While everyone in the fleet will gain an evasion bonus, the amount of evasion you gain is based on 2 things:
+
+#Is the ship a DD?
+#Is the ship part of the top or the bottom half?
+
+The rough estimates of the evasion bonus are as followed:
+*'''Top half (including the 4th ship)'''
+**Non-DD: +5% Evasion
+**DD: +20% Evasion
+*'''Bottom half (excluding the 4th ship)'''
+**Non-DD: +20% Evasion
+**DD: +40% Evasion
+
+Regarding aggro effect, the bottom half is attacked more often than usual, which is supported by its higher evasion.
+|-|Airstrikes=A test has been done albeit roughly regarding Vanguard Formation's effect on Air Raid nodes. A conclusion was reached as followed [https://goo.gl/rupe5P]:
+
+{| class="article-table" style="text-align:center; font-size:12px"
+|-
+! scope="col" style="text-align:center;" rowspan="1" |Ship Slots
+! scope="col" style="text-align:center;" rowspan="1" |Evasion Bonus?
+! scope="col" style="text-align:center;" rowspan="1" |{{Tooltip|Aggro?|Ship will be attacked by the enemies more often}}
+|-
+|{{Tooltip|First half|Rounded down if uneven fleet members. (e.g. 3 out of 7 and 2 out of 4 fleet members)}}
+|style="color:red;"|'''✘'''
+|style="color:red;"|'''✘'''
+|-
+|{{Tooltip|Second half|The rest of the fleet that are not in the first half}}
+|style="color:red;"|'''✘'''
+|style="color:green;"|'''✓'''
+|}
+
+While the aggro effect is still there, you do not gain any evasion bonus against airstrikes. In other words, your evasion will be the same as in Diamond formation, except with a worse AA modifier of 110% instead of 160%.
+*Your bottom half will suffer the most from airstrikes and you do not have evasion bonuses to compensate for it this time.
+|-|Utilization=
+'''Some Utilization Examples:'''
+
+*Night Battle modifier is not a 100% all-around (Top: 50%, Bottom: 100%) which is unique. 
+**For nodes where you want to maximize your firepower such as boss nodes, vanguard is generally undesired.
+**However, in some situations, using vanguard might be better such as at pre-boss night battle nodes.
+***'''5-3 Leveling''', for example, Node {{Event/Route|I}} does not have tough enemies and your night battle power might be able to out-damages the modifier while increasing your evasion to improve survivability. This requires a lot of trial and error.
+*Torpedo modifier remains 100% regardless of where the ship is placed in the fleet.
+**Ships who rely highly on their torpedo stats such as CLT and especially SS can benefit greatly from this. For example, submarines with vanguard will still maintain the 100% modifier from Line Ahead while benefiting from increased evasion based on position. However, consider placing your higher evasion or armor at the bottom half as they will be targeted more.
+*The ASW capable ships benefit the most from the top half while those who damage through shelling and night attacks benefit the most when placed in the bottom half. 
+
+'''Vanguard and Pre-setup'''
+
+Vanguard Formation is position-sensitive. As such, learning how to position is the key in utilizing the formation to its greatest extent but also its greatest weakness. Once you setup your fleet to benefit the most from vanguard, you can and most likely disorder your fleet's shelling depending on what you want to utilize.
+
+'''Consider this situation: '''
+*A fleet of 3 low-level ship: 1 CL and 2 DDs; plus 3 high-level ships: 1 BB and 2 CV
+{| class="article-table" style="text-align:center; font-size:12px"
+|-
+! scope="col" style="text-align:center;" rowspan="1" |Ship Type
+! scope="col" style="text-align:center;" rowspan="1" |Level
+! scope="col" style="text-align:center;" rowspan="1" |Ship
+! scope="col" style="text-align:center;" rowspan="1" |Evasion Bonus
+! scope="col" style="text-align:center;" rowspan="1" |{{Tooltip|Aggro?|Ship will be attacked by the enemies more often}}
+! scope="col" style="text-align:center;" rowspan="1" |Shelling Modifier
+! scope="col" style="text-align:center;" rowspan="1" |ASW Modifier
+! scope="col" style="text-align:center;" rowspan="1" |Night Battle
+|-
+|3
+|DD
+|{{ShipBattleCard|Nenohi}}
+|style="color:blue;"| +20%
+|style="color:red;"|'''✘'''
+|50%
+|100%
+|50%
+|-
+|21
+|DD
+|{{ShipBattleCard|Nagatsuki/Kai}}
+|style="color:blue;"| +20%
+|style="color:red;"|'''✘'''
+|50%
+|100%
+|50%
+|-
+|26
+|CL
+|{{ShipBattleCard|Sendai/Kai}}
+|style="color:blue;"| +5%
+|style="color:red;"|'''✘'''
+|50%
+|100%
+|50%
+|-
+|175
+|CV
+|{{ShipBattleCard|Hiryuu/Kai Ni}}
+|style="color:blue;"| +20%
+|style="color:green;"|'''✓'''
+|100%
+|60%
+|100%
+|-
+|170
+|BB
+|{{ShipBattleCard|Kirishima/Kai Ni}}
+|style="color:blue;"| +20%
+|style="color:green;"|'''✓'''
+|100%
+|60%
+|100%
+|-
+|162
+|BB
+|{{ShipBattleCard|Hiei/Kai Ni}}
+|style="color:blue;"| +20%
+|style="color:green;"|'''✓'''
+|100%
+|60%
+|100%
+|}
+
+*'''Note''': Please see previous tabs to understand the evasion bonuses. Torpedo and Aerial modifier stay constant and therefore not shown.
+*Disregarding equipment setup, what is the current situation of the fleet?
+**As low-level DDs have horrible evasion, it won't benefit as much from evasion bonus and therefore would be safe to position them in #1-3
+**This allows position #4-6 to be occupied by your high-level ships that can both tank, draw aggro, benefit slightly from evasion bonus, and display 100% shelling damage all at once in exchange for getting targeted more. 
+**In maps with submarines, those DDs can also be equipped with ASW gears to sink submarine from position #1-3 which gives them 100% ASW benefit.
+
+This is beneficial in cases in which you need to protect weaker ships, but in cases in which you need all the ships to participate, i.e. Boss Nodes in an event, this can become troublesome to setup as using vanguard formation to pass through the nodes more easily can harm your damage chance at boss node due to your setup. Consideration toward fleet ordering is required to setup properly.
+</tabber>
+[[Category:Game Mechanics]]
+[[Category:Game System]]
+[[Category:Events]]
+[[Category:Help]]

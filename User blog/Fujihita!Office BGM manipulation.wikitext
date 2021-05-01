@@ -1,0 +1,103 @@
+This blog explains how the home port BGM (background music) interacts with BGM-enabling furniture, how to use BGM-enabling furniture without losing the default, and how to override one furniture-specific BGM for another.
+ 
+==Forewords==
+Asides the gritty-grindy and ship collection bits, KanColle features an extensive and fantastic arsenal of background music. The musical aspect is arguably the only thing Kadokawa has never failed to deliver.
+ 
+Take the anime for example. I know it's a terribad anime plot-wise, art-wise, character-development-wise, everything-wise; but one cannot deny the OST has been one of the finer soundtracks out there. And we game players get to own a good number of in-game tracks in the form of BGM-enabling furniture.
+ 
+I have seen many players failed to recognize BGM-enabling furniture as tracks in their collection. Not many people know exactly how these furniture interact with each other and which BGM will be the result of the interaction. I admit, using BGM-enabling furniture isn't as simple as using youtube playlists but there exist tricks to achieve a similar degree of freedom.
+ 
+==Prerequisite==
+Before we go on with the tutorial, I must insist readers to review '''Changing BGM using Furniture''' section in [[Furniture]]/Guide page. I'll assume the readers know how to use (and own) the [[Jukebox]] and have at least two BGM-enabling furniture at their disposal. These are the prerequisites to make use of all the tricks demonstrated in this document.
+ 
+==Types of BGM==
+I'll classify BGM into 2 types based on the source. Each of them follows a fixed set of characteristics and override rules.
+
+===Default BGM===
+The default BGM is the one played when there is no BGM-enabling furniture in the office. Default BGM can be changed by the Jukebox and Jukebox Kai at the cost of some furniture coins.
+ 
+===Feature BGM===
+The feature BGM is the one that comes with a BGM-enabling furniture. This is the one that is played when the furniture is first put into the office.
+ 
+==Interaction Rules==
+:'''Rule 1:'''
+:When any BGM-enabling furniture is removed from the office, the current BGM will change to the default BGM.
+:'''Rule 2:'''
+:When the Jukebox changes the default BGM, it'll also set the current BGM to the default BGM regardless of all BGM-enabling furniture.
+:'''Rule 3:'''
+:When a BGM-enabling furniture is put into the office, it'll set the the current BGM to the feature BGM of the latest furniture and override that from old ones.
+
+==Applying the rules==
+To illustrate the tricks, let's do the following exercises.
+
+:'''Preparations'''
+[[File:Winter's decoration.png|right|thumb|200px|This furniture features a background music]]
+:First, I'll use the Jukebox to change the BGM to Kaga Misaki (加賀岬)
+<table class="wikitable" width="60%" style="text-align:center;margin:20px">
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td> '''Default'''</td><td>Kaga Misaki</td></tr> 
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td> '''Feature'''</td><td>Kaga Misaki</td></tr> 
+<tr><td style="background-color:pink;color:black;padding:2px">'''OFF'''</td><td>'''Latest'''</td><td>Winter's decoration</td></tr></table>
+::'''Legends'''
+::Default: The Default BGM (ON = playing)
+::Feature: The Feature BGM (ON = playing)
+::Latest: The latest BGM-enabling furniture (ON = in office)
+:Then, using a BGM-enabling furniture, I'll use this Winter's decoration (冬の飾り付け) to change the BGM to Sallying Forth in Winter! (冬の抜錨)
+ 
+<table class="wikitable" width="60%" style="text-align:center;margin:20px">
+<tr><td style="background-color:pink;color:black;padding:2px">'''OFF'''</td><td> '''Default'''</td><td>Kaga Misaki</td></tr> 
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td> '''Feature'''</td><td>Sallying Forth in Winter</td></tr> 
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td>'''Latest'''</td><td>Winter's decoration</td></tr></table>
+
+===Set which BGM to play from multiple BGM-enabling furniture===
+[[File:Autumn feast table.png|200px|thumb|right|A neat furniture with Autumn theme BGM]]
+For the first trick, I'll need the help of a second BGM-enabling furniture. I'll use the Autumn feast table (秋刀魚の食卓) which comes with Naval District in Autumn (秋の鎮守府) BGM. 
+:'''Step 1:'''
+:Go to the Furniture select screen
+:'''Step 2:'''
+:Activate the second BGM-enabling furniture (Autumn feast table)
+
+<table class="wikitable" width="60%" style="text-align:center;margin:20px">
+<tr><td style="background-color:pink;color:black;padding:2px">'''OFF'''</td><td> '''Default'''</td><td>Kaga Misaki</td></tr> 
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td> '''Feature'''</td><td>Naval District in Autumn</td></tr> 
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td></td><td>Winter's decoration</td></tr>
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td>'''Latest'''</td><td>Autumn feast table</td></tr></table>
+
+This is quite normal so far, '''Rule #3''' is applied and the Feature BGM of the latest BGM-enabling furniture (Autumn feast table) overrides the old Feature BGM and then starts playing. Next is the tricky part:
+
+:'''Step 3:'''
+:Deactivate (enable something else) then Re-activate the first BGM-enabling furniture (Winter's decoration)
+
+<table class="wikitable" width="60%" style="text-align:center;margin:20px">
+<tr><td style="background-color:pink;color:black;padding:2px">'''OFF'''</td><td> '''Default'''</td><td>Kaga Misaki</td></tr> 
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td> '''Feature'''</td><td>Sallying Forth in Winter</td></tr> 
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td>'''Latest'''</td><td>Winter's decoration</td></tr>
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td></td><td>Autumn feast table</td></tr></table>
+
+No, I honestly didn't jinx it. This step applies '''Rule #3''' another time making Winter's decoration the latest BGM-enabling furniture in the room and hence its BGM (Sally Forth in Winter) becomes the Feature BGM and starts playing.
+
+===Re-enable default while keeping a BGM-enabling furniture on===
+[[File:Well-used futon.png|200px|thumb|right|A totally normal furniture]]
+With the same setting as above, I'll re-enable Kaga Misaki (default) while keeping Winter's decoration on. And, I'll need a totally normal Furniture of the same type as the Autumn feast table. The well-used futon (煎餅布団) will do.
+
+:'''Step 4:'''
+:Replace any BGM-enabling furniture (Autumn feast table) with a normal one (Well-used futon)
+
+<table class="wikitable" width="60%" style="text-align:center;margin:20px">
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td> '''Default'''</td><td>Kaga Misaki</td></tr> 
+<tr><td style="background-color:pink;color:black;padding:2px">'''OFF'''</td><td> '''Feature'''</td><td>Sallying Forth in Winter</td></tr> 
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td>'''Latest'''</td><td>Winter's decoration</td></tr>
+<tr><td style="background-color:pink;color:black;padding:2px">'''OFF'''</td><td></td><td>Autumn feast table</td></tr>
+<tr><td style="background-color:lightgreen;color:black;padding:2px">'''ON'''</td><td></td><td>Well-used futon (no BGM)</td></tr></table>
+
+'''Rule #1''' is applied in step 4, a BGM-enabling furniture is removed from the office and hence the default BGM (Kaga Misaki) will be played while Winter's decoration is still on.
+
+:'''Limitation'''
+:As it stands, we'll need a "sacrificial" BGM-enabling furniture for this trick to work. If, say, I want the default BGM and all the BGM-enabling furniture on. I'll run into trouble. This becomes even more problematic if the player lacks BGM-enabling furniture of multiple furniture types.
+
+===Play the default BGM without moving any BGM-enabling furniture===
+The only way to overcome the aforementioned limitation is to use the Jukebox, set the default to a random BGM and then set the default back to the desired BGM. '''Rule #2''' will apply and we will get the default BGM playing without moving any of our BGM-enabling furniture.
+
+The obvious drawback is that changing default BGM costs furniture coins.
+[[Category:Blog posts]]
+
+[[Category:Blog posts]]

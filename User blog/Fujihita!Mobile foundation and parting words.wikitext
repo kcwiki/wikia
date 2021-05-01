@@ -1,0 +1,585 @@
+This will be my last blog post as an administrator of this wiki.
+
+I informed relevant parties at least three months ago that I would return to active duty only till the end of the second drill. The time has come for me to retire. Reflecting on the time I spent as an administrator, I have done little to maintain the wiki and I have focused solely on advancing the visual and content aspects. This means my retirement will not hinder wiki operation in any ways, though technical supports for my existing templates and layouts will no longer be provided.
+
+==Unfinished business==
+Among the "unfinished business" I'll leave behind for future generations are the problem of [[Thread:571586|page clusters]] and the problem of mobile compatibility. The former is the elephant in the room and the latter is uncharted territory plagued with technical limitations. 
+
+===Page clusters===
+[[File:Fix_what_aint_broken.jpg|thumb|center|400px|Fix...the elephant please!]]
+{{clear}}
+:I tackled the core problem of page clusters, which is [https://www.webdesignerdepot.com/2017/05/how-to-balance-information-density-in-web-design/ an excess of choices] and devised a solution using better [https://en.wikipedia.org/wiki/Visual_hierarchy visual hierarchy] as documented in the thread. It is a nightmare to satisfy mobile users, monobook skin users, oasis skin users, newcomers who want lower information density, and old users who want higher information density.
+:On top of this delicate balancing act of functionality and aesthetic, there are technical limitations imposed by wikia and mediawiki platform to which the unhelpful response of the average users would be "Who cares about the law of physics? Just make my wish happen".
+:I have neither the time nor the energy to campaign for its full implementation.
+
+===Mobile compatibility===
+:Mobile compatibility is something I have been made aware of recently as a result of the first unfinished business. I have looked into the matter and discovered some facts that might be helpful for future mobile designers:
+:*Mobile view is provided by a skin called "mercury".
+:*Appending <code>?useskin=mercury</code> to the end of the URL enforces mercury skin (wherever applicable).
+:*Mobile view is NOT available in <code><User></code> (user profile), <code><Thread></code> (forums), and <code><Template></code> (templates) namespaces.
+:*When mobile view is not available, default "oasis" skin will be enforced.
+:*Mobile preview is also available in source editor even where mobile view is not available.
+:Finally, in regard to the front page, unlike normal article pages, the front page uses an automatically generated mobile version called "[[Help:Mobile_Main_Page|mobile main page]]". This mobile version is enforced by wikia and [http://community.wikia.com/wiki/Thread:1192556 there is no known way to switch it off].
+:Therefore, it is not possible for me to design a mobile version of the front page. Though to the average users, "Who cares about the evil Wikian overlord? Just make my wish happen", right?
+
+==Building portable pages==
+My final work here is about setting the methods to create mobile compatible pages. This blog post outlines two main ways to go about this matter. The write-up below is intended to set the foundation for mobile implementation of existing articles in the future (Hear me [[User:Acrone|Acrone]]? This is your homework for eternity).
+
+The first is to avoid all mobile incompatible elements such as nesting tables, tabview, tabber, collapsibles, overlays and HTML in general. 
+
+So, instead of this
+
+{|
+! width="80px"| Equip
+! width="90px"| Upgrade
+! style="cellpadding:10px;" |[[file:Improvement Materials.png|30px|link=]]
+! style="cellpadding:10px;" |[[File:RedGunMedium.png|30px|link=]]
+! width="35px" cellpadding="10px"|Sun
+! width="35px"| Mon
+! width="35px"|Tue
+! width="35px"|Wed
+! width="35px"| Thu
+! width="35px"|Fri
+! width="35px"|Sat
+|-
+| style="background:gray;" colspan="11" |
+|-
+| rowspan="3" align="center"|[[File:Equipment120-1.png|80px|link=Type_91_Anti-Aircraft_Fire_Director]]
+| rowspan="3" align="center"|[[File:Equipment121-1.png|80px|link=Type 94 Anti-Aircraft Fire Director]]
+| align="center"| 1/2
+| align="center"| - 
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:white;" rowspan="3" |
+| style="background-color:white;" rowspan="3" |
+| style="background-color:white;" rowspan="3" |
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+|-
+| align="center"| 2/4
+| align="center"| 1<ref name="T91 improve">use [[12.7cm Twin High-angle Gun Mount]]</ref>
+|-
+| align="center"| 4/7
+| align="center"| 2<ref name="T91 upgrade">use [[10cm Twin High-angle Gun Mount]]</ref>
+|-
+| style="background:gray;" colspan="11" | <!--Row 3 starts here -->
+|-
+| rowspan="3" align="center"|[[File:36.png|80px|link=Type 91 Armor-Piercing (AP) Shell]]
+| rowspan="3" align="center"|[[File:116_card.png|80px|link=Type 1 Armor-Piercing (AP) Shell]]
+| align="center"| 1/1
+| align="center"| - 
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div></div>
+| style="background-color:white;" rowspan="3" |
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+|-
+| align="center"| 1/2
+| align="center"| 1
+|-
+| align="center"| 4/9
+| align="center"| 3
+|}
+{{reflist}}
+
+<pre>
+{|
+! width="80px"| Equip
+! width="90px"| Upgrade
+! style="cellpadding:10px;" |[[file:Improvement Materials.png|30px|link=]]
+! style="cellpadding:10px;" |[[File:RedGunMedium.png|30px|link=]]
+! width="35px" cellpadding="10px"|Sun
+! width="35px"| Mon
+! width="35px"|Tue
+! width="35px"|Wed
+! width="35px"| Thu
+! width="35px"|Fri
+! width="35px"|Sat
+|-
+| style="background:gray;" colspan="11" |
+|-
+| rowspan="3" align="center"|[[File:Equipment120-1.png|80px|link=Type_91_Anti-Aircraft_Fire_Director]]
+| rowspan="3" align="center"|[[File:Equipment121-1.png|80px|link=Type 94 Anti-Aircraft Fire Director]]
+| align="center"| 1/2
+| align="center"| - 
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:white;" rowspan="3" |
+| style="background-color:white;" rowspan="3" |
+| style="background-color:white;" rowspan="3" |
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+|-
+| align="center"| 2/4
+| align="center"| 1<ref name="T91 improve">use [[12.7cm Twin High-angle Gun Mount]]</ref>
+|-
+| align="center"| 4/7
+| align="center"| 2<ref name="T91 upgrade">use [[10cm Twin High-angle Gun Mount]]</ref>
+|-
+| style="background:gray;" colspan="11" | <!--Row 3 starts here -->
+|-
+| rowspan="3" align="center"|[[File:36.png|80px|link=Type 91 Armor-Piercing (AP) Shell]]
+| rowspan="3" align="center"|[[File:116_card.png|80px|link=Type 1 Armor-Piercing (AP) Shell]]
+| align="center"| 1/1
+| align="center"| - 
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div></div>
+| style="background-color:white;" rowspan="3" |
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+|-
+| align="center"| 1/2
+| align="center"| 1
+|-
+| align="center"| 4/9
+| align="center"| 3
+|}
+{{reflist}}
+</pre>
+
+
+We have this
+{| class="article-table" align="center" style="width:80%;margin:0px"
+!align="center"| Equip
+!align="center"| Upgrade
+!align="center" style="cellpadding:10px;" |[[file:Improvement Materials.png|30px|link=]]
+!align="center" style="cellpadding:10px;" |[[File:RedGunMedium.png|30px|link=]]
+|-
+| style="background:gray;" colspan="11" |
+|-
+| rowspan="3" align="center"|[[File:Equipment120-1.png|80px|link=Type_91_Anti-Aircraft_Fire_Director]]
+| rowspan="3" align="center"|[[File:Equipment121-1.png|80px|link=Type 94 Anti-Aircraft Fire Director]]
+| align="center"| 1/2
+| align="center"| - 
+|-
+| align="center"| 2/4
+| align="center"| 1<ref name="T91 improve">use [[12.7cm Twin High-angle Gun Mount]]</ref>
+|-
+| align="center"| 4/7
+| align="center"| 2<ref name="T91 upgrade">use [[10cm Twin High-angle Gun Mount]]</ref>
+|-
+| style="background-color:lightgray;" colspan="4" align="center"|Maya Kai Ni (Sun,Mon,Fri,Sat)
+Akizuki (Sun,Mon,Fri,Sat)
+|-
+| style="background:gray;" colspan="11" | <!--Row 3 starts here -->
+|-
+| rowspan="3" align="center"|[[File:36.png|80px|link=Type 91 Armor-Piercing (AP) Shell]]
+| rowspan="3" align="center"|[[File:116_card.png|80px|link=Type 1 Armor-Piercing (AP) Shell]]
+| align="center"| 1/1
+| align="center"| - 
+|-
+| align="center"| 1/2
+| align="center"| 1
+|-
+| align="center"| 4/9
+| align="center"| 3
+|-
+| style="background-color:lightgray;" colspan="4" align="center"|Kirishima Kai Ni (Sun,Mon,Fri,Sat)
+Hiei Kai Ni (Wed,Thu,Fri,Sat)
+|}
+{{reflist}}
+
+<pre>
+{| class="article-table" align="center" style="width:80%;margin:0px"
+!align="center"| Equip
+!align="center"| Upgrade
+!align="center" style="cellpadding:10px;" |[[file:Improvement Materials.png|30px|link=]]
+!align="center" style="cellpadding:10px;" |[[File:RedGunMedium.png|30px|link=]]
+|-
+| style="background:gray;" colspan="11" |
+|-
+| rowspan="3" align="center"|[[File:Equipment120-1.png|80px|link=Type_91_Anti-Aircraft_Fire_Director]]
+| rowspan="3" align="center"|[[File:Equipment121-1.png|80px|link=Type 94 Anti-Aircraft Fire Director]]
+| align="center"| 1/2
+| align="center"| - 
+|-
+| align="center"| 2/4
+| align="center"| 1<ref name="T91 improve">use [[12.7cm Twin High-angle Gun Mount]]</ref>
+|-
+| align="center"| 4/7
+| align="center"| 2<ref name="T91 upgrade">use [[10cm Twin High-angle Gun Mount]]</ref>
+|-
+| style="background-color:lightgray;" colspan="4" align="center"|Maya Kai Ni (Sun,Mon,Fri,Sat)
+Akizuki (Sun,Mon,Fri,Sat)
+|-
+| style="background:gray;" colspan="11" | <!--Row 3 starts here -->
+|-
+| rowspan="3" align="center"|[[File:36.png|80px|link=Type 91 Armor-Piercing (AP) Shell]]
+| rowspan="3" align="center"|[[File:116_card.png|80px|link=Type 1 Armor-Piercing (AP) Shell]]
+| align="center"| 1/1
+| align="center"| - 
+|-
+| align="center"| 1/2
+| align="center"| 1
+|-
+| align="center"| 4/9
+| align="center"| 3
+|-
+| style="background-color:lightgray;" colspan="4" align="center"|Kirishima Kai Ni (Sun,Mon,Fri,Sat)
+Hiei Kai Ni (Wed,Thu,Fri,Sat)
+|}
+{{reflist}}
+</pre>
+
+The second table is workable on mobile view, though not the most ideal design. It is arguably not ideal for desktop view either. It is a lazy compromise that can work if the desktop audience can accept a worse-off design in order to support mobile compatibility.
+
+;The problem?
+:Desktop users won't accept anything less than the current for the sake of another group of users. Ain't anybody want to be a social justice hero when it is THEIR privilege they will have to sacrifice.
+
+==Separating mobile-desktop views==
+<div class="hidden" style="width:90%; border:2px solid darkred; background:pink; text-align:left; margin:15px auto 20px;padding:5px;">
+;You are viewing this blog in desktop view
+[http://kancolle.wikia.com/wiki/User_blog:Fujihita/Mobile_foundation_and_parting_words?useskin=mercury Click here to see this blog in mobile view]
+Also, shrink the width of your screen to emulate the effect of mobile perspective...or just use a real mobile device, that works too.
+</div>
+<div class="mobileshow">
+----
+;You are viewing this blog in mobile view
+[http://kancolle.wikia.com/wiki/User_blog:Fujihita/Mobile_foundation_and_parting_words?useskin=oasis Click here to see this blog in desktop view]
+----
+</div>
+The alternative is separating mobile and desktop views, making some contents only available on desktop view while others only available on mobile view.
+
+===Collapsible hack (mobile only content wrapper)===
+:The pioneer of this technique in this wiki is [[User:Dragonjet|Dragonjet]] with his collapsible hack to make some front page elements exclusive to mobile view (by taking advantage of the fact that collapsible does not work in mobile view and hence, a "sealed" collapsible container will not show content on desktop view). It is implemented as follow:
+
+<div class="article-table mw-collapsible mw-collapsed" id="mw-customcollapsible-text_table">
+[[File:DD Inazuma 037 Full.png|thumb|link=|You can only see her in mobile view]]
+</div>
+
+<pre>
+<div class="article-table mw-collapsible mw-collapsed" id="mw-customcollapsible-text_table">
+[[File:DD Inazuma 037 Full.png|thumb|link=|You can only see her in mobile view]]
+</div>
+</pre>
+
+
+===Mobileshow class (mobile only content wrapper)===
+:[[User:がか|Gaka]] formally implemented <code>class="mobileshow"</code> to this wiki's css to create easier wrappers of mobile-only content. This is the recommended method and it is implemented as follow:
+
+<div class="mobileshow">
+[[File:DD Ikazuchi 036 Full.png|thumb|link=|You can only see her in mobile view]]
+</div>
+
+<pre>
+<div class="mobileshow">
+[[File:DD Ikazuchi 036 Full.png|thumb|link=|You can only see her in mobile view]]
+</div>
+</pre>
+
+
+===Hidden class (desktop only content wrapper)===
+Wikia supports a default <code>class="hidden"</code> to hide desktop only content from mercury skin. It is implemented as follow
+
+<div class="hidden">
+[[File:DD Akatsuki 034 Full.png|thumb|link=|You can only see her in desktop view]]
+</div>
+{{clear}}
+<pre>
+<div class="hidden">
+[[File:DD Akatsuki 034 Full.png|thumb|link=|You can only see her in desktop view]]
+</div>
+</pre>
+
+==Full desktop view on mobile==
+
+Wikia provides an option to use full desktop view on mobile. This affects the visibility of content under the aforementioned techniques as follow
+
+<div class="hidden">
+{| class="article-table" style="width:80%;text-align:center" align="center"
+|
+!collapsible hack
+!class="mobileshow"
+!class="hidden"
+|-
+!Oasis on desktop
+|✘
+|✘
+|style="background-color:lime"|✔
+|-
+!Oasis on mobile
+|style="background-color:lime"|✔
+|✘
+|style="background-color:lime"|✔
+|-
+!Mercury
+|style="background-color:lime"|✔
+|style="background-color:lime"|✔
+|✘
+|}
+</div>
+<div class="mobileshow">
+;collapsible hack
+*Visible on mobile (oasis) and mobile (mercury)
+;class="mobileonly"
+*Visible only on mobile (mercury)
+;class="hidden"
+*Visible only on desktop (oasis)
+</div>
+
+==Putting together two views==
+
+<div class="hidden">
+===Desktop version===
+{|
+! width="80px"| Equip
+! width="90px"| Upgrade
+! style="cellpadding:10px;" |[[file:Improvement Materials.png|30px|link=]]
+! style="cellpadding:10px;" |[[File:RedGunMedium.png|30px|link=]]
+! width="35px" cellpadding="10px"|Sun
+! width="35px"| Mon
+! width="35px"|Tue
+! width="35px"|Wed
+! width="35px"| Thu
+! width="35px"|Fri
+! width="35px"|Sat
+|-
+| style="background:gray;" colspan="11" |
+|-
+| rowspan="3" align="center"|[[File:Equipment120-1.png|80px|link=Type_91_Anti-Aircraft_Fire_Director]]
+| rowspan="3" align="center"|[[File:Equipment121-1.png|80px|link=Type 94 Anti-Aircraft Fire Director]]
+| align="center"| 1/2
+| align="center"| - 
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:white;" rowspan="3" |
+| style="background-color:white;" rowspan="3" |
+| style="background-color:white;" rowspan="3" |
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+|-
+| align="center"| 2/4
+| align="center"| 1<ref name="T91 improve">use [[12.7cm Twin High-angle Gun Mount]]</ref>
+|-
+| align="center"| 4/7
+| align="center"| 2<ref name="T91 upgrade">use [[10cm Twin High-angle Gun Mount]]</ref>
+|-
+| style="background:gray;" colspan="11" | <!--Row 3 starts here -->
+|-
+| rowspan="3" align="center"|[[File:36.png|80px|link=Type 91 Armor-Piercing (AP) Shell]]
+| rowspan="3" align="center"|[[File:116_card.png|80px|link=Type 1 Armor-Piercing (AP) Shell]]
+| align="center"| 1/1
+| align="center"| - 
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div></div>
+| style="background-color:white;" rowspan="3" |
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+|-
+| align="center"| 1/2
+| align="center"| 1
+|-
+| align="center"| 4/9
+| align="center"| 3
+|}
+{{reflist}}
+</div>
+
+<div class="mobileshow">
+===Mobile version===
+{| class="article-table" style="width:100%;margin:0;"
+! Equip
+|[[Type 91 Anti-Aircraft Fire Director]]
+|-
+! Upgrade
+|[[Type 94 Anti-Aircraft Fire Director]]
+|-
+! Screw
+|1/2/4 (2/4/7)
+|-
+!Stock
+|0
+[[Type 91 Anti-Aircraft Fire Director]]
+|-
+!Stock (6-10)
+|1
+[[12.7cm Twin High-angle Gun Mount]]
+|-
+!Stock (10+)
+|2
+[[10cm Twin High-angle Gun Mount]]
+|-
+! Ship
+|
+*[[Akizuki]] (Mon,Fri,Sat,Sun)
+*[[Maya]] (Mon,Fri,Sat,Sun)
+*[[Teruzuki]] (Fri,Sat,Sun)
+|}
+
+{| class="article-table" style="width:100%;margin:0;"
+! Equip
+|[[Type 91 Armor Piercing Shell]]
+|-
+! Upgrade
+|[[Type 1 Armor Piercing Shell]]
+|-
+! Screw
+|1/1/4 (1/2/9)
+|-
+|-
+! Screw
+|1/2/4 (2/4/7)
+|-
+!Stock (1-6)
+|0
+[[Type 91 Armor Piercing Shell]]
+|-
+!Stock (6-10)
+|1
+[[Type 91 Armor Piercing Shell]]
+|-
+!Stock (10+)
+|3
+[[Type 91 Armor Piercing Shell]]
+|-
+! Ship
+|
+*[[Kirishima]] (Sun,Mon,Fri,Sat)
+*[[Hiei]] (Wed,Thu,Fri,Sat)
+|}
+</div>
+
+<pre>
+<div class="hidden">
+===Desktop version===
+{|
+! width="80px"| Equip
+! width="90px"| Upgrade
+! style="cellpadding:10px;" |[[file:Improvement Materials.png|30px|link=]]
+! style="cellpadding:10px;" |[[File:RedGunMedium.png|30px|link=]]
+! width="35px" cellpadding="10px"|Sun
+! width="35px"| Mon
+! width="35px"|Tue
+! width="35px"|Wed
+! width="35px"| Thu
+! width="35px"|Fri
+! width="35px"|Sat
+|-
+| style="background:gray;" colspan="11" |
+|-
+| rowspan="3" align="center"|[[File:Equipment120-1.png|80px|link=Type_91_Anti-Aircraft_Fire_Director]]
+| rowspan="3" align="center"|[[File:Equipment121-1.png|80px|link=Type 94 Anti-Aircraft Fire Director]]
+| align="center"| 1/2
+| align="center"| - 
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:white;" rowspan="3" |
+| style="background-color:white;" rowspan="3" |
+| style="background-color:white;" rowspan="3" |
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-84px">{{EnemyShipCard|Maya|Kai Ni}}</div><div style="margin-left:-74px">{{EnemyShipCard|Akizuki|Kai}}</div></div>
+|-
+| align="center"| 2/4
+| align="center"| 1<ref name="T91 improve">use [[12.7cm Twin High-angle Gun Mount]]</ref>
+|-
+| align="center"| 4/7
+| align="center"| 2<ref name="T91 upgrade">use [[10cm Twin High-angle Gun Mount]]</ref>
+|-
+| style="background:gray;" colspan="11" | <!--Row 3 starts here -->
+|-
+| rowspan="3" align="center"|[[File:36.png|80px|link=Type 91 Armor-Piercing (AP) Shell]]
+| rowspan="3" align="center"|[[File:116_card.png|80px|link=Type 1 Armor-Piercing (AP) Shell]]
+| align="center"| 1/1
+| align="center"| - 
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div></div>
+| style="background-color:white;" rowspan="3" |
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+| style="background-color:lightgray;" rowspan="3" |<div style="overflow:hidden;width:35px;"><div style="margin-left:-70px">[[File:Kirishima kai2 card.jpg|link=Kirishima]]</div><div style="margin-left:-80px">[[File:Hiei kai2 card.jpg|link=Hiei]]</div></div>
+|-
+| align="center"| 1/2
+| align="center"| 1
+|-
+| align="center"| 4/9
+| align="center"| 3
+|}
+{{reflist}}
+</div>
+
+<div class="mobileshow">
+===Mobile version===
+{| class="article-table" style="width:100%;margin:0;"
+! Equip
+|[[Type 91 Anti-Aircraft Fire Director]]
+|-
+! Upgrade
+|[[Type 94 Anti-Aircraft Fire Director]]
+|-
+! Screw
+|1/2/4 (2/4/7)
+|-
+!Stock
+|0
+[[Type 91 Anti-Aircraft Fire Director]]
+|-
+!Stock (6-10)
+|1
+[[12.7cm Twin High-angle Gun Mount]]
+|-
+!Stock (10+)
+|2
+[[10cm Twin High-angle Gun Mount]]
+|-
+! Ship
+|
+*[[Akizuki]] (Mon,Fri,Sat,Sun)
+*[[Maya]] (Mon,Fri,Sat,Sun)
+*[[Teruzuki]] (Fri,Sat,Sun)
+|}
+
+{| class="article-table" style="width:100%;margin:0;"
+! Equip
+|[[Type 91 Armor Piercing Shell]]
+|-
+! Upgrade
+|[[Type 1 Armor Piercing Shell]]
+|-
+! Screw
+|1/1/4 (1/2/9)
+|-
+|-
+! Screw
+|1/2/4 (2/4/7)
+|-
+!Stock (1-6)
+|0
+[[Type 91 Armor Piercing Shell]]
+|-
+!Stock (6-10)
+|1
+[[Type 91 Armor Piercing Shell]]
+|-
+!Stock (10+)
+|3
+[[Type 91 Armor Piercing Shell]]
+|-
+! Ship
+|
+*[[Kirishima]] (Sun,Mon,Fri,Sat)
+*[[Hiei]] (Wed,Thu,Fri,Sat)
+|}
+</div>
+</pre>
+
+==Performance concerns==
+Finally, a word of caution.
+
+These view separation techniques are all borderline hacks and they come with a performance penalty. Both mobile and desktop version are always loaded together. This is not a major issue for desktop view as they generally have strong network connection. However, as desktop version is also loaded in mobile view, this might result in long load time on mobile devices with weak network connection.
+
+Without fiddling with Wikia's server backend, there is no way to negate this performance penalty or redirect mobile users to a dedicated page. Only the first approach "Building portable pages" does not come with performance penalty as both views are the same. Therefore, it is highly recommended that this approach is taken wherever applicable.
+
+Either that or...
+"Who cares about technical impossibility? Just make my mobile page load faster!"
+
+[[File:I_am_done_here.jpg|thumb|center|400px|To which, my final response shall be...]]
+
+[[User:Fujihita|Fujihita]] ([[User talk:Fujihita|talk]]) 16:24, July 23, 2017 (UTC) Administrator (2014-2017)
+[[Category:Blog posts]]

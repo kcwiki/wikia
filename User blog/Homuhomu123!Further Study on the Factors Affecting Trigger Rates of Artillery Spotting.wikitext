@@ -1,0 +1,463 @@
+<p style="font-size:14.4444446563721px;">'''''>> Due to LIMITED sample size and/or BAD experiment procedure, this article is considered obsolete. '''''</p>
+
+<p style="font-size:14.4444446563721px;">'''>> Click [http://kancolle.wikia.com/wiki/User:Homuhomu123#-_Homu_Test:_Trigger_Rates_of_Artillery_Spotting_.2F_.E3.83.9B.E3.83.A0.E3.83.86.E3.82.B9.E3.83.88.EF.BC.9A.E5.BC.BE.E7.9D.80.E8.A6.B3.E6.B8.AC.E5.B0.84.E6.92.83.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6 here] to see the list of experiments performed by <u>Homu Test</u>.'''</p>
+
+
+==Intro to the Exp't==
+This is my 2nd part of the [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Preliminary_Study_on_the_Factors_Affecting_Double_Attack_Chance#Introduction_to_ASTRE_Project: ASTRE] (Artillery Spotting Trigger Rate Estimate) project, in which 2 experiments, namely Exp't C & Exp't D, were done in total of 3 days.
+
+We will accumulate more data, and use those data to evaluate our previous hypothesis and/or come up with new ones. For convenience, '''we will now assume a fatigue (red face) modifier of -12% when calculating the estimates.''' . 
+
+
+
+
+
+==[ Exp't C ]==
+===[ Information About the Exp't ]===
+'''- Objective: '''To accumulate more data for further analysis. Also, we may evaluate the fatigue (red face) modifer on both CI & DA chance.
+
+'''- Assumptions''': Based on the page [http://kancolle.wikia.com/wiki/Artillery_Spotting_(%E5%BC%BE%E7%9D%80%E8%A6%B3%E6%B8%AC%E5%B0%84%E6%92%83)#The_Trigger_Chance_of_Artillery_Spotting: Artillery Spotting]
+
+'''- Terminology:'''
+*"#ATK" = Total number of attacks"
+*"#DA/CI" = Number of double attacks or cut-ins. A double attack is only counted once.
+*"#DA/CI_HIT" = Number of DA/CI which inflicted non-scratch damage (>10% of the target's current HP). If both double attacks hit the target, they're only counted once.        
+
+'''- Test Ship & Equipment'''
+
+'''[[File:Ships_Equipment.jpg|thumb|left|400px]]'''
+
+- Assume difference in seaplanes will NOT affect the trigger rate of CI.
+
+- Assume difference in artillery will not affect chances for CI or DA.
+
+- FuMO25 is an AA radar.
+
+- #22 Surface radar Kai-4 (+8 accuracy), same as #32 Surface radar.
+>>> Data shall be recorded only if test ships are in severe fatigue & above moderate damage (except Fuso). Fuso will always stay in a moderately damaged status. 
+
+- [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Further_Study_on_the_Factors_Affecting_Trigger_Rates_of_Artillery_Spotting#.5B_Exp.27t_C_.5D_2 Illustration on how data were collected.]
+
+
+
+
+
+
+===[ Exp't C ]===
+- Completed in 1 Day (Total of 5h)
+
+- # Battles:  147
+
+- Formation: LINE AHEAD
+
+- Fleet total LOS = ~381~ '''(+6.5% DA, +8.0% CI)'''
+
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|
+! scope="col"|
+<p style="font-weight:bold;font-size:13.63636302948px;">Chikuma Kai</p>
+
+<p style="font-weight:bold;font-size:13.63636302948px;"><span style="font-size:13.3333339691162px;font-weight:bold;">lv 70 -> 78</span></p>
+
+<p style="font-weight:bold;font-size:13.63636302948px;">{ Flagship }</p>
+! scope="col"|
+<p style="font-weight:bold;font-size:14.4444446563721px;">Prinz Eugen Kai,</p>
+
+<p style="font-weight:bold;font-size:14.4444446563721px;">lv 77 -> 81</p>
+<p style="font-weight:bold;margin-top:0.4em;margin-bottom:0.5em;font-size:13.63636302948px;">
+</p>
+! scope="col"|
+<span style="font-size:13.63636302948px;font-weight:bold;">Fuso Kai, </span>
+
+<p style="font-weight:bold;font-size:13.63636302948px;">lv 78 -> 82,</p>
+
+<p style="font-weight:bold;font-size:13.63636302948px;">Moderately damaged</p>
+|-
+|
+"#ATK"
+|
+<span style="font-size:13.63636302948px;">185</span>
+|
+<span style="font-size:13.63636302948px;"><span style="font-size:14.4444446563721px;">162</span></span>
+|
+<span style="font-size:13.3333339691162px;">168</span>
+|-
+|
+"#DA/CI"
+|
+130
+|
+<span style="font-size:14.4444446563721px;">136</span>
+|
+<span style="font-size:14.4444446563721px;">89</span>
+|-
+|
+"#Single Attack"
+|
+55
+|
+<span style="font-size:14.4444446563721px;">26</span>
+|
+<span style="font-size:14.4444446563721px;">79</span>
+|-
+|
+"#DA/CI HIT"
+|
+69
+|
+<span style="font-size:14.4444446563721px;">77</span>
+|
+<span style="font-size:13.3333339691162px;">65</span>
+|-
+|
+"#Single Attack HIT"
+|
+15
+|
+<span style="font-size:14.4444446563721px;">6</span>
+|
+<span style="font-size:14.4444446563721px;">18</span>
+|-
+|
+'''DA/CI rate'''
+|
+'''70.3%'''
+|
+'''84.0%'''
+|
+'''53.0%'''
+|-
+|
+DA/CI rate Estimate
+|
+<span style="font-size:13.63636302948px;">77.5% = 47%+15%+[7%]+(6.5%)+<2%></span>
+|
+<span style="font-size:13.63636302948px;"><span style="font-size:14.4444446563721px;">84% = 50%+[26%]+(8.0%)</span></span>
+|
+<span style="font-size:13.3333339691162px;">61.5% = 47%+[8%]+(6.5%)</span>
+|-
+|
+'''Difference (Est. - Actual)'''
+|
+'''+7.2%'''
+|
+'''+0.0%'''
+|
+'''+8.5%'''
+|-
+|
+''DA/CI Accuracy''
+|
+''53.1%''
+|
+''56.6%''
+|
+''73.0%''
+|-
+|
+''Single Attack Accuracy''
+|
+''(27.3%)''
+|
+''(23.1%)''
+|
+''(22.8%)''
+|-
+|
+''Accuracy bonus from equipment''
+|
+''+12''
+|
+''+15''
+|
+''+11''
+|}
+
+- Non-S Results:<span class="Apple-tab-span" style="white-space:pre"> </span>16
+
+<span style="font-size:14px;">- Buckets used:</span><span class="Apple-tab-span" style="white-space:pre"> </span><span style="font-size:14px;">11 (1)</span>
+
+<span style="font-size:14px;">- Companion CV(L):</span><span class="Apple-tab-span" style="white-space:pre"> </span><span style="font-size:14px;">Taihou lv 91, Junyou lv 80</span><span class="Apple-tab-span" style="white-space:pre"> </span>
+
+<span style="font-size:14px;">- Wildcard: </span><span class="Apple-tab-span" style="white-space:pre"> </span><span style="font-size:14px;">Amatsukaze</span>
+
+'''NOTE:'''
+*<span style="font-size:14px;">The # of sorties Fuso participated in a moderately damaged status: </span><span style="font-size:14px;">1st -> 147th, consists 100% of all the sorties</span>
+*<span style="font-size:14px;">ALWAYS ABOVE MODERATE DAMAGE FOR TEST SHIPS (EXCEPT FUSO), ABOVE RED FOR THE OTHERS.</span>
+*<span style="font-size:14px;">The action of switching companion CVL and/or wildcard should be prohibited in future exp'ts.</span>
+
+
+
+
+===Findings from Exp't C - (ASTRE)===
+*'''Fatigue doesn't seem to penalize CI chance.'''
+*<strike>'''''The existence of fagitue penalty &/ or minor damage penalty: ~9% DA chance''''', Otherwise the estimates are always getting too far from actual results.</strike>
+*<span style="font-size:14px;">Both CI & DA boost shelling accuracy considerably, if compared with single attacks  (VERY small sample size)</span>
+*Comparing the estimate to her actual DA rate from the moderately damaged Fuso, it seems being 中破 doesn't really affect DA chance. (similar effect as minor damage??)) 
+*Giving the same accuracy bonus from equipments, Chikuma's DA Accuracy is much lower than Fuso's. This is consistent with our previous observation that BBV Fuso with 35.6cm gave significantly higher DA accuracy than CAs.
+*Under severe fatigue, CI has almost the same accuracy as DA.
+
+
+
+
+
+
+
+
+==[ Exp't D ]==
+===[ Information About the Exp't ]===
+'''- Objectives:'''
+#Evaluate effects on DA chance, by remodelling CA to CAV.
+#Preliminary evaluation of radar modifier on CI chance. (Surface vs. AA radar)
+#Calibrate the fatigue (red face) modifer.
+#Determine the effects of level difference on DA chance.
+
+'''- Assumptions''':
+#Based on the page [http://kancolle.wikia.com/wiki/Artillery_Spotting_(%E5%BC%BE%E7%9D%80%E8%A6%B3%E6%B8%AC%E5%B0%84%E6%92%83)#Detailed_Explanation: Artillery Spotting]
+#Since we don't know anything about fatigue penalty on CI chance, assume it does NOT affect CI chance, for now.
+
+'''- Terminology:'''
+*"#ATK" = Total number of attacks"
+*"#DA/CI" = Number of double attacks or cut-ins. A double attack is only counted once.
+*"#DA/CI_HIT" = Number of DA/CI which inflicted non-scratch damage (>10% of the target's current HP). If both double attacks hit the target, they're only counted once.        
+
+'''- Test Ship & Equipment:'''
+
+[[File:4_test_ships.jpg|thumb|left|500px]]
+
+- Please ignore the +2 upgrade on 41cm, I just couldn't find another 41cm for Fuso.. << Shall be avoided in future exp't.
+
+- Assume slight damage does NOT affect DA or CI chance, for now.</p>
+
+<p style="font-size:13.63636302948px;">>>> Data shall be recorded only if test ships are in severe fatigue & above moderate damage (except Fuso). Fuso will always stay in a moderately damaged status. </p>
+
+<p style="font-size:13.63636302948px;"><span style="font-size:13.63636302948px;">- </span>[http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Further_Study_on_the_Factors_Affecting_Trigger_Rates_of_Artillery_Spotting#.5B_Exp.27t_D_.5D_2 Illustration on how data were collected.]</p>
+
+
+
+
+
+
+
+
+
+===[ Exp't D ]===
+
+- Completed in 1 Day (Total of 5h)
+
+- #Battles: 151
+
+- Formation: LINE HEAD
+
+- Fleet total LOS = 347 (initial) -> 363 (final) ... '''( +4.5% DA, +5.5% CI )'''
+
+
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|
+! scope="col"|
+Chikuma Kai Ni
+
+<span style="font-size:14.6666669845581px;font-weight:bold;">lv 78~>84</span>
+
+{ Flagship }
+! scope="col"|
+Prinz Eugen Kai
+
+lv 81~>85
+! scope="col"|
+Fusou Kai
+
+lv 83~>86
+! scope="col"|
+Yamashiro Kai
+
+lv 32~>48
+|-
+|#ATK
+|211
+|197
+|171
+|167
+|-
+|#DA/CI
+|151
+|171
+|79
+|95
+|-
+|#DA/CI HIT
+|68
+|93
+|41
+|61
+|-
+|'''Actual DA/CI chance'''
+|'''71.6%'''
+|'''86.8%'''
+|'''46.2%'''
+|'''56.9%'''
+|-
+|DA/CI rate Estimate
+|75.5% = 47%+15%+[7%]+(4.5%)+<2%>
+|81.5% = 50%+[26%]+(5.5%)
+|54.5% = 50% +(4.5%)
+|65.5% = 50%+[10%]+(4.5%)+<1%>
+|-
+|'''Difference (Est. - Actual)'''
+| '''+3.9%'''
+| '''-5.3%'''
+| '''+8.3%'''
+| '''+8.6%'''
+|-
+|''DA/CI Accuracy''
+|''45.0%''
+|''54.4%''
+|''51.9%''
+|''64.2%''
+|-
+|''Accuracy bonus from equipment''
+| ''+12''
+| ''+7''
+| ''+1''
+| ''+12''
+|}
+- NON-S RESULTS:<span class="Apple-tab-span" style="white-space:pre"> </span>17
+
+- BUCKETS USED:<span class="Apple-tab-span" style="white-space:pre"> </span>32(1)
+
+- CV(L):<span class="Apple-tab-span" style="white-space:pre"> </span>Junyou Kai Ni lv 86<span class="Apple-tab-span" style="white-space:pre"> </span>-> 91
+
+- Wildcard: <span class="Apple-tab-span" style="white-space:pre"> </span>Amatsukaze lv 47->55
+
+
+
+
+
+
+
+===Findings from Exp't D  (ASTRE)===
+- '''''Level differences will NOT affect DA rate.''''' This is proved by comparing Yamashiro (Lv 40+) in [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Further_Study_on_the_Factors_Affecting_Trigger_Rates_of_Artillery_Spotting#.5B_Exp.27t_D_.5D Exp't D] & Fuso (Lv 80+) in [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Preliminary_Study_on_the_Factors_Affecting_Double_Attack_Chance#.5B_Exp.27t_B_.5D Exp't B].
+
+- Fuso was used to evaluate the fatigue penalty on DA chance, which gives a value of -8.3%. This is very close to our previous estimate of -9%.
+
+''- Yamashiro's DA accuracy is 12.3% higher than Fuso's, even when she's 40 levels lower her sister ship. This very much owes to her higher equipment bonus ??''
+
+- Prinz Eugen replaced her extraordinary FuMO AA radar with a "poor" #22 Surface radar. However, the CI trigger rate actually increased by 4.3% (after calibration on LoS difference), with almost the same CI accuracy. '''''As a preliminary hypothesis, we may try to verify that Surface Radars give ~ 4% higher CI chance than AA Radars, and CI chance is NOT so dependent on the accuracy stat on radars ??''' ''
+
+- '''''After remodelling, Chikuma's DA rate slightly rose by +3.3%.''''' Does it mean that CAV has higher base trigger rate than DA ?? 
+
+- As <u>total ship levels</u> rose by 42, their total LoS rose by 16. From this obseravtion, we may deduct the formula:
+
+<p style="text-align:center;">'''''difference in Fleet.LoS == SUM( difference in ship.Lv)  * 0.4.   '''''</p>
+
+This formula will be further evaluated in future experiments. <<EDIT: not ture for fleets with very high LoS growth (see Exp't E)
+
+
+
+
+
+
+
+==Next Step: ( [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Back_up_for_Page_Artillery_Spotting Exp't E] )==
+
+<span style="font-size:14px;">In the next exp't, besides collecting reference data, I will use ASTRE to evaluate different radar modifiers on DA & CI chances. Namely:</span>
+
+- #13 AA Radar  (CI)
+
+- FuMO32 AA Radar (DA)
+
+- #22 Kai-4 Surface Radar (DA)
+<p style="font-size:14.6666669845581px;">
+</p>
+
+<p style="font-size:14.6666669845581px;">
+</p>
+
+<p style="font-size:14.6666669845581px;">
+</p>
+
+<p style="font-size:14.6666669845581px;">
+</p>
+
+
+
+
+
+
+==Illustration on How Data Were Collected==
+====<span style="font-size:15px;font-weight:bold;">[ Exp't C ]</span>====
+
+[[File:Fatigue.jpg|thumb|left|317px]]
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">Severe fatigue for the 3 test ships, and moderately damaged BB Fuso.</span></p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;">[[File:How_data_were_collected.jpg|left]]`</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">Data counting (using `)</span></p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">`</span></p>
+
+<p style="font-size:14.6666669845581px;">[[File:Fuso_Solo.jpg|left]]</p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">`</span></p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">`</span></p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">`</span></p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">`</span></p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">`</span></p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">`</span></p>
+
+<p style="font-size:14.6666669845581px;"><span style="font-size:14.6666669845581px;">Illustration on How to keep Fuso moderately damaged (Map 3-2-A)</span></p>
+
+<p style="font-size:14.6666669845581px;">` </p>
+
+<p style="font-size:14.6666669845581px;">` </p>
+
+<p style="font-size:14.6666669845581px;">` </p>
+
+<p style="font-size:14.6666669845581px;">` </p>
+
+<p style="font-size:14.6666669845581px;">` </p>
+
+<p style="font-size:14.6666669845581px;">` </p>
+
+<p style="font-size:14.6666669845581px;">` </p>
+
+<p style="font-size:14.6666669845581px;">` </p>
+
+<p style="font-size:14.6666669845581px;">`</p>
+<h3 style="font-size:14.6666669845581px;">[ Exp't D ]</h3>
+Sortie & data counting, using `
+
+[[File:Expt_D_Illustration.jpg|left]]`
+[[Category:Blog posts]]

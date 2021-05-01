@@ -1,0 +1,1180 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:70%;" | V12-2: 北太平洋MI諸島沖
+| rowspan="3" style="text-align:center;width:30%;" | [[File:Vita Map Banner 12-2.png|400px]]
+|-
+! Items
+| None
+|-
+! Restrictions
+| No BB/BBV allowed
+|-
+! Strategy Info
+|MI作戦
+|正規空母を基幹戦力とした有力なる空母機動部隊を以て、<br>MI島の航空基地を無力化しつつ、邀撃してくるであろう<br>敵機動部隊を撃破、同方面の制海権を確立せよ！
+|}
+<center>[[File:Vita Map Image 12-2.png|600px]]</center>
+==Map guide==
+{{Map/Branching
+|id = V12-2
+|order = C,D,B
+|A/empty -> C =*Meet any of the following requirements :
+**CV(B) + FBB ≧ 4
+**CV(L/B) ≧ 4
+**FBB ≧ 3
+**CV(B) ≧ 3
+|A/empty -> B =*Meet all of the following requirements :
+**Do not meet the requirements for C
+**{{ShipLink|Akitsushima}} in the fleet '''OR''' '''Fast fleet'''
+**CL ≧ 1 and DD ≧ 2
+|A/empty -> D/storm =*Do not meet the requirements for C nor B
+|E/empty -> I/empty =*Meet any of the following requirements :
+**SS(V) ≧ 1
+**Fail the LoS check
+|E/empty -> H =*Do not meet the requirements for I
+|H ->G = *Fail the LoS check
+|H ->J = *Pass the LoS check
+}}
+
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=任務部隊 III群
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|240
+|618
+|527
+|591
+|591
+|576
+|576
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|220
+|618
+|527
+|591
+|576
+|576
+|575
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|200
+|617
+|527
+|591
+|576
+|575
+|575
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|180
+|616
+|527
+|591
+|575
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=任務部隊 I群
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|280
+|618
+|579
+|592
+|591
+|576
+|576
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|260
+|618
+|579
+|591
+|591
+|576
+|576
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|240
+|579
+|579
+|591
+|591
+|576
+|576
+|-
+}}
+{{Map/Nodes|name=任務部隊 II群
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|320
+|618
+|618
+|543
+|592
+|576
+|576
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|310
+|618
+|617
+|543
+|592
+|576
+|576
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|300
+|617
+|617
+|543
+|592
+|576
+|576
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|280
+|616
+|616
+|543
+|592
+|576
+|576
+|-
+}}
+{{Map/Nodes|name=MI島航空基地
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|500
+|584
+|549
+|550
+|551
+|558
+|558
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|460
+|584
+|536
+|537
+|538
+|558
+|558
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|430
+|583
+|536
+|537
+|538
+|558
+|558
+|-
+}}
+{{Map/Nodes|name=任務部隊 Y群
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|400
+|585
+|527
+|592
+|592
+|576
+|576
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|360
+|585
+|527
+|592
+|576
+|576
+|576
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|320
+|585
+|527
+|592
+|575
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=任務部隊 III群
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|220
+|618
+|527
+|591
+|576
+|576
+|575
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|200
+|617
+|527
+|591
+|576
+|575
+|575
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|180
+|616
+|527
+|591
+|575
+|575
+|575
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|160
+|579
+|527
+|591
+|575
+|575
+|501
+|-
+}}
+{{Map/Nodes|name=任務部隊 I群
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|260
+|618
+|579
+|591
+|591
+|576
+|576
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|240
+|579
+|579
+|591
+|591
+|576
+|576
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|200
+|579
+|528
+|591
+|576
+|575
+|575
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|180
+|579
+|528
+|591
+|576
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=任務部隊 II群
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|310
+|618
+|617
+|543
+|592
+|576
+|576
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|300
+|617
+|617
+|543
+|592
+|576
+|576
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|280
+|616
+|616
+|543
+|592
+|576
+|576
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|260
+|616
+|616
+|543
+|591
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=MI島航空基地
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|460
+|584
+|536
+|537
+|538
+|558
+|558
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|430
+|583
+|536
+|537
+|538
+|558
+|558
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|400
+|583
+|536
+|537
+|538
+|526
+|526
+|-
+}}
+{{Map/Nodes|name=任務部隊 Y群
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|320
+|585
+|527
+|592
+|575
+|575
+|575
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|300
+|585
+|527
+|591
+|575
+|575
+|575
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|280
+|585
+|527
+|591
+|575
+|501
+|501
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|260
+|585
+|522
+|575
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|乙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=任務部隊 III群
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|160
+|579
+|527
+|591
+|575
+|575
+|501
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|150
+|579
+|527
+|591
+|575
+|501
+|501
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|130
+|528
+|527
+|591
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=任務部隊 I群
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|200
+|579
+|528
+|591
+|576
+|575
+|575
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|180
+|579
+|528
+|591
+|576
+|501
+|501
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|170
+|528
+|528
+|591
+|575
+|501
+|501
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|160
+|528
+|525
+|591
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=任務部隊 II群
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|260
+|616
+|616
+|543
+|591
+|575
+|575
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|240
+|579
+|579
+|543
+|591
+|575
+|575
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|200
+|528
+|528
+|543
+|591
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI島航空基地
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|400
+|583
+|536
+|537
+|538
+|526
+|526
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|380
+|583
+|536
+|537
+|538
+|513
+|513
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|360
+|583
+|536
+|537
+|513
+|513
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|340
+|583
+|536
+|513
+|513
+|-
+}}
+{{Map/Nodes|name=任務部隊 Y群
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|280
+|585
+|527
+|591
+|575
+|501
+|501
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|260
+|585
+|522
+|575
+|501
+|501
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|220
+|585
+|522
+|501
+|501
+|501
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|210
+|585
+|522
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=任務部隊 III群
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|150
+|579
+|527
+|591
+|575
+|501
+|501
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|130
+|528
+|527
+|591
+|575
+|501
+|501
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|120
+|528
+|591
+|575
+|501
+|501
+|501
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|110
+|525
+|519
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=任務部隊 I群
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|170
+|528
+|528
+|591
+|575
+|501
+|501
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|160
+|528
+|525
+|591
+|575
+|501
+|501
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|140
+|528
+|525
+|519
+|575
+|501
+|501
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|130
+|525
+|525
+|519
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=任務部隊 II群
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|240
+|579
+|579
+|543
+|591
+|575
+|575
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|200
+|528
+|528
+|543
+|591
+|501
+|501
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|180
+|528
+|525
+|542
+|519
+|501
+|501
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|160
+|525
+|525
+|542
+|519
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI島航空基地
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|340
+|583
+|536
+|513
+|513
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|320
+|583
+|513
+|513
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|300
+|583
+|513
+|513
+|-
+}}
+{{Map/Nodes|name=任務部隊 Y群
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|220
+|585
+|522
+|501
+|501
+|501
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|210
+|585
+|522
+|501
+|501
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|200
+|585
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丁=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=任務部隊 III群
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|120
+|528
+|591
+|575
+|501
+|501
+|501
+|-
+|B
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|110
+|525
+|519
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=任務部隊 I群
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|140
+|528
+|525
+|519
+|575
+|501
+|501
+|-
+|C
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|130
+|525
+|525
+|519
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=任務部隊 II群
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|180
+|528
+|525
+|542
+|519
+|501
+|501
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|160
+|525
+|525
+|542
+|519
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI島航空基地
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|320
+|583
+|513
+|513
+|-
+|H
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|300
+|583
+|513
+|513
+|-
+}}
+{{Map/Nodes|name=任務部隊 Y群
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|210
+|585
+|522
+|501
+|501
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|200
+|585
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+</tabber>
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, F, H, J
+|boss = J
+|{{ShipFrom|163}} : H, J
+|{{ShipFrom|134}} : F, H, J
+|{{ShipFrom|132}} : F, H, J
+|{{ShipFrom|415}} : F, H, J
+|{{ShipFrom|122}} : F, H, J
+|{{ShipFrom|83}} : F, H, J
+|{{ShipFrom|91}} : F, H, J
+|{{ShipFrom|84}} : B, F, H, J
+|{{ShipFrom|90}} : B, F, H, J
+|{{ShipFrom|79}} : B, C, F, H, J
+|{{ShipFrom|85}} : B, C, F, H, J
+|{{ShipFrom|71}} : B, C, F, H, J
+|{{ShipFrom|72}} : B, C, F, H, J
+|{{ShipFrom|21}} : B, C, F, H, J
+|{{ShipFrom|9}} : B, C, F, H, J
+|{{ShipFrom|10}} : B, C, F, H, J
+|{{ShipFrom|32}} : B, C, F, H, J
+|{{ShipFrom|12}} : B, C, F, H, J
+|{{ShipFrom|33}} : B, C, F, H, J
+|{{ShipFrom|13}} : B, C, F, H, J
+|{{ShipFrom|14}} : B, C, F, H, J
+|{{ShipFrom|48}} : B, C, F, H, J
+|{{ShipFrom|49}} : B, C, F, H, J
+|{{ShipFrom|17}} : B, C, F, H, J
+|{{ShipFrom|18}} : B, C, F, H, J
+|{{ShipFrom|19}} : B, C, F, H, J
+|{{ShipFrom|44}} : B, C, F, H, J
+|{{ShipFrom|45}} : B, C, F, H, J
+|{{ShipFrom|46}} : B, C, F, H, J
+|{{ShipFrom|453}} : J
+|{{ShipFrom|120}} : J
+|{{ShipFrom|124}} : J
+|{{ShipFrom|125}} : J
+|{{ShipFrom|70}} : J
+}}
+|-|甲=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, F, H, J
+|boss = J
+|{{ShipFrom|163}} : H, J
+|{{ShipFrom|134}} : F, H, J
+|{{ShipFrom|132}} : F, H, J
+|{{ShipFrom|415}} : F, H, J
+|{{ShipFrom|122}} : F, H, J
+|{{ShipFrom|83}} : F, H, J
+|{{ShipFrom|91}} : F, H, J
+|{{ShipFrom|84}} : B, F, H, J
+|{{ShipFrom|90}} : B, F, H, J
+|{{ShipFrom|79}} : B, C, F, H, J
+|{{ShipFrom|85}} : B, C, F, H, J
+|{{ShipFrom|71}} : B, C, F, H, J
+|{{ShipFrom|72}} : B, C, F, H, J
+|{{ShipFrom|21}} : B, C, F, H, J
+|{{ShipFrom|9}} : B, C, F, H, J
+|{{ShipFrom|10}} : B, C, F, H, J
+|{{ShipFrom|32}} : B, C, F, H, J
+|{{ShipFrom|12}} : B, C, F, H, J
+|{{ShipFrom|33}} : B, C, F, H, J
+|{{ShipFrom|13}} : B, C, F, H, J
+|{{ShipFrom|14}} : B, C, F, H, J
+|{{ShipFrom|48}} : B, C, F, H, J
+|{{ShipFrom|49}} : B, C, F, H, J
+|{{ShipFrom|17}} : B, C, F, H, J
+|{{ShipFrom|18}} : B, C, F, H, J
+|{{ShipFrom|19}} : B, C, F, H, J
+|{{ShipFrom|44}} : B, C, F, H, J
+|{{ShipFrom|45}} : B, C, F, H, J
+|{{ShipFrom|46}} : B, C, F, H, J
+|{{ShipFrom|453}} : J
+|{{ShipFrom|120}} : J
+|{{ShipFrom|124}} : J
+|{{ShipFrom|125}} : J
+|{{ShipFrom|70}} : J
+}}
+|-|乙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, F, H, J
+|boss = J
+|{{ShipFrom|163}} : H,
+|{{ShipFrom|134}} : H, J
+|{{ShipFrom|132}} : F, H, J
+|{{ShipFrom|415}} : F, H, J
+|{{ShipFrom|122}} : F, H, J
+|{{ShipFrom|83}} : F, H, J
+|{{ShipFrom|91}} : F, H, J
+|{{ShipFrom|84}} : B, F, H, J
+|{{ShipFrom|90}} : B, F, H, J
+|{{ShipFrom|79}} : B, C, F, H, J
+|{{ShipFrom|85}} : B, C, F, H, J
+|{{ShipFrom|71}} : B, C, F, H, J
+|{{ShipFrom|72}} : B, C, F, H, J
+|{{ShipFrom|21}} : B, C, F, H, J
+|{{ShipFrom|9}} : B, C, F, H, J
+|{{ShipFrom|10}} : B, C, F, H, J
+|{{ShipFrom|32}} : B, C, F, H, J
+|{{ShipFrom|12}} : B, C, F, H, J
+|{{ShipFrom|33}} : B, C, F, H, J
+|{{ShipFrom|13}} : B, C, F, H, J
+|{{ShipFrom|14}} : B, C, F, H, J
+|{{ShipFrom|48}} : B, C, F, H, J
+|{{ShipFrom|49}} : B, C, F, H, J
+|{{ShipFrom|17}} : B, C, F, H, J
+|{{ShipFrom|18}} : B, C, F, H, J
+|{{ShipFrom|19}} : B, C, F, H, J
+|{{ShipFrom|44}} : B, C, F, H, J
+|{{ShipFrom|45}} : B, C, F, H, J
+|{{ShipFrom|46}} : B, C, F, H, J
+|{{ShipFrom|453}} : J
+|{{ShipFrom|120}} : J
+|{{ShipFrom|124}} : J
+|{{ShipFrom|125}} : J
+|{{ShipFrom|70}} : J
+}}
+|-|丙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, F, H, J
+|boss = J
+|{{ShipFrom|134}} : H, J
+|{{ShipFrom|132}} : F, H, J
+|{{ShipFrom|415}} : F, H, J
+|{{ShipFrom|122}} : F, H, J
+|{{ShipFrom|83}} : F, H, J
+|{{ShipFrom|91}} : F, H, J
+|{{ShipFrom|84}} : B, F, H, J
+|{{ShipFrom|90}} : B, F, H, J
+|{{ShipFrom|79}} : B, C, F, H, J
+|{{ShipFrom|85}} : B, C, F, H, J
+|{{ShipFrom|71}} : B, C, F, H, J
+|{{ShipFrom|72}} : B, C, F, H, J
+|{{ShipFrom|21}} : B, C, F, H, J
+|{{ShipFrom|9}} : B, C, F, H, J
+|{{ShipFrom|10}} : B, C, F, H, J
+|{{ShipFrom|32}} : B, C, F, H, J
+|{{ShipFrom|12}} : B, C, F, H, J
+|{{ShipFrom|33}} : B, C, F, H, J
+|{{ShipFrom|13}} : B, C, F, H, J
+|{{ShipFrom|14}} : B, C, F, H, J
+|{{ShipFrom|48}} : B, C, F, H, J
+|{{ShipFrom|49}} : B, C, F, H, J
+|{{ShipFrom|17}} : B, C, F, H, J
+|{{ShipFrom|18}} : B, C, F, H, J
+|{{ShipFrom|19}} : B, C, F, H, J
+|{{ShipFrom|44}} : B, C, F, H, J
+|{{ShipFrom|45}} : B, C, F, H, J
+|{{ShipFrom|46}} : B, C, F, H, J
+|{{ShipFrom|124}} : J
+|{{ShipFrom|125}} : J
+|{{ShipFrom|70}} : J
+}}
+|-|丁=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, F, H, J
+|boss = J
+|{{ShipFrom|132}} : H, J
+|{{ShipFrom|415}} : H, J
+|{{ShipFrom|122}} : F, H, J
+|{{ShipFrom|83}} : F, H, J
+|{{ShipFrom|91}} : F, H, J
+|{{ShipFrom|84}} : B, F, H, J
+|{{ShipFrom|90}} : B, F, H, J
+|{{ShipFrom|79}} : B, C, F, H, J
+|{{ShipFrom|85}} : B, C, F, H, J
+|{{ShipFrom|71}} : B, C, F, H, J
+|{{ShipFrom|72}} : B, C, F, H, J
+|{{ShipFrom|21}} : B, C, F, H, J
+|{{ShipFrom|9}} : B, C, F, H, J
+|{{ShipFrom|10}} : B, C, F, H, J
+|{{ShipFrom|32}} : B, C, F, H, J
+|{{ShipFrom|12}} : B, C, F, H, J
+|{{ShipFrom|33}} : B, C, F, H, J
+|{{ShipFrom|13}} : B, C, F, H, J
+|{{ShipFrom|14}} : B, C, F, H, J
+|{{ShipFrom|48}} : B, C, F, H, J
+|{{ShipFrom|49}} : B, C, F, H, J
+|{{ShipFrom|17}} : B, C, F, H, J
+|{{ShipFrom|18}} : B, C, F, H, J
+|{{ShipFrom|19}} : B, C, F, H, J
+|{{ShipFrom|44}} : B, C, F, H, J
+|{{ShipFrom|45}} : B, C, F, H, J
+|{{ShipFrom|46}} : B, C, F, H, J
+|{{ShipFrom|124}} : J
+|{{ShipFrom|125}} : J
+|{{ShipFrom|70}} : J
+}}
+</tabber>

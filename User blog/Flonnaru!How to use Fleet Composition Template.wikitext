@@ -1,0 +1,471 @@
+<br />
+
+<center>
+<div style="width:300px;background:#A596B5;border-top-right-radius:10px;border-top-left-radius:10px;text-align:center;"><font size=4 color=#000040>'''Introduction'''</font></div>
+</center>
+{| align="center" style="width:100%"
+| style="background:#000040;border-top-left-radius:5px;border-bottom-left-radius:5px;width:4px" rowspan="3" |
+| style="background:#000040" colspan="1" |
+| style="background:#000040;border-top-right-radius:5px;border-bottom-right-radius:5px;width:4px" rowspan="3" |
+|-
+|
+<font size=3 color=#000040>In this blog im gonna show you how to use the Fleet Compositions Template to visualize your fleets build
+in compact form for map clears or the upcoming Spring Event 2015.<br /> 
+With little knowledge about wikitext you should be able to use thit template.<br /> 
+If your template still wont work after reading through this blog,<br /> 
+just post a comment as I might have not explained it well.<br /> 
+Feel free to criticize this template or leave suggestions of how to improve it.<br /> 
+</font>
+|-
+| style="background:#000040" colspan="1" |
+|}
+<br />
+
+<div style="width:200px;background:#A596B5;border-top-right-radius:10px;border-top-left-radius:10px;text-align:center"><font size=4 color=#000040>'''Template'''</font></div>
+{| align="center" style="width:100%"
+| style="background:#000040;border-top-left-radius:5px;border-bottom-left-radius:5px;width:4px" rowspan="3" |
+| style="background:#000040" colspan="1" |
+| style="background:#000040;border-top-right-radius:5px;border-bottom-right-radius:5px;width:4px" rowspan="3" |
+|-
+|
+<font size=3 color=#000040>
+This is the sourcecode (click expand) for the template.<br /> 
+Copy paste this into your post while being in source mode.<br />
+Only 'Ship Card #1' ; 'Equipment Type #1' and so on should be edited.<br /> 
+Further below you can find a list for Equipment Icons.<br />
+The Card.jpg are in the respective wikipage of that ship<br />
+and copy paste the name of the file to 'Ship Card #1'.<br />
+An example is explained below.<br />
+The template can be tested freely in a Sandboxpage [http://kancolle.wikia.com/wiki/Sandbox/FleetCompositionTemplate]
+and <b>NOT</b> in this blog,post questions here. 
+</font>
+|-
+| style="background:#000040" colspan="1" |
+|}
+
+<div class="mw-collapsible mw-collapsed">
+<nowiki>{{</nowiki>FleetCompViewer<br />
+|Map = Map/Event Map<br />
+|Ship1 = Ship Card #1<br />
+|Ship1Equip1 = Equipment Name #1<br />
+|Ship1Equip1_icon = Equipment Type #1<br />
+|Ship1Equip2 = Equipment Name #2<br />
+|Ship1Equip2_icon = Equipment Type #2<br />
+|Ship1Equip3 = Equipment Name #3<br />
+|Ship1Equip3_icon = Equipment Type #3<br />
+|Ship1Equip4 = Equipment Name #4<br />
+|Ship1Equip4_icon = Equipment Type #4<br />
+<br />
+|Ship2 = Ship Card #2<br />
+|Ship2Equip1 = Equipment Name #1<br />
+|Ship2Equip1_icon = Equipment Type #1<br />
+|Ship2Equip2 = Equipment Name #2<br />
+|Ship2Equip2_icon = Equipment Type #2<br />
+|Ship2Equip3 = Equipment Name #3<br />
+|Ship2Equip3_icon = Equipment Type #3<br />
+|Ship2Equip4 = Equipment Name #4<br />
+|Ship2Equip4_icon = Equipment Type #4<br />
+<br />
+|Ship3 = Ship Card #3<br />
+|Ship3Equip1 = Equipment Name #1<br />
+|Ship3Equip1_icon = Equipment Type #1<br />
+|Ship3Equip2 = Equipment Name #2<br />
+|Ship3Equip2_icon = Equipment Type #2<br />
+|Ship3Equip3 = Equipment Name #3<br />
+|Ship3Equip3_icon = Equipment Type #3<br />
+|Ship3Equip4 = Equipment Name #4<br />
+|Ship3Equip4_icon = Equipment Type #4<br />
+<br />
+|Ship4 = Ship Card #4<br />
+|Ship4Equip1 = Equipment Name #1<br />
+|Ship4Equip1_icon = Equipment Type #1<br />
+|Ship4Equip2 = Equipment Name #2<br />
+|Ship4Equip2_icon = Equipment Type #2<br />
+|Ship4Equip3 = Equipment Name #3<br />
+|Ship4Equip3_icon = Equipment Type #3<br />
+|Ship4Equip4 = Equipment Name #4<br />
+|Ship4Equip4_icon = Equipment Type #4<br />
+<br />
+|Ship5 = Ship Card #5<br />
+|Ship5Equip1 = Equipment Name #1<br />
+|Ship5Equip1_icon = Equipment Type #1<br />
+|Ship5Equip2 = Equipment Name #2<br />
+|Ship5Equip2_icon = Equipment Type #2<br />
+|Ship5Equip3 = Equipment Name #3<br />
+|Ship5Equip3_icon = Equipment Type #3<br />
+|Ship5Equip4 = Equipment Name #4<br />
+|Ship5Equip4_icon = Equipment Type #4<br />
+<br />
+|Ship6 = Ship Card #6<br />
+|Ship6Equip1 = Equipment Name #1<br />
+|Ship6Equip1_icon = Equipment Type #1<br />
+|Ship6Equip2 = Equipment Name #2<br />
+|Ship6Equip2_icon = Equipment Type #2<br />
+|Ship6Equip3 = Equipment Name #3<br />
+|Ship6Equip3_icon = Equipment Type #3<br />
+|Ship6Equip4 = Equipment Name #4<br />
+|Ship6Equip4_icon = Equipment Type #4<br />
+<br />
+|Total_LOS = Fleet LOS: xx.xx<br />
+|Total_FP = xxx Fighter Power<br />
+|Route =Route: x-x-x-x<br />
+<nowiki>}}</nowiki>
+<br />
+</div>
+<br />
+
+<div style="width:200px;background:#A596B5;border-top-right-radius:10px;border-top-left-radius:10px;text-align:center"><font size=4 color=#000040>'''Example'''</font></div>
+{| align="center" style="width:100%"
+| style="background:#000040;border-top-left-radius:5px;border-bottom-left-radius:5px;width:4px" rowspan="3" |
+| style="background:#000040" colspan="1" |
+| style="background:#000040;border-top-right-radius:5px;border-bottom-right-radius:5px;width:4px" rowspan="3" |
+|-
+|
+<font size=3 color=#000040>Here is an example for a 6-2 Fleet.<br />
+The value for <nowiki>'>Map='</nowiki> is a string,so simply write the Map/Event map down.<br />
+The ship cards files are findable in the wikipage of the Ship.
+For Taihou it would be [http://kancolle.wikia.com/wiki/Taihou].<br />
+Now you choose the variant of the ship and click on the image.<br />
+[[File:File name example.png|200px]]<br />
+As in the picture above you can see the file name (dont forget the .jpg / .png !),<br />
+copy and paste that into the slot of <nowiki>'Ship Card #x'</nowiki>.<br />
+You repeat that again for the second one and so on.<br /></font>
+
+
+<font size=3 color=#000040>
+
+<br />
+The <nowiki>'Equipment Name #y'</nowiki> for the ship in case can be rewritten however you want,<br />
+keep in mind other people have have to recognize the Equipment name.<br />
+Btw, the string shouldnt be to long,otherwise the cell is gonna jump another row and the table looks messed up.<br />
+If the equipmentslot is empty,add either <nowiki>'---'</nowiki> or leave it empty.<br />
+</font>
+
+
+<font size=3 color=#000040>
+
+<br />
+Also copy paste the equipmentype.jpg in the place of <nowiki>'Equipment Type #y'</nowiki>.<br />
+A list of equipment type icons are in a reference table further below.<br />
+Empty Slots should be filled too,otherwise the table gets corrupted,<br />
+because of this there is a slotfiller.jpg added in the reference table.<br />
+</font>
+
+
+<font size=3 color=#000040>
+
+<br />
+The Fleet ELOS value is that one which is shown after adding every ELOS of the ships and subtracted by Admiral level (in short,new formula for ELOS calculation).<br />
+<nowiki>'|Total_FP's</nowiki> value is the sum of your fighterpower (refer to combat page for further details).<br />
+For the taken route use capitals letters and separate them with <nowiki>'-'</nowiki>.<br />
+Altogether it can look like this (click expand)<br />
+</font>
+|-
+| style="background:#000040" colspan="1" |
+|}
+
+<div class="mw-collapsible mw-collapsed">
+<br />
+{{FleetCompViewer
+
+|Map         = 6-2
+|Ship1       = 151 Card.jpg
+|Ship1Equip1 =Prototype 46cm Twin Cannon
+|Ship1Equip1_icon = RedGunHeavy.png
+|Ship1Equip2 =Prototype 41cm Twin Cannon
+|Ship1Equip2_icon = RedGunHeavy.png
+|Ship1Equip3 =Type 0 Observation Seaplane
+|Ship1Equip3_icon = Seaplane.png
+|Ship1Equip4 =Type 1 Shell
+|Ship1Equip4_icon = RedAmmo.png
+
+|Ship2       = 156.jpg
+|Ship2Equip1 = Reppuu (601 Air Group)
+|Ship2Equip1_icon = GreenPlane.png
+|Ship2Equip2 = Reppuu (601 Air Group)
+|Ship2Equip2_icon = GreenPlane.png
+|Ship2Equip3 = Reppuu 
+|Ship2Equip3_icon = GreenPlane.png
+|Ship2Equip4 = Type 62 Zero Fighter-bomber
+|Ship2Equip4_icon = RedPlane.png
+
+|Ship3       = 144.jpg
+|Ship3Equip1 =12.7cm Type B Kai 2
+|Ship3Equip1_icon = RedGunLight.png
+|Ship3Equip2 =12.7cm Type B Kai 2
+|Ship3Equip2_icon = RedGunLight.png
+|Ship3Equip3 =Type 33 Surface RADAR
+|Ship3Equip3_icon = Radar.png
+|Ship3Equip4 =---
+|Ship3Equip4_icon = Empty equipment slot.png‎
+
+|Ship4       = 145.jpg
+|Ship4Equip1 =10cm Twin High-angle + FD
+|Ship4Equip1_icon = GreenGunDP.png
+|Ship4Equip2 = 61cm Quint O2 Torpedo Mount
+|Ship4Equip2_icon = Torpedo.png
+|Ship4Equip3 = Type 13 AIR RADAR Kai
+|Ship4Equip3_icon = Radar.png
+|Ship4Equip4 = ---
+|Ship4Equip4_icon = Empty equipment slot.png‎
+
+|Ship5       = 114.png
+|Ship5Equip1 = Type A Ko-hyoteki
+|Ship5Equip1_icon = Torpedo.png
+|Ship5Equip2 = 15.2cm Twin Gun Mount
+|Ship5Equip2_icon = RedGunMedium.png
+|Ship5Equip3 = 15.5cm Triple Gun Mount
+|Ship5Equip3_icon = YellowGun.png
+|Ship5Equip4 = ---
+|Ship5Equip4_icon = Empty equipment slot.png‎
+
+|Ship6       = 115.png
+|Ship6Equip1 = Type A Ko-hyoteki
+|Ship6Equip1_icon = Torpedo.png
+|Ship6Equip2 = 15.2cm Twin Gun Mount
+|Ship6Equip2_icon = RedGunMedium.png
+|Ship6Equip3 = 15.5cm Triple Gun Mount
+|Ship6Equip3_icon = YellowGun.png
+|Ship6Equip4 = ---
+|Ship6Equip4_icon = Empty equipment slot.png‎
+
+|Total_LOS  = Fleet LOS: 29.35
+|Total_FP   = 174 Fighter Power
+|Route      =Route: B - F - H - K
+}}
+<font size=3 color=#000040>
+with source code:</font><br />
+<nowiki>{{</nowiki>FleetCompViewer<br />
+|Map = 6-2<br />
+|Ship1 = 151 Card.jpg<br />
+|Ship1Equip1 =Prototype 46cm Twin Cannon<br />
+|Ship1Equip1_icon = RedGunHeavy.png<br />
+|Ship1Equip2 =Prototype 41cm Twin Cannon<br />
+|Ship1Equip2_icon = RedGunHeavy.png<br />
+|Ship1Equip3 =Type 0 Observation Seaplane<br />
+|Ship1Equip3_icon = Seaplane.png<br />
+|Ship1Equip4 =Type 1 Shell<br />
+|Ship1Equip4_icon = RedAmmo.png<br />
+<br />
+|Ship2 = 156.jpg<br />
+|Ship2Equip1 = Reppuu (601 Air Group)<br />
+|Ship2Equip1_icon = GreenPlane.png<br />
+|Ship2Equip2 = Reppuu (601 Air Group)<br />
+|Ship2Equip2_icon = GreenPlane.png<br />
+|Ship2Equip3 = Reppuu<br />
+|Ship2Equip3_icon = GreenPlane.png<br />
+|Ship2Equip4 = Type 62 Zero Fighter-bomber<br />
+|Ship2Equip4_icon = RedPlane.png<br />
+<br />
+|Ship3 = 144.jpg<br />
+|Ship3Equip1 =12.7cm Type B Kai 2<br />
+|Ship3Equip1_icon = RedGunLight.png<br />
+|Ship3Equip2 =12.7cm Type B Kai 2<br />
+|Ship3Equip2_icon = RedGunLight.png<br />
+|Ship3Equip3 =Type 33 Surface RADAR<br />
+|Ship3Equip3_icon = Radar.png<br />
+|Ship3Equip4 =---<br />
+|Ship3Equip4_icon = Empty equipment slot.png‎<br />
+<br />
+|Ship4 = 145.jpg<br />
+|Ship4Equip1 =10cm Twin High-angle + FD<br />
+|Ship4Equip1_icon = GreenGunDP.png<br />
+|Ship4Equip2 = 61cm Quint O2 Torpedo Mount<br />
+|Ship4Equip2_icon = Torpedo.png<br />
+|Ship4Equip3 = Type 13 AIR RADAR Kai<br />
+|Ship4Equip3_icon = Radar.png<br />
+|Ship4Equip4 = ---<br />
+|Ship4Equip4_icon = Empty equipment slot.png‎<br />
+<br />
+|Ship5 = 114.png<br />
+|Ship5Equip1 = Type A Ko-hyoteki<br />
+|Ship5Equip1_icon = Torpedo.png<br />
+|Ship5Equip2 = 15.2cm Twin Gun Mount<br />
+|Ship5Equip2_icon = RedGunMedium.png<br />
+|Ship5Equip3 = 15.5cm Triple Gun Mount<br />
+|Ship5Equip3_icon = YellowGun.png<br />
+|Ship5Equip4 = ---<br />
+|Ship5Equip4_icon = Empty equipment slot.png‎<br />
+<br />
+|Ship6 = 115.png<br />
+|Ship6Equip1 = Type A Ko-hyoteki<br />
+|Ship6Equip1_icon = Torpedo.png<br />
+|Ship6Equip2 = 15.2cm Twin Gun Mount<br />
+|Ship6Equip2_icon = RedGunMedium.png<br />
+|Ship6Equip3 = 15.5cm Triple Gun Mount<br />
+|Ship6Equip3_icon = YellowGun.png<br />
+|Ship6Equip4 = ---<br />
+|Ship6Equip4_icon = Empty equipment slot.png‎<br />
+<br />
+|Total_LOS = Fleet LOS: 29.35<br />
+|Total_FP = 174 Fighter Power<br />
+|Route =Route: B - F - H - K<br />
+<nowiki>}}</nowiki><br />
+</div>
+<br />
+
+<center>
+<div style="width:200px;background:#A596B5;border-top-right-radius:10px;border-top-left-radius:10px;text-align:center;"><font size=4 color=#000040>'''Reference Table'''</font></div>
+{| style="width:600px" align="center"
+| rowspan="35" style="background:#000040;border-top-left-radius:5px;border-bottom-left-radius:5px;width:4px"|
+| style="background:#000040;width:590" colspan="5" |
+| rowspan="35" style="background:#000040;border-top-right-radius:5px;border-bottom-right-radius:5px;width:4px"|
+|-
+| style="width:45px;text-align:center;background:#A596B5"|<font size=3 color=#000080>Icon</font>
+| style="background:#000040;width:590" rowspan="33" |
+| style="width:300px;text-align:center;background:#A596B5"|<font size=3 color=#000080>Equipment Type</font>
+| style="background:#000040;width:590" rowspan="33" |
+| style="width:255px;text-align:center;background:#A596B5"|<font size=3 color=#000080>File</font>
+|-
+| style="background:#000040" colspan="5" |
+|-
+| align="center" style="width:45px" |[[File:RedGunLight.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Small Guns</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>RedGunLight.png</font>
+|-
+| align="center" style="width:45px" |[[File:RedGunMedium.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Medium Guns</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>RedGunMedium.png</font>
+|-
+| align="center" style="width:45px" |[[File:RedGunHeavy.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Large Guns</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>RedGunHeavy.png</font>
+|-
+| align="center" style="width:45px"|[[File:YellowGun.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Secondary Guns</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>YellowGun.png</font>
+|-
+| align="center" style="width:45px"|[[File:GreenGunDP.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Highangle Guns</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>GreenGunDP.png</font>
+|-
+| align="center" style="width:45px"|[[File:GreenGunMG.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Anti Air Guns</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>GreenGunMG.png</font>
+|-
+| align="center" style="width:45px"|[[File:Torpedo.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Torpedoes</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Torpedo.png</font>
+|-
+| align="center" style="width:45px"|[[File:Radar.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Radars</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Radar.png</font>
+|-
+| align="center" style="width:45px" |[[File:RedAmmo.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Armor Piercing Shells</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>RedAmmo.png</font>
+|-
+| align="center" style="width:45px" |[[File:GreenAmmo.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Sanshikis</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>GreenAmmo.png</font>
+|-
+| align="center" style="width:45px"|[[File:Seaplane.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Seaplanes</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Seaplane.png</font>
+|-
+| align="center" style="width:45px" |[[File:YellowPlane.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Recon Planes</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>YellowPlane.png</font>
+|-
+| align="center" style="width:45px" |[[File:RedPlane.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Dive Bombers</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>RedPlane.png</font>
+|-
+| align="center" style="width:45px" |[[File:BluePlane.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Torpedo Bombers</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>BluePlane.png</font>
+|-
+| align="center" style="width:45px" |[[File:GreenPlane.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Fighters</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>GreenPlane.png</font>
+|-
+| align="center" style="width:45px" |[[File:Heli.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Ka-type Observation Autogyro</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Heli.png</font>
+|-
+| align="center" style="width:45px" |[[File:Subplane.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Type 3 Spotter/Liaison (ASW)</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Subplane.png</font>
+|-
+| align="center" style="width:45px" |[[File:Sonar.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Sonars</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Sonar.png</font>
+|-
+| align="center" style="width:45px" |[[File:DepthCharge.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Depth Charges</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>DepthCharge.png</font>
+|-
+| align="center" style="width:45px" |[[File:Turbine.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Boilers/Turbines</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Turbine.png</font>
+|-
+| align="center" style="width:45px" |[[File:Expansion Bulge (Medium).png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Armor Bulges</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Expansion Bulge (Medium).png</font>
+|-
+| align="center" style="width:45px" |[[File:Searchlight.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Searchlight</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Searchlight.png</font>
+|-
+| align="center" style="width:45px" |[[File:FlareIcon.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Star Shellt</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>FlareIcon.png</font>
+|-
+| align="center" style="width:45px" |[[File:Ssp_c.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Skilled Lookout</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Ssp_c.png</font>
+|-
+| align="center" style="width:45px" |[[File:Aafd c.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Anti Air Director</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Aafd c.png</font>
+|-
+| align="center" style="width:45px" |[[File:Cf c.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Fleet Command Facility</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Cf c.png</font>
+|-
+| align="center" style="width:45px" |[[File:Drum.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Drums</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Drum.png</font>
+|-
+| align="center" style="width:45px" |[[File:Ap c.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>SCAMP</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Ap c.png</font>
+|-
+| align="center" style="width:45px" | [[File:Empty equipment slot.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Empty Equipment Slot</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Empty equipment slot.png‎</font>
+|-
+| style="background:#000040" colspan="5" |
+|-
+| align="center" style="width:45px" | [[File:Empty ship slot.png|30px]]
+|style="width:300px;text-align:center"|<font size=3 color=#000080>Empty Ship Slot</font>
+|style="width:255px;text-align:center"|<font size=3 color=#000080>Empty ship slot.png</font>
+|-
+| style="background:#000040" colspan="5" |
+|}
+
+<br />
+
+
+
+
+
+
+<div style="width:200px;background:#A596B5;border-top-right-radius:10px;border-top-left-radius:10px;text-align:center"><font size=4 color=#000040>'''Troubleshooting'''</font></div>
+
+{| align="center" style="width:100%"
+| style="background:#000040;border-top-left-radius:5px;border-bottom-left-radius:5px;width:4px" rowspan="5" |
+| style="background:#000040" colspan="1" |
+| style="background:#000040;border-top-right-radius:5px;border-bottom-right-radius:5px;width:4px" rowspan="5" |
+|-
+|<font size=3 color=#000040><u>The template is chopped off and not completely visible:</u> </font>
+|-
+|
+|-
+|<font size=3 color=#000040>Increase the size of the window. Stretch the window in horizontal direction.<br />If your screen is too small,the only option left is zooming in. Depending on the browser 'ctrl' and '+' or 'mousewheel up' will zoom in,<br />while 'ctrl' and '-' or 'mousewheel down' zooms out. </font>
+|-
+| style="background:#000040" colspan="1" |
+|}
+
+</center>
+[[Category:Blog posts]]

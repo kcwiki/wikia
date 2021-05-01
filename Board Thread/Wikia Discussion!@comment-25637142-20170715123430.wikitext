@@ -1,0 +1,154 @@
+Greetings, fellow editors
+
+I have been working on some methods to structure a large volume of information and handle navigation of pages clusters (main article and subspaces + partials ecosystem) such as event pages, guides, combat mechanics and of course our front page. Without an index of these pages clusters, it is very difficult for readers find information in the cluster and for our editors to update the pages.
+
+I have been working on the issue for a while and I have reached some interesting results I would like to share. After that, I will invite everyone to take a look at the new front page design in a sandbox and give feedback / suggestions to improve the design before I make it official.
+
+==Shiny new toys==
+What I came up with last December is navigation hubs--a map of a cluster similar to [[Template:Tutorialportal]] or [[Template:Equipmentlist]] but designed as an individual page instead of a simple table. This allows the application of [https://en.wikipedia.org/wiki/Visual_hierarchy visual hierarchy] to the index without compromising the hierarchy of the page containing the index.
+
+{{Tile
+|height=150px
+|text-height=150px
+|header=Tiles
+|overflow=scroll
+|content=
+This results in the creation of [[Template:Tile]]. The template is designed to act like an item in search results. It gives a short snippet of the page and a link to the full page.
+
+The snippet is created by clipping a partial transclusion of the full page. Vertical scrollbar can be enabled as an option
+}}
+{{Tile
+|height=210px
+|text-height=160px
+|content=
+{{:Template:Tile/doc}}
+|source=Template:Tile
+|image=DD Inazuma 037 Full.png
+|image-pos=top:-80px
+|rgba=148,101,55,0.4
+}}
+{{clear}}
+Tiles will be competing against current [[Help:Tabview|tabview]] + [[Help:Collapsing|collapsible]], as well as [[Help:Tabber|tabber]] implementations in various pages clusters. The first implementation of Tile is in [[Help:Guides]] and it demonstrates how a navigation hub might look like.
+{{Tile
+|height=340px
+|width=80%
+|text-height=300px
+|header=Clickbox
+|content=
+Remember that [[Template:ItemStack]] I introduced two years ago? When linking to a page using the built-in image link, there exists a blind spot over the text area as seen below
+
+{{ItemStack
+|item = [[File:Improvement material.png{{!}}50px{{!}}link=Shop]]
+|text = x7
+}}
+This issue has then been fixed using an invisible clickbox overlay, the same kind used in interactive maps:
+
+{{ItemStack
+|item = [[File:Improvement material.png{{!}}50px{{!}}link=]]
+|text = x7
+|link = Shop
+}}
+
+|source=Template:ItemStack
+}}
+{{Tile
+|height=210px
+|width=100%
+|text-height=160px
+|header=Animated tiles
+|content=
+Combining Tile, clickbox overlay and Oasis theme's default classes and it is possible to create a variety of responsive elements. One of which is as seen below
+{{FrontpageHeaderButton
+|content=
+<div style="color:white;padding:10px"><h3>Na</h3>
+</div>
+|image=Anime akatsuki.png
+|image-pos=top:-260px;left:-70px;
+|link=Akatsuki
+}}
+{{FrontpageHeaderButton
+|content=
+<div style="color:white;padding:10px"><h3>No</h3>
+</div>
+|image=Anime hibiki.png
+|image-pos=top:-270px;left:-40px;
+|link=Hibiki
+}}
+{{FrontpageHeaderButton
+|content=
+<div style="color:white;padding:10px"><h3>De</h3>
+</div>
+|image=Anime ikazuchi.png
+|image-pos=top:-250px;left:-10px;
+|link=Ikazuchi
+}}
+{{FrontpageHeaderButton
+|content=
+<div style="color:white;padding:10px"><h3>Su</h3>
+</div>
+|image=Anime inazuma.png
+|image-pos=top:-260px;left:-10px;
+|link=Inazuma
+}}
+|source=Template:FrontpageHeaderButton
+}}
+{{clear}}
+==Front page overhaul==
+
+All the above elements are designed to be used in the new front page design and future navigation hubs. As the front page is a high traffic area, it is necessary to make a site-wide announcement ahead of time. I myself am very interested in hearing feedback and suggestions from everyone on how to better organize and improve the design.
+
+{{FrontpageNewsfeed
+|height=60px
+|content=Click on this message to visit the sandbox page.
+|link=Sandbox/Frontpage/Tile
+}}
+
+Feedback I'm looking for in particular are:
+{{FrontpageNewsfeed
+|height=30px|color=lime
+|content=I expected <item> to be at <location>.
+}}
+{{FrontpageNewsfeed
+|height=30px|color=lime
+|content=I expected <action> to have <effect>.
+}}
+{{FrontpageNewsfeed
+|height=30px|color=lime
+|content=I use <item> a lot. Please make it more accessible.
+}}
+{{FrontpageNewsfeed
+|height=30px|color=lime
+|content=I think <item> should belong to <dropdown> or <section>
+}}
+{{FrontpageNewsfeed
+|height=30px|color=lime
+|content=I think <item> should be on top/below/before/after <item>
+}}
+{{FrontpageNewsfeed
+|height=30px|color=lime
+|content=I prefer <item> to be of <style> or in <color>
+}}
+{{FrontpageNewsfeed
+|height=30px|color=lime
+|content=I find <item> to be working incorrectly in <browser> or <monitor size>
+}}
+{{clear}}
+===Known issues===
+{{FrontpageNewsfeed
+|height=30px|color=red
+|content=Dropdown list should be displayed on hover, not click
+}}
+{{FrontpageNewsfeed
+|height=30px|color=red
+|content=Color of animated tiles and buttons cannot be changed
+}}
+{{FrontpageNewsfeed
+|height=70px|color=gray
+|content=<s>Broken mobile compatibility</s>
+:Issue dropped. Wikia uses its own mobile front page which cannot be edited
+}}
+{{FrontpageNewsfeed
+|height=30px|color=red
+|content=Monobook skin does not have comparable Oasis's button classes
+}}
+[[Category:Blog posts]]  </style></item></item></item></section></dropdown></item></item></effect></action></location></item><ac_metadata title="Navigation hubs, Tiles and Front page overhaul" related_topics="Suggestion|Kancolle Wiki"> </ac_metadata>

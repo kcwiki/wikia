@@ -1,0 +1,13 @@
+== The Core.swf ==
+
+With an attracting name, Core.swf has been one of the greatest interest points on how the game works. However, the file itself is obfuscated and is loaded after being processed in an obfuscated function in mainD2.swf. Still curious about what the "Core" actually is, I tried inserting export code after the mysterious decode into the disassembled mainD2 class. Here is what I got:
+
+'''[http://pan.baidu.com/s/1nt2BtDB Download]'''
+(Click the button with "下载(185kb)" on it)
+
+This file is now standard swf and can be parsed normally. It do contain a lot of essential functions, like api_port. However, important functions are still obfuscated, like the api_port parameter. Unfortunately, the only image in this file is the cat error (really Core lol).
+
+I have been using FFDec to parse swfs and rabcdasm to unassemble and reassemble code. Assembly code is not decompiled into source code, or the obfuscated functions won't work after recompiling the source code (the decompilation of obfuscated functions is inaccurate and loses information when turned into source code).
+
+However, I am unable to decode the obfuscated bit operations and RegExps. I am not familiar with assembly. But the remaining obfuscated functions provide nothing useful and (seem) only serve to prevent automated queries (Tanaka spent so much efforts lol). If you are still interested in how these work, you can try looking into the assembly code.
+[[Category:Blog posts]]

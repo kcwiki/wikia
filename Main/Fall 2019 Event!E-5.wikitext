@@ -1,0 +1,229 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Davao Patrol Line
+|jp = ダバオ沖哨戒線
+|tag = E-5
+|romaji = Dabao-oki Shōkaisen
+|mechanics = <!--
+|transport = true
+-->
+|hp_easy = 1450HP + 3000
+|hp_medium = 1950HP + 3300
+|hp_hard = 2450HP + 3600
+<!--
+|show_kills = true
+|kills_all = 5 + 6
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_casual_1 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_casual_2_x = 2
+|reward_easy_1 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_easy_2_x = 2
+|reward_easy_3 = {{EquipmentCardKai|5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_medium_2_x = 3
+|reward_medium_3 = {{EquipmentCardKai/Stars|5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|2}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_hard_2_x = 4
+|reward_hard_3 = {{EquipmentCardKai/Stars|5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|2}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|New Model Aerial Armament Material|icon=true|size=50px}}
+|reward_hard_5_x = 2
+}}
+{{MapBranchingTable
+|title = E-5 Branching Rules
+|expand = true
+|id = 46-5
+
+|0 -> 1 = * Combined Fleet
+|0 -> 2 = * Single Fleet
+
+|2 -> B = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** No (F)BB(V)
+** No CV(L/B)
+** No SS(V)
+|2 -> C = * Do not meet the requirements to go to B.
+
+|A -> C = 
+* Meet '''ALL''' of the following requirements:
+** Fleet is '''NOT''' a Carrier Task Force
+** Amount of CV(L/B)+LHA ≤ 2
+** Amount of (F)BB(V)+CV(B) ≤ 3
+|A -> D = * Do not meet the requirements to go to C.
+
+|C -> B = * Do not meet the requirements to go to E.
+|C -> E = 
+* If fleet contains either CV(B) or LHA, go to B.
+* Else, if amount of (F)BB(V)+CVL ≥ 3 '''AND''' Single Fleet, go to B.
+* Else, if amount of CVL ≥ 2, random routing.
+* Else, if Fast Fleet '''AND''' amount of DD ≥ 2, go to E.
+* Else, if amount of DD ≥ 4, go to E.
+* Finally, go to B if you don't meet any of the above requirements.
+
+|E -> F = * Surface Task Force '''OR''' Carrier Task Force
+|E -> G = * Single Fleet '''OR''' Transport Combined Fleet
+
+|G -> H/empty = * Fail the LoS check
+|G -> J = * Pass the LoS check
+
+|I -> K = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to O.
+** Pass the LoS check.
+** Amount of CV(B) ≤ 2
+** Amount of (F)BB(V) ≤ 3
+** If '''Slow''' fleet, amount of (F)BB(V)+CV(L/B) ≤ 5
+|I -> L = * Pass the LoS check, but fail to meet the requirements to go to either K or O.
+|I -> M = * Do not meet the requirements to go to either K, L or O.
+|I -> O = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Fast Fleet
+** No CV(B)
+** Amount of DD ≥ 3
+** Amount of (F)BB(V)+CVL ≤ 5
+}}
+<!--
+map information content here
+-->
+===Map Progression===
+{{#tag:gallery|
+Fall19_E5_p1.png{{!}}Map during the HP phase at node J
+Fall_2019_Event_E-5_Map.png{{!}}Map during the second HP phase at node O
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+
+===Map Bonuses===
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="3"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="3"| Davao Patrol Group / Battle of Phillippine Sea
+!colspan="2"| {{Event/Route|J|Red}}
+|-
+!{{ShipBattleCardKai|Verniy}}
+!{{ShipBattleCardKai|Kazagumo/Kai Ni}}
+!{{ShipBattleCardKai|Asagumo/Kai}}
+|colspan="2"|1.2x
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Hatsushimo/Kai Ni}}
+!{{ShipBattleCardKai|Shiratsuyu/Kai Ni}}
+!{{ShipBattleCardKai|Shigure/Kai Ni}}
+|colspan="2" rowspan="2"|1.15x
+|-
+!{{ShipBattleCardKai|Hamakaze/B Kai}}
+!
+!
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Nagato/Kai Ni}}
+!{{ShipBattleCardKai|Fusou/Kai Ni}}
+!{{ShipBattleCardKai|Junyou/Kai Ni}}
+|colspan="2" rowspan="4"|1.1x
+|-
+!{{ShipBattleCardKai|Hiyou/Kai}}
+!{{ShipBattleCardKai|Ryuuhou/Kai}}
+!{{ShipBattleCardKai|Myoukou/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Haguro/Kai Ni}}
+!{{ShipBattleCardKai|Mogami/Kai}}
+!{{ShipBattleCardKai|Aoba/Kai}}
+|-
+!{{ShipBattleCardKai|Kinu/Kai Ni}}
+!{{ShipBattleCardKai|Michishio/Kai Ni}}
+!{{ShipBattleCardKai|Nowaki/Kai}}
+|-
+!colspan="5"|Boss Node {{Event/Route|O|Red}} (Multiplicative with above)
+|-
+!{{ShipBattleCardKai|Verniy}}
+!{{ShipBattleCardKai|Kazagumo/Kai Ni}}
+!{{ShipBattleCardKai|Asagumo/Kai}}
+|colspan="2"| 1.15x
+|-
+!colspan="3"| Everyone else above
+|colspan="2"| 1.25x
+|}
+
+===Phase 1: Defeat Submarine Princess Kai===
+*Fleet: 1 (F)BB(V) 4 DD 1 XX (2nd BB(V) is ok), 1 (F)BB(V) 1 CVL 3 DD 1 CL or similar.
+**Route: {{Event/Route|C|Red|E|Red|G|Red|J|Red}}
+*Bring as many as OASW capable Ships as possible
+**Some Air Power required for Node G, which has Nu-class CVL Flagship.
+*LOS check at Node G must be passed to proceed to Node J.
+*Recommended to use 2 LBAS of {{EquipmentLink|Prototype Toukai}} and {{EquipmentLink|Toukai (901 Air Group)}}, and Carrier-based Bombers with the stat of 7+ {{ASW}} ASW, and either send them all down to the Boss Node, or divide them between Node C and J.
+
+===Phase 2: Defeat Aircraft Carrier Princess Kai===
+====Option 1: Fast Fleet====
+*Fleet: 2 FBB 2 CVL 2 CA(V) + 1 CL 4 DD 1 CA(V)/CLT
+*Route: {{Event/Route|A|Red|C|Red|E|Red|F|Red|I|Red|O|Red}}
+**Using 2 CVL has the possibility to off-route into {{Event/Route|C|Red}} → {{Event/Route|B|Red}} randomly.
+**Slow ships that are speed boosted are permitted.
+*Recommended to bring around 3 OASW Ships to deal with Node A and C.
+**May wish to consider use of a LBAS of {{EquipmentLink|Prototype Toukai}} / {{EquipmentLink|Toukai (901 Air Group)}}, and Carrier-based Bombers with the stat of 7+ {{ASW}} ASW and send them down to Nodes A and C.
+**Use of ASW-based Aerial Support Expedition is also an option for insurance.
+*Will require a lot of Air Power and a LBAS of Fighters to deal with the Boss' extremely high Air Power requirement to gain Air Superiority.
+*Fleet: 3 (F)BB(V) 2 CVL 1 CA(V) + 1-2 CA(V) 1 CL 0-1 CLT 3DD
+**Fleet must be fast.
+**You need to mostly pay attention to the same things as with the fleet above, however bringing a fast Nagato is viable if she has a [[Reinforcement Expansion]].
+**Thanks to being heavier the chances for killing the boss are higher, but you are trading away ASW power which is required against the Submarine Princesses while still avoiding the extra Air Defense node {{Event/Route|K|Red}}.
+
+====Option 2: Slow Fleet====
+*Fleet: 3 BB(V) 2 CVL 1 CA(V) + 1 CL 4 DD 1 CA(V)/1 CLT
+*Route: {{Event/Route|A|Red|C|Red|E|Red|F|Red|I|Red|K|Red|O|Red}}
+**Using 2 CVL has the possibility to off-route into {{Event/Route|C|Red}} → {{Event/Route|B|Red}} randomly.
+*Recommended to bring Nagato Kai Ni & Mutsu Kai Ni for their Special Attack, as it can obliterate the Aircraft Carrier Princess Kai due to Nagato's Historical Bonus.
+**Recommended to bring Fusou Kai Ni for the 3rd BB(V).
+*Recommended to bring around 3 OASW Ships to deal with Node A and C.
+**May wish to consider use of a LBAS of {{EquipmentLink|Prototype Toukai}} / {{EquipmentLink|Toukai (901 Air Group)}}, and Carrier-based Bombers with the stat of 7+ {{ASW}} ASW and send them down to Nodes A and C.
+**Use of ASW-based Aerial Support Expedition is also an option for insurance.
+*Will require a lot of Air Power and a LBAS of Fighters to deal with the Boss' extremely high Air Power requirement to gain Air Superiority.
+
+===Farming at the 1st boss===
+E-5 is one of the few maps in recent history, where it is possible to farm the first boss on '''easy''' or '''medium''' for a new ship, the DE {{ShipLink|Hirato}} before increasing the difficulty to the one you wish to clear on. Assuming you have the equipment required to defeat the boss on a higher difficulty with this you can achieve a high number of runs that can easily get S ranks at the first boss node and won't have to deal with retreats along the way as often. Note that in the case of '''easy''' difficulty the drop chance is lower than in the higher difficulties and no drops have been reported on '''casual''' difficulty.
+It also allows for the Land Base Aerial Support to attack the pre-boss surface nodes or defend against the LBAS Air Raid and further increase the chance to reach the boss.
+*Route: {{Event/Route|C|Red|E|Red|G|Red|J|Red}}
+*Fleet: 1 CVL 1 (F)BB(V) 1 CL 3 DD; 1 CVL 1 (F)BB(V) 2 CL 2 DD '''or''' 1 (F)BB(V) 4 DD 1 XX (2nd BB(V) is ok)
+**Fleets with less than 4DDs need to be Fast speed for {{Event/Route|C|Red}} -> {{Event/Route|E|Red}} routing.
+**With 4 CL + DD taking care of the submarines, Suzuya or Kumano Carrier K2 work well here for attacking the surface targets at the boss node, especially in '''medium''' difficulty. However, any other fast CVL will also be fine to use.
+**1 LBAS can be split as required or not used at all. Having 1 defend against air raids and the other send to {{Event/Route|G|Red}} or using both bases to attack {{Event/Route|E|Red}} and {{Event/Route|G|Red}} should depend on how easy it is for you to reach the boss, though in the latter case resource cost from getting the land base damaged by the air raid will be quite high.
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+====J====
+{{Fleets|friend=Fall 2019 Event|node=E-5 J}}
+====O====
+{{Fleets|friend=Fall 2019 Event|node=E-5 O}}
+
+===LBAS Flight Range===
+[[File:Fall 2019 Event E-5 LBAS Map.png|500px|center]]
+
+{{Event/MapPageFooter}}

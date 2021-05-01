@@ -1,0 +1,138 @@
+== {{#if:{{{thread|}}}|[[Partials/Updates/2016_September_16th/Content|Content]]|[[Thread:483869|16th September]]}} ==
+{{#if:{{{thread|}}}||''For a full debriefing on the game update (including developer tweets), you may wish to refer to [[Partials/Updates/2016_September_16th|this link]].''}}
+
+__NOTOC__
+=== [[Uranami]] ===
+[[File:DD_Uranami_486_Full.png|100px|right|Uranami]]
+<br>
+[[File:DD_Uranami_486_Full_Damaged.png|100px|right|Uranami (damaged)]]
+* Has idle voice line, as well as hourly voice lines at Kai.
+* Drops in multiple maps including [[2-4]], [[4-1]], [[5-1]], and [[6-2]].
+{| class="wikitable" style="text-align:center"
+!colspan="7"|[[Uranami]] [https://db.kcwiki.moe/drop/ship/486/SAB.html drop data]
+|-
+!Map
+!Node
+!Rank
+!Drops
+!Trials
+!Rate
+!60%, 80%<br>(trials for)
+|-
+|rowspan="3"|[[2-4]]
+{{Drop|node=H|rank=S|98|8774}}
+|-
+{{Drop|node=P|rank=S|88|8286}}
+|-
+{{Drop|node=J (Boss)|rank=S|764|15717}}
+|-
+|[[4-1]]
+{{Drop|node=D (Boss)|rank=S|79|1232}}
+|-
+|[[5-1]]
+{{Drop|node=I (Boss)|rank=S|160|2902}}
+|-
+|[[6-2]]
+{{Drop|node=K (Boss)|rank=S|43|838}}
+|}
+{{Clear}}
+
+=== [[Seasonal/Fall 2016|CG and voice lines]] and general voice line fixes ===
+{{SeasonalGallery|Naganami/Fall|Mutsu/Fall}}
+* New Limited-time Yukata CGs and Fall voice lines for:
+** [[Naganami]]
+** [[Mutsu]]
+* Some voice lines has been fixed including [[I-26]]'s 20:00hrs (8PM) hourly voice line.
+{{Clear}}
+
+=== UI ===
+<gallery type="slideshow" widths="300" hideaddbutton="true">
+2016 Quests old UI.jpg|Old Quest completion UI
+2016 Quests new UI.jpg|New Quest completion UI
+</gallery>
+* Quests UI has been updated so that 50% cleared marker no longer overlaps with the Quest description tag
+{{Clear}}
+
+=== [[Quests]] ===
+{{QuestList|
+{{Quest
+|ID = A72
+|Title_JP = 「第十九駆逐隊」を編成せよ！
+|Title_EN = Organise the 19th Destroyer Division!
+|Requirements = Have {{ShipLinkTmp|Isonami/}}, {{ShipLinkTmp|Uranami/}}, {{ShipLinkTmp|Ayanami/}} and {{ShipLinkTmp|Shikinami/}} in your fleet.
+|Rewards_RSC = 190 / 190 / 190 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2<br>[[File:Combat Ration 145 Full.png|30px|link=Combat Ration]] X 1
+|Note = Requires: [[Quests#B21|B21]](?), [[Quests#Bd1|Bd1]](?)
+}}
+{{Quest
+|ID = B78
+|Title_JP = 「第十九駆逐隊」出撃せよ！
+|Title_EN = 19th Destroyer Division, sortie!
+|Requirements = Sortie a fleet with {{ShipLinkTmp|Isonami/}}, {{ShipLinkTmp|Uranami/}}, {{ShipLinkTmp|Ayanami/}} and {{ShipLinkTmp|Shikinami/}} to [[1-5|World 1-5]], and score at least an '''A-Rank''' at the boss node.<br>
+※Because of the branching rules you can have only these four in your fleet. Enjoy the pre-boss compass trolling. 
+|Rewards_RSC = 300 / 300 / 300 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 3<br>[[File:Food supply ship irako.png|30px|link=Fatigue]][[Fatigue#Food_Supply_Ship_.22Irako.22|"Irako"]] X 1
+|Note = Requires: [[Quests#A72|A72]], others(?)
+}}
+{{Quest
+|ID = B79
+|Title_JP = 「第十九駆逐隊」敵主力に突入せよ！
+|Title_EN = 19th Destroyer Division, engage the enemy main forces!
+|Requirements = Sortie a fleet with {{ShipLinkTmp|Isonami/}}, {{ShipLinkTmp|Uranami/}}, {{ShipLinkTmp|Ayanami/}}, {{ShipLinkTmp|Shikinami/}} and up to two wildcards to [[2-5|World 2-5]], and score at least an '''A-Rank''' at the boss node.
+|Rewards_RSC = 600 / 600 / 0 / 300
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 4<br>[[File:Supplies_Icon.png|30px|link=Underway Replenishment]][[Underway Replenishment]] X 1
+|Note = Requires: [[Quests#B78|AB78]], others(?)
+}}
+{{Quest
+|ID = F41
+|Title_JP = 「洋上補給」物資の調達
+|Title_EN = Monthly Procurement of Maritime Supply Goods
+|Requirements = Have 750 fuel, 750 ammo, two [[Drum Canister (Transport Use)|Drum Canisters]], one [[Type 91 AP Shell]] in your inventory, and scrap one [[Type 3 Shell]].<br>
+'''※Consumes all the resources and equipment.'''<br>
+'''※Consumes all the resources and equipment stated above.'''
+|Rewards_RSC = 0/ 0 / 0 / 0
+|Rewards_Items = [[File:Supplies_Icon.png|30px|link=Underway Replenishment]][[Underway Replenishment]] X 1
+|Note = '''Monthly Quest'''<br>Requires: [[Quests#B54|B54]](?), [[Quests#Bw5|Bw5]]
+}}
+{{Quest
+|ID = F42
+|Title_JP = 「特注家具」の調達
+|Title_EN = Procurement of Custom-Made Furniture
+|Requirements = Have 5000 Furniture Coins, two [[25mm Twin Autocannon Mount]], two [[25mm Triple Autocannon Mount]] in your inventory, and scrap one [[25mm Single Autocannon Mount]].<br>
+'''※Equipment must be unlocked.'''<br>
+'''※Consumes all the resources and equipment stated above.'''
+|Rewards_RSC = 0 / 0 / 0 / 100
+|Rewards_Items = [[File:Furniture_fairy.png|30px|link=Furniture]][[Furniture|Furniture Fairy]] X 1
+|Note = Requires: [[Quests#C4|C4]], others(?)
+}}
+}}
+
+=== [[Akashi's Improvement Arsenal]] ===
+* [[38.1cm Mk.I Twin Gun Mount]] can now be improved
+** cannot be upgraded.
+
+{| style="width:100%"
+|-
+| valign="top" | {{ImprovementTableKai|38.1cm Mk.I Twin Gun Mount}}
+| valign="top" | <gallery type="slideshow" widths="300" hideaddbutton="true">
+38.1cm_Mk.I_Twin_Gun_Mount_190_Card.png
+38.1cm_Mk.I_Twin_Gun_Mount_190_Character.png
+38.1cm_Mk.I_Twin_Gun_Mount_190_Equipment.png
+38.1cm_Mk.I_Twin_Gun_Mount_190_Full.png
+</gallery>
+|}
+
+{{Clear}}
+
+=== [[Furniture]] ===
+<gallery type="slideshow" widths="300" hideaddbutton="true">
+Hot_spring_bath+Fall_2016.png|Hot Spring Bath - Fall season 2016
+</gallery>
+* New seasonal CG for [[Furniture/Window#Anchorage_Counter_Bar|Anchorage Counter Bar]] as well as [[Furniture/Desk#Hot_spring_bath|Hot spring bath]]
+{{clear}}
+
+=== Misc. ===
+* Server strengthening for both [[:Category:Shootorando|Shortland Anchorage]] as well as [[:Category:Kanoya|Kanoya Airbase]] in preparation for upcoming [[Mackerel]] mini-event next month (October 2016). Server strengthening was more heavily focused on [[:Category:Shootorando|Shortland Anchorage]].
+* Botting/Macro/illegitimate tool detection mechanism has been enhanced.
+** Illegitimate tool as tweeted implied speed hacking tools.
+** The same old tweet that has been iterated many times in the past again warns users be advised if using such tools.

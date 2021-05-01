@@ -1,0 +1,40 @@
+<includeonly>
+{{#vardefine:pagename|{{#if:{{{pagename|}}}|{{{pagename}}}|{{PAGENAMEE}}}}}}{{#vardefine:update|{{#titleparts:{{#var:pagename}}|1|2}}_{{#titleparts:{{#var:pagename}}|1|3}}}}{{#vardefine:banner|File:{{#if:{{{banner|}}}|{{{banner}}}|File:Wikia_{{#var:update}}_Banner.{{{banner_ext|png}}}}}}}__NOTOC__<div style="float:right;font-size:14px">{{Edit|{{#var:pagename}}}}</div>
+{{#ifexist:{{#var:banner}}|[[{{#var:banner}}|center|{{{banner_width|500}}}px|frameless|link=]]}}
+{{#if:{{{live|}}}||{{Update/Timer
+|maintenance_start = {{{maintenance_start|}}}
+|maintenance_start_text = {{{maintenance_start_text|}}}
+|maintenance_end = {{{maintenance_end|}}}
+|maintenance_end_text = {{{maintenance_end_text|}}}
+|maintenance_end_expected = {{{maintenance_end_expected|}}}
+}}}}
+<h2>Content<div style="float:right;font-size:14px">{{Edit|{{#var:pagename}}}}</div></h2></includeonly><noinclude>
+Layout templates for [https://kancolle.fandom.com/index.php?title=Special%3APrefixIndex&prefix=Game+Updates&namespace=0 update pages].
+
+For ranking updates see also [[Template:Update/RankingRewards]].
+==Examples==
+*[https://kancolle.fandom.com/wiki/Game_Updates/2019/February_27th?action=raw Game Updates/2019/February 27th] update page.
+*[https://kancolle.fandom.com/wiki/Game_Updates/2019/February_27th/Tweets?action=raw Game Updates/2019/February 27th/Tweets] update tweets page.
+*[[Thread:711264]] update thread (<code><nowiki><!-- 1 --></nowiki></code> counter is incremented to force cache updates):<pre>{{Update/Thread|2019/February 27th}}<!-- 1 --></pre>
+*[https://kancolle.fandom.com/wiki/Game_Updates/2019/February_22nd?action=raw Game Updates/2019/February 22nd] ranking update page.
+*[[Thread:711390]] ranking update thread:<pre>{{:Game Updates/2019/February 22nd}}<!-- 1 --></pre>
+==Parameters==
+===Required===
+*<code>maintenance_start</code>, time of maintenance start, for example, <code>February 27 2019 11:00:00</code>.
+*<code>maintenance_end</code>, (actual) time of maintenance end, for example, <code>February 27 2019 19:00:00</code>.
+*<code>pagename</code>, boilerplate for update thread inclusion, set to <code><nowiki>{{{pagename|}}}</nowiki></code>.
+===Optional===
+*<code>maintenance_start_text</code>, additional text to add to maintenance start timer.
+*<code>maintenance_end_text</code>, additional text to add to maintenance start timer.
+*<code>maintenance_end_expected</code>, initially announced time of maintenance end.
+*<code>banner</code>, update banner to use, <code><nowiki>Wikia <YYYY> <Month> <DD>[th|nd] Banner.<banner_ext></nowiki></code> by default.
+*<code>banner_ext</code>, update banner extension, <code>png</code> by default.
+*<code>banner_width</code>, update banner width in pixels, <code>500</code> by default.
+===[[Template:Update/Footer]]===
+*<code>teaser_1</code>, etc., twitter avatars, using <code><nowiki>Teaser-<YYYY>-<MM>-<DD>-[A|B|...].png</nowiki></code> format, for example, <code>Teaser-2019-02-15-A.png</code>.
+*<code>pagename</code>, boilerplate for update thread inclusion, set to <code><nowiki>{{{pagename|}}}</nowiki></code>.
+*<code>/Tweets</code> subpage will be included if it exists.
+===[[Template:Update/Thread]]===
+For update threads such as [[Thread:711264]].
+*<code>[1]</code>, set to <code><nowiki><YYYY>/<Month> <DD>[th|nd]</nowiki></code>.
+</noinclude>

@@ -1,0 +1,72 @@
+[[Category:Todo]]
+Planned to be a template for:
+* Calling generic functions such as [[Module:Stat]] functions, see [[#Special Functions|special functions]], add more as needed
+* Querying [[:Category:Data modules|Lua data modules]]
+* Performing predefined calculations (e.g., [[Module:Combat]]) based on a context queried from data modules.
+Currently, the context is one [[Module:Ship|Ship]] variable.
+==Parameters==
+===format===
+If <code>table</code>, values will be returned as table cells.
+===concat_value===
+A separator to use when concatenating Lua tables, <code>", "</code> by default.
+===[1]===
+Can be used to call a [[#Special Functions|special function]].
+
+Otherwise, <code>[1]</code>, <code>[2]</code>, ... use the following special syntax, either setting the context, or querying and returning values.
+===#===
+When <code>format=table</code>, returns a row separator (<code>"|-"</code>).
+===@<iterator>===
+Require a ship iterator, e.g., <code>base_names</code>.
+===!@===
+Set <code>ship</code> context variable to a next ship from the current ship iterator.
+===!<ship>===
+Set <code>ship</code> context variable.
+===?<getter>===
+Request data from <code>ship</code> context variable, supported queries:
+* Any [[Module:ShipData|ship object function]].
+* Any [[Template:ShipDataDocumentation/ShipForm|ship data module filed]].
+* The following queries override ship object functions and implemented using [[Module:Formatting]] functions: <code>type</code>, <code>link</code>
+* <code>code</code> for ship code
+* <code>implementation_date</code> for ship implementation date in <code>year/month/day</code> format.
+Any other argument is returned as is, so it can be mixed with calculated values in a table.
+==Special Functions==
+===error===
+<pre>{{Calc|error|x|n}}</pre>
+Calculates 95% confidence interval for a x / n proportion using the [[wikipedia:Binomial_proportion_confidence_interval#Normal_approximation_interval|normal approximation method]]. E.g., <code><nowiki>{{Calc|error|800|1000}}%</nowiki></code> gives <code>{{Calc|error|800|1000}}%</code>.
+==Examples==
+===Implementation dates===
+<pre>{{Calc|format=table|@base_names|#|!@|?id|?link|?implementation_date}}</pre>
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!Id!!Ship!!Implementation date
+{{Calc|format=table|@base_names|#|!@|?id|?link|?implementation_date}}
+|}
+===Fuel and ammo consumption===
+<pre>{{Calc|format=table|@base_names|#|!@|?code|?link|?fuel|?ammo}}</pre>
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!Type!!Ship!!{{Fuel}}!!{{Ammo}}
+{{Calc|format=table|@base_names|#|!@|?code|?link|?fuel|?ammo}}
+|}
+===Night battle power===
+<pre>{{Calc|format=table|@all_names|#|!@|?code|?link|?night_battle_power}}</pre>
+{|class="mw-collapsible mw-collapsed wikitable sortable"
+!Type!!Ship!!{{Firepower}}+{{Torpedo}}
+{{Calc|format=table|@all_names|#|!@|?code|?link|?night_battle_power}}
+|}
+===API IDs===
+<pre>{{Calc|format=table|@all_names|#|!@|?link|?api_id}}</pre>
+{|class="mw-collapsible mw-collapsed wikitable sortable"
+!Ship!!api_id
+{{Calc|format=table|@all_names|#|!@|?link|?api_id}}
+|}
+===Enemy Armor===
+<pre>{{Calc|format=table|@enemy|#|!@|?link|?armor}}</pre>
+{|class="mw-collapsible mw-collapsed wikitable sortable"
+!Ship!!armor
+{{Calc|format=table|@enemy|#|!@|?link|?armor}}
+|}
+
+==TODO==
+(Re-)implement (at least) the following tables using this template:
+* [[Expedition/Support Expedition#Shelling damage calculation]]
+* [[Partials/Opening ASW]]
+* [[Template:NodeInfo#Name_list]]

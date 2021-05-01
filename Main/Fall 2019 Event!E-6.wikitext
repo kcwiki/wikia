@@ -1,0 +1,595 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Fierce Fight! 3rd Battle of the Solomon Sea
+|jp = 激闘！第三次ソロモン海戦
+|tag = E-6
+|romaji = Gekitō! Dai-san-ji Soromon Kaisen
+|mechanics = <!--
+|transport = true
+-->
+|hp_easy = 600TP + 4400
+|hp_medium = 720TP + 4530
+|hp_hard = 840TP + 5430
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCard|Atlanta}}
+|reward_casual_1 = {{ItemStack|item=[[File:Jervaited.png|50px|link=]]|text=Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_easy_1_x = 2
+|reward_medium_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|GFCS Mk.37|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|GFCS Mk.37|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai/Stars|GFCS Mk.37 + 5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|2}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|First Class Medal|icon=true|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-6 Branching Rules
+|expand = true
+|id = 46-6
+
+|1 -> A/empty = * Do not meet the requirements to go to C.
+|1 -> C/empty = 
+* Single Fleet
+* Alternatively, meet '''ALL''' of the following requirements:
+** Carrier Task Force '''OR''' Transport Combined Fleet
+** Fast Fleet
+** Amount of CV(L/B) ≤ 3
+** No '''Slow''' DD (engines irrelevant)
+
+|B -> D = 
+* Meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V)+CV(L/B) ≤ 6
+** Amount of CV(L/B)+LHA ≤ 4 ({{ShipLink|Shinshuu Maru}} doesn't count)
+** And meet '''ANY''' of the following requirements:
+*** Fast Fleet
+*** Carrier Task Force '''AND''' amount of DE+DD ≥ 3
+*** Surface Task Force '''AND''' amount of DE+DD ≥ 4
+*** Amount of (F)BB(V) ≤ 2
+*** Amount of (F)BB(V)+CV(L/B)+LHA ≤ 4
+*** Amount of CV(L/B) ≤ 1
+*** Fleet contains {{ShipLink|Shinshuu Maru}}
+|B -> E = * Do not meet the requirements to go to D.
+
+|C/empty -> D, F = * Active branching
+
+|D -> F = * Do not meet the requirements to go to I.
+|D -> I/empty =
+* Meet '''ALL''' of the following requirements:
+** Amount of DD ≥ 2
+** No CV(B)
+** If Transport Escort '''OR''' Single Fleet, no CV(L/B)
+** No SS(V)
+** If Single Fleet, amount of (F)BB(V) ≤ 2
+** If Combined Fleet, amount of (F)BB(V) ≤ 3
+** Meet '''ANY''' of the following to prevent random routing:
+*** Fleet contains AV
+*** Amount of ships equipped with '''Surface''' radars ≥ 4
+
+|F -> G/empty = * Do not meet the requirements to go to I.
+|F -> I/empty = 
+* Meet '''ALL''' of the following requirements:
+** No SS(V)
+** No CV(L/B)
+** No LHA
+** Amount of (F)BB(V) ≤ 3
+
+|G/empty -> H = * Do not meet the requirements to go to J.
+|G/empty -> J = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CV(L/B) ≤ 3
+** Amount of CV(B) ≤ 2
+** Amount of (F)BB(V) ≤ 2
+
+|J -> L = * Carrier Task Force
+|J -> K/night = * Not a Carrier Task Force
+
+|K/night -> M = * Do not meet the requirements to go to either N or X.
+|K/night -> N = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to X.
+** Fleet must contain CL
+** Amount of DD ≥ 2
+** Amount of (F)BB(V) ≤ 2
+** Fast Fleet '''OR''' Single Fleet
+** No CV(L/B) '''OR''' Single Fleet
+|K/night -> X/empty = 
+* Meet '''ALL''' of the following requirements:
+** Node X is unlocked.
+** Fleet contains {{ShipLink|Akashi Kai}} or {{ShipLink|Akitsushima Kai}}
+** Fleet must contain CL
+** Amount of DD ≥ 2
+
+|L -> Q = * Pass the LoS check, but do not meet the requirements to go to R.
+|L -> R = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check
+** Amount of CV(B) ≤ 2
+** Amount of (F)BB(V) ≤ 3
+|L -> T = * Do not meet the requirements to go to either Q or R.
+
+|N -> O/resource = * Do not meet the requirements to go to S.
+|N -> S = 
+* Meet '''ALL''' of the following requirements:
+** Node S is unlocked.
+** Surface Task Force
+
+|S -> U/empty = * Do not meet the requirements to go to W.
+|S -> W = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships equipped with '''Surface''' radars ≥ 3
+}}
+{{clear}}
+===Map Bonuses===
+{{Ambox/Disclaimer| This information is based on user submitted data and is subject to revisions as more data is gathered.}}
+<tabber>
+Mapwide=
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="4"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="3"| 3rd Battle of Solomon Islands
+!colspan="2"| Mapwide (WIP)
+|-
+!{{ShipBattleCardKai|Hiei/Kai Ni}}
+!{{ShipBattleCardKai|Akatsuki/Kai Ni}}
+!{{ShipBattleCardKai|Yuudachi/Kai Ni}}
+|colspan="2"|1.2x
+|-
+!{{ShipBattleCardKai|Kirishima/Kai Ni}}
+!{{ShipBattleCardKai|Kinugasa/Kai Ni}}
+!{{ShipBattleCardKai|Ayanami/Kai Ni}}
+|colspan="2" rowspan="2"|1.15x
+|-
+!{{ShipBattleCardKai|Hatsukaze/Kai}}
+!{{ShipBattleCardKai|Harusame/Kai}}
+|-
+! colspan="5"|
+|-
+! colspan="3"|Battleship (BB)
+|colspan="2" rowspan="14"|1.1x
+|-
+!{{ShipBattleCardKai|Kongou/Kai Ni C}}
+!{{ShipBattleCardKai|Haruna/Kai Ni}}
+!
+|-
+! colspan="3"|Heavy Cruiser (CA)
+|-
+!{{ShipBattleCardKai|Atago/Kai}}
+!{{ShipBattleCardKai|Takao/Kai}}
+!{{ShipBattleCardKai|Tone/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Chikuma/Kai Ni}}
+!{{ShipBattleCardKai|Suzuya/Kai Ni}}
+!{{ShipBattleCardKai|Kumano/Kai Ni}}
+|-
+! colspan="3"|Light Cruiser (CL)
+|-
+!{{ShipBattleCardKai|Sendai/Kai Ni}}
+!{{ShipBattleCardKai|Nagara/Kai}}
+!{{ShipBattleCardKai|Isuzu/Kai Ni}}
+|-
+! colspan="3"|Destroyer (DD)
+|-
+!{{ShipBattleCardKai|Yukikaze/Kai}}
+!{{ShipBattleCardKai|Teruzuki/Kai}}
+!{{ShipBattleCardKai|Shiratsuyu/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Shigure/Kai Ni}}
+!{{ShipBattleCardKai|Murasame/Kai Ni}}
+!{{ShipBattleCardKai|Fletcher/Kai}}
+|-
+!{{ShipBattleCardKai|Yuugumo/Kai Ni}}
+!{{ShipBattleCardKai|Makigumo/Kai Ni}}
+!{{ShipBattleCardKai|Urakaze/D Kai}}
+|-
+!{{ShipBattleCardKai|Tanikaze/D Kai}}
+!{{ShipBattleCardKai|Isokaze/B Kai}}
+!{{ShipBattleCardKai|Hamakaze/B Kai}}
+|-
+!{{ShipBattleCardKai|Amatsukaze/Kai}}
+!{{ShipBattleCardKai|Tokitsukaze/Kai}}
+!{{ShipBattleCardKai|Asagumo/Kai}}
+|-
+!{{ShipBattleCardKai|Samidare/Kai}}
+!{{ShipBattleCardKai|Inazuma/Kai}}
+!{{ShipBattleCardKai|Ikazuchi/Kai}}
+|-
+!colspan="5"|Node {{Event/Route|S|Red}} (Multiplicative with above)
+|-
+!colspan="3"|Historicals with <font color="#D00000">1.15x/1.2x</font> Bonus above
+|colspan="2"| 1.25x
+|-
+!colspan="3"|Historicals with <font color="#D00000">1.1x</font> Bonus above
+|colspan="2"| 1.1x
+|-
+!colspan="3"|Everyone else
+|colspan="2"| 1.15x
+|}
+*The term '''"Mapwide"''' does not include boss nodes which have their own sets of multipliers.
+|-|Nodes L, Q and V=
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="4"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="5"| Battle of Santa Cruz Islands
+|-
+!{{ShipBattleCardKai|Kongou/Kai Ni C}}
+!{{ShipBattleCardKai|Haruna/Kai Ni}}
+!{{ShipBattleCardKai|Shoukaku/Kai Ni A}}
+|colspan="2" rowspan="8"|1.2x
+|-
+!{{ShipBattleCardKai|Zuikaku/Kai Ni A}}
+!{{ShipBattleCardKai|Junyou/Kai Ni}}
+!{{ShipBattleCardKai|Zuihou/Kai Ni B}}
+|-
+!{{ShipBattleCardKai|Tone/Kai Ni}}
+!{{ShipBattleCardKai|Chikuma/Kai Ni}}
+!{{ShipBattleCardKai|Suzuya/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Kumano/Kai Ni}}
+!{{ShipBattleCardKai|Isuzu/Kai Ni}}
+!
+|-
+! colspan="3"|Destroyer (DD)
+|-
+!{{ShipBattleCardKai|Yuugumo/Kai Ni}}
+!{{ShipBattleCardKai|Makigumo/Kai Ni}}
+!{{ShipBattleCardKai|Kazagumo/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Urakaze/D Kai}}
+!{{ShipBattleCardKai|Tanikaze/D Kai}}
+!{{ShipBattleCardKai|Isokaze/B Kai}}
+|-
+!{{ShipBattleCardKai|Hamakaze/B Kai}}
+!
+!
+|-
+! colspan="5"|
+|-
+! colspan="3"| Node {{Event/Route|V|Red}} (Multiplicative with above)
+| colspan="2"| 1.05x
+|}
+*For mapwide ships not listed here, they receive the normal mapwide bonuses and do not enjoy the Node {{Event/Route|V|Red}} bonus.
+|-|Boss Node P=
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="4"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="5"|Boss Node {{Event/Route|P|Red}}
+|-
+!{{ShipBattleCardKai|Hiei/Kai Ni}}
+!{{ShipBattleCardKai|Kirishima/Kai Ni}}
+!{{ShipBattleCardKai|Akatsuki/Kai Ni}}
+|colspan="2" rowspan="2"|1.5x
+|-
+!{{ShipBattleCardKai|Yuudachi/Kai Ni}}
+!{{ShipBattleCardKai|Ayanami/Kai Ni}}
+!
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Kinugasa/Kai Ni}}
+!
+!
+|colspan="2"|1.44x
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Atago/Kai}}
+!{{ShipBattleCardKai|Sendai/Kai Ni}}
+!{{ShipBattleCardKai|Shigure/Kai Ni}}
+|colspan="2" rowspan="3"|1.32x
+|-
+!{{ShipBattleCardKai|Shiratsuyu/Kai Ni}}
+!{{ShipBattleCardKai|Murasame/Kai Ni}}
+!{{ShipBattleCardKai|Fletcher/Kai}}
+|-
+!{{ShipBattleCardKai|Yukikaze/Kai}}
+!{{ShipBattleCardKai|Teruzuki/Kai}}
+!
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Suzuya/Kai Ni}}
+!{{ShipBattleCardKai|Kumano/Kai Ni}}
+!{{ShipBattleCardKai|Tone/Kai Ni}}
+|colspan="2" rowspan="3"|1.2x
+|-
+!{{ShipBattleCardKai|Chikuma/Kai Ni}}
+!{{ShipBattleCardKai|Isuzu/Kai Ni}}
+!{{ShipBattleCardKai|Yuugumo/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Makigumo/Kai Ni}}
+!{{ShipBattleCardKai|Hamakaze/B Kai}}
+!{{ShipBattleCardKai|Tanikaze/D Kai}}
+|}
+|-|Boss Node W=
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="4"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="5"|Boss Node {{Event/Route|W|Red}}
+|-
+!{{ShipBattleCardKai|Hiei/Kai Ni}}
+!{{ShipBattleCardKai|Kirishima/Kai Ni}}
+!{{ShipBattleCardKai|Akatsuki/Kai Ni}}
+|colspan="2" rowspan="2"|1.73x
+|-
+!{{ShipBattleCardKai|Yuudachi/Kai Ni}}
+!{{ShipBattleCardKai|Ayanami/Kai Ni}}
+!{{ShipBattleCardKai|Kinugasa/Kai Ni}}
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Atago/Kai}}
+!{{ShipBattleCardKai|Takao/Kai}}
+!{{ShipBattleCardKai|Sendai/Kai Ni}}
+|colspan="2" rowspan="5"|1.5x
+|-
+!{{ShipBattleCardKai|Nagara/Kai}}
+!{{ShipBattleCardKai|Shigure/Kai Ni}}
+!{{ShipBattleCardKai|Shiratsuyu/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Murasame/Kai Ni}}
+!{{ShipBattleCardKai|Fletcher/Kai}}
+!{{ShipBattleCardKai|Yukikaze/Kai}}
+|-
+!{{ShipBattleCardKai|Teruzuki/Kai}}
+!{{ShipBattleCardKai|Amatsukaze/Kai}}
+!{{ShipBattleCardKai|Akashi/Kai}}
+|-
+!{{ShipBattleCardKai|Akitsushima/Kai}}
+!
+!
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Kongou/Kai Ni C}}
+!{{ShipBattleCardKai|Haruna/Kai Ni}}
+!{{ShipBattleCardKai|Suzuya/Kai Ni}}
+|colspan="2" rowspan="4"|1.32x
+|-
+!{{ShipBattleCardKai|Kumano/Kai Ni}}
+!{{ShipBattleCardKai|Tone/Kai Ni}}
+!{{ShipBattleCardKai|Chikuma/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Urakaze/D Kai}}
+!{{ShipBattleCardKai|Tanikaze/D Kai}}
+!{{ShipBattleCardKai|Isokaze/B Kai}}
+|-
+!{{ShipBattleCardKai|Hamakaze/B Kai}}
+!
+!
+|-
+! colspan="3"| Everybody Else
+|colspan="2"| 1.25x
+|-
+! colspan="3"|Last Dance Debuff (Multiplicative with Above)
+|colspan="2"| 1.15x
+|}
+* Last Dance Debuff applies to attacks against Anti-air Cruiser Princess '''only'''.
+</tabber>
+
+===No Shiplock for Medium Difficulty===
+*Please be advised that Ship Lock does not apply towards the Medium Difficulty for this Map, and you may bring any Ship you wish as long as your difficulty is up to Medium difficulty.
+**Hard Mode still applies Ship Lock.
+
+===Phase 1: Transport Phase===
+*Surface Task Force: 2(F)BB(V) 1CA(V) 1AV 2DD + 1CL 2CLT 3DD
+**Route: {{Event/Route|A|Blue|B|Red|D|Red|I|Blue|K|Purple|N|Red|O|Green|P|Red}}
+**'''This fleet must be Fast''', any Slow ships must made Fast by equipping [[Partials/Speed system|a combination of boilers and turbines]].<sup>[https://bbs.nga.cn/read.php?tid=19427682&rand=835]</sup>
+*Transport Combined Fleet : 2 CAV 4 DD + 1 CL 2 CA 3 DD
+**Route: {{Event/Route|C|Blue|F|Red|I|Blue|K|Purple|N|Red|O|Green|P|Red}}
+**Must be Fast Fleet
+
+===E-6 Phase 2: Node X Opening Phase===
+Do the following in any order '''(Be advised some below may not be required for lower difficulties)'''
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|P|Red}}
+! {{Event/Route|N|Red}}
+! {{Event/Route|V|Red}}
+! {{Event/Route|E|Red}}
+! {{Event/Route|H|Red}}
+! {{Event/Route|M|Red}}
+! LBAS Defense
+|-
+! Hard
+| S
+| S
+| A+ x2
+| AS
+| AS
+| AS
+| AS x2
+|-
+! Medium
+| S
+| S
+| A+
+| AS
+| AS
+! -
+| AS
+|-
+! Easy
+| A+
+| A+
+| A+
+! -
+! -
+! -
+! -
+|-
+! Casual
+| A+
+| A+
+| A+
+! -
+! -
+! -
+! -
+|}
+*Node {{Event/Route|P|Red}} S-Rank Once
+**Single Fleet: 2FBB 1CAV 1CL 2DD
+**Transport Combined Fleet required. (2 CAV 4 DD + 1 CL 3 DD 2 CA(V))
+***Recommended to take Node D instead of F to not use ASW setups in LBAS and Fleet, and send all 3 LBAS down to Node P.
+**A+ is enough for Casual/Easy Difficulty.
+*Node {{Event/Route|N|Red}} S-Rank Once
+**Can be done together with above Node P requirement.
+**A+ is enough for Casual/Easy Difficulty
+*Node {{Event/Route|E|Red}} Obtain Air Superiority Once
+**Fleet: Surface Task Force (4 BB(V) 2 CVL + 1 CL 3 DD 2 CA(V)/CLT)
+**Not required for Casual/Easy.
+*Node {{Event/Route|V|Red}} A+ Rank Twice (once for Casual/Easy/Medium)
+**Carrier Task Force required. (1-2 FBB 2 CV 1 CVL 1-2 CA(V) + 1 CL 3 DD 2 CA(V)/CLT)
+**Route: {{Event/Route|C|Blue|F|Red|G|Blue|J|Red|L|Red|R|Blue|V|Red}}
+***There is a LoS Check in Node L.
+***Highly recommended to bring 1 or 2 AACI Ships such as Maya Kai Ni or Akizuki-class due to the harsh enemy Carriers in Node J and V.
+***You will require a large amount of Fighter mules, including in LBAS due to the high Air Power Requirement in Node V.
+***Must be Fast Fleet
+*Node {{Event/Route|H|Red}} Obtain Air Superiority Once
+**Fleet: Carrier Task Force (3 CV + 1 CL 5 DD)
+**Main fleet can consist of only 3 Carriers to obtain AS and save resource while the escort should be OASW focused to deal with the submarine node at node F.
+**Route: {{Event/Route|C|Blue|F|Red|G|Blue|H|Red|}}
+**Not required for Casual/Easy.
+**Must be Fast Fleet
+*Node {{Event/Route|M|Red}} Obtain Air Superiority Once
+**Fleet: Single Fleet: 2CV 1CVL 1SS(V)
+**Route: {{Event/Route|C|Blue|F|Red|G|Blue|J|Red|K|Purple|M|Red}}
+**Use one Land Base to deal with the submarines in Node {{Event/Route|F|Red}}.
+*** Up to '''1''' additional DD may be used to perform OASW duty. (2 DD will route away from M Node)
+**The submarine will attract and absorb all attacks in Node {{Event/Route|K|Red}}.
+**The submarine is unable to sink in Node {{Event/Route|M|Red}} afterwards even if heavily damaged, as submarines are unable to be targeted by air strikes.
+**Not required for Casual/Easy/Medium.
+*Obtain Air Superiority via LBAS Air Defense twice.
+**Required once for Medium difficulty.
+**Not required for Casual/Easy.
+
+===Phase 3: Boss Pre-Final Phase===
+*Deplete Boss HP Gauge down to Last Dance.
+*Fleet: 3 (F)BB 2 CA(V) 1 Akashi Kai or Akitsushima Kai + 1 CL 2 DD 3 XX (CLT/CA(V)/DD/AV/AO. No FBB/CVL in 2nd fleet)
+**At least 3 Radar with 5+ LoS required (4 if using Akashi instead of Akitsushima to avoid an offroute to F).
+*Fleet: 3 (F)BB 2 CA(V) 1 Akashi Kai or Akitsushima Kai + 1 CL 2 DD 1 CLT/CA(V)/DD 1 SS(V) 1 Taigei
+**A submarine allows safer passage through the night battle at K node and can tank damage from DDs and CLs at the boss, including Anti-Air Cruiser Princess.  However, they can be vulnerable to enemy ASW.  Emergency repair items and/or upgraded [[List_of_Engines_by_stats|boilers]] are recommended equipment.
+*Route: {{Event/Route|A|Blue|B|Red|D|Red|I|Blue|K|Purple|X|Blue|S|Red|W|Red}}
+**Bring Nelson, Hiei, Kirishima, and recommended historical ships are Ayanami Kai Ni, Fletcher Kai, Yuudachi Kai Ni, Yukikaze Kai.
+
+===Phase 4: Boss Debuff===
+'''BOSS HP GAUGE BAR MUST BE IN LAST DANCE FIRST.'''
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|S|Red}}
+! {{Event/Route|Q|Red}}
+! {{Event/Route|V|Red}}
+! {{Event/Route|M|Red}}
+! LBAS Defense
+|-
+! Hard
+| S
+| S
+| S
+| AS
+| AS x2
+|-
+! Medium
+| S
+| S
+| A+
+| AS
+| AS x2
+|-
+! Easy
+| S
+! -
+! -
+! -
+! -
+|-
+! Casual
+| S
+! -
+! -
+! -
+! -
+|}
+*Be advised some of the requirements below may not apply towards Lower Difficulties.
+*S-Rank Node {{Event/Route|S|Red}} once
+**Same Fleet as Pre-Final.
+*S-Rank Node {{Event/Route|Q|Red}} once
+**Fleet: Fast Carrier Task Force: 2 FBB 3 CV(B) 1CA(V) + 1 CL 3 DD 2 CA(V)/CLT
+**Route: {{Event/Route|C|Blue|F|Red|G|Blue|H|Red|J|Red|L|Red|Q|Red}}
+**Not require for Easy
+*S-Rank Node {{Event/Route|V|Red}} once (A-Rank on Medium)
+**Same Fleet as used in Phase 2.
+**Not required for Easy
+*Obtain Air Superiority in Node {{Event/Route|M|Red}} once
+**Same Fleet as used in Phase 2.
+**Not required for Easy
+*Obtain Air Superiority via LBAS Air Defense Twice
+**Recommended to use a single submarine to cruise around easily.
+**Not required for Easy
+
+===E-6 Phase 5: Last Dance===
+*Fleet: 3 BB 2 CA(V) 1 Akashi Kai or Akitsushima Kai + 1 CL 2 DD 3 XX (CLT/CA(V)/DD No FBB/CVL in 2nd fleet)
+**Route: {{Event/Route|A|Blue|B|Red|D|Red|I|Blue|K|Purple|X|Blue|S|Red|W|Red}}
+**At least 3 ​Radar​s (with 5+ LoS) required (4 if using Akashi instead of Akitsushima to avoid an offroute to F).
+**Main fleet BBs are strongly recommended to be Nelson Kai, Kirishima Kai Ni and Hiei Kai Ni. Haruna Kai Ni or Kongou Kai Ni can be substituted if Nelson is unavailable.
+**Ships above taiha can be repaired by Akitsushima or Akashi to shouha or higher at node X if utilizing [[Emergency_Repair_Material|Emergency Repair Materials]].
+**It's common to utilize Ayanami Kai Ni, Yuudachi Kai Ni, Kinugasa Kai Ni and to a lesser extent Yukikaze Kai and Shigure Kai Ni in the second fleet due to high historical modifiers.
+**Gotland Kai is a common choice for 3 equip OASW + [[Type 96 150cm Searchlight]], to give other ships less chance of being targeted.
+**While CLT do not have special bonuses, their opening torpedoes are helpful for clearing out escort fleet enemies before the second shelling phase and slightly more consistency in reaching the boss.
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+====P====
+{{Fleets|friend=Fall 2019 Event|node=E-6 P}}
+====W====
+{{Fleets|friend=Fall 2019 Event|node=E-6 W}}
+
+===Map Progression===
+{{#tag:gallery|
+Fall19_E6_p1.png{{!}}Map during the TP phase at node P
+Fall19_E6_p2.png{{!}}Map during the HP phase at node W
+Fall_2019_Event_E-6_Map.png{{!}}Map during the second HP with node X unlocked
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+
+===LBAS Flight Range===
+[[File:Fall19_E6_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

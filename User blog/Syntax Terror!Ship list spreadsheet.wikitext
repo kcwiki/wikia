@@ -1,0 +1,54 @@
+'''Download link: [https://mega.co.nz/#!XgsjjC6B!97z_VfXy5E3p2yQg3uQ8eW_sRGvLAyQa_lKOJVoKc00 Quick reference ship list.ods]''' 
+
+This spreadsheet has been made to see quickly what ships you have, which ones you need and when you can [[Remodelling|remodel]] and [[Modernization|modernize]] them. It also allows to see their actual characteristics, the maximum of it and the points needed to reach this maximum.<br />
+It is an [https://en.wikipedia.org/wiki/ODF ODF] file, [https://www.openoffice.org/ OpenOffice Calc] or [http://www.libreoffice.org/ LibreOffice Calc] are free/open source spreadsheet programs that can read and edit it.
+
+;Notes
+*The names and ship numbers are the ones of the base ships.
+*The ships have been chosen thanks to the informations found on the [[Ship Maximum Status]] articles, it is not said to be the best list nor the one to choose, feel free to adapt it to your needs.
+*All the obtainable submarines and auxiliary ships are present, although it may be quite long to get them all.
+*There is no data on this list for the destroyers used in expeditions ([[:Category:Mutsuki Class|Mutsuki Class]]) and the ones you may want for their sonar/radar when they get remodelled ([[:Category:Yuugumo Class|Yuugumo Class]]). Look at [[:File:Best_destroyers_-_Radar_-_Expedition.png|Best destroyers - Radar - Expedition]] to see the cards of the destroyers to keep.
+*There is no indication for Luck as it is quite difficult to get Maruyu for modernization and it would also complicate the table. 
+
+== Description ==
+
+You can use this spreadsheet as a list of you ships, of the ones you need and of their [[remodelling]] levels.
+It can also be used for [[modernization]]: the maximum characteristics are indicated, along with the actual ones and the differences between the two (i.e. the number of points needed to reach the maximum).
+
+=== Lines ===
+
+* '''Number:''' the number of the card of the ship.
+* '''Romaji:''' the name of the ship in Latin characters.
+* '''Name:''' the name of the ship in Japanese characters.
+* '''Levels:''' the [[remodelling]] level(s).
+* '''Firepower, Torpedo, Anti-Air, Armour:''' the characteristics that can be improved with modernization.
+
+=== Columns ===
+
+* '''Actu:''' the actual characteristics of the ship, '''this is the only column you should edit'''. The numbers before modification are the base characteristics after the last remodelling.
+* '''Diff:''' the number of points needed to reach the maximum (i.e. Max - Actu = Diff).
+* '''Max:''' the maximum of the characteristic.
+
+== How to use ==
+
+*Before modernizing a ship, compare the '''Diff''' columns to avoid wasting ships by merging them while some of their bonuses are already maxed, or if they will be added in future modernizations:
+**Try to merge first the ships with Anti-Air bonuses (mainly the carriers, seaplane tenders and battleships) because it is the rarest characteristic.
+**Then add the ships with Firepower bonuses (Battleships, cruisers and remodelled destroyers).
+**Then the ships with only Armour and Torpedo attack and finally the ones with only torpedo attack if this characteristic still needs to be raised.
+*:(Note that some ships have 0 torpedo attack (battleships, aviation battleships, carriers and auxiliary ships) and that submarines have 0 Anti-Air.)
+*The cell colours can be changed to indicate the needed ships, the ones that are ready to be modernized and the ones that should be used for expeditions (that must not be modernized so their ammo and fuel consumption stay low). The maxed up characteristics should also have a different colour to see quickly what needs to be done.
+*:Example:
+[[File:Quick_reference_spreadsheet_example.png|300px|center]]
+
+== Modifiying the ship list ==
+
+*To remove ships, delete the corresponding cells.
+*To add ships, copy/paste a group of cells and edit them as indicated below.
+*To change the ships, change their number, names and remodelling level(s).
+**The romaji names are linked to the wikia articles, so the URL has to be changed to have correct links: 
+***Select the cell of the name and click on the URL button:
+[[File:URL_button.png|center]]
+:::*Change the name of the ship and its URL:
+[[File:HyperlinkDialog.png|center]]
+:*Change also the ships characteristics: look at the last remodel in the ship's article and put the Firepower, Torpedo attack, Anti-Air and Armour figures in the '''Actu''' (actual figure) column. Put the corresponding figures between brackets in the '''Max''' (maximum characteristic) column. The figure in the '''Diff''' (difference between Max and Actu) column will be calculated automatically.
+[[File:Characteristics.png|300px|center]]

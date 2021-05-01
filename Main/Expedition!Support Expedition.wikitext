@@ -1,0 +1,540 @@
+<!--
+{{Under Construction
+|Desc = is missing info on Aerial Support (damage calculations, example setups, when to use it) and Torpedo Attack Support; setup table for Support Shelling should be updated and preferably re-implemented using damage calculation template; need collapsed table with expedition numbers for current and past events; crosscheck with [http://wikiwiki.jp/kancolle/?%BB%D9%B1%E7%B4%CF%C2%E2 wikiwiki]; scratch damage considerations (?)
+|Page Adopted = がか
+}}
+-->
+==Introduction==
+[[File:Support expedition.png|250px|right]]
+Support expeditions involve sending a fleet into an expedition to provide additional bombardment during the [[Combat#Opening_Stages|opening stages of Combat]]. There are two types of support expeditions, normal support and boss support:
+* ''Expedition 33'' (15 minutes) is a normal support expedition, only works for pre-boss nodes.
+* ''Expedition 34'' (30 minutes) is a boss support expedition, only works for the boss node.
+Some '''important points''' about support expeditions are:
+* [[Events]] come with their exclusive support expeditions (e.g. expeditions 133 and 134 for normal and boss support, respectively) that can only be used throughout the event.
+** These event expeditions are unlocked by default.
+** Ships that take part in support expeditions are exempted from [[Events#Ship_Locking|ship locking]].
+* Outside of [[events]] support expeditions only work in [[World 5]].
+* Aerial Support does not work on night battle-only nodes.
+* For night to day battle nodes, Shelling and Torpedo Support trigger at the start of the night battle, while Aerial Support triggers during the day battle.
+In addition:
+* Sparkling your ships (mainly flagship) increases the probability to trigger support, while using fatigued ships reduces it.
+* For a [[#Support Types|support type]], [[#Support Shelling|Support Shelling]] is the usual choice, while Aerial Support is also used sometimes.
+* Support expedition will end if either of these two conditions is fulfilled:
+** Finish a sortie.
+** The timer runs out before starting a sortie. As long as the sortie is underway, having the counter running out on the way will not disable the support during battles.
+* Because support expeditions are ended but not returned, they do not count for daily and weekly expedition quests.
+
+==Support Types==
+A support expedition requires a minimum of '''at least 2 {{Type|DD}}'''. The other 4 slots affect what type of support will be provided. The three types provided are Aerial Support, Support Shelling, and Long Range Torpedo Attack:
+
+{| class="wikitable typography-xl-optout" width="100%"
+! width="10%"|Type
+! width="50%"|Fleet
+! width="0%"|{{Fuel}}
+! width="0%"|{{Ammo}}
+! width="0%"|{{Bauxite}}
+! width="40%"|Pros & Cons
+|-
+!Aerial Support
+| style="text-align: left;" |
+Meet '''one''' of the following requirements:
+* Amount of CV(L/B) + AV + LHA ≧ 2.
+* Amount of CV(L/B) ≧ 1 '''&''' fleet contains no CA(V) or (F)BB(V).
+* Amount of BBV + CAV + AV + LHA + AO ≧ 2 '''&''' fleet contains no CA or (F)BB.
+| rowspan="3" style="text-align: center;" |50%
+| style="text-align: center;" |{{Tooltip|40%|80% with 2+ CVB}}
+| style="text-align: center;" |✓
+|
+<span style="color:green">'''Pros'''</span>
+* Damage is spread out
+* Low cost.
+* Not affected by formation and engagement.
+* Capable of performing ASW Support when equipped with ASW equipment.
+* Capable of reducing the enemy fighter power.
+<span style="color:red">'''Cons'''</span>
+* Unlikely to sink heavily-armored ships.
+* Affected by enemy's AA and air power.
+* Costs bauxite.
+* Cannot activate in Night Battle nodes, unless said node can transition into a day battle.
+* Useless for reducing the enemy fighter power on battles that start on day, due to the support triggering only after the aerial battle has already occurred.
+|-
+!Support Shelling
+| style="text-align: left;" |
+Meet '''all''' of the following requirements:
+* Amount of CV(L/B) + AV + LHA ≦ 1.
+* Fleet contains at least a CA or (F)BB.
+* Amount of (F)BB(V) ≧ 2 '''OR''' amount of CA = 4.
+| rowspan="2" style="text-align: center;" |80%
+| rowspan="2" style="text-align: center;" |✗
+|
+<span style="color:green">'''Pros'''</span>
+* High damage upon hitting.
+* Likely to sink enemy's ships.
+* Can activate in Night battle nodes.
+<span style="color:red">'''Cons'''</span>
+* High cost.
+* Affected by formation and engagement.
+|-
+!Long Range Torpedo Attack
+| style="text-align: left;" |Do not meet the requirements for either Aerial or Shelling Support.
+|
+<span style="color:green">'''Pros'''</span>
+* Can activate in Night battle nodes.
+<span style="color:red">'''Cons'''</span>
+* Low accuracy and damage.
+* Unable to sink any ship.
+* Practically useless.
+|}
+
+===Support Shelling===
+The standard composition is '''2 DD, 1 CV(L), 3 BB'''. Up to two BBV may be substituted in for BB.
+
+'''Addendum'''<span style="font-weight:400;">: Previously, 2 CV(L)s are usable for Shelling Support, but as of the November 17th, 2017 update, using 2 CV(L)s will result in Aerial Support instead.</span>
+====Shelling damage calculation====
+* Each ship attacks a randomly selected enemy ship
+* Damage calculated as usual, see [[Damage Calculation]], noting that some modifiers don't affect support shelling, as described below
+** For DD, BB, Cruisers and etc., the same [[Damage_Calculation#Basic_Attack_Power|shelling formula]] for basic attack power is used; if FP is ship's firepower, EFP is equipment firepower:<div align="center" style="margin:20px;"><math>4 + FP + \sum{EFP}</math></div>
+** AOs use shelling damage formula regardless of equipment
+** For CV and CVL the [[Damage_Calculation#Basic_Attack_Power|carrier shelling formula]] is used; if FP is ships's firepower, TP is equipment torpedo, DB is equipment divebomb:<div align="center" style="margin:20px;"><math>25 + \big \lfloor 1.5 \times (19 + FP + \lfloor 1.3 \times \sum{DB} \rfloor + \sum{TP} ) \big \rfloor</math></div>
+* Applicable modifiers: [[Combat#Formation_Selection|formation]] and [[Combat#Engagement_Form_Modifier|engagement]] modifiers, [[Damage_Calculation#Attack_Power_Cap|damage cap]], [[Damage_Calculation#Critical_Modifier|critical damage]] modifier
+* Accuracy (at least from morale, equipment accuracy, luck and levels<ref name="kenshou_wikia_1">http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:1253</ref>) also has its effect
+* The following factors are considered to have no effects (or pending verification):
+** Artillery spotting modifiers; thus, there is no need to equip a seaplane
+** Equipment fit and overweight<ref>http://www.nicovideo.jp/watch/sm27095718</ref><ref name="kenshou_wikia_1" />
+** Equipment [[improvements]]<ref>http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1400461230/493</ref><ref name="kenshou_wikia_1" />
+** [[Aircraft Proficiency]]<ref>http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1400461230/972</ref>
+** [[List_of_Shells_by_stats#Armor_Piercing_Shells|AP shell]] modifiers<ref>http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1439793270/159</ref>
+** Light cruiser FP bonus<ref name="kiritr_blogspot_2015_12" />
+** Accuracy difference between battleships and carriers<ref name="kenshou_wikia_1" />
+
+The attack power cap and the importance of accuracy render '''2-3 [[List of Main Guns by stats|main guns]] or 2-3 bombers + 1-2 [[List of Radars by stats|radars]]''' as standard setup for battleships and carriers (when dealing with heavily armored targets, DD can use 3 radars to increase the chance for their scratch damage). Sparkling all ships for better accuracy is also recommended.
+
+For example:
+
+* [[Haruna|Haruna Kai Ni]] equipped with two [[46cm Triple Gun Mount]] and two [[Type 32 Surface Radar]] will have 5 + (96 - 1) + 2 × 26 = 152 attack power before the cap with +16 accuracy from equipment
+** With three [[46cm Triple Gun Mount]]: 179 attack power before the cap, 142 in head-on engagement
+* [[Yamato|Yamato Kai]] with two [[46cm Triple Gun Mount]] will have 195 attack power before the cap, or 156 in head-on engagement
+* [[Kaga|Kaga Kai]] with two [[Suisei Model 12A]] (or two [[Ryuusei Kai]]) will have 55 + 1.5 × (49 - 1) + 1.5 × 1.3 × 2 × 10 (or 55 + 1.5 × (49 - 1) + 1.5 × 2 × 13) = 166 attack power before the cap, 132 in head-on engagement
+** With three [[Suisei Model 12A]] (or three [[Ryuusei Kai]]): 185 attack power before the cap, 148 in head-on engagement
+* [[Hiryuu|Hiryuu Kai Ni]] with two [[Suisei Model 12A]] (or two [[Ryuusei Kai]]) will have 188 attack power before the cap, or 150 in head-on engagement
+* [[Yuudachi|Yuudachi Kai Ni]] will have 77 attack power without guns, or up to 86 with 3 guns ([[Ayanami|Ayanami Kai Ni]] will have 3 less). For example, with default modifiers, Yuudachi with one gun (or Ayanami with two) will always hit for 40+ damage on a 30- armor ship.
+
+See the following tables for reference
+
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%"
+! colspan="6" | List of bombers by shelling attack power
+|-
+! Bomber
+! [[File:Icon Torpedo.png|Torpedo]]
+! [[File:Icon Dive.png|Divebomb]]
+! Attack Power
+! [[File:Icon Hit.png|Accuracy]]
+! Buildable
+|-
+|[[File:RedPlane.png]][[Suisei (Egusa Squadron)]]
+|
+|13
+|24
+|4
+|No
+|-
+|[[File:BluePlane.png]][[Tenzan Model 12 (Murata Squadron)]]
+|15
+|
+|22.5
+|2
+|No
+|-
+|[[File:BluePlane.png]][[Tenzan Model 12 (Tomonaga Squadron)]]
+|14
+|
+|21
+|3
+|No
+|-
+|[[File:RedPlane.png]][[Suisei (601 Air Group)]]
+|
+|11
+|21
+|1
+|No
+|-
+|[[File:RedPlane.png]][[Prototype Nanzan]]
+|
+|11
+|21
+|
+|No
+|-
+|[[File:RedPlane.png]][[Type 99 Dive Bomber (Egusa Squadron)]]
+|
+|10
+|19.5
+|4
+|No
+|-
+|[[File:BluePlane.png]][[Ryuusei (601 Air Group)]]
+|13
+|
+|19.5
+|1
+|No
+|-
+|[[File:RedPlane.png]][[Suisei Model 12A]]
+|
+|10
+|19.5
+|
+|Yes
+|-
+|[[File:BluePlane.png]][[Ryuusei Kai]]
+|13
+|
+|19.5
+|
+|Yes
+|-
+|[[File:BluePlane.png]][[Type 97 Torpedo Bomber (Murata Squadron)]]
+|12
+|
+|18
+|2
+|No
+|-
+|[[File:BluePlane.png]][[Type 97 Torpedo Bomber (Tomonaga Squadron)]]
+|11
+|
+|16.5
+|3
+|No
+|-
+|[[File:RedPlane.png]][[Ju 87C Kai]]
+|
+|9
+|16.5
+|1
+|No
+|-
+|[[File:BluePlane.png]][[Tenzan (601 Air Group)]]
+|10
+|
+|15
+|1
+|No
+|-
+|[[File:RedPlane.png]][[Suisei]]
+|
+|8
+|15
+|
+|Yes
+|-
+|[[File:BluePlane.png]][[Ryuusei]]
+|10
+|
+|15
+|
+|Yes
+|-
+|[[File:RedPlane.png]][[Type 99 Dive Bomber (Skilled)]]
+|
+|7
+|13.5
+|2
+|No
+|-
+|[[File:BluePlane.png]][[Tenzan (931 Air Group)]]
+|9
+|
+|13.5
+|
+|No
+|-
+|[[File:BluePlane.png]][[Type 97 Torpedo Bomber (Skilled)]]
+|8
+|
+|12
+|2
+|No
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%"
+! colspan="6" | List of ships and setups by shelling attack power
+|-
+| colspan="6" |
+* Maximal remodel and modernization
+* Bombers with 19.5 attack power used for CV/CVL ([[Suisei Model 12A]], [[Ryuusei Kai]])
+* [[46cm Triple Gun Mount]] used for BB
+* Attack power highlighted in <span style="color:orange;">orange</span> is over the damage cap
+* Attack power highlighted in <span style="color:red;">red</span> is over the damage cap in head-on engagement
+* Consumption-wise Kongou, Ise, Unryuu class ships and CVLs are the most effective, while more expensive ships allow using more radars
+|-
+! colspan="2" |
+! colspan="4" | Attack Power with N guns / bombers
+|-
+! Ship
+! [[File:Icon Gun.png|Firepower]]
+! 1
+! 2
+! 3
+! 4
+|-
+|[[Aquila]]
+|24
+|109
+|128
+|148
+| style="color:orange;" |167
+|-
+|[[Shouhou]], [[Hiyou]], [[Zuihou]]
+|29
+|116
+|136
+| style="color:orange;" |155
+| style="color:orange;" |175
+|-
+|[[Ryuuhou]]
+|32
+|121
+|140
+| style="color:orange;" |160
+| style="color:orange;" |179
+|-
+|[[Chitose]], [[Chiyoda]]
+|34
+|124
+|143
+| style="color:orange;" |163
+| style="color:orange;" |182
+|-
+|[[Taiyou]]
+|39
+|131
+| style="color:orange;" |151
+| style="color:orange;" |170
+| style="color:red;" |190
+|-
+|[[Ryuujou]], [[Junyou]]
+|40
+|133
+| style="color:orange;" |152
+| style="color:orange;" |172
+| style="color:red;" |191
+|-
+|[[Amagi]], [[Katsuragi]]
+|45
+|140
+| style="color:orange;" |160
+| style="color:orange;" |179
+| style="color:red;" |199
+|-
+|[[Unryuu]]
+|48
+|145
+| style="color:orange;" |164
+| style="color:orange;" |184
+| style="color:red;" |203
+|-
+|[[Kaga]]
+|49
+|146
+| style="color:orange;" |166
+| style="color:orange;" |185
+| style="color:red;" |205
+|-
+|[[Saratoga]]
+|53
+| style="color:orange;" |152
+| style="color:orange;" |172
+| style="color:red;" |191
+| style="color:red;" |211
+|-
+|[[Akagi]]
+|54
+| style="color:orange;" |154
+| style="color:orange;" |173
+| style="color:red;" |193
+| style="color:red;" |212
+|-
+|[[Kumano]]
+|55
+| style="color:orange;" |155
+| style="color:orange;" |175
+| style="color:red;" |194
+| style="color:red;" |214
+|-
+|[[Suzuya]]
+|56
+| style="color:orange;" |157
+| style="color:orange;" |176
+| style="color:red;" |196
+| style="color:red;" |215
+|-
+|[[Souryuu]]
+|57
+| style="color:orange;" |158
+| style="color:orange;" |178
+| style="color:red;" |197
+| style="color:red;" |217
+|-
+|[[Taihou]]
+|59
+| style="color:orange;" |161
+| style="color:orange;" |181
+| style="color:red;" |200
+| style="color:red;" |220
+|-
+|[[Hiryuu]]
+|64
+| style="color:orange;" |169
+| style="color:red;" |188
+| style="color:red;" |208
+| style="color:red;" |227
+|-
+|[[Zuikaku]]
+|65
+| style="color:orange;" |170
+| style="color:red;" |190
+| style="color:red;" |209
+| style="color:red;" |229
+|-
+|[[Shoukaku]]
+|70
+| style="color:orange;" |178
+| style="color:red;" |197
+| style="color:red;" |217
+| style="color:red;" |236
+|-
+|[[Ise]], [[Hyuuga]]
+|83
+|113
+|139
+| style="color:orange;" |165
+| style="color:red;" |191
+|-
+|[[Haruna]]
+|96
+|126
+| style="color:orange;" |152
+| style="color:orange;" |178
+| style="color:red;" |204
+|-
+|[[Kongou]], [[Hiei]], [[Yamashiro]]
+|98
+|128
+| style="color:orange;" |154
+| style="color:orange;" |180
+| style="color:red;" |206
+|-
+|[[Mutsu]], [[Fusou]], [[Bismarck]]
+|99
+|129
+| style="color:orange;" |155
+| style="color:orange;" |181
+| style="color:red;" |207
+|-
+|[[Italia]]
+|102
+|132
+| style="color:orange;" |158
+| style="color:orange;" |184
+| style="color:red;" |210
+|-
+|[[Kirishima]]
+|104
+|134
+| style="color:orange;" |160
+| style="color:orange;" |186
+| style="color:red;" |212
+|-
+|[[Roma]]
+|105
+|135
+| style="color:orange;" |161
+| style="color:red;" |187
+| style="color:red;" |213
+|-
+|[[Nagato]]
+|110
+|140
+| style="color:orange;" |166
+| style="color:red;" |192
+| style="color:red;" |218
+|-
+|[[Yamato]], [[Musashi]]
+|139
+| style="color:orange;" |169
+| style="color:red;" |195
+| style="color:red;" |221
+| style="color:red;" |247
+|}
+
+===Aerial Support===
+Standard composition is '''2 DD, 4CV(L/B)''' with the maximum amount of carriers possible participating in the airstrike. Only ships with planes participate in this phase, as this support type will lead you through a self-contained air phase. This means that your fleet will be subject to the 1st and 2nd phase of [[Aerial Combat]]. The efficiency of this support is heavily dependent on whether you can reach a desirable air status, and whether the enemy {{AA}} is strong or not. Since this support also makes use of the airstrike formula, the only thing relevant are the planes you're using on your carriers.
+
+====Airstrike Phase====
+The Aerial Support Fleet fights for the air control for a desirable air status, just like how it happens with the main fleet, with a few twists:
+* Your bombers will each randomly select a target to attack.
+** The damage done here is weaker in comparison to the airstrike from a main fleet.
+* The enemy fleet will not attack your support fleet.
+* Whatever air state you reach with your support fleet, will not affect the air state of the main fleet.
+* Your bombers are still susceptible to {{AA}} fire, while your opponent is immune to it. Obviously, if a plane slot gets obliterated, it does not launch its attack either.
+** The enemy shot down ratio for both proportional and fixed is 20% less effective than usual.
+* There is no Contact, {{YellowPlane}} have no uses here.
+* The base accuracy is reduced in comparison to the airstrike from the main fleet.
+* Improvements are not taken into account.
+* [[Aircraft Proficiency]] has no effect.
+* Using Jets will not trigger a Jet phase.
+
+====Airstrike Damage Calculation====
+Since each bomber attacks their own target using the airstrike formula, it is important that you try to reach a favorable air control, to reduce the amount of bombers being lost and to maximize the damage you can dish.
+
+The Aerial Support fleet uses the following formula for basic attack power of 
+'''each''' plane (same as the usual [[Damage_Calculation#Basic_Attack_Power|airstrike formula]], with the exception of 25 constant being reduced to 3) and a postcap modifier of 1.35:<br />
+
+<div align="center" style="margin:20px;"><math>(P \times \sqrt{N} + 3) \times R</math></div>
+where:
+*P is the bomber's Torpedo or Dive Bombing stat
+*N is the current plane count (slot size) of the slot
+*R is the bomber's Plane Scaling:
+{| class="wikitable typography-xl-optout" style="width:100%"
+|-
+!Bomber Type
+!Plane Scaling
+!Notes
+|-
+|{{RedPlane}} {{Seaplane}}
+|1
+|This value is fixed, regardless the situation.
+|-
+|{{BluePlane}}
+|0.8 or 1.5
+|About 50% chance of either modifier.
+|}
+
+====Anti-submarine Patrol====
+Anti-submarine Patrol can also occur when using aerial support. At least one CVL and either of one CVL/AV/AO/LHA/CL/CT or 2DE is required to trigger it. The recommended composition is 2CVL 2CV 2DD, equipped with high ASW planes on large slots. Take note that on a node with only surface enemies, it will default back to aerial support (if possible).
+
+In ASW Support, all planes with ASW stat and on a non-zero slot except carrier fighters will participate. Damage is calculated by the following formula:
+
+<div align="center" style="margin:20px;"><math>\operatorname{precap} \left ( 0.6 P \times \sqrt{N} +3 ) \right ) \times 1.75 \times R \times C</math></div>
+where:
+*P is the plane's ASW stat
+*N is the current plane count (slot size) of the slot
+*R is a random multiplier from three weighted numbers: 1.2 (40%), 1.5 (10%) or 2.0 (50%)
+*C is the Critical Hit Modifier
+*Precap is the  [[#Attack Power Cap|soft cap to attack power]], soft capping at 150.
+
+===Long-range Torpedo Attack===
+Currently, torpedo support is only capable of dealing scratch damage, regardless of torpedo stat. It is not known if this is a bug, or intended behavior. As such, it can currently be considered a failure state, when your support fleet does not fulfill the conditions of any other 'proper' support type.
+
+===Trigger rates===
+This is the general trigger rate for all support expeditions.
+* Route support, normal morale: 50%
+* Route support, only flagship is sparkled: 65%
+* Route support, all ships are sparkled: 90%
+* Boss support, normal morale: 85%
+* Boss support, only flagship is sparkled: 100%
+The general algorithm is: 50% base + 15% if flagship is sparkled + 5%*N for N sparkled non-flagships + 35% if boss support.
+
+==References==
+<references />

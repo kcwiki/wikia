@@ -1,0 +1,49 @@
+==Ship Data Format==
+
+This module should return a table.
+
+If the module contains ship forms, the returned table should contain other tables for each form of the ship, under a string key. This string key determines the part after the "/" in the ship lookup. The table for the basic form should be under the key "", or the empty string. Remodels should be under the suffix of that remodel, like "Kai" or "Kai Ni". For enemy forms that can't be differentiated by name, they should be numbered with roman numerals according to the order of their <code>_api_id</code>, except the first one, for which the numeral should be omitted.
+
+See [[#Ship Form Data Format]] for the contents of these tables.
+
+<div class="mw-collapsible {{#if:{{{collapsed|false}}}|true|mw-collapsed}}">For example,<div class="mw-collapsible-content">
+
+ local Ooyodo = {
+     [""] = {
+         ... --ship data goes here
+     },
+     ["Kai"] = {
+         ... --ship data goes here
+     },
+ }
+ 
+ return Ooyodo
+</div></div>
+
+It is also possible to redirect forms by specifying a ship selector string, instead of a table. If the base name of the ship form to be redirected to is the same as the form that is being redirected, the base name can be omitted.
+
+<div class="mw-collapsible {{#if:{{{collapsed|false}}}|true|mw-collapsed}}">For example,<div class="mw-collapsible-content">
+ local Harbour_Princess = {
+     ...
+     ["II"] = {
+         ... --ship data goes here
+     },
+     ["Final"] = "/II",
+     OR
+     ["Final"] = "Harbour Princess/II",
+ }
+</div></div>
+
+If the module contains a ship class, the returned table should contain contain a table under the key ''class''.
+
+<div class="mw-collapsible {{#if:{{{collapsed|false}}}|true|mw-collapsed}}">For example,<div class="mw-collapsible-content">
+ local Ooyodo = {
+     class = {
+         ... --ship class data goes here
+     },
+ }
+ 
+ return Ooyodo
+</div></div>
+
+For seasonal forms' format, see [[Template:Ship/Gallery]].

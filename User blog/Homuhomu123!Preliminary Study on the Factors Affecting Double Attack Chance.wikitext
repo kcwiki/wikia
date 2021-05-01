@@ -1,0 +1,273 @@
+<p style="font-size:14.4444446563721px;">'''''>> Due to LIMITED sample size and/or BAD experiment procedure, this article is considered obsolete. '''''</p>
+
+<p style="font-size:14.4444446563721px;">'''>> Click [http://kancolle.wikia.com/wiki/User:Homuhomu123#-_Homu_Test:_Trigger_Rates_of_Artillery_Spotting_.2F_.E3.83.9B.E3.83.A0.E3.83.86.E3.82.B9.E3.83.88.EF.BC.9A.E5.BC.BE.E7.9D.80.E8.A6.B3.E6.B8.AC.E5.B0.84.E6.92.83.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6 here] to see the list of experiments performed by <u>Homu Test</u>.'''</p>
+
+
+==Intro to the ASTRE Project:==
+: ASTRE means "Artillery Spotting Trigger Rate Estimate". As the name suggests, this project will come up with a reliable formula to estimate DA/CI chances, from which we could optimize our set up for day battles. The effectiveness of Artillery Spotting will also be studied, namely DA/CI accuracy and post-cap damage output. Please be aware that according to limited labor & time, this project does NOT study the exact formula, but gives credible rough estimates (deviation < 5%) on the trigger rates. 
+
+: <span style="font-size:14px;">In order to save time, I will be sending test ships consistently to 3-2-A, and they will be under severe fatigue (or red faces). In some experiments, effects from minor factors such as slight damage (小破), enemy formation & engagement form will be ignored as sample size gets larger (#ATK > 170). When each study were done, preliminary hypothesis on DA / CI rate modifiers will be made, and those hypothesis will be further evaluated in future experiments. Over numerous trials we should be able to build a model which precisely predicts the actual Artillery Spotting chances. O</span>nce hypothesis became mature, they will be posted on the page [http://kancolle.wikia.com/wiki/Artillery_Spotting_%28%E5%BC%BE%E7%9D%80%E8%A6%B3%E6%B8%AC%E5%B0%84%E6%92%83%29 Artillery Spotting], the final product of the ASTRE project.
+
+: This my the first part of the ASTRE project, in which 2 experiments, namely Exp't A & Exp't B, were done in total of 3 days. In order to analyze the data, some [http://kancolle.wikia.com/wiki/Artillery_Spotting_(%E5%BC%BE%E7%9D%80%E8%A6%B3%E6%B8%AC%E5%B0%84%E6%92%83)#The_Trigger_Chance_of_Artillery_Spotting: fundamental assumptions] were presumed. These assumptions were primarily based on test results from<span style="color:rgb(0,0,0);font-size:13.63636302948px;"> </span>[http://kankoregouchin.blog.fc2.com/blog-entry-23.html 艦これ-チラ裏検証-].
+
+: Please let me know If you want to check the blog but can't read Japanese. Also, your feedbacks are more than welcome (:
+
+
+==Information About the Exp't==
+'''- Objective:  '''<span style="font-size:13.63636302948px;">C</span><span style="font-size:14px;">ollect reference data for future experiments. Also, evaluate the flagship modifier on DA rate.</span>
+
+<span style="font-size:14px;">- </span>'''Assumptions'''<span style="font-size:14px;">: Based on the page </span>[http://kancolle.wikia.com/wiki/Artillery_Spotting_(%E5%BC%BE%E7%9D%80%E8%A6%B3%E6%B8%AC%E5%B0%84%E6%92%83)#The_Trigger_Chance_of_Artillery_Spotting: Artillery Spotting]
+
+- '''Terminology:''' "#ATK" = Total number of attacks 
+
+::::  "#DA" = Number of double attacks. A double attack is only counted once 
+
+::::  "#DA_HIT" = Number of DA that either strike inflcted a non-scratch damage (>10% of the target's current HP)
+<span style="font-size:14.6666669845581px;">- '''Map:''' 3-2-A</span>
+
+- '''Test ships & equipment:'''
+
+[[File:Test_Ships_330px.jpg|thumb|left|500px]]
+
+
+- <span style="font-size:14.4444446563721px;">Levels are subject to change (<10)</span>
+
+- Ar196 Kai (+5 LoS, +2 Accuracy)
+
+<span style="font-size:14px;">- Difference in guns is neglected, for now</span>
+
+<span style="font-size:14px;">- FuMO is classified as AA radar. (+10 accuracy, +9 LoS)</span>
+
+
+
+
+'''[ NOTES ]'''
+
+- EDIT: Since ships are being leveled up, their individual LoS will be changing. Thus we use the average of the initial and final Fleet LoS, in order to estimate the LoS modifier. The formula used is 
+
+<p style="text-align:center;">'''''<span style="font-size:14px;">Difference in fleet LoS == SUM (diff. ship.Lv) * 0.4</span>'''''</p>
+
+which was derived from [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Further_Study_on_the_Factors_Affecting_Trigger_Rates_of_Artillery_Spotting#Findings_from_Exp.27t_D findings from Exp't D] .
+
+- This formula gives underestimate. A fleet with very high LoS growth (CAV, CV(L), etc) will probably use a factor of 0.5.
+
+- EDIT: Assume difference in seaplanes will NOT affect DA chance (< 2%). << SUCH PRACTICE SHALL BE AVOIDED IN FUTURE EXP'TS
+
+<span style="font-size:14px;">-</span><span style="font-size:14px;"> Data shall be recorded only if test ships are in severe fatigue (red face) & beyond moderate damage.</span>
+
+
+
+
+
+
+
+=='''[ Exp't A ]'''==
+
+- Completed in 2 Days (Total of 4h)
+
+<span style="font-size:14px;">- # Battles: </span><span style="font-size:14.6666669845581px;">118</span>
+
+<span style="font-size:14px;">- Formation: LINE AHEAD                                                    </span>
+
+<span style="font-size:14px;">- Fleet Total LOS = ~364~''' (+5% DA chance)'''</span>
+
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|
+! scope="col"|
+Fuso {flag}, 
+
+<span style="font-size:14px;">lv 63 ~> 73</span>
+! scope="col"|
+Chikuma,
+
+lv 50 ~> 61
+! scope="col"|
+Prinz Eugen,
+
+lv 65 ~> 72
+|-
+|#ATK
+|'''165'''
+|122
+|138
+|-
+|#DA
+|117
+|72
+|82
+|-
+|#DA_HIT
+|73
+|20
+|42
+|-
+|'''Actual DA rate'''
+|'''70.9%'''
+|'''59.0%'''
+|'''59.4%'''
+|-
+|DA rate Estimate
+|
+81% = <span style="font-size:14px;">50%+</span><span style="font-size:14.4444446563721px;">15%+</span><span style="font-size:14px;">[10%]+(5%)+<1%></span>
+|57% = 47%+[3%]+(5%)+<2%>        
+|60% = 47%+[7%]+(5%)+<1%>        
+|-
+|Difference (Est-Act)
+| '''+10.1%'''
+| '''-2.0%'''
+| '''+1.6%'''
+|-
+|''DA Accuracy''
+|''62.4%''
+|''27.8%''
+|''51.2%''
+|-
+|
+''Equipment Bonus on Accuracy''
+| +11
+| +7
+| +14
+|}
+
+<span style="font-size:14px;">- Non-S Results:                20</span>
+
+- Buckets used:                18 (6 by the wildcard)
+
+- Companion CV(L):        Chitose KK2 ~ lv 86, Taihou K ~ lv 78, Junyou K ~ lv 60   
+
+- Wildcard:    Akashi lv1->35, then switched to Uzuki & Amatsukaze  << SUCH PRACTICE SHALL BE AVOIDED IN FUTURE EXP'Ts
+
+
+
+
+
+
+=='''[ Exp't B ]'''==
+
+- Completed in 2 Days (Total of 4h)
+
+- # Battles: 128                
+
+- Formation: LINE AHEAD
+
+- Fleet Total LoS = ~384~ '''(+6.5% DA chance)'''
+
+
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|
+! scope="col"|
+<p style="font-weight:bold;font-size:14.4444446563721px;">Fuso,</p>
+
+<p style="font-weight:bold;font-size:14.4444446563721px;">lv 73 ~> 78</p>
+! scope="col"|
+<p style="font-weight:bold;font-size:14.4444446563721px;">Chikuma</p>
+
+<p style="font-weight:bold;font-size:14.4444446563721px;"><span style="font-size:14.6666669845581px;font-weight:bold;">lv 61 ~> 70</span></p>
+
+<p style="font-weight:bold;font-size:14.4444446563721px;">{ Flagship }</p>
+! scope="col"|
+<p style="font-weight:bold;font-size:14.4444446563721px;">Prinz Eugen,</p>
+
+<p style="font-weight:bold;font-size:14.4444446563721px;">lv 72 ~> 77,</p>
+
+<p style="font-weight:bold;font-size:14.4444446563721px;">"Moderately</p>
+
+<p style="font-weight:bold;font-size:14.4444446563721px;">damaged" **</p>
+|-
+|#ATK
+|<span style="font-size:14.4444446563721px;">164</span>
+|<span style="font-size:14.4444446563721px;">177</span>
+|<span style="font-size:14.4444446563721px;">163</span>
+|
+|-
+|#DA
+|<span style="font-size:14.4444446563721px;">93</span>
+|<span style="font-size:14.4444446563721px;">109</span>
+|<span style="font-size:14.4444446563721px;">92</span>
+|
+|-
+|#DA_HIT
+|55
+|46
+|49
+|-
+|'''Actualy DA rate'''
+|'''56.7%'''
+|'''61.6%'''
+|'''56.4%'''
+|-
+|DA rate Estimate
+|66.5% = 50%+[10%]+(6.5%)
+|71.5% = 47%+15%+[3%]+(6.5%)
+|60.5% = 47%+[7%]+(6.5%)  
+|-
+|Difference (Est-Act)
+|'''+9.8%'''
+|'''+9.9%'''
+|'''+4.1%'''
+|-
+|''DA Accuracy''
+|''59.1%''
+|''42.2%''
+|''53.3%''
+|-
+|''Equipment Bonus on Accuracy''
+|''+11''
+|''+7''
+|''+14''
+|}
+
+- Non-S Results:                29
+
+- Buckets used:                11 (3) .. the wildcard Uzuki never used any bucket
+
+- Companion CV(L):        Taihou ~lv 86~, Junyou ~lv 73~.  
+
+- Wildcard:                        Uzuki lv 5~>24 / Amatsukaze 11~>29
+
+*<span style="font-size:14px;">Prinz Eugen was in moderately damaged state during 20th -> 34th & 48th -> 128th sortie, which consists 73.4% of the total.</span>
+
+
+>> ALWAYS ABOVE MODERATE DAMAGE FOR TEST SHIPS (EXCEPT PRINZ EUGEN), ABOVE RED FOR THE OTHERS.
+
+----
+
+
+'''[ Notice ]'''
+
+- When comparing Exp't A & B, DA chance from B should be 2% less due to higher LoS.
+
+- Exp't A has lower credibility since a smaller samples (#ATK < 160) were collected, except the one from Fuso.
+
+- Too many variables varying at the same time, which would lead to inconclusive results. such action should be prohibited in future exp't.
+
+
+
+
+
+
+
+==Analysis on the Data:==
+'''- General Observation:'''
+*Frequent change on CV(L) & wildcards which had various LoS. This could significantly distort the test results. For the sake of better accuracy and credibility, such practice should be strictly prohibited. 
+*In Exp't A, 2 out of 3 test ships had a fairly small sample size (#ATK) relative to their true probability (DA rate). This might result in considerable deviation from their true DA chance. For future exp't, when the true probability is between 40%~60%, a larger sample size must be considered. 
+*When evaluating "moderately damaged" modifier, it's better to keep the ship under that condition 100% of the time. 
+*In general, the first 2 tests are very starter-level, and heavily based on ASTRE w/ undetermined factors. In future exp't, I will prefer more comparative study with factors firmly controlled. 
+'''- Comparative'''
+*Between Fuso Kai & Prinz Eugen Kai, despite similar ship levels, Fuso seems to have ~10% higher DA chance. (Smaller sample size, lower credibility)
+'''- ASTRE:'''
+
+*If we're allowed to calibrate the LoS difference between Exp't A & B (364 vs 384), Fuso's DA chance decreased by 15.7% when it's not the flagship.
+*<span style="font-size:14px;">For those results from larger sample sizes (#ATK > 160), our estimates are always above the actual DA chances by ~10%. I suspect that this comes from fatigue penalty and/or minor damage penalty.</span>
+*<span style="font-size:14px;">After LoS calibration, when Prinz Eugen was "moderately damaged", its DA chance fell by 4.5%. This value could be very much inaccurate since both exp't used fairly small sample size.</span>
+
+
+
+
+==Plans for the Next Step ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Further_Study_on_the_Factors_Affecting_Trigger_Rates_of_Artillery_Spotting Exp't C] & D )==
+In the next experiments, we will continue using ASTRE to estimate effects from fatigue & HP state. Prinz Eugen will do a CI test and to evaluate the effects from different radars.
+[[Category:Blog posts]]

@@ -1,0 +1,74 @@
+{| style="width:100%; margin:0px 0px 10px 0px; text-align:left;" class="mobile-hide"
+|- <!---------------------- FIRST ROW ---------------------->
+{{FrontpageMenu
+|image = {{{event_icon|Event_Closed.png}}}
+|link = {{{event_ext_link|{{{event_link|{{{event|Events}}}}}}}}}
+|ext_link = {{{event_ext_link|}}}
+|title = {{{event_title|{{{event|Past Events}}}}}}
+|line1 = &#8226; {{{event_line_1|{{#if:{{{event_prev|}}}|Previous: '''[[{{{event_prev|}}}]]'''|{{#if:{{{event_next|}}}|Next: '''[[{{{event_next|}}}]]'''|}}}}}}}
+|line2 = &#8226; {{{event_line_2|{{#if:{{{event_next|}}}|Next: '''{{{event_next|}}}'''|Past: '''[[Events]]'''}}}}}
+}}
+{{FrontpageMenu
+|image = Portal_discussion.png
+|link = General Discussion
+|title = Discussions
+|line1 = &#8226; [[Special:Forum|Forum Boards]]
+|line2 = &#8226; [[General Discussion/Art|Artworks]]
+|line3 = &#8226; [[Suggestion|Make a Suggestion]]
+}}
+|- <!---------------------- SECOND ROW ---------------------->
+{{FrontpageMenu
+|image = Recent_updates.png
+|link = Recent Updates
+|title = Recent Updates
+|line1 = &#8226; Latest: '''{{{update_text|{{{update_latest|TBA}}}}}}'''
+|line2 = &#8226; Next: '''{{#if:{{{update_next|}}}|{{{update_next|}}}|TBA}}'''
+|line3 = &#8226; {{#if:{{{season|}}}|[[Seasonal|Season]]: '''{{{season}}}'''|[[Seasonal|Seasons]]}}
+}}
+{{FrontpageMenu
+|image = Wiki_anime.png
+|link = Anime
+|title = Anime
+|line1 = &#8226; {{{anime_line_1|[[Anime/Season 1|Season 1]] ([https://kancolle.fandom.com/f/p/2442113144848618612 Review])}}}
+|line2 = &#8226; {{{anime_line_2|[[Anime/Season 2|Season 2]]}}}
+|line3 = &#8226; {{{anime_line_3|[[KanColle Movie|KanColle 2016 Movie]]}}}
+}}
+|- <!---------------------- THIRD ROW ---------------------->
+{{FrontpageMenu
+|image = Wiki_rules.png
+|link = Kancolle_Wiki:Policy
+|title = Rules & Policies
+|line1 = &#8226; [[Kancolle_Wiki:Staff|KanColle Wiki Staff]]
+|line2 = &#8226; [https://kancolle.fandom.com/f/p/2991222540992747207 Report Misbehavior]
+}}
+{{FrontpageMenu
+|image = Wiki_merch.png
+|link = Merchandise
+|title = Merchandise
+|line1 = &#8226; [[KanColle Kai]]
+|line2 = &nbsp;&nbsp;&#8226; [[KanColle Kai/Areas|Areas]] &#8226; [[KanColle Kai/Quest|Quest]]
+}}
+|- <!---------------------- FOURTH ROW ---------------------->
+| style="width:110px;" |[[File:Wiki_tutorial.png|link=Tutorial: FAQ|110px]]
+| colspan="3" |
+<span style="font-size:18px;">'''[[:Category:Tutorial|Tutorials]]'''</span>
+<br />
+[[Tutorial: How to Register|Registration]]
+&nbsp; &#8594; &nbsp; [[Tutorial: Connection|Connection]]
+&nbsp; &#8594; &nbsp; [[Tutorial: How to Play|Gameplay]]
+&nbsp; &#8594; &nbsp; [[Tutorial: Leveling|Leveling]]
+&nbsp; &#8594; &nbsp; [[Equipment_Guide|Equipment Guide]]
+<br />
+[[Tutorial: FAQ|FAQ (Please read!)]]
+&nbsp; / &nbsp; [[Glossary]]
+&nbsp; / &nbsp; [[Guides]]
+&nbsp; / &nbsp; [[Tutorial: Troubleshooting|Troubleshooting]]
+&nbsp; / &nbsp; [[KanColle Android]]
+|}
+<!--
+{{FrontpageMobile
+|update_text = Latest: '''{{{update_text|{{{update_latest|TBA}}}}}}'''
+|update_next = Next: '''{{#if:{{{update_next|}}}|{{{update_next|}}}|TBA}}'''
+}}
+-->
+[[Category:Main_Page]]

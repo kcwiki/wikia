@@ -1,0 +1,123 @@
+<includeonly>{{#vardefine:normal|{{#ifeq:{{#explode:{{{page|{{PAGENAME}}}}}|/|0}}|Sandbox|Sandbox/{{#explode:{{{page|{{PAGENAME}}}}}|/|1}}|{{#explode:{{{page|{{PAGENAME}}}}}|/|0}}}}}}{| class="typography-xl-optout" style="width:300px; border:1px solid #ccc; float:right; margin:0px 0px 0px 10px"
+|-
+| colspan="2" style="background:#def; padding:12px 0px 7px 0px; text-align:center;" |
+<p style="margin:0px 10px 5px 10px; font-weight:bold; line-height:22px; font-size:16px;">
+{{#if:{{{en|}}}
+  |{{{en}}}
+  |{{#if:{{{jp|}}}
+    |Map name is untranslated
+    |Map name is unknown
+    }}
+}}
+</p>
+<p style="margin:0px 10px 5px 10px; font-weight:bold; line-height:22px; font-size:16px;">
+{{#if:{{{jp|}}}
+  |<span lang="ja">{{Tooltip|{{{jp}}}|{{{romaji|?}}}}}</span>
+  |''Japanese name is unknown''
+}}
+</p>
+|-
+| colspan="2" |
+[[File:{{#ifexist:File:{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Banner.png
+  |{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Banner.png
+  |Map_placeholder_banner.png
+  }}|300px|center]]{{#ifexist:File:{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Banner_{{{banner2|2}}}.png
+    |[[File:{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Banner_{{{banner2|2}}}.png|300px|center]]}}
+|-
+| colspan="2" |
+[[File:{{#ifexist:File:{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Map.png
+  |{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Map.png
+  |Map placeholder branch.png
+  }}|300px|center]]{{#ifexist:File:{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Map_{{{map2|2}}}.png
+    |[[File:{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Map_{{{map2|2}}}.png|300px|center]]}}{{#ifexist:File:{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Map_{{{map3|3}}}.png
+    |[[File:{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}_Map_{{{map3|3}}}.png|300px|center]]}}
+|-
+| style="background:#def; font-weight:bold; text-align:center; color:#09c;" colspan="2" |Information
+|-
+| style="width:100px; background:#def; font-weight:bold;" |Special Mechanics
+|{{#if:{{{mechanics|}}}
+  |{{#if:{{#explode:{{{mechanics}}}|,|0}}
+    |<span style="{{#explode:{{#explode:{{{mechanics}}}|,|0}}|@|2}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|0}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|0}}|@|0}}]]</span>{{#if:{{#explode:{{{mechanics}}}|,|1}}
+      |<br/><span style="{{#explode:{{#explode:{{{mechanics}}}|,|1}}|@|2}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|1}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|1}}|@|0}}]]</span>{{#if:{{#explode:{{{mechanics}}}|,|2}}
+        |<br/><span style="{{#explode:{{#explode:{{{mechanics}}}|,|2}}|@|2}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|2}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|2}}|@|0}}]]</span>{{#if:{{#explode:{{{mechanics}}}|,|3}}
+          |<br/><span style="{{#explode:{{#explode:{{{mechanics}}}|,|3}}|@|2}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|3}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|3}}|@|0}}]]</span>{{#if:{{#explode:{{{mechanics}}}|,|4}}
+            |<br/><span style="{{#explode:{{#explode:{{{mechanics}}}|,|4}}|@|3}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|4}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|4}}|@|0}}]]</span>
+            |}}
+          |}}
+        |}}
+      |}}
+    |}}
+  |None
+}}
+|- {{#if:{{{show_kills|}}}||style="display:none"}}
+| style="width:100px; background:#def; font-weight:bold;" |Kills required
+|{{{kills|?}}}
+|- {{#if:{{{show_rewards|}}}||style="display:none"}}
+| style="background:#def; font-weight:bold; text-align:center; color:#09c;" colspan="2" |Rewards
+|- {{#if:{{{show_rewards|}}}||style="display:none"}}
+| style="text-align:center;" colspan="2" |
+{{Normal/MapInfo/Reward|{{{reward_1|}}}|{{{reward_1_x|}}}}}{{Normal/MapInfo/Reward|{{{reward_2|}}}|{{{reward_2_x|}}}}}
+{{#if:{{{ranking|}}}|
+<div>'''Ranking Points:''' {{{ranking|}}}</div>}}
+|}
+</includeonly><noinclude>
+Map infobox used on [[event]] map pages.
+==Parameters==
+===page===
+Defaults to <code><nowiki>{{PAGENAME}}</nowiki></code>, the page name of the map page. Used for asset auto-detection, the following images are used (if exist, <code>event</code> is the part before first <code>/</code>, e.g., <code>Winter 2017 Event</code> if <code>page</code> is <code>Winter 2017 Event/E-3</code>, when in filenames, <code>/</code> in <code>page</code> are replaced with spaces):
+*<code><page> Banner.png</code> for map banner, [http://kancolle.wikia.com/wiki/File:Map_placeholder_banner.png Map placeholder banner.png] if doesn't exist.
+**Optional <code><page> Banner 2.png</code> also can be used, nothing is generated if it doesn't exist.
+*<code><page> Map.png</code> for map image, [http://kancolle.wikia.com/wiki/File:Map_placeholder_branch.png Map placeholder branch.png] if doesn't exist.
+**Optional <code><page> Map 2.png</code> also can be used, nothing is generated if it doesn't exist.
+===en===
+English name of the map.
+===jp===
+Japanese name of the map (refer to <code>api_?</code>, note that <code>api_?</code> is currently unused).
+===romaji===
+Romaji for the Japanese name.
+===mechanics===
+List of applicable mechanics, the syntax is <code><mechanic>@<link>, ...</code>, e.g., <code>Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Ship Locking@Events/Mechanics#Ship Locking</code>.
+===show_kills, kills===
+Set <code>show_kills</code> to show the <code>Kills required</code> section (hidden by default). To set the amount of kills required, you can use <code>kills = ?</code> parameter.
+===show_rewards===
+Set <code>show_rewards</code> if you want to show rewards. 
+===reward_<n>, reward_<n>_x===
+<code>reward_1, reward_1_x, reward_2, reward_2_x</code>, etc. Up to 2 rewards. <code>_x</code> is used for quantity (no number will be displayed if not set, use <code>?</code> explicitly if needed).
+===ranking===
+Sets the ranking point reward.
+
+==Examples==
+===Basic usage===
+{{Normal/MapInfo
+|en = 
+|jp = 
+|romaji = 
+
+|mechanics = 
+
+|show_kills = true
+|kills = ?
+
+|show_rewards = true
+|reward_1 = ?
+|reward_1_x = 
+}}
+<pre>{{Normal/MapInfo
+|en = 
+|jp = 
+|romaji = 
+
+|mechanics = 
+
+|show_kills = true
+|kills = ?
+
+|show_rewards
+|reward_1 = ?
+|reward_1_x = 
+}}</pre>{{clear}}
+
+==Tests==
+===Calling without parameters===
+{{Normal/MapInfo}}
+<pre>{{Normal/MapInfo}}</pre>{{clear}}

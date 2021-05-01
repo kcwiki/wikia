@@ -1,0 +1,40 @@
+== Purpose ==
+
+To simplify the deployment of event specific forum threads either prior or during the event time. For each and every event map there is and that requires some form of centralised way of keeping track this template was made to address those specific niche.
+
+== Usage ==
+<pre>{{ForumEventsEnemyComp/Draft
+|Eventseason = Winter 2016 Event
+|Eventmap = E-1
+|EventAPI = 388946
+|mapname = Winter 2016 Event E-1.png
+|ForumEventsFleetComp = 391516
+}}
+</pre>
+
+== Parameters ==
+
+=== Eventseason ===
+Sets the parameter as being a page that is accessible within the wiki.
+
+Defaults to [[Winter 2016 Event]] if not set.
+
+=== Eventmap ===
+Sets the parameter as the actual map within the event page as a literal link. Usually works in combination with Eventseason above.
+
+Defaults to "E-1" and without Eventseason parameter set the full link would become [[Winter 2016 Event/E-1]].
+
+=== EventAPI ===
+Sets the forum thread to a forum thread that talks about API dumps on related event.  This parameter only needs the digits of the forum link, i.e. not Thread:388946 for instance.
+
+Defaults to "388946" which is [[Winter 2016 Event]]'s [[Thread:388946|[Winter 2016] Naval Intelligence Command HQ Thread:388946]]
+
+=== mapname ===
+Sets the name of the map with the filename extension (e.g. ".png" or ".jpg").
+
+Defaults to a placeholder map if not set.
+
+=== ForumEventsFleetComp ===
+Sets the forum thread to a "sister" forum thread that talks about the same map but for Fleet compositions. This parameter only needs the digits of the forum link, i.e. not Thread:391516 for instance.
+
+Defaults to "391516" which is [[Winter 2016 Event/E-1]]'s [[Thread:391516|Fleet composition report Thread:391516]]

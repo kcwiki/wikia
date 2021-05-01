@@ -1,0 +1,18 @@
+A Torpedo Cut-ins (TCI) damage is calculated by taking the total Yasen Stat and multiplying it by 1.5. The Yasen Stat consists of Firepower, Torpedo, Improvement Bonus and Night Recon Trigger. With this we can conclude that every 2 points of Yasen Stat add up to 3 TCI damage and every 0.666 Yasen Stat add up to 1 TCI damge.
+<br>The only part of the Yasen Stat that actively makes use of the 0.666 breakpoints is the Improvement Bonus due to the other values being flat numbers with no decimals.
+<br>What this means is that there are other breakpoints in improvements to consider than just the flat values reached at +1, +4 and +9.
+<br>An interesting one to look at is the +10 one as it is the final improvement level:
+<br>Eqiupping 3 Torpedos at +10 gives an Improvement Bonus of <math>3 \cdot \sqrt{10} = 9.486</math> which adds up to 14.229 TCI damage. As a comparison, 3 Torpedos at +9 would result in 13.5 TCI damage.
+<br>This shows that +10 Torpedos are more damage efficient when total Yasen Stat without Improvement Bonus is an even number. 
+<br>However any ship with any equipment can have that number be even due to the Night Recon Trigger adding either 0 or 5 damage.
+<br>In the case of a TCI attack landing a critical hit things are simpler. When using 3 Torpedos at +9 their Improvement bonus will contribute with <math> \left \lfloor 9 \cdot 1.5 \right \rfloor \cdot 1.5 = 19.5</math> damage while 3 Torpedos at +10 will contribute with <math> \left \lfloor 3 \cdot \sqrt{10} \cdot 1.5 \right \rfloor \cdot 1.5 = 21</math> damage, which is more damage in every case, no exceptions.
+
+==Notes:==
+*<math>\sqrt{10}</math> was calculated as 3.162
+*these calculations only work below the cap
+*the above crit calculations are somewhat simplified
+
+If the TCIs damage is over the damage cap (more than 200 total Yasen Stat) the breakpoints to look out for are in different places and get progressively rarer the higher one goes over the cap.
+<br>The breakpoints for regular hits are now at 200.666 (301), 201.666 (302), 203 (303), 210.666 (304), 216.666 (305) total Yasen Stat (post cap TCI damage).
+<br>This points towards the difference between +9 and +10 losing significance when the TCI is over the damage cap.
+[[Category:Blog posts]]

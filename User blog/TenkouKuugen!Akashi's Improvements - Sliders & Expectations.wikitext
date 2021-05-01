@@ -1,0 +1,87 @@
+This is a short article on '''when''' to apply Akashi Slider during Improvements.  This is for my personal references rather than a guide, therefore some concepts may not be explained in detail and may contain my subjective views on the matter.  Feedbacks are welcomed as usual though :)
+
+==Intro==
+Equipments can be improved via [[Akashi's Improvement Arsenal]] by spending [[Improvement Material]] (aka Screws), Development Materials (DevMats) and fodders.  Notably, there is a chance of failure depending on the level of improvement.
+
+Success can be guaranteed by investing more screws/devmats via the Slider function.  This article explores the sweet-spot/threshold for applying the Slider while avoiding excessive spending.
+
+==Success Rates==
+[http://kancolle.wikia.com/wiki/Akashi%27s_Improvement_Arsenal#Improvement_Success_Rate_without_.27Guaranteed_Success.27 Improvement Success rates] can be found on wikia and various [https://docs.google.com/spreadsheets/d/1wPUtvU9yG5Sf8MnTAp3kKOXyC5EeKUIJ_V5OCu27_0c/edit#gid=524721121 other sources].  The exact % varies from test to test, however they all follow a common trend: the higher the improvement level, the more risky it gets.
+
+It would be nice if it doesn't cost anything extra to guarantee a success (via Slider).  Alas, this "investment" varies from one equipment to another.  We will thus need a measure to guide our decision making.
+
+==Expectation Values==
+[https://en.wikipedia.org/wiki/Expected_value Expectation value], in short, is a probability-weighted average of all possible values.
+
+Personally I enjoy utilising Expectation Values (in a broader sense) when it comes to investments and returns, basically anything that has more than 1 outcome.  It helps establish whether an investment return is "fair" and whether it's "good business" or a "scam."
+
+For Akashi Improvements, obviously the outcome is either Success or Failure, weighted by a % (probability).
+
+===Expectation Tables (Akashi Kai)===
+Without further ado, here are the tables I refer to when I have a decision to make:
+
+[[File:Akashi_Expectation_wikia_w_prob.png|480px|centre|Akashi Kai]]
+[[File:Akashi_Expectation_wikia_no_kai.png|480px|centre]]
+
+Red represents '''expected''' Loss, while Green represents '''expected''' Gain.  More explanations later.
+
+'''How to use''': check the equipment's screw consumption with and without sliders, then read the corresponding lines vs Improvement levels.
+
+For example, improving a [[Type 0 Fighter Model 21 (Skilled)]] from 6★ to 7★ costs 2 screws (3 screws with slider).  The expectation is -0.8, ie one can '''expect''', in the long run, to lose 0.8 screw per try if Slider is used.
+[[File:Akashi_Example_T0M21S.png|480px|centre]]
+
+Or you may be improving [[Type 1 Fighter Hayabusa Model III A]] from 8★ to 9★ (6/7 screws).  In this case the expectation is +0.37, ie one can '''expect''' to slide and gain (save) 0.37 screw per try in the long run.
+[[File:Akashi_Example_Hayabusa-3A.png|480px|centre]]
+
+'''TL/DR''': if a cell is Green, you can Slide without 2nd thought; if a cell is Red, there're more to think about before Sliding.  This will be discussed later.
+
+If the screw combinations are not listed on the table, try following the line that gives the same '''fractional number''', eg: F6F-5 costs 8/12 screws past 6★.  The 2/3 (or 4/6, 6/9) line can be read in substitution.  The threshold should be the same, however the expectation value will not be accurate.
+
+===How Are The Values Derived===
+Those who are not interested in calculations can skip this and go straight to the next section.
+
+The values in the tables were calculated by comparing screws wasted in failed improvements vs additional investments (Slider), ie:
+
+<pre>Expected Screw Savings
+= [ Expected Screw Loss due to Failure ] - [ Extra Screws required by the Slider ]
+= [ (Chance of Failure) x (Default Screw Count) ] - [ Extra Screws required by the Slider ]</pre>
+
+'''Example 1''': Consider an equipment that costs 5 screws (6 with slider) to improve to 4★.
+*Chance of Failure is 0% for Akashi Kai
+*Default Screw Count = 5
+*Extra Screws required by the Slider = ( 6 - 5 ) = 1
+*Expected Screw Savings = [ 0 x 5 ] - [ 1 ] = -1
+
+ie it's a waste to use slider in this case.  This one's easy, let's see another one...
+
+'''Example 2''': Consider an equipment that costs 6 screws (7 with slider) to improve to 9★.
+*Chance of Failure is (100% - 77%) = 23% for Akashi Kai
+*Default Screw Count = 6
+*Extra Screws required by the Slider = ( 7 - 6 ) = 1
+*Expected Screw Savings = [ 0.23 x 6 ] - [ 1 ] = 0.38
+
+ie one is expected to save 0.38 screws per try in the long run via Slider.  Note that the value here is slightly different from the tables due to rounding.
+
+==What Else to Consider==
+The Expectation value is only a guide.  It gives a sense of "what to expect" in the long run, but it's up to the TTK to take everything else into consideration.  Here are a few things I'd consider personally:
+
+===Fodders===
+Are the fodders easy to obtain?  I'd go by the expectation alone if it only eats common, craftable fodders eg [[Type 0 Fighter Model 21]].  If the fodders are not craftable, or a pain in the rear to craft (eg [[Shiden Kai 2]]), I'd generally use slider from 6★ onwards.
+
+If the fodders are not craftable, but readily farmable, I'd weigh the screw savings vs the effort then make my decision.
+
+===Savings===
+Is the expected saving worth the trouble of re-obtaining the fodder?  You may have noticed that some expected losses are quite small (<0.1).  Is it worth the trouble to craft the fodders again, just to save so little?
+
+===Urgency===
+Personally I do only 1 improvement per day, so every failed improvement is a day of delay for other equips.  Do I need this equipment bad?  Can it wait, or do I prefer to have peace of mind right here, right now?
+
+Well that's enough for today I guess...
+
+==References==
+*http://akashi-list.me
+*http://nga.178.com/read.php?tid=9494956&rand=562
+
+I will also include below an expectation table based on % data from akashi-list.me for comparison.  Note how only the numbers vary, while the threhold persists.
+[[File:Akashi_Expectation_akashi-list.png|480px|centre]]
+[[Category:Blog posts]]

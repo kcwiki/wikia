@@ -1,0 +1,75 @@
+Using [[Module:Calc/Plugins/Assets]] getters:
+*<code>Assets.banner</code>
+*<code>Assets.banner_dmg</code>
+*<code>Assets.card</code>
+*<code>Assets.card_dmg</code>
+*<code>Assets.full</code>
+*<code>Assets.full_dmg</code>
+
+Also relies on [[:Category:Collection modules|collection modules]] for mapping API ids to names and iterators.
+
+For a ship via name:
+
+<pre>
+{{Calc|!Taihou|?Assets.card}}
+</pre>
+
+For a ship via API id:
+
+<pre>
+{{Calc|!153|?Assets.card}}
+</pre>
+
+For an API id range:
+
+<pre>
+{{Calc|concat=,{{sp}}|from=1|to=700|!@|?Assets.card}}
+</pre>
+
+For all known ship names:
+
+<pre>
+{{Calc|concat=,{{sp}}|@all_names|!@|?Assets.card}}
+</pre>
+
+Formatting a table below:
+
+<pre>
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!API Id!!Ship!!URL
+{{Calc|format=table|from=1|to=700|#|!@|?api_id|?link|?Assets.card}}
+|}
+</pre>
+
+==Full Tables==
+===Banner===
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!API Id!!Ship!!URL
+{{Calc|format=table|from=1|to=700|#|!@|?api_id|?link|?Assets.banner}}
+|}
+===Banner Damaged===
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!API Id!!Ship!!URL
+{{Calc|format=table|from=1|to=700|#|!@|?api_id|?link|?Assets.banner_dmg}}
+|}
+===Card===
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!API Id!!Ship!!URL
+{{Calc|format=table|from=1|to=700|#|!@|?api_id|?link|?Assets.card}}
+|}
+===Card Damaged===
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!API Id!!Ship!!URL
+{{Calc|format=table|from=1|to=700|#|!@|?api_id|?link|?Assets.card_dmg}}
+|}
+===Full===
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!API Id!!Ship!!URL
+{{Calc|format=table|from=1|to=700|#|!@|?api_id|?link|?Assets.full}}
+|}
+===Full Damaged===
+{| class="mw-collapsible mw-collapsed wikitable sortable"
+!API Id!!Ship!!URL
+{{Calc|format=table|from=1|to=700|#|!@|?api_id|?link|?Assets.full_dmg}}
+|}
+__NOTOC__

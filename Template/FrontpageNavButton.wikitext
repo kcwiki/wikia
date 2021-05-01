@@ -1,0 +1,10 @@
+<div class="wds-button" style="cursor:{{{cursor|pointer}}};position:relative;overflow:hidden;height:{{{height|40px}}};padding:0px;float:{{{float|center}}};width:{{{width|24%}}};margin:{{{margin|2px}}};{{#if:{{{text-color|}}}|color:{{{text-color|}}};|}};border:{{{border|none}}}">
+{{#if:{{{image|}}}|<div style="position:absolute;{{{image-pos|top:-60px;left:-60px}}};opacity:{{{opacity|0.2}}};z-index:1;">[[File:{{{image|}}}|{{{size|}}}|link=]]</div>|}}
+<div style="position:absolute;z-index:3;width:100%;{{{height|40px}}};left:0px;top:0px;overflow:hidden;opacity:0">
+[[File:Blank_square.svg|{{{clickable-size|200}}}px|link={{{link|}}}]]
+</div>
+{{{content|}}}
+</div>
+<noinclude>
+{{documentation}}
+</noinclude>

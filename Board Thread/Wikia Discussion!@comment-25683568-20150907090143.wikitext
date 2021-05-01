@@ -1,0 +1,44 @@
+There is a new easy way to put ship (battle) card images on a page (or forum post, comment etc.)
+Never wonder what an image is called ever again!
+
+Just type
+
+ <nowiki>{{ShipCardKai|<ship name>/<suffix>}}</nowiki>
+
+to show a ship's card image.
+
+For example,
+
+ <nowiki>{{ShipCardKai|Shigure/Kai Ni}}</nowiki>
+
+becomes:
+
+{{ShipCardKai|Shigure/Kai Ni}}
+
+For non-remodeled ships, just leave the suffix empty, like this:
+
+ <nowiki>{{ShipCardKai|Taigei/}}</nowiki>
+
+{{ShipCardKai|Taigei/}}
+
+For battle cards, just replace ShipCardKai with ShipBattleCardKai:
+
+ <nowiki>{{ShipBattleCardKai|Kawakaze/}}</nowiki>
+
+{{ShipBattleCardKai|Kawakaze/}}
+
+Enemy ships work as well too (battle card only):
+
+ <nowiki>{{ShipBattleCardKai|Air Defense Princess/}}</nowiki>
+
+{{ShipBattleCardKai|Air Defense Princess/}}
+
+Some enemy ships even have special ways to differentiate between variants, like the Wo-Class:
+
+ <nowiki>{{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship III}}</nowiki>
+
+{{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship III}}
+
+The benefits of this method is that when images get updated or replaced, it'll update automatically. In the past, some files were png but others were jpg, but with this method, you don't need to worry about that. Using this method also gets everyone to use the same images, so when you go to different pages that show the same ship's card, your browser doesn't download a different but effectively identical image.
+
+The ShipCardKai and ShipBattleCardKai templates also have some more advanced features, such as showing damaged versions like {{ShipBattleCardKai|Myoukou|damaged=true}}, adding status overlays like {{ShipBattleCardKai|Myoukou|damaged=true|layers=status_heavy_damage}}, and even damage smudges {{ShipBattleCardKai|Myoukou|damaged=true|layers=smudge_heavy status_heavy_damage}}. For how to use these features see [[Template:ShipCardKai]] and [[Template:ShipBattleCardKai]].<ac_metadata title="An easy way to show ship (battle) cards" notify_everyone="1441616503"> </ac_metadata>

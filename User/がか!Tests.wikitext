@@ -1,0 +1,75 @@
+==Practice==
+
+===CT experience [[Katori#Notes|bonus]]===
+[http://wikiwiki.jp/kancolle/?%B1%E9%BD%AC#v657609b Base experience] (includes [[Experience_and_Rank#Ships_Experience|rank multiplier]]) is shown at the battle result screen, and also is in API, so the rounded bonus can be calculated from API as <code>[100 * min(api_get_ship_exp) / api_get_base_exp] / 100</code> (assuming there is a non-flagship non-MVP ship).
+<pre>
+CTFS,CTEscort1,CTEscort2,BaseExp,RealExp,Bonus,RoundedBonus
+0,37,0,618,661,1.069579288,1.07
+0,37,0,147,157,1.068027211,1.07
+38,0,0,669,749,1.119581465,1.12
+38,0,0,637,713,1.119309262,1.12
+1,38,0,768,844,1.098958333,1.1
+38,5,0,723,838,1.159059474,1.16
+0,39,7,716,773,1.079608939,1.08
+0,39,8,710,766,1.078873239,1.08
+0,39,9,667,720,1.07946027,1.08
+0,39,9,638,689,1.079937304,1.08
+0,40,10,555,599,1.079279279,1.08
+11,49,0,668,754,1.128742515,1.13
+0,12,0,628,659,1.049363057,1.05
+0,12,0,642,674,1.049844237,1.05
+0,45,36,702,758,1.07977208,1.08
+0,45,37,685,739,1.078832117,1.08
+0,45,0,684,731,1.06871345,1.07
+0,70,73,640,716,1.11875,1.12
+0,70,73,656,734,1.118902439,1.12
+0,70,73,668,748,1.119760479,1.12
+0,70,73,735,823,1.119727891,1.12
+0,70,73,694,777,1.119596542,1.12
+0,70,73,522,584,1.118773946,1.12
+0,70,73,678,759,1.119469027,1.12
+0,71,73,700,784,1.12,1.12
+0,71,73,648,725,1.11882716,1.12
+0,71,73,596,667,1.119127517,1.12
+0,71,73,658,736,1.118541033,1.12
+0,71,73,643,720,1.119751166,1.12
+0,71,73,720,806,1.119444444,1.12
+71,0,0,723,831,1.149377593,1.15
+71,74,0,684,820,1.198830409,1.2
+0,71,74,637,713,1.119309262,1.12
+0,71,0,639,702,1.098591549,1.1
+0,74,0,828,910,1.099033816,1.1
+</pre>
+
+==Expeditions==
+
+===[[Expedition/Introduction#Ratings_and_rewards|Experience doubling]]===
+
+<pre>
+2 NS : Resources = [0,100,30,0], HQ XP = 20, Base XP = [22,15], Trials = 551, XP Doubling = 289
+5 NS : Resources = [200,200,20,20], HQ XP = 40, Base XP = [60,40], Trials = 166, XP Doubling = 72
+6 NS : Resources = [0,0,0,80], HQ XP = 30, Base XP = [75,50], Trials = 67, XP Doubling = 31
+6 GS : Resources = [0,0,0,120], HQ XP = 60, Base XP = [150,100], Trials = 19, XP Doubling = 11
+11 NS : Resources = [0,0,0,250], HQ XP = 40, Base XP = [60,40], Trials = 5, XP Doubling = 2
+12 NS : Resources = [50,250,200,50], HQ XP = 60, Base XP = [75,50], Trials = 11, XP Doubling = 8
+20 NS : Resources = [0,0,150,0], HQ XP = 40, Base XP = [75,50], Trials = 3, XP Doubling = 1
+21 GS : Resources = [480,405,0,0], HQ XP = 90, Base XP = [165,110], Trials = 15, XP Doubling = 8
+21 NS : Resources = [320,270,0,0], HQ XP = 45, Base XP = [82,55], Trials = 5, XP Doubling = 2
+37 GS : Resources = [0,570,405,0], HQ XP = 100, Base XP = [195,130], Trials = 30, XP Doubling = 17
+37 NS : Resources = [0,380,270,0], HQ XP = 50, Base XP = [97,65], Trials = 4, XP Doubling = 3
+38 GS : Resources = [630,0,300,0], HQ XP = 100, Base XP = [210,140], Trials = 114, XP Doubling = 54
+38 NS : Resources = [420,0,200,0], HQ XP = 50, Base XP = [105,70], Trials = 6, XP Doubling = 1
+</pre>
+
+Examples:
+
+<pre>
+// 2 NS
+svdata={"api_result":1,"api_result_msg":"成功","api_data":{"api_ship_id":[-1,4068,4226,587,4623],"api_clear_result":1,"api_get_exp":20,"api_member_lv":101,"api_member_exp":1729992,"api_get_ship_exp":[22,15,15,15],"api_get_exp_lvup":[[20562,21000],[24686,25300],[5370,5500],[9432,10500]],"api_maparea_name":"鎮守府海域","api_detail":"外海まで足を延ばし、艦隊の練度を高めよう！","api_quest_name":"長距離練習航海","api_quest_level":1,"api_get_material":[0,100,30,0],"api_useitem_flag":[0,0]}}
+// 2 NS (doubling)
+svdata={"api_result":1,"api_result_msg":"成功","api_data":{"api_ship_id":[-1,4068,4226,587,4623],"api_clear_result":1,"api_get_exp":20,"api_member_lv":101,"api_member_exp":1730196,"api_get_ship_exp":[45,30,30,30],"api_get_exp_lvup":[[20584,21000],[24701,25300],[5385,5500],[9447,10500]],"api_maparea_name":"鎮守府海域","api_detail":"外海まで足を延ばし、艦隊の練度を高めよう！","api_quest_name":"長距離練習航海","api_quest_level":1,"api_get_material":[0,100,30,0],"api_useitem_flag":[0,0]}}
+// 5 NS
+svdata={"api_result":1,"api_result_msg":"成功","api_data":{"api_ship_id":[-1,3765,44,2003,3735],"api_clear_result":1,"api_get_exp":40,"api_member_lv":101,"api_member_exp":1730032,"api_get_ship_exp":[60,40,40,40],"api_get_exp_lvup":[[28017,30000],[128888,132700],[10275,10500],[9066,9100,10500]],"api_maparea_name":"鎮守府海域","api_detail":"輸送船団の安全を図るために、船団に同行して、これを護衛しよう！","api_quest_name":"海上護衛任務","api_quest_level":3,"api_get_material":[200,200,20,20],"api_useitem_flag":[0,0]}}
+// 5 NS (doubling)
+svdata={"api_result":1,"api_result_msg":"成功","api_data":{"api_ship_id":[-1,3765,44,2003,3735],"api_clear_result":1,"api_get_exp":40,"api_member_lv":101,"api_member_exp":1725912,"api_get_ship_exp":[120,80,80,80],"api_get_exp_lvup":[[27897,30000],[128808,132700],[10195,10500],[8986,9100]],"api_maparea_name":"鎮守府海域","api_detail":"輸送船団の安全を図るために、船団に同行して、これを護衛しよう！","api_quest_name":"海上護衛任務","api_quest_level":3,"api_get_material":[200,200,20,20],"api_useitem_flag":[0,0]}}
+</pre>

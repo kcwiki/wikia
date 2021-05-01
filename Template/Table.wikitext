@@ -1,0 +1,48 @@
+<includeonly>{| class="{{{class|wikitable}}} {{#if:{{{no_xl_optout|}}}||typography-xl-optout}} {{#if:{{{collapsible|}}}|mw-collapsible|}} {{#if:{{{collapsed|}}}|mw-collapsed|}} {{#if:{{{sortable|}}}|sortable|}} {{{classes|}}}" style="text-align: {{{align|center}}}; width: {{{width|100%}}}; {{{styles|}}}"
+{{{1}}}
+|}</includeonly><noinclude>
+__NOTOC__
+Wikitext table wrapper:
+<pre>
+{{Table|
+!One
+!Two
+!Three
+{{!}}-
+{{!}}1
+{{!}}2
+{{!}}3
+}}
+</pre>
+Gives
+{{Table|
+!One
+!Two
+!Three
+{{!}}-
+{{!}}1
+{{!}}2
+{{!}}3
+}}
+==Parameters==
+===class===
+Main class, default: <code>wikitable</code>.
+===no_xl_optout===
+Set to disable <code>typography-xl-optout</code> class.
+===collapsible===
+Set to make a table collapsible.
+===collapsed===
+Set with <code>collapsible</code> to make a table collapsible and collapsed by default.
+===sortable===
+Set to make a table sortable.
+===classes===
+Other classes.
+===align===
+<code>text-align</code> style, default: <code>center</code>.
+===width===
+<code>width</code> style, default: <code>100%</code>.
+===styles===
+Other styles.
+===[1]===
+Table content.
+</noinclude>

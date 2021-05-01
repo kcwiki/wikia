@@ -1,0 +1,46 @@
+Content archived here are formula that once being used for [[Line of Sight]] calculation but currently deprecated and replaced by other formulas. Please visit the main Line of Sight page for further detail.
+__TOC__
+== Effective Line of Sight (2-5 old formula) ==
+* Effective LoS = Recon LoS×2 ＋ Radar LoS ＋ √(Fleet total LoS - Recon LoS - Radar LoS). This is the formula used since Spring 2014 event; in 2-5, 3-5 boss node, and any node with the seaplane-searching animation.
+* '''Due to the formula, recon planes will contribute more to effective LoS than radars. For the purposes of fulfilling effective LoS, avoid using radars that do not give at least +10 LoS. '''
+* You can make an exception to the above if your ships require other equipment for more damage, in which case you can make a DD/[[Yuubari]] a radar 'mule' to contribute to LoS by stacking radars.
+* <s>ONLY Recon planes' (yellow & seaplanes) LoS values are doubled. LoS from carrier-based bomber planes (red & blue) are not doubled, but in fact square rooted. Avoid doubling dive bomber and torpedo bomber LoS values when calculating LoS.</s> [It is currently uncertain whether LOS from bombers contribute to Recon LOS (x2) or Fleet LOS (sqrt). Testing required.]
+* ''You know you fulfilled the LoS requirement if you see a short animation with a seaplane flying to the node and back to your ship icon, plus the flagship's image appearing on-screen. Otherwise, you will be diverted off-course to a dead end without the animation playing.''
+
+5:06-5:11 of this video here shows what the animation looks like: http://www.youtube.com/watch?v=J-x1tNuCeSE
+* You can have a high''' total '''LoS and still fail the '''''effective LoS''''' requirement. '''<u>Do not use the total LoS as a guide.</u>'''
+
+* If you have trouble reaching LoS requirements, take a look at the sortie page (for 2-5, 3-5) or other players' reports (for event maps) and adjust your equipment accordingly
+=== (Events) Variations in effective LoS between players ===
+During the Summer 2014 event, there were many player reports where players of similar HQ levels have differing effective LoS requirements, leading to confusion among many players. This hinted to a ''possibility'' that effective LoS scales to level. Do not be surprised if you level up or reach the next HQ bracket (e.g. HQ lvl 60-99, 100+) and fail to reach boss node when you did reach the node the previous sortie.
+
+Some later variation of the formula is then proposed to address the difference.
+
+== 2-5 fall formula==
+With the advent of the 2014 Fall Event, a new formula for Effective LoS has been devised to account for inconsistencies of the old formula. <ref>http://wikiwiki.jp/kancolle/?%C6%EE%C0%BE%BD%F4%C5%E7%B3%A4%B0%E8#area5</ref><ref>http://ch.nicovideo.jp/biikame/blomaga/ar663428</ref>
+
+Also known as '''2-5 autumn formula''', '''2-5 new formula''' or '''new eLoS formula''' in some places. It is also '''the eLoS formula''' or '''the LoS formula''' as it has already become a de-facto standard on how to calculate (e)los.
+* Effective LoS = Dive Bomber LoS x (1.04) + Torpedo Bomber LoS x (1.37) + Carrier-based Reconnaissance Plane LoS x (1.66) + Reconnaissance Seaplane LoS x (2.00) + Seaplane Bomber LoS x (1.78) + Small Radar LoS x (1.00) + Large Radar LoS x (0.99) + Searchlight LoS x (0.91) + √(base LoS of each ship) x (1.69) + (HQ level rounded up to the next multiple of 5) x (-0.61)
+* √(base LoS of each ship) x (1.69) = Calculate the square root of each ship's LoS (base value without any equipment) separately, then add the values together and multiply by 1.69
+* Regarding the HQ Level: For example, if your HQ level is 101~105, use 105. If it's 106~110, use 110. And so on.
+
+== new fall simplified ==
+The difference between this one and the 2-5 fall formula is that it simplified the calculation process a bit by dividing the 2-5 fall formula with a factor of 1.6841056 and tidying up (round off and matching test result graph) some numbers. However, values obtained from this formula are NOT compatible with 2-5 fall eLoS values, and thus it is not yet in active use as of today.
+
+The formula to obtain a new fall simplified eLoS value is as follows:
+
+Dive Bomber × 0.6 ＋ Torpedo Bomber × 0.8 ＋ Reconnaissance Aircraft × 1.0 ＋ Reconnaissance Seaplane × 1.2 ＋ Seaplane Bomber × 1.0 ＋ Radar × 0.6 ＋ Search Light × 0.5 
+－ HQ Level ×0.4 ＋ Sum of square root of individual kanmusu LoS value
+<ref>http://jbbs.shitaraba.net/bbs/read_archive.cgi/netgame/12394/1416371100/#237</ref><ref>http://jbbs.shitaraba.net/bbs/read_archive.cgi/netgame/12394/1418551798/#344</ref>
+
+[[List of Fighters by stats|Fighters]], [[Fleet Command Facility|FCF]], [[Skilled Carrier-based Aircraft Maintenance Personnel|SCAMP]], as well as [[Type 3 Command Liaison Aircraft (ASW)]] values are still unknown, and can be treated with a 0.5 multiplier when factored into the formula here.
+
+===Model===
+There are two different models applied to calculate the new fall simplified eLoS.<ref name=HoppoAlpha>http://nekokan333.blog.fc2.com/blog-entry-345.html</ref> Model A is used by tools like Hoppo Alpha, while Model B is used by tools like Electronic Observer.<ref>http://jbbs.shitaraba.net/bbs/read_archive.cgi/netgame/12394/1428728232/#566</ref>
+
+The difference is that, in model A, after the eLoS value from the kanmusu is added, they are first rounded off before being added up together, and so as with the multiplied HQ level. On the other hand, in model B, kanmusu and HQ level values are added together before being rounded down. According to post from Hoppo Alpha's author, applying model A onto existing data gives a more linear increase in boss entry rate per every point increment, and thus he applied Model A onto Hoppo.Alpha. <ref name="HoppoAlpha" />
+
+* P.S. The LoS value from kanmusu in the above paragraph = summation of all equipment's LoS value following the rule (equipment LoS value multiply by equipment multiplier) plus the square root of kanmusu's own naked LoS value (without equipment) after.
+
+===Unknown Factors in 2-5 Fall/NFS Formula calculation===
+Currently, how the 2-5 fall formula would be affected by [[List of Fighters by stats|Fighters]], [[Fleet Command Facility|FCF]], [[Skilled Carrier-based Aircraft Maintenance Personnel|SCAMP]], [[Type 3 Command Liaison Aircraft (ASW)|ASW Liason Aircraft]], [[Improvement]], and [[Aircraft Proficiency]] are still undetermined. Some calculators assume equipment in the list have 1.00x of their los value influence on the 2-5 fall value.

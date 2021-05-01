@@ -1,0 +1,230 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Requiem for the Fleet Convoy Ki-504
+|jp = 鎮魂、キ504船団
+|romaji = Chinkon、Ki-504 sendan
+|tag = E1
+|mechanics = <!--
+|transport = true
+-->
+|hp_easy = 400 TP + ?
+|hp_medium = 600 TP + ?
+|hp_hard = 750 TP + 3000
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Usugumo}}
+|reward_casual_1 = {{ItemStack|item = [[File:Catbomb.png{{!}}50px{{!}}link=]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 3 Depth Charge Projector (Concentrated Deployment)|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_hard_1_x = 3
+|reward_hard_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_2_x = 2
+|reward_hard_3 = {{EquipmentCardKai|Prototype 15cm 9-tube ASW Rocket Launcher|size=50px}}
+|reward_hard_3_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|expand = true
+|id = 48-1
+|order = C,G,H,F,N,R
+
+|C/empty -> D, E/empty = * Active branching
+
+|G -> H = * Do not meet the requirements to go to J.
+|G -> J = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships ≤ 5 (Hard)
+** Amount of CL ≤ 1
+** Amount of DD ≥ 3 '''OR''' DD+DE ≥ 4
+** No CA(V)
+
+|H -> I = * Do not meet the requirements to go to K.
+|H -> K/empty = 
+* Meet '''ALL''' of the following requirements:
+** No CL
+** No CA(V)
+** Amount of DD ≥ 4
+** Fleet contains DE
+* Alternatively, use a Fast+ Fleet
+
+|F -> N = 
+* Meet '''ALL''' of the following requirements:
+** No CA(V) (Medium+)
+** Amount of CA(V) ≤ 2
+** Amount of CL ≤ 1 (Hard)
+** Amount of DD+DE ≥ 3
+** If amount of ships = 6, amount of DE ≥ 2 (Hard)
+|F -> O/empty = * Do not meet the requirements to go to N.
+
+|N -> P/empty = * Fail the LoS check: '''< 43 Cn=3'''
+|N -> T = * Pass the LoS check: '''> 51 Cn=3'''
+* Random if between '''43-51 Cn3'''
+
+|R -> S/empty = * Fail the LoS check: '''< 39 Cn=3'''
+|R -> Q = * Pass the LoS check: '''> 51 Cn=3'''
+* Random if between '''39-46 Cn3'''
+}}
+
+==Before Starting the Event==
+If you wish to challenge any difficulty above Easy this event, it is highly advised for players to read up the [[Rainy-Summer 2020 Event/Info|Info Tab]] first to understand about difficulty selection and ship-locking.
+
+==Map Guide==
+*This is a '''single fleet''' map
+*CV(L/B), (F)BB(V) and Akitsumaru '''cannot be sortied''' to this area.
+*The map is split into 2 parts. Phase 1 is to perform a Transport Operation at Node {{Event/Route|M|Red}}. Phase 2 is unlocking the 2nd part of the map and defeating the {{ShipLink|Abyssal Kuriles Princess|text=Abyssal Kuriles Princess}} at {{Event/Route|T|Red}}.
+**The time spent on Phase 1 heavily depends on how much Transport Load-Off Equipment you can bring to the boss node {{Event/Route|M|Red}}. The [[Events/Mechanics|Mechanics Tab]] includes a list of TP Load-Off Equipment and how many points are reduced from the TP-bar.
+**The Phase 2 boss is a standard high-armour Abyssal Princess that needs to be defeated in order to clear the map. She is accompanied by DDs and in Easy+, a Submarine Yo-class.
+
+===Map Bonuses===
+<font color="red">'''DISCLAIMER:''' ''This information is based on user submitted data and is subject to revisions as more data is gathered. Any version of the ship receives the bonus regardless of remodel.''</font> Some ships may also be useful in other maps.
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="3" rowspan="2"|Ship
+!colspan="2"|Damage Bonus
+|-
+!Mapwide
+!Boss
+|-
+!{{ShipBattleCardKai|Nachi/Kai Ni}}
+!{{ShipBattleCardKai|Ashigara/Kai Ni}}
+!{{ShipBattleCardKai|Kiso/Kai Ni}}
+| rowspan="2"| 1.15x
+| rowspan="2"| 1.265x
+|-
+!{{ShipBattleCardKai|Tama/Kai Ni}}
+!{{ShipBattleCardKai|Abukuma/Kai Ni}}
+!
+|-
+!{{ShipBattleCardKai|Kasumi/Kai Ni}}
+!{{ShipBattleCardKai|Shiranui/Kai Ni}}
+!
+| 1.265x
+| {{Tooltip|1.391x|1.3915x}}
+|-
+!{{ShipBattleCardKai|Akebono/Kai}}
+!{{ShipBattleCardKai|Ushio/Kai Ni}}
+!{{ShipBattleCardKai|Usugumo/Kai}}
+| 1.375x
+| {{Tooltip|1.581x|1.58125x}}
+|-
+!colspan="3"| All Other Destroyers(DD)
+|colspan="2"| 1.1x
+|-
+!colspan="3"| All Other Destroyer Escorts(DE)
+|colspan="2"| 1.35x
+|}
+
+===Map Progression===
+{{#tag:gallery|
+Rainy2020E1TP.png{{!}}Map during TP phase at node M
+Rainy2020E1HP1.png{{!}}Map during HP phase without the route to node T unlocked
+Rainy2020E1HP2.png{{!}}Full map after unlocking the route to node T
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=250}}
+{{clear}}
+
+===Phase 1: Transport Operation===
+The Boss Node {{Event/Route|M|Red}} in this phase has some rare drops (DEs, Kamoi, Shinyou, Ooyodo). For admirals intending to farm for drops, not focusing too heavily on maximizing TP depletion per run in favor of damage and consistency can be an option.
+
+'''1CL(T) 1AV 3DD''' or '''1CL(T) 4DD'''
+*Routes {{Event/Route|A|blue|B|blue|C|blue|D|red|G|red|J|red|K|blue|L|green|M|red}}
+*Speed is irrelevant
+*No LoS requirement
+*Nodes D and G are small submarine fleets
+**Bring 2-3 OASW and Line Abreast
+*Node J is a torpedo squadron
+**Use [[Combat/Main/Vanguard_Formation| Vanguard formation]]
+*Boss node M is a single submarine with up to 5 destroyers in Line Ahead formation
+**Vanguard formation with 1+ OASW in the top half (first 2 ships of 5)
+**Alternatively, Line Ahead formation with 1+ 3 slot OASW
+**If shelling firepower is sufficient, Double Line is also viable for shelling accuracy and ASW damage
+
+===Phase 2: Route Unlock & Defeating Abyssal Kuriles Princess===
+
+====Unlocking Boss Route====
+Obtain an A Rank or higher at Node {{Event/Route|F|Red}}. Only required for Hard.
+
+====Depleting the HP Gauge====
+Admirals have the option between a short route and a long route, which differ only by one submarine node.
+
+<u>'''Long Route'''</u>
+
+'''6XX'''<br />
+Ex. 1CL 1CLT 1AV 3DD<br />
+Ex. 1CL(T) 5DD<br />
+Ex. 1CA 1CL(T) 4DD<br />
+Ex. 1CA 1CLT 1CL 1AV 2DD
+*Routes {{Event/Route|A|blue|B|blue|C|blue|E|blue|F|red|O|blue|R|red|Q|red|T|red}}
+*LoS Cn2 >= 29 needed to guarantee routing to boss
+*Nodes {{Event/Route|F|Red}} and {{Event/Route|R|Red}} are small submarine fleets
+**Bring 1-2 OASW and Line Abreast or Vanguard
+*Node {{Event/Route|Q|Red}} is a torpedo squadron
+**Will sometimes contain a Light Cruiser He Class Kai on Hard
+**Vanguard formation and position destroyers to take full advantage of evasion bonuses
+*The boss node contains Abyssal Kuriles Princess and a submarine, along with several destroyers
+**Use Vanguard formation (with 1+ OASW in the top half of the fleet), or Double Line formation to deal with the submarine
+**Kuriles Princess is capable of damaging several ships alone (opening torpedo, shelling, closing torpedo, night battle DA), so it's better to have several ships capable of dealing high damage
+**Consider sending boss shelling support if not using several historical ships
+
+<u>'''Short Route'''</u>
+
+'''1CL(T) 2DE 3XX (cannot contain CA)'''<br />
+Ex. 1CL 2DE 2DD 1CLT<br />
+Ex. 1CL 2DE 2DD 1AV
+*Routes {{Event/Route|A|blue|B|blue|C|blue|E|blue|F|red|N|red|T|red}}
+*LoS Cn2 >= 29 needed to guarantee routing to boss
+**Since the need for ASW damage is not too high, considering equipping a DE with 2-3 radars if short on LoS
+*Node {{Event/Route|F|Red}} is a small submarine fleet
+**Equip 1 or 2 DEs for ASW and Line Abreast or Vanguard
+*Node {{Event/Route|N|Red}} is a torpedo squadron
+**Will sometimes contain a Light Cruiser He Class Kai on Hard
+**Vanguard formation and position destroyers to take full advantage of evasion bonuses
+*The boss node contains Abyssal Kuriles Princess and a submarine, along with several destroyers
+**Formation
+***Vanguard formation with 1+ OASW in the top half of the fleet
+****Drawback of less damage from the first three ships is balanced by increased evasion from the boss's multiple attacks
+****Will decrease damage from shelling support if used
+***Double Line formation
+****Higher shelling accuracy, but lower torpedo and day shelling firepower
+****DEs may have trouble sinking enemy DDs sometimes
+***Line Ahead with at least 1 3 equipment OASW setup on a DE
+****Kai DEs can potentially sink destroyers in shelling phase in Line Ahead
+****Useful if using ships capable of opening torpedo strikes
+**Kuriles Princess is capable of damaging several ships alone (opening torpedo, shelling, closing torpedo, night battle DA), so it's better to have several ships capable of dealing high damage
+**Consider sending boss shelling support if not using several historical ships
+
+====Sinking Abyssal Kuriles Princess (Last Dance)====
+*On Hard, the boss's final form has 230 Armor
+**If not using historical ships, it's somewhat necessary to use ships with high night battle power
+*During day battle, it's fairly reasonable to expect the boss to be chipped down to low shouha/chuuha range. This leaves roughly 200-300 damage to be dealt at night battle
+*Ushio Kai Ni TCI, Abukuma Kai Ni TCI, Kiso Kai Ni DA, Akebono DA, Shiranui DA and Kasumi DA/TCI are common setups for dealing finishing blows to the boss
+**Abukuma, Kiso, Shiranui and especially Kasumi may be more useful to save for E4 for admirals not holding multiple copies
+*Support shelling is not necessarily required, but can help deal with the stronger destroyers present
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+{{Fleets|friend=Rainy-Summer 2020 Event|node=E-1 T}}
+
+{{Event/MapPageFooter}}

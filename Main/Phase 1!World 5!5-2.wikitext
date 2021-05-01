@@ -1,0 +1,423 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Coral Islands
+|jp = 珊瑚諸島沖
+|romaji =Sango-shotō oki
+|strategy_name = [[wikipedia:Battle_of_the_Coral_Sea|Coral Islands Naval Battle]]
+|strategy_name_ja = 珊瑚諸島沖海戦
+|strategy_info = We are executing Operation MO. Form a carrier battle group and crush the enemy task force!
+|strategy_info_ja = ＭＯ作戦を実施する。空母機動部隊を展開し、南方海域に出没する敵機動部隊を叩け！ 
+
+|exp_ship = 380
+|exp_hq = 170
+|exp_hq_boss = 2340
+
+|show_kills = true
+|kills = 4
+}}
+{{MapBranchingTable
+|id = 5-2
+|A -> B = * Fleet contains exactly 2 CV(B) and 1 CVL.
+|A -> F = * 75% chance to go to F if you fail the requirements to go to B.
+
+|B -> C,G = * Random 50%/50% chance
+
+|F -> G,I = * Random 50%/50% chance
+
+|G -> E/resource = 
+* Fleet contains ≧ 2 CV(B).
+<!--
+TsunDB 2018-07-24
+0 CV(B) ->E: 33% (1)
+0 CV(B) ->H: 67% (2)
+1 CV(B) ->E: 20% (2)
+1 CV(B) ->H: 80% (8)
+2 CV(B) ->E: 100% (1648)
+3 CV(B) ->E: 100% (32)
+4 CV(B) ->E: 100% (3)
+5 CV(B) ->E: 100% (2)
+-->
+|G -> H/resource = * ~80% chance to go to H if you fail the requirements to go to E.
+
+|I -> H/resource = * Fleet contains CAV?
+|I -> J = * 80%? chance to go to J if your fleet does not contain CAV?
+<!--
+Seems pretty wrong, but not enough samples to really find anything conclusive
+
+TsunDB 2018-07-24
+==== Routing info from 5-2 / node I ====
+0 CAV ->H: 94% (17)
+0 CAV ->J: 6% (1)
+1 CAV ->H: 100% (19)
+
+CVL CVL CLT CLT DD DD -> J
+-->
+}}
+
+===Tips===
+*Killing the boss will bring down the map meter 25%. After defeating the boss 3 times, she will turn into her final form in the last battle, for a total of 4 kills. The boss HP gauge does not regenerate.
+*2 CV and 1 CVL (no extras) guarantees boss routing.
+*The boss will attack submarines, making them useful for tanking when running the map repeatedly.
+*Node B and F are Submarine Nodes.
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=211|y=216}}
+{{Map/ImageNode|B|x=256|y=102}}
+{{Map/ImageNode|F|x=296|y=303}}
+{{Map/ImageNode|G|x=381|y=229}}
+{{Map/ImageNode|E|x=398|y=142}}
+{{Map/ImageNode|C|x=420|y=65}}
+{{Map/ImageNode|I|x=444|y=314}}
+{{Map/ImageNode|H|x=516|y=232}}
+{{Map/ImageNode|J|x=583|y=307}}
+{{Map/ImageNode|D|x=551|y=61}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵前衛艦隊
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>{{Formation|Double Line}}
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+}}
+{{Map/Nodes|name=敵潜水艦隊
+|B
+|Normal
+|{{Formation|Echelon}}
+|Submarine Yo-Class/Flagship
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|B
+|Normal
+|{{Formation|Line Abreast}}
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|B
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+}}
+{{Map/Nodes|name=敵任務部隊
+|C
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ro-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{Map/Nodes|name=敵機動部隊本隊
+|D
+|Boss
+|{{Formation|Diamond}}
+|Armored Carrier Princess
+|Armored Carrier Demon
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Flagship
+|-
+|D
+|Boss/Final
+|{{Formation|Diamond}}
+|Southern War Demon
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ta-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|-
+|D
+|Boss/Clear
+|{{Formation|Diamond}}
+|Armored Carrier Princess
+|Armored Carrier Demon
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Flagship
+|-
+|D
+|Boss/Clear
+|{{Formation|Diamond}}
+|Southern War Demon
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ta-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|-
+|D
+|Boss/CLear
+|{{Formation|Line Ahead}}
+|Armored Carrier Princess
+|Standard Carrier Wo-Class/Elite
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Flagship
+}}
+{{NodeInfo
+|E
+|Resource
+|Ammo
+|25-75
+}}
+{{Map/Nodes|name=敵潜水艦隊
+|F
+|Normal
+|{{Formation|Echelon}}
+|Submarine Yo-Class/Flagship
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|F
+|Normal
+|{{Formation|Line Abreast}}
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|F
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+}}
+{{Map/Nodes|name=敵水上打撃部隊
+|G
+|Normal
+|{{Formation|Line Ahead}}<br>{{Formation|Double Line}}
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ni-Class/Elite
+|-
+|G
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ni-Class/Elite
+}}
+{{NodeInfo
+|H
+|Resource
+|Bauxite
+|40-105
+}}
+{{Map/Nodes|name=敵補給部隊
+|I
+|Normal
+|{{Formation|Diamond}}
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|-
+|I
+|Normal
+|{{Formation|Double Line}}
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|I
+|Normal
+|{{Formation|Diamond}}
+|Transport Ship Wa-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+}}
+{{Map/Nodes|name=敵任務部隊
+|J
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Elite
+|-
+|J
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ro-Class/Elite
+|-
+|J
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, C, D, F, G, I, J
+|boss = D
+|Akagi: D
+|Akatsuki: A, B, C, F, G, I
+|Akigumo: A, B, C, D, F, G, I, J
+|Aoba: A, B, C, D, F, G, I, J
+|Arashio: A, B, C, J
+|Asashio: A, B, C, F, G
+|Ashigara: A, B, C, D, F, G, I
+|Atago: A, B, C, D, F, G
+|Chikuma: A, B, C, D, F, G, J
+|Chitose: A, B, D, F, G, J
+|Chiyoda: A, C, D, F, G
+|Choukai: A, B, C, D, F, G, I
+|Furutaka: A, B, C, D, G, I, J
+|Fusou: A, B, C, D, G, I, J
+|Haguro: A, B, C, D, F, G, J
+|Hamakaze: D
+|Haruna: A, B, C, D, F, G, I, J
+|Hatsuharu: D
+|Hibiki: A, B, C, F, G
+|Hiei: A, B, C, D, F, G
+|Hiryuu: D
+|Hiyou: A, B, C, D, G, I
+|Houshou: D
+|Hyuuga: D
+|I-58: D
+|Ikazuchi: A, B, C, F, G, I
+|Inazuma: A, B, C, F, G
+|Ise: D
+|Isuzu: A, B, C, D, G, I
+|Jintsuu: A, B, C, F, I, J
+|Junyou: A, B, C, D, G
+|Kaga: D
+|Kagerou: A, B, C, G, J
+|Kako: A, B, C, D, F, G, J
+|Kasumi: A, B, C, F, I, J
+|Kinugasa: D
+|Kirishima: A, B, C, D, F, G, I, J
+|Kiso: A, B, C, F, G, I
+|Kitakami: D
+|Kongou: A, B, C, D, F, G, I
+|Kuma: A, B, C, G
+|Kuroshio: A, B, C, F, G, J
+|Maikaze: B, D
+|Makigumo: D
+|Maya: A, B, C, D, F, G, I, J
+|Michishio: A, B, C, F, G, I, J
+|Mikuma: D
+|Mogami: A, B, C, D, F, G, I, J
+|Mutsu: D
+|Myoukou: A, B, C, D, F, G
+|Nachi: A, B, C, D, F, G, I, J
+|Nagara: D
+|Naka: A, B, C, F, G, I
+|Natori: A, B, C, D, F, G, I
+|Ooi: D, F
+|Ryuujou: A, B, C, D, F, G, J
+|Samidare: A, B, C, F, G, J
+|Sendai: D
+|Shiranui: A, B, C, G, I
+|Shouhou: A, B, C, D, F, G, I, J
+|Souryuu: D
+|Suzukaze: A, B, C, G, J
+|Taigei: D
+|Takao: A, B, C, D, G, I
+|Tama: A, B, C, F, G, I, J
+|Tatsuta: A, B, C, D, F, G, I, J
+|Tenryuu: A, B, C, D, F, G, I
+|Tone: A, B, C, D, G
+|Yamashiro: A, B, C, D, G, J
+|Yukikaze: D
+|Yura: A, B, C, D, G, J
+|Yuubari: D
+|Yuugumo: D
+|Zuihou: D
+|Zuikaku: D
+}}
+{{SectionEnd}}

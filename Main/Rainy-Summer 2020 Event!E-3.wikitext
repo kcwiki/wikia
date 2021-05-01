@@ -1,0 +1,381 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = A Prayer From the Seafloor of the Gotou Islands Sea
+|jp = 五島列島沖海底の祈り
+|tag = E3
+|romaji = Gotō Rettō-oki kaitei no Inori
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 2800
+|hp_easy = 2800
+|hp_medium = 2800
+|hp_hard = 4000
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|I-47}}
+|reward_casual_1 = {{ItemStack|item = [[File:Catbomb.png{{!}}50px{{!}}link=]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_easy_1_x = 3
+|reward_easy_2 = {{EquipmentCardKai|Saiun (4th Recon Squad)|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_medium_2_x = 4
+|reward_medium_3 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_medium_3_x = 2
+|reward_medium_4 = {{EquipmentCardKai/Stars|Saiun (4th Recon Squad)|1}}
+|reward_medium_4_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_hard_2_x = 5
+|reward_hard_3 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = {{EquipmentCardKai/Stars|Saiun (4th Recon Squad)|2}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Late Model Submarine Radar & Passive Radiolocator|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules
+|expand = true
+|id = 48-3
+|order = D,P,F,G,K,H,I,U,T,V
+<!--Do not edit the LOS values just because you managed to pass once with a lower LOS value than listed-->
+|D/empty -> C, E/empty = * Active branching
+
+|P -> Q/empty = * Fail the LoS check.
+|P -> R = * Pass the LoS check: '''>=56 Cn3'''
+
+|F -> G/empty = * Do not meet the requirements to go to U.
+|F -> U/empty = 
+* Meet '''ALL''' of the following requirements:
+** Route to node U is unlocked.
+** Single Fleet
+
+|G/empty -> H, K = * Active branching
+
+|K -> M = * Do not meet the requirements to go to N.
+|K -> N = 
+* Meet '''ALL''' of the following requirements:
+** Single Fleet
+** Amount of DD+DE ≥ 2
+** Amount of (F)BB(V)+CV(L/B) ≤ 2
+** If Slow Fleet, amount of (F)BB(V)+CV(L/B) ≤ 1
+** If amount of (F)BB(V)+CV(L/B) = 2, amount of DD+DE ≥ 3
+
+|H -> I = * Do not meet the requirements to go to S.
+|H -> S = 
+* Meet '''ALL''' of the following requirements:
+** Route to node S is unlocked.
+** Single Fleet
+
+|I -> J/empty = * Fail the LoS check.
+|I -> L = * Pass the LoS check: '''>=51 Cn3'''
+
+|U/empty -> S, T = * Active branching
+
+|T -> O = 
+* Meet '''ALL''' of the following requirements:
+** No BBV
+** Pass the LoS check: '''>=60 Cn3'''
+|T -> V = * Do not meet the requirements to go to O.
+
+|V -> O = * Pass the LoS check: '''>=60 Cn3'''
+|V -> W/empty = * Fail the LoS check.
+}}
+===Map Progression===
+{{#tag:gallery|
+Rainy2020E3HP1.png{{!}}Map before unlocking routes to nodes R and S
+Rainy2020E3HP2.png{{!}}Map after unlocking routes to nodes R and S
+Rainy-Summer 2020 Event E-3 Map.png{{!}}Full map after unlocking the route to node O
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=250}}
+{{clear}}
+
+===Map Bonuses===
+<font color="red">'''DISCLAIMER:''' ''This information is based on user submitted data and is subject to revisions as more data is gathered. Any version of the ship receives the bonus regardless of remodel.''</font>
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="3" rowspan="2"|Ship
+!colspan="2"|Damage Bonus
+|-
+!Mapwide
+!Boss {{Event/Route|O|Red}}
+|-
+!{{ShipBattleCardKai|Ise/Kai Ni}}
+!{{ShipBattleCardKai|Hyuuga/Kai Ni}}
+!{{ShipBattleCardKai|Isuzu/Kai Ni}}
+| rowspan="4"|1.1x
+| rowspan="4"|1.21x
+|-
+!{{ShipBattleCardKai|Ooyodo/Kai}}
+!{{ShipBattleCardKai|Asashimo/Kai Ni}}
+!{{ShipBattleCardKai|Kiyoshimo/Kai}}
+|-
+!{{ShipBattleCardKai|Yamakaze/Kai}}
+!{{ShipBattleCardKai|Satsuki/Kai Ni}}
+!{{ShipBattleCardKai|Uzuki/Kai}}
+|-
+!{{ShipBattleCardKai|Matsu/Kai}}
+!
+!
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Ashigara/Kai Ni}}
+!{{ShipBattleCardKai|Nachi/Kai Ni}}
+!{{ShipBattleCardKai|Aoba/Kai}}
+| rowspan="5"|1.15x
+| rowspan="5"|1.265x
+|-
+!{{ShipBattleCardKai|Abukuma/Kai Ni}}
+!{{ShipBattleCardKai|Kinu/Kai Ni}}
+!{{ShipBattleCardKai|Shiranui/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Kasumi/Kai Ni}}
+!{{ShipBattleCardKai|Hatsuharu/Kai Ni}}
+!{{ShipBattleCardKai|Hatsushimo/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Wakaba/Kai}}
+!{{ShipBattleCardKai|Ushio/Kai Ni}}
+!{{ShipBattleCardKai|Akebono/Kai}}
+|-
+!{{ShipBattleCardKai|Uranami/Kai}}
+!
+!
+|-
+! colspan="3"|All Destroyer Escorts(DE)
+| colspan="2"|1.25x
+|-
+! colspan="3"|All Submarines (SS/SSV)
+| colspan="2"|1.2x
+|-
+! colspan="3"|All Other Non-Bonus Ships
+! -
+| 1.1x
+|-
+!colspan="3"| Debuff Modifier (Multiplicative with above; Applies to All Ships)
+|colspan="2"| 1.08x
+|}
+
+==='''For Medium+: Before you start! - Land Base (LBAS) Defense Check'''===
+You need to perform LBAS defense to unlock the boss node for '''Medium+ ONLY'''. In this case, enemy raids on allied bases are considered high-altitude raids instead of normal. These raids apply a multiplier to air defense air power based on number of high-altitude interceptor squadrons assigned to air defense as shown below:
+*0: 0.5x (Total Air Power is halved)
+*1: 0.8x
+*2: 1.1x
+*3+: 1.2x
+Currently, there are only three such high-altitude interceptors which are not obtainable currently:
+*{{EquipmentLink|Me 163B}}
+*{{EquipmentLink|Prototype Shuusui}}
+*{{EquipmentLink|Shuusui}}
+If you do not have access to any of these, you will have to calculate based on the enemy's raid air power multiplied by 0.5x. This makes it harder to obtain the AS requirement albeit not impossible. For E-3's requirement, you will need a combined Air Defense air power from 2 bases of at least (for 0.5x multiplier):
+*'''Hard''': 564+
+*'''Medium''': 420+
+Keep in mind 1 Saiun per base can be used to raise a base's Air Defense air power by 1.3x, which is often more beneficial than adding a 4th plane with lower air power than the other 3 slots.
+
+Please perform calculations based on the available equipment that you have ([https://i.imgur.com/8fgG60S.png LBAS Air Defense Values]) before continuing as the map cannot be completed without unlocking the boss. Technically, the requirement is doable with no previous event equipment, even on Hard, but may require significant investment into interceptor upgrades.
+
+===E-3 Phase 1: Node R Opening Phase===
+Do the following in any order '''(Be advised some below may not be required for lower difficulties)'''
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|L|Red}}
+! {{Event/Route|N|Red}}
+! {{Event/Route|B|Red}}
+! LB Defense
+|-
+! Hard
+| S
+| S
+| AS
+| AS x2
+|-
+! Medium
+| A+
+| S
+! -
+| AS x1
+|-
+! Easy
+| A+
+| A+
+! -
+! -
+|-
+! Casual
+| D+
+| D+
+! -
+! -
+|}
+
+'''Land Base Defense'''
+*You can bait the LBAS raid with 1+ submarine
+
+'''Node B'''
+*Route: {{Event/Route|D|blue|C|red|A|red|B|red}}
+**Ex. ''2CV CL 3DD''
+**Ex. ''BBV 2CV CL CA DD''
+**Nodes C and B are Air Raid nodes
+**Node A is a submarine node
+**LBAS not needed, but can help to reduce air power needed
+
+'''Node L'''
+*Route: {{Event/Route|D|blue|E|blue|F|red|G|blue|H|red|I|red|L|red}}
+**Ex. ''2CV CL 3DD''
+**Ex. ''BBV 2CV CL CA DD''
+**LoS check from I to L, Cn=3 51
+**Node H is an Air Raid node
+**Node F is a submarine node
+**Node L is a combined fleet
+**Shelling support is not highly needed but can help with I and L nodes
+**For LBAS, 1 fighter + 3 bomber per base can achieve AD
+
+'''Node N'''
+*Route: {{Event/Route|D|blue|E|blue|F|red|G|blue|K|red|N|red}}
+**Ex. ''2CV CL 3DD '''(FAST)'''''
+*Route: {{Event/Route|D|blue|E|blue|F|red|G|blue|K|red|M|red|N|red}}
+**Ex. ''BBV 2CV CL CA DD''
+**Node K is an Air Raid node
+**Node F is a submarine node
+**Node N is a combined fleet
+**Shelling support is not highly needed but can help with M and N nodes
+**For LBAS, 1 fighter + 3 bomber per base can achieve AD
+
+===E-3 Phase 2: Boss Node Opening Phase===
+Do the following in any order '''(Be advised some below may not be required for lower difficulties)'''
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|R|Red}}
+! {{Event/Route|S|Red}}
+|-
+! Hard
+| S
+| S
+|-
+! Medium
+| A+
+| A+
+|-
+! Easy
+| A+
+! -
+|-
+! Casual
+| A+
+! -
+|}
+
+Node R:
+*Route: {{Event/Route|D|blue|C|red|A|red|B|red|P|red|R|red}}
+**Ex. ''2CV CL 3DD''
+**Ex. ''BBV 2CV CL 2DD''
+**Ex. ''BBV 3CV CL DD''
+**LoS check from P to R, Cn=2 36(?)
+**Nodes C and B are Air Raid nodes
+**Node A is a submarine node
+**Node R is a combined fleet
+
+Node S:
+*Route: {{Event/Route|D|blue|E|blue|F|red|G|blue|H|red|S|red}}
+**Ex. ''2CV CL 3DD''
+**Ex. ''BBV'' ''2CV CA CL DD''
+**Node H is an Air Raid node
+**Node F is a submarine node
+**Node S is a mixed surface and submarine node
+
+===E-3 Phase 3: Gotou Islands Seabed Princess===
+
+Node O:
+*Route: {{Event/Route|D|blue|E|blue|F|red|U|blue|T|red|O|red}}
+**Ex. ''2CV 4(CL or DD or DE)''
+**LoS check from T to O, Cn=2 38(?)
+**Node F is a submarine node
+**DE flagship recommended, heavier ships (''i.e.'' CV) or DDs in bottom 3
+**Vanguard on T node
+**Line Abreast on Boss node O
+**Equip DD/DE/CL for full ASW
+***Using ships with post-cap bonuses recommended but not required
+**Equip CV with bombers+Saiun and (if needed) longer range for dealing with surface enemies at T and the boss
+**LBAS
+***[[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] recommended against the boss node since the boss fleet is usually in diamond formation and always has a Tsu-class light cruiser
+***T & Boss setup: 4 bombers to node T, 1-2 Toukai + 2-3 bombers to Boss
+***Boss only setup: 2-3 Toukai + 1-2 bombers first base, and as many 8 ASW scouts as possible + ASW bombers or surface bombers
+****8 ASW scouts do not need to be resupplied
+*Route: {{Event/Route|D|blue|E|blue|F|red|U|blue|T|red|V|red|O|red}}
+**Ex. ''BBV CV(L) 4DD''
+**LoS check from V to O, Cn=2 36(?)
+**Node F is a submarine node
+**Allows a second round of shelling at the boss
+**Must fight an extra battle pre-boss which consists of a single sub and 5 Elite surface ships
+
+Post-Clear Notes:
+*After clearing the map, a third land base is unlocked that can be used for Land Base Air Defense  <s>or attack (potentially a bug)</s>
+*On Hard, the boss will always be in the Diamond formation + Tsu Elite form after clearing
+*To conserve resources while farming:
+**Equip mainly bombers with enemy AA resistance (named squadrons like Tomonaga, Murata, Egusa, etc.)
+**Toukai can be resupplied after dropping to 3 or 4 planes since they can still oneshot the enemy Ka-Class Elite Submarines above that. But, they will lose ranks sometimes
+**Nonaka Squadron can maintain proficiency if resupplied at 10 or fewer planes
+**8 ASW seaplane scouts highly recommended for 2nd base against boss, unless fleet ASW damage is lacking
+***These do not need to be resupplied as they are used for scratch damage and will not drop to 0
+
+===E-3 Phase 4: Last Dance Debuff===
+Not needed to clear the map, but does supply a small (~1.08x) post-cap bonus during the boss's final form only<br />
+Do the following in any order '''(Be advised some below may not be required for lower difficulties)'''<br />
+'''Note:''' Only attempt when on the boss' final form. Conditions performed before that will not count.
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|S|Red}}
+! LB Defense
+|-
+! Hard
+| S x2
+| AS x2
+|-
+! Medium
+| S x2
+| AS x2
+|-
+! Easy
+| S x2
+| AS x2
+|-
+! Casual
+| S x2
+| AS x2
+|}
+
+Node S:
+*Route: {{Event/Route|D|blue|E|blue|F|red|U|blue|S|red}}
+**Ex. ''2CV CL 3DD''
+**Node F is a submarine node
+
+LB Defense:
+You can bait the LBAS raid with 1+ submarines
+
+{{clear}}
+
+===LBAS Flight Range===
+[[File:Rainy2020E3LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

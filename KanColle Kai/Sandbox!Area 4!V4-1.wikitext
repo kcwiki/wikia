@@ -1,0 +1,1202 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:70%;" | V4-1: カレー洋正面海域
+| rowspan="3" style="text-align:center;width:30%;" | [[File:Vita Map Banner 4-1.png|400px]]
+|-
+! Items
+| None
+|-
+! Restrictions
+| None
+|-
+! Strategy Info
+|カレー洋作戦
+|カレー洋作戦が発令された！艦隊はカレー洋方面へ進出し、<br>同方面の敵艦隊と交戦、同海域の制海権確保に努めよ！
+|}
+<center>[[File:Vita Map Image 4-1.png|600px]]</center>
+==Map guide==
+{{Map/Branching
+|id = V4-1
+|0 -> C/empty =*Have no CV(B) in the fleet and meet any of the following requirements :
+**SS(V) ≦ 1
+**CVL ≦ 1
+|0 -> A =*Do not meet the requirements for C
+|B/empty -> D, E = * Choice node
+|F/empty -> H/storm, E = * Choice node
+|E -> G =*Fixed route
+|G ->I/empty = *Fail the LoS check
+|G ->K = *Pass the LoS check (value lowers the more DDs in the fleet)
+}}
+===Possible fleet compositions===
+*{{Event/Route|C|blue|F|blue|E|red|G|red|K|red}}
+**6XX [XX cannot be 2+ SS(V) or CV(B)]
+***It is recommended to bring 1-2 CVL for airpower.
+*{{Event/Route|A|red|B|blue|E|red|G|red|K|red}}<br>{{Event/Route|A|red|B|blue|D|red|G|red|K|red}}
+**1CV(B) 5XX
+***Allows the use of CV(B)s.
+***Fights one extra battle compared to the previous fleet and reaches the boss with ammo penality.
+*{{Event/Route|A|red|B|blue|E|red|G|red|K|red}}<br>{{Event/Route|A|red|B|blue|D|red|G|red|K|red}}
+**4~6SS(V)
+***Recommended to bring SSVs to carry seaplanes for the LoS check.
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=東洋艦隊巡洋戦隊
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|220
+|555
+|527
+|595
+|595
+|576
+|576
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|555
+|527
+|595
+|595
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦B戦隊
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|270
+|543
+|543
+|527
+|555
+|576
+|576
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|220
+|529
+|529
+|527
+|555
+|576
+|576
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|220
+|579
+|591
+|591
+|576
+|576
+|576
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|200
+|579
+|591
+|591
+|576
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|579
+|591
+|576
+|576
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|160
+|528
+|591
+|576
+|576
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦A戦隊
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|280
+|560
+|543
+|543
+|555
+|576
+|576
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|270
+|560
+|543
+|543
+|555
+|576
+|576
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|220
+|560
+|529
+|529
+|555
+|576
+|576
+|-
+}}
+{{Map/Nodes|name=東洋艦隊補給輸送船団
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|170
+|598
+|558
+|558
+|558
+|577
+|577
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|150
+|597
+|558
+|558
+|558
+|576
+|576
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|555
+|558
+|558
+|558
+|576
+|576
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊旗艦
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|320
+|545
+|560
+|560
+|592
+|576
+|576
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|300
+|545
+|560
+|560
+|591
+|576
+|576
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|270
+|545
+|560
+|560
+|591
+|575
+|575
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|240
+|544
+|560
+|560
+|591
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=東洋艦隊巡洋戦隊
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|200
+|555
+|527
+|595
+|595
+|575
+|575
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|555
+|527
+|595
+|575
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦B戦隊
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|220
+|529
+|529
+|527
+|555
+|576
+|576
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|200
+|529
+|529
+|527
+|555
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|579
+|591
+|576
+|576
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|160
+|528
+|591
+|576
+|576
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|150
+|528
+|591
+|576
+|576
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦A戦隊
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|220
+|560
+|529
+|529
+|555
+|576
+|576
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|200
+|560
+|529
+|529
+|555
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=東洋艦隊補給輸送船団
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|555
+|558
+|558
+|558
+|576
+|576
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|555
+|558
+|558
+|558
+|575
+|575
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|555
+|558
+|526
+|526
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊旗艦
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|300
+|545
+|560
+|560
+|591
+|576
+|576
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|270
+|545
+|560
+|560
+|591
+|575
+|575
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|240
+|544
+|560
+|560
+|591
+|575
+|575
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|220
+|544
+|523
+|523
+|591
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|乙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=東洋艦隊巡洋戦隊
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|170
+|555
+|527
+|595
+|575
+|575
+|575
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|150
+|555
+|527
+|594
+|575
+|575
+|575
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|527
+|594
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦B戦隊
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|200
+|529
+|529
+|527
+|555
+|575
+|575
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|529
+|524
+|522
+|519
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|150
+|528
+|591
+|576
+|576
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|140
+|528
+|591
+|575
+|575
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|120
+|528
+|591
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦A戦隊
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|200
+|560
+|529
+|529
+|555
+|575
+|575
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|560
+|555
+|524
+|524
+|575
+|575
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|150
+|560
+|524
+|524
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊補給輸送船団
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|555
+|558
+|526
+|526
+|575
+|575
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|555
+|526
+|526
+|526
+|575
+|575
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|555
+|526
+|513
+|513
+|575
+|575
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|519
+|513
+|513
+|513
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊旗艦
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|220
+|544
+|523
+|523
+|591
+|575
+|575
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|200
+|544
+|523
+|523
+|591
+|501
+|501
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|270
+|544
+|523
+|523
+|518
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=東洋艦隊巡洋戦隊
+|A
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|170
+|555
+|527
+|595
+|575
+|575
+|575
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|150
+|555
+|527
+|594
+|575
+|575
+|575
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|527
+|594
+|575
+|501
+|501
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|555
+|522
+|522
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦B戦隊
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|529
+|524
+|522
+|519
+|575
+|575
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|529
+|524
+|519
+|575
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|529
+|524
+|519
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|120
+|528
+|591
+|575
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|100
+|528
+|519
+|501
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|90
+|528
+|518
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦A戦隊
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|560
+|555
+|524
+|524
+|575
+|575
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|150
+|560
+|524
+|524
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊補給輸送船団
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|555
+|526
+|526
+|526
+|575
+|575
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|555
+|526
+|513
+|513
+|575
+|575
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|519
+|513
+|513
+|513
+|575
+|575
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|519
+|513
+|513
+|513
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊旗艦
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|200
+|544
+|523
+|523
+|591
+|501
+|501
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|270
+|544
+|523
+|523
+|518
+|501
+|501
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|150
+|544
+|523
+|523
+|518
+|501
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|140
+|544
+|523
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丁=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=東洋艦隊巡洋戦隊
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|527
+|594
+|575
+|501
+|501
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|555
+|522
+|522
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦B戦隊
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|529
+|524
+|519
+|575
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|529
+|524
+|519
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|100
+|528
+|519
+|501
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|90
+|528
+|518
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊戦艦A戦隊
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|150
+|560
+|524
+|524
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊補給輸送船団
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|519
+|513
+|513
+|513
+|575
+|575
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|519
+|513
+|513
+|513
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=東洋艦隊機動部隊旗艦
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|150
+|544
+|523
+|523
+|518
+|501
+|-
+|K
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|140
+|544
+|523
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+</tabber>
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, D, E, G, J, K
+|boss = K
+|{{ShipFrom|122}} : J,
+|{{ShipFrom|110}} : J, K
+|{{ShipFrom|90}} : J, K
+|{{ShipFrom|124}} : G, J, K
+|{{ShipFrom|125}} : G, J, K
+|{{ShipFrom|78}} : G, J, K
+|{{ShipFrom|86}} : G, J, K
+|{{ShipFrom|79}} : G, J, K
+|{{ShipFrom|85}} : G, J, K
+|{{ShipFrom|70}} : E, G, J, K
+|{{ShipFrom|69}} : D, E, G, J, K
+|{{ShipFrom|76}} : E, G, J, K
+|{{ShipFrom|54}} : D, E, G, J, K
+|{{ShipFrom|23}} : D, E, G, J, K
+|{{ShipFrom|9}} : D, E, G, J, K
+|{{ShipFrom|10}} : A, D, E, G, J, K
+|{{ShipFrom|32}} : A, D, E, G, J, K
+|{{ShipFrom|17}} : D, E, G, J, K
+|{{ShipFrom|18}} : A, D, E, G, J, K
+|{{ShipFrom|48}} : D, E, G, J, K
+|{{ShipFrom|49}} : D, E, G, J, K
+|{{ShipFrom|12}} : A, D, E, G, J, K
+|{{ShipFrom|431}} : K
+|{{ShipFrom|128}} : K
+|{{ShipFrom|169}} : K
+|{{ShipFrom|168}} : K
+|{{ShipFrom|83}} : K
+|{{ShipFrom|114}} : K
+|{{ShipFrom|71}} : K
+|{{ShipFrom|72}} : K
+}}
+|-|甲=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, D, E, G, J, K
+|boss = K
+|{{ShipFrom|110}} : J, K
+|{{ShipFrom|90}} : J, K
+|{{ShipFrom|124}} : J, K
+|{{ShipFrom|125}} : G, J, K
+|{{ShipFrom|78}} : G, J, K
+|{{ShipFrom|86}} : G, J, K
+|{{ShipFrom|79}} : G, J, K
+|{{ShipFrom|85}} : G, J, K
+|{{ShipFrom|70}} : D, E, G, J, K
+|{{ShipFrom|69}} : D, E, G, J, K
+|{{ShipFrom|76}} : D, E, G, J, K
+|{{ShipFrom|54}} : D, E, G, J, K
+|{{ShipFrom|23}} : D, E, G, J, K
+|{{ShipFrom|9}} : D, E, G, J, K
+|{{ShipFrom|10}} : A, D, E, G, J, K
+|{{ShipFrom|32}} : A, D, E, G, J, K
+|{{ShipFrom|17}} : D, E, G, J, K
+|{{ShipFrom|18}} : A, D, E, G, J, K
+|{{ShipFrom|48}} : A, D, E, G, J, K
+|{{ShipFrom|49}} : A, D, E, G, J, K
+|{{ShipFrom|12}} : A, D, E, G, J, K
+|{{ShipFrom|431}} : K
+|{{ShipFrom|128}} : K
+|{{ShipFrom|169}} : K
+|{{ShipFrom|168}} : K
+|{{ShipFrom|83}} : K
+|{{ShipFrom|114}} : K
+|{{ShipFrom|71}} : K
+|{{ShipFrom|72}} : K
+}}
+|-|乙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, D, E, G, J, K
+|boss = K
+|{{ShipFrom|110}} : K
+|{{ShipFrom|90}} : J, K
+|{{ShipFrom|124}} : J, K
+|{{ShipFrom|125}} : J, K
+|{{ShipFrom|78}} : G, J, K
+|{{ShipFrom|86}} : G, J, K
+|{{ShipFrom|79}} : G, J, K
+|{{ShipFrom|85}} : G, J, K
+|{{ShipFrom|70}} : D, E, G, J, K
+|{{ShipFrom|69}} : D, E, G, J, K
+|{{ShipFrom|76}} : D, E, G, J, K
+|{{ShipFrom|54}} : D, E, G, J, K
+|{{ShipFrom|23}} : D, E, G, J, K
+|{{ShipFrom|9}} : D, E, G, J, K
+|{{ShipFrom|10}} : A, D, E, G, J, K
+|{{ShipFrom|32}} : A, D, E, G, J, K
+|{{ShipFrom|17}} : A, D, E, G, J, K
+|{{ShipFrom|18}} : A, D, E, G, J, K
+|{{ShipFrom|48}} : A, D, E, G, J, K
+|{{ShipFrom|49}} : A, D, E, G, J, K
+|{{ShipFrom|12}} : A, D, E, G, J, K
+|{{ShipFrom|128}} : K
+|{{ShipFrom|169}} : K
+|{{ShipFrom|168}} : K
+|{{ShipFrom|83}} : K
+|{{ShipFrom|114}} : K
+|{{ShipFrom|71}} : K
+|{{ShipFrom|72}} : K
+}}
+|-|丙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, D, E, G, J, K
+|boss = K
+|{{ShipFrom|110}} : K
+|{{ShipFrom|90}} : J, K
+|{{ShipFrom|124}} : J, K
+|{{ShipFrom|125}} : J, K
+|{{ShipFrom|78}} : J, K
+|{{ShipFrom|86}} : G, J, K
+|{{ShipFrom|79}} : G, J, K
+|{{ShipFrom|85}} : G, J, K
+|{{ShipFrom|70}} : D, E, G, J, K
+|{{ShipFrom|69}} : A, D, E, G, J, K
+|{{ShipFrom|76}} : D, E, G, J, K
+|{{ShipFrom|54}} : D, E, G, J, K
+|{{ShipFrom|23}} : D, E, G, J, K
+|{{ShipFrom|9}} : A, D, E, G, J, K
+|{{ShipFrom|10}} : A, D, E, G, J, K
+|{{ShipFrom|32}} : A, D, E, G, J, K
+|{{ShipFrom|17}} : A, D, E, G, J, K
+|{{ShipFrom|18}} : A, D, E, G, J, K
+|{{ShipFrom|48}} : A, D, E, G, J, K
+|{{ShipFrom|49}} : A, D, E, G, J, K
+|{{ShipFrom|12}} : A, D, E, G, J, K
+|{{ShipFrom|128}} : K
+|{{ShipFrom|169}} : K
+|{{ShipFrom|168}} : K
+|{{ShipFrom|83}} : K
+|{{ShipFrom|114}} : K
+|{{ShipFrom|71}} : K
+|{{ShipFrom|72}} : K
+}}
+|-|丁=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, D, E, G, J, K
+|boss = K
+|{{ShipFrom|110}} : K
+|{{ShipFrom|90}} : K
+|{{ShipFrom|124}} : J, K
+|{{ShipFrom|125}} : J, K
+|{{ShipFrom|78}} : J, K
+|{{ShipFrom|86}} : G, J, K
+|{{ShipFrom|79}} : G, J, K
+|{{ShipFrom|85}} : G, J, K
+|{{ShipFrom|70}} : D, E, G, J, K
+|{{ShipFrom|69}} : A, D, E, G, J, K
+|{{ShipFrom|76}} : D, E, G, J, K
+|{{ShipFrom|54}} : D, E, G, J, K
+|{{ShipFrom|23}} : D, E, G, J, K
+|{{ShipFrom|9}} : A, D, E, G, J, K
+|{{ShipFrom|10}} : A, D, E, G, J, K
+|{{ShipFrom|32}} : A, D, E, G, J, K
+|{{ShipFrom|17}} : A, D, E, G, J, K
+|{{ShipFrom|18}} : A, D, E, G, J, K
+|{{ShipFrom|48}} : A, D, E, G, J, K
+|{{ShipFrom|49}} : A, D, E, G, J, K
+|{{ShipFrom|12}} : A, D, E, G, J, K
+|{{ShipFrom|169}} : K
+|{{ShipFrom|168}} : K
+|{{ShipFrom|83}} : K
+|{{ShipFrom|114}} : K
+|{{ShipFrom|71}} : K
+|{{ShipFrom|72}} : K
+}}
+</tabber>
+__NOTOC__

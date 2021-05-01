@@ -1,0 +1,10 @@
+<includeonly><span class="tablink">[[{{{page|{{#sub:{{PAGENAME}}|0|{{#rpos:{{PAGENAME}}|/}}}}}}}/{{{1}}}{{#if:{{{2|}}}|%23{{{2}}}}}|{{{text|{{{3|{{{2|{{{1}}}}}}}}}}}}]]</span></includeonly><noinclude>
+==Usage==
+* When on a tabbed page (i.e., a page with <code><nowiki><tabview></nowiki></code>), clicking <code>TabLink</code> links (used in subpages) will switch tabs and scroll to elements without loading the subpages:
+** <code><nowiki>{{TabLink|<tab name>}}</nowiki></code> link will switch to a tab <code><tab name></code> and change the URL hash to <code>#/<tab name></code>.
+** <code><nowiki>{{TabLink|<tab name>|<element id>}}</nowiki></code> link will switch to a tab <code><tab name></code>, scroll to an element with <code><element id></code>, and change the URL hash to <code>#/<tab name>#<element id></code>.
+** In both cases <code>text</code> parameter can be used for a custom text, e.g., <code><nowiki>{{TabLink|<tab name>|text=<custom text>}}</nowiki></code> or <code><nowiki>{{TabLink|<tab name>|<element id>|text=<custom text>}}</nowiki></code>.
+* On subpages the links will work as usual, loading linked pages.
+* Using <code><nowiki><tabbed page>#/<tab name></nowiki></code>, <code><nowiki><tabbed page>#/<tab name>#<element id></nowiki></code>, and <code><nowiki><tabbed page>#<element id></nowiki></code> URLs directly also works, that is, after tabbed page is loaded, tab switching and scrolling will be performed.
+* Switching tabs also changes the URL hash to <code><nowiki>#/<tab name></nowiki></code>.
+</noinclude>

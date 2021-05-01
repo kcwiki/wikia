@@ -1,0 +1,290 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Across the Gibraltar
+|jp = ジブラルタルを越えて
+|tag = E2
+|romaji = Ziburarutaru o koete
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 1500 HP + 2800
+|hp_easy = 1500 HP + 2800
+|hp_medium = 2600 HP + 3700
+|hp_hard = 3000 HP + 3950
+|show_kills = true
+|kills_casual = 3 + 4
+|kills_easy = 3 + 4
+|kills_medium = 4 + 5
+|kills_hard = 4 + 5
+|reward_all = {{ShipBattleCardKai|Duca degli Abruzzi}}
+|reward_casual_1 = {{ItemStack|item = [[File:Rotaiting.gif{{!}}50px{{!}}link=]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|New Model Rocket Development Material|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|New Model Rocket Development Material|size=50px}}
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Me 163B|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|New Model Rocket Development Material|size=50px}}
+|reward_hard_2_x = 3
+|reward_hard_3 = {{EquipmentCardKai|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Me 163B|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|M4A1 DD|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-2A Branching Rules
+|expand = true
+|id = 45-2A
+|order = 0,B,C,E,D,J,G,I,K
+
+|0 -> 1 = * Do not meet the requirements to start at 2.
+|0 -> 2 = 
+* Meet '''ANY''' of the following requirements after unlocking part 2:
+** Surface Task Force
+** Transport Combined Fleet '''AND''' fleet contains AV, AS, AO or AR.
+
+|B/empty -> A, D = * Active branching
+
+|C -> E = 
+* Meet '''ALL''' of the following requirements:
+** If Transport Fleet, no BBV allowed.
+** Transport Combined Fleet '''OR''' Surface Task Force.
+|C -> G = * Do not meet the requirements to go to E.
+
+|E -> H/empty = * Fail the LoS check.
+|E -> I = 
+* Pass the LoS check, but do not meet the requirement to go to M.
+|E -> M/empty = * Pass the LoS check '''AND''' Transport Combined Fleet
+
+|D -> F = * Do not meet the requirements to go to G.
+|D -> G = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of CV(L/B) ≤ 1
+** Amount of (F)BB(V)+CV(L/B) ≤ 2
+* Alternatively, use a Transport Escort Fleet.
+
+|J -> G = * Pass the LoS check, but do not meet the requirements to go to K.
+|J -> K = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CV(L/B) ≤ 2
+** Amount of (F)BB(V)+CV(L/B)+LHA ≤ 4
+** Fast Fleet
+** Pass the LoS check
+|J -> L/empty = * Fail the LoS check.
+
+|G -> I = * Do not meet the requirements to go to K.
+|G -> K = 
+* Meet '''ALL''' of the following requirements:
+** If fleet contains (F)BB(V), no CV(B) allowed?
+** Amount of CVL ≤ 1
+
+|I -> K = * Fixed
+
+|K -> M/empty = * Fixed
+}}
+{{MapBranchingTable
+|title = E-2B Branching Rules
+|expand = true
+|id = 45-2B
+|order = 0,O,T,Q
+
+|0 -> 1 = * Do not meet the requirements to start at 2.
+|0 -> 2 = 
+* Meet '''ANY''' of the following requirements after unlocking part 2:
+** Surface Task Force
+** Transport Combined Fleet '''AND''' fleet contains AV, AS, AO or AR.
+
+|O -> P = 
+* Meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V)+CV(L/B)+LHA ≤ 3
+** Amount of CA(V)+(F)BB(V)+CV(L/B) ≤ 6
+** No SS(V)
+|O -> R = * Do not meet the requirements to go to P.
+
+|T -> Q = * Pass the LoS check, but do not meet the requirements to go to V.
+|T -> U/empty = * Fail the LoS check.
+|T -> V = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+** Amount of CA(V)+(F)BB(V)+CV(L/B) ≤ 7
+
+|Q -> S/empty = * Fleet contains {{ShipLink|Akitsushima}}.
+|Q -> V = * Do not meet the requirements to go to S.
+}}
+{{clear}}
+
+==Map Guide==
+*This is a '''combined fleet''' map.
+*There are 2 boss nodes on this map. The 1st boss at node {{Event/Route|N|Red}} must be defeated before the 2nd part of the map is unlocked.
+*The first boss is an installation type enemy. Prepare Anti-Installation equipment to take it down.
+*The 2nd boss is a high armour Abyssal Princess in an '''abyssal combined fleet'''
+*Two [[Land Base Aerial Support]] squadrons are available for sortie (see range below).
+
+===Map progression===
+{{#tag:gallery|
+Summer19_E2_p1.png{{!}}Map during the first HP phase at node N
+Summer_2019_Event_E-2_Map.png{{!}}Full map during the second HP phase at node V
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+===Ship Bonuses===
+The following ships have bonuses on E2:
+{{Ambox/Disclaimer|This information is based on user submitted data and is subject to revisions as more data is gathered.}}
+
+'''Mapwide'''
+*German, French, Italian - 1.1x
+*British - 1.15x
+
+'''Node''' {{Event/Route|K|Red}}
+*British - 1.25x
+*Ark Royal - 1.55x
+
+'''Node''' {{Event/Route|O|Red|R|Red}}
+*Zara - 1.2x
+*Ark Royal - 1.43x
+
+'''Node''' {{Event/Route|T|Red}}
+*Italian - 1.2x
+*Pola, Italia, Roma - 1.4x (vs BBH)
+
+'''Node''' {{Event/Route|V|Red}}
+*German, French - 1.1x
+*British - 1.15x
+*Italian - 1.25x
+*Jervis - 1.4x
+*Ark Royal - 1.43x
+*Aqulia - 1.76x
+
+===Part 1: Defeating the boss at Node N===
+*The routing for this part will depend on the type of combined fleet you sortie to the map.
+*The boss needs to be killed 3 times in '''Casual/Easy''' and 4 times in '''Medium/Hard'''.
+*'''Tips'''
+**The boss is {{ShipLink|Harbour Summer Princess}} escorted by {{ShipLink|Supply Depot Princess Vacation Mode|text=Supply Depot Princess}}. The easily accessible Anti-installation equipment, {{EquipmentLink|Type 3 Shell}}, is crucial against these two. It is recommended to have 3-5 T3 Shells for this situation.
+**There are also 0-2 {{ShipLink|Artillery Imp}} depending on difficulty against which {{EquipmentLink|Type 3 Shell|text=Type 3 Shells}} are not effective. To easily deal with them you should equip your BBs with an {{EquipmentLink|Type 91 Armor Piercing Shell|Type 1 Armor Piercing Shell|text=AP Shell}} or use [[Land Base Aerial Support|LBAS]] bombers such as {{EquipmentLink|Type 96 Land-based Attack Aircraft}} if available. Alternatively variants of {{EquipmentLink|Daihatsu Landing Craft|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|
+Toku Daihatsu Landing Craft + 11th Tank Regiment|text=Daihatsu Landing Craft}} are also effective against Arty Imps, especially if used in a "nuke" setup against Supply Depot Princess together with a{{EquipmentLink|Special Type 2 Amphibious Tank|text=Type 2 Tank}} and an {{EquipmentLink|WG42 (Wurfgerät 42)|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|text=20cm AG Rocket Launcher|text=Anti-Ground Equipment}}. The list of ship that can equip Daihatsus and the Type 2 Tank is down below.
+***{{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}} is decent against both {{ShipLink|Artillery Imp}} and the boss and can be equipped on CL/DD but are hard to obtain. However, if you did clear E-1 in Easy+ you will have access to 1-2 {{EquipmentLink|Type 2 12cm Mortar Kai}} and if you cleared Hard you also obtained a {{EquipmentLink|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|text=20cm AG Rocket Launcher}}. They are less effective than WG42 but can still damage them.
+**1 {{ShipLink|PT Imp Pack}} also exists on every difficulty and can be a nuisance. They are extremely difficult to sink despite their low HP and it is recommended to use [[Expedition/Support Expedition|Support Expedition]] (or Land-base) against them. Otherwise, specific ship setup (Anti-PT-Imp setup) are required to accurately sink them. (Please click [Expand] to the right)
+
+<div class="mw-collapsible mw-collapsed">
+*'''At least two different types of equipment must be combined to see significant boosts to accuracy.'''
+**Skilled lookouts give very high boost to accuracy, and reaching very high accuracy is hard without them
+**Stacking multiple of other types (without skilled lookouts) can give somewhat high accuracy. For instance, two secondary guns and one machine gun
+*Applicable equipment types
+**Skilled Lookouts [[File:Ssp c.png]]
+**Small main guns [[File:RedGunLight.png]][[File:GreenGunDP.png]]
+**Secondary guns [[File:YellowGun.png]][[File:GreenGunDP.png]]
+**AA/machine guns [[File:GreenGunMG.png]]
+**Seaplane scouts/bombers [[File:Seaplane.png]]
+*Typically destroyers are used as anti-PT imp because they usually want to have small main guns equipped regardless, however CL, AV, CA(V), BB(V) are also sometimes used as well depending on the circumstances
+*Equipping more different types of equipment will increase accuracy greatly, but some types (guns, machine guns) will increase accuracy further if two of the same type are equipped, albeit less than equipping an additional type instead.
+*Some equipment types give extra firepower bonuses against PT Imp Packs, namely the main/secondary guns. For very high probability of sinking in one hit, at least one gun-type equipment effective against PT Imp Packs is usually needed.
+</div>
+<br />
+
+{{Hard Anti-installation Weapons}}
+
+*'''Compositions & Routes'''
+**'''Transport Combined Fleet'''
+***Route:{{Event/Route|B|Blue|A|Red|C|Red|E|Red|M|Blue|N|Red}}
+***No '''BBV''' allowed
+***The CVL for a Transport Combined Fleet must have a base ASW stat that is not 0. Currently this is true for the four following ships: {{ShipLink|Gambier Bay}}, {{ShipLink|Taiyou}}, {{ShipLink|Shinyou}}, or {{ShipLink|Zuihou Kai Ni B}}. If you don't have any of these four ships, 2 CAVs could be considered instead.
+****1CVL 1CAV 4DD and 2CA(V) 1CL 3DD
+****1CVL 1CAV 4DD and 1CA(V) 2CL 3DD
+**'''Surface Task Force'''
+**If you have {{ShipLink|Nagato Kai Ni}}/{{ShipLink|Mutsu Kai Ni}}, {{ShipLink|Nelson}}, {{ShipLink|Colorado}}, it is safe to lock Nagato/Mutsu here as British (Nelson) and U.S. (Colorado) have bonus in E-3. However, Phase 2 requires your Nagato/Mutsu to be fast in order to follow the shortest route, otherwise you will need to face an additional air-node.
+***Route:{{Event/Route|B|Blue|A|Red|C|Red|E|Red|I|Red|K|Red|M|Blue|N|Red}}
+***This route allows to bring your heaviest ships. Defeat the boss with an all out attack
+****4(F)BB(V) 2CVL and 1FBB 2CA(V) 1CL 2DD
+****4(F)BB(V) 2CVL and 2CA(V) 0-1CLT 1CL 2-3DD
+****4(F)BB(V) 1CV(L/B) 1CA(V) and 2CA(V) 0-1CLT 1CL 2-3DD
+***Route:{{Event/Route|B|Blue|D|Red|F|Red|J|Red|G|Red|I|Red|K|Red|M|Blue|N|Red}}
+***This route as well allows to bring your heaviest ships. Defeat the boss with an all out attack
+****4(F)BB(V) 2CVL and 1FBB 2CA(V) 1CL 2DD
+****4(F)BB(V) 2CVL and 2CA(V) 0-1CLT 1CL 2-3DD
+****4(F)BB(V) 1CV(L/B) 1CA(V) and 2CA(V) 0-1CLT 1CL 2-3DD
+*****CVL ≤ 1 and no CV should avoid the submarine node {{Event/Route|I|Red}} ('''Requires further testing''').
+***Route:{{Event/Route|B|Blue|D|Red|G|Red|K|Red|M|Blue|N|Red}}
+***Route for a relatively light STF that avoids multiple nodes, but might have trouble at {{Event/Route|K|Red}}.
+***Fleet must be '''Fast''' speed.
+***Maximum (F)BB(V) + CV(L/B) combined ≤ 2 '''and''' if a (F)BB(V) is in the fleet only a CVL is allowed.
+****2(F)BB(V) 4CA(V) and 2CA(V) 0-1CLT 1CL 2-3DD
+***{{Event/Route|B|Blue|D|Red|F|Red|J|Red|K|Red|M|Blue|N|Red}}
+***A middle way between the light and heavy STF routes. There is a LoS check at {{Event/Route|J|Red}}
+***Fleet must be '''Fast''' speed.
+***Maximum (F)BB(V) + CV(L/B) combined  ≤ 4 '''and''' maximum 2 CV(L/B) are allowed.
+****3(F)BB(V) 1CV(L/B) 2CA(V) and 2CA(V) 0-1CLT 1CL 2-3DD
+****2(F)BB(V) 2CVL 2CA(V) and 2CA(V) 0-1CLT 1CL 2-3DD
+
+===Part 2: Defeating {{ShipLink|Abyssal Mediterranean Princess|text=Abyssal Mediterranean Princess}} at Node V===
+*'''Compositions & Routes''' - Surface Task Force
+**{{Event/Route|O|Red}}{{Event/Route|P|Red}}{{Event/Route|T|Red}}{{Event/Route|V|Red}} - Reaches boss with no damage penalty from ammo
+***2 (F)BB (1 CV(B) or 2 CVL) 0-3 CA(V) 0-3 CL/DD 0-1 AV and 1 CL 2 DD 3 XX(DD,CA,CLT)
+****in which CA(V)+(F)BB(V)+CV(L/B) ≤ 6 and (F)BB(V)+CV(L/B) ≤ 3
+****All Fast
+***As this route passes through the sub node instead of a surface battle, less ammo is used and there is no damage penalty at the boss
+***Since this composition will pass through a submarine node (P), an ASW gear on a DD or CL can be considered for greater stability in reaching the boss, especially on hard difficulty
+****During the final kill phase in hard difficulty, the submarine node is locked to line abreast formation, so ASW equipment is much less necessary
+**{{Event/Route|O|Red}}{{Event/Route|P|Red}}{{Event/Route|T|Red}}{{Event/Route|Q|Orange}}{{Event/Route|V|Red}} - Reaches boss with no damage penalty from ammo
+***2 BB (1 CV(B) or 2 CVL) 0-3 CA(V) 0-3 CL/DD 0-1 AV and 1 CL 2 DD 3 XX(DD,CA,CLT)
+****in which CA(V)+(F)BB(V)+CV(L/B) ≤ 6 and (F)BB(V)+CV(L/B) ≤ 3
+***As this route passes through the sub node instead of a surface battle, less ammo is used
+***In exchange for an enemy air raid node before the boss (''i.e''. less fuel), special attack ships such as Nagato or Nelson can be used without needing speed-boosting equipment.
+***Since this composition will pass through a submarine node (P), an ASW gear on a DD or CL can be considered for greater stability in reaching the boss, especially on hard difficulty
+****During the final kill phase in hard difficulty, the submarine node is locked to line abreast formation, so ASW equipment is much less necessary
+**{{Event/Route|O|Red}}{{Event/Route|R|Red}}{{Event/Route|T|Red}}{{Event/Route|V|Red}} - Reaches boss with ~20% damage penalty from ammo
+***2 (F)BB (1 CV(B) or 2 CVL) 0-3 CA(V) 0-3 CL/DD and 1 CL 2 DD 3 XX(DD,CA,CLT)
+****in which amount of CA(V)+(F)BB(V)+CV(L/B) ≤ 7
+****All Fast
+***An additional heavy cruiser, carrier or battleship can be brought in exchange for going through a PT Imp node
+***It is recommended that node shelling support is used, and/or some of the CA/CL/DD in the main fleet be equipped with Anti-PT Imp setups to assist in sinking them before the torpedo phase
+**{{Event/Route|O|Red}}{{Event/Route|R|Red}}{{Event/Route|T|Red}}{{Event/Route|Q|Orange}}{{Event/Route|V|Red}} - Reaches boss with ~28% damage penalty from ammo
+*** 3 (F)BB ([1 BBV 1 CV(B)] or 2 CVL) 0-1 AO 0-1 CAV and 1 CL 2 DD 3 XX(DD,CA,CLT)
+***Disregards any speed and composition restriction for higher firepower setup
+***Since the route involves more fuel and ammo consumption, on higher difficulties an AO is recommended for use of underway replenishment consumable items to have higher damage and evasion at the boss node
+*General Notes
+**Up to 3 CLT are useful in this phase for greater stability in getting to the boss and damage output at the boss node
+***In E-3 all bosses and most important end nodes contain installations, reducing (but not eliminating) the utility of CLTs in that map
+**Due to the scaling of accuracy and critical damage with multiple high proficiency bombers on top of historical bonuses enjoyed by Ark Royal and Aquila, it is recommended to equip as many bombers to those carriers as possible.  This boosts damage at the boss node and also increases consistency in reaching the boss
+***For smaller slots, it's helpful to equip special squadrons which have high resistance to enemy AA (Murata, Tomonaga, etc.)
+***As a result, it's desirable to equip a number of Seaplane Fighters to other main fleet ships (CAV and/or AV) to maintain air power
+**It is recommended to bring some Torpedo Cut-in (TCI) ships due to the boss's high armor
+**Common notable composition picks
+***CV: Aquila or Ark Royal due to historical bonuses
+***Fast BB: Italia, Roma, Kongou and/or Bismarck due to historical ship bonuses and innate fast speed
+***Slow BB: Nagato Kai Ni + Mutsu Kai Ni for special attack extra damage
+****If using Nagato and Mutsu in E3, Nelson can be utilized here instead.
+***CLT: Kiso (to save Kitakami for E3) Ooi (especially if having multiple), Kitakami (''especially'' if having multiple)
+***Escort fleet CA: Prinz Eugen due to high base luck for TCI, other high luck CAs
+***DD: Ayanami, Yukikaze, and other high luck high attack DDs due to suitability for TCI.  Also Akizuki-class DDs for AACI and ASW or anti-PT
+****It is strongly recommended to reserve Jervis and to a lesser degree Johnston for E3
+***AV: Chitose/Chiyoda (due to not being ships suited for E3), duplicate Commandant Testes 
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+{{Fleets|friend=Summer 2019 Event|map=E-2}}
+
+===LBAS Flight Range===
+[[File:Summer19_E2_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

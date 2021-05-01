@@ -1,0 +1,15 @@
+A few hours earlier, there was hack on wikia, specifically on the [http://dev.wikia.com developers wiki], where we source some of our scripts.
+
+It caused pages to disappear, and get replaced by these messages:
+* ''Guys you need to protect your js files''
+* ''oops i broke it''
+* ''i broke it''
+
+This is not isolated to '''kancolle.wikia.com'''. Any wikia that imports specific scripts from '''dev.wikia.com''' were affected, including elderscrolls, fnaf, etc.
+
+The culprit is a specific wikia user named [http://dev.wikia.com/wiki/Special:Contributions/Regalis111 Regalis111].
+
+The user edited common scripts that we take from '''dev.wikia.com''' (''which were not protected from public editing''). It was a small blunder for wikia dev, forgetting to restrict editing permissions from these files. It is not a highly technical cyber-battle hack, but a simple ''oops''.
+
+After a few minutes, dev wikia admins started undoing and protecting these pages/scripts from public editing:
+* http://dev.wikia.com/wiki/Special:WikiActivity<ac_metadata title="Wikia hacking: 25th July 2015" notify_everyone="1437789188" related_topics="General Discussion"> </ac_metadata>

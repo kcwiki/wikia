@@ -1,0 +1,148 @@
+==Types of Map Nodes==
+Note: All consumption amounts listed are rounded down, to a minimum of at least 1 Fuel/Ammo consumed.
+
+===Day Battle Node===
+
+''Main Article: [[Combat/Day Combat]]''
+
+<div class="floatright">[[File:Red node.png]]<br><div style="font-size:12px">A day battle node</div></div>
+
+Day Battle nodes are the standard type of battle nodes encountered during sorties, and are marked with a red circle on the map. Both fleets will engage in three main phases of combat in order, namely Aerial Phase, Shelling Phase and Torpedo Phase. Depending on the type of fleet used, or the type of enemy fleet fought (ie. [[Combat/Combined Fleet]]), the order of Shelling and Torpedo Phase might be altered.
+
+After initial combat ends, the player is given an option to extend the battle into the Night Phase at the expense of additional ammo and [[Morale/Fatigue|morale]].
+
+Day Battle Nodes consume '''20% Fuel and Ammo'''. If the battle continues into the night, the ammo cost is instead '''30%'''.
+{{clear}}
+===Night Battle Node===
+''Main Article: [[Combat/Night Battle]]''
+<div class="floatright">[[File:Night_node.png]]<br><div style="font-size:12px">A night battle node</div><br>[[File:Night_to_Day_node.png]]<br><div style="font-size:12px">A night-to-day battle node</div></div>
+Night Battle nodes are marked in purple on the map. Night Battle nodes differ in that the battle starts immediately under night conditions, and ends the battle immediately upon completion.
+
+Events may feature nodes marked as night-to-day battle nodes, which involve a night battle where your fleet fights an enemy combined fleet, followed by a day battle against the enemy main fleet.  Proceeding from night to day only occurs when certain requirements are met. When they are met, the transition happens automatically - unlike going from day to night battle, you do not have any control over whether this happens.
+
+As of the [[Fall 2017 Event]], Night Battle Nodes now consume '''10% Fuel and 10% Ammo'''. 
+
+This behavior was extended to regular world maps with the [[Thread:670693|Phase 2 [Block-1] Update]].  
+{{clear}}
+
+===Submarine Node===
+As of the [[Fall 2017 Event]], nodes containing only submarines consume '''8% Fuel and 0% Ammo'''. The consumption is unchanged regardless of starting in day or nighttime.
+
+This behavior was extended to regular world maps with the [[Thread:670693|Phase 2 [Block-1] Update]].
+{{clear}}
+
+===PT Imp Node===
+As of the [[Fall 2017 Event]], nodes containing only [[PT Imp Pack]]s consume '''4% Fuel and 8% Ammo'''. The consumption is unchanged regardless of starting in day or nighttime.
+
+If continuing a PT Imp Node from day to night, the ammo cost is instead '''12% Ammo'''
+{{clear}}
+
+===Boss Node===
+<div class="floatright">[[File:Boss_node.png]]<br><div style="font-size:12px">A boss node</div></div>
+Boss nodes are marked with a horned head symbol on the map. Boss nodes generally start in Day Battle, but can also start as Night-to-Day battle nodes depending on the map in question.
+
+Boss nodes consume '''20% Fuel and Ammo'''. Even if the boss fleet consists of all Submarines or all PT Imps, Boss node consumption takes priority.
+{{clear}}
+
+===Resource Nodes===
+<div class="floatright">[[File:Green node.png]]<br><div style="font-size:12px">A resource node</div></div>
+Resource nodes are marked in green on the map. Resource nodes grant bonus resources when returning to base after a sortie. 
+
+The amount of resources given by a resource node can be increased by equipping [[Drum Canister (Transport Use)|Drums]] or [[Daihatsu Landing Craft|Daihatsu-type equipment]]. (Does not apply to instant repairs, constructions or development materials)
+
+If a connection is lost during a sortie (Cat Error or Refreshing), the collected resources will be forfeited.
+{{clear}}
+
+===Anchor Node===
+<div class="floatright">[[File:Anchor node.png]]<br><div style="font-size:12px">An anchor node</div></div>
+Anchor nodes are marked with an anchor symbol on the map. Depending on the map, an anchor node can represent a resource node, an empty node, or a Transport Load-off Point.
+
+With the exception of [[World 1/1-6|World 1-6]], Anchor nodes that function as resource nodes will have their resources boosted by the same equipment as a normal resource node.
+
+If a connection is lost during a sortie (Cat Error or Refreshing), the collected resources will be forfeited.
+{{clear}}
+
+===Scout Node===
+<div class="floatright">[[File:Scout node.png]]<br><div style="font-size:12px">A scout node</div></div>
+Scout nodes are marked in dark green on the map. Scout nodes have a chance of granting bonus resources when returning to base after defeating the Boss node on the map.
+
+The amount of resources given by a scout node is dependent on the type of recon seaplane used to 'scout' the node. Using a [[Type 2 Large Flying Boat]] enables a larger amount of resources to be rewarded.
+
+Obtaining resources from a scout node is not guaranteed, and the success rate is dependent on the type and amount of recon seaplane equipped. Using a [[Type 2 Large Flying Boat]] also increases the success rate greatly.
+
+Unlike normal resource nodes, the collected resources will also be forfeited if the player is unable to score a '''B-Rank or higher''' at the Boss node. If the player ends the sortie without reaching the boss, the resources will also be forfeited.
+
+If a connection is lost during a sortie (Cat Error or Refreshing), the collected resources will be forfeited. 
+{{clear}}
+
+===Aerial Battle Node===
+<div class="floatright">[[File:Aerial_node.png]]<br><div style="font-size:12px">An aerial battle node</div></div>
+Introduced in [[Summer 2014 Event]], Aerial Battle Nodes differ in that the battle instead consists of two separate Aerial Phases. Plane counts are affected per phase, and anti-air mechanics apply for both phases.
+
+Like normal Day Battle nodes, the player is given an option to extend the battle into the Night Phase.
+
+Aerial Battle Nodes consume '''20% Fuel and 20% Ammo'''. If the battle continues into the night, the ammo cost is instead '''30%'''.
+{{clear}}
+
+===Air Raid Node===
+<div class="floatright">[[File:Raid_node.png]]<br><div style="font-size:12px">An air raid node</div></div>
+
+''Also known as: Air Raid Battle (空襲戦)''
+
+First introduced in [[Winter 2016 Event]].
+
+Unlike Aerial Battle nodes, Air Raid Battle nodes are defensive battles where the victory objective is to minimize, or outright neutralize damage dealt to your ships.
+
+There are a few key differences with an Air Raid Battle versus regular battles:
+* The battle consists of a single aerial phase, in which allied bombers are unable to attack the enemy fleet.
+* Abyssal aircraft will attempt to bomb your fleet. Your fleet will launch any aircraft capable of participating in the Aerial Combat phase to intercept them. 
+* As it is an air-raid node, it is advised to use diamond (for single fleet/striking force) or ring (for combined fleet) formation for the battle.
+* The only means of directly damaging the enemy fleet is through the use of bombers sent to the node via [[Land Base Aerial Support]]. Damage dealt to the enemy fleet is not considered for determining battle victory ranks.
+* These nodes calculate ranks solely based on the damage you take during the air raid:
+**Perfect S: Take zero damage from the air raid. Annihilation of enemy bombers is optional.
+**A: Take less than 10% damage<ref name=LDAB>http://nga.178.com/read.php?tid=8989155</ref>
+**B: Take 10%-20% damage<ref name=LDAB />
+**C: Take 20%-50% damage<ref name=LDAB />
+* Air Raid nodes cannot be extended into Night Battle.
+
+As of the [[Fall 2017 Event]], Air Raid nodes consume '''6% Fuel and 4% Ammo'''.  
+
+This behavior was extended to regular world maps with the [[Thread:670693|Phase 2 [Block-1] Update]].
+
+{{clear}}
+
+===Ambush Node===
+<div class="floatright">[[File:Ambush node.png]]<br><div style="font-size:12px">An ambush node</div></div>
+
+Introduced in [[Winter 2019 Event]], Ambush nodes are nodes where battle occurs with an abyssal enemy fleet, but the player fleet is unable to attack. Although the displayed background is nighttime, the battle will follow day battle rules, wherein the enemy fleet is granted air superiority and will proc artillery spotting accordingly. The battle will also adhere to the daytime damage cap.
+
+Ambush nodes automatically select the formation and starts the battle immediately for the player once the fleet arrives on the node. (Line Ahead for Single Fleet, Formation 4 for Combined, or Formation 2 if not possible) Ships can be sunk in this node as per normal sinking rules (Continuing sortie while below <25% HP) so closing the game, or refreshing has to be done before the ship reaches the ambush node in question.
+
+Ambush nodes consume '''4% Fuel and 0% Ammo'''.
+{{clear}}
+
+==Map Mechanics==
+
+===Node Selection===
+<gallery type="slideshow" hideaddbutton="true">
+Manual_node_selection_-_Winter_2016_Event.png|Winter 2016 Event - map E-2. Game prompts you to select a node.
+Manual_node_selection_nodes_highlighted_-_Winter_2016_Event.png|Winter 2016 Event - map E-2. Available nodes are displayed.
+</gallery>
+
+''Also known as Manual Node Selection''
+
+Introduced in [[Spring 2015 Event]], certain nodes allow you click on a node to specify which route you want to take. You may only choose nodes that are connected directly to the node you are currently at.
+{{clear}}
+
+===Multiple Starting Points===
+[[File:Multiple branching.jpg|thumb|300x300px]]
+Introduced in [[Winter 2016 Event]], maps with multiple starting points were introduced. These maps may have multiple starting or/and ending nodes. The starting node your fleet begins at depends on the fleet type, or composition of the fleet depending on the map.
+
+For example, in this image, there were multiple start and end nodes in E3 of the [[Winter 2016 Event]]. The type of combined fleet used in this map influenced which starting node the fleet began at. Different phases of the map could only be completed by starting at a different point.
+{{clear}}
+
+===Map Phases===
+Certain maps have '''multiple phases''' that have differing objectives that required to complete in order to clear the map.
+
+==References==
+<references/>

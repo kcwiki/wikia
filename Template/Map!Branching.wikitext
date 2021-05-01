@@ -1,0 +1,66 @@
+<includeonly>{{#invoke:MapBranchingTable|Table}}</includeonly><noinclude>
+==Parameters==
+Unnamed parameters are ignored. The following named parameters are used (ignored otherwise).
+===width===
+Width of the table, defaults to <code>auto</code>.
+===id===
+A custom id for collapsible element, use when more than one table is used on a page.
+===title===
+A custom title, also can be used as an alternative to <code>id</code>.
+===expand===
+Set to expand the branching table. Collapsed by default.
+===Parameters for branching rules===
+Named parameters in the following format
+:<code><node>[/<color>][/<color2>] -> <node>[/<color>][/<color2>][, <node>[/<color>][/<color2>]]*  = <rules></code>
+* <code><node></code> is a letter or a digit, <code>0</code> is used for '''Start''', other digit nodes are always <code>gray</code>.
+* <code><color></code> can be an HTML color [https://material.io/guidelines/style/color.html# code] or [http://www.w3schools.com/colors/colors_names.asp name], or one of the following:
+** <span style="color:#FF1744"><code>battle</code></span>, default
+** <span style="color:#64DD17"><code>resource</code></span>
+** <span style="color:#EA80FC"><code>storm</code></span>
+** <span style="color:#40C4FF"><code>empty</code></span>
+* When <code><color2></code> is specified, the node will be colored using both colors (<code><color></code> and <code><color2></code>).
+
+==Example==
+<pre>
+{{MapBranchingTable|title = A Branching Table|width = 50%
+|0 -> 1, 2 = Some text...
+|0 -> Z = ...
+|0 -> X1 = ...
+|0 -> XX1 = ...
+|1 -> A/battle/empty = Some text...
+|1 -> B/resource = [[DD]], [[CL]]
+|1 -> C/storm =
+* A
+* list
+|C/storm -> D/empty = ...
+|F/storm -> G/battle, H/resource, I/empty = random
+|B -> D/red/green/blue, E/red/green/blue/yellow = ...
+|X -> Y/nightday_night, Z/night_battle_empty = ...
+|ignored argument
+|Q -> = also ignored
+|...
+}}
+</pre>
+{{MapBranchingTable|title = A Branching Table|width = 50%
+|0 -> 1, 2 = Some text...
+|0 -> Z/ambush = ...
+|0 -> X1 = ...
+|0 -> XX1 = ...
+|1 -> A/battle/empty = Some text...
+|1 -> B/resource = [[DD]], [[CL]]
+|1 -> C/storm =
+* A
+* list
+|C/storm -> D/empty = ...
+|F/storm -> G/battle, H/resource, I/empty = random
+|B -> D/red/green/blue, E/red/green/blue/yellow = ...
+|X -> Y/nightday_night, Z/night_battle_empty = ...
+|ignored argument
+|Q -> = also ignored
+|...
+}}
+
+==Tests==
+* [http://kancolle.wikia.com/wiki/Fall_2016_Event/E-5?action=purge]
+* [http://kancolle.wikia.com/wiki/World_1:_鎮守府海域?action=purge]
+</noinclude>

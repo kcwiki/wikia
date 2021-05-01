@@ -1,0 +1,113 @@
+[[File:49125784 p0.png|thumb|220px|right|waifu.]]
+
+==A Few Words==
+* Sometimes, the best girl is [[Fubuki|the plainest one]].
+* Juggling work, KanColle and [http://lovelive.kouhi.me LLSIF] is serious ''business'' indeed.
+** More so when you're doing events in ''both'' games.
+* I'm a ''"collectionist,"'' not a ''"completionist."''
+** I only collect whatever stuff RNG-sama throws my way. I don't force it out of her in order to complete my collection.
+*** ...save that one time I farmed for [[Akizuki|Ducky]] in the [[Winter 2016 Event]]...
+*** ...or that time I farmed for [[Asakaze]] in the [[Fall 2016 Event]]...
+*** ...or that time I farmed for [[I-13]], [[I-26]], [[Fujinami]], and [[Teruzuki]] in the [[Winter 2017 Event]]...
+*** ...or that time I farmed for [[Shimushu]] and [[Italia]] in the [[Spring 2017 Event]]...
+*** ...or that time I farmed for [[Etorofu]], [[Matsuwa]], [[Amagiri]], [[Sagiri]], [[Luigi Torelli]], [[Roma]], and [[Graf Zeppelin]] in the [[Summer 2017 Event]]...
+*** ...or that time I farmed for [[Tsushima]], [[I-400]], and [[Katsuragi]] in the [[Fall 2017 Event]]...
+*** ...or that time I farmed for [[Daitou]], [[Jervis]], [[Hamanami]], and [[Tashkent]] in the [[Winter 2018 Event]]...
+*** ...or that time I farmed for [[Kishinami]] and [[Gotland]] in the [[Early Fall 2018 Event]]. [[File:Kappa.png|32px|link=]]
+*** <small>...I'm happy that RNG-sama gave them to me anyway.</small>
+* <span style="text-decoration:line-through;">I ''never'' abuse my subs by repeatedly sending them to [[World_2:_%E5%8D%97%E8%A5%BF%E8%AB%B8%E5%B3%B6%E6%B5%B7%E5%9F%9F#World_2-3:_.E6.9D.B1.E9.83.A8.E3.82.AA.E3.83.AA.E3.83.A7.E3.83.BC.E3.83.AB.E6.B5.B7_Eastern_Orel_Bay|Orel cruises]]. All Orel cruising are for [[Quests#Bw2|Bw2]] and [[Quests#Bw3|Bw3]] only, and ''nothing'' else.</span> Phase 2 killed Orel. RIP.
+* In official anime releases, yellow subs may look ugly, but in Kancolle, [[I-8|yellow subs]] are damn gorgeous.
+* Unless it's [[Akatsuki]] or [[Ikazuchi]], or I have a particular <code style="background-color:#DEF;border:2px solid #DEF;border-radius:3px;">mood</code> flag set, anything about the 6thDesDiv or [[Kongou]] passed to <code style="background-color:#DEF;border:2px solid #DEF;border-radius:3px;">me</code> for processing will raise an <code style="background-color:#DEF;border:2px solid #DEF;border-radius:3px;">overratedException</code>.
+* In the last ~10 years of my life, my ragequit key changed from the <code style="background-color:#FFC;border:2px solid #FFC;border-radius:3px;">F4</code> of the DotA days to the <code style="background-color:#FFC;border:2px solid #FFC;border-radius:3px;">F5</code> of today's Kancolle. [[File:Amagi.png|48px|link=]]
+* <small>I can't take [[Kinugasa]]'s <span title="zettai ryouiki">ZR</span> off my head, goddammit. Send help!</small><br><span style="font-size:2px;">[http://i.imgur.com/ugsuIel.png this image is not gay]</span>
+
+==Code Snippets==
+<div class="mw-collapsible mw-collapsed">
+===Free Verse (maybe?) in Perl===
+<div class="mw-collapsible-content">
+<syntaxhighlight lang="perl">
+
+use strict;
+use warnings;
+use feature qw(say);
+
+$_ = <<"END";
+I don't like you, Kaga; no, really, I don't.
+I can't stand it whenever I have to set you as secretary ship
+And have you loiter around in my office.
+I can't stand seeing your face in any sortie I go.
+Your voice when you dish out pain to those Abyssals is annoying.
+
+But—damn it!—why must it be
+That your stats and ability would be so heavenly
+It's like marrying a rich girl for the money
+It's not love, just out of necessity.
+
+So I must let your undesirable character slip
+And treat you as a valuable ship.
+Be glad, Kaga, that you are so useful
+Else it's the scrapyard, or modernization food.
+END
+
+s/\x4B\x61\x67\x61/\x41\x62\x75\x6B\x75\x6D\x61/g; 
+say $_;
+<>;
+</syntaxhighlight>
+
+(view results [https://ideone.com/e6K2XK here]. This is purely for entertainment, no dislike towards the fans. :3)
+</div>
+</div>
+{{Clear}}
+<div class="mw-collapsible mw-collapsed">
+===>opinions===
+<div class="mw-collapsible-content">
+<syntaxhighlight lang="javascript">
+function opinions(item) {
+    var isGoodMood = Math.random() > 0.85;
+    if (typeof(item.name) != "string") {
+        throw new TypeError("I have no opinions about that");
+    } else if ((["Kongou","Hibiki","Inazuma","Shimakaze","Kaga"].indexOf(item.name) >= 0) && !isGoodMood) {
+        throw new OverratedException(item.name + " is an overrated character");
+    } else if (["Fubuki","Houshou","Akatsuki","Ikazuchi"].indexOf(item.name) >= 0) {
+        console.log(item.name + " a good, " + item.name + " a very good");
+    } else {
+        console.warn(item.name + " is just fine");
+    }
+}
+
+function OverratedException(e) {
+    this.message = e;
+    this.name = "OverratedException";
+}
+</syntaxhighlight>
+</div>
+</div>
+
+==The Collection of Plaques==
+<table style="background:#FFC;border:3px solid #FF8;width:100%;margin:6px auto 20px auto;padding:0;">
+<td style="vertical-align:middle;text-align:center;" width="64px">[[File:NPC_Compass1a.png|48px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;" width="64px">[[File:NPC_compass2a.png|48px|link=]]</td>
+<td style="vertical-align:middle;"><div style="text-align:center;font-size:22px;line-height:22px;">“Our lords, and our eternal mistresses<br/>There is no god but RNG-sama and the Compass-chans are her prophets”<br/></div>
+<div style="width:100%;text-align:right;font-size:10px;line-height:20px;">—''[https://danbooru.donmai.us/users/458825 Kesomesx] of [https://danbooru.donmai.us/posts/2069297#comment-1422529 Danbooru]''</div></td>
+<td style="vertical-align:middle;text-align:center;" width="64px">[[File:NPC_compass3a.png|48px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;" width="64px">[[File:NPC_compass4a.png|108px|link=]]</td>
+</table>
+
+<table style="background:#FFC;border:3px solid #FF8;width:100%;margin:6px auto 20px auto;padding:3px;">
+<td style="vertical-align:middle;text-align:center;" width="64px">[[File:Catdive-emoticon.png|100px|link=]]</td>
+<td style="vertical-align:middle;"><div style="text-align:center;"><span style="font-size:15px;line-height:15px;">“Perfection in this game needs too much knowledge at the start to be effective</span><br/><span style="font-size:22px;line-height:22px;">“Or rather, you can't reach perfection as [RNG-sama] can f[**]k up as much as it wants”</span></div><br/>
+<div style="width:100%;text-align:right;font-size:10px;line-height:20px;">—''[[User:Juuryoushin|Juuryoushin]]''</div></td>
+</table>
+
+<table style="background:#FFC;border:3px solid #FF8;width:100%;margin:6px auto 20px auto;padding:3px;">
+<td style="vertical-align:middle;text-align:center;" width="64px">[[File:Emote kisaragi.png|98px|link=]] </td>
+<td style="vertical-align:middle;"><div style="text-align:center;"><span style="font-size:15px;line-height:15px;">“''KanColle'' teaches that weddings are expensive,</span><br/><span style="font-size:22px;line-height:22px;">“but you can grind whoever you want even without marrying them.”</span></div><br/>
+<div style="width:100%;text-align:right;font-size:10px;line-height:20px;">—''[[User:Hayashi H|Hayashi H]]''</div></td>
+</table>
+
+<table style="background:#FFC;border:3px solid #FF8;width:100%;margin:6px auto 20px auto;padding:3px;">
+<td style="vertical-align:middle;text-align:center;" width="64px">[[File:Catdive-emoticon.png|100px|link=]]</td>
+<td style="vertical-align:middle;"><div style="text-align:center;"><span style="font-size:15px;line-height:15px;">“when everything is going your way, Tanaka presses the 'F[**]k You' button</span><br/><span style="font-size:22px;line-height:22px;">“and verily, thou shalt be f[**]ked.”</span></div><br/>
+<div style="width:100%;text-align:right;font-size:10px;line-height:20px;">—''[[User:Hayashi H|Hayashi H]]''</div></td>
+</table>
+[[Category:Tauitaui]]

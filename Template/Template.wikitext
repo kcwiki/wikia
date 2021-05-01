@@ -1,0 +1,36 @@
+<infobox>
+  <title source="title1">
+    <default>{{PAGENAME}}</default>
+  </title>
+  <image source="image1">
+    <caption source="caption1"/>
+  </image>
+  <data source="admiral_name">
+    <label>Admiral name</label>
+  </data>
+  <data source="hp">
+    <label>HP</label>
+  </data>
+  <data source="server">
+    <label>Server</label>
+  </data>
+  <data source="starter">
+    <label>Starter</label>
+  </data>
+  <data source="hq_level">
+    <label>HQ level</label>
+  </data>
+</infobox>
+<noinclude>
+Example usage:<pre>
+{{Template
+|title1=Example
+|image1=Example
+|caption1=Example
+|hp=Example
+|server=Example
+|starter=Example
+|hq_level=Example
+}}
+</pre>
+</noinclude>

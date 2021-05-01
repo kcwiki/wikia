@@ -1,0 +1,33 @@
+{{#ifeq:{{#sub:{{FULLPAGENAME}}|0|13}}|KanColle Kai:|<div id="EventTemplate">{{#vardefine:title_prefix|KanColle Kai:{{#if:{{{prefix|}}}|{{{prefix}}}/}}{{SUBPAGENAME}}/V{{#sub:{{SUBPAGENAME}}|5|2}}}}{{#tag:tabview|
+{{#ifexist:{{#var:title_prefix}}-1|{{#var:title_prefix}}-1{{!}}V{{#sub:{{SUBPAGENAME}}|5|2}}-1}}
+{{#ifexist:{{#var:title_prefix}}-2|{{#var:title_prefix}}-2{{!}}V{{#sub:{{SUBPAGENAME}}|5|2}}-2}}
+{{#ifexist:{{#var:title_prefix}}-3|{{#var:title_prefix}}-3{{!}}V{{#sub:{{SUBPAGENAME}}|5|2}}-3}}
+{{#ifexist:{{#var:title_prefix}}-4|{{#var:title_prefix}}-4{{!}}V{{#sub:{{SUBPAGENAME}}|5|2}}-4}}
+{{#ifexist:{{#var:title_prefix}}-5|{{#var:title_prefix}}-5{{!}}V{{#sub:{{SUBPAGENAME}}|5|2}}-5}}
+{{#ifexist:{{#var:title_prefix}}-6|{{#var:title_prefix}}-6{{!}}V{{#sub:{{SUBPAGENAME}}|5|2}}-6}}
+{{#ifexist:{{#var:title_prefix}}-7|{{#var:title_prefix}}-7{{!}}V{{#sub:{{SUBPAGENAME}}|5|2}}-7}}
+}}</div>|{{#ifeq:{{#sub:{{{prefix|{{SUBPAGENAME}}}}}|0|5}}|{{#if:{{{prefix|}}}|{{#sub:{{{prefix}}}|0|5}}|World}}|<div id="EventTemplate" data-world="{{#sub:{{SUBPAGENAME}}|6|1}}">{{#vardefine:title_prefix|{{#if:{{{prefix|}}}|{{{prefix}}}/}}{{SUBPAGENAME}}/{{#sub:{{SUBPAGENAME}}|6|1}}}}{{#tag:tabview|
+{{#if:{{{no_maps|}}}||{{#ifexist:{{#var:title_prefix}}-1|{{#var:title_prefix}}-1{{!}}{{#sub:{{SUBPAGENAME}}|6|1}}-1}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{#var:title_prefix}}-2|{{#var:title_prefix}}-2{{!}}{{#sub:{{SUBPAGENAME}}|6|1}}-2}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{#var:title_prefix}}-3|{{#var:title_prefix}}-3{{!}}{{#sub:{{SUBPAGENAME}}|6|1}}-3}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{#var:title_prefix}}-4|{{#var:title_prefix}}-4{{!}}{{#sub:{{SUBPAGENAME}}|6|1}}-4}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{#var:title_prefix}}-5|{{#var:title_prefix}}-5{{!}}{{#sub:{{SUBPAGENAME}}|6|1}}-5}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{#var:title_prefix}}-6|{{#var:title_prefix}}-6{{!}}{{#sub:{{SUBPAGENAME}}|6|1}}-6}}}}
+}}</div>|<div id="EventTemplate">{{#tag:tabview|
+{{SUBPAGENAME}}/Info{{!}}Info
+{{#if:{{{no_faq|}}}||Events/FAQ{{!}}FAQ}}
+{{#ifexist:{{SUBPAGENAME}}/FAQ|{{SUBPAGENAME}}/FAQ{{!}}FAQ}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-1|{{SUBPAGENAME}}/E-1{{!}}E-1}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-2|{{SUBPAGENAME}}/E-2{{!}}E-2}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-3|{{SUBPAGENAME}}/E-3{{!}}E-3}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-4|{{SUBPAGENAME}}/E-4{{!}}E-4}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-5|{{SUBPAGENAME}}/E-5{{!}}E-5}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-6|{{SUBPAGENAME}}/E-6{{!}}E-6}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-7|{{SUBPAGENAME}}/E-7{{!}}E-7}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-8|{{SUBPAGENAME}}/E-8{{!}}E-8}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-9|{{SUBPAGENAME}}/E-9{{!}}E-9}}}}
+{{#if:{{{no_maps|}}}||{{#ifexist:{{SUBPAGENAME}}/E-10|{{SUBPAGENAME}}/E-10{{!}}E-10}}}}
+{{#ifexist:{{SUBPAGENAME}}/Mechanics|{{SUBPAGENAME}}/Mechanics{{!}}Mechanics}}
+{{#if:{{{no_mechanics|}}}||Events/Mechanics{{!}}Mechanics}}
+{{#if:{{{no_mechanics|}}}||LBAS{{!}}LBAS}}
+}}</div>}}}}

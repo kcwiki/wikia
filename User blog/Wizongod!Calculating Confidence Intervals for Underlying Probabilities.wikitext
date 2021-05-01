@@ -1,0 +1,154 @@
+==About==
+This post introduces formulas that would prove very useful for players who are researching and conducting experiments, collecting data for analysis of the game’s mechanics. It deals with back-calculating the underlying probability from a set of data collected'' including'' the xx% confidence bounds, thus allowing hypothesis testing.
+==Background==
+(Feel free to skip reading this section)
+
+Kancolle is a game of numbers and statistics. With much of the underlying probabilities not released to the gamer, there is a need to collect statistics to form conclusions regarding the non-obvious mechanics of the game, allowing much of the qualitative results or haunches to be backed by statistical reasoning. Even monitoring the JSON stream in communications to the server do not provide any of the underlying probability values, although it certainly makes the collection of statistics easier. An obvious application of being able to know the underlying probabilities is crafting - an often frustrating process. Other applications are usually found in combat, e.g. cut-in chance based on type of equipment fitted.
+
+Collecting statistics to draw conclusions about the game mechanics is not new. Many enthusiastic players have spent hours on end collecting data sets and displaying their results, often in tables, for others to see and judge, while publishing their conclusions and participating in discussions. However, what I have noticed so far is that almost everyone concludes in a arbitrary sense whether a set of data is “significant”, “not so significant”, or “not significant”. There is a quantitative way of doing so, and thus the following section has been developed.
+==Motivation==
+Calculating the underlying probability may seem like an easy task. “If 10 attempts were made at crafting and only 1 succeeded, then the success rate is 10%.” This is true, but it is the success rate of ''one particular series of crafts'', and moreover, would you trust someone who said that the chances of getting Yamato in LSC was 100% since they tried once and got her immediately? (That happened to me btw, my Yamato crafting rate is 100%.) The success rate of a series of data is not the same as the ''underlying probability''. To appreciate the difference, think about an example of crafting 46cm guns. Say someone crafted it once out of 10 times, and told you that the success rate is therefore 10%. Another person tells you they tried 1000 times, and succeeded 100 times, therefore the success rate is 10%. Which dataset would you trust more? Whose dataset gives you more certainty? And most importantly,'' is that certainty measurable''?
+
+It is, of course, possible to place some figures to that probability, and would then allow better judgement. Continuing from the example, it is pointless to say that the probability is ''exactly'' 10%, i.e. 10.00000...%. For all we know, it could be 10.01%, and that would still have given the same effective results. A ''band'' is needed instead, so we could say that it is likely to be within a range of 8-12%. Further, we could also say that this range lies in the 99% confidence interval (or 95%, 90%, etc.). This means that there is a 99% chance of the ''actual underlying probability'' falling within that range that was just stated. (This definition is not technically correct, but for practical purposes, it can be treated as such.)
+
+So far, the above figures are just for example. The band and the confidence level has to be calculated, and this section will continue to show how it is done. As one might expect, this is not applicable to just crafting alone. For example, a certain ship cuts-in 50 times collected over 100 tries. After changing the equipment, it cuts in at 58 times over 100 tries. Is that a significant change? From the data, the bands at various confidence intervals can be calculated and thus the result can be judged to be significant or not significant, rather than leaving it to just “gut feel”.
+==Calcuations==
+To calculate the upper bounds and lower bounds of the band, the whole space over which results are possible must be established. That is to say, that if all underlying probabilities are considered, i.e. 0% to 100%, and totalled, the result should be 100%. Another way of saying this is that the probability of the underlying probability lying between 0% and 100% is 100%, which is obvious. This is one of the 3 axioms of probability, and forms the basis for the formula:
+
+<math>\int_{0}^{1}{}^{N}C_{r}(1-x)^{N-r}x^{r}dx=1</math>
+
+This formula (apart from the integral) may look familiar as it is the [http://en.wikipedia.org/wiki/Binomial_distribution#Probability_mass_function Binomial Probability Mass Function]. As can be seen, all that is really done is to integrate across all probabilities of ''x'' for a particular outcome of ''r'' successes in ''N'' attempts for a binomial distribution, where <sup>N</sup>C<sub>r</sub> is the “n choose r” [http://en.wikipedia.org/wiki/Binomial_coefficient Binomial Coefficient Function]. However, this integral does not actually equate to 1. There is a missing normalising constant, which is found easily upon inspection, and thus the complete formula is:
+
+<math>(N+1){}^{N}C_{r}\int_{0}^{1}(1-x)^{N-r}x^{r}dx=1</math>
+
+This formula can also be arrived at in the approach as seen in the example provided in the wikipedia article of [http://en.wikipedia.org/wiki/Checking_whether_a_coin_is_fair#Example Checking Whether a Coin is Fair]. It uses Bayesian rules to formulate the posterior probability density function (the same formula which I just provided above), but, arguably, in a more long-winded (although more thorough) way.
+
+To calculate a [http://en.wikipedia.org/wiki/Confidence_interval confidence interval (CI)] which ''x'' is located in, all that is needed is to replace the integral limits with two variables:'' x''<sub>upper</sub> and ''x''<sub>lower</sub> as such:
+
+<math>(N+1){}^{N}C_{r}\int_{x_{lower}}^{x_{upper}}(1-x)^{N-r}x^{r}dx=CI</math>
+
+Now the difficult part is to find ''x''<sub>upper</sub> and ''x''<sub>lower</sub> which is a pain when N is large as needed for a narrow interval. Firstly, it must be noted that the above equation is asymmetrical (except at ''x'' =50%) and so ''x''<sub>upper</sub> and ''x''<sub>lower</sub> cannot be calculated from the peak of the distribution, moving outwards till the area between both bounds equal to the confidence level. Instead, ''x''<sub>upper</sub> and ''x''<sub>lower</sub> should be moved in from the ends of 1 and 0 respectively, with the tails having equal probability on both sides. Thus:
+
+<math>(N+1){}^{N}C_{r}\int_{x_{upper}}^{1}(1-x)^{N-r}x^{r}dx=\frac{1-CI}{2}</math>
+
+<math>(N+1){}^{N}C_{r}\int_{0}^{x_{lower}}(1-x)^{N-r}x^{r}=\frac{1-CI}{2}</math>
+
+which unfortunately has no closed form solution. However, a MatLab script can be written to find each of the boundaries (which I have done - see below).
+==Example Results==
+To give anyone a feel of how many samples is actually needed for something to be useful (hint: a tiring number of at least a hundred), here are some sample results with a success rate of 10% (nominal):
+
+: Attempts: 100
+: Successes: 10
+: 99% interval: 4.40% - 20.01%
+
+: Attempts: 300
+: Successes: 30
+: 99% interval: 6.28% - 15.23%
+
+: Attempts: 1000
+: Successes: 100
+: 99% interval: 7.78% - 12.68%
+
+If we're not so stringent, and accept a 90% confidence interval (the lowest you can go), then:
+
+: Attempts: 100
+: Successes: 10
+: 90% interval: 6.23% - 16.22%
+
+: Attempts: 300
+: Successes: 30
+: 90% interval: 7.55% - 13.28%
+
+: Attempts: 1000
+: Successes: 100
+: 90% interval: 8.56% - 11.69%
+==Source Code for MATLAB Script==
+Note: This script is usable for most purposes. Large samples of up to around 100,000 can be used. Anything larger results in over/under-flows.
+
+This is a script that searches with increasing precision as to where the confidence bounds are. There used to be an over/under-flow issue which happens somewhere around figures like 2000 attempts and 200 successes. This is because the integral gets very small (underflow) while <sup>N</sup>C<sub>r</sub> gets very big (overflow). Both problems have been solved by moving to the log domain. This is why a custom function called "logintegrate" is introduced. It is much slower than Matlab's own "integral" function, but is able to handle the very small numbers when dealing with large sample sizes. You'll see "weird" expressions in the "logintegrate" custom function since it uses the [http://en.wikipedia.org/wiki/Simpson%27s_rule Simpson's Rule] for integrating, but moved over to the log domain in such a way to prevent underflow. It took me a some while to do the algebraic manipulation so don't be surprised if you don't understand what's going on there.
+
+<blockquote><font size="2"><syntaxhighlight lang="matlab">
+function KC_craft(N,r,p)
+%Returns estimated probability intervals for crafting based on results
+
+mode = r/N;
+%pre compute the log of (nCr)*(N+1) first to save time and avoid overflow
+nCr = log10(N+1) + sum(log10(1:N)) - sum(log10(1:r)) - sum(log10(1:N-r));
+
+
+% find lower bound first
+inc = 1;
+lx = 1;
+for count = 1:30;
+    lx = lx - inc;
+    inc = inc/2;
+    result = 1;
+    while result >= log10(p + (1-p)/2)
+        lx = lx + inc;
+        result = nCr + logintegrate(N,r,lx,1);
+    end
+end
+lx = lx - inc;
+
+
+% find upper bound
+inc = 1;
+ux = 0;
+for count = 1:30;
+    ux = ux + inc;
+    inc = inc/2;
+    result = 1;
+    while result >= log10(p + (1-p)/2)
+        ux = ux - inc;
+        % Following is a trick. The integrator doesn't like to go from 0 so
+        % flip the thing around instead and integrate from 1.
+        result = nCr + logintegrate(N,N-r,1-ux,1);
+    end
+end
+ux = ux + inc;
+
+fprintf('\nL= %.2f   H= %.2f   Mode= %.2f   Med= %.2f\n\n',lx*100,ux*100,mode*100,(lx+ux)/2*100)
+end
+
+
+
+
+
+function result = logintegrate(N,r,l,u)
+%Returns the numerical integral of the function (1-x)^(N-r) * x^r in the
+%log10 domain because it is otherwise too small and will underflow
+
+%Uses Simpson's Rule
+
+%Tackle the exception of l = u
+if l == u
+    result = -Inf;
+    return
+end
+
+% define step size
+dx = (u-l)/2000;
+
+% define functions for easier manipulation
+H = @(x) (N-r)*log10(1-x) + r*log10(x);
+K = @(x) H(x) + log10(1 + 10.^(log10(4) + H(x+dx/2) - H(x)) + 10.^(H(x+dx) - H(x)));
+% K(0) is defined slightly differently hence the need for an exception
+K0 = H(dx) + log10(1 + 10.^(log10(4) + H(dx/2) - H(dx)));
+x = (l:dx:u);
+x(end) = [];
+
+% With the trick implemented above, this isn't necessary actually. Ditto
+% with defining K0.
+if x(1) == 0
+    y = sum(10.^( K(x(2:end)) - K0 ));
+    result = log10(dx/6) + K0 + log10(1+y);
+    return
+else
+    y = sum(10.^( K(x(2:end))-K(x(1)) ));
+    result = log10(dx/6) + K(x(1)) + log10(1+y);
+    return
+end
+
+end
+</syntaxhighlight></font></blockquote>
+[[Category:Blog posts]]

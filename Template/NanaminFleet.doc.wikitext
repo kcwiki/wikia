@@ -1,0 +1,105 @@
+==Basic==
+;Description
+:This template allows you to display your fleets in a tabular fashion on the wiki.
+;Skeleton
+<pre>{{NanaminFleet
+|Ship/Model/LoS
+|Equip
+|Equip
+|Equip
+|Equip
+|Ship/Model/LoS
+|Equip
+|Equip
+|Equip
+|Equip
+|!hq=
+|!route=
+|!difficulty=
+|!drops=
+}}</pre>
+
+==Syntax==
+*''Ship'' is the ship's name. For example, "Sendai".
+*''Model'' is the ship's remodel. This may be "", "Kai", "Kai Ni", "A", "Carrier", "Carrier Kai", "Carrier Kai Ni", "zwei" or "drei".
+*''LoS'' is the ship's base Line of Sight stat '''without''' equipment.
+*''Equip'' is an equipment from the list of guns [[Sandbox/EquipmentListByType|here]].
+;Additional Variables
+*''!hq'' is the player's HQ level.
+*''!route'' is the route the player took. This is passed in as-is, so you may format it however you wish (eg. "A-B/C-D/E" or "A-B-D or A-C-E").
+*''!difficulty'' is the difficulty selected. This is passed in as-is, but for clarity's sake, you should use "Easy", "Medium" and "Hard".
+*''!drops'' is a list of the ships obtained as drops from the map the fleet was sortied. This is a list of ship name '''without their models''', separated by forward slashes. For example, "!drops=Akizuki/Prinz Eugen/Akashi/Taigei".
+
+==Example==
+<pre>{{NanaminFleet
+|Ro-500/Regular/32
+|Prototype FaT Type 95 Oxygen Torpedo Kai
+|61cm Quint (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-58/Kai/32
+|61cm Quint (Oxygen) Torpedo Mount
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-168/Kai/22
+|61cm Quad (Oxygen) Torpedo Mount
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-8/Regular/22
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|!-
+|Maruyu/Kai/11
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|!-
+|-
+|!-
+|!-
+|!-
+|!-
+|!hq = 97
+|!route = A-B-C-D or A-B-E-F
+|!difficulty = Hard
+|!drops = Akizuki/Taigei/Prinz Eugen/Akashi/Tokitsukaze/Hamakaze
+}}</pre>
+{{NanaminFleet
+|Ro-500/Regular/32
+|Prototype FaT Type 95 Oxygen Torpedo Kai
+|61cm Quint (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-58/Kai/32
+|61cm Quint (Oxygen) Torpedo Mount
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-168/Kai/22
+|61cm Quad (Oxygen) Torpedo Mount
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-8/Regular/22
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|!-
+|Maruyu/Kai/11
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|!-
+|-
+|!-
+|!-
+|!-
+|!-
+|!hq = 97
+|!route = A-B-C-D or A-B-E-F
+|!difficulty = Hard
+|!drops = Akizuki/Taigei/Prinz Eugen/Akashi/Tokitsukaze/Hamakaze
+}}

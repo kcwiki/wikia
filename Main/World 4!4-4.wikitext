@@ -1,0 +1,59 @@
+{{Map/Header}}
+{{Map/Info
+|en = Casgadama Island
+|jp = カスガダマ島
+|romaji = Kasugadama-tō
+|exp_hq = 170
+|exp_hq_boss = 2340
+|show_kills = true
+|kills = 4
+|strategy_name = [[wikipedia:Battle_of_Madagascar|Casgadama Island Naval Battle]]
+|strategy_name_ja = カスガダマ沖海戦
+|strategy_info = Break through enemy patrol line on western part of the Curry Ocean.  After that, advance to the Casgadama Island deep area. Capture an enemy core unit of the Oriental fleet and annihilate it!
+|strategy_info_ja = カレー洋西方の敵哨戒線を突破、カスガダマ島沖深く進出し、敵東方艦隊中枢部隊を捕捉撃滅せよ！
+}}
+{{MapBranchingTable
+|id = 4-4
+|0 -> A, B = 
+* Go to A if DD+DE ≥ 2
+* Otherwise, random between A and B
+
+|A -> E = * Fixed Route
+
+|B -> A, D/storm, F = 
+* Go to A if (F)BB(V)+CV(L/B) ≥ 4
+* Otherwise, random between D and F
+
+| E -> C/resource, G, I =
+* Go to G if (F)BB(V)+CV(L/B) ≥ 4
+* Meet '''ANY''' of the following to go to I
+** DD+DE ≥ 2 '''AND''' contain either of CA(V) or CL
+**Fleet contains either of CA(V) or CL '''AND''' CA(V)+CVL ≤ 2, no CLT
+* Go to C if DE ≥ 3
+* Otherwise, random routing
+
+|F -> H, I = * Random Routing
+
+|G -> C/resource, I, J/resource = * Random Routing
+
+|I -> H, K = 
+* Meet '''ANY''' of the following to go to K
+** DD+DE ≥ 2 '''AND''' CV(B) = 2
+** DD+DE ≥ 2 '''AND''' CA(V) = 2
+** No CV(B), fleet contains CL AND DD+DE ≥ 2
+* Otherwise, random routing
+}}
+===Tips===
+* You must sink the flagship of the boss fleet '''FOUR''' times before the map is cleared.
+** [[Light Carrier Nu-Class]] Flagship can replace [[Armored Carrier Princess]] and become the boss instead.
+** One of the boss node's compositions has a submarine present that can render your CVL/CL/DD useless if not dealt using ASW gears.
+* 90 air power provides at least Air Superiority for every route towards the boss node.
+**At least 160 air power is required for Air Supremacy.
+* This map is more consistent for completing the [[Quests#Bw6|World 4 Weekly Quest]] compared to 4-2, but is not as reliable if you need to destroy transports as well.
+===Fleet Compositions===
+* The middle route ({{Event/Route|A|red|E|red|I|red|K|red}}) is the shortest and easiest route towards the boss node. Possible compositions are as followed:
+** 0-1 (F)BB(V) 2 CV(B) 1-2 CL/CA(V) 2 DD
+** 2 CV(B) 1 CVL 1 CA(V)/CL 2 DD
+**  3 CVL 1 CL 2 DD
+
+{{Map/Footer}}

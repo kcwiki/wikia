@@ -1,0 +1,1336 @@
+<p class="MsoNormal">Hi again fellow teitokus. Here, we will discuss about how to OHKO (one hit knock out) enemy abyssal ships.</p>
+
+<p class="MsoNormal">This is a collaboration project between me and [[User:Hayashi H|Hayashi H]] who came up with the idea and created a document first.</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal"><u>Before reading this guide, you are supposed to:</u></p>
+
+<p class="MsoNormal">1-)Have general knowledge about game mechanisms (formations, night battle special attacks etc..)</p>
+
+<p class="MsoNormal">2-)Be able to calculate your own firepower (consult to this page : [[Damage Calculation|Damage Calculation]])</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">Otherwise, this may be confusing, especially for the newbies.</p>
+
+<p class="MsoNormal">3-)Keep the abbreviations that we use in mind : SA(single attack), DA(double attack), APSA(single attack with AP shell), APDA (double attack with AP shell), APCI(cut-in with AP shell),NBCI(night battle cut-in) and also ship classes such as CAV,BB etc..</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''Why would I want this?'''===
+<p class="MsoNormal">All of you had this, I know it. That one enemy surviving with 1-5 hp and ruining the turns of your other ships who are supposed to hit another enemy, or that not only your ships fail to kill an enemy, they also fail to damage them heavily enough to stop them from going rampage on your ships.</p>
+
+<p class="MsoNormal">By doing this research, I have come across some surprising results about some ships being capable/incapable of sinking some enemies with some certain firepower values.</p>
+
+<p class="MsoNormal">Your CA being incapable of sinking an enemy DD,your BB failing to kill a Tsu-class cruiser, your Night battle cut-in not killing the boss. By making some preparations, you can actually prevent these. Not all of them though, because you know, RNG. Still, what we can change will give you more peaceful runs.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal"><u>The explanation of the main idea</u> : I’ve thought on the current damage formula which is;</p>
+
+<p class="MsoNormal">[BAP*pre-cap modifiers]*post-cap modifiers – armor roll >=enemy’s HP</p>
+
+<p class="MsoNormal">This is the requirement for our ships to sink any enemy in the game. In this formula, I’ve categorized some parts as ''constants'' and ''variables'' and separated them. Hayashi H had created different categories such as SA,DA,NBCI etc. I have determined such values as constants which won’t change no matter what we do (such as enemy HP,armor, double attack modifier, etc..). Then there is the variables part (which will be divided into different categories later such as green T,red T, etc...) which is '''capped'''. I’ve assumed this part as “Required FP value” which will OHKO an enemy in any situation. What we need to do is just to reach that FP value. However, there are many elements involved in this process and made it too confusing to work on. We needed a tool to calculate all these complicated formulas.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">So me and Hayashi H have prepared an excel file which has 2 separate goals.</p>
+
+<p class="MsoNormal">1st one is that, it will calculate your chance to sink an enemy.</p>
+
+<p class="MsoNormal">2nd one is that, it will give you the exact FP values which will kill an enemy 100%.</p>
+
+<p class="MsoNormal">The excel file needs some UI improvements, however you can still check it to help you reading this guide, especially in it's 2nd page. [https://drive.google.com/folderview?id=0BwekGxODioxfSlNlbFV5T3JZbnc&usp=sharing Download Kancolle Abyssal OHKO chart & calculator from here]
+</p>
+
+<p class="MsoNormal">Please note that "The values shown in the excel file are '''capped''', which means that for the values above 150 at day and 300 at night, you'll need a lot more than those to reach them."</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">1-)Calculation of a kanmusu’s chance to sink an enemy</p>
+
+<p class="MsoNormal">I’ll start by showing an example: (These are generated from the excel file.)</p>
+{| border="0" cellpadding="0" cellspacing="0" width="448"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:48pt" width="64"|
+| style="width:48pt" width="64"|
+| class="xl64" style="width: 48pt; text-align: center;" width="64"|'''Naka'''
+| class="xl64" style="width: 48pt; text-align: center;" width="64"|
+| class="xl64" style="width: 48pt; text-align: center;" width="64"|'''Myoukou'''
+| class="xl64" style="width: 48pt; text-align: center;" width="64"|
+| class="xl64" style="width: 48pt; text-align: center;" width="64"|'''Tone'''
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|<u>Engagement
+</u>
+| class="xl65" style="text-align: center;"|<u>86 FP</u>
+| class="xl65" style="text-align: center;"|<u>
+</u>
+| class="xl65" style="text-align: center;"|<u>98FP</u>
+| class="xl65" style="text-align: center;"|<u>
+</u>
+| class="xl65" style="text-align: center;"|<u>105FP</u>
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt"|Green T critical
+| class="xl63" style="text-align: center;"|100%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|100%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt"|Green T normal
+| class="xl63" style="text-align: center;"|89%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|100%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt"|Parallel critical
+| class="xl63" style="text-align: center;"|100%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|100%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt"|Parallel normal
+| class="xl63" style="text-align: center;"|41%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|75%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|94%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt"|Head-on critical
+| class="xl63" style="text-align: center;"|89%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|100%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt"|Head-on normal
+| class="xl63" style="text-align: center;"|0
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|19%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|35%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt"|Red T critical
+| class="xl63" style="text-align: center;"|16%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|47%
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|65%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt"|Red T normal
+| class="xl63" style="text-align: center;"|0
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|0
+| class="xl63" style="text-align: center;"|
+| class="xl63" style="text-align: center;"|0
+|}
+<p class="MsoNormal"><span style="mso-spacerun:yes"> </span>(Percentages show the rate to successfully sink an enemy Ri-class flagship by using a ''Daytime Double Attack'' set-up with 2 red guns, and a SCAMP for Tone)</p>
+
+<p class="MsoNormal">As you see above, Naka-chan has issues killing an enemy Ri. 89% chance to kill it in green T but it won’t happen often. 41% in parallel which is not really reliable. And 0% in head-on aaargh, scratch.</p>
+
+<p class="MsoNormal">Myoukou is better than Naka-chan in this case. Guarantees to kill it in green T, 75% in parallel which is okay, but 19% in head-on.</p>
+
+<p class="MsoNormal">Then there is Tone, a CAV which can equip a SCAMP to increase her DA(double attack) damage. This grants her 94% chance to kill that Ri in parallel, and ~1/3 chance on head-on which isn’t that good but still much better than the idol, and than Myoukou who has around half the chance of Tone’s.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">2-)Analyzing the firepower values that will OHKO an enemy.</p>
+
+<p class="MsoNormal">For every enemy, there is a treshold firepower value. If your attacking ship has the same value or even higher, she will kill that enemy all the time. And these are related with a number of things. Such as :</p>
+
+<p class="MsoNormal">Enemy HP and armor values; basically an enemy’s survivalability.</p>
+
+<p class="MsoNormal">Engagement; which is the biggest <u>random</u> factor that effects our plans.</p>
+
+<p class="MsoNormal">Your formation</p>
+
+<p class="MsoNormal">Firepower caps; these prevent us from dealing heavy hits to the enemies.</p>
+
+<p class="MsoNormal">Firepower of your ships; this includes their equipment bonuses, even Akashi improvements, and the special attack bonuses that they are using.</p>
+
+<p class="MsoNormal">The attack type your kanmusu is using; There are different required FP values for different attack setups. (You’ll see in the example given just below)</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''Teach me how to do this!'''===
+<p class="MsoNormal">It’s simple. Just reach the optimum FP value against that enemy. And you’ll definitely kill it. Let’s see it in an example that I’ve promised 3 seconds ago:</p>
+{| border="0" cellpadding="0" cellspacing="0" width="256"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:48pt" width="64"|
+| style="width:48pt" width="64"|
+| class="xl67" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''He Flagship'''
+|- height="20" style="height:15.0pt"
+| class="xl70" colspan="2" height="20" style="height:15.0pt"|<u>Engagement
+</u>
+| class="xl66" style="text-align: center;"|<u>SA</u>
+| class="xl66" style="text-align: center;"|<u>DA</u>
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|Green T critical
+| class="xl65" style="text-align: center;"|60
+| class="xl65" style="text-align: center;"|37
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|Green T normal
+| class="xl65" style="text-align: center;"|90
+| class="xl65" style="text-align: center;"|55
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|Parallel critical
+| class="xl65" style="text-align: center;"|72
+| class="xl65" style="text-align: center;"|44
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|Parallel normal
+| class="xl65" style="text-align: center;"|108
+| class="xl65" style="text-align: center;"|66
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|Head-on critical
+| class="xl65" style="text-align: center;"|90
+| class="xl65" style="text-align: center;"|55
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|Head-on normal
+| class="xl65" style="text-align: center;"|134
+| class="xl65" style="text-align: center;"|83
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|Red T critical
+| class="xl65" style="text-align: center;"|119
+| class="xl65" style="text-align: center;"|74
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt"|Red T normal
+| class="xl65" style="text-align: center;"|179
+| class="xl65" style="text-align: center;"|110
+|}
+<p class="MsoNormal"><span style="mso-spacerun:yes"> </span>(These are the required FP values for your ships to OHKO He-class light cruiser flagship with Single Attack and Double Attack set-ups in daytime)</p>
+
+<p class="MsoNormal">As we don’t know how often critical hits happen, I’ll discard them from my line of thought.</p>
+
+<p class="MsoNormal">If we can bring saiun, red T will be prevented. If we can’t, we will need 179FP to reliably kill that thing in case a SA triggers(which is not possible because of the daytime damage cap...). And 110 FP to kill it with a DA. Here is the issue : Only battleships can reach 110 FP value with DA. [Or you may be able to reach it with CAs by using some other alternatives that I’m going to discuss below]</p>
+
+<p class="MsoNormal">In Head-on, CAs can easily kill that thing with DA (83 is very easy to achieve with CAs). However, their SA won’t do much against them. But BBs and carriers can easily kill it since 134 FP is easy to achieve with both.</p>
+
+<p class="MsoNormal">In parallel, even light cruisers can kill it with DA. CA’s SA will do it most of the time too, but they will sometimes leave the enemy with very low HP.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">Would you like to check another situation? Just find the enemy in the excel sheet, and try to adjust your firepower adequately. For instance, in the example above, if my fleet had a BB, a CA, a CL and DDs, I would have arranged them like this :</p>
+
+<p class="MsoNormal">'''BB''' will have at least 134FP. But I would adjust her FP for another possible enemy such as a Ru or Ta if the map had any. (Ise class fails this)</p>
+
+<p class="MsoNormal">'''CA''' will have at least 90 FP. So you can ohko them anytime unless in parallel or head-on. In those engagements, the more FP you have, the higher possibility your kanmusu will have to kill that thing.</p>
+
+<p class="MsoNormal">It might be hard for the choosen '''CL''' to reach 90 FP. Still, she will have a good chance to kill it.</p>
+
+<p class="MsoNormal">'''DDs''' won’t kill that thing (consider yourself lucky if that happens) I’d gear them for other reasons (such as a NBCI set-up for a boss)</p>
+
+<p class="MsoNormal">As for why I choose those numbers, they are the lowest possible values which will make your kanmusu OHKO their enemies on some particular engagements.</p>
+
+<br>
+
+<p class="MsoNormal">[An Important Note : The DA values you see here have the “engagement” and “x1.2 DA” modifiers included, you don’t need to multiply them again. 2*('''37'''*1,5*1,2*1,2-(39*1,3-0,6)) = 2*(79,92-50,1)=59,64 which kills that 57 HP monster. ] These numbers that you see on the table are Basic Attack Power of your girls. (Check [[Damage Calculation|Damage Calculation]] page for the formulas)</p>
+
+<p class="MsoNormal">For instance, if you want to reach 60 FP, having 55 FP will be enough because of the formulas of the game. (Only for non-carrier ships)</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">For night battle required FP, as special modifier attacks are calculated ''before'' the cap, you’ll have to multiply your B.A.P. with the according number (1,2 for NBDA, 1,5 for torpedo NBCI) for the type of the attack you wish to use.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''A few comparison examples between different ship types'''===
+<p class="MsoNormal">Ships have a maximum FP value which they can’t hit harder than that (you don’t expect Shimakaze to hit 150 in daytime shelling, do you?). We will determine their FP limit, so that we can use it in our planning. (This will be a general assumption for now)</p>
+
+<p class="MsoNormal"><u>-Destroyers</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:1">                </span>DDs can only trigger '''SA''' at day. And I won’t include Mutsuki-class in my calculations. So our DDs will have '''55-87''' FP. (Ranges from Ushio K2 with 3 torpedos to Poi with 3 red guns)</p>
+
+<p class="MsoNormal"><u>-Light Cruisers</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:1">                </span>Most favourable setup for CLs is '''DA'''. With 2 main guns and 1 seaplane, they can have '''79-95''' FP.</p>
+
+<p class="MsoNormal"><u>-Heavy Cruisers</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:1">                </span>I tend to use '''DA''' setups on CAs. So here I’ll assume that they will have 2-3xMain Guns, 1 Seaplane, and 0-1 auxillary equipment. With these, FP limit of CAs change between '''90-120'''.</p>
+
+<p class="MsoNormal"><u>-Battleships</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:1">                </span>Their FP with 2xMain Guns,1 Seaplane and 1 AP Shell ranges between '''149-162(uncapped)'''. Attack type can be '''SA,DA or CI'''. For ise class it is '''122'''. For Yamatos, it is '''192(uncapped)'''. [Capped damage limit is not more than 158 which is terribly hard to reach, and not really worth it.]</p>
+
+<p class="MsoNormal"><u>-Standard Carriers</u></p>
+
+<p class="MsoNormal">A new formula for the carriers has been found, so I’m going to use that for my assumptions :</p>
+
+<p class="MsoNormal">Carrier Firepower = [(Firepower + Torpedo + [Bombing * 1.3])*1.5]+50</p>
+
+<p class="MsoNormal">Most of the standart carriers can reach daytime FP cap with 1-2 torpedo bombers (which is used quite commonly) so I’ll assume their FP as '''150''' (their FP actually ranges between 108-152 with no equipments)</p>
+
+<p class="MsoNormal"><u>-Light Carriers</u></p>
+
+<p class="MsoNormal">They are quite weak compared to standard carriers. Their FP values with no equipments ranges between 93-110. I’ll assume their average FP as '''110''' for now. If you want to increase their shelling, prefer red planes instead of blue ones.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">In this categorization, i tried to use equipments which aren’t too hard to find/craft. And Akashi improvements aren’t included here. So you can add ''a bit'' more additional FP to these values.</p>
+
+<br>
+
+<p class="MsoNormal">Go ahead, gear one of your kanmusu and calculate her FP. Then see how she does against an enemy.</p>
+
+<p class="MsoNormal">Note : You shouldn’t calculate the extra damage that AP shell grants.Nor the special attack bonuses. They are calculated in the excel file for convenience. All you need is = kanmusu base FP <span style="mso-spacerun:yes"> </span>+ equipment FP + akashi improvements + 5. (Briefly, Basic Attack Power) [Remember that it’s different for carriers, so just use the new formula]</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">Okay we have these values, now what do we do?</p>
+
+<p class="MsoNormal">Let’s say that you are going with Haruna,Italia, Maya,Sendai,Hibiki and a CV. And your enemies consist of Ta-flagship,Nu Flagship,Tsu elite,3xI Late Model DDs.</p>
+
+<p class="MsoNormal">We will assign our kanmusu differently. Heavy ones will be able to ohko the heavy enemies, and the same for the light ones.</p>
+
+<p class="MsoNormal">
+</p>
+{| border="0" cellpadding="0" cellspacing="0" width="832"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:48pt" width="64"|
+| style="width:48pt" width="64"|
+| class="xl65" colspan="5" style="width: 240pt; text-align: center;" width="320"|'''Ta Flagship'''
+| style="width: 48pt; text-align: center;" width="64"|
+| class="xl65" colspan="5" style="width: 240pt; text-align: center;" width="320"|'''Nu Flagship'''
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|<u>Engagement
+</u>
+| class="xl67" style="text-align: center;"|<u>SA</u>
+| class="xl67" style="text-align: center;"|<u>DA</u>
+| class="xl67" style="text-align: center;"|<u>APSA</u>
+| class="xl67" style="text-align: center;"|<u>APDA
+</u>
+| class="xl67" style="text-align: center;"|<u>APCI</u>
+| style="text-align: center;"|<u>
+</u>
+| class="xl67" style="text-align: center;"|<u>SA</u>
+| class="xl67" style="text-align: center;"|<u>DA</u>
+| class="xl67" style="text-align: center;"|<u>APSA</u>
+| class="xl67" style="text-align: center;"|<u>APDA</u>
+| class="xl67" style="text-align: center;"|<u>APCI</u>
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T critical
+| class="xl66" style="text-align: center;"|119
+| class="xl65" style="text-align: center;"|'''79'''
+| class="xl65" style="text-align: center;"|'''111'''
+| class="xl65" style="text-align: center;"|'''73'''
+| class="xl65" style="text-align: center;"|'''85'''
+| style="text-align: center;"|
+| class="xl65" style="text-align: center;"|'''97'''
+| class="xl65" style="text-align: center;"|'''62'''
+| class="xl65" style="text-align: center;"|'''90'''
+| class="xl65" style="text-align: center;"|'''57'''
+| class="xl65" style="text-align: center;"|'''70'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T normal
+| class="xl66" style="text-align: center;"|179
+| class="xl71" style="text-align: center;"|118
+| class="xl66" style="text-align: center;"|166
+| class="xl65" style="text-align: center;"|'''109'''
+| class="xl65" style="text-align: center;"|'''128'''
+| style="text-align: center;"|
+| class="xl66" style="text-align: center;"|146
+| class="xl65" style="text-align: center;"|'''92'''
+| class="xl65" style="text-align: center;"|'''135'''
+| class="xl65" style="text-align: center;"|'''86'''
+| class="xl65" style="text-align: center;"|'''104'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel critical
+| class="xl66" style="text-align: center;"|143
+| class="xl65" style="text-align: center;"|'''94'''
+| class="xl65" style="text-align: center;"|'''133'''
+| class="xl65" style="text-align: center;"|'''88'''
+| class="xl65" style="text-align: center;"|'''102'''
+| style="text-align: center;"|
+| class="xl66" style="text-align: center;"|117
+| class="xl65" style="text-align: center;"|'''74'''
+| class="xl65" style="text-align: center;"|'''108'''
+| class="xl65" style="text-align: center;"|'''69'''
+| class="xl65" style="text-align: center;"|'''83'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel normal
+| class="xl66" style="text-align: center;"|215
+| class="xl66" style="text-align: center;"|141
+| class="xl66" style="text-align: center;"|199
+| class="xl65" style="text-align: center;"|'''131'''
+| class="xl65" style="text-align: center;"|'''153'''
+| style="text-align: center;"|
+| class="xl66" style="text-align: center;"|175
+| class="xl65" style="text-align: center;"|'''111'''
+| class="xl66" style="text-align: center;"|162
+| class="xl65" style="text-align: center;"|'''103'''
+| class="xl65" style="text-align: center;"|'''125'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on critical
+| class="xl66" style="text-align: center;"|179
+| class="xl71" style="text-align: center;"|118
+| class="xl66" style="text-align: center;"|166
+| class="xl65" style="text-align: center;"|'''109'''
+| class="xl65" style="text-align: center;"|'''128'''
+| style="text-align: center;"|
+| class="xl66" style="text-align: center;"|146
+| class="xl65" style="text-align: center;"|'''92'''
+| class="xl65" style="text-align: center;"|'''135'''
+| class="xl65" style="text-align: center;"|'''86'''
+| class="xl65" style="text-align: center;"|'''104'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on normal
+| class="xl66" style="text-align: center;"|268
+| class="xl66" style="text-align: center;"|177
+| class="xl66" style="text-align: center;"|248
+| class="xl66" style="text-align: center;"|164
+| class="xl66" style="text-align: center;"|191
+| style="text-align: center;"|
+| class="xl66" style="text-align: center;"|218
+| class="xl66" style="text-align: center;"|138
+| class="xl66" style="text-align: center;"|202
+| class="xl65" style="text-align: center;"|'''128'''
+| class="xl66" style="text-align: center;"|156
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T critical
+| class="xl66" style="text-align: center;"|238
+| class="xl66" style="text-align: center;"|157
+| class="xl66" style="text-align: center;"|221
+| class="xl65" style="text-align: center;"|146
+| class="xl66" style="text-align: center;"|170
+| style="text-align: center;"|
+| class="xl66" style="text-align: center;"|194
+| class="xl66" style="text-align: center;"|123
+| class="xl66" style="text-align: center;"|180
+| class="xl65" style="text-align: center;"|114
+| class="xl65" style="text-align: center;"|139
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T normal
+| class="xl66" style="text-align: center;"|357
+| class="xl66" style="text-align: center;"|235
+| class="xl66" style="text-align: center;"|331
+| class="xl66" style="text-align: center;"|218
+| class="xl66" style="text-align: center;"|255
+| style="text-align: center;"|
+| class="xl66" style="text-align: center;"|291
+| class="xl66" style="text-align: center;"|184
+| class="xl66" style="text-align: center;"|270
+| class="xl66" style="text-align: center;"|171
+| class="xl66" style="text-align: center;"|208
+|}
+<p class="MsoNormal"><span style="mso-spacerun:yes"> </span>(The bold values show the acvieveable FP values depending on the ship classes which are using those attack types. I didnt make any values bold in red-T because we assume that we will have saiun.)</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">I’ve grouped heavy enemies together so we can try to adjust our BBs,CA and CV according to them. BBs will have AP shells (APSA,APDA,or APCI). CA and CL will use DA. CV will carry saiun. So;</p>
+
+<p class="MsoNormal">To oneshot '''Ta flag''' with '''APSA''' will be hard. A kill in this situation is only guaranteed in critical hits in green T and parallel. A crit in head-on will require some luck to kill it (66% chance to kill with 150FP, increases until 166FP which definitely kills it but it is not possible to reach 166 FP – same for green T normal). Otherwise, you won’t deal much damage to it.</p>
+
+<p class="MsoNormal">With '''APDA''', it will be a piece of cake. A kill is guaranteed in any situation except Head-on normal (in which it is 66% chance to kill it if we assume that your BB has 150FP)</p>
+
+<p class="MsoNormal">With '''APCI''', we see that the FP requirements are higher. This means that APDA deals higher damage than APCI against this particular enemy. Still, you will almost always kill it with APCI. You can guarantee this by having exactly 153FP(capped). Only head-on normal will make it harder to kill it (42% chance to kill).</p>
+
+<br>
+
+<p class="MsoNormal">As for '''Nu''', its easier to kill it. The only times u can fail to kill it can be caused by “head-on APSA”, “head-on APCI” but this has 9% chance to happen, and “parallel APSA” which has 29% chance to happen. If you want, you can force your kanmusu to have 156FP(capped) to get rid of that 9% chance. But this is overcap so actually you would need 186FP for that, and not really worth it.</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">For our '''CAs''', keep in mind that if their SA triggers, they won’t sink any of them. So we should look at DA values. The highest guaranteed value here is 94 which all CA can manage. However, in the situations where they can’t kill the enemies with DA, the more FP you have, the higher possibility you’ll have to kill them. For instance with a green T normal hit, your CA’s DA will have 58% chance to kill that Ta (with 100 FP) [You can try to see the possibility of other values from the excel sheet.] So, the higher will give you more chance as we have guaranteed 94 FP.</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">For our '''CL''', the limit of 74FP is guaranteed, however 94FP may not be possible. (For instance with 91FP, you’ll have 94% chance to kill Ta flag in a parallel crit hit.) Depending on the kanmusu you are using, you may prefer improved equipments. (Improvements will be discussed later below)</p>
+
+<p class="MsoNormal">For our '''CV''', 153FP is acqually reachable with most CVs if they have 2 good torpedo bombers (slots don’t matter). Only kaku sisters kai forms are unable to do so. The choice is up to you. Then add a green plane and saiun, done.</p>
+
+<p class="MsoNormal">
+</p>
+{| border="0" cellpadding="0" cellspacing="0" width="256"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:48pt" width="64"|
+| style="width:48pt" width="64"|
+| class="xl65" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''I LM'''
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|<u>Engagement
+</u>
+| class="xl67" style="text-align: center;"|<u>SA</u>
+| class="xl67" style="text-align: center;"|<u>DA</u>
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T critical
+| class="xl65" style="text-align: center;"|'''35'''
+| class="xl65" style="text-align: center;"|'''22'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T normal
+| class="xl65" style="text-align: center;"|'''53'''
+| class="xl65" style="text-align: center;"|'''32'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel critical
+| class="xl65" style="text-align: center;"|'''42'''
+| class="xl65" style="text-align: center;"|'''26'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel normal
+| class="xl65" style="text-align: center;"|'''63'''
+| class="xl65" style="text-align: center;"|'''39'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on critical
+| class="xl65" style="text-align: center;"|'''53'''
+| class="xl65" style="text-align: center;"|'''32'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on normal
+| class="xl71" style="text-align: center;"|79
+| class="xl65" style="text-align: center;"|'''48'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T critical
+| class="xl66" style="text-align: center;"|70
+| class="xl66" style="text-align: center;"|43
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T normal
+| class="xl66" style="text-align: center;"|105
+| class="xl66" style="text-align: center;"|64
+|}
+<p class="MsoNormal"><span style="mso-spacerun:yes"> </span>(Again, bold values show FP values which can be reached by most of our destroyers. None in red-T again because of the assumption that we’d bring saiun. So we don’t need to check red-T values now)</p>
+
+<p class="MsoNormal">In this case, as we have 3 enemy DDs (half of their entire fleet), i think the FP value of our DD will be important. (The importance of the FP changes you make will get bigger as there are more enemies of that type which you are planning to ohko) Our DD should have at least 79FP to reliably kill them. But Hibiki can’t reach 79 FP. Only Poi and Ayanami are able to do so. So i might consider switching Hibiki with 1 of them.</p>
+
+<p class="MsoNormal">But also, we need to check the others especially the CL again to make sure she has 79FP to kill this particular enemy. Okay, she does have, no problem. Sometimes you may need to go back and check if you can reliably kill the weaker enemies. (An example about this will be given at the final part of the report)</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''How do I increase my damage?'''===
+<p class="MsoNormal">Okay we know the required FP values, but how do we reach them?</p>
+
+<p class="MsoNormal">There are a few ways to do so.</p>
+
+<p class="MsoNormal">1-)Pick a kanmusu with high base FP value. For instance, Nagato might be a better option than Hiei.</p>
+
+<p class="MsoNormal">2-)Change the class of the kanmusu. You can pick a CAV instead of a CA, or even Yuudachi K2 instead of Isuzu K2. (This doesn’t mean that CAVs are more powerful than CAs)</p>
+
+<p class="MsoNormal">3-)Equip weapons which give higher FP values. 38cm<41cm<46cm<51cm but you need to be aware of 2 important things. The accuracy penalty and not to change your attack type. (If you add a yellow gun or an AP shell to a BB that has 2 main guns and a seaplane, you may turn her attack type from DA to CI. And this will change the required FP values. And especially, <u>I don’t recommend going from DA to CI</u>, because required FP values for CI are higher than DA, which makes it harder to achieve)</p>
+
+<p class="MsoNormal">Also adding SCAMP on your ships will help them hit much heavier. –Yes, 10FP is a big difference.</p>
+
+<p class="MsoNormal">4-)Akashi improvements. I don’t have to point out how important this is. Just don’t waste your daily improvement quests. As for what equipments to improve, that is up to you. If you can’t decide, you can check some posts done by other players (for instance, [[http://kancolle.wikia.com/wiki/User_blog:Hayashi_H/Advanced_Equipment_Guide#Akashi_and_Upgrading_Q.26A| here is one]]). And if you don’t happen to have an Akashi yet, make her your first priority because she is very very very helpful. The change that 1 FP makes will be discussed in later parts.</p>
+
+<p class="MsoNormal">5-)If you can’t reach the required FP value for a specific type of attack, you may try to aim for <u>another type of attack</u>. For instance, killing AV Hime with NBCI is much easier than NBDA (this is true for any kind of enemy we have in kancolle, NBCI rocks). Also the same thing that I’ve mentioned in the #3. Prefer Double Attacks instead of Cut-Ins at day.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''Plan your set-ups'''===
+<p class="MsoNormal">There are different equipments, thus we have many different options to go with in certain setups.</p>
+
+<p class="MsoNormal">For instance, with 2 main guns, we can trigger a DA. But if u add a yellow gun, it turns into a mixed attack. If you add an AP shell, it turns into a mixed AP attack. 1 red + 1 yellow makes a CI but with lower damage modifiers. Here, I will discuss about the setups that give you the highest damage output.</p>
+
+<p class="MsoNormal">[[File:Xerderder.png|left]]</p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal">As you see here, I don’t know how to make a table in wiki.</p>
+
+<br>
+
+<br>
+
+<br>
+<p class="MsoNormal">As you see here, the only option for a 3-slot-ship is DA, and the best way to achieve it is to use 2 red guns which give higher FP at day, and it is equally same with the other option at night.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal"><u>For 4-slot-ships, if you want to go with a CI, the best setups to use it would be;</u></p>
+
+<p class="MsoNormal">'''On BBs :''' '''2xMain,1xAP,1xPlane'''. Gives APSA,APDA with x1.2 bonus, and APCI with either x1.5 or 1.3 bonus.</p>
+
+<p class="MsoNormal">'''On CAs :''' '''2xMain,1xSec,1xPlane'''. Gives SA,DA with x1.2 bonus, and CI with either x1.5 or x1.1 bonus. (3xMain guns would have triggered a DA, not CI) However, I’d recommend you to go with DA.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal"><u>If you want to go with a DA, there are 4 main options;</u></p>
+
+<p class="MsoNormal">'''A)3xMain,1xPlane''' - Gives the highest daytime FP for DA, however forces a NBCI.</p>
+
+<p class="MsoNormal">'''B)2xMain,1xSecondary,1xPlane''' <span style="mso-spacerun:yes"> </span>- Slightly worse than the 1st option ''when it triggers'' DA. It can also trigger a CI in which it is harder to kill an enemy. This one also forces a NBCI.</p>
+
+<p class="MsoNormal">'''C)2xMain,1xAuxillary,1xPlane''' <span style="mso-spacerun:yes"> </span>– Considerably worse than the options above for daytime. But gives a NBDA.</p>
+
+<p class="MsoNormal">'''D)2xMain,1xAP,1xPlane''' <span style="mso-spacerun:yes"> </span>– Only available for BBs. Can trigger a cut-in as well. Gives a NBDA.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">So, '''option A''' is preferred for ships which are intended to use “Gun Cut-Ins” for night battles.</p>
+
+<p class="MsoNormal">I don’t see any reason to prefer '''option B''', honestly.</p>
+
+<p class="MsoNormal">'''Option C''' is intended for those who have to trigger NBDA. If night battle is not an issue, go with the option A. (Unless you have other things to carry such as searchlights, sanshikis, drums etc..)</p>
+
+<p class="MsoNormal">Analyzing '''option D''' will be kinda troublesome. I have to provide an example for this.</p>
+{| border="0" cellpadding="0" cellspacing="0" width="448"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:48pt" width="64"|
+| style="width:48pt" width="64"|
+| class="xl65" colspan="5" style="width: 240pt; text-align: center;" width="320"|'''Ru Flagship'''
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|<u>Engagement
+</u>
+| class="xl67" style="text-align: center;"|<u>SA</u>
+| class="xl67" style="text-align: center;"|<u>DA</u>
+| class="xl67" style="text-align: center;"|<u>APSA</u>
+| class="xl67" style="text-align: center;"|<u>APDA</u>
+| class="xl67" style="text-align: center;"|<u>APCI</u>
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T critical
+| class="xl65" style="text-align: center;"|'''126'''
+| class="xl65" style="text-align: center;"|'''82'''
+| class="xl65" style="text-align: center;"|'''117'''
+| class="xl65" style="text-align: center;"|'''76'''
+| class="xl65" style="text-align: center;"|'''90'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T normal
+| class="xl66" style="text-align: center;"|189
+| class="xl65" style="text-align: center;"|'''123'''
+| class="xl66" style="text-align: center;"|175
+| class="xl65" style="text-align: center;"|'''114'''
+| class="xl65" style="text-align: center;"|'''135'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel critical
+| class="xl65" style="text-align: center;"|'''151'''
+| class="xl65" style="text-align: center;"|'''99'''
+| class="xl65" style="text-align: center;"|'''140'''
+| class="xl65" style="text-align: center;"|'''92'''
+| class="xl65" style="text-align: center;"|'''108'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel normal
+| class="xl66" style="text-align: center;"|227
+| class="xl65" style="text-align: center;"|'''148'''
+| class="xl66" style="text-align: center;"|210
+| class="xl65" style="text-align: center;"|'''137'''
+| class="xl66" style="text-align: center;"|162
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on critical
+| class="xl66" style="text-align: center;"|189
+| class="xl65" style="text-align: center;"|'''123'''
+| class="xl66" style="text-align: center;"|175
+| class="xl65" style="text-align: center;"|'''114'''
+| class="xl65" style="text-align: center;"|'''135'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on normal
+| class="xl66" style="text-align: center;"|283
+| class="xl66" style="text-align: center;"|185
+| class="xl66" style="text-align: center;"|262
+| class="xl66" style="text-align: center;"|171
+| class="xl66" style="text-align: center;"|202
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T critical
+| class="xl66" style="text-align: center;"|252
+| class="xl66" style="text-align: center;"|164
+| class="xl66" style="text-align: center;"|233
+| class="xl65" style="text-align: center;"|'''152'''
+| class="xl66" style="text-align: center;"|179
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T normal
+| class="xl66" style="text-align: center;"|377
+| class="xl66" style="text-align: center;"|246
+| class="xl66" style="text-align: center;"|349
+| class="xl66" style="text-align: center;"|228
+| class="xl66" style="text-align: center;"|269
+|}
+<p class="MsoNormal"><span style="mso-spacerun:yes"> </span>(These are the FP values to successfully sink a Ru-Flagship. Bold ones are reachable by BBs)</p>
+
+<p class="MsoNormal">As you see here, the easiest way to kill this Ru is to use APDA, then DA, then APCI, then APSA, then SA. So we pick the easiest one to achieve, which is APDA. However, there is ''something wrong'' in this way of thinking because equipping an AP shell to a BB won’t only trigger a APDA, it will <u>also</u> trigger an APCI which is actually worse than normal DA.</p>
+
+<p class="MsoNormal">For instance, in a parallel engagement normal hit, if normal DA is triggered, we can always kill that Ru. Yes, it is easier to kill it with APDA, but if RNG triggers an APCI, we may not be able to oneshot it. [Here, I have to remind you that these numbers are not must to have, even if the number over there is 162, you still have a chance to kill it in one hit, but the chance will be lower. For instance, with 150FP, you’ll have 81% chance to kill it, which is actually a big number]</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">To solve this complicated issue, we will just calculate the chances to ohko on those setups.</p>
+
+<p class="MsoNormal">For normal setup : 50% SA(0% kill rate), 50% DA(100% kill rate) = (50*0 +50*100)/100 = <u>50%</u> overall kill chance</p>
+
+<p class="MsoNormal">For AP-shell setup : 30% APSA(0% kill rate), 35%APDA(100% kill rate), 35%APCI(81% kill rate) = (30*0+35*100+35*81)/100 = <u>63,35</u> overall kill chance</p>
+
+<p class="MsoNormal">*Confirmation needed for the trigger rates. (Assumption of 150FP again)</p>
+
+<p class="MsoNormal">So in this case, it looks like using AP shells give us ~13% higher chance to kill that Ru, under the conditions that we maintain 150FP in both cases, in a parallel engagement normal hit. (As for what happens in the other engagements, see 5 cm below)</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">Let’s take it into the next step. What if i used a red gun instead of that AP shell? Wouldn’t it increase my FP and thus my overall chance to kill that Ru? Let’s see it in the example :</p>
+
+<p class="MsoNormal">'''Comparison 1-)'''Either 150FP with an AP shell, or 161FP(uncapped) with 3 guns. (Put a 41cm just as an example)</p>
+
+<p class="MsoNormal">[[File:Comparison1_table.png|left]]</p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p class="MsoNormal">'''Comparison 2-)'''Either 139FP with an AP shell, or 150FP with 3 guns. (Just to see another example, especially for undercap)</p>
+
+<p class="MsoNormal">[[File:Comparison2_table.png|left]]</p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<br>
+
+<p class="MsoNormal">When you look at the overall difference, it is quite clear that AP shells indeed give us an advantage even with considerably lower FP. So yes, option D is the right choice for our Battleships.</p>
+
+<p class="MsoNormal">
+</p>
+
+
+==='''General comparison report of the enemies'''===
+<p class="MsoNormal">In this part, I will explain how hard-easy it is to kill most of our enemies. I’ll discuss briefly on each and tell you what will kill it, and what won’t. So you’ll have easier time to pick resource effcient ships. It might be easier if you follow from the excel sheet at the same time (2nd page).</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt"><u>1)Destroyers</u></p>
+
+<p class="MsoNormal" style="margin-left:35.4pt;text-indent:35.4pt">'''a)Late Models''' : They are easily oneshottable. Only in head-on, your average destroyers will have ~50% chance to sink them. However, Ni-class is a bit exceptional. It can’t be killed reliably with any DDs we have, even with maxed equipments. ''(Preferred counter : DD)''</p>
+
+<p class="MsoNormal" style="margin-left:35.4pt;text-indent:35.4pt">'''b)Late Model Elites''' : These guys are there to take hits from your DDs. Sometimes even your CLs will struggle to kill them with SA. Again, Ni is exceptionally sturdier.'' (Preferred counter : CL)''</p>
+
+<p class="MsoNormal" style="margin-left:35.4pt;text-indent:35.4pt">
+</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt"><u>2)Light Cruisers</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>'''a)Ho,He,To Flag, Chi Elite''' : Your CL’s DA won’t let you down against them. However, know that their SA can’t pull off much, especially in head-on. ''(Preferred counter : CL-CA)''</p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                              </span>'''b)Chi Flag, Tsu Elite''' ''':''' I was actually surprised when i saw that these enemies had such high FP requirements. Your CLs won’t kill these in head-on.Even in parallel, their DA may not take them out. You can only rely on DAs of heavier ships. But you can’t guarantee any SA kills. SA of CAs can only kill these in green T. BBs will mostly do it on parallel but will struggle quite much on head-on (~20 chance to kill). But you can be sure that a CI will wipe them out. ''(Preferred counter : CA)''</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt"><u>3)Heavy Cruisers</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>Your CA’s DA will only oneshot these in parallel and green-T, and has ~35% chance in head-on. CLs are weaker but they still have ~60% chance to kill it on parallel but almost none in head-on (~7%). Your BBs will only fail to kill these with a APSA in head-on (and with ~10% chance to fail in parallel). ''(Preferred counter : CA-BB) Pick stronger ships against tougher CAs.''</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt"><u>4)Battleships</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                              </span>'''a)Ta,Ru Flag :''' Oneshotting these all the time is only possible with BB’s special attacks in parallel, and CA DAs in green T. Otherwise, there is ~40% chance to kill it with APCI, and ~70% with APDA in head-on. (Again, it is quite clear that double attacks give much higher chance) ''(Preferred counter : BB)''</p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>'''b)Ru Kai''' : Hard to kill unless a crit or green T occurs. 80% chance to kill in parallel, 22% in head-on with APDA (for APCI, 34% in parallel and 0% in head-on). Sometimes very low damage (1-4) is possible. Very very hard to kill with CAs even if they have 3 improved red guns.'' (Preferred counter : BB)''</p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>'''c)Re :''' Abandon all hope. Abandon it twice against Elite version. ''(Preferred counter : do NOT counter)''</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt"><u>5)Carriers</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>'''a)Nu,Wo Flag :''' Can be killed with DA of CAs reliably. When they can’t kill, they will damage them to orange and disable their threat. CLs will fail it most of the time (~20% chance in parallel, 0% in head-on) ''(Preferred counter : CA-BB)''</p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>'''b)Wo Kai :''' Oneshotting these is something that you’ll see rarely. But we can search how much FP we need to shut them up. Instead of talking about that, I’ll just put this here :</p>
+{| border="0" cellpadding="0" cellspacing="0" width="448"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:48pt" width="64"|
+| style="width:48pt" width="64"|
+| class="xl70" colspan="5" style="width: 240pt; text-align: center;" width="320"|'''Wo kai to chuuha'''
+|- height="20" style="height:15.0pt"
+| class="xl65" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|<u>Engagement
+</u>
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|<u>SA</u>
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|<u>DA</u>
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|<u>APSA</u>
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|<u>APDA</u>
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|<u>APCI</u>
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T critical
+| class="xl68" style="width: 48pt; text-align: center;" width="64"|131
+| class="xl71" style="width: 48pt; text-align: center;" width="64"|'''91'''
+| class="xl72" style="text-align: center;"|'''122'''
+| class="xl71" style="width: 48pt; text-align: center;" width="64"|'''84'''
+| class="xl71" style="width: 48pt; text-align: center;" width="64"|'''94'''
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T normal
+| class="xl69" style="text-align: center;"|197
+| class="xl68" style="width: 48pt; text-align: center;" width="64"|136
+| class="xl69" style="text-align: center;"|182
+| class="xl72" style="text-align: center;"|'''126'''
+| class="xl72" style="text-align: center;"|'''140'''
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel critical
+| class="xl69" style="text-align: center;"|157
+| class="xl72" style="text-align: center;"|'''109'''
+| class="xl72" style="text-align: center;"|'''146'''
+| class="xl72" style="text-align: center;"|'''101'''
+| class="xl72" style="text-align: center;"|'''112'''
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel normal
+| class="xl69" style="text-align: center;"|236
+| class="xl69" style="text-align: center;"|163
+| class="xl69" style="text-align: center;"|218
+| class="xl72" style="text-align: center;"|'''151'''
+| class="xl69" style="text-align: center;"|168
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on critical
+| class="xl69" style="text-align: center;"|197
+| class="xl69" style="text-align: center;"|136
+| class="xl69" style="text-align: center;"|182
+| class="xl72" style="text-align: center;"|'''126'''
+| class="xl72" style="text-align: center;"|'''140'''
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on normal
+| class="xl69" style="text-align: center;"|295
+| class="xl69" style="text-align: center;"|204
+| class="xl69" style="text-align: center;"|273
+| class="xl69" style="text-align: center;"|189
+| class="xl69" style="text-align: center;"|210
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T critical
+| class="xl69" style="text-align: center;"|262
+| class="xl69" style="text-align: center;"|181
+| class="xl69" style="text-align: center;"|243
+| class="xl69" style="text-align: center;"|168
+| class="xl69" style="text-align: center;"|187
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T normal
+| class="xl69" style="text-align: center;"|393
+| class="xl69" style="text-align: center;"|272
+| class="xl69" style="text-align: center;"|364
+| class="xl69" style="text-align: center;"|252
+| class="xl69" style="text-align: center;"|280
+|}
+<p class="MsoNormal"><span style="mso-tab-count:1">                </span><u>6)Transports</u></p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>'''a)Wa Normal :''' Very easy to oneshot with any CL. DDs are sometimes unreliable. ''(Preferred counter : CL)''</p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>'''b)Wa Elite :''' Easilly oneshottable with any DA. As for a SA, CAs will fail killing them quite often. BBs are much more reliable, but more expensive. ''(Preferred counter : CA)''</p>
+
+<p class="MsoNormal"><span style="mso-tab-count:2">                               </span>'''c)Wa Flag :''' Can only be reliably oneshottable by DAs of BBs. ''(Preferred counter : BB)''</p>
+
+<p class="MsoNormal"><span style="mso-tab-count:1">                </span><u>7)Submarines</u><span style="mso-tab-count:1">   </span>-To be tested later</p>
+
+<p class="MsoNormal"><span style="mso-tab-count:1">                </span><u>8)Bosses</u><span style="mso-tab-count:1">             </span>-To be tested later</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''The influence of 1 damage in the chances of killing an enemy.'''===
+<p class="MsoNormal">What exactly happens if i fail to reach the required FP values? How much is my chance to kill it reduced?</p>
+
+<p class="MsoNormal">That usually depends on how much FP you need to sink them. If the enemy is a weak type such as a destroyer, 1 value change in FP gives you more drastic results. I’ll give 3 examples just to show the effects.</p>
+
+<p class="MsoNormal">[[File:Req_FP_change.png|thumb|left|400px]]</p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal">(is there no way to fit this onto the screen?)</p>
+
+<p class="MsoNormal"></p>
+
+<br>
+
+<p class="MsoNormal">Again the percentages show the chance to kill a Ro Late Model DD with a SA. At the right side, you see the required FP values and the changes in percentage caused by 1 FP difference. (You can follow the highlighted cells) As you see, the lower the requirement, the easier to kill it by increasing your FP.</p>
+
+<br>
+
+<p class="MsoNormal">
+</p>
+{| border="0" cellpadding="0" cellspacing="0" width="576"
+|- height="20" style="height:15.0pt"
+| class="xl68" colspan="4" height="20" style="height: 15pt; width: 192pt; text-align: center;" width="256"|'''Ru Kai APCI'''
+| style="width:48pt" width="64"|
+| class="xl68" colspan="4" style="width: 192pt; text-align: center;" width="256"|'''Ri Flagship DA'''
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|<u>Engagement
+</u>
+| class="xl70" style="text-align: center;"|<u>req FP
+</u>
+| class="xl71" style="text-align: center;"|<u>Change</u>
+|<u>
+</u>
+| class="xl69" colspan="2" style="mso-ignore:colspan"|<u>Engagement</u>
+| class="xl70" style="text-align: center;"|<u>req FP</u>
+| class="xl72" style="text-align: center;"|<u>Change</u>
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T critical
+| class="xl67" style="text-align: center;"|108 FP
+| class="xl73" style="text-align: center;"|2,70%
+|
+| class="xl66" colspan="2" style="mso-ignore:colspan"|Green T critical
+| class="xl65" style="text-align: center;"|60 FP
+| class="xl73" style="text-align: center;"|5,26%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Green T normal
+| class="xl67" style="text-align: center;"|162 FP
+| class="xl73" style="text-align: center;"|2,00%
+|
+| class="xl66" colspan="2" style="mso-ignore:colspan"|Green T normal
+| class="xl65" style="text-align: center;"|90 FP
+| class="xl73" style="text-align: center;"|3,45%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel critical
+| class="xl67" style="text-align: center;"|130 FP
+| class="xl73" style="text-align: center;"|2,27%
+|
+| class="xl66" colspan="2" style="mso-ignore:colspan"|Parallel critical
+| class="xl65" style="text-align: center;"|72 FP
+| class="xl73" style="text-align: center;"|4,35%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Parallel normal
+| class="xl67" style="text-align: center;"|195 FP
+| class="xl73" style="text-align: center;"|1,67%
+|
+| class="xl66" colspan="2" style="mso-ignore:colspan"|Parallel normal
+| class="xl65" style="text-align: center;"|107 FP
+| class="xl73" style="text-align: center;"|2,94%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on critical
+| class="xl67" style="text-align: center;"|162 FP
+| class="xl73" style="text-align: center;"|2,00%
+|
+| class="xl66" colspan="2" style="mso-ignore:colspan"|Head-on critical
+| class="xl65" style="text-align: center;"|90 FP
+| class="xl73" style="text-align: center;"|3,45%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Head-on normal
+| class="xl67" style="text-align: center;"|243 FP
+| class="xl73" style="text-align: center;"|0,00%
+|
+| class="xl66" colspan="2" style="mso-ignore:colspan"|Head-on normal
+| class="xl65" style="text-align: center;"|134 FP
+| class="xl73" style="text-align: center;"|2,27%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T critical
+| class="xl67" style="text-align: center;"|216 FP
+| class="xl73" style="text-align: center;"|1,67%
+|
+| class="xl66" colspan="2" style="mso-ignore:colspan"|Red T critical
+| class="xl65" style="text-align: center;"|119 FP
+| class="xl73" style="text-align: center;"|2,63%
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Red T normal
+| class="xl67" style="text-align: center;"|324 FP
+| class="xl73" style="text-align: center;"|0,00%
+|
+| class="xl66" colspan="2" style="mso-ignore:colspan"|Red T normal
+| class="xl65" style="text-align: center;"|179 FP
+| class="xl73" style="text-align: center;"|1,72%
+|}
+<p class="MsoNormal">As we analyze a very heavy enemy such as Ru Kai, 1 FP difference in FP doesn’t make much of a difference. And against not-so-heavy-ships such as heavy cruisers, the difference is just a little bit better than that for us to utilize.</p>
+
+<p class="MsoNormal">What I conclude from this is that, against heavy enemies, you don’t need to care about low FP differences. Against Ri-type of enemies, it is up to you. <u>However for small ships, I suggest going as powerful as you can.</u></p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">As for a '''10 FP difference''', you can just multiply those values by 10! However note that these differences won’t be valid when your shipgirl’s FP is either lower than the min, and higher than the max. values of the required FP values. (What I’m trying to say is that you can’t gain any advantage by increasing your FP by 10, ''from 0 to 10''...) And don’t forget that daytime cap limits us greatly in this kind of a calculation, though mostly against heavy enemies such as batteships or some bosses</p>
+
+<p class="MsoNormal">Mathematically, if your chance increases by “a” for 1 FP difference, your chance for 10 FP difference will be between 0 and 10*a.</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">This is why Akashi improvements will give you higher overall chance to sink your enemies by using improved small guns than larger ones.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''Possible faults in the system'''===
+<p class="MsoNormal">As we have taken many things from other sources, a change or mistake in those sources will effect these calculations.</p>
+
+<p class="MsoNormal">Some of the kill chance predictions might not be perfectly accurate, especially for those which have overcap values. And the night battle percentage calculator is broken for very tough bosses. What we are <u>certain</u> of is the exact FP values to kill them. We can just try to adjust to those required FP values when we can.</p>
+
+<p class="MsoNormal">Also note that those kill chance predictions show you only the percentages for the related attack type. For instance, even if you have 100% chance to sink an enemy with DA, you may fail due to DA not triggering. Blame RNG.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''Tactical ideas'''===
+<p class="MsoNormal">The things we can do varies on different scenarios. What ships you use, which enemies you face, what kind of setups you can prepare, whether you have enough number of guns to accomplish all those setups or not, akashi improvements (as they progress slowly, it takes a long time to prepare a number of guns), what kind of risks you can take or what you can sacrifice, all of these can change your kanmusu’s performance.</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">Here, I’ll try to provide some common scenarios so you can give quick decisions to prepare them, instead of going yolo on event maps and tasting different types of salty salt.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">A) If your CAs have to use NBDA no matter what, the best setup would be 2xMain,1plane,1Auxillary equipment. Auxillary can be mostly radars as they give more accuracy, or sanshikis if your enemy is installation. However, CAVs have the best DA damage at day while using NBDA thanks to SCAMP. Some CAs can surely have higher DA dmg with 3 guns, but they’ll have to abandon their powerful NBDA.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">B) If you want to have resource efficient runs, you might try to use the prefferred counters in the general comparison report. Of course using heavier ships will give you higher chance to survive, but this won’t be necessary to win. If the enemies have for instance; 1BB,2CA,1CL,2DD , you can use the same composition against them (getting air superiority recommended). But as I’ve discussed in [http://kancolle.wikia.com/wiki/User_blog:DynamitMC/How_to_use_%22Player_Ship_Protection_Mechanism%22_in_our_advantage Enemy Damage Calculation Thread], you might want to be careful about the number of CL and DDs in your fleet as they are the most vulnurable ships against this enemy composition.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">C) Don’t assume that everything will work perfectly. Your NBCI ship might get damaged thus you might fail to kill a boss. <u>Always have a B plan</u>. However, as the devs keep placing heavy armored bosses against us, NBCI seems like the only dependable option. So, instead of 1 NBCI ship, use more than 1. This number depends on the difficulty of the map. Some enemies cannot be ohko’ed no matter which ship or setup you use. The best example about this is AD Hime III which as 333 armor. With a night battle damage cap of 300, you’ll need either a good RNG roll or a critical hit to sink her, but even this won’t happen often especially if she has still a lot of HP left.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">D) Don’t worry if you can’t sink a powerful enemy. It will be enough to damage them to orange or preferably red HP so they won’t pose any thread to your kanmusu. But to accomplish this, your kanmusu should aim at that particular enemy and they will most probably fail it if there are many other enemies. So you should at least guarantee ohko’ing those weak enemies, so you can guarantee a heavy damage on that powerful enemy. As for the bosses, you can kill them at night anyway.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">E) It looks like transport escort fleets might keep appearing, so you might want to keep kanmusu with high base FP values available for those maps, as they are going to carry drums and won’t be able to hit very high, failing to disable enemies before their torpedo salvo. (But this is just an opinion)</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''Extra examples'''===
+<p class="MsoNormal">Let’s say that you’re going to face “CV Hime (bitch), Tsu Elite (bitch), Ta Flag (bitch), Ne Elite, Wa Elite, Ro LM Elite” composition.</p>
+
+<p class="MsoNormal">And in preboss, there will be “2xRu flag, 2xRi flag, 2x I LM”.</p>
+
+<p class="MsoNormal">The map will require a normal fleet, and won’t allow any CLT nor SS.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">From now on, the rest will be my opinions. You may wish to accept or refuse this strategy. Here I’ll be using Akashi improvements and all kind of other things in my thought process.</p>
+
+<p class="MsoNormal"><u>I start thinking from the last one, the boss.</u> To sink her, we’ll need a NBCI setup (You can sink her without NBCI too, but those options will require too much luck to pull off). However, I also think that my CI ship might get damaged, so I pick <u>2 NBCI ships</u>. But, as you see, the map consists of mostly tough enemies which are dangerous against our weak ships, <u>mainly our destroyers</u>,so instead of 2 DDs, I’ll pick 1 DD and 1 CA to perform those CI attacks at night.</p>
+
+<p class="MsoNormal">As the enemies have a '''BB''', the most reliable option to counter them is to use a BB ourselves. And we might want 2 of them because both boss and preboss have more than 1 heavy enemy. I think that 2 BBs will be safer.</p>
+
+<p class="MsoNormal">Then we’ll have at least 1 '''carrier''' to get air superiority. The choice depends upon you. You might either choose <u>1 CV with 1 bomber</u> (this is hard to achieve if you don’t have any unique planes. Or you can support her with a CAV or BBV) or <u>2 CV with multiple bombers</u> to clean out trash before the battle begins.</p>
+
+<p class="MsoNormal"></p>
+
+<br>
+
+<p class="MsoNormal">So either :</p>
+
+<p class="MsoNormal">'''1) BB BB CA DD CV CV -''' Can clear the trashes at day. Higher bauxite cost. Lower NB damage. CVs might get chuuha and fail to shell unless they are armored carriers which consume more resources.</p>
+
+<p class="MsoNormal">'''2) BB BB CAV CA DD CV –''' Much lower opening airstrike damage (probably none). Has better NB damage. Lower bauxite cost. Lower cost in the long term.</p>
+
+<p class="MsoNormal">Both of them are powerful enough to deal heavy damage to any kind of ships.</p>
+
+<p class="MsoNormal">If you can enter the night battle with everyone else except the boss killed and your CI ships not heavily damaged, you have a high possibility to win. This is what we need to aim for, I think. But incase that you have 1 of your NBCI ships damaged, or even 2, or they didn’t activate their cut-in, it’s going to result in most likely a failure.</p>
+
+<p class="MsoNormal">It depends on you what to choose. You can even go with some other composition. As long as it works, it’s perfectly fine. However, just to show you more things in detail, I’ll go with the 2nd option here.</p>
+
+<p class="MsoNormal"></p>
+
+<br>
+
+<p class="MsoNormal">The 2nd option focuses on NB damage. Your heavy cruisers can deal heavy hits to the boss at night, or they can kill the others who are still alive.</p>
+
+<p class="MsoNormal">For the Battleships, I’ll choose '''Nagato''' and '''Hiei'''. Both of them will have 2xMain guns, 1 seaplane and 1 AP shell, as this is the option which gives us higher possibilities to kill the other enemies more reliably. (Mutsu could be a little bit better than Hiei, but her lvl is low for me). You might prefer Yamato-class if you don’t mind spending more resources as they have the least risk to get taiha. But this is really not necessary to clear the map.</p>
+
+<p class="MsoNormal">[A side note: You MAY wish to go crazy and use 2 BBs with high luck, thus making it a “4CI at night battle” match. Or even 5 if you have prinz and can achieve AS with 1 CV alone. This might give you a higher chance to kill that boss. But don’t forget that AP shells give us higher chances to sink other enemies. It also makes your kanmusu use artillery spotting attacks more often. As I said,in the end the choice is totally up to you. I’m just providing you some options.]</p>
+
+<p class="MsoNormal">The CV I’ll use will be '''Kaga''' with Tenzan Tomonagata(20),Reppuu(20),Reppuu601(46), and a saiun loaded. I could have brought an armored CV, but with these planes, only Kaga can achieve AS while being able to perform opening airstrike and shelling. Also I put the bomber to <u>the 1st slot for extra air proficiency bonus.</u></p>
+
+<p class="MsoNormal">The DD, the usual. 3 of your best torpedoes onto one of your best torpedo CI DDs. I choose '''Yukikaze'''.</p>
+
+<p class="MsoNormal">CAV will have 2xMain,1 seaplane, and 1<span style="mso-spacerun:yes">  </span>SCAMP. This is very useful (as I’ve already explained) because it gives you +10 FP while keeping your NBDA. '''Tone''' is the best candidate.</p>
+
+<p class="MsoNormal">And CA will be '''Myoukou''' with 3xMain guns, and 1 seaplane, which will give her DA setup at day and NBCI (gun version, x2 dmg bonus) at night. I have picked this because this option gives us the best DA setup we can have at day, thus making it easier to clear the trash before night battle. The other options you can resort could be;</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">Full torp setup – Concentrates on killing the boss but this ruins her day dmg capacity.</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">2 guns, 1 torp, 1 plane – Gives her good DA at day, and a mixed NBCI at night. (Note : mixed NBCI is worse than torpedo NBCI)</p>
+
+<p class="MsoNormal" style="text-indent:35.4pt">2 guns, 2 torps – Focuses on killing the boss with a torpedo NBCI, but gives up her artillery spotting. Still, she might kill something with her SA. But against these enemies, this seems unlikely.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">Now, let’s check how much FP they will need to reliably sink the enemies. (Please follow from the excel sheet, 2nd page) I’ll just open and see the minimum requirements. [Reminder that the values in the Library page of Excel are '''capped'''.]</p>
+
+<p class="MsoNormal">Against Ta, 153 FP for BBs, 118 for CAs (if possible. we will see)</p>
+
+<p class="MsoNormal">Against Ru, 140 FP for BBs, but of course the higher will be better. (Don’t be surprised that the value is lower than Ta. I had to give up on that value because the same value on Ru was too much.) 123 FP for CAs (if possible)</p>
+
+<p class="MsoNormal">Against Ne Elite, 145 FP for BBs (or 154 if possible), otherwise the higher the better. And 111FP for CAs.</p>
+
+<p class="MsoNormal">Against Ri flag, 149 FP for BBs to completely kill it. And 107 for CAs.</p>
+
+<p class="MsoNormal">Against Tsu Elite, 126 FP is required to completely kill it. Even if our CAs can’t reach it, our chance to kill it will still be very high, unless that bitch dodges one of the double attacks.</p>
+
+<p class="MsoNormal">Against Ne Elite, 145 FP is min requirement to ohko with APCI in parallel. But APDA in head-on will require 154. For CAs, 111 should be enough.</p>
+
+<p class="MsoNormal">Against Wa Elite, 125 FP</p>
+
+<p class="MsoNormal">Against Ro LM Elite, 112 FP</p>
+
+<p class="MsoNormal">Against I LM, 105 FP</p>
+
+<p class="MsoNormal">Against CV Hime, ???</p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal">Table version of these thoughts:</p>
+{| border="0" cellpadding="0" cellspacing="0" width="384"
+|- height="20" style="height:15.0pt"
+| class="xl69" height="20" style="height:15.0pt;width:48pt" width="64"|
+| class="xl70" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''Required FP'''
+| style="width:48pt" width="64"|
+| style="width:48pt" width="64"|
+| style="width:48pt" width="64"|
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|<u>Enemies</u>
+| class="xl65" style="text-align: center;"|<u>for BB
+</u>
+| class="xl65" style="text-align: center;"|<u>for CA</u>
+|
+|
+|
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|CV Hime
+| class="xl66" style="text-align: center;"|:V
+| class="xl68" style="text-align: center;"|:V
+|
+|
+|
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|Tsu Elite
+| class="xl66" style="text-align: center;"|154
+| class="xl66" style="text-align: center;"|103
+|
+| class="xl70" colspan="2" style="text-align: center;"|'''Current Setup'''
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|Ta Flag
+| class="xl66" style="text-align: center;"|153
+| class="xl66" style="text-align: center;"|118
+|
+| class="xl71"|<u>Kanmusu</u>
+| class="xl65" style="text-align: center;"|<u>FP</u>
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|Ne Elite
+| class="xl66" style="text-align: center;"|154
+| class="xl66" style="text-align: center;"|111
+|
+| class="xl67"|Nagato
+| class="xl66" style="text-align: center;"|154
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|Wa Elite
+| class="xl66" style="text-align: center;"|125
+| class="xl66" style="text-align: center;"|105
+|
+| class="xl67"|Hiei
+| class="xl66" style="text-align: center;"|152
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|Ro LM Elite
+| class="xl66" style="text-align: center;"|112
+| class="xl66" style="text-align: center;"|112
+|
+| class="xl67"|Tone
+| class="xl66" style="text-align: center;"|114
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|Ru Flag
+| class="xl66" style="text-align: center;"|140
+| class="xl66" style="text-align: center;"|123
+|
+| class="xl67"|Myoukou
+| class="xl66" style="text-align: center;"|121
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|Ri Flag
+| class="xl66" style="text-align: center;"|149
+| class="xl66" style="text-align: center;"|107
+|
+| class="xl67"|Yukikaze
+| class="xl66" style="text-align: center;"|64
+|- height="20" style="height:15.0pt"
+| class="xl67" height="20" style="height:15.0pt"|I LM
+| class="xl66" style="text-align: center;"|105
+| class="xl66" style="text-align: center;"|105
+|
+| class="xl67"|Kaga
+| class="xl66" style="text-align: center;"|146
+|}
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">So, just to see the full composition:</p>
+
+<p class="MsoNormal">Nagato<span style="mso-tab-count:2">               </span>41cm*4,51cm,Type 0 recon, Type 91 AP shell*6<span style="mso-tab-count:1">              </span>(NBDA)</p>
+
+<p class="MsoNormal">Hiei<span style="mso-tab-count:2">                     </span>41cm*1, 41cm*1,Type 0 recon, Type 91 AP shell*6<span style="mso-tab-count:1">         </span>(NBDA)</p>
+
+<p class="MsoNormal">Tone<span style="mso-tab-count:2">                   </span>2x 20.2cm(2)*6,zuiun12,SCAMP<span style="mso-tab-count:3">                                           </span>(NBDA)</p>
+
+<p class="MsoNormal">Myoukou<span style="mso-tab-count:1">            </span>3x 20.2cm(3)*4, Night scout<span style="mso-tab-count:4">                                                   </span>(NBCI)</p>
+
+<p class="MsoNormal">Yukikaze<span style="mso-tab-count:1">            </span>3x Quint torpedoes*6<span style="mso-tab-count:5">                                                                </span>(NBCI)</p>
+
+<p class="MsoNormal">Kaga<span style="mso-tab-count:2">                  </span>Tenzan Tomonagata(20), Reppuu(20), Reppuu601(46), Saiun(12).</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">By using 51cm together with 41cm*4 on '''Nagato''', I was able to reach a BAP value of 154(capped), which is more than enough to kill that Ta very reliably. Actually I was using a 41cm*1 on her, but then realized that she had 153FP, which was not enough to completely one-shot Tsu Elite unless in head-on. So I adjusted her FP to 154. Also, while aiming to kill heavy ships, don’t forget to adjust your FP against smaller ones.</p>
+
+<p class="MsoNormal">However for '''Hiei''', she can’t reach the perfect values 154 nor 153. The best thing which could give her high FP was 41cm*1. I know 41cm is overweight for her but 2 of them shouldnt cause much risk. So in the end she has 152 FP which is satisfactory.</p>
+
+<p class="MsoNormal">As for why '''Myoukou''' has 121 FP, I had 3x20.3cm(3)*4. For now, it looks like she can’t reach 123, but still she’ll have around 90-95% chance to kill those enemies which require 123 FP to oneshot on preferred situations. We cannot guarantee it all the time, but this is what i can achieve with my equipments at the moment.</p>
+
+<p class="MsoNormal">'''Tone''' has 114 FP, it looks like 118 is not reachable by my current equips. I can reach 118 actually, but using my best guns on Myoukou has higher priority. Because she might kill the boss. That’s why I gave Tone my 2x20.3cm(2)*6 guns.</p>
+
+<p class="MsoNormal">'''Kaga''' has 146 shelling FP with one tenzan tomonagata. She can’t reach higher than that because of those reppuus and saiun. But I can’t remove saiun because of such a thing. She might get damaged and ruin my modifications. This isn’t worth throwing saiun away. <u>I almost always suggest using saiun.</u></p>
+
+<p class="MsoNormal">For '''Yukikaze''', her NBCI FP is 195 with my current equipments (292,5 with NBCI multiplier). With this, she will have 58% chance to kill CV Hime when she has full hp, if there aren’t any mistakes in the calculations. Ehh, I think night battle percentage calculator is broken. Don’t trust this percentage for now.</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+<p class="MsoNormal">One final thing : Here, I’ve assumed that your battle with the boss is not 4th (which usually is..). Because this example had to introduce you a simple way to analyze a situation. The only issue here is that, in your 4th battle, your ships will have <u>80% of their FP</u>, which will reduce their performance. So, if you desire, you may plan according to that (actually you should, if you want to sink everything so badly). But it will get harder to sink enemy battleships escorting the boss on 4th battle.</p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal">'''Things that aren’t done yet'''</p>
+
+<p class="MsoNormal">Haven’t tested daytime mixed attacks for CAs.</p>
+
+<p class="MsoNormal">Haven’t shown the gun NBCI nor mixed NBCI in the excel sheet.</p>
+
+<p class="MsoNormal">Haven’t tested submarines and bosses.</p>
+
+<p class="MsoNormal">
+</p>
+
+<br>
+
+==='''References and other useful links'''===
+<p class="MsoNormal">[[Combat|Wikia Combat Page]]</p>
+
+<p class="MsoNormal">[http://kancolle.wikia.com/wiki/User_blog:Qunow/Damage_Calculation_Summary_-version_NGA- Qunow Damage Calculation Translation Page]</p>
+
+<p class="MsoNormal">[[Damage Calculation|Damage Calculation]]</p>
+
+<p class="MsoNormal">[[Akashi's_Improvement_Arsenal|Akashi's_Improvement_Arsenal]]</p>
+
+<p class="MsoNormal">[http://kancolle.wikia.com/wiki/User_blog:DynamitMC/How_to_use_%22Player_Ship_Protection_Mechanism%22_in_our_advantage Enemy Damage Calculation Thread]</p>
+
+<p class="MsoNormal">
+</p>
+[[Category:Blog posts]]

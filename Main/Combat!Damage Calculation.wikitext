@@ -1,0 +1,394 @@
+<!--
+{{Under Construction
+|Scope = article
+|Missing Information = Correct and complete damage calculations, better presentation and formatting, examples, section on extended models (fitting)
+|Page Adopted = Tsubakura, がか
+}}
+-->
+<!--
+Have a story about attack types, CL0/CL1/CL2, normal/proportional damage first.
+-->
+==Main Formula==
+
+<math>\text{Damage Value} = \bigg \lfloor \left ( \left \lfloor \operatorname{cap} \left ( \hat{F} \cdot M_{pre} \right ) \cdot C \right \rfloor \cdot M_{post} - \hat{A} \right ) \cdot R \bigg \rfloor</math>
+
+Where:
+*<math>\hat{F}</math> is [[#Basic Attack Power|Basic Attack Power]].
+*<math>M_{pre}</math> is the combination of [[#Pre-Cap Modifiers|Pre-Cap Modifiers]].
+*<math>M_{post}</math> is the combination of [[#Post-Cap Modifiers|Post-Cap Modifiers]].
+*<math>C</math> is the Critical Hit modifier. Assumes a value of 1.5 if the attack is a Critical Hit, and is 1 otherwise.
+*<math>\operatorname{cap}</math> is the [[#Attack Power Cap|soft cap to attack power]].
+*<math>\hat{A}</math> is '''Defense Power'''.
+*<math>R</math> is the remaining ammo penalty:
+**<math>R = \begin{cases} 2R_{s}, & \text{ if } R_{s} < 0.5 \\ 1, & \text{ otherwise } \end{cases}</math>
+**<math>R_{s}</math> is the ship's current ammo percentage (1 bar = 10% = 0.1)
+*<math>\left \lfloor x \right \rfloor</math> is the floor function; that is, the rounding down of input <math>x</math>
+
+'''Defense Power''' is calculated as follows:
+
+<math>\hat{A} =  0.7 A_t + 0.6 \big ( \text{random} \in \left [ 0 , \left \lfloor A_t \right \rfloor - 1 \right ] \big ) - D</math>
+
+Where:
+*<math>A_{t}</math> is the sum of the defending ship's displayed armor stat and all [[improvements]] to armor.
+*The random number function outputs an integer value between 0 and <math>\left \lfloor A_{t} \right \rfloor - 1</math> (inclusive, uniformly distributed).
+*<math>D</math> is the Depth Charge Rack armor penetration effect. See [[#asw|'''Anti-Submarine Warfare''']] for details.
+
+If Damage Value is less than 1, it becomes '''scratch damage''', and the following formula is applied instead:
+
+<math>\text{Damage Value} = \Big \lfloor 0.06 H_t + 0.08 \big ( \text{random} \in \left [ 0 , H_t - 1 \right ] \big ) \Big \rfloor</math>
+
+Where:
+*<math>H_{t}</math> is the target's '''current''' HP.
+*The random number function outputs an integer value between 0 and <math>H_{t} - 1</math> (inclusive, uniformly distributed).
+<!--
+Once there is a section for scratch damage, mention:
+*If CL0 from some special attack types can give scratch damage or not.
+*Can be zero (displayed as ''miss'', but for CL1/CL2).
+*Can never sink the target.
+*Can be more effective than normal damage for high HP targets (maybe have an example).
+-->
+
+==Basic Attack Power==
+
+For '''Shelling''':
+
+<math>\hat{F} = F_{s} + F_{\bigstar} + C_{f} + 5</math>
+
+*<math>F_{s}</math>is the ship's firepower stat
+*<math>F_{\bigstar}</math>is the sum of all [[improvements]] to shelling damage
+*<math>C_{f}</math>is the Combined Fleet factor
+
+For '''Torpedo''':
+
+<math>\hat{F} = T_{s} + T_{\bigstar} + 5</math>
+
+*<math>T_{s}</math>is the ship's torpedo stat
+*<math>T_{\bigstar}</math>is the sum of all [[improvements]] to torpedo damage
+
+For '''Carrier Shelling''':
+
+<math>\hat{F} = 55 + \big \lfloor 1.5 \left ( F_{s} + T_{s} + \left \lfloor 1.3 D_{s} \right \rfloor + F_{\bigstar} + C_{f} \right ) \big \rfloor</math>
+
+*<math>D_{s}</math>is the ship's dive bombing stat
+*<math>F_{\bigstar}</math>is the sum of improvements to carrier shelling. It is confirmed for [[List_of_Secondary_Guns_by_stats|secondary]] and [[List of Anti-Air Guns by stats|machine]] gun [[improvements]], and also [[List_of_Torpedo_Bombers_by_stats|torpedo bomber]] improvements (0.2 per star).
+
+For the '''Opening Airstrike''':
+
+<math>\hat{F} = M_{type} \left ( ( P_{p} + P_{\bigstar} ) \sqrt{N} + K_{f} \right )</math>
+
+*<math>N</math>is the current plane count (slot size) of a given slot
+*<math>P_{p}</math>is the plane's dive bombing or torpedo stat
+*<math>P_{\bigstar}</math>is the plane's improvement bonus to airstrike damage:
+**<math>P_{\bigstar} = \begin{cases} 0.2 \bigstar, & \text{ for Torpedo Bombers, Seaplane Bombers } \\ 0, & \text{ for Dive Bombers } \end{cases}</math>
+*<math>M_{type}</math>is the Plane Scaling modifier:
+**For Dive Bombers and Seaplane Bombers: '''1'''
+**For Torpedo Bombers: '''0.8''' or '''1.5'''; one value is picked at random (~50% chance of each).
+*<math>K_{f}</math>is the airstrike damage constant. Varies according to which type of fleet is being targeted:
+**Against Single Fleets, or Player Combined Fleets:<math>K_{f} = 25</math>
+**Against an Abyssal Main Fleet:<math>K_{f} = 15</math>
+**Against an Abyssal Escort Fleet:<math>K_{f} = 5</math>
+
+For {{anchor|asw}}'''Anti-Submarine Warfare''':
+
+<math>\hat{F} = \left ( 2 \sqrt{A_{s}} + A_{\bigstar} + 1.5 E_{asw} + C_{t} \right ) \cdot S_{asw} \left ( 1 + S_{a} + S_{b} \right )</math>
+
+*<math>A_{s}</math>is the ship's naked ASW stat (no equipment ASW is considered)
+*<math>A_{\bigstar}</math>is the sum of all [[improvements]] to ASW damage
+*<math>E_{asw}</math>is the sum of the displayed ASW stat of the ship's equipment. Recon Seaplanes are not considered.
+*<math>C_{t}</math>is the ASW type constant:
+**If Sonar or Depth Charge (DD, CL): 13
+**If aircraft-based (AV, CVL, CAV, BBV): 8
+*<math>S_{asw}</math>is the basic synergy modifier for ASW. Becomes '''1.15''' if the ship is equipped with a Sonar and Depth Charge Projector pair; assume 1 otherwise.
+*<math>S_{a}</math>is a secondary synergy modifier. Becomes '''0.15''' if the ship is equipped with a Sonar and Depth Charge Rack pair; assume 0 otherwise.
+*<math>S_{b}</math>is a secondary synergy modifier. Becomes '''0.1''' if the ship is equipped with a Depth Charge Projector and Depth Charge Rack pair; assume 0 otherwise.
+Additionally, equipping a Depth Charge Rack will incur an additional '''armor penetration''' effect when executing ASW attacks, denoted as
+
+<math>D</math>
+in the Defense Power formula. It is calculated as follows:
+
+<math>D = \sqrt{D_{asw} - 2} + C_{ship}</math>
+
+*<math>D_{asw}</math>is the Depth Charge Rack's displayed ASW value
+*<math>C_{ship}</math>is the Ship Type constant; becomes 1 if the ship equipping the Depth Charge Rack is a DE, and is 0 otherwise.
+
+For '''Night Battle''':
+
+<math>\hat{F} = F_{s} + T_{s} + N_{\bigstar} + C_{r}</math>
+
+*<math>N_{\bigstar}</math>is the sum of all [[improvements]] to night battle damage
+*<math>C_{r}</math>is the Night Contact bonus; 5 if Night Scout has activated, 0 otherwise
+
+For '''Night Battle (Aerial Attack)''':
+
+<math>\hat{F} = F_{s} + \sum^{\text{Night Aircraft}} F_{p} + T_{p} + D_{p} + M_{p} \sqrt{N} + NK_{a} + \sqrt{\bigstar_{p}}</math>
+
+<math>M_{p} = K_{b} \left( F_{p} + T_{p} + A_{p} + D_{p} \right )</math>
+
+*Applicable '''Night Aircraft''' include Swordfish variants, [[Zero Fighter Model 62 (Fighter-bomber / Iwai Squadron)]], [[Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)]] and Night Planes.
+*'''Night Planes''' (purple icon) are [[F6F-3N]], [[F6F-5N]], [[Reppuu Kai Ni Model E]], [[Reppuu Kai Ni Model E (CarDiv 1/Skilled)]], [[TBM-3D]], [[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]], and [[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]].
+*<math>F_{p}</math>is the plane's firepower stat
+*<math>T_{p}</math>is the plane's torpedo stat
+*<math>A_{p}</math>is the plane's ASW stat
+*<math>D_{p}</math>is the plane's dive bombing stat
+*<math>\bigstar_{p}</math>is the plane's improvement level
+*<math>M_{p}</math>is the plane's calculated night multiplier
+*<math>N</math>is the current plane count (slot size) of that slot
+*<math>K_{a}</math>is the first Night Plane modifier; becomes '''3''' if the plane is a Night Plane, and is 0 otherwise.
+*<math>K_{b}</math>is the second Night Plane modifier; becomes '''0.45''' if the plane is a Night Plane, and is '''0.3''' otherwise.
+
+Notes:
+* Multiple SONAR/Depth charges do not boost the ASW Bonus (i.e. 2 of each still makes the bonus 1.15)
+* In [[KanColle Kai]] abyssal ships with non-zero ASW stat (not counting equipment) have an ASW constant of 13. This takes precedence over ship classification. Currently, it is confirmed that [[Battleship Re-Class#Elite|Re Elite]] exhibits this behavior.
+* Please read [[Akashi's Improvement Arsenal]] page for effects given by upgraded equipment.
+* Please read [[Combined Fleet]] page for combined fleet factor in combined fleets.
+* During Night Battle, the basic attack power of anti-submarine warfare can be treat as zero, with the exception of in Combined Fleet maps and Night Battle nodes.
+* Carriers utilize the Night Battle formula unless one of the following:
+** Saratoga Mk.II (uses Aerial Attack formula)
+** Equipped with night operation aviation personnel (uses Aerial Attack formula)
+** Ark Royal equipped with Swordfish and not equipped with night operation aviation personnel (uses normal night battle formula, but ignores all equipment besides Swordfish).
+===Pre-Cap Modifiers===
+These are the factors directly applied to your ship's attack power.
+* [[Damage Calculation#Anti-Installation Attack Modifier|Anti-Installation Attack Modifier]]
+* [[Combat/Main#Formation Selection|Formation Modifier]] (see "Damage modifier")
+* [[Combat/Main#Engagement Form Modifier|Engagement Modifier]]
+* [[Damage Calculation#Ship.27s_Health_Modifier|Health Modifier]]
+* [[Damage Calculation#Night_Special_Attack_Modifier|Night Special Attack Modifier]]
+* [[Damage Calculation#Light_Cruiser_Fit_Bonus|Light Cruiser Fit Bonus]]
+Effects from the modifiers are multiplied/added cumulatively.
+
+==== Anti-Installation Attack Modifier ====
+{{Main|Installation Type}}
+* The [[Type 3 Shell]] multiplies Attack Power by 2.5 against soft-skinned installations
+* The [[WG42 (Wurfgerät 42)]] adds a flat bonus and possibly an additional modifier depending on the installation and number equipped.
+* [[:Category:Landing Craft|Landing Crafts]] give varying bonuses against installations.
+Note also that against installations, only firepower is taken into account; in night battle, even though attack power is normally the sum of firepower and Torpedo, for installations specifically the Torpedo stat is disregarded.
+
+====Ship's Health Modifier====
+{| class="article-table" style="width: 440px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Damage
+! scope="col" style="text-align:center;" |Shelling/ASW
+! scope="col" style="text-align:center;" |Torpedo
+|-
+| Minor damage (小破 Shouha) or less
+| style="text-align:center;" |100%
+| style="text-align:center;" |100%
+|-
+| Moderate damage (中破 Chuuha)
+| style="text-align:center;" |70%
+| style="text-align:center;" |80%
+|-
+| Heavy damage (大破 Taiha)
+| style="text-align:center;" |40%
+| style="text-align:center;" |0%
+|}
+These modifiers do not affect Aerial Combat.
+<!--
+====Plane Scaling====
+{| class="article-table" style="width:600px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="width:250px; text-align:center;" |Type
+! scope="col" style="width:100px; text-align:center;" |Attack Type Modifier
+! scope="col" style="width:550px; text-align:center;" |Notes
+|-
+|Dive Bombers, Seaplane Bombers
+|1
+|This value is fixed, regardless the situation.
+|-
+|Torpedo Bombers
+|0.8 or 1.5
+|About 50% chance of either modifier.
+|}
+
+Applied on bombers during the opening air strike. These are the random numbers multiplied to the plane's bombing attack power.
+-->
+
+====Night Special Attack Modifier ====
+[[File:night_cut_in.png|thumb|An example of a cut-in]]
+[http://kancolle.wikia.com/wiki/Combat#Night_Battle_Special_Attacks Certain Equipment setups] have a chance to trigger special attacks at night, giving boost to both attack power and accuracy. This stage is usually the most rewarding / dangerous because both sides have drastically increased attack power.
+
+The ship must be able to participate in the night battle in order to trigger the special attacks.
+
+====Light Cruiser Fit Bonus====
+:{{Main|Overweight Penalty and Fit Gun Bonus}}
+a few points would be added for CL's attack power after all pre-cap firepower but before the cap if they used fit guns.
+*Applicable Twin Gun Mounts: [[15.2cm Twin Gun Mount]], [[15.2cm Twin Gun Mount Kai]], [[14cm Twin Gun Mount]]
+*Applicable Single Gun Mounts: [[15.2cm Single Gun Mount]], [[14cm Single Gun Mount]]
+*Not Applicable Guns: All the 15.5cm and 20.3cm guns, [[OTO 152mm Triple Rapid Fire Gun Mount]], [[15cm Twin Secondary Gun Mount]], etc.
+
+==Attack Power Cap==
+Applies after the pre-cap modifiers. This is a '''soft limit''' on your effective attack power. It is given by:
+
+<math>\operatorname{cap} \left ( x \right ) = \begin{cases} \left \lfloor S + \sqrt{x - S} \right \rfloor,  & \text{if } x > S \\ \left \lfloor x \right \rfloor, & \text{otherwise} \end{cases}</math>
+
+Where:
+*<math>x</math>is the input of the function; or in other words, the value of Basic Attack Power multiplied by all Pre-Cap Modifiers.
+*<math>S</math>is the attack power cap, represented by different thresholds according to the type of attack:
+**'''180 '''for Day Battle Shelling
+**'''300 '''for Night Battle
+**'''150 '''for Others (ASW, support shelling, aerial attack, torpedo attack, etc.)
+
+Daytime Shelling Attack Cap (180) often makes it important to utilize [[Combat#Artillery_Spotting|Artillery Spotting]] since they boost your attack power '''after the cap''', [[Combat#Night Combat|Night Combat]] can be very dangerous and/or rewarding due to having a very high cap (300) and the inclusion of torpedo to firepower for the basic attack power calculation.
+
+==Post-Cap Modifiers==
+In damage calculation, Post-cap modifiers apply''''' after the cap''''', but '''''before enemy armor reduction'''''. Thus they are very effective approach to boost your damage output (esp. against heavy armor enemies).
+
+Currently, the post-cap modifiers are from:
+* [[Damage Calculation#Artillery_Spotting|Artillery Spotting]] (aka. Day time special attacks)
+* [[Damage Calculation#Critical_Modifier|Critical Damage]] and [[Aircraft Proficiency]]
+* [[Damage Calculation#Contact|Contact]] (Opening air strike)
+* [[Damage Calculation#AP Shell|AP Shell]] (against certain targets)
+* PT Imp Pack (unconfirmed)
+
+====Artillery Spotting ====
+[[File:Combat_daycutin.jpg|200px|right]] [http://kancolle.wikia.com/wiki/Combat#Day_Battle_Special_Attacks_.28Artillery_Spotting.29 Certain equipment setups] provide a chance to trigger special attacks during day battle, giving boost to both attack power and accuracy. The damage modifiers are applied after the cap (180), thus very effective against heavy armor targets. Note that the ship requires at least 1 seaplane on board to perform Artillery Spotting.
+
+====Critical Modifier====
+Most forms of attack (Torpedo, Shelling, Anti-Submarine, Preemptive Bombing) have a chance to crit the target. The damage modifier applies after the cap.
+{| class="article-table" style="height: 100px; width: 200px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Attack Type
+! scope="col" style="text-align:center;" |Modifier
+|-
+| Normal Attack
+| style="text-align:center;" |100%
+|-
+| Critical Hit
+| style="text-align:center;" |150%
+|}
+It should be noted that the '''critical message always appears when damage dealt is greater than or equal to 40,''' regardless of whether the 150% modifier was applied or not. On the other hand, the critical message will never appear when damage dealt is less than or equal to 14, even if the 150% modifier was applied.
+
+Critical damage rate seems to depend on accuracy.
+
+[[Aircraft Proficiency]] boost Critical Hit Modifier.
+
+====Contact====
+[[File:Combat_contact.jpg|right]] Contact takes place during the Aerial Combat bombing phase, and applies to the bombing damage of all allied planes.  For activation conditions, rate and additional details, see [[Aerial_Combat#Contact|Aerial Combat]].
+
+The damage increase depends on the +accuracy bonus {{Template:Hit}} of the squadron performing contact.
+{| class="article-table" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Accuracy<br />Bonus
+! scope="col" style="text-align:center;" |Damage<br />Modifier
+|-
+| style="text-align:center;" | +0
+| style="text-align:center;" |112%
+|-
+| style="text-align:center;" | +1
+| style="text-align:center;" |112%
+|-
+| style="text-align:center;" | +2
+| style="text-align:center;" |117%
+|-
+| style="text-align:center;" | +3 or more
+| style="text-align:center;" |120%
+|}
+
+====AP Shell====
+Damage against certain targets increases when both large-caliber main guns and AP shells are equipped.
+
+This modifier works against the following enemy classes:
+*Battleships (including Fast Battleships and Aviation Battleships)
+*Heavy Cruisers
+*Standard Carriers
+*Demons and Princesses (including land installations)
+*Floating Fortresses ([[Escort Fortress]] and [[Floating Fortress]])
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 380px;"
+|-
+! scope="col"|Type
+! scope="col"|Modifier
+|-
+|Main + AP Shell
+|108%
+|-
+|Main + AP Shell + Radar
+|110%
+|-
+|Main + Secondary + AP Shell
+|115%
+|-
+|Main + Secondary + AP Shell + Radar
+|115%
+|}
+<span style="font-size:12px;font-weight:bold;">Notes</span>
+*The size of the main guns are irrelevant.
+*Source of the tests can be found [https://kancolle.fandom.com/ja/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:421 here].
+*<span style="line-height:21px;">Exercise caution as this modifier works for enemy ships as well (practice matches and special enemies with '''Deteriorate AP Shell''' equipped).</span>
+
+==Remaining Ammo Modifier==
+{| class="article-table" style="height: 100px; width: 320px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Remaining Ammunition
+! scope="col" style="text-align:center;" |Modifier
+|-
+| 5 to 10 {{Ammo}} bars
+| style="text-align:center;" |100%
+|-
+| 4 {{Ammo}} bars
+| style="text-align:center;" |80%
+|-
+| 3 {{Ammo}} bars
+| style="text-align:center;" |60%
+|-
+| 2 {{Ammo}} bars
+| style="text-align:center;" |40%
+|-
+| 1 {{Ammo}} bar
+| style="text-align:center;" |20%
+|-
+| 0 {{Ammo}} bars
+| style="text-align:center;" |Scratch Damage
+|}
+*In general, two bars of {{Ammo}} will be used in Day Battle for all ships, regardless of whether they attack or not.
+*The Remaining Ammo Modifier affects all phases, including the opening Aerial Combat Phase.
+*When entering night battle, the Remaining Ammo Modifier on a vessel remains same as the previous day battle. One bar of {{Ammo}} is used for all ships in Night Battle, regardless of whether they attack or not.
+*Because most battles will consume 2 bars of ammunition each, try to engage the boss before the 5th battle, or else achieving victory becomes unlikely (but not impossible).
+*When attempting to defeat boss nodes, avoid night battles and whirlpools on the way.
+**Whirlpools will decrease either {{Fuel}} or {{Ammo}} bars of your sorted fleet, which can be disadvantageous in long sorties.  Equipping one or more ships with RADAR can help reduce losses taken from these.
+***Only one RADAR is required per ship.  Equipping multiple RADAR to the same ship will not reduce the penalty further.
+***The max reduction typically occurs at 3 ships with RADAR. In events special caveats such as only RADAR in the main fleet of a Combined Fleet being considered can exist.
+*Submarine-only nodes on limited-time event maps do not consume ammo in Day or Night Battle.
+*[[Hayasui]] with [[Underway Replenishment]] can temporarily resupply ammo/fuel when players choose to use the item.
+*Ammo/Fuel reduced in Air Raid nodes are reduced. Read [[Events/Mechanics]] for details.
+
+==Player Ship Protection Mechanisms==
+<math>\text{Damage Value} = \left \lfloor \frac{H_{t}}{2} + 0.3 \big ( \text{rand} \in \left [ 0 , H_{t} - 1 \right ] \big ) \right \rfloor</math>
+While the above formulas and statements are generally true for damage taken by a player's ships, there are additional limits that apply to friendly units only. These protection mechanisms are important for game balance and to protect your fleet from sinking.
+*For ships entering battle at ''chuuha'' (orange) or higher HP:
+**Damage taken cannot reduce HP below 1.
+***Any further hits will become misses.
+**For flagships, as well as ships with 20 morale or more (''i.e.'' not red face):
+***If damage taken exceeds a ship's current HP, then instead of taking full damage, the damage of the current attack is limited to 50%-79% (rounded down) of current HP.
+****For multi-hit attacks, such as night battle torpedo cut-in attacks, each hit is calculated separately.
+****This can occasionally help ships avoid ''taiha'' (red HP), because it narrows the range of damage where it is possible to be hit into ''taiha''.
+****For ships with at full HP and an odd HP total, it is occasionally possible to stop damage at lightly damaged.
+<!--
+==Calculation Examples==
+===Example 1: Opening Air Strike===
+===Example 2: Carrier Shelling===
+===Example 3: Surface Ship Shelling===
+===Example 4: ASW Attack===
+===Example 5: Torpedo===
+===Example 6: Night Battle===
+===Example 7: Armor range from Damage===
+-->
+
+==See Also==
+* [http://wikiwiki.jp/kancolle/?%C0%EF%C6%AE%A4%CB%A4%C4%A4%A4%A4%C6#t616785f WikiWiki section] on damage calculation
+* [http://ja.kancolle.wikia.com/ ja.kancolle.wikia] pages:
+** [http://ja.kancolle.wikia.com/wiki/%E3%83%80%E3%83%A1%E3%83%BC%E3%82%B8%E5%BC%8F Common parts]
+** [http://ja.kancolle.wikia.com/wiki/%E5%A4%9C%E6%88%A6 Night Battle formula]
+** [http://ja.kancolle.wikia.com/wiki/%E5%AF%BE%E6%BD%9C ASW formula]
+** [http://ja.kancolle.wikia.com/wiki/%E7%A9%BA%E6%AF%8D%E7%A0%B2%E6%92%83%E5%8A%9B Carrier Shelling formula]
+** [http://ja.kancolle.wikia.com/wiki/%E8%88%AA%E7%A9%BA%E6%88%A6#.E3.82.B9.E3.83.86.E3.83.BC.E3.82.B83.EF.BC.9A.E8.88.AA.E7.A9.BA.E6.94.BB.E6.92.83 Air Strike formula]
+* [http://kancollecalc.web.fc2.com/damage.html Online calculator] ([http://kancollecalc.web.fc2.com/damage_formula.html explanations])
+<!-- * Modules and templates capable of damage calculations on this wiki: [[Module:ShipCapabilities]], [[Module:Combat]], [[Template:Combat]] -->
+<!--
+==References==
+<references />
+-->
+[[Category:Calculation]]
+[[Category:Example]]
+[[Category:Help]]
+[[Category:Game System]]
+[[Category:Game Mechanics]]

@@ -1,0 +1,411 @@
+__NOTOC__
+<div style="text-align:center;margin-top:20px;">{{Event/DetailToggle}}</div>
+
+==Information==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{Notice|align=left|
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/XIVIqIeRJIqzWF6w1 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1YeBRyOSSiRQerexdTyqFNMYynweag6ZC5tPxoiJ2QA0 here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:524322|here]].
+}}
+
+{{Event/MapInfo
+|en = Strengthening the Patrol Line in Ogasawara Islands
+|jp = 小笠原諸島哨戒線強化
+|romaji = Ogasawara shotō shōkaisen kyōka
+|tag = Convoy Fleet
+|transport = true
+|hp_easy = 290
+|hp_normal = 400
+|hp_hard = 500
+|mechanics =  Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, LoS Check@Events/Mechanics#LoS_Check, Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Ship Locking@Events/Mechanics#Ship_Locking
+|Allreward = {{ShipBattleCardKai|Matsukaze/}}
+
+|Easyitem1 = {{EquipmentCardKai|Underway Replenishment|size=50px}}|Easyqty1 = 1
+
+|Normitem1 = {{EquipmentCardKai|Underway Replenishment|size=50px}}|Normqty1 = 2
+|Normitem2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Normqty2 = 1
+|Normitem3 = {{EquipmentCardKai|Submarine Radar & Waterproof Telescope|size=50px}}|Normqty3 = 1
+
+|Harditem1 = {{EquipmentCardKai|Underway Replenishment|size=50px}}|Hardqty1 = 3
+|Harditem2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Hardqty2 = 1
+|Harditem3 = [[File:Skilled Crew Member Icon.png{{!}}50px{{!}}link=Skilled Crew Member]]|Hardqty3 = 1
+|Harditem4 = {{EquipmentCardKai|Submarine Radar & Waterproof Telescope|size=50px}}|Hardqty4 = 1
+
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules
+|0 -> A = 
+* Does not meet the requirements to go to C
+|0 -> C/empty = 
+* Meet '''all''' of the following requirements:
+** Transport Escort Combined Fleet
+** Fast Fleet
+** Obtain the necessary score through the following:
+*** Reach at least 3 on Easy / 4 on Medium / 5 on Hard.
+*** The score can be reached by having historic ships in your whole combined fleet.
+*** Kamikaze-class destroyers are 2 points each.
+*** {{ShipLink|Satsuki|kai_ni=x}}, {{ShipLink|Fumizuki}}, {{ShipLink|Nagatsuki}}, {{ShipLink|Mikazuki}} and {{ShipLink|Minazuki}} are 1 point each.
+
+|A -> B = 
+* Does not meet the requirements to go to D
+|A -> D/empty = 
+* Meet '''all''' of the following requirements:
+** Transport Escort Combined Fleet
+** Fast Fleet
+
+
+|D/empty -> E, G = * Choice node
+
+|E -> G = 
+* Fleet contains AV
+* Fleet went through node B
+* Amount of Seaplanes equipped ≦ 2
+* The fleet is a Transport Escort Combined Fleet and {{EquipmentLink|Fleet Command Facility}} is activated.(Not equipped, but activated)
+|E -> H =
+* Does not meet the requirements to go to G
+
+|F -> I = * Fixed route
+
+|G -> F = 
+* Amount of (F)BB(V)+CV(B) ≧ 5 (CVL does not count)
+* Slow Fleet
+|G -> I = 
+* Amount of Seaplanes equipped ≦ 2
+* The fleet is a Transport Escort Combined Fleet and {{EquipmentLink|Fleet Command Facility}} is activated.(Not equipped, but activated)
+|G -> J = * Does not meet the requirements to go to either F or I
+
+|H -> J = 
+* If the TP gauge is not destroyed yet:
+** TP gauge is below 25% '''and''' fleet is Transport Escort Combined Fleet (once per sortie)
+|H -> K/resource = 
+* Fleet came from node J
+* TP gauge is destroyed
+
+|I -> J = * Pass the LoS check
+|I -> L/empty = * Fail the LoS check
+
+|J -> H = 
+* If the TP gauge is not destroyed yet:
+** TP gauge is below 25% '''and''' fleet is Transport Escort Combined Fleet
+|J -> K/resource = 
+* Carrier Task Force
+* TP gauge is above 25% '''and''' fleet is Transport Escort Combined Fleet
+* TP gauge is destroyed
+}}
+===Historical Ships===
+All ships used in the historical routing are involved with {{ShipLink|Matsukaze}} in some way.
+* '''Kamikaze-class (same class)'''
+**{{ShipLink|Kamikaze}}, {{ShipLink|Harukaze}}, {{ShipLink|Asakaze}}, {{ShipLink|Matsukaze}}
+* '''Attack on Pearl Harbour (DesDiv 22)'''
+**{{ShipLink|Satsuki|kai_ni=x}}, {{ShipLink|Fumizuki}}, {{ShipLink|Minazuki}}, {{ShipLink|Nagatsuki}}
+* '''Battle of Kolombangara'''
+**{{ShipLink|Satsuki|kai_ni=x}}, {{ShipLink|Mikazuki}}, {{ShipLink|Minazuki}}
+* '''Battle of Vella Lavella'''
+**{{ShipLink|Fumizuki}}
+
+===Notes===
+*Compositions which went J -> K via Transport Combined Fleet initially will route J -> H after the TP gauge has been reduced to at or below 25% [https://twitter.com/trollkin_ball/status/830670987771334656].
+**This will not happen for Surface Task Force or Carrier Task Force fleets.
+*For the boss node, the final form will trigger based on the amount of TP that will be depleted with a S-rank and TP remaining. 
+**If the S-rank TP depletion exceeds the TP remaining, the final form will appear even if more than 25% of the TP bar is remaining.[http://imgur.com/a/2QTSb]
+**If the bar is at or under 25%, the final form will always appear.
+===Tips===
+*This is a Transport Operation map. Equipping many [[Drum Canister (Transport Use)]] and [[Daihatsu Landing Craft]] will help deplete the TP gauge quickly.
+**A or S-rank victories are required to deplete the TP gauge. B-ranks will result in a fail (no gauge depleted).
+* Avoid using a Slow Fleet at all costs. Using slow fleets will give yield the longest routes possible.
+*For Transport Combined Fleet (TCF), it is recommended to bring 3 or more seaplane fighters ([[Type 2 Seaplane Fighter Kai]] or [[Ro.44 Seaplane Fighter]]) to gain Air Parity against the boss so that the enemy doesn't gain access to [[Artillery Spotting]].
+**With a 4th seaplane fighter, and depending on the [[Land Base Aerial Support]] setup, it is possible to gain Air Superiority (AS) at the boss while using the Transport Combined Fleet.
+*It is possible to use Surface Task Force (STF) or Carrier Task Force (CTF) to deplete the TP gauge. However, compared to the use of the Transport Combined Fleet (TCF), fleets will be taking a longer route and depletion of the TP gauge will be slower.
+**But recommended over Transport Combined Fleet (TCF) if
+***Your TCF lacking too much of air control power.
+***You have many high level (F)BB,CV(B) but less high level DD.
+***You can't pass last dance with TCF.
+===Ranking Up Land-Based Attack Aircrafts' Aircraft Proficiency in node A===
+*If in need of Power Ranking up your Aircraft Proficiency for your Land-based Attack Aircrafts, you may do so in E-2 Node A (also available in node C but then you need the historical ships)
+**You must setup a Transport Combined Fleet with 4 DDs minimum in 1st fleet, and have 1 CL 3~5 DDs in 2nd fleet, equipped with ASW equipment. It is recommended that these 1 CL 3~5 DDs in the 2nd fleet to have the ability to use OASW attacks by either having Isuzu Kai Ni included, and/or having members with 100 ASW stats, as much as possible.
+**Send your LBAS to node A, full of Land-based Attack Aircrafts (you may also add in Carrier-based Aircraft as well if you wish to rank their AIrcraft Proficiency as well) 
+**Morale on both your LBAS and your fleet can be completely ignored, as ASW attacks aren't very affected by morale. 
+**Retreat after finished, and repeat until all of your Aircrafts are fully ranked up to Double Chevron. 
+**As node A is a Submarine node, it will not consume ammo. 
+
+==User Submitted Fleet compositions==
+===Transport Combined Fleet (TCF)===
+'''South Route'''
+*{{Event/Route|A|red|D|blue|E|red|H|red|K|green|M|red}}<br />{{Event/Route|A|red|D|blue|G|red|J|red|K|green|M|red}}
+** 2 BBV/CAV/AV (Fast-Only) 4 DD + 1 CL 2 CA(V) 3 DD
+** Most generic fleet setup to be used without the use of the historical ships.
+** All fleet members must be Fast speed. Any slow ships present will cause off-routing.
+*** To use any normally slow ships for this composition, the ship must have [[Improved Kanhon Type Turbine]] and [[Enhanced Kanhon Type Boiler]]/[[New Model High Temperature High Pressure Boiler]] equipped change their speeds from Slow to Fast.
+** Once the TP gauge is at or below a certain amount (25%?), this fleet will route H -> J, and also J -> H even if H has already been visited once. Consider using Surface Task Force or Carrier Task Force instead.
+***Alternatively ADGJHKM route can be used to clear the remaining gauge.
+<!--
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View Sample Fleet
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|‎Chitose}}
+|{{Seaplane}}[[Type 2 Seaplane Fighter Kai]] '''OR'''<br />
+{{Seaplane}}[[Zuiun]] (EASY MODE ONLY)
+|{{Seaplane}}[[Type 2 Seaplane Fighter Kai]] '''OR'''<br />
+{{Seaplane}}[[Zuiun]] (EASY MODE ONLY)
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Mogami/Kai}}
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{Seaplane}}[[Type 2 Seaplane Fighter Kai]] '''OR'''<br />
+{{Seaplane}}[[Zuiun]] (EASY MODE ONLY)
+|-
+|{{ShipBattleCardKai|Ooshio/Kai Ni}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Kasumi/Kai Ni}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Asashio/Kai Ni D}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Arashio/Kai Ni}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Naka/Kai Ni}}
+|{{RedGunMedium}}[[20.3cm (No.3) Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm (No.3) Twin Gun Mount]]
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Suzuya/Kai}}
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{Seaplane}}[[Type 98 Reconnaissance Seaplane (Night Recon)]]
+|-
+|{{ShipBattleCardKai|Kumano/Kai}}
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|-
+|{{ShipBattleCardKai|Kawakaze/Kai Ni}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]
+|
+|-
+|{{ShipBattleCardKai|Shimakaze/Kai}}
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]|
+|
+|-
+|{{ShipBattleCardKai|Verniy}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]|
+|
+|}
+-->
+
+'''North Route'''
+* {{Event/Route|C|blue|F|red|I|red|J|red|K|green|M|red}}
+** Fleet setup is 2 CAV/AV (Fast) 4 DD + 2 CA(V) 1 CL 3 DD.
+** A number of historical ships is required depending on the selected map difficulty.  See Branching Rules above for details.
+*** For hard, the minimum number possible is 2 Kamikaze-class DD and one other historical ship.
+*** For normal, the minimum number possible is 2 Kamikaze-class DD.
+*** For easy, the minimum number possible is 1 Kamikaze-class DD and one other historical ship.
+*** Other combinations (that bring more historical ships) are possible.
+** All fleet members must be Fast speed. Any slow speed ships without speed boost present in the fleet will cause the fleet to start from south instead.
+** Once the TP gauge is at or below a certain amount (25%?), this fleet will route J -> H. Consider using Surface Task Force or Carrier Task Force instead.
+***Alternatively CFIJHKM route can be used to clear the remaining gauge.
+**This route is Transport Combined Fleet exclusive and cannot be taken via Surface Task Force or Carrier Task Force.
+
+<!--
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View Sample Fleet
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|‎Chiyoda}}
+|{{Seaplane}}[[Type 2 Seaplane Fighter Kai]] '''OR'''<br />
+{{Seaplane}}[[Zuiun]] (EASY MODE ONLY)
+|{{Seaplane}}[[Type 2 Seaplane Fighter Kai]] '''OR'''<br />
+{{Seaplane}}[[Zuiun]] (EASY MODE ONLY)
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Mikuma/Kai}}
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{Seaplane}}[[Type 2 Seaplane Fighter Kai]] '''OR'''<br />
+{{Seaplane}}[[Zuiun]] (EASY MODE ONLY)
+|-
+|{{ShipBattleCardKai|Satsuki/Kai Ni}}<br />
+'''MANDATORY'''
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Kasumi/Kai Ni}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Asashio/Kai Ni D}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Arashio/Kai Ni}}
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|{{LandingCraft}}[[Daihatsu Landing Craft]]<br />
+'''OR'''<br />
+{{Drum}}[[Drum Canister (Transport Use)]]
+|
+|-
+|{{ShipBattleCardKai|Ooyodo/Kai}}
+|{{RedGunMedium}}[[20.3cm (No.3) Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm (No.3) Twin Gun Mount]]
+|{{Seaplane}}[[Type 98 Reconnaissance Seaplane (Night Recon)]]
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|-
+|{{ShipBattleCardKai|Suzuya/Kai}}
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{Seaplane}}[[Type 0 Observation Seaplane]]
+|-
+|{{ShipBattleCardKai|Kumano/Kai}}
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm (No.2) Twin Gun Mount]]
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|-
+|{{ShipBattleCardKai|Hatsushimo/Kai Ni}}
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{TorpedoWeapon}}[[61cm Quintuple (Oxygen) Torpedo Mount]]<br />
+Only Recommended for Ships above 30 Luck
+|{{TorpedoWeapon}}[[61cm Quintuple (Oxygen) Torpedo Mount]]]<br />
+Only Recommended for Ships above 30 Luck
+|
+|-
+|{{ShipBattleCardKai|Kamikaze/Kai}}<br />
+'''MANDATORY'''
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{TorpedoWeapon}}[[61cm Quadruple (Oxygen) Torpedo Mount]]<br />
+Only Recommended for Ships above 30 Luck
+|{{TorpedoWeapon}}[[61cm Quadruple (Oxygen) Torpedo Mount]]<br />
+Only Recommended for Ships above 30 Luck
+|
+|-
+|{{ShipBattleCardKai|Harukaze/Kai}}<br />
+'''MANDATORY'''
+|{{Drum}}[[Drum Canister (Transport Use)]]
+|{{TorpedoWeapon}}[[61cm Quadruple (Oxygen) Torpedo Mount]]<br />
+Only Recommended for Ships above 30 Luck
+|{{TorpedoWeapon}}[[61cm Quadruple (Oxygen) Torpedo Mount]]<br />
+Only Recommended for Ships above 30 Luck
+|
+|}
+-->
+
+===Carrier Task Force (CTF)===
+* {{Event/Route|A|red|B|orange|E|red|G|red|J|red|K|green|M|red}}
+** All members must be Fast speed to avoid G → F offroute.
+** 2 FBB 2 CV(B) 2 CA(V) + 1 CL 4 DD 1 CLT
+** 1 FBB 2 CV(B) 2 CVL 1 CA(V) + 1 CL 3 DD 2 CA(V) 
+** 4 CV(B) 2 CA(V) + 1 CL 2 DD 2 CA(V) 1 CLT 
+** 1 FBB 3 CV(B) 1 CVL 1 CA(V) + 1 CL 2 DD 2 CA(V) 1 CLT 
+** 2 FBB 2 CV(B) 2 CVL + 1 CL 2 DD 1 CA(V) 2 CLT
+
+
+</div>{{clear}} <!-- Information collapsible -->
+{{Include|Enemy patterns}}
+{{Include|Drop list}}

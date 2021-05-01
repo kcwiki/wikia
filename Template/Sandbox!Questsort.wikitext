@@ -1,0 +1,19 @@
+|- id="{{{1}}}"
+{{#switch:{{{tab|0}}}|1={{!}}width="70px" valign="top" align="right"{{!}}{{#switch:{{{pos}}}|st|sten=<p style{{=}}"font-size:26px">&#8680;</p>}}|2={{!}}width="70px"{{!}}
+{{!}}width="70px" valign="top" align="right"{{!}}{{#switch:{{{pos}}}|st|sten=<p style{{=}}"font-size:26px">&#8680;</p>|}}}}
+| width="70px" valign="top" align="center" | <span style="color:{{#switch: {{padleft:|1|{{{1}}}}}|A=green|B=red|C=limegreen|D=blue|E=orange|F=brown|G=purple|black}}">'''{{{1}}}'''</span><br />{{#switch:{{padleft:|1|{{{1}}}}}|A=[[File:Quest_composition.png|58x58px|link=]]|B=[[File:Quest sortie.png|58x58px|link=]]|C=[[File:Quest practice.png|58x58px|link=]]|D=[[File:Quest expedition.png|58x58px|link=]]|E=[[File:Quest supply.png|58x58px|link=]]|F=[[File:Quest building.png|58x58px|link=]]|G=[[File:Quest modernization.png|58x58px|link=]]|}}{{#switch:{{{pos}}}|en|sten=|<p style{{=}}"font-size:20px">&#9660;</p>}}
+| colspan="{{#expr:3-{{{tab|0}}}}}" | &nbsp;&nbsp;&nbsp;&nbsp;'''{{{2}}}'''{{#if: {{{3}}} |&nbsp;&nbsp;&#124;&nbsp;&nbsp;''{{{3}}}''|}}
+<hr style="border-top:1px solid gray; border-left:none; border-right:none; border-bottom:none; width:99%;"/>
+*{{{4}}}
+{|style="padding:0px; margin:auto; border:0px; border-radius:7px; width:98%; background:#FFFFCC;" cellspacing="0"
+|- style="vertical-align:top;"
+| width="90px" align="right" style="padding-top:8px" |&nbsp;&nbsp;<span style="color:red;">''Reward(s)''</span>
+|
+*[[File:FuelKai.png|14x14px|link=]]&nbsp;&nbsp;{{#explode:{{{5|?/?/?/?}}}|/|0}}&nbsp;&nbsp;[[File:AmmoKai.png|14x14px|link=]]&nbsp;&nbsp;{{#explode:{{{5|?/?/?/?}}}|/|1}}&nbsp;&nbsp;[[File:SteelKai.png|14x14px|link=]]&nbsp;&nbsp;{{#explode:{{{5|?/?/?/?}}}|/|2}}&nbsp;&nbsp;[[File:BauxiteKai.png|14x14px|link=]]&nbsp;&nbsp;{{#explode:{{{5|?/?/?/?}}}|/|3}}
+{{#if:{{{6}}}|*{{{6}}}|}}
+| width="3px" |
+|}
+|-{{#ifeq:{{{hide}}}|yes|style="display:none;"||}}
+|height="10px"|
+|
+<noinclude>

@@ -1,0 +1,95 @@
+{{for|more information and tips on how to sparkle ships|Morale/Fatigue}}
+[[File:Greatsuccess.jpg|center|500px|Great Success]]
+
+Great Success is the advanced form of Success. It grants 50% additional resources, double (x2) the Admiral experience, double (x2) the ship experience, and if applicable, the great success item reward.
+
+The Great Success chance is determined by the initial state of the fleet—ergo, even if ''none'' of your ships are sparkling when the expedition ''returns'', you can still get a great success rating as long as they were sparkling when they ''left''.
+
+Great Success still requires [[#Normal Success|Normal Success]] conditions to be met. The factors that affect its chances of occurring are also different dependent on the expedition type:
+====Regular Expedition====
+*The primary requirement for Great Success is that '''all ships''' in the expedition fleet must be sparkled ([[morale]] ≥ 50). If you have 6 ships in the expedition fleet and you decide to sparkle only 5 of the 6, you will '''not''' be able to achieve Great Success.
+*Great Success rate starts at 21% if all the requirements are met, and is increased by 15% for every sparkled ship.
+**5 sparkled ships are enough for 96% Great Success rate. If the expedition requires 6 ships, you have to sparkle the 6th ship as well.
+**With 6 sparkled ships, you achieve a Great Success rate of 100%.
+
+{| class="wikitable"
+|-
+! colspan="2" |Regular Expeditions
+|-
+! scope="col"|# of sparkled ships
+! scope="col"|GS Rate
+|-
+|1
+|36%
+|-
+|2
+|51%
+|-
+|3
+|66%
+|-
+|4
+|81%
+|-
+|5
+|96%
+|-
+|6
+|100%
+|}
+
+====Drum Expedition (21, 24, 37, 38, 40)====
+*Unlike Regular expeditions, sparkling every ship in the fleet is not a necessity to be able to gain Great Success. These expeditions involves the use of {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canisters}} and some expedition requires you to carry a certain amount of them as requirement.
+*Like Regular expeditions, the Great Success value starts at 21% if all requirements are met, but this is further influenced by the fact whether enough drums are equipped or not and how many sparkled ships you have in your fleet.
+*The Great Success rate is increased by:
+**Overdrumming, which involves the fleet carrying more {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canisters}} than is required.  This is only a one-time bonus of 20% per expedition fleet; equipping more drums than the required overdrum value does not increase the rate any higher. '''Note:''' If you do not overdrum, you will suffer a penalty of -15% instead. It is thus recommended to always try to overdrum whenever it is possible.
+***Carrying 25% more {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canisters}} than the expedition requirement asks you, with the number rounded down. Expedition 21 for example, requires you to bring 3 drums, and 125% of 3 makes it 4. Thus, for expedition 21, you need 4 drums in total.
+***In case of expedition 24 and 40, where equipping drums is not a requirement for basic success, the requirement for overdrumming is equipping at least 4 drums.
+**Sparkling your ships. The Great Success rate increases per sparkled ship, just like Regular Expeditions.
+*Sparkling at least 4 ships combined with overdrumming will give you a 100% success rate in these expeditions. Note that it is impossible to achieve 100% if you do not utilize overdrumming, even if you bring 6 sparkled ships.
+
+{| class="wikitable"
+|-
+! colspan="3" |Drum Expeditions
+|-
+! scope="col"|# of sparkled ships
+! scope="col"|Not Overdrummed
+! scope="col"|Overdrummed
+|-
+|0
+|6%
+|41%
+|-
+|1
+|21%
+|56%
+|-
+|2
+|36%
+|71%
+|-
+|3
+|51%
+|86%
+|-
+|4
+|66%
+|100%
+|-
+|5
+|81%
+|100%
+|-
+|6
+|96%
+|100%
+|}
+
+===="Vita-esque" Expeditions (A2 & 41)====
+*In expeditions A2 & 41, the flagship's level affects the Great Success chance<ref>https://twitter.com/jo_swaf/status/1145297004995596288</ref>.
+*The Great Success chance can be calculated by using ([[KanColle Kai]])'s Great Success formula<ref>[https://kcwiki.github.io/plot#tdZesAJIIEJODJNCMDtWcffisAtjhiksAuAsBDuAsH2csBBxFDsITPNEPREQPrKsQ2JsOM2MsMrKsR2JsJPJ2EsQ2L2h2MsRL2D2esJ3JsEK2VsKL2K2EsEM3csMJxKD2wsOQ2DsRxKD2esL2UsLKxKDsO2l2BxEExMDsP3JsIyND2ExMD2p3VxDD2KsLxsDsNxEF2MsMyZGxgDxSDx3F]</ref>:<br /> <math>GS_\% = 16 + 15 \times S + \left \lfloor \sqrt{L} + \frac{L}{10} \right \rfloor</math><br />
+**Where:
+**<math>S</math>is the number of sparkled (morale ≥ 50) ships
+**<math>L</math> is the flagship level.
+*For example, if the flagship level is at least 128 and the fleet contains at least four sparkled ships, then the fleet should always achieve Great Success in A2 and 41.
+<references/>

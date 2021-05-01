@@ -1,0 +1,42 @@
+----
+<!-- nice but doesn't work -->
+
+{{#if:{{{notoc|}}}|
+__NOTOC__
+}}
+
+{{#if:{{{edit|}}}|
+<div style="float:right;font-size:14px">{{Edit|{{PAGENAME}}}}</div>
+}}
+
+{{#if:{{{banner|}}}|
+[[File:Wikia_2019_March_22nd_Banner.png|center|500px|frameless|link=]]
+}}
+
+{{#if:{{{table|}}}|
+{{{!}} class="wikitable"
+!...!!...
+{{!}}-
+{{!}}...{{!}}{{!}}...
+{{!}}}
+}}
+
+{{#if:{{{header|}}}|
+==Content<div style="float:right;font-size:14px">{{Edit|{{PAGENAME}}}}</div>==
+}}
+---- <!-- this? -->
+{{#if:{{{notoc|}}}|
+__NOTOC__
+}}{{#if:{{{edit|}}}|<nowiki />
+<div style="float:right;font-size:14px">{{Edit|{{PAGENAME}}}}</div>
+}}{{#if:{{{banner|}}}|<nowiki />
+[[File:Wikia_2019_March_22nd_Banner.png|center|500px|frameless|link=]]
+}}{{#if:{{{table|}}}|<nowiki />
+{{{!}} class="wikitable"
+!...!!...
+{{!}}-
+{{!}}...{{!}}{{!}}...
+{{!}}}
+}}{{#if:{{{header|}}}|<nowiki />
+==Content<div style="float:right;font-size:14px">{{Edit|{{PAGENAME}}}}</div>==
+}}

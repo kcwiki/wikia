@@ -1,0 +1,124 @@
+{{Map/Header}}
+{{Map/Info
+|en = Okinoshima Island
+|jp = 沖ノ島海域
+|romaji = Okinoshima-kaiiki
+|exp_hq = 120
+|exp_hq_boss = 1740
+|strategy_name = [[wikipedia:Battle_of_the_Philippine_Sea|Operation A-Go: The Fleet's Decisive Battle]]
+|strategy_name_ja = あ号艦隊決戦
+|strategy_info = On Okinoshima Island,  we will intercept a powerful enemy carrier task force which has invaded there. Defeat them completely with your fleet's full-power sortie! 
+|strategy_info_ja = 沖ノ島海域に襲来した有力な敵機動部隊を迎撃する。艦隊全力出撃で、これを捕捉撃滅せよ！
+}}
+{{MapBranchingTable
+|id = 2-4
+|B -> C/storm,G/resource=
+*Meet '''ANY''' of the following to go to C
+**(F)BB(V)+CV(L/B) ≥ 5
+**CV(L/B) ≥ 3 '''AND''' DD ≤ 2
+**(F)BB(V)+CV(B) ≥ 3 '''AND''' DD ≤ 2
+*Meet '''ALL''' of the following to go to G
+**No (F)BB(V), CV(L/B), AV, CLT or SS(V)
+**CL = 1
+**DD ≥ 4
+**Amount of ships in fleet = 6
+*Otherwise, random routing
+
+|C/storm -> F,G/resource=
+*Go to G if fleet contains AO
+*Otherwise, random routing
+
+|F -> A/resource, J/empty=
+*Go to A if fleet contains no CVL '''AND''' DD ≤ 1
+*Otherwise, random routing
+
+|H/empty -> I,L=
+*Meet '''ALL''' of the following requirements to go to L:
+**Your fleet must contain 6 ships.
+**DD ≥ 4
+**CL+CT ≤ 2
+**CA(V) ≤ 1
+**No other ship types are allowed.
+*Otherwise, go to I.
+
+|I -> E,K/empty=
+*Random routing
+**If fleet contains CL '''AND''' CVL, 90% K
+**If fleet contains CVL, 80% K
+**If fleet contains CL, 75% K
+**Otherwise, more likely to go to E
+
+|J/empty -> L,M=
+*Meet '''ANY''' of the following to go to L
+**(F)BB(V)+CV(L/B) ≥ 4
+**No CV(B)
+*Meet '''ANY''' of the following to go to M
+**(F)BB(V)+CV(L/B) = 3
+**CV(B) = 2
+*Otherwise, random routing
+
+|K/empty -> L,N/resource,O/empty=
+*Random routing, with higher chance of going to N if fleet contains AV or AS
+*Go to L if DD ≥ 2
+*Otherwise, random routing between L and O
+**If fleet contains DD, you will more likely to go to L
+**If fleet doesn't contain DD, you will more likely to go to O
+
+|L -> M=
+*(F)BB(V)+CV(L/B) ≥ 4
+*Random routing if you don't meet any conditions
+|L -> P=
+*(F)BB(V)+CV(B) ≤ 2
+*Random routing if you don't meet any conditions
+}}
+
+===Note===
+*Clearing this map will unlock [[World_3/3-1|3-1]], [[World_4/4-1|4-1]], and [[World_7/7-1|7-1]] but not the subsequent maps of each world. To unlock those, clearing [[World_1/1-5|1-5]] (at least once) and [[World_7/7-1|7-1]] are required.
+===Recommended Fleets===
+
+*North or South Route with Heavy Fleet
+*{{Event/Route|B|red|C|magenta|F|red|J|blue|M|red|P|red}} or {{Event/Route|B|red|C|magenta|G|green|H|blue|I|red|K|blue|L|red|P|red}}
+**Longer route with '''4 Battles total''' (Both North and South routes.)
+**2 ((F)BB(V)+CV(B)) + 2DD + 0-1 CVL + XX (CA(V)/CLT)
+***1(F)BB(V) + 1CV(B) + 1CVL + 2DD + 1XX
+***2CV(B) + 1CVL + 2~3 DD + 1~0 XX (Taking 2 DD will guarantee going to {{Event/Route|C|magenta}})
+**{{Event/Route|C|magenta}} and {{Event/Route|G|green}} are both random with the comp, so going north or south is entirely by chance.
+**Recommended for '''Players who lack properly leveled Destroyers'''.
+**Please Note that when using a Heavy Fleet there is always the chance to off-route to either {{Event/Route|A|green}} or {{Event/Route|E|red}}.
+
+
+*Middle Route with Light Fleet {{Event/Route|B|red|G|green|H|blue|L|red|P|red}}
+**This is the shortest Route '''(3 Battles Total)'''
+***1 CL 4 DD 1 CA(V)
+**'''Not Recommended for Beginners for clearing the Map''', due to this method needing high leveled and fully modernized Destroyers to survive the Pre-Boss Nodes and handle the Heavy Enemy Fleet in the Boss Node.
+
+==Sample Fleets==
+{{Section|no_clear=true}}
+{{Fleets
+|!North/South Route
+|!!Example 1
+|-|Hiei/Kai|35.6cm Twin Gun Mount|35.6cm Twin Gun Mount|Type 0 Reconnaissance Seaplane|Type 91 Armor Piercing Shell
+|-|Akagi/Kai|Type 97 Torpedo Bomber|Type 99 Dive Bomber|Type 0 Fighter Model 52|Type 0 Fighter Model 21
+|-|Junyou/Kai|Type 97 Torpedo Bomber|Type 99 Dive Bomber|Type 0 Fighter Model 52|Type 0 Fighter Model 21
+|-|Kitakami/Kai|20.3cm Twin Gun Mount|20.3cm Twin Gun Mount|Type A Kouhyouteki
+|-|Yuudachi/Kai|10cm Twin High-angle Gun Mount|10cm Twin High-angle Gun Mount|Type 13 Air Radar
+|-|Shigure/Kai|10cm Twin High-angle Gun Mount|10cm Twin High-angle Gun Mount|Type 13 Air Radar
+|!!Example 2
+|-|Hiyou/Kai|Type 97 Torpedo Bomber|Type 99 Dive Bomber|Type 0 Fighter Model 52|Type 0 Fighter Model 21
+|-|Akagi/Kai|Type 97 Torpedo Bomber|Type 99 Dive Bomber|Type 0 Fighter Model 52|Type 0 Fighter Model 21
+|-|Kaga/Kai|Type 97 Torpedo Bomber|Type 99 Dive Bomber|Type 0 Fighter Model 52|Type 0 Fighter Model 21
+|-|Ooi/Kai|20.3cm Twin Gun Mount|20.3cm Twin Gun Mount|Type A Kouhyouteki
+|-|Hibiki/Kai|10cm Twin High-angle Gun Mount|10cm Twin High-angle Gun Mount|Type 13 Air Radar
+|-|Akatsuki/Kai|10cm Twin High-angle Gun Mount|10cm Twin High-angle Gun Mount|Type 13 Air Radar
+|!Middle Route
+|!!Example 1
+|-|Abukuma/Kai Ni|15.5cm Triple Gun Mount|15.5cm Triple Gun Mount|Type A Kouhyouteki
+|-|Akatsuki/Kai Ni|12.7cm Twin Gun Mount|12.7cm Twin Gun Mount Model B Kai 2|Type 22 Surface Radar
+|-|Hibiki/Kai Ni|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|Type 13 Air Radar Kai
+|-|Inazuma/Kai|12.7cm Twin Gun Mount|12.7cm Twin Gun Mount|Type 22 Surface Radar
+|-|Ikazuchi/Kai|12.7cm Twin Gun Mount|12.7cm Twin Gun Mount|Type 22 Surface Radar
+|-|Mogami/Kai|20.3cm Twin Gun Mount|20.3cm Twin Gun Mount|Type 0 Reconnaissance Seaplane|Type 2 Seaplane Fighter Kai
+}}
+{{SectionEnd}}
+{{Clear}}
+{{Map/Footer}}

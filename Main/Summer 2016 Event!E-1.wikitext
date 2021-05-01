@@ -1,0 +1,207 @@
+__NOTOC__{{EnableTalkButton}}
+<div style="text-align:center">{{Event/DetailToggle}}</div>
+
+==Information==
+
+<div class="mw-collapsible mw-expanded">
+
+
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;">
+;COMMUNITY AREAS
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/za1XBzofbwHeMPzD3 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1HXswAHk3ukAkLiLgU4kq707UihLCeiBmUSOW7mBAqFc/edit#gid=1035239931 here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:461449|here]].
+</div>{{Event/MapInfo
+|en = Buntan Patrol
+|jp = ブンタン沖哨戒
+|romaji = Buntan oki Syôkai
+
+|tag = Patrol Fleet
+
+|mechanics = LoS Check@Events/Mechanics#LoS_Check@background:yellow, Ship Locking@Events/Mechanics#Ship_Locking@background:yellow
+
+|hp_hard = 900|hp_easy = 550|hp_normal = 700
+
+|Easyitem1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]|Easyqty1 = 1
+|Easyitem2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]|Easyqty2 = 1
+|Easyitem3 = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]]|Easyqty3 = 2
+|Easyitem4 = {{EquipmentCardKai|Daihatsu Landing Craft|size=50px}}|Easyqty4 = 1
+|Easyitem5 = {{EquipmentCardKai|Type 96 Land-based Attack Aircraft|size=50px}}|Easyqty5 = 1
+
+|Normitem1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]|Normqty1 = 1
+|Normitem2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]|Normqty2 = 2
+|Normitem3 = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]]|Normqty3 = 2
+|Normitem4 = {{EquipmentCardKai|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|size=50px}}|Normqty4 = 1
+|Normitem5 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft|size=50px}}|Normqty5 = 1
+
+|Harditem1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]|Hardqty1 = 1
+|Harditem2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]|Hardqty2 = 3
+|Harditem3 = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]]|Hardqty3 = 2
+|Harditem4 = {{EquipmentCardKai|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|size=50px}}|Hardqty4 = 1
+|Harditem5 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft Model 34|size=50px}}|Hardqty5 = 1
+}}
+
+<div>
+
+===Branching rules===
+{| class="article-table"
+!Node
+!Next
+!Condition
+|-
+|rowspan="2"|Start
+|{{Route|A|#FF0000;}}
+|Having less than 2 {{Tooltip|[[EliteDD/Sortable|DD]]|Destroyers}}<br />
+{{Tooltip|[[EliteDD/Sortable|DD]]|Destroyers}}+{{Tooltip|[[EliteCL/Sortable|CL]]|Light Cruiser}} in fleet ≤ 2<br />
+{{Tooltip|[[EliteCVL/Sortable|CVL]]|Light Aircraft Carrier}} ≥ 3
+|-
+|{{Route|B|#FF0000;}}
+|{{Tooltip|[[EliteDD/Sortable|DD]]|Destroyer}} ≥ 2 in fleet.<br />
+{{Tooltip|[[EliteDD/Sortable|DD]]|Destroyers}}+{{Tooltip|[[EliteCL/Sortable|CL]]|Light Cruiser}} in fleet ≥ 3<br />
+{{Tooltip|[[EliteCVL/Sortable|CVL]]|Light Aircraft Carrier}} ≤ 2
+|-
+|rowspan="3"|{{Route|B|#FF0000;}}
+|{{Route|C|#FF0000;}}
+|
+Non {{Tooltip|[[EliteDD/Sortable|DD]]|Destroyer}}/{{Tooltip|[[EliteCL/Sortable|CL]][[EliteCLT|(T)]]|Light Cruiser (Torpedo)}}/{{Tooltip|[[Auxiliary Ships|CT]]|Training Cruiser}}/{{Tooltip|[[EliteCVL/Sortable|CVL]]|Light Aircraft Carrier}} ≥ 2 <br />
+If FBB in fleet, FBB+{{Tooltip|[[EliteCVL/Sortable|CVL]]|Light Aircraft Carrier}} ≥ 2
+|-
+|{{Route|D|#00CCFF;}}
+|
+Fast Fleet<br />
+{{Tooltip|[[EliteCL/Sortable|CL]]|Light Cruiser}} must be in fleet<br />
+No {{Tooltip|[[EliteBB/Sortable|FBB]]|Fast Battleship}} in fleet
+|-
+|{{Route|E|#FF0000;}}
+|
+1 or less non {{Tooltip|[[EliteDD/Sortable|DD]]|Destroyer}}/{{Tooltip|[[EliteCL/Sortable|CL]][[EliteCLT|(T)]]|Light Cruiser (Torpedo)}}/{{Tooltip|[[Auxiliary Ships|CT]]|Training Cruiser}}<br />
+If FBB in fleet, FBB+{{Tooltip|[[EliteCVL/Sortable|CVL]]|Light Aircraft Carrier}} = 1<br />
+Slow Fleet
+|-
+|rowspan="2"|{{Route|G|#FF0000;}}
+|{{Route|H|#00CCFF;}}
+|fail LoS check
+|-
+|{{Route|I|#FF0000;}}
+|pass LoS check
+|}
+
+===Fleet compositions===
+
+
+
+<div style="padding:0px 0px 0px 50px;">{{Route
+|B|#FF0000;
+|D|#00CCFF;
+|F|#FF0000;
+|G|#FF0000;
+|I|#FF0000;
+}}</div>
+'''Mid Route''' - Fast Fleet only
+* 1CL + 5DD <ref>With 5DD and [[Isuzu]] as CL, adding reconnaissance planes will allow to pass the LoS check to the boss node, even if their count is 0 ([[:file:Compo_3.png|exemple]]), while adding radars doesn't seem to work.</ref>
+* 1CL + 4DD + 1CVL <sup>[https://puu.sh/qyMGi/2d7fd4fb1b.jpg]</sup>
+* 2CL + 3DD + 1CVL <sup>[https://puu.sh/qyNnK/84b7ab5926.jpg]</sup>
+* 2CL + 2DD + 2CVL
+* 3CL + 2DD + 1CVL <sup>[https://puu.sh/qyNYh/ee26d56d21.jpg]</sup>
+* 1CL + 1CLT + 3DD + 1CVL
+*1CAV + 2CL + 3DD
+*1CAV + 2CL + 2DD + 1CLT <sup>[http://i.imgur.com/1QUtVH7.jpg]</sup>
+*2CL + 2DD + 1CLT + 1CVL
+*2CL + 4DD
+*3CL + 3DD
+*4CL + 2DD
+
+
+
+<div style="padding:0px 0px 0px 50px;">{{Route
+|B|#FF0000;
+|E|#FF0000;
+|F|#FF0000;
+|G|#FF0000;
+|I|#FF0000;
+}}</div>
+'''North Route'''
+*1CL + 1CAV + 4DD
+*1CA(V) + 1CLT + CL + 3DD
+*1FBB + 2CL + 3DD
+*1FBB + 1CLT + 2CL + 2DD
+*1CAV + 1CT + CL + 3DD
+*1CL + 2CT + 2DD + 1CVL
+*1CL + 2CT + 2DD + 1FBB
+
+
+
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#FF0000;
+|C|#FF0000;
+|F|#FF0000;
+|G|#FF0000;
+|I|#FF0000;
+}}</div>
+'''South Route''' (not recommended)
+* 4 CL 1 DD 1 CVL
+* 1 CL 3 DD 1 CVL 1 FBB Will take you BCFGI
+
+==Tips==
+* '''No CV and slow BB allowed'''
+* If you lack 5 OASW-capable ships, it is suggested to farm [[I-26]] on Easy mode first, then clear the map on Hard.
+* The map has a Line of Sight requirement at pre-boss: 10.06 ~ 21.17{{Cite}} eLoS on Normal and 13.55 ~ 22.5 eLoS on Hard. <sup>[https://puu.sh/qyMGi/2d7fd4fb1b.jpg]</sup>
+* There are many sub nodes. It's recommended to bring Isuzu for preemptive ASW or any ship with 100+ ASW after equipment.
+* Bringing a FBB offroutes you to C and 20% less fuel at boss (20% fuel left at boss vs. 40%), but enables the second shelling phase at the boss node. If you lack ASW, it might be better to bring a FBB.
+* Do not go into a night battle with the subs, including the boss. This is a common mistake which many people makes, as subs can only take scratch damage, which does 6-14% of a targets current HP rounded down (can be rounded to 0), meaning '''subs cannot be killed during a night battle'''. The only exceptions are when you are using a [[Combined Fleet]] or when the battle starts at night.
+* If farming for Akitsushima or Mizuho in node C, bring CVLs with a few Fighters to gain AS+ against the enemy.
+* To go to node C, all you must do is use a fleet that goes against the Branching Rules so that you will start from node A instead of B.  
+
+== Recommended Fleets==
+====Clearing Map & Farming Boss Node====
+* 2 CL 1 CLT 2 DD 1 CVL 
+*1 FBB 1 CLT 2 CL 2 DD
+*1 FBB 1 CL 2 CT 2 DD
+==== Farming node C for Mizuho and Akitsushima ====
+* 1 FBB 2 CLT 3 CVL
+* 1 FBB 1 CLT 4 CVL
+* 2 CLT 4 CVL
+* 6 SS(V)
+
+===References===
+<references />
+
+{{clear}}
+{{:Summer 2016 Event/E-1/Enemy patterns}}
+{{clear}}
+
+==Drop list==
+
+<div class="mw-collapsible mw-expanded">
+
+
+
+
+
+<!-- Refer to http://kancolle.wikia.com/wiki/Template:DropList/doc -->
+{{DropList
+|no_legend = true
+|filter_button = true
+|height = 234
+|subst = |nodes = A, B, C, E, F, G, I
+|boss = I
+|I-26: I/Easy
+|Akitsu Maru: I/Easy
+|Akitsushima: C/Easy
+|Kumano : C/Hard, G/Easy, I/Easy
+|Suzuya: G/Easy, I/Easy
+|Maruyu: I/Easy
+|Mikuma: I/Easy, C/Easy
+|Mizuho: C/Easy
+|Mogami: G/Easy, I/Easy
+|I-19: I/Easy
+|I-58: I/Easy
+|I-8: I/Easy
+|Haruna: C/Easy
+|Ise: I/Easy
+|Fusou: I/Easy
+|Yamashiro: I/Easy
+|Ooi: I/Easy
+|Zuihou: C/Easy}}
+</div>
+{{clear}}

@@ -1,0 +1,893 @@
+<p style="text-align:center;">'''Disclaimer'''</p>
+
+This is a work in progress. Contents of this post have been made through personal observations and by no means are official opinion, facts or any sort of representation of such opinions or facts. The author is not responsible for any sort of misunderstanding or misleading conclusions drawn based on the information below.
+
+
+==        Revisions        ==
+{| class="mw-collapsible mw-collapsed wikitable" style="text-align: center; background:#FFFFFF",
+|-
+|        '''History'''
+        
+|-
+|        Ver0.1.03(2016-02-10): Battle section being filled in. Terminologies for value types being revised to a more JavaScript-oriented vocabs.<br>Ver 0.1.02(2016-01-17): Port section filled in. Battle section added.<br />Ver 0.1.01 (2016-01-14): Page opened. Introduction laid down. Port section added.        
+|}
+
+==        Introduction        ==
+
+First of all, welcome to my guide on how to read raw API data.
+
+I am pretty sure that many of you are familiar with various viewers for Kancolle, namely KCV and KC3Kai. Many admirals use these viewers as an aid to their daily command activity. It is a very neat tool that allows you to visualize variety of information that are otherwise very hard to grasp from just looking at your flash game screen.
+
+However, viewers aren't really running around digging through server-side information on how many 12.7cm Single Mounts you have or what the next enemy fleet is going to be. Rather, viewers are actually parser that presents relevant information with various graphic representation and also take a step further to use certain output numbers to calculate things.
+
+What does this mean? What your viewer is actually doing is showing you all the information from the server response made for a recent request made by the game, and if you have access to a developer tool (which you should for most browsers...), you would be able to read what your viewer is showing you in a completely raw text. Of course, such endeavor might sound inefficient, because it really does not achieve anything that your viewer couldn't already do for you. However, the viewer can only do so much as to do things that it was programmed to carry out. It does not think for itself and that is where the fun or reading (Yes! READING!) kicks in.
+
+Basically, what I am claiming is that learning how to read a raw API response data can have its merits.<br />Personally I feel that people below might find the information here interesting
+
+1. People who like numbers... A LOT OF NUMBERS. You can be dumped with 1235792470921357 different values and you'd be happy.<br />2. Programmers who would like to play around and make their own little gadgets for KanColle, but have no idea what any of those API data want to say.<br />3. Theorycrafters who would like to access info that are sometimes no apparent on the viewers too.
+
+Hope you enjoy what is coming.
+
+Reph
+
+==        Response 'port'        ==
+
+The 'port' response is made every time you enter the home port screen from another activity, denoted by the request (api_port). These activities can be entering other screens, receiving fleets coming back from expeditions. This request is one of the heaviest and most central request made in the game as it carries a vast array of information, including information on your kanmusus and your career.
+
+===        Request Process Result (api_result and api_result_msg)        ===
+----
+These values are basically meaningless data-wise. All they do is signify that the request that was made was responded successfully.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table"
+|-
+|        Key        
+|        Value type        
+|        Possible values        
+|        Description        
+|-
+|        api_result        
+|        n        
+|        1 or non-1        
+|        Checks if response was successfully made<br />(1 when succeeded)        
+|-
+|        api_result_msg        
+|        str        
+|        string        
+|        Outputs string of message depending on success of response        
+|}
+
+===        User ID Number (api_member_id)        ===
+----
+While this api key is used as part of the information as a whole, ending up under various first-level sub-keys or even second-level sub-keys, it is so commonplace that it deserves a separate section of its own.
+
+'api_member_id' key outputs an 8 digit value. This value is a value unique to the specific user. '''It is assumed that it is per-server basis at the moment.'''
+<br />
+===        Raw Data Batch (api_data)        ===
+----
+This api key signifies where the actual data for the port screen is. On this section we will only identify the independent sub-keys that rest right below the 'api_data' key, which will also be discussed further down below
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Main key        
+|        Sub-keys        
+|        Description        
+|-
+|rowspan=10|        api_data        
+|        api_material        
+|        Materials and resources        
+|-
+|        api_deck_port        
+|        Fleets information        
+|-
+|        api_ndock        
+|        Repair dock status        
+|-
+|        api_ship        
+|        Ship information list        
+|-
+|        api_basic        
+|        Basic admiral/port information        
+|-
+|        api_log        
+|        Log output section        
+|-
+|        api_combined_flag        
+|        Checks for type of combined fleet '''EVENT SPECIFIC'''        
+|-
+|        api_p_bgm_id        
+|        Port BGM ID #        
+|-
+|        api_parallel_quest_count        
+|        Maximum # of quest acceptable        
+|-
+|        api_event_object        
+|        Currently needs more review '''EVENT SPECIFIC'''     
+|}
+<br />
+===        Materials and Resources (api_material)        ===
+----
+This api key holds 8 separate arrays composed of 3 different values that are presented in the following fashion. Each array is bound to a specific resource or material that is available in game and holds the amount of each resource/material that the user has.
+
+'''''{"api_member_id":########,"api_id":x,"api_value":y}'''''
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_id        
+|        number        
+|        Each value has resources/mats assigned<br />'''1: fuel, 2: ammo, 3: steel, 4: baux,<br />5: flamethrower, 6: bucket, 7: devmat,<br />8: screws'''        
+|-
+|        api_value        
+|        number        
+|        The total amount of specific material or resource available.        
+|}
+
+So for example, if you had 57284 fuel, the api response for fuel would look like this
+
+'''''{"api_member_id":########,"api_id":1,"api_value":52784}'''''
+<br />
+===        Fleet Information (api_deck_port)        ===
+----
+This api key holds 4 separate arrays composed of 7 different values/arrays that are presented in the following fashion. Each of the 4 higher level of array is linked to each independent fleet that you have.
+
+'''''[{"api_member_id":########,"api_id":x,"api_name":"string","api_name_id":"","api_mission":[s,n,t_f,x],"api_flagship":"0","api_ship":[sid_1,sid_2,sid_3,sid_4,sid_5,sid_6]}'''''
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_id        
+|        number        
+|        The value of api_id corresponds directly to the Fleet # in your port. (1<=x<=4)        
+|-
+|        api_name        
+|        string        
+|        The name given to the x-th Fleet.        
+|-
+|        api_name_id        
+|        null        
+|        Likely a defunct key that was meant to hold id for each Fleet name to have it recalled.        
+|-
+|        api_mission        
+|        [s,n,t_f,a]        
+|        Outputs information on the expedition being carried out by a fleet<br />'''s=Expedition state<br />(0=Idle, 1=Active, 2=Returned, 3=Recalled)<br />n=Expedition # (1<=n<=40 usually)<br />t_f=Relative final time*<br />a=unknown value (seems to be 0 all the time)'''        
+|-
+|        api_flagship        
+|        number        
+|        Purpose of this value is yet unknown. Seems to be always 0        
+|-
+|        api_ship        
+|        [sid_1,sid_2,sid_3,sid_4,sid_5,sid_6]        
+|        sid_i=Ship ID # for the ship at i-th slot. '''NOT KANDEX #.''' Value is -1 for empty slots.        
+|}
+
+* For t_f value under api_mission, the value is given in thousandth of seconds passed from t_0=0, set to be at 12:00:00.000 AM on January 1st of 1970, UTC+0. This reference is used for all time values in the game.
+<br />
+===        Repair Dock Status (api_ndock)        ===
+----
+This api key holds 4 separate arrays containing 10 different values that are represented in the following fashion
+
+'''''{"api_member_id":####,"api_id":x,"api_state":s,"api_ship_id":sid,"api_complete_time":t,"api_complete_time_str":"YYYY-MM-DD HH:MM:SS","api_item1":fuel,"api_item2":ammo,"api_item3":steel,"api_item4":baux}'''''
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_id        
+|        number        
+|        Represents the repair dock slots with x=1 being top and increasing as you go down.        
+|-
+|        api_state        
+|        number        
+|        Represents the repair dock usage<br />(0=Unused, 1=In use, ''additional values should exist'')        
+|-
+|        api_ship_id        
+|        number        
+|        Gives the ID # of the ship that is in the repair dock at the moment. '''NOT KANDEX #.'''        
+|-
+|        api_complete_time        
+|        number        
+|        Relative time point for which repair will be done (Uses the 1970-01-01 12AM as reference)        
+|-
+|        api_complete_time_str        
+|        string        
+|        Outputs the expected completion time in string for JST with absolute dates.        
+|-
+|        api_item1        
+|        number        
+|        Amount of fuel spent on repair        
+|-
+|        api_item2        
+|        number        
+|        Amount of ammo spent on repair (will always be 0)        
+|-
+|        api_item3        
+|        number        
+|        Amount of steel spent on repair        
+|-
+|        api_item4        
+|        number        
+|        Amount of bauxite spent on repair (will always be 0)        
+|}
+<br />
+===        Ship Information List (api_ship)        ===
+----
+This api key holds any amount from 1 to at most 270 indepedent arrays (as of 2016-01-14) that contains 29 values/arrays within that are presented in the following fashion. Each array corresponds to an independent ship you have and the detailed data on them.
+
+'''''{"api_id":sid,"api_sortno":k,"api_ship_id":cid,"api_lv":l,"api_exp":[xp_tot,xp_next,xp_per],"api_nowhp":hp,"api_maxhp":hp_max,"api_leng":range,"api_slot":[eid_1,eid_2,eid_3,eid_4,eid_5],"api_onslot":[pc_1,pc_2,pc_3,pc_4,pc_5],"api_slot_ex":x,"api_kyouka":[fp,torp,aa,def,lck],"api_backs":y,"api_fuel":fuel,"api_bull":ammo,"api_slotnum":n_slot,"api_ndock_time":t_rep,"api_ndock_item":[fuel_rep,steel_rep],"api_srate":r_star,"api_cond":m,"api_karyoku":[fp_cur,fp_max],"api_raisou":[torp_cur,torp_max],"api_taiku":[aa_cur,aa_max],"api_soukou":[def_cur,def_max],"api_kaihi":[eva_cur,eva_max],"api_taisen":[asw_cur,asw_max],"api_sakuteki":[los_cur,los_max],"api_lucky":[lck_cur,lck_max],"api_locked":hlock,"api_locked_equip":elock}'''''
+
+As there are a lot of values contained per each array, I will divide the explanation for this key one step further.
+
+====        Ship 'Dog Tag'        ====
+These 3 keys gives info which basically acts like a dog tag. They allow the differentiation of ships and also reference of fundamental data that each ship is linked to.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_id        
+|        number        
+|        Unique ID # given to each of your ships.        
+|-
+|        api_sortno        
+|        number        
+|        Number used to sort ships for composition screen. Corresponds to Kandex # up to 420        
+|-
+|        api_ship_id        
+|        number        
+|        Ship reference ID #. This is used to call the base information for the ship. '''Do NOT confuse with 'api_ship_id's under other sections.'''        
+|}
+<br />
+====        Ship Growth        ====
+These 2 keys contain the information on your ship's level and experience gains so far.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_lv        
+|        number        
+|        The current level of the ship.        
+|-
+|        api_exp        
+|        [xp_tot,xp_next,xp_per]        
+|        Ships's experience information<br />'''e_tot=Total exp gained so far,<br />xp_next=Exp needed till level up,<br />xp_per=% Exp gained for this level'''        
+|}
+<br />
+====        Ship Hull        ====
+These 2 keys contain information relevant to ship's HP or 'hull'.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_nowhp        
+|        number        
+|        Ship's current HP        
+|-
+|        api_maxhp        
+|        number        
+|        Ship's maximum HP        
+|}
+<br />
+====        Ship Modularization        ====
+These 5 keys check for your ship's range, equipment and modernization.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_leng        
+|        number        
+|        The ship's range (1=Short, 2=Medium, 3=Long, 4=Very Long)        
+|-
+|        api_slot        
+|        [eid_1,eid_2,eid_3,eid_4,eid_5]        
+|        Ship's equipment on each slot. These ID's do NOT represent the equipment data ID, but rather the equipment tag ID saved under the "slot_item" response.<br />'''(eid_5 is always -1 as of 2016-01-16)'''        
+|-
+|        api_onslot        
+|        [pc_1,pc_2,pc_3,pc_4,pc_5]        
+|        Ship's current plane count for each slot.<br />'''(pc_5 is always 0 as of 2016-01-16)'''        
+|-
+|        api_slot_ex        
+|        number        
+|        Checks for reinforcement slot. (0=Slot unopened, -1=Slot empty, other values linked to respective items equipped)        
+|-
+|        api_kyouka        
+|        [fp,torp,aa,def,lck]        
+|        Checks for modernization done to the ship so far, in order of FP, Torp, AA, Armor, Luck        
+|}
+<br />
+====        Ship Base Information        ====
+There are 4 key that hold information that are fixed for each ship, as a base information.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_backs        
+|        number        
+|        Shows what the card/obtain background color is (a.k.a. rarity) 1<=y<=8 with 1 being the lowest rarity and 8 being the highest rarity        
+|-
+|        api_fuel        
+|        number        
+|        Max fuel load        
+|-
+|        api_bull        
+|        number        
+|        Max ammo load        
+|-
+|        api_slotnum        
+|        number        
+|        Total number of equipment slots available. Does not count reinforcement slot.        
+|}
+<br />
+====        Ship Repair Info        ====
+There are 2 keys holding repair information about the ship.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_ndock_time        
+|        number        
+|        
+|-
+|        api_ndock_item        
+|        [fuel_rep,steel_rep]        
+|        Resources needed for repair.<br />fuel_rep=Fuel required<br />steel_rep=Steel required        
+|}
+<br />
+====        Ship Rating        ====
+Below two keys are used for rating purposes for the star rating and for the morale.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_srate        
+|        number        
+|        Star Rating-1 (hence value is from 0 to 4)        
+|-
+|        api_cond        
+|        number        
+|        The ship's morale value (0~100)        
+|}
+
+<br />
+====        Ship Parameters        ====
+There are 8 keys which contain the stat parameters for the ship.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_karyoku        
+|        [fp_cur, fp_max]        
+|rowspan=8|        Contains the 8 different stat parameters in order of: firepower, torpedo, anti-air, armor, evasion, ASW, LoS and Luck.<br />x_cur values are current stat value of the ship, including stat boosts from equipments.<br />x_max values are the maximum stat achievable by a ship WITHOUT any equipment on them.        
+|-
+|        api_raisou        
+|        [torp_cur, torp_max]        
+|-
+|        api_taiku        
+|        [aa_cur,aa_max]        
+|-
+|        api_soukou        
+|        [def_cur,def_max]        
+|-
+|        api_kaihi        
+|        [eva_cur,eva_max]        
+|-
+|        api_taisen        
+|        [asw_cur,asw_max]        
+|-
+|        api_sakuteki        
+|        [los_cur,los_max]        
+|-
+|        api_lucky        
+|        [lck_cur,lck_max]        
+|}
+
+<br />
+====        Miscellaneous        ====
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_locked        
+|        binary        
+|        Heart lock check        
+|-
+|        api_locked_equip        
+|        binary        
+|        Checks for locked equipments attached to it        
+|}
+<br />
+===        Basic Admiral/Port Information (api_basic)        ===
+----
+This api key is formed of a single array containing 33 independent values, which contains information about the user's admiral status and port status. The format looks like the following.
+
+'''''{"api_member_id":"########","api_nickname":"string","api_nickname_id":"#########","api_active_flag":a,"api_starttime":t,"api_level":l_hq,"api_rank":r_adm,"api_experience":xp_hq,"api_fleetname":null,"api_comment":"comment","api_comment_id":"#########","api_max_chara":ship_max,"api_max_slotitem":equip_max,"api_max_kagu":0,"api_playtime":0,"api_tutorial":0,"api_furniture":[f_1,f_2,f_3,f_4,f_5,f_6],"api_count_deck":b,"api_count_kdock":dock_con,"api_count_ndock":dock_rep,"api_fcoin":b,"api_st_win":win_s,"api_st_lose":lose_s,"api_ms_count":tot_e,"api_ms_success":win_e,"api_pt_win":win_p,"api_pt_lose":lose_p,"api_pt_challenged":0,"api_pt_challenged_win":0,"api_firstflag":1,"api_tutorial_progress":100,"api_pvp":[0,0],"api_medals":m,"api_large_dock":1}'''''
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|api_member_id
+|
+|
+|-
+|api_nickname
+|
+|
+|-
+|api_nickname_id
+|
+|
+|-
+|api_active_flag
+|
+|
+|-
+|api_starttime
+|
+|
+|-
+|api_level
+|
+|
+|-
+|api_rank
+|
+|
+|-
+|api_experience
+|
+|
+|-
+|api_fleetname
+|
+|
+|-
+|api_comment
+|
+|
+|-
+|api_comment_id
+|
+|
+|-
+|api_max_chara
+|
+|
+|-
+|api_max_slotitem
+|
+|
+|-
+|api_max_kagu
+|
+|
+|-
+|api_playtime
+|
+|
+|-
+|api_tutorial
+|
+|
+|-
+|api_furniture
+|
+|
+|-
+|api_count_deck
+|
+|
+|-
+|api_count_kdock
+|
+|
+|-
+|api_count_ndock
+|
+|
+|-
+|api_fcoin
+|
+|
+|-
+|api_st_win
+|
+|
+|-
+|api_st_lose
+|
+|
+|-
+|api_ms_count
+|
+|
+|-
+|api_ms_success
+|
+|
+|-
+|api_pt_win
+|
+|
+|-
+|api_pt_lose
+|
+|
+|-
+|api_pt_challenged
+|
+|
+|-
+|api_pt_challenged_win
+|
+|
+|-
+|api_firstflag
+|
+|
+|-
+|api_tutorial_progress
+|
+|
+|-
+|api_pvp
+|
+|
+|-
+|api_medals
+|
+|
+|-
+|api_large_dock
+|
+|
+|}
+<br>
+===Log Output Section (api_log)===
+----
+This api key is formed of a 6 independent arrays containing 4 different values that are output to the KanColle's log. The log window can be opened by clicking the arrow that is located in the lower middle section of the KC flash.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_no       
+|        number
+|        Log display order (0~5, with smaller number on top
+|-
+|        api_type
+|        number
+|        Activity type (at least 1~5 identified, needs further review)
+|-
+|        api_state
+|        number
+|        Activity state (needs further reveiw)
+|-
+|        api_message
+|        string
+|        Log message that is printed on the log window.
+|}
+<br />
+===Miscellaneous===
+----
+There are also following api keys in port.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_p_bgm_id
+|        number
+|        Id # for the port bgm being played
+|-
+|        api_parallel_quest_count
+|        number
+|        Total # of quests that can be accepted (either 5 or 6)
+|}
+<br />
+===Event-specific keys===
+----
+There are also keys under the port response's api_data object used specifically for event thus far.
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key       
+|        Value type        
+|        Description        
+|-
+|        api_combined_flag
+|        number
+|        Checks for combined fleet <br> (0=None, 1=Carrier, 2=Surface, 3=Transport. <br> Negative when fleet is forced to break)
+|-
+|        api_event_object
+|        object
+|        The use of this is unclear. Needs more study
+|}
+<br />
+==Battle responses==
+
+There are many different types of battle in the game, if you consider the different combination of things.
+
+Firstly, you can either be doing a regular sortie or a practice (PvP) battle.
+For sortie, there are normal day-night node, aerial node and night battle node.
+Then there are also situation where you would be using a regular fleet or combined fleet during the events.
+
+The way that the api requests and responses are set up for KC is somewhat messy. It is very clear that the devs obviously did not think of their own structure when they were first designing the mechanics. So in order to make a long story short, I made a table which specifies the response name for each situation, to make it easier for identification when you are searching for them.
+<br>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|
+|        PvP       
+|        Regular Sortie        
+|        Combined Fleet        
+|-
+|        Normal Day Battle
+|        battle
+|        battle
+|        battle (Carrier or Transport TF)<br> battle_water (Surface TF)
+|-
+|        Normal Night Battle
+|        midnight_battle
+|        battle
+|        midnight_battle
+|-
+|Aerial Node
+|N/A
+|airbattle
+|airbattle
+|-
+|Night Battle Node
+|N/A
+|sp_midnight
+|sp_midnight
+|}
+<br>
+In order to avoid having multiple sections discuss very similar responses, I am lumping all of these responses under this sections, using the 'regular sortie', 'normal day battle' response as the fundamental basis (as you will encounter this most often). I will clarify specific keys that needs may be specific or missing to certain responses as I discuss them. 
+
+===        Request Process Result (api_result and api_result_msg)        ===
+----
+Values saved under these keys are basically meaningless data-wise. All they do is signify that the request that was made was responded successfully.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|        api_result        
+|        number        
+|        Checks if response was successfully made<br />(1 when succeeded)        
+|-
+|        api_result_msg        
+|        string        
+|        Outputs string of message depending on success of response        
+|}
+<br>
+===        Raw Data Batch (api_data)        ===
+----
+This key holds the object which contains all the data relevant to the incoming battle. While we could go through the entire object in the order that they are presented, I am going to organize it a bit further as some of the keys within this object will share very similar looking values. I will also divide the keys according to the data that they are present so you can get the general idea of where you should be looking for.
+
+Also before we go any further, I would like to first set down these principle for both ease of understanding and use. <br><br>
+'''1. We are going to give ships "designated numbers" for this section. Friendly ships will be given 1~6 and Enemy ships will be given 7~12 with Ship 1 and Ship 7 being the flagship of the respective fleet.''' <br>
+'''2. For the escort fleet, we will mark them as Ship 1C~6C, to avoid confusion. C stands for 'Combined'.''' <br>
+'''3. I will be making notations using _f and _e to describe variables. This will mean 'friendly' and 'enemy' respectively.''' <br>
+Try to keep these in mind as it will help me explain, and help you understand how certain aspects work for this section
+<br>
+==== Fleet status ====
+----
+Following keys are the basic information about friendly fleet and enemy fleet as they enter the battle.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|api_dock_id<br>api_deck_id
+|number
+|Calls out which fleet is being sortied. api_deck_id is for '''combined fleet.''' <br>The former can have a value of 1~4 while the latter can only be 1.
+|-
+|api_ship_ke
+|array[7]
+|Enemy fleet composition. The first value will always be a dummy (-1).<br>The following 6 values contain the ship data ID# (refer to api_start2.api_mst_ship), or -1 if that slot is an empty slot.
+|-
+|api_ship_lv
+|array[7]
+|Enemy fleet ship level. The first value will always be a dummy (-1).<br>The following 6 values contain the level of enemy ship in the same order as they are presented in api_ship_ke, and -1 if the slot is empty.<br>('''Only really matters in PvP'''. Abyssals are all 'level 1'.)
+|-
+|api_nowhps
+|array[13]
+|Current HP for all main fleet ships (both friendly and enemy). The first value being a dummy followed by the value from ship 1 to ship 12.
+|-
+|api_maxhps
+|array[13]
+|Maximum HP for all main fleet ships (both friendly and enemy). The first value being a dummy followed by the value from ship 1 to ship 12.
+|-
+|api_nowhps_combined
+|array[7]
+|Current HP for escort fleet. The first value being a dummy followed by the value from ship 1C to ship 6C. '''Combined fleet only'''
+|-
+|api_maxhps_combined
+|array[7]
+|Maximum HP for escort fleet. The first value being a dummy followed by the value from ship 1C to ship 6C.'''Combined fleet only'''
+|-
+|api_midnight_flag
+|number
+|Checks whether or not night battle can be carried out after the day battle. Result is binary, with 1 signifying night battle as possible.
+|-
+|api_eSlot
+|array[6]
+|Contains equipment setup for ships 7~12 in order in array[5]. Values within those arrays use equipment data ID# (refer to api_start2.api_mst_slotitem) or -1 for empty.<br>5th value is always -1 (since there is no fifth slot yet)
+|-
+|api_eKyouka
+|array[6]
+|Cotains modernization info for ships 7~12 in array[4]. 4 values per each array represent [FP, Torp, AA, Armor] mod in order.<br>'''Non-zero only for PvP'''
+|-
+|api_fParam
+|array[6]
+|Contains final parameter for ships 1~6 in main fleet in array[4], accounting equipment stats, in [FP, Torp, AA, Armor] order.
+|-
+|api_eParam
+|array[6]
+|Contains final parameter for ships 7~12 in array[4], accounting equipment stats, in [FP, Torp, AA, Armor] order.
+|-
+|api_fParam_combined
+|array[6]
+|Contains final parameter for ships 1C~6C in array[4], accounting equipment stats, in [FP, Torp, AA, Armor] order.
+|}
+<br>
+====Initiation Phase====
+----
+These keys hold the info on the initiation of the battle. Basically, it contains the search status (contact), and the formation/engagement setup.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|api_search
+|array[2]<br>[contact_f, contact_e]
+|Checks for type of contact made.<br> 1=Success, 2=Success(Planes lost), 3=Fail(Planes lost), 4=Fail, 5=Success(No planes used), 6=Fail(No planes used)
+|-
+|api_formation
+|array[3]<br>[form_f, form_e, engage]
+|Shows what formations are chosen and the engagement.<br>For form_f and form_e: 1=Line Ahead, 2=Double Line, 3=Diamond, 4=Echelon, 5=Line Abreast.<br>Additionally form_f may also have values "11"~"14" which are 1st~4th formation for the combined fleet.<br>For engage: 1=Parallel, 2=Head-on, 3=Green T, 4=Red T
+|}
+<br>
+====Aerial Phase====
+----
+These keys are related to the opening aerial battle. API reading will require a bit of thinking here, as this is the point where the values listed here might not necessarily appear all the time, because there are conditional aspects that influence whether or not something will occur.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|api_stage_flag
+|array[3]<br>[stage1,stage2,stage3]
+|Describes which stages of an aerial battle will occur. Whether or not each stage will occur in api_kouku will be denoted in binary form.
+|-
+|api_kouku
+|object
+|Contains the actual data for the aerial battle. Whether specific stages occur within the api_kouku is depends on api_stage_flag.
+|}
+
+I know that I left the explanation hanging on api_stage_flag on what these 'stage's actually are.
+The actual information for what happens during an aerial combat is contained in the api_kouku, which is yet another object.
+Within api_kouku, there are 3 keys called api_stage1, api_stage2 and api_stage_3 and that is where values from api_stage_flag array plays a role.
+
+Following are the keys contained within api_kouku
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|api_plane_from
+|array[2]<br>[ship_f=array[i],ship_e=array[j]]<br>1<i,j<6
+|Shows which ships can send out warplanes. If there are no planes on one side, their array will be [-1]. <br> Otherwise both arrays will contain the designated number for ships that can send out planes. 
+|-
+|api_stage1
+|object or null
+|'Dogfighting phase.' api_stage1 is null when '''stage1=0 in api_stage_flag'''. Otherwise, it is an object that contains bunch of information.
+|-
+|api_stage2
+|object or null
+|'Interception phase.' api_stage2 is null when '''stage1=0 in api_stage_flag'''. Otherwise, it is an object that contains bunch of information.
+|-
+|api_stage3
+|object or null
+|'Strike phase.' api_stage3 is null when '''stage1=0 in api_stage_flag'''. Otherwise, it is an object that contains bunch of information.
+|-
+|api_stage3_combined
+|object or null
+|'Strike phase against escort.' api_stage3 is null when '''stage1=0 in api_stage_flag'''. Otherwise, it is an object that contains bunch of information.<br>'''Combined Fleet Only'''
+|}
+
+If the phase names don't make sense, here are the explanation
+api_stage1 is Fighter vs Fighter phase.
+api_stage2 is Fighters + ship AA vs Bomber phase.
+api_stage3 and api_stage3_combined is Bomber attack on ship phase.
+
+Naturally, under certain conditions, some stages may not occur.
+For example, if neither side had planes to send out, api_stage_flag=[0,0,0] and there would be null information on api_stage1~3.
+If one side had all fighters, and the other side had no planes api_stage_flag=[1,0,0] 
+
+As api_stage1 and api_stage2 are both phases that involve planes being shot down, they shares some keys in common. On the other hand since their targets are different, they also have keys that are unique to them.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" 
+|-
+|        Key        
+|        Value type        
+|        Description        
+|-
+|api_fcount
+|number
+|Total number of friendly warplanes. Common for api_stage1 and api_stage2, fighter and bomber respectively.
+|-
+|api_flostcount
+|number
+|Total number of friendly warplanes shot down. Common for api_stage1 and api_stage2, fighter and bomber respectively.
+|-
+|api_ecount
+|number
+||Total number of enemy warplanes. Common for api_stage1 and api_stage2, fighter and bomber respectively.
+|-
+|api_elostcount
+|number
+||Total number of enemy warplanes shot down. Common for api_stage1 and api_stage2, fighter and bomber respectively.
+|-
+|api_disp_seiku
+|number
+|Shows air superiority status. 0=Parity, 1=Superiority, 2=Supremacy, 3=Incapability, 4=Denial
+|-
+|api_touch_plane
+|array[2]
+|Shows what plane appears on the contact circle for both sides.
+|-
+|api_air_fire
+|object or null
+|This object contains further information on the anti-air cut-in (AACI). This is null if the AACI does not activate.
+|}
+[[Category:Blog posts]]

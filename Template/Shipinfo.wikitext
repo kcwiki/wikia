@@ -1,0 +1,133 @@
+{|class="typography-xl-optout" style="border: 1px solid darkgray; width: 320px;"
+|-
+| colspan="4" style="text-align: center; background-color: {{{color|}}};"|<p style="font-size:20px">'''{{{name|Name?}}}'''</p>
+<p style="font-size:15px">'''{{#if:{{{id|}}}|No.{{{id}}}}} {{SpanJa|{{{japanesename|}}}}}'''</p>
+<p>'''{{#if:{{{class|}}}|{{{class}}} Class}} {{{type|}}}'''</p>
+|-
+| align=center colspan="4"  |{{{image|}}}
+|-
+| colspan="4" style="text-align: center; background-color: LightSkyBlue;"|'''Statistic'''
+|-
+| style="width: 80px;"|[[file:icon_HP.png]] HP
+|width="60px"|'''{{{hp|no data}}}'''
+| style="width: 86px;"|[[file:icon_Gun.png]] Firepower
+|'''{{{firepower|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Armor.png]] Armor
+|width="60px"|'''{{{armor|no data}}}'''
+| style="width: 86px;"|[[file:icon_Torpedo.png]] Torpedo
+|'''{{{torpedo|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Evasion.png]] Evasion
+|width="60px"|'''{{{evasion|no data}}}'''
+| style="width: 86px;"|[[file:icon_AA.png]] AA
+|'''{{{AA|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Aircraft.png]] Aircraft
+|width="60px"|'''{{{aircraft|no data}}}'''
+| style="width: 86px;"|[[file:icon_ASW.png]] ASW
+|'''{{{ASW|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Speed.png]] Speed
+|width="60px"|'''{{{speed|no data}}}'''
+| style="width: 80px;"|[[file:icon_LOS.png]] LOS
+|'''{{{LOS|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Range.png]] Range
+|width="60px"|'''{{{range|no data}}}'''
+| style="width: 86px;"|[[file:icon_Luck.png]] Luck
+|'''{{{luck|no data}}}'''
+|-
+| colspan="3" style="text-align: center; background-color: LightSkyBlue;"|'''Build Time'''
+|style="text-align: center; background-color: LightSkyBlue;" | '''Slot'''
+|- 
+| colspan="3" style="text-align: center;"|{{{time|Unbuildable}}}
+| align=center |{{{slot|no data}}}
+|-
+| colspan="4" style="text-align: center; background-color: LightSkyBlue;"|'''Stock Equipment'''
+|-
+|align=center colspan="4" |{{{slot1|no data}}}
+|-
+|align=center colspan="4" |{{{slot2|no data}}}
+|-
+|align=center colspan="4" |{{{slot3|no data}}}
+|-
+|align=center colspan="4" |{{{slot4|no data}}}
+|}
+<noinclude>
+* Parameters need not follow the order shown below, however it is highly recommended for easier editing
+* Empty or parameters left out will be autofilled with "no data" (except the "time" slot which autofilled with "Unbuildable")
+* Color Rarity; use color= ( skyblue / cyan / silver / gold / violet )
+* For ships '''with''' aircraft capabilities, use [[Template:Shipinfo2]]
+
+<pre>
+{{shipinfo
+| name=Mutsuki
+| japanesename=睦月
+| id=31
+| image=[[File:031.jpg]]
+| color=Cyan
+| type=Destroyer
+| class=Mutsuki
+| firepower=6
+| torpedo=18
+| AA=7
+| ASW=16
+| LOS=4
+| luck=12
+| hp=13
+| armor=5
+| evasion=37
+| aircraft=0
+| speed=Fast
+| range=Short
+| fuel=15
+| ammo=15
+| d_fuel=1
+| d_ammo=3
+| d_steel=8
+| d_bauxite=0
+| time=18:00
+| slot=2
+| slot1=12cm Single Cannon
+| slot2=7.7mm Gun
+| slot3=-Locked-
+| slot4=-Locked-
+}}
+</pre>
+
+
+{{shipinfo
+| name=Mutsuki
+| japanesename=睦月
+| id=31
+| image=[[File:031.jpg]]
+| color=Cyan
+| type=Destroyer
+| class=Mutsuki
+| firepower=6
+| torpedo=18
+| AA=7
+| ASW=16
+| LOS=4
+| luck=12
+| hp=13
+| armor=5
+| evasion=37
+| aircraft=0
+| speed=Fast
+| range=Short
+| fuel=15
+| ammo=15
+| d_fuel=1
+| d_ammo=3
+| d_steel=8
+| d_bauxite=0
+| slot=2
+| time=18:00
+| slot1=12cm Single Cannon
+| slot2=7.7mm Gun
+| slot3=-Locked-
+| slot4=-Locked-
+}}
+</noinclude>

@@ -1,0 +1,27 @@
+{|class="wikitable sortable" style="text-align:center"
+!Type
+!Id
+!Name
+!style="width:160px"|Card
+!Icon
+!Damaged<br>Icon
+!Rarity
+!Back
+!Difference
+{{Calc|format=table|@all_names|#|!@|?code|?api_id|?link|?card|?icon|?icon_damaged|?rarity_bg|?back_bg|?backMinusRarity}}
+|-
+!Type
+!Id
+!Name
+!style="width:160px"|Card
+!Icon
+!Rarity
+!Back
+!Difference
+|}
+==Notes==
+In ship modules:
+*<code>rarity</code> - API rarity value.
+*<code>back</code> - card background rarity, if different from API rarity value.
+*<code>back - rarity</code> - sort the table for differences.
+*<code>back || rarity</code> - ''should'' always give actual card background rarity.

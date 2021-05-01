@@ -1,0 +1,509 @@
+__TOC__
+This page will give an overview of the seasonal subsystem. This subsystem includes:
+* Assets: seasonal CG and voice files, following their naming conventions
+* Page layouts for seasonal pages, ship pages, ship gallery pages, and other pages that can require seasonal content
+* Associated templates and modules
+The purposes of this subsystem:
+* to have all seasonal assets uploaded and listed on necessary pages
+* to simplify creation of those pages using templates
+* to have automatic seasonal lines on ship pages (without editing ship pages):
+<pre>
+seasonal page (year1) -> proxy module                       ->|ship pages
+                             |  .                             |
+                             V        .                       |
+                      seasonal page (year2) -> proxy module ->|
+                                            .      |          |
+                                                 . V          |
+                                                  ...       ->|
+                                                              |
+...                                                         ->|
+</pre>
+** Proxy modules are auto-generated from seasonal pages and shouldn't be edited manually
+** Data from proxy modules is included into ship pages and subsequent seasonal pages (e.g., [[Seasonal/New Year 2015]] and [[Seasonal/New Year 2016]] into [[Seasonal/New Year 2017]])
+
+==Assets==
+===CG===
+===Voice lines===
+==Layouts==
+===Seasonal pages===
+===Ship pages===
+===Ship gallery pages===
+==Template and modules==
+
+==TODO==
+* Convert seasonal pages to using <code>SeasonalQuote*</code> templates
+** Usage: e.g., http://kancolle.wikia.com/wiki/Seasonal/New_Year_2017?action=raw
+** Rename voice files when needed
+** Adjust templates and modules when needed
+** Progress: 11/32
+* Generate proxy modules for seasonal pages
+** Provide a converter, similarly to [[Template:SeasonalTOC]]
+** [[:Category:Seasonal modules]]
+** Progress: 9/32
+* <s>Preferably, support import/comparasion from/with KC3Kai</s> (?)
+* Write [[Template:ShipSeasonalQuotes]] and use it on ship pages
+** Planned usage: <code><nowiki>{{ShipSeasonalQuotes}}</nowiki></code>
+** Preferably, resolve conflicts in transcriptions and translations between ship page quotes and seasonal page quotes
+** Progress: 0/184
+* Documentation here (?)
+* Join SeasonalQuotesInclude calls (not close to any Lua limits, low priority)
+* Include spring lines via SeasonalQuotesInclude.
+* Redirects left:
+<div class="mw-collapsible mw-collapsed">
+* http://kancolle.wikia.com/wiki/File:Fubuki_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuyuki_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Miyuki_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Murakumo_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Isonami_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Oboro_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Akebono_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Sazanami_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Ushio_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuharu_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Nenohi_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Asagumo_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Hamakaze_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Nowaki_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Akizuki_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Kiso2_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Kiso3_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Naka3_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Naka4_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Ooyodo_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Furutaka_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Eugen_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Nagato02_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Nagato03_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Hyuuga_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Bismarck_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Hiyou_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Zuihou_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Soryuu_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Hiryuu_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Mamiya_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Irako_christmas2014.ogg
+* http://kancolle.wikia.com/wiki/File:Fubuki_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuyuki_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Murakumo_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Oboro_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Akebono_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Sazanami_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Ushio_Happy_New_Year.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuharu_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Nenohi_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Wakaba_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsushimo-NewYear.ogg
+* http://kancolle.wikia.com/wiki/File:Shiratsuyu_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Shigure_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Murasame_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Yuudachi_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Urakaze_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Tanikaze_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Hamakaze_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Akizuki_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Asagumo_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Nowaki_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Yamagumo_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Yura_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Ooi_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Kitakami_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Ooyodo_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Furutaka_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Kako_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Prinz_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Nagato_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Ise_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Hyuuga_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Bismarck_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Zuihou_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Soryuu_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Hiryuu_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Mamiya_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Irako_2015newyear.ogg
+* http://kancolle.wikia.com/wiki/File:Mutsuki-Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Kisaragi-Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuharu-Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Nenohi-Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Wakaba-Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsushimo-Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Shiratsuyu_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Shigure_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Murasame_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Yuudachi_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Urakaze_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Hamakaze_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Tanikaze_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Nowaki_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Prinz_Eugen_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Zuihou_Setsubun.ogg
+* http://kancolle.wikia.com/wiki/File:Mutsuki_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Kisaragi_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Yayoi_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Uzuki_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Mochizuki_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Fubuki_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Shirayuki_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuyuki_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Murakumo_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Isonami_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Akebono_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Sazanami_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Shiratsuyu_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Shigure_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Murasame_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Yuudachi_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Asagumo_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Asashimo_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Ooi_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Kitakami_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Yura_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Katori_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Maya_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Maya_Valentine_2015_Attack.ogg
+* http://kancolle.wikia.com/wiki/File:Choukai_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Choukai_Valentine_2015_Attack.ogg
+* http://kancolle.wikia.com/wiki/File:Kongou_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Kongou_Valentine_2015_Attack.ogg
+* http://kancolle.wikia.com/wiki/File:Hiei_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Hiei_Valentine_2015_Attack.ogg
+* http://kancolle.wikia.com/wiki/File:Haruna_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Haruna_Valentine_2015_Attack.ogg
+* http://kancolle.wikia.com/wiki/File:Kirishima_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Kirishima_Valentine_2015_Attack.ogg
+* http://kancolle.wikia.com/wiki/File:Ise_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Hyuuga_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Souryuu_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Hiryuu_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Mamiya_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Irako_Valentine_2015.ogg
+* http://kancolle.wikia.com/wiki/File:Mutsuki_WhiteDay2015.ogg
+* http://kancolle.wikia.com/wiki/File:Kisaragi_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Shiratsuyu_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Shigure_Whiteday2015.ogg
+* http://kancolle.wikia.com/wiki/File:Murasame_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Yuudachi_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsukaze_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Maikaze_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Yuubari_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Myoukou_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Nachi_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Ashigara_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Haguro.ogg
+* http://kancolle.wikia.com/wiki/File:MayaKai2-White_Day.ogg
+* http://kancolle.wikia.com/wiki/File:Choukai_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Suzuya_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Kumano_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Kongou_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Hiei_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Haruna_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Kirishima_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Shouhou_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Akashi_WhiteDay.ogg
+* http://kancolle.wikia.com/wiki/File:Mutsuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kisaragi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Yayoi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Uzuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Satsuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Fumizuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Nagatsuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kikuzuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Mikazuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Mochizuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Fubuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Shirayuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuyuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Miyuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Murakumo-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Ayanami-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Shikinami-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuharu-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Nenohi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsushimo-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Shiratsuyu-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Shigure-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Murasame-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Yuudachi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Samidare-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Suzukaze-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Yamagumo-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Asagumo-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kagerou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Shiranui-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kuroshio-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsukaze-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Yukikaze-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Tokitsukaze-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hamakaze-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Nowaki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Maikaze-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Asashimo-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Akizuki-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Ooi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kitakami-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Yura-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kinu-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Abukuma-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Katori-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Yuubari-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Furutaka-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kako-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Myoukou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Nachi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Ashigara-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Haguro-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Maya-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Choukai-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Suzuya-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kumano-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Prinz_Eugen-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kongou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hiei-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Haruna-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Kirishima-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Fusou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Yamashiro-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Ise-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hyuuga-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Ryuujou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hiyou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Junyou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Shouhou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Zuihou-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Akagi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Souryuu-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Hiryuu-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Shoukaku-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Zuikaku-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Amagi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:U-511-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Ro-500-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Akashi-2nd_Anniversary.ogg
+* http://kancolle.wikia.com/wiki/File:Satsuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Fumizuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Nagatsuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kikuzuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Mikazuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Fubuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Shirayuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Ayanami_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Shikinami_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Oboro_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Akebono_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Sazanami_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Ushio_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsuyuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Akatsuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Hibiki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Ikazuchi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Ikazuchi_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Inazuma_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Samidare_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Umikaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kawakaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Asashio_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Ooshio_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Michishio_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Arashio_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Arare_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kasumi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kagerou_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Shiranui_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kuroshio_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Hatsukaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Yukikaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Tokitsukaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Urakaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Hamakaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Maikaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Tanikaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Arashi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Arashi_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Hagikaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Hagikaze_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Kazagumo_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Takanami_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Teruzuki_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Libeccio_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Shimakaze_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Tenryuu_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Tatsuta_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kuma_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Tama_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kiso_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kinu_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Abukuma_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Agano_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Noshiro_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Yahagi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Sakawa_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Yuubari_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Furutaka_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Aoba_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Aoba_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Kinugasa_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kinugasa_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Kako_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Myoukou_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Nachi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Ashigara_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Haguro_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Takao_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Takao_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Atago_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Atago_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Mogami_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Mikuma_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Mikuma_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Suzuya_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kumano_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Tone_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Chikuma_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Nagato_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Mutsu_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Fusou_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Yamashiro_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Musashi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Roma_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Houshou_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Houshou_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Ryuujou_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Shouhou_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Zuihou_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Chitose_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Chiyoda_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Akagi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kaga_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Shoukaku_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Zuikaku_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Katsuragi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Graf_Zeppelin_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:I-168_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:I-168_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:I-58_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:I-58_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:I-19_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:I-19_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:I-8_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:I-8_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Kashima_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kashima_Valentine_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Akashi_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Akitsushima_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Mizuho_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Hayasui_Valentine_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Hayasui_Hinamatsuri_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Mizuho_Hinamatsuri_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Ro-500_White_Day_2016.ogg
+* http://kancolle.wikia.com/wiki/File:I-168_Hinamatsuri_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Shoukaku_Hinamatsuri_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Kinugasa_Hinamatsuri_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Mikuma_Hinamatsuri_2016_Secretary_2.ogg
+* http://kancolle.wikia.com/wiki/File:Sakawa_Hinamatsuri_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Libeccio_Hinamatsuri_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Hibiki_Hinamatsuri_2016.ogg
+* http://kancolle.wikia.com/wiki/File:Akatsuki_Hinamatsuri_2016.ogg
+</div>
+
+==Temporary converters==
+===To new templates (from old tables)===
+<pre>
+function getLinesOld() {
+    const lines = {};
+    let prev_ship = null;
+    $(".audio-button").parent().parent().each((_, row) => {
+        const type = $(row).parent().parent().prevAll("h3").first().find("span:first").text(),
+              id = $(row).attr("id"),
+              cells = $(row).children(),
+              ship = (id || prev_ship).replace("_", " ").replace("'", ""),
+              ja = $(cells[id ? 2 : 1]).text().trim(),
+              en = $(cells[id ? 3 : 2]).text().trim(),
+              note = $(cells[id ? 4 : 3]).text().trim();
+        if (!lines[type]) {
+            lines[type] = {};
+        }
+        if (!lines[type][ship]) {
+            lines[type][ship] = [];
+        }
+        lines[type][ship].push({ season: wgTitle, ship: ship, ja: ja, en: en, note: note });
+        prev_ship = id || prev_ship;
+    });
+    return lines;
+}
+
+function genWiki(lines) {
+    let wiki = "";
+    for (const type in lines) {
+        let quotes = "";
+        for (const ship in lines[type]) {
+            for (const line of lines[type][ship]) {
+                quotes += `{{SeasonalQuote|${ship}\n|ja = ${line.ja}\n|en = ${line.en}\n|note = ${line.note}\n}}\n`;
+            }
+        }
+        wiki += `===${type}===\n{{SeasonalQuotes|\n${quotes}}}\n`;
+    }
+    return wiki;
+}
+
+copy(genWiki(getLinesOld()));
+</pre>
+===To proxy modules===
+<pre>
+function getLinesNew() {
+    const lines = {};
+    let prev_ship = null;
+    $(".seasonal-quote:not(.seasonal-quote-old)").each((_, row) => {
+        const type = $(row).parent().parent().prevAll("h3").first().find("span:first").text(),
+              id = $(row).attr("id"),
+              cells = $(row).children(),
+              ship = (id || prev_ship).replace("_", " "),
+              ja = $(cells[id ? 2 : 1]).text().trim(),
+              en = $(cells[id ? 3 : 2]).text().trim(),
+              note = $(cells[id ? 4 : 3]).text().trim();
+        if (!lines[type]) {
+            lines[type] = {};
+        }
+        if (!lines[type][ship]) {
+            lines[type][ship] = []
+        }
+        lines[type][ship].push({ season: wgTitle, ship: ship, ja: ja, en: en, note: note })
+        prev_ship = id || prev_ship;
+    });
+    return lines;
+}
+
+function genLua(lines) {
+    let lua_index = "";
+    for (const type in lines) {
+        lua_index += `    ["${type}"] = { ${Object.keys(lines[type]).map(e => `"${e}"`).join(", ")} },\n`;
+    }
+    let lua_ships = "";
+    for (const type in lines) {
+        for (const ship in lines[type]) {
+            let ship_lines = "";
+            for (const line of lines[type][ship]) {
+                ship_lines += `      {
+        ja = "${line.ja.replace(/\n/g, "<br>").replace(/"/g, "\\\"")}",
+        en = "${line.en.replace(/\n/g, "<br>").replace(/"/g, "\\\"")}",
+        note = "${line.note.replace(/\n/g, "<br>").replace(/"/g, "\\\"")}",
+      },
+`;
+            }
+            lua_ships += `    ["${ship}"] = {
+${ship_lines}    },
+`;
+        }
+    }
+    return `--Categories:
+--[[Category:Seasonal modules]]
+
+return {
+  index = {
+${lua_index}  },
+  ships = {
+${lua_ships}  },
+}
+`;
+}
+
+copy(genLua(getLinesNew()));
+</pre>

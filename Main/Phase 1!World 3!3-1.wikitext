@@ -1,0 +1,287 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Moray Sea
+|jp = モーレイ海
+|romaji = Mōrei kai
+|strategy_name = Moray Sea Patrol
+|strategy_name_ja = モーレイ海哨戒
+|strategy_info = Advance into Northern waters and patrol the Moray Sea!
+|strategy_info_ja = 北方海域に艦隊を進出させ、モーレイ海を哨戒せよ！
+|exp_ship = 310
+|exp_hq = 110
+|exp_hq_boss = 1420
+}}
+{{MapBranchingTable
+|expand = true
+|id = 3-1
+|0 -> A, D = * Random 50%/50% chance
+
+|A -> B/resource, C = *Random 50%/50% chance
+
+|D -> E = * Random 45% chance
+|D -> F = * Random 55% chance
+<!--
+TsunDB 2018-07-26
+
+==== Routing info from 3-1 / node Start ====
+all ->A: 50% (975)
+all ->D: 50% (980)
+
+==== Routing info from 3-1 / node A ====
+all ->B: 49% (198)
+all ->C: 51% (207)
+
+==== Routing info from 3-1 / node D ====
+all ->E: 46% (427)
+all ->F: 54% (497)
+
+number of successes = 427, number of trials = 924, p-value = 0.02316
+alternative hypothesis: true probability of success is not equal to 0.5
+95 percent confidence interval:
+ 0.4295984 0.4948862
+sample estimates:
+probability of success 
+             0.4621212 
+-->
+}}
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=143|y=147}}
+{{Map/ImageNode|B|x=147|y=62}}
+{{Map/ImageNode|C|x=229|y=130}}
+{{Map/ImageNode|D|x=158|y=280}}
+{{Map/ImageNode|E|x=242|y=185}}
+{{Map/ImageNode|F|x=270|y=280}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵哨戒艦隊
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser Ho-Class/Elite
+|Light Cruiser He-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{NodeInfo
+|B
+|Resource
+|Steel
+|35-150
+}}
+{{Map/Nodes|name=敵護衛空母群
+|C
+|Normal
+|{{Formation|Line Ahead}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Line Ahead}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Echelon}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{Map/Nodes|name=敵哨戒艦隊
+|D
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|D
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser Ho-Class/Elite
+|Light Cruiser He-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{Map/Nodes|name=敵北方侵攻艦隊
+|E
+|Boss
+|{{Formation|Line Ahead}}
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Destroyer Ha-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Transport Ship Wa-Class/Elite
+|-
+|E
+|Boss
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|E
+|Boss
+|{{Formation|Double Line}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Transport Ship Wa-Class/Elite
+}}
+{{Map/Nodes|name=敵護衛空母群
+|F
+|Normal
+|{{Formation|Line Ahead}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|F
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Echelon}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, C, D, E, F
+|boss = E
+|Abukuma: A
+|Akagi: E
+|Akebono: D
+|Arare: A, F
+|Arashio: A
+|Asashio: A, D, E, F
+|Ashigara: A, C, D, E, F
+|Atago: A, D, E, F
+|Ayanami: A, C, D, F
+|Chikuma: A, D, E, F
+|Chitose: A, C, D, E, F
+|Chiyoda: A, C, D, E, F
+|Choukai: A, C, D, E, F
+|Fubuki: A, C, D, E, F
+|Fumizuki: A
+|Fusou: A, C, D, E, F
+|Haguro: A, C, D, E, F
+|Haruna: A, C, D, E, F
+|Hatsuyuki: D
+|Hiei: A, C, D, E, F
+|Hiryuu: E
+|Hiyou: A, D, E, F
+|Hyuuga: A, E
+|Ise: A, E
+|Isonami: A, C, F
+|Isuzu: A, C, D
+|Jintsuu: A, C, D
+|Junyou: A, C, D, E, F
+|Kaga: A, C, D, E, F
+|Kagerou: A, C, D, E, F
+|Kako: A, C, F
+|Kasumi: A, F
+|Kinu: E
+|Kirishima: A, C, D, E, F
+|Kiso: A, D, F
+|Kitakami: A, E
+|Kongou: A, C, D, E, F
+|Kuroshio: A, D, E
+|Maya: A, C, D, E, F
+|Michishio: A, C, F
+|Miyuki: A, D, F
+|Mogami: A, C, E, F
+|Murakumo: A, C, D, F
+|Mutsu: E
+|Myoukou: A, C, D, E, F
+|Nachi: A, C, D, E, F
+|Naka: A, C, D
+|Natori: C, D, F
+|Ooi: A
+|Ooshio: A, C, D, E, F
+|Ryuujou: A, C, D, E, F
+|Samidare: A, C, D, F
+|Sendai: A, D, F
+|Shikinami: A, C, D, E, F
+|Shimakaze: E
+|Shiranui: A, D, E, F
+|Shouhou: A, C, D, E, F
+|Souryuu: A, E
+|Takao: C, D
+|Tama: A, C, D, F
+|Tatsuta: A, C, D, E, F
+|Tenryuu: A, C, D, E, F
+|Tone: A, D, E
+|Yamashiro: A, C, D, E, F
+|Yukikaze: E
+|Yura: A, C, D, F
+}}
+{{SectionEnd}}

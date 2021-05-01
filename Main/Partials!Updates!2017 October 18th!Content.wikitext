@@ -1,0 +1,210 @@
+=={{#if:{{{thread|}}}|[[Partials/Updates/2017_October_{{Ordinal|18}}/Content|Content]]|[[Thread:603138|{{Ordinal|18}} October]]}}==
+{{#if:{{{thread|}}}||''For a full debriefing on the game update (including developer tweets), you may wish to refer to 
+[[Partials/Updates/2017_October_{{Ordinal|18}}|this link]].''}}
+===End of [[Mackerel|Saury 2017 Mini-Event]]===
+*The [[Mackerel|Saury 2017 Mini-Event]] comes to an end.
+** Saury limited-time quests will no longer be available.
+** Any [[Mackerel|Saury]] in possession will disappear from the inventory.
+
+===End of Coastal Defense Ships (DE) Limited-time Drop===
+*The [[List of coastal defense ships by upgraded maximum stats|Coastal Defense Ships]] will no longer be available in the Normal Maps as Drops. 
+
+===KanColle Android Updated to 1.0.11===
+*Update required from DMM GAMES App.
+
+===Seasonal CG===
+Yukata, Saury mode, Fishing mode Seasonal CGs are over.
+*Each respective Seasonal mode will be added into the Library.
+{{SeasonalGallery|slideshow=true|Akigumo/Autumn Casual|Amagiri/Autumn Casual|Fujinami/Autumn Casual|Sagiri/Autumn Casual|Sendai/Autumn Casual|Shiranui/Autumn Casual|Souryuu/Autumn Casual}}
+{{SeasonalGallery|slideshow=true|Mizuho/Halloween}}
+{{SeasonalGallery|slideshow=true|Libeccio/Halloween|Roma/Halloween|Z1/Oktoberfest}}
+The following girls have new/returning Seasonal CG:
+*{{New}} Autumn Casual Outfit Seasonal CG:
+**{{ShipLink|Akigumo}}
+**{{ShipLink|Amagiri}}
+**{{ShipLink|Fujinami}}
+**{{ShipLink|Sagiri}}
+**{{ShipLink|Sendai}}
+**{{ShipLink|Shiranui}}
+**{{ShipLink|Souryuu}} 
+*{{New}} Halloween CG:
+**{{ShipLink|Mizuho}}
+* Returning CG:
+**{{ShipLink|Libeccio}}
+**{{ShipLink|Roma}}
+**{{ShipLink|Z1}}
+{{clear}}
+===UI Enhancements===
+*Button changes
+**Sortie and Expedition section's UI/Button has been slightly changed/updated.
+*Fixes
+**In the Composition and Resupply sections, the nuisance of where you had trouble in controls due to the smoke coming out from the Damaged Ships has been fixed.
+*OPTION update
+**It is now possible to mute the BGM and other sounds with One Click.
+*Furniture store UI update
+**The Furniture Store/Internal Change has been slightly changed/updated.
+**For Furnitures with Headquarters BGM change, a Music Fairy will be shown.
+===Expedition update===
+[[File:【KanColle】New Expedition Feature Provisional Resupply-0|thumb|right|250 px]]
+*New "[[Provisional Resupply|provisional resupply]] " in expedition page.
+**'''NOTE:''' [[Quest#D25|Quest D25]] must be cleared first in order to obtain the item (遠征「臨時補給」開放) that allows such function.
+**Can be used in the Expedition Preparation section by fulfilling a certain requirement
+**Can be used to resupply the expedition fleet on the expedition start screen.
+**No additional item is required in order to use provisional resupply.
+
+===New [[Expedition/Reference_tables|expeditions]]===
+*Expeditions A2 and A3 can give Great Success without sparkling or special equipment.
+*Expedition 24 needs to be cleared for A3 to appear. Other requirements are uncertain.
+<tabber>Total yield=
+{{Expeditions
+|{{Expedition
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|hq = 15
+|ship = 20 (?)
+|fuel = {{color|blue|'''45'''}}
+|ammo = {{color|blue|'''45'''}}
+}}
+{{Expedition
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|hq = 40
+|ship = 45 (?)
+|fuel = 70
+|ammo = 40
+|bauxite = 10
+|item1 = {{ItemStack|item=[[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+}}
+{{Expedition
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|hq = 55
+|ship = 70
+|fuel = 120
+|steel = 60
+|bauxite = 60
+|item1 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]]|text=x2}}
+}}
+}}
+|-|Hourly yield=
+{{Expeditions
+|{{Expedition
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|hq = 36
+|ship = 48 (?)
+|fuel = {{color|blue|'''108'''}}
+|ammo = {{color|blue|'''108'''}}
+}}
+{{Expedition
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|hq = 44
+|ship = 49 (?)
+|fuel = 76
+|ammo = 44
+|bauxite = 11
+|item1 = {{ItemStack|item=[[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+}}
+{{Expedition
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|hq = 24
+|ship = 31
+|fuel = 53
+|steel = 27
+|bauxite = 27
+|item1 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]]|text=x2}}
+}}
+}}
+|-|Requirements=
+{{Expeditions
+| req = true
+|{{Expedition2
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|sum = 10
+|level = 5
+|fleet = 3DD/DE 1XX
+|drums = 
+|fuel = 3.5
+}}
+{{Expedition2
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|sum = 
+|level = {{tooltip|25|20?}}
+|fleet = 4DD/DE<br>'''with'''<br>{{ASW}} {{tooltip|180+|Summary ASW including ship stats, equipment stats and ASW improvements}}<br>{{AA}} {{tooltip|70+|Summary AA including ship and equipment stats}}<br>{{tooltip|???|Additional unknown requirements}}
+|drums = 
+|fuel = 5
+|ammo = 2
+}}
+{{Expedition2
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|sum = 185
+|level = 35
+|fleet = 1CL 4DD/DE<br>'''or'''<br>1-2 DD 4-3 DE<br>'''with'''<br>{{ASW}} {{tooltip|280+ ASW|Summary ASW including ship and equipment stats}}
+|drums = 
+|fuel = 6.5
+|ammo = 3.5
+}}
+}}
+</tabber>
+
+===Aircraft Carrier Cut-in (CVCI) update===
+*CVCI has been updated where the Aircraft's Proficiency will determine the Attack Success Rate/Critical Attack Success Rate/Critical Damage Output and etc.
+*The first slot bomber will also increase the attack success rate depending on its proficiency.
+===[[Quest|New Quests]]===
+{{QuestList|
+{{Quest
+|ID = B107
+|Title_JP = 補給線の安全を確保せよ！
+|Title_EN =  Secure the Safety of the Transportation Route!
+|Requirements = Sortie a fleet with [[Ship Class#Light Cruiser .28CL.29|Light Cruiser]] as flagship, 2 or more [[Ship Class#Destroyer .28DD.29|Destroyers]]/[[Ship Class#Coastal_Defense_Ship_.28DE.29|Coastal Defense Ships]]. You may bring up to 3 additional ships. <br>Sortie to World [[1-3]], [[1-4]], [[1-5]] and obtain at least A-rank victories at the boss node.
+|Rewards_RSC = 300 / 300 / 0 / 0
+|Rewards_Items = [[File:Food supply ship irako.png|30px|link=Fatigue]] X 1 <br/>
+ {{EquipmentLink|Underway_Replenishment|image=30px}}[[Underway Replenishment]] x 1
+|Note = Requires: ?
+}}
+{{Quest
+|ID = D25
+|Title_JP = 遠征「補給」支援体制を強化せよ！
+|Title_EN = Reinforce the Expedition Resupply Support Regime!
+|Requirements = Prepare 800 Steel in your inventory, complete Expedition A1.
+|Rewards_RSC = 200 / 200 / 0 / 0
+|Rewards_Items = {{EquipmentLink|Provisional Resupply|image=30px}}[[Provisional Resupply]] <br/> [[File:Combat Ration 145 Full.png|30px|link=Combat Ration]] X 2
+|Note = Requires: [[Quest#B107|B107]]
+}}
+{{Quest
+|ID = D26
+|Title_JP = 近海に侵入する敵潜を制圧せよ！
+|Title_EN = Suppress the Enemy Ships intruding into the close seas! 
+|Requirements = Complete Expedition 4, A2, and A3 twice each per Expedition.
+|Rewards_RSC = 0 / 1000 / 0 / 300
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 3, <br/> {{EquipmentLink|Type 95 Depth Charge|image=30px}}[[Type 95 Depth Charge]]
+|Note = Requires: [[Quest#D24|D24]], [[Quest#D25|D25]]
+'''Quarterly Quest'''
+}}
+}}
+{{clear}}
+<br />

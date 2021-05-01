@@ -1,0 +1,341 @@
+{{Map/Header}}
+{{Map/Info
+|en = Curry Ocean Pacification
+|jp = カレー洋制圧戦
+|romaji =Karē-yō sēatsu sen
+|strategy_name = [[wikipedia:Indian_Ocean_raid|Curry Ocean Takeover Battle]]
+|strategy_name_ja = カレー洋制圧戦
+|strategy_info = We are undertaking operations to control the Curry Ocean. Secure the mines and incapacitate the enemy fleet!
+|strategy_info_ja = カレー洋の制圧作戦を行う。 採掘地域を確保しつつ、カレー半島水域の敵艦隊を無力化せよ！
+|exp_ship = 320
+|exp_hq = 120
+|exp_hq_boss = 1640
+}}
+{{MapBranchingTable
+|expand = true
+|id = 4-2
+|0 -> A, F = * Random 50%/50% chance
+
+|A -> B/storm, E/resource = 
+* Always E if amount of DD in fleet is ≧ 2
+* Random 50%/50% chance between B and E if amount of DD in fleet is ≦ 1
+
+|C -> D, H = * Random 50%/50% chance
+
+|F -> E/resource, G/resource = * Random 50%/50% chance
+
+|H -> D, I = * Random 50%/50% chance
+}}
+*Node C and F are submarines nodes.
+*You will get sent from node A to E if you have two or more Destroyers in your fleet. Otherwise, the compass is random.
+
+===Tips===
+*Node B drops 20% of your remaining fuel in the fleet without radar equipped.
+*If you are aiming to reach the Boss node, going without Destroyers (or with only one) may increase your odds of getting there (56.25% instead of 50%).
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|F|x=480|y=266}}
+{{Map/ImageNode|A|x=476|y=163}}
+{{Map/ImageNode|B|x=421|y=94}}
+{{Map/ImageNode|G|x=349|y=304}}
+{{Map/ImageNode|E|x=320|y=182}}
+{{Map/ImageNode|C|x=278|y=90}}
+{{Map/ImageNode|H|x=214|y=214}}
+{{Map/ImageNode|I|x=152|y=301}}
+{{Map/ImageNode|D|x=102|y=145}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵前衛艦隊
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser Ho-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+}}
+{{NodeInfo
+|B
+|Storm
+|Fuel
+|20% without radar
+|-
+|B
+|Storm
+|Fuel
+|25 with radar
+}}
+{{Map/Nodes|name=敵潜水教導艦隊
+|C
+|Normal
+|{{Formation|Line Abreast}}
+|Submarine Yo-Class/Elite
+|Submarine Yo-Class
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Light Cruiser He-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Echelon}}
+|Submarine Yo-Class/Elite
+|Submarine Yo-Class
+|Submarine Ka-Class
+|Light Cruiser He-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Echelon}}
+|Submarine Yo-Class/Elite
+|Submarine Yo-Class
+|Submarine Yo-Class
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{Map/Nodes|name=東方主力艦隊
+|D
+|Boss
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|D
+|Boss
+|{{Formation|Double Line}}
+|Battleship Ru-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser He-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|D
+|Boss
+|{{Formation|Diamond}}
+|Battleship Ru-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+}}
+{{NodeInfo
+|E
+|Resource
+|Steel
+|40-120
+}}
+{{Map/Nodes|name=敵潜水教導艦隊
+|F
+|Normal
+|{{Formation|Line Abreast}}
+|Submarine Yo-Class/Elite
+|Submarine Yo-Class
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Light Cruiser He-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|F
+|Normal
+|{{Formation|Echelon}}
+|Submarine Yo-Class/Elite
+|Submarine Yo-Class
+|Submarine Ka-Class
+|Light Cruiser He-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|F
+|Normal
+|{{Formation|Echelon}}
+|Submarine Yo-Class/Elite
+|Submarine Yo-Class
+|Submarine Yo-Class
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{NodeInfo
+|G
+|Resource
+|Steel
+|20-60
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|H
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|H
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|H
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{Map/Nodes|name=敵補給船団
+|I
+|Normal
+|{{Formation|Double Line}}
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|I
+|Normal
+|{{Formation|Double Line}}
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|I
+|Normal
+|{{Formation|Diamond}}
+|Light Cruiser He-Class/Flagship
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Light Carrier Nu-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, C, D, F, H, I
+|boss = D
+|Abukuma: D
+|Akagi: D
+|Akatsuki: A, C, F, H
+|Aoba: A, C, F, H, I
+|Ashigara: A, D, H, I
+|Atago: A, D, F, H, I
+|Chikuma: A, D, F
+|Chitose: A, D, F, H, I
+|Chiyoda: A, D, F, H, I
+|Choukai: A, D, F, H, I
+|Fubuki: A, C, F, H, I
+|Furutaka: A, C, F, H, I
+|Fusou: A, D, F, H, I
+|Haguro: A, C, D, F, H, I
+|Haruna: A, C, D, F, H, I
+|Hatsuyuki: C, F, H
+|Hiei: A, C, D, F, H, I
+|Hiryuu: D
+|Hiyou: A, C, D, F, H, I
+|Houshou: D
+|Hyuuga: A, C, D, F, H, I
+|I-58: D
+|Ise: A, C, D, F, H, I
+|Isonami: F, H, I
+|Isuzu: A, D, F, H, I
+|Jintsuu: A, C, F, H, I
+|Junyou: A, C, D, F, H, I
+|Kaga: A, C, D, F, H, I
+|Kagerou: C, F, H, I
+|Kako: A, D, F, H, I
+|Kinu: D
+|Kirishima: A, C, D, F, H, I
+|Kisaragi: A, C, F, H, I
+|Kiso: A, C, D, F, H, I
+|Kitakami: A, C, D, F, H, I
+|Kongou: A, C, D, F, H, I
+|Kuroshio: A, C, H, I
+|Maya: A, C, D, F, H, I
+|Miyuki: F, H, I
+|Mogami: A, D, F, H, I
+|Murasame: A, F, H, I
+|Mutsu: D
+|Mutsuki: A, F, H, I
+|Myoukou: A, D, H, I
+|Nachi: A, C, D, F, H, I
+|Naka: A, C, F, H, I
+|Natori: A, C, D, F, H, I
+|Ooi: C, D
+|Ryuujou: A, D, F, H, I
+|Samidare: A, F, H, I
+|Sendai: C, F, H, I
+|Shimakaze: D
+|Shiranui: A, F, H, I
+|Shirayuki: A, F, H, I
+|Shouhou: A, C, D, F, H, I
+|Souryuu: C, D
+|Suzukaze: A, C, F, H, I
+|Takao: A, D, F, H, I
+|Tama: A, C, D, F, H, I
+|Tatsuta: A, C, D, H, I
+|Tenryuu: A, C, D, F, I
+|Tone: A, D, F, H, I
+|Urakaze: D
+|Yamashiro: A, D, F, H, I
+|Yayoi: D
+|Yukikaze: D
+|Yura: A, C, D, F, H, I
+|Yuubari: D
+|Yuugumo: D
+|Zuihou: D
+}}
+{{SectionEnd}}

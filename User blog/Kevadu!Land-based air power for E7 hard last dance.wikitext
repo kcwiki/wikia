@@ -1,0 +1,128 @@
+There is a lot of confusion about the new land-based air base mechanics and what the optimal setup for them should be.  I know I certainly have my fair share of questions as well.  I went through the exercise shown described in this post to try and better understand things for the specifc example of E7 hard last dance boss node, but I think the general approach is the best way o really understand what is happening to your land-based planes on any map.
+
+Land-based air rounds proceed just like any others, with the exception that there are several rounds and each base will particiapte twice.  Planes lost in one round will be missing at the start of the next round.  However land-based planes only participate twice then we move on to another base while the abyssals have to always defend with the same aircraft that are slowly whittled away.  This is the major advantage for the player.
+
+The land bases themselves have 4 slots that contain only 12 planes each.  This is the major limitation of land-based air support.  48 planes to participate in each round isn't very many.
+
+For last dance the only enemy with planes at the boss nice is Aircraft Carrier Princess II who is believed to carry 60 Abyssal Cat Fighter kais and 56 Revenge Torpedo Bomber kais (and some dive bombers but they have no AA stat so they're not important here).  The Cat Fighter kais--which I will abbreviate CFk--have 12 AA and the Revenge Torpedo Bomber kais--which I will abbreviate RTk--have 5 AA.  What I wish to do is calculate the number of planes lost and enemy air power numbers for each of these 6 rounds.
+
+Of course the number of planes the enemy loses depends on whether the planes gets air superiority, parity, denial, etc.  But since we know the enemy's initial air power it is possible to tailor your planes to always get the results you want (well unless you want AS+, that isn't even possible...).  It's more a question of what tradeoffs you're willing to make.  Always getting AS, for example, means you're going to have fewer bombers because you need to carry more fighters.
+
+So first let's look at what happens if we assume air parity.  According to the combat page, parity means losing between 30/256 and 75/256 of your total planes so I present these numbers as ranges:
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 600px; height: 500px;"
+|+Air power requirements for each round assuming air parirty
+|-
+! scope="col"|Round
+! scope="col"|Base
+! scope="col"|CFk
+! scope="col"|RTk
+! scope="col"|Enemy Air Power
+! scope="col"|Needed for AP
+|-
+|1
+|LB #1-1
+|60
+|56
+|129
+|86
+|-
+|2
+|LB #1-2
+|42-53
+|40-49
+|110-122
+|74-81
+|-
+|3
+|LB #2-1
+|30-46
+|29-43
+|93-114
+|62-76
+|-
+|4
+|LB #2-2
+|22-40
+|21-37
+|80-106
+|54-70
+|-
+|5
+|LB #3-1
+|16-35
+|15-32
+|68-99
+|46-66
+|-
+|6
+|LB #3-2
+|12-30
+|11-28
+|59-92
+|
+40-61
+|}
+
+The conclusion is that if you want to ensure AP for each base you will need 86 air power on your first base, 76 on your second, and 66 on your third.  Note that I only focus on the first round of each base.  Actually your base loses planes too and depending on RNG they could lose more than the enemy does and face a bad situation in the second round.  But that's not actually a big problem because I'm just going to go ahead and assume that if you're doing E7H then you probably chevroned your planes.  The chevron provides a significant bonus ''independent of plane count'' that the abyssals have no equivalent to.  Which basically means that even if they lose planes the proportional impact on their total air power is much lower than abyssals losing an equivalent number of planes.  In other words, if you can get AP for the first round you really ought to get in in the second round too.  At least so long as you aren't relying on fighter/bombers, Zuiuns, or other bombers with an AA bonus too much since they will also be shot down by enemy ship AA.
+
+Now let's do the same calculation assuming you're going for AS every round.  This means the abyssals have air incapability and lose between 40/256 and 105/256 of planes each round.
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 600px; height: 600px;"
+|+Air power requirements for each round assuming air superiority
+|-
+! scope="col"|Round
+! scope="col"|Base
+! scope="col"|CFk
+! scope="col"|RTk
+! scope="col"|Enemy Air Power
+! scope="col"|Needed for AS
+|-
+|1
+|LB #1-1
+|60
+|56
+|129
+|194
+|-
+|2
+|LB #1-2
+|36-50
+|34-47
+|102-119
+|153-178
+|-
+|3
+|LB #2-1
+|22-42
+|21-39
+|80-108
+|120-162
+|-
+|4
+|LB #2-2
+|13-35
+|13-32
+|62-99
+|93-148
+|-
+|5
+|LB #3-1
+|8-29
+|8-27
+|49-91
+|74-136
+|-
+|6
+|LB #3-2
+|5-24
+|5-23
+|39-90
+|59-135
+|}
+One thing you will immediately notice is that the ranges are much larger.  This is in part just because the base numbers are larger, but there's also just a larger range of random variation for the number of planes shot down in this situation.  And that adds up after several rounds.
+
+In order to ensure AS for each base you would need air power of at least 194 for the first base, 162 for the second base, and 136 for the third base.   That's a pretty tall order with only 4 12-plane slots.  For the first base you have to go 4 fighters, but even the second and third bases will probably need 3 fighters each.  That only gives you 2 bombers total...not exactly the most effective air support (though it would do a good job of decimating enemy fighters...).   Of course there's some significant variation there.  The third base in particular could likely acheive AS ''most'' of the time with only 2 fighters, but even then you're still only looking at 3 bombers total.
+
+What about starting with AS and then dropping to AP?  That certainly is possible, but I see little point in it.  To get AS on the first base you will still need 4 fighters there, so all your bombing will be done after taking AP-level loses anyway.   And even though they shoot down more planes the first round the effect isn't enough to make up for completely missing out having bombers the first round.
+
+My conclusion after looking at these numbers is that you should forget about getting AS and just focus on getting AP for every round.  This can be acheived with 2 fighters on the first base, 2 fighters on the second base, and 1 good fighter on the third base (Reppu kai is good for this if you have one).  While you will take some loses this way, bombers are generally still effective under AP conditions and this leaves room for 7 bombers total.  The important thing is to avoid air incapability/denial, two rounds of which will decimate your bombers.
+[[Category:Blog posts]]

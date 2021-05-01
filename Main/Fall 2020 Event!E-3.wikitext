@@ -1,0 +1,168 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Escort Convoy PQ17!
+|jp = PQ17船団を護衛せよ！
+|romaji = PQ17-sendan o goei seyo!
+|tag = E3
+|mechanics = 
+<!--
+|transport = true
+-->
+|hp_casual = 400 TP + 500 TP + 5880
+|hp_easy = 400 TP + 500 TP + 5880
+|hp_medium = 450 TP + 720 TP + 6370
+|hp_hard = 600 TP + 900 TP + 6860
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Washington}}
+|reward_casual_1 = {{ItemStack|item = [[File:Catbomb.png{{!}}50px{{!}}link=]]|text = Nothing}}
+|reward_casual_1_x = 
+|reward_easy_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_easy_2_x = 3
+|reward_medium_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_medium_2_x = 6
+|reward_medium_3 = {{EquipmentCardKai|New Model Gun Mount Improvement Material|icon=true|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Do 17 Z-2|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_hard_2_x = 8
+|reward_hard_3 = {{EquipmentCardKai|New Model Gun Mount Improvement Material|icon=true|size=50px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = {{EquipmentCardKai/Stars|Do 17 Z-2|size=50px|2}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|16inch Triple Gun Mount Mk.6 + GFCS|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules
+|expand = true
+|id = 49-3
+|order = 0,1,2,C,D,E,F,R,G,H,T,K,L,M,U
+
+|0 -> 1 = * Do not meet the requirements to start at 2.
+|0 -> 2 = 
+* Meet '''ALL''' of the following requirements:
+** Start point 2 is unlocked.
+** Surface Task Force
+
+|1 -> A/empty = * Transport Combined Fleet
+|1 -> B/empty = * Carrier/Surface Task Force
+
+|2 -> D = * Do not meet the requirements to go to R.
+|2 -> R = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DD ≥ 4
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+
+|C -> E/empty = * If fleet contains BBV, fleet must either be Fast or contain at least 2 CL.
+|C -> F = * Do not meet the requirements to go to E.
+
+|D -> F = 
+* No requirement during Phase 1.
+* During the latter phases, meet '''ALL''' of the following requirements:
+** Carrier Task Force
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+|D -> R = * Do not meet the requirements to go to F.
+
+|E/empty -> G = * Do not meet the requirements to go to H.
+|E/empty -> H = 
+* If Transport Combined Fleet, meet the following requirement:
+** If amount of BBV+CVL ≥ 2, fleet must either be Fast or contain at least 2 CL.
+* Surface Task Force has no requirements.
+
+|F -> E/empty =
+* Meet '''ANY''' of the following requirements:
+** Transport Combined Fleet
+** Fast Surface Task Force
+** Amount of CL ≥ 3
+|F -> G = * Do not meet the requirements to go to E.
+
+|R -> F = * Do not meet the requirements to go to either G or S.
+|R -> G = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to S.
+** Surface Task Force
+** Fast Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+* Alternatively, amount of SS(V) ≥ 6
+|R -> S/empty = 
+* Meet '''ALL''' of the following requirements:
+** Surface Task Force
+** Fast Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 2
+
+|G -> H = * Do not meet the requirements to go to S.
+|G -> S/empty = 
+* Meet '''ANY''' of the following requirements:
+** Amount of DD ≥ 4
+** Amount of CL ≥ 2
+
+|H -> I = 
+* Do not meet the requirements to go to J.
+|H -> J = 
+* Meet '''ANY''' of the following requirements:
+** Amount of DD ≥ 4
+** Amount of CL ≥ 2
+
+|T -> J = * Do not meet the requirements to go to either K or Z.
+|T -> K = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to Z.
+** No SS(V)
+|T -> Z = 
+* Meet '''ALL''' of the following requirements:
+** Shortcut to node Z is unlocked.
+** Pass the LoS check.
+** No SS(V)
+
+|K -> L/empty = 
+* No requirements in Phase 1 and 2.
+* If Phase 3, Transport Combined Fleet
+|K -> Y/empty = * Do not meet the requirements to go to either L or Z.
+|K -> Z = 
+* Meet '''ALL''' of the following requirements:
+** Carrier/Surface Task Force
+** Pass the LoS check.
+
+|L/empty -> M/resource, P = * Choose your own adventure!
+
+|M/resource -> N/empty = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check
+** Fleet contains either {{ShipLink|Akitsushima Kai|text=Akitsushima Kai}} or {{ShipLink|Akashi Kai|text=Akashi Kai}}
+|M/resource -> O/empty = * Do not meet the requirements to go to either N or Q.
+|M/resource -> Q = * Pass the LoS check, but fail to meet the requirements to go to N.
+
+|U/resource -> V/empty = * Fail the LoS check
+|U/resource -> X = * Pass the LoS check
+}}
+{{clear}}
+https://en.kancollewiki.net/Fall_2020_Event/Main_Operations#E-3
+{{clear}}
+===Map Progression===
+{{#tag:gallery|
+Fall2020E3P1.png{{!}}Map during TP phase at node Q
+Fall2020E3P2.png{{!}}Map during TP phase at node X
+Fall2020E3P3.png{{!}}Map during HP phase at node Z but no T->Z shortcut unlocked
+Fall_2020_Event_E-3_Map.png{{!}}Full map after unlocking the shortcut
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+===LBAS Flight Range===
+[[File:Fall2020E3LBAS.png|500px|center]]
+{{clear}}
+{{Event/MapPageFooter}}

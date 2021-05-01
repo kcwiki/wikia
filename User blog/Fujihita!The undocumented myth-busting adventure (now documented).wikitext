@@ -1,0 +1,110 @@
+During Summer 2015, we had a myth busting campaign in chat in regard to three things:
+#20.3cm No.2 vs. 20.3cm vanilla vs. 20.3cm no.3 in yasen accuracy
+#Air radar vs. Surface radar accuracy
+#15.5cm main gun giving bonus firepower on CL
+
+The people involved in the campaign at the time were I, Hayashi, Admiral Mikado and McDohlJr . We tracked down the sources of those three myths and arrived at some interesting conclusions. However, since the campaign was not documented in any form outside KC chat, many of these busted myths are pretty much as alive today as they were back then.
+
+==Preface==
+
+This blog is written to put a rest to those myths once and for all and provide the background circumstances in each of these cases. I have included two bonus findings at the end and records of one major argument we had back then just to give readers a glimpse of how we conducted the validations. Perhaps, editors may find these methods useful in debunking yet-to-come myths.
+
+I have provided the cases below as they are for archival purposes. I have only given the evidences and background study of these claims in the event of future revisit of these myths. Then, future myth busters will have an idea why and how the myth came to existence and which possibilities have been looked into. I, or any of those involved, take no responsibilities for the conclusions we arrived at.
+
+If there were anyone to whom I have yet given credits in the myth-busting campaign, my apology for the oversight and '''thank you, you and all of the editors of this wiki, for your tireless contributions.'''
+
+==Case 1==
+<div style="margin-left:20px;width:80%">
+;The claim
+:20.3cm (no.2) main guns and SKC20.3cm main gun give no yasen bonus
+;The source
+:A Chinese blog in which the author only reported the finding and expressed disbelief in the data's validity. He stated that more tests must be conducted to verify the claims and people should take the findings with a grain of salt.
+;Spreading
+:People ''who cannot read Chinese'' went in there with '''Google Translate''' and hailed the findings of the author as if it were a major breakthrough.
+;Validations
+*Hayashi and I agreed that without any raw data to perform statistical evaluation of the claim, this entire rumor is baseless and bogus.
+*McDohlJr tracked down all the tweets about 20.3cm fit, light-cruiser fit implementations. You can find those tweets archived on my wall [[Thread:346965|here]]. Here's the opinion of our local JP translator Admiral Mikado
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Admiral Mikado wrote:''</span><br />The devs said 20.3cm Twin Gun Mount and its variations give CA(V)s a small accuracy bonus in night battle. Giving the bonus to one gun but not to others just wouldn't make sense from a game design perspective. It's the same deal with air radar allegedly only giving half the displayed accuracy bonus. Didn't make any sense no matter how you looked at it, then turned out to be bullshit as predicted</blockquote>
+;Conclusion
+:Myth busted.</div>
+
+==Case 2==
+<div style="margin-left:20px;width:80%">
+;The claim
+:Air radar only gives half the accuracy of surface radar does.
+;The source
+:A Japanese blog which contains a study of various radar types as a result of FuMO25 re-introduction in Spring 2015.
+;Spreading
+:The blog study included raw data and detailed their statistical methods. Since the claim was backed by lots of numbers and sound mathematical expressions, it must be legit.
+;Validations
+*Except that it was not. There were inconsistencies in the data samples as well as a wide confidence interval. The statistical methods used in the study shouldn't be applied to one-factor, multi-level, categorical data of radar accuracy. Here's a video just to show you it gets really fuzzy and confusing when it comes to statistical testing and how easy to screw up a batch of good data points with bad method (https://www.youtube.com/watch?v=rulIUAN0U3w).
+*Subsequently, we also found that independent groups had conducted the same study again and they found the opposite. In fact, afaik, since more groups have found that "Air radar gives the same acc as surface radar does", the source study of this claim is erroneous.
+*Unlike the first case, which was a case of mass ignorance, this case seemed to be an honest mistake...and average Joes placing blind trust in the infallibility of solid-sounding statistics.
+*In term of game design, as Admiral Mikado pointed out from the previous quote. It wouldn't make any senses to halve the accuracy of air radar by implementing an extra super secret function when developers can just...halve the value on the card directly.
+;Conclusion
+:Myth busted.</div>
+
+==Case 3==
+
+<div style="margin-left:20px;width:80%">
+;The claim
+:15.5cm main gun gives fit bonus firepower on CL
+;The source
+:Our very own KC English Wikia. I tracked down the first report of 15.5cm fit bonus. It dated back to pre-Fall 2014, during Fusou K2 and AP shell update.
+;Spreading
+:In the comment section of [[Recent Updates]] page, someone asked about 15.5cm firepower bonus on CL. Another person came in and saw the comment, then made a new comment asking about the same thing. After 2 more pages of people asking the same question, it somehow became an accepted fact even though no one was making the claim. This is the finest case of "[http://www.brainyquote.com/quotes/quotes/v/vladimirle132031.html A lie told often enough becomes the truth]"
+;Validation
+*Let's just skip the validation part because the source said it all...
+;Conclusion
+:Myth busted.
+</div>
+
+==Bonus==
+<div style="margin-left:20px;width:80%">
+While tracking down the tweets, we stumbled upon a few old tweets on Artillery spotting and [[Type_98_Reconnaissance_Seaplane_(Night_Recon)|Night recon]] implementations.
+
+;Findings on Night scout (Confirmed)
+:We have confirmed that Night scout also gives bonus firepower and critical hit rate. These two characteristics were neither sourced nor mentioned in both KC English Wikia and wikiwiki. Hayashi and Admiral Mikado both agreed that the tweet at the time used an unusual expression for critical hit rate and firepower, which may have led early translators to misunderstand the tweet.
+
+;Findings on Artillery spotting (Plausible)
+:Hayashi and Mikado went into heated argument on whether the original artillery spotting tweet specifically said higher LoS leads to an increased in artillery spotting rate or not.
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''KC_Staff tweeted:''</span><br />
+17▼搭載索敵機による【弾着修正射撃】の実装
+昼間砲撃戦において、艦隊全体の索敵能力が高く、制空権確保または航空優勢の状況下において、【水上索敵機/観測機/爆撃機】を搭載した巡洋艦以上の艦娘は、弾着修正射撃による【昼間特殊砲撃(連続砲撃等)】を実施する場合があります。
+</blockquote>
+
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Hayashi H wrote:''</span><br />
+Anyway, adjectives cannot be used as a terminal conjunction; if 高く was meant as an adjective 高い it would occur before LoS,
+like 「艦隊全体の高く索敵...」; if it was meant as a conditional, it would be 高ければ;
+the only (not one of, ONLY) possible interpretation of this phrasing is that it's a contraction of 高くして, meaning 'increased by'.
+<br/>
+Unfortunately there is no easy way to 'prove' a translation matter without falling back on credentials,
+so if you don't believe me your only recourse is to seek an English-speaking native Japanese speaker and ask them to translate the tweet into English.
+<br/>
+Japanese is high-context, and grammar is complicated to begin with; searching complicated grammar structures is already hard enough,
+but when half of the structure is omitted like this it makes dictionaries unuseable, and you'd have to 'refer to native speaker' for any form of confirmation.\
+</blockquote>
+
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Admiral Mikado wrote:''</span><br />
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Hayashi H wrote:''</span><br />Anyway, adjectives cannot be used as a terminal conjunction;</blockquote>
+Wrong. 高く is not just the adverbial from of 高い, but can also be a stylised form of 高くて, which CAN use as a conjunction.
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Hayashi H wrote:''</span><br />
+> if 高く was meant as an adjective 高い it would occur before LoS, like 「艦隊全体の高く索敵...」;</blockquote>
+Wrong. Adjectives can be placed before or after the noun they modify. In the latter case the noun merely needs to be marked with が, generally speaking.
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Hayashi H wrote:''</span><br />
+> if it was meant as a conditional, it would be 高ければ; </blockquote>
+Not necessarily. The tweet uses 状況下 which can be translated as "under [these] circumstances" and basically functions as conditional for the the aforementioned... well, conditions.
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Hayashi H wrote:''</span><br />
+> the only (not one of, ONLY) possible interpretation of this phrasing is that it's a contraction of 高くして, meaning 'increased by'.</blockquote>
+This is wrong on so many levels I don't even know where to start.
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Hayashi H wrote:''</span><br />
+> Unfortunately there is no easy way to 'prove' a translation matter without falling back on credentials, so if you don't believe me your only recourse is to seek an English-speaking native Japanese speaker and ask them to translate the tweet into English. 
+</blockquote>
+I have a BA degree in both Japanese Studies AND linguistics, that should be enough. An English-speaking Japanese wouldn't do you any good anyway because their English still has to be good enough. Besides, this tweet isn't using some weird, archaic and/or complicated grammar. The tweets are using literary language for the most part, but nothing out of the ordinary.
+
+<blockquote class="styled"><span style="font-size:12px; color:#444;">''Hayashi H wrote:''</span><br />
+> Nor is it possible to resolve this without going through lessons on adjectives, verbs, conditionals and contractions, which will not work if you don't trust me on the matter either.</blockquote>
+No need for that, I just went through it.
+</blockquote>
+</div>
+[[Category:Blog posts]]

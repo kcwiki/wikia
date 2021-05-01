@@ -1,0 +1,152 @@
+<includeonly>
+'''{{{date|No date provided}}}'''
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+!'''Ship'''
+!'''Lvl'''
+!'''Equipment'''
+!'''Morale'''
+!{{Hit}}
+!{{Luck}}
+!'''Target'''
+!'''CL0'''
+!'''CL1'''
+!'''CL2'''
+!'''Crit Rate'''
+!'''Hit Rate'''
+!'''Interval'''
+!'''Calc. Rate'''
+!'''Difference'''
+|-
+|{{ShipBattleCard|{{{ship|}}}}}
+|{{{lvl|0}}}
+|{{{equip|Unarmed}}}
+|{{{morale|Normal}}}
+|{{{acc|0}}}
+|{{{luck|0}}}
+|{{ShipBattleCard|{{{target|}}}}}
+|{{{CL0|0}}}
+|{{{CL1|0}}}
+|{{{CL2|0}}}
+|{{{crit|0%}}}
+|{{{hit|0%}}}
+|{{{interval|({{Calc|error|{{#expr:{{{CL1|0}}}+{{{CL2|0}}}}}|{{#expr:{{{CL0|0}}}+{{{CL1|0}}}+{{{CL2|0}}}}}}}%)}}}
+|{{{calculated|0%}}}
+|{{{difference|0%}}}
+|-
+|colspan="15"|{{{note|No comments provided}}}
+|}
+</includeonly>
+<noinclude>
+This is a template for displaying fit data samples in a neat table. Feel free to use this template, but do notify the creator if you intend on modifying this template, as any edits might have potential consequences on existing pages that makes use of this template.
+
+Note: Use of Monobook skin or removing the siderail with a personal js/css is recommended to fully utilize the available space.
+
+{{Clear}}
+==Parameters==
+Note that all the parameters are optional. As this template doesn't make use of any complex
+* '''date:''' Sets the date. Will display no date on default.
+* '''ship:''' Sets the card of the ship name using the [[Template:ShipBattleCard|ShipBattleCard]] template.
+* '''lvl:''' The level of your ship.
+* '''equip:''' The weapons used by the ship in the sample. Default is ''unarmed''.
+* '''morale:''' The morale of the ship. Default is ''normal''.
+* '''acc:''' Sets the extra accuracy value obtained from equipment. Default is ''0''.
+* '''luck:''' Sets the luck of the ship. Default is ''0''.
+* '''target:''' The card of the enemy ship that will be used as the basis.
+* '''CL0:''' The amount of times your ship missed the target in the sample. Default is ''0''.
+* '''CL1:''' The amount of times your ship hit your target in the sample. Default is ''0''.
+* '''CL2:''' The amount of times your ship dealt a critical hit against your opponent. Default is ''0''.
+* '''crit:''' Recored crit percentage. Default is ''0%''.
+* '''hit:''' Recorded hit percentage. Default is ''0%''.
+* '''interval:''' The confidence interval of the sample. Will use CL0, CL1 and CL2 to calculate the interval by default, if a value is not provided.
+* '''calculated:''' The hit rate value which is obtained through calculation with no regards of any fit or overweight modifiers. Default is ''0%''.
+* '''difference:''' The difference between the hit rate and the calculated hit rate value. Default is ''0%''.
+
+{{Clear}}
+
+==Examples==
+===Default===
+<pre>
+{{FitData}}
+</pre>
+{{FitData}}
+===Battleship Fit Data===
+<pre>
+{{FitData
+|date = 30-07-2017
+|ship = Nagato Kai Ni
+|lvl = 99
+|equip = 2x 41cmK, 1x T13K
+|morale = Orange
+|acc = 10
+|luck = 40
+|target = Destroyer Ro-Class
+|CL0 = 56
+|CL1 = 807
+|CL2 = 137
+|hit = 94.40%
+|interval = 1.34%
+|calculated = 88.75%
+|difference = 5.65%
+|note = Fit bonus of 41cm Kai guns on {{ShipLink|Nagato Kai Ni}} is expected to be +4.
+}}
+</pre>
+{{FitData
+|date = 30-07-2017
+|ship = Nagato Kai Ni
+|lvl = 99
+|equip = 2x 41cmK, 1x T13K
+|morale = Orange
+|acc = 10
+|luck = 40
+|target = Destroyer Ro-Class
+|CL0 = 56
+|CL1 = 807
+|CL2 = 137
+|hit = 94.40%
+|interval = 1.34%
+|calculated = 88.75%
+|difference = 5.65%
+|note = Fit bonus of 41cm Kai guns on {{ShipLink|Nagato Kai Ni}} is expected to be +4.
+}}
+===No Confidence Interval provided===
+<pre>
+{{FitData
+|date = 30-07-2017
+|ship = Nagato Kai Ni
+|lvl = 99
+|equip = 2x 41cmK, 1x T13K
+|morale = Orange
+|acc = 10
+|luck = 40
+|target = Destroyer Ro-Class
+|CL0 = 56
+|CL1 = 807
+|CL2 = 137
+|hit = 94.40%
+|calculated = 88.75%
+|difference = 5.65%
+|note = Fit bonus of 41cm Kai guns on {{ShipLink|Nagato Kai Ni}} is expected to be +4.
+}}
+</pre>
+{{FitData
+|date = 30-07-2017
+|ship = Nagato Kai Ni
+|lvl = 99
+|equip = 2x 41cmK, 1x T13K
+|morale = Orange
+|acc = 10
+|luck = 40
+|target = Destroyer Ro-Class
+|CL0 = 56
+|CL1 = 807
+|CL2 = 137
+|hit = 94.40%
+|calculated = 88.75%
+|difference = 5.65%
+|note = Fit bonus of 41cm Kai guns on {{ShipLink|Nagato Kai Ni}} is expected to be +4.
+}}
+{{Clear}}
+
+==Made by==
+[[User:Tsubakura|Tsubakura]]
+</noinclude>

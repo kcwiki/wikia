@@ -1,0 +1,50 @@
+Recently I saw the [[Sandbox/List_of_ships_by_combat_performance#Luck|new Luck-based NBCI Trigger Rate formulas]], which got me a little push into expressing the same in code form. Even if I suck at coding.
+
+This is what I got so far:
+
+<syntaxhighlight lang="javascript">
+function calcNBCI (type,luck,fs,damaged,slight,lookout) {
+/*
+NBCI Rate Calculator
+Formula based on http://kancolle.wikia.com/wiki/Sandbox/List_of_ships_by_combat_performance#Luck
+
+Parameter List:
+	name		type			description
+	---------	-----------		---------------------------------------------------------------------------------------
+	type		integer			cut-in type:
+									0: Torpedo cut-in
+									1: Mixed (Main gun + Torpedo) cut-in
+									2: Main gun cut-in
+	luck		integer			ship girl's base luck
+	fs			Boolean			is the shipgirl in question placed as the flagship?
+	damaged		Boolean			is the shipgirl in question moderately damaged (chuuha)?
+	slight		integer			searchlight usage:
+									0: no searchlight
+									1: only allied fleet has searchlight
+									2: only enemy fleet has searchlight
+									3: both fleets have searchlights (do note that is a tentative calculated factor)
+	lookout		Boolean			is a Skilled Lookouts equipped to the shipgirl in question?
+*/
+
+	var cap = new Array(60,70,55)[type]; // 0 - Torp CI, 1 = Mixed CI (uses lower bound), 2 = Main Gun CI
+	var mult = new Array(70,70,50)[type]; // 0 - Torp CI, 1 = Mixed CI, 2 = Main Gun CI
+	var mod_pos = (fs) ? 12.5 : 0; // Flagship - +12.5%
+	var mod_hp = (damaged) ? 20 : 0; // Green/Shouha (slight damage) receive no modifier, chuuha (moderate damage) - +20%
+	var mod_slight = new Array(0,5,-10,-5)[slight]; // 0 - No searchlight, 1 - Allied searchlight, 2 - Enemy searchlight, 3 - Searchlight on both sides
+	var mod_lookout = (lookout) ? 5 : 0; // Skilled Lookouts: +5% (pre-cap)
+	
+	var capped_luck = (luck + mod_lookout > cap) ? cap : luck + mod_lookout; // we're assuming a hardcap here
+	
+	return (Math.sqrt(mult * capped_luck) + (mod_pos + mod_hp + mod_slight));
+}
+</syntaxhighlight>
+
+''(Pardon the mangled tabbing; I personally use a tabulator width of 4)''
+
+and while I got results close to the ones indicated on the table in the aforementioned page (77% for torp CI for a shipgirl with 60 Luck as flagship; my script got 77.3074069840786%), I still have questions (aside from the overall correctness of my script):
+
+* How exactly are pre-cap and post-cap modifiers applied? (code-wise)
+* If both sides have Searchlights, does the Searchlight modifier become <span style="font-family:monospace;">5 + (-10) = -5</span>?
+* Would having a Star Shell activating together with the Searchlight have any effect on the modifier?
+
+Any help on these (and a few others I might ask later) would help this newbie greatly. Thanks in advance!<ac_metadata title="A Piece of Code, for the Community&#039;s Review"> </ac_metadata>

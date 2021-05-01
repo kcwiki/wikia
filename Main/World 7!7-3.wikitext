@@ -1,0 +1,188 @@
+{{Map/Header}}
+{{Map/Info
+|en = Penang Island
+|jp = ペナン島沖
+|romaji = Penan-tō Oki
+|exp_hq = 160
+|exp_hq_boss = 320 1st boss, 1920 2nd
+|show_kills = true
+|kills = 3+4
+|strategy_name = Pass Out of Malacca Strait
+|strategy_name_ja = マラッカ海峡を抜けて
+|strategy_info = With a small fleet which strong heavy cruisers and destroyers form the core of, you will pass out of the Malacca Strait. Destroy enemy forces at Penang Island and go forward!
+|strategy_info_ja = 精強な重巡及び駆逐艦を中核とする小艦隊でマラッカ海峡を突破する。ペナン島沖の敵戦力を撃破して前進せよ！
+}}
+{{MapBranchingTable
+|title = 7-3 Branching Rules Part 1
+|A/empty -> B,C =
+*Go to C if fleet contains only one ship
+*Meet '''ANY''' of the following to go to B
+**Fleet contains 5 or 6 ships
+**CA(V) = 0
+**DD+DE = 0
+**Fleet contains CV(L/B)
+*Meet '''ANY''' of the following to go to C
+**Fleet contains [[Haguro]] '''and''' [[Kamikaze]]
+**Fleet contains [[Haguro]] and DD = 3
+**Fleet contains only DD, DE, CL and CA(V)
+*Otherwise, B
+
+|C -> D,E =
+*Meet '''ANY''' of the following to go to E
+**Fleet contains only 1DD
+**Fleet contains only 1CA(V) and 1DD
+*Meet '''ANY''' of the following to go to D
+**Fleet contains SS(V), (F)BB(V) or CV(L/B)
+**Fleet contains 5 or 6 ships
+*If fleet contains [[Haguro]] '''and''' [[Kamikaze]]
+**Go to D if CA(V) = 3 '''or''' fleet also contains any CAV, CLT
+**Otherwise, E
+*If fleet has only 4 ships
+**Go to E if fleet contains [[Haguro]] '''or''' [[Kamikaze]] '''and''' meets one of the following:
+***CA(V) = 1 '''and''' DD+DE = 3
+***DD+DE = 4
+**Otherwise, D
+*If the amount of ships in the fleet is 3 or less:
+**Go to E if CA(V) = 1 and DD+DE = 2 '''or''' DD+DE = 3
+**Otherwise, D
+
+|D -> E,F/empty =
+*Meet '''ANY''' of the following to go to F
+**Fleet contains (F)BB(V) or CV(L/B)
+**Fleet contains 6 ships
+**CA(V) ≥ 4
+**CAV ≥ 2
+*Otherwise, E
+}}
+{{MapBranchingTable
+|title = 7-3 Branching Rules Part 2
+|A/empty -> B,C =
+*'''FORCE''' node C if fleet contains only one ship
+*Meet '''ANY''' of the following to go to B
+**Fleet contains CV(L/B)
+**CA(V) = 0
+**DD+DE = 0
+*Meet '''ANY''' of the following to go to C
+**Fleet contains [[Haguro]] & [[Kamikaze]]
+**Fleet contains AO, DD ≥ 3
+*If fleet contains 5 or 6 ships
+**Go to B if DD+DE ≤ 2 '''OR''' fleet contains slow ships '''and''' doesn't contain [[Haguro]]
+**Otherwise, C
+*If fleet contains 4 ships or less
+**If amount of ship in fleet = 4, go to B if CA(V) ≥ 2 or DD+DE ≤ 1
+**Go to C if fleet contains only CL, DD, CA(V)
+**Otherwise, B
+
+|C -> D,E,I/empty=
+*Go to D if fleet contains (F)BB(V), CV(L/B), DD+DE = 0
+*Go to I if '''Fastest''' fleet
+*If fleet contains 6 ships
+**Go to I if '''Fast+''' fleet, CL+DD ≥ 4
+**Otherwise, D
+*If fleet contains 5 ships and contains [[Haguro]] & [[Kamikaze]]
+**Go to D if DD+DE ≤ 1
+**Go to I if fleet contains CL or [[Ashigara]]
+**Otherwise, D
+*Go to I if CA(V) = 1, CL = 1 and DD = 3, '''all fast'''
+*Otherwise, D if fleet contains 5 ships but doesn't meet any of the above conditions
+*If fleet contains 4 ships
+**If fleet contains [[Haguro]] & [[Kamikaze]]
+***Go to D if CA(V) ≥ 3 '''OR''' fleet doesn't contain [[Ashigara]] '''and''' DD+DE ≤ 1
+***Otherwise, E
+**Go to E if fleet contains [[Haguro]] and DD+DE = 3 '''OR''' fleet contains [[Kamikaze]] and DD+DE = 4
+**Otherwise, D
+*If fleet contains 3 ships
+**Go to D if CA(V) ≥ 2 or DD+DE ≤ 1
+**Go to E if fleet contains only DD, CA(V)
+**Otherwise, D
+*Go to E if fleet doesn't meet any of the above conditions '''and''' contains 2 ships or less
+
+|D -> F/empty, G/empty =
+*Go to F if CAV ≥ 3, CV(L/B) ≥ 3, (F)BB(V) ≥ 3
+*Otherwise, G
+
+|G/empty -> H/resource, I/empty, J, K/storm, P=
+*Go to H if DD ≥ 2, CA(V) = 0, and meets one of the following:
+**AV ≥ 2
+**Fleet contains AO
+*Go to I if fleet contains SS(V)
+*Meet '''ANY''' of the following to go to J
+**Fleet contains slow ship
+**Fleet contains (F)BB(V) or CV(L/B)
+**DD ≤ 2
+**CA(V) ≥ 3
+*Meet '''ANY''' of the following to go to P
+**Fleet contains [[Haguro]], [[Ashigara]] and [[Kamikaze]]
+**Fleet contains [[Haguro]] and [[Kamikaze]], '''Fast+'''
+**Fleet contains 4 ships or less, including [[Haguro]] and [[Kamikaze]]
+*Go to K if fleet contains [[Haguro]] and [[Kamikaze]], no [[Ashigara]]
+*Otherwise, I
+
+|I/empty -> J, L/storm, M =
+*Meet '''ANY''' of the following to go to J
+**Fleet contains (F)BB(V) or CV(L/B)
+**DD = 0
+**CA(V) ≥ 3
+**Fleet contains [[Haguro]] and [[Kamikaze]], DD ≥ 3, '''Fast+'''
+**'''Fastest''' fleet, DD ≥ 3
+*Meet '''ANY''' of the following to go to M
+**Fleet contains [[Haguro]] and [[Kamikaze]], DD ≥ 3, the speed is '''Fast''' or below
+**Fleet contains [[Haguro]] and [[Kamikaze]], DD = 2, '''Fastest'''
+**Fleet contains [[Ashigara]] '''and''' either [[Haguro]] or [[Kamikaze]], DD ≥ 3
+*Otherwise, L
+
+|J -> M, P =
+*Meet '''ANY''' of the following to go to M
+**Fleet contains slow ship
+**Fleet contains (F)BB(V), CV(L/B), SS(V)
+**CA(V) ≥ 4
+*Meet '''ANY''' of the following to go to P
+**Fleet contains [[Haguro]] & [[Ashigara]], DD ≥ 3
+**'''Fast+''' fleet, DD ≥ 3
+**Fleet contains [[Haguro]], [[Kamikaze]] & [[Ashigara]], DD = 2
+*Otherwise, M
+
+|M -> N, O/resource, P =
+*Go to N if fleet contains CV(B), CV(L/B)+(F)BB(V) ≥ 2, SS(V) ≥ 4
+*Go to O if AV ≥ 2 or fleet contains AO, slow BB
+*Otherwise, P
+}}
+
+==Map Guide==
+*World 7-3 is a 2 Phase Map
+*Historical Routings exist in this Map, similar to Events '''(See Below)'''
+*The Boss HP Gauge Bar will reset every 1st day of each month, like World 7-2 and Extra Operations. Clearing 7-2 is not required.
+===Phase 1===
+This Phase requires you to defeat the {{ShipLink|Destroyer Ro-Class/Late Model|Destroyer Ro-Class/Late Model Elite|text=Enemy Destroyers}} 1st Boss Node {{Event/Route|E|red}} and destroy the HP Gauge Bar in order to move into Phase 2.
+*Fleet: {{ShipLink|Haguro Kai Ni|text=Haguro}} + 3 DD
+**Route: {{Event/Route|A|blue|C|red|E|red}}
+
+===Phase 2===
+Phase 2 requires you to defeat the Boss {{ShipLink|Heavy Cruiser Ne-Class Elite}} in Node {{Event/Route|P|red}}
+====Historical fleet====
+*{{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kamikaze}}, {{ShipLink|Ashigara Kai Ni|text=Ashigara}} are required.
+*All the compositions listed below require at least '''Fast''' fleet
+**{{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kamikaze}}, {{ShipLink|Ashigara Kai Ni|text=Ashigara}} 1 CL(T)/AV 2 DD
+**{{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kamikaze}}, 1 CA(V) 1 CL(T)/AV 2 DD ('''Fast+''')
+***Route: {{Event/Route|A|blue|C|red|D|red|G|blue|P|red}}
+**{{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kamikaze}}, {{ShipLink|Ashigara Kai Ni|text=Ashigara}} 1 AV 1 CL/CLT 1 DD
+***Route: {{Event/Route|A|blue|C|red|D|red|G|blue|J|red|P|red}} 
+**{{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kamikaze}}, {{ShipLink|Ashigara Kai Ni|text=Ashigara}} 1 CA(V) 1 DD '''(5 Ships)'''
+**{{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kamikaze}}, 1 CA(V)/CLT/AV 3 DD ('''Fast+''')
+***Route: {{Event/Route|A|blue|C|red|I|blue|J|red|P|red}}
+**{{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Ashigara Kai Ni|text=Ashigara}} 1 CLT/AV 3 DD
+***Route: {{Event/Route|A|blue|C|red|D|red|G|blue|I|blue|M|red|P|red}}
+***Not recommended as there is ammo penalty at the boss node. Only use this if you don't have [[Kamikaze]]
+
+====Non-historical fleet====
+*2 CA(V) 1 CL 3 DD ('''Fast+''' fleet)
+**Route: {{Event/Route|A|blue|C|red|I|blue|L|purple|M|red|P|red}}
+*2 CA(V) 1 CL 3 DD ('''Fastest''' fleet)
+**Route: {{Event/Route|A|blue|C|red|I|blue|J|red|P|red}}
+
+===Map progression===
+{{#tag:gallery|
+7-3_Map_p1.png{{!}}Map during 1st Ro-class Phase at Node E
+7-3_Map_p2.png{{!}}Map during 2nd Ne-class Boss Phase at Node P
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{Map/Footer}}

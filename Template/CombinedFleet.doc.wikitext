@@ -1,0 +1,183 @@
+==Basic==
+;Description
+:This template is for maps with [[Combined Fleet|Combined Fleets]]. If you are not using a Combined Fleet, consider using [[Template:NanaminFleetKai]] or [[Template:FleetCompViewer]].
+;Credits
+:[[User:Nanamin|Nanamin]] for writing the module and documentation.
+:[[User:Flonnaru|Flonnaru]] for designing the template's look and layout.
+;Skeleton
+<pre>{{CombinedFleet
+| <Ship>/<Model>/<Level>
+| <Equipment>
+| <Equipment>
+| <Equipment>
+| <Equipment>
+|-
+... (Up to a total of 12 ship entries)
+| route = 
+| hq_level = 
+| map_name = 
+| notes = 
+}}</pre>
+
+==Syntax==
+*''Ship'' is the ship's name. For example, "Sendai".
+*''Model'' is the ship's remodel. This may be "", "Kai", "Kai Ni", "A", "Carrier", "Carrier Kai", "Carrier Kai Ni", "zwei" or "drei".
+*''Level'' is the ship's current level. Alternatively, if ''use_los'' is set, this will be the ship's base line of sight (LoS) value (without any equipment on).
+*''Equipment'' is the ship's equipment. Slot order does matter as it is used to calculate the ship's fighter power. A full list may be found here: [[Sandbox/EquipmentListKai/TypeSorted]].
+
+;Special Values
+*''hq_level'' is the user's current HQ level.
+*''route'' is the route taken on the map. This is used as-is, so you can write it how you like. For example, "A-B/C-D/E-F" and "A-B-D-F or A-C-E-F" are both valid entries.
+*''map_name'' is the map's designated number or name. It is used as-is so "2-3", "Eastern Orel Bay" and "東部オリョール海" are all valid inputs.
+*''notes'' are for any miscellaneous information the user wishes to add. This is used as-is.
+*''use_los'' may be specified to have the ''Level'' field read as base LoS. As module data may be missing, this is a 100% sure way to get the correct ELoS calculated.
+
+==Example==
+<pre class="mw-collapsible mw-collapsed">{{CombinedFleet
+| # Main Fleet starts here
+| Tone/Kai Ni/99
+| 20.3cm (No.3) Twin Gun Mount
+| 20.3cm (No.3) Twin Gun Mount
+| Type 0 Observation Seaplane
+| Searchlight
+|-
+| Haruna/Kai Ni/99
+| 35.6cm Twin Gun Mount (Dazzle Camouflage)
+| 35.6cm Twin Gun Mount (Dazzle Camouflage)
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Kongou/Kai Ni/99
+| 41cm Twin Gun Mount
+| 41cm Twin Gun Mount
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Hiei/Kai Ni/99
+| 41cm Twin Gun Mount
+| 41cm Twin Gun Mount
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Kirishima/Kai Ni/99
+| 41cm Twin Gun Mount
+| 41cm Twin Gun Mount
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Kaga/Kai/99
+| Tenzan (601 Air Group)
+| Reppuu
+| Reppuu
+| Saiun
+|-
+| # Escort Fleet starts here
+| Shigure/Kai Ni/99
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| Skilled Lookouts
+|-
+| Kitakami/Kai Ni/99
+| 15.2cm Twin Gun Mount
+| 15.5cm Triple Secondary Gun Mount
+| Kouhyouteki
+|-
+| Sendai/Kai Ni/99
+| 15.5cm Triple Secondary Gun Mount
+| 15.5cm Triple Secondary Gun Mount
+| Type 0 Observation Seaplane
+|-
+| Ooi/Kai Ni/99
+| 15.2cm Twin Gun Mount
+| 15.5cm Triple Secondary Gun Mount
+| Kouhyouteki
+|-
+| Chikuma/Kai Ni/99
+| 20.3cm (No.3) Twin Gun Mount
+| 20.3cm (No.3) Twin Gun Mount
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Yuudachi/Kai Ni/99
+| 12.7cm Twin Gun Mount Model B Kai Ni
+| 12.7cm Twin Gun Mount Model B Kai Ni
+| No. 33 Surface Radar
+| route = A-B-C-D
+| hq_level = 98
+| map_name = E-1
+| notes = Are we there yet?
+}}</pre>
+{{CombinedFleet
+| # Main Fleet starts here
+| Tone/Kai Ni/99
+| 20.3cm (No.3) Twin Gun Mount
+| 20.3cm (No.3) Twin Gun Mount
+| Type 0 Observation Seaplane
+| Searchlight
+|-
+| Haruna/Kai Ni/99
+| 35.6cm Twin Gun Mount (Dazzle Camouflage)
+| 35.6cm Twin Gun Mount (Dazzle Camouflage)
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Kongou/Kai Ni/99
+| 41cm Twin Gun Mount
+| 41cm Twin Gun Mount
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Hiei/Kai Ni/99
+| 41cm Twin Gun Mount
+| 41cm Twin Gun Mount
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Kirishima/Kai Ni/99
+| 41cm Twin Gun Mount
+| 41cm Twin Gun Mount
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Kaga/Kai/99
+| Tenzan (601 Air Group)
+| Reppuu
+| Reppuu
+| Saiun
+|-
+| # Escort Fleet starts here
+| Shigure/Kai Ni/99
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| Skilled Lookouts
+|-
+| Kitakami/Kai Ni/99
+| 15.2cm Twin Gun Mount
+| 15.5cm Triple Secondary Gun Mount
+| Kouhyouteki
+|-
+| Sendai/Kai Ni/99
+| 15.5cm Triple Secondary Gun Mount
+| 15.5cm Triple Secondary Gun Mount
+| Type 0 Observation Seaplane
+|-
+| Ooi/Kai Ni/99
+| 15.2cm Twin Gun Mount
+| 15.5cm Triple Secondary Gun Mount
+| Kouhyouteki
+|-
+| Chikuma/Kai Ni/99
+| 20.3cm (No.3) Twin Gun Mount
+| 20.3cm (No.3) Twin Gun Mount
+| Type 0 Observation Seaplane
+| No. 32 Surface Radar
+|-
+| Yuudachi/Kai Ni/99
+| 12.7cm Twin Gun Mount Model B Kai Ni
+| 12.7cm Twin Gun Mount Model B Kai Ni
+| No. 33 Surface Radar
+| route = A-B-C-D
+| hq_level = 98
+| map_name = E-1
+| notes = Are we there yet?
+}}

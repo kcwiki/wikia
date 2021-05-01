@@ -1,0 +1,31 @@
+/* ========================================================= */
+/* ========         Wikia Full Page View            ======== */
+/* ========================================================= */
+ 
+/* Navigation bar width change*/
+.global-navigation-container
+{
+    max-width: 100% !important;
+    width: 90% !important;
+    margin-left: 5% !important;
+    margin-right: 5% !important;
+}
+ 
+/* Main body width change */
+.skin-oasis>.banner-notifications-wrapper, .WikiaHeader, .page-width-container, .WikiaPage
+{
+    max-width: 100%;
+}
+ 
+#WikiaPage
+{
+    width: 90%;
+    margin-left: 5%;
+    margin-right: 5%;
+}
+ 
+body
+{
+    overflow-x: hidden;
+    padding-bottom: 0;
+}

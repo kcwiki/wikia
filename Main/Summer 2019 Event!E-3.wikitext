@@ -1,0 +1,353 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Commence! : Operation Shingle
+|jp = 発動！「シングル作戦」
+|tag = E3
+|romaji = Hatsudō! 「Shingle Sakusen」
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 1600 HP + 4000
+|hp_easy = 1600 HP + 4000
+|hp_medium = 1800 HP + 4200
+|hp_hard = 2200 HP + 4800
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Janus}}
+|reward_casual_1 = {{ItemStack|item = [[File:Jantaited.png{{!}}55px{{!}}link=]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Me 163B|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Fw 190 A-5 Kai (Skilled)|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Fw 190 D-9|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai|Fw 190 A-5 Kai (Skilled)|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Fw 190 D-9|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Shuusui|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|First Class Medal|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules
+|expand = true
+|id = 45-3
+|order = 0,A,B,D,F,G,H,M,N,L,Q,K
+
+|0 -> 1 = * Do not meet the requirements to start at 2.
+|0 -> 2 = 
+* Meet '''ALL''' of the following requirements:
+** Unlock the 2nd starting point.
+** Carrier Task Force '''OR''' Transport Combined Fleet
+
+|A -> B/empty, C, F = 
+* If Single Fleet '''OR''' Transport Combined Fleet, go to B.
+* Else, if amount of CV(L/B) ≥ 3, go to C.
+* Else, if amount of (F)BB(V)+CV(L/B) ≥ 5, go to C.
+* Else, go to F.
+
+|B/empty -> D, F = * Active branching
+
+|D -> E = * Single Fleet '''OR''' Transport Combined
+|D -> F = * Surface/Carrier Task Force
+
+|F -> G, I = 
+* If Single Fleet '''OR''' Transport Combined Fleet, go to I.
+* Else, go to G if you meet '''ANY''' of the following:
+** Slow Fleet
+** Fleet contains CV(B)
+** Amount of (F)BB(V)+CV(L/B) ≥ 4
+* Finally, go to I if you do not meet any of the above.
+
+|G -> H = * Do not meet the requirements to go to either I or M.
+|G -> I = 
+* Meet '''ALL''' of the following requirements:
+** Node M is **not** unlocked.
+** Amount of (F)BB(V)+CV(B) ≤ 2
+** If '''Slow''' Fleet, amount of (F)BB(V)+CV(L/B) ≤ 3
+|G -> M/empty = 
+* Meet '''ALL''' of the following requirements:
+** Node is unlocked.
+** Amount of CV(L/B) ≤ 2
+** Amount of (F)BB(V)+CV(L/B) ≤ 5
+** If '''Slow Fleet''', amount of (F)BB(V)+CV(L/B) ≤ 4
+
+|H -> I, M/empty = 
+* Go to M if it is unlocked.
+* Else, go to I.
+
+|M/empty -> L/empty, N = * Active branching
+
+|N -> O = * Do not meet the requirements to go to T.
+|N -> T = 
+* Meet '''ANY''' of the following requirements after unlocking node T:
+** Fleet contains {{ShipLink|Taigei}} '''AND''' amount of SS(V) ≥ 3
+** Amount of SS(V) ≥ 6
+
+|L/empty -> K = * Do not meet the requirements to go to Q.
+|L/empty -> Q/empty = * Fleet contains Akashi Kai '''OR''' Akitsushima Kai.
+
+|Q/empty -> K = * Do not meet the requirements to go to P.
+|Q/empty -> P = 
+* Fast+ Fleet
+* Alternatively, meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V)+CV(L/B) ≤ 5
+** Amount of (F)BB(V)+CA(V)+CLT+AV ≤ 6?
+
+|K -> P = * Pass the LoS check, but do not meet the requirements to go to R.
+|K -> R = 
+* Meet '''ALL''' of the following requirements:
+** No SS(V)
+** Amount of DD ≥ 2
+** Amount of (F)BB(V) ≤ 2 (Easy+)
+** Amount of (F)BB(V)+CV(L/B) ≤ 5
+** If '''Slow''' Fleet, amount of (F)BB(V)+CV(L/B) ≤ 4 
+** If fleet came from Q, amount of (F)BB(V)+CV(L/B)+LHA+AO+CA(V)+CL(T) ≤ 8
+|K -> S/empty = * Fail the LoS check.
+}}
+{{clear}}
+
+==Overview==
+*Both Single and Combined Fleets can be sortied to this map.
+*There are two boss nodes, as well as multiple gimmicks present for unlocking routes on the map and debuffing the boss.
+*The first boss is {{ShipLink|Anchorage Water Demon Vacation Mode}}, who is susceptible to anti-installation equipment.
+*The second boss is a mixed fleet with installations, and the heavily armored {{ShipLink|Anzio Princess||Anzio Princess Damaged||text=Anzio Princess}} as flagship.
+*This map has a '''hard only''' orange tag.
+
+===Map progression===
+{{#tag:gallery|
+Summer19_E3_p1.png{{!}}Map during the first HP phase at node J
+Summer19_E3_p2.png{{!}}Map during the second HP phase but boss node U not unlocked
+Summer19_E3_p3.png{{!}}Map during the second HP phase at node U but second starting point and shortcut Q>P not unlocked
+Summer_2019_Event_E-3_Map.png{{!}}Full map during the second HP phase at node U after unlocking everything
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+{{clear}}
+
+===Ship Bonuses===
+{{Ambox/Disclaimer| This information is based on user submitted data and is subject to revisions as more data is gathered.}}'''Mapwide'''
+*German, Italian, US - 1.1x
+*British - 1.15x(?)
+
+'''Node''' {{Event/Route|J|Red}}
+*German, US - 1.1x
+*Italian - 1.2x
+*British - 1.25x
+
+'''Node''' {{Event/Route|U|Red}}
+*German - 1.1x
+*Italian - 1.15x
+*USN - 1.25x
+*British - 1.3x
+*Shortcut Modifier - 1.07x
+*Debuff Modifier - 1.15x (against Anzio Princess, and Anchorage Water Demon only)
+
+===Part 0: Before you start, especially if you wish to do Medium/Hard===
+The following section discusses a mechanic present in this map that is '''exclusive to Medium and Hard difficulties'''. If you tackling this map on Casual or Easy, the information here does not apply to you.
+
+====High-altitude Abyssal Bombers====
+When [[Land_Base_Aerial_Support#Enemy_Raid|LBAS raids]] occur in this map on Medium and Hard difficulties, your bases will be subjected to attacks from '''High-altitude Abyssal Bombers'''. When defending your bases against these bombers, an additional modifier is applied to the total defense air power of your land bases; this modifier is influenced by the total number of rocket-powered interceptors present on all of your bases:
+*'''0:''' x0.5 (Total fighter power is halved)
+*'''1:''' x0.8
+*'''2:''' x1.1
+*'''3 or more:''' x1.2
+The following interceptors are considered to be "rocket-powered interceptors":
+*{{EquipmentLink|Me 163B}} (E-2 Medium/Hard reward)
+*{{EquipmentLink|Prototype Shuusui}} (E-1 reward for all difficulties)
+*{{EquipmentLink|Shuusui}} (E-3 Hard reward)
+*You will want at least the {{EquipmentLink|Me 163B}} from E-2 Medium/Hard and the {{EquipmentLink|Prototype Shuusui}} from E-1 to obtain the 1.1x modifier.
+**If you cannot clear E-2 Medium/Hard, at least try to clear E-3 Easy as it also gives {{EquipmentLink|Me 163B}} so the 1.1x modifier is obtainable in future events which feature this mechanic.
+*Ranking up these fighters up to Double Chevron (>>) will require at least 35+ runs which can be tedious.
+*The best options to rank them up are E-1 Node C (Range Extender Aircraft required) and World 6-5 Node B.
+
+====AS Air Defense Requirements====
+Both Medium and Hard require you to obtain Air Superiority (AS) on air defense against the enemy's air raid. The AS values required are as followed for all possible compositions.
+*'''Medium''': 644, 683, or 780 (Locked on {{ShipLink|Anzio Princess||Anzio Princess Damaged||text=Anzio Princess}} Final Form)
+*'''Hard''': 956, 1092, or 1365 (Locked on Final Form)
+There are 2 (3 for Hard) instances when you need to achieve this: unlocking the {{ShipLink|Anzio Princess||Anzio Princess Damaged||text=final boss}} (Part 2, Hard only), unlocking the 2nd starting point & shortcut (Part 3), and unlocking the debuff while the boss is at her Final Form (Part 5).
+*You can unlock the boss, the starting point, and the shortcut by achieving at least 644 (Medium) or 956 (Hard) defense air power and hope the easiest enemy raid comp shows up. This is doable with a bunch of fighters/interceptors.
+*However, upon reaching the boss' Final Form, the AS requirement will lock to 780 (Medium) or 1365 (Hard). If you are unable to reach this threshold, you will not be able to unlock the debuff.
+**It is nearly impossible to reach 1365 defense air power unless you have a collection of interceptors from previous events.
+**Note that achieving at least 780 (or 956 for Hard's 2 other gimmicks) defense air power is doable even with non-event equipment. If you cannot reach 1365 defense air power, consider either trying to clear Hard without the debuff (but with the start point/shortcut unlocked) or dropping to Medium.
+
+====Note: Calculation of Defense Air Power====
+*{{EquipmentLink|Me 163B}} and {{EquipmentLink|Prototype Shuusui}} can give you 110 and 101 fighter power at >>, respectively.
+*The following are fighter power values for easily obtainable fighters at >>:
+**{{EquipmentLink|Type 0 Fighter Model 21}}: 46 fighter power
+**{{EquipmentLink|Type 0 Fighter Model 52}}: 50
+**{{EquipmentLink|Prototype Reppuu Late Model|Reppuu}}: 67
+*'''For all other planes, please see this link from reddit''': https://i.imgur.com/DSy6Jtf.png
+*You can replace one fighter on a land base with a {{EquipmentLink|Saiun}}, which provides you with a 1.3x multiplier to the defense air power of that specific base. Bases with planes that have high defense air power ({{EquipmentLink|Prototype Shuusui}}, {{EquipmentLink|Me 163B}} , {{EquipmentLink|Reppuu Kai}}) see the most benefit from the inclusion of a Saiun.
+*Achieving 956 defense air power will require 8-10 >> {{EquipmentLink|Prototype Reppuu Late Model|text=Reppuu}} and/or 1-2 {{EquipmentLink|Saiun}} placed as suggested above, including {{EquipmentLink|Me 163B}} and {{EquipmentLink|Prototype Shuusui}} >> for around 970 fighter power.
+
+===Part 1: Defeat Anchorage Water Demon Vacation Mode===
+
+'''Route''': {{Event/Route|A|Red|F|Red|I|Red|J|Red}}
+*'''STF'''
+**Fast STF | 1-2 (F)BB / 2-1 CVL / CAV / XX + CL / 3 DD / 2 CA(V)
+**Maximum of 3 BB+CVL in STF
+**Fleet must be fast if STF.
+**Bringing CV(B) will off-route you {{Event/Route|F|Red}} to {{Event/Route|G|Red}}; it must be CVL.
+*'''Single Fleet'''
+**No ship nor speed restriction. You can bring whatever you want.
+*'''Boss'''
+**Anchorage Water Demon is a normal surface ship, but also takes bonus damage from anti-installation equipment, which are the followings (ordered from least to most effective).
+***{{EquipmentLink|Type 2 12cm Mortar Kai|text=Type 2 12cm}} - 1.15x
+***{{EquipmentLink|
+Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|text=Type 4 20cm}} - 1.15 ~ 1.25x
+***{{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}}- 1.25x
+***{{EquipmentLink|Daihatsu Landing Craft|text=Daihatsu}} - 1.43 ~ 1.49x
+***{{EquipmentLink|Toku Daihatsu Landing Craft + 11th Tank Regiment|text=11th Tank}} - 1.44 ~ 1.56x
+***{{EquipmentLink|Type 3 Shell|text=T3 Shell}} - 1.5x
+***2 x {{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}} - 1.6x
+***{{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|text=T89}} - 1.67 ~ 1.72
+****If MAX improvement, 2 ~ 2.09x
+***{{EquipmentLink|Special Type 2 Amphibious Tank|text=T2 Tank}} - 2.39 ~ 2.42x
+****If MAX improvement, 3.14 ~ 3.32x
+***{{EquipmentLink|M4A1 DD|text=M4A1}}- 2.54x
+***'''Dive bombers''' also have bonus damage against her
+****1DB = 1.4x
+****2DB = 2.4 ~ 2.44
+*'''LBAS'''
+**If you have {{EquipmentLink|Prototype Toukai}} available, it is recommended to send a Land Base to Node {{Event/Route|F|Red}}.
+**LBAS Range of 8 is required to be sent to Node {{Event/Route|J|Red}}.
+**On Last Dance, there is no Air Power at the boss. It is thus possible to run 4 LBAS bombers to the boss for Last Dance.
+
+===Part 2: Unlock Boss Node U===
+
+'''Hard''': A+ Rank Node {{Event/Route|O|Red}} twice, S-Rank Node {{Event/Route|K|Red}} & {{Event/Route|E|Red}}, AS Air Defense twice.
+*It is recommended to do the Air Defense requirement last as the next section of unlocking (Starting point) also requires Air Defense. This is to save resources.<br /> 
+'''Normal''': A+ Rank Node {{Event/Route|O|Red}} & {{Event/Route|E|Red}}, S-Rank Node {{Event/Route|K|Red}}.<br />
+'''Easy''': B+ Rank Node {{Event/Route|O|Red}}, A+ Rank Nodes {{Event/Route|E|Red}} & {{Event/Route|K|Red}}.
+
+*Nodes {{Event/Route|O|Red}} & {{Event/Route|K|Red}} can be reached by using a fleet with 4 (F)BB(V)+CV(B/L). Using any more will result in a detour to {{Event/Route|H|Red}}
+*Node {{Event/Route|E|Red}} can be reached with either Single Fleet or TCF. Single Fleet is recommended as it has access to vanguard formation, and has higher base shelling accuracy compared to TCF.
+
+===Part 3: Unlock Start Point #2 & Shortcut===
+
+'''Requirements''':
+*S Rank Node {{Event/Route|T|Red}}
+** Twice for Hard
+** Once for Casual/Easy/Medium
+*AS on Nodes {{Event/Route|D|Red|R|Red}}
+** Required for at least Easy+. No test on Casual yet.
+***Use Single Fleet for {{Event/Route|D|Red}}
+***AS only on ​​​​​{{Event/Route|D|Red}} for easy mode.
+*A+ Rank Node {{Event/Route|U|Red}}.
+** Twice for Hard
+** Once for Casual/Easy/Medium
+*Obtain AS via LBAS Air Defense once.
+**Required for Medium/Hard
+**Not required for Casual/Easy
+
+===Part 4: Chip Anzio Princess to Last Dance===
+*Please be advised that to use the Start Point #2 you have opened up, you may only access it via Carrier Task Force or Transport Combined Fleet.
+
+===Part 5: Unlock Debuff on Anzio Princess===
+*Boss Gauge must be on Last Dance before requirements are made, and any requirements done in prior will not count.
+*Unlike all previous Gimmicks, you will not hear the 'Quest Completion' Sound Effect upon return to Home after completing each requirements below. Instead upon the completion of the Final Requirement, you will hear the Boss' Voiceline {{audio|file=Anzio Princess Debuffed.ogg}} "チッ…ナマイキッ！" while still in the Map, and you will not retreat automatically.
+**Due to this fact, it is highly recommended that you play with the Game Volume On (With Headphones/Earphones), and pay attention to the Sound to not miss this, as otherwise you will have no way of finding out whether the Debuff has activated without actually visiting the Boss Node.
+**The Boss debuff audio may not play if ending the debuff step on air defense node D. To check Boss debuff manually, sortie to the boss and notice her introduction CG. If the eyes are purple, the boss is without debuff. If the eyes are orange, the boss has been debuffed.
+'''Requirements''':
+*A+ Rank Node {{Event/Route|J|Red}} with Single fleet/TCF and {{Event/Route|O|Red}} with STF/CTF.
+**Required for all difficulties.
+*Obtain AS on Node {{Event/Route|D|Red}}
+**Required for Easy+
+*Obtain AS on Air Defense once.
+**Required for Medium+
+*Obtain AS on Node {{Event/Route|H|Red}} with STF and A+ rank Node {{Event/Route|E|Red}} with Single fleet.
+**'''Hard Only'''
+
+===Part 6: Defeat {{ShipLink|Anzio Princess|text=Anzio Princess}}===
+
+'''Compositions & Routes – Carrier Task Force'''
+*{{Event/Route|2|black|D|orange|F|red|G|red|M|blue|L|blue|K|red|R|orange|U|red}} - Reaches boss with no ammo penalty
+*Possible composition: 2 (F)BB / 2 CV(B) / 0-2 CA(V) / 0-2 AV + 1 CL / 2 DD / 1-2 CA / 1-2 CLT / 0-1 FBB
+**For '''slow speed fleets''' (F)BB(V)+CV(L/B)≤ 4
+**For fast speed fleets (F)BB(V)+CV(L/B)≤ 5
+***An additional CV(L/B) can be included in exchange for an additional node at {{Event/Route|H|red}} and small ammo penalty. Adding another BB is not recommended as it will route to {{Event/Route|P|red}}.
+**This fleet has high combat potential, but the escort fleet may have difficulties at {{Event/Route|G|red}} and {{Event/Route|K|red}} due to CTF vs single fleet shelling order.
+***Pre-boss support expedition is highly recommended.
+***Utilizing FBB will increase combat power and durability of the 2nd fleet, especially against enemy torpedoes.
+***Bringing CLT helps stabilize G and K nodes, and they can also act as finishers at the boss node
+*{{Event/Route|2|black|D|orange|F|red|G|red|H|orange|M|blue|L|blue|Q|blue|K|red|R|orange|U|red}} - Reaches boss with ~8% damage penalty from ammo
+**1 {{ShipLink|Akitsushima}} / 2 (F)BB / 3 CV(B) + 1 CL / 2 DD / 1 CAV / 2 FBB
+***2nd fleet CAV cannot be substituted with CA
+***1 FBB in the 2nd fleet may be substituted with CA or CLT
+**This fleet takes a slightly longer route but can bring 2 battleships in the escort fleet.
+
+'''Compositions & Routes – Surface Task Force'''
+*{{Event/Route|1|black|A|red|F|red|G|red|M|blue|L|blue|K|red|R|orange|U|red}} - Reaches boss with ~28% ammo penalty
+*2 (F)BB / 1 CV(B) / 0-3 CAV / 0-2 AV/ 0-1 AO + 1 CL / 2 DD / 2 CA / 1 CLT
+**AO is recommended to reduce ammo and fuel penalties at the boss node 
+***They can also double as anti-land base, or for increasing air power
+
+
+'''LBAS – Utilization'''
+*LBAS requires 7+ range to reach boss node. Possible usages are as followed:
+**0-1 base of Prototype Toukai to attack Node F
+**2-3 bases of 3 Bombers + 1 Fighter to Node U (Pre Final)
+**2-3 bases of 4 Bombers to Node U (Final)
+
+
+'''Boss Node Battle'''
+*{{ShipLink|Anzio Princess}} has high armor near the night battle damage cap (339 on hard last form). The general approach against this is to try to sink or destroy all other enemies before night battle occurs. Then, use multiple attacks at or close to the night damage cap preferably with historical post-cap modifiers to score either low armor rolls or critical hits to deal large damage to her.
+*There are a wide variety of historical post-cap bonuses that can be utilized.  Notable ships:
+**CV: {{ShipLink|Saratoga Mk.II Mod.2|Intrepid Kai|text=American carriers}} are ideal due to their post-cap damage bonus and high slot capacity
+***{{ShipLink|Ark Royal}} is also a good option, although her capacity is somewhat lower and the map is rife with anti-air enemies
+**BB: {{ShipLink|Nelson}} and {{ShipLink|Warspite}} have high damage modifiers
+***Although not historically relevant, {{ShipLink|Nagato Kai Ni}} and {{ShipLink|Mutsu Kai Ni}} can equip bonus equipment and have high modifiers on their special attacks
+**FBB: {{ShipLink|Iowa}} has a high damage modifier and is able to be placed in either the main or escort fleet
+***{{ShipLink|Bismarck}} has lower modifiers, but also fulfills this role
+***{{ShipLink|Italia}} and {{ShipLink|Roma}} are options, but they are also useful in E-2
+**CA: {{ShipLink|Zara}} and {{ShipLink|Pola}} are available CAs with historical bonuses, and due to their innate long range are good for leading shelling at preboss and boss nodes
+***For {{ShipLink|Prinz Eugen}}, although less potent in day battle, she can be used for either double attack or TCI
+**DD: For escort TCI, {{ShipLink|Jervis}}, {{ShipLink|Johnston}}, and {{ShipLink|Fletcher}} are viable options due to post-cap bonuses, which put their damage above typical TCI ships like Ayanami
+*Anzio Princess herself is a surface ship with no special equipment weaknesses known.  But the rest of the boss main fleet contains 4 installations, as well as Anchorage Water Demon Vacation Mode who shares many weaknesses with installations
+**Thus, the approach is to bring many ships with anti-installation equipment in the allied main fleet
+***For AV and DD, combining Type 2 Amphibious Tanks with WG42 as well as Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force) or M4A1 DD will result in high damage to all enemies besides Anzio Princess
+**For battleships, AP shells will increase damage against Turret Imps
+***Type 3 shell will increase damage against Airfield Princess, Supply Depot Princess Vacation Mode
+***Nagato Kai Ni can equip the M4A1 DD or other landing craft, which has a large post-cap bonus against installations
+****Mutsu Kai Ni can equip Type 2 Amphibious Tanks but not other landing crafts, but it still provides considerable bonuses
+**For heavy cruisers, Type 3 shells with double attack artillery spotting is ideal
+**For carriers, equipping dive bombers that disable attacking installations can be desirable
+***Up to two dive bombers will give post-cap bonus against Anchorage Water Demon Vacation Mode, with high probability to target her.
+*The escort fleet engages the enemy escort fleet in the day and is usually responsible for finishing the boss off during night battle
+**On Hard, the escort is fairly bulky (Ta, Tsu and Na flagships) and clearing any remnants after opening phases is not always trivial
+**If using CTF, for route safety and damage output in the day bringing 1-2 ships equipped for day double attacks is advisable
+**Otherwise, TCI, or possibly night DA for CLTs, is preferred
+***Night bonus equipment (searchlight, star shell, night scout) are good to have to increase cut in effectiveness
+**During chipping, opening ASW can help stabilize safety on route to the boss node, but during final kill phase damage it should be balanced against damage output at the boss node
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+====J====
+{{Fleets|friend=Summer 2019 Event|node=E-3 J}}
+====U====
+{{Fleets|friend=Summer 2019 Event|node=E-3 U}}
+
+===LBAS Flight Range===
+[[File:Summer19_E3_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

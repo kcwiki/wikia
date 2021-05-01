@@ -1,0 +1,275 @@
+__NOTOC__
+=={{Anchor|1-5}}World 1-5: 【Extra Operation】 鎮守府近海 Adjacent Seas of the Naval Base==
+[[File:The Marshal Admiral Guide to 1-5|thumb|right|260px]]
+{{Sortieworld
+| map = {{World1-5}}
+| difficulty = ☆ ☆ ☆ ☆ ☆
+| item = None
+| exp = 150
+| code = 鎮守府近海対潜哨戒 (Naval base adjacent waters anti-submarine patrol)
+| text = なるべく小編成の対潜哨戒部隊を編成し、鎮守府近海に出没する敵潜水艦を発見・制圧せよ！
+<br>Organize a small seek-and-destroy ASW fleet to clean up the submarine-infested waters near the naval base!}}
+
+===Stage Guide===
+{{MapBranchingTable
+|title = 1-5 Branching Rules
+|id = 1-5
+|B/battle -> C/battle =
+* If the amount of ships in fleet is ≦ 4, the routing is guaranteed
+* If the amount of ships in fleet is ≧ 5, the routing is random
+|B/battle -> D/battle = 
+* Random routing if the amount of ships in fleet is ≧ 5
+
+|C/battle -> F/battle = 
+* Fleet contains (F)BB (BBV does not count)
+* Fleet contains SS
+* Amount of CL in fleet is ≧ 3 (CLT and CT does not count)
+* Amount of ships in the fleet is ≧ 5
+|C/battle -> E/empty = 
+* Does not meet any of the requirement to go to F
+
+|D/battle -> H/empty =
+* Amount of ships in fleet is ≧ 5
+|D/battle -> I/battle = 
+* Amount of ships in fleet is ≦ 4
+
+|E/empty -> G/battle = 
+* 70-90% chance of off routing if:
+** Fleet contains no CVL, AV, LHA or CAV
+** Amount of CVL ≧ 2
+** Amount of AV ≧ 2
+** Amount of CAV ≧ 2
+|E/empty -> I/battle =
+* Guaranteed if the fleet contains at least a CVL, AV, LHA or CAV '''AND''' the fleet does not meet the requirements to off route to G.
+}}
+
+This is the first map which has branching rules, the first map with a boss HP bar requiring multiple completions, and the first map where you can face Flagship and Elite enemies. The map is filled with only submarines unless your fleet composition is wrong and you go off-course.
+
+* You are required to sink the boss submarine '''4 times''' to clear the map.
+* Since it is an Extra Operation, clearing this map is not required to continue onto [[World 2]].
+* Clearing this map rewards a [[Medal]] and 75 [[Experience_and_Rank#Monthly_Ranking|ranking points]]. At the start of each month, the boss HP bar will reset, allowing the rewards to be obtained again (if it doesn't reset, refresh the game, or get a new API link if you're using one).
+* The enemies on the map are scaled to your HQ level, which means that the enemies will rank up when you hit a certain HQ level. Nodes power up at levels 40 and 80.
+* {{ShipLink|Akashi}} drops on the boss node (Node I) for those who are HQ80+. She only drops if you currently do not have {{ShipLink|Akashi}}, meaning that you cannot get duplicates this way.
+
+==== Tips ====
+===== Beginners =====
+* This map is a good place for players with HQ level below 80 to level their [[DD]]s and [[CL]]s. For details, refer to the [[Tutorial: Leveling|leveling guide]].
+* Defeating the boss on this map will give you a large amount of HQ experience. If you don't want to inflate your HQ level and thus your enemies, then consider retreating on C node.
+* '''Recommended composition''': 1 [[CVL]] 1 [[BBV]] 2 [[CL]]. This will guarantee that you reach the boss node. You may replace any number of [[CL]]s with [[DD]]s if you wish.
+** '''Taking more than 4 ships will not allow you to reach the boss node'''.
+** 1 [[BBV]] is recommended since it can equip [[List of Seaplanes by stats|Seaplane Bombers]] to hit subs while allowing you to enter the [[Combat/Main#Combat_Stages|second shelling phase]].
+** 1 [[CVL]] is recommended since it can equip [[Saiun]] to prevent [[Combat/Main#Engagement_Form_Modifier|T-cross disadvantage (Red T)]], which can make killing the boss difficult without good ASW equipment.
+** It's possible to replace the [[CVL]] with a [[CAV]] or [[AV]], but it's not advisable to do so without good equipment. An [[AV]] can equip [[Depth Charge]]s, a [[CAV]] has better armor and can equip [[List of Seaplanes by stats|Seaplane Bombers]] to hit subs, but neither of them can equip [[Saiun]] to prevent the occasional Red T.
+* Putting [[Sonar]] and [[Depth Charge]] on same ship will get 15% ASW power bonus (doesn't stack, one depth charge and sonars is the usual setup).
+
+===== OASW =====
+* [[Isuzu Kai Ni]] and ships with ASW of 100 or greater (or in the case of DEs and Taiyou Kai/Kai Ni: 60 and 65, respectively) will allow you to perform [[OASW|Opening ASW attacks]], making the map much easier.
+* '''Recommended composition''': 3 OASW-capable [[DD]]/[[DE]] + 1 [[CVL]]/[[AV]]/[[LHA]]. Ideally: '''3[[DE]] + [[Kasuga Maru|Taiyou Kai (Kai Ni)]]'''. This setup trades the [[BBV]] for a [[DD]] or [[DE]], reducing the resource consumption while disabling the second shelling phase, but also allows preemptive attacks that disable the enemy subs before they attack, working as if it was an extra shelling phase. You can swap up to 2 [[DD]]s for [[CL]]s. Using [[CT]]s or [[CLT]]s is also possible.
+** Drop [[CVL]]/[[AV]] can be used (that is, dropped level 1 ships), up to two times without resupplying. Generally, this doesn't affect boss, boss S rank, and bucket rates. The cost is around 50 fuel and ammo for full sortie. More drop ships ([[DD]] and [[CL]]) also can be used, reducing resource consumption even further ([[Satsuki Kai Ni]] and 3 drop ships will cost around 10 fuel and ammo per full sortie); however, this will affect boss and boss kill rates (possibly down to 50%).
+** [[CVL]]/[[AV]]/[[LHA]] range can be increased to medium/long by using [[OTO]]/[[SCAMP]] (will attack first in the first shelling phase after the OASW phase).
+** For [[DD]]/[[CL]]/[[CT]]/[[CLT]] use one [[Type 3 Depth Charge Projector]], and 2-3 [[Type 3 Active Sonar]]s or [[Type 4 Passive Sonar]]s. Generally, [[CVL]]/[[AV]]/[[LHA]] equipment don't matter, you can use [[List of Engine|boilers]], [[Anti-torpedo Bulge (Medium)|bulges]], normal ASW equipment, or default equipment if drop [[CVL]]/[[AV]] is used.
+
+{{:Partials/ASW Equipment|collapsed=true}}
+
+===Nodes and Enemy Encounters===
+
+<div class="mw-customtoggle-1-5-enemy wikia-menu-button">Show/Hide Nodes and Enemy Encounters</div>
+
+
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-1-5-enemy"
+!Area
+!Admiral Level
+!#
+! width="500px" |Encountered vessels
+!Form
+|-
+| colspan="1" rowspan="2" style="text-align: center;" |A<br />敵偵察潜水艦
+| style="text-align: center;" |79 and below
+| style="text-align: center;" |1
+| style="text-align: left;" |[[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{LineAhead}}
+|-
+| style="text-align: center;" |80 and above
+| style="text-align: center;" |2
+| style="text-align: left;" |[[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{LineAhead}}
+|-
+| colspan="1" rowspan="3" style="text-align: center;" |B<br />敵潜水艦隊A群
+| rowspan="1" style="text-align: center;" |39 and below
+| style="text-align: center;" |1
+| style="text-align: left;" |[[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|-
+| rowspan="1" style="text-align: center;" |40 to 79
+| style="text-align: center;" |2
+| style="text-align: left;" |[[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|-
+| style="text-align: center;" |80 and above
+| style="text-align: center;" |3
+| style="text-align: left;" |[[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|-
+| colspan="1" rowspan="3" style="text-align: center;" |C<br />敵潜水艦隊C群
+| style="text-align: center;" |39 and below
+| style="text-align: center;" |1
+| style="text-align: left;" |[[File:SS Yo Class.png|Submarine Yo Class|link=Submarine Yo-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{LineAbreast}}
+|-
+| style="text-align: center;" |40 to 79
+| style="text-align: center;" |2
+| style="text-align: left;" |[[File:SS Yo Class2.png|Submarine Yo Class Elite|link=Submarine Yo-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{LineAbreast}}
+|-
+| style="text-align: center;" |80 and above
+| style="text-align: center;" |3
+| style="text-align: left;" |[[File:SS Yo Class2.png|Submarine Yo Class Elite|link=Submarine Yo-Class]][[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{LineAbreast}}
+|-
+| colspan="1" rowspan="3" style="text-align: center;" |D<br />敵潜水艦隊B群
+| style="text-align: center;" |39 and below
+| style="text-align: center;" |1
+| style="text-align: left;" |[[File:SS Yo Class.png|Submarine Yo Class|link=Submarine Yo-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|-
+| style="text-align: center;" |40 to 79
+| style="text-align: center;" |2
+| style="text-align: left;" |[[File:SS Yo Class2.png|Submarine Yo Class Elite|link=Submarine Yo-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|-
+| style="text-align: center;" |80 and above
+| style="text-align: center;" |3
+| style="text-align: left;" |[[File:SS Yo Class2.png|Submarine Yo Class Elite|link=Submarine Yo-Class]][[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]][[File:SS Yo Class.png|Submarine Yo Class|link=Submarine Yo-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|-
+| style="text-align: center;" |E
+| colspan="4" rowspan="1" style="text-align: center;" |"Must be my imagination" (battle avoided)
+|-
+| colspan="1" rowspan="3" style="text-align: center;" |F<br />敵侵攻打撃艦隊A群
+| style="text-align: center;" |39 and below
+| style="text-align: center;" |1
+| style="text-align: left;" |[[File:CVL_Nu_Class2.png|Light Carrier Nu Class Elite|link=Light Carrier Nu-Class]][[File:CL Ho Class3.png|Light Cruiser Ho Class Flagship|link=Light Cruiser Ho-Class]][[File:DD_Ni_Class2.png|Destroyer Ni-Class Elite|link=Destroyer Ni-Class]][[File:DD_Ha_Class.png|Destroyer Ha-Class|link=Destroyer Ha-Class]][[File:DD_Ha_Class.png|Destroyer Ha-Class|link=Destroyer Ha-Class]]
+| style="text-align: center;" |{{diamond}}
+|-
+| style="text-align: center;" |40 to 79
+| style="text-align: center;" |2
+| style="text-align: left;" |[[File:CVL_Nu_Class2.png|Light Carrier Nu Class Elite|link=Light Carrier Nu-Class]][[File:CL He Class3.png|Light Cruiser He Class Flagship|link=Light Cruiser He-Class]][[File:CL Ho Class2.png|Light Cruiser Ho Class Elite|link=Light Cruiser Ho-Class]][[File:DD_I_class3.png|Destroyer I-Class Flagship|link=Destroyer I-Class]][[File:DD_I_class3.png|Destroyer I-Class Flagship|link=Destroyer I-Class]]
+| style="text-align: center;" |{{diamond}}
+|-
+| style="text-align: center;" |80 and above
+| style="text-align: center;" |3
+| style="text-align: left;" |[[File:CVL_Nu_Class3.png|Light Carrier Nu Class Flagship|link=Light Carrier Nu-Class]][[File:CL He Class3.png|Light Cruiser He Class Flagship|link=Light Cruiser He-Class]][[File:DD_I_class3.png|Destroyer I-Class Flagship|link=Destroyer I-Class]][[File:DD_I_class3.png|Destroyer I-Class Flagship|link=Destroyer I-Class]][[File:DD_I_class3.png|Destroyer I-Class Flagship|link=Destroyer I-Class]]
+| style="text-align: center;" |{{diamond}}
+|-
+| colspan="1" rowspan="3" style="text-align: center;" |G<br />敵侵攻打撃艦隊B群
+| style="text-align: center;" |39 and below
+| style="text-align: center;" |1
+| style="text-align: left;" |[[File:CT_Chi_Class2.png|Torpedo Cruiser Chi Class Elite|link= Torpedo Cruiser Chi-Class]][[File:CT_Chi_Class2.png|Torpedo Cruiser Chi Class Elite|link= Torpedo Cruiser Chi-Class]][[File:DD Ha Class2.png|Destroyer Ha Class Elite|link=Destroyer Ha-Class]][[File:DD Ro Class.jpg|Destroyer Ro Class|link=Destroyer Ro-Class]][[File:DD Ro Class.jpg|Destroyer Ro Class|link=Destroyer Ro-Class]]
+| style="text-align: center;" |{{Template:LineAhead}}
+|-
+| style="text-align: center;" |40 to 79
+| style="text-align: center;" |2
+| style="text-align: left;" |[[File:CT_Chi_Class3.png|Torpedo Cruiser Chi Class Flagship|link= Torpedo Cruiser Chi-Class]][[File:CL_He_Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ha Class2.png|Destroyer Ha Class Elite|link=Destroyer Ha-Class]][[File:DD Ha Class2.png|Destroyer Ha Class Elite|link=Destroyer Ha-Class]]
+| style="text-align: center;" |{{Template:LineAhead}}
+|-
+| style="text-align: center;" |80 and above
+| style="text-align: center;" |3
+| style="text-align: left;" |[[File:CT_Chi_Class3.png|Torpedo Cruiser Chi Class Flagship|link= Torpedo Cruiser Chi-Class]][[File:CT_Chi_Class3.png|Torpedo Cruiser Chi Class Flagship|link= Torpedo Cruiser Chi-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:DD Ha Class3.png|Destroyer Ha Class Flagship|link=Destroyer Ha-Class]][[File:DD Ha Class3.png|Destroyer Ha Class Flagship|link=Destroyer Ha-Class]]
+| style="text-align: center;" |{{Template:LineAhead}}
+|-
+| style="text-align: center;" |H
+| colspan="4" rowspan="1" style="text-align: center;" |"Must be my imagination" (battle avoided)
+|-
+| colspan="1" rowspan="3" style="text-align: center;" |'''<span class="wikicolor" style="color:Red">I<br />敵通商破壊主力艦隊</span>'''
+| style="text-align: center;" |39 and below
+| style="text-align: center;" |1
+| style="text-align: left;" |[[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|-
+| style="text-align: center;" |40 to 79
+| style="text-align: center;" |2
+| style="text-align: left;" |[[File:SS Ka Class3.png|Submarine Ka Class Flagship|link=Submarine Ka-Class]][[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]][[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|-
+| style="text-align: center;" |80 and above
+| style="text-align: center;" |3
+| style="text-align: left;" |[[File:SS Yo Class3.png|Submarine Yo Class Flagship|link=Submarine Yo-Class]][[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]][[File:SS Ka Class2.png|Submarine Ka Class Elite|link=Submarine Ka-Class]][[File:SS Ka Class.png|Submarine Ka Class|link=Submarine Ka-Class]]
+| style="text-align: center;" |{{Template:Echelon}}
+|}
+
+===Drops===
+
+<div class="mw-customtoggle-1-5-drop wikia-menu-button">Show/Hide Drops</div>
+
+
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-1-5-drop"
+!Node
+!Destroyers
+!Light Cruisers
+!Heavy Cruisers
+!Seaplane Tender
+!Aircraft Carrier
+!Submarine
+|-
+| style="text-align:center;" |A
+| style="text-align:center;" |[[Kisaragi]], [[Sazanami]], [[Hatsuyuki]], [[Samidare]], [[Arare]], [[Nagatsuki]], [[Miyuki]], [[Murakumo]], [[Shigure]], [[Mochizuki]], [[Shikinami]], [[Hatsushimo]], [[Yuudachi]], [[Ooshio]], [[Michishio]], [[Ushio]], [[Ikazuchi]], [[Hibiki]], [[Inazuma]], [[Murasame]], [[Kikuzuki]], [[Mikazuki]], [[Nagatsuki]], [[Shiranui]], [[Akebono]], [[Satsuki]], [[Isonami]], [[Nenohi]], [[Shirayuki]], [[Arashio]], [[Kasumi]]
+| style="text-align:center;" |[[Naka]], [[Isuzu]]
+|
+| style="text-align:center;" |[[Chitose]], [[Chiyoda]]
+|
+|
+|-
+| style="text-align:center;" |B
+| style="text-align:center;" |[[Shiranui]], [[Kuroshio]], [[Yuudachi]], [[Shigure]], [[Miyuki]], [[Kikuzuki]], [[Fumizuki]], [[Akebono]], [[Hatsuyuki]], [[Isonami]], [[Hibiki]], [[Inazuma]], [[Samidare]], [[Oboro]], [[Michishio]], [[Wakaba]], [[Shikinami]], [[Arare]], [[Sazanami]], [[Mochizuki]], [[Ooshio]], [[Ushio]], [[Kisaragi]], [[Shirayuki]], [[Mikazuki]], [[Nenohi]], [[Arare]], [[Ikazuchi]], [[Murakumo]], [[Hatsushimo]]
+| style="text-align:center;" |[[Natori]], [[Jintsuu]], [[Naka]], [[Kitakami]], [[Isuzu]], [[Yura]]
+|
+| style="text-align:center;" |[[Chitose]], [[Chiyoda]]
+| style="text-align:center;" |[[Houshou]]
+|
+|-
+| style="text-align:center;" |C
+| style="text-align:center;" |[[Arare]], [[Kisaragi]], [[Mochizuki]], [[Hibiki]], [[Kuroshio]], [[Shiranui]], [[Oboro]], [[Wakaba]], [[Ikazuchi]], [[Isonami]], [[Michishio]], [[Mutsuki]], [[Satsuki]], [[Mikazuki]], [[Nagatsuki]], [[Arashio]], [[Nenohi]], [[Sazanami]], [[Murasame]], [[Hatsushimo]], [[Kuroshio]], [[Kikuzuki]], [[Akebono]], [[Shirayuki]], [[Shigure]], [[Ushio]], [[Nenohi]], [[Hatsushimo]], [[Ooshio]], [[Shikinami]], [[Murakumo]], [[Kasumi]], [[Yayoi|'''<span style="color:red">Yayoi</span>''']]
+| style="text-align:center;" |[[Kiso]], [[Jintsuu]], [[Kitakami]], [[Isuzu]], [[Naka]], [[Yura]], [[Natori]], [[Tama]]
+|
+| style="text-align:center;" |[[Chitose]], [[Chiyoda]]
+| style="text-align:center;" |[[Houshou]]
+| style="text-align:center;" |
+[[I-19|'''<span style="color:red">I-19</span>''']] (HQ 80+), [[I-58|'''<span style="color:red">I-58</span>''']], [[I-168|'''<span style="color:red">I-168</span>''']]'''<span style="color:red"> </span>'''
+|-
+| style="text-align:center;" |D
+| style="text-align:center;" |[[Kisaragi]], [[Satsuki]], [[Fumizuki]], [[Nagatsuki]], [[Kikuzuki]], [[Mikazuki]] [[Shirayuki]], [[Hatsuyuki]], [[Miyuki]], [[Isonami]], [[Inazuma]], [[Hibiki]], [[Oboro]], [[Akebono]], [[Sazanami]], [[Ushio]], [[Nenohi]], [[Wakaba]], [[Hatsushimo]], [[Shigure]], [[Yuudachi]], [[Samidare]], [[Ooshio]], [[Michishio]], [[Arare]], [[Kasumi]], [[Shiranui]], [[Kuroshio]]
+| style="text-align:center;" |[[Kitakami]], [[Kiso]], [[Jintsuu]], [[Naka]], [[Isuzu]], [[Natori]]
+|
+| style="text-align:center;" |[[Chitose]], [[Chiyoda]]
+| style="text-align:center;" |[[Houshou]]
+| style="text-align:center;" | [[I-19|'''<span style="color:red">I-19</span>''']] (HQ 80+), [[I-58|'''<span style="color:red">I-58</span>''']], [[I-168|'''<span style="color:red">I-168</span>''']]
+|-
+| style="text-align:center;" |F
+| style="text-align:center;" |[[Ikazuchi]], [[Shigure]], [[Hibiki]], [[Kisaragi]],
+[[Mochizuki]], [[Miyuki]], [[Akebono]], [[Ooshio]], [[Yuudachi]], [[Fumizuki]]
+| style="text-align:center;" |[[Isuzu]], [[Kitakami]], [[Yura]]
+|
+| style="text-align:center;" |[[Chitose]]
+|
+| style="text-align:center;" |[[I-58|'''<span style="color:red">I-58</span>''']],
+[[I-168|'''<span style="color:red">I-168</span>''']]
+|-
+| style="text-align:center;" |G
+| style="text-align:center;" |[[Arare]], [[Shikinami]], [[Kasumi]], [[Isonami]], [[Akebono]], [[Ooshio]], [[Hatsushimo]], [[Nagatsuki]], [[Murakumo]], [[Nenohi]], [[Shirayuki]], [[Kisaragi]], [[Mochizuki]], [[Kikuzuki]], [[Sazanami]]
+| style="text-align:center;" |[[Tama]], [[Naka]], [[Yura]], [[Kiso]]
+|
+| style="text-align:center;" |[[Chiyoda]]
+| style="text-align:center;" |[[Houshou]]
+| style="text-align:center;" |[[I-58|'''<span style="color:red">I-58</span>''']],
+[[I-168|'''<span style="color:red">I-168</span>''']]
+|-
+| style="text-align:center;" |'''<span class="wikicolor" style="color:Red">I Boss Node</span>'''
+| style="text-align:center;" |[[Akatsuki]], [[Oboro]], [[Kikuzuki]], [[Ayanami]],
+[[Sazanami]], [[Arashio]], [[Kisaragi]], [[Fubuki]], [[Hatsuyuki]], [[Miyuki]], [[Shiranui]], [[Shiratsuyu]], [[Ushio]], [[Samidare]], [[Suzukaze]], [[Murasame]], [[Murakumo]], [[Mochizuki]], [[Nagatsuki]], [[Asashio]], [[Shigure]], [[Isonami]], [[Fumizuki]], [[Mikazuki]], [[Shirayuki]], [[Shikinami]], [[Kuroshio]], [[Kagerou]], [[Makigumo]], [[Kawakaze]] (Winter)
+| style="text-align:center;" |[[Natori]], [[Isuzu]], [[Nagara]], [[Yura]], [[Sendai]], [[Naka]], [[Jintsuu]], [[Kuma]], [[Tama]], [[Kiso]]
+| style="text-align:center;" |[[Kinugasa|'''<span style="color:red">Kinugasa</span>''']], [[Aoba]], [[Kako]], [[Furutaka]]
+|
+| style="text-align:center;" |[[Houshou]], [[Jun'you]], [[Hiyou]], [[Ryuujou]]
+| style="text-align:center;" |
+[[I-8|'''<span style="color:red">I-8</span>''']] (HQ 80+), [[I-19|'''<span style="color:red">I-19</span>''']] (HQ 40+), [[I-58|'''<span style="color:red">I-58</span>''']], [[I-168|'''<span style="color:red">I-168</span>''']]
+|}

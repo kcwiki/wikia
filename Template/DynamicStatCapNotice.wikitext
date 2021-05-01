@@ -1,0 +1,37 @@
+
+<div style="" class="plainlinks ambox ambox-type-notice">
+	<div class="ambox-image">
+		{{#switch:notice
+		|stub			= [[File:AMBox_construction.png|40px|link=]]
+		|construction		= [[File:AMBox_construction.png|40px|link=]]
+		|translation		= [[File:AMBox_translation.png|40px|link=]]
+		|delete			= [[File:AMBox_warning.png|40px|link=]]
+		|cleanup		= [[File:AMBox_cleanup.png|40px|link=]]
+		|notice			= [[File:AMBox_information.png|40px|link=]]
+		|move			= [[File:AMBox_move.png|40px|link=]]
+		|protection		= [[File:AMBox_protection.png|40px|link=]]
+		|renovate		= [[File:AMBox_construction.png|40px|link=]]
+		|#default		= [[File:Wiki.png|40px|link=]]
+		}}
+	</div>
+	<div class="ambox-content">
+		<span class="ambox-title">
+{{#if: ||
+			{{#switch:notice
+			|stub		= This article is a stub
+			|construction	= This article is under construction
+			|translation	= This article needs translation
+			|delete		= This article is currently marked for deletion
+			|cleanup	= This article needs cleanup
+			|notice		= Notice
+			|move		= This article is suggested to be moved or merged
+			|protection	= This article's protection level should be discussed
+			|renovate	= This article is being renovated in a sandbox page
+			|#default	= Notice
+			}}
+}}
+		</span><br>
+		<span class="ambox-description">{{PAGENAME}} appears to have some sort of mechanic which gradually increases her firepower, torpedo, AA and armor stat maximums as she levels. The listed maximums for the affected stats appear to only be valid at Lvl 1. This is a <b>BUG</b> and will be fixed during the 5/13 maintenance.</span>
+	</div>
+	<div class="ambox-clear"></div>
+</div><includeonly>[[Category:Ships that have dynamic stat caps]]</includeonly>

@@ -1,0 +1,311 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = The Doll's Festival! Waves in the Offing
+|jp = 桃の節句！沖に立つ波
+|romaji = Momo-no-sekku! Oki ni tatsu nami
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 360TP +3600HP +3000
+|hp_easy = 360TP +3600HP +3000
+|hp_medium = 480TP +3960HP +3300
+|hp_hard = 600TP +5940HP +3600
+<!--
+|show_kills = true
+|kills_all = ?
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_casual_1 = {{EquipmentCardKai|Hishimochi|icon=true|size=50px}}
+|reward_casual_1_x = 3
+|reward_casual_2 = {{EquipmentCardKai|12.7cm Twin Gun Mount Model C Kai 2|size=50px}}
+|reward_casual_2_x = 1
+|reward_casual_3 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_casual_3_x = 3
+|reward_easy_1 = {{EquipmentCardKai|Hishimochi|icon=true|size=50px}}
+|reward_easy_1_x = 5
+|reward_easy_2 = {{EquipmentCardKai|12.7cm Twin Gun Mount Model D Kai 2|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_easy_3_x = 1
+|reward_easy_4 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_easy_4_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Hishimochi|icon=true|size=50px}}
+|reward_medium_1_x = 7
+|reward_medium_2 = {{EquipmentCardKai|12.7cm Twin Gun Mount Model D Kai 3|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 4 Fighter Hayate|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_medium_4_x = 2
+|reward_medium_5 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Hishimochi|icon=true|size=50px}}
+|reward_hard_1_x = 12
+|reward_hard_2 = {{EquipmentCardKai/Stars|12.7cm Twin Gun Mount Model D Kai 3|4}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai/Stars|Type 4 Fighter Hayate|5}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_4_x = 3
+|reward_hard_5 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_hard_5_x = 2
+|reward_hard_6 = {{EquipmentCardKai|First Class Medal|icon=true|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|0 -> A/battle=
+*Single Fleet
+|0 -> B/empty=
+*Do not meet the requirements to go to A or C
+|0 -> C/battle=
+*Combined Fleet that contains one of the following:
+**CV(L/B) ≥ 4  
+**CV(B) ≥ 3
+**(F)BB(V)+CV(L/B) ≥ 6
+**(F)BB(V)+CV(B) ≥ 5
+*Transport Combined Fleet that contains BBV '''and slow''' fleet
+
+|A/battle -> D/battle, E/battle=
+*Meet '''ANY''' of the following to go to D
+**Combined Fleet
+**Fleet contains (F)BB(V) or CV(B/L)
+**DD+DE ≤ 3
+**Fleet contains both CA and CL (CAV doesn't count)
+*Otherwise, E
+
+|B/empty -> A/battle=
+*Surface Task Force
+*Transport Combined Fleet
+*Fleet contains slow ship
+*CV(L/B) ≥ 3
+|B/empty -> D/battle=
+*Do not meet the requirements to go to A
+
+|D/battle -> E/battle=
+*Single Fleet that contains (F)BB(V) or CV(B/L)
+*Any other fleets that do not meet any of the conditions here
+|D/battle -> F/empty=
+*Transport Combined Fleet
+*Single Fleet that contains AV or SS(V) ≥ 2
+|D/battle -> G/battle=
+*Single fleet, fleet contains no (F)BB(V) or CV(B/L), '''and''' DD ≥ 4
+|D/battle -> K/empty=
+*Surface Task Force
+*Carrier Task Force
+
+|E/battle -> G/battle, J/battle=
+*Meet '''ANY''' of the following to go to G
+**Fleet contains (F)BB(V) or CV(L/B)
+**Shortcut E - J is not opened yet
+*Go to J if DD ≥ 4
+*Otherwise, G
+
+|F/empty -> K/empty, H/resource=
+*Active Branching
+
+|L/battle -> M/empty, N/battle=
+*Go to M if fleet contains Akitsushima Kai or Akashi Kai
+*Otherwise, N
+
+|Q/battle -> R/battle=
+*Fail the LoS check
+*Shortcut Q - T is not opened yet
+*(F)BB(V)+CV(L/B) ≥ 5
+|Q/battle -> T/battle=
+*Pass the LoS check
+
+|R/battle -> S/empty =
+*Fail the LoS check
+|R/battle -> T/battle =
+*Pass the LoS check
+}}
+This map contains 1 TP bar and 2 HP bars that must be depleted in order to complete the map.
+*Phase 1: Deplete the TP bar by securing multiple A or S ranks at Node I
+*Phase 2: Deplete the first HP bar by damaging (then sinking) the [[Supply Depot Princess B]] at Node J
+*Phase 3: Open the shortcut Q-T
+*Phase 4: Deplete the last HP bar by damaging (then sinking) the [[Aircraft Carrier Princess]] at Node T.
+2 LBAS is available for you to sortie (Airbase defence can also occur)
+===Phase 1: Transport Operation===
+Transport Combined Fleet '''1CAV 1CL/CAV 4DD + 1CL 2CA(V) 3DD'''<br />
+Transport Combined Fleet '''1CVE 1AV/CAV 4DD + 1CL 2CA(V) 3DD'''
+*Routes {{Event/Route|B|blue|A|red|D|red|F|black|H|green|I|red}}
+*As this is a Transport Operation, you are recommended to bring as many Drum Canisters and Daihatsu Landing Craft as possible
+*LBAS: 1 Base of ASW bombers to Node D , another base of all bombers to Boss Node
+'''E -> J''' route will be revealed once this phase is over
+====Phase 1 Boss post-clear farming====
+On Hard mode, once this phase is over, you can alway go back to this boss node to farm a lot of DE such as [[Sado]], [[Tsushima]] and [[Maruyu]]. A '''single fleet such as 1CVL 2CLT 1CL 1CL/(F)BB(V) 1AV''' should be strong enough to S rank the boss node reliably (Routes {{Event/Route|A|red|D|red|F|black|H|green|I|red}})
+===Phase 2: Defeating Supply Depot Princess B===
+Single Fleet '''1CA 1CL 4DD''' (Not CAV)
+*Routes {{Event/Route|A|red|D|red|G|orange|J|red}}
+*This comp goes through [[New Submarine Princess]] node and an air raid node. Consider OASW and AACI if you have trouble bypassing
+*There are PT Imp Packs at the boss node, a certain equipment such as {{EquipmentLink|Skilled Lookouts}} may be required to counter them
+*LBAS: 1 Base of ASW bombers to Node D , another base of all bombers to Boss Node
+**If node A forces retreats a lot, consider sending LBAS of all bombers to this node instead
+===Phase 3: Opening the shortcut===
+
+*<u>1. Single fleet</u>
+
+**'''S rank node J''': Same comp as Phase 2
+**'''AS node G''':
+***Not required for Easy.
+***Heavy comp '''1BB 2CAV 3CV(B)''', '''2 BB 4 CV(B)'''
+****Route {{Event/Route|A|red|D|red|E|red|G|orange|}}
+****This comp will go through both [[New Submarine Princess]] and CA Ne-Class Kai node. LBAS can be sent to these two nodes to increase the passing rate
+****Node G has one formation that requires 550+ air for AS. It's recommended to bring 600 air or more to counter it
+***Light comp '''1CA 1CL 4DD (Same as Phase 2, with CL being {{ShipLink|Yura/Kai Ni}} and CA being {{ShipLink|Zara/Due}})'''
+****Route {{Event/Route|A|red|D|red|G|orange|}}
+****Skipping CA Ne-Class Kai node, requires several Seaplane Fighters to gain AS at node G (May have issue with the comp that requires 550+ air, but LBAS can be sent here to fighter sweep and lower the air down)
+*<u>2. Carrier Task Force</u>
+
+**'''AS node C''': '''2BBV 4CV(B) + 1CL 2DD 3XX'''
+***Not required for Easy.
+***Route {{Event/Route|C|red|}}
+**'''AS node O''': '''1FBB 2CAV 2CV Akitsushima Kai / Akashi Kai + 1CL 2CA 3DD (All Fast)'''
+** Can be combined with requirement to S rank node R below
+***Route {{Event/Route|B|blue|D|red|K|blue|L|red|M|black|O|red|}}
+***Node O has one formation that requires 900+ air for AS. It's recommend to bring around 750 air and use one of the LBAS to fighter sweep this node, lowering it's air power for easier AS
+***Using a Fleet Command Facility helps with Node L
+*<u>3. Transport Combined Fleet</u>
+
+**'''S rank node D and I''': Same comp as Phase 1
+***There is an alternative way of doing the Node D requirement via Carrier Task Force, with a fleet of '''2 CVL (1st Fleet) + 1 CL 5 DD (2nd Fleet) (FAST FLEET)'''. Route: {{Event/Route|B|blue|D|red}}
+***Single fleet used for farming can also be used to finish both requirements in one run
+*<u>4. Either Surface Task Force or Carrier Task Force</u>
+
+**'''S rank node R''':
+***CTF Route {{Event/Route|B|blue|D|red|K|blue|L|red|M|black|O|red|P|blue|Q|red|R|red}}
+****'''1FBB 2CV 2CAV Akitsushima Kai / Akashi Kai + 1CL 2CA(V) 3DD (All Fast)'''
+***STF Route {{Event/Route|B|blue|A|red|D|red|K|blue|L|red|M|black|O|red|P|blue|Q|red|R|red}}
+***Either combined fleet will work. Using CTF will skip node A, but escort fleet might cause issue pre-boss and get more retreat. On the other hand, STF can fight the pre-boss nodes better, but have to go through the extra node A
+*<u>5. '''Score AS during the airbase defence'''</u>
+
+**Not required for Easy.
+**Due to the presence of [[Abyssal Sky Fortress Ace (Heavy Bomber Model)]], it's recommended to equip multiple high attitude interceptors such as {{EquipmentLink|Shuusui}} to be able to gain AS
+
+===Phase 4: Defeating Aircraft Carrier Princess===
+Carrier Task Force '''2(F)BB(V) 2CV(B) 1CA(V)/CL Akitsushima Kai / Akashi Kai + 1CL 2DD 3CLT/CA(V) (All Fast)'''
+*Routes {{Event/Route|B|blue|D|red|K|blue|L|red|M|black|O|orange|P|blue|Q|red|T|red}}
+*On Hard mode, boss node has very high air power. You may need 700 air or more to be able to score AS there
+*M node is the anchorage repair node
+*L node contains a lot of PT Imp Pack, a certain equipment such as {{EquipmentLink|Skilled Lookouts}} may be required to counter them
+*LBAS: 1 Base of ASW bombers to Node D , another base of all bombers or fighter sweep to the boss node
+Carrier Task Force '''2(F)BB(V) 2CV(B) 2CA(V)/CL + 1CL 2DD 3CLT/CA(V) (All Fast)'''
+*Routes {{Event/Route|B|blue|D|red|K|blue|L|red|N|orange|O|orange|P|blue|Q|red|T|red}}
+*Same idea as the above comp, but will go through one more air raid node, skipping the anchorage repair node completely
+Surface Task Force '''3(F)BB(V) 1CV(B) 1CA(V) (Akitsushima Kai or Akashi Kai) + 1CL 2DD 3CA(V)/CLT'''
+*Routes {{Event/Route|B|blue|A|red|D|red|K|blue|L|red|M|black|O|orange|P|blue|Q|red|T|red}}
+*Going through one more surface node which will cause ammo penalty at the boss node, in exchange you can bring slow ships
+*As you will arrive at the boss node with 36% ammo left, AO with [[Underway Replenishment]] can be considered for the Final Kill to restore the damage modifier back to 100%
+
+===Map Bonuses===
+<font color="red">'''DISCLAIMER:''' ''This information is based on user submitted data and is subject to revisions as more data is gathered''</font>
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="3"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="5"| Nodes {{Event/Route|A|Red|D|Red|E|Red|I|Red}}
+|-
+!{{ShipBattleCardKai|Akishimo/Kai}}
+!{{ShipBattleCardKai|Okinami/Kai}}
+!
+| colspan="2"|1.2x
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Ashigara/Kai Ni}}
+!{{ShipBattleCardKai|Ooyodo/Kai}}
+!{{ShipBattleCardKai|Kiso/Kai Ni}}
+|rowspan="3" colspan="2"|1.15x
+|-
+!{{ShipBattleCardKai|Kasumi/Kai Ni}}
+!{{ShipBattleCardKai|Asashimo/Kai Ni}}
+!{{ShipBattleCardKai|Kiyoshimo/Kai}}
+|-
+!{{ShipBattleCardKai|Ushio/Kai Ni}}
+!{{ShipBattleCardKai|Akebono/Kai}}
+!{{ShipBattleCardKai|Hatsuharu/Kai Ni}}
+|-
+! colspan="5"|
+|-
+! colspan="5"|Boss Node {{Event/Route|J|Red}} (Flat Bonus)
+|-
+!{{ShipBattleCardKai|Kasumi/Kai Ni}}
+!{{ShipBattleCardKai|Ashigara/Kai Ni}}
+!{{ShipBattleCardKai|Ooyodo/Kai}}
+| rowspan="2" colspan="2"| 1.25x
+|-
+!{{ShipBattleCardKai|Asashimo/Kai Ni}}
+!{{ShipBattleCardKai|Kiyoshimo/Kai}}
+!
+
+|-
+! colspan="5"| Nodes {{Event/Route|L|Red|Q|Red|R|Red}} (Flat Bonus)
+|-
+!{{ShipBattleCardKai|Shimakaze/Kai}}
+!{{ShipBattleCardKai|Naganami/Kai Ni}}
+!{{ShipBattleCardKai|Ushio/Kai Ni}}
+| rowspan="2" colspan="2"|1.2x
+|-
+!{{ShipBattleCardKai|Hatsushimo/Kai Ni}}
+!{{ShipBattleCardKai|Asashimo/Kai Ni}}
+!
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Chikuma/Kai Ni}}
+!{{ShipBattleCardKai|Choukai/Kai Ni}}
+!{{ShipBattleCardKai|Johnston/Kai}}
+| rowspan="2" colspan="2"|1.15x
+|-
+!{{ShipBattleCardKai|Kasumi/Kai Ni}}
+!
+!
+|-
+! colspan="5"|Boss Node {{Event/Route|T|Red}}
+|-
+! colspan="3"| Shortcut Unlock Multiplier (To All Ships, Multiplicative with below)
+| colspan="2"| 1.17x
+|-
+!{{ShipBattleCardKai|Akishimo/Kai}}
+!{{ShipBattleCardKai|Okinami/Kai}}
+!{{ShipBattleCardKai|Kiyoshimo/Kai}}
+| rowspan="3" colspan="2"|1.3x
+|-
+!{{ShipBattleCardKai|Asashimo/Kai Ni}}
+!{{ShipBattleCardKai|Yuugumo/Kai Ni}}
+!{{ShipBattleCardKai|Naganami/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Makigumo/Kai Ni}}
+!{{ShipBattleCardKai|Kazagumo/Kai Ni}}
+!
+|-
+!{{ShipBattleCardKai|Chikuma/Kai Ni}}
+!{{ShipBattleCardKai|Choukai/Kai Ni}}
+!{{ShipBattleCardKai|Johnston/Kai}}
+| rowspan="2" colspan="2"|1.2x
+|-
+!{{ShipBattleCardKai|Samuel B. Roberts/Kai}}
+!
+!
+|}
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+{{Fleets|friend=Hinamatsuri 2020 Mini-Event}}
+
+===LBAS Flight Range===
+[[File:Hinamatsuri 2020 Mini-Event E-1 LBAS Map.jpg|700px|center]]
+
+{{Event/MapPageFooter}}

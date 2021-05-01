@@ -1,0 +1,27 @@
+<span class="wikia-menu-button toggle-all-button">{{{1}}}</span>
+
+<noinclude>
+'''Usage''':
+
+<pre>
+{{ToggleAll|Toggle All Collapsibles}}
+
+<div class="mw-collapsible mw-collapsed" data-expandtext="Show" data-collapsetext="Hide">1</div>
+<div class="mw-collapsible mw-collapsed" data-expandtext="Show" data-collapsetext="Hide">2</div>
+<div class="mw-collapsible mw-collapsed" data-expandtext="Show" data-collapsetext="Hide">3</div>
+</pre>
+
+requires the following JS code
+
+<pre>
+$('.toggle-all-button').click(function() { $('.mw-collapsible-toggle').click(); });
+</pre>
+
+'''Result''':
+
+{{ToggleAll|Toggle All Collapsibles}}
+
+<div class="mw-collapsible mw-collapsed" data-expandtext="Show" data-collapsetext="Hide">1</div>
+<div class="mw-collapsible mw-collapsed" data-expandtext="Show" data-collapsetext="Hide">2</div>
+<div class="mw-collapsible mw-collapsed" data-expandtext="Show" data-collapsetext="Hide">3</div>
+</noinclude>

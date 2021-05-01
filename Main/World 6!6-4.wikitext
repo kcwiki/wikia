@@ -1,0 +1,115 @@
+{{Map/Header}}
+{{Map/Info
+|en = Peacock Island, On Northern Part of Central Waters
+|jp = 中部北海域ピーコック島沖
+|romaji = Chūbu-kita-kaiiki Pīkokku-tō oki
+|mechanics = Land Base Aerial Support@Land Base Aerial Support, Multiple Starting Points@Events/Mechanics#Node specific details
+|exp_hq = 230
+|exp_hq_boss = 3160
+|show_kills = true
+|kills = 5
+|strategy_name = Remote island re-capture strategy
+|strategy_name_ja = 離島再攻略作戦
+|strategy_info = Commence the Island Takeover Operation on the Central Waters using either a fleet centered around a Torpedo Squadron or a taskforce with maximum of two carriers! Fleet, set forth!
+|strategy_info_ja = 水雷戦隊を基幹とした攻略部隊または空母最大二隻を擁する機動部隊による中部海域離島攻略作戦を発動！艦隊、出撃せよ！
+}}
+{{MapBranchingTable
+|id = 6-4
+|0 -> A,B,M = 
+*Meet '''ANY''' of the following to '''FORCE''' M
+**Fleet contains {{ShipLink|Akitsu Maru}}
+**Fleet contains any CV(L)
+**Fleet contains 3 CA(V)
+**Fleet contains DD ≤ 1
+**Fleet contains 2 (F)BB(V) ('''Ignored if you bring {{ShipLink|Nagato Kai Ni}} and {{ShipLink|Mutsu Kai Ni}}''')
+*Meet '''ALL''' of the following to go to B
+**'''FAST''' fleet
+**'''AND''' meet one of the following
+***Fleet contains 4 DD
+***Fleet contains 3 DD with 1 CL as flagship
+***Fleet contains {{ShipLink|Nagato Kai Ni}} and {{ShipLink|Mutsu Kai Ni}} + 4 DD
+***Fleet contains {{ShipLink|Nagato Kai Ni}} and {{ShipLink|Mutsu Kai Ni}} + 3 DD + 1 CL as flagship
+*Otherwise, go to A
+
+|A -> D, E = 
+*Meet '''ANY''' of the following to go to D
+**Fleet contains {{ShipLink|Akitsushima}} and meets '''ONE''' of the following
+***CAV = 1
+***Fleet contains CL
+***DD ≥ 3
+**Meet '''ALL''' of the following
+***Fleet contains CL as flagship '''OR''' DD ≥ 3
+***Fast fleet
+***Fleet contains no (F)BB(V)
+*Otherwise, E
+
+|D -> C = *Fixed Route
+
+|E -> D =
+*Fleet contains {{ShipLink|Akitsushima}} or {{ShipLink|Kisaragi}}
+*Fast fleet and fleet contains CL
+
+|E -> G = * Does not meet the requirements to go to D
+
+|J -> I,L,N =
+*'''FORCE''' node N if fleet contains {{ShipLink|Akitsu Maru}}, CL = 1 and DD ≥ 2
+*Meet '''ANY''' of the following to go to L
+**Fleet contains no CL
+**Slow fleet and CV(L/B) ≥ 2
+*Otherwise, I
+
+|K -> H,J = 
+*Meet '''ANY''' of the following to go to H
+**(F)BB(V) ≥ 2
+**(F)BB(V)+CA(V) ≥ 3
+**DD ≤ 1
+*Otherwise, J
+}}
+
+===Strategy===
+* Can use a maximum of 1 [[Land Base Aerial Support]] squadron. No abyssal air raid.
+* '''You need at least 5 range to reach the boss''' with your [[Land Base Aerial Support]].
+* The standard land base loadout is 3 land-based bombers + 1 fighter for maximum damage output on the boss node.
+*Requires sinking the flagship at the boss node '''5 TIMES''' to deplete the gauge and clear the map.
+*Maximum 2 [[BB]] and/or 2 [[CV]]/[[CVL]] allowed to sortie.
+*The boss node has 3-5 [[Installation Type|land based]] targets, {{ShipLink|Isolated Island Princess}} and {{ShipLink|Supply Depot Princess}}, accompanied by 2-3 {{ShipLink|Artillery Imp}}s.
+**WG42, Type 3 Shells and AP shells will help increase damage on these enemies.
+*On the last kill boss and pre-boss nodes switches to stronger patterns as noted with <span style="color:red">'''(Final)'''</span> in the patterns table below.
+
+===Possible Fleet Compositions===
+*'''West Start'''
+**Node D and F are [[Events#Air_Raid_Battle_.28.E7.A9.BA.E8.A5.B2.E6.88.A6.29|Air Defense nodes]].
+**Node B, A and C are normal battle nodes.
+**{{Event/Route|B|red|D|orange|C|red|F|orange|N|red}} '''(must be fast fleet)'''
+***1CL'''(flagship)''' 1fBB(V) 3DD 1CAV
+***1fBB(V) 4DD 1CL/CAV
+***{{ShipLink|Nagato Kai Ni}}, {{ShipLink|Mutsu Kai Ni}} and 4DDs
+****1 DD can be replaced with CL, but that CL needs to be flagship
+**{{Event/Route|A|red|D|orange|C|red|F|orange|N|red}} (Slow ships are allowed for this route)
+***{{ShipLink|Akitsushima}} 1CA/CL 2DD 1CAV 1(F)BB(V)
+***{{ShipLink|Akitsushima}}, {{ShipLink|Nagato Kai Ni}}, {{ShipLink|Mutsu Kai Ni}}, CAV/CL 2DD
+
+*'''East Start:'''
+**Node I is an air defense node and doesn't eat much resources as cost.
+**Having {{ShipLink|Akitsu Maru Kai}} will skip node I and go J-N.
+**{{Event/Route|M|red|K|red|J|red|I|orange|N|red}}
+***2CV(B) 1CA(V) 1CL 2DD
+***1CV(B) 1(F)BB(V) 1CA(V) 1CL 2DD
+**{{Event/Route|M|red|K|red|J|red|N|red}}
+***{{ShipLink|Akitsu Maru Kai}} 1(F)BB(V)/CV(B) 1CA(V) 1CL 2DD
+
+===LBAS Flight Range===
+[[File:6-4 LBAS flight range.png|500px|center]]
+====Node M Land-Based Aircraft Proficiency Leveling====
+*If you wish to rank up your [[Aircraft Proficiency]] , you may utilize node M to do so.
+*'''Your Land-Base' Range must be 8 or higher''' (Range is counted from the West starting point even if you started from the East)
+**If you are trying to rank up aircraft with lower range, you may be required to bring a {{EquipmentLink|Type 2 Large Flying Boat}} (3+ Range) or {{EquipmentLink|PBY-5A Catalina}} (2+ Range) to increase your Land-base's range. 
+**Due to the maximum range increase being 3+, you will be unable to use this method to rank up any aircrafts with 4 or lower range even if you bring a Large Flying Boat or PBY-51 Catalina. 
+*Sortie 1 Submarine with a variety of aircraft to rank up in your Land-Base. You will start from East.
+*Send your Land-Base Aircraft Support to attack node M only twice. 
+*This will result in a Rank D loss, but your aircraft will be ranked up from Blank to Double Chevron after around 12 runs.
+**If you send 1 aircraft with Anti-Submarine Patrol capabilities, like {{EquipmentLink|Prototype Toukai}} , you can avoid the loss.
+*You may ignore morale on both your submarine and aircraft all the way.
+*1 or 2 aircraft may be shot down sometimes which will only cost around 3 fuel to 5 bauxite per plane.
+
+{{Map/Footer}}

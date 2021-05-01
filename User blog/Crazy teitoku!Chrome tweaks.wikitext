@@ -1,0 +1,52 @@
+As the advent of web grows with more enriching contents and the proliferation of less optimised programming techniques being preferred for the sake of simplicity. Web browsers these days sure are taking their stance of hogging the resources on one's computer.
+
+That said, there are ways to tweak the performance of your web browser in order to try and make the most of it without having to necessarily buy new computer and/or new components. Again these tweaks are to be tried at your own expense and there are no guarantees whatsoever.
+
+==Re-prioritising processes/tasks==
+One of the most basic ways is to lower the priorities of processes/tasks as this gives priorities to other processes/tasks and make the computer lags less apparent.
+
+For windows users you can read up here on how to do so:
+[http://www.howtogeek.com/179325/how-to-end-and-prioritize-processes-to-make-your-windows-pc-run-more-smoothly/ How to end and prioritize processes to make your windows pc run more smoothly]
+
+For Mac OSX users you can read up here:
+[https://discussions.apple.com/thread/1491812 How to change process priority]
+
+For linux there is no simple way (as yet) but you can do something like this:
+{{Template:Talkquote|text = '''<nowiki> renice -n 19 $(pgrep -fw chrom) </nowiki>'''}}
+
+An alternative (but slower) method is to use htop, filtering by the process name for chrome/chromium (F4 button), selecting all the instances of it (spacebar) and then renicing it to lowest priority (F8 button).
+
+==Offloading graphics to GPU==
+Depending on your Graphical Processor Unit (GPU) you can tell chrome to use GPU to render the work on its own without heavily depending on your Central Processing Unit (CPU) to decode and thus decrease the un-necessary overheads.
+
+First I would recommend you to have a read here to make sure that your configuration is compatible:
+[https://www.khronos.org/webgl/wiki/BlacklistsAndWhitelists WebGL Blacklists and Whitelists]
+
+Should you satisfy those requirements then head over to this site on enabling the extra performance (under Experiment at your own risk section):
+[http://www.pcworld.com/article/2027955/google-chrome-how-to-make-it-faster-smarter-and-better-than-before.html Google Chrome: How to make it faster, smarter and better than before]
+
+If you happen to be running chromium some extra command line switches can also be enabled/disabled prior to process execution:
+[http://peter.sh/experiments/chromium-command-line-switches/ List of Chromium Command Line Switches]
+
+Usually the effects would be taken into effect after you restart your browser.
+
+==OneTab==
+A nifty add-on to minimise memory intensive or otherwise CPU/GPU intensive tabs is to use OneTab add-on. Initially there would be a bit of a learning curve into using it for the first time however, once put into practise you can really minimise the un-necessary overheads whom would otherwise place even more burden on your resources.
+
+Website:
+[http://www.one-tab.com/ OneTab]
+
+==Closing remarks==
+Initially this blog posting was meant for Google Chrome/Chromium users however Mozilla Firefox users may also be able to benefit in some ways, for every other thing you can always search up for relevant ways.
+
+Other handy links within chrome are:
+
+- chrome://system/
+
+- chrome://chrome-urls/ 
+
+'''-Update:-''' apart from chrome://system showing the memory used for each tabs/extensions that are active there is another  [http://askubuntu.com/questions/89568/identify-which-chrome-tab-is-using-up-cpu nifty little tool via Shift+Esc]. This opens up Chrome task manager which not only shows what is going where for just memory alone but also CPU and shows other stats. Along with that the list is sortable.
+
+Questions? Comments? You can also use my message wall to contact me.
+[[Category:Blog posts]]
+[[Category:Guide]]

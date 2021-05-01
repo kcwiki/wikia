@@ -1,0 +1,116 @@
+{{Ambox
+|type = construction
+}}
+{{todo|show=true|title=Minor todos|
+* Add more links to PrefixIndex
+}}
+__TOC__
+==Namespaces==
+===Core namespaces===
+Pages in those namespaces constitute all main content of the wiki (except assets).
+* Only main namespace should have redirects (should be used only for convenient and reasonable aliases).
+{{notice|align=left|
+Assume no proper system and categorization, only partial documentation.
+}}
+{{notice|align=left|
+A proper system should have a category tree for all pages (including redirects) with each level having reasonable number of children, with reasonable number of levels, with all pages categorized, without redundant pages, categories, redirects, or categorization. Not mentioning game related content itself (Main), as well as documentation (Kancolle Wiki, MediaWiki, Template, Help, Category, Module), though for some categories strict content rules can be enforced (for example, a category for ship gallery subpages can require those subpages to be single calls to a template without any arguments, while ship page category can require ship pages to follow a certain layout).
+}}
+{| class="wikitable"
+!Namespace!!Pages!!Redirects!!Function
+|-
+|[http://kancolle.wikia.com/index.php?title=Special%3APrefixIndex&prefix=&namespace=0 Main]
+|1687||1127||All game related pages
+|-
+|Kancolle Wiki||417||<span style="color:red">22</span>||All pages related to the wiki (including this one)<br><span style="color:red">Includes legacy chat logs</span>
+|-
+|MediaWiki||69||<span style="color:red">1</span>||Technical pages restricted to admins (JS, CSS, site configs)
+|-
+|Template||921||<span style="color:red">63</span>||Templates, from simple to Lua-based<br>Includes template documentation
+|-
+|Help||2||<span style="color:red">1</span>||Almost unused, but can be used for game related documentation (assets, API, etc.), coding help, etc.
+|-
+|Category||673||<span style="color:red">6</span>||Should be used for the category tree
+|-
+|Module||1280||<span style="color:red">75</span>||Lua data and code modules
+|}
+===Empty namespaces===
+Those namespaces are (mostly) empty.
+* Should contain fixed number of pages (0 or a small number, no redirects).
+{| class="wikitable"
+!Namespace!!Pages
+|-
+|User talk||2
+|-
+|Kancolle Wiki talk||0
+|-
+|File talk||0
+|-
+|MediaWiki talk||0
+|-
+|Template talk||0
+|-
+|Help talk||0
+|-
+|Category talk||0
+|-
+|Forum||0
+|-
+|Forum talk||0
+|-
+|Layer||0
+|-
+|Layer talk||0
+|-
+|Blog||1
+|-
+|Blog talk||0
+|-
+|Module talk||0
+|-
+|Message Wall Greeting||3
+|-
+|Board||12
+|-
+|Topic||0
+|}
+===File namespace===
+Includes both assets and other (sometimes random) files. Quite large.
+* Should be ignored, except for assets.
+* Only assets should use categories.
+* Only assets should have redirects and only if it is required.
+{{notice|align=left|
+Assume no proper system and categorization, no or partial documentation.
+}}
+{{notice|align=left|
+Similarly to other namespaces, a category tree can be used for systematization.
+}}
+Lots of files, 3420 redirects.
+===User and talk namespaces===
+Each can include many pages.
+* Ignored.
+* However, redirects are mostly bad here (?).
+{| class="wikitable"
+!Namespace!!Pages!!Redirects
+|-
+|Talk||?||<span style="color:red">355</span>
+|-
+|User||?||<span style="color:red">126</span>
+|-
+|User blog||?||<span style="color:red">92</span>
+|-
+|User blog comment||?||<span style="color:red">5</span>
+|-
+|Message Wall||?||<span style="color:red">67</span>
+|-
+|Thread||?||<span style="color:red">90</span>
+|-
+|Board Thread||?||0
+|}
+==Categories==
+{{todo|show=true|
+Main stuff goes here.
+* Can make the above section more compact and make this one a "hub", linking documentation in categories (e.g., voice files categories documenting naming conventions, modules, templates and usage).
+}}
+==See Also==
+* [[Special:Statistics]] for XML dumps.
+* [https://www.mediawiki.org/wiki/API:Main_page API@mediawiki] for live API.

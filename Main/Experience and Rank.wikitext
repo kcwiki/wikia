@@ -1,0 +1,2762 @@
+==Ship Experience==
+===Experience from Sorties===
+Ship experience from sorties is given by
+<div style="text-align:center;margin:20px;">
+<math>\left [ base \times mvp \times flag \times rank \right ]</math>
+</div>
+<!-- assuming flooring -->
+*''base'' experience is dependent on a [[#Map experience|map]] (displayed as 基本経験値 on the battle result screen)
+*''mvp'' multiplier is 2 for MVP, 1 otherwise (always 1 for E rank, as there is no MVP)
+*''flag'' multiplier is 1.5 for flagship, 1 otherwise
+*''rank'' multiplier is dependent on a battle rank:
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+! Rank
+| S
+| A
+| B
+| C
+| D
+| E
+|-
+! Multiplier
+| 1.2
+| colspan="2" | 1.0
+| 0.8
+| 0.7
+| 0.5
+|}
+* Multiplier for flagship MVP is therefore 3, maximum multiplier for base experience (flagship MVP and S rank) is 3.6.
+
+===Map Experience (Phase 1)===
+{{Warning|As of the introduction of [[Partials/Updates/2018 August 15th|KanColle Phase 2]], base ship experience in normal world maps (with the exception of [[6-1]] and [[6-2]]) is now defined on a per-composition basis instead of a per-map basis, meaning that experience varies between enemy patterns in every node in a map as opposed to being the same for all nodes. The base experience values for every enemy pattern in a map can be found by [[Sortie|looking at the information page for said map]]. For posterity, the original Phase 1 experience values have been archived below.}}
+*Base is base experience for a map
+*Flag is experience for flagship (not MVP, A rank)
+*MVP is for MVP (not flagship, A rank)
+*F+M(A) is for flagship MVP on A rank, F+M(S) is for flagship MVP on S rank.
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+!Map
+!Base
+!Flag
+!MVP
+!F+M(A)
+!F+M(S)
+| rowspan="21" style="width:1px;" |
+!Map
+!Base
+!Flag
+!MVP
+!F+M(A)
+!F+M(S)
+|-
+|[[1-1]]
+|30
+|45
+|60
+|90
+|108
+|[[4-1]]
+|310
+|465
+|620
+|930
+|1,116
+|-
+|[[1-2]]
+|50
+|75
+|100
+|150
+|180
+|[[4-2]]
+|320
+|480
+|640
+|960
+|1,152
+|-
+|[[1-3]]
+|80
+|120
+|160
+|240
+|288
+|[[4-3]]
+|330
+|495
+|660
+|990
+|1,188
+|-
+|[[1-4]]
+|100
+|150
+|200
+|300
+|360
+|[[4-4]]
+|340
+|510
+|680
+|1,020
+|1,224
+|-
+|[[1-5]]
+|150
+|225
+|300
+|450
+|540
+|[[4-5]]
+| colspan="5" |Variable, 440 maximum base exp.
+|-
+|[[1-6]]
+| colspan="5" |Variable, 220 maximum base exp.
+| colspan="6" |
+|-
+| colspan="6" style="height:1px;" |
+| colspan="6" style="height:1px;" |
+|-
+|[[2-1]]
+|120
+|180
+|240
+|360
+|432
+|[[5-1]]
+|360
+|540
+|720
+|1,080
+|1,296
+|-
+|[[2-2]]
+|150
+|225
+|300
+|450
+|540
+|[[5-2]]
+|380
+|570
+|760
+|1,140
+|1,368
+|-
+|[[2-3]]
+|200
+|300
+|400
+|600
+|720
+|[[5-3]]
+|400
+|600
+|800
+|1,200
+|1,440
+|-
+|[[2-4]]
+|300
+|450
+|600
+|900
+|1,080
+|[[5-4]]
+|420
+|630
+|840
+|1,260
+|1,512
+|-
+|[[2-5]]
+|250
+|375
+|500
+|750
+|900
+|[[5-5]]
+|450
+|675
+|900
+|1,350
+|1,620
+|-
+| colspan="6" |
+| colspan="6" |
+|-
+| colspan="6" style="height:1px;" |
+| colspan="6" style="height:1px;" |
+|-
+|[[3-1]]
+|310
+|465
+|620
+|930
+|1,116
+|[[6-1]]
+|380
+|570
+|760
+|1,140
+|1,368
+|-
+|[[3-2]]
+|320
+|480
+|640
+|960
+|1,152
+|[[6-2]]
+|420
+|630
+|840
+|1,260
+|1,512
+|-
+|[[3-3]]
+|330
+|495
+|660
+|990
+|1,188
+|[[6-3]]
+| colspan="5" |Variable, 400 maximum base exp.
+|-
+|[[3-4]]
+|350
+|525
+|700
+|1,050
+|1,260
+|[[6-4]]
+| colspan="5" |Variable, 600 maximum base exp.
+|-
+|[[3-5]]
+|400
+|600
+|800
+|1,200
+|1,440
+|[[6-5]]
+| colspan="5" |Variable, 550 maximum base exp.
+|-
+| colspan="6" |
+| colspan="6" |
+|}
+
+==={{Anchor|XP Table (Ship)}}Ship Experience Table===
+{| class="wikitable typography-xl-optout" style="text-align:center;width:100%;"
+! style="width:30px;" |Lv
+! style="width:70px;" |Exp.
+! style="width:70px;" |Exp. diff.
+| rowspan="26" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:75px;" |Exp.
+! style="width:75px;" |Exp. diff.
+| rowspan="26" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:80px;" |Exp.
+! style="width:80px;" |Exp. diff.
+| rowspan="26" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:85px;" |Exp.
+! style="width:85px;" |Exp. diff.
+|-
+|1
+|0
+|0
+|26
+|32,500
+|2,500
+|51
+|127,500
+|5,000
+|76
+|331,000
+|12,000
+|-
+|2
+|100
+|100
+|27
+|35,100
+|2,600
+|52
+|132,700
+|5,200
+|77
+|343,400
+|12,400
+|-
+|3
+|300
+|200
+|28
+|37,800
+|2,700
+|53
+|138,100
+|5,400
+|78
+|356,200
+|12,800
+|-
+|4
+|600
+|300
+|29
+|40,600
+|2,800
+|54
+|143,700
+|5,600
+|79
+|369,400
+|13,200
+|-
+|5
+|1,000
+|400
+|30
+|43,500
+|2,900
+|55
+|149,500
+|5,800
+|80
+|383,000
+|13,600
+|-
+|6
+|1,500
+|500
+|31
+|46,500
+|3,000
+|56
+|155,500
+|6,000
+|81
+|397,000
+|14,000
+|-
+|7
+|2,100
+|600
+|32
+|49,600
+|3,100
+|57
+|161,700
+|6,200
+|82
+|411,500
+|14,500
+|-
+|8
+|2,800
+|700
+|33
+|52,800
+|3,200
+|58
+|168,100
+|6,400
+|83
+|426,500
+|15,000
+|-
+|9
+|3,600
+|800
+|34
+|56,100
+|3,300
+|59
+|174,700
+|6,600
+|84
+|442,000
+|15,500
+|-
+|10
+|4,500
+|900
+|35
+|59,500
+|3,400
+|60
+|181,500
+|6,800
+|85
+|458,000
+|16,000
+|-
+|11
+|5,500
+|1,000
+|36
+|63,000
+|3,500
+|61
+|188,500
+|7,000
+|86
+|474,500
+|16,500
+|-
+|12
+|6,600
+|1,100
+|37
+|66,600
+|3,600
+|62
+|195,800
+|7,300
+|87
+|491,500
+|17,000
+|-
+|13
+|7,800
+|1,200
+|38
+|70,300
+|3,700
+|63
+|203,400
+|7,600
+|88
+|509,000
+|17,500
+|-
+|14
+|9,100
+|1,300
+|39
+|74,100
+|3,800
+|64
+|211,300
+|7,900
+|89
+|527,000
+|18,000
+|-
+|15
+|10,500
+|1,400
+|40
+|78,000
+|3,900
+|65
+|219,500
+|8,200
+|90
+|545,500
+|18,500
+|-
+|16
+|12,000
+|1,500
+|41
+|82,000
+|4,000
+|66
+|228,000
+|8,500
+|91
+|564,500
+|19,000
+|-
+|17
+|13,600
+|1,600
+|42
+|86,100
+|4,100
+|67
+|236,800
+|8,800
+|92
+|584,500
+|20,000
+|-
+|18
+|15,300
+|1,700
+|43
+|90,300
+|4,200
+|68
+|245,900
+|9,100
+|93
+|606,500
+|22,000
+|-
+|19
+|17,100
+|1,800
+|44
+|94,600
+|4,300
+|69
+|255,300
+|9,400
+|94
+|631,500
+|25,000
+|-
+|20
+|19,000
+|1,900
+|45
+|99,000
+|4,400
+|70
+|265,000
+|9,700
+|95
+|661,500
+|30,000
+|-
+|21
+|21,000
+|2,000
+|46
+|103,500
+|4,500
+|71
+|275,000
+|10,000
+|96
+|701,500
+|40,000
+|-
+|22
+|23,100
+|2,100
+|47
+|108,100
+|4,600
+|72
+|285,400
+|10,400
+|97
+|761,500
+|60,000
+|-
+|23
+|25,300
+|2,200
+|48
+|112,800
+|4,700
+|73
+|296,200
+|10,800
+|98
+|851,500
+|90,000
+|-
+|24
+|27,600
+|2,300
+|49
+|117,600
+|4,800
+|74
+|307,400
+|11,200
+|99
+|1,000,000
+|148,500
+|-
+|25
+|30,000
+|2,400
+|50
+|122,500
+|4,900
+|75
+|319,000
+|11,600
+| colspan="3" |
+|}
+<!--
+const exp = [1000000,1010000,1011000,1013000,1016000,1020000,1025000,1031000,1038000,1046000,1055000,1065000,1077000,1091000,1107000,1125000,1145000,1168000,1194000,1223000,1255000,1290000,1329000,1372000,1419000,1470000,1525000,1584000,1647000,1714000,1785000,1860000,1940000,2025000,2115000,2210000,2310000,2415000,2525000,2640000,2760000,2887000,3021000,3162000,3310000,3465000,3628000,3799000,3978000,4165000,4360000,4564000,4777000,4999000,5230000,5470000,5720000,5780000,5860000,5970000,6120000,6320000,6580000,6910000,7320000,7820000,7920000,8033000,8172000,8350000,8580000,8875000,9248000,9705000,10266000,10950000]
+
+const numberWithCommas = x => x ? x.toString().replace(/\B(?=(\d{3})+(?!\d))/g, ',') : ''
+
+const rows = 19
+let s = ''
+for (let row = 0; row <= rows; ++row) {
+  s += '|-\n'
+  for (let col = 1; col <= 4; ++col) {
+    const lv = 100 + row + (rows + 1) * (col - 1)
+    const diff = exp[lv - 100] - exp[lv - 100 - 1]
+    s += `|${lv > 175 ? '' : lv}\n|${numberWithCommas(exp[lv - 100])}\n|${diff > 0 ? numberWithCommas(diff) : ''}\n`
+  }
+}
+copy(s)
+-->
+'''Marrying level 99 ships raises them to level 100. No experience is necessary for this level up.'''{{Template:Details|Marriage|Marriage|label 1 = Marriage
+|l1 = Marriage}}
+{| class="wikitable typography-xl-optout" style="text-align:center;width:100%;"
+! style="width:30px;" |Lv
+! style="width:70px;" |Exp.
+! style="width:70px;" |Exp. diff.
+| rowspan="21" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:75px;" |Exp.
+! style="width:75px;" |Exp. diff.
+| rowspan="21" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:80px;" |Exp.
+! style="width:80px;" |Exp. diff.
+| rowspan="21" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:85px;" |Exp.
+! style="width:85px;" |Exp. diff.
+|-
+|100
+|1,000,000
+|
+|120
+|1,255,000
+|32,000
+|140
+|2,760,000
+|120,000
+|160
+|6,120,000
+|150,000
+|-
+|101
+|1,010,000
+|10,000
+|121
+|1,290,000
+|35,000
+|141
+|2,887,000
+|127,000
+|161
+|6,320,000
+|200,000
+|-
+|102
+|1,011,000
+|1,000
+|122
+|1,329,000
+|39,000
+|142
+|3,021,000
+|134,000
+|162
+|6,580,000
+|260,000
+|-
+|103
+|1,013,000
+|2,000
+|123
+|1,372,000
+|43,000
+|143
+|3,162,000
+|141,000
+|163
+|6,910,000
+|330,000
+|-
+|104
+|1,016,000
+|3,000
+|124
+|1,419,000
+|47,000
+|144
+|3,310,000
+|148,000
+|164
+|7,320,000
+|410,000
+|-
+|105
+|1,020,000
+|4,000
+|125
+|1,470,000
+|51,000
+|145
+|3,465,000
+|155,000
+|165
+|7,820,000
+|500,000
+|-
+|106
+|1,025,000
+|5,000
+|126
+|1,525,000
+|55,000
+|146
+|3,628,000
+|163,000
+|166
+|7,920,000
+|100,000
+|-
+|107
+|1,031,000
+|6,000
+|127
+|1,584,000
+|59,000
+|147
+|3,799,000
+|171,000
+|167
+|8,033,000
+|113,000
+|-
+|108
+|1,038,000
+|7,000
+|128
+|1,647,000
+|63,000
+|148
+|3,978,000
+|179,000
+|168
+|8,172,000
+|139,000
+|-
+|109
+|1,046,000
+|8,000
+|129
+|1,714,000
+|67,000
+|149
+|4,165,000
+|187,000
+|169
+|8,350,000
+|178,000
+|-
+|110
+|1,055,000
+|9,000
+|130
+|1,785,000
+|71,000
+|150
+|4,360,000
+|195,000
+|170
+|8,580,000
+|230,000
+|-
+|111
+|1,065,000
+|10,000
+|131
+|1,860,000
+|75,000
+|151
+|4,564,000
+|204,000
+|171
+|8,875,000
+|295,000
+|-
+|112
+|1,077,000
+|12,000
+|132
+|1,940,000
+|80,000
+|152
+|4,777,000
+|213,000
+|172
+|9,248,000
+|373,000
+|-
+|113
+|1,091,000
+|14,000
+|133
+|2,025,000
+|85,000
+|153
+|4,999,000
+|222,000
+|173
+|9,705,000
+|457,000
+|-
+|114
+|1,107,000
+|16,000
+|134
+|2,115,000
+|90,000
+|154
+|5,230,000
+|231,000
+|174
+|10,266,000
+|561,000
+|-
+|115
+|1,125,000
+|18,000
+|135
+|2,210,000
+|95,000
+|155
+|5,470,000
+|240,000
+|175
+|10,950,000
+|684,000
+|-
+|116
+|1,145,000
+|20,000
+|136
+|2,310,000
+|100,000
+|156
+|5,720,000
+|250,000
+|
+|
+|
+|-
+|117
+|1,168,000
+|23,000
+|137
+|2,415,000
+|105,000
+|157
+|5,780,000
+|60,000
+|
+|
+|
+|-
+|118
+|1,194,000
+|26,000
+|138
+|2,525,000
+|110,000
+|158
+|5,860,000
+|80,000
+|
+|
+|
+|-
+|119
+|1,223,000
+|29,000
+|139
+|2,640,000
+|115,000
+|159
+|5,970,000
+|110,000
+|
+|
+|
+|}
+
+====Technicalities====
+<div class="mw-collapsible mw-collapsed">
+As can be seen, for levels 1-89, experience values [[wikipedia:Quadratic_growth|grow quadratically]]: they can be split into a family of ranges, depending on levels, with each range having different quadratic function (any coefficients beside ''c₀'' (last non-zero derivative) are not so important and more or less arbitrary, a simpler formula may exist):
+{| class="wikitable typography-xl-optout" style="text-align:center;background:white;width:100%"
+!Range
+!Formula
+!Second difference (2c₀)
+|-
+| colspan="3" |<math>x = lvl, exp(x) = c_0(x) x^2 + c_1(x) x + c_2(x)</math>
+|-
+![1, 49]
+|<math>50 (x^2 - x)</math>
+|100
+|-
+![50, 59]
+|<math>50 (2 x^2 - 102 x + 2550)</math>
+|200
+|-
+![60, 69]
+|<math>50 (3 x^2 - 223 x + 6210)</math>
+|300
+|-
+![70, 79]
+|<math>50 (4 x^2 - 364 x + 11180)</math>
+|400
+|-
+![80, 89]
+|<math>50 (5 x^2 - 525 x + 17660)</math>
+|500
+|}
+
+That is, leveling is slowing down within the ranges (the difference between experience values grows linearly), and also slowing down even more between them, as ''c₀'' grows linearly.
+
+For levels 90-98 experience values appear to be proportional to the cube (resulting in even slower leveling):
+
+{| class="wikitable typography-xl-optout" style="text-align:center;background:white;width:100%"
+!Range
+!Formula
+!Third difference (6c₀)
+|-
+![90, 94]
+|<math>(500/3) (x^3 - 270 x^2 + 24413 x - 735897)</math>
+|1000
+|-
+![95, 98]
+|<math>(500/3) (10 x^3 - 2820 x^2 + 265250 x - 8318031)</math>
+|10000
+|}
+
+Then, a different family of quadratic functions is used for levels 101-155:
+
+{| class="wikitable typography-xl-optout" style="text-align:center;background:white;width:100%"
+!Range
+!Formula
+!Second difference (2c₀)
+|-
+![101, 109]
+|<math>500 (x^2 - 201 x + 10120)</math>
+|1000
+|-
+![110, 114]
+|<math>500 (2 x^2 - 422 x + 22330)</math>
+|2000
+|-
+![115, 119]
+|<math>500 (3 x^2 - 653 x + 35670)</math>
+|3000
+|-
+![120, 129]
+|<math>500 (4 x^2 - 894 x + 50190)</math>
+|4000
+|-
+![130, 139]
+|<math>500 (5 x^2 - 1155 x + 67220)</math>
+|5000
+|-
+|colspan="3"|2''c₀'' = 6000 is skipped
+|-
+![140, 144]
+|<math>500 (7 x^2 - 1713 x + 106140)</math>
+|7000
+|-
+![145, 149]
+|<math>500 (8 x^2 - 2002 x + 127020)</math>
+|8000
+|-
+![150, 155]
+|<math>500 (9 x^2 - 2301 x + 149370)</math>
+|9000
+|}
+</div>
+{{clear}}
+
+===Experience from [[Expedition]]s===
+For ship experience from expeditions see [[Expedition/Introduction#Ratings and rewards|introduction to expeditions]].
+
+===Experience from [[Exercises (PvP)]]===
+Experience from PvP is given by
+<div style="text-align:center;margin:20px;">
+<math>exp = \left\lfloor base \times mvp \times flag \times bonus \right\rfloor</math>
+</div>
+<div style="text-align:center;margin:20px;">
+<math>base =
+\begin{cases}
+\left\lfloor precap \times rank \right\rfloor , & precap \le 500 \\
+\bigg\lfloor \left\lfloor 500 + \sqrt{precap - 500} \right\rfloor \times rank \bigg\rfloor , & precap > 500
+\end{cases}
+</math>
+</div>
+<div style="text-align:center;margin:20px;">
+<math>precap = \left\lfloor \frac{e_1}{100} + \frac{e_2}{300} \right\rfloor + random \in [0, 3]</math>
+</div>
+
+*<math>\lfloor \dots \rfloor</math> denote [[wikipedia:Floor_and_ceiling_functions|floor function]]
+*<math>random \in [0, 3]</math> is a random integer from 0 to 3 (inclusive, uniformly distributed)
+*''base'' is displayed as 基本経験値 on the battle result screen, unlike [[#Experience from Sorties|sortie ''base'' experience]], it includes ''rank'' multiplier
+*''e₁'' and ''e₂'' are minimal [[#XP Table (Ship)|experience values]] corresponding to opponent's flagship and second ship levels, respectively
+*''mvp'' multiplier is 2 for MVP, 1 otherwise
+*''flag'' multiplier is 1.5 for flagship, 1 otherwise
+*''bonus'' is 1 + [[#Training Cruiser Bonus|training cruiser bonus]]
+*''rank'' multiplier is dependent on a battle rank (can differ from [[#Experience from Sorties|sortie ''rank'' multiplier]]):
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+! Rank
+| S
+| A
+| B
+| C
+| D
+| E
+|-
+! Multiplier
+| 1.2
+| colspan="2" | 1.0
+| 0.64
+| 0.56
+| 0.4
+|}
+* Maximum possible experience for a non [[CT]] flagship is 3725 (3963 for [[CT]]).
+
+====Training Cruiser Bonus====
+Training Cruisers (CT: [[Katori]] and [[Kashima]]) provide a post-cap bonus to the final experience gain.
+* The bonus is dependent on CT positions in the fleet and their levels.
+* When 2 CT are deployed, one as the flagship, only flagship level is used.
+* If both deployed as escort, only maximum level is used.
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+! colspan="2" |Composition
+! colspan="5" |Level
+|-
+!Flagship
+!Escort
+!1-9
+!10-29
+!30-59
+!60-99
+!100+
+|-
+|CT
+|
+|5%
+|8%
+|12%
+|15%
+|20%
+|-
+|
+|CT
+|3%
+|5%
+|7%
+|10%
+|15%
+|-
+|CT
+|CT
+|10%
+|13%
+|16%
+|20%
+|25%
+|-
+|
+|2CT
+|4%
+|6%
+|8%
+|12%
+|17.5%
+|}
+{| class="wikitable mw-collapsible mw-collapsed typography-xl-optout" style="width:100%"
+! colspan=6 | Tests
+|-
+| colspan=6 | Base experience (includes [[#Experience from Sorties|rank multiplier]]) is shown at the battle result screen (<span lang="ja">基本経験値</span>), and also is in API, so the rounded bonus can be calculated from API as <code>{100 * min(api_get_ship_exp) / api_get_base_exp} / 100</code> (assuming there is a non-flagship non-MVP ship).
+|-
+!Flagship Level
+!Escort Level 1
+!Escort Level 2
+!Base exp.
+!Real exp.
+!Bonus (Rounded)
+|-
+|
+|37
+|
+|618
+|661
+|1.07
+|-
+|38
+|
+|
+|669
+|749
+|1.12
+|-
+|1
+|38
+|
+|768
+|844
+|1.1
+|-
+|38
+|5
+|
+|723
+|838
+|1.16
+|-
+|
+|39
+|7
+|716
+|773
+|1.08
+|-
+|
+|40
+|10
+|555
+|599
+|1.08
+|-
+|11
+|49
+|
+|668
+|754
+|1.13
+|-
+|
+|12
+|
+|642
+|674
+|1.05
+|-
+|
+|45
+|36
+|702
+|758
+|1.08
+|-
+|
+|45
+|
+|684
+|731
+|1.07
+|-
+|
+|70
+|73
+|735
+|823
+|1.12
+|-
+|71
+|
+|
+|723
+|831
+|1.15
+|-
+|71
+|74
+|
+|684
+|820
+|1.2
+|-
+|
+|74
+|
+|828
+|910
+|1.1
+|}
+
+==Admiral Experience and Ranking==
+===Admiral Ranks===
+{| class="wikitable typography-xl-optout" style="text-align:center;width:100%;"
+! style="text-align: center; width:60px;" |Insignia
+! style="text-align: center; width:230px;" |Rank<br>Complete IJN Rank
+! style="text-align: center; width:120px;" |In English
+! style="text-align: center; width:100px;" |Note
+! style="text-align: center; width:60px;" |Rank Number
+! style="text-align: center; width:60px;" |Percentile<ref name=wikiwiki />
+|-
+|[[File:Rank_Marshal_Admiral.png]]
+| {{SpanJa|元帥}} (''Gensui'')<br>{{SpanJa|元帥海軍大将}} (''Gensui Kaigun Taishō'')
+| Marshal Admiral
+| style="text-align: left;" |
+|1
+|1
+|-
+|[[File:Rank_Admiral.png]]
+| {{SpanJa|大将}} (''Taishō'')<br>{{SpanJa|海軍大将}} (''Kaigun Taishō'')
+| Admiral
+| style="text-align: left;" |
+|2
+|5
+|-
+|[[File:Rank_Vice_Admiral.png]]
+| {{SpanJa|中将}} (''Chūjō'')<br>{{SpanJa|海軍中将}} (''Kaigun Chūjō'')
+| Vice-Admiral
+| style="text-align: left;" |
+|3
+|10
+|-
+|[[File:Rank_Rear_Admiral.png]]
+| {{SpanJa|少将}} (''Shōshō'')<br>{{SpanJa|海軍少将}} (''Kaigun Shōshō'')
+| Rear-Admiral
+| style="text-align: left;" |
+|4
+|20
+|-
+|[[File:Rank_Captain.png]]
+| {{SpanJa|大佐}} (''Taisa'')<br>{{SpanJa|海軍大佐}} (''Kaigun Taisa'')
+| Captain
+| style="text-align: left;" |
+|6
+|40
+|-
+|[[File:Rank_Commander.png]]
+| {{SpanJa|中佐}} (''Chūsa'')<br>{{SpanJa|海軍中佐}} (''Kaigun Chūsa'')
+| Commander
+| style="text-align: left;" |
+|7
+|55
+|-
+|[[File:Rank_Commander_Novice.png]]
+| {{SpanJa|新米中佐}} (''Shinmai Chūsa'')<br>-
+| Commander (Novice)
+| style="text-align: left;" |Does not officialy exist in IJN rankings, but in practical use, it is used as an intermediary rank between Lieutenant-Commander and Commander.
+|9
+|65
+|-
+|[[File:Rank_Lieutenant-Commander.png]]
+| {{SpanJa|少佐}} (''Shōsa'')<br>{{SpanJa|海軍少佐}} (''Kaigun Shōsa'')
+| Lieutenant-Commander
+| style="text-align: left;" |
+|10
+|80
+|-
+|[[File:Rank_Lieutenant_Commander_Senior.png]]
+| {{SpanJa|中堅少佐}} (''Chūken Shōsa'')<br>-
+| Vice Lieutenant-Commander
+| rowspan="2" style="text-align: left;" |Does not officialy exist in IJN rankings, but in practical use, it is used as an intermediary rank between Lieutenant and Lieutenant-Commander
+|11
+|90
+|-
+|[[File:Rank_Lieutenant-Commander_Novice.png]]
+| {{SpanJa|新米少佐}} (''Shinmai Shōsa'')<br>-
+| Lieutenant-Commander (Novice)
+|12
+|100
+|}
+Notes:
+*Your monthly server rank determines your title and insignia.
+*High scores update twice per day (along with [[PvP]] reset at 03:00 and 15:00 JST) and resets every month.
+*You can get admiral experience (or HQ experience) from sorties, drills and expeditions.
+*Admiral experience is shown in the profile page below the Admiral Level. Admiral levels increase with experience gained.
+*Admiral levels increases the maximum resource soft cap and are speculated to improve Development results.
+*Refer to the [[#Monthly Ranking|Ranking]] section below for more detailed explanation of the mechanics.
+
+===HQ Experience from Sorties===
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+|-
+! style="text-align: center" |Battle Ranks
+! style="text-align: center" |HQ exp. (Non-Boss)
+! style="text-align: center" |HQ exp. (Boss)
+|-
+| S
+| <code>Non-boss base exp.</code>
+| <code>Boss base exp.</code>
+|-
+| A
+| <code>0.8 * Non-boss base exp.</code>
+| <code>Boss base exp. - 0.5 * Non-boss base exp.</code>
+|-
+| B
+| <code>0.5 * Non-bos base exp.</code>
+| <code>Boss base exp. - 0.8 * Non-boss base exp.</code>
+|-
+| C
+| <code>0</code>
+| <code>Non-boss base exp.</code>
+|-
+| D, E
+| <code>0</code>
+| <code>0</code>
+|}
+* <code>Boss base exp.</code> and <code>non-boss base exp.</code> are dependent on a map, see the table below
+* The majority of HQ experience comes from achieving victory at boss nodes
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+!Map
+!Non-boss<br>base exp.
+!Boss<br>base exp.
+| rowspan="14" style="width:1px;" |
+!Map
+!Non-boss<br>base exp.
+!Boss<br>base exp.
+| rowspan="14" style="width:1px;" |
+!Map
+!Non-boss<br>base exp.
+!Boss<br>base exp.
+| rowspan="14" style="width:1px;" |
+!Map
+!Non-boss<br>base exp.
+!Boss<br>base exp.
+|-
+|[[1-1]]
+|10
+|20
+|[[3-1]]
+|110
+|1,420
+|[[5-1]]
+|160
+|2,020
+|[[7-1]]
+|140
+|1,680
+|-
+|[[1-2]]
+|20
+|140
+|[[3-2]]
+|120
+|1,740
+|[[5-2]]
+|170
+|2,340
+|[[7-2]]
+|180
+|360 (Node G)<br>2,360 (Node N)
+|-
+|[[1-3]]
+|40
+|380
+|[[3-3]]
+|140
+|2,280
+|[[5-3]]
+|190
+|2,680
+| colspan="3" |
+|-
+|[[1-4]]
+|60
+|720
+|[[3-4]]
+|160
+|3,320
+|[[5-4]]
+|210
+|3,020
+| colspan="3" |
+|-
+|[[1-5]]
+|80
+|1,060
+|[[3-5]]
+|190
+|2,880
+|[[5-5]]
+|240
+|3,480
+| colspan="3" |
+|-
+|[[1-6]]
+|100
+|
+| colspan="3" |
+| colspan="3" |
+| colspan="3" |
+|-
+| colspan="3" style="height:1px;" |
+| colspan="3" style="height:1px;" |
+| colspan="3" style="height:1px;" |
+| colspan="3" style="height:1px;" |
+|-
+|[[2-1]]
+|60
+|720
+|[[4-1]]
+|110
+|1,520
+|[[6-1]]
+|180
+|2,160
+| colspan="3" |
+|-
+|[[2-2]]
+|70
+|840
+|[[4-2]]
+|120
+|1,640
+|[[6-2]]
+|200
+|2,600
+| colspan="3" |
+|-
+|[[2-3]]
+|90
+|1180
+|[[4-3]]
+|140
+|1,880
+|[[6-3]]
+|180
+|2,760
+| colspan="3" |
+|-
+|[[2-4]]
+|120
+|1,740
+|[[4-4]]
+|170
+|2,340
+|[[6-4]]
+|230
+|3,160
+| colspan="3" |
+|-
+|[[2-5]]
+|160
+|2,320
+|[[4-5]]
+|200
+|2,900
+|[[6-5]]
+|260
+|3,520
+| colspan="3" |
+|-
+| colspan="3" |
+| colspan="3" |
+| colspan="3" |
+| colspan="3" |
+|}
+*For example, we can calculate experience gained from a 2-3 run as follows: A rank at a non-boss node followed by B rank at boss node, <code>non-boss base exp. = 90</code>, <code>boss base exp. = 1180</code> (from the table), <code>non-boss exp. (A rank) = 0.8 * 90 = 72</code>, <code>boss exp. (B rank) = 1180 - 0.8 * 90 = 1108</code>, <code>total exp. = 72 + 1108 = 1180</code>.
+
+===HQ Experience from [[Exercises (PvP)]]===
+<code>Level diff.</code> is a difference between opponent's and player's HQ levels.
+{| class="wikitable typography-xl-optout"
+!Level diff.
+!S
+!A
+!B
+!C, D
+|-
+|≥5
+|160
+|120
+|96
+|80
+|-
+|3~4
+|120
+|80
+|64
+|60?
+|-
+|1~2
+|80
+|60
+|48
+|40?
+|-
+|0
+|60
+|40
+|32
+|30
+|-
+| -1~-2
+|40
+|30
+|24
+|20
+|-
+| -3~-4
+|30
+|20
+|16
+|15?
+|-
+|≤-5
+|20
+|15
+|12
+|10
+|}
+
+===HQ Experience from [[Expedition]]s===
+Admiral experience gained from expeditions is not equal to the experience reward for your ships. Refer to the [[Expedition/Introduction#Ratings_and_rewards|expedition]] page for information on experience values.
+
+==={{Anchor|XP Table (HQ)}}HQ Experience Table===
+{| class="wikitable typography-xl-optout" style="text-align:center;width:100%;"
+! style="width:30px;" |Lv
+! style="width:70px;" |Exp.
+! style="width:70px;" |Exp. diff.
+| rowspan="31" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:75px;" |Exp.
+! style="width:75px;" |Exp. diff.
+| rowspan="31" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:80px;" |Exp.
+! style="width:80px;" |Exp. diff.
+| rowspan="31" style="width:1px;" |
+! style="width:30px;" |Lv
+! style="width:85px;" |Exp.
+! style="width:85px;" |Exp. diff.
+|-
+| style="background-color:rgb(153,255,0);" |1
+|0
+|0
+| style="background-color:rgb(153,255,0);" |31
+|46,500
+|3,000
+| style="background-color:rgb(255,255,0);" |61
+|188,500
+|7,000
+| style="background-color:rgb(255,204,187);" |91
+|564,500
+|19,000
+|-
+| style="background-color:rgb(153,255,0);" |2
+|100
+|100
+| style="background-color:rgb(153,255,0);" |32
+|49,600
+|3,100
+| style="background-color:rgb(255,255,0);" |62
+|195,800
+|7,300
+| style="background-color:rgb(255,204,187);" |92
+|584,500
+|20,000
+|-
+| style="background-color:rgb(153,255,0);" |3
+|300
+|200
+| style="background-color:rgb(153,255,0);" |33
+|52,800
+|3,200
+| style="background-color:rgb(255,255,0);" |63
+|203,400
+|7,600
+| style="background-color:rgb(255,204,187);" |93
+|606,500
+|22,000
+|-
+| style="background-color:rgb(153,255,0);" |4
+|600
+|300
+| style="background-color:rgb(153,255,0);" |34
+|56,100
+|3,300
+| style="background-color:rgb(255,255,0);" |64
+|211,300
+|7,900
+| style="background-color:rgb(255,204,187);" |94
+|631,500
+|25,000
+|-
+| style="background-color:rgb(153,255,0);" |5
+|1,000
+|400
+| style="background-color:rgb(153,255,0);" |35
+|59,500
+|3,400
+| style="background-color:rgb(255,255,0);" |65
+|219,500
+|8,200
+| style="background-color:rgb(255,204,187);" |95
+|661,500
+|30,000
+|-
+| style="background-color:rgb(153,255,0);" |6
+|1,500
+|500
+| style="background-color:rgb(153,255,0);" |36
+|63,000
+|3,500
+| style="background-color:rgb(255,255,0);" |66
+|228,000
+|8,500
+| style="background-color:rgb(255,204,187);" |96
+|701,500
+|40,000
+|-
+| style="background-color:rgb(153,255,0);" |7
+|2,100
+|600
+| style="background-color:rgb(153,255,0);" |37
+|66,600
+|3,600
+| style="background-color:rgb(255,255,0);" |67
+|236,800
+|8,800
+| style="background-color:rgb(255,204,187);" |97
+|761,500
+|60,000
+|-
+| style="background-color:rgb(153,255,0);" |8
+|2,800
+|700
+| style="background-color:rgb(153,255,0);" |38
+|70,300
+|3,700
+| style="background-color:rgb(255,255,0);" |68
+|245,900
+|9,100
+| style="background-color:rgb(255,204,187);" |98
+|851,500
+|90,000
+|-
+| style="background-color:rgb(153,255,0);" |9
+|3,600
+|800
+| style="background-color:rgb(153,255,0);" |39
+|74,100
+|3,800
+| style="background-color:rgb(255,255,0);" |69
+|255,300
+|9,400
+| style="background-color:rgb(255,204,187);" |99
+|1,000,000
+|148,500
+|-
+| style="background-color:rgb(153,255,0);" |10
+|4,500
+|900
+| style="background-color:rgb(255,255,0);" |40
+|78,000
+|3,900
+| style="background-color:rgb(255,255,0);" |70
+|265,000
+|9,700
+| style="background-color:rgb(255,76,76);" |100
+|1,300,000
+|300,000
+|-
+| style="background-color:rgb(153,255,0);" |11
+|5,500
+|1,000
+| style="background-color:rgb(255,255,0);" |41
+|82,000
+|4,000
+| style="background-color:rgb(255,255,0);" |71
+|275,000
+|10,000
+| style="background-color:rgb(255,76,76);" |101
+|1,600,000
+|300,000
+|-
+| style="background-color:rgb(153,255,0);" |12
+|6,600
+|1,100
+| style="background-color:rgb(255,255,0);" |42
+|86,100
+|4,100
+| style="background-color:rgb(255,255,0);" |72
+|285,400
+|10,400
+| style="background-color:rgb(255,76,76);" |102
+|1,900,000
+|300,000
+|-
+| style="background-color:rgb(153,255,0);" |13
+|7,800
+|1,200
+| style="background-color:rgb(255,255,0);" |43
+|90,300
+|4,200
+| style="background-color:rgb(255,255,0);" |73
+|296,200
+|10,800
+| style="background-color:rgb(255,76,76);" |103
+|2,200,000
+|300,000
+|-
+| style="background-color:rgb(153,255,0);" |14
+|9,100
+|1,300
+| style="background-color:rgb(255,255,0);" |44
+|94,600
+|4,300
+| style="background-color:rgb(255,255,0);" |74
+|307,400
+|11,200
+| style="background-color:rgb(255,76,76);" |104
+|2,600,000
+|400,000
+|-
+| style="background-color:rgb(153,255,0);" |15
+|10,500
+|1,400
+| style="background-color:rgb(255,255,0);" |45
+|99,000
+|4,400
+| style="background-color:rgb(255,255,0);" |75
+|319,000
+|11,600
+| style="background-color:rgb(255,76,76);" |105
+|3,000,000
+|400,000
+|-
+| style="background-color:rgb(153,255,0);" |16
+|12,000
+|1,500
+| style="background-color:rgb(255,255,0);" |46
+|103,500
+|4,500
+| style="background-color:rgb(255,255,0);" |76
+|331,000
+|12,000
+| style="background-color:rgb(255,76,76);" |106
+|3,500,000
+|500,000
+|-
+| style="background-color:rgb(153,255,0);" |17
+|13,600
+|1,600
+| style="background-color:rgb(255,255,0);" |47
+|108,100
+|4,600
+| style="background-color:rgb(255,255,0);" |77
+|343,400
+|12,400
+| style="background-color:rgb(255,76,76);" |107
+|4,000,000
+|500,000
+|-
+| style="background-color:rgb(153,255,0);" |18
+|15,300
+|1,700
+| style="background-color:rgb(255,255,0);" |48
+|112,800
+|4,700
+| style="background-color:rgb(255,255,0);" |78
+|356,200
+|12,800
+| style="background-color:rgb(255,76,76);" |108
+|4,600,000
+|600,000
+|-
+| style="background-color:rgb(153,255,0);" |19
+|17,100
+|1,800
+| style="background-color:rgb(255,255,0);" |49
+|117,600
+|4,800
+| style="background-color:rgb(255,255,0);" |79
+|369,400
+|13,200
+| style="background-color:rgb(255,76,76);" |109
+|5,200,000
+|600,000
+|-
+| style="background-color:rgb(153,255,0);" |20
+|19,000
+|1,900
+| style="background-color:rgb(255,255,0);" |50
+|122,500
+|4,900
+| style="background-color:rgb(255,204,187);" |80
+|383,000
+|13,600
+| style="background-color:rgb(255,76,76);" |110
+|5,900,000
+|700,000
+|-
+| style="background-color:rgb(153,255,0);" |21
+|21,000
+|2,000
+| style="background-color:rgb(255,255,0);" |51
+|127,500
+|5,000
+| style="background-color:rgb(255,204,187);" |81
+|397,000
+|14,000
+| style="background-color:rgb(255,76,76);" |111
+|6,600,000
+|700,000
+|-
+| style="background-color:rgb(153,255,0);" |22
+|23,100
+|2,100
+| style="background-color:rgb(255,255,0);" |52
+|132,700
+|5,200
+| style="background-color:rgb(255,204,187);" |82
+|411,500
+|14,500
+| style="background-color:rgb(255,76,76);" |112
+|7,400,000
+|800,000
+|-
+| style="background-color:rgb(153,255,0);" |23
+|25,300
+|2,200
+| style="background-color:rgb(255,255,0);" |53
+|138,100
+|5,400
+| style="background-color:rgb(255,204,187);" |83
+|426,500
+|15,000
+| style="background-color:rgb(255,76,76);" |113
+|8,200,000
+|800,000
+|-
+| style="background-color:rgb(153,255,0);" |24
+|27,600
+|2,300
+| style="background-color:rgb(255,255,0);" |54
+|143,700
+|5,600
+| style="background-color:rgb(255,204,187);" |84
+|442,000
+|15,500
+| style="background-color:rgb(255,76,76);" |114
+|9,100,000
+|900,000
+|-
+| style="background-color:rgb(153,255,0);" |25
+|30,000
+|2,400
+| style="background-color:rgb(255,255,0);" |55
+|149,500
+|5,800
+| style="background-color:rgb(255,204,187);" |85
+|458,000
+|16,000
+| style="background-color:rgb(255,76,76);" |115
+|10,000,000
+|900,000
+|-
+| style="background-color:rgb(153,255,0);" |26
+|32,500
+|2,500
+| style="background-color:rgb(255,255,0);" |56
+|155,500
+|6,000
+| style="background-color:rgb(255,204,187);" |86
+|474,500
+|16,500
+| style="background-color:rgb(255,76,76);" |116
+|11,000,000
+|1,000,000
+|-
+| style="background-color:rgb(153,255,0);" |27
+|35,100
+|2,600
+| style="background-color:rgb(255,255,0);" |57
+|161,700
+|6,200
+| style="background-color:rgb(255,204,187);" |87
+|491,500
+|17,000
+| style="background-color:rgb(255,76,76);" |117
+|12,000,000
+|1,000,000
+|-
+| style="background-color:rgb(153,255,0);" |28
+|37,800
+|2,700
+| style="background-color:rgb(255,255,0);" |58
+|168,100
+|6,400
+| style="background-color:rgb(255,204,187);" |88
+|509,000
+|17,500
+| style="background-color:rgb(255,76,76);" |118
+|13,000,000
+|1,000,000
+|-
+| style="background-color:rgb(153,255,0);" |29
+|40,600
+|2,800
+| style="background-color:rgb(255,255,0);" |59
+|174,700
+|6,600
+| style="background-color:rgb(255,204,187);" |89
+|527,000
+|18,000
+| style="background-color:rgb(255,76,76);" |119
+|14,000,000
+|1,000,000
+|-
+| style="background-color:rgb(153,255,0);" |30
+|43,500
+|2,900
+| style="background-color:rgb(255,255,0);" |60
+|181,500
+|6,800
+| style="background-color:rgb(255,204,187);" |90
+|545,500
+|18,500
+| style="background-color:rgb(255,76,76);" |120
+|15,000,000
+|1,000,000
+|}
+Notes:
+*HQ experience is capped at 300,000,000<ref>https://twitter.com/Sepultura______/status/1083842088737751041</ref><ref>https://cdn.discordapp.com/attachments/176206906141048832/533882103138615317/u.png</ref>. After reaching the cap, it become impossible to gain [[#Monthly Ranking|ranking points]] via HQ experience gains.
+
+====Difficulty Tiers====
+In some older Event maps and Extra Operation (EO) maps, enemy appearance and rare drop rates vary depending on your HQ level. Newer events (starting from winter 2015) now allow you to choose your difficulty manually, rather than using HQ level as a proxy, as it once was. However, the difficulties you can choose are determined by your HQ level; some event maps HP (as well as number of boss kills required) can be also be influenced by HQ level. Here are the overall details of the existing difficulty tiers:
+
+{| class="wikitable typography-xl-optout" style="width:100%;"
+|-
+! colspan="2" style="width:100px;" scope="col" |Tier
+! style="width:100px;" scope="col" |Level Range
+! style="width:100px;" scope="col" |Rare Drop Rates
+! style="width:350px;" scope="col" |Enemy Appearances
+! style="width:200px;" scope="col" |Notes
+|-
+| style="text-align:center;background-color:rgb(153,255,0);" |'''I'''
+| style="text-align:center;" |Easy
+| style="text-align:center;" |1 - 34 (or 39)
+| style="text-align:center;" |Seldom
+| Mostly Normal tier.<br>Few Elites may appear.
+| Can only choose '''Easy''' in events
+|-
+| style="text-align:center;background-color:rgb(255,255,0);" |'''II'''
+| style="text-align:center;" |Normal
+| style="text-align:center;" |35 (or 40) - 79
+| style="text-align:center;" |Few<br>''(Moderate)''
+| Normal and Elite tier.<br>Few Flagships may appear.
+| Can choose '''Easy''' or '''Normal''' in events
+|-
+| style="text-align:center;background-color:rgb(255,204,187);" |'''III'''
+| style="text-align:center;" |Hard
+| style="text-align:center;" |80 - 99<br>''(80 - 120)''
+| style="text-align:center;" |Moderate<br>''(High)''
+| Mostly Elite and Flagship tier.<br>Few Flagship kai and special tier (bosses) may appear.
+| Can choose any difficulty in events.<br>Sometimes begins from Lv 75 or 85 (e.g. for 3-5).
+|-
+| style="text-align:center;background-color:rgb(255,76,76);" |'''IV'''
+| style="text-align:center;" |Expert
+| style="text-align:center;" |100 - 120
+| style="text-align:center;" |High
+| All possible tiers.<br>In some cases, special tiers (bosses) may appear.
+| Not always implemented.<br>Sometimes begins from Lv 105 or 110 (e.g. for 2015 fall E5H HP)
+|}
+Notes:
+* In case the 4<sup>th</sup> tier is not implemented, then the level ranges and drop rates in parentheses are used instead.
+** If the 4<sup>th</sup> tier is implemented, there is a high possibility that rare ships from previous events may drop on certain nodes.
+
+===Monthly Ranking===
+*You are ranked each month within your server based on your overall HQ ranking points gained during the month. These rankings are shown in the second left-hand tab in the profile page.
+*Your title, insignia, ranking points, and rank update twice per day along with the [[PvP]] reset at 03:00 and 15:00 JST.
+**Accounting for ranking points is performed at 02:00 and 14:00 JST; for example, any points gained after 14:00 JST will not show after 15:00 JST update, but only after 03:00 JST on the next update.
+*Ranking points gained for the current month are given by<br><div style="text-align:center;margin:20px;"><span style="border:1px red solid;padding:10px;"><math>\text{Initial points} + \text{Experience points} + \text{EO points} + \text{Quest points}</math></span></div>
+**''Initial points'' are calculated as <code>[[#HQ Experience from Sorties|HQ experience]] for the current year / 50000 + [[#Extra_Operations|EO points]] and [[#Quests|Quest points]] for the previous month / 35</code>.
+***E.g., 20,000,000 HQ experience during the year (starting from January 1st of the current year) gives 400 initial points, all EO from the previous month give roughly 30 initial points.
+**''Experience points'' are calculated as <code>[[#HQ Experience from Sorties|HQ experience]] for the current month * 7 / 10000</code>.
+***Around 1428 HQ experience per 1 point, or 100,000 HQ experience per 70 points.
+**''EO points'' is a sum of [[#Extra Operations|ranking points for each EO map]] completed.
+***1030 points for all EOs.
+**''Quest points'' is any [[#Quests|ranking points rewarded by quests]] during the current month.
+***1330 points for all quests.
+*Experience and EO points are finalized at 22:00 JST on the last day of the month, experience points gained from 22:00 JST will be added to the next month's ranking points.<ref name=KenshoKanColle1 />
+**Displayed ranking points at 03:00 JST update on the first day of the month: <code>Experience points from 22:00 to 02:00 + Initial points + EO points from 00:00 to 02:00</code>.<ref name=wikiwiki />
+**EO points gained from 22:00 to 00:00 JST (i.e. before EO reset) on the last day of the month '''will be lost'''.<ref name=KenshoKanColle2 />
+**EO points gained after 00:00 JST (i.e. after EO reset) on the first day of the new month will be added to this new month's ranking points.
+*Achieving top ranks for each month yields rewards that are distributed in the following month (typically around the end although it varies). Tiers are top 5, 20, 100, 500. Higher tiers generally have better rewards.
+**See [[#Past Monthly Rewards|the table]] below for rewards from previous months.
+*Different servers have different degrees of dedication from players. It may be worth finding out how many ranking points were required for your desired rank placement in your server from the previous month as a guide before attempting, as failing to reach the #500 cutoff means no rewards at all, even if you used a substantial amount of resources in the attempt; the amount required for some newer servers can be as little as half of that of the more hardcore servers.
+**You can check [[#Past Monthly Ranking Points|the section]] below for previous months' records.
+**On the [http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/ DMM site] you can see (incomplete) top 500 list (also include approximate ranking points for some ranks) for each server by pressing [[File:nav_item04.png]] button (also can be accessed [[#See Also|directly]]).
+*As players also tend to complete some of their EOs at the last possible juncture (after 15:00 JST on the last day of the month) to lull competitors into complacency, players attempting a rank should be sure to gain an excess amount of required ranking points displayed to avoid being displaced at the last minute. This practice is colloquially referred to as ''firing the EO cannons''.
+*When players have the same amount of ranking points, they are sorted by their total HQ experience, from highest at the top to lowest at the bottom of the ranking list.
+*Some players might get banned from obtaining ranking reward if they play in a way that does not comply with term of service. They would be remove from game ranking and unable to obtain ranking reward for an unknown number of months despite still able to play the game.
+
+====Extra Operations====
+*Extra Operations (EOs) can be completed once a month to earn ranking points along with [[Medal|medals]].
+*All EO map progress is reset at the beginning of every month (00:00 JST).
+**The game may have to be refreshed after 00:00 JST in order to visibly see this reset. Note that any progress made  before visibly seeing the reset will not be counted, and no ranking points or other rewards will be credited to your profile should you "clear" the maps.
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+|-
+! Map
+! Ranking Points
+! Medals
+|-
+| [[1-5]]
+| +75
+| 1
+|-
+| [[1-6]]
+| +75
+| 0 (1 Present Box)
+|-
+| [[2-5]]
+| +100
+| 1
+|-
+| [[3-5]]
+| +150
+| 1
+|-
+| [[4-5]]
+| +180
+| 1
+|-
+| [[5-5]]
+| +200
+| 1
+|-
+| [[6-5]]
+| +250
+| 1
+|-
+| Total without [[5-5]] and [[6-5]]
+| +580
+| 4 (one blueprint)
+|-
+| Total without [[6-5]]
+| +780
+| 5
+|-
+| Total with all EOs
+| +1030
+| 6
+|}
+
+====[[Quests]]====
+*Some quests award ranking points upon completion. Currently, all available quests which do so are repeatable quests that can only be completed once per quarter.
+*These quests must be completed before 14:00 JST of the final day of the month for their points to count toward your ranking points for that month; completing the quests afterwards will result in their points counting toward next month's ranking.
+
+{| class="wikitable typography-xl-optout" style="text-align:center;"
+|-
+! Quest
+! Ranking Points
+|-
+|[[Quests#Bq2|Bq2]]<br>"Z Cannon"
+| +350
+|-
+|[[Quests#Bq7|Bq7]]<br>"M Cannon"
+| +200
+|-
+|[[Quests#Bq8|Bq8]]<br>"Tawi Cannon"
+| +300
+|-
+|[[Quests#Bq10|Bq10]]<br>"Z2 Cannon"
+| +400
+|-
+|[[Quests#Bq11|Bq11]]<br>"Small Cannon"
+| +80
+|-
+|[[Quests#Bq12|Bq12]]<br>"World 4 Cannon"
+| +330
+|-
+|[[Quests#Bq13|Bq13]]<br>"Melon Cannon"
+| +390
+|-
+|Total with all quests
+| +2050
+|}
+
+====Past Monthly Rewards====
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="5"|2013
+|-
+!Month
+!Rank 1-3
+!Rank 4-20
+!Rank 21-100
+!Rank 101-500
+|-
+|April
+|[[20.3cm (No.3) Twin Gun Mount]] x1<br>[[Prototype Reppuu Late Model]] x1<br>[[Type 32 Surface Radar]] x1
+|[[20.3cm (No.3) Twin Gun Mount]] x1<br>[[Prototype Reppuu Late Model]] x1
+|[[20.3cm (No.3) Twin Gun Mount]] x1
+|None
+|-
+|May
+| colspan="2" |[[61cm Quintuple (Oxygen) Torpedo Mount]] x1<br>[[Type 3 Active Sonar]] x1<br>[[Type 42 Air Radar]] x1
+|[[61cm Quintuple (Oxygen) Torpedo Mount]] x1<br>[[Type 3 Active Sonar]] x1
+|[[Type 3 Active Sonar]] x1<br>[[Emergency Repair Personnel]] x1<br>(Rank 101-200)<br>
+[[20.3cm (No.3) Twin Gun Mount]] x1<br>[[Emergency Repair Personnel]] x1<br>(Rank 400-405)<br>
+[[25mm Twin Autocannon Mount]] x1<br>[[Emergency Repair Personnel]] x1<br>(Rank 1000-1005)
+|-
+|June
+| colspan="2" |[[Suisei Model 12A]] x1<br>[[Type 0 Observation Seaplane]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1<br>[[Emergency Repair Personnel]] x1
+|[[Suisei Model 12A]] x1<br>[[Type 0 Observation Seaplane]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Type 0 Observation Seaplane]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1<br>(Rank 101-340)<br>
+[[20.3cm (No.3) Twin Gun Mount]] x1<br>[[Emergency Repair Personnel]] x1<br>(Rank 400-407)<br>
+[[25mm Twin Autocannon Mount]] x1<br>[[Emergency Repair Personnel]] x1<br>(Rank 993-1000)
+|-
+|July
+|[[Type 0 Fighter Model 62 (Fighter-bomber)]] x2<br>[[Type 3 Active Sonar]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[Type 3 Active Sonar]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[Type 33 Surface Radar]] x1
+|[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|-
+|August
+|[[Prototype Seiran]] x2<br>[[Type 2 Reconnaissance Aircraft]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1<br>[[Type 2 Reconnaissance Aircraft]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|-
+|September
+|[[Prototype Seiran]] x1<br>[[Type 2 Reconnaissance Aircraft]] x1<br>[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1<br>[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1
+|-
+|October
+|[[Prototype Seiran]] x1<br>[[Type 2 Reconnaissance Aircraft]] x1<br>[[Ju 87C Kai]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1<br>[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1<br>[[12.7cm Twin Gun Mount Model B Kai 2]] x1
+|[[Type 2 Reconnaissance Aircraft]] x1<br>[[Ju 87C Kai]] x1
+|-
+|November
+|[[Prototype Seiran]] x1<br>[[Type 2 Reconnaissance Aircraft]] x1<br>[[Emergency Repair Goddess]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1<br>[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Prototype Seiran]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Type 0 Fighter Model 62 (Fighter-bomber)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|-
+|December
+|[[Anti-torpedo Bulge (Large)]] x1<br>[[Anti-torpedo Bulge (Medium)]] x2<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Anti-torpedo Bulge (Large)]] x1<br>[[Anti-torpedo Bulge (Medium)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Anti-torpedo Bulge (Medium)]] x1<br>[[Ka Type Observation Autogyro]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Anti-torpedo Bulge (Medium)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="5"|2014
+|-
+!Month
+!{{tooltip|Rank 1-3|1-5 since June}}
+!{{tooltip|Rank 4-20|6-20 since June}}
+!Rank 21-100
+!Rank 101-500
+|-
+|January
+|[[Anti-torpedo Bulge (Large)]] x1<br>[[Anti-torpedo Bulge (Medium)]] x1<br>[[53cm Bow (Oxygen) Torpedo Mount]] x1<br>[[Daihatsu Landing Craft]] x1
+|[[Anti-torpedo Bulge (Large)]] x1<br>[[Anti-torpedo Bulge (Medium)]] x1<br>[[10cm Twin High-angle Gun Mount (Carriage)]] x1
+|[[Anti-torpedo Bulge (Large)]] x1<br>[[Daihatsu Landing Craft]] x1<br>[[10cm Twin High-angle Gun Mount (Carriage)]] x1
+|[[Anti-torpedo Bulge (Medium)]] x1<br>[[10cm Twin High-angle Gun Mount (Carriage)]] x1
+|-
+|February
+|[[Zuiun Model 12]] x1<br>[[Tenzan (931 Air Group)]] x1<br>[[Anti-torpedo Bulge (Large)]] x1<br>[[Daihatsu Landing Craft]] x1
+|[[Zuiun Model 12]] x1<br>[[Tenzan (931 Air Group)]] x1<br>[[Daihatsu Landing Craft]] x1
+|[[Zuiun Model 12]] x1<br>[[Type 97 Torpedo Bomber (931 Air Group)]] x1<br>[[Daihatsu Landing Craft]] x1
+|[[Type 97 Torpedo Bomber (931 Air Group)]] x1<br>[[Daihatsu Landing Craft]] x1
+|-
+|March
+|[[Tenzan (931 Air Group)]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1<br>[[Daihatsu Landing Craft]] x1
+|[[Tenzan (931 Air Group)]] x1<br>[[Zuiun Model 12]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Type 97 Torpedo Bomber (931 Air Group)]] x1<br>[[Zuiun Model 12]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|[[Zuiun Model 12]] x1<br>[[20.3cm (No.3) Twin Gun Mount]] x1
+|-
+|April
+|[[Zuiun Model 12 (634 Air Group)]] x1<br>[[Tenzan (931 Air Group)]] x1<br>[[Type 21 Air Radar Kai]] x1<br>[[Type 22 Surface Radar Kai 4]] x1
+|[[Zuiun Model 12 (634 Air Group)]] x1<br>[[Tenzan (931 Air Group)]] x1<br>[[Type 22 Surface Radar Kai 4]] x1
+|[[Tenzan (931 Air Group)]] x1<br>[[Zuiun Model 12]] x1<br>[[Type 22 Surface Radar Kai 4]] x1
+|[[Type 97 Torpedo Bomber (931 Air Group)]] x1<br>[[Type 22 Surface Radar Kai 4]] x1
+|-
+|May
+|[[Type 22 Surface Radar Kai 4]] x1<br>[[Type 21 Air Radar Kai]] x1<br>[[12.7cm Twin High-Angle Mount (Late Model)]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[Type 22 Surface Radar Kai 4]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[12.7cm Twin High-Angle Mount (Late Model)]] x1
+|[[Type 22 Surface Radar Kai 4]] x1<br>[[12.7cm Twin High-Angle Mount (Late Model)]] x1<br>[[Zuiun Model 12]] x1
+|[[Type 22 Surface Radar Kai 4]] x1<br>[[Zuiun Model 12]] x1
+|-
+!Month
+!{{tooltip|Rank 1-5|1-3 before June}}
+!{{tooltip|Rank 6-20|4-20 before June}}
+!Rank 21-100
+!Rank 101-500
+|-
+|June
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Type 21 Air Radar Kai]] x1<br>[[Tenzan (931 Air Group)]] x1<br>[[Daihatsu Landing Craft]] x1
+|[[Type 21 Air Radar Kai]] x1<br>[[Tenzan (931 Air Group)]] x1<br>[[Daihatsu Landing Craft]] x1
+|[[Type 21 Air Radar Kai]] x1<br>[[Tenzan (931 Air Group)]] x1<br>[[Star Shell]] x1
+|[[Type 21 Air Radar Kai]] x1<br>[[Tenzan (931 Air Group)]] x1
+|-
+|July
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Type 22 Surface Radar Kai 4]] x1<br>[[Tenzan (931 Air Group)]] x1
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Type 22 Surface Radar Kai 4]] x1<br>[[Tenzan (931 Air Group)]] x1
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Type 22 Surface Radar Kai 4]] x1<br>[[Type 97 Torpedo Bomber (931 Air Group)]] x1
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Type 22 Surface Radar Kai 4]] x1
+|-
+|August
+|[[Prototype 41cm Triple Gun Mount]] x1<br>[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[Type 21 Air Radar Kai]] x1
+|[[Prototype 35.6cm Triple Gun Mount]] x2<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[Type 21 Air Radar Kai]] x1
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[Type 21 Air Radar Kai]] x1
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Zuiun Model 12]] x1
+|-
+|September
+|[[Prototype 46cm Twin Gun Mount]] x2<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Shiun]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Shiun]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Shiun]] x1
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Shiun]] x1
+|-
+|October
+|[[Prototype 46cm Twin Gun Mount]] x2<br>[[Shiun]] x1<br>[[Ryuusei (601 Air Group)]] x1
+|[[Prototype 46cm Twin Gun Mount]] x2<br>[[Shiun]] x1
+|[[Prototype 41cm Triple Gun Mount]] x2<br>[[Shiun]] x1
+|[[Prototype 41cm Triple Gun Mount]] x1<br>[[Shiun]] x1
+|-
+|November
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Reppuu (601 Air Group)]] x1<br>[[Ryuusei (601 Air Group)]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Ryuusei (601 Air Group)]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Tenzan (601 Air Group)]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Tenzan (601 Air Group)]] x1
+|-
+|December
+|[[Reppuu (601 Air Group)]] x1<br>[[Ryuusei (601 Air Group)]] x1<br>[[Type 22 Surface Radar Kai 4]] x1<br>[[Shiun]] x1
+|[[Reppuu (601 Air Group)]] x1<br>[[Ryuusei (601 Air Group)]] x1<br>[[Shiun]] x1
+|[[Zero Fighter Model 52C (601 Air Group)]] x1<br>[[Shiun]] x1<br>[[Ryuusei (601 Air Group)]] x1
+|[[Zero Fighter Model 52C (601 Air Group)]] x1<br>[[Ryuusei (601 Air Group)]] x1
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="5"|2015
+|-
+!Month
+!Rank 1-5
+!Rank 6-20
+!Rank 21-100
+!Rank 101-500
+|-
+|January
+|[[Skilled Lookouts]] x2<br>[[Prototype 46cm Twin Gun Mount]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[Skilled Lookouts]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[Skilled Lookouts]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1<br>[[Zuiun Model 12]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Zuiun Model 12]] x1
+|-
+|February
+|[[Type 0 Passive Sonar]] x2<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Tenzan (931 Air Group)]] x1
+|[[Type 0 Passive Sonar]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Tenzan (931 Air Group)]] x1
+|[[Type 0 Passive Sonar]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Type 97 Torpedo Bomber (931 Air Group)]] x1
+|[[Type 0 Passive Sonar]] x1<br>[[Type 97 Torpedo Bomber (931 Air Group)]] x1
+|-
+|March
+|[[381mm/50 Triple Gun Mount]] x2<br>[[Shiun]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[381mm/50 Triple Gun Mount]] x1<br>[[Shiun]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[381mm/50 Triple Gun Mount]] x1<br>[[Shiun]] x1<br>[[Zuiun Model 12]] x1
+|[[381mm/50 Triple Gun Mount]] x1<br>[[Zuiun (634 Air Group)]] x1
+|-
+|April
+|[[15.2cm Twin Gun Mount Kai]] x2<br>[[Shiun]] x1<br>[[Reppuu Model 11]] x1
+|[[15.2cm Twin Gun Mount Kai]] x1<br>[[Shiun]] x1<br>[[Reppuu Model 11]] x1
+|[[15.2cm Twin Gun Mount Kai]] x1<br>[[Shiun]] x1<br>[[Zero Fighter Model 52C (601 Air Group)]] x1
+|[[15.2cm Twin Gun Mount Kai]] x1<br>[[Shiun]] x1
+|-
+|[[Thread:273614|May]]
+|[[Type 32 Surface Radar Kai]] x2<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[Type 32 Surface Radar Kai]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[Type 32 Surface Radar Kai]] x1<br>[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[Type 32 Surface Radar Kai]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|-
+|[[Thread:287304|June]]
+|[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1<br>[[Prototype 51cm Twin Gun Mount]] x2<br>[[Type 0 Passive Sonar]] x1
+|[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Type 0 Passive Sonar]] x1
+|[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1<br>[[Type 0 Passive Sonar]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Type 0 Passive Sonar]] x1
+|-
+|[[Thread:313022|July]]
+|[[Prototype Nanzan]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Type 32 Surface Radar Kai]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[Prototype Nanzan]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[Prototype Nanzan]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[Prototype Nanzan]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|-
+|[[Thread:334008|August]]
+|[[Type 4 Passive Sonar]] x2<br>[[Type 32 Surface Radar Kai]] x1<br>[[Prototype Nanzan]] x1
+|[[Type 4 Passive Sonar]] x2<br>[[Prototype Nanzan]] x1
+|[[Type 4 Passive Sonar]] x2<br>[[Tenzan (931 Air Group)]] x1
+|[[Type 4 Passive Sonar]] x1<br>[[Tenzan (931 Air Group)]] x1
+|-
+|[[Thread:340685|September]]
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Shiun]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Type 0 Passive Sonar]] x1
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Shiun]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1
+|[[Shiun]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1
+|[[Shiun]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|-
+|[[Thread:365841|October]]
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Type 0 Passive Sonar]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Type 0 Passive Sonar]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Type 0 Passive Sonar]] x1<br>[[Zuiun Model 12]] x1
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Zuiun Model 12]] x1
+|-
+|[[Thread:380141|November]]
+|[[Ne Type Engine]] x2<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1
+|[[Ne Type Engine]] x1<br>[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1
+|[[Ne Type Engine]] x1<br>[[Type 21 Air Radar Kai]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1
+|[[Ne Type Engine]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1
+|-
+|[[Thread:387539|December]]
+|[[16inch Triple Gun Mount Mk.7]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[Ne Type Engine]] x1
+|[[16inch Triple Gun Mount Mk.7]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[16inch Triple Gun Mount Mk.7]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1<br>[[Zuiun Model 12]] x1
+|[[16inch Triple Gun Mount Mk.7]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="5"|2016
+|-
+!Month
+!Rank 1-5
+!Rank 6-20
+!Rank 21-100
+!Rank 101-500
+|-
+|[[Thread:389990|January]]
+|[[16inch Triple Gun Mount Mk.7]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1<br>[[Ro.44 Seaplane Fighter]] x1
+|[[16inch Triple Gun Mount Mk.7]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Ro.44 Seaplane Fighter]] x1
+|[[16inch Triple Gun Mount Mk.7]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1<br>[[Ro.44 Seaplane Fighter]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Ro.44 Seaplane Fighter]] x1
+|-
+|[[Partials/Updates/2016 March 19th|February]]
+|[[16inch Triple Gun Mount Mk.7]] x1<br>[[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]] x2<br>[[Shiun]] x1
+|[[Prototype 41cm Triple Gun Mount]] x1<br>[[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]] x1<br>[[Shiun]] x1
+|[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]] x1<br>[[Shiun]] x1
+|[[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]] x1<br>[[Shiun]] x1
+|-
+|[[Partials/Updates/2016 March Ranking Rewards|March]]
+|[[Type 1 Land-based Attack Aircraft]] x2<br>[[Type 96 Land-based Attack Aircraft]] x1<br>[[Bofors 40mm Quadruple Autocannon Mount]] x1
+|[[Type 1 Land-based Attack Aircraft]] x1<br>[[Type 96 Land-based Attack Aircraft]] x1<br>[[Bofors 40mm Quadruple Autocannon Mount]] x1
+|[[Type 96 Land-based Attack Aircraft]] x2<br>[[Bofors 40mm Quadruple Autocannon Mount]] x1
+|[[Type 96 Land-based Attack Aircraft]] x1<br>[[Bofors 40mm Quadruple Autocannon Mount]] x1
+|-
+|[[Partials/Updates/2016 April Ranking Rewards|April]]
+|[[Prototype 61cm Sextuple (Oxygen) Torpedo Mount]] x2<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Type 4 Passive Sonar]] x1
+|[[Prototype 61cm Sextuple (Oxygen) Torpedo Mount]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Type 4 Passive Sonar]] x1
+|[[Prototype 61cm Sextuple (Oxygen) Torpedo Mount]] x1<br>[[Prototype 35.6cm Triple Gun Mount]] x1<br>[[Type 4 Passive Sonar]] x1
+|[[Prototype 61cm Sextuple (Oxygen) Torpedo Mount]] x1<br>[[Type 4 Passive Sonar]] x1
+|-
+|[[Partials/Updates/2016 May Ranking Rewards|May]]
+|[[Prototype 61cm Sextuple (Oxygen) Torpedo Mount]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Type 32 Surface Radar Kai]] x1<br>[[Reppuu (601 Air Group)]] x1
+|[[Prototype 61cm Sextuple (Oxygen) Torpedo Mount]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Zero Fighter Model 52C (601 Air Group)]] x1
+|[[Prototype 61cm Sextuple (Oxygen) Torpedo Mount]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Zero Fighter Model 52C (601 Air Group)]] x1
+|[[Prototype 61cm Sextuple (Oxygen) Torpedo Mount]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1
+|-
+|[[Partials/Updates/2016 June Ranking Rewards|June]]
+|[[Re.2001 OR Kai]] x2<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Shiun]] x1
+|[[Re.2001 OR Kai]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Shiun]] x1
+|[[Re.2001 OR Kai]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1<br>[[Shiun]] x1
+|[[Prototype 46cm Twin Gun Mount]] x1<br>[[Shiun]] x1
+|-
+|[[Partials/Updates/2016 July Ranking Rewards|July]]
+|[[Reppuu Model 11]] x1<br>[[Raiden]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1
+|[[Reppuu Model 11]] x1<br>[[Raiden]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[Reppuu Model 11]] x1<br>[[Raiden]] x1<br>[[Zuiun Model 12]] x1
+|[[Reppuu Model 11]] x1<br>[[Zuiun (634 Air Group)]] x1
+|-
+|[[Partials/Updates/2016 August Ranking Rewards|August]]
+|[[38.1cm Mk.I/N Twin Gun Mount Kai]] x1<br>[[Ginga]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[38.1cm Mk.I/N Twin Gun Mount Kai]] x1<br>[[Zuiun Model 12 (634 Air Group)]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[38.1cm Mk.I/N Twin Gun Mount Kai]] x1<br>[[Zuiun Model 12]] x1<br>[[15.2cm Twin Gun Mount Kai]] x1
+|[[38.1cm Mk.I Twin Gun Mount]] x1<br>[[Zuiun Model 12]] x1
+|-
+|[[Partials/Updates/2016 September Ranking Rewards|September]]
+|[[Toku Daihatsu Landing Craft]] x1<br>[[Toku Daihatsu Landing Craft]] x1<br>[[Type 3 Fighter Hien (244th Air Combat Group)]] x1<br>[[Shiun]] x1
+|[[Toku Daihatsu Landing Craft]] x1<br>[[Type 3 Fighter Hien (244th Air Combat Group)]] x1<br>[[Shiun]] x1
+|[[Toku Daihatsu Landing Craft]] x1<br>[[Type 3 Fighter Hien Model 1D]] x1<br>[[Shiun]] x1
+|[[Toku Daihatsu Landing Craft]] x1<br>[[Shiun]] x1
+|-
+|[[Partials/Updates/2016 October Ranking Rewards|October]]
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Reppuu Model 11]] x1<br>[[Ginga]] x1<br>[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Reppuu Model 11]] x1<br>[[Ginga]] x1
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Reppuu Model 11]] x1<br>[[Type 1 Land-based Attack Aircraft Model 22A]] x1
+|[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[Reppuu Model 11]] x1
+|-
+|[[Partials/Updates/2016 November Ranking Rewards|November]] x1
+|[[F6F-3]] x2<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1
+|[[F6F-3]] x1<br>[[Prototype 51cm Twin Gun Mount]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1
+|[[F6F-3]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1
+|[[F6F-3]] x1<br>[[Prototype 46cm Twin Gun Mount]] x1
+|-
+|[[Partials/Updates/2016 December Ranking Rewards|December]] x1
+|[[Zuiun (631 Air Group)]] x1<br>[[Submarine 53cm Bow Torpedo Mount (8 tubes)]] x1<br>[[Ginga]] x1<br>[[Type 4 Passive Sonar]] x1
+|[[Zuiun (631 Air Group)]] x1<br>[[Ginga]] x1<br>[[Type 4 Passive Sonar]] x1
+|[[Zuiun (631 Air Group)]] x1<br>[[Type 1 Land-based Attack Aircraft Model 22A]] x1<br>[[Type 4 Passive Sonar]] x1
+|[[Zuiun (631 Air Group)]] x1<br>[[Type 4 Passive Sonar]] x1
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="5"|2017
+|-
+!Month
+!Rank 1-5
+!Rank 6-20
+!Rank 21-100
+!Rank 101-500
+|-
+|[[Partials/Updates/2017 January Ranking Rewards|January]]
+|[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x2<br>[[Prototype Nanzan]] x1
+|[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[Prototype Nanzan]] x1
+|[[Late Model Bow Torpedo Mount (6 tubes)]] x2<br>[[Prototype Nanzan]] x1
+|[[Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[Prototype Nanzan]] x1
+|-
+|[[Partials/Updates/2017 February Ranking Rewards|February]]
+|[[Kyoufuu Kai]] x2<br>[[Type 0 Fighter Model 63 (Fighter-bomber)]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1
+|[[Kyoufuu Kai]] x1<br>[[Type 0 Fighter Model 63 (Fighter-bomber)]] x1<br>[[Prototype 41cm Triple Gun Mount]] x1
+|[[Kyoufuu Kai]] x1<br>[[Type 0 Fighter Model 63 (Fighter-bomber)]] x1<br>[[Prototype 35.6cm Triple Gun Mount]] x1
+|[[Kyoufuu Kai]] x1<br>[[Prototype 35.6cm Triple Gun Mount]] x1
+|-
+|[[Partials/Updates/2017 March Ranking Rewards|March]]
+|[[Type 1 Fighter Hayabusa Model II (64th Squadron)]] x1<br>[[Type 1 Fighter Hayabusa Model III A (54th Squadron)]] x1<br>[[Type 1 Fighter Hayabusa Model II]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[Type 1 Fighter Hayabusa Model III A (54th Squadron)]] x1<br>[[Type 1 Fighter Hayabusa Model II]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[Type 1 Fighter Hayabusa Model III A]] x1<br>[[Type 1 Fighter Hayabusa Model II]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[Type 1 Fighter Hayabusa Model II]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|-
+|[[Partials/Updates/2017 April Ranking Rewards|April]]
+|[[41cm Triple Gun Mount Kai]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[Zuiun (631 Air Group)]] x1<br>[[Ne Type Engine]] x1
+|[[41cm Triple Gun Mount Kai]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[Zuiun (631 Air Group)]] x1
+|[[41cm Triple Gun Mount Kai]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[Zuiun (631 Air Group)]] x1
+|[[41cm Triple Gun Mount Kai]] x1<br>[[Zuiun (631 Air Group)]] x1
+|-
+|[[Partials/Updates/2017 May Ranking Rewards|May]]
+|[[F4U-1D]] x1<br>[[F6F-5]] x2<br>[[Type 0 Reconnaissance Seaplane Model 11B]] x1
+|[[F4U-1D]] x1<br>[[F6F-5]] x1<br>[[Type 0 Reconnaissance Seaplane Model 11B]] x1
+|[[F6F-5]] x1<br>[[Type 0 Reconnaissance Seaplane Model 11B]] x1<br>[[Type 0 Fighter Model 63 (Fighter-bomber)]] x1
+|[[F6F-5]] x1<br>[[Type 0 Fighter Model 63 (Fighter-bomber)]] x1
+|-
+|[[Partials/Updates/2017 June Ranking Rewards|June]]
+|[[Swordfish Mk.II (Skilled)]] x1<br>[[Swordfish]] x1<br>[[Zuiun (634 Air Group/Skilled)]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[Swordfish Mk.II (Skilled)]] x1<br>[[Swordfish]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[Swordfish Mk.II (Skilled)]] x1<br>[[Swordfish]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[Swordfish]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|-
+|[[Partials/Updates/2017 July Ranking Rewards|July]]
+|[[F6F-5N]] x1<br>[[F6F-3N]] x1<br>[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[F6F-5N]] x1<br>[[F6F-3N]] x1<br>[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1
+|2x [[F6F-3N]] x1<br>[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1
+|[[F6F-3N]] x1<br>[[15m Duplex Rangefinder + Type 21 Radar Kai Ni]] x1
+|-
+|[[Partials/Updates/2017 August Ranking Rewards|August]]
+|[[HF/DF + Type144/147 ASDIC]] x1<br>[[Type144/147 ASDIC]] x1<br>[[Type124 ASDIC]] x1<br>[[Shiun]] x1
+|[[HF/DF + Type144/147 ASDIC]] x1<br>[[Type124 ASDIC]] x1<br>[[Shiun]] x1
+|[[Type144/147 ASDIC]] x1<br>[[Type124 ASDIC]] x1<br>[[Shiun]] x1
+|[[Type124 ASDIC]] x1<br>[[Shiun]] x1
+|-
+|[[Partials/Updates/2017 September Ranking Rewards|September]]
+|[[Shiden Model 21 Shiden Kai]] x1<br>[[Shiden Model 11]] x1<br>[[Kyoufuu Kai]] x1<br>[[Type 22 Surface Radar Kai 4 (Calibrated Late Model)]] x1
+|[[Shiden Model 21 Shiden Kai]] x1<br>[[Kyoufuu Kai]] x1<br>[[Type 22 Surface Radar Kai 4 (Calibrated Late Model)]] x1
+|[[Shiden Model 11]] x1<br>[[Kyoufuu Kai]] x1<br>[[Type 22 Surface Radar Kai 4 (Calibrated Late Model)]] x1
+|[[Shiden Model 11]] x1<br>[[Type 22 Surface Radar Kai 4 (Calibrated Late Model)]] x1
+|-
+|[[Partials/Updates/2017 October Ranking Rewards|October]]
+|[[Arctic Camouflage (+ Arctic Equipment)]] x1<br>[[Special Type 2 Amphibious Tank]] x1<br>[[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]] x1<br>[[Toku Daihatsu Landing Craft]] x1
+|[[Arctic Camouflage (+ Arctic Equipment)]] x1<br>[[Special Type 2 Amphibious Tank]] x1<br>[[Toku Daihatsu Landing Craft]] x1
+|[[Arctic Camouflage (+ Arctic Equipment)]] x1<br>[[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]] x1<br>[[Toku Daihatsu Landing Craft]] x1
+|[[Arctic Camouflage (+ Arctic Equipment)]] x1<br>[[Toku Daihatsu Landing Craft]] x1
+|-
+|[[Partials/Updates/2017 December 22nd|November]]
+|[[12.7cm Twin Gun Mount Model D Kai 2]] x2<br>[[Ginga]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[12.7cm Twin Gun Mount Model D Kai 2]] x1<br>[[Ginga]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[12.7cm Twin Gun Mount Model D Kai 2]] x1<br>[[Type 1 Land-based Attack Aircraft Model 22A]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[12.7cm Twin Gun Mount Model D Kai 2]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|-
+|[[Partials/Updates/2018 January 27th|December]]
+|[[Saiun (4th Recon Squad)]] x1<br>[[46cm Triple Gun Mount Kai]] x1<br>[[FM-2]] x1<br>[[12cm 30-tube Rocket Launcher Kai Ni]] x1
+|[[46cm Triple Gun Mount Kai]] x1<br>[[FM-2]] x1<br>[[12cm 30-tube Rocket Launcher Kai Ni]] x1
+|[[Prototype 41cm Triple Gun Mount]] x1<br>[[FM-2]] x1<br>[[12cm 30-tube Rocket Launcher Kai Ni]] x1
+|[[FM-2]] x1<br>[[12cm 30-tube Rocket Launcher Kai Ni]] x1
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="5"|2018
+|-
+!Month
+!Rank 1-5
+!Rank 6-20
+!Rank 21-100
+!Rank 101-500
+|-
+|[[Partials/Updates/2018 February 28th|January]]
+|[[46cm Triple Gun Mount Kai]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[5inch Single Gun Mount Mk.30]] x2
+|[[46cm Triple Gun Mount Kai]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[5inch Single Gun Mount Mk.30]] x1
+|[[46cm Triple Gun Mount Kai]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1<br>[[5inch Single Gun Mount Mk.30]] x1
+|[[46cm Triple Gun Mount Kai]] x1<br>[[5inch Single Gun Mount Mk.30]] x1
+|-
+|[[Partials/Updates/2018 March 28th|February]]
+|[[10cm Twin High-angle Gun Mount Kai + Additional Machine Guns]] x1<br>[[5inch Single Gun Mount Mk.30]] ★+4 x1<br>[[Zuiun Model 12 (634 Air Group)]] ★+4 x1<br>[[Ginga]] x1
+|[[10cm Twin High-angle Gun Mount Kai + Additional Machine Guns]] x1<br>[[5inch Single Gun Mount Mk.30]] ★+4 x1<br>[[Zuiun Model 12 (634 Air Group)]] ★+4 x1
+|[[10cm Twin High-angle Gun Mount Kai + Additional Machine Guns]] x1<br>[[5inch Single Gun Mount Mk.30]] ★+4 x1<br>[[Zuiun Model 12 (634 Air Group)]] x1
+|[[10cm Twin High-angle Gun Mount Kai + Additional Machine Guns]] x1<br>[[5inch Single Gun Mount Mk.30]] ★+4 x1
+|-
+|[[Partials/Updates/2018 April 28th|March]]
+|[[61cm Triple (Oxygen) Torpedo Mount Late Model]] ★+4 x1<br>[[61cm Quadruple (Oxygen) Torpedo Mount Late Model]] ★+4 x1<br>[[Zuiun (631 Air Group)]] ★+4 x1<br>[[Zuiun (634 Air Group/Skilled)]] x1
+|[[61cm Triple (Oxygen) Torpedo Mount Late Model]] x1<br>[[61cm Quadruple (Oxygen) Torpedo Mount Late Model]] ★+4 x1<br>[[Zuiun (631 Air Group)]] ★+4 x1
+|[[61cm Triple (Oxygen) Torpedo Mount Late Model]] x1<br>[[61cm Quadruple (Oxygen) Torpedo Mount Late Model]] x1<br>[[Zuiun (631 Air Group)]] x1
+|[[61cm Quadruple (Oxygen) Torpedo Mount Late Model]] x1<br>[[Zuiun (631 Air Group)]] x1
+|-
+|[[Partials/Updates/2018 May 29th|April]]
+|[[41cm Triple Gun Mount Kai Ni]] ★+4 x1<br>[[35.6cm Triple Gun Mount Kai (Dazzle Camouflage)]] ★+4 x2<br>[[Submarine Radar & Passive Radiolocator (E27)]] x1
+|[[41cm Triple Gun Mount Kai Ni]] ★+4 x1<br>[[35.6cm Triple Gun Mount Kai (Dazzle Camouflage)]] x1<br>[[Submarine Radar & Passive Radiolocator (E27)]] x1
+|[[41cm Triple Gun Mount Kai Ni]] x1<br>[[35.6cm Triple Gun Mount Kai (Dazzle Camouflage)]] x1<br>[[Submarine Radar & Waterproof Telescope]] x1
+|[[41cm Triple Gun Mount Kai Ni]] x1<br>[[Submarine Radar & Waterproof Telescope]] x1
+|-
+|[[Partials/Updates/2018 June 29th|May]]
+|[[35.6cm Triple Gun Mount Kai (Dazzle Camouflage)]] x1<br>[[12.7cm Twin Gun Mount Model A Kai 3 (Wartime Modification) + Anti-Aircraft Fire Director]] x1<br>[[12.7cm Twin Gun Mount Model B Kai 4 (Wartime Modification) + Anti-Aircraft Fire Director]] x1<br>[[12cm Single Gun Mount Kai 2]] x1
+|[[35.6cm Triple Gun Mount Kai (Dazzle Camouflage)]] x1<br>[[12.7cm Twin Gun Mount Model A Kai 3 (Wartime Modification) + Anti-Aircraft Fire Director]] x1<br>[[12cm Single Gun Mount Kai 2]] x1
+|[[35.6cm Triple Gun Mount Kai (Dazzle Camouflage)]] x1<br>[[12.7cm Twin Gun Mount Model A Kai 2]] x1<br>[[12cm Single Gun Mount Kai 2]] x1
+|[[35.6cm Triple Gun Mount Kai (Dazzle Camouflage)]] x1<br>[[12.7cm Twin Gun Mount Model A Kai 2]] x1
+|-
+|[[Partials/Updates/2018 July 30th|June]]
+|[[16inch Mk.I Triple Gun Mount Kai + FCR Type 284‎]] x1<br>[[16inch Mk.I Triple Gun Mount + AFCT Kai‎]] x1<br>[[16inch Mk.I Triple Gun Mount‎]] x1<br>[[20-tube 7inch UP Rocket Launchers]] x1
+|[[16inch Mk.I Triple Gun Mount Kai + FCR Type 284‎]] x1<br>[[16inch Mk.I Triple Gun Mount‎]] x1<br>[[20-tube 7inch UP Rocket Launchers]] x1
+|[[16inch Mk.I Triple Gun Mount + AFCT Kai‎]] x1<br>[[16inch Mk.I Triple Gun Mount‎]] x1<br>[[20-tube 7inch UP Rocket Launchers]] x1
+|[[16inch Mk.I Triple Gun Mount‎]] x1<br>[[20-tube 7inch UP Rocket Launchers]] x1
+|-
+|[[Partials/Updates/2018 August 30th|July]]
+|[[16inch Mk.I Triple Gun Mount Kai + FCR Type 284‎]] x1<br>[[Bofors 15.2cm Twin Gun Mount Model 1930]] ★+2 x1<br>[[Ju 87C Kai Ni (w/ KMX)]] x1<br>[[S9 Osprey]] x1
+|[[Bofors 15.2cm Twin Gun Mount Model 1930]] ★+2 x1<br>[[Ju 87C Kai Ni (w/ KMX)]] x1<br>[[S9 Osprey]] x1
+|[[Bofors 15.2cm Twin Gun Mount Model 1930]] ★+2 x1<br>[[S9 Osprey]] x1<br>[[Type 97 Torpedo Bomber (931 Air Group)]] x1
+|[[Bofors 15.2cm Twin Gun Mount Model 1930]] ★+2 x1<br>[[Type 97 Torpedo Bomber (931 Air Group)]] x1
+|-
+|[[Partials/Updates/2018 September 28th|August]]
+|[[5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37]] x2<br>[[GFCS Mk.37]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37]] x1<br>[[GFCS Mk.37]] x1<br>[[Skilled Sonar Personnel + Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37]] x1<br>[[GFCS Mk.37]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|[[5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37]] x1<br>[[Late Model Bow Torpedo Mount (6 tubes)]] x1
+|-
+|[[Partials/Updates/2018 October 30th|September]]
+|[[Ginga]] x1<br>[[Type C Kouhyouteki]] x1<br>[[Suisei Model 22 (634 Air Group/Skilled)]] x1<br>[[SK Radar]] x1
+|[[Type C Kouhyouteki]] x1<br>[[Suisei Model 22 (634 Air Group/Skilled)]] x1<br>[[SK Radar]] x1
+|[[Type C Kouhyouteki]] x1<br>[[Suisei Model 22 (634 Air Group)]] x1<br>[[SK Radar]] x1
+|[[Type C Kouhyouteki]] x1<br>[[Suisei Model 22 (634 Air Group)]] x1
+|-
+|[[Partials/Updates/2018 November 29th|October]]
+|[[14cm Twin Gun Mount Kai]] x1<br>[[Type 2 Land-based Reconnaissance Aircraft]] x1<br>[[12.7cm Twin Gun Mount Model B Kai 4 (Wartime Modification) + Anti-Aircraft Fire Director]] ★+2 x1<br>[[61cm Quadruple (Oxygen) Torpedo Mount Late Model]] x1
+|[[14cm Twin Gun Mount Kai]] x1<br>[[Type 2 Land-based Reconnaissance Aircraft]] x1<br>[[61cm Quadruple (Oxygen) Torpedo Mount Late Model]] x1
+|[[14cm Twin Gun Mount Kai]] x1<br>[[Type 2 Land-based Reconnaissance Aircraft]] x1<br>[[61cm Triple (Oxygen) Torpedo Mount Late Model]] x1
+|[[14cm Twin Gun Mount Kai]] x1<br>[[Type 2 Land-based Reconnaissance Aircraft]] x1
+|-
+|[[Partials/Updates/2018 December 25th|November]]
+|[[SG Radar (Initial Model)]] x1<br>[[533mm Quintuple Torpedo Mount (Initial Model)]] x1<br>[[Type 3 Fighter Hien (244th Air Combat Group)]] ★+5 x1<br>[[Type C Kouhyouteki]] x1
+|[[SG Radar (Initial Model)]] x1<br>[[533mm Quintuple Torpedo Mount (Initial Model)]] x1<br>[[Type 3 Fighter Hien (244th Air Combat Group)]] ★+4 x1
+|[[SG Radar (Initial Model)]] x1<br>[[533mm Quintuple Torpedo Mount (Initial Model)]] x1<br>[[Type 3 Fighter Hien Model 1D]] ★+3 x1
+|[[533mm Quintuple Torpedo Mount (Initial Model)]] x1<br>[[Type 3 Fighter Hien Model 1D]] ★+3 x1
+|-
+|[[Game Updates/2019/January 30th|December]]
+|[[41cm Triple Gun Mount Kai Ni]] x1<br>[[Saiun (4th Recon Squad)]] x1<br>[[Re.2001 OR Kai]] ★+5 x1<br>[[Re.2001 CB Kai]] x1
+|[[41cm Triple Gun Mount Kai Ni]] x1<br>[[Re.2001 OR Kai]] ★+5 x1<br>[[Re.2001 CB Kai]] x1
+|[[41cm Triple Gun Mount Kai]] x1<br>[[Re.2001 OR Kai]] ★+5 x1<br>[[Re.2001 CB Kai]] x1
+|[[41cm Triple Gun Mount Kai]] x1<br>[[Re.2001 CB Kai]] x1
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="5"|2019
+|-
+!Month
+!Rank 1-5
+!Rank 6-20
+!Rank 21-100
+!Rank 101-500
+|-
+|[[Game Updates/2019/February 22nd|January]]
+|[[41cm Twin Gun Mount Kai Ni]] x1<br>[[Type 3 Shell Kai]] x1<br>[[SK + SG Radar]] x1<br>[[Ju 87C Kai Ni (w/ KMX/Skilled)]] x1
+|[[41cm Twin Gun Mount Kai Ni]] x1<br>[[Type 3 Shell Kai]] x1<br>[[Ju 87C Kai Ni (w/ KMX/Skilled)]] x1
+|[[41cm Twin Gun Mount Kai Ni]] x1<br>[[Type 3 Shell Kai]] x1<br>[[Ju 87C Kai Ni (w/ KMX)]] x1
+|[[Type 3 Shell Kai]] x1<br>[[Ju 87C Kai Ni (w/ KMX)]] x1
+|-
+|[[Game Updates/2019/March 29th|February]]
+|[[35.6cm Twin Gun Mount Kai Ni]] x2<br>[[35.6cm Twin Gun Mount Kai]] x1<br>[[Suisei Model 22 (634 Air Group/Skilled)]] x1
+|[[35.6cm Twin Gun Mount Kai Ni]] x1<br>[[35.6cm Twin Gun Mount Kai]] x1<br>[[Suisei Model 22 (634 Air Group/Skilled)]] x1
+|[[35.6cm Twin Gun Mount Kai Ni]] x1<br>[[35.6cm Twin Gun Mount Kai]] x1<br>[[Suisei Model 22 (634 Air Group)]] x1
+|[[35.6cm Twin Gun Mount Kai Ni]] x1<br>[[35.6cm Twin Gun Mount Kai]] x1
+|-
+|[[Partials/Updates/2018 April 28th|March]]
+|[[Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)]] x1<br>[[16inch Mk.I Twin Gun Mount]] x1<br>[[16inch Mk.V Twin Gun Mount]] x1<br>[[16inch Mk.VIII Twin Gun Mount Kai]] x1
+|[[Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)]] x1<br>[[16inch Mk.I Twin Gun Mount]] x1<br>[[16inch Mk.VIII Twin Gun Mount Kai]] x1
+|[[Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)]] x1<br>[[16inch Mk.I Twin Gun Mount]] x1<br>[[16inch Mk.V Twin Gun Mount]] x1
+|[[Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)]] x1<br>[[16inch Mk.I Twin Gun Mount]] x1
+|-
+|[[Game Updates/2019/May 30th|April]]
+|[[Ryuusei Kai (CarDiv 1/Skilled)]] x1<br>[[Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)]] x1<br>[[16inch Mk.VIII Twin Gun Mount Kai]] x1<br>[[SK + SG Radar]] x1
+|[[Ryuusei Kai (CarDiv 1/Skilled)]] x1<br>[[16inch Mk.VIII Twin Gun Mount Kai]] x1<br>[[SK Radar]] x1
+|[[Ryuusei Kai (CarDiv 1/Skilled)]] x1<br>[[16inch Mk.V Twin Gun Mount]] x1<br>[[SK Radar]] x1
+|[[Ryuusei Kai (CarDiv 1)]] x1<br>[[SK Radar]] x1
+|-
+|[[Game Updates/2019/June 28th|May]]
+|[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] ★+3 x1<br>[[Night Operation Aviation Personnel + Skilled Deckhands]] x1<br>[[O Type Observation Autogyro Kai Ni]] ★+3 x1
+|[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] ★+3 x1<br>[[O Type Observation Autogyro Kai Ni]] ★+3 x1
+|[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[O Type Observation Autogyro Kai]] ★+3 x1
+|[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[O Type Observation Autogyro Kai]] ★+3 x1
+|-
+|[[Game Updates/2019/July 30th|June]]
+|[[Shipborne Model Type 4 20cm Anti-ground Rocket Launcher]] x2<br>[[Type 2 12cm Mortar Kai (Concentrated Deployment)]] x1<br>[[Type 2 12cm Mortar Kai]] x1
+|[[Shipborne Model Type 4 20cm Anti-ground Rocket Launcher]] x1<br>[[Type 2 12cm Mortar Kai (Concentrated Deployment)]] x1<br>[[Type 2 12cm Mortar Kai]] x1
+|[[Shipborne Model Type 4 20cm Anti-ground Rocket Launcher]] x1<br>[[Type 2 12cm Mortar Kai]] x2
+|[[Shipborne Model Type 4 20cm Anti-ground Rocket Launcher]] x1<br>[[Type 2 12cm Mortar Kai]] x1
+|-
+|[[Game Updates/2019/August 28th|July]]
+|[[Shuusui]] x1<br>[[Prototype Shuusui]] x1<br>[[Me 163B]] x1<br>[[Type 2 12cm Mortar Kai (Concentrated Deployment)]] x1
+|[[Shuusui]] x1<br>[[Prototype Shuusui]] x1<br>[[Type 2 12cm Mortar Kai (Concentrated Deployment)]] x1
+|[[Prototype Shuusui]] x1<br>[[Me 163B]] x1<br>[[Type 2 12cm Mortar Kai]] x1
+|[[Prototype Shuusui]] x1<br>[[Type 2 12cm Mortar Kai]] x1
+|-
+|[[Game Updates/2019/September 29th|August]]
+|[[Ginga]] x1<br>[[8inch Triple Gun Mount Mk.9]] ★+3 x2<br>[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1
+|[[8inch Triple Gun Mount Mk.9]] ★+3 x2<br>[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1
+|[[8inch Triple Gun Mount Mk.9]] ★+3 x1<br>[[8inch Triple Gun Mount Mk.9]] x1<br>[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1
+|[[8inch Triple Gun Mount Mk.9]] x1<br>[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1
+|-
+|[[Game Updates/2019/October 30th|September]]
+|[[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] x1<br>[[8inch Triple Gun Mount Mk.9 mod.2]] ★+4 x1<br>[[5inch Single High-angle Gun Mount Battery]] ★+4 x1<br>[[Shiden Kai 4]] ★+4 x1
+|[[8inch Triple Gun Mount Mk.9 mod.2]] ★+4 x1<br>[[5inch Single High-angle Gun Mount Battery]] ★+4 x1<br>[[Shiden Kai 4]] ★+4 x1
+|[[8inch Triple Gun Mount Mk.9 mod.2]] ★+2 x1<br>[[5inch Single High-angle Gun Mount Battery]] ★+2 x1<br>[[Shiden Kai 4]] ★+2 x1
+|[[8inch Triple Gun Mount Mk.9 mod.2]] ★+1 x1<br>[[Shiden Kai 4]] ★+1 x1
+|-
+|[[Game Updates/2019/November 28th|October]]
+|[[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] ★+4 x1<br>[[6inch Twin Rapid Fire Gun Mount Mk.XXI]] ★+8 x1<br>[[Toku Daihatsu Landing Craft]] ★+5 x1<br>[[Type 4 20cm Anti-ground Rocket Launcher (Concentrated Deployment)]] x1
+|[[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] ★+2 x1<br>[[6inch Twin Rapid Fire Gun Mount Mk.XXI]] ★+4 x1<br>[[Toku Daihatsu Landing Craft]] ★+5 x1
+|[[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] ★+1 x1<br>[[6inch Twin Rapid Fire Gun Mount Mk.XXI]] ★+2 x1<br>[[Toku Daihatsu Landing Craft]] ★+5 x1
+|[[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] x1<br>[[6inch Twin Rapid Fire Gun Mount Mk.XXI]] ★+1 x1
+|-
+|[[Game Updates/2019/December 31st|November]]
+|[[Ginga]] ★+3 x1<br>[[5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)]] ★+3 x1<br>[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)]] ★+3 x1
+|[[Ginga]] ★+2 x1<br>[[5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)]] ★+2 x1<br>[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>
+|[[Ginga]] ★+1 x1<br>[[5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)]] ★+1 x1<br>[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>
+|[[Ginga]] x1<br>[[5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)]] x1
+|-
+|[[Game Updates/2020/January 31st|December]]
+|[[Type 1 Armor Piercing Shell Kai]] ★+3 x1<br>[[12.7cm Twin Gun Mount Model B Kai 4 (Wartime Modification) + Anti-Aircraft Fire Director]] ★+3 x1<br>[[SK + SG Radar]] ★+2 x1<br>[[M4A1 DD]] x1
+|[[Type 1 Armor Piercing Shell Kai]] ★+2 x1<br>[[12.7cm Twin Gun Mount Model B Kai 4 (Wartime Modification) + Anti-Aircraft Fire Director]] ★+2 x1<br>[[SK + SG Radar]] ★+2 x1
+|[[Type 1 Armor Piercing Shell Kai]] ★+1 x1<br>[[12.7cm Twin Gun Mount Model B Kai 4 (Wartime Modification) + Anti-Aircraft Fire Director]] ★+1 x1<br>[[SK Radar]] ★+2 x1
+|[[Type 1 Armor Piercing Shell Kai]] x1<br>[[12.7cm Twin Gun Mount Model B Kai 4 (Wartime Modification) + Anti-Aircraft Fire Director]] x1
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="5"|2020
+|-
+!Month
+!Rank 1-5
+!Rank 6-20
+!Rank 21-100
+!Rank 101-500
+|-
+|[[Game Updates/2020/February 28th|January]]
+|[[Type 3 Shell Kai]] ★+4 x1<br>[[Prototype Keiun (Carrier-based Reconnaissance Model)]] ★+4 x1<br>[[8inch Triple Gun Mount Mk.9 mod.2]] ★+4 x1<br>[[Kikka Kai]] x1
+|[[Type 3 Shell Kai]] ★+4 x1<br>[[Prototype Keiun (Carrier-based Reconnaissance Model)]] ★+4 x1<br>[[8inch Triple Gun Mount Mk.9 mod.2]] ★+4 x1
+|[[Type 3 Shell Kai]] ★+4 x1<br>[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1<br>[[8inch Triple Gun Mount Mk.9 mod.2]] ★+2 x1
+|[[Type 3 Shell Kai]] ★+4 x1<br>[[Prototype Keiun (Carrier-based Reconnaissance Model)]] x1
+|-
+|[[Game Updates/2020/March 31st|February]]
+|[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[Swordfish Mk.II Kai (Reconnaissance Seaplane Model)]] x1<br>[[Swordfish Mk.III Kai (Seaplane Model/Skilled)]] x1<br>[[Fairey Seafox Kai]] x1
+|[[Prototype Type 97 Torpedo Bomber Kai (Skilled) No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[Swordfish Mk.II Kai (Reconnaissance Seaplane Model)]] x1<br>[[Swordfish Mk.III Kai (Seaplane Model/Skilled)]] x1
+|[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[Swordfish Mk.II Kai (Reconnaissance Seaplane Model)]] x1<br>[[Swordfish Mk.III Kai (Seaplane Model/Skilled)]] x1
+|[[Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)]] x1<br>[[Swordfish Mk.II Kai (Reconnaissance Seaplane Model)]] x1
+|-
+|[[Game Updates/2020/April 30th|March]]
+|[[XF5U]] x1<br>[[Tenzan Model 12A Kai (Skilled w/ Type 6 Airborne Radar Kai)]] x1<br>[[Tenzan Model 12A Kai (w/ Type 6 Airborne Radar Kai)]] x1<br>[[SG Radar (Initial Model)]] ★+4 x1
+|[[XF5U]] x1<br>[[Tenzan Model 12A Kai (Skilled w/ Type 6 Airborne Radar Kai)]] x1<br>[[SG Radar (Initial Model)]] ★+3 x1
+|[[XF5U]] x1<br>[[Tenzan Model 12A Kai (w/ Type 6 Airborne Radar Kai)]] x1<br>[[SG Radar (Initial Model)]] ★+2 x1
+|[[XF5U]] x1<br>[[SG Radar (Initial Model)]] ★+2 x1
+|-
+|[[Game Updates/2020/May 29th|April]]
+|[[16inch Triple Gun Mount Mk.6]] ★+6 x1<br>[[12.7cm Single High-angle Gun Mount Kai 2]] ★+4 x1<br>[[12.7cm Twin High-angle Gun Mount Kai 2]] ★+3 x1
+|[[16inch Triple Gun Mount Mk.6]] ★+6 x1<br>[[12.7cm Single High-angle Gun Mount Kai 2]] ★+3 x1<br>[[12.7cm Twin High-angle Gun Mount Kai 2]] ★+2 x1
+|[[16inch Triple Gun Mount Mk.6]] ★+3 x1<br>[[12.7cm Single High-angle Gun Mount Kai 2]] ★+2 x1<br>[[12.7cm Twin High-angle Gun Mount Kai 2]] ★+1 x1
+|[[16inch Triple Gun Mount Mk.6]] ★+1 x1<br>[[12.7cm Single High-angle Gun Mount Kai 2]] ★+2 x1
+|-
+|[[Game Updates/2020/June 30th|May]]
+|[[16inch Triple Gun Mount Mk.6 mod.2]] ★+MAX x1<br>[[16inch Triple Gun Mount Mk.6 mod.2]] ★+6 x1<br>[[Type 0 Reconnaissance Seaplane Model 11B (Skilled)]] ★+3 x1<br>[[HF/DF + Type144/147 ASDIC]] x1
+|[[16inch Triple Gun Mount Mk.6 mod.2]] ★+MAX x1<br>[[16inch Triple Gun Mount Mk.6 mod.2]] ★+6 x1<br>[[Type 0 Reconnaissance Seaplane Model 11B (Skilled)]] ★+2 x1
+|[[16inch Triple Gun Mount Mk.6 mod.2]] ★+6 x1<br>[[16inch Triple Gun Mount Mk.6 mod.2]] x1<br>[[Type 0 Reconnaissance Seaplane Model 11B (Skilled)]] ★+1 x1
+|[[16inch Triple Gun Mount Mk.6 mod.2]] x1<br>[[Type 0 Reconnaissance Seaplane Model 11B (Skilled)]] x1
+|-
+|[[Game Updates/2020/July 31st|June]]
+|[[Ginga (Egusa Squadron)]] x1<br>[[Type D Kouhyouteki Kai (Kouryuu Kai)]] x1<br>[[Type C Kouhyouteki]] ★+3 x1<br>[[Ju 87C Kai Ni (w/ KMX/Skilled)]] x1
+|[[Ginga (Egusa Squadron)]] x1<br>[[Type C Kouhyouteki]] ★+3 x1<br>[[Ju 87C Kai Ni (w/ KMX)]] ★+1 x1
+|[[Ginga]] ★+2 x1<br>[[Type C Kouhyouteki]] ★+2 x1<br>[[Ju 87C Kai Ni (w/ KMX)]] x1
+|[[Ginga]] ★+1 x1<br>[[Type C Kouhyouteki]] ★+1 x1
+|-
+|[[Game_Updates/2020/August_31st|July]]
+|[[Ginga (Egusa Squadron)]] x1<br>[[TBM-3D]] x1<br>[[Late Model Submarine Radar & Passive Radiolocator]] x1<br>[[Late Model 53cm Bow Torpedo Mount (8 tubes)]] x1
+|[[Ginga (Egusa Squadron)]] x1<br>[[TBM-3D]] x1<br>[[Late Model Submarine Radar & Passive Radiolocator]] x1
+|[[Ginga]] ★+2 x1<br>[[TBM-3D]] x1<br>[[Submarine Radar & Passive Radiolocator (E27)]] x1
+|[[Ginga]] ★+1 x1<br>[[TBM-3D]] x1
+|-
+|[[Game_Updates/2020/September_30th|August]]
+|[[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] ★+5 x1<br>[[16inch Triple Gun Mount Mk.6 + GFCS]] ★+7 x2<br>[[M4A1 DD]] x1
+|[[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] ★+3 x1<br>[[16inch Triple Gun Mount Mk.6 + GFCS]] ★+6 x1<br>[[16inch Triple Gun Mount Mk.6 + GFCS]] ★+3 x1
+|[[Type 1 Land-based Attack Aircraft Model 22A]] ★+3 x1<br>[[16inch Triple Gun Mount Mk.6 + GFCS]] ★+3 x1<br>[[16inch Triple Gun Mount Mk.6 + GFCS]] x1
+|[[Type 1 Land-based Attack Aircraft Model 22A]] ★+2 x1<br>[[16inch Triple Gun Mount Mk.6 + GFCS]] x1
+|-
+|[[Game_Updates/2020/October 29th|September]]
+|[[Shinzan Kai]] x1<br>[[Shinzan]] x1<br>[[120mm/50 Twin Gun Mount mod.1936]] ★+3 x1<br>[[120mm/50 Twin Gun Mount Kai A.mod.1937]] ★+3 x1
+|[[Shinzan Kai]] x1<br>[[120mm/50 Twin Gun Mount mod.1936]] ★+2 x1<br>[[120mm/50 Twin Gun Mount Kai A.mod.1937]] ★+3 x1
+|[[Shinzan]] x1<br>[[120mm/50 Twin Gun Mount mod.1936]] ★+2 x1<br>[[120mm/50 Twin Gun Mount Kai A.mod.1937]] ★+2 x1
+|[[Shinzan]] x1<br>[[120mm/50 Twin Gun Mount mod.1936]] ★+2 x1
+|}
+{| class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="13"|Distribution Dates
+|-
+!rowspan="2"|Year
+!colspan="12"|For month
+|-
+!Dec!!Jan!!Feb!!Mar!!Apr!!May!!Jun!!Jul!!Aug!!Sep!!Oct!!Nov
+|-
+!2013
+|       ||      ||       ||       ||05/02木||06/01土||07/03水||08/14水||09/16月||10/06日||11/13水||12/11水
+|-
+!2014
+|01/15水||02/19水||03/15土||04/21月||05/14水||06/14土||07/19土||08/16土||09/13土||10/13月||11/18火||12/17水
+|-
+!2015
+|01/19月||02/17火||03/18水||04/18土||05/19火||06/19金||07/21火||08/21金||09/22火||10/21水||11/24火||12/22火
+|-
+!2016
+|01/22金||02/24水||03/19土||04/25月||05/27金||06/26日||07/27水||08/27土||09/27火||10/26火||11/28月||12/28水
+|-
+!2017
+|01/27金||02/25土||03/27月||04/29土||05/29月||06/29木||07/28金||08/29火||09/28木||10/28土||11/29水||12/22金
+|-
+!2018
+|01/27金||02/28水||03/28水||04/28土||05/29火||06/29金||07/30月||08/30木||09/28金||10/30火||11/29木||12/25火
+|-
+!2019
+|01/30水||02/22金||03/29金||04/30火||05/30木||06/28金||07/30火||08/28水||09/29日||10/30水||11/28木||12/31火
+|-
+!2020
+|01/31金||02/28金||03/31火||04/30木||05/29金||06/30火||07/31金||08/31月||09/30水||10/29木||      ||      
+|}
+
+====Past Monthly Ranking Points====
+<!--
+[[File:Servers top500 history.png|250px|right]]
+-->
+For the final points of previous months, see [[Ranking Data|here]].
+<!--
+In general, servers can be divided into two categories:
+* Old/less active servers (first seven servers).
+* New/more active servers (the rest).
+-->
+<!--
+Top 500 requirements for old and new servers form two distinct sets, each with a diameter of 100-300 points (depending on the month), see the attached chart (top 100 picture is similar).
+-->
+<!--
+In general, [[servers]] can be divided into three categories:
+* Yokosuka, Kure, Sasebo, Maizuru, Ominato, Truk, Lingga: first seven servers, oldest and now least active.
+* Rabaul, Shortland, Buin, Tawi-Tawi, Palau, Brunei, Hitokappu, Paramushir, Sukumo, Kanoya, Iwagawa, Saiki: 12 newer servers that are now most active.
+* Hashirajima: the newest, most active and competitive server.
+** Used to be the least active server (see the chart above).
+-->
+
+==See Also==
+*Kancolle Phase 2 Ranking Guide by Minhfongboy: [https://en.kancollewiki.net/User:Minhfongboy/KC_Phase_2_Ranking]
+{{:Ranking/Cutoffs}}
+*[[Ranking Data|Final (15:00 JST on the last day) ranking points for previous months]]
+*Official ranking results:
+**戦績表示 → ランキング in-game for the current ranking points
+**http://203.104.209.7/kcscontents/information/ for the final results (<code><nowiki>http://203.104.209.7/kcscontents/information/image/rank<year.dd><month.dd><server number.dd>.jpg</nowiki></code> for previous months, published on reward distributions)
+**[http://www.dmm.com/netgame/community/-/topic/detail/=/tid=922/ DMM community page] ([https://translate.google.com/translate?u=http%3A%2F%2Fwww.dmm.com%2Fnetgame%2Fcommunity%2F-%2Ftopic%2Fdetail%2F%3D%2Ftid%3D922%2F&anno=2 original via google translate]) for ranking reward announcements
+*Unofficial ranking results:
+** Inactive: [https://twitter.com/senkakichi @SenkaKichi] / [https://twitter.com/Kensho_KanColle @Kensho_KanColle] / senka.me (2014/3 ~ 2016/7), [https://twitter.com/aecate_c @aecate_c] (2016/1 ~ 2017/1), [https://docs.google.com/spreadsheets/d/1VV4x09dSssPVsQvTTpWiUIdBb7NQcWC1j9sk8ys1jAo monthly spreadsheets] (2017/2 ~ 2017/4), [https://twitter.com/search?f=tweets&q=from%3AWolfKungz%20final%20update @WolfKungz] (2017/10 ~ 2018/05), [https://www.google.com/search?q=%22%E3%83%A9%E3%83%B3%E3%82%AD%E3%83%B3%E3%82%B0%E3%81%AB%E3%81%A4%E3%81%84%E3%81%A6%E8%AA%9E%E3%82%8B%E3%82%B9%E3%83%AC%22+site%3Ajbbs.shitaraba.net shitaraba threads] (~ 2018/07)
+** Active: [https://senka.su senka.su] / [https://twitter.com/Senka_Viewer @Senka_Viewer]
+
+==References==
+<references>
+<ref name=wikiwiki>http://wikiwiki.jp/kancolle/?%B3%AC%B5%E9</ref>
+<ref name=KenshoKanColle1>https://twitter.com/Kensho_KanColle/status/704291979765501954</ref>
+<ref name=KenshoKanColle2>https://twitter.com/Kensho_KanColle/status/704295485083766784</ref>
+</references>

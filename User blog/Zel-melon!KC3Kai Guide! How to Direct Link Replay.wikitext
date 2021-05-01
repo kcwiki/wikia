@@ -1,0 +1,28 @@
+It is a well known function for casual users of KC3Kai, one of the Kancolle Add-ons that provide users with easier KC-life (there's KCV users and those hippies but that's not the focus), that there is a web-link that allows you to upload and share your replay with others:
+
+'''Replay's URL:''' https://kc3kai.github.io/kancolle-replay/battleplayer.html
+
+Commonly, the method that people used to share their replays are either:
+#Upload the picture of their replay that they downloaded from KC3Kai and let others save it and upload it.
+#Upload the picture of their replay and give them the link that they can post in the URL section.
+However, there's a third method. I am not saying this works everytime. Unfortunately, there are moments where the trick doesn't work. I have no idea why since I am not the developers. Still, this method will save people a lot of time if it works. The steps are simple, but you cannot escape uploading your images.
+
+----
+#Upload your picture into one of the Image sharing websites (e.g. Imgur, Tinypic...I never try any others yet).
+##Just make sure you can upload the "Original/Default" image that you downlaod, that is, no reducing size or cropping or anything along the line of "changing the image".
+#Get its '''direct link'''. A direct link is a link that will direct you to a page with ONLY the image. These are not hard to find. Of course, you can also upload it to wikia, but you need an account and '''you need to hyperlink it'''.. For example:
+##http://oi65.tinypic.com/10rjx2v.jpg
+##http://i.imgur.com/9tG5Qb3.png
+##[http://vignette2.wikia.nocookie.net/kancolle/images/3/34/4-5_Final.png%7C Wikia one example]
+##*How to hyperlink --> Add a [] in front and at the end of your link.
+#Now, we will add that "direct link" url directly to the "replay", but we need to add this specific link behind the "replay" url to make it work:
+##'''?FromImg='''
+#This is like telling the page to look up that specific link, so you don't need to paste it in the "<span style="color:rgb(0,0,0);font-family:"TimesNewRoman";font-size:medium;font-weight:bold;">Load from URL</span>" section. The end product should be something like this:
+##https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://oi65.tinypic.com/10rjx2v.jpg
+##https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/9tG5Qb3.png
+##[https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://vignette2.wikia.nocookie.net/kancolle/images/3/34/4-5_Final.png Replay Wikia Example]
+'''NOTE''': You can do this with other sites too. You just need to have the original size of the replay image still intact. So even Discord images work.
+----
+
+And there you go. Please keep in mind what I said at the start, this method might not work all the time, but it works enough to make me rub your faces with my B44 run.
+[[Category:Blog posts]]

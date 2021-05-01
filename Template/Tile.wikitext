@@ -1,0 +1,18 @@
+<div style="float:{{{float|left}}};width:{{{width|50%;}}}">
+<div style="position:relative;overflow:hidden;height:{{{height|360px}}};margin:{{{margin|5px}}};background:rgba({{{rgba|250,250,255,0.1}}});{{#if:{{{text-color|}}}|color:{{{text-color|}}};|}};border:{{{border|none}}}">
+{{#if:{{{image|}}}|<div style="position:absolute;{{{image-pos|top:0px;left:0px}}};opacity:{{{opacity|0.2}}};z-index:1;">[[File:{{{image|}}}|{{{size|}}}|link=]]</div>|}}
+<div style="position:absolute;z-index:2;overflow-y:{{{overflow|hidden}}};overflow-x: hidden;height:{{{text-height|288px}}};width:100%;">
+<{{{header-level|h3}}}>{{{header|}}}</{{{header-level|h3}}}>
+{{{content|}}}
+</div>
+{{#if:{{{source|}}}|<div style="position:absolute;z-index:3;height:16px;{{{source-pos|bottom:20px;right:10px;}}}">
+[[{{{source|}}}|<span style="font-size:12px;{{#if:{{{link-color|}}}|color:{{{link-color|black}}}|}}">'''See more >'''</span>]]
+</div>|}}
+</div>
+
+----
+
+</div>
+<noinclude>
+{{documentation}}
+</noinclude>

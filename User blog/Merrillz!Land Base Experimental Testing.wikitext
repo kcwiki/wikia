@@ -1,0 +1,235 @@
+<p class="MsoNormal">All of the testing was done in KC3 Kai.  Thus, the data gathered from KC3 Kai is assumed to reflect reality.  In the case that KC3 Kai data is found incorrect please disregard the following testing.</p>
+
+<p class="MsoNormal">The following test data was conducted after the May 5<sup>th</sup> patch.</p>
+
+<p class="MsoNormal">Please refer to the following nomenclature: Land Base – LB, Fighter Power – FP, Enemy Raid – ER, Air Proficiency Rank – APR, Anti Air – AA, Air Superiority – AS, Air Parity – AP, Air Denial <span style="font-weight:normal;">– </span> AD </p>
+
+<h2 class="MsoNormal">'''Introduction'''</h2>
+
+<p class="MsoNormal">The purpose of this testing is to clarify how the LB system operates. Many different variables could be affecting how the LB system operates.  Unknown variables will be isolated as best as possible and examined.</p>
+
+<p class="MsoNormal">To reduce the possible variations, testing was performed on E-5M the boss node.  The same LB squad loadouts were used for all testing.  No changes to the fleet or fleet equipment occurred.</p>
+
+<p class="MsoNormal">Unknown Variables: Engagement, ER damage to LB, ARP, Fleet AA, Critical Hits, Type of enemy,</p>
+
+<p class="MsoNormal">Assumptions: The LB attack order is based on the squad number.  Squad 1 goes first, squad 2 goes second and squad 3 goes last.  Diamond and line formation of the boss has the same fighter and bomber loadout. </p>
+
+<p class="MsoNormal">Note: Fleet FP changes drastically due to APR losses on Zuiuns.  This varies between 10 and 26 APR.</p>
+
+<h2 class="MsoNormal">'''Setup'''</h2>
+
+<p class="MsoNormal">Current test data can be seen here [https://docs.google.com/spreadsheets/d/1l2qixOppuQGJQQ-gNlJK9zfUo5dfAAbv3nLHv6H-AnY/edit?usp=sharing Google Doc Spreadsheet]</p>
+
+<p class="MsoNormal">LB squad 1 – 4 Fighters all max APR.  Combined AA of 37.</p>
+
+<p class="MsoNormal">LB squad 2 – 2 Torpedo Bombers, 1 Dive Bomber, 1 Fighter Bomber.  APR is variable.  Combined AA of 7.</p>
+
+<p class="MsoNormal">LB squad 3 – 4 new LB bombers.  APR is variable.  Combined AA of 7.</p>
+
+
+<li class="MsoNormal">Control test: no LB support.</li></li></li></li></li>
+
+<li class="MsoNormal">Control Air:  LB squad 1, one pass</li></li></li></li></li>
+
+<li class="MsoNormal">Control Bomber: LB squad 3, one pass.</li></li></li></li></li>
+
+<li class="MsoNormal">Primary Test: 5 total LB passes, One LB squad 1, Two LB squad 2, and Two LB squad 3.</li></li></li></li></li>
+
+<li class="MsoNormal">Four Pass: 4 total LB passes, One LB squad 1, Two LB squad 2, and One LB squad 3. </li></li></li></li></li>
+
+<p class="MsoNormal">Max Pass: All 6 LB passes were sent to the boss.</li></p><p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">Misc: Changes to the LB squads during test standardization.  These results were omitted but are recorded as a reference.</p>
+
+
+
+
+<h2 class="MsoNormal">'''Does Fleet AA effect the amount of enemy planes shot down?'''</h2>
+<p class="MsoNormal">[[File:AA_activation.jpg|thumb|LBAS Fleet AA activation]]Based on observations taken during a bombing pass. AA mounts visually activate.   It is assumed that your fleet AA is accounted for during LB passes.  However, since the fleet composition of these tests does not change.  Any fleet AA assistance will be constant.  Thus, fleet AA assistance will not be addressed during this testing.</p>
+
+<p class="MsoNormal">
+</p>
+
+
+
+
+<h2 class="MsoNormal">'''LB squads FP strength, planes shot down and AS calculations'''</h2>
+<p class="MsoNormal">In this section the FP of LB squads will be addressed and how they relate to AS and planes killed.</p>
+
+<p class="MsoNormal">First looking at the control test, the amount of planes that the boss has is 96 of which were 70 bombers.  Then taking a look at the Control Air 1, the boss now has a total of 48 planes of which were 26 bombers.  We can see that the boss has 22 fighters out of 26 or 16% fighters shot down.  For the bombers we assume there are 3 slots so of which we spread 44 bombers across 3 squads for an average bomber destruction rate of 63%.</p>
+
+<p class="MsoNormal">Hypothesis:  The LB squad one engaged the Enemy planes and shot down a percentage of them.  This percentage is the same as the Aerial combat system.  If one were to get AS the amount of planes shot down per slot would be between 0 and 80%.  Planes killed per pass are recalculated per new pass, thus changing the enemy air power for each new LB pass. </p>
+
+<p class="MsoNormal">From previous runs, the boss AS cutoff is about 220 FP.  Since we shot down more than 60% planes on the first LB pass our squad FP must be greater than the AS cutoff.  Which means it is highly likely that FP of LB squad one is the same as if it were a carrier with 12/12/12/12 plane slots.   From here on we will assume that this is how the LB system operates.   </p>
+
+<p class="MsoNormal">Control Bomber 1 was conducted to test this theory.  We know that the FP strength of this group is lower than AP and is most likely lower than AD. In this test no fighters were shot down and only 2 bombers.  Which is less than 10% even if the 2 bombers were a part of one stack.  Also note that repairs were significant for the bomber with losing 53% of the planes. </p>
+
+<p class="MsoNormal">The question now becomes, does the fighter power of the enemy fleet get recalculated after every pass. We know for sure that AS recalculates iafter the bombing run.  With the reduction in total planes results in the fact that 20 FB can get AI vs the boss.  Looking at the primary test data the amount of planes remaining of the enemy fleet fighter is an average of 10 and with remaining bombers having an average of 17.6.  If FB was not recalculated, we could assume that 0-80% of the fighters and bombers would be killed on the first pass. With each of the following passes would kill off about 0-10% of the remaining planes.   Assuming an average of 40% and 5% we would expect to see 12.7 fighters and 34.2 bombers for a total of 46.9 planes remaining.  However, none of the primary tests were greater than 36 planes remaining, with bombers significantly lower in testing.  Now let us assume that FP of the enemy fleet was recalculated after every pass.  At some point the FP of our fleet will exceed AD of the new calculated enemy FP.   Let us assume that we get AS on the fighter pass one, AD on pass two and AI on pass 3 through five.  (This may vary depending on LB planes FP change based on APR) The new calculations for bombers would be 70 x .6 x .95 x .8 x .8 x .8 = 20.4.  And fighters would result in 7.6 remaining.   Based on the primary test, fighters seem to be shot down less than bombers.  With bombers being shot down at a 2% greater frequency per pass.</p>
+
+<p class="MsoNormal">Looking at the damage taken from LB squads when repairing them is a good indicator of their air combat result.</p>
+
+<p class="MsoNormal">
+</p>
+
+
+
+
+<h2 class="MsoNormal">'''LB damage to enemy types  '''</h2>
+<p class="MsoNormal">Looking at the data we see that BBs take a significant reduction in damage.  Lighter ships such as DDs and Transport crafts look to take enough damage to kill them or be significantly damaged.   Installations seem to take increased damage from LB sorties.</p>
+
+<p class="MsoNormal">
+</p>
+
+
+
+
+<h2 class="MsoNormal">'''Engagement'''</h2>
+<gallery type="slideshow" widths="368">
+DD only.png
+Transport only.png
+Boss only.png
+Total damage.png
+</gallery>
+<p class="MsoNormal">In this section will look at if Engagement changes how the LB system operates.</p>
+
+<p class="MsoNormal">Looking at the graph below there is a significant increase in damage as we move from Red T toward Green T.   However, this is not the increase in damage we would expect if the LB passes were effected by engagement.</p>
+
+<p class="MsoNormal">Breaking down the damage further into each type of ship.  The relationship suggests that engagement is playing a role in the amount of damage done.  However, there are a lot of variables of which one may be influencing these results.  Also more data is needed to establish the relationship.</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+
+
+<h2 class="MsoNormal">'''Enemy Raid'''</h2>
+<p class="MsoNormal">'''<gallery type="slideshow" widths="344">
+Squad 2 er vs dm.png
+Squad 1 er vs pk.png
+Squad 3 er vs dm.png
+</gallery>'''</p>
+
+<p class="MsoNormal">The ER do not damage your planes directly.  Note ID 1200 when the fighter squad took red damage the same number of planes were damaged.  Update: As of the May 13th patch, Plane damage from ER does occur; however, it is not a significant amount. (Red killed off about 3 planes total)</p>
+
+<p class="MsoNormal">However, the enemy raids do seem to hurt the performance of your aircraft.  Below are two graphs based on the color damaged indicator of the base after being hit by ER: 1 red, 2 orange, 3 yellow, and 4 none.</p>
+
+<p class="MsoNormal">In this graph the amount of planes killed increases when the ER did less damage to your bases.  (lower number here means less remaining enemy aircraft)</p>
+
+<p class="MsoNormal">In the second graph the amount of damage done from squad 2 looks to be affected by the amount your bases take in ER.</p>
+
+<p class="MsoNormal">Lastly squad 3 seems to follow similar rules as before, but there is less of a relationship present.  My guess is that some of the squishier targets were taken out in earlier waves thus resulting in the larger spread of data.</p>
+
+
+
+<h3 class="MsoNormal"> </h3>
+
+<h2 class="MsoNormal">'''Engagement Vs Enemy Raid'''</h2>
+[[File:ER_adj_vs_Engagement.png|thumb|350px|ER Adj Dmg vs Eng]]<p class="MsoNormal">Assuming that one of these is the driving factor for damage.  In the following graph damage is adjusted based on ER damage to see if Engagement still hold to its earlier pattern.  Note that Red is scaled to 40% orange to 70% and yellow/none to 100%.  This is due to the assumption that they operate the same as when ships are damaged.</p>
+
+<p class="MsoNormal">Observing the graph, the relationship between engagement and damage almost entirely goes away.</p>
+
+<p class="MsoNormal">
+</p>
+
+
+
+
+<h2 class="MsoNormal">'''APR relationship to damage done'''</h2>
+<p class="MsoNormal">'''<gallery type="slideshow" widths="348">
+ER adj Damage vs Rank LB.png|LB aircraft damage adjusted to ER damage taken vs Rank
+ER adj Damage vs Rank normal.png|Normal Bomber damage Adjusted to ER damage vs Rank
+</gallery>'''</p>
+
+<p class="MsoNormal">Here we will look at damage done vs the APR of the squad.  The sum of the squad plane’s rank was recorded.  This data has been scaled to account for ER.</p>
+
+<p class="MsoNormal">The normal bomber squad seems to follow the APR system that occurs during Aerial Combat.  More data is needed to flush out the line, but the relationship seems to follow the 10% for a max APR plane.</p>
+<p class="MsoNormal">The LB bomber have a significant increase in damage as they increase in APR. I am not sure if their critical rate increases with damage or if they get an increase to hit.  Either way there is a distinctive relationship.</p>
+
+<p class="MsoNormal">
+</p>
+==Conclusions==
+<p class="MsoNormal">The LB passes will kill off enemy aircraft based on the amount of FP the squad has vs the remaining enemy FP.  As Enemy planes are killed off the FP decreases proportionally.  The amount of planes killed is determined based on AD/AI/AP/AS for that pass. </p>
+
+<p class="MsoNormal">AA of your fleet may engage in damage calculations done to enemy aircraft.  Further testing is needed. Graphical queues seem to point to your fleet AA assisting. (Enemy fleet as well, unknown if AACI has an effect, I would say no)</p>
+
+<p class="MsoNormal">Engagement has little or no effect on your LB damage, planes shot down or damage taken to LB squads.</p>
+
+<p class="MsoNormal">Enemy Raid damage to your squads have a significant impact in how your squads perform.  This effects your FP strength/AA for shooting down planes, along with damage output of your bombers.   However damage done to the squads from Enemy raids does not kill planes directly. (If the base is totally killed this may be a different matter, further testing required)</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">Plane rank is account for when calculating FP and damage done.  LB bombers seem to have a greater bonus from APR than normal bombers.  (Testing estimates a 150-200% improvement at max rank)</p>
+
+<p class="MsoNormal">
+</p>
+
+
+
+
+<h2 class="MsoNormal">Practical Test</h2>
+<p class="MsoNormal">[[File:Practical_test.png|frame|Practical test]]Based on the information above.  I will be attempting to calculate what is needed to get AS on the boss with my current configuration (2 Zuiun in the 9 plane slots on my CAV, roughly 26 AP). To do this I estimate that the total plane count of the enemy can be no greater than 8.  Thus I will need to have enough FP to consistantly achive AS through all 5 passes.  I calcuate that this would require 4 fighters in squad 1 (218 FP at the least), 2fighters+ fighterbomber in squad 2 (129 FP at the least), and 1 fighter in squad 3 (34 FP at the least).  This should achive a result of AS, AS, AS+, AS, AS+ in the order of pass 1 to 5. The planes shot down should be calcualted as such 96 x .6 x .6 x .5 x .6 x .5 = 5.2 remaining planes.  That is to have a safety factor of 1.5 in case of poor RNG or bad ER occurances. </p>
+
+
+<p class="MsoNormal">[[File:Practical_Test_2.png|frame|Practical Test 2]]</p>
+ 
+<p class="MsoNormal">Test 1: The Squad 2 and 3 need slightly more FP, the assumption being AS was not achived on second pass.  This chained down to the other passes not reaching as high.  (<span style="font-weight:normal;">96 x .6 x .7 x .7 x .7 x .7 = 13.3   for AS,AP,AP,AP,AP)</span></p>
+
+<p class="MsoNormal"><span style="font-weight:normal;">Test 2: Squad fighters increased to 4, 3, and 1.  The lowest the enemy planes got to was 8.  I am guessing that going lower would require very high RNG.  As it would be required to kill 50% of the enemy planes to reduce the enemy plane stack from 2 to 1.  Note: this might have been an AS if more Zuiuns had made it to the boss.  </span></p>
+
+
+
+
+<p class="MsoNormal"></p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+
+<p class="MsoNormal">
+</p>
+[[Category:Blog posts]]

@@ -1,0 +1,7 @@
+{{#vardefine:icon|{{#switch:{{{world|}}}|1=World1icon|2=World2icon|3=World3icon|4=World4icon|5=World5icon|6=World6icon|7=World7icon|E=EventWorldicon|World1icon}}}}{{#vardefine:background|{{#switch:{{{world|}}}|1=lightgray|2=#cccc99|3=#99cccc|4=#66cc99|5=#9999cc|E=orangered|lightgray}}}}{{#vardefine:names|{{#switch:{{{world|}}}|1=鎮守府海域|2=南西諸島海域|3=北方海域|4=西方海域|5=南方海域|6=中部海域|7=南西海域|E=期間限定海域|鎮守府海域}}}}
+<div style="width:90%;margin-left:20px;">
+{| width=100%
+| style="width:50px;"| [[File:{{#var:icon}}.png|link=]]
+| <div style="background:{{#var:background}};color:black;width:100%;padding-left:10px;border-top-right-radius:10px;">'''{{#var:names}}'''</div>
+|}
+</div>

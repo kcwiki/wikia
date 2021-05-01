@@ -1,0 +1,148 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|Thread = 
+}}
+{{Event/MapInfo
+|en = Strategy preparations! Secure a rear supply line
+|jp = 作戦準備！後方兵站線確保
+|tag =  E1
+|romaji =  Sakusen jumbi! Kōhō hētan-sen kakuho
+|hp_casual = 750
+|hp_easy = 750
+|hp_medium = 1200
+|hp_hard = 1500
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_casual_1 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_casual_1_x =  1
+|reward_casual_2 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_casual_2_x = 2
+|reward_casual_3 = {{EquipmentCardKai|Daihatsu Landing Craft|size=50px}}
+|reward_easy_1 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_easy_1_x =  1
+|reward_easy_2 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_easy_2_x = 2
+|reward_easy_3 = {{EquipmentCardKai|Daihatsu Landing Craft|size=50px}}
+|reward_easy_3_x = 1
+|reward_easy_4 = {{EquipmentCardKai|WG42 (Wurfgerät 42)|size=50px}}
+|reward_easy_4_x = 1
+|reward_medium_1 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|WG42 (Wurfgerät 42)|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Daihatsu Landing Craft|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_hard_2_x = 2
+|reward_hard_3 = {{EquipmentCardKai|Type 22 Surface Radar Kai 4 (Calibrated Late Model)|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|WG42 (Wurfgerät 42)|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Daihatsu Landing Craft|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Special Type 2 Amphibious Tank|size=50px}}
+|reward_hard_6_x = 1
+|Mechanics = Unknown
+<!--
+|transport = true
+-->
+}}
+{{MapBranchingTable
+|id = 42-1
+|order = A,B,E,2,G
+
+|0 -> 1 = * Do not meet the requirement to start at 2.
+|0 -> 2 = 
+* Meet '''ALL''' of the following requirements:
+** Fleet may only contain DE/DD/CL/CT
+** Amount of CL+CT ≤ 2
+** Meet '''ONE''' of the following requirements:
+*** Amount of DE+DD ≥ 2 '''AND''' amount of CL ≤ 1
+*** Amount of DE+DD ≥ 4
+
+|A -> B/empty, D/storm = 
+* Meet '''ALL''' of the following to go to B:
+** Amount of CA(V) ≤ 2
+** No SS(V)
+* Random routing if fleet contains SS(V)
+* Otherwise, go to D.
+
+|B -> C/resource, E = 
+* Meet '''ANY''' of the following requirements to go to C:
+** Amount of DE ≥ 3
+** Amount of AV ≥ 2
+** Fleet contains AO
+* Random routing if amount of DE = 2
+* Meeting '''ANY''' of the following '''FORCES''' you to E:
+** Do not meet any of the above requirements for either random routing or routing to C.
+** Fleet contains CA(V)
+
+|E -> F = * Fixed route
+
+|2 -> G, H/storm = 
+* Meet '''ANY''' of the following requirements to go to G:
+** Amount of ships ≤ 5
+** Amount of CL+CT ≥ 2
+** Fleet contains no CL
+* Otherwise, 60% G, 40% H.
+
+|G -> E, F =
+* Meet '''ANY''' of the following requirements to go to F:
+** Amount of ships ≤ 5
+** Amount of DE ≥ 3
+* Otherwise, 30% E, 70% F.
+}}
+
+===Before you start the Event===
+* A friendly reminder that once you clear a map - destroying the gauge by sinking the boss on her final form - at your chosen difficulty, there is no going back to change it.
+* Please read the [[Events/Mechanics|mechanics]] tab first - especially 'Ship locking' and 'Difficulty selection' - or the [[Early_Fall_2018_Event/Info|Info]] tab to plan before starting. Consider asking the Discord channel for help.
+**Anyone who wishes to tackle Medium+ should not rush into the map. Check other maps and see their requirements unless you wish to fight later maps
+* Remember that in normal situation, your final objective of every map is the boss. You only need to deplete her gauge and sink her a final time to clear the map; her fleet is optional.
+
+===Map Guide===
+*'''This map does not allow the use of CV(L/B) or (F)BB(V).''' Therefore, 2nd shelling is not possible and there is no way to prevent Red T formation. 
+* The boss of this map is {{ShipLink|New Submarine Princess Vacation Mode/Flagship|text=New Submarine Princess with hat}}. Prepare your {{EquipmentLink|Type 93 Passive Sonar|Type 94 Depth Charge Projector|
+Type 95 Depth Charge|text=ASW gears}}.
+**'''Tips:''' Always setup your DD/CL with at least one {{EquipmentLink|Type 93 Passive Sonar|text=sonar}} and one {{EquipmentLink|Type 94 Depth Charge Projector|Type 3 Depth Charge Projector|text=depth charge projector}} for synergy: 15% more damage and [[Combat/Damage_Calculation#Basic_Attack_Power|depth charge armor penetration]]. These two can be crafted from [https://i.imgur.com/ZehPS8X.png development] If available, the third equipment should be {{EquipmentLink|
+Type 95 Depth Charge|Type 2 Depth Charge|text=depth charge equipment}}, all three types give ~44% damage increase. {{EquipmentLink|
+Type 95 Depth Charge|text=T95 depth charge}} is uncraftable but can be obtained from many of the {{ShipLink|Shimushu/Kai|Etorofu/Kai|Matsuwa/Kai|Tsushima/Kai|Sado/Kai|Fukae/Kai|Daitou/Kai|Hiburi/Kai|text=destroyer escort (DE) kai's form}}, {{ShipLink|Shigure/Kai}} and {{ShipLink|Shiratsuyu/Kai|Shiratsuyu/Kai Ni}}; farming from the latter two will be easier. Otherwise, equip an additional {{EquipmentLink|Type 93 Passive Sonar|text=sonar}}.
+***The use of light/torpedo cruisers and destroyers capable of using [[Partials/Opening ASW|opening ASW attacks]] either from being able to reach 100 {{ASW}} stat or having built-in OASW capabilities (''e.g''. {{ShipLink|Isuzu/Kai Ni}}, {{ShipLink|Tatsuta/Kai Ni}}, and {{ShipLink|Jervis/Kai}}) is highly recommended. {{ShipLink|Isuzu/Kai Ni}} being the fastest and easiest for new players to obtain. Additionally, there's a [[Quests#F73|quest]] that provides a DE early on although the exact requirement for it to appear is still unknown.
+***{{ShipLink|Shimushu/Kai|Etorofu/Kai|Matsuwa/Kai|Tsushima/Kai|Sado/Kai|Fukae/Kai|Daitou/Kai|Hiburi/Kai|text=DE}} are able to perform OASW at only 60 {{ASW}}, which can help against the boss. {{ShipLink|Etorofu|Matsuwa|text=DEs}} are currently dropable in {{Event/Route|F|red}}.
+**Visual aid examples has been provided if literacy is imaginary.
+***'''Example 1''': Two '''(2)''' {{Sonar}} {{EquipmentLink|Type 3 Active Sonar|Type 4 Passive Sonar|text=Sonar}} & One '''(1)''' {{DepthCharge}} {{EquipmentLink|Type 3 Depth Charge Projector|Type 94 Depth Charge Projector|text=Depth Charge Projector}}
+***'''Example 2''': One '''(1)''' {{Sonar}} {{EquipmentLink|Type 3 Active Sonar|Type 4 Passive Sonar|text=Sonar}} + One '''(1)''' {{DepthCharge}} {{EquipmentLink|Type 3 Depth Charge Projector|Type 94 Depth Charge Projector|text=Depth Charge Projector}} + One '''(1)''' {{DepthCharge}} {{EquipmentLink|Type 2 Depth Charge|Type 95 Depth Charge|text=Depth Charge}}.
+*Node {{Event/Route|G|red}} and {{Event/Route|F|red}} are surface fleet. [[Events/FAQ#Vanguard_Formation_.28.E8.AD.A6.E6.88.92.E9.99.A3.29:_The_Spear-looking_formation|Vanguard formation]] can help in avoiding unnecessary damage (see link) and should be used unless you want to sink transport ship.
+**It is '''not recommended''' to use both vanguard and [[Expedition/Support_Expedition|shelling support]] at the same time as shelling support is affected by both selected formation and engagement. On the other hand, [[Expedition/Support_Expedition|aerial support]] is capable of performing ASW support when equipped with ASW equipment, and is not affected by formation nor engagement; this makes it useful as a boss support against {{ShipLink|New Submarine Princess Vacation Mode/Flagship|text=our little lady with hat}}
+*[[Combat/Main#Formation_Modifier|Line abreast is '''super''' effective against submarines]]; therefore, use it against the boss that is a submarine.
+*Do '''NOT''' proceed into night battle against submarine; it is impossible to sink them. The believe that submarine [[Combat/Night_Battle#General|'''can be sunk in night battle only applies''' to Combined Fleet]].
+*Do remember that your main objective is to sink the submarine boss. It is recommended to equip all your ships with ASW gears (see above) instead of surface (e.g. guns, surface radar), especially since you do not have that many shots with the lack of 2nd shelling.
+
+===Compositions===
+{{Event/Route|1|black|A|red|B|blue|E|red|F|red|I|red}}
+
+This route has 3 battles before reaching the boss. This route allows you to bring up to 2 CA(V) and allows the use of CLT as well. Keep in mind that the boss is a submarine, the use of DD and CL is still encouraged.
+* 1-4 CL or DD, 0-2 CA(V) and 0-2 CLT
+
+{{Event/Route|2|black|G|red|F|red|I|red}}
+
+The shortest route available to the boss with the least amount of battles.
+* '''Maximum of 5 ships''': 0-1 CL 4-5 DD/DE
+* '''Maximum of 6 ships''': 2 CL 4 DD/DE, or 6 DD/DE; avoids {{Event/Route|H|purple}} but random chance to route to {{Event/Route|E|red}}
+** if ≥3 DE are used, avoids {{Event/Route|E|red}} entirely
+* '''Possible, but requires {{ShipLink|Kashima|Katori|text=CT}}''':
+** 1 CL 1 CT 3-4 DE 0-1 DD; <3 DE can off-routed to {{Event/Route|E|red}}
+** 2 CT 1 DD 3 DE
+
+{{Event/MapPageFooter}}

@@ -1,0 +1,90 @@
+<noinclude>
+General infobox that may potentially be used on anything
+* '''<span style="color:#f00;">Do not edit via Visual Editor!</span>'''
+* Actual template starts after <code style="color:#00f;"><nowiki>&lt;/noinclude></nowiki></code>
+
+
+==Code==
+<pre>
+{{Infobox
+|title = Kantai Collection: KanColle
+|kanji = 艦隊これくしょん -艦これ-
+|romaji = Kankore
+|image = KanColle_anime_PI.jpg
+|label1 = Sample 1
+|value1 = Sample 2
+|label2 = Sample 3
+|value2 = Sample 4
+}}
+</pre>
+
+
+==Sample Output==
+{{Infobox
+|title = Kantai Collection: KanColle
+|kanji = 艦隊これくしょん -艦これ-
+|romaji = Kankore
+|image = KanColle_anime_PI.jpg
+|label1 = Sample 1
+|value1 = Sample 2
+|label2 = Sample 3
+|value2 = Sample 4
+}}
+{{clr}}
+
+
+==Implementation==
+</noinclude>
+{| style="width:300px; border:1px solid #ccc; float:right; margin:0px 0px 0px 10px"
+|-
+| colspan="2" style="background:#def; padding:12px 0px 7px 0px; text-align:center;" |
+
+<p style="margin:0px 10px 5px 10px; font-weight:bold; line-height:22px; font-size:16px;">{{{title|}}}</p>
+<p style="margin:0px; font-size:12px;" lang="ja">{{{kanji|}}}</p>
+|-
+| colspan="2" |[[File:{{{image|}}}|300px|center]]{{#if:{{{image2|}}}|[[File:{{{image2|}}}|300px|center]]|}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; text-align:center; color:#09c; font-size:14px;" colspan="2" |Title
+|-
+| style="width:{{{label_width|100px}}}; background:#def; font-size:12px; font-weight:bold;" |English
+|{{{english|{{{title|A}}}}}}
+{{InfoboxSong/OptionalRow
+|Japanese
+|{{{kanji|B}}}
+|lang=ja}}
+{{InfoboxSong/OptionalRow
+|Romaji
+|{{{romaji|C}}} }}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; text-align:center; color:#09c; font-size:14px;" colspan="2" |{{{info_head|Information}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label1|}}}||display:none;}}" |{{{label1|}}}
+|{{{value1|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label2|}}}||display:none;}}" |{{{label2|}}}
+|{{{value2|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label3|}}}||display:none;}}" |{{{label3|}}}
+|{{{value3|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label4|}}}||display:none;}}" |{{{label4|}}}
+|{{{value4|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label5|}}}||display:none;}}" |{{{label5|}}}
+|{{{value5|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label6|}}}||display:none;}}" |{{{label6|}}}
+|{{{value6|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label7|}}}||display:none;}}" |{{{label7|}}}
+|{{{value7|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label8|}}}||display:none;}}" |{{{label8|}}}
+|{{{value8|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label9|}}}||display:none;}}" |{{{label9|}}}
+|{{{value9|}}}
+|-
+| style="background:#def; font-size:12px; font-weight:bold; {{#if: {{{label10|}}}||display:none;}}" |{{{label10|}}}
+|{{{value10|}}}
+|}

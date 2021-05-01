@@ -1,0 +1,1285 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:70%;" | V5-1: ショートランド沖
+| rowspan="3" style="text-align:center;width:30%;" | [[File:Vita Map Banner 5-1.png|400px]]
+|-
+! Items
+| {{Fuel}}{{Steel}}
+|-
+! Restrictions
+| None
+|-
+! Strategy Info
+|南方海域進出作戦
+|南方海域進出への橋頭堡確立を図る。練度の高い水上打撃艦隊<br>を編成、同方面に投入し、南方海域への進出を図れ！
+|}
+<center>[[File:Vita Map Image 5-1.png|600px]]</center>
+==Map guide==
+{{Map/Branching
+|id = V5-1
+|0 -> A/storm,B = *Having (F)BB(V) + CV(B) ≧ 4 '''FORCES''' A
+*Otherwise, meet any of the following requirements to route to B:
+**'''Slow fleet'''
+**CL ≧ 1 and DD ≧ 2
+**CA(V) ≧ 3 and CL ≧ 1
+*Failure to meet any of the above requirements triggers random routing (60% chance for A, 40% chance for B)
+|B -> D/resource =*Have a '''fast fleet''' and meet any of the following requirements :
+**CL as fleet flagship and DD ≧ 2
+**CL ≧ 1 and DD ≧ 3
+**DD ≧ 4
+|B -> E =*Do not meet the requirements for D
+|D/resource ->F,G =*Meet any of the following requirements to route to F:
+**Drums in the fleet ≧ 3
+**BBV ≧ 2
+**CAV ≧ 2
+*Do not meet any of the requirements for F and meet any of the following ones to route to G:
+**CL as fleet flagship and DD ≧ 2
+**CL ≧ 1 and DD ≧ 4
+**DD ≧ 5
+*Failure to meet any of the above requirements triggers random routing (40% chance for F, 60% chance for G)
+|F -> H/resource,G=*Having 3 or more drums in the fleet '''FORCES''' H
+*Otherwise, meeting any of the following requirements has 60% chance of routing to H:
+**BBV ≧ 2
+**CAV ≧ 2
+*Else, random routing (40% chance for H, 60% chance for G)
+|G -> I =*Fixed route
+}}
+===Possible Fleet compositions===
+*{{Event/Route|B|red|D|green|G|red|I|red}}
+**1CL(as flagship) 2DD 1CVL 2(F)BB
+***cannot have 2BBV or 2CAV else it will route from {{Event/Route|D|green}} to {{Event/Route|F|red}}.
+*{{Event/Route|B|red|E|red|G|red|I|red}}
+**3(F)BB(V)+CV(B) 3XX [XX cannot be a (F)BB(V) or CV(B)]
+***heavier fleet at the cost of an extra battle, will reach boss node with ammo penality.
+***the fleet must have '''slow speed''' else it has a risk of starting from {{Event/Route|A|purple}}.
+****it is recommended to bring a slow BB, a slow CVL or a BBV in the fleet for this purpose.
+
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=前線哨戒任務部隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|554
+|554
+|576
+|576
+|576
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|554
+|576
+|576
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|555
+|554
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=哨戒水上打撃部隊
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|566
+|559
+|559
+|555
+|576
+|576
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|125
+|527
+|559
+|559
+|555
+|576
+|576
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|527
+|559
+|559
+|554
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=空母機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|220
+|579
+|591
+|591
+|576
+|576
+|576
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|200
+|579
+|591
+|591
+|576
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|579
+|591
+|576
+|576
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|160
+|528
+|591
+|576
+|576
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=水上打撃任務部隊
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|567
+|527
+|527
+|555
+|575
+|575
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|190
+|529
+|527
+|527
+|555
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=護衛空母部隊
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|210
+|560
+|560
+|527
+|592
+|577
+|577
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|200
+|560
+|560
+|527
+|592
+|576
+|576
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|560
+|560
+|527
+|591
+|576
+|576
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|160
+|560
+|560
+|527
+|591
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=南方前線司令部
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|240
+|558
+|560
+|566
+|592
+|576
+|576
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|220
+|558
+|560
+|527
+|592
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=前線哨戒任務部隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|554
+|576
+|576
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|90
+|555
+|554
+|575
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|75
+|555
+|575
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=哨戒水上打撃部隊
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|125
+|527
+|559
+|559
+|555
+|576
+|576
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|100
+|527
+|559
+|559
+|554
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=空母機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|579
+|591
+|576
+|576
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|160
+|528
+|591
+|576
+|576
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|150
+|528
+|591
+|576
+|576
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|140
+|528
+|591
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=水上打撃任務部隊
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|190
+|529
+|527
+|527
+|555
+|575
+|575
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|180
+|529
+|527
+|522
+|519
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=護衛空母部隊
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|200
+|560
+|560
+|527
+|592
+|576
+|576
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|560
+|560
+|527
+|591
+|576
+|576
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|160
+|560
+|560
+|527
+|591
+|575
+|575
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|140
+|560
+|560
+|591
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方前線司令部
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|220
+|558
+|560
+|527
+|592
+|575
+|575
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|200
+|558
+|560
+|527
+|591
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|乙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=前線哨戒任務部隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|75
+|555
+|575
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|60
+|554
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=哨戒水上打撃部隊
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|527
+|527
+|554
+|554
+|575
+|575
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|80
+|527
+|521
+|521
+|575
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|60
+|522
+|521
+|521
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=空母機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|150
+|528
+|591
+|576
+|576
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|140
+|528
+|591
+|575
+|575
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|130
+|525
+|591
+|575
+|501
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|110
+|525
+|519
+|501
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=水上打撃任務部隊
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|180
+|529
+|527
+|522
+|575
+|575
+|575
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|130
+|529
+|522
+|522
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|529
+|522
+|522
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=護衛空母部隊
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|140
+|560
+|560
+|591
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|130
+|560
+|523
+|591
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|120
+|523
+|523
+|591
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|110
+|523
+|523
+|519
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方前線司令部
+|I
+|Boss/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|200
+|558
+|560
+|527
+|591
+|575
+|575
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|150
+|558
+|523
+|523
+|522
+|575
+|575
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|130
+|558
+|523
+|522
+|575
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=前線哨戒任務部隊
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|75
+|555
+|575
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|60
+|554
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|50
+|518
+|501
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=哨戒水上打撃部隊
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|80
+|527
+|521
+|521
+|575
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|60
+|522
+|521
+|521
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=空母機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|130
+|525
+|591
+|575
+|501
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|110
+|525
+|519
+|501
+|501
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|100
+|525
+|518
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=水上打撃任務部隊
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|130
+|529
+|522
+|522
+|575
+|501
+|501
+|
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|529
+|522
+|522
+|501
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|524
+|522
+|522
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=護衛空母部隊
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|120
+|523
+|523
+|591
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|110
+|523
+|523
+|519
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|100
+|523
+|523
+|519
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方前線司令部
+|I
+|Boss/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|150
+|558
+|523
+|523
+|522
+|575
+|575
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|130
+|558
+|523
+|522
+|575
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丁=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=前線哨戒任務部隊
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|554
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|50
+|518
+|501
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=哨戒水上打撃部隊
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|60
+|522
+|521
+|521
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=空母機動部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|110
+|525
+|519
+|501
+|501
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|100
+|525
+|518
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=水上打撃任務部隊
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|529
+|522
+|522
+|501
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|524
+|522
+|522
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=護衛空母部隊
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|110
+|523
+|523
+|519
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|100
+|523
+|523
+|519
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方前線司令部
+|I
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|130
+|558
+|523
+|522
+|575
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+</tabber>
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, F, G, I
+|boss = I
+|{{ShipFrom|424}} : G, I
+|{{ShipFrom|190}} : G, I
+|{{ShipFrom|415}} : G, I
+|{{ShipFrom|405}} : G, I
+|{{ShipFrom|115}} : G, I
+|{{ShipFrom|123}} : G, I
+|{{ShipFrom|59}} : G, I
+|{{ShipFrom|60}} : G, I
+|{{ShipFrom|61}} : E, F, G, I
+|{{ShipFrom|69}} : E, F, G, I
+|{{ShipFrom|51}} : E, F, G, I
+|{{ShipFrom|54}} : E, F, G, I
+|{{ShipFrom|55}} : E, F, G, I
+|{{ShipFrom|13}} : E, F, G, I
+|{{ShipFrom|9}} : E, F, G, I
+|{{ShipFrom|17}} : E, F, G, I
+|{{ShipFrom|42}} : C, E, F, G, I
+|{{ShipFrom|47}} : C, E, F, G, I
+|{{ShipFrom|23}} : C, E, F, G, I
+|{{ShipFrom|102}} : C, E, F, G, I
+|{{ShipFrom|103}} : C, E, F, G, I
+|{{ShipFrom|6}} : C, E, F, G, I
+|{{ShipFrom|28}} : C, E, F, G, I
+|{{ShipFrom|7}} : C, E, F, G, I
+|{{ShipFrom|14}} : B, C, E, F, G, I
+|{{ShipFrom|33}} : B, C, E, F, G, I
+|{{ShipFrom|18}} : B, C, E, F, G, I
+|{{ShipFrom|19}} : B, C, E, F, G, I
+|{{ShipFrom|43}} : B, C, E, F, G, I
+|{{ShipFrom|44}} : B, C, E, F, G, I
+|{{ShipFrom|45}} : B, C, E, F, G, I
+|{{ShipFrom|46}} : B, C, E, F, G, I
+|{{ShipFrom|167}} : I
+|{{ShipFrom|78}} : I
+|{{ShipFrom|86}} : I
+|{{ShipFrom|79}} : I
+|{{ShipFrom|85}} : I
+|{{ShipFrom|99}} : I
+|{{ShipFrom|100}} : I
+|{{ShipFrom|101}} : I
+|{{ShipFrom|21}} : I
+|{{ShipFrom|22}} : I
+|{{ShipFrom|53}} : I
+|{{ShipFrom|56}} : I
+|{{ShipFrom|52}} : I
+|{{ShipFrom|34}} : I
+|{{ShipFrom|35}} : I
+|{{ShipFrom|36}} : I
+|{{ShipFrom|37}} : I
+}}
+|-|甲=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, F, G, I
+|boss = I
+|{{ShipFrom|424}} : G, I
+|{{ShipFrom|190}} : G, I
+|{{ShipFrom|415}} : G, I
+|{{ShipFrom|405}} : G, I
+|{{ShipFrom|115}} : G, I
+|{{ShipFrom|123}} : G, I
+|{{ShipFrom|59}} : G, I
+|{{ShipFrom|60}} : F, G, I
+|{{ShipFrom|61}} : E, F, G, I
+|{{ShipFrom|69}} : E, F, G, I
+|{{ShipFrom|51}} : E, F, G, I
+|{{ShipFrom|54}} : E, F, G, I
+|{{ShipFrom|55}} : E, F, G, I
+|{{ShipFrom|13}} : E, F, G, I
+|{{ShipFrom|9}} : C, E, F, G, I
+|{{ShipFrom|17}} : C, E, F, G, I
+|{{ShipFrom|42}} : C, E, F, G, I
+|{{ShipFrom|47}} : C, E, F, G, I
+|{{ShipFrom|23}} : B, C, E, F, G, I
+|{{ShipFrom|102}} : B, C, E, F, G, I
+|{{ShipFrom|103}} : B, C, E, F, G, I
+|{{ShipFrom|6}} : B, C, E, F, G, I
+|{{ShipFrom|28}} : B, C, E, F, G, I
+|{{ShipFrom|7}} : B, C, E, F, G, I
+|{{ShipFrom|14}} : B, C, E, F, G, I
+|{{ShipFrom|33}} : B, C, E, F, G, I
+|{{ShipFrom|18}} : B, C, E, F, G, I
+|{{ShipFrom|19}} : B, C, E, F, G, I
+|{{ShipFrom|43}} : B, C, E, F, G, I
+|{{ShipFrom|44}} : B, C, E, F, G, I
+|{{ShipFrom|45}} : B, C, E, F, G, I
+|{{ShipFrom|46}} : B, C, E, F, G, I
+|{{ShipFrom|167}} : I
+|{{ShipFrom|78}} : I
+|{{ShipFrom|86}} : I
+|{{ShipFrom|79}} : I
+|{{ShipFrom|85}} : I
+|{{ShipFrom|99}} : I
+|{{ShipFrom|100}} : I
+|{{ShipFrom|101}} : I
+|{{ShipFrom|21}} : I
+|{{ShipFrom|22}} : I
+|{{ShipFrom|53}} : I
+|{{ShipFrom|56}} : I
+|{{ShipFrom|52}} : I
+|{{ShipFrom|34}} : I
+|{{ShipFrom|35}} : I
+|{{ShipFrom|36}} : I
+|{{ShipFrom|37}} : I
+}}
+|-|乙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, F, G, I
+|boss = I
+|{{ShipFrom|424}} : I
+|{{ShipFrom|190}} : G, I
+|{{ShipFrom|415}} : G, I
+|{{ShipFrom|405}} : G, I
+|{{ShipFrom|115}} : F, G, I
+|{{ShipFrom|123}} : F, G, I
+|{{ShipFrom|59}} : F, G, I
+|{{ShipFrom|60}} : F, G, I
+|{{ShipFrom|61}} : C, E, F, G, I
+|{{ShipFrom|69}} : C, E, F, G, I
+|{{ShipFrom|51}} : C, E, F, G, I
+|{{ShipFrom|54}} : C, E, F, G, I
+|{{ShipFrom|55}} : C, E, F, G, I
+|{{ShipFrom|13}} : C, E, F, G, I
+|{{ShipFrom|9}} : B, C, E, F, G, I
+|{{ShipFrom|17}} : B, C, E, F, G, I
+|{{ShipFrom|42}} : B, C, E, F, G, I
+|{{ShipFrom|47}} : B, C, E, F, G, I
+|{{ShipFrom|23}} : B, C, E, F, G, I
+|{{ShipFrom|102}} : B, C, E, F, G, I
+|{{ShipFrom|103}} : B, C, E, F, G, I
+|{{ShipFrom|6}} : B, C, E, F, G, I
+|{{ShipFrom|28}} : B, C, E, F, G, I
+|{{ShipFrom|7}} : B, C, E, F, G, I
+|{{ShipFrom|14}} : B, C, E, F, G, I
+|{{ShipFrom|33}} : B, C, E, F, G, I
+|{{ShipFrom|18}} : B, C, E, F, G, I
+|{{ShipFrom|19}} : B, C, E, F, G, I
+|{{ShipFrom|43}} : B, C, E, F, G, I
+|{{ShipFrom|44}} : B, C, E, F, G, I
+|{{ShipFrom|45}} : B, C, E, F, G, I
+|{{ShipFrom|46}} : B, C, E, F, G, I
+|{{ShipFrom|78}} : I
+|{{ShipFrom|86}} : I
+|{{ShipFrom|79}} : I
+|{{ShipFrom|85}} : I
+|{{ShipFrom|99}} : I
+|{{ShipFrom|100}} : I
+|{{ShipFrom|101}} : I
+|{{ShipFrom|21}} : I
+|{{ShipFrom|22}} : I
+|{{ShipFrom|53}} : I
+|{{ShipFrom|56}} : I
+|{{ShipFrom|52}} : I
+|{{ShipFrom|34}} : I
+|{{ShipFrom|35}} : I
+|{{ShipFrom|36}} : I
+|{{ShipFrom|37}} : I
+}}
+|-|丙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, F, G, I
+|boss = I
+|{{ShipFrom|190}} : I
+|{{ShipFrom|415}} : G, I
+|{{ShipFrom|405}} : G, I
+|{{ShipFrom|115}} : F, G, I
+|{{ShipFrom|123}} : F, G, I
+|{{ShipFrom|59}} : F, G, I
+|{{ShipFrom|60}} : F, G, I
+|{{ShipFrom|61}} : C, E, F, G, I
+|{{ShipFrom|69}} : C, E, F, G, I
+|{{ShipFrom|51}} : C, E, F, G, I
+|{{ShipFrom|54}} : C, E, F, G, I
+|{{ShipFrom|55}} : B, C, E, F, G, I
+|{{ShipFrom|13}} : B, C, E, F, G, I
+|{{ShipFrom|9}} : B, C, E, F, G, I
+|{{ShipFrom|17}} : B, C, E, F, G, I
+|{{ShipFrom|42}} : B, C, E, F, G, I
+|{{ShipFrom|47}} : B, C, E, F, G, I
+|{{ShipFrom|23}} : B, C, E, F, G, I
+|{{ShipFrom|102}} : B, C, E, F, G, I
+|{{ShipFrom|103}} : B, C, E, F, G, I
+|{{ShipFrom|6}} : B, C, E, F, G, I
+|{{ShipFrom|28}} : B, C, E, F, G, I
+|{{ShipFrom|7}} : B, C, E, F, G, I
+|{{ShipFrom|14}} : B, C, E, F, G, I
+|{{ShipFrom|33}} : B, C, E, F, G, I
+|{{ShipFrom|18}} : B, C, E, F, G, I
+|{{ShipFrom|19}} : B, C, E, F, G, I
+|{{ShipFrom|43}} : B, C, E, F, G, I
+|{{ShipFrom|44}} : B, C, E, F, G, I
+|{{ShipFrom|45}} : B, C, E, F, G, I
+|{{ShipFrom|46}} : B, C, E, F, G, I
+|{{ShipFrom|78}} : I
+|{{ShipFrom|86}} : I
+|{{ShipFrom|79}} : I
+|{{ShipFrom|85}} : I
+|{{ShipFrom|99}} : I
+|{{ShipFrom|100}} : I
+|{{ShipFrom|101}} : I
+|{{ShipFrom|21}} : I
+|{{ShipFrom|22}} : I
+|{{ShipFrom|53}} : I
+|{{ShipFrom|56}} : I
+|{{ShipFrom|52}} : I
+|{{ShipFrom|34}} : I
+|{{ShipFrom|35}} : I
+|{{ShipFrom|36}} : I
+|{{ShipFrom|37}} : I
+}}
+|-|丁=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, F, G, I
+|boss = I
+|{{ShipFrom|405}} : G, I
+|{{ShipFrom|115}} : F, G, I
+|{{ShipFrom|123}} : F, G, I
+|{{ShipFrom|59}} : F, G, I
+|{{ShipFrom|60}} : F, G, I
+|{{ShipFrom|61}} : C, E, F, G, I
+|{{ShipFrom|69}} : C, E, F, G, I
+|{{ShipFrom|51}} : C, E, F, G, I
+|{{ShipFrom|54}} : C, E, F, G, I
+|{{ShipFrom|55}} : B, C, E, F, G, I
+|{{ShipFrom|13}} : B, C, E, F, G, I
+|{{ShipFrom|9}} : B, C, E, F, G, I
+|{{ShipFrom|17}} : B, C, E, F, G, I
+|{{ShipFrom|42}} : B, C, E, F, G, I
+|{{ShipFrom|47}} : B, C, E, F, G, I
+|{{ShipFrom|23}} : B, C, E, F, G, I
+|{{ShipFrom|102}} : B, C, E, F, G, I
+|{{ShipFrom|103}} : B, C, E, F, G, I
+|{{ShipFrom|6}} : B, C, E, F, G, I
+|{{ShipFrom|28}} : B, C, E, F, G, I
+|{{ShipFrom|7}} : B, C, E, F, G, I
+|{{ShipFrom|14}} : B, C, E, F, G, I
+|{{ShipFrom|33}} : B, C, E, F, G, I
+|{{ShipFrom|18}} : B, C, E, F, G, I
+|{{ShipFrom|19}} : B, C, E, F, G, I
+|{{ShipFrom|43}} : B, C, E, F, G, I
+|{{ShipFrom|44}} : B, C, E, F, G, I
+|{{ShipFrom|45}} : B, C, E, F, G, I
+|{{ShipFrom|46}} : B, C, E, F, G, I 
+|{{ShipFrom|78}} : I
+|{{ShipFrom|86}} : I
+|{{ShipFrom|79}} : I
+|{{ShipFrom|85}} : I
+|{{ShipFrom|99}} : I
+|{{ShipFrom|100}} : I
+|{{ShipFrom|101}} : I
+|{{ShipFrom|21}} : I
+|{{ShipFrom|22}} : I
+|{{ShipFrom|53}} : I
+|{{ShipFrom|56}} : I
+|{{ShipFrom|52}} : I
+|{{ShipFrom|34}} : I
+|{{ShipFrom|35}} : I
+|{{ShipFrom|36}} : I
+|{{ShipFrom|37}} : I
+}}
+</tabber>
+__NOTOC__

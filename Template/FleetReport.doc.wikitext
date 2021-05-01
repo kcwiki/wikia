@@ -1,0 +1,23 @@
+;Description
+:Template for generating fleet composition report in the new talk page format
+
+;Syntax
+:Fill in the form with the appropriate parameters
+:<code><nowiki>{{subst:FleetReport|</nowiki></code>
+:<code><nowiki>|fleet1=Isuzu, Inazuma, Yuudachi, Shigure, Akatsuki, Akitsumaru</nowiki></code>
+:<code><nowiki>|fleet2=Chiyoda, Chitose, Mogami, Mikuma, Yayoi, Mutsuki</nowiki></code>
+:<code><nowiki>|route1=A-D-C-E-F</nowiki></code>
+:<code><nowiki>|freq1=4/7</nowiki></code>
+:<code><nowiki>|route2=A-B-C-D-E-F</nowiki></code>
+:<code><nowiki>|freq2=3/7</nowiki></code>
+:<code><nowiki>}}</nowiki></code>
+
+:This yields
+
+*-- [[User:Fujihita|Fujihita]] ([[User talk:Fujihita|talk]]) 17:17, July 25, 2016 (UTC)
+** Isuzu, Inazuma, Yuudachi, Shigure, Akatsuki, Akitsumaru {{#if:Chiyoda, Chitose, Mogami, Mikuma, Yayoi, Mutsuki| |{{#if:A-D-C-E-F|(A-D-C-E-F) 4/7|}} {{#if:A-B-C-D-E-F|(A-B-C-D-E-F) 4/7|}}}}
+{{#if:Chiyoda, Chitose, Mogami, Mikuma, Yayoi, Mutsuki|
+** Chiyoda, Chitose, Mogami, Mikuma, Yayoi, Mutsuki {{#if:A-D-C-E-F|(A-D-C-E-F) 4/7|}} {{#if:A-B-C-D-E-F|(A-B-C-D-E-F) 4/7|}}| }}
+
+;Note
+:Remove why space between two instances of the template

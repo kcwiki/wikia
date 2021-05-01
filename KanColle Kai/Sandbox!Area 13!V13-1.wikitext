@@ -1,0 +1,957 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:70%;" | V13-1: 北方AL海域前縁部
+| rowspan="3" style="text-align:center;width:30%;" | [[File:Vita Map Banner 13-1.png|400px]]
+|-
+! Items
+| {{Ammo}}
+|-
+! Restrictions
+| No CA/CAV/FBB/BB/BBV/CV/CVB allowed
+|-
+! Strategy Info
+|AL作戦方面進出
+|AL作戦発動の準備行動として、北方AL海域前縁部に艦隊を<br>進出し、同方面の偵察、AL作戦開始の準備を実施せよ！
+|}
+<center>[[File:Vita Map Image 13-1.png|600px]]</center>
+==Map guide==
+{{Map/Branching
+|id = V13-1
+|A/empty -> B, C = *Choice node
+|B -> E =*Meet all of the following requirements :
+**No LHA, AR, AO in the fleet
+**DD ≧ 3
+|B -> D/resource = *Do not meet the requirements for E
+|C -> F/empty = *Meet any of the following requirements :
+**Fail the LoS check
+**SS(V) = 6
+**DD ≦ 4
+|C -> E = *Do not meet the requirements for F
+|E -> F/empty = *Meet any of the following requirements:
+**CL + CT + DD ≦ 4
+**SS(V) ≧ 5
+**Fail the LoS check
+|E -> G = *Do not meet the requirements for F
+}}
+
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=AL哨戒部隊 I群
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|555
+|592
+|576
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|591
+|575
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|555
+|591
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 II群
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|592
+|575
+|575
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|591
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL海域前縁部哨戒線
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|555
+|554
+|576
+|576
+|535
+|535
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|150
+|555
+|554
+|576
+|576
+|535
+|535
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|554
+|575
+|575
+|535
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|130
+|555
+|554
+|575
+|575
+|535
+|532
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 旗艦
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|602
+|527
+|559
+|559
+|577
+|577
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|602
+|527
+|559
+|559
+|576
+|576
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|180
+|602
+|527
+|559
+|559
+|575
+|575
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|601
+|527
+|559
+|559
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=AL哨戒部隊 I群
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|591
+|575
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|555
+|591
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|555
+|591
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 II群
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|591
+|575
+|575
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|575
+|575
+|501
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|555
+|575
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL海域前縁部哨戒線
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|555
+|554
+|576
+|576
+|535
+|535
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|150
+|555
+|554
+|576
+|576
+|535
+|535
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|554
+|575
+|575
+|535
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|130
+|555
+|554
+|575
+|575
+|535
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|575
+|575
+|575
+|533
+|532
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 旗艦
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|602
+|527
+|559
+|559
+|576
+|576
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|180
+|602
+|527
+|559
+|559
+|575
+|575
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|601
+|527
+|559
+|559
+|575
+|575
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|601
+|527
+|521
+|521
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|乙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=AL哨戒部隊 I群
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|55
+|554
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|55
+|554
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 II群
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|65
+|555
+|575
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|75
+|555
+|575
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|555
+|501
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL海域前縁部哨戒線
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|575
+|575
+|575
+|533
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|110
+|555
+|575
+|575
+|575
+|533
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|575
+|501
+|501
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|80
+|555
+|575
+|501
+|501
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|70
+|519
+|575
+|501
+|501
+|530
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 旗艦
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|601
+|527
+|521
+|521
+|575
+|575
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|601
+|527
+|521
+|521
+|501
+|501
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|601
+|521
+|501
+|501
+|501
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|601
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=AL哨戒部隊 I群
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|55
+|554
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|55
+|554
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|50
+|518
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 II群
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|75
+|555
+|575
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|555
+|501
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|501
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|50
+|519
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL海域前縁部哨戒線
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|575
+|501
+|501
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|80
+|555
+|575
+|501
+|501
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|70
+|519
+|575
+|501
+|501
+|530
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 旗艦
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|601
+|527
+|521
+|521
+|501
+|501
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|601
+|521
+|501
+|501
+|501
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|601
+|501
+|501
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|601
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丁=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=AL哨戒部隊 I群
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|55
+|554
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|50
+|518
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 II群
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|501
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|50
+|519
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=AL海域前縁部哨戒線
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|80
+|555
+|575
+|501
+|501
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|70
+|519
+|575
+|501
+|501
+|530
+|-
+}}
+{{Map/Nodes|name=AL哨戒部隊 旗艦
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|601
+|501
+|501
+|-
+|G
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|601
+|501
+|-
+}}
+</div> <!-- overflow -->
+</tabber>
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, G
+|boss = G
+|{{ShipFrom|163}} : E, G
+|{{ShipFrom|114}} : E, G
+|{{ShipFrom|66}} : E, G
+|{{ShipFrom|68}} : E, G
+|{{ShipFrom|63}} : E, G
+|{{ShipFrom|92}} : E, G
+|{{ShipFrom|76}} : E, G
+|{{ShipFrom|100}} : E, G
+|{{ShipFrom|101}} : E, G
+|{{ShipFrom|38}} : E, G
+|{{ShipFrom|40}} : B, E, G
+|{{ShipFrom|41}} : B, E, G
+|{{ShipFrom|34}} : B, E, G
+|{{ShipFrom|35}} : B, E, G
+|{{ShipFrom|36}} : B, E, G
+|{{ShipFrom|37}} : B, C, E, G
+|{{ShipFrom|15}} : B, C, E, G
+|{{ShipFrom|94}} : B, C, E, G
+|{{ShipFrom|16}} : B, C, E, G
+|{{ShipFrom|451}} : G
+|{{ShipFrom|190}} : G
+|{{ShipFrom|116}} : G
+|{{ShipFrom|77}} : G
+|{{ShipFrom|87}} : G
+|{{ShipFrom|26}} : G
+|{{ShipFrom|27}} : G
+}}
+|-|甲=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, G
+|boss = G
+|{{ShipFrom|163}} : E, G
+|{{ShipFrom|114}} : E, G
+|{{ShipFrom|66}} : E, G
+|{{ShipFrom|68}} : E, G
+|{{ShipFrom|63}} : E, G
+|{{ShipFrom|92}} : E, G
+|{{ShipFrom|76}} : E, G
+|{{ShipFrom|100}} : B, E, G
+|{{ShipFrom|101}} : B, E, G
+|{{ShipFrom|38}} : B, E, G
+|{{ShipFrom|40}} : B, E, G
+|{{ShipFrom|41}} : B, E, G
+|{{ShipFrom|34}} : B, E, G
+|{{ShipFrom|35}} : B, C, E, G
+|{{ShipFrom|36}} : B, C, E, G
+|{{ShipFrom|37}} : B, C, E, G
+|{{ShipFrom|15}} : B, C, E, G
+|{{ShipFrom|94}} : B, C, E, G
+|{{ShipFrom|16}} : B, C, E, G
+|{{ShipFrom|451}} : G
+|{{ShipFrom|190}} : G
+|{{ShipFrom|116}} : G
+|{{ShipFrom|77}} : G
+|{{ShipFrom|87}} : G
+|{{ShipFrom|26}} : G
+|{{ShipFrom|27}} : G
+}}
+|-|乙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, G
+|boss = G
+|{{ShipFrom|114}} : E, G
+|{{ShipFrom|66}} : E, G
+|{{ShipFrom|68}} : E, G
+|{{ShipFrom|63}} : E, G
+|{{ShipFrom|92}} : E, G
+|{{ShipFrom|76}} : E, G
+|{{ShipFrom|100}} : B, E, G
+|{{ShipFrom|101}} : B, E, G
+|{{ShipFrom|38}} : B, E, G
+|{{ShipFrom|40}} : B, E, G
+|{{ShipFrom|41}} : B, E, G
+|{{ShipFrom|34}} : B, C, E, G
+|{{ShipFrom|35}} : B, C, E, G
+|{{ShipFrom|36}} : B, C, E, G
+|{{ShipFrom|37}} : B, C, E, G
+|{{ShipFrom|15}} : B, C, E, G
+|{{ShipFrom|94}} : B, C, E, G
+|{{ShipFrom|16}} : B, C, E, G
+|{{ShipFrom|451}} : G
+|{{ShipFrom|190}} : G
+|{{ShipFrom|116}} : G
+|{{ShipFrom|77}} : G
+|{{ShipFrom|87}} : G
+|{{ShipFrom|26}} : G
+|{{ShipFrom|27}} : G
+}}
+|-|丙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, G
+|boss = G
+|{{ShipFrom|114}} : E, G
+|{{ShipFrom|66}} : E, G
+|{{ShipFrom|68}} : E, G
+|{{ShipFrom|63}} : E, G
+|{{ShipFrom|92}} : E, G
+|{{ShipFrom|76}} : B, E, G
+|{{ShipFrom|100}} : B, E, G
+|{{ShipFrom|101}} : B, E, G
+|{{ShipFrom|38}} : B, E, G
+|{{ShipFrom|40}} : B, E, G
+|{{ShipFrom|41}} : B, E, G
+|{{ShipFrom|34}} : B, C, E, G
+|{{ShipFrom|35}} : B, C, E, G
+|{{ShipFrom|36}} : B, C, E, G
+|{{ShipFrom|37}} : B, C, E, G
+|{{ShipFrom|15}} : B, C, E, G
+|{{ShipFrom|94}} : B, C, E, G
+|{{ShipFrom|16}} : B, C, E, G
+|{{ShipFrom|451}} : G
+|{{ShipFrom|190}} : G
+|{{ShipFrom|116}} : G
+|{{ShipFrom|77}} : G
+|{{ShipFrom|87}} : G
+|{{ShipFrom|26}} : G
+|{{ShipFrom|27}} : G
+}}
+|-|丁=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, E, G
+|boss = G
+|{{ShipFrom|114}} : G
+|{{ShipFrom|66}} : E, G
+|{{ShipFrom|68}} : E, G
+|{{ShipFrom|63}} : E, G
+|{{ShipFrom|92}} : E, G
+|{{ShipFrom|76}} : B, E, G
+|{{ShipFrom|100}} : B, E, G
+|{{ShipFrom|101}} : B, E, G
+|{{ShipFrom|38}} : B, E, G
+|{{ShipFrom|40}} : B, E, G
+|{{ShipFrom|41}} : B, E, G
+|{{ShipFrom|34}} : B, C, E, G
+|{{ShipFrom|35}} : B, C, E, G
+|{{ShipFrom|36}} : B, C, E, G
+|{{ShipFrom|37}} : B, C, E, G
+|{{ShipFrom|15}} : B, C, E, G
+|{{ShipFrom|94}} : B, C, E, G
+|{{ShipFrom|16}} : B, C, E, G
+|{{ShipFrom|116}} : G
+|{{ShipFrom|77}} : G
+|{{ShipFrom|87}} : G
+|{{ShipFrom|26}} : G
+|{{ShipFrom|27}} : G
+}}
+</tabber>

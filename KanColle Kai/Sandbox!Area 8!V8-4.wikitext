@@ -1,0 +1,1212 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:70%;" | V8-4: 幌筵泊地沖
+| rowspan="3" style="text-align:center;width:30%;" | [[File:Vita Map Banner 8-4.png|400px]]
+|-
+! Items
+| {{Fuel}}{{Ammo}}
+|-
+! Restrictions
+| None
+|-
+! Strategy Info
+|幌筵沖泊地沖海戦
+|北方の我が重要拠点、幌筵泊地方面に敵の大規模な艦隊の接近<br>が確認された。北方艦隊全力を以て出撃し、これを撃滅せよ！
+|}
+<center>[[File:Vita Map Image 8-4.png|600px]]</center>
+==Map guide==
+{{Map/Branching
+|id = V8-4
+|0 -> A/storm, B = * Random 50%/50% chance
+|B -> D, E =*Meet any of the following requirements to route to E :
+**CV(B) + (F)BB(V) ≧ 1
+**SS(V) ≧ 3
+*Do not meet the requirements for E and meet the following ones to route to D :
+**CL is Fleet flagship and DD ≧ 3
+**1 ≧ CA ≧ 2 and DD ≧ 3
+*Failure to meet any of the above requirements triggers random routing:
+**25% chance for D
+**75% chance for E
+|C -> E = *Meet any of the following requirements :
+**CV(B) + (F)BB(V) ≧ 1
+**SS(V) ≧ 1
+**DD ≦ 1
+|C -> F =* Do not meet the requirements for E
+|E -> F, G/resource =*Having more than 1 CV(B) + (F)BB(V) '''FORCES''' F
+*Otherwise, meet any of the following requirements to route to G:
+** DD ≧ 4
+** {{ShipLink|Akitsu Maru}} in the fleet and DD ≧ 2
+** DD ≧ 3 and CL ≧ 1
+*Not meeting the requirements for G and having SS(V) ≧ 2 routes to F.
+*Failure to meet any of the above mentioned requirements triggers random routing:
+**35% chance for G
+**65% chance for F
+}}
+
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=北方潜水艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|100
+|534
+|532
+|532
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Abreast}}
+|100
+|534
+|532
+|532
+|530
+|530
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 I群
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|559
+|559
+|576
+|575
+|575
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|555
+|559
+|559
+|576
+|575
+|575
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|555
+|559
+|559
+|575
+|575
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|555
+|559
+|559
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 II群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|527
+|555
+|576
+|576
+|575
+|575
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|130
+|527
+|555
+|576
+|576
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=北方急派任務部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|240
+|579
+|528
+|529
+|555
+|576
+|576
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|230
+|528
+|528
+|529
+|555
+|576
+|576
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|200
+|528
+|528
+|529
+|519
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=北方急派巡洋艦隊
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|220
+|555
+|527
+|527
+|592
+|576
+|576
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|220
+|555
+|527
+|527
+|592
+|576
+|576
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|555
+|527
+|527
+|591
+|575
+|575
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|190
+|555
+|527
+|527
+|591
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=深海北方主力艦隊
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|310
+|543
+|528
+|529
+|529
+|577
+|577
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|290
+|543
+|529
+|529
+|560
+|576
+|576
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|270
+|543
+|529
+|529
+|520
+|576
+|576
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|250
+|543
+|529
+|529
+|520
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=北方潜水艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|80
+|534
+|532
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Abreast}}
+|80
+|534
+|532
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|70
+|532
+|532
+|530
+|530
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 I群
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|555
+|559
+|559
+|575
+|575
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|555
+|559
+|559
+|575
+|575
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|554
+|521
+|521
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|554
+|521
+|521
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 II群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|527
+|555
+|576
+|575
+|575
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|527
+|555
+|576
+|575
+|575
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|527
+|519
+|576
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|527
+|519
+|576
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=北方急派任務部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|200
+|528
+|528
+|529
+|519
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|190
+|528
+|528
+|524
+|518
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|528
+|525
+|524
+|518
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|170
+|528
+|524
+|518
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=北方急派巡洋艦隊
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|555
+|527
+|527
+|591
+|575
+|575
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|190
+|555
+|527
+|527
+|591
+|575
+|575
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|160
+|555
+|527
+|522
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|160
+|555
+|527
+|522
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=深海北方主力艦隊
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|270
+|543
+|529
+|529
+|520
+|576
+|576
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|250
+|543
+|529
+|529
+|520
+|575
+|575
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|220
+|543
+|524
+|524
+|520
+|575
+|575
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|542
+|524
+|520
+|575
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|乙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=北方潜水艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|70
+|532
+|532
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|50
+|532
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|40
+|530
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|30
+|530
+|530
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 I群
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|554
+|521
+|521
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|554
+|521
+|521
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|554
+|521
+|521
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|55
+|518
+|521
+|501
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|50
+|518
+|508
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 II群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|527
+|519
+|576
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|527
+|519
+|576
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|522
+|519
+|575
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|522
+|519
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=北方急派任務部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|528
+|525
+|524
+|518
+|575
+|575
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|170
+|528
+|524
+|518
+|575
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|160
+|525
+|524
+|518
+|575
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|150
+|525
+|524
+|518
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=北方急派巡洋艦隊
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|160
+|555
+|527
+|522
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|130
+|554
+|522
+|522
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|522
+|522
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|522
+|522
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=深海北方主力艦隊
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|542
+|524
+|520
+|575
+|501
+|501
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|542
+|524
+|507
+|501
+|501
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|542
+|507
+|501
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=北方潜水艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|40
+|530
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|30
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|20
+|530
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 I群
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|554
+|521
+|521
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|55
+|518
+|521
+|501
+|501
+|501
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|50
+|518
+|508
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 II群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|522
+|519
+|575
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|522
+|519
+|575
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|519
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=北方急派任務部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|150
+|525
+|524
+|518
+|501
+|501
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|140
+|525
+|518
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=北方急派巡洋艦隊
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|130
+|554
+|522
+|522
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|522
+|522
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|522
+|522
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=深海北方主力艦隊
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|542
+|524
+|507
+|501
+|501
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|542
+|507
+|501
+|501
+|501
+|-
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|541
+|507
+|501
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丁=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=北方潜水艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|30
+|530
+|530
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|20
+|530
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 I群
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|50
+|518
+|508
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=深海北方水雷戦隊 II群
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|519
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=北方急派任務部隊
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|140
+|525
+|518
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=北方急派巡洋艦隊
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|522
+|522
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=深海北方主力艦隊
+|I
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|541
+|507
+|501
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+</tabber>
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F, I
+|boss = I
+|{{ShipFrom|114}} : F, I
+|{{ShipFrom|63}} : F, I
+|{{ShipFrom|64}} : F, I
+|{{ShipFrom|22}} : F, I
+|{{ShipFrom|100}} : F, I
+|{{ShipFrom|101}} : F, I
+|{{ShipFrom|38}} : F, I
+|{{ShipFrom|40}} : C, D, E, F, I
+|{{ShipFrom|41}} : C, D, E, F, I
+|{{ShipFrom|9}} : C, E, F, I
+|{{ShipFrom|13}} : C, E, F, I
+|{{ShipFrom|49}} : C, D, E, F, I
+|{{ShipFrom|18}} : C, D, E, F, I
+|{{ShipFrom|11}} : C, D, E, F, I
+|{{ShipFrom|34}} : C, D, E, F, I
+|{{ShipFrom|35}} : C, D, E, F, I
+|{{ShipFrom|36}} : C, D, E, F, I
+|{{ShipFrom|37}} : C, D, E, F, I
+|{{ShipFrom|15}} : C, D, E, F, I
+|{{ShipFrom|16}} : C, D, E, F, I
+|{{ShipFrom|10}} : C, D, E, F, I
+|{{ShipFrom|32}} : C, D, E, F, I
+|{{ShipFrom|12}} : C, D, E, F, I
+|{{ShipFrom|33}} : C, D, E, F, I
+|{{ShipFrom|14}} : C, D, E, F, I
+|{{ShipFrom|414}} : I
+|{{ShipFrom|163}} : I
+|{{ShipFrom|26}} : I
+|{{ShipFrom|27}} : I
+|{{ShipFrom|99}} : I
+}}
+|-|甲=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F, I
+|boss = I
+|{{ShipFrom|114}} : I
+|{{ShipFrom|63}} : F, I
+|{{ShipFrom|64}} : F, I
+|{{ShipFrom|22}} : D, E, F, I
+|{{ShipFrom|100}} : D, E, F, I
+|{{ShipFrom|101}} : C, D, E, F, I
+|{{ShipFrom|38}} : C, D, E, F, I
+|{{ShipFrom|40}} : C, D, E, F, I
+|{{ShipFrom|41}} : C, D, E, F, I
+|{{ShipFrom|9}} : C, D, E, F, I
+|{{ShipFrom|13}} : C, D, E, F, I
+|{{ShipFrom|49}} : B, C, D, E, F, I
+|{{ShipFrom|18}} : B, C, D, E, F, I
+|{{ShipFrom|11}} : C, D, E, F, I
+|{{ShipFrom|34}} : C, D, E, F, I
+|{{ShipFrom|35}} : C, D, E, F, I
+|{{ShipFrom|36}} : C, D, E, F, I
+|{{ShipFrom|37}} : C, D, E, F, I
+|{{ShipFrom|15}} : C, D, E, F, I
+|{{ShipFrom|16}} : C, D, E, F, I
+|{{ShipFrom|10}} : C, D, E, F, I
+|{{ShipFrom|32}} : C, D, E, F, I
+|{{ShipFrom|12}} : C, D, E, F, I
+|{{ShipFrom|33}} : C, D, E, F, I
+|{{ShipFrom|14}} : B, C, D, E, F, I
+|{{ShipFrom|414}} : I
+|{{ShipFrom|163}} : I
+|{{ShipFrom|26}} : I
+|{{ShipFrom|27}} : I
+|{{ShipFrom|99}} : I
+}}
+|-|乙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F, I
+|boss = I
+|{{ShipFrom|114}} : I
+|{{ShipFrom|63}} : F, I
+|{{ShipFrom|64}} : F, I
+|{{ShipFrom|22}} : C, D, E, F, I
+|{{ShipFrom|100}} : C, D, E, F, I
+|{{ShipFrom|101}} : C, D, E, F, I
+|{{ShipFrom|38}} : C, D, E, F, I
+|{{ShipFrom|40}} : C, D, E, F, I
+|{{ShipFrom|41}} : C, D, E, F, I
+|{{ShipFrom|9}} : C, D, E, F, I
+|{{ShipFrom|13}} : C, D, E, F, I
+|{{ShipFrom|49}} : B, C, D, E, F, I
+|{{ShipFrom|18}} : B, C, D, E, F, I
+|{{ShipFrom|11}} : C, D, E, F, I
+|{{ShipFrom|34}} : C, D, E, F, I
+|{{ShipFrom|35}} : C, D, E, F, I
+|{{ShipFrom|36}} : C, D, E, F, I
+|{{ShipFrom|37}} : C, D, E, F, I
+|{{ShipFrom|15}} : C, D, E, F, I
+|{{ShipFrom|16}} : C, D, E, F, I
+|{{ShipFrom|10}} : C, D, E, F, I
+|{{ShipFrom|32}} : C, D, E, F, I
+|{{ShipFrom|12}} : B, C, D, E, F, I
+|{{ShipFrom|33}} : B, C, D, E, F, I
+|{{ShipFrom|14}} : B, C, D, E, F, I
+|{{ShipFrom|26}} : I
+|{{ShipFrom|27}} : I
+|{{ShipFrom|99}} : I
+}}
+|-|丙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F, I
+|boss = I
+|{{ShipFrom|114}} : I
+|{{ShipFrom|63}} : F, I
+|{{ShipFrom|64}} : F, I
+|{{ShipFrom|22}} : C, D, E, F, I
+|{{ShipFrom|100}} : C, D, E, F, I
+|{{ShipFrom|101}} : C, D, E, F, I
+|{{ShipFrom|38}} : C, D, E, F, I
+|{{ShipFrom|40}} : C, D, E, F, I
+|{{ShipFrom|41}} : C, D, E, F, I
+|{{ShipFrom|9}} : C, D, E, F, I
+|{{ShipFrom|13}} : C, D, E, F, I
+|{{ShipFrom|49}} : B, C, D, E, F, I
+|{{ShipFrom|18}} : B, C, D, E, F, I
+|{{ShipFrom|11}} : C, D, E, F, I
+|{{ShipFrom|34}} : C, D, E, F, I
+|{{ShipFrom|35}} : C, D, E, F, I
+|{{ShipFrom|36}} : C, D, E, F, I
+|{{ShipFrom|37}} : C, D, E, F, I
+|{{ShipFrom|15}} : C, D, E, F, I
+|{{ShipFrom|16}} : C, D, E, F, I
+|{{ShipFrom|10}} : C, D, E, F, I
+|{{ShipFrom|32}} : C, D, E, F, I
+|{{ShipFrom|12}} : B, C, D, E, F, I
+|{{ShipFrom|33}} : B, C, D, E, F, I
+|{{ShipFrom|14}} : B, C, D, E, F, I
+|{{ShipFrom|26}} : I
+|{{ShipFrom|27}} : I
+|{{ShipFrom|99}} : I
+}}
+|-|丁=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F, I
+|boss = I
+|{{ShipFrom|63}} : I
+|{{ShipFrom|64}} : I
+|{{ShipFrom|22}} : C, D, E, F, I
+|{{ShipFrom|100}} : C, D, E, F, I
+|{{ShipFrom|101}} : C, D, E, F, I
+|{{ShipFrom|38}} : C, D, E, F, I
+|{{ShipFrom|40}} : C, D, E, F, I
+|{{ShipFrom|41}} : C, D, E, F, I
+|{{ShipFrom|9}} : C, D, E, F, I
+|{{ShipFrom|13}} : C, D, E, F, I
+|{{ShipFrom|49}} : B, C, D, E, F, I
+|{{ShipFrom|18}} : B, C, D, E, F, I
+|{{ShipFrom|11}} : C, D, E, F, I
+|{{ShipFrom|34}} : C, D, E, F, I
+|{{ShipFrom|35}} : C, D, E, F, I
+|{{ShipFrom|36}} : C, D, E, F, I
+|{{ShipFrom|37}} : C, D, E, F, I
+|{{ShipFrom|15}} : C, D, E, F, I
+|{{ShipFrom|16}} : C, D, E, F, I
+|{{ShipFrom|10}} : C, D, E, F, I
+|{{ShipFrom|32}} : C, D, E, F, I
+|{{ShipFrom|12}} : B, C, D, E, F, I
+|{{ShipFrom|33}} : B, C, D, E, F, I
+|{{ShipFrom|14}} : B, C, D, E, F, I
+|{{ShipFrom|27}} : I
+|{{ShipFrom|99}} : I
+}}
+</tabber>

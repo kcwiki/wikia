@@ -1,0 +1,110 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Coral Islands
+|jp = 珊瑚諸島沖
+|romaji = Sango-shotō oki
+|mechanics = LoS Check@Line of Sight
+|exp_hq = 170
+|exp_hq_boss = 2340
+|show_kills = true
+|kills = 4
+|strategy_name = [[wikipedia:Battle_of_the_Coral_Sea|Coral Islands Naval Battle]]
+|strategy_name_ja = 珊瑚諸島沖海戦
+|strategy_info = You are going to carry out the operation MO. Deploy a carrier task force, and support it! Search the enemy carrier task force and annihilate it!
+|strategy_info_ja = MO作戦を実施する。空母機動部隊を展開、これを支援せよ！敵機動部隊を捜索、撃滅せよ！
+}}
+{{MapBranchingTable
+|id = 5-2
+|0 -> A/storm, B/empty  =
+*Random routing if meeting '''ANY''' of the following
+**(F)BB(V) ≥ 4
+**CV(B) ≥ 3  
+**CV(B/L) + (F)BB(V) ≥ 5
+**Fleet contains SS(V)
+*Otherwise, B
+
+|C -> D = 
+*Meet '''ANY''' of the following
+**Fleet contains 2 CV(B/L), 2 CA(V) and 2 DD
+**Fleet contains Shouhou and CA(V)+CL+DD+AO = 5
+**Fleet contains Yuubari and CVL+CA(V)+DD+AO = 5
+**'''FAST''' fleet '''AND''' one of the following conditions:
+***Fleet contains Shoukaku '''AND''' Zuikaku, 2 DD and 2 wildcards
+***Fleet contains no CV(B), 2 CVL and 2 DD (''Exactly 2 CVL, no more no less, (F)BB(V) not allowed'')
+***Fleet contains 1 CVL, 2 DD and CA(V)
+
+|C -> E = 
+*Meet '''ANY''' of the following to '''FORCE''' E
+**Fleet contains SS(V), DE and AV
+**Fleet contains (F)BB(V), CV(B) or CLT ('''Ignored if the fleet contains Shoukaku, Zuikaku and 2 DDs''')
+**Fleet contains slow ship ('''Ignored if the fleet meets the historical requirement above''')
+**Fleets that do not meet any conditions of going to D
+
+|D -> G/resource =
+*Meet '''ANY''' of the following
+**Fleet contains CL and DD only
+**Fleet contains [[Shouhou]], [[Yuubari]], DD = 2, CA+AO = 2, no CAV
+**Fleet contains Shouhou, 3 DD and one of the following
+***AO = 2
+***CA = 1 '''and''' CL+AO = 1
+**Fleet contains Yuubari, 2 DD and one of the following
+***AO = 1 '''and''' CA+DD = 4
+***AO = 2 '''and''' CA+DD = 3
+
+|D -> F =
+* Do not meet the requirements for routing to G.
+
+|F -> H/empty,  = 
+* Fail the LoS check.
+|F -> I, O = 
+* Meet '''ALL''' of the following requirements to guarantee routing to O:
+** Pass the LoS check : '''> 71 F33 (C<sub>n</sub>=2)'''
+** Have ≤ 2 CV(B/L) in your fleet.
+*Go to I if CV(B/L) + (F)BB(V) ≥ 5 
+*Otherwise, random between I and O if you pass the LoS check
+
+|G/resource -> J/resource, L =
+* Random
+|L -> K = 
+*Meet '''ANY''' of the following
+**'''Fast+''' Fleet
+**Pass the LoS check : '''> 62 F33 (C<sub>n</sub>=2)'''
+|L -> M/storm = 
+* Fail the LoS check
+|L -> N/empty =
+*AO+CL+CA = 0
+}}
+
+===Opening this Map===
+*To open World 5-2, you must clear World [[4-4]] in addition to World [[5-1]].
+
+===Historical Fleet: Operation MO===
+Members of this fleet can be used to obtain special historical routing on this map.
+
+* CV(L): {{ShipLink|Shoukaku/Kai Ni A|text=Shoukaku}}, {{ShipLink|Zuikaku/Kai Ni A|text=Zuikaku}}, {{ShipLink|Shouhou/Kai|text=Shouhou}}
+* CL : {{ShipLink|Yuubari}}
+
+===Tips===
+* The boss node flagship must be sunk '''4 times''' in order to clear the map.
+** The boss is random, it can be either be a [[Standard Carrier Wo-Class|Standard Carrier Wo-Class Kai]] or the [[Aircraft Carrier Demon]].
+**'''352+ [[Combat/Aerial Combat#Fighter_Combat|Air Power]]''' guarantees Air Supremacy (AS+) [<span style="color:green">'''制空権確保!'''</span>] for all the enemy compositions at the Boss Node {{Event/Route|O|red}}.
+*** It is recommended to bring additional air power ('''370+''') as the air raid at node {{Event/Route|C|orange}} can reduce your air power.
+** > 71 LoS [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=2)]] is required to reach the Boss Node from node {{Event/Route|F|red}}.
+** Bringing at least 1 ship capable of using [[Combat/Aerial Combat#Anti-Air Cut-In|Anti-Air Cut In]] is recommended due to the powerful carrier presence across the map.
+
+===Recommended Fleet===
+Route: {{Event/Route|B|blue|C|orange|D|red|F|red|O|red}}
+====Historical Fleet====
+*{{ShipLink|Shoukaku/Kai Ni A|text=Shoukaku}} & {{ShipLink|Zuikaku/Kai Ni A|text=Zuikaku}} + 2 FBB 2 DD (Fast Fleet)
+**A heavy fleet comp designed to maximize damage at the boss node.
+*{{ShipLink|Shoukaku/Kai Ni A|text=Shoukaku}} & {{ShipLink|Zuikaku/Kai Ni A|text=Zuikaku}} + 1 FBB 1 CAV 2 DD (Fast Fleet)
+**In this case, you trade the shelling power of a FBB for the additional airpower a CAV can provide, allowing you extra flexibility in how you load out your carriers.
+====Non-Historical Fleet====
+*2 CV(B) 2 CA(V) 2 DD (Fast Fleet)
+** While you can use any ships you want with this composition, you will not have a second shelling phase at the boss node; this may make it harder to secure victory.
+Route: {{Event/Route|B|blue|C|orange|E|red|F|red|O|red}}
+*2 CV(B) 2 (F)BB(V) 2 CA(V)/CL(T)/DD
+**Using this formation forces you to fight a Battleship Ta-Class at node {{Event/Route|E|red}}, however you will have a second shelling phase at the boss node.
+
+<references />
+{{Map/Footer}}

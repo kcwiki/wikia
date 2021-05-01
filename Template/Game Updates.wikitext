@@ -1,0 +1,15 @@
+This is intended to be a scaffolding for [http://kancolle.wikia.com/index.php?title=Special%3APrefixIndex&prefix=Partials%2FUpdates&namespace=0 Updates]
+
+== Usage ==
+* Copy the contents of [[Template:Game Updates/Base]] into a new Partials/Updates/YYYY Month D(c) where:
+** YYYY is the current year in four digits. e.g. {{CURRENTYEAR}}
+** Month is the full name of the month, e.g. {{CURRENTMONTHNAME}}
+** D(c) is the day of the month in single digit. If the day of the month is less than 10 digits, you do not need to have zeros "padded" in front of it. (c) is the [[wikipedia:ordinal indicator|ordinal indicator]] e.g. 1st, 2nd, 3rd, 4th, etc. e.g. {{Ordinal|{{CURRENTDAY}}}}
+* Edit the information out accordingly from the newly created Partials/Updates/YYYY Month D(c) based on [[Template:Game Updates/Base]]:
+** <nowiki>{{CURRENTMONTHNAME}}</nowiki> should be replaced with the actual full name of the month if for instance the update was to not happen within the same month. Refer to above for example of how it should be done.
+** <nowiki>{{CURRENTDAY}}</nowiki> should be replaced with the actual day of the month if for instance the update was to not happen on the same day as the thread/page content creation. Refer to above for example of how it should be done.
+** <nowiki>{{CURRENTYEAR}}</nowiki> should be replaced with the actual year for the scheduled maintenance. Should the maintenance not fall on the same year as indicated, you should edit this accordingly. Refer to above for example of how it should be done.
+** <nowiki>{{Warning|}}</nowiki> banner towards the top of the page should not be commented out before or during the maintenance as this is to inform the readers that we're not the developers and that they are to wait until the editors could update both the Contents part of the page (which shall be covered later on). Once however all the information based on developer tweets as well as maintenance conclusions as well as more information has been ratified, the banner should be commented out to prevent confusion.
+* Copy the contents of [[Template:Game Updates/Base/Content]] into a new Partials/Updates/YYYY Month D(c)/Content page.
+* Edit the information accordingly  from the new newly created Partials/Updates/YYYY Month D(c)/Content based on [[Template:Game Updates/Base/Content]]:
+** The <nowiki>[[Thread:FIXME]]</nowiki> should be replaced with the respective forum thread link once a game update thread has been established on the Wikia forum. e.g. <nowiki>[[Thread:489353]]</nowiki>

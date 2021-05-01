@@ -1,0 +1,22 @@
+<includeonly>{{#if:{{{1|}}}|<span class="image-stack" style="display:inline-block;overflow:hidden;vertical-align:middle;position:relative;">[[File:{{#replace:{{{1}}}|/|&#32;}} Card.png|link={{{link|{{#replace:{{{1}}}|/|&#32;}}}}}|{{{size|75px}}}]]</span>|[[File:Catbomb.png|75x75px]]}}</includeonly><noinclude>
+{{Ambox/Disclaimer|Not yet fully supported, need (another) asset migration.}}
+Simplified version of [[Template:EquipmentCardKai]]. Doesn't use Lua, so it's possible to have (practically) unlimited number of ShipBattleCard invokes on a page without blowing the wikia up, see [[Template:EquipmentCard/Test]].
+==Usage==
+<pre>{{EquipmentCard|Star Shell}}</pre>
+{{EquipmentCard|Star Shell}}
+<pre>{{EquipmentCard|Star Shell|size=125px}}</pre>
+{{EquipmentCard|Star Shell|size=125px}}
+<pre>{{EquipmentCard|Searchlight|link=Star Shell}}</pre>
+{{EquipmentCard|Searchlight|link=Star Shell}}
+==Notes==
+Supported parameters: <code>[1]</code>, <code>size</code>, <code>link</code>.
+*Relies on [[Help:Redirect|redirects]] (currently ~300):
+<pre>
+File:<name> Card.png -> File:<asset name, common name or name> <id:3> Card.png or _card
+</pre>
+for all equipments, for example
+<pre>
+#redirect [[File:Star Shell 101 Card.png]]
+</pre>
+in [http://kancolle.wikia.com/wiki/File:Star_Shell_Card.png?redirect=no File:Star_Shell_Card.png].
+</noinclude>

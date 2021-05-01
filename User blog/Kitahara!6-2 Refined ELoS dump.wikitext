@@ -1,0 +1,73 @@
+'''''Warning: It has since become knowledge that the new ELoS formula does not necessarily project ELoS values accurately either (although it is still far better than the old formula). These values are only applicable for those at HQ107 or very close to it! Adjustments for other levels are still being tested.'''''
+
+
+Just dumping results regarding 6-2's [[Line_of_Sight#Effective_Line_of_Sight_.28new_formula.29|refined ELoS]] rules before I update the page. Doing 10 runs of each integer to check consistency.
+==26==
+
+'''26.06 LoS''':
+
+*1 run  H>J
+*2 runs H>K
+'''26.18 LoS'''
+*1 run  H>J
+*3 runs H>K
+'''26.54 LoS'''
+*3 runs H>K
+
+==27==
+'''27.3 LoS'''
+*1 run H>J
+*2 run H>K
+
+'''27.71 LoS'''
+*1 run H>J
+*3 runs H>K
+'''27.87 LoS'''
+*2 runs H>J
+*1 run H>K
+==28==
+'''28.11 LoS'''
+*1 run H>K
+'''28.22 LoS'''
+*1 run H>J
+*2 runs H>K
+'''28.78 LoS'''
+*1 run H>J (!)
+*5 runs H>K
+==29==
+'''29.32 LoS'''
+*3 runs H>K
+'''29.44 LoS'''
+*2 runs H>K
+'''29.81 LoS'''
+*5 runs H>K
+==30==
+'''30.39 LoS'''
+*5 runs H>K
+'''30.76 LoS'''
+*4 runs H>K
+'''30.88 LoS'''
+*1 run H>K
+==31==
+I already confirmed being sent to I-node at 31.44 before this test, so I will only test values around it for this integer.
+
+'''31.36 LoS'''
+*4 runs H>K
+*1 run I (!)
+'''31.39 LoS'''
+*3 runs H>K
+'''31.42 LoS'''
+*2 runs H>K
+==32==
+'''32.16 LoS'''
+*3 runs I
+'''32.28 LoS'''
+*2 runs I
+'''32.35 LoS'''
+*2 runs I
+'''32.46 LoS'''
+*3 runs I
+
+==Conclusion==
+29~30 refined ELoS guarantees, or has an incredibly high chance of going H whilst avoiding the dead end node. The boss can still be reached via H with a few points less than 29, but is not guaranteed (there will have a chance of dead-ending). It becomes possible to route to I upon 31 ELoS, but isn't guaranteed until 32+ ELoS.
+[[Category:Blog posts]]

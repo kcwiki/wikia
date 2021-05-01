@@ -1,0 +1,145 @@
+==Introduction==
+KC3 is an Game Player, which is a Chrome Extension allowing Admirals to play KanColle by fetching API links for you, remembering and re-using it until you specify to get a new link, and ultimately adds convenience by displaying game information in a user-friendly manner.
+
+'''A one-click install''' from the Chrome WebStore and you're set!
+
+Region cookies '''allow login even without VPN!'''
+
+This is a continuation of [[User_blog:Dragonjet/KanCo!_Tools|KanCo! Tools]] (KC!T), but will carry "KC3" as its new name. This should avoid confusion with [http://kancolletool.github.io/ KancolleTool] (KcT), which is a totally separate project, and is a primary suspect in the Spring 2014 bans.
+
+==Installation==
+The extension is available on the Chrome WebStore, don't worry '''it's free'''. This ultimately solves the problem with [[User_blog:Dragonjet/KanCo!_Tools|KanCo! Tools]] wherein Chrome automatically deletes, manually installed extensions.
+
+* <span style="font-size:16px; font-weight:bold;">[https://chrome.google.com/webstore/detail/kancolle-command-center/kglcokekkkmblhhkgkdnjccbpdnhocge Visit on Chrome WebStore]</span>
+
+Once installed, open the KC3 menu on the top-right of your Chrome (shimakaze icon), and select "'''Get new API link'''" this will lead your to the DMM website. Make sure, you have '''Region Cookies''' and '''Game Redirect''' enabled.
+
+===Updates===
+'''Release 011'''
+* Updated Quest Translations
+* Ability to disable Quest Translations
+* Updated ship icons
+* Critical fix to HP bar colors
+* Revised morale icons
+* Minor UI Updates and code clean-up
+
+{| class="mw-collapsible mw-collapsed wikitable"
+!Release History
+|-
+|
+'''Release 010'''
+* Stop timers on Instant Repair and Instant Construction
+* Changed HP background bar color to a darker shade
+* Added Quest Translations (partial)
+* Merged version info onto "Config" tab
+* Updated with latest ship portraits: Hamakaze, Amatsukaze, Taigei, Urakaze, Kai nis
+* Ships Tab: Added Level and Morale columns. Removed Kanji and Range columns.
+
+'''Release 009'''
+* No need to restart game when opening/closing Admiral's panel
+* Expedition, Repair, Construction Timers now working
+* Screenshot Tool (Options: View in new Tab, Download, Auto-upload to imgur)
+
+'''Release 008'''
+* Fix: Removed restart when clicking on admiral name
+* Added Exp Left for LevelUp on main fleet
+* Enabled "Forget API Link" on Config
+* Added stats and equipment on Ship List
+
+'''Release 007'''
+* Fix: Main fleet not showing correct info
+* Added "Ships" tab with full ship list
+* Added "Items" tab. Empty.
+
+'''Release 006'''
+*Change the Game Start flow to avoid refresh
+*Added Updates tab to show current version and changelog
+*Ship and Item count updates more often
+*Fleet status updates mid-sortie
+*Fixed: Wrong ship type code on Main Fleet
+
+'''Release 005'''
+*First-time open, asks for your API link so you can input
+*Admiral's Panel: Tab "Home" shows your fleet, and their status & morale
+*Admiral's Panel: Tab "Config" shows your latest API link
+*Fixed Region Cookies. No need to re-login to utilize the feature.
+
+'''Release 004'''
+*Initial publish on Chrome WebStore
+*Admiral's panel headers shows basic info
+*All tabs on the Admiral's panel are still under construction
+|}
+
+==Features==
+<span style="font-size:16px; font-weight:bold; color:#0099CC;">Command Center</span> ''Play anytime!''<br />
+This is a special game page where you can play using API link. Each time you open it will use your latest API link. No need to copy and hide it somewhere else, the app itself remembers your API link. If you want to refresh the API link, there's a separate feature for that.
+
+<span style="font-size:16px; font-weight:bold; color:#0099CC;">Admiral's Panel</span> ''See everything!''<br />
+A very useful tool, reminiscent of KancolleViewer (KCV). Mostly of the same purpose, to show you useful and important game data in a user-friendly way. Although, alot more is planned for this tool.
+
+This can be accessed through the Chrome DevTools (HotKey: [F12]). A new tab is added on the devtools panel where you can access your game information.
+
+'''Admiral's Panel also works if you play on DMM game site itself!'''
+
+<span style="font-size:16px; font-weight:bold; color:#0099CC;">Region Cookie Method</span> ''LOGIN EVEN WITHOUT VPN!''<br />
+If this is enabled, you won't need VPN/Proxy to access the game on DMM website. You just need to go there on DMM, set the language as japanese, and its done. You can now go to the game page and play without restriction. No more API links.
+
+<span style="font-size:16px; font-weight:bold; color:#0099CC;">Getting new API link</span> ''Fast and Easy Refresh Link!''<br />
+If you need to refresh your API link (maintenance or monthly reset), or just prefer other third-party viewers, just enable "redirect" on the menu, and everytime you login to the DMM game page, you will be redirected to the Command Center, where you can view your API link.
+
+==FAQ==
+<span style="font-size:16px; font-weight:bold; color:#0099CC;">Is this extension ban-safe?</span><br />
+[[User_blog:Dragonjet/KanCo!_Tools|KanCo! Tools]] never had any reports of users getting banned, even after the Spring 2014 elimination rounds! As this is the continuation of that project, you can rest easy.
+
+I've been observing the API for months, as some of you might already know. I've been doing some [[User_blog:Dragonjet/Decoding_the_Ships_Master_Record|quick API decodes]] each update for fast and accurate information delivery to the community.
+
+I know what is illegal and what's suspicious here on the back-end. This extension '''never''' makes "synthetic" / "unnatural" API calls to the server. The information shown on the Admiral's panel is from the Chrome's Network Logs (devtools), ''see methodology section''.
+
+<span style="font-size:16px; font-weight:bold; color:#0099CC;">Is this extension  hacker-safe?</span><br />
+''Source'': [[User_blog:Dragonjet/KanColle_Command_Center#comm-80155|80155]]<br />
+1) This extension does not store or send your username/password to anyone or anywhere. Users can inspect the extension's running code via Sources tab of developer tools.<br />
+2) The game API and the DMM website does not use https, so your packets are unencrypted and can be intercepted, especially when using VPN. I'm not into networking, so even I, can only guess on that possibility.
+
+<span style="font-size:16px; font-weight:bold; color:#0099CC;">Region Cookies doesn't work! I still see Error Area.</span><br />
+As mentioned in the features section, when you're on DMM, set Language as Japanese on the top right on the website. Then refresh once, then just click on the '''Get new API Link''' from the KC3 menu again.
+
+
+==Tips and Tricks==
+
+===Horizontal Player===
+{|
+|-
+|style="background:#ccc; width:100px;" |[[File:Dock_btn.jpg|100px]]
+|style="width:5px;" |
+|valign="top" |Click and Hold this button. When the drop-down appears, choose the icons that indicates a shade to the right. This is where the Admiral's panel will be docked. You can also separate the Admiral's panel onto a separate window by choosing the other drop-down item.
+|}
+
+===Separate Admiral's Panel on a new window===
+{|
+|-
+|style="background:#ccc; width:100px;" |[[File:Undock.jpg|100px]]
+|style="width:5px;" |
+|valign="top" |Same drop-down button as setting horizontal player, but now select the icon that indicates two overlapping windows.
+|}
+
+===Create desktop shortcuts===
+{|
+|-
+|style="background:#ccc; width:100px;" |[[File:App_shortcut.jpg|100px]]
+|style="width:5px;" |
+|valign="top" |
+|}
+
+
+==Source==
+'''See on GitHub'''<br />
+https://github.com/dragonjet/KC3
+
+
+==Screenshots and Diagrams==
+<gallery orientation="landscape">
+Kc3 ss.jpg
+kc3_ss4.jpg
+Kc3_dataflow.jpg
+</gallery>
+[[Category:Blog posts]]

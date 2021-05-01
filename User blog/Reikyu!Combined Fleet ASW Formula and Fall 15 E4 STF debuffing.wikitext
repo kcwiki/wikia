@@ -1,0 +1,1048 @@
+This blog will first take a look at the combined fleet ASW formula as english wiki and JP wikiwiki are currently different.  The second part will take a look at whether or not SS hime can be armor debuffed while as STF.
+
+
+
+[[Combined Fleet]] formation 1 is listed with an ASW mod of 1.0 for main and escort fleet .
+
+[http://wikiwiki.jp/kancolle/?cmd=read&page=%CF%A2%B9%E7%B4%CF%C2%E2 Wikiwiki] formation 1 is listed with an ASW mod of 1.3 for main and escort fleet.
+
+
+
+Testing for armor debuffing initially gave me very strange readings which didn't make any sense.  I noticed the reference to wikwiki on the combined fleet page and saw that wikiwiki was using a 1.3 mod instead of 1.0.  It could be that our combined fleet page was based off old wikiwiki data or numbers were changed at some point. 
+
+
+
+=Yuubari Test=
+
+
+
+Fall 2015 - E4 Hard - Post clear farming - Node D
+
+Equipment: 3 x Type 4 Sonar, 1 x Type 3 Depth Charge
+
+Base ASW stat: 57
+
+Calculated ASW damage using (2 * √(Ship ASW) + 1.5 * Equipment ASW + Type) * Bonus = 108.21
+{| border="0" cellspacing="0" cols="2" frame="VOID" rules="NONE"
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Enemies
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Armor
+|-
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Gold So
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|42
+|-
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Red Yo
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|27
+|-
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Blue Yo
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|9
+|-
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Scrub Ka
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|7
+|}
+Table 1: The armor values of the 4 enemies that can appear
+
+
+{| border="0" cellspacing="0" cols="12" frame="VOID" rules="NONE"
+| align="CENTER" height="17" style="border-bottom: 1px solid #000000" width="36"|Run
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" width="88"|Engagement
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" width="86"|Yuubari Day
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" width="61"|Gold So
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" width="57"|Red Yo
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" width="60"|Blue Yo
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" width="68"|Scrub Ka
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000" width="94"|Yuubari Night
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" width="61"|Gold So
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" width="57"|Red Yo
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000" width="60"|Blue Yo
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-right: 1px solid #000000" width="68"|Scrub Ka
+|-
+| align="CENTER" height="17"|1
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000"|Green T
+| align="CENTER" style="border-top: 1px solid #000000"|chuuha
+| align="CENTER" style="border-top: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-right: 1px solid #000000"|96
+| align="CENTER" style="border-left: 1px solid #000000"|chuuha
+| align="CENTER"|
+| align="CENTER"|73
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|
+|-
+| align="CENTER" height="17"|2
+| align="CENTER" style="border-left: 1px solid #000000"|Head On
+| align="CENTER"|
+| align="CENTER"|58
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000"|
+| align="CENTER"|
+| align="CENTER"|83
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|
+|-
+| align="CENTER" height="17"|3
+| align="CENTER" style="border-left: 1px solid #000000"|Green T
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER"|'''134'''
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000"|
+| align="CENTER"|74
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|
+|-
+| align="CENTER" height="17"|4
+| align="CENTER" style="border-left: 1px solid #000000"|Parallel
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|99
+| align="CENTER" style="border-left: 1px solid #000000"|
+| align="CENTER"|61
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|
+|-
+| align="CENTER" height="17"|5
+| align="CENTER" style="border-left: 1px solid #000000"|Parallel
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|97
+| align="CENTER" style="border-left: 1px solid #000000"|
+| align="CENTER"|
+| align="CENTER"|78
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|
+|-
+| align="CENTER" height="17"|6
+| align="CENTER" style="border-left: 1px solid #000000"|Red T
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER"|50
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000"|
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER"|
+| align="CENTER" style="border-right: 1px solid #000000"|79
+|-
+| align="CENTER" height="17" style="border-bottom: 1px solid #000000"|7
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000"|Green T
+| align="CENTER" style="border-bottom: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000"|83
+| align="CENTER" style="border-bottom: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000"|61
+| align="CENTER" style="border-bottom: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-right: 1px solid #000000"|
+|}
+Table 2: Total of 7 runs to node D with Yuubari as flagship of escort fleet.  ASW formation used
+
+
+{| border="0" cellspacing="0" cols="8" frame="VOID" rules="NONE"
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="77"|ASW Dam
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="107"|1.3 mod
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="104"|softcap
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="96"|engagement
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="38"|
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="107"|chuuha 1.3mod
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="107"|chuuha softcap
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|engagement
+|-
+| align="CENTER" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|108.21
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|140.68
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|106.38
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|parallel
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|98.48
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|parallel
+|-
+| align="CENTER" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|168.82
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|108.3
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|green T
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|118.17
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|104.26
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|green T
+|-
+| align="CENTER" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|112.54
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|103.54
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|head on
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|78.78
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|head on
+|-
+| align="CENTER" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|84.41
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|red T
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|59.1
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|red T
+|}
+Table 3: Yuubari's theoretical ASW damage with 1.3x mod (from ASW formation) and engagement with resulting softcap values for healthy and chuuha conditions.
+
+
+
+Establishing the softcap of 100.
+
+See runs #3 and #7
+
+Red Yo has armor value of 27 so damage mitigation will range from (18.9 - 35.1)
+
+Without a softcap Yuubari's 108.21 x 1.2 (green T) = 129.85 damage
+
+Run #7: 129.85 - 83 damage = 46.85 armor roll (outside possible roll)
+
+Run #4: 129.85 x 1.5 (crit damage) - 134 damage = 60.78 armor roll (outside possible roll)
+
+These examples excludes the 1.3x ASW roll, which would throw the armor roll values even more out the window.
+
+
+
+Establishing the modifier of 1.3x instead of 1.0x
+
+Scrub Ka has armor value of 7 so damage mitigation will range from (4.9 - 9.1)
+
+Run #1, Green T chuuha with 1.3x mod would result in 104.26 softcap and did 96 damage.  Armor roll = 8.26 (in range)
+
+If ASW mod was only 1.0, the resulting damage would be 108.21 x 1.0 x 1.2 (green T) x 0.7 (chuuha) = 90.9 damage (less than 96)
+
+
+
+Establishing yasen formation + engagement modifier persist into day.
+
+Run #6 resulted in 79 damage.  108.21 x 1.3 (asw mod) x 0.6 (red T) = 84.4 damage (armor roll of 5.4 is in range)
+
+
+
+You can play with the other values but they all match up within the possible armor roll ranges.
+
+
+
+=STF Armor Break Test=
+
+
+Fall 2015 - E4 Hard - Post clear farming - Boss node - STF combined fleet - SS Hime armor value = 73
+
+
+{| border="0" cellspacing="0" cols="8" frame="VOID" rules="NONE"
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="74"|Ship
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="81"|ASW equip
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="71"|ASW stat
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="77"|ASW Dam
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="61"|1.3 mod
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="119"|'''Softcap Parallel'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="120"|'''Softcap Green T'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="69"|'''Head On'''
+|-
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|32
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|77
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|90.3
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|117.39
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''104.17'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''106.39'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''93.91'''
+|-
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|38
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|36
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|94.3
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|122.59
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''104.75'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''106.86'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''98.07'''
+|-
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|28
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|64
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|81.7
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|106.21
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''102.49'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''105.24'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''84.97'''
+|-
+| align="CENTER" height="17" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|32
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|71
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|89.5
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|116.35
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''104.04'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''106.29'''
+| align="CENTER" style="border-top: 1px solid #000000; border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''93.08'''
+|}
+Table 4: Theoretical ASW damage with 1.3x mod (from ASW formation) for various engagements while healthy.  Head on formations do not reach softcap. 
+
+Kuma and Ooyodo were in main fleet.
+
+Hatsuharu and Verniy were in escort fleet.
+
+
+
+Runs with NO armor break
+{| border="0" cellspacing="0" cols="8" frame="VOID" rules="NONE"
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Run
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Engagement
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="92"|Ship
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Damage
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Damage #2
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Notes
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Armor Roll
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BWS
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|1
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|parallel
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|37
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|67.17
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|10
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|94.75
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|22
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|80.49
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|43
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|61.04
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BB Hime
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|2
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|green T
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|29
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|77.39
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|19
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|chuuha
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|83.98
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|41
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|64.24
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BB Hime
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|3
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|head on
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|15
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|taiha
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|10
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|88.07
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo #2
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|8
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|90.07
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|28
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|56.97
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu #2
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|26
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|yasen hit
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|58.97
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|33
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|60.08
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BWS
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|4
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|head on
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|17
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|76.91
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma #2
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|30
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|63.91
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|43
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|55.07
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|33
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|60.08
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BB Hime
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|5
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|parallel
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|27
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|77.17
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|94
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|crit
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|63.13
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|17
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|87.04
+|}
+Table 5: Five runs to boss with STF and NO armor breaking
+
+
+
+Run #3 Kuma's taiha hit excluded because scratch damage.
+
+Run #5 had the only crit which was Ooyodo's 94 in parallel resulting in an armor roll of 63.13
+
+SS Hime with 73 armor will have damage mitigation ranging from (51.1 - 94.9)
+
+All armor rolls fell within the 51.1 - 94.9 interval.
+
+Average armor roll: 71.92
+
+
+
+
+
+Armor break was performed by S ranking nodes J and M once each.  I only had to visit each node once to S rank.
+{| border="0" cellspacing="0" cols="7" frame="VOID" rules="NONE"
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Run
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Engagement
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Ship
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Damage
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Notes
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000" width="86"|Armor Roll
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BWS
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|1
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|head on
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|48
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|45.91
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|42
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|56.07
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|45
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|39.97
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''BWS'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''2'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''parallel'''
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''Kuma'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''110'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''crit'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''46.26'''
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BB Hime
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|3
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|green T
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|57
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|49.86
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|57
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|49.29
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BWS
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|4
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|green T
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|71
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|35.39
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|50
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|56.86
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BWS
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|5
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|parallel
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|chuuha
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|taiha
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|61
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|41.49
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|52
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|52.04
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BWS
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|6
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|parallel
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|48
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|56.75
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|71
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|yasen
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|33.04
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|BWS
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|7
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|parallel
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Kuma
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|60
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|44.17
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|70
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|34.04
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''BWS'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''8'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''head on'''
+| align="LEFT" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''Kuma'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''98'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''crit'''
+| align="CENTER" style="border-top: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|'''42.87'''
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Ooyodo
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|Hatsuharu
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|-
+| align="LEFT" height="17" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="LEFT" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|Verniy
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+| align="CENTER" style="border-bottom: 1px solid #000000; border-left: 1px solid #000000; border-right: 1px solid #000000"|
+|}
+
+Table 6: Eight STF runs to boss after S ranking nodes J and M once each.
+
+
+
+Runs #2 and #8 are without question crits.  Armor rolls were 46.26 and 42.87.  These fall completely outside the 51.1 - 94.9 interval.
+
+All the other damage values are substantially higher compared to the no armor break runs. 
+
+Run #6 if you took Verniy's yasen hit of 71 and assumed it was actually a crit, the armor roll would be 85.06.  While this would fit in the 51.1 - 94.9 interval, for 42.87 and 85.06 to both coexist the base armor value would have to be 63.97 (and even then that would fail the 0.7x - 1.3x armor roll window).
+
+
+
+Average armor roll: 45.6
+
+Low: 33.04
+
+High: 56.86
+
+If the boss had x = 45.6 armor, all armor rolls fell within .72x - 1.25x
+
+
+
+=Conclusion=
+
+1) As I see no reason to doubt wikiwiki in this regards as our combined fleet ASW modifiers on ASW formation are clearly wrong, these values should be updated with wikiwiki's values until further testing proves otherwise.  Our combined fleet page specifically references wikiwiki's combined fleet page, yet it is not even using the correct values it is referencing.  1.3x appears close enough to be the modifier when using ASW formation in combined fleet from what I can tell.
+
+2) STF did apply armor debuffs even though there was no API or graphical change.  The two crit values fall way outside the theoretical armor rolls.  The damage between debuff and non debuff are night and day.  15 hits the LOWEST being 42 in a head on versus 17 hits with the HIGHEST being 43. 
+
+For all I can tell the API call was simply to display graphic #1 or #2 and nothing more.
+[[Category:Blog posts]]

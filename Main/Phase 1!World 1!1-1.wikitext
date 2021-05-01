@@ -1,0 +1,157 @@
+{{Map/Header}}
+{{Map/Info
+|en = Sea in Front of the Naval Base
+|jp = 鎮守府正面海域
+|romaji = Chinjufu-shōmen kaiiki
+|strategy_name = Coastal Waters Defense
+|strategy_name_ja = 近海警備
+|strategy_info = Mobilize for a patrol of the waters outside the naval base!
+|strategy_info_ja = 鎮守府正面近海の<br>警備に出動せよ！
+|exp_ship = 30
+|exp_hq = 10
+|exp_hq_boss = 20
+}}
+{{Map/Branching
+|expand = true
+|id = 1-1
+|A -> B, C = * Random 50%/50% chance
+}}
+Easy map for [[Morale/Fatigue|flagship sparkling]].
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=225|y=158}}
+{{Map/ImageNode|B|x=340|y=80}}
+{{Map/ImageNode|C|x=322|y=220}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵偵察艦
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Destroyer I-Class
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Destroyer Ro-Class
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Destroyer Ha-Class
+}}
+{{Map/Nodes|name=敵はぐれ艦隊
+|B
+|Normal
+|{{Formation|Line Ahead}}
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}
+|Destroyer Ro-Class
+|Destroyer I-Class
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+}}
+{{Map/Nodes|name=敵主力艦隊
+|C
+|Boss
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|C
+|Boss
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|C
+|Boss
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|C
+|Boss
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class
+|Destroyer Ha-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, C
+|boss = C
+|Akatsuki: A, B, C
+|Akebono: A, B, C
+|Arare: A, B, C
+|Arashio: A, B, C
+|Asashio: C
+|Ayanami: A, B, C
+|Fubuki: C
+|Fumizuki: A, B, C
+|Hatsuharu: A, B, C
+|Hatsushimo: A, B, C
+|Hatsuyuki: A, B, C
+|Hibiki: A, B, C
+|Ikazuchi: A, B, C
+|Inazuma: A, B, C
+|Isonami: A, B, C
+|Jintsuu: A, B, C
+|Kagerou: C
+|Kasumi: A, B, C
+|Kikuzuki: A, C
+|Kisaragi: A, B, C
+|Kiso: C
+|Kitakami: C
+|Kuma: B, C
+|Kuroshio: C
+|Michishio: A, B, C
+|Mikazuki: A, C
+|Miyuki: A, B, C
+|Mochizuki: A, B, C
+|Murakumo: C
+|Murasame: A, B, C
+|Mutsuki: A, C
+|Nagatsuki: A, B, C
+|Naka: A, B, C
+|Nenohi: A, B, C
+|Oboro: A, B, C
+|Ooshio: A, B, C
+|Samidare: A, B, C
+|Satsuki: A, B, C
+|Sazanami: A, C
+|Sendai: C
+|Shigure: A, B, C
+|Shikinami: A, B, C
+|Shiranui: C
+|Shiratsuyu: C
+|Shirayuki: A, B, C
+|Suzukaze: A, B, C
+|Tama: C
+|Tatsuta: C
+|Tenryuu: A, B, C
+|Ushio: A, B, C
+|Wakaba: A, B, C
+|Yuudachi: A, B, C
+}}
+{{SectionEnd}}

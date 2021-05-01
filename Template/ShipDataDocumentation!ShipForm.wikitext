@@ -1,0 +1,551 @@
+==Ship Form Data Format==
+{{Notice|"Refer to" are meant to refer to API and client code, see for example [https://github.com/andanteyk/ElectronicObserver/blob/master/ElectronicObserver/Other/Information/apilist.txt][https://github.com/andanteyk/ElectronicObserver/blob/master/ElectronicObserver/Other/Information/kcmemo.md][https://github.com/kcwiki/kancolle-data][https://github.com/KagamiChan/kcsapi.ts].}}
+
+The table for each form should contain a number of key value pairs that describe the ship.
+
+===<code>_name</code>===
+String. The name of the ship. 
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_nick</code>===
+String. The nickname of the ship.
+
+If specified, <code>_japanese_nick</code> should also be specified.
+
+Omit or set to <code>nil</code> if none.
+
+===<code>_suffix</code>===
+String. The suffix of the ship, e.g. Kai, Kai Ni.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_module_name</code>===
+String. The name of the data module the ship resides in.
+
+Defaults to <code>_name</code>. Omit or set to <code>nil</code> if not different from <code>_name</code>.
+
+===<code>_api_id</code>===
+Integer. The API id of the ship. Refer to <code>api_id</code>.
+
+Note that for player ships <code>_api_id = api_id</code>, while for enemy ships <code>_api_id = api_id - 1000</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_id</code>===
+Integer. The id of the ship as shown in the Ship Library. Refer to <code>api_sortno</code>.
+
+However, if this ship shares a slot in the ship list with another ship, <code>api_sortno</code> may not match the id it is listed under in the Ship Library. In this case use the Ship Library id.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_true_id</code>===
+Integer. The true id of the ship.
+
+If the Ship Library id does not match the <code>api_sortno</code>, the <code>api_sortno</code> should be recorded as the <code>_true_id</code>.
+
+If the Ship Library id does match the <code>api_sortno</code>, set this to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_rarity</code>===
+Integer. A number from 1-8 indicating the rarity of the ship. Refer to <code>api_backs</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_back</code>===
+Integer. A number from 1-8 indicating the background of the card of the ship. Defaults to <code>_rarity</code>.
+
+===<code>_overlay</code>===
+String. An overlay from [[Module:Effects]] for when <code>_rarity</code> is 8. This is used to simulate the "sakura" or "stars" effect in [[Module:ShipInfoKai]].
+
+Defaults to <code>"bloom"</code>. The only other overlay available currently is <code>"stars"</code>.
+
+===<code>_class</code>===
+String. The class of the ship.
+
+Module:<code>_class</code> will be loaded to provide data on the ship class.
+
+The ship class should be named according to the class shown in the in-game Album.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_class_number</code>===
+String. The number specifying that the ship is the _th ship in its class. Use the number in the in-game Album. If the ship is generic and doesn't have a class number, use <code>false</code>.
+
+If unknown, set to <code>nil</code>.
+
+===<code>_type</code>===
+Integer. The type of the ship. Refer to <code>api_stype</code>. 
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_pillbox</code>===
+Boolean. Whether or not this ship is a pillbox. Defaults to <code>false</code>.
+
+Only used to distinguish installations and pillboxes, both of which have 0 <code>_speed</code>.
+
+===<code>_card</code>===
+String. An override for the name of the card image on [[Kancolle Wiki]]. Omit "File:" from the image.
+
+If the fields <code>_api_id</code>, <code>_type</code>, <code>_name</code>, <code>_suffix</code> are available, then the system should be able to derive the filename if it matches the naming convention. For circumstances where the above fields are unavailable, use this field to explicitly specify the filename.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_card_reference</code>===
+String. Optional. A reference to a ship that should be used to obtain the card for this ship in "name/suffix" form.
+
+The name portion of the reference can be omitted if it refers to the same data module.
+
+===<code>_battle_card</code>===
+String. An override for the name of the battle card image on [[Kancolle Wiki]]. Omit "File:" from the image.
+
+See [[#card]].
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_battle_card_layers</code>===
+Table. A list of strings specifying layers to overlay on top of the battle card. See [[Module:ShipBattleCardKai]]'s <code>_battle_card_layers</code> for available layers.
+
+This is not inherited through <code>_battle_card_reference</code>.
+
+===<code>_battle_card_reference</code>===
+String. Optional. A reference to a ship that should be used to obtain the battle card for this ship in "name/suffix" form.
+
+See [[#card_reference]].
+
+===<code>_cg</code>===
+String. An override for the name of the CG image on [[Kancolle Wiki]]. Omit "File:" from the image.
+
+See [[#card]].
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_cg_reference</code>===
+String. Optional. A reference to a ship that should be used to obtain the CG for this ship in "name/suffix" form.
+
+See [[#card_reference]].
+
+===<code>_japanese_name</code>===
+String. The japanese name of the ship. Refer to <code>api_name</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_japanese_nick</code>===
+String. The japanese nickname of the ship.
+
+If specified, <code>_nick</code> should also be specified.
+
+Omit or set to <code>nil</code> if none.
+
+===<code>_reading</code>===
+String. The furigana for the <code>_japanese_name</code> of the ship. <code>api_yomi</code> may provide a base for this value. 
+
+For ships that have multiple names, <code>api_yomi</code> may contain the readings for all of the names.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_reading_nick</code>===
+String. The furigana for the <code>_japanese_nick</code> of the ship.
+
+Only valid when <code>_japanese_nick</code> is set.
+
+===<code>_hp</code>===
+Integer. The base hp of the ship. Refer to <code>api_taik[0]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_hp_max</code>===
+Integer. The max hp of the ship. Refer to <code>api_taik[1]</code>.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_firepower</code>===
+Integer. The base firepower of the ship. Refer to <code>api_houg[0]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_firepower_max</code>===
+Integer. The max firepower of the ship. Refer to <code>api_houg[1]</code>.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_firepower_mod</code>===
+Integer. The amount of firepower the ship grants through [[Modernization]]. Refer to <code>api_powup[0]</code>.
+
+If none is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_armor</code>===
+Integer. The base armor of the ship. Refer to <code>api_souk[0]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_armor_max</code>===
+Integer. The max armor of the ship. Refer to <code>api_souk[1]</code>.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_armor_mod</code>===
+Integer. The amount of armor the ship grants through [[Modernization]]. Refer to <code>api_powup[3]</code>.
+
+If none is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_torpedo</code>===
+Integer. The base torpedo of the ship. Refer to <code>api_raig[0]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_torpedo_max</code>===
+Integer. The max torpedo of the ship. Refer to <code>api_raig[1]</code>.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_torpedo_mod</code>===
+Integer. The amount of torpedo the ship grants through [[Modernization]]. Refer to <code>api_powup[1]</code>.
+
+If none is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_evasion</code>===
+Integer. The [[Modernization#level|base (f(1))]] evasion of the ship. Refer to:
+*Displayed value for level 1 ships without equipment (<code>api_kaihi[0]</code> in <code>api_port/port</code>).
+*Displayed base evasion in kandex (<code>api_kaih</code> in <code>api_get_member/picture_book</code>).
+*Or use the formula method.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_evasion_max</code>===
+Integer. The [[Modernization#level|max (f(99))]] evasion of the ship. Refer to:
+*Displayed value for level 99 ships without equipment (<code>api_kaihi[0]</code> in <code>api_port/port</code>).
+*<code>api_kaihi[1]</code> in <code>api_port/port</code> or <code>api_get_member/ship3</code> at any level.
+*Or use the formula method.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_aa</code>===
+Integer. The base AA of the ship. Refer to <code>api_tyku[0]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_aa_max</code>===
+Integer. The max AA of the ship. Refer to <code>api_tyku[1]</code>.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_aa_mod</code>===
+Integer. The amount of AA the ship grants through [[Modernization]]. Refer to <code>api_powup[2]</code>.
+
+If none is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_asw</code>===
+Integer. The [[Modernization#level|base (f(1))]] ASW of the ship. Refer to:
+*Displayed value for level 1 ships without equipment (<code>api_taisen[0]</code> in <code>api_port/port</code>).
+*Base ASW in kandex (not displayed, <code>api_tais</code> in <code>api_get_member/picture_book</code>).
+*Or use the formula method.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_asw_max</code>===
+Integer. The [[Modernization#level|max (f(99))]] ASW of the ship. Refer to:
+*Displayed value for level 99 ships without equipment (<code>api_taisen[0]</code> in <code>api_port/port</code>).
+*<code>api_taisen[1]</code> in <code>api_port/port</code> or <code>api_get_member/ship3</code> at any level.
+*Or use the formula method.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_speed</code>===
+Integer. The speed of the ship. Refer to <code>api_soku</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_los</code>===
+Integer. The [[Modernization#level|base (f(1))]] LOS of the ship. Refer to:
+*Displayed value for level 1 ships without equipment (<code>api_sakuteki[0]</code> in <code>api_port/port</code>).
+*Or use the formula method.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_los_max</code>===
+Integer. The [[Modernization#level|max (f(99))]] LOS of the ship. Refer to:
+*Displayed value for level 99 ships without equipment (<code>api_sakuteki[0]</code> in <code>api_port/port</code>).
+*<code>api_sakuteki[1]</code> in <code>api_port/port</code> or <code>api_get_member/ship3</code> at any level.
+*Or use the formula method.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_range</code>===
+Integer. The range of the ship. Refer to <code>api_leng</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_luck</code>===
+Integer. The base luck of the ship. Refer to <code>api_luck[0]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_luck_max</code>===
+Integer. The max luck of the ship. Refer to <code>api_luck[1]</code>.
+
+If equal to the base stat, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_luck_mod</code>===
+Integer. The amount of luck the ship grants through [[Modernization]].
+
+If none is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_buildable</code>===
+Boolean. Whether or not this ship is buildable in normal [[Construction]].
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_buildable_lsc</code>===
+Boolean. Whether or not this ship is buildable in [[Large Ship Construction]].
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_build_time</code>===
+Integer. The amount of minutes it takes to build the ship. Refer to <code>api_buildtime</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_level</code>===
+Integer. The level at which a ship can remodel into this form. Refer to <code>api_afterlv</code> of the previous form.
+
+If this ship is not a remodel, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_ammo</code>===
+Integer. The amount of ammo required to remodel into this form. Refer to <code>api_afterbull</code> of the previous form.
+
+Only used when <code>_remodel_level</code> is <code>true</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_steel</code>===
+Integer. The amount of ammo required to remodel into this form. Refer to <code>api_afterfuel</code> of the previous form.
+
+Only used when <code>_remodel_level</code> is <code>true</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_development_material</code>===
+Integer. The amount of development materials required to remodel into this form. Refer to <code>vo.MasterShipUpgradeData</code>.
+
+Only used when <code>_remodel_level</code> is <code>true</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_construction_material</code>===
+Integer. The amount of construction materials required to remodel into this form. Refer to <code>vo.MasterShipUpgradeData</code>.
+
+Only used when <code>_remodel_level</code> is <code>true</code>.
+
+Optional.
+
+===<code>_remodel_blueprint</code>===
+Boolean. Whether a blueprint is needed to remodel into this form. Refer to <code>api_drawing_count</code>.
+
+Only used when <code>_remodel_level</code> is <code>true</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_catapult</code>===
+Boolean. Whether a prototype deck catapult is needed to remodel into this form. Refer to <code>api_catapult_count</code>.
+
+Only used when <code>_remodel_level</code> is <code>true</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_from</code>===
+String. A reference to the ship form that this ship remodels from in "name/suffix" form.
+
+Set to <code>false</code> if this ship is not a remodel.
+
+===<code>_remodel_to</code>===
+String. A reference to the ship form that this ship remodels to in "name/suffix" form.
+
+Set to <code>false</code> if this ship does not remodel.
+
+===<code>_remodel_to_level</code>===
+Integer. The level at which a ship can remodel into the <code>_remodel_to</code> form. Refer to <code>api_afterlv</code>. Use this only when <code>_remodel_from</code> is the same as <code>_remodel_to</code> (ie. a reversible remodel).
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_to_ammo</code>===
+Integer. The amount of ammo required to remodel into the <code>_remodel_to</code> form. Refer to <code>api_afterbull</code>. Use this only when <code>_remodel_from</code> is the same as <code>_remodel_to</code> (ie. a reversible remodel).
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_to_steel</code>===
+Integer. The amount of ammo required to remodel into the <code>_remodel_to</code> form. Refer to <code>api_afterfuel</code>. Use this only when <code>_remodel_from</code> is the same as <code>_remodel_to</code> (ie. a reversible remodel).
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_to_development_material</code>===
+Integer. The amount of development materials required to remodel into the <code>_remodel_to</code> form. Refer to <code>vo.MasterShipUpgradeData</code>. Use this only when <code>_remodel_from</code> is the same as <code>_remodel_to</code> (ie. a reversible remodel).
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_to_construction_material</code>===
+Integer. The amount of construction materials required to remodel into the <code>_remodel_to</code> form. Refer to <code>vo.MasterShipUpgradeData</code>. Use this only when <code>_remodel_from</code> is the same as <code>_remodel_to</code> (ie. a reversible remodel).
+
+Optional.
+
+===<code>_remodel_to_blueprint</code>===
+Boolean. Whether a blueprint is needed to remodel into the <code>_remodel_to</code> form. Refer to <code>api_drawing_count</code>. Use this only when <code>_remodel_from</code> is the same as <code>_remodel_to</code> (ie. a reversible remodel).
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_remodel_to_catapult</code>===
+Boolean. Whether a prototype deck catapult is needed to remodel into the <code>_remodel_to</code> form. Refer to <code>api_catapult_count</code>. Use this only when <code>_remodel_from</code> is the same as <code>_remodel_to</code> (ie. a reversible remodel).
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_fuel</code>===
+Integer. The max amount of fuel consumed. Refer to <code>api_fuel_max</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_ammo</code>===
+Integer. The max amount of ammo consumed. Refer to <code>api_bull_max</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_scrap_fuel</code>===
+Integer. The amount of fuel returned when the ship is scrapped. Refer to <code>api_broken[0]</code>.
+
+If none is returned, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_scrap_ammo</code>===
+Integer. The amount of ammo returned when the ship is scrapped. Refer to <code>api_broken[1]</code>.
+
+If none is returned, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_scrap_steel</code>===
+Integer. The amount of steel returned when the ship is scrapped. Refer to <code>api_broken[2]</code>.
+
+If none is returned, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_scrap_baux</code>===
+Integer. The amount of bauxite returned when the ship is scrapped. Refer to <code>api_broken[3]</code>.
+
+If none is returned, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_wikipedia</code>===
+String. Wikipedia page for the ship. For example, <code>[[wikipedia:Japanese submarine I-401|Japanese submarine I-401]]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_voice_actor</code>===
+String. Name of the [[:Category:Voice_actor_data_modules|seiyuu data module]] for ship's seiyuu. Use existing modules as a template for new seiyuu data modules.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_artist</code>===
+String. Name of the [[:Category:Artist_data_modules|artist data module]] for ship's artist. Use existing modules as a template for new artist data modules.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_implementation_date</code>===
+Table: <code>{ <year>, <month>, <day> }</code> (JST). Ship's implementation date.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_availability</code>===
+{{todo|show=true|That is kinda hard to use and update?}}
+Table. Ship's current availability.
+
+Example usage:
+<pre>
+{ "drop", "event_reward", "event_drop",
+  drop = {
+    {
+      1, -- world
+      4, -- map
+      "B", -- node, can be a list of nodes or true for all nodes
+      -- optional formation, can be a table from nodes
+    },
+    -- ...
+  },
+  event_reward = {
+    {
+      2016, -- year
+      4, -- quarter, 1 = winter, 4 = spring, 7 = summer, 10 = fall
+      5, -- map
+      -- optional difficulty, 0 = All, 1 = Easy, 2 = Medium, 3 = Hard
+    }
+  },
+  event_drop = {
+    {
+      2016, -- year
+      4, -- quarter, see "event_reward"
+      7, -- map
+      "N", -- node, see "drop"
+      -- optional formation, see "drop"
+    },
+    -- ...
+  }
+}
+</pre>
+
+If not available yet, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===<code>_equipment</code>===
+Table. A table containing other tables that represent equipment slots.
+
+The table should contain the same number of tables as slots the ship has. Refer to <code>api_slot_num</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+====Equipment Slot====
+Table. A table representing an equipment slot.
+
+=====<code>equipment</code>=====
+String. The name of the equipment in the slot.
+
+If no equipment is equipped, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+=====<code>size</code>=====
+String. The size of the slot. Refer to <code>api_maxeq[slot number]</code>.
+
+If unknown, omit or set to <code>nil</code>.

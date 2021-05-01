@@ -1,0 +1,32 @@
+<includeonly>{{#if:{{{1|}}}|<span class="image-stack" style="display:inline-block;overflow:hidden;vertical-align:middle;position:relative;">[[File:{{#replace:{{{1}}}|/|&#32;}} Banner{{#if:{{{damaged|}}}|&#32;Damaged}}.png|{{{size|160x40px}}}|link={{{link|{{#replace:{{{1}}}|/|&#32;}}}}}|{{{caption|{{#replace:{{{1}}}|/|&#32;}}}}}]]{{#if:{{{ring|}}}|<span class="image-layer" style="line-height:0px;position:absolute;top:19px;left:138px;">[[File:Battle Card Marriage Ring.png|link={{{link|{{#replace:{{{1}}}|/|&#32;}}}}}|{{{caption|{{#replace:{{{1}}}|/|&#32;}}}}}|20x21px]]</span>|}}{{#if:{{{ring_glow|}}}|<span class="image-layer" style="line-height:0px;position:absolute;opacity:0.7;top:10px;left:126px;">[[File:Battle Card Marriage Ring Glow.png|link={{{link|{{#replace:{{{1}}}|/|&#32;}}}}}|{{{caption|{{#replace:{{{1}}}|/|&#32;}}}}}]]</span>|}}</span>|[[File:Catbomb.png|160x40px]]}}</includeonly><noinclude>
+Same as [[Template:ShipBattleCardHD]], but automatically downscaled to Phase 1 size.
+==Usage==
+<pre>{{ShipBattleCard|I-401}}</pre>
+{{ShipBattleCard|I-401}}
+
+<pre>{{ShipBattleCard|I-401/}}</pre>
+{{ShipBattleCard|I-401/}}
+
+<pre>{{ShipBattleCard|I-401 Kai}}</pre>
+{{ShipBattleCard|I-401 Kai}}
+
+<pre>{{ShipBattleCard|I-401/Kai}}</pre>
+{{ShipBattleCard|I-401/Kai}}
+
+<pre>{{ShipBattleCard|I-401/Kai|damaged=true}}</pre>
+{{ShipBattleCard|I-401/Kai|damaged=true}}
+
+<pre>{{ShipBattleCard|I-401/Kai|caption=Shioi|ring=true|ring_glow=true}}</pre>
+{{ShipBattleCard|I-401/Kai|caption=Shioi|ring=true|ring_glow=true}}
+
+==Tests==
+{|
+|{{ShipBattleCard|I-400}}
+|}
+
+==Notes==
+*Supported parameters: ''[1]'', ''link'', ''caption'', ''ring'', ''ring_glow'', ''damaged''.
+*The following parameters can be added: ''name'', ''model'', ''grayscale'', ''mode''.
+*Other layers also can be supported (''flagship'', etc.).
+*Automatic enemy aircraft layers are not supported.
+</noinclude>

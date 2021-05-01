@@ -1,0 +1,227 @@
+<div style="height:200px;overflow:hidden;position:relative">
+<div style="position:absolute;bottom:-280px;">
+{{ItemStack
+|item = [[File:E-0.jpg{{!}}700px{{!}}link{{=}}]]
+|text-position = bottom:-40px;right:20px;
+|font-size = 25px
+|text = KanColle Wiki "Event Panic" Drill
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+</div>
+</div>
+{{clear}}
+==Forewords==
+On June 13th, 2017, the outgoing third and fourth generation wiki staffs organized a mock-up KanColle event known as "Event Panic" Drill. The event was part of a training program we provided to foster the next generation of capable editors who can handle the intensity of a real KanColle event.
+
+The exercise caused some confusions among our patrons; as of writing this, we have at least eight instances of wiki users mistaking the exercise for a real KanColle event. In hindsight, I do consider this fact a compliment. It is a testimony that we have successfully pulled off a very realistic emulation of the panic, the confusion and the stress involved wiki contributors would have to face in delivering the event content as timely as possible.
+
+The original announcement thread can be found [[Thread:565053|here]] though the materials of the drill are likely to have been removed by the time this blog is ever read. Every drill is a start over and we expect both our trainees and instructors to clean up their camps after the drill has run its course.
+
+==Purpose of this blog==
+This blog aims to set a guideline, a reference point, for future organizers in the absence of historical materials. This blog introduces the drill teams, the various roles the trainees can take on and the procedures to conduct the tests for each of the aforementioned roles.
+
+At the end of this blog is a checklist for team Kadokawa, provided as bonus material.
+
+==Teams==
+KanColle Drill Event revolves around two teams
+;Team Kanmusu / Cadets aka the trainees.
+:This team consists of new participants who will construct an event page, update relevant pages and manage everything related to the drill event on wiki side.
+;Team Kadokawa aka the game masters.
+:This team consists of our staff members and adepts who no longer need any training pertaining to the wiki's event management. They are responsible for designing the event, creating the related resources and conducting simulation tests during the drill.
+
+In addition to the above two teams, there are supervisors whose primary responsibility is to provide technical training for the trainees. Some of the supervisors may volunteer to take part in team Kadokawa activities as well.
+
+==Communication==
+KanColle Drill Event is conducted on a temporary Discord server acting as a hub for various simulated information sources.
+*'''<nowiki>#</nowiki>general''': this is the general discussion area. Training and team coordination normally take place here.
+*'''<nowiki>#</nowiki>offshore''': banters and other things unrelated to the wiki or the drill.
+*'''<nowiki>#</nowiki>translations''': this channel is dedicated to mock-up dev tweets. The language of the tweets by default will be English unless there was a translator trainee.
+*'''<nowiki>#</nowiki>assets''': this channel is dedicated to mock-up game resources data mined from the game. The resources will be posted as processed CGs, enemy patterns and drop data ready to be uploaded unless there was a dataminer trainee. In such scenarios, the resources will be compiled into swf files / api responses and be put on a private server. Only the link to api_start2, poidb dumps and db.kcwiki.org export API mirrors on the private server will be provided.
+*'''<nowiki>#</nowiki>clock''': this channel is where editors coordinate their works to avoid edit conflicts. The channel employs a clock-in, clock-out system in which editors can announce tasks they're working on, tasks open for taking (reminders from supervisors) and when they're clocking out of duty.
+*'''<nowiki>#</nowiki>e-1''', '''<nowiki>#</nowiki>e-2''',...'''<nowiki>#</nowiki>e-x''': these channels are dedicated to reporting frontline results of the corresponding event maps. Frontliners will report their finding as screenshots, api data or fleet line ups after they perform battle simulation tasks with the data acquired from the GMs in private messages. Discussions of branching rules and map-specific mechanics also take place in these channels.
+Each team will also have their own hidden channels; the organization of which varies from team to team.
+
+:;IMPORTANT NOTE
+::The Discord server should '''always''' be wiped at the end of a season.
+
+Due to the secretive nature of their work, Team Kadokawa always has a hidden channel which can only be accessible to their team members and some supervisors. At the end of a drill, team Kadokawa's channel can be opened for post-drill reviews and Kadokawa trainees recruitment for the next season.
+
+==Timeline==
+
+:'''Week 0:''' Announcement and sign ups
+:'''Week 1:''' Technical training
+:'''Week 2:''' Technical training & pre-event tweets
+:'''Week 3:''' Drill
+:'''Week 4:''' Open-channel review and goodbye
+:'''Week 5:''' Next season announcement and sign ups
+
+Trainees from previous seasons, if interested, will be elevated to supervisor or game master position.
+
+==Roles and test procedures==
+There are three main roles in an event management committee:
+;Frontliner
+:Branching rules, strategies, air raid API reports, mechanics discovery and verification
+;Dataminer
+:Enemy patterns, ship drops, game assets, and back-end Lua modules.
+;Editor
+:Translation, writing quality, front-end wikitext templates, and article updates.
+
+
+===Frontliner's test===
+The frontliners can send screenshots of their fleet setup (ships, equipment, eLoS, fleet type and Speed) to team Kadokawa's active GMs and request to sortie to an event map. The GMs will then tell the frontliners which node the said fleet will go, along with the API values and formation of the enemy in the said node (if battle node). The frontliners will then reference the API values [[Template:NodeInfo/All|here]] and use the [https://kc3kai.github.io/kancolle-replay/simulator.html battle simulator] to test their fleet against the mock-up Abyssal fleets.
+
+The idea behind the battle simulation is to gain insights into how effective a strategy is. Once the frontliners have found a good strategy, they can then provide recommendations and write up map guides for the event page. The GMs might provide additional information of mechanics cannot be emulated by the battle simulator.
+
+:;NOTE
+::Since the frontliners' gaming skill is not being tested, ship locks are done on voluntary basis and the record of it will be kept by the frontliners themselves (if they choose to).
+
+Lenient GMs may allow the frontliners to choose which phase they want to test: prefinal, final, TP or HP regardless of progression. It is, however, inadvisable to allow the frontliners this much freedom since it may backfire by ruining their enjoyment.
+
+
+===Dataminer's test===
+At the start of the event, <code>api_start2</code> will be dropped into '''#assets''' channel as the starting point. From there, the data miners can figure out the api_id of new ships and equipment, compute the obfuscated filenames and request these files from our GMs. They will then be tasked with extracting and uploading relevant assets such as CGs and stats to the wiki. Data miners are also responsible for creating new Lua modules as these deep back-end tasks are best handled by these highly technical people.
+
+In addition to the above tasks, data miners are often tasked with filtering poidb dumps and generating drop lists as well as enemy patterns. These two items can also be obtained by converting db.kcwiki.org template export api into our own [[Template:NodeInfo]] and [[Template:DropList]]. These tasks require heavy usage of automated tools that they might require fine tuning on the fly.
+
+:;EXAMPLE TOOL
+::http://fujihita.azurewebsites.net/poi
+::Disclaimer: the tool is provided as it is and should only be used as reference material. No effort will be made to keep the tool up-to-date.
+
+Dataminers are expected to write their own tools or work with wiki dev team to tune existing tools in the event of api changes.
+
+
+===Editor's test===
+The editors are responsible for turning the frontliner's reports into information written on the event page. They are also responsible for turning any rambling nonsense (either from the frontliners or else) that may occur into proper wiki writing style, marking citations and keeping the related event pages up to date.
+
+The editors build and fill the templates in a normal event page as soon as new information arrive. Their specialty is fixing broken templates and fighting vandalism. Their works compliment the other two roles and many of them also act as discussion moderators in comments and forum boards.
+
+Translators are classified under editor role and they'll receive basic editing training in addition to language training by our veteran translators.
+
+==Team Kanmusu's checklist==
+[[File:KC_wiki_event_team.png|thumb|700px|KanColle Wiki event team organization chart]]
+
+;For <event>
+:Create <event> page
+:*title
+:*message
+:*info and resource threads
+:*wikiwiki link
+:*timers
+:Create <event>/Info subpage
+:*infobox
+:*information section
+:*HP/TP scaling
+:*drop table
+:*outline for new ships, equipment, enemy, enemy equipment
+:*maps
+:Upload File:<event> Lock.png
+:Upload File:<event> Banner.[png|gif]
+:Add <event>/Live Streams partial
+
+;For each <map>:
+:Create <event>/<map> page
+:*infobox
+:*notice
+:*branching rules
+:*strategy/recommendation content section
+:Create <event>/<map>/Enemy patterns partial
+:*Add pattern data (PoiDB tools / manual reports)
+:*Add coordinates (Map tools / manual coordinates)
+:Create <event>/<map>/Drop list partial
+:*Add drop data (PoiDB tools / manual reports)
+:Upload File:<event> <map> Banner.png
+:Upload File:<event> <map> Map.png (Working with map and SallyMain SWF files)
+
+;For each <ship>:
+:Create <ship> page
+:Create Module:<ship> (+ aliases)
+:Create <ship>/Gallery‎ page
+:Upload 6 assets (Full, Card, Battle both damaged and undamaged) + remodel assets (if any)
+*Upload normal and hourly voice files + remodel files (if any)
+*Create Forms/aliases redirects
+
+;For each <enemy ship>
+:Create <enemy ship> page
+:Create Module:<enemy ship>
+:Upload 2 assets (Full, Card) + extra forms assets (if any) + debuff (_d) assets (if any)
+*Upload 4 voice files + damaged/debuffed files (if any)
+*Create Forms redirects
+
+;For each <equipment>:
+:Create <equipment> page
+*Create Module:<equipment>
+*Upload 4 assets (Full, Character, Equipment, Card)
+*Upload equipment icon (if any)
+
+;For each <enemy equipment>:
+*Create <enemy equipment> page
+*Create Module:<enemy equipment>
+*Upload 2 assets
+*Upload icon (if any)
+
+;Misc.:
+:Still missing a list of pages/categories/redirects that should be updated for <event> and each <ship>, <enemy ship>, <equipment>, and <enemy equipment>
+:Upload twitter teasers and add them to update partial
+:Update Main page and threads
+:Fix templates, lua, tools
+
+==Bonus: Team Kadokawa's checklist==
+;Map planning
+:Note overall branching rules, descriptions of nodes, debuff and special mechanics on a reference map.
+:Write branching tables and rewards for all maps in a single text file (''map_info.txt'').
+:Write a new text file containing battle nodes with formation and api_id values for every map (''e1_pattern.txt'', ''e2_pattern.txt'', etc.). One line per variation.
+:List notable rare drops at key nodes and populate the drop lists with randomized common drops. One line per key node (''drop_list.txt'').
+;New assets planning
+:Create a stat sheet of new ship girls and equipment. Plan their api_id to avoid collision with existing assets and randomize the rest if necessary.
+;Create new CGs by graphic fusion or original drawing
+:For every new ship girl, create a minimum of
+:*one ship card (DD_Nekomusu_666_Card.png)
+:*one battle card (DD_Nekomusu_666_Battle.png)
+:*one full body CG (DD_Nekomusu_666_Full.png).
+:For every new equipment, create a minimum of
+:*one equipment card (Tomahawk_Anti-ship_Missile_1337_Card.png)
+:*one equipment only CG (Tomahawk_Anti-ship_Missile_1337_Equipment.png)
+:*one fairy CG (Tomahawk_Anti-ship_Missile_1337_Character.png)
+:*one combination CG (Tomahawk_Anti-ship_Missile_1337_Full.png)
+;Create map.swf file
+:Decide on maparea_id for every event map
+:Decide on path id for every possible branching path in the node (Only necessary for mock-up PoiDB data dump creation later on)
+:Add the sortie map image to mock-up ''map.swf'' file.
+:Rename the file to a valid encoded filename that would be requested by the game's client given the maparea_id.
+;Create db.kcwiki.org export API
+:Generate export API for both [https://db.kcwiki.org/wiki/enemy/15.html enemy] and [https://db.kcwiki.org/wiki/drop/15.html drop]
+;Create mock-up PoiDB data dump
+:Contact [[User:がか|Gaka]] for more information
+;Create ship.swf file
+:Add all new CGs to their respective ship.swf files
+:Rename the file to a valid encoded filename
+;Modify SallyMain.swf file
+:Add map banners, ship tags and custom boss gauge CG (if any) to ''SallyMain.swf''
+;Modify api_start2 API response
+:Add data for new ships
+:*api_mst_ship
+:*api_mst_shipgraph
+:*api_mst_shipupgrade
+:*api_mst_stype (for new ship types)
+:Add data for new equipment
+:*api_mst_slotitem
+:*mst_slotitem_equiptype (for new types)
+:Add map data
+:*api_mst_maparea
+:*api_mst_mapinfo
+:*api_mst_mapbgm
+;Modify mapinfo API response
+:Add TP/HP values for new maps based on HQ / Difficulty
+;Host a private server to serve the resources and API responses above
+:No authentication, with either a deployed mirror of a working KanColle server (starting point is MainD2.swf and Core.swf) or a static directory of asset files.
+:Add also equipment CG and voice files (if any) to the server.
+;Write dev tweets
+:Use [[Thread:412521|Spring 2016's data incident]] as reference tweets and write apologetic tweets to make up for the lack of any resources or maintenance delays (in the event the trainees team need more time to prepare themselves).
+:Write pre-event tweets and teaser CGs
+:Write progress tweets
+:Write patch notes
+:Write post maintenance tweets in case any further clarifications and hints need to be made
+
+[[Category:Blog posts]]

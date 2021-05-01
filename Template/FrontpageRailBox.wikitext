@@ -1,0 +1,8 @@
+<div class="kcRailBox main-page-railbox-{{{id|default}}}" {{#if:{{{style|}}}|style="{{{style}}}"}}>
+<div class="kcRailTitle toggle" data-target="main-page-railbox-{{{id|default}}}" data-default="{{#if:{{{hide|}}}|hide|show}}" style="cursor:pointer;">
+<p>{{{title|}}}</p>
+</div>
+<div class="kcRailContent toggle-target-main-page-railbox-{{{id|default}}}" {{#if:{{{content_style|}}}|style="{{{content_style|}}}"|}}>
+{{{content|}}}
+</div>
+</div>

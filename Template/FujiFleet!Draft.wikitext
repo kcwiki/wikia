@@ -1,0 +1,143 @@
+<center><h3>-How to use-</h3>
+<h3>(This template is under construction)</h3>
+<h3>Syntax</h3></center>
+
+<pre>
+{| width=
+{{FujiFleet |
+| name= 
+| rname1=
+| 1= {{Fslot | img= | name= | lv= }}
+| 2= {{Fslot | img= | name= | lv= }}
+| 3= {{Fslot | img= | name= | lv= }}
+| 4= {{Fslot | img= | name= | lv= }}
+| 5= {{Fslot | img= | name= | lv= }}
+| 6= {{Fslot | img= | name= | lv= }}
+
+| rname2=
+| 7=  {{Fslot | img= | name= | lv= }}
+| 8=  {{Fslot | img= | name= | lv= }}
+| 9=  {{Fslot | img= | name= | lv= }}
+| 10= {{Fslot | img= | name= | lv= }}
+| 11= {{Fslot | img= | name= | lv= }}
+| 12= {{Fslot | img= | name= | lv= }}
+}}
+|}
+</pre>
+
+<center><h3>Example : 2 Fleet size</h3></center>
+<pre>
+{| width= 100%
+{{FujiFleet |
+| name= My Fleets
+| rname1= BB
+| 1= {{Fslot | img= Yamato_kai_card.png | name= Yamato | lv= 120 }}
+| 2= {{Fslot | img= Nagato_kai_card.jpg | name= Nagato | lv= 90  }}
+| 3= {{Fslot | img= Mutsu_kai_card.jpg  | name= Mutsu  | lv= 90  }}
+
+| rname2= CV
+| 7= {{Fslot | img= Akagi_Kai_Card.jpg               | name= Akagi    | lv= 92 }}
+| 8= {{Fslot | img= Kaga_kai_card.jpg                | name= Kaga     | lv= 93 }}
+| 9= {{Fslot | img= CV_Souryuu_Kai_Ni_197_Battle.jpg | name= Souryuu  | lv= 91 }}
+| 10= {{Fslot | img= CV_Hiryuu_Kai_Ni_196_Battle.jpg | name= Hiryuu   | lv= 92 }}
+| 11= {{Fslot | img= Shoukaku_kai_card.jpg           | name= Shoukaku | lv= 91 }}
+| 12= {{Fslot | img= Zuikaku_kai_card.jpg            | name= Zuikaku  | lv= 60 }}
+}}
+
+|}
+</pre>
+
+<center><h3>Result</h3></center>
+
+{| width= 100%
+{{FujiFleet |
+| name= My Fleets
+| rname1= BB
+| 1= {{Fslot | img= Yamato_kai_card.png | name= Yamato | lv= 120 }}
+| 2= {{Fslot | img= Nagato_kai_card.jpg | name= Nagato | lv= 90  }}
+| 3= {{Fslot | img= Mutsu_kai_card.jpg  | name= Mutsu  | lv= 90  }}
+
+| rname2= CV
+| 7= {{Fslot | img= Akagi_Kai_Card.jpg               | name= Akagi    | lv= 92 }}
+| 8= {{Fslot | img= Kaga_kai_card.jpg                | name= Kaga     | lv= 93 }}
+| 9= {{Fslot | img= CV_Souryuu_Kai_Ni_197_Battle.jpg | name= Souryuu  | lv= 91 }}
+| 10= {{Fslot | img= CV_Hiryuu_Kai_Ni_196_Battle.jpg | name= Hiryuu   | lv= 92 }}
+| 11= {{Fslot | img= Shoukaku_kai_card.jpg           | name= Shoukaku | lv= 91 }}
+| 12= {{Fslot | img= Zuikaku_kai_card.jpg            | name= Zuikaku  | lv= 60 }}
+}}
+
+|}
+
+<center><h3> Example : 4 Fleet Size (Multiplier by 2 is possible) </h3></center>
+
+<pre>
+{| width = 100%
+{{FujiFleet |
+| name= My Fleets
+| rname1= BB
+| 1= {{Fslot | img= Yamato_kai_card.png | name= Yamato | lv= 120 }}
+| 2= {{Fslot | img= Nagato_kai_card.jpg | name= Nagato | lv= 90  }}
+| 3= {{Fslot | img= Mutsu_kai_card.jpg  | name= Mutsu  | lv= 90  }}
+
+| rname2= CV
+| 7= {{Fslot | img= Akagi_Kai_Card.jpg               | name= Akagi    | lv= 92 }}
+| 8= {{Fslot | img= Kaga_kai_card.jpg                | name= Kaga     | lv= 93 }}
+| 9= {{Fslot | img= CV_Souryuu_Kai_Ni_197_Battle.jpg | name= Souryuu  | lv= 91 }}
+| 10= {{Fslot | img= CV_Hiryuu_Kai_Ni_196_Battle.jpg | name= Hiryuu   | lv= 92 }}
+| 11= {{Fslot | img= Shoukaku_kai_card.jpg           | name= Shoukaku | lv= 91 }}
+| 12= {{Fslot | img= Zuikaku_kai_card.jpg            | name= Zuikaku  | lv= 60 }}
+}}
+
+{{FujiFleet |
+| rname1= BBV
+| 1= {{Fslot | img= BBV_Fusou_Kai_Ni_411_Battle.jpg     | name= Fusou     | lv= 81 }}
+| 2= {{Fslot | img= BBV_Yamashiro_Kai_Ni_412_Battle.jpg | name= Yamashiro | lv= 81 }}
+| 3= {{Fslot | img= Ise_kai_card.jpg                    | name= Ise       | lv= 83 }}
+| 4= {{Fslot | img= BBV_Hyuuga_Kai_088_Battle.jpg       | name= Hyuuga    | lv= 74 }}
+
+| rname2= FBB
+| 7=  {{Fslot | img= FBB_Haruna_Kai_Ni_151_Battle.jpg    | name= Haruna    | lv= 96 }}
+| 8=  {{Fslot | img= FBB_Kongou_Kai_Ni_149_Battle.jpg    | name= Kongou    | lv= 75 }}
+| 9=  {{Fslot | img= FBB_Kirishima_Kai_Ni_152_Battle.jpg | name= Kirishima | lv= 75 }}
+| 10= {{Fslot | img= FBB_Hiei_Kai_Ni_150_Battle.jpg      | name= Hiei      | lv= 75 }}
+| 11= {{Fslot | img= FBB_Italia_446_Battle.jpg           | name= Italia    | lv= 92 }}
+}}
+|}
+</pre>
+
+<center><h3>Result</h3></center>
+
+{| width = 100%
+{{FujiFleet |
+| name= My Fleets
+| rname1= BB
+| 1= {{Fslot | img= Yamato_kai_card.png | name= Yamato | lv= 120 }}
+| 2= {{Fslot | img= Nagato_kai_card.jpg | name= Nagato | lv= 90  }}
+| 3= {{Fslot | img= Mutsu_kai_card.jpg  | name= Mutsu  | lv= 90  }}
+
+| rname2= CV
+| 7= {{Fslot | img= Akagi_Kai_Card.jpg               | name= Akagi    | lv= 92 }}
+| 8= {{Fslot | img= Kaga_kai_card.jpg                | name= Kaga     | lv= 93 }}
+| 9= {{Fslot | img= CV_Souryuu_Kai_Ni_197_Battle.jpg | name= Souryuu  | lv= 91 }}
+| 10= {{Fslot | img= CV_Hiryuu_Kai_Ni_196_Battle.jpg | name= Hiryuu   | lv= 92 }}
+| 11= {{Fslot | img= Shoukaku_kai_card.jpg           | name= Shoukaku | lv= 91 }}
+| 12= {{Fslot | img= Zuikaku_kai_card.jpg            | name= Zuikaku  | lv= 60 }}
+}}
+
+{{FujiFleet |
+| rname1= BBV
+| 1= {{Fslot | img= BBV_Fusou_Kai_Ni_411_Battle.jpg     | name= Fusou     | lv= 81 }}
+| 2= {{Fslot | img= BBV_Yamashiro_Kai_Ni_412_Battle.jpg | name= Yamashiro | lv= 81 }}
+| 3= {{Fslot | img= Ise_kai_card.jpg                    | name= Ise       | lv= 83 }}
+| 4= {{Fslot | img= BBV_Hyuuga_Kai_088_Battle.jpg       | name= Hyuuga    | lv= 74 }}
+
+| rname2= FBB
+| 7=  {{Fslot | img= FBB_Haruna_Kai_Ni_151_Battle.jpg    | name= Haruna    | lv= 96 }}
+| 8=  {{Fslot | img= FBB_Kongou_Kai_Ni_149_Battle.jpg    | name= Kongou    | lv= 75 }}
+| 9=  {{Fslot | img= FBB_Kirishima_Kai_Ni_152_Battle.jpg | name= Kirishima | lv= 75 }}
+| 10= {{Fslot | img= FBB_Hiei_Kai_Ni_150_Battle.jpg      | name= Hiei      | lv= 75 }}
+| 11= {{Fslot | img= FBB_Italia_446_Battle.jpg           | name= Italia    | lv= 92 }}
+}}
+|}
+
+__NOTOC__

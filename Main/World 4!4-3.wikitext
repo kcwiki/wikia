@@ -1,0 +1,103 @@
+{{Map/Header}}
+{{Map/Info
+|en = Ri-Lanka Island
+|jp = リランカ島
+|romaji = Ri Ranka-tō
+|exp_hq = 140
+|exp_hq_boss = 1880
+|strategy_name = [[wikipedia:Easter_Sunday_Raid|Ri-Lanka Air Raid]]
+|strategy_name_ja = リランカ島空襲
+|strategy_info = You are going to organize a fleet being attended by aircraft carriers and attack an enemy fleet deploying on its home port in Ri-Lanka Island. Fleet, sortie!
+|strategy_info_ja = 空母を伴った艦隊を編成し、リランカ島の敵母港に展開する敵艦隊への攻撃を行う。艦隊、出撃！
+}}
+{{MapBranchingTable
+|expand = true
+|id = 4-3
+|0 -> A, C, D = 
+*Go to C if fleet contains CV(B)
+* Meet '''ANY''' of the following to go to D
+**DD+DE = 6
+**DD ≥ 3, CL+DD ≥ 4 '''AND''' meet '''one''' of the following
+***Fast fleet
+***Fleet contains CL
+***BB(V)+CV(L/B) = 0 (FBB doesn't count)
+*Go to A if DD+DE ≥ 2 '''AND''' fleet contains either CL or AO
+* Otherwise, random routing between A and C
+
+|A -> B/resource, D = 
+*Meet '''ANY''' of the following to go to B 
+**Fleet contains AO or AV
+**Fleet contains CVL, CL, DD ≥ 2 '''AND''' CA ≤ 1 (CAV doesn't count)
+*Go to D if CA ≥ 2 (CAV doesn't count)
+* Otherwise, random routing
+
+|B/resource -> E/storm, G =
+* Go to E if (F)BB(V)+CV(L/B) ≥ 3
+* Fleet containing slow ship will more likely go to E
+* Otherwise, go to G
+
+|C -> D, F =
+* Go to D if fleet contains CL, DD ≥ 2 '''AND''' no SS(V)
+* Go to F if fleet contains (F)BB(V)+CV(L/B) ≥ 4
+* Otherwise, random routing (More likely to go to F)
+
+|F -> H, K/storm =
+* Go to K if fleet contains SS(V) or no DDs
+* Go to H if fleet contains DD ≥ 2, (F)BB(V)+CV(L/B) ≤ 2 '''AND''' the fleet is fast
+* Otherwise, random routing (The higher amount of DDs you have in fleet, the better chance you will go to H)
+
+|G -> H, I, J/resource =
+* Go to J if fleet contains no CV(B/L)
+* Otherwise, random routing between H and I
+
+|H -> I, N =
+*If CV(B/L) = 2, 90% N, 10% I
+*Otherwise, 75% N, 25% I
+
+|K/storm -> L, N = 
+*Meet '''ANY''' of the following to go to L 
+**DD ≤ 1
+**CV(B/L) ≥ 3
+**Fleet contains SS(V)
+* Otherwise, random routing
+
+|L -> M/empty, N = 
+*Meet '''ANY''' of the following to go to M 
+**(F)BB(V)+CV(L/B) ≥ 5
+**CL+DD+DE = 0
+**CV(L/B) = 0
+* Go to N if (F)BB(V)+CV(L/B) ≤ 2 '''AND''' no SS(V)
+* Random otherwise
+}}
+==Tips==
+*You '''DO NOT''' need to sink the boss to clear the map. Her escorts are mostly light ships and A-rank can easily be achieved. However, if you wish for S-rank, further preparation will be needed.
+*'''Boss''': This will be the first map where you directly face a [[Installation_Type|Installation Type]] Boss. Majorly, these bosses require a special equipment called a {{EquipmentLink|Type 3 Shell}} (Sanshiki, T3-Shell) in order to damage them efficiently; however, there are [[Installation_Type#Ship_Type|exceptions]].
+**It is recommended that you equip your CAs with it.
+**For CL/DDs, it is possible to equip them with {{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}} if available. Due to the difficulty in obtaining them, it is optional.
+**Aircraft carriers '''CANNOT''' attack installations if they have a {{DiveBomb icon}} equipped '''UNLESS''' it's one of the bombers from the following list:
+
+{{Anti-Installation Bombers}}
+
+==Resource Farming==
+Farming for Fuel and Bauxite is viable on this map.
+*'''Route''': {{Event/Route|A|red|B|green|G|red|J|green}}
+**The base yield is 30-90 Fuel and 50-100 Bauxite per run which can be increased by carrying additional drums and daihatsu on DD/CL/AV/AO
+*'''Requirements'''
+**At least 1 AV/AO and 1 CL (If using AV)
+**No carriers allowed
+*'''Composition''': To avoid routing to '''C''' or '''D''', the amount of DD you can bring is limited. It '''must be less than''' 3 (DD < 3), '''i.e.''' 1 AV 1 CL 2 DD 2 XX, where (XX ≠ CV(B/L), DD)
+
+==Compositions==
+*{{Event/Route|D|red|H|red|N|red}}
+**2 CVL 1 CL 3 DD
+***A Light Fleet Composition which takes the shortest path to the boss. Since you'll be limited to light ships, you will need to depend on Daihatsu type equipment and WG42 to effectively fight the installation boss
+*{{Event/Route|C|red|D|red|H|red|N|red}} or {{Event/Route|C|red|F|red|H|red|N|red}}
+**2 CV(B) 2 CA(V) 2 DD
+***A stronger composition than the above one, but you will fight one more pre-boss battle
+***Dealing with [[Harbour Princess]] is slightly easier as your CA(V) can carry [[Type 3 Shell]] to damage her
+***Has some chance to off-route to I
+*{{Event/Route|A|red|B|green|G|red|H|red|N|red}}
+**1 CL 2 CVL 2 DD 1 AV
+'''Note''': Due to the nature of routing, all of these comp have a chance to offroute from Node {{Event/Route|H|red}} to Node {{Event/Route|I|red}}. Bringing at least 2 CV(L/B) will reduce the chance of going offroute.
+
+{{Map/Footer}}

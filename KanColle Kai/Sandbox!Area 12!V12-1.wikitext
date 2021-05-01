@@ -1,0 +1,1682 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:70%;" | V12-1: 北太平洋海域
+| rowspan="3" style="text-align:center;width:30%;" | [[File:Vita Map Banner 12-1.png|400px]]
+|-
+! Items
+| None
+|-
+! Restrictions
+| Only DD/CL/SS/SSV/AS/CT allowed
+|-
+! Strategy Info
+|MI作戦前路哨戒
+|いよいよMI作戦が発動された！主力機動部隊の進出の前に<br>前衛部隊を展開し、MI作戦の前路索敵哨戒を実施せよ！
+|}
+<center>[[File:Vita Map Image 12-1.png|600px]]</center>
+==Map guide==
+{{Map/Branching
+|id = V12-1
+|A/empty -> B, C/empty = *Choice node
+|C/empty -> E,F = *Meet any of the following requirements to route to E:
+**Number of ships in the fleet = 6
+**CL + CT ≧ 3
+*Having CL + CT = 2 triggers random routing (50%/50% chance)
+*Not meeting any of the above requirements routes F.
+|D/empty -> F, G = *Choice node
+|F -> H,L =*If number of ships in the fleet = 3 then route to L.
+*If number of ships in the fleet = 4 then random routing (75% chance L, 25% chance H)
+*If number of ships in the fleet ≧ 5 then route to H.
+|H -> J/empty = *Fail the LoS check
+|H -> L = *Pass the LoS check
+|I -> K/empty = *Fail the LoS check
+|I -> L = *Pass the LoS check
+}}
+
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=哨戒艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|554
+|576
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|555
+|554
+|576
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|575
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|75
+|555
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=潜水艦隊付補給部隊
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|150
+|558
+|575
+|575
+|533
+|533
+|533
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|150
+|558
+|575
+|575
+|533
+|533
+|533
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|558
+|575
+|575
+|533
+|532
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|120
+|558
+|575
+|575
+|533
+|532
+|532
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 I群
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|554
+|554
+|576
+|576
+|576
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|554
+|554
+|576
+|575
+|575
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|555
+|554
+|554
+|576
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|555
+|554
+|554
+|576
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 II群
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|554
+|576
+|575
+|575
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|555
+|554
+|576
+|575
+|575
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|575
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|75
+|555
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 III群
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|160
+|555
+|576
+|576
+|576
+|535
+|535
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|555
+|576
+|575
+|575
+|535
+|535
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|576
+|575
+|575
+|535
+|533
+|-
+}}
+{{Map/Nodes|name=MI基地補給輸送船団
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|160
+|558
+|558
+|526
+|526
+|576
+|576
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|130
+|558
+|526
+|526
+|526
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|130
+|558
+|526
+|526
+|526
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 旗艦
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|220
+|602
+|559
+|559
+|555
+|576
+|576
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|602
+|559
+|559
+|555
+|575
+|575
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|601
+|559
+|559
+|555
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=哨戒艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|554
+|576
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|555
+|554
+|576
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|575
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|75
+|555
+|575
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=潜水艦隊付補給部隊
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|150
+|558
+|575
+|575
+|533
+|533
+|533
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|150
+|558
+|575
+|575
+|533
+|533
+|533
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|558
+|575
+|575
+|533
+|532
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|120
+|558
+|575
+|575
+|533
+|532
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|526
+|575
+|575
+|532
+|532
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|90
+|526
+|575
+|575
+|532
+|532
+|532
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 I群
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|554
+|554
+|576
+|576
+|576
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|554
+|554
+|576
+|575
+|575
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|555
+|554
+|554
+|576
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|555
+|554
+|554
+|576
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|554
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|555
+|554
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 II群
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|555
+|554
+|576
+|575
+|575
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|555
+|554
+|576
+|575
+|575
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|575
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|75
+|555
+|575
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 III群
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|555
+|576
+|575
+|575
+|535
+|535
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|576
+|575
+|575
+|535
+|533
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|576
+|575
+|575
+|533
+|533
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|555
+|575
+|575
+|575
+|533
+|533
+|-
+}}
+{{Map/Nodes|name=MI基地補給輸送船団
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|130
+|558
+|526
+|526
+|526
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|130
+|558
+|526
+|526
+|526
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|526
+|526
+|526
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|100
+|526
+|526
+|526
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 旗艦
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|602
+|559
+|559
+|555
+|575
+|575
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|601
+|559
+|559
+|555
+|575
+|575
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|180
+|601
+|521
+|521
+|555
+|575
+|575
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|601
+|521
+|521
+|519
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|乙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=哨戒艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|65
+|555
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=潜水艦隊付補給部隊
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|90
+|526
+|575
+|575
+|532
+|532
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|90
+|526
+|575
+|575
+|532
+|532
+|532
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|526
+|575
+|575
+|532
+|530
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|70
+|526
+|575
+|575
+|532
+|530
+|530
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 I群
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|554
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|555
+|554
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|518
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|518
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 II群
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|65
+|555
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 III群
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|576
+|575
+|575
+|533
+|533
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|110
+|555
+|575
+|575
+|575
+|533
+|533
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|555
+|575
+|575
+|501
+|533
+|533
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|555
+|575
+|501
+|501
+|533
+|533
+|-
+}}
+{{Map/Nodes|name=MI基地補給輸送船団
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|526
+|526
+|526
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|100
+|526
+|526
+|526
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|526
+|513
+|513
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|80
+|526
+|513
+|513
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 旗艦
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|180
+|601
+|521
+|521
+|555
+|575
+|575
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|601
+|521
+|521
+|519
+|575
+|575
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|555
+|521
+|521
+|519
+|575
+|575
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|555
+|521
+|521
+|575
+|501
+|501
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|521
+|521
+|575
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=哨戒艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|65
+|555
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=潜水艦隊付補給部隊
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|526
+|575
+|575
+|532
+|530
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|70
+|526
+|575
+|575
+|532
+|530
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|50
+|526
+|575
+|501
+|501
+|530
+|530
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 I群
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|555
+|554
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|555
+|554
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|518
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|518
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 II群
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|575
+|501
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|65
+|555
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 III群
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|555
+|575
+|575
+|501
+|533
+|533
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|555
+|575
+|501
+|501
+|533
+|533
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|519
+|575
+|501
+|501
+|532
+|532
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|519
+|575
+|501
+|501
+|532
+|-
+}}
+{{Map/Nodes|name=MI基地補給輸送船団
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|526
+|513
+|513
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|80
+|526
+|513
+|513
+|575
+|575
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|526
+|513
+|513
+|501
+|501
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|60
+|526
+|513
+|513
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 旗艦
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|555
+|521
+|521
+|575
+|501
+|501
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|521
+|521
+|575
+|501
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|521
+|521
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|丁=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=哨戒艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|65
+|555
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|575
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|55
+|519
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=潜水艦隊付補給部隊
+|E
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|526
+|575
+|575
+|532
+|530
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|70
+|526
+|575
+|575
+|532
+|530
+|530
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|50
+|526
+|575
+|501
+|501
+|530
+|530
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 I群
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|555
+|518
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|70
+|555
+|518
+|575
+|575
+|501
+|501
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|555
+|518
+|575
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 II群
+|G
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|65
+|555
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|65
+|555
+|575
+|501
+|501
+|-
+|G
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|55
+|519
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 III群
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|80
+|519
+|575
+|501
+|501
+|532
+|532
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|519
+|575
+|501
+|501
+|532
+|-
+}}
+{{Map/Nodes|name=MI基地補給輸送船団
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|60
+|526
+|513
+|513
+|501
+|501
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|60
+|526
+|513
+|513
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=MI海域警戒部隊 旗艦
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|555
+|521
+|521
+|575
+|501
+|-
+|L
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|555
+|521
+|521
+|575
+|-
+}}
+</div> <!-- overflow -->
+</tabber>
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, E, F, G, H, I, L
+|boss = L
+|{{ShipFrom|163}} : I, L
+|{{ShipFrom|81}} : I, L
+|{{ShipFrom|77}} : F, H, I, L
+|{{ShipFrom|87}} : F, G, H, I, L
+|{{ShipFrom|26}} : F, G, H, I, L
+|{{ShipFrom|27}} : F, G, H, I, L
+|{{ShipFrom|54}} : F, G, H, I, L
+|{{ShipFrom|89}} : B, F, G, H, I, L
+|{{ShipFrom|25}} : B, E, F, G, H, I, L
+|{{ShipFrom|103}} : F, G, H, I, L
+|{{ShipFrom|24}} : B, F, G, H, I, L
+|{{ShipFrom|42}} : B, E, F, G, H, I, L
+|{{ShipFrom|43}} : B, E, F, G, H, I, L
+|{{ShipFrom|13}} : B, E, F, G, H, I, L
+|{{ShipFrom|14}} : B, E, F, G, H, I, L
+|{{ShipFrom|9}} : B, E, F, G, H, I, L
+|{{ShipFrom|10}} : B, E, F, G, H, I, L
+|{{ShipFrom|32}} : B, E, F, G, H, I, L
+|{{ShipFrom|12}} : B, E, F, G, H, I, L
+|{{ShipFrom|33}} : B, E, F, G, H, I, L
+|{{ShipFrom|140}} : L
+|{{ShipFrom|458}} : L
+|{{ShipFrom|184}} : L
+|{{ShipFrom|80}} : L
+|{{ShipFrom|191}} : L
+}}
+|-|甲=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, E, F, G, H, I, L
+|boss = L
+|{{ShipFrom|163}} : I, L
+|{{ShipFrom|81}} : I, L
+|{{ShipFrom|77}} : F, H, I, L
+|{{ShipFrom|87}} : F, G, H, I, L
+|{{ShipFrom|26}} : F, G, H, I, L
+|{{ShipFrom|27}} : F, G, H, I, L
+|{{ShipFrom|54}} : B, F, G, H, I, L
+|{{ShipFrom|89}} : B, E, F, G, H, I, L
+|{{ShipFrom|25}} : B, E, F, G, H, I, L
+|{{ShipFrom|103}} : B, F, G, H, I, L
+|{{ShipFrom|24}} : B, E, F, G, H, I, L
+|{{ShipFrom|42}} : B, E, F, G, H, I, L
+|{{ShipFrom|43}} : B, E, F, G, H, I, L
+|{{ShipFrom|13}} : B, E, F, G, H, I, L
+|{{ShipFrom|14}} : B, E, F, G, H, I, L
+|{{ShipFrom|9}} : B, E, F, G, H, I, L
+|{{ShipFrom|10}} : B, E, F, G, H, I, L
+|{{ShipFrom|32}} : B, E, F, G, H, I, L
+|{{ShipFrom|12}} : B, E, F, G, H, I, L
+|{{ShipFrom|33}} : B, E, F, G, H, I, L
+|{{ShipFrom|140}} : L
+|{{ShipFrom|458}} : L
+|{{ShipFrom|184}} : L
+|{{ShipFrom|80}} : L
+|{{ShipFrom|191}} : L
+}}
+|-|乙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, E, F, G, H, I, L
+|boss = L
+|{{ShipFrom|163}} : I, L
+|{{ShipFrom|81}} : I, L
+|{{ShipFrom|77}} : F, H, I, L
+|{{ShipFrom|87}} : F, G, H, I, L
+|{{ShipFrom|26}} : F, G, H, I, L
+|{{ShipFrom|27}} : F, G, H, I, L
+|{{ShipFrom|54}} : B, E, F, G, H, I, L
+|{{ShipFrom|89}} : B, E, F, G, H, I, L
+|{{ShipFrom|25}} : B, E, F, G, H, I, L
+|{{ShipFrom|103}} : B, E, F, G, H, I, L
+|{{ShipFrom|24}} : B, E, F, G, H, I, L
+|{{ShipFrom|42}} : B, E, F, G, H, I, L
+|{{ShipFrom|43}} : B, E, F, G, H, I, L
+|{{ShipFrom|13}} : B, E, F, G, H, I, L
+|{{ShipFrom|14}} : B, E, F, G, H, I, L
+|{{ShipFrom|9}} : B, E, F, G, H, I, L
+|{{ShipFrom|10}} : B, E, F, G, H, I, L
+|{{ShipFrom|32}} : B, E, F, G, H, I, L
+|{{ShipFrom|12}} : B, E, F, G, H, I, L
+|{{ShipFrom|33}} : B, E, F, G, H, I, L
+|{{ShipFrom|140}} : L
+|{{ShipFrom|458}} : L
+|{{ShipFrom|184}} : L
+|{{ShipFrom|80}} : L
+|{{ShipFrom|191}} : L
+}}
+|-|丙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, E, F, G, H, I, L
+|boss = L
+|{{ShipFrom|81}} : I, L
+|{{ShipFrom|77}} : F, I, L
+|{{ShipFrom|87}} : F, G, I, L
+|{{ShipFrom|26}} : F, G, H, I, L
+|{{ShipFrom|27}} : F, G, H, I, L
+|{{ShipFrom|54}} : B, E, F, G, H, I, L
+|{{ShipFrom|89}} : B, E, F, G, H, I, L
+|{{ShipFrom|25}} : B, E, F, G, H, I, L
+|{{ShipFrom|103}} : B, E, F, G, H, I, L
+|{{ShipFrom|24}} : B, E, F, G, H, I, L
+|{{ShipFrom|42}} : B, E, F, G, H, I, L
+|{{ShipFrom|43}} : B, E, F, G, H, I, L
+|{{ShipFrom|13}} : B, E, F, G, H, I, L
+|{{ShipFrom|14}} : B, E, F, G, H, I, L
+|{{ShipFrom|9}} : B, E, F, G, H, I, L
+|{{ShipFrom|10}} : B, E, F, G, H, I, L
+|{{ShipFrom|32}} : B, E, F, G, H, I, L
+|{{ShipFrom|12}} : B, E, F, G, H, I, L
+|{{ShipFrom|33}} : B, E, F, G, H, I, L
+|{{ShipFrom|458}} : L
+|{{ShipFrom|184}} : L
+|{{ShipFrom|80}} : L
+|{{ShipFrom|191}} : L
+}}
+|-|丁=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, E, F, G, H, I, L
+|boss = L
+|{{ShipFrom|81}} : L
+|{{ShipFrom|77}} : F, I, L
+|{{ShipFrom|87}} : F, G, I, L
+|{{ShipFrom|26}} : F, G, I, L
+|{{ShipFrom|27}} : F, G, I, L
+|{{ShipFrom|54}} : B, E, F, G, H, I, L
+|{{ShipFrom|89}} : B, E, F, G, H, I, L
+|{{ShipFrom|25}} : B, E, F, G, H, I, L
+|{{ShipFrom|103}} : B, E, F, G, H, I, L
+|{{ShipFrom|24}} : B, E, F, G, H, I, L
+|{{ShipFrom|42}} : B, E, F, G, H, I, L
+|{{ShipFrom|43}} : B, E, F, G, H, I, L
+|{{ShipFrom|13}} : B, E, F, G, H, I, L
+|{{ShipFrom|14}} : B, E, F, G, H, I, L
+|{{ShipFrom|9}} : B, E, F, G, H, I, L
+|{{ShipFrom|10}} : B, E, F, G, H, I, L
+|{{ShipFrom|32}} : B, E, F, G, H, I, L
+|{{ShipFrom|12}} : B, E, F, G, H, I, L
+|{{ShipFrom|33}} : B, E, F, G, H, I, L
+|{{ShipFrom|184}} : L
+|{{ShipFrom|80}} : L
+|{{ShipFrom|191}} : L
+}}
+</tabber>

@@ -1,0 +1,156 @@
+Drop list table for event maps.
+
+* Automatic highlighting for rare ships was based on [[Thread:295964]] (rare ships are defined in <code>rare_ships</code> array in [[Module:DropList]], those will be highlighted in red in the table):
+{| class="wikitable typography-xl-optout" width="100%"
+!align="center"|Rare ships: [[Construction#Event.2FSeasonal_only|event-only]], [[Construction#Ships_buildable_only_via_large_construction|LSC-only]], other [[Construction#Available_from_Sortie|non-buildable]] ships with some exceptions (''rationale required'')
+|-
+|[[Agano]], [[Akashi]], [[Akitsu Maru]], [[Akitsushima]], [[Akizuki]], [[Amagi]], [[Amatsukaze]], [[Aquila]], [[Arashi]], [[Asagumo]], [[Asakaze]] [[Asashimo]], [[Bismarck]], [[Commandant Teste]], [[Fujinami]], [[Graf Zeppelin]], [[Hagikaze]], [[Harukaze]], [[Harusame]], [[Hatsukaze]], [[Hatsuzuki]], [[Hayashimo]], [[Hayasui]], [[I-13]], [[I-14]], [[I-26]], [[I-400]], [[I-401]], [[Isokaze]], [[Kamikaze]], [[Kamoi]], [[Kashima]], [[Kasuga Maru]], [[Katsuragi]], [[Kawakaze]], [[Kazagumo]], [[Kiyoshimo]], [[Kunashiri]], [[Libeccio]], [[Littorio]], [[Maikaze]], [[Maruyu]], [[Matsukaze]], [[Mikuma]], [[Minazuki]], [[Mizuho]], [[Musashi]], [[Noshiro]], [[Nowaki]], [[Okinami]], [[Ooyodo]], [[Oyashio]], [[Pola]], [[Prinz Eugen]], [[Roma]], [[Sado]], [[Sakawa]], [[Saratoga]], [[Shimushu]], [[Suzutsuki]], [[Taigei]], [[Taihou]], [[Takanami]], [[Tanikaze]], [[Teruzuki]], [[Tokitsukaze]], [[Tsushima]], [[U-511]], [[Umikaze]], [[Unryuu]], [[Uranami]], [[Uzuki]], [[Yamakaze]], [[Yahagi]], [[Yamato]], [[Z1]], [[Z3]], [[Zara]]
+|}
+* Ignored ships that aren't included in resulting HTML (defined in <code>ignored_ships</code> array):
+{| class="wikitable typography-xl-optout" width="100%"
+!align="center"|Ignored ships: non-rare and BG under silver
+|-
+|[[Akatsuki]], [[Akebono]], [[Aoba]], [[Arare]], [[Arashio]], [[Asashio]], [[Ashigara]], [[Ayanami]], [[Chitose]], [[Chiyoda]], [[Choukai]], [[Fubuki]], [[Fumizuki]], [[Furutaka]], [[Haguro]], [[Hatsuharu]], [[Hatsushimo]], [[Hatsuyuki]], [[Hibiki]], [[Houshou]], [[I-168]], [[Ikazuchi]], [[Inazuma]], [[Isonami]], [[Isuzu]], [[Jintsuu]], [[Kagerou]], [[Kako]], [[Kasumi]], [[Kikuzuki]], [[Kisaragi]], [[Kiso]], [[Kuma]], [[Kuroshio]], [[Maya]], [[Michishio]], [[Mikazuki]], [[Miyuki]], [[Mochizuki]], [[Murakumo]], [[Murasame]], [[Mutsuki]], [[Nachi]], [[Nagatsuki]], [[Naka]], [[Natori]], [[Nenohi]], [[Oboro]], [[Ooshio]], [[Samidare]], [[Satsuki]], [[Sazanami]], [[Shigure]], [[Shikinami]], [[Shiranui]], [[Shiratsuyu]], [[Shirayuki]], [[Suzukaze]], [[Tama]], [[Tatsuta]], [[Tenryuu]], [[Ushio]], [[Wakaba]], [[Yura]], [[Yuudachi]]
+|}
+* Non-rare non-ignored ships (not in <code>rare_ships</code> or <code>ignored_ships</code> arrays):
+{| class="wikitable typography-xl-optout" width="100%"
+!align="center"|Non-rare non-ignored ships: silver+ BG
+|-
+|[[Abukuma]], [[Akagi]], [[Akigumo]], [[Atago]], [[Chikuma]], [[Fusou]], [[Hamakaze]], [[Haruna]], [[Hiei]], [[Hiryuu]], [[Hiyou]], [[Hyuuga]], [[I-19]], [[I-58]], [[I-8]], [[Ise]], [[Jun'you]], [[Kaga]], [[Katori]], [[Kinu]], [[Kinugasa]], [[Kirishima]], [[Kitakami]], [[Kongou]], [[Kumano]], [[Makigumo]], [[Mogami]], [[Mutsu]], [[Myoukou]], [[Naganami]], [[Nagara]], [[Nagato]], [[Ooi]], [[Ryuujou]], [[Sendai]], [[Shimakaze]], [[Shouhou]], [[Shoukaku]], [[Souryuu]], [[Suzuya]], [[Takao]], [[Tone]], [[Urakaze]], [[Yamagumo]], [[Yamashiro]], [[Yayoi]], [[Yukikaze]], [[Yuubari]], [[Yuugumo]], [[Zuihou]], [[Zuikaku]]
+|}
+* The generated list is a [[Wikipedia:Help:Sorting|sortable table]], you can click ([[Wikipedia:Help:Sorting#Secondary_key|hold Shift key to multi-sort]]) the small arrows next to the header cells on the first row to sort by ship types/names (Type/Ship) or group drops in that particular node together according to ship drop difficulty (A, B, C, etc.).
+* By default, the rare ships group is always comes first, followed by non-ignored non-rare ships group (the order in each group is based on the order of template parameters).
+* The table has fixed height that can be changed by using [[#height|height]] parameter.
+
+==Examples==
+
+* From [[Fall_2015_Event|Fall 2015]] (click edit to see the source code): [[Fall_2015_Event/E-1#Drop_list|E-1]], [[Fall_2015_Event/E-2#Drop_list|E-2]], [[Fall_2015_Event/E-3#Drop_list|E-3]], [[Fall_2015_Event/E-4#Drop_list|E-4]], [[Fall_2015_Event/E-5#Drop_list|E-5]].
+* From [[Winter_2016_Event|Winter 2016]]: [[Winter_2016_Event/E-1#Drop_list|E-1]], [[Winter_2016_Event/E-2#Drop_list|E-2]], [[Winter_2016_Event/E-3#Drop_list|E-3]] (two boss nodes).
+
+==Tests== 
+
+<pre>
+{{DropList
+|no_legend = true
+|filter_button = true
+|height = 234
+|nodes = A, b, d, E, F, G, J, Z, z, abc
+|boss = Z
+|Harusame: g/Easy, A/Tei, J/Dubious
+|Hatsukaze: z/Medium, e/asdf
+|Makigumo: Z/Easy, E
+|Taigei: G/Medium, E/, e/
+|Agano: Z/Easy, E/?
+|Noshiro: Z/Easy
+|Unryuu: Z/Easy
+|Inazuma: D/Hard, Z/Hard, X, E
+|Taigei: G/Medium, E/, e/
+|Prinz Eugen: Z/Hard
+|Prin Eugen: Z/Hard
+|Fubuki: F
+|Yuudachi
+|Junyou:
+|Jun'you:
+|U-511:
+|Akitsu Maru:
+|Nagato: Z/Easy, !!!
+}}
+</pre>
+
+{{DropList
+|no_legend = true
+|filter_button = true
+|height = 234
+|nodes = A, b, d, E, F, G, J, Z, z, abc
+|boss = Z
+|Harusame: g/Easy, A/Tei, J/Dubious
+|Hatsukaze: z/Medium, e/asdf
+|Makigumo: Z/Easy, E
+|Taigei: G/Medium, E/, e/
+|Agano: Z/Easy, E/?
+|Noshiro: Z/Easy
+|Unryuu: Z/Easy
+|Inazuma: D/Hard, Z/Hard, X, E
+|Taigei: G/Medium, E/, e/
+|Prinz Eugen: Z/Hard
+|Prin Eugen: Z/Hard
+|Fubuki: F
+|Yuudachi
+|Junyou:
+|Jun'you:
+|U-511:
+|Akitsu Maru:
+|Nagato: Z/Easy, !!!
+}}
+
+
+<pre>
+{{DropList
+|no_legend = true
+|nodes = A, C, G, J, K, L, M
+|boss = Z, L, M
+|Nagato: Z/Hard
+|Tanikaze: Z/Hard
+|Maruyu: Z/Hard
+}}
+</pre>
+
+{{DropList
+|no_legend = true
+|nodes = A, C, G, J, K, L, M
+|boss = Z, L, M
+|Nagato: Z/Hard
+|Tanikaze: Z/Hard
+|Maruyu: Z/Hard
+}}
+
+===Regular Drops===
+<pre>
+{{DropList
+|regular = true|no_legend = true|filter_button = true
+|nodes = A, B, C, D, E, F, G, H, I, J, K, L, M, N|boss = N
+|Fubuki: A, B, C, N|Nagato: B, C, N|Akashi: N
+}}
+</pre>
+
+{{DropList
+|regular = true|no_legend = true|filter_button = true
+|nodes = A, B, C, D, E, F, G, H, I, J, K, L, M, N|boss = N
+|Fubuki: A, B, C, N|Nagato: B, C, N|Akashi: N
+}}
+
+==Parameters==
+
+===no_legend===
+Use to hide documentation link before the table.
+
+===filter_button===
+Show a toggle button for hiding/showing non-rare non-ignored ships (choice saved in the browser's local storage).
+
+===height===
+The height of the table (429px by default, 10 rows with Oasis on Desktop XL).
+
+===nodes===
+Comma-separated list of nodes (whitespace characters are ignored), each node should be an English letter (ignored otherwise).
+
+===boss===
+The boss node, should be an English letter presented in '''nodes''' list (ignored otherwise). For maps with multiple boss nodes can be a comma-separated list of English letters (nodes not in '''nodes''' list will be ignored).
+
+===Unnamed parameters===
+
+Each unnamed parameter specify a ship and its drop nodes with known difficulties, use the following format:
+
+<pre>
+<ShipName> : <Node>, <Node> / <Difficulty>, <Node> / <Difficulty> {<Tooltip>}, <Node> / <Difficulty> {<Tooltip>} S, ...
+</pre>
+
+*<code><ShipName></code> should be a valid [[:Category:Player_ship_modules|ship name]] (ignored otherwise)
+*<code><Node></code> should be an English letter presented in '''nodes''' list (ignored otherwise)
+*<code><Difficulty></code> is either <code>Easy</code>, <code>Medium</code>, <code>Hard</code> or <code>?</code> (<code><Difficulty></code> is set to <code>?</code> otherwise), <code>?</code> when omitted.
+*<code><Tooltip></code> can be used to add arbitrary text in a tooltip for a node (e.g. notes about drop rates, battle ranks, one time only drops, etc.).
+**<code> / </code> (with spaces) can be used as a line break.
+*Whitespace characters before and after <code>/</code> and <code>,</code> are ignored, as well as before <code>{</code> and after <code>}</code>.
+*<code>S</code> can be used to indicate S only drops (red font color will be used), for more details tooltips can be used.
+
+==See Also==
+* [[Template:NodeInfo]] [[Template:NodeInfo/doc#Generating_enemy_patterns_automatically|notes]] on automatic generation can be useful for drops as well (same sources).

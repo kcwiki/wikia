@@ -1,0 +1,250 @@
+<table style="background:#FCC;border:3px solid #FAA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''This is a work in progress!''' While the core guide is essentially complete, ''it's not completely done yet!'' Please be ''very'' careful in utilizing the information contained herein!</td>
+</tr>
+</table>
+
+<table style="background:#FCC;border:3px solid #FAA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''This post is for educational purposes only!''' I neither promote/encourage nor condone practices of this sort. By utilizing the information in this guide, you understand that '''you are utilizing this information out of your own accord,''' and you agree that '''you will ''NOT'' hold me liable for any and all damages that may directly or indirectly arise from such usage!'''</td>
+</tr>
+</table>
+
+=Intro=
+
+I actually don't know why should I be writing this guide. If anybody's smart enough to be using a packet sniffer like Wireshark, he/she should be proficient enough to do all the things discussed here.
+
+Anyways, here we go.
+
+This is intended for users playing Kancolle via KCV; if you're playing directly in the browser, or are using KC3Kai, you're in luck; there's an easier method. Visit [[User_blog:Crazy_teitoku/Ripping_data_from_kancolle_servers|Crazy Teitoku's guide]] instead.
+
+===Why KCV?===
+
+Simply because KCV doesn't have a browser's ability to view network traffic and HTTP requests (try it: open your browser, hit <span style="font-family:monospace;">F12</span>, go to the tab named "Network" (or similar), then try loading some web pages). So we have to monitor the traffic some other way.
+
+----
+
+For this guide, I'm going to assume you already have Wireshark set up and running; if you don't have Wireshark yet, grab it off their [https://www.wireshark.org/#download site], and install it into your PC. Once done, read on.
+
+=Preparing Wireshark for the Capture=
+
+Start Wireshark.
+
+==Capture Options==
+First, head over to '''Capture > Options''' (or hit <span style="font-family:monospace;">Ctrl+K</span>).
+
+[[File:Clip_(2015-10-31_at_07.10.44).png|500px|thumb|center]]
+
+Just leave much of the screen as it is. Two things you might want to check are the '''network interface you're capturing from''' (the big list box at the top) and the '''capture filter''' (the green edit box in the picture).
+
+===Network Interface===
+
+<table style="background:#FCD;border:3px solid #FAC;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:center;" width="100px">[[File:NPC compass4a.png|100px]]</td>
+<td style="vertical-align:middle;text-align:center;" >'''Remember!'''<br/>Make sure you're capturing from the '''correct''' network interface, or else you'll get nothing!</td>
+</table>
+
+Unless you're rich enough to have multiple network cards, playing Kancolle off your datacenter racks' boxes (I ''sure hope'' nobody's doing this), or are using a laptop (the more probable case), there should be only one interface listed in this box (something like '''"Local Area Connection"'''). If so, you don't need to touch anything in this box.
+
+Now, if it ''does'' list more than one interface, make sure you have checked the correct interface to capture. Which checkbox should be checked should be easy to figure out:
+
+* If you have connected a LAN cable to your computer, check '''"Local Area Connection"'''.
+* If you're playing over Wi-Fi, check '''Wi-Fi'''.
+* If you're not sure, '''check everything.''' No, seriously.
+
+===Capture Filter===
+
+<table style="background:#FCD;border:3px solid #FAC;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:center;" width="100px">[[File:NPC compass4a.png|100px]]</td>
+<td style="vertical-align:middle;text-align:center;" >'''Remember!'''<br/>To avoid massive headaches, pointless scrolling, and ''HUGE'' capture files later on, filter your capture!</td>
+</table>
+
+A ''lot'' of activity goes on at the network every moment, and capturing them would only clutter your screen (and eventually your capture file) with traffic you don't really need. We'd want to get only the ones related to Kancolle, and ''nothing'' else.
+
+Wireshark helps us out with the '''Capture Filter''' feature, which does exactly that. Setting it up is simple. Just type:
+
+<pre>tcp and host &lt;your Kancolle server's IP address&gt;</pre>
+
+into the '''Capture Filter''' box.
+
+If you're not sure which server you're in, try [[Tutorial:_FAQ#How_do_I_see_which_server_do_I_belong_to.3F|this]]. If you're not sure what your server's IP address is, check the [[Servers|Server list]].
+
+=Capturing=
+
+==Before You Start...==
+
+'''DO ''NOT'' HIT THAT ''START'' BUTTON YET!''' It might be tempting, but we need to prepare things over at KCV's side first.
+
+I highly suggest you empty your cache first if you're attempting to grab assets off the servers; if an asset is already copied (''"cached"'') to your computer, KCV would just read it off there, and Wireshark would get nothing.
+
+When you start up KCV, there should be a button labeled '''Clear Cache'''. Click that. Done.
+
+'''DO ''NOT'' LOG IN YET!''' We need to start the capture over at Wireshark's side first.
+
+''Now'' go to Wireshark and hit the '''Start''' button at the bottom of the box.
+
+''Now'' go back to KCV and log in.
+
+You're done. You should now see Wireshark's main window with all kinds of text scrolling. We'll get to this in the next section.
+
+==Filtering Your Capture (Again)==
+Yes, you'd need to filter your capture. ''Again.'' This way, you'd get to your prize(s) with minimal fuss and headaches.
+
+Near the top of Wireshark's main window, just below the toolbar, there should be a field labeled '''"Filter:"'''. Type this into the field:
+
+<pre>http</pre>
+
+and hit <span style="font-family:monospace;">Enter</span>. Voil&agrave;:
+
+[[File:Ss_(2015-11-02_at_11.25.19).png|thumb|700px|center]]
+
+<table class="mw-collapsible mw-collapsed" style="background:#CDF;border:3px solid #ACF;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<tr><th></th><th>'''Technical Stuff! (You may safely skip this)'''</th></tr>
+<tr>
+<td style="vertical-align:middle;text-align:center;" width="100px">[[File:Improved Kanhon Type Turbine 033 Full.png|100px]]</td>
+<td style="vertical-align:middle;text-align:center;" >For an asset (image, sound, SWF file) to reach your KCV more quickly, the server breaks it down to several small pieces (''packets'' in tech-speak) which KCV then reassembles. Wireshark displays these by default (look under the '''Protocol''' header; these little bits would say '''[[wikipedia:Transmission Control Protocol|TCP]]''' here). Now these are really of little use for us; we need the reassembled ones. Fortunately for us, Wireshark automatically does this. These reassembled packets are listed as '''[[wikipedia:Hypertext Transfer Protocol|HTTP]]''' under the '''Protocol''' header. This is the reason why we'd use the <span style="font-family:monospace;">http</span> filter.</td>
+</tr>
+</table>
+
+=Finding Your Prize(s)=
+
+This is where it gets a ''wee'' bit hairy. Hang on to your chairs.
+
+==Step 1: Find a Request You're Interested In==
+A '''Request''' is what KCV sends to the Kancolle servers whenever it wants a file (image, sound, SWF file, etc). This would usually contain the name of the file it wants, making it an ideal starting point in finding your prize(s).
+
+<table class="mw-collapsible mw-collapsed" style="background:#CDF;border:3px solid #ACF;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<tr><th></th><th>'''Technical Stuff! (You may safely skip this)'''</th></tr>
+<tr>
+<td style="vertical-align:middle;text-align:center;" width="100px">[[File:Improved Kanhon Type Turbine 033 Full.png|100px]]</td>
+<td style="vertical-align:middle;text-align:center;" >'''Why "usually"?''' Because in other cases KCV instead requests for the result of a certain action (like sortieing, activating and ending quests, rearranging your fleet/equipment, etc). These are still '''Requests''', but are of a different nature that's out of the scope of this guide (and even this box).</td>
+</tr>
+</table>
+
+Scroll the list of colored text around while looking under the '''Info''' header. Requests by the client for files would say something like this under the '''Info''' header:
+
+<pre>GET <some/URL/here> HTTP/1.1</pre>
+
+Keep scrolling around until you find a Request that strikes your fancy. For this example, I'll use this request:
+
+[[File:Ss_(2015-11-02_at_12.46.41).png|thumb|700px|center|Mogami Kai's moderately damaged line.]]
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>'''DO ''NOT''''' freak out if you see black-colored rows like the one in the screenshot above. This simply tells experts and geeks that your Internet connection is experiencing some minor hiccups; '''this should not be a cause for concern as the prize(s) you are trying to get are still intact.'''</td>
+</table>
+
+Click the row in question so that it's highlighted.
+
+==Step 2: Find the Response to the Request==
+
+A '''Response''' is the server's, err, response to KCV's '''Requests'''. If KCV requests for a file, the server responds with the file in question.
+
+<table style="background:#FCD;border:3px solid #FAC;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:center;" width="100px">[[File:NPC compass4a.png|100px]]</td>
+<td style="vertical-align:middle;text-align:center;" >'''Remember!'''<br/>Your prize is in the '''server's Response''', not in the Request! Once you find your Request of interest, you ''have'' to find the Response!</td>
+</table>
+
+Below the scrolling lines of colored text is an area showing technical info about the row you highlighted. The last line should say '''"Hypertext Transfer Protocol"''' with a tiny plus sign to the left of it. Click that button:
+
+[[File:Clip_(2015-11-02_at_03.25.54).png|thumb|700px|center|whoops, there's my API link!]]
+
+I've highlighted the part we're interested in:
+
+<pre>Response in frame: <some number></pre>
+
+Double-click that, and you should see the lines of colored text jump a bit and shove the Response right in your face.
+
+==Step 3: THE PRIZE!==
+
+Just a little bit more!
+
+As Wireshark shoves the response in your face, it'll also update the lower area to show technical info for the server's Response. Again, I highlighted the part we're interested in:
+
+[[File:Ss_(2015-11-02_at_03.36.37).png|thumb|700px|center|It's the '''Media Type''' line.]]
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin:3px auto 3px auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>Different kinds of files change what this last line might say; files like SWFs (aka Flash files) and MP3s would display '''Media Type''', PNG images would display '''[[wikipedia:Portable Network Graphics|Portable Network Graphics]]''', plain text files would display '''Line-based text data: text/plain''', etc. Don't let this faze you; '''it's always the last line.'''
+</td>
+</table>
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin:3px auto 3px auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>A typical Response would say something like this under the '''Info''' header:<br/>
+<span style="font-family:monospace;">HTTP/1.1 200 OK (<some/string_here>)</span><br/>
+This (obviously) says that nothing wrong happened, and your prize is intact. However, there are rare cases that you won't get this message (say, you get a <span style="font-family:monospace;">HTTP/1.1 206 Partial Content</span> instead), which means that your prize might have gotten mangled. You ''may try'' to export it, but don't expect the file to be 100% intact.
+</td>
+</table>
+
+Right-click that, then choose '''Export Selected Packet Bytes...'''
+
+[[File:Clip_(2015-11-02_at_03.42.26).png|center]]
+
+At long last! An '''Export Raw Data''' dialog box appears. Choose a folder, pick a filename, you know the drill here.
+
+[[File:Ss_(2015-11-02_at_03.45.25).jpg|center]]
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin:6px auto auto auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>Wireshark '''DOES ''NOT''''' add a file extension by default when exporting; '''you have to add it ''yourself''.'''</td>
+</table>
+
+And then hit '''Save'''. ''It is finished!''
+
+You may now go back to [[#Step_1:_Find_a_Request_You.27re_Interested_In|Step 1]] and repeat the process for any other file you might want to grab.
+
+Once you're done grabbing all the files you need, you may opt to save your capture file (by choosing '''File > Save''' or hitting <span style="font-family:monospace;">Ctrl+S</span>). While not necessary, I highly recommend doing so, so you can have a sort of snapshot of Kancolle on a certain date/time, or for when there are files you might want to get back to.
+
+=Bonus Chapter: Using the ''Find Packet'' Dialog=
+
+If you just hurt your eyes, your head or your scroll wheel finger trying to find your target files, you may want to try the '''Find Packet''' dialog, accessible via '''Edit > Find Packet...''' (or hitting <span style="font-family:monospace;">Ctrl+F</span>).
+
+[[File:Clip_(2015-11-07_at_09.50.04).jpg|center]]
+
+It's very handy but can take a while to master, especially at its default ('''Display filter''') setting. (If you want the easy way out, though, choose the '''String''' option, type a part of the name of the URL you're trying to find, hit <span style="font-family:monospace;">Enter</span>, and be on your way.)
+
+Let's have a little tour, shall we?
+
+==Anatomy of a Dialog==
+* '''''Find'' group''': What do you want to find, and how do you want to find it?
+** '''''By'' radio button group''': how do you want to find your target:
+*** '''Display filter''': the default option. Powerful, but quite complex.
+*** '''Hex value''': Too geeky. Not for Kancolle. You'll never use this.
+*** '''String''': The friendliest option, which you might want to use until you can wrap your head around the '''Display Filter''' option.
+** '''''Filter'' button''': Eases the process of creating search expressions by presenting a dialog box wherein you can click some stuff here and type something there. Still complex as heck. Personally, I won't recommend even ''touching'' it. Available only if you selected the '''Display filter''' option from earlier.
+** '''''Search string'' box''': This is where you type whatever you want to search for. Changes background color as you type: green when everything's good to go, red for when you messed up something, yellow for "This will work, but there might be <s>dragons</s>Abyssals."
+[[File:Clip_(2015-11-09_at_05.11.25).png|thumb]]
+* '''''Search In'' group''': Where will Wireshark search your target?
+** The options refer to one of the three areas in Wireshark's interface (see the accompanying image). Usually, when you're looking for your target by ''URL/filename'', use '''Packet list''' (the default); if you're looking for your target by its ''content'', use '''Packet bytes'''. 
+** ''This option is available only if you selected '''String''' from the '''Find''' group, above.''
+* '''''String Options'' group''': More "search-by-text" options.
+** '''''Case sensitive'' checkbox''': What it says on the tin. When checked, <span style="font-family:monospace;">MAIND2</span> will ''not'' search for <span style="font-family:monospace;">mainD2</span>.
+**  '''''Character width'' drop-down''': Too geeky to discuss. Just leave this at its default setting ('''Narrow & Wide''').
+** ''This option is available only if you selected '''String''' from the '''Find''' group, above.''
+* '''''Direction'' group''': Contains a radio button group determining the direction Wireshark would search, whether '''Up''' or '''Down'''. Can be used to optimize searching of your target, though you don't need to fret too much as Wireshark would just go back to the beginning/end of the area you're searching if it reaches the bottom/top, and continue searching.
+
+And that concludes our tour. Now, let's jump right in!
+
+==Lesson 1: Simple Text Searching==
+Set up the '''Find Packet''' dialog so it looks like the one below:
+
+[[File:Clip_(2015-11-09_at_06.18.42).png|center]]
+
+You can basically live ''forever'' with this setup, as most of your searches will involve the URL (or the filename) of whatever you're trying to find:
+
+# Type a part of the URL/filename of whatever you're trying to find in the '''Search string''' box.
+# Hit <span style="font-family:monospace;">Enter</span>. The list will jump around a bit and highlight the first row that matches whatever search string you typed.
+# To see if there are any further results, hit <span style="font-family:monospace;">Ctrl+N</span>. To get back to the previous result, hit <span style="font-family:monospace;">Ctrl+B</span>.
+
+As an example, let us try a souped-up (read: overkill :3) version of [[Tutorial:_Proxy_Connection#Get_via_Network_Logs|finding your API link]]:
+
+# Type '''<span style="font-family:monospace;">mainD2</span>''' into the '''Search string''' box.
+# Hit <span style="font-family:monospace;">Enter</span>.<br/><table style="background:#FFC;border:3px solid #FF8;width:85%;margin-left:auto;margin-right:auto;padding:0;"><td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td><td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>You might want to try hitting <span style="font-family:monospace;">Ctrl+N</span> a few times after doing this and glance at the scrollbar beside the rows of colored text; you'd want the last (bottom-most) result which contains your latest, still-working, API link. If the scrollbar doesn't move, you're looking at your latest API link; you can use that.</td></table>
+# Look at the area displaying technical info for the row you found from your search (remember, it's below the lines of colored text). Like in the asset grabbing tutorial earlier, find the '''Hypertext Transfer Protocol''' line, and click the tiny '''[+]''' sign to the left of it.
+# This time though, we'd look for a row that looks like this: <pre>[Full request URI: http://##.##.##.##/kcs/mainD2.swf?api_token=...&amp;amp;api_starttime=...]</pre>
+# '''Right-click''' that line '''> Copy > Value'''.<br/>[[File:Clip_(2015-11-09_at_07.01.45).png|300px|center]]
+# You may now paste that into your browser/viewer; '''just remember to replace the <span style="font-family:monospace;">&amp;amp;</span> with <span style="font-family:monospace;">&amp;</span>'''.
+[[Category:Blog posts]]

@@ -1,0 +1,147 @@
+{|class="typography-xl-optout" style="border: 1px solid darkgray; width: 320px;"
+|-
+| colspan="4" style="text-align: center; background-color: {{{color|}}};"|<p style="font-size:20px">'''{{{name|Name?}}}'''</p>
+<p style="font-size:15px">'''{{#if:{{{id|}}}|No.{{{id}}}}} {{SpanJa|{{{japanesename|}}}}}'''</p>
+<p>'''{{#if:{{{class|}}}|{{{class}}} Class}} {{{type|}}}'''</p>
+|-
+|align=center colspan="4" |{{{image|}}}
+|-
+| colspan="4" style="text-align: center; background-color: LightSkyBlue;"|'''Statistic'''
+|-
+| style="width: 80px;"|[[file:icon_HP.png]] HP
+|width="60px"|'''{{{hp|no data}}}'''
+| style="width: 86px;"|[[file:icon_Gun.png]] Firepower
+|'''{{{firepower|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Armor.png]] Armor
+|width="60px"|'''{{{armor|no data}}}'''
+| style="width: 86px;"|[[file:icon_Torpedo.png]] Torpedo
+|'''{{{torpedo|no data}}}'''
+|-
+| style="width: 86px;"|[[file:icon_Evasion.png]] Evasion
+|width="60px"|'''{{{evasion|no data}}}'''
+| style="width: 80px;"|[[file:icon_AA.png]] AA
+|'''{{{AA|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Aircraft.png]] Aircraft
+|width="60px"|'''{{{aircraft|no data}}}'''
+| style="width: 86px;"|[[file:icon_ASW.png]] ASW
+|'''{{{ASW|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Speed.png]] Speed
+|width="60px"|'''{{{speed|no data}}}'''
+| style="width: 86px;"|[[file:icon_LOS.png]] LOS
+|'''{{{LOS|no data}}}'''
+|-
+| style="width: 80px;"|[[file:icon_Range.png]] Range
+|width="60px"|'''{{{range|no data}}}'''
+| style="width: 86px;"|[[file:icon_Luck.png]] Luck
+|'''{{{luck|no data}}}'''
+|-
+| colspan="3" style="text-align: center; background-color: LightSkyBlue;"|'''Build Time'''
+|style="text-align: center; background-color: LightSkyBlue;" | '''Slot'''
+|-
+| colspan="3" style="text-align: center;"|{{{time|Unbuildable}}}
+| align=center |{{{slot|no data}}}
+|-
+| colspan="3" style="text-align: center; background-color: LightSkyBlue;"|'''Stock Equipment'''
+|style="text-align: center; background-color: LightSkyBlue;" | '''[[file:icon_Aircraft.png]]Space'''
+|-
+|align=center colspan="3" |{{{slot1|no data}}}
+|align=center | {{{space1|-}}}
+|-
+|align=center colspan="3" |{{{slot2|no data}}}
+|align=center | {{{space2|-}}}
+|-
+|align=center colspan="3" |{{{slot3|no data}}}
+|align=center | {{{space3|-}}}
+|-
+|align=center colspan="3" |{{{slot4|no data}}}
+|align=center | {{{space4|-}}}
+|-
+{{#if:{{{slot5|}}}|{{!}}align=center colspan="3" {{!}}{{{slot5|no data}}}|}}
+{{#if:{{{slot5|}}}|{{!}}align=center {{!}} {{{space5|-}}}|}}
+|}
+<noinclude>
+* Parameters need not follow the order shown below, however it is highly recommended for easier editing 
+* Empty or parameters left out will be autofilled with "no data" (except the "time" slot which autofilled with "Unbuildable")
+* Color Rarity; use color= ( skyblue / cyan / silver / gold / violet )
+* For ships '''without''' aircraft capabilities, use [[Template:Shipinfo]]
+<pre>
+{{Shipinfo2
+| name=Kaga Kai
+| japanesename=加賀改
+| id=007b
+| image=[[File:007b.png]]
+| color=violet| type=Aircraft Carrier
+| class=Kaga
+| firepower=6 (49)
+| torpedo=0
+| AA=42 (79)
+| LOS=61 (89)
+| ASW=0
+| luck=12
+| hp=79
+| armor=45 (79)
+| evasion=39 (69)
+| aircraft=98
+| speed=High
+| range=Short
+| fuel=60
+| ammo=55
+| d_fuel=16
+| d_ammo=36
+| d_steel=45
+| d_bauxite=45
+| time=Lv30 Remodel
+| slot=4
+| slot1=Type 52 Zero Fighter
+| slot2=Suisei (Comet)
+| slot3=Type 97 Torpedo Bomber
+| slot4=-Unequipped-
+| space1=20
+| space2=20
+| space3=46
+| space4=12
+}}
+</pre>
+
+
+{{Shipinfo2
+| name=Kaga Kai
+| japanesename=加賀改
+| id=007b
+| image=[[File:007b.png]]
+| color=violet| type=Aircraft Carrier
+| class=Kaga
+| hp=79
+| firepower=6 (49)
+| armor=45 (79)
+| torpedo=0
+| evasion=39 (69)
+| AA=42 (79)
+| aircraft=98
+| speed=High
+| LOS=61 (89)
+| ASW=0
+| range=Short
+| luck=12
+| fuel=80
+| ammo=80
+| d_fuel=16
+| d_ammo=36
+| d_steel=45
+| d_bauxite=45
+| slot=4
+| time=Lv30 Remodel
+| slot1=Type 52 Zero Fighter 
+| slot2=Suisei (Comet)
+| slot3=Type 97 Torpedo Bomber 
+| slot4=-Unequipped-
+| space1=20
+| space2=20
+| space3=46
+| space4=12
+}}
+
+</noinclude>

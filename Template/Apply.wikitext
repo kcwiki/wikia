@@ -1,0 +1,6 @@
+<includeonly>{{#vardefine:a1|{{#explode:{{{args|}}}|,|0}}}}{{#vardefine:a2|{{#explode:{{{args|}}}|,|1}}}}{{#vardefine:a3|{{#explode:{{{args|}}}|,|2}}}}{{#vardefine:a4|{{#explode:{{{args|}}}|,|3}}}}{{#vardefine:a5|{{#explode:{{{args|}}}|,|4}}}}{{#vardefine:a6|{{#explode:{{{args|}}}|,|5}}}}{{#vardefine:a7|{{#explode:{{{args|}}}|,|6}}}}{{#vardefine:a8|{{#explode:{{{args|}}}|,|7}}}}{{#vardefine:a9|{{#explode:{{{args|}}}|,|8}}}}{{#vardefine:a10|{{#explode:{{{args|}}}|,|9}}}}{{#if:{{{2|{{#var:a1|}}}}}|{{{{{1}}}|{{{2|{{#var:a1|}}}}}}}{{{separator|}}}{{#if:{{{3|{{#var:a2|}}}}}|{{{{{1}}}|{{{3|{{#var:a2|}}}}}}}{{{separator|}}}{{#if:{{{4|}}}|{{{{{1}}}|{{{4}}}}}{{{separator|}}}{{#if:{{{5|}}}|{{{{{1}}}|{{{5}}}}}{{{separator|}}}{{#if:{{{6|}}}|{{{{{1}}}|{{{6}}}}}{{{separator|}}}{{#if:{{{7|}}}|{{{{{1}}}|{{{7}}}}}{{{separator|}}}{{#if:{{{8|}}}|{{{{{1}}}|{{{8}}}}}{{{separator|}}}{{#if:{{{9|}}}|{{{{{1}}}|{{{9}}}}}{{{separator|}}}{{#if:{{{10|}}}|{{{{{1}}}|{{{10}}}}}{{{separator|}}}{{#if:{{{11|}}}|{{{{{1}}}|{{{11}}}}}{{{separator|}}}}}}}}}}}}}}}}}}}}}}}</includeonly><noinclude>
+<pre>{{Apply|ShipBattleCard|Shigure|Yuudachi}}</pre>
+{{Apply|ShipBattleCard|Shigure|Yuudachi}}
+<pre>{{Apply|ShipBattleCard|args=Shigure, Yuudachi}}</pre>
+{{Apply|ShipBattleCard|args=Shigure, Yuudachi}}
+</noinclude>

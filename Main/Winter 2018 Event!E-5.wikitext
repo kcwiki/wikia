@@ -1,0 +1,169 @@
+{{Event/MapPageHeader
+<!--|thread = -->
+}}
+{{Event/MapInfo
+|en = Operation Ta-gō Kai
+|jp = 多号作戦改
+|tag = E5
+|romaji = Ta-gō Sakusen Kai
+|mechanics = Striking Force@Striking_Force, Abyssal Combined Fleet@Abyssal Combined Fleet, Land Base Aerial Support@Land Base Aerial Support, LoS Check@Events/Mechanics#LoS_Check, Ship Locking@Events/Mechanics#Ship_Locking, Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Unlockable Nodes@Events/Mechanics#Node_specific_details,
+|no_hp = true
+|hp_casual = 500 TP + 1400 HP
+|hp_easy = 500 TP + 1400 HP
+|hp_medium = 600 TP + 1400 HP
+|hp_hard = 800 TP + 1400 HP
+|show_kills = true
+|kills_all = 4
+|kills_casual = 4
+|kills_easy = 4
+|kills_medium = 4
+|kills_hard = 4
+|reward_casual_1 = {{EquipmentCardKai|130mm B-13 Twin Gun Mount|size=50px}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_casual_2_x = 1
+|reward_easy_1 = {{EquipmentCardKai|130mm B-13 Twin Gun Mount|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|533mm Triple Torpedo Mount|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_easy_3_x = 2
+|reward_medium_1 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|12.7cm Twin Gun Mount Model C Kai 2|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|130mm B-13 Twin Gun Mount|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|533mm Triple Torpedo Mount|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_5_x = 2
+|reward_hard_1 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|12.7cm Twin Gun Mount Model D Kai 2|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|130mm B-13 Twin Gun Mount|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|533mm Triple Torpedo Mount|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_5_x = 3
+}}
+{{MapBranchingTable
+|title = E-5 Branching Rules Starting Points
+|0 -> 1 =
+* Meet one of the following requirements:
+** Phase 2 isn't unlocked yet.
+** Fleet contains AV.
+** Fleet contains SS(V).
+|0 -> 2 =
+* Do not meet the requirements to start at 1.
+}}
+{{MapBranchingTable
+|title = E-5 Branching Rules Part 1
+|1 -> B = 
+* Do not meet the requirements to go to C.
+|1 -> C/empty = 
+* Amount of the Operation Ta-gō Kai members ≧ 2/3/5 on Easy/Medium/Hard
+
+|B -> A = * Do not meet the requirements to go to D.
+|B -> D = * Amount of CA(V) ≦ 1
+
+|J -> K/empty = * Fail the LoS check.
+|J -> L = * Pass the LoS check.
+}}
+{{MapBranchingTable
+|title = E-5 Branching Rules Part 2
+|order = O,R,N,P
+|O -> N = * Amount of DD + DE ≧ 4
+|O -> R = * Do not meet the requirements to go to N.
+
+|R -> S/empty = * Fail the LoS check.
+|R -> N = * Pass the LoS check.
+
+|N -> M = * Do not meet the requirements to go to P.
+|N -> P = 
+* Meet one of the following requirements:
+** Amount of DD ≧ ?
+** Amount of the Operation Ta-gō Kai members ≧ ?/?/3 on Easy/Medium/Hard
+
+|P -> Q/empty = * Fail the LoS check.
+|P -> T = * Pass the LoS check.
+}}
+
+==Map Guide==
+*'''This map does not allow the use of (F)BB(V) and CV(L/B).'''
+**You can place a BB or CV on your 1st fleet to avoid mistakenly sorting it.
+*'''NOTE''': It is possible to sortie either the First Fleet, or the [[Striking Force]] Fleet (3rd Fleet) in this map.
+*'''LBAS''': Two [[Land Base Aerial Support]]s are available for sorties. Enemy's air raid is present.
+** 2+ range is required in order to reach the first boss node {{Event/Route|L|red}} and 6+ for the 2nd {{Event/Route|T|red}}
+
+===Historical Fleet: Battle of Ormoc Bay===
+The historical fleet that has participated in Operation Ta-gō Kai.
+* CA: {{ShipLink|Ashigara Kai Ni|text=Ashigara}}, {{ShipLink|Nachi Kai Ni|text=Nachi}}
+* CL: {{ShipLink|Kinu Kai Ni|text=Kinu}}
+* DD: {{ShipLink|Akebono Kai|text=Akebono}}, {{ShipLink|Asashimo}}, {{ShipLink|Hatsuharu Kai Ni|text=Hatsuharu}}, {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}}, {{ShipLink|Kasumi Kai Ni|text=Kasumi}}, {{ShipLink|Naganami Kai Ni|text=Naganami}}, {{ShipLink|Okinami}}, {{ShipLink|Shimakaze}}, {{ShipLink|Ushio Kai Ni|text=Ushio}}, {{ShipLink|Uranami}}, {{ShipLink|Wakaba}}
+* DE: {{ShipLink|Shimushu}}
+
+==Phases==
+#Completely Deplete the Transport Gauge to unlock the Boss Node {{Event/Route|T|red}}.
+#*Depending on difficulty selected, you must also:
+#**For Hard difficulty, achieve both Air Superiority from Node {{Event/Route|D|orange}} as well as from an Enemy Air Raid on your [[Land Base Aerial Support|LBAS]].
+#**For Normal/Medium difficulty, achieve minimum Air Parity at Node {{Event/Route|D|orange}}, but Air Superiority during [[Land Base Aerial Support|LBAS]] raid.
+#**For Easy difficulty, only Air Parity is required for Node {{Event/Route|D|orange}}. 
+#Sink the {{ShipLink|Heavy Cruiser Princess}} and her combined fleet.
+
+===Depleting the Transport Gauge===
+[[File:Winter 2018 Event E-5 Hard Transport Phase|right|250 px]]
+*'''Recommended: Strike Force (3rd Fleet)'''
+*You must fully clear the TP Gauge Bar for this phase.
+**Like any other Transport Operation, you must obtain at least a minimum of A-Rank Victory to deplete the TP Gauge Bar. Refer to [[Events/Mechanics#Map-specific_Mechanics|Transport Loadoff]] for more information regarding the mechanic.
+*Using a certain number of [http://kancolle.wikia.com/wiki/Thread:631528#The_Second_Striking_Force_.28Shima_Fleet.29%7C Shima Fleet], ≥2/3/5 on Easy/Medium/Hard, it can route you through {{Event/Route|C|lightblue|D|orange|E|lightblue|G|Green|F|orange|H|red|I|green|J|red|L|red}} for the shortest path.
+**NOTE: Abukuma is NOT a member of the Shima Fleet
+*Possible Composition: 1-2 CL + 2 CA(V) + 2-4 DD + 0-1 {{ShipLink|Akitsu Maru/Kai}}
+**You may use {{ShipLink|Akitsu Maru/Kai}}, and/or multiple {{EquipmentLink|Type 2 Seaplane Fighter Kai|text=Seaplane Fighters}} on a CAV to obtain AS. However, it is also possible to fight without Air Power by utilizing [[Equipment_Guide|a setup for non-Artillery Spotting (no AS) situation]], though you still might be required to use Recon plane(s) to satisfy the LoS requirement.
+*'''NOTE:''' {{EquipmentLink|Special Type 2 Amphibious Tank}} depletes a bonus 20 TP from the TP bar for this map. It is recommended that you bring it, if available.
+*Because of the Short Range required by the LBAS to reach the boss node, it is recommended to send all of your LBAS into it to have a good chance in obtaining at least an A-rank victory.
+**However, sending one of your bases full of interceptors/fighters to the Enemy Air Raid Nodes {{Event/Route|D|orange}} and {{Event/Route|F|orange}} can help make reaching the boss node easier.
+***Alternatively you can send them both to the Air-Raid nodes (4 and 2 range) in lower difficulties and have them deal with those if your fleet is strong enough to obtain A- or S-Rank at the boss node without support.
+**You may also consider the option to use the Support Expedition Fleet for the Boss Node.
+
+===Unlocking the Boss Node===
+[[File:Winter 2018 Event E-5 Opening Route to Boss|right|250 px]]
+*Just depleting the Transport Gauge will not be enough to open up the Boss Node {{Event/Route|T|red}}.
+**Depending on difficulty selected, you must also:
+***For Hard difficulty, achieve both Air Superiority from Node {{Event/Route|D|orange}} as well as from an Enemy Air Raid on your [[Land Base Aerial Support|LBAS]].
+***For Normal/Medium difficulty, achieve minimum Air Parity at Node {{Event/Route|D|orange}}, but Air Superiority during [[Land Base Aerial Support|LBAS]] raid.
+***For Easy difficulty, only Air Parity is required for Node {{Event/Route|D|orange}}. 
+====Obtaining Air Superiority/Parity in Node D====
+*To obtain Air Superiority (Hard-Only) or Air Parity in (Easy/Medium) from {{Event/Route|D|orange}}, you are recommended to bring CAV(s) (or Italian CA(s) such as {{ShipLink|Pola}} or {{ShipLink|Zara/Due|text=Zara}} with multiple {{EquipmentLink|Type 2 Seaplane Fighter Kai|text=Seaplane Fighters}}, and/or {{ShipLink|Akitsu Maru/Kai}} with [[List of Fighters by stats|Fighters]], and have all of your LBAS fully equipped with [[List of Land-based Fighters by stats|Land-based Fighters]] or [[List of Fighters by stats|Carrier-based Fighters]] and sent to Node {{Event/Route|D|orange}}.
+**Another option for your LBAS is to equip them with both {{EquipmentLink|Type 1 Land-based Attack Aircraft|text=Land-based Attack Aircrafts}} and [[List of Land-based Fighters by stats|Land-based Fighters]]/[[List of Fighters by stats|Carrier-based Fighters]] and sent to Node {{Event/Route|D|orange}}, where the Bombers will sink the Enemy Carriers, where they will become unable to participate in the Aerial Battle Phase.
+***However as there are chances that the Enemy Carrier(s) may not be sunk from this attack, this option is slightly risky to use.
+
+===Defeating the Heavy Cruiser Princess===
+[[File:Winter 2018 Event E-5 Hard Final Kill|thumb|right|250 px]]
+*You are to use the '''Striking Force Fleet (3rd Fleet)''' for this Phase.
+**Recommended Composition: 2 CA(V) 1 CL 4 DD
+***Route: {{Event/Route|O|orange|N|red|P|red|T|red}}
+****Please note that to avoid routing from O to R, having 4 Destroyers in the fleet is '''Mandatory'''.
+****Due to this fact, use of {{EquipmentLink|Striking Force Fleet Command Facility}} to retreat a Destroyer on node O is discouraged, as having even one of them retreated will cause your fleet to go through the extra node R before the boss node.
+*To pass through the Route with a safer chance, you are highly recommended to continue to use the Vanguard Formation all the way until your fleet reaches the Boss Node.
+*You are recommended to bring at least 1 CAV fully equipped with multiple {{EquipmentLink|Type 2 Seaplane Fighter Kai|text=Seaplane Fighters}}.
+**Unfortunately due to the extremely high Air Power requirements in Nodes {{Event/Route|O|orange}} and {{Event/Route|N|red}}, you will most likely have to deal with getting <span style="color:red">Air Denial</span>, or at worse <span style="color:red">Air Incapability ('''制空権喪失!''')</span> if lacking in Seaplane Fighters or just outright not using any at all.
+***Although you may choose to use your [[Land Base Aerial Support|LBAS]] with Fighters to reduce the Air Power of the Enemy Fleet, this will mean you will have less support at the Boss Node.
+**You are highly recommended to bring at least 1-2 Ship capable of using Anti-Air Cut-In.
+*Node {{Event/Route|P|red}} has an Enemy Fleet Pattern which contains a {{ShipLink|Submarine So-Class}}. This will cause your Destroyer/Light Cruisers to be forced to attack it, making them unable to take out the other enemies.
+**You are recommended to bring at least 1 OASW capable Destroyer or Light Cruiser to get rid of it immediately.
+*To fight against the Boss Fleet more easily, you are recommended to send both of your LBAS with 3 {{EquipmentLink|Type 1 Land-based Attack Aircraft|text=Land-based Attack Aircrafts}} and 1 Fighter each to the Boss Node.
+**Use of Support Expedition is not required for Pre-Finals, but you may wish to consider it for the Final Kill in the Boss Node.
+
+==Map progression==
+{{#tag:gallery|
+Winter_2018_Event_E-5_Map p1.png{{!}}Map during the TP phase at node L.
+Winter_2018_Event_E-5_Map.png{{!}}Full map during HP phase at node T.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+==LBAS Flight Range==
+[[File:Winter_2018_Event_E5 LBAS_Flight_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

@@ -1,0 +1,188 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = DesDiv 8, in Position! Battle of Bali Island
+|jp = 八駆見参！バリ島沖海戦
+|tag = E-1
+|romaji = Hakku kenzan! Bari-tō oki kaisen
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 1800 HP + 275
+|hp_easy = 1800 HP + 275
+|hp_medium = 2400 HP + 575
+|hp_hard = 2400 HP + 750
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_casual_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Furniture Fairy|icon=true|size=50px}}
+|reward_casual_2_x = 1
+|reward_casual_3 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_casual_3_x = 2
+|reward_easy_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Furniture Fairy|icon=true|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_easy_3_x = 2
+|reward_easy_4 = {{EquipmentCardKai|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|size=50px}}
+|reward_easy_4_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Furniture Fairy|icon=true|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_medium_3_x = 3
+|reward_medium_4 = {{EquipmentCardKai|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_hard_1_x = 3
+|reward_hard_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Furniture Fairy|icon=true|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_hard_4_x = 4
+|reward_hard_5 = {{EquipmentCardKai|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|expand = true
+|id = 46-1
+|order = 1,C,E,F
+
+|1 -> A = * Do not meet the requirements to go to B.
+|1 -> B/empty = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships ≤ 5
+** Amount of DD ≥ 3
+** AV+CA(V)+SS(V)=0
+** CL+CLT≤1
+
+|C -> D = * Do not meet the requirements to go to E.
+|C -> E/empty = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships ≤ 5
+** Amount of DD ≥ 3
+** No CA(V) allowed
+** AV+CL+CLT+SS(V)≤1
+
+|E/empty -> F/empty = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships ≤ 5
+** Amount of DD = 4
+|E/empty -> G = * Do not meet the requirements to go to F.
+
+|F/empty -> I/empty, H = * Active branching
+}}
+==Before Starting the Event==
+*If you wish to challenge any difficulty above Easy this event, it is highly advised for players to read up the [[Fall_2019_Event/Info|Info tab]] first to understand about difficulty selection and ship-locking.
+
+==Map Guide==
+*This is a '''single fleet''' map.
+*All forms of battleship (BB) and carriers (CV) '''are not allowed''' in this map.
+*The map is split into two parts: Phase 1, sinking {{ShipLink|Supply Depot Princess|text=Supply Depot Princess}} at {{Event/Route|H|Red}}, then Phase 2, {{ShipLink|Light Cruiser He-Class|text=Light Cruiser He-Class Kai Flagship}} at {{Event/Route|K|Red}}
+**The difficulty of Phase 1 depends on the type of anti-installation equipment available (i.e. {{EquipmentLink|Type 3 Shell}}, {{EquipmentLink|WG42 (Wurfgerät 42)}}, {{EquipmentLink|Type 2 12cm Mortar Kai|text=mortars}}), and the amount of Destroyers(DD)/Light-cruiser(CL) that can equip them.
+**{{ShipLink|Supply Depot Princess|text=Supply Depot Princess}} is an installation boss.
+**1 or more {{ShipLink|PT Imp Pack}} accompany her on Casual last kill, Easy and above difficulties. They are extremely difficult to sink despite their low HP and it is recommended to use [[Expedition/Support Expedition|Support Expedition]] (or Land-base) against them. Otherwise, a specific ship setup (Anti-PT-Imp setup) are required to effectively sink them (See below).
+<tabber>
+Map Bonuses=
+
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="2"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="2"| 8th DesDiv
+!colspan="2"| Mapwide
+|-
+!{{ShipBattleCardKai|Asashio/Kai Ni}}
+!{{ShipBattleCardKai|Arashio/Kai Ni}}
+|colspan="2" rowspan="2"|1.25x
+|-
+!{{ShipBattleCardKai|Ooshio/Kai Ni}}
+!{{ShipBattleCardKai|Michishio/Kai Ni}}
+|-
+!colspan="4"| Node Modifiers (Multiplicative with above)
+|-
+!colspan="2"|{{Event/Route|H|Red}}
+|colspan="2"| 1.45x
+|-
+!colspan="2"|{{Event/Route|J|Red}}
+|colspan="2"| 1.25x
+|-
+!colspan="2"|{{Event/Route|K|Red}}
+|colspan="2"| 1.30x
+|-
+!colspan="2"| Nagara + 21st DesDiv
+!colspan="2"| Mapwide
+|-
+!{{ShipBattleCardKai|Nagara/Kai}}
+!{{ShipBattleCardKai|Nenohi/Kai}}
+|colspan="2" rowspan="2"|1.15x
+|-
+!{{ShipBattleCardKai|Wakaba/Kai}}
+!{{ShipBattleCardKai|Hatsushimo/Kai}}
+|}
+|-|Anti-PT Imp Pack Setup=
+*'''At least two different types of equipment must be combined to see significant boosts to accuracy.'''
+**Skilled lookouts give a high boost to accuracy, and reaching very high accuracy is hard without them
+**Stacking multiple of other types (without skilled lookouts) can give somewhat high accuracy. For instance, two secondary guns and one machine gun
+*Applicable equipment types
+**Skilled Lookouts [[File:Ssp c.png]]
+**Small main guns [[File:RedGunLight.png]][[File:GreenGunDP.png]]
+**Secondary guns [[File:YellowGun.png]][[File:GreenGunDP.png]]
+**AA/machine guns [[File:GreenGunMG.png]]
+**Seaplane scouts/bombers [[File:Seaplane.png]]
+*Typically destroyers are used as anti-PT imp because they usually want to have small main guns equipped regardless, however, CL, AV, CA(V), BB(V) are also sometimes used as well depending on the circumstances
+*Equipping more different types of equipment will increase accuracy greatly, but some types (guns, machine guns) will increase accuracy further if two of the same type are equipped, albeit less than equipping an additional type instead.
+*Some equipment types give extra firepower bonuses against PT Imp Packs, namely the main/secondary guns. For the high probability of sinking in one hit, at least one gun-type equipment effective against PT Imp Packs is usually needed.
+|-|Ships than can equip Tanks (Ka-mi)=
+{{Hard Anti-installation Weapons}}
+</tabber>
+
+===Map progression===
+{{#tag:gallery|
+Fall19_E1_p1.png{{!}}Map during the first HP phase at node H
+Fall_2019_Event_E-1_Map.png{{!}}Map during the second HP phase at node K
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+
+===Part 1: Sink {{ShipLink|Supply Depot Princess|text=Supply Depot Princess}}===
+*'''Method 1:''' 1 CL 4 DD or 4 DD
+**'''Route''':{{Event/Route|B|Blue|C|Red|E|Red|F|Blue|H|Red}}
+**For people with anti-installation gears that are equippable on DD (and 1 CL).
+*'''Method 2:''' 1-3 CA + 3-5 XX (recommended DD for Anti-imp)
+**'''Due to shiplocks this method is not recommended for Medium+ unless you have a lot of CAs to spare or plan to clear later maps in Easy or Casual difficulty!'''
+**'''Route''':{{Event/Route|A|Red|C|Red|D|Red|F|Blue|H|Red}}
+**'''Node A''' is a submarine node. Therefore, there is still no resource penalty even with 3 battles.
+**For people that have to rely on {{EquipmentLink|Type 3 Shell}}.
+***In Phase 2, you will be fighting the boss with a resource penalty (less damage). However, the boss is already weak which still makes it viable.
+***Bringing any CA will immediately route you to '''Node D'''; in Medium+, you may face 2 {{ShipLink|Heavy Cruiser Ne-Class}} ({{ShipLink|Heavy Cruiser Ne-Class Elite|text=elite}} in hard) here.
+
+===Part 2: Sink {{ShipLink|Light Cruiser He-Class|text=Light Cruiser He-Class Kai Flagship}}===
+*Either '''Method 1''' or '''Method 2''' from Part 1 works. However, Method 2 will be fought under resource penalty.
+**If you have trouble reaching the boss, consider using [https://kancolle.fandom.com/wiki/Fall_2019_Event#What_is_the_Spear-looking_formation.3F_I_didn.27t_see_it_before_the_event... Vanguard formation]
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers.
+{{Fleets|friend=Fall 2019 Event|node=E-1 H}}
+
+{{Event/MapPageFooter}}

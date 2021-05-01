@@ -1,0 +1,68 @@
+This template uses ship data modules to construct a ship modernization bonus table.
+
+==Example==
+
+ <nowiki>{{ShipModernizationListKai
+ |Nagato |Nagato/Kai
+ |Yuudachi |Yuudachi/Kai
+ |- |Yuudachi/Kai Ni
+ |#
+ |Hiyou |Hiyou/Kai
+ |Bismarck |Bismarck/Kai
+ |Bismarck/zwei |Bismarck/drei
+ |#
+ |Iona (fog)
+ }}</nowiki>
+
+<div class="mw-collapsible mw-collapsed">
+becomes
+
+<div class="mw-collapsible-content">{{ShipModernizationListKai
+ |Nagato |Nagato/Kai
+ |Yuudachi |Yuudachi/Kai
+ |- |Yuudachi/Kai Ni
+ |#
+ |Hiyou |Hiyou/Kai
+ |Bismarck |Bismarck/Kai
+ |Bismarck/zwei |Bismarck/drei
+ |#
+ |Iona (fog)
+ }}</div>
+</div>
+
+==Parameters==
+
+The following sections describe the parameters that can be passed to this template.
+
+===Ships===
+
+The list of ships to be included in that table should be passed in as unnamed parameters, like in the example.
+Pass a dash (-) to prevent cells in the row above from merging with cells in the row below.
+Pass a hash (#) to insert a header row.
+Pass an exclamation mark (!) followed by a string key to specify a [[#Custom Rows|custom row]].
+
+====Ship Name Format====
+
+Ships should be passed in as ''ship_name''[/''suffix''].
+
+For example, the basic form of [[Ooyodo]] would be specified as ''Ooyodo'', whereas her Kai form would be specified as ''Ooyodo/Kai''.
+
+===Custom Rows===
+
+You can specify custom rows by passing in an exclamation mark followed by a string key as described in [[#Ships]].
+
+You can then set the properties of that custom row using the following parameters:
+
+====custom_row_''key''_content====
+
+Pass this parameter to set the content of the custom row. You can use wikitext. Be careful with = and |, for they may interfere with template parsing.
+
+====custom_row_''key''_text_align====
+
+Pass this parameter to set the text_align of the custom row. Defaults to "start".
+
+====custom_row_''key''_bg_color====
+
+Pass this parameter to set the background-color of the custom row. Defaults to "transparent".
+
+<includeonly>[[Category:Templates that use ship data modules|{{PAGENAME}}]]</includeonly><noinclude>[[Category:Template documentation|{{PAGENAME}}]]</noinclude>

@@ -1,0 +1,108 @@
+==Important Notes==
+*If you are having difficulties using this template, [[User_blog:Dragonjet/KC3%E6%94%B9|KC3 Kai]] has a built-in exporter. This allows you to just copy-paste the code and have it working.
+*Instead of using this template, you can also just screenshot your fleet and post that. It may prove easier for some.
+
+==Basic==
+;Description
+:This is a very lightweight template running on Lua.
+;Credits
+:[[User:Nanamin|Nanamin]]
+;Skeleton
+<pre>{{EventComp
+| <Ship>/<Remodel>
+| <Level>
+| <Equipment>
+| <Equipment>
+| <Equipment>
+| <Equipment>
+|-
+| hq = 
+}}</pre>
+
+==Syntax==
+*''Ship'' is the ship's name. For example, "Sendai".
+*''Remodel'' is the ship's remodel. This may be "", "Kai", "Kai Ni", "A", "Carrier", "Carrier Kai", "Carrier Kai Ni", "zwei" or "drei".
+*''Level'' is the ship's current level.
+*''Equipment'' is the ship's equipment. Slot order does matter as it is used to calculate the ship's fighter power. Names are as listed on the wikia.
+;Special Values
+:''hq'' is your HQ level.
+
+==Example==
+<pre>{{EventComp
+| Sendai/Kai Ni
+| 132
+| 20.3cm (No.3) Twin Gun Mount
+| 20.3cm (No.3) Twin Gun Mount
+| Type 98 Reconnaissance Seaplane (Night Recon)
+|-
+| Shigure/Kai Ni
+| 93
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| Skilled Lookouts
+|-
+| Yuudachi/Kai Ni
+| 93
+| 12.7cm Twin Gun Mount Model B Kai 2
+| 12.7cm Twin Gun Mount Model B Kai 2
+| Type 22 Surface Radar Kai Yon
+|-
+| Akatsuki/Kai Ni
+| 93
+| 12.7cm Twin Gun Mount Model B Kai 2
+| 12.7cm Twin Gun Mount Model B Kai 2
+| Type 22 Surface Radar Kai Yon
+|-
+| Shimakaze/Kai
+| 91
+| 12.7cm Twin Gun Mount Model B Kai 2
+| 12.7cm Twin Gun Mount Model B Kai 2
+| Type 22 Surface Radar Kai Yon
+|-
+| Yukikaze/Kai
+| 91
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| Skilled Lookouts
+|-
+| hq = 102
+}}</pre>
+{{EventComp
+| Sendai/Kai Ni
+| 132
+| 20.3cm (No.3) Twin Gun Mount
+| 20.3cm (No.3) Twin Gun Mount
+| Type 98 Reconnaissance Seaplane (Night Recon)
+|-
+| Shigure/Kai Ni
+| 93
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| Skilled Lookouts
+|-
+| Yuudachi/Kai Ni
+| 93
+| 12.7cm Twin Gun Mount Model B Kai 2
+| 12.7cm Twin Gun Mount Model B Kai 2
+| Type 22 Surface Radar Kai Yon
+|-
+| Akatsuki/Kai Ni
+| 93
+| 12.7cm Twin Gun Mount Model B Kai 2
+| 12.7cm Twin Gun Mount Model B Kai 2
+| Type 22 Surface Radar Kai Yon
+|-
+| Shimakaze/Kai
+| 91
+| 12.7cm Twin Gun Mount Model B Kai 2
+| 12.7cm Twin Gun Mount Model B Kai 2
+| Type 22 Surface Radar Kai Yon
+|-
+| Yukikaze/Kai
+| 91
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| 61cm Quintuple (Oxygen) Torpedo Mount
+| Skilled Lookouts
+|-
+| hq = 102
+}}

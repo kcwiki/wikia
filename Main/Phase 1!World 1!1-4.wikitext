@@ -1,0 +1,322 @@
+{{Map/Header}}
+{{Map/Info
+|en = Hold the Line at the Nansei Islands
+|jp = 南西諸島防衛線
+|romaji = Nansē-shotō bōēsen
+|strategy_name = First Southern Operation Tactics
+|strategy_name_ja = 南1号作戦
+|strategy_info = An enemy invasion fleet is pressing on the defensive line in the Nansei Islands. Sail out at full force and destroy them!
+|strategy_info_ja = 南西諸島の防衛ライン上の<br>敵侵攻艦隊を捕捉、<br>全力出撃でこれを撃滅せよ！
+|exp_ship = 100
+|exp_hq = 50
+|exp_hq_boss = 500
+}}
+{{MapBranchingTable
+|expand = true
+|id = 1-4
+|0 -> A, B, G/resource = * Random 33%/33%/33% chance
+
+|C/resource -> D/resource, E = * Random 50%/50% chance
+
+|I/battle -> F/battle = * 30% chance
+|I/battle -> J/battle = * 70% chance
+}}
+New players will notice that this map marks the first appearance of enemy aircraft carriers. As you will most likely be lacking carriers of your own at this point in time, you will have to rely on brute force without any carrier support.
+
+After playing this stage once, you may notice that standard aircraft carriers kind of hurt. For now, your only countermeasures are farming for heavy cruisers at 1-3/this stage and training them, crafting battleships and using them to push through with their firepower and armor, or building your own aircraft carrier and equipping fighters of your own to shoot down enemy aircraft. If you have Isuzu, getting her to level 12 and Remodeling her gives a huge boost to Anti-Air which also helps. Note that getting an aircraft carrier will also help to complete the Akagi quests ([[Quests#A11|A11]] and [[Quests#B10|B10]]).
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=214|y=75}}
+{{Map/ImageNode|B|x=250|y=178}}
+{{Map/ImageNode|C|x=349|y=113}}
+{{Map/ImageNode|D|x=509|y=85}}
+{{Map/ImageNode|G|x=239|y=238}}
+{{Map/ImageNode|H|x=358|y=234}}
+{{Map/ImageNode|E|x=455|y=173}}
+{{Map/ImageNode|I|x=474|y=250}}
+{{Map/ImageNode|J|x=637|y=284}}
+{{Map/ImageNode|F|x=594|y=162}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵偵察艦隊
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|A
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|A
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser He-Class
+|Light Cruiser He-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+}}
+{{Map/Nodes|name=敵偵察艦隊
+|B
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|B
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|B
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser He-Class
+|Light Cruiser He-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class}}
+{{NodeInfo
+|C
+|Resource
+|Steel
+|10-15-20
+}}
+{{NodeInfo
+|D
+|Resource
+|Bauxite
+|10-15-20
+}}
+{{Map/Nodes|name=敵前衛艦隊
+|E
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser Ho-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|E
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|E
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+{{Map/Nodes|name=敵機動部隊
+|F
+|Boss
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|F
+|Boss
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|F
+|Boss
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Destroyer Ni-Class
+}}
+{{NodeInfo
+|G
+|Resource
+|Ammo
+|10-15-20
+}}
+{{NodeInfo
+|H
+|Resource
+|Steel
+|10-15-20
+}}
+{{Map/Nodes|name=敵前衛艦隊
+|I
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser Ho-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|I
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|I
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+{{Map/Nodes|name=敵支援艦隊
+|J
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Torpedo Cruiser Chi-Class
+|Light Cruiser He-Class
+|Light Cruiser He-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|J
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Torpedo Cruiser Chi-Class
+|Torpedo Cruiser Chi-Class
+|Light Cruiser He-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|J
+|Normal
+|{{Formation|Double Line}}
+|Battleship Ru-Class
+|Light Cruiser Ho-Class
+|Light Cruiser Ho-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+<!--
+AUTOGENERATED, leave a comment on this subpage if you have found any issues
+(incorrect or missing info, non-optimal order, etc.)
+-->
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, E, F, I, J
+|boss = F
+|Akagi: F, I, J
+|Akatsuki: A, B, F, I
+|Aoba: A, B, E, F, I, J
+|Arare: A, B, E, F, J
+|Arashio: A, E, F, J
+|Asashio: A, J
+|Ashigara: A, B, E, F, I, J
+|Ayanami: B, E, I
+|Chitose: A, B, E, F, I, J
+|Chiyoda: A, B, E, F, I, J
+|Choukai: F, J
+|Fubuki: B, E, F, I
+|Fumizuki: A, B, E, F, I
+|Furutaka: A, B, E, F, I, J
+|Haguro: A, B, E, F, I, J
+|Hamakaze: F
+|Hatsuharu: A, F, I, J
+|Hatsushimo: A, E, F, I, J
+|Hatsuyuki: A, B, E, F, I, J
+|Hibiki: A, B, E, F, I, J
+|Houshou: A, B, E, F, I, J
+|Ikazuchi: A, B, E, F, I, J
+|Inazuma: A, B, E, F
+|Isonami: A, B, E, F, I, J
+|Isuzu: A, B, E, F, I
+|Jintsuu: A, B, F, I, J
+|Kagerou: A, B, E, F, I, J
+|Kako: A, B, F, I, J
+|Kasumi: A, E, F, I
+|Kikuzuki: B, F, I, J
+|Kinugasa: F
+|Kisaragi: A, E, F, I, J
+|Kiso: A, B, E, F, I, J
+|Kuma: A, B, E, F, I, J
+|Kuroshio: A, F, I, J
+|Makigumo: F
+|Maya: F
+|Michishio: A, B, E, F, I, J
+|Mikazuki: A, B, F, J
+|Miyuki: A, E, F, I, J
+|Mochizuki: A, B, I
+|Murakumo: A, B, F, I, J
+|Murasame: B, F, I, J
+|Mutsuki: A, B, F, I
+|Myoukou: A, B, E, F, I, J
+|Nachi: A, B, E, F, I, J
+|Nagara: A, B, E, F, I, J
+|Nagatsuki: B, F, J
+|Naka: A, B, E, F, J
+|Natori: A, E, F, I, J
+|Nenohi: A, B, E, F, I, J
+|Ooshio: A, B, F, I, J
+|Ryuujou: F, I
+|Samidare: A, B, E, F, I
+|Satsuki: A, B, E, I
+|Sendai: F
+|Shigure: A, B, F, I
+|Shikinami: B, I
+|Shiranui: A, B, E, F, J
+|Shiratsuyu: A, B, E, F, I, J
+|Shirayuki: A, B, E
+|Shouhou: F, I
+|Suzukaze: A, B, I, J
+|Tama: A, B, E, I
+|Tatsuta: A, B, E, F, I, J
+|Tenryuu: A, B, E, F, J
+|Wakaba: A, B, E, F, I, J
+|Yura: A, B, F, I
+|Yuubari: I
+|Yuudachi: A, B, E, F, I, J
+
+}}
+{{SectionEnd}}

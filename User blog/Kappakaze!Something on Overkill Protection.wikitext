@@ -1,0 +1,36 @@
+If a ship takes damage higher than its current HP and it didnt enter the Node on Taiha, then overkill protection will apply. Because of how the overkill protection formula works there are some conditions that can make chances of going Taiha higher or lower.
+
+The formula consists of 2 parts. In the first part the ships current HP is divided by 2. In the second part a random value between 0 and the current HP - 1 is picked, multiplied by 0.3. These two parts combined, with the decimals cut off are the damage the ship will take.
+<center>
+<math>\text{Damage Value} = \left \lfloor \frac{H_{t}}{2} + 0.3 \big ( \text{rand} \in \left [ 0 , H_{t} - 1 \right ] \big ) \right \rfloor</math>
+</center>
+Looking at the first part of the formula, ships with uneven HP values have an advantage because they are capable of surviving overkill at just Shouha while ships with even HP values are guaranteed to be at best Chuuha. As an example, ships with 32 and 31HP getting overkilled with minimum damage are both left at 16HP, but the 32HP ship is Chuuha while the 31HP ship remains Shouha.
+<br>Continuing this example, if the 32HP ship takes 8 or more damage from the second part of the formula, it enters the Taiha range, while the 31 HP ship could take another 8 damage from that and still be Chuuha at 8 HP.
+<br>This highlights the first condition one should avoid for overkill protection, 4n HP values. The problem is that 4n HP values have the "closest distance" between 50% damage and the Taiha range, that being always 25% of their HP, while other ships have a bit more room. For instance a 31HP ship at 50% HP (16) needs to take another 9 damage to be Taiha, which is about 29% of its full HP.
+
+In the second part of the formula 6n HP valeus are something to look out for. If a 6n HP value ship rolls a 5n value (or higher), it would take damage equal to 25% (or higher) of its max HP (5n * 0.3 = 1.5n = 25% * 6n). 1/6 of all rolls for 6n HP ships are 5n or higher.
+If a ship now combines both the 4n HP and 6n HP conditions (ie 12n HP) it effectively has a 1/6 (16.6%) chance of going Taiha with overkill protection.
+
+==Notes:==
+*calculations assume full HP ships
+*Shouha - Yellow HP
+*Chuuha - Orange HP
+*Taiha - Red HP
+
+===Something to consider for HP modding ships with even HP:===
+A ship with 2n HP will take n damage from the first part of the formula while a 2n + 1 HP ship will take n + 0.5 damage. Additionally a 2n HP ship and a 2n +1 HP ship both reach Taiha at <math> \left \lfloor \text{n / 2} \right \rfloor</math> HP.
+<br>This means that by adding 1 HP to a 2n HP ship
+*the ship needs to take at least 0.5 damage from the second part of the formula to enter Chuuha range
+*Taiha HP range is pushed back by 0.5 damage
+What this means is that a 2n + 1 HP ship always has 2 rolls in the second part of the formula where it survives with Shouha HP. Also the rolls that go Taiha right away are pushed back by potentially two while only adding one total roll.
+
+Some examples:
+*a 30 HP ship has to roll > 26 (10%) while a 31 HP ship needs to roll > 28 (6.5%)
+*a 34 HP ship has to roll > 29 (11.8%) while a 35 HP ship needs to roll > 31 (8.6%)
+*a 38 HP ship has to roll > 33 (10.5%) while a 39 HP ship needs to roll > 34 (10.3%)
+to go Taiha. In the first two cases the Taiha chance went down relatively significantly, and the ship in the third case still benefits from the added Shouha chance.
+
+==Notes:==
+*HP modding a 2n HP ship to an uneven value is less efficient (case 3) when the distance between half HP and Taiha HP (n - <math> \left \lfloor \text{n / 2} \right \rfloor</math>) ends up being a 3n + 1 value
+*for more details on the formula visit [[Damage Calculation#Player Ship Protection Mechanisms|Damage Calculation]]
+[[Category:Blog posts]]

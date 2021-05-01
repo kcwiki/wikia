@@ -1,0 +1,124 @@
+{{Map/Header}}
+{{Map/Info
+|en = Tawi-Tawi Anchorage
+|jp = タウイタウイ泊地沖
+|romaji = Tawi Tawi Hakuchi oki
+|exp_hq = 180
+|exp_hq_boss = 360 1st boss, 2360 2nd
+|show_kills = true
+|kills = 3+4
+|strategy_name = Celebes Sea Combat Patrols
+|strategy_name_ja = セレベス海戦闘哨戒
+|strategy_info = It is recognized enemy forces rampancy in off the Tawi-Tawi anchorage that is a sortie base for our carrier task force. Conduct patrol strictly and mastery them!
+|strategy_info_ja = 我が機動部隊の出撃拠点であるタウイタウイ泊地沖に敵戦力の跳梁が確認されている。哨戒を厳として、これらを制圧せよ！
+}}
+{{MapBranchingTable
+|title = 7-2 Branching Rules Part 1
+|id = 7-2A
+
+|0 -> A/storm = * Do not meet the requirements to go to either B or C.
+|0 -> B = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to C.
+** Amount of DE+DD ≥ 2
+** Amount of CV(B) ≤ 1
+** Amount of (F)BB(V)+CV(B) ≤ 3
+** Amount of CL+CT ≤ 2
+** No SS(V)
+|0 -> C = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DE+DD ≥ 3 
+** Amount of ships in fleet ≤ 5
+** Amount of ships in fleet ≤ 4 '''OR''' DE ≥ 3
+** Amount of CL+CT ≤ 1
+** No (F)BB(V) or CV(B)
+** No SS(V)
+
+|C -> D/empty, E = 
+*Meet '''ANY''' of the following to '''FORCE''' node D
+**(F)BB(V)+CV(B) ≥ 2
+**Fleet contains AO
+*If the amount of ships in fleet = 6
+**Go to D if fleet contains (F)BB(V), CV(B) or DD+DE ≤ 3
+**Go to E if DD+DE ≥ 4
+*If the amount of ships in fleet = 5
+**Go to E if DD+DE ≥ 4 '''OR''' DE ≥ 3
+**Otherwise, D
+*If the amount of ships in fleet ≤ 4
+**Go to E if DD+DE = 3 '''OR''' DE ≥ 2
+**Otherwise, D
+
+|E -> F/empty, G = 
+*Always node G if fleet contains only 5 ships
+*Random routing if the amount of ships in fleet is not 5 '''AND''' CL ≥ 2 (More likely to go to F)
+*If the fleet contains 6 ships 
+**Go to G if DE ≥ 3
+**Go to F if the fleet contains (F)BB(V), CV(L/B), CLT or CA(V) '''AND''' Fail the LoS check ('''≤ 46 F33 Cn4''')
+*Otherwise, G
+}}
+{{MapBranchingTable
+|title = 7-2 Branching Rules Part 2
+|id = 7-2B
+
+|D/empty -> H, I = 
+*Always node I if '''Fast+''' fleet
+*Meet '''ANY''' of the following requirements to go to H:
+** Amount of (F)BB(V)+CV(L/B) ≥ 4
+** Amount of (F)BB(V)+CV(L/B) ≥ 3 and fleet contains slow ship
+*Random routing if Slow Fleet '''AND''' amount of (F)BB(V)+CV(L/B) = 2
+* Otherwise, I.
+
+|I -> J = 
+*Fleet contains AO
+*Fleet contains AV and DD ≥ 3
+|I -> L/empty = 
+*Fail the LoS check.
+|I -> M =
+*Does not meet the condition to go to J and pass the LoS check ('''≥ 69 F33 Cn4''')
+}}
+
+==Map Guide==
+*This map is divided in 2 phases, a HP phase at node {{Event/Route|G|red}} against a submarine boss and another HP phase at node {{Event/Route|M|red}} against a surface fleet. The 2nd HP phase will be hidden (alongside its related nodes) on the map until the 1st phase is cleared (see map progression below).
+*'''This map will reset each month''', it will be necessary to re-deplete both HP phases again in order to clear the map.
+
+===Phase 1===
+*To clear this phase, the boss {{ShipLink|Submarine So-Class/Elite|Submarine So-Class/Flagship|text=Submarine So-Class}} must be sunk 3 times.
+*There is no speed limitation.
+*This is an anti-submarine operation, use of ships capable of using [[Partials/Opening ASW|opening ASW attacks]] (OASW) is highly recommended.
+*Route:{{Event/Route|C|red|E|red|G|red}}
+**3DD/DE 1XX, No [(F)BB(V)/CV(B)/SS(V)]
+**3DE 2XX, No [(F)BB(V)/CV(B)/SS(V), Max 1 CL]
+*Unlike [[7-1]], there is no surface battle before the boss node on this route.
+**Use of CL(T) and/or DDs capable of using [[Partials/Opening ASW|opening ASW attacks]] either from being able to reach 100 {{ASW}} stat or having built-in OASW capabilities (''e.g''. {{ShipLink|Isuzu Kai Ni}}, {{ShipLink|Tatsuta/Kai Ni}}, {{ShipLink|Jervis/Kai}}, {{ShipLink|Samuel B. Roberts/Kai}} and {{ShipLink|Johnston}}) is highly recommended, however do keep in mind that you are limited in the number of CL(T)s in your fleet (only 1 max).
+**{{ShipLink|Shimushu/Kai|Etorofu/Kai|Matsuwa/Kai|Tsushima/Kai|Sado/Kai|Fukae/Kai|Daitou/Kai|Hiburi/Kai|text=DE}} are able to perform OASW at only 60 {{ASW}} and are very cheap to run so they are also highly recommended.
+*Bringing 2CVEs as the wildcards in the 3DE composition is recommended if you have {{ShipLink|Taiyou/Kai|text=Taiyou}}, {{ShipLink|Shinyou/Kai|text=Shinyou}} and/or {{ShipLink|Gambier Bay/Kai|text=Gambier Bay}} at a mimimum of Kai remodel, or {{ShipLink|Zuihou/Kai Ni B}}. Giving them dive bombers {{DiveBomb icon}} or torpedo bombers {{TorpBomb icon}} with high {{ASW}} stat alongside sonars and depth charges (launchers) will allow them to OASW easily while still maintaining a high anti-surface firepower to deal with the DDs at the boss node.
+**As for the other CVLs, it is recommended to equip them with enough torpedo bombers {{TorpBomb icon}} to clear out at boss node most if not all of the surface enemies.
+
+===Phase 2===
+*To clear this phase, the boss {{ShipLink|Standard Carrier Wo-Class/Kai Flagship}} must be sunk 4 times.
+*Route:{{Event/Route|B|red|C|red|D|blue|I|red|M|red}}
+**1CV(B) 1(F)BB(V) 1CVL 1CA(V)/CL(T) 2DD
+**1CV(B) 2(F)BB(V) 1CA(V)/CL(T) 2DD
+***Fast Fleet
+*Route:{{Event/Route|A|purple|B|red|C|red|D|blue|I|red|M|red}}
+**6XX, No [AO]
+***6SS(V)
+***Beware of heavy enemy {{ASW}} en route.
+*Must be '''fast fleet''' or submarine fleet in order to avoid any risk of routing to node{{Event/Route|H|orange}}
+*It is recommended to have at least 370+ airpower to be able to obtain AS at boss node for any possible formation.
+*CVLs and (F)BB(V) are interchangeable, however keep in mind that with no Battleship in the fleet you lose second shelling on '''EVERY''' node (boss included) which is '''NOT''' recommended.
+*AACI setup on DDs is highly recommended in order to mitigate airstrike damage at the boss node.
+**Node {{Event/Route|C|red}} is a weak submarine node so bringing {{ASW}} equipments for it is not necessary.
+*There are {{ShipLink|Light Cruiser Tsu-Class|Light Cruiser Tsu-Class/Elite|text=Light Cruisers Tsu-Class}} at both node {{Event/Route|B|red}} and boss node {{Event/Route|M|red}}, use of seaplane bombers {{Seaplane}} on your CA(V)s or BB(V)s is '''NOT''' recommended as they can get easily shot down.
+*Keep in mind that there is a LoS check at node {{Event/Route|I|red}}
+**'''69+''' {{LOS}} using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] formula is required in order to safely pass.
+***C<sub>n</sub>=4 means that '''LoS from equipments weights 4 times more''' than usual.
+
+*'''NOTE''': After clearing the map, the 2nd boss node will lock to the easiest pre-clear formation (Nu-class Elite, Ne-class base, Tsu-class base). This greatly reduces the required Air Power needed for AS from 359 to 266.
+
+===Map progression===
+{{#tag:gallery|
+7-2_Map_p1.png{{!}}Map during 1st Submarine Boss Phase at Node G
+7-2_Map_p2.png{{!}}Map during 2nd Wo-class Boss Phase at Node M
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{Map/Footer}}

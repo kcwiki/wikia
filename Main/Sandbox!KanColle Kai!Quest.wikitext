@@ -1,0 +1,1989 @@
+You can accept up to 7 quests from the beginning, but as you get "Headquarters Personnel" you can accept more quest at the same time.
+
+Note that Quests Require/Unlock are only placeholder
+
+Also note that quest IDs on this page are temporary assignments for now, try not to refer to these quests by their OD until things get settled
+
+== Composition Quests ==
+<div style="width:100%;margin:20px;">
+{| width="100%"
+| style="width:50px;" |[[File:KCKai_Quest_Composition_Icon.png|left]]
+|<div style="background: #43C769; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Composition Quests'''</font></div>
+|}
+</div>
+<div style="position: relative; max-width: 1200px; margin:10px;">
+{{QuestList|
+{{Quest
+|ID = A1
+|Title_JP = はじめての「編成」！
+|Title_EN = The First Organization
+|Requirements = Have 2 ships in your main fleet
+|Rewards_RSC = 30 / 30 / 0 / 0
+|Rewards_Items = {{ShipLink|Shirayuki}}
+|Note = Requires: [[#F1|F1]] <br />Unlocks: [[#A2|A2]], [[#VC1|VC1]]
+}}
+{{Quest
+|ID = A2
+|Title_JP = 「駆逐隊」を編成せよ！
+|Title_EN = Organize a Destroyer Division
+|Requirements = Have 4+ [[Ship Class#Destroyer .28DD.29|Destroyers]] in your fleet
+|Rewards_RSC = 50 / 50 / 50 / 0
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 1
+|Note = Requires: [[#A1|A1]] <br />Unlocks: [[#A3|A3]]
+}}
+{{Quest
+|ID = A3
+|Title_JP =「水雷戦隊」を編成せよ！
+|Title_EN = Organize a Torpedo Squadron
+|Requirements = Consists of a [[Ship Class#Light Cruiser .28CL.29|Light Cruiser]] as your flagship and Multiple [[Ship Class#Destroyer .28DD.29|Destroyers]]. 1CL2DD is the minimum requirement for completion. (browser ver. need 3+DD)
+|Rewards_RSC = 60 / 60 / 0 / 30
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]]<br />100 Points
+|Note = Requires: [[#A2|A2]]<br />Unlocks: [[#A4|A4]], [[#A5|A5]], [[#VC7|VC7]]
+}}
+{{Quest
+|ID = A4
+|Title_JP = 大規模艦隊を編成せよ！
+|Title_EN = 
+|Requirements = Have 6 ships in your fleet
+|Rewards_RSC = 70 / 0 / 70 / 0
+|Rewards_Items = <font color = #FF0000>Unlock Second Fleet<br />Expeditions</font>
+|Note = Requires: [[#A3|A3]] <br />Unlocks: [[#A6|A6]], [[#A9|A9]]
+}}
+{{Quest
+|ID = A5
+|Title_JP = 軽巡2隻を擁する隊を編成せよ！
+|Title_EN = Organize a Fleet of 2 Light Cruisers
+|Requirements = Have 2 [[Ship_Class#Light_Cruiser_.28CL.29|Light Cruisers]] in your fleet
+|Rewards_RSC = 80 / 80 / 0 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2
+|Note = Requires: [[#A3|A3]] <br />Unlocks: [[#A7|A7]], [[#A8|A8]], [[#VB22|VB22]], [[#F11|F11]]
+}}
+{{Quest
+|ID = A6
+|Title_JP = 第2艦隊を編成せよ！
+|Title_EN = Organize the Second Fleet
+|Requirements = Have a flagship in your second fleet
+|Rewards_RSC = 100 / 100 / 200 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1<br />200 Points
+|Note = Requires: [[#A4|A4]] <br />Unlocks: [[#VB4|VB4]]
+}}
+{{Quest
+|ID = A7
+|Title_JP = 「重巡戦隊」を編成せよ！
+|Title_EN = Organize a Heavy Cruiser Division
+|Requirements = Have 2 [[Ship Class#Heavy Cruiser .28CA.29|Heavy Cruisers]] in your fleet <font color="red">(Aviation Cruisers don't count)</font>
+|Rewards_RSC = 0 / 100 / 0 / 50
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 1 [[File:Development material.png|30px|link=Construction]] X 1
+|Note = Requires: [[#A5|A5]] <br >Unlocks: [[#A14|A14]], [[#VB7|VB7]]
+}}
+{{Quest
+|ID = A8
+|Title_JP = 「天龍」型軽巡姉妹の全2艦を編成せよ！
+|Title_EN = Organize both Sisters of the [[Ship Class#Tenryuu-class|Tenryuu-class]] Light Cruisers
+|Requirements = Have {{ShipLink|Tenryuu}} and {{ShipLink|Tatsuta}} in your main fleet
+|Rewards_RSC = 100 / 100 / 100 / 50
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X  <br /> 100 Points
+|Note = Requires: [[#A5|A5]] <br />Unlocks: [[#A17|A17]]
+}}
+{{Quest
+|ID = A9
+|Title_JP = 「水上機母艦」を配備せよ！
+|Title_EN = Deploy a Seaplane Tender
+|Requirements = Have a [[Ship_Class#Seaplane_Tender_.28AV.29|Seaplane Tender]] in your fleet
+|Rewards_RSC = 0 / 0 / 0 / 200
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1<br /> 100 Points
+|Note = Requires: [[#A4|A4]] <br />Unlocks: [[#A10|A10]], [[#A45|A45]]
+}}
+{{Quest
+|ID = A10
+|Title_JP = 「第六駆逐隊」を編成せよ！
+|Title_EN = Organize the 6th Destroyer Division
+|Requirements = Have '''ONLY''' {{ShipLink|Akatsuki}}, {{ShipLink|Hibiki}}, {{ShipLink|Ikazuchi}} and {{ShipLink|Inazuma}} in any of your fleets
+|Rewards_RSC = 150 / 150 / 0 / 0
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]] <br />200 Points
+|Note = Requires: [[#A9|A9]] <br />Unlocks: [[#A28|A28]], [[#VB20|VB20]], [[#VB25|VB25]]
+}}
+{{Quest
+|ID = A11
+|Title_JP = 第2艦隊で空母機動部隊を編成せよ！
+|Title_EN = Organize a Carrier Task Force in Your Second Fleet
+|Requirements = Have an [[Ship_Class#Regular_Aircraft_Carrier_.28CV.29|Aircraft Carrier]] / [[Ship_Class#Light_Aircraft_Carrier_.28CVL.29|Light Aircraft Carrier]] and 3 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] in your '''SECOND''' fleet
+|Rewards_RSC = 100 / 0 / 0 / 200
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 2<br />300 Points
+|Note = Requires: [[#VB4|VB4]] <br />Unlocks: [[#VB10|VB10]]
+}}
+{{Quest
+|ID = A12
+|Title_JP = 「空母機動部隊」を編成せよ！
+|Title_EN = Organize a Carrier Task Force
+|Requirements = Have an [[Ship_Class#Regular_Aircraft_Carrier_.28CV.29|Aircraft Carrier]] / [[Ship_Class#Light_Aircraft_Carrier_.28CVL.29|Light Aircraft Carrier]] and 3 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] in your main fleet
+|Rewards_RSC = 100 / 0 / 100 / 100
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1 [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = Requires: [[#A7|A7]]<br />Unlocks: [[#A13|A13]]
+}}
+{{Quest
+|ID = A13
+|Title_JP = 戦艦と重巡による主力艦隊を編成せよ！
+|Title_EN = Organize the Main Fleet with a Battleship and Heavy Cruisers
+|Requirements = Have a [[Ship_Class#Battleship_.28BB.29|Battleship]] and 2 [[Ship_Class#Heavy_Cruiser_.28CA.29|Heavy Cruisers]] in any of your fleets
+<font color="red">(Aviation Battleships don't count)</font>
+|Rewards_RSC = 0 / 200 / 200 / 0
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 2 <br/> 200 Points
+|Note = Requires: [[#A12|A12]] <br />Unlocks: [[#A19|A19]], [[#A20|A20]]
+}}
+{{Quest
+|ID = A14
+|Title_JP = 「川内」型軽巡姉妹の全3艦を編成せよ！
+|Title_EN = Organize All 3 Sisters of the [[Ship_Class#Sendai-class|Sendai-class]] Light Cruisers
+|Requirements = Have {{ShipLink|Sendai}}, {{ShipLink|Jintsuu}}, and {{ShipLink|Naka}} in the same fleet
+|Rewards_RSC = 0 / 0 / 0 / 0
+|Rewards_Items = <font color="red">Unlocks the fifth fleet</font> <br /> 200 Points
+|Note = Requires: [[#VB13|VB13]], [[#VC4|VC4]] <br />Unlocks: [[#A15|A15]], [[#G4|G4]], [[#VB14|VB14]]
+}}
+{{Quest
+|ID = A15
+|Title_JP = 「妙高」型重巡姉妹の全4隻を編成せよ！
+|Title_EN = Organize All 4 Sisters of the [[Ship_Class#Myoukou-class|Myoukou-class]] Heavy Cruisers
+|Requirements = Have {{ShipLink|Myoukou}}, {{ShipLink|Nachi}}, {{ShipLink|Ashigara}}, and {{ShipLink|Haguro}} in your main fleet
+|Rewards_RSC = 150 / 100 / 150 / 100
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 1
+|Note = Requires: [[#A14|A14]] <br />Unlocks: [[#A16|A16]]
+}}
+{{Quest
+|ID = A16
+|Title_JP = 「金剛」型による高速戦艦部隊を編成せよ！
+|Title_EN = Organize a Fast Battleship Force with the [[Ship_Class#Kongou-class|Kongou-class]]
+|Requirements = Have {{ShipLink|Kongou}}, {{ShipLink|Hiei}}, {{ShipLink|Haruna}}, and {{ShipLink|Kirishima}} in your main fleet
+|Rewards_RSC = 0 / 0 / 400 / 0
+|Rewards_Items =  <font color="red">Unlocks the seventh fleet</font> <br />400 Points 
+|Note = Requires: [[#A15|A15]] <br />Unlocks: [[#WF01|WF01]]
+}}
+{{Quest
+|ID = A17
+|Title_JP = 「扶桑」型戦艦姉妹の全２艦を編成せよ！
+|Title_EN = Organize both Sisters of the [[Ship Class#Fusou-class|Fusou-class]] Battleships!
+|Requirements = Have {{ShipLink|Fusou}} and {{ShipLink|Yamashiro}} in the same fleet
+|Rewards_RSC = 200 / 200 / 200 / 200
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = Requires: [[#A8|A8]] <br />Unlocks: [[#A18|A18]] 
+}} 
+{{Quest
+|ID = A18
+|Title_JP = 「伊勢」型戦艦姉妹の全２隻を編成せよ！
+|Title_EN = Organize both Sisters of the [[Ship Class#Ise-class|Ise-class]] Battleships!
+|Requirements = Have {{ShipLink|Ise}} and {{ShipLink|Hyuuga}} in the same fleet
+|Rewards_RSC = 300 / 200 / 300 / 200
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = Requires: [[#A8|A8]] 
+}} 
+{{Quest
+|ID = A19
+|Title_JP = 「南雲機動部隊」を編成せよ！
+|Title_EN = Organize the Nagumo Carrier Task Force
+|Requirements = Have {{ShipLink|Akagi}}, {{ShipLink|Kaga}}, {{ShipLink|Hiryuu}}, and {{ShipLink|Souryuu}} in one of your fleets
+|Rewards_RSC = 300 / 300 / 300 / 700
+|Rewards_Items = <font color="red">Unlocks the eighth fleet</font> <br />1000 Points 
+|Note = Requires: [[#A13|A13]],[[#A15|A15]] <br />Unlocks: ?
+}}
+{{Quest
+|ID = A20
+|Title_JP = 「三川艦隊」を編成せよ！
+|Title_EN = Organize the Mikawa Fleet
+|Requirements = Have {{ShipLink|Choukai}}, {{ShipLink|Aoba}}, {{ShipLink|Kako}}, {{ShipLink|Furutaka}}, and {{ShipLink|Tenryuu}} in any of your fleets, with one additional '''FAST''' ship
+|Rewards_RSC = 400 / 0 / 300 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 3<br />400 points
+|Note = Requires: [[#A13|A13]] <br />Unlocks: [[#A21|A21]], [[#VB19|VB19]]
+}}
+{{Quest
+|ID = A21
+|Title_JP = 「第四戦隊」を編成せよ！
+|Title_EN = Organize the 4th Cruiser Division
+|Requirements = Have {{ShipLink|Takao}}, {{ShipLink|Atago}}, {{ShipLink|Choukai}}, and {{ShipLink|Maya}} in any of your fleets
+|Rewards_RSC = 300 / 150 / 0 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 4 <br />400 Points
+|Note = Requires: [[#A20|A20]] <br />Unlocks:  [[#A22|A22]], [[#A24|A24]], [[#A25|A25]], [[#A27|A27]], [[#A29|A29]], [[#VB45|VB45]]
+}}
+{{Quest
+|ID = A22
+|Title_JP = 「西村艦隊」を編成せよ！
+|Title_EN = Organize the Nishimura Fleet
+|Requirements = Have {{ShipLink|Fusou}}, {{ShipLink|Yamashiro}}, {{ShipLink|Mogami}}, and {{ShipLink|Shigure}} in any of your fleets
+|Rewards_RSC = 200 / 200 / 200 / 0
+|Rewards_Items = [[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] X 1 <br />500 Points
+|Note = Requires: [[#A21|A21]] <br />Unlocks: [[#A23|A23]], [[#A26|A26]], [[#VB47|VB47]]
+}}
+{{Quest
+|ID = A23
+|Title_JP = 「第五航空戦隊」を編成せよ！
+|Title_EN = Organize the 5th Carrier Division
+|Requirements = Have both {{ShipLink|Shoukaku}}, {{ShipLink|Zuikaku}}, and 2 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] in any of your fleets
+|Rewards_RSC = 500 / 0 / 0 / 500
+|Rewards_Items = [[File:Headquarters Personnel.png|30px|link=#Introduction]][[#Introduction|"Headquarters Personnel"]] X 1 <br />700 points
+|Note = Requires: [[#A22|A22]] <br />Unlocks: [[#A41|A41]], [[#A46|A46]], [[#A56|A56]]?, [[#VB48|VB48]]
+}}
+{{Quest
+|ID = A24
+|Title_JP = 新「三川艦隊」を編成せよ！
+|Title_EN = Organize the New Mikawa Fleet
+|Requirements = Have {{ShipLink|Choukai}}, {{ShipLink|Aoba}}, {{ShipLink|Kinugasa}}, {{ShipLink|Kako}}, {{ShipLink|Furutaka}}, and {{ShipLink|Tenryuu}} in any of your fleets
+|Rewards_RSC = 400 / 0 / 300 / 0
+|Rewards_Items = [[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] X 1 <br />400 Points
+|Note = Requires: [[#A21|A21]] <br />Unlocks: [[#B16|B16]]
+}}
+{{Quest
+|ID = A25
+|Title_JP = 潜水艦隊を編成せよ！
+|Title_EN = Organize a Submarine Fleet
+|Requirements = Have 2 [[Ship_Class#Submarine_.28SS.29|Submarines]] in any one of your fleets
+|Rewards_RSC = 150 / 150 / 0 / 0
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]] <br />200 Points
+|Note = Requires: [[#A21|A21]] <br />Unlocks: [[#VB34|VB34]]
+}}
+{{Quest
+|ID = A26
+|Title_JP = 航空水上打撃艦隊を編成せよ！
+|Title_EN = Organize an Aviation Surface Attack Fleet
+|Requirements = Have '''ONLY''' 2 [[Ship_Class#Aviation_Battleship_.28BBV.29|Aviation Battleships]] and 2 [[Ship_Class#Aviation_Cruiser_.28CAV.29|Aviation Cruisers]] in any of your fleets
+|Rewards_RSC = 0 / 0 / 250 / 250
+|Rewards_Items = [[Zuiun]] X 2 <br />400 Points
+|Note = Requires: [[#A22|A22]] <br />Unlocks: [[#VB56|VB56]]
+}}
+{{Quest
+|ID = A27
+|Title_JP = 中規模潜水艦隊を編成せよ！
+|Title_EN = Organize a Medium-sized Submarine Fleet
+|Requirements = Have 3 [[Ship_Class#Submarine_.28SS.29|Submarines]] in any one of your fleets
+|Rewards_RSC = 150 / 150 / 0 / 0
+|Rewards_Items = [[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] X 1 <br />300 Points 
+|Note = Requires: [[#A21|A21]] <br />Unlocks: [[#A37|A37]], [[#D5|D5]]
+}}
+{{Quest
+|ID = A28
+|Title_JP = 「第六戦隊」を編成せよ！
+|Title_EN = Organize the 6th Cruiser Division
+|Requirements = Have {{ShipLink|Furutaka}}, {{ShipLink|Kako}}, {{ShipLink|Kinugasa}}, and {{ShipLink|Aoba}} in any of your fleets
+|Rewards_RSC = 300 / 300 / 0 / 0
+|Rewards_Items = [[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] X 1 <br />350 Points 
+|Note = Requires: [[#A10|A10]] <br />Unlocks: [[#A36|A36]], [[#VB32|VB32]]
+}}
+{{Quest
+|ID = A29
+|Title_JP =「第五艦隊」を編成せよ！
+|Title_EN = Organize the 5th Fleet
+|Requirements = Have {{ShipLink|Nachi}}, {{ShipLink|Ashigara}}, {{ShipLink|Tama}}, and {{ShipLink|Kiso}} in any of your fleets
+|Rewards_RSC = 350 / 0 / 350 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 3 <br />350 Points
+|Note = Requires: [[#A21|A21]] <br />Unlocks: [[#A30|A30]]
+}}
+{{Quest
+|ID = A30
+|Title_JP =「第一水雷戦隊」を編成せよ！
+|Title_EN = Form the Torpedo Squadron 1!
+|Requirements = Have {{ShipLink|Abukuma}}, {{ShipLink|Akebono}}, {{ShipLink|Ushio}}, {{ShipLink|Kasumi}}, and {{ShipLink|Shiranui}} in any of your fleets
+|Rewards_RSC = 200 / 300 / 0 / 0
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]] <br />350 Points
+|Note = Requires: [[#A29|A29]] <br />Unlocks: [[#D10|D10]]
+}}
+{{Quest
+|ID = A31
+|Title_JP =第八駆逐隊」を編成せよ！
+|Title_EN = Form the Destroyer Division 8!
+|Requirements = Have {{ShipLink|Asashio}}, {{ShipLink|Michishio}}, {{ShipLink|Ooshio}}, and {{ShipLink|Arashio}} in your fleets
+|Rewards_RSC = 180 / 180 / 0 / 0
+|Rewards_Items = [[File:Combat_Provisions_Icon.png|30px|link=Combat_Provisions]][[Combat_Provisions|Combat Ration]] X 1 <br />200 Points
+|Note = Requires: [[#A25|A25]] <br />Unlocks: [[#A33|A33]]
+}}
+{{Quest
+|ID = A32
+|Title_JP = 「第十八駆逐隊」を編成せよ！
+|Title_EN = Organize the 18th Destroyer Division
+|Requirements = Have '''ONLY''' {{ShipLink|Kasumi}}, {{ShipLink|Arare}}, {{ShipLink|Kagerou}}, and {{ShipLink|Shiranui}} in any of your fleets
+|Rewards_RSC = 180 / 180 / 0 / 0
+|Rewards_Items = [[File:Combat_Provisions_Icon.png|30px|link=Combat_Provisions]][[Combat_Provisions|Combat Ration]] X 1 <br />200 points
+|Note = Requires: [[#VB15|VB15]] <br />Unlocks: [[#A42|A42]], [[#A47|A47]], [[#B21|B21]] 
+}}
+{{Quest
+|ID = A33
+|Title_JP = 「第三十駆逐隊(第一次)」を編成せよ！
+|Title_EN = Form the Destroyer Division 30 (First Generation)!
+|Requirements = Have '''ONLY''' {{ShipLink|Mutsuki}}, {{ShipLink|Kisaragi}}, {{ShipLink|Yayoi}}, and {{ShipLink|Mochizuki}} in any of your fleets
+|Rewards_RSC = 230 / 230 / 0 / 0
+|Rewards_Items = [[File:Combat_Provisions_Icon.png|30px|link=Combat_Provisions]][[Combat_Provisions|Combat Ration]] X 1 <br />200 points
+|Note = Requires: [[#A31|A31]] <br />Unlocks: [[#A42|A42]], [[#A47|A47]], [[#B21|B21]] 
+}}
+{{Quest
+|ID = A34
+|Title_JP = 「第三十駆逐隊(第二次)」を編成せよ！
+|Title_EN = Form the 30th Destroyer Fleet (Second Generation)!
+|Requirements = Have '''ONLY''' {{ShipLink|Mutsuki}}, {{ShipLink|Yayoi}}, {{ShipLink|Uzuki}}, and {{ShipLink|Mochizuki}} in any of your fleets
+|Rewards_RSC = 230 / 230 / 0 / 0
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]] X 1 <br />300 points
+|Note = Requires: [[#A33|A33]] <br />Unlocks: [[#A51|A51]]
+}}
+{{Quest
+|ID = A35
+|Title_JP =「第五戦隊」を編成せよ！
+|Title_EN = Organize the 5th Fleet!
+|Requirements = Have {{ShipLink|Myoukou}}, {{ShipLink|Nachi}}, and {{ShipLink|Haguro}} in any of your fleets
+|Rewards_RSC = 0 / 350 / 350 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 4 <br />400 Points 
+|Note = Requires: to be added <br />Unlocks: [[#D18|D18]]
+}}
+{{Quest
+|ID = A36
+|Title_JP = 新編「第二航空戦隊」を編成せよ！
+|Title_EN = Organize the New 2nd Carrier Division
+|Requirements = Have {{ShipLink|Hiryuu/Kai Ni|link=Hiryuu}}(Kai-2) as flagship, {{ShipLink|Souryuu}} and 2 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] in any of your fleets
+|Rewards_RSC = 200 / 200 / 0 / 400
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 <br />700 Points 
+|Note = Requires: [[#A28|A28]] <br />Unlocks: [[#VB21|VB21]]
+}}
+{{Quest
+|ID = A37
+|Title_JP = 潜水艦隊「第六艦隊」を編成せよ！
+|Title_EN = Organize the Submarine Fleet: "6th Fleet"
+|Requirements = Have a [[Ship_Class#Submarine_Tender_.28AS.29|Submarine Tender]] as flagship and 4 [[Ship_Class#Submarine_.28SS.29|Submarines]] or more in any of your fleets
+|Rewards_RSC = 250 / 250 / 0 / 0
+|Rewards_Items = [[File:Food supply ship irako.png|30px|link=Fatigue]][[Fatigue#Food_Supply_Ship_.22Irako.22|"Irako"]] <br />400 Points 
+|Note = Requires: [[#A27|A27]] <br />Unlocks: [[#D14|D14]]
+}}
+{{Quest
+|ID = A39
+|Title_JP = 再編成「第二航空戦隊」を強化せよ！
+|Title_EN = Strengthen the Reorganized 2nd Carrier Division
+|Requirements = Have {{ShipLink|Souryuu/Kai Ni|link=Souryuu}}(Kai-2) as flagship with {{ShipLink|Hiryuu/Kai Ni|link=Hiryuu}}(Kai-2) and 2 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] in any of your fleets
+|Rewards_RSC = 0 / 0 / 0 / 450
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 4 <br />800 Points
+|Note = Requires: [[#VB21|VB21]] <br />Unlocks: [[#VB51|VB51]],[[#F24|F24]] (?)
+}}
+{{Quest
+|ID = A41
+|Title_JP = 「新型正規空母」を配備せよ！
+|Title_EN = Deploy the New Standard Aircraft Carrier Class
+|Requirements = Have {{ShipLink|Unryuu}}, {{ShipLink|Amagi}} or {{ShipLink|Katsuragi}} in your first fleet as flagship
+|Rewards_RSC = 100 / 100 / 100 / 400
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 2<br />500 Points
+|Note = Requires: [[#A23|A23]] <br />Unlocks: [[#VB49|VB49]]
+}}
+{{Quest
+|ID = A42
+|Title_JP = 主力戦艦部隊「第二戦隊」を編成せよ！
+|Title_EN = Organize the Main Battleship Force: "The 2nd Squadron"
+|Requirements = Have {{ShipLink|Nagato}}, {{ShipLink|Mutsu}}, {{ShipLink|Fusou}}, and {{ShipLink|Yamashiro}} in any of your fleets
+|Rewards_RSC = 0 / 250 / 250 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 3 <br />800 Points
+|Note = Requires: [[#A32|A32]] <br />Unlocks: [[#VB37|VB37]]
+}}
+{{Quest
+|ID = A43
+|Title_JP = 戦艦を主力とした水上打撃部隊を編成せよ！
+|Title_EN = Organize a Surface Attack Fleet with Battleships Comprising the Main Force
+|Requirements = Have 3 of any ship from either the [[Ship_Class#Nagato-class|Nagato]], [[Ship_Class#Ise-class|Ise]], [[Ship_Class#Fusou-class|Fusou]], or [[Ship_Class#Yamato-class|Yamato]] classes and 1 [[Ship_Class#Light_Cruiser_.28CL.29|Light Cruiser]] in any of your fleets
+|Rewards_RSC = 400 / 400 / 0 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3 <br />400 Points 
+|Note = Requires: [[#VB36|VB36]] <br />Unlocks: [[#VB38|VB38]], [[#VB39|VB39]]
+}}
+{{Quest
+|ID = A45
+|Title_JP = 改修工廠を準備せよ！
+|Title_EN = Prepare the Improvement Arsenal
+|Requirements = Have {{ShipLink|Akashi}} as flagship in your first fleet
+|Rewards_RSC = 100 / 0 / 100 / 0
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 5 <br />200 Points 
+|Note = Requires: [[#A9|A9]] <br />Unlocks: [[#F17|F17]]
+}}
+{{Quest
+|ID = A46
+|Title_JP = 軽快な「水上反撃部隊」を編成せよ！
+|Title_EN = Organize a Light Surface Counterattack Fleet
+|Requirements = Have {{ShipLink|Kasumi}} as flagship, {{ShipLink|Ashigara}}, 1 [[Ship_Class#Light_Cruiser_.28CL.29|Light Cruiser]], and 3 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] in any of your fleets
+|Rewards_RSC = 250 / 250 / 0 / 50
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 3 <br />[[File:Development material.png|30px|link=Construction]] X 3
+|Note = Requires: [[#A23|A23]] <br />Unlocks: [[#VB54|VB54]]
+}}
+{{Quest
+|ID = A47
+|Title_JP = 「第十一駆逐隊」を編成せよ！
+|Title_EN = Organize the 11th Destroyer Division
+|Requirements = Have '''ONLY''' {{ShipLink|Fubuki}}, {{ShipLink|Shirayuki}}, {{ShipLink|Hatsuyuki}}, and {{ShipLink|Murakumo}} in any of your fleets
+|Rewards_RSC = 110 / 110 / 110 / 0
+|Rewards_Items = [[File:Combat_Provisions_Icon.png|30px|link=Combat_Provisions]][[Combat_Provisions|Combat Ration]] X 1 <br />200 Points 
+|Note = Requires: [[#A32|A32]] <br />Unlocks: [[#VB50|VB50]]
+}}
+{{Quest
+|ID = A51
+|Title_JP = 「三川艦隊」を新編、突入準備せよ！ 
+|Title_EN = Organise the New Edition of the Mikawa Fleet
+|Requirements = Have {{ShipLink|Choukai/Kai Ni|link=Choukai}} as the flagship and have any five of these ships {{ShipLink|Aoba}}, {{ShipLink|Kinugasa}}, {{ShipLink|Kako}}, {{ShipLink|Furutaka}}, {{ShipLink|Tenryuu}} or {{ShipLink|Yuubari}} in your main fleet
+|Rewards_RSC = 300 / 300 / 0 / 0
+|Rewards_Items = [[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] X 1 <br />500 Points 
+|Note = Requires: [[#A34|A34]], to be added <br>Unlocks: [[#VC7|VC7]]
+}}
+{{Quest
+|ID = A56
+|Title_JP = 「第五航空戦隊」を再編成せよ！
+|Title_EN = Reorganize the 5th Carrier Division
+|Requirements = Have {{ShipLink|Shoukaku}}, {{ShipLink|Zuikaku}}, {{ShipLink|Oboro}} and {{ShipLink|Akigumo}} in any of your fleets
+|Rewards_RSC = 300 / 0 / 0 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 5 <br />800 Points 
+|Note = Requires: [[#A23|A23]], [[#VB52|VB52]] <br>Unlocks: [[#VB53|VB53]]
+}}
+{{Quest
+|ID = A58
+|Title_JP = 「第十六戦隊」を編成せよ！
+|Title_EN = Organize the 16th Squadron (First Generation)
+|Requirements = Have {{ShipLink|Ashigara}} as flagship with {{ShipLink|Kuma}} and {{ShipLink|Nagara}} in your main fleet
+|Rewards_RSC = 160 / 160 / 160 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 4 <br />300 points
+|Note = Requires: [[#Bd2|Bd2]](?)<br>Unlocks: [[#B52|B52]]
+}}
+{{Quest
+|ID = A59
+|Title_JP = 「第三航空戦隊」を編成せよ！
+|Title_EN = Organize the 3rd Carrier Division
+|Requirements = Have {{ShipLink|Zuikaku/Kai|link=Zuikaku}} as flagship, {{ShipLink|Zuihou}}, {{ShipLink|Chitose/Carrier|link=Chitose}} and {{ShipLink|Chiyoda/Carrier|link=Chiyoda}} (both as CVL, not AV) in any of your fleets
+|Rewards_RSC = 600 / 600 / 0 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3<br>[[File:Skilled Crew Member Icon.png|30px|link=Skilled Crew Member]][[Skilled Crew Member]]
+|Note = Requires: [[#VB54|VB54]] <br>Unlocks: [[#VB55|VB55]], [[#F25|F25]]
+}}
+{{Quest
+|ID = A60
+|Title_JP = 「第四航空戦隊」を編成せよ！
+|Title_EN = Organize the 4th Carrier Division
+|Requirements = Have {{ShipLink|Ise/Kai|link=Ise}} and {{ShipLink|Hyuuga/Kai|link=Hyuuga}} in your main fleet
+|Rewards_RSC = 0 / 400 / 700 / 400
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 3<br>[[Zuiun (634 Air Group)]]
+|Note = Requires: [[#VB55|VB55]]<br>Unlocks: [[#A61|A61]]
+}}
+{{Quest
+|ID = A61
+|Title_JP = 「小沢艦隊」を編成せよ！
+|Title_EN = Organize Ozawa's Fleet
+|Requirements = Have {{ShipLink|Zuikaku/Kai|link=Zuikaku}} as flagship, {{ShipLink|Zuihou/Kai|link=Zuihou}}, {{ShipLink|Chitose/Carrier|link=Chitose}} and {{ShipLink|Chiyoda/Carrier|link=Chiyoda}} (both as CVL), {{ShipLink|Ise/Kai|link=Ise}} and {{ShipLink|Hyuuga/Kai|link=Hyuuga}} in any of your fleets
+|Rewards_RSC = 0 / 800 / 0 / 600
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 5<br>[[File:Skilled Crew Member Icon.png|30px|link=Skilled Crew Member]][[Skilled Crew Member]]
+|Note = Requires: [[#VB54|VB54]]?, [[#A60|A60]]<br>Unlocks: [[#VB57|VB57]]
+}}
+{{Quest
+|ID = A62
+|Title_JP = 新航空戦隊を編成せよ！
+|Title_EN = Organize the New Carrier Division
+|Requirements = Have {{ShipLink|Zuikaku/Kai Ni|link=Zuikaku}}, {{ShipLink|Shoukaku/Kai Ni|link=Shoukaku}} and two [[Ship_Class#Destroyer_.28DD.29|Destroyers]] in your fleet
+|Rewards_RSC = 600 / 600 / 0 / 900
+|Rewards_Items = [[File:Skilled Crew Member Icon.png|30px|link=Skilled Crew Member]][[Skilled Crew Member]]<br>[[File:Food supply ship irako.png|30px|link=Fatigue]][[Fatigue#Food_Supply_Ship_.22Irako.22|"Irako"]]
+|Note = Requires: [[#VB57|VB57]] 
+}}
+{{Quest
+|ID = A68
+|Title_JP = 空母機動部隊「第三艦隊」を編成せよ！
+|Title_EN = 
+|Requirements = Have {{ShipLink|Shoukaku}} as flagship with {{ShipLink|Zuikaku}}, {{ShipLink|Zuihou}} and 3 additional ships
+|Rewards_RSC = 300 / 300 / 0 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 4 <br />1000 points
+|Note = Requires: [[#VB36|VB36]] <br>Unlocks: [[#F22|F22]]
+}}
+{{Quest
+|ID = A69
+|Title_JP = 精強な「潜水艦隊」を編成せよ！
+|Title_EN = 
+|Requirements = Have a level 80 [[Ship_Class#Submarine_.28SS.29|Submarines]] as flagship with atleast 3 other lvl 40 [[Ship_Class#Submarine_.28SS.29|Submarines]] in any of your fleets
+|Rewards_RSC = 400 / 400 / 0 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3 <br />[[53cm Hull-mount O2 Torpedoes]]
+|Note = Requires: [[#A27|A27]], [[#VB15|VB15]] 
+}}
+}}
+</div>
+
+== Sortie Quests ==
+<div style="width:100%;margin:20px;">
+{| width="100%"
+| style="width:50px;" |[[File:KCKai_Quest_Sortie_Icon.png|left]]
+|<div style="background: #EC6063; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Sortie Quests'''</font></div>
+|}
+</div>
+<div style="position: relative; max-width: 1200px; margin: 10px;">
+{{QuestList|
+{{Quest
+|ID = VB1
+|Use_ID= B1001
+|Title_JP = はじめての「出撃」！
+|Title_EN = The First Sortie 
+|Requirements =  Sortie your main fleet 
+|Rewards_RSC = 30 / 30 / 0 / 0 
+|Rewards_Items =  [[File:Development material.png|30px|link=Construction]] X 1
+|Note = Requires: [[#VC2|VC2]] <br />Unlocks: [[#VB2|VB2]]
+}}
+{{Quest
+|ID = VB2
+|Use_ID= B1002
+|Title_JP = 鎮守府正面海域を護れ！
+|Title_EN = Guard the Sea in Front of the Naval Base
+|Requirements = Sortie to the first map of [[KanColle_Kai/鎮守府海域|鎮守府海域]] and defeat the boss
+|Rewards_RSC = 50 / 50 / 50 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = Requires: [[#VB1|VB1]]<br />Unlocks: [[#E1|E1]], [[#E2|E2]], [[#VB3|VB3]]
+}}
+{{Quest
+|ID = VB3
+|Use_ID= B1003
+|Title_JP =鎮守府海域沖を警備せよ！
+|Title_EN = Guard the sea near Naval base!
+|Requirements = Sortie to the second map of [[KanColle_Kai/鎮守府海域|鎮守府海域]] 
+|Rewards_RSC = 100 / 100 / 0 / 0
+|Rewards_Items = Transport Convoy X 1<br />[[File:Furniture box small.png|30px|link=Furniture]] X 1
+|Note = Requires: [[#VB2|VB2]]<br />Unlocks: [[#VB5|VB5]], [[#Bm1|Bm1]]
+}}
+{{Quest
+|ID = VB4
+|Use_ID=B1004
+|Title_JP = 新設第２艦隊、抜錨せよ！
+|Title_EN = Sortie The New 2nd Fleet
+|Requirements = Sortie your second fleet
+|Rewards_RSC = 0 / 0 / 200 / 200
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 [[File:Furniture box large.jpg|30px|link=Furniture]] X 1 
+|Note = Requires: [[#A6|A6]] <br />Unlocks: [[#A11|A11]]
+}}
+{{Quest
+|ID = VB5
+|Use_ID=B1005
+|Title_JP = 接近する「敵前衛艦隊」を迎撃せよ！
+|Title_EN = Intercept the Approaching Enemy Vanguard Fleet
+|Requirements = Sortie to the second map of [[KanColle_Kai/鎮守府海域|鎮守府海域]] and defeat the boss '''AGAIN''' 
+|Rewards_RSC = 100 / 0 / 100 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1<br />{{ShipLink|Miyuki}} [[File:DepthCharge.png|30px|link=Type_94_Depth_Charge_Projector]] X 1
+|Note = Requires: [[#VB3|VB3]]<br />Unlocks: [[#VB6|VB6]], [[#VB11|VB11]]
+}}
+{{Quest
+|ID = VB6
+|Use_ID=B1006
+|Title_JP = 「水雷戦隊」出撃せよ！
+|Title_EN = Sortie a Torpedo Squadron
+|Requirements = Sortie a [[Ship Class#Light Cruiser .28CL.29|Light Cruiser]] as flagship and 3 [[Ship Class#Destroyer .28DD.29|Destroyers]]
+|Rewards_RSC = 70 / 70 / 0 / 70
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2<br />100 Points
+|Note = Requires: [[#VB5|VB5]]<br />Unlocks: [[#VB7|VB7]], [[#VB23|VB23]]
+}}
+{{Quest
+|ID = VB7
+|Use_ID=B1007
+|Title_JP = 「重巡洋艦」出撃せよ！
+|Title_EN = Sortie a Heavy Cruiser
+|Requirements = Sortie a fleet with a [[Ship Class#Heavy Cruiser .28CA.29|Heavy Cruiser]] as flagship
+|Rewards_RSC = 80 / 80 / 80 / 80
+|Rewards_Items =  <font color="red">Unlocks the third fleet</font><br />150 Points
+|Note = Requires: [[#A7|A7]], [[#VB6|VB6]] <br />Unlocks: [[#VB8|VB8]], [[#D15|D15]], [[#VB12|VB12]]
+}}
+{{Quest
+|ID = VB8
+|Use_ID=B1008
+|Title_JP = 「戦艦」出撃せよ！
+|Title_EN = Sortie a Battleship
+|Requirements = Sortie a fleet with a [[Ship Class#Battleship .28BB.29|Battleship]] as flagship. <font color="red">Aviation Battleships (BBVs) don't count</font>
+|Rewards_RSC = 0 / 160 / 160 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 <br/> 200 Points
+|Note = Requires: [[#VB7|VB7]] <br />Unlocks: [[#VB9|VB9]]
+}}
+{{Quest
+|ID = VB9
+|Use_ID=B1009
+|Title_JP =  「空母機動部隊」 拔錨せよ！
+|Title_EN = Sortie a Carrier Task Force
+|Requirements = Sortie a [[Ship Class#Light Aircraft Carrier .28CVL.29|Light]] or [[Ship Class#Regular Aircraft Carrier .28CV.29|Standard]] Carrier flagship and 5 [[Ship Class#Light Cruiser .28CL.29|Light Cruisers]], [[Ship Class#Destroyer .28DD.29|Destroyers]], or [[Ship Class#Seaplane Tender .28AV.29|Seaplane Tenders]]
+|Rewards_RSC = 200 / 0 / 0 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 <br/>300 Points
+|Note = Requires: [[#VB8|VB8]] 
+}}
+{{Quest
+|ID = VB10
+|Use_ID=B1010
+|Title_JP = 敵機動部隊を撃破せよ！
+|Title_EN = Crush the Enemy Task Force!
+|Requirements = Sink an enemy [[Enemy Vessel#Standard Aircraft Carriers .28CV.29|Aircraft Carrier]] / [[Enemy Vessel#Light Aircraft Carriers .28CVL.29|Light Aircraft Carrier]].
+|Rewards_RSC = 0 / 0 / 0 / 200
+|Rewards_Items = {{ShipLink|Akagi}}
+|Note = Requires: [[#A11|A11]] 
+}}
+{{Quest
+|ID = VB11
+|Use_ID=B1011
+|Title_JP =近海諸島防衛線を支援せよ！
+|Title_EN = Support defense force on those islands nearby!
+|Requirements = Sortie to the fourth map of [[KanColle_Kai/鎮守府海域|鎮守府海域]] and get atleast a B+ Rank on the Boss
+|Rewards_RSC = 200 / 0 / 200 / 0
+|Rewards_Items = [[Kinugasa]] X 1<br />Transport Convoy X 1
+|Note = Requires: [[#VB5|VB5]] <br />Unlocks: [[#VB12|VB12]]
+}}
+{{Quest
+|ID = VB12
+|Use_ID=B1012
+|Title_JP = 南方連絡海域正面の制海権を確保せよ！
+|Title_EN = 
+|Requirements =  Sortie to the first map of 南方連絡海域 and Achieve B+ Rank at Boss Node
+|Rewards_RSC = 400 / 0 / 200 / 0
+|Rewards_Items = [[File:Sonar.png|30px|link=Tutorial:Type_93_Passive_Sonar]] [[Type 93 Passive Sonar]]<br />Transport Convoy X 2
+|Note = Requires: [[#VB11|VB11]], [[#VB7|VB7]] <br />Unlocks: [[#VB13|VB13]], [[#VB26|VB26]] 
+}}
+{{Quest
+|ID = VB13
+|Use_ID=B1013
+|Title_JP = 南方連絡航路対潜哨戒を実施せよ！
+|Title_EN = 
+|Requirements =  Sortie to the second map of 南方連絡海域 and Achieve B+ Rank at Boss Node
+|Rewards_RSC = 400 / 0 / 400 / 0
+|Rewards_Items =  <font color="red">Unlocks the fourth fleet</font><br />Transport Convoy X 2
+|Note = Requires: [[#VB12|VB12]] <br />Unlocks: [[#A14|A14]], [[#VB18|VB18]]
+}}
+{{Quest
+|ID = VB14
+|Use_ID=B1014
+|Title_JP = 北方海峡の警護を実施せよ！
+|Title_EN = Carry Out the Northern Strait Escort!
+|Requirements =  Sortie to the second map of [[KanColle_Kai/北方泊地海域|北方泊地海域]] three times and get atleast A ranks on the boss (B rank not tested)
+|Rewards_RSC = 300 / 0 / 300 / 0 
+|Rewards_Items = [[File:Radar.png|30px|link=Type_22_Surface_Radar]] [[Type 22 Surface Radar]] X 1 <br /> 150 Points
+|Note = Requires: [[#A14|A14]] <br />Unlocks: [[#VB15|VB15]], [[#VB16|VB16]]
+}}
+{{Quest
+|ID = VB15
+|Use_ID=B1015
+|Title_JP = オリョール海西部に進出せよ！
+|Title_EN = Advance to the Western Region of Orel Bay!
+|Requirements =   Sortie to the second map of 中部西海域 and get at least an A rank on the boss (B rank not tested). In KanColle Kai, you can simply stack "escape" commands to reach the Boss node much more easily than trying to confront the Battleships at node F.
+|Rewards_RSC = 400 / 400 / 0 / 0
+|Rewards_Items = <font color="red">Unlocks the sixth fleet</font><br /> 300 Points
+|Note = Requires: [[#VB14|VB14]] <br />Unlocks: [[#A32|A32]], [[#D12|D12]]
+}}
+{{Quest
+|ID = VB16
+|Use_ID=B1016
+|Title_JP = 北方海域の哨戒を実施せよ！
+|Title_EN = 
+|Requirements = Sortie to the first map of 北方海域 and defeat the boss
+|Rewards_RSC = 300 / 300 / 0 / 100
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] x 3 <br />300 Points
+|Note = Requires: [[#VB14|VB14]] <br />Unlocks: [[#VB17|VB17]] 
+}}
+{{Quest
+|ID = VB17
+|Use_ID=B1017
+|Title_JP = 陽動作戦！[AL作戦] を実施せよ！ 
+|Title_EN = 
+|Requirements =   Sortie to the first three maps of AL海域 and clear them
+|Rewards_RSC = 600 / 600 / 0 / 800
+|Rewards_Items = [[File:Medal.png|30px|link=Medal]] X 1 <br/>800 Points
+|Note = Requires: [[#VB16|VB16]] <br />Unlocks: [[#VB35|VB35]] 
+}}
+{{Quest
+|ID = VB18
+|Use_ID=B1018
+|Title_JP = 南方連絡線制海権を確保せよ！
+|Title_EN = 
+|Requirements =  Sortie to the fourth map of 南方連絡海域 and get at least an A rank at the boss
+|Rewards_RSC = 400 / 400 / 400 / 0
+|Rewards_Items =  Transport Convoy x 2 <br />400 Points
+|Note = Requires: [[#VB13|VB13]] 
+}}
+{{Quest
+|ID = VB19
+|Use_ID=B1019
+|Title_JP = 「三川艦隊」出撃せよ！
+|Title_EN = Sortie the Mikawa Fleet
+|Requirements = Sortie {{ShipLink|Choukai}}, {{ShipLink|Aoba}}, {{ShipLink|Kako}}, {{ShipLink|Furutaka}}, and {{ShipLink|Tenryuu}}, with one additional fast ship to any map
+|Rewards_RSC = 300 / 300 / 0 / 0
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]] X 1<br />200 points
+|Note = Requires: [[#A20|A20]] 
+}}
+{{Quest
+|ID = VB20
+|Use_ID=B1020
+|Title_JP = 「第六駆逐隊」出撃せよ！
+|Title_EN = Sortie the 6th Destroyer Division
+|Requirements = Sortie '''ONLY''' {{ShipLink|Akatsuki}}, {{ShipLink|Hibiki}}, {{ShipLink|Ikazuchi}}, and {{ShipLink|Inazuma}} to any map
+|Rewards_RSC = 200 / 0 / 0 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] x 1 <br />200 Points
+|Note = Requires: [[#A10|A10]], [[#Bm6|Bm6]] 
+}}
+{{Quest
+|ID = VB21
+|Use_ID=B1021
+|Title_JP = 新編「第二航空戦隊」出撃せよ！
+|Title_EN = Sortie the New 2nd Carrier Division
+|Requirements = Sortie {{ShipLink|Hiryuu/Kai Ni|link=Hiryuu}}(Kai-2) as flagship, {{ShipLink|Souryuu}} ([[Souryuu#Upgrade|Kai]] or [[Souryuu#Second_Remodel|Kai-2]] is ok), and 2 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] (you may add additional ships) to the second map of 南方海域 and obtain an S-Rank at the boss
+|Rewards_RSC = 0 / 800 / 0 / 800
+|Rewards_Items = [[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] X 1 [[File:Furniture box large.jpg|30px|link=Furniture]] X 1
+|Note =  Requires: [[#A36|A36]] <br />Unlocks: [[#A39|A39]], [[#F13|F13]], [[#F14|F14]]
+}}
+{{Quest
+|ID = VB22
+|Use_ID=B1022
+|Title_JP = 「軽空母」戦隊、出撃せよ！
+|Title_EN = Sortie a Light Carrier Squadron
+|Requirements = Sortie 1-2 [[Ship_Class#Light_Aircraft_Carrier_.28CVL.29|Light Carriers]], 1 [[Ship_Class#Light_Cruiser_.28CL.29|Light Cruiser]], and 3-4 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] to the first map of 中部西海域 (Similar to KC Browser's World 2-2) and obtain an S-Rank at the boss.
+|Rewards_RSC = 0 / 300 / 0 / 500
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]] X 1
+|Note =  Requires: [[#A5|A5]] 
+}}
+{{Quest
+|ID = VB23
+|Use_ID=B1023
+|Title_JP = 「水雷戦隊」バシー島沖緊急展開
+|Title_EN = The Torpedo Squadron Bashi Island Emergency Deployment
+|Requirements = Sortie 1-2 [[Ship_Class#Light_Cruiser_.28CL.29|Light Cruisers]], which one of must be the flagship, and 4-5 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] to the first map of 中部西海域 and obtain an S-Rank at the boss
+|Rewards_RSC = 300 / 500 / 0 / 0
+|Rewards_Items = [[File:Furniture box large.jpg|30px|link=Furniture]] X 1<br />[[File:Furniture fairy.png|30px|link=Furniture]][[Furniture|Furniture Fairy]] X 1
+|Note =  Requires: [[#VB6|VB6]] <br />Unlocks: [[#VB46|VB46]]?
+}}
+{{Quest
+|ID = VB24
+|Use_ID=B1024
+|Title_JP = 「改装防空重巡」出撃せよ！
+|Title_EN = Sortie the Remodeled Anti-Air Heavy Cruiser
+|Requirements = Sortie {{ShipLink|Maya}} ([[Maya#Upgrade|Kai]] or [[Maya#Second_Upgrade|Kai-2]]), and 3 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] (you may add additional ships) to the South Anchorage Sea second map and obtain an S-Rank at the Boss
+|Rewards_RSC = 300 / 200 / 300 / 0
+|Rewards_Items = [[File:GreenAmmo.png|30px|link=Type 3 Shell]][[Type 3 Shell]] <br /> [[File:GreenGunMG.png|30px|link=25mm Triple Autocannon Mount]][[25mm Triple Autocannon Mount]]
+|Note = Requires: [[#D16|D16]] <br />Unlocks: [[#D17|D17]]
+}}
+{{Quest
+|ID = VB25
+|Use_ID=B1025
+|Title_JP =「第六駆逐隊」対潜哨戒なのです！
+|Title_EN = The 6th Destroyer Division Anti-Submarine Patrol <font size="-1">nanodesu</font>
+|Requirements = Sortie {{ShipLink|Akatsuki}}, {{ShipLink|Hibiki}}(Hibiki/Верный), {{ShipLink|Ikazuchi}}, and {{ShipLink|Inazuma}} to the second map of [[KanColle_Kai/南方連絡海域|南方連絡海域]] and obtain a C-Rank or better at the boss, '''{{ShipLink|Akatsuki}} must be flagship'''
+|Rewards_RSC = 200 / 200 / 200 / 0
+|Rewards_Items = ?
+|Note = Requires: [[#A10|A10]] <br />Unlocks: ?
+}}
+{{Quest
+|ID = VB26
+|Use_ID=B1026
+|Title_JP = 資源地帯の制海権を確保せよ！
+|Title_EN = 
+|Requirements = Sortie to the third map of 南西諸島海域 and clear it
+|Rewards_RSC = 600 / 600 / 0 / 600
+|Rewards_Items = [[File:Medal.png|30px|link=Medal]] X 1 <br/>600 Points
+|Note = Requires: [[#VB12|VB12]] <br />Unlocks: [[#VB27|VB27]], [[#VB28|VB28]] 
+}}
+{{Quest
+|ID = VB27
+|Use_ID=B1027
+|Title_JP = 西南要塞を攻略せよ！
+|Title_EN = 
+|Requirements = Sortie to the third map of 西南海域 and clear it
+|Rewards_RSC = 800 / 800 / 400 / 400
+|Rewards_Items =  [[File:Medal.png|30px|link=Medal]] X 1 <br/>800 Points
+|Note = Requires: [[#VB26|VB26]] 
+}}
+{{Quest
+|ID = VB28
+|Use_ID=B1028
+|Title_JP = カレー洋作戦、開始せよ！
+|Title_EN = 
+|Requirements = Sortie to the first map of 西方海域 and clear it
+|Rewards_RSC = 750 / 750 / 0 / 500
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 5 <br/>1000 Points
+|Note = Requires: [[#VB26|VB26]] 
+}}
+{{Quest
+|ID = VB29
+|Use_ID=B1029
+|Title_JP = トラック泊地周辺の対潜哨戒を実施せよ！
+|Title_EN = 
+|Requirements = Sortie to the first map of 南方泊地海域 and clear it
+|Rewards_RSC = 300 / 300 / 300 / 0
+|Rewards_Items = {{ShipLink|Houshou}} <br/>150 Points
+|Note = Requires: [[#VC10|VC10]] <br />Unlocks: [[#VB30|VB30]]
+}}
+{{Quest
+|ID = VB30
+|Use_ID=B1030
+|Title_JP = トラック泊地周辺警備を実施せよ！
+|Title_EN = 
+|Requirements = Sortie to the second map of 南方泊地海域 and clear it
+|Rewards_RSC = 0 / 500 / 0 / 0
+|Rewards_Items = {{ShipLink|Akashi}} <br/>150 Points
+|Note = Requires: [[#VB29|VB29]] 
+}}
+{{Quest
+|ID = VB31
+|Use_ID=B1031
+|Title_JP = 敵北方艦隊主力を撃滅せよ！
+|Title_EN = 
+|Requirements = Sortie to the third and fourth map of 北方海域 and defeat the bosses
+|Rewards_RSC = 500 / 300 / 500 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3 <br/>[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 3
+|Note = Requires: [[#Bm12|Bm12]] 
+}}
+{{Quest
+|ID = VB32
+|Use_ID=B1032
+|Title_JP = 「第六戦隊」出撃せよ！
+|Title_EN = Sortie the 6th Cruiser Division
+|Requirements = Sortie {{ShipLink|Aoba}}, {{ShipLink|Furutaka}}, {{ShipLink|Kako}}, {{ShipLink|Kinugasa}}, and 2 additional ships to オリョール海東部 and obtain an S-Rank at the boss
+|Rewards_RSC = 400 / 200 / 0 / 0
+|Rewards_Items = ?
+|Note =  Requires: [[#A28|A28]] <br />Unlocks: [[#B34|B34]] (?)
+}}
+{{Quest
+|ID = VB33
+|Use_ID=B1033
+|Title_JP = 「第十八駆逐隊」出撃せよ！
+|Title_EN = Sortie the 18th Destroyer Division
+|Requirements = Sortie {{ShipLink|Arare}}, {{ShipLink|Kagerou}}, {{ShipLink|Kasumi}}, {{ShipLink|Shiranui}}, and 2 additional ships to [[World_3:_北方海域#3-1|World 3-1]] and defeat the boss
+|Rewards_RSC = 200 / 0 / 0 / 0
+|Rewards_Items = ?
+|Note =  Requires: [[#A32|A32]] <br />Unlocks: ?
+}}
+{{Quest
+|ID = VB34
+|Use_ID=B1034
+|Title_JP = 「 潜水艦隊」 出撃せよ！ 
+|Title_EN = 
+|Requirements = Sortie a fleet with '''only two or more [[Ship_Class#Submarine_.28SS.29|Submarines]]''' to the second map of 中部西海域  and score B rank or better at the boss
+|Rewards_RSC = 150 / 0 / 300 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] x 2 <br/>150 Points
+|Note =  Requires: [[#A25|A25]] <br />Unlocks: ?
+}}
+{{Quest
+|ID = VB35
+|Use_ID=B1035
+|Title_JP = 発動！「MI作戦」
+|Title_EN = 
+|Requirements = Sortie to all four maps of MI海域 and clear them
+|Rewards_RSC = 880 / 880 / 880 / 880
+|Rewards_Items = [[File:Medal.png|30px|link=Medal]] X 1 <br/>2000 Points
+|Note =  Requires: [[#VB17|VB17]] (VB27 also needed?) <br />Unlocks: [[#VB36|VB36]], [[#VB39|VB39]], [[#VB43|VB43]]
+}}
+{{Quest
+|ID = VB36
+|Use_ID=B1036
+|Title_JP = 西部方面派遣艦隊、出撃せよ！
+|Title_EN = 
+|Requirements = Sortie to 西方海域 and defeat four bosses
+|Rewards_RSC = 880 / 880 / 880 / 0
+|Rewards_Items = [[File:Furniture box large.jpg|30px|link=Furniture]] X 3 <br/>1000 Points
+|Note =  Requires: [[#VB35|VB35]] <br />Unlocks: [[#A68|A68]]
+}}
+{{Quest
+|ID = VB37
+|Use_ID=B1037
+|Title_JP = 「第二戦隊」抜錨！
+|Title_EN = 
+|Requirements = Sortie {{ShipLink|Fusou}}, {{ShipLink|Mutsu}}, {{ShipLink|Nagato}}, {{ShipLink|Yamashiro}}, and 2 additional ships to the first map of 西方海域 and obtain two (S-Rank victories?) at the boss
+|Rewards_RSC = 0 / 800 / 0 / 0
+|Rewards_Items = [[File:RedAmmo.png|30px|link=Type 1 Armor-Piercing (AP) Shell]][[Type 1 Armor-Piercing (AP) Shell|Type 1 AP Shell]]
+|Note =  Requires: [[#A42|A42]] <br />Unlocks: [[#A43|A43]] 
+}}
+{{Quest
+|ID = VB38
+|Use_ID=B1038
+|Title_JP = 「水上打撃部隊」南方へ！
+|Title_EN = 
+|Requirements = Sortie a fleet with 3 '''slow battleships''', 1 light cruiser and 2 additional ships to the first map of 南方海域 and defeat the boss
+|Rewards_RSC = 400 / 400 / 800 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 4 <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 4
+|Note =  Requires: [[#A43|A43]] <br />Unlocks: [[#VB40|VB40]], [[#VB41|VB41]]
+}}
+{{Quest
+|ID = VB39
+|Use_ID=B1039
+|Title_JP = 艦隊旗艦、戦艦「大和」出撃せよ！
+|Title_EN = 
+|Requirements = Sortie {{ShipLink|Yamato}} as flagship and 5 additional ships to the third map of MI海域 and defeat the boss
+|Rewards_RSC = 0 / 800 / 800 / 0
+|Rewards_Items = [[File:RedGunHeavy.png|30px|link=Prototype 51cm Twin Cannon]][[Prototype 51cm Twin Cannon]] <br/>300 Points
+|Note =  Requires: [[#A43|A43]], [[#VB35|VB35]] 
+}}
+{{Quest
+|ID = VB40
+|Use_ID=B1040
+|Title_JP = 「戦艦部隊」北方海域に突入せよ！
+|Title_EN = 
+|Requirements =  Sortie two '''slow battleships''', one light carrier and 3 additional ships to the third map of 北方海域 and achieve an S-rank at the boss
+|Rewards_RSC = 0 / 600 / 0 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 4 <br/>[[File:RedAmmo.png|30px|link=Type 1 Armor-Piercing (AP) Shell]][[Type 1 Armor-Piercing (AP) Shell|Type 1 AP Shell]]
+|Note =  Requires: [[#VB38|VB38]] 
+}}
+{{Quest
+|ID = VB41
+|Use_ID=B1041
+|Title_JP = 南方海域珊瑚諸島沖の制空権を握れ！
+|Title_EN = 
+|Requirements = Sortie to the second map of 南方海域 and defeat the boss two times
+|Rewards_RSC = 0 / 600 / 0 / 800
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 5 <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 5
+|Note =  Requires: [[#VB38|VB38]] <br />Unlocks: [[#VB42|VB42]]
+}}
+{{Quest
+|ID = VB42
+|Use_ID=B1042
+|Title_JP = 「鉄底海峡」を越えて
+|Title_EN = 
+|Requirements = Sortie to the fourth map of 南方海域 and defeat the boss 
+|Rewards_RSC = 900 / 900 / 900 / 0
+|Rewards_Items = [[File:Medal.png|30px|link=Medal]] X 1 <br/>1500 Points
+|Note =  Requires: [[#VB41|VB41]] <br />Unlocks: [[#VB43|VB43]] 
+}}
+{{Quest
+|ID = VB43
+|Use_ID=B1043
+|Title_JP = 決戦！「FS作戦」、発動せよ！
+|Title_EN = 
+|Requirements = Sortie to the fourth map of FS海域 and defeat the boss
+|Rewards_RSC = 0 / 900 / 0 / 900
+|Rewards_Items = [[File:Medal.png|30px|link=Medal]] X 1 <br/>3000 Points
+|Note =  Requires: [[#VB42|VB42]], [[#VB35|VB35]] <br />Unlocks: [[#VB44|VB44]] 
+}}
+{{Quest
+|ID = VB44
+|Use_ID=B1044
+|Title_JP = 深海運河戦略攻撃
+|Title_EN = 
+|Requirements = Sortie to the third map of 深海運河海域 and defeat the boss
+|Rewards_RSC = 900 / 900 / 0 / 900
+|Rewards_Items = [[File:Medal.png|30px|link=Medal]] X 1 <br/>3000 Points
+|Note =  Requires: [[#VB43|VB43]] <br />Unlocks: ?
+}}
+{{Quest
+|ID = VB45
+|Use_ID=B1045
+|Title_JP = 「第四戦隊」出撃せよ！
+|Title_EN = Sortie the 4th Cruiser Division
+|Requirements = Sortie {{ShipLink|Takao}}, {{ShipLink|Atago}}, {{ShipLink|Maya}}, {{ShipLink|Choukai}}, and 2 additional ships to fourth map of 鎮守府海域 and defeat the boss
+|Rewards_RSC = 150 / 100 / 150 / 100
+|Rewards_Items = ?
+|Note = Requires: [[#A21|A21]] 
+}}
+{{Quest
+|ID = VB46
+|Use_ID=B1046
+|Title_JP = 「潜水艦隊」出撃せよ！[[#Notes|<sup>?</sup>]]
+|Title_EN = Sortie a Submarine Fleet
+|Requirements = Sortie 2 [[Ship_Class#Submarine_.28SS.29|Submarines]] and 4 additional ships to ? and defeat the boss
+|Rewards_RSC = 150 / 0 / 300 / 0
+|Rewards_Items = ?
+|Note = Requires: [[#VB23|VB23]]?
+}}
+{{Quest
+|ID = VB47
+|Use_ID=B1047
+|Title_JP = 「西村艦隊」出撃せよ！
+|Title_EN = Sortie the Nishimura Fleet
+|Requirements = Sortie {{ShipLink|Fusou}}, {{ShipLink|Yamashiro}}, {{ShipLink|Mogami}}, {{ShipLink|Shigure}}, and 2 additional ships to the fourth map of [[KanColle_Kai/南方連絡海域|南方連絡海域]] and defeat the boss
+|Rewards_RSC = 400 / 0 / 400 / 0
+|Rewards_Items = [[File:Headquarters Personnel.png|30px|link=#Introduction]][[#Introduction|"Headquarters Personnel"]] X 1 <br />400 points
+|Note = Requires: [[#A22|A22]] <br />Unlocks: [[#A53|A53]]
+}}
+{{Quest
+|ID = VB48
+|Use_ID=B1048
+|Title_JP = 「第五航空戦隊」出撃せよ！
+|Title_EN = Sortie the 5th Carrier Division
+|Requirements = Sortie {{ShipLink|Shoukaku}}, {{ShipLink|Zuikaku}}, and 4 additional ships to ? and defeat the boss
+|Rewards_RSC = 200 / 200 / 0 / 700
+|Rewards_Items = ?
+|Note = Requires: [[#A23|A23]] 
+}}
+{{Quest
+|ID = VB49
+|Use_ID=B1049
+|Title_JP = 「第六〇一航空隊」出撃せよ！
+|Title_EN = Sortie the 601st Naval Air Group
+|Requirements = Sortie {{ShipLink|Unryuu}}, {{ShipLink|Amagi}} or {{ShipLink|Katsuragi}} as flagship with 5 additional ships to the third map of [[KanColle_Kai/南方泊地海域|南方泊地海域]] and defeat the boss 
+|Rewards_RSC = 0 / 300 / 0 / 900
+|Rewards_Items = [[File:Ap c.png|30px|link=Skilled Carrier-based Aircraft Maintenance Personnel]][[Skilled Carrier-based Aircraft Maintenance Personnel]] <br />[[File:Skilled Crew Member Icon.png|30px|link=Skilled Crew Member]][[Skilled Crew Member]]
+|Note =  Requires: [[#A41|A41]] <br />Unlocks: [[#F15|F15]]
+}}
+{{Quest
+|ID = VB50
+|Use_ID=B1050
+|Title_JP = 「第十一駆逐隊」 出撃せよ！
+|Title_EN = Sortie the 11th Destroyer Division
+|Requirements = Sortie {{ShipLink|Fubuki}}, {{ShipLink|Shirayuki}}, {{ShipLink|Hatsuyuki}}, {{ShipLink|Murakumo}}, and 2 additional ships to ? and defeat the boss
+|Rewards_RSC = 0 / 300 / 300 / 0
+|Rewards_Items = ?
+|Note = Requires: [[#A47|A47]] <br />Unlocks: ?
+}}
+{{Quest
+|ID = VB51
+|Use_ID=B1051
+|Title_JP = 精鋭「第二航空戦隊」抜錨せよ！
+|Title_EN = Sortie the Elite 2nd Carrier Division
+|Requirements = Sortie {{ShipLink|Souryuu/Kai Ni|link=Souryuu}}(Kai-2) as flagship, {{ShipLink|Hiryuu/Kai Ni|link=Hiryuu}}(Kai-2), 2 [[Ship_Class#Destroyer_.28DD.29|Destroyers]], and 2 additional ship to the third map of 西方海域  and obtain an S-Rank at the boss
+|Rewards_RSC = 800 / 0 / 800 / 0
+|Rewards_Items = [[File:Furniture fairy.png|30px|link=Furniture]][[Furniture|Furniture Fairy]] X 1 <br />[[File:Skilled Crew Member Icon.png|30px|link=Skilled Crew Member]][[Skilled Crew Member]]
+|Note =  Requires: [[#A39|A39]] 
+}}
+{{Quest
+|ID = VB52
+|Use_ID=B1052
+|Title_JP = 「空母機動部隊」西へ！
+|Title_EN = Carrier Task Force, toward West
+|Requirements = Sortie 2 Aircraft Carriers ([[Ship_Class#Light_Aircraft_Carrier_.28CVL.29|CVL]]/[[Ship_Class#Regular_Aircraft_Carrier_.28CV.29|CV]]/[[Ship_Class#Armored_Aircraft_Carrier_.28CV.29|CVB]]), 2 [[Ship_Class#Destroyer_.28DD.29|Destroyers]], and 2 additional ships to the first map of 西方海域 and obtain an S-Rank? at the boss 
+|Rewards_RSC = 0 / 0 / 800 / 800
+|Rewards_Items = [[File:Furniture box large.jpg|30px|link=Furniture]] X 2 [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 4
+|Note = Requires: ? <br />Unlocks: [[#A56|A56]], [[#A59|A59]] '''Yearly quest'''
+}}
+{{Quest
+|ID = VB53
+|Use_ID=B1053
+|Title_JP = 「第五航空戦隊」珊瑚諸島沖に出撃せよ！
+|Title_EN =  Sortie the 5th Carrier Division to the Southern Sea Coral Islands
+|Requirements = Sortie {{ShipLink|Shoukaku}}, {{ShipLink|Zuikaku}}, {{ShipLink|Oboro}}, {{ShipLink|Akigumo}} and up to 2 additional ships to the second map of 南方海域 and obtain an S-Rank at the boss
+|Rewards_RSC = 0 / 800 / 0 / 800
+|Rewards_Items = [[File:Medal.png|30px|link=Medal]] X 1 <br/>500 Points
+|Note = Requires: [[#A56|A56]] <br>Unlocks: [[#A64|A64]]?, [[#F20|F20]], [[#F27|F27]]?, [[#D20|D20]]
+}}
+{{Quest
+|ID = VB54
+|Use_ID=B1054
+|Title_JP = 「水上反撃部隊」突入せよ！
+|Title_EN = Send in the Surface Counterattack Fleet
+|Requirements =  Sortie 2 [[Ship_Class#Destroyer_.28DD.29|Destroyer]] with 1 as the flagship, 1 [[Ship_Class#Heavy_Cruiser_.28CA.29|Heavy Cruiser]] ([[Ship_Class#Aviation_Cruiser_.28CAV.29|CAVs]] don't count), 1 [[Ship_Class#Light_Cruiser_.28CL.29|Light Cruiser]], and 2 ships of a different class (2CVL worked, browser composition didn't work) to the fourth map of 中部西海域 and obtain an S-Rank? at the boss
+|Rewards_RSC = 300 / 600 / 0 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 4 <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 5
+|Note = Requires: [[#A46|A46]] <br />Unlocks: [[#A59|A59]] 
+'''Yearly quest'''
+}}{{Quest
+|ID = VB55
+|Use_ID=B1055
+|Title_JP = 「第三航空戦隊」近海諸島防衛線に出撃！
+|Title_EN = 
+|Requirements = Sortie {{ShipLink|Zuikaku/Kai|link=Zuikaku}} as flagship, {{ShipLink|Zuihou}}, {{ShipLink|Chitose/Carrier|link=Chitose}} and {{ShipLink|Chiyoda/Carrier|link=Chiyoda}} (both as CVL) (you can add 2 more ships) to the fourth map of 鎮守府海域 and score an S-rank victory at the boss
+|Rewards_RSC = 500 / 0 / 500 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] x 4 <br />[[File:Food supply ship irako.png|30px|link=Fatigue]][[Fatigue#Food_Supply_Ship_.22Irako.22|"Irako"]] X 1
+|Note = Requires: [[#A59|A59]] <br>Unlocks: [[#A60|A60]]
+}}
+{{Quest
+|ID = VB56
+|Use_ID=B1056
+|Title_JP = 「航空水上打撃艦隊」出撃せよ！
+|Title_EN = Sortie an Aviation Surface Attack Fleet
+|Requirements = Sortie 2 [[Ship_Class#Aviation_Cruiser_.28CAV.29|Aviation Cruisers]], 2 [[Ship_Class#Aviation_Battleship_.28BBV.29|Aviation Battleships]], and 2 additional ships to the fourth map of [[KanColle_Kai/北方泊地海域|北方泊地海域]] and defeat the boss
+|Rewards_RSC = 0 / 300 / 0 / 500
+|Rewards_Items = [[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] X 1 <br/>200 Points
+|Note =  Requires: [[#A26|A26]]
+}}
+{{Quest
+|ID = VB57
+|Use_ID=B1057
+|Title_JP = 「小沢艦隊」出撃せよ！
+|Title_EN = Sortie the Ozawa's fleet
+|Requirements = Sortie {{ShipLink|Zuikaku/Kai|link=Zuikaku}} as flagship, {{ShipLink|Zuihou/Kai|link=Zuihou}}, {{ShipLink|Chitose/Carrier|link=Chitose}} and {{ShipLink|Chiyoda/Carrier|link=Chiyoda}} (both as CVL), {{ShipLink|Ise/Kai|link=Ise}} and {{ShipLink|Hyuuga/Kai|link=Hyuuga}} to the fourth map of 中部西海域 and score an S-rank victory at the boss
+|Rewards_RSC = 400 / 400 / 400 / 800
+|Rewards_Items = [[File:Medal.png|30px|link=Medal]] X 1 <br/>700 Points
+|Note = Requires: [[#A61|A61]] <br>Unlocks: [[#A62|A62]]
+}}
+{{Quest
+|ID = VB58
+|Use_ID=B1058
+|Title_JP = 「第五航空戦隊」」出撃せよ！
+|Title_EN = 
+|Requirements = Sortie {{ShipLink|Zuikaku}} and {{ShipLink|Shoukaku}} with 4 additional ships to the fourth map of 中部西海域 and defeat the boss (A-rank confirmed)
+|Rewards_RSC = 200 / 200 / 0 / 700
+|Rewards_Items = [[File:Furniture box large.jpg|30px|link=Furniture]] X 1 <br/>500 Points
+|Note = Requires: ? 
+}}
+}}
+</div>
+
+=== Monthly Sortie Quests ===
+<div style="width:100%;margin:20px;">
+{| width="100%"
+| style="width:50px;" |[[File:KCKai_Quest_Sortie_Icon.png|left]]
+|<div style="background: #EC6063; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Monthly Sortie Quests'''</font></div>
+|}
+</div>
+<div style="position: relative; max-width: 1200px; margin: 10px;">
+{{QuestList|
+{{Quest
+|ID = Bm1
+|Title_JP = 敵艦隊を撃破せよ！
+|Title_EN = Crush the Enemy Fleet
+|Requirements = Defeat an enemy fleet
+|Rewards_RSC = 100 / 100 / 0 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = Requires: [[#B3|B3]] <br />Unlocks: [[#Bm4|Bm4]], [[#Bm5|Bm5]], [[#Bm2|Bm2]]
+}}
+{{Quest
+|ID = Bm2
+|Title_JP = 敵艦隊を邀撃、敵戦力の漸減を図れ！
+|Title_EN = Ambush the Enemy Fleet and Attempt to Decrease Their War Potential!
+|Requirements = Defeat a boss in any area with at least a B?
+|Rewards_RSC = 100 / 100 / 100 / 100
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = Requires: [[#Bm1|Bm1]] <br />Unlocks: [[#Bm3|Bm3]], [[#Bm7|Bm7]]
+}}
+{{Quest
+|ID = Bm3
+|Title_JP =敵艦隊を全力邀撃せよ！
+|Title_EN = Ambush the Enemy Fleet With All Your Might!
+|Requirements = Sortie 8 times before the end of the month
+|Rewards_RSC = 250 / 250 / 250 / 100
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 4<br />50 Points
+|Note = Requires: [[#Bm2|Bm2]] 
+}}
+{{Quest
+|ID = Bm4
+|Title_JP = 敵輸送船団を叩け！
+|Title_EN = Strike the Enemy Transport Group
+|Requirements = Sink 2 enemy [[Enemy_Vessel#Transport_Ships_.28AP.29|Transport Ships]] in a month
+|Rewards_RSC = 0 / 600 / 300 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 [[File:Furniture box large.jpg|30px|link=Furniture]] X 1
+|Note = Requires: [[#Bm1|Bm1]] 
+}}
+{{Quest
+|ID = Bm5
+|Title_JP = 敵空母を撃沈せよ！
+|Title_EN = Sink Enemy Carriers
+|Requirements = Sink 2 enemy Aircraft Carriers.<br />'''Light Carriers are fine too'''<br />Armored Carrier Princess does not work<br />Need to verify for Seaplane Tender Princess
+|Rewards_RSC = 150 / 150 / 150 / 450
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2<br />150 Points
+|Note = Requires: [[#Bm1|Bm1]] <br />Unlocks: [[#Bm6|Bm6]] 
+}}
+{{Quest
+|ID = Bm6
+|Title_JP = 敵補給ラインを寸断せよ！
+|Title_EN = Cut Off Enemy Supply Line
+|Requirements = Sink 3 enemy [[Enemy_Vessel#Transport_Ships_.28AP.29|Transport Ships]]
+|Rewards_RSC = 300 / 50 / 300 / 50
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 2 [[File:Furniture box large.jpg|30px|link=Furniture]] X 1
+|Note = Requires: [[#Bm5|Bm5]] <br />Unlocks: [[#Bm9|Bm9]], [[#VB20|VB20]]
+}}
+{{Quest
+|ID = Bm7
+|Title_JP = 海上通商破壊作戦
+|Title_EN = Maritime Trade Disrupt Operation
+|Requirements = Sink 5 enemy [[Enemy_Vessel#Transport_Ships_.28AP.29|Transport Ships]] in a month
+|Rewards_RSC = 500 / 0 / 500 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 3<br /> 200 Points
+|Note = Requires: [[#Bm2|Bm2]] <br />Unlocks: [[#B12|B12]]
+}}
+{{Quest
+|ID = Bm8
+|Title_JP = あ号作戦
+|Title_EN = Operation A-gou
+|Requirements = Sortie your fleet x times? and defeat 16 bosses? in a month
+|Rewards_RSC = 400 / 400 / 400 / 200
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3<br />150 Points
+|Note = Requires: [[#Bm2|Bm2]] <br />Unlocks: [[#Bm10|Bm10]]
+}}
+{{Quest
+|ID = Bm9
+|Title_JP = い号作戦
+|Title_EN = Operation I-gou
+|Requirements = Sink 10? enemy Aircraft Carriers in a month.<br />'''Light Carriers are fine too'''
+|Rewards_RSC = 0 / 600 / 0 / 600
+|Rewards_Items =  [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 3<br />200 Points
+|Note = Requires: [[#Bm6|Bm6]] <br />Unlocks: [[#Bm12|Bm12]], [[#F26|F26]]
+}}
+{{Quest
+|ID = Bm10
+|Title_JP = ろ号作戦
+|Title_EN = Operation Ro-gou 
+|Requirements = Sink 10? [[Enemy_Vessel#Transport_Ships_.28AP.29|Transport Ships]] in a month (transport ships killed before getting the quest seem to also count)
+|Rewards_RSC = 400 / 0 / 800 / 0
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 3<br />250 Points
+|Note = Requires: [[#Bm8|Bm8]] <br />Unlocks: [[#Bm11|Bm11]]
+}}
+{{Quest
+|ID = Bm11
+|Title_JP = 「水雷戦隊」南西へ！
+|Title_EN = Torpedo Squadron, toward Southwest 
+|Requirements =  Sortie 1-3 [[Ship_Class#Light_Cruiser_.28CL.29|Light Cruisers]], with one as flagship, and 3-5 [[Ship_Class#Destroyer_.28DD.29|Destroyers]] (Same as the browser version?) to the fourth map of [[KanColle_Kai/鎮守府海域|鎮守府海域]] and obtain an S-Rank at the boss
+|Rewards_RSC = 500 / 0 / 0 / 300
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 3<br />[[File:Food supply ship irako.png|30px|link=Fatigue]][[Fatigue#Food_Supply_Ship_.22Irako.22|"Irako"]] X 1
+|Note = Requires: [[#Bm10|Bm10]]
+}}
+{{Quest
+|ID = Bm12
+|Title_JP = 海上護衛戦
+|Title_EN = Marine Escort Battle 
+|Requirements = Sink 10 submarines
+|Rewards_RSC = 600 / 0 / 0 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2<br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 2
+|Note = Requires: [[#Bm9|Bm9]] <br />Unlocks: [[#Bm13|Bm13]], [[#VB31|VB31]]
+}}
+{{Quest
+|ID = Bm13
+|Title_JP = トラック泊地を防衛せよ！
+|Title_EN = 
+|Requirements = ?
+|Rewards_RSC = 400 / 0 / 0 / 700
+|Rewards_Items = ?
+|Note = Requires: [[#Bm12|Bm12]]
+}}
+}}
+</div>
+
+== Exercise Quests ==
+<div style="width:100%; margin: 20px;">
+{| width="100%"
+| style="width:50px;" |[[File:KCKai_Quest_Exercise_Icon.png|left]]
+|<div style="background: #93CE67; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Exercise Quests'''</font></div>
+|}
+</div>
+<div style="position: relative; max-width: 1200px; margin: 10px;">
+{{QuestList|
+{{Quest
+|ID = VC1
+|Use_ID=C1
+|Title_JP = はじめての「演習」！
+|Title_EN = The First Exercise!
+|Requirements = Do the Fleet Movement Exercise
+|Rewards_RSC = 30 / 30 / 0 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1 <br /><font color="red">Unlocks Shelling Exercise</font>
+|Note = Requires: [[#A1|A1]], Unlock: [[#VC2|VC2]]
+}}
+{{Quest
+|ID = VC2
+|Use_ID=C2
+|Title_JP = 「砲戦演習」を実施せよ！
+|Title_EN = Carry Out the Shelling Exercise!
+|Requirements = Do the Shelling Exercise
+|Rewards_RSC = 0 / 70 / 0 / 0
+|Rewards_Items = <font color="red">Unlocks Torpedo Exercise</font>
+|Note = Requires: [[#VC1|VC1]], Unlock: [[#VC3|VC3]], [[#VC4|VC4]], [[#VB1|VB1]]
+}}
+{{Quest
+|ID = VC3
+|Use_ID=C3
+|Title_JP = 「雷撃戦演習」を実施せよ！
+|Title_EN = Carry Out the Torpedo Exercise!
+|Requirements = Do the Torpedo Exercise
+|Rewards_RSC = 80 / 0 / 0 / 0
+|Rewards_Items = [[61cm Quadruple Torpedo Mount]]
+|Note = Requires: [[#VC2|VC2]]
+}}
+{{Quest
+|ID = VC4
+|Use_ID=C4
+|Title_JP = 「砲撃演習」を継続実施せよ！
+|Title_EN = Continue Carrying Out the Shelling Exercise!
+|Requirements = Do the Shelling Exercise three times '''(previous exercises done during the same month also count)'''
+|Rewards_RSC = 0 / 100 / 0 / 0
+|Rewards_Items = [[12.7cm Twin Gun Mount Model B Kai Ni]]
+|Note = Requires: [[#VC2|VC2]], Unlock [[#VC5|VC5]], [[#A14|A14]]
+}}
+{{Quest
+|ID = VC5
+|Use_ID=C5
+|Title_JP = 「演習」を実施し、夜戦練度を高めよ！
+|Title_EN = Carry out an Exercise to Increase Night Battle Proficiency! 
+|Requirements = Do Fleet Movement Exercise three times and Torpedo Exercise three times '''(previous exercises done during the same month also count)'''
+|Rewards_RSC = 100 / 100 / 0 / 0
+|Rewards_Items = <font color="red">Unlocks Anti-Submarine Warfare Exercise</font><br />[[Skilled Lookouts]]
+|Note = Requires: [[#VC4|VC4]], Unlock: [[#VC8|VC8]], [[#VC9|VC9]], [[#VC10|VC10]]
+}}
+{{Quest
+|ID = VC6
+|Use_ID=C6 
+|Title_JP = 作戦前に艦隊練度向上を図れ！
+|Title_EN = Improve Fleet discipline before operation!
+|Requirements = Do rival exercise 3 times in a month
+|Rewards_RSC = 0 / 0 / 300 / 300
+|Rewards_Items =[[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = Requires: [[#A51|A51]], [[#VC16|VC16]] Unlock: to be added
+}}
+{{Quest
+|ID = VC7
+|Use_ID=C7 
+|Title_JP = 演習を強化、艦隊の練度向上に努めよ！
+|Title_EN = Strengthen fleet discipline!
+|Requirements =  Continue doing rival exercise 4 more times in a month 
+|Rewards_RSC = 0 / 300 / 0 / 0
+|Rewards_Items =[[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2 <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 1
+|Note = Requires: [[#D18|D18]], [[#VC16|VC16]] Unlock: [[#D19|D19]]
+}}
+{{Quest
+|ID = VC8
+|Use_ID=C8
+|Title_JP = 北方再突入に備え、練度向上に努めよ！
+|Title_EN = Preparing to retake the north, improve fleet discipline!
+|Requirements =  Do fleet movement exercise three times.
+|Rewards_RSC = 300 / 0 / 0 / 0
+|Rewards_Items =[[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2 <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 2
+|Note = Requires: to be added, [[#VC5|VC5]]
+}}
+{{Quest
+|ID = VC9
+|Use_ID=C9
+|Title_JP = 「砲戦演習」を強化せよ！
+|Title_EN = Intensify the Shelling Exercise!
+|Requirements = Do Shelling Exercise five times '''(previous exercises done during the same month also count)'''
+|Rewards_RSC = 0 / 100 / 0 / 0
+|Rewards_Items =[[File:Development material.png|30px|link=Construction]] X 2
+|Note = Requires: [[#VC5|VC5]], <br />Unlock: [[#VC10|VC10]], [[#VC11|VC11]], [[#VC14|VC14]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = VC10
+|Use_ID=C10
+|Title_JP = 「砲戦演習」を強化せよ！
+|Title_EN = Strive to Increase the Fleet's Night Battle Proficiency!
+|Requirements = Do both Movement and Torpedo exercises 5 times each '''(previous exercises done during the same month also count)'''
+|Rewards_RSC = 100 / 100 / 0 / 0
+|Rewards_Items =[[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = Requires: [[#VC5|VC5]],[[#VC9|VC9]] <br />Unlock: [[#VC12|VC12]], [[#VC15|VC15]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = VC11
+|Use_ID=C11
+|Title_JP = 「対潜戦演習」を強化せよ！
+|Title_EN =  Intensify the Anti-Submarine Warfare Excercise!
+|Requirements = Do the Anti-Submarine Warfare Exercise three times
+|Rewards_RSC = 200 / 0 / 0 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1 <br /> Transport Convoy X 1 
+|Note = Requires: [[#VC9|VC9]], [[#VC15|VC15]]  <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = VC12
+|Use_ID=C12
+|Title_JP = 艦隊の練度向上に努めよ！
+|Title_EN = Strive to Increase the Fleet's Practice Proficiency!
+|Requirements = Do the All-Rounded Exercise twice
+|Rewards_RSC = 0 / 200 / 0 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 1 [[File:Combat_Provisions_Icon.png|30px|link=Combat_Provisions]][[Combat_Provisions|Combat Ration]] X 1 
+|Note = Requires: [[#VC10|VC10]], [[#VC18|VC18]]  <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = VC13
+|Use_ID=C13
+|Title_JP = 「航空戦演習」を強化せよ！
+|Title_EN = Intensify the Aerial Battle Exercise!
+|Requirements = Do the Aerial Battle Exercise three times
+|Rewards_RSC = 0 / 0 / 0 / 200
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2 <br />[[File:Combat_Provisions_Icon.png|30px|link=Combat_Provisions]][[Combat_Provisions|Combat Ration]] X 1
+|Note = Requires: [[#VC11|VC11]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = VC14
+|Use_ID=C14
+|Title_JP = 艦隊同士の「対抗演習」を実施せよ！
+|Title_EN = Carry Out a Rival Exercise Among Friends!
+|Requirements = Do Rival Exercise 5 times 
+|Rewards_RSC = 200 / 200 / 200 / 0
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 2 <br /> [[File:Combat_Provisions_Icon.png|30px|link=Combat_Provisions]][[Combat_Provisions|Combat Ration]] X 1
+|Note = Requires: [[#VC9|VC9]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = VC15
+|Use_ID=C15
+|Title_JP = 「対潜戦演習」を実施せよ！
+|Title_EN = Carry Out the Anti-Submarine Warfare Exercise!
+|Requirements = Do the Anti-Submarine Warfare Exercise
+|Rewards_RSC = 80 / 0 / 0 / 0
+|Rewards_Items = [[Type 94 Depth Charge]]<br /><font color="red">Unlocks Aerial Battle Exercise</font>
+|Note = Requires: [[#VC10|VC10]], Unlock: [[#VC11|VC11]], [[#VC17|VC17]], [[#VB29|VB29]]
+}}
+{{Quest
+|ID = VC16
+|Use_ID=C16
+|Title_JP = 「対抗演習」を実施せよ！
+|Title_EN = Carry Out the Rival Exercise!
+|Requirements = Do Rival Exercise.
+|Rewards_RSC = 0 / 0 / 80 / 0
+|Rewards_Items =[[File:Instant construction 2.png|30px|link=Construction]] X 1
+|Note = Requires: [[#A3|A3]] unlock:  [[#VC7|VC7]],  [[#VC8|VC8]]
+}}
+{{Quest
+|ID = VC17
+|Use_ID=C17
+|Title_JP = 「航空戦演習」を実施せよ！
+|Title_EN = Carry Out the Aerial Battle Exercise!
+|Requirements = Do the Aerial Battle Exercise
+|Rewards_RSC = 0 / 0 / 0 / 80
+|Rewards_Items = [[Type 0 Fighter Model 21 (Skilled)]]<br /><font color="red">Unlocks All-Rounded Exercise</font>
+|Note = Requires: [[#VC15|VC15]], [[#VC16|VC16]] <br/> Unlock: [[#VC18|VC18]]
+}}
+{{Quest
+|ID = VC18
+|Use_ID=C18
+|Title_JP = 「総合演習」を実施せよ！
+|Title_EN = Carry Out the All-Rounded Exercise!
+|Requirements = Do the All-Rounded Exercise
+|Rewards_RSC = 100 / 100 / 100 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2<br />[[Type 91 AP Shell]]
+|Note =  Requires: [[#VC17|VC17]] <br />Unlock: [[#VC12|VC12]]
+}}
+}}
+</div>
+
+== Expedition Quests (遠征) ==
+<div style="width:100%; margin: 20px;">
+{| width="100%"
+| style="width:50px;" |[[File:KCKai_Quest_Expedition_Icon.png|left]]
+|<div style="background: #4EBBD4; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Expedition Quests'''</font></div>
+|}
+</div>
+<div style="position: relative; max-width: 1200px; margin: 10px;">
+{{QuestList|
+{{Quest
+|ID = D1
+|Title_JP = はじめての「遠征」
+|Title_EN = The First Expedition
+|Requirements = Perform an expedition
+|Rewards_RSC = 50 / 50 / 50 / 0
+|Rewards_Items = [[File:Furniture box small.png|30px|link=Furniture]] X 1<br />Transport Convoy X 1
+|Note = Requires: [[#F2|F2]] 
+}}
+{{Quest
+|ID = D2
+|Title_JP = 艦隊の「遠征」を実施せよ！
+|Title_EN = Fleet Expedition implementation
+|Requirements = Perform 3 successful expeditions within same month.
+|Rewards_RSC = 100 / 100 / 100 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 [[File:Furniture box small.png|30px|link=Furniture]] X 1  
+|Note = Unlock: [[#D3|D3]]<br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D3
+|Title_JP = 「遠征」を継続して実施せよ！
+|Title_EN = Fleet Expedition implementation 2
+|Requirements = Perform 10 successful expeditions within same month
+|Rewards_RSC = 200 / 200 / 200 / 50
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3 <br/>Transport Convoy X 1
+|Note = Requires: [[#D2|D2]]<br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D4
+|Title_JP = 南方からの資源輸送作戦を強化せよ！
+|Title_EN = Strengthen southern transport operations
+|Requirements = Do 12 successful transport fleet expeditions in Southern Connecting Sea/[[KanColle_Kai/南方連絡海域|南方連絡海域]] during the same month
+'''Expeditions that count for quest progression:''' 
+[<font color = #FF0000>タンカー船団護衛任務</font>] [<font color = #FF0000>ボーキサイト輸送任務</font>] [<font color = #FF0000>資源輸送船団護衛任務</font>] [<font color = #FF0000>軽空母海上護衛任務</font>] 
+|Rewards_RSC = 300 / 100 / 400 / 200
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 <br />[[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]]
+|Note = Requires: [[#D1|D1]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D5 
+|Title_JP = 第 1 次潜水艦派遣作戦
+|Title_EN = The First Submarine Dispatch Operation
+|Requirements = Complete the fourth expedition [Submarine Voyage] / [<font color = #FF0000>潜水艦派遣演習</font>] in Southwestern Sea / 西南海域 (It requires 4 submarines with a combined fleet level of 62? and a flagship level of 17?)
+|Rewards_RSC = 0 / 0 / 20 / 20
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]] <br />150 Points
+|Note = Requires: [[#A27|A27]] <br />Unlocks: [[#D6|D6]]
+}}
+{{Quest
+|ID = D6
+|Title_JP = 第２次潜水艦派遣作戦
+|Title_EN = The Second Submarine Dispatch Operation
+|Requirements = Complete the fourth expedition [Submarine Voyage] / [<font color = #FF0000>潜水艦派遣演習</font>] in Southwestern Sea / 西南海域 '''one more time'''
+|Rewards_RSC = 0 / 0 / 20 / 20
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3 <br />[[File:RedPlane.png|30px|link=Ju 87C Kai]][[Ju 87C Kai]]
+|Note = Requires: [[#D5|D5]] <br />Unlocks: [[#D8|D8]]
+}}
+{{Quest
+|ID = D7
+|Title_JP = 海上護衛・対潜作戦を強化せよ！
+|Title_EN = Strengthen maritime escort anti submarine operations
+|Requirements = Perform the maritime escort and anti-submarine expeditions!
+|Rewards_RSC = 300 / 150 / 0 / 150 
+|Rewards_Items =  [[File:Development material.png|30px|link=Construction]] X 2 <br />[[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]]
+|Note = Requires: [[#D3|D3]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D8
+|Title_JP = 潜水艦派遣作戦による技術入手の継続！
+|Title_EN = Continue to Obtain Technology through Submarine Dispatch Operations 
+|Requirements =  Complete the fourth expedition  [Submarine Voyage] / [<font color = #FF0000>潜水艦派遣演習</font>] in Southwestern Sea / 西南海域 '''two more times'''
+|Rewards_RSC = 0 / 0 / 0 / 800
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 4 <br /> [[File:RedPlane.png|30px|link=Ju 87C Kai]][[Ju 87C Kai]]
+|Note = Requires: [[#D6|D6]] <br />Unlocks: [[#D9|D9]]
+}}
+{{Quest
+|ID = D9
+|Title_JP = 潜水艦派遣による海外艦との接触作戦
+|Title_EN = Operation Contact Foreign Ship through Submarine Dispatch 
+|Requirements = Complete the third expedition [Submarine Voyage Drill] / [<font color = #FF0000>海外艦との接触</font>] in Southwestern Sea / 西方海域 (It requires 4 submarines, level details unknown bring high level subs)
+|Rewards_RSC = 150 / 150 / 0 / 0
+|Rewards_Items = {{ShipLink|Z1}} <br />200 Points
+|Note = Requires: [[#D8|D8]] <br />Unlocks:[[#D21|D21]]
+}}
+{{Quest
+|ID = D10
+|Title_JP = 南方海域への鼠輸送を実施せよ！
+|Title_EN = Carry out a [Tokyo Express] to the southern sea
+|Requirements = Send a fleet of a CL as core and destroyers with drum canisters for [Tokyo Express] expedition in the Southern Sea
+|Rewards_RSC = 100 / 100 / 0 / 0
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]] X 2 <br />[[File:Furniture box large.jpg|30px|link=Furniture]]
+|Note = Requires: [[#A30|A30]] <br />Unlocks: [[#D11|D11]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D11
+|Title_JP = 南方海域への鼠輸送を継続実施せよ！
+|Title_EN = Continue the [Tokyo Express] to the southern sea
+|Requirements = Carry out the [Tokyo Express] missions of the Southern Sea and clear them 6 times.
+|Rewards_RSC = 400 / 400 / 0 / 0
+|Rewards_Items = Transport Convoy X 1 <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 2
+|Note = Requires: [[#D10|D10]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D12
+|Title_JP = 「北号作戦」を実施せよ！
+|Title_EN = Operation Hoku-Gou!
+|Requirements = Send a fleet with 2 BBVs as its core and DDs to the 4th expedition of the Nansei Islands
+|Rewards_RSC = 100 / 100 / 0 / 150
+|Rewards_Items = [[File:Seaplane.png|30px|link=Zuiun (634 Air Group)]][[Zuiun (634 Air Group)]] <br />500 Points
+|Note = Requires: [[#VB15|VB15]] <br />Unlocks: [[#D13|D13]]
+}}
+{{Quest
+|ID = D13
+|Title_JP = 「北号作戦」を継続実施せよ！
+|Title_EN = Strengthen Operation Hoku-Gou!
+|Requirements = Send a fleet with 2 BBVs as its core and DDs to the 4th expedition of the Nansei Islands and clear it 3 times
+|Rewards_RSC = 150 / 150 / 100 / 250
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2 <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 2
+|Note = Requires: [[#VB15|VB15]] <br />Unlocks: [[#D13|D13]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D14
+|Title_JP = 中部西海域潜水艦哨戒を実施せよ！
+|Title_EN = Central Western sea submarine patrol
+|Requirements = Send a fleet of 3 submarines to the 4th expedition [Submarine Patrol] of the Central Western Sea
+|Rewards_RSC = 100 / 100 / 0 / 0
+|Rewards_Items = [[File:Torpedo.png|link=Submarine 53cm Bow Torpedo Mount (8 tubes)]][[Submarine 53cm Bow Torpedo Mount (8 tubes)]]
+|Note = Requires: [[#A37|A37]] <br />Unlocks: [[#D15|D15]], [[#D21|D21]]
+}}
+{{Quest
+|ID = D15
+|Title_JP = 遠洋潜水艦作戦を実施せよ！
+|Title_EN = Carry Out Distant Ocean Submarine Operation!
+|Requirements = Carry out "Distant Ocean Submarine Operation" to increase the submarine fleet's experience and reduce the enemy fleet!
+|Rewards_RSC = 150 / 150 / 0 / 0
+|Rewards_Items = [[File:Torpedo.png|link=Submarine 53cm Bow Torpedo Mount (8 tubes)]][[Submarine 53cm Bow Torpedo Mount (8 tubes)]]
+|Note = Requires: [[#D14|D14]] 
+}}
+{{Quest
+|ID = D16
+|Title_JP = 防空射撃演習を継続実施せよ！
+|Title_EN = Perform the Air Defense Exercises!
+|Requirements = Complete the 4th Naval Base Expedition [Anti-aircraft Drill] 2 times
+|Rewards_RSC = 150 / 150 / 0 / 0
+|Rewards_Items = [[File:GreenGunMG.png|link=25mm Twin Autocannon Mount]][[25mm Twin Autocannon Mount]] <br /> [[File:Development material.png|30px|link=Construction]] X 2
+|Note = Requires: [[#VB7|VB7]] <br />Unlocks: [[#VB24|VB24]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D17
+|Title_JP = 囮機動部隊支援作戦を実施せよ！
+|Title_EN = Decoy Mobile Fleet Support Operation!
+|Requirements = Dispatch a fleet for the 6th expedition [Decoy Mobile Fleet Support Operations] of the South Connecting Sea!
+|Rewards_RSC = 300 / 300 / 0 / 500
+|Rewards_Items = [[File:Aafd_c.png|link=Type 91 Anti-Aircraft Fire Director]][[Type 91 Anti-Aircraft Fire Director]] <br /> [[File:Development material.png|30px|link=Construction]] X 2
+|Note = Requires: [[#VB24|VB24]]
+}}
+{{Quest
+|ID = D18
+|Title_JP = 観艦式予行を実施せよ！
+|Title_EN = Perform the Fleet Review Rehearsal!
+|Requirements = Prepare a fleet for the 5th expedition [Fleet Review Rehearsal] of the Naval District Sea and and clear it 2 times!
+|Rewards_RSC = 200 / 0 / 200 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3
+|Note = Requires: [[#V35|A35]]
+}}
+{{Quest
+|ID = D19
+|Title_JP = 観艦式を敢行せよ！
+|Title_EN = Perform the Fleet Review!
+|Requirements = Sortie a fleet for the 6th expedition [Fleet Review] of the Naval District Sea and clear it!
+|Rewards_RSC = 200 / 0 / 800 / 0
+|Rewards_Items = [[File:Headquarters personnel 063 useitem.png|30px]] <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 3
+|Note = Requires: [[#VC7|VC7]]
+}}
+{{Quest
+|ID = D20
+|Title_JP = 空母機動部隊を積極運用せよ！
+|Title_EN = Actively Manage the Aircraft Carrier Division!
+|Requirements = Sortie fleets for the 4th expedition [Operation MO] of the Southern Sea and 2nd expedition [Airstrike Operation Against Enemy Homeport] in the Western Sea!
+|Rewards_RSC = 200 / 300 / 0 / 400
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2 <br />[[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 2
+|Note = Requires: [[#D10|D10]], [[#VB53|VB53]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = D21
+|Title_JP = 潜水艦派遣による技術入手を強化せよ！
+|Title_EN = Strengthen the technology available by submarine dispatch!
+|Requirements = Sortie a fleet for the 4th expedition [Submarine Voyage] of the Southwest Sea and clear it 5 times!
+|Rewards_RSC = 50 / 50 / 0 / 0
+|Rewards_Items = [[File:Seaplane.png|30px|link=Zuiun (634 Air Group)]][[Zuiun (634 Air Group)]] <br />150 Points
+|Note = Requires: [[#D9|D9]], [[#D14|D14]]
+}}
+{{Quest
+|ID = D22
+|Title_JP = 潜水艦派遣作戦による海外艦救援！
+|Title_EN = Overseas ship relief by submarine dispatch operations!
+|Requirements = Sortie a fleet for the 3rd expedition [Contacting Foreign Ship] of the Western Sea and clear it 5 times!
+|Rewards_RSC = 200 / 200 / 200 / 0
+|Rewards_Items = {{ShipLink|Littorio}} <br />200 Points
+|Note = Requires: [[#A56|A56]], [[#D21|D21]]
+}}
+{{Quest
+|ID = D23
+|Title_JP =遠洋練習航海を実施せよ！
+|Title_EN = Carry out the Overseas Practice Voyage!
+|Requirements = Sortie fleets for 4th expedition [Cross-Oceanic Training Trip] of the Central Sea and the 4th expedition [South-East Asian Cross-Oceanic Training Trip] of FS Sea!
+|Rewards_RSC = 0 / 400 / 0 / 0
+|Rewards_Items = {{ShipLink|Kashima}} 
+|Note = Requires: [[#D19|D19]]
+}}
+}}
+</div>
+
+== Supply / Docking Quests ==
+<div style="width:100%; margin: 20px;">
+{| width="100%"
+| style="width:50px;" |[[File:KCKai_Quest_Supply_Icon.png|left]]
+|<div style="background: #DEC772; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Supply / Docking Quests'''</font></div>
+|}
+</div>
+<div style="position: relative; max-width: 1200px; margin: 10px;">
+{{QuestList|
+{{Quest
+|ID = E1
+|Title_JP = はじめての「補給」
+|Title_EN = The First Resupply
+|Requirements = Resupply a ship
+|Rewards_RSC = 50 / 50 / 0 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 1
+|Note = Requires: [[#VB2|VB2]] <br />Unlocks: [[#E2|E2]] 
+}}
+{{Quest
+|ID = E2
+|Title_JP = 艦娘を「入渠」で修理！
+|Title_EN = 
+|Requirements = Repair a ship
+|Rewards_RSC = 0 / 0 / 100 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1 [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 1
+|Note = Requires: [[#VB01|VB01]], [[#E1|E1]] <br />Unlocks: [[#E3|E3]] 
+}}
+{{Quest
+|ID = E3
+|Title_JP = 艦隊大整備！
+|Title_EN = The Fleet's Large Maintenance
+|Requirements = Repair 10 ships
+|Rewards_RSC = 200 / 100 / 300 / 100
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2 [[File:Development material.png|30px|link=Construction]] X 2
+|Note =  Requires: [[#E2|E2]] Unlocks: [[#E4|E4]]<br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = E4
+|Title_JP = 艦隊酒保祭り！
+|Title_EN = The Fleet's Canteen Festival
+|Requirements = Resupply 30 times
+|Note = Requires: [[#E3|E3]] <br />'''Monthly Quest'''
+|Rewards_RSC = 200 / 300 / 100 / 100
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 2 [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2 
+}}
+}}
+</div>
+
+== Arsenal Quests ==
+<div style="width:100%; margin: 20px;">
+{| width="100%"
+| style="width:50px;" |[[File:KCKai_Quest_Arsenal_Icon.png|left]]
+|<div style="background: #BA8F79; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Arsenal Quests'''</font></div>
+|}
+</div>
+<div style="position: relative; max-width: 1200px; margin: 10px;">
+{{QuestList|
+{{Quest
+|ID = F1
+|Title_JP = はじめての「建造」！
+|Title_EN = The First Construction
+|Requirements = Craft a ship
+|Rewards_RSC = 50 / 50 / 50 / 50
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1  [[File:Instant construction 2.png|30px|link=Construction]] X 2 
+|Note = Unlocks: [[#A1|A1]]
+}}
+{{Quest
+|ID = F2
+|Title_JP = はじめての「開発」！
+|Title_EN = The First Development
+|Requirements = Craft a piece of equipment
+|Rewards_RSC = 100 / 100 / 100 / 100
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3
+|Note = Requires: [[#VB2|VB2]] <br />Unlocks: [[#F3|F3]] 
+}}
+{{Quest
+|ID = F3
+|Title_JP = はじめての「解体」！
+|Title_EN = The First Dismantling
+|Requirements = Dismantle a ship
+|Rewards_RSC = 60 / 60 / 60 / 60
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2<br />Transport Ship X 1
+|Note = Requires: [[#F2|F2]] Unlocks: [[#F4|F4]]
+}}
+{{Quest
+|ID = F4
+|Title_JP = はじめての「廃棄」！
+|Title_EN = The First Scrapping
+|Requirements = Scrap a piece of equipment
+|Rewards_RSC = 80 / 80 / 80 / 80
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 1 [[File:Development material.png|30px|link=Construction]] X 2
+|Note = Requires: [[#F3|F3]] Unlocks: [[#F7|F7]]
+}}
+{{Quest
+|ID = F7
+|Title_JP = 装備「開発」集中月間！
+|Title_EN = Intensify the Concentration in Developing Equipment
+|Requirements = Craft 5 pieces of equipment<br />(Failures are OK)
+|Rewards_RSC = 80 / 80 / 100 / 100
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3 [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 2
+|Note = '''Monthly Quest''' <br/>Requires: [[#F4|F4]] 
+}}
+{{Quest
+|ID = F8
+|Title_JP = 艦娘大規模「建造」計画
+|Title_EN = Strengthen the Fleet by Constructing Shipgirls
+|Requirements = Craft 5 ships
+|Rewards_RSC = 200 / 200 / 300 / 100
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]] X 2<br />Transport Ship X 1
+|Note = '''Monthly Quest'''
+}}
+{{Quest
+|ID = F10
+|Title_JP = 「大型艦建造」の準備！(その弐)
+|Title_EN = Preparation for Large Ship Construction (Part II)
+|Requirements = Scrap 5 pieces of equipment
+|Rewards_RSC = 500 / 500 / 0 / 0
+|Rewards_Items = <font color="red">'''''Unlocks Large Ship Construction'''''</font><br />700 Points
+|Note = Requires: [[#G4|G4]]
+}}
+{{Quest
+|ID = F11
+|Title_JP = 輸送用ドラム缶の準備
+|Title_EN = Preparation for Transport Use Drum Canister
+|Requirements = Scrap equipment 3 times
+|Rewards_RSC =  0 / 0 / 30 / 0
+|Rewards_Items = [[File:Drum.png|30px|link=Drum_Canister]][[Drum Canister]] X 3
+|Note = Requires: [[#A5|A5]]
+}}
+{{Quest
+|ID = F13
+|Title_JP = 機種転換[[#Notes|<sup>?</sup>]]
+|Title_EN = Model Conversion: [[Type 97 Torpedo Bomber (Tomonaga Squadron)]]
+|Requirements = Have the flagship of the first fleet equipped with {{LinkImageTooltip|Type 97 Torpedo Bomber (Tomonaga Squadron)|Slotitem 093.png}}, then scrap 2 {{LinkImageTooltip|Tenzan (Heavenly Mountain)|Equipment17-1.png}}<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked''' </font>
+|Rewards_RSC = 0 / 0 / 0 / 50
+|Rewards_Items = [[File:BluePlane.png|30px|link=Tenzan Model 12 (Tomonaga Squadron)]][[Tenzan Model 12 (Tomonaga Squadron)]]
+|Note = Requires: [[#VB21|VB21]]
+}}
+{{Quest
+|ID = F14
+|Title_JP = 機種転換[[#Notes|<sup>?</sup>]]
+|Title_EN = Model Conversion: [[Type 99 Dive Bomber (Egusa Squadron)]]
+|Requirements = Have the flagship of the first fleet equipped with {{LinkImageTooltip|Type 99 Dive Bomber (Egusa Squadron)|Equipment099-1.png}}, then scrap 2 {{LinkImageTooltip|Suisei (Comet)|Equipment24-1.png}}<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked''' </font>
+|Rewards_RSC = 0 / 0 / 0 / 50
+|Rewards_Items = [[File:RedPlane.png|30px|link=Suisei (Egusa Squadron)]][[Suisei (Egusa Squadron)]]
+|Note = Requires: [[#VB21|VB21]]
+}}
+{{Quest
+|ID = F15
+|Title_JP = 機種転換
+|Title_EN = Model Conversion: [[Zero Fighter Type 52 Type C (601 Air Group)]]
+|Requirements = Have flagship of the first fleet equipped with {{LinkImageTooltip|Zero Fighter Type 52 Type C (601 Air Group)|Equipment109-1.png}}, then scrap 2 {{LinkImageTooltip|Reppuu (Strong Gale)|Equipment22-1.png}}<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked''' </font>
+|Rewards_RSC = 0 / 0 / 0 / 50
+|Rewards_Items = [[File:GreenPlane.png|30px|link=Reppuu (601 Air Group)]][[Reppuu (601 Air Group)]]
+|Note = Requires: [[#VB49|VB49]]
+}}
+{{Quest
+|ID = F16
+|Title_JP = 「伊良湖」の準備
+|Title_EN = Preparation for Irako
+|Requirements = Scrap equipment 10 times
+|Rewards_RSC = 100 / 0 / 0 / 0
+|Rewards_Items = [[File:Food supply ship irako.png|30px|link=Fatigue]] [[Fatigue#Food_Supply_Ship_.22Irako.22|"Irako"]] X 4<br />300 Points
+|Note = Requires: [[#F8|F8]]
+}}
+{{Quest
+|ID = F17
+|Title_JP = はじめての「装備改修」！
+|Title_EN = The First Equipment Improvement
+|Requirements = Do equipment modernization 1 time
+|Rewards_RSC = 0 / 0 / 100 / 0
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 7
+|Note = Requires: [[#A45|A45]]<br />Unlocks: ?
+}}
+{{Quest
+|ID = F20
+|Title_JP = 精鋭「九七式艦攻」部隊の編成
+|Title_EN = Organize the Elite Type 97 Torpedo Bomber Force
+|Requirements = Have {{ShipLink|Shoukaku}} or {{ShipLink|Akagi}} as flagship in your first fleet and then scrap 3 {{LinkImageTooltip|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber 016 Card.png}}
+|Rewards_RSC = 0 / 0 / 0 / 50
+|Rewards_Items = [[File:BluePlane.png|30px|link=Type 97 Torpedo Bomber (Murata Squadron)]][[Type 97 Torpedo Bomber (Murata Squadron)]]
+|Note = Requires: [[#VB53|VB53]]
+}}
+{{Quest
+|ID = F22
+|Title_JP = 精鋭「艦戦」隊の新編成
+|Title_EN = Organize the New Elite Fighter Force
+|Requirements = Have [[File:Skilled_Crew_Member_Icon.png|30px]] in your item page and Equip a rank 7 {{LinkImageTooltip|Type 0 Fighter Model 21|Type 0 Fighter Model 21 020 Card.png}} on {{ShipLink|Houshou}} set as your Secretary Ship in your first fleet, then scrap 2 {{LinkImageTooltip|Type 0 Fighter Model 21|Type 0 Fighter Model 21 020 Card.png}} and a {{LinkImageTooltip|Type 96 Fighter|Type 96 Fighter 019 Card.png}}. One [[File:Skilled_Crew_Member_Icon.png|30px]] is consumed in the process.<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked''' </font>
+|Rewards_RSC =  0 / 0 / 0 / 50
+|Rewards_Items = [[File:GreenPlane.png|30px|link=Type 0 Fighter Model 21 (Skilled)]][[Type 0 Fighter Model 21 (Skilled)]]
+|Note = Requires: [[#A68|A68]] <br />Unlocks: [[#F23|F23]], [[#F24|F24]]
+}}
+{{Quest
+|ID = F23
+|Title_JP = 精鋭「艦爆」部隊の編成
+|Title_EN = 
+|Requirements = Have [[File:Skilled_Crew_Member_Icon.png|30px]] in your item page and Equip a rank 7 {{LinkImageTooltip|Type 99 Dive Bomber|Type 99 Dive Bomber 020 Card.png}} on a Carrier Secretary in your first fleet, then scrap 2 {{LinkImageTooltip|Type 99 Dive Bomber|Type 99 Dive Bomber 020 Card.png}}. One [[File:Skilled_Crew_Member_Icon.png|30px]] is consumed in the process.<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked''' </font>
+|Rewards_RSC =  0 / 0 / 0 / 50
+|Rewards_Items = [[File:RedPlane.png|30px|link=Type 99 Dive Bomber (Skilled)]][[Type 99 Dive Bomber (Skilled)]]
+|Note = Requires: [[#F22|F22]] <br />Unlocks: [[#F24|F24]]
+}}
+{{Quest
+|ID = F24
+|Title_JP = 精鋭「艦攻」部隊の編成
+|Title_EN = 
+|Requirements = Have [[File:Skilled_Crew_Member_Icon.png|30px]] in your item page and Equip a rank 7 {{LinkImageTooltip|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber 016 Card.png}} on a Carrier Secretary in your first fleet, then scrap 2 {{LinkImageTooltip|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber 016 Card.png}}. One [[File:Skilled_Crew_Member_Icon.png|30px]] is consumed in the process.<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked''' </font>
+|Rewards_RSC =  0 / 0 / 0 / 50
+|Rewards_Items = [[File:BluePlane.png|30px|link=Type 97 Torpedo Bomber (Skilled)]][[Type 97 Torpedo Bomber (Skilled)]]
+|Note = Requires: [[#F23|F23]] <br />Unlocks: [[#F26|F26]] 
+}}
+{{Quest
+|ID = F25
+|Title_JP = 機種転換
+|Title_EN = Model Conversion: [[Type 0 Fighter Model 21 (Skilled)]]
+|Requirements = Equip a {{LinkImageTooltip|Type 0 Fighter Model 21 (Skilled)|Type 0 Fighter Model 21 (Skilled) 096 Card.png}} on a Carrier secretary in your first fleet, then scrap 2 {{LinkImageTooltip|Type 0 Fighter Model 52|Type 0 Fighter Model 52 021 Card.png}}<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked''' </font>
+|Rewards_RSC =  0 / 0 / 0 / 50
+|Rewards_Items = [[File:GreenPlane.png|30px|link=Type 0 Fighter Model 52 (Skilled)]][[Type 0 Fighter Model 52 (Skilled)]]
+|Note = Requires: [[#F22|F22]],[[#A59|A59]]
+}}
+{{Quest
+|ID = F26
+|Title_JP = 機種転換
+|Title_EN = Model Conversion: [[Type 97 Torpedo Bomber (Murata Squadron)]]
+|Requirements = Have {{ShipLink|Shoukaku}} equipped with {{LinkImageTooltip|Type 97 Torpedo Bomber (Murata Squadron)|Type 97 Torpedo Bomber (Murata Squadron) 143 Card.png}} as flagship in your first fleet and then scrap 2 {{LinkImageTooltip|Tenzan (Heavenly Mountain)|Equipment17-1.png}}<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked'''</font>
+|Rewards_RSC = 0 / 0 / 0 / 50
+|Rewards_Items = [[File:BluePlane.png|30px|link=Tenzan Model 12 (Murata Squadron)]][[Tenzan Model 12 (Murata Squadron)]]
+|Note = Requires: [[#Bm9|Bm9]], [[#F24|F24]]? <br />Unlocks: [[#F27|F27]] 
+}}
+{{Quest
+|ID = F27
+|Title_JP = 新型「艦戦」の改良
+|Title_EN = Model Conversion: [[Reppuu (Strong Gale)]]
+|Requirements = Equip a rank 7 {{LinkImageTooltip|Reppuu (Strong Gale)|Equipment22-1.png}} on a Carrier secretary in your first fleet, then scrap 1 {{LinkImageTooltip|Reppuu (Strong Gale)|Equipment22-1.png}} and 1 {{LinkImageTooltip|Type 0 Fighter Model 52|Type 0 Fighter Model 52 021 Card.png}}<br /><font color="red">'''UNLOCK the plane before completing this quest if they are previously locked''' </font>
+|Rewards_RSC =  0 / 0 / 0 / 50
+|Rewards_Items = [[File:GreenPlane.png|30px]][[Reppuu Model 11]]
+|Note = Requires: [[#F26|F26]],[[#VB53|VB53]]?
+}}
+}}
+</div>
+
+== Modernization Quests ==
+<div style="width:100%; margin: 20px;">
+{| width="100%"
+| style="width:50px;" |[[File:KCKai_Quest_Modernization_Icon.png|left]]
+|<div style="background: #CAA6DD; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Modernization Quests'''</font></div>
+|}
+</div><div style="position: relative; max-width: 1200px; margin: 10px;">
+{{QuestList|
+{{Quest
+|ID = G1
+|Title_JP = はじめての「近代化改修」！
+|Title_EN = The First Modernization
+|Requirements = Perform a successful modernization
+|Rewards_RSC = 0 / 0 / 60 / 30
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1
+|Note = 
+}}
+{{Quest
+|ID = G2
+|Title_JP = 「近代化改修」を実施せよ！
+|Title_EN = 
+|Requirements = Perform 2 successful modernizations within the same month
+|Rewards_RSC = 50 / 50 / 100 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2
+|Note = Unlocks: [[#G3|G3]]<br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = G3
+|Title_JP = 「近代化改修」を進め、戦備を整えよ！
+|Title_EN = 
+|Requirements = Perform 10 successful modernizations within the same month
+|Rewards_RSC = 200 / 200 / 300 / 100
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3 [[File:Instant construction 2.png|30px|link=Construction]] X 2
+|Note = Requires: [[#G2|G2]] <br />'''Monthly Quest'''
+}}
+{{Quest
+|ID = G4
+|Title_JP = 「大型艦建造」の準備！(その壱)
+|Title_EN = Preparation for Large Ship Construction (Part I)
+|Requirements = Perform 4 successful modernizations 
+|Rewards_RSC = 0 / 0 / 300 / 300
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]]
+|Note = Requires: [[#A14|A14]] <br />Unlocks: [[#F10|F10]]
+}}
+}}
+</div>
+
+== Marriage Quests  ==
+<div style="width:100%; margin: 20px;">
+{| width="100%"
+| style="width:50px;" |[[File:Marriage Banner(Smaller Width).jpg|300px]]
+|<div style="background: #FDD0F0; width: 50%; height: 20px; padding: 5px 0px 5px 10px; border-top-right-radius: 10px;"><font size="4">'''Marriage Quests'''</font></div>
+|}
+</div>
+<div style="position: relative; max-width: 1200px; margin: 10px;">
+{{QuestList|
+{{Quest
+|ID = WF01
+|Use_ID = W1
+|Title_JP = 式の準備！(その壱)
+|Title_EN = Preparation for the Ceremony (Part I)
+|Requirements = Scrap equipment three times
+|Rewards_RSC = 88 / 88 / 0 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 1
+|Note = Requires: [[#A16|A16]] <br />Unlocks: [[#WC01|WC01]]
+}}
+{{Quest
+|ID = WC01
+|Use_ID = W2
+|Title_JP = 式の準備！(その弐)
+|Title_EN = Preparation for the Ceremony (Part II)
+|Requirements = Do 5 battles in Rival Exercises in a month
+|Rewards_RSC = 0 / 0 / 88 / 88
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 2
+|Note = Requires: [[#WF01|WF01]], [[#VC16|VC16]] <br />Unlocks: [[#WA01|WA01]]
+}}
+{{Quest
+|ID = WA01
+|Use_ID = W3
+|Title_JP = 式の準備！(その参)
+|Title_EN = Preparation for the Ceremony (Part III)
+|Requirements = Have a level 90 to 99 ship as your flagship in your first fleet
+|Rewards_RSC = 88 / 88 / 88 / 88
+|Rewards_Items = [[File:Furniture box large.jpg|30px|link=Furniture]] X 1<br /> 300 Points
+|Note = Requires: [[#WC01|WC01]] <br />Unlocks: [[#WB01|WB01]]
+}}
+{{Quest
+|ID = WB01
+|Use_ID = W4
+|Title_JP = 式の準備！(最終)
+|Title_EN = Preparation for the Ceremony (Final)
+|Requirements = Defeat the boss in the second map of 中部西海域 with a Level 90-99 flagship in your first fleet (with S rank)
+|Rewards_RSC = 0 / 0 / 0 / 0
+|Rewards_Items = [[File:Marriage Papers.png|30px|link=Marriage]]<br />[[Marriage|Marriage Ring and Documents]] X 1
+|Note = Requires: [[#WA01|WA01]] <br />Unlocks: [[#WA02|WA02]]
+}}
+{{Quest
+|ID = WA02
+|Use_ID = W5
+|Title_JP = 新たなる旅立ち！
+|Title_EN = A New Voyage
+|Requirements =  Have a Level 100 ship as your flagship along with five others in your first fleet
+|Rewards_RSC = 300 / 300 / 300 / 300
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Emergency Repair Goddess]][[Emergency Repair Goddess]]
+|Note = Requires: [[#WB01|WB01]] <br />Unlocks: [[#WB02|WB02]]
+}}
+{{Quest
+|ID = WB02
+|Use_ID = W6
+|Title_JP = 二人でする初めての任務！
+|Title_EN = A Couple's First Quest 
+|Requirements = Defeat the boss in the third map of 西方海域 with a level 100+ flagship in your first fleet (with S rank) 
+|Rewards_RSC = 500 / 500 / 500 / 500
+|Rewards_Items = [[Furniture#Thin Futon|Thin Futon]]
+|Note = Requires: [[#WA02|WA02]] 
+}}
+}}
+</div>
+[[Category:Old sandboxes]]

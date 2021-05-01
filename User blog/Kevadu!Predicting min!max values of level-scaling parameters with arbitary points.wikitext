@@ -1,0 +1,33 @@
+So I was discussing the question of whether or not we could predict the possible min/max (leve 1 and level 99) values for parameters like evasion or LoS that strictly scale with level using arbitary observed points.  The relationships between ship level and parameter values all appear to be linear and in principle only two points are necessary to determine a line.  However there are ambiguities introduced because all the observed values have been rounded down to the nearest integer, so they actually aren't necessarily on the line exactly.  However with enough points it should be possible to nail down these ambiguities, so I wrote a simple python routine that does exactly that:
+ for i in range(1, 100):
+     for j in range(i+1,101):
+         slope = (j-i)/98.
+         intercept = i - slope
+         flag = 0
+         for point in points:
+             diff = int(slope*point[0]+intercept)-point[1]
+             if(diff != 0):
+                 flag = 1
+                 break
+         if(flag == 0):
+             print("Possible candidate is min: " + str(i) + " and max: " + str(j))
+The input is just a list of points in (level, parameter value) form.  For example I got these values for Yuudachi:
+ points = ((80, 80), (98, 88), (110, 93), (150, 111), (31,58), (73,77))
+Which then gives the output:
+ Possible candidate is min: 45 and max: 89
+
+
+However if there are not enough points we can get multiple candidates.  For example if we only use the first three points:
+ points = ((80, 80), (98, 88), (110, 93))
+We get the output:
+ Possible candidate is min: 45 and max: 89
+ Possible candidate is min: 46 and max: 89
+ Possible candidate is min: 47 and max: 89
+These points are all pretty high level and pin down the max but there are multiple candidates for the min thanks to the rounding ambiguity.  But if we try instead:
+ points = ((80, 80), (98, 88), (31,58))
+The output is:
+ Possible candidate is min: 45 and max: 89
+So it is possible to pin it down with just three points when they're more spread out.  However it is a good check of this program that the full set of points does not over constrain things and still gets the same solution.  If there were a problem with the code (or incorrect values entered) it's entirely possible that no solution would be found.
+
+You might note that the 'max' value I'm computing is for level 99 and there were actually some married ship values in the above points.  It still seems to work with those, however, indicating that married values simply exact the line further.  So we can also predict marriage values as well using this approach.
+[[Category:Blog posts]]

@@ -1,0 +1,26 @@
+<includeonly><div class="kcRailBox" style="float:{{{float|right}}}">
+<div class="kcRailTitle"><p>{{{title|}}}</p></div>
+<div class="kcRailContent">
+<div class="twitter-timeline-wrapper" data-width="{{{width|300}}}" data-height="{{{height|400}}}" data-profile="{{{profile|}}}" data-text="{{{text|}}}"></div>
+</div>
+</div></includeonly><noinclude>
+==Usage==
+<pre>
+{{TwitterTimeline|profile=KanColle_STAFF|title=Official Staff Tweets|text=Tweets by KanColle_STAFF}}
+{{TwitterTimeline|profile=dmmolg_com|title=Official DMM Tweets|text=Tweets by dmmolg_com}}
+{{TwitterTimeline|profile=Kensho_KanColle|title=Kensho KanColle Tweets|text=Tweets by Kensho_KanColle}}
+</pre>
+Result:
+{{TwitterTimeline|profile=KanColle_STAFF|title=Official Staff Tweets|text=Tweets by KanColle_STAFF}}
+{{TwitterTimeline|profile=dmmolg_com|title=Official DMM Tweets|text=Tweets by dmmolg_com}}
+{{TwitterTimeline|profile=Kensho_KanColle|title=Kensho KanColle Tweets|text=Tweets by Kensho_KanColle}}
+{{clear}}
+==Parameters==
+* '''profile''': twitter profile name
+* '''title''': <code>kcRailBox</code> title
+* '''text''': text for widget header
+* '''width''', '''height''': widget width and height, defaults to <code>300</code> and <code>400</code>
+* '''float''': [http://www.w3schools.com/cssref/pr_class_float.asp float property], defaults to <code>right</code>
+==Requirements==
+* [[MediaWiki:TwitterTimeline.js]]
+</noinclude>

@@ -1,0 +1,17 @@
+How can we effectively reduce the damage caused by Enemy Raid? Here is the first step 
+==Short Summary==
+In short: Land-based fighters stationed in slot X intercept the enemy airplanes equipped in slot X. 
+
+This was actually an unexpected discovery. I can explain why I collected data under this condition but it would be quite long story and such a background history is not necessary for understanding a clear conclusion deduced from the data.
+
+Following is my explanation. 
+==Explanation==
+===1. Demonstration of the data===
+Please look at the first ten rows of the table (https://docs.google.com/spreadsheets/d/10y1tj0LHR57iRGxRgRzIULNLYjXGt7yX3KLGJgzNBWA/edit?usp=sharing).<br />In these rows, the air state is Air Supremacy, the used Interceptor is Raiden and stationed in slot 2. The number of shot down is not important in this explanation, it is only included for your reference. The most important one is the type of attack effects (the rightmost column). 
+===2. About the attack effects===
+You may know that the appearance of attack effects depends on whether the airplanes with particular attacking methods participate in the battle and survive. In other words, if you do not use torpedo bombers, then the torpedo attacking effect never appears; even if you use them but all of them were shot down, then the result is the same (no torpedo effect). Thus, it is possible to know which enemy slot survives or is annihilated. 
+===3. Interpretation of the data===
+As you can see, the Raiden in slot 2 apparently always (10/10) annihilates the enemy dive bombers (equipped in slot 2) but enemy torpedo bombers almost always (9/10) survive. This hypothesis may be underlined by other data that, for instance, the Raidens in slots 2-3 always (20/20) annihilate all the enemy attackable airplanes (in slots 2-3) but the Raidens in slots 1 and 4 basically let enemies through (in 18/20 both effects happen).<br />Could it happen by chance?<br />First, we shall suppose that the annihilation of particular airplanes happens randomly (e.g., the Raiden increases the average shot down, thus an enemy slot may sometimes be annihilated). For the sake of simplicity, we shall think about the simplest case concerning the Raiden in slot 2. We shall very roughly estimate the ratio of the annihilation as 50% (estimated from 11/20, i.e. the number of total annihilated airplanes divided by the total survived airplanes). Then the ratio of 10 consecutive annihilation of slot 2 might be 50%^10 = 0.098%, which is significantly low. <br />Is it not enough? Then we can do the similar calculation in the case of the Raidens in slots 2-3. 20 consecutive annihilation of two slots might be 25%^20 = 9.1e-11%. <br />The situation may be different if we use more than one Raiden. Then we shall make another hypothesis that the Raidens may increase, for instance, the shot down ratio of all the enemy attackable planes (dive + torpedo bombers), thus (perhaps) two Raidens can always annihilate all of them. But this hypothesis is also wrong, as Raidens in slots 1 and 4 only rarely annihilate some of them. 
+===4. Conclusion===
+At least on the basis of (1) alone, we can establish that the annihilation of enemy slots happens not randomly but in relation to the fact to which slot you put the Raiden. The points (2) and (3) underline this conclusion, and provide further evidence that Raiden increases not the average of the total shot down but (mainly) that of particular slots, corresponding to the slots where Raiden is equipped.
+[[Category:Blog posts]]

@@ -1,0 +1,132 @@
+== Introduction ==
+It is no surprise that DMM has been limiting the global fanbase from accessing Kantai Collection. You will notice that an unprepared computer '''will not load Kancolle as of January 23, 2021 because of the IP Ban implemented for foreign addresses (since February 26, 2020).''' However, the community has triumphed over this restriction many times over for the last six years KanColle has been online.
+
+This guide aims to help players to access Kantai Collection through their respective methods and is '''beginner friendly.''' This method encompasses the most recommended, community-based solutions on accessing Kantai Collection through Desktop and Android and for now, will only explain how to do it through KC3 itself (as of 35.0.0) KCCP + KC3 and GotoBrowser + Kcanotify.
+
+== Desktop ==
+
+==== [https://github.com/Tibowl/KCCacheProxy KCCacheProxy] (KCCP) ====
+An open source project that bypasses the gadget IP block and locally stores your KC assets to your computer. Optionally, you may download all of the assets immediately but for brevity, this guide will only tell you to prepare an initial dump and let your computer download the assets itself.  [https://github.com/Tibowl/KCCacheProxy/wiki/Installation-and-setup (Developer-made guide for installation)]
+
+==== [https://chrome.google.com/webstore/detail/kancolle-command-center-%E6%94%B9/hkgmldnainaglpjngpajnnjfhpdjkohh KC3 Kai] (KC3) ====
+'''Gadget Bypass Feature -''' As of KC3Kai Release 35.0.0 KC3 has an in built bypass feature. It can be enabled using the guide below.
+
+The KanColle Command Center Kai is a cornerstone project of the English community and arguably, one of the most used support-apps for Kantai Collection. As of the 35.0.0 update, this can now run independent of any third-party application through the guide included in this document below. Runs on Google Chrome or Chromium browsers.
+
+==== VPN ====
+You may use SoftEther VPN to emulate a Japanese IP address.
+
+== Android ==
+
+==== [https://play.google.com/store/apps/details?id=com.antest1.kcanotify&hl=en&gl=US Kcanotify] ====
+The equivalent of KC3 in Android version. This requires a bit of tinkering to run but can effectively run and is a support-app for Kantai Collection on Android phones.
+
+==== [https://github.com/antest1/GotoBrowser GotoBrowser] ====
+An Android Browser that can run the HTML5 version of the game natively on your Android device.
+{| class="article-table"
+|+Comparison of GotoBrowser and the Official App
+!GotoBrowser
+!DMM KanColle App
+|-
+|Downloaded through Github
+|Downloaded through DMM App (Official)
+|-
+|Runs the HTML5 (Browser) version of the game
+|Runs a dumbed-down version of the game, much more like Phase 1 KanColle
+|-
+|Allows Direct Connection to DMM (Restricted in foreign IPs) or through kancolle.su or ooi.moe
+|DMM direct connection only (official, restricted to foreign IPs)
+|}
+<br />
+
+== Running Kantai Collection on an Unprepared Computer ==
+Please skip to the next part of the guide for instructions on preparing your computer to play Kantai Collection. This part aims to find out what is happening when Kantai Collection is run on a computer with a foreign IP address.
+[[File:Kancolle Unprep1.png|thumb|304x304px|Error 403 screen output.]]
+'''403: Forbidden -''' A computer with a foreign IP address will receive a '''''403: Forbidden''''' error upon requesting assets from Kantai Collection servers. This effectively halts the loading of all and any assets that the computer needs to run the game itself. If you see this screen despite following this guide - make sure you check that everything related to routing the connection to your computer/device is set properly. Another version of this is when KC3 is installed and there is only a white screen in the frame.
+
+Todo: Add other error messages
+
+
+
+
+== Preparing Your Computer ==
+
+==== Built-In Gadget Block Bypass (KC3) [Primary] ====
+As of [https://github.com/KC3Kai/KC3Kai/pull/3086 KC3Kai Release 35.0.0] an experimental gadget block feature has been introduced in the extension. No other requirements are now needed to play the game.
+
+These are accurate as of February 19, 2021.
+
+# (Installing KC3) Install the latest version of KC3 Kai through the [https://chrome.google.com/webstore/detail/kancolle-command-center-%E6%94%B9/hkgmldnainaglpjngpajnnjfhpdjkohh Google Webstore].
+#Go to KC3Kai Settings through the Extension Menu
+# Go to '''''DMM Regional Block''''' by scrolling down or Control+F in the settings and tick "Gadget Block Bypass"
+#Tick "Force Cookie Hack"
+
+You can simply start playing Kantai Collection normally. Note that features such as asset patching, which can be done through KCCP are not available in this method. Note that usage of KCCP and KC3Kai's Gadget Block Bypass at the same time is incompatible.
+
+==== Installation and Preparations (KC3 + KCCP) ====
+These are accurate as of January 23, 2021 - check [https://github.com/Tibowl/KCCacheProxy/wiki/Installation-and-setup (KCCP Official Guide)] for any updates.
+
+# (Installing KC3) Install the latest version of KC3 Kai through the [https://chrome.google.com/webstore/detail/kancolle-command-center-%E6%94%B9/hkgmldnainaglpjngpajnnjfhpdjkohh Google Webstore].
+# (Downloading KCCP) Install the latest version .exe file, respective to your OS (.exe Windows, .dmg for MacOS ) and whether you're 32-bit (ia32) or 64-bit (x64) to your computer through [https://github.com/Tibowl/KCCacheProxy/releases Github].
+# (Installing ProxySwitchyOmega) Install the latest version through the [https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif Google Webstore].
+# Install KCCP by running the executable (Windows) or .dmg file (MacOS).
+#Open KCCP by double clicking the app in the taskbar - scroll down to "Settings" and tick "Start in System Tray, Start-up With System, Automatically verify cache integrity" - then press "Save".[[File:KCCP Installation.gif|thumb|258x258px|Step 5 guide.]]
+# Below "Save", there are more buttons, click the "Import built-in basic cache dump" and minimize KCCP for now.
+# (Preparing ProxySwitchyOmega) Click the extension icon (if this is hidden, it is inside the "Plugin" icon of your Chrome window) and Select Options.[[File:ProxySwitchy.gif|thumb|275x275px|Step 7 visual guide]]
+## Go to Import/Export.
+## Paste <code><nowiki>https://raw.githubusercontent.com/Tibowl/KCCacheProxy/master/misc/OmegaOptions.bak</nowiki></code>  in Restore from online
+## Click on restore.
+## Close the tab and enable the Auto Switch from the dropdown menu.
+# To check if it works, run KanColle through KC3 by pressing "Play Kantai Collection" from the KC3 extension menu.
+#At this point Kantai Collection should now run independently without VPN, the nature of ProxySwitchyOmega ensures that nothing but KanColle assets are redirected, allowing you to use your native internet connection with ease.
+
+<br />
+
+==== Installation and Preparation (KC3 + Softether VPN) ====
+Softether VPN uses VPN networks available for the public. Note that your computer will not be able to use its native connection using this procedure unless you specifically disable it. You may try to attempt closing it once gaining access to the Port Screen after the "Game Start" greeting, otherwise, it must be enabled for the entirety of your gameplay.
+
+# (Installing KC3) Install the latest version of KC3 Kai through the [https://chrome.google.com/webstore/detail/kancolle-command-center-%E6%94%B9/hkgmldnainaglpjngpajnnjfhpdjkohh Google Webstore].
+# (Downloading Softether VPN with VPN Gate Client) Install the Latest version of the VPN software [https://www.vpngate.net/en/download.aspx here] (top most blue download link)
+# (Installing Softether VPN) extract or open the .zip file and run the installer executable.
+## Ensure you select SoftEther VPN Client '''(not admin tools only)''' in the installer menu.
+# Once Softether has successfully been installed, run it.
+# In the main screen, there should exist two selections under "VPN Connection Setting Name" if one only exists, you have downloaded the wrong version of SoftEther VPN and must uninstall it and follow step 2. (Make sure it has the VPN Gate Client addon).
+# Select '''VPN Gate Public VPN Relay Servers.'''
+# In the menu that pops up, select any "Japan" server VPN and click - connect to the VPN server.
+## Select TCP or UDP, any will work.
+## Depending on your native internet connection, this may fail at times - you may simply choose to disconnect and repeat step 7 until you are able to properly connect.
+## Wait until an IP is given to you, if not, select another server and repeat step 7.
+# Once you are connected to the Japanese VPN, the main screen should have three selections now, one of which should have the status of '''Connected.''' If this is the case, you may now start your session of Kantai Collection through KC3 to check.
+
+== Preparing Your Android Device ==
+todo
+
+<br />
+== Asset Patching ==
+"Asset patching" is a '''optional''' KCCP feature that allows stable asset modifications for Kantai Collection. '''Use at your own risk'''. Asset modification is a DMM bannable offense, however implementation of this rule is vague. For more details, refer to this [https://github.com/Tibowl/KCCacheProxy/wiki/Asset-patching document.] This is not recommended for beginners but nevertheless this guide will explore how to enable asset patching and how to download a prominent public mod, the [https://github.com/InochiPM/KanColle-English-Patch-KCCP English Patch].
+
+# Ensure that your installation of KCCP is up-to-date, following the above instructions. Ensure you are able to connect to KanColle first before enabling this mod.
+#[[File:Guide engKCCP.png|thumb|234x234px|Visual Guide for English KCCP Patch installation.]](Downloading Patch Files) Go to the [https://github.com/InochiPM/KanColle-English-Patch-KCCP Github Page] for the English KCCP Patch and press the green "Code" button and at the dropdown that appears, "Download ZIP".
+# Once the download is complete, extract the .zip file somewhere memorable (to a folder) and remember this file location. Note where "EN-patch.mod.json" is located as you will need to select it in KCCP settings.
+# In the bottomost KCCP setting, tick "Enable assets modifier"
+# Once again, do this at your own risk.
+# Scroll down in the KCCP settings and above the Proxy log, look for "Assets modifier"
+# Select "Add a patcher" and navigate to the file location of the file you extracted in '''step 3''' and select the '''EN-patch.mod.json''' file.
+#[[File:Kccp splashscreen.png|thumb|Proper installation, note full translations of port screen and main menu. Also the "English Patch" text in splash screen. If this does not appear properly, check '''Troubleshooting.''']]'''Kancolle English Patch v.X.XX''' should now appear in the enabled mods, if not - check if the files you extracted are complete. Click "Reload mod data".
+# Close your session of Kantai Collection if necessary, if all goes well, the main menu splash screen should be modified with the words "English Patch" with the respective version number on the top right.
+# '''Troubleshooting:'''
+## "English Patch" does not appear in the splash screen: Check if you have properly downloaded all files from Github, if problem still persists, restart your computer and attempt again.
+## "English Patch" appears, but translations are incomplete: If it seems like some Japanese words still exist in known-translated places (whole Port menu should be translated, most quests should be translated) - clear your [https://support.google.com/accounts/answer/32050?co=GENIE.Platform%3DDesktop&hl=en Browser Cache in Chrome] and restart your session.
+
+==== Conclusion ====
+If you own anything in this document that you would like to be removed or updated, please send me a DM thru SporadicToast#2003 in Discord. If this document has helped you in anyway, or you have observed an error in the instructions - please inform me through the comments below or thru the same Discord account. Happy sortieing, Admiral!
+
+
+
+
+
+
+
+
+<br />
+[[Category:Blog posts]]

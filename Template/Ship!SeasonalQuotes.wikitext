@@ -1,0 +1,10 @@
+<includeonly>{{ {{{subst|safesubst:}}}#invoke:ShipSeasonalQuotes|format|pagename={{PAGENAME}}}}</includeonly><noinclude>
+This template is used to automatically add quotes from [[seasonal]] pages on [[:Category:Player ships|ship pages]].
+
+==Usage==
+<pre>{{ShipSeasonalQuotes}}</pre>
+
+==Notes==
+*[[Seasonal]] pages are not used directly (that would require [http://community.wikia.com/wiki/Help:DynamicPageList DPL]), but via [[:Category:Seasonal modules|seasonal proxy modules]]. On changes seasonal module(s) should be updated (see [[Template:Seasonal]] for a possible script). To be used seasonal modules also should be registered in [[Module:Collection/Seasons]]. [[Help:Purge#How_to_purge|Purging]] of ship pages may also be required.
+*For ship pages that use this template, see [[:Category:Ship pages that use automatic seasonal quotes]].
+</noinclude>

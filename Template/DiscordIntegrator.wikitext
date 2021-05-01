@@ -1,0 +1,44 @@
+<includeonly>{{#if:{{{1|{{{id|}}}}}}|<span class="DiscordIntegrator" data-id="{{{1|{{{id}}}}}}" data-logged-in="{{{loggedIn}}}" data-usePTB="{{{usePTB|}}}" data-theme="{{{theme|dark}}}" data-width="{{{width|100%}}}" data-height="{{{height|90%}}}" data-allowtransparency="{{{allowtransparency|true}}}" frameborder="{{{frameborder|0}}}">If you see this, your JavaScript might be disabled or DiscordIntegrator plugin isn't working. If the latter, please contact a wiki administrator.</span>|<span style="color:red">'''DiscordIntegrator error: ID of the server isn't supplied.'''</span> On instructions how to find a Discord server ID, see [https://support.discordapp.com/hc/en-us/articles/206346498-Where-can-I-find-my-server-ID- this]}}</includeonly><noinclude>
+<!-- You might want to use {{documentation}} here instead -->
+== Description ==
+This template is used as a utility for making usage of [[w:c:dev:DiscordIntegrator|DiscordIntegrator]] easier. In order to integrate the widget, it first needs to be enabled, for instructions on how to do that check "''[[w:c:dev:DiscordIntegrator#Enabling the widget|Enabling the widget]]''" section in the documentation.
+== Parameters ==
+{| class="wikitable" style="width: 100%; text-align: center"
+! Option
+! Type
+! What it changes
+! Default
+|-
+! <tt>id</tt>
+| String
+| ID of the server. For more information on how to find Discord server ID, see "Enabling the widget" section in the documentation<br >'''This parameter is required for the widget to work'''
+| N/A
+|-
+! <tt>loggedIn</tt>
+| Boolean
+| If set to true, widget will only work for logged in users
+| N/A
+|-
+! <tt>theme</tt>
+| String
+| Theme of the widget. Can be set to either <code>light</code> or <code>dark</code>. If invalid option specified the default is used
+| <tt>dark</tt>
+|-
+! <tt>width</tt>
+| String
+| Width of the widget.
+| <tt>100%</tt>
+|-
+! <tt>height</tt>
+| String
+| Height of the widget.
+| <tt>90%</tt>
+|-
+! <tt>usePTB</tt>
+| Anything
+| If to use the widget from Public Test Build server instead of the normal one
+| N/A
+|}
+== See also ==
+* [[w:c:dev:DiscordIntegrator]] for complete documentation
+<!-- TO DO: Add more documentation --></noinclude>

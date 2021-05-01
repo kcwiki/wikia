@@ -1,0 +1,26 @@
+Hi all,
+
+So I've written a script to retrieve ship assets from source, name them according, and upload them to wikia. Since I now have to capability to painlessly reupload all our images, I'm going to go for it. Screw renaming everything, screw checking what images are good quality and what images aren't. Just re-upload everything from source and we'll know that all the images are good quality.
+
+So here comes the problem. We don't seem to have consensus on naming conventions. My script currently uploads as:
+
+ filename := <ship_type_code>_<ship_name>[_<ship_suffix>][_(<ship_seasonal_prefix>)]_<ship_api_id>_<image_type>.<extension>
+ ship_seasonal_prefix := Valentine|New Year's|Year End|Xmas
+ ship_suffix := Kai|Kai Ni|zwei|drei|Carrier|Carrier Kai|Carrier Kai Ni|A
+ ship_type_code := DD|CL|CLT|CA|CAV|CVL|BC|BB|BBV|CV|SS|SSV|AOR|AV|LHA|CVB|AR|AS|CT
+ image_type := Battle|Battle_Damaged|Card|Card_Damaged|Full|Full_Damaged
+
+Some examples that were uploaded as part of a test to the wiki: [[:File:DD Sazanami Kai 232 Battle.png]], [[:File:BC Battleship Ta Class 541 Battle.jpg]].
+Examples that don't exist on the wiki yet: [[:File:CL Ooyodo Kai New Year's 912 Card.jpg]], [[:File:BC Bismarck drei 178 Full Damaged.png]].
+
+I think this naming scheme fits everyone's needs; it's searchable for in the page editor and the api_id is there so that collisions are guaranteed to be avoided as long as the devs treat the api_id as a primary key.
+
+The script also adds a nice description to the image stating how it was retrieved, from what location in the shipgraph, how it was stored in the shipgraph, and the shipgraph version. Note that the current examples are uploaded through my account; when I actually do the full upload I will use a separate bot account.
+
+Note that the suffixes, type codes, and image types are only the ones I plan to use for now. I have support for uploading damaged cards/battle cards and various other resources from the shipgraphs as well.
+
+I plan to do something similar with equipment later.
+
+Are there any objections, concerns, or suggestions? Please tell me so I can determine whether or not to go ahead with this.
+
+PS: If you want to see the source code, message me and I'll invite you to the repo. The setup for my script is kinda weird though (pywikibot has some weird troubles with python3).<ac_metadata title="Media naming conventions"> </ac_metadata>

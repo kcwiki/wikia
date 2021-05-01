@@ -1,0 +1,194 @@
+=={{#if:{{{thread|}}}|[[Partials/Updates/2017_October_{{Ordinal|25}}/Content|Content]]|[[Thread:604636|{{Ordinal|25}} October]]}}==
+{{#if:{{{thread|}}}||''For a full debriefing on the game update (including developer tweets), you may wish to refer to 
+[[Partials/Updates/2017_October_{{Ordinal|25}}|this link]].''}}
+===Final Update before the [[Fall 2017 Event]]===
+*This will be the final maintenance to take place before the start of the [[Fall 2017 Event]], which will take place next month in November.
+{{Clear}}
+==={{ShipLink|Michishio}} 2nd Remodel===
+{{SeasonalGallery|slideshow=true|Michishio/Kai Ni}}
+*Second Upgrade: {{ShipLink|Michishio/Kai Ni}}
+**Requires lvl 77+
+**'''Does not require a [[Medal|Blueprint]]'''
+**New Kai Ni exclusive Voicelines
+**She can equip [[Daihatsu Landing Craft|Daihatsu]] and all its variants ([[Special Type 2 Amphibious Tank]] included)
+**Stock equipment:
+***{{EquipmentLink|12.7cm Twin Gun Mount Model C Kai 2}}
+***{{EquipmentLink|Searchlight}}
+***{{EquipmentLink|Type 22 Surface Radar}}
+{{Clear}}
+
+===[[Equipment]] Update===
+<gallery type="slideshow" widths="300" hideaddbutton="true">
+12.7cm Twin Gun Mount Model C Kai 2 266 Card.png|{{new}} 12.7cm Twin Gun Mount Model C Kai 2
+</gallery>
+*{{New}} Equipment: [12.7cm連装砲C型改二] ({{EquipmentLink|12.7cm Twin Gun Mount Model C Kai 2}})
+**Can be obtained as stock equipment from {{ShipLink|Michishio Kai Ni}} and from [[Akashi's Improvement Arsenal]].
+<br />
+*Medium caliber guns upgrades/buffs
+**[[20.3cm (No.3) Twin Gun Mount]] +1 {{Hit}}
+**[[20.3cm (No.2) Twin Gun Mount]] night battle bonus
+**[[15.5cm Triple Gun Mount Kai]] +1 {{AA}} +1 {{Hit}}
+**[[15.5cm Triple Secondary Gun Mount Kai]] +1 {{AA}} +1 {{Hit}}
+**[[14cm Twin Gun Mount]] +1 {{Firepower}}
+**[[15.2cm Twin Gun Mount]] +1 {{Firepower}}
+**[[15.2cm Twin Gun Mount Kai]] +1 {{Firepower}}
+{{clear}}<br />
+
+===[[Akashi's Improvement Arsenal]]===
+*'''The following equipment are improvable with certain girl's help.
+**{{EquipmentLink|12.7cm Twin Gun Mount Model C Kai 2}}
+**{{EquipmentLink|Type 95 Depth Charge}}
+
+{{{!}} class="mw-collapsible mw-collapsed wikitable" style="text-align: center; width:100%;"
+! colspan="1" {{!}}{{new}}&{{updated}}Akashi's Improvement Arsenal: Equipment Tables
+{{!}}-
+{{!}}{{ImprovementTableKai
+|!new
+|#
+|12.7cm Twin Gun Mount Model C Kai 2
+|Type 95 Depth Charge
+|custom_row_new_content = <h3>New Equipment</h3>
+}}
+{{!}}-
+{{!}}{{ImprovementTableKai
+|!updated
+|#
+|12.7cm Twin Gun Mount Model B Kai 2
+|custom_row_updated_content = <h3>Updated Equipment</h3>
+}}
+{{!}}}
+{{clear}}
+
+
+===New Destroyer Night Battle Update===
+<gallery type="slideshow" widths="200">
+Radar Torpedo Cut-In.png|New Radar Torpedo Cut-In
+Radar Torpedo Gun Cut-In.jpg|Radar Night Battle Cut-In
+</gallery>
+*Destroyers equipped and fighting with {{EquipmentLink|Skilled Lookouts}} and a certain Radar Equipment together will be able to increase their evasion abilities during night battle.
+*New Night battle Cut-ins ("Radar Night Battle" and "Radar Torpedo Strike") can be used through certain equipment setups with higher trigger rate than Torpedo based Cut-ins but weaker damage output.
+
+*'''This content is pre-released, it may receive further updates in the future.'''
+{{clear}}
+
+===New [[Expedition/Reference tables|Expedition]]===
+*For this new expedition, along with the Ship types and composition, {{LOS}}, {{AA}}, {{ASW}} stats will also be required at a certain level.
+<tabber>Total yield=
+{{Expeditions
+|{{Expedition
+|world = 2
+|id = B1
+|name = {{tooltip|南西方面航空偵察作戦|索敵力の高い水上機母艦及び軽巡、を伴う艦隊で敵情勢を偵察せよ！}}
+|time = 00:35
+|hq = '''{{color|blue|35}}'''
+|ship = 40
+|steel = 10
+|bauxite = '''{{color|blue|30}}'''
+|item1 = {{ItemStack|item=[[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+}}
+}}
+|-|Hourly yield=
+{{Expeditions
+|{{Expedition
+|world = 2
+|id = B1
+|name = {{tooltip|南西方面航空偵察作戦|索敵力の高い水上機母艦及び軽巡、を伴う艦隊で敵情勢を偵察せよ！}}
+|time = 00:35
+|hq = '''{{color|blue|60}}'''
+|ship = 69
+|steel = 17
+|bauxite = '''{{color|blue|51}}'''
+|item1 = {{ItemStack|item=[[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+}}
+}}
+|-|Requirements=
+{{Expeditions
+|{{Expedition2
+|world = 2
+|id = B1
+|name = {{tooltip|南西方面航空偵察作戦|索敵力の高い水上機母艦及び軽巡、を伴う艦隊で敵情勢を偵察せよ！}}
+|time = 00:35
+|sum = 175
+|level = 40
+|fleet = 1AV 1CL 2DD/DE 2XX<br>'''with'''<br>{{ASW}} {{tooltip|200+|Summary ASW including ship and equipment stats}}<br>{{AA}} {{tooltip|200+|Summary AA including ship and equipment stats}}<br>{{LOS}} {{tooltip|140+|Summary LoS including ship and equipment stats}}
+|drums = 
+|fuel = 4.5
+|ammo = 1.5
+}}
+}}
+</tabber>
+
+===[[Quest|New Quests]]===
+{{QuestList|
+{{Quest
+|ID = B108
+|Title_JP = 「第八駆逐隊」、南西へ！
+|Title_EN = 8th Destroyer Division, to the Southwestern Area!
+|Requirements = Sortie a fleet with {{ShipLink|Asashio}}, {{ShipLink|Ooshio}}, {{ShipLink|Arashio}}, {{ShipLink|Michishio}}, up to 2 additional ships to world [[1-2]], [[2-2]] and obtain S-rank victories at the boss nodes.
+|Rewards_RSC = 0 / 250 / 250 / 250
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]] X 3, <br>
+[[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] X 1
+|Note = Requires: [[Quests#B88|B88]](?)<br> Unlocks: [[Quests#A81|A81]], [[Quests#D27|D27]]
+}}
+{{Quest
+|ID = A81
+|Title_JP = 最精鋭「第八駆逐隊」を編成せよ！
+|Title_EN = Form the New Elite 8th Destroyer Division!
+|Requirements = Have {{ShipLink|Michishio/Kai Ni}}, {{ShipLink|Asashio/Kai Ni}}/{{ShipLink|Asashio/Kai Ni D}}, {{ShipLink|Ooshio/Kai Ni}} and {{ShipLink|Arashio/Kai Ni}} in the fleet.<br>
+'''{{color|red|※ On completion plays {{Audio|file=Quest A81 achieved.ogg}}}}'''
+|Rewards_RSC = 300 / 300 / 0 / 0
+|Rewards_Items = [[File:Combat Ration 145 Full.png|30px|link=Combat Ration]] X 1, <br>
+[[File:Food supply ship irako.png|30px|link=Fatigue]][[Fatigue#Food_Supply_Ship_.22Irako.22|"Irako"]] X 1
+|Note = Requires: [[Quests#B108|B108]]<br> 
+}}
+{{Quest
+|ID = B109
+|Title_JP = 最精鋭「第八駆逐隊」、全力出撃！
+|Title_EN = New Elite 8th Destroyer Division, Sortie Out!
+|Requirements = Sortie a fleet including {{ShipLink|Michishio/Kai Ni}}, {{ShipLink|Asashio/Kai Ni}}/{{ShipLink|Asashio/Kai Ni D}}, {{ShipLink|Ooshio/Kai Ni}}, {{ShipLink|Arashio/Kai Ni}}, up to 2 additional ships to [[3-2]], [[5-4]] and obtain S-rank(?) victories at the boss nodes.<br>
+'''{{color|red|※ On completion plays {{Audio|file=Quest B109 achieved.ogg}}}}'''
+|Rewards_RSC = 800 / 0 / 0 / 0
+|Rewards_Items = [[File:Improvement Materials.png|30px|link=Akashi's_Improvement_Arsenal]] X 4<br>'''choice between'''<br>{{EquipmentLink|12.7cm Twin Gun Mount Model C Kai 2|image=30px}}[[12.7cm Twin Gun Mount Model C Kai 2]] X 1<br>'''or'''<br>{{EquipmentLink|Daihatsu Landing Craft|image=30px}}[[Daihatsu Landing Craft]] X 1<br>'''or'''<br>{{EquipmentLink|Type 22 Surface Radar|image=30px}}[[Type 22 Surface Radar]] X 2
+|Note = Requires: [[Quests#A81|A81]], [[Quests#D27|D27]]
+
+}}
+{{Quest
+|ID = A82
+|Title_JP = 「西村艦隊」第二戦隊随伴部隊、集結せよ！
+|Title_EN = 2nd Naval Assault Squadron Nishimura Fleet, Gather!
+|Requirements = Have {{ShipLink|Mogami}}, {{ShipLink|Michishio}}, {{ShipLink|Shigure}}, {{ShipLink|Asagumo}} and {{ShipLink|Yamagumo}} in the '''third''' fleet.<br>
+'''{{color|red|※ On completion plays {{Audio|file=Quest A82 achieved.ogg}}}}'''
+|Rewards_RSC = 0 / 300 / 300 / 0
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 3<br>'''choice between'''<br>[[File:Food supply ship irako.png|30px|link=Fatigue]][[Fatigue#Food_Supply_Ship_.22Irako.22|"Irako"]] X 2<br>'''or'''<br>[[File:Furniture fairy.png|30px|link=Furniture]][[Furniture|Furniture Fairy]] X 1<br>'''or'''<br>[[File:New_Model_Gun_Mount_Improvement_Material_Icon.png|30px|link=New_Model_Gun_Mount_Improvement_Material]][[New Model Gun Mount Improvement Material]] X 1
+|Note = Requires: [[Quests#D27|D27]], [[Quests#D2|D2]]
+
+}}
+{{Quest
+|ID = D27
+|Title_JP =「捷一号作戦」、発動準備！
+|Title_EN = Operation Shō-Gō 1, Begin!
+|Requirements = Complete Expedition 3, A1, B1
+|Rewards_RSC = 0 / 600 / 0 / 600
+|Rewards_Items = [[File:Instant repair 2.png|30px|link=Tutorial:_FAQ#What_are_buckets.3F]] X 4<br>{{EquipmentLink|Underway_Replenishment|image=30px}}[[Underway Replenishment]] x 2
+|Note = Requires: [[Quests#B108|B108]], [[Quests#D2|D2]] (?)
+}}
+}}
+{{clear}}
+
+===Seasonal CG===
+{{SeasonalGallery|slideshow=true|Asagumo/Surigao Strait Assault|Yamagumo/Surigao Strait Assault}}
+{{New}} Surigao Strait Assault(w/ Autumn/Winter Uniform) CG for the following ships:
+*{{ShipLink|Asagumo}}
+*{{ShipLink|Yamagumo}}
+{{clear}}
+===Voice lines Update===
+*The New Elite 8th Destroyer Division related Quests will have Quest Completion voice lines implemented
+*{{ShipLink|Yamato}} and few other girls will receive new [[Seasonal/Late Fall 2017|Late Fall]] voice lines
+*{{New}} [[Seasonal/Eve Of Battle|Eve of Battle]] voice lines.
+
+===Misc===
+*Parts of the Ocean Area's Indicator below the Sortie Screen, and the Home Port Screen's respective indicators will receive minor UI changes.
+*Maximum ship slots limit increased to 350 and maximum equipment slots limit increased to 1500
+*Type 17 Fleet Fishery Banner renewal.

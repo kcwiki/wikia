@@ -1,0 +1,92 @@
+<includeonly>{{ {{{subst|safesubst:}}}#invoke:ImprovementTable|Main}}</includeonly><noinclude>
+A version of [[Template:ImprovementTableKai]] for [[Akashi's Improvement Arsenal]] page.
+
+==Lua==
+WIP in [[Module:ImprovementTable]].
+
+<code>only_rows</code> parameter can be used to mix with [[#Wikitext|wikitext templates]] inside [[Template:Table]], for example:
+
+<pre>
+{{Table|
+{{ImprovementTable
+|only_rows = true
+|!Small Caliber Main Guns
+|#
+|12.7cm Twin Gun Mount
+|12.7cm Twin Gun Mount Model B Kai 2
+}}
+{{ImprovementTable/Row
+  |10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director
+  |devmats0 = 6/7|impmats0 = 3/4
+  |devmats6 = 5/8|impmats6 = 4/7|equips6 = 2<span title="10cm Twin High-angle Gun Mount">[[file:Equipment3-2.-icon.png|link=10cm Twin High-angle Gun Mount]]</span>
+  |fuel = 10|ammo = 60|steel = 150|bauxite = 50
+  |sun = -/T|mon = A/-|tue = A/-|wed = A/-|thu = A/T|fri = -/T|sat = -/T
+  |ships = [[Akizuki]]/[[Teruzuki]]
+}}
+}}
+</pre>
+
+(same result as below).
+
+==Wikitext==
+Non-lua templates [[Template:ImprovementTable/Heading]] and [[Template:ImprovementTable/Row]] can be used to generate headings/headers and equipment rows. Should be wrapped in [[Template:Table]], for example:
+<pre>
+{{Table|
+{{ImprovementTable/Heading|Small Caliber Main Guns}}
+{{ImprovementTable/Row
+  |12.7cm Twin Gun Mount
+  |devmats0 = 1/2|impmats0 = 1/2
+  |devmats6 = 1/2|impmats6 = 1/2|equips6 = 1
+  |devmats10 = 2/3|impmats10 = 3/6|equips10 = 2
+  |fuel = 10|ammo = 30|steel = 60
+  |sun = any|mon = any|tue = any|wed = any|thu = any|fri = any|sat = any
+  |upgrades = 12.7cm Twin Gun Mount Model B Kai 2
+}}
+{{ImprovementTable/Row
+  |12.7cm Twin Gun Mount Model B Kai 2
+  |devmats0 = 2/2|impmats0 = 2/3
+  |devmats6 = 2/2|impmats6 = 2/4|equips6 = 1
+  |fuel = 10|ammo = 60|steel = 100
+  |sun = no|mon = A/Y|tue = A/Y|wed = A/Y|thu = no|fri = no|sat = no
+  |ships = [[Ayanami Kai Ni]]/[[Yuudachi Kai Ni]]
+}}
+{{ImprovementTable/Row
+  |10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director
+  |devmats0 = 6/7|impmats0 = 3/4
+  |devmats6 = 5/8|impmats6 = 4/7|equips6 = 2<span title="10cm Twin High-angle Gun Mount">[[file:Equipment3-2.-icon.png|link=10cm Twin High-angle Gun Mount]]</span>
+  |fuel = 10|ammo = 60|steel = 150|bauxite = 50
+  |sun = -/T|mon = A/-|tue = A/-|wed = A/-|thu = A/T|fri = -/T|sat = -/T
+  |ships = [[Akizuki]]/[[Teruzuki]]
+}}
+}}
+</pre>
+Result:
+{{Table|
+{{ImprovementTable/Heading|Small Caliber Main Guns}}
+{{ImprovementTable/Row
+  |12.7cm Twin Gun Mount
+  |devmats0 = 1/2|impmats0 = 1/2
+  |devmats6 = 1/2|impmats6 = 1/2|equips6 = 1
+  |devmats10 = 2/3|impmats10 = 3/6|equips10 = 2
+  |fuel = 10|ammo = 30|steel = 60
+  |sun = any|mon = any|tue = any|wed = any|thu = any|fri = any|sat = any
+  |upgrades = 12.7cm Twin Gun Mount Model B Kai 2
+}}
+{{ImprovementTable/Row
+  |12.7cm Twin Gun Mount Model B Kai 2
+  |devmats0 = 2/2|impmats0 = 2/3
+  |devmats6 = 2/2|impmats6 = 2/4|equips6 = 1
+  |fuel = 10|ammo = 60|steel = 100
+  |sun = no|mon = A/Y|tue = A/Y|wed = A/Y|thu = no|fri = no|sat = no
+  |ships = [[Ayanami Kai Ni]]/[[Yuudachi Kai Ni]]
+}}
+{{ImprovementTable/Row
+  |10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director
+  |devmats0 = 6/7|impmats0 = 3/4
+  |devmats6 = 5/8|impmats6 = 4/7|equips6 = 2<span title="10cm Twin High-angle Gun Mount">[[file:Equipment3-2.-icon.png|link=10cm Twin High-angle Gun Mount]]</span>
+  |fuel = 10|ammo = 60|steel = 150|bauxite = 50
+  |sun = -/T|mon = A/-|tue = A/-|wed = A/-|thu = A/T|fri = -/T|sat = -/T
+  |ships = [[Akizuki]]/[[Teruzuki]]
+}}
+}}
+</noinclude>

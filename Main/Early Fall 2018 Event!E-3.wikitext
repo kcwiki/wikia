@@ -1,0 +1,193 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|Thread = 
+}}
+{{Event/MapInfo
+|en = Crush the Enemy's Western Frontline Anchorage!
+|jp = 西方敵前線泊地を叩け！
+|tag = E3
+|romaji = Sēhō teki-zensen-hakuchi o tatake!
+|hp_casual = 1700 HP + 1300 HP + 1300
+|hp_easy = 1700 HP + 1300 HP + 1300
+|hp_medium = 1800 HP + 1400 HP + 1350
+|hp_hard = 2000 HP + 1500 HP + 1400
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Shinyou}}
+|reward_casual_1 = {{ItemStack|item = [[File:Rotaited.png{{!}}50px]]|text = Nothing}}
+|reward_easy_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 97 Torpedo Bomber (931 Air Group/Skilled)|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Type 97 Torpedo Bomber (931 Air Group/Skilled)|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Ju 87C Kai Ni (w/ KMX)|size=50px}}
+|reward_hard_4_x = 1
+|Mechanics = Unknown
+<!--
+|transport = true
+-->
+}}
+{{MapBranchingTable
+|id = 42-3
+|order = A,B,C,E,F,H,J,I,N,O
+
+|A/empty -> B, C, E/empty = 
+* Meet '''ANY''' of the following requirements to go to B:
+** Amount of (F)BB(V)+CV(L/B) in '''MAIN''' Fleet = 4
+** Amount of (F)BB(V)+CV(L/B) in '''MAIN''' Fleet = 6
+* Meet '''ALL''' of the following requirements to go to E:
+** Amount of ships ≤ 5
+** Amount of DD = 4
+** No CLT
+** ???
+** ???
+* Otherwise, go to C
+
+|B -> C = 
+* Meet '''ANY''' of the following requirements:
+** Single Fleet
+** Amount of (F)BB(V)+CV(L/B) in '''MAIN''' Fleet = 6
+|B -> D = * Do not meet the requirements to go to C.
+
+|C -> D, F/empty =
+* Meet '''ANY''' of the following requirements to go to F:
+** Single Fleet '''AND''' amount of DD ≥ 2
+** Amount of (F)BB(V)+CV(L/B) in '''MAIN''' Fleet ≤ 3
+* Otherwise, go to D.
+|C -> E/empty = * ???
+
+|E/empty -> F/empty, H = * Active Branching
+
+|F/empty -> I, J = * Active Branching
+
+|H -> G = * ???
+|H -> J = * ???
+
+|J -> K, L/empty, M = 
+* Failing LoS check '''FORCES''' you to L.
+* Go to K if Combined Fleet.
+* Go to M if Single Fleet - Can still go to K
+
+|I -> N = * Amount of (F)BB(V)+CV(L/B) in '''MAIN''' Fleet ≥ 4
+|I -> O = * Amount of (F)BB(V)+CV(L/B) in '''MAIN''' Fleet ≤ 3
+
+|N -> O = * Amount of (F)BB(V)+CV(L/B) in '''MAIN''' Fleet ≤ 4
+|N -> P = * Amount of (F)BB(V)+CV(L/B) in '''MAIN''' Fleet ≥ 5
+
+|O -> L/empty = * Fail the LoS check.
+|O -> Q = * Pass the LoS check.
+}}
+
+===Historical Fleet: Indian Ocean Raid===
+'''DISCLAIMER''': Keep in mind that not all of them are 100% confirmed to be historical in-game nor are all of them confirmed to have bonus damage against bosses. Please use the Ships at your own discretion.
+*There is also suspicion that for CV(B), you require a specific combination(s) of Equipment to gain Bonus Damage.
+
+====Carrier Striking Force (Nagumo):====
+A fast carrier striking force led by Chūichi Nagumo.
+* CV(B): {{ShipLink|Akagi Kai|text=Akagi}}, {{ShipLink|Hiryuu Kai Ni|text=Hiryuu}}, {{ShipLink|Shoukaku Kai Ni|text=Shoukaku}}, {{ShipLink|Souryuu Kai Ni|text=Souryuu}}, {{ShipLink|Zuikaku Kai Ni|text=Zuikaku}}
+* (F)BB(V): {{ShipLink|Haruna Kai Ni|text=Haruna}}, {{ShipLink|Hiei Kai Ni|text=Hiei}}, {{ShipLink|Kirishima Kai Ni|text=Kirishima}}, {{ShipLink|Kongou Kai Ni|text=Kongou}}
+* CA(V): {{ShipLink|Chikuma Kai Ni|text=Chikuma}}, {{ShipLink|Tone Kai Ni|text=Tone}}
+* CL: {{ShipLink|Abukuma Kai Ni|text=Abukuma}}
+* DD: {{ShipLink|Arare Kai Ni|text=Arare}}, {{ShipLink|Akigumo Kai|text=Akigumo}}, {{ShipLink|Hamakaze B Kai|text=Hamakaze}}, {{ShipLink|Isokaze B Kai|text=Isokaze}}, {{ShipLink|Kagerou Kai Ni|text=Kagerou}}, {{ShipLink|Kasumi Kai Ni|text=Kasumi}}, {{ShipLink|Shiranui Kai Ni|text=Shiranui}}, {{ShipLink|Tanikaze Kai|text=Tanikaze}}, {{ShipLink|Urakaze D Kai|text=Urakaze}}
+
+====Malaya Force (Ozawa)====
+* CVL: {{ShipLink|Ryuujou Kai Ni|text=Ryuujou}}, {{ShipLink|Suzuya Carrier Kai Ni|text=Suzuya}}, {{ShipLink|Kumano Carrier Kai Ni|text=Kumano}}
+* CA(V): {{ShipLink|Choukai Kai Ni|text=Choukai}}, {{ShipLink|Kumano|Kumano Kai Ni|text=Kumano}}, {{ShipLink|Suzuya|Suzuya Kai Ni|text=Suzuya}}
+* CL: {{ShipLink|Yura Kai Ni|text=Yura}}
+* DD: {{ShipLink|Amagiri Kai|text=Amagiri}}?, {{ShipLink|Fubuki Kai|text=Fubuki}}, {{ShipLink|Hatsuyuki Kai|text=Hatsuyuki}}, {{ShipLink|Murakumo Kai|text=Murakumo}}, {{ShipLink|Shirayuki Kai|text=Shirayuki}}
+
+===Map Guide===
+E-3 has 3 phases. 2 LBAS can be used. For new players, this will be the first map that you will use [[Combined Fleet|combined fleet]]. Please read up on how to set up [[Combined Fleet|combined fleet]] before proceeding.
+#'''Phase 1''': An installation, {{ShipLink|Harbour Summer Princess}} 
+#*You will be using either a single fleet or an [[Combined Fleet|surface task force]] (STF)
+#**'''Single Fleet:''': Less flexible, but allows you to avoid {{Event/Route|K|red}} . Their main benefits are the cheaper cost, less ship locked, and being able to use [[Events/FAQ#Vanguard_Formation_.28.E8.AD.A6.E6.88.92.E9.99.A3.29:_The_Spear-looking_formation|vanguard formation]]; the latter can be useful against the double line Ta-class you will be facing at {{Event/Route|J|red}} due to its evasion boost.
+#**'''Surface Task Force:''' More flexible, but will route to {{Event/Route|K|red}} forcing at least 3 battles prior to boss. You have no access to vanguard formation here but you can rely on your heavier ships and even CLTs (see possible comps below).
+#*This phase is like a continuation of E-2 Phase 2. Similarly, the boss is an installation escorted by {{ShipLink|Artillery Imp}} but this time also escorted by {{ShipLink|PT Imp Pack}}. They can be dealt using [[PT_Imp_Pack#Notes|specific setup]] but the alternate option is to use LBAS equipped with LBAA or any bombers with at least 6 range focusing on the boss node. This phase will be a lot harder without LBAS, so it is a proper time to invest in obtaining some LBAA.
+#*Once {{ShipLink|PT Imp Pack}} are sunk, it will be similar to E-2. Please refer to [[Early_Fall_2018_Event/E-2#Map%20Guide|E-2's page]] on how to equip your fleet.
+#'''Phase 2''': A surface battleship, {{ShipLink|Anchorage Water Demon Vacation Mode|text=Anchorage Water Demon with umbrella}} 
+#*You will be using either a STF or [[Combined Fleet|Carrier Task Force (CTF)]]
+#**If you use STF during Phase 1, you're likely to use that same fleet here. However, due to the boss' high air power, you're unlikely to utilize artillery spotting without at least a fighter sweep from your LBAS to reduce her air power. Pre-boss nodes can be easier since your main fleet attacks first, more likely to avoid damages to your escorts.
+#**An alternate option is to use CTF, which you are recommended to use in Phase 3 due to bonus damage from carriers (see below). More carriers can be brought which make achieving AS a more viable option.
+#**Additionally, using a submarine (viable in STF too) allow you to avoid the boss and Nu-kai attacks as they will attack the submarine, '''but''' will not work against boss at LD since her damaged form does not attack submarine. Furthermore, it will not stop her from attacking your escort fleet during 2nd shelling of the combined abyssal fleet.
+#*'''LBAS:''' {{EquipmentLink|Type 2 Large Flying Boat|text=Taitei}} or {{EquipmentLink|PBY-5A Catalina|text=Catalina}} is required in order for your LBAS to reach the boss. It is possible to send the LBAS to node {{Event/Route|O|red}} or {{Event/Route|C|red}} instead, preferably the former. Those with {{EquipmentLink|Toukai (901 Air Group)|Prototype_Toukai|text=Toukai}} can send them to {{Event/Route|I|red}} to sink those submarines. Other nodes are also possible if you decide to bring a heavier fleet than suggested.
+#'''Phase 3''': A light carrier, {{ShipLink|German Escort Princess|text=Baked Escort Princess but with horn on the left side}}
+#*The same node as Phase 2. However, CTF is heavily recommended. {{ShipLink|Akagi|Souryuu|Hiryuu|text=Many carriers}} have bonus damage against the boss fleet (see below), making them extremely useful.
+#*Bringing a submarine is recommended as the boss will attack the submarine even in LD unlike Phase 2. As above, it will not stop her from attacking your escort fleet during 2nd shelling.
+#*'''LBAS:''' See Phase 2
+
+====Phase 3 Bonus against boss====
+Despite having the best science in the world, the following have been confirmed to have bonuses against {{ShipLink|German Escort Princess|text=the boss}}:
+*These are the few types of bonus multiplier that stacks against the boss:
+**{{EquipmentLink|Type 3 Shell}} (T3): 1.35x
+**[[Seaplane_Fighters#Seaplane_Bombers|Seaplane bombers]] (SPB) or [[Seaplane_Fighters#Seaplane_Fighters|fighters]] (SPF): 1.3x
+***SPB and SPF will not stack. Pick either of the two.
+**1 [[List_of_Dive_Bombers_by_stats|Dive bombers]]: 1.4x
+**2 [[List_of_Dive_Bombers_by_stats|Dive bombers]]: 2.1x(?)
+**Historicals ships: 1.2x
+***'''Historical CA/BB''':
+****{{ShipLink|Kirishima/Kai Ni}}, {{ShipLink|Haruna/Kai Ni}}, {{ShipLink|Tone/Kai Ni}}, {{ShipLink|Chikuma/Kai Ni|Chikuma/Kai|text=both Chikuma Kai and Kai Ni}}, {{ShipLink|Atago/Kai}}
+***'''Historical CV''':
+****{{ShipLink|Akagi/Kai}}, {{ShipLink|Hiryuu/Kai Ni}}, {{ShipLink|Souryuu/Kai Ni}},{{ShipLink|Shoukaku/Kai Ni}} ,{{ShipLink|Zuikaku/Kai Ni}}
+
+===Compositions===
+Do note that this is not the optimal composition, but it is viable and reaches the boss with shortest route.
+#Phase 1: {{Event/Route|A|blue|C|red|F|blue|J|red|M|red}} (single fleet) and {{Event/Route|A|blue|C|red|F|blue|J|red|K|red|M|red}} (STF)
+#*'''Single Fleet:''' 1 FBB 1 CV 1 CAV 3 DD or 1 FBB 1-2 CV 1-2 CAV 2DD
+#*'''Combined Fleet (STF):''' 2 FBB 1 CAV 1 CV 2 DD + 1 CL 2 DD 2 CLT 1 CAV
+#Phase 2: {{Event/Route|A|blue|C|red|F|blue|I|red|O|red|Q|red}}
+#*'''Combined Fleet (STF):''' 2 FBB 3 CA(V) 1 CV + 1 CL 2 DD 1-2 CA 2-1 CLT
+#*'''Combined Fleet (CTF):''' 3 CV 2 CAV 1 SS(V) + 1 CL 2 DD 1-2 CA(V) 1-2 CLT 0-1 Night Attack CVL
+#**CVL does not need to be capable of attacking at night if you wish to bring her for more air power. Additionally, you can also bring something CA(V) or CLT instead.
+#Phase 3: {{Event/Route|A|blue|C|red|F|blue|I|red|O|red|Q|red}}
+#*'''Combined Fleet (CTF):''' 3 CV 2 CAV 1 SS(V) + 1 CL 2 DD 1-2 CA(V) 1-2 CLT 0-1 Night Attack CVL
+#**Regarding CVL, as Phase 2.
+
+====Tips====
+*Node {{Event/Route|H|red}} Transport,EXP grinding for DD/CL, and LBAS proficiency leveling (mainly for Easy players)
+**Working Compositions: 1 CL 4 DD, 4 DD
+**According to the branching rule, you must bring exactly 4 DDs and are only allowed 5 ships with the final one mainly being CL(?). The branching rule there is still under testing.
+**The general idea is to use your LBAS, which should be full bomber with at least 5 range and target both two at {{Event/Route|H|red}}. This gives 204-240 base EXP.
+**'''Pros:'''
+***Easier {{ShipLink|Transport Ship Wa-Class|text=transport ship}} farming than E-1.
+***0 morale farming is possible while gaining some EXP since LBAS should sink almost every ship.
+***You can increase your LBAS proficiency here, but adding in interceptor can hurt your chance of sinking the enemy.
+***Nothing to shoot down your LBAS planes. Low bauxite cost
+**'''Cons:'''
+***Sortieing LBAS consumes fuel and ammo (216 Fuel and 96 ammo per sortie for 2 full set of attack aircraft)
+***Limited amount of ships allowed.
+***LBAS can still fail with more chance at higher difficulty than easy.
+***Still lower base-exp than the old 2-4A
+***Extremely tedious
+
+===Friend Fleets===
+{{Fleets|friend=Early Fall 2018 Event|map=E-3}}
+
+===Map Progression===
+{{#tag:gallery|
+Early_Fall_2018_Event_E-3_Map_p1.png{{!}}Map during first HP phase at node M.
+Early_Fall_2018_Event_E-3_Map_p2.png{{!}}Map during second HP phase at node Q.
+Early_Fall_2018_Event_E-3_Map_p3.png{{!}}Full map during final HP phase at node Q.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=250
+}}
+
+===LBAS Flight Range===
+[[File:Early_Fall_2018_Event_E-3_LBAS_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

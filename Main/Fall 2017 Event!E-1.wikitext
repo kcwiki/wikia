@@ -1,0 +1,142 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = 2nd Striking Force, Set Sail!
+|jp = 第二遊撃部隊、抜錨！
+|romaji = Dai-ni Yūgeki butai, batsubyō!
+|tag = E1
+|mechanics = Ship Locking@Events/Mechanics#Ship_Locking, Unlockable Nodes@Events/Mechanics#Node_specific_details, Land Base Aerial Support@Land Base Aerial Support, LoS Check@Events/Mechanics#LoS_Check
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_easy = 420
+|hp_medium = 440
+|hp_hard = 590
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = 
+|reward_easy_1 = [[File:Food supply ship irako.png{{!}}50px{{!}}Irako{{!}}link=Fatigue]]
+|reward_easy_1_x = 2
+|reward_easy_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_easy_3_x = 2
+|reward_easy_4 = {{EquipmentCardKai|Type 0 Reconnaissance Seaplane Model 11B|size=50px}}
+|reward_easy_4_x = 1
+|reward_medium_1 = [[File:Food supply ship irako.png{{!}}50px{{!}}Irako{{!}}link=Fatigue]]
+|reward_medium_1_x = 3
+|reward_medium_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_medium_3_x = 2
+|reward_medium_4 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = [[File:Food supply ship irako.png{{!}}50px{{!}}Irako{{!}}link=Fatigue]]
+|reward_hard_1_x = 4
+|reward_hard_2 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}Mamiya{{!}}link=Fatigue]]
+|reward_hard_2_x = 1
+|reward_hard_3 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_hard_4_x = 3
+|reward_hard_5 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|G/empty -> D, J = * Active Branching
+
+|E -> I/empty = * Fail the LoS check
+|E -> H = 
+* If the amount of historical ships ≧ 0/1/2 on Easy/Medium/Hard:
+** Pass the LoS check (+10 ~ +25 F33 Cn1)
+* Else
+** Pass the LoS check (+50 ~ +80 F33 Cn1)
+
+|J -> K = 
+* Do not meet the requirements to go to M.
+|J -> M/empty = 
+* Meet all of the following requirements:
+** Path is unlocked
+** Pass the LoS check
+** Fleet contains CL (Hard)
+** Amount of DD ≧ 2
+** No SS(V)
+
+
+|M/empty -> N, O = * Active Branching
+
+|O -> Q = 
+* Pass the LoS check, but the boss is not unlocked yet.
+* Pass the LoS check, but fail to meet the requirements to go to S.
+|O -> R = * Fail the LoS check.
+|O -> S = 
+* If the amount of historical ships ≧ 0/1/2 on Easy/Medium/Hard:
+** Pass the LoS check (+10 ~ +25 F33 Cn1)
+* Else
+** Pass the LoS check (+50 ~ +80 F33 Cn1)
+}}
+'''Note:''' You are recommended to meet the historical requirements, as the LoS requirements are hard to meet without the reduction.
+
+===Task Description:===
+台湾沖航空戦の大戦果に誤認の可能性がある。重巡と水雷戦隊からなる第二遊撃部隊を展開！敵情偵察を実施せよ！
+
+There is a possibility that the victory report of Air Battle off Taiwain is erroneous. Set out the Second Strike Force composed of Heavy Cruisers and Torpedo sqaudrons! Carry out recon against the enemy!
+
+===Historical Fleet: The Second Striking Force (Shima Fleet)===
+One of the 2 fleets of the "Southern Force" during the Battle of Leyte Gulf led by Kiyohide Shima. Members of the Shima Fleet will get a post-cap damage multiplier of at least 120% at the boss node.
+* CA: {{ShipLink|Ashigara Kai Ni|text=Ashigara}}, {{ShipLink|Nachi Kai Ni|text=Nachi}}
+* CL: {{ShipLink|Abukuma Kai Ni|text=Abukuma}}
+* DD: {{ShipLink|Akebono Kai|text=Akebono}}, {{ShipLink|Kasumi Kai Ni|text=Kasumi}}, {{ShipLink|Shiranui}}, {{ShipLink|Ushio Kai Ni|text=Ushio}}
+
+{{Clear}}
+
+==Map Guide==
+* '''{{Type|FBB}}/{{Type|BB}}/{{Type|BBV}}/{{Type|CV}}/{{Type|CVL}}/{{Type|CVB}} cannot be used in this map.'''
+* Node B, node D and node J are submarine nodes.
+*'''LBAS''': one [[Land Base Aerial Support]] is available for sortie in this map.
+**8+ range is required to reach the boss node S.
+
+===Unlocking the Boss node S===
+* When entering the map for the first time, the path from J to M going to the boss node will be hidden and it will be necessary to do the following steps in order to unlock it:
+** Reach both the anchor node F and node K once, this will unlock the path going from J to M.
+** Reach node P and O, this will unlock boss node for Easy and Medium.
+**<span style="font-weight:400;"> (</span>'''Hard only'''<span style="font-weight:400;">) </span>achieve Air Superiority at node E to unlock the route to the Boss node. Getting AS before unlocking the path from J to M will not count.
+***Due to the high air power requirements of node E, it is highly recommended to use as many [[List of Seaplanes by stats|seaplane fighters]] on your CAV as possible in order to reach AS after lowering the enemy air power with the help of the LBAS (recommended a base with 4 fighters/interceptors).
+***It is also possible to sortie {{ShipLink|Akitsu Maru/Kai}} with 3 fighters or more seaplane bomber carriers (in case you lack seaplane fighters) like AVs to increase the fleet's airpower and thus make achieving AS easier.
+***Another option is to send Attack Aircraft/Bombers via LBAS to potentially destroy enemy Carriers, effectively reducing the required Air Power needed.
+
+==="LoS Requirement" Reduction from Historical Ship===
+For Hard and Medium difficulties, usage of Historical ships can help reduce the LoS requirement for node E, J, and O. The minimum is 1 for medium and 2 for Hard. Easy is unconfirmed but it was assumed as 0 for now. The specific number is still uncertain. One value found is
+*about >20.0 LoS Cn1 for Medium with 1 Historical Ship
+
+===Possible Fleet Compositions===
+*Farming Node L: 6SS(V)
+*Boss Clear:  2 CA(V) 1 CL 3 DD
+
+{{clear}}
+
+===Map progression===
+{{#tag:gallery|
+Fall 2017 Event E-1 part 1.png{{!}}Map before route unlock.
+Fall 2017 Event E-1 part 2.png{{!}}Map with hidden route but no boss node S.
+Fall 2017 Event E-1 Map.png{{!}}Full map after unlocking boss node S.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+{{clear}}
+
+===LBAS Flight Range===
+[[File:Fall 2017 Event E1 Flight Range.png|500px|center]]
+{{Event/MapPageFooter}}

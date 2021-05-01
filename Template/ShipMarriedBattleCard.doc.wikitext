@@ -1,0 +1,20 @@
+;Description
+:This template is used to do insert married ship battle cards with link and description to articles.
+;Syntax
+:Type <code><nowiki>{{ShipMarriedBattleCard|<Ship name>|<Model>|align=<alignment>}}</nowiki></code> somewhere.
+:Alternatively, <code><nowiki>{{ShipMarriedBattleCard|<Ship name>/<Model>|align=<alignment>}}</nowiki></code> also works.
+;Sample outputs
+:<code><nowiki>{{ShipMarriedBattleCard}}</nowiki></code> gives the default...{{ShipMarriedBattleCard}}
+:<code><nowiki>{{ShipMarriedBattleCard|Ikazuchi}}</nowiki></code> gives...
+:{{ShipMarriedBattleCard|Ikazuchi}}
+:<code><nowiki>{{ShipMarriedBattleCard|Akatsuki/Kai Ni}}</nowiki></code> gives...
+:{{ShipMarriedBattleCard|Akatsuki/Kai Ni}}
+:<code><nowiki>{{ShipMarriedBattleCard|Standard Carrier Wo-Class|align=center}}</nowiki></code> gives...
+:{{ShipMarriedBattleCard|Standard Carrier Wo-Class|align=center}}
+:<code><nowiki>{{ShipMarriedBattleCard|Northern Princess|Final|align=right}}</nowiki></code> gives...
+:{{ShipMarriedBattleCard|Northern Princess|Final|align=right}}
+:<code><nowiki>{{ShipMarriedBattleCard|Ooyodo|align=center|Kai}}</nowiki></code> gives...
+:{{ShipMarriedBattleCard|Ooyodo|align=center|Kai}}
+;Limitation:
+:The parameters can be in any order but <code><nowiki><Ship name></nowiki></code> must always be before <code><nowiki><Model></nowiki></code>
+:The embedded link does not work in the ring area.

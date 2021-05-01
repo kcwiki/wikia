@@ -1,0 +1,170 @@
+__NOTOC__
+
+;Description
+:A template to generate metro-styled tiles.
+:These are float:left HTML dividers and they can be stacked horizontally or vertically, creating highly customized table cells.
+:To stop tiles and other content from stacking horizontally, put <code><nowiki>{{Clear}}</nowiki></code> where the stacking should stop
+;Syntax
+:Fill in the form below. Some fields can be omitted (see simplified sample for mandatory fields)
+::<code><nowiki>{{Tile</nowiki></code><br/>
+::<code><nowiki>| header=</nowiki></code><br/>
+::<code><nowiki>| content=</nowiki></code>
+::<code><nowiki>| image=</nowiki></code><br/>
+::<code><nowiki>| source=</nowiki></code><br/>
+::<code><nowiki>| size=</nowiki></code>
+::<code><nowiki>| width=</nowiki></code><br/>
+::<code><nowiki>| height=</nowiki></code><br/>
+::<code><nowiki>| rgba=</nowiki></code><br/>
+::<code><nowiki>| text-color=</nowiki></code>
+::<code><nowiki>| text-height=</nowiki></code>
+::<code><nowiki>| image-pos=</nowiki></code>
+::<code><nowiki>| opacity=</nowiki></code>
+::<code><nowiki>| source-pos=</nowiki></code>
+::<code><nowiki>| float=</nowiki></code>
+::<code><nowiki>}}</nowiki></code>
+;Main arguments
+:<code><nowiki>header</nowiki></code>
+::Set the text in h3 header. Default value is hidden
+:<code><nowiki>content</nowiki></code>
+::Set the content written on top of the tile. To source the content from a partial within the main namespace, use <code><nowiki>{{:<Page>}}</nowiki></code>
+:<code><nowiki>image</nowiki></code>
+::Set the background overlay image. Default is hidden.
+:<code><nowiki>source</nowiki></code>
+::This field creates a footer with a "See more >" link to the sourced partial. Default is hidden. 
+;Styling arguments
+:<code><nowiki>width</nowiki></code>
+::Set the width of the tile. Default value is 50%.
+:<code><nowiki>height</nowiki></code>
+::Set the height of the tile. Default value is 360px
+:<code><nowiki>rgba</nowiki></code>
+::Set the color and opacity of the tile (see [http://www.w3schools.com/CSS/css3_colors.asp CSS3 Colors] tutorial for more information). Default value is 250,250,255,0.1
+:<code><nowiki>text-color</nowiki></code>
+::Set the color of the text. This color styling is not restricted to rgba definition. Default value is set by the wiki's theme.
+:<code><nowiki>text-height</nowiki></code>
+::Set the height of the inner text box. The text box is set to hidden overflow; texts that go outside the set height are cropped. Default value is 288px.
+:<code><nowiki>image-pos</nowiki></code>
+::Set the position of the background image within the tile. Default value is top:0px;left:0px
+::<code><nowiki>opacity</nowiki></code>
+::Set the opacity of the background image. Default value is 0.2
+::<code><nowiki>source-pos</nowiki></code>
+::Set the position of the "See more" link and the footer. Default value is bottom:20px;right:10px;
+::<code><nowiki>float</nowiki></code>
+::Set the float direction of the tile. Default value is left.
+
+;Full width tile
+<pre>
+{{Tile
+|header=Resources management
+|content={{:Sandbox/Guides/Resources}}
+|source=Sandbox/Guides/Resources
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,0.2
+|width=100%
+}}
+</pre>
+{{Tile
+|header=Resources management
+|content={{:Sandbox/Guides/Resources}}
+|source=Sandbox/Guides/Resources
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,0.2
+|width=100%
+}}
+;Double height tile
+<pre>
+{{Tile
+|header=Resources management
+|content={{:Sandbox/Guides/Resources}}
+|source=Sandbox/Guides/Resources
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,0.2
+|height=741px
+|text-height=628px
+}}
+</pre>
+{{Tile
+|header=Resources management
+|content={{:Sandbox/Guides/Resources}}
+|source=Sandbox/Guides/Resources
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,0.2
+|height=741px
+|text-height=628px
+}}
+{{clear}}
+;Quarter tile
+<pre>
+{{Tile
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,0.2
+|size=300px
+|width=25%
+|height=180px
+|text-height=113px
+}}
+{{Tile
+|header=high opacity
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,1
+|size=300px
+|width=25%
+|height=180px
+|text-height=113px
+|opacity=1
+}}
+{{Tile
+|header=reposition
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,0.2
+|size=300px
+|width=25%
+|height=180px
+|text-height=113px
+|image-pos=top:-60px;left:-60px
+}}
+{{Tile
+|header=default
+|size=300px
+|width=25%
+|height=180px
+|text-height=113px
+|image-pos=top:-60px;left:-60px
+}}
+</pre>
+
+{{Tile
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,0.2
+|size=300px
+|width=25%
+|height=180px
+|text-height=113px
+}}
+{{Tile
+|header=high opacity
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,1
+|size=300px
+|width=25%
+|height=180px
+|text-height=113px
+|opacity=1
+}}
+{{Tile
+|header=reposition
+|image=CL_Ooyodo_Kai_321_Full.png
+|rgba=188,191,195,0.2
+|size=300px
+|width=25%
+|height=180px
+|text-height=113px
+|image-pos=top:-60px;left:-60px
+}}
+{{Tile
+|header=blank
+|size=300px
+|width=25%
+|height=180px
+|text-height=113px
+|image-pos=top:-60px;left:-60px
+}}

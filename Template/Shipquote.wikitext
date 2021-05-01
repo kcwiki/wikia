@@ -1,0 +1,438 @@
+<includeonly>{| class="wikitable typography-xl-optout"
+!Event
+!{{#if:{{{ja_width|}}}|style="width:{{{ja_width|}}};"|}}|Japanese
+!{{#if:{{{en_width|}}}|style="width:{{{en_width|}}};"|}}|English
+!{{#if:{{{note_width|}}}|style="width:{{{note_width|}}};"|}}|Note
+|- class="shipquote-line" data-line-name="Introduction"
+| Introduction<br />{{{Clip1|}}}
+|{{SpanJa|{{{自己紹介|}}}}}
+|{{{EN1|}}}
+|{{{Note1|}}}
+|- class="shipquote-line" data-line-name="Library"
+| Library Intro<br />{{{Clip0|}}}
+|{{SpanJa|{{{Library|}}}}}
+|{{{EN0|}}}
+|{{{Note0|}}}
+|- class="shipquote-line" data-line-name="Secretary 1"
+| Secretary(1)<br />{{{Clip2|}}}
+|{{SpanJa|{{{秘書クリック会話①|}}}}}
+|{{{EN2|}}}
+|{{{Note2|}}}
+|- class="shipquote-line" data-line-name="Secretary 2"
+| Secretary(2)<br />{{{Clip3|}}}
+|{{SpanJa|{{{秘書クリック会話②|}}}}}
+|{{{EN3|}}}
+|{{{Note3|}}}
+|- class="shipquote-line" data-line-name="Secretary 3"
+| Secretary(3)<br />{{{Clip4|}}}
+|{{SpanJa|{{{秘書クリック会話③|}}}}}
+|{{{EN4|}}}
+|{{{Note4|}}}
+|- {{#if: {{{秘書放置時|}}} | class="shipquote-line" data-line-name="Idle" | {{#if: {{{Clip4a|}}} | class="shipquote-line" data-line-name="Idle" | style="display: none;" }} }}
+| Secretary(idle)<br />{{{Clip4a|}}}
+|{{SpanJa|{{{秘書放置時|}}}}}
+|{{{EN4a|}}}
+|{{{Note4a|}}}
+|- {{#if:{{{idle_extra|}}}||style="display: none;"}}
+| colspan="5"|　⇧ for Kai form, plays Base form's Secretary Married line when [[Morale|sparkled]]
+|- class="shipquote-line" data-line-name="Secretary Married"
+| Secretary(Married)<br />{{{Clip25|}}}
+|{{Template:Background_color|#3A3A3A|{{SpanJa|{{{Married|}}}}}}}
+|{{Template:Background_color|#3A3A3A|{{{EN25|}}}}}
+|{{Template:Background_color|#3A3A3A|{{{Note25|}}}}}
+|- class="shipquote-line" data-line-name="Wedding"
+| Wedding<br />{{{Clip26|}}}
+|{{Template:Background_color|#3A3A3A|{{SpanJa|{{{Wedding|}}}}}}}
+|{{Template:Background_color|#3A3A3A|{{{EN26|}}}}}
+|{{Template:Background_color|#3A3A3A|{{{Note26|}}}}}
+|- class="shipquote-line" data-line-name="Looking At Scores"
+| Show player's score<br />{{{Clip5|}}}
+|{{SpanJa|{{{戦績表示時|}}}}}
+|{{{EN5|}}}
+|{{{Note5|}}}
+|- class="shipquote-line" data-line-name="Joining A Fleet"
+| Joining a fleet<br />{{{Clip6|}}}
+|{{SpanJa|{{{編成選択時|}}}}}
+|{{{EN6|}}}
+|{{{Note6|}}}
+|- class="shipquote-line" data-line-name="Equipment 1"
+| Equipment(1)<br />{{{Clip7|}}}
+|{{SpanJa|{{{装備時①|}}}}}
+|{{{EN7|}}}
+|{{{Note7|}}}
+|- class="shipquote-line" data-line-name="Equipment 2"
+| Equipment(2)<br />{{{Clip8|}}}
+|{{SpanJa|{{{装備時②|}}}}}
+|{{{EN8|}}}
+|{{{Note8|}}}
+|- class="shipquote-line" data-line-name="Equipment 3"
+| Equipment(3)<br />{{{Clip9|}}}
+|{{SpanJa|{{{装備時③|}}}}}
+|{{{EN9|}}}
+|{{{Note9|}}}
+|-
+|  colspan="5"|　⇧ shared with expedition selection, resource collection, instant repair and development
+|- class="shipquote-line" data-line-name="Supply"
+| Supply<br />{{{Clip24|}}}
+|{{SpanJa|{{{補給時|}}}}}
+|{{{EN24|}}}
+|{{{Note24|}}}
+|- class="shipquote-line" data-line-name="Docking Minor"
+| Docking <br />≤ minor damage<br />{{{Clip10|}}}
+|{{SpanJa|{{{ドック入り(小破以下)|}}}}}
+|{{{EN10|}}}
+|{{{Note10|}}}
+|- class="shipquote-line" data-line-name="Docking Major"
+| Docking <br />≥ moderate damage<br />{{{Clip11|}}}
+|{{SpanJa|{{{ドック入り(中破以上)|}}}}}
+|{{{EN11|}}}
+|{{{Note11|}}}
+|- {{#if: {{{入渠完了|}}} | class="shipquote-line" data-line-name="Docking Complete" | {{#if: {{{Clip27|}}} | class="shipquote-line" data-line-name="Docking Complete" | style="display: none;" }} }}
+| Docking <br />complete<br />{{{Clip27|}}}
+|{{SpanJa|{{{入渠完了|}}}}}
+|{{{EN27|}}}
+|{{{Note27|}}}
+|- class="shipquote-line" data-line-name="Construction"
+| Ship construction<br />{{{Clip12|}}}
+|{{SpanJa|{{{建造時|}}}}}
+|{{{EN12|}}}
+|{{{Note12|}}}
+|- class="shipquote-line" data-line-name="Returning From Sortie"
+| Return from sortie<br />{{{Clip13|}}}
+|{{SpanJa|{{{艦隊帰投時|}}}}}
+|{{{EN13|}}}
+|{{{Note13|}}}
+|- class="shipquote-line" data-line-name="Starting A Sortie"
+| Start a sortie<br />{{{Clip14|}}}
+|{{SpanJa|{{{出撃時|}}}}}
+|{{{EN14|}}}
+|{{{Note14|}}}
+|- class="shipquote-line" data-line-name="Battle Start"
+| Battle start<br />{{{Clip15|}}}
+|{{SpanJa|{{{戦闘開始時|}}}}}
+|{{{EN15|}}}
+|{{{Note15|}}}
+|- {{#if: {{{航空戦開始時|}}} | class="shipquote-line" data-line-name="Air Battle" | {{#if: {{{Clip15a|}}} | class="shipquote-line" data-line-name="Air Battle" | style="display: none;" }} }}
+| Air battle<br />{{{Clip15a|}}}
+|{{SpanJa|{{{航空戦開始時|}}}}}
+|{{{EN15a|}}}
+|{{{Note15a|}}}
+|- class="shipquote-line" data-line-name="Attack"
+| Attack<br />{{{Clip16|}}}
+|{{SpanJa|{{{攻撃時|}}}}}
+|{{{EN16|}}}
+|{{{Note16|}}}
+|- class="shipquote-line" data-line-name="Night Battle"
+| Night battle<br />{{{Clip17|}}}
+|{{SpanJa|{{{夜戦開始時|}}}}}
+|{{{EN17|}}}
+|{{{Note17|}}}
+|- {{#if: {{{夜戦攻撃時|}}} | class="shipquote-line" data-line-name="Night Attack" | {{#if: {{{Clip18|}}} | class="shipquote-line" data-line-name="Night Attack" | style="display: none;" }} }}
+| Night attack<br />{{{Clip18|}}}
+|{{SpanJa|{{{夜戦攻撃時|}}}}}
+|{{{EN18|}}}
+|{{{Note18|}}}
+|- {{#if: {{{夜戦攻撃時|}}} | | {{#if: {{{Clip18|}}} | | style="display: none;" }} }}
+|  colspan="5"|　⇧ shared with [[Combat#Artillery_Spotting|day]]/[[Combat#Night_Special_Attack_Modifier|night]] special attacks, [[Expedition#Support_expedition|support expedition team]] arrival
+|- class="shipquote-line" data-line-name="MVP"
+| MVP<br />{{{Clip19|}}}
+|{{SpanJa|{{{MVP時|}}}}}
+|{{{EN19|}}}
+|{{{Note19|}}}
+|- class="shipquote-line" data-line-name="Minor Damage 1"
+| Minor damaged(1)<br />{{{Clip20|}}}
+|{{SpanJa|{{{小破①|}}}}}
+|{{{EN20|}}}
+|{{{Note20|}}}
+|- class="shipquote-line" data-line-name="Minor Damage 2"
+| Minor damaged(2)<br />{{{Clip21|}}}
+|{{SpanJa|{{{小破②|}}}}}
+|{{{EN21|}}}
+|{{{Note21|}}}
+|- class="shipquote-line" data-line-name="Major Damage"
+| ≥Moderately damaged<br />{{{Clip22|}}}
+|{{SpanJa|{{{中破|}}}}}
+|{{{EN22|}}}
+|{{{Note22|}}}
+|- class="shipquote-line" data-line-name="Sunk"
+| Sunk<br />{{{Clip23|}}}
+|{{Template:Background_color|#3A3A3A|{{SpanJa|{{{撃沈時(反転)|}}}}}}}
+|{{Template:Background_color|#3A3A3A|{{{EN23|}}}}}
+|{{Template:Background_color|#3A3A3A|{{{Note23|}}}}}
+|}{{#if:{{{no_category|}}}||[[Category:Ship page (legacy)]]}}</includeonly><noinclude>
+How to use :
+*Secretary(idle) and Air battle rows will hide automatic if you leave that line empty
+<pre>
+{{Shipquote
+| 自己紹介 = 
+| EN1 = 
+| Note1 = 
+| Library = 
+| EN0 = 
+| Note0 = 
+| 秘書クリック会話① = 
+| EN2 = 
+| Note2 = 
+| 秘書クリック会話② = 
+| EN3 = 
+| Note3 = 
+| 秘書クリック会話③ = 
+| EN4 = 
+| Note4 = 
+| 秘書放置時 = 
+| EN4a = 
+| Note4a = 
+| Married = 
+| EN25 = 
+| Note25 = 
+| Wedding = 
+| EN26 = 
+| Note26 = 
+| 戦績表示時 = 
+| EN5 = 
+| Note5 = 
+| 編成選択時 = 
+| EN6 = 
+| Note6 = 
+| 装備時① = 
+| EN7 = 
+| Note7 = 
+| 装備時② = 
+| EN8 = 
+| Note8 = 
+| 装備時③ = 
+| EN9 = 
+| Note9 = 
+| 補給時 = 
+| EN24 = 
+| Note24 = 
+| ドック入り(小破以下) = 
+| EN10 = 
+| Note10 = 
+| ドック入り(中破以上) = 
+| EN11 = 
+| Note11 = 
+| 入渠完了 = 
+| EN27 = 
+| Note27 = 
+| 建造時 = 
+| EN12 = 
+| Note12 = 
+| 艦隊帰投時 = 
+| EN13 = 
+| Note13 = 
+| 出撃時 = 
+| EN14 = 
+| Note14 = 
+| 戦闘開始時 = 
+| EN15 = 
+| Note15 = 
+| 航空戦開始時 = 
+| EN15a = 
+| Note15a = 
+| 攻撃時 = 
+| EN16 = 
+| Note16 = 
+| 夜戦開始時 = 
+| EN17 = 
+| Note17 = 
+| 夜戦攻撃時 = 
+| EN18 = 
+| Note18 = 
+| MVP時 = 
+| EN19 = 
+| Note19 = 
+| 小破① = 
+| EN20 = 
+| Note20 = 
+| 小破② = 
+| EN21 = 
+| Note21 = 
+| 中破 = 
+| EN22 = 
+| Note22 = 
+| 撃沈時(反転) = 
+| EN23 = 
+| Note23 = 
+
+|Clip1 = 
+|Clip0 = 
+|Clip2 = 
+|Clip3 = 
+|Clip4 = 
+|Clip4a = 
+|Clip25 = 
+|Clip26 = 
+|Clip5 = 
+|Clip6 = 
+|Clip7 = 
+|Clip8 = 
+|Clip9 = 
+|Clip24 = 
+|Clip10 = 
+|Clip11 = 
+|Clip27 = 
+|Clip12 = 
+|Clip13 = 
+|Clip14 = 
+|Clip15 = 
+|Clip15a = 
+|Clip16 = 
+|Clip17 = 
+|Clip18 = 
+|Clip19 = 
+|Clip20 = 
+|Clip21 = 
+|Clip22 = 
+|Clip23 = 
+}}
+</pre>
+
+Demo :
+<pre>
+{{Shipquote
+| 自己紹介=私が戦艦長門だ、よろしく頼むぞ。敵戦艦との殴り合いなら任せておけ。
+| EN1=(english translation here...)
+| Note1=(note, if any)
+| 秘書クリック会話①=
+| EN2=
+| Note2=
+| 秘書クリック会話②=
+| EN3=
+| Note3=
+| 秘書クリック会話③=
+| EN4=
+| Note4=
+| 戦績表示時=
+| EN5=
+| Note5=
+| 編成選択時=
+| EN6=
+| Note6=
+| 装備時①=
+| EN7=
+| Note7=
+| 装備時②=
+| EN8=
+| Note8=
+| 装備時③=
+| EN9=
+| Note9=
+| ドック入り=
+| EN10=
+| Note10=
+| ドック入り(重傷)=
+| EN11=
+| Note11=
+| 建造時=
+| EN12=
+| Note12=
+| 艦隊帰投時=
+| EN13=
+| Note13=
+| 出撃時=
+| EN14=
+| Note14=
+| 戦闘開始時=
+| EN15=
+| Note15=
+| 攻撃時=
+| EN16=
+| Note16=
+| 夜戦開始時=
+| EN17=
+| Note17=
+| 夜戦攻撃時=
+| EN18=
+| Note18=
+| MVP時=
+| EN19=
+| Note19=
+| 被弾小破①=
+| EN20=
+| Note20=
+| 被弾小破②=
+| EN21=
+| Note21=
+| 被弾カットイン=
+| EN22=
+| Note22=
+| 撃沈時(反転)=
+| EN23=
+| Note23=
+}}
+</pre>
+
+{{Shipquote
+| no_category = true
+| 自己紹介=私が戦艦長門だ、よろしく頼むぞ。敵戦艦との殴り合いなら任せておけ。
+| EN1=(english translation here...)
+| Note1=(note, if any)
+| 秘書クリック会話①=
+| EN2=
+| Note2=
+| 秘書クリック会話②=
+| EN3=
+| Note3=
+| 秘書クリック会話③=
+| EN4=
+| Note4=
+| 戦績表示時=
+| EN5=
+| Note5=
+| 編成選択時=
+| EN6=
+| Note6=
+| 装備時①=
+| EN7=
+| Note7=
+| 装備時②=
+| EN8=
+| Note8=
+| 装備時③=
+| EN9=
+| Note9=
+| ドック入り=
+| EN10=
+| Note10=
+| ドック入り(重傷)=
+| EN11=
+| Note11=
+| 建造時=
+| EN12=
+| Note12=
+| 艦隊帰投時=
+| EN13=
+| Note13=
+| 出撃時=
+| EN14=
+| Note14=
+| 戦闘開始時=
+| EN15=
+| Note15=
+| 攻撃時=
+| EN16=
+| Note16=
+| 夜戦開始時=
+| EN17=
+| Note17=
+| 夜戦攻撃時=
+| EN18=
+| Note18=
+| MVP時=
+| EN19=
+| Note19=
+| 被弾小破①=
+| EN20=
+| Note20=
+| 被弾小破②=
+| EN21=
+| Note21=
+| 被弾カットイン=
+| EN22=
+| Note22=
+| 撃沈時(反転)=
+| EN23=
+| Note23=
+}}
+</noinclude>

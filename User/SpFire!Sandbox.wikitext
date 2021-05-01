@@ -1,0 +1,22 @@
+Shot-down ratio (per slot): 
+
+<math> S_{ratio} = 6.5 * A +​3,5*(AB + (min(0, IC)*A + Random(A + AB)) </math>
+[%]
+
+<math> A </math>
+​varies depending on the Air State: under AS+, 10; under AS, 8; under AP, 6; under AD, 4; under AI, 1
+
+<math> Random </math>
+returns a random integer between 0 and the parameter
+
+<math> AB </math>
+is the Anti-bomber value of the fighter stationed in the given slot
+
+<math> IC </math>
+is the Intercept value of the fighter stationed in the given slot
+
+The number of planes shot down: 
+
+<math> S = int(N*S_{ratio}) </math>
+<math> N </math>
+is the slot size of the targeted slot.

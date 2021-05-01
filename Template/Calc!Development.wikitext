@@ -1,0 +1,49 @@
+* Flagship groups:
+** Group 1 (G1): [[DE]]/[[DD]]/[[CL]]/[[CLT]]/[[SS]]/[[CT]]/[[AO]]
+** Group 2 (G2): [[CA]]/[[FBB]]/[[BB]]/[[AR]]
+** Group 3 (G3): [[CAV]]/[[CVL]]/[[BBV]]/[[CV]]/[[SSV]]/[[AV]]/[[LHA]]/[[CVB]]/[[AS]]
+* Resource order is {{Fuel}} Fuel / {{Ammo}} Ammo / {{Steel}} Steel / {{Bauxite}} Bauxite
+{|class="wikitable typography-xl-optout sortable" style="text-align:center"
+!style="width:5%" rowspan="2" nowrap|Id
+!style="width:5%" rowspan="2" nowrap|Card
+!style="width:5%" rowspan="2" nowrap|Type
+!style="width:50%" rowspan="2" nowrap|Name
+!style="width:25%" colspan="4" nowrap|Recipes
+!style="width:10%" rowspan="2" nowrap|HQ
+|-
+!Resources
+!G1
+!G2
+!G3
+|-
+|rowspan="3"|1
+|rowspan="3"|{{EquipmentCard|12cm Single Gun Mount}}
+|rowspan="3"|[[File:RedGunLight.png]]
+|rowspan="3"|[[12cm Single Gun Mount]]
+|{{color|red|10}}/10/{{color|red|10}}/10
+|{{color|red|6%}}
+|4%
+|2%
+|rowspan="3"|1
+|-
+|10/{{color|red|11}}/10/10
+|2%
+| -
+|2%
+|-
+|10/10/10/{{color|red|11}}
+|2%
+| -
+| -
+|-
+|
+|{{EquipmentCard|Type 0 Fighter Model 62 (Fighter-bomber)}}
+|
+|[[Type 0 Fighter Model 62 (Fighter-bomber)]]
+|colspan="4"|
+|
+|}
+{|class="wikitable typography-xl-optout sortable" style="text-align:center"
+!Id!!Card!!Type!!style="width:25%"|Name!!Scrap!!Recipes!!Rates!!Rarity!!HQ
+{{Calc|format=table|@equipment|#|!@|?id|?card|?icon|?link|?scrap|?development|?development_rate|?rarity|?development_hq}}
+|}

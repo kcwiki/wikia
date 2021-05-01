@@ -1,0 +1,93 @@
+==Windows==
+<pre>
+::IndexedDBbackup v0.92 by Ar-cen-ciel
+::Requires 7zip to be installed
+
+::declare variables
+
+SETLOCAL ENABLEEXTENSIONS
+
+SET EXEC=C:\Program Files\7-Zip\7z.exe
+SET EXTENSIONID=hkgmldnainaglpjngpajnnjfhpdjkohh
+SET BACKUP=C:\Users\%USERNAME%\Downloads\kancolle\indexedb\
+SET USERDIR=C:\Users\%USERNAME%\AppData\Local\Google\Chrome\User Data\Default\
+SET DESTINATION=kc3backup.zip
+SET INDEXDB=%USERDIR%IndexedDB\chrome-extension_%EXTENSIONID%_0.indexeddb.leveldb\
+SET LCSTORE=%USERDIR%Local Storage\chrome-extension_%EXTENSIONID%_0.localstorage
+SET LCSTOREJRNL=%USERDIR%Local Storage\chrome-extension_%EXTENSIONID%_0.localstorage-journal
+
+::conditionals for multi-stage backup
+
+IF EXIST %DESTINATION% MOVE %DESTINATION% kc3backup.current.zip
+IF EXIST kc3backup.03.zip MOVE kc3backup.03.zip "%BACKUP%kc3archivebackup [%date%].zip"
+IF EXIST kc3backup.02.zip MOVE kc3backup.02.zip kc3backup.03.zip
+IF EXIST kc3backup.01.zip MOVE kc3backup.01.zip kc3backup.02.zip
+IF EXIST kc3backup.current.zip MOVE kc3backup.current.zip kc3backup.01.zip
+
+::backup the latest Kc3Kai data.
+"%EXEC%" a %DESTINATION% "%INDEXDB%" "%LCSTORE%" "%LCSTOREJRNL%"
+</pre>
+
+==Linux==
+<pre>
+#!/bin/dash
+#IndexedDBbackup v0.71 by Ar-cen-ciel
+#Requires tar and gzip to be installed
+
+#declare variables
+EXTENSIONID=hkgmldnainaglpjngpajnnjfhpdjkohh
+DESTINATION=~/KC3Kai-backup/kc3backup.tgz
+BACKUP=~/KC3Kai-archivebackup
+USERDIR=~/.config/google-chrome/Default
+INDEXDB=$USERDIR/IndexedDB/chrome-extension_${EXTENSIONID}_0.indexeddb.leveldb/
+LCSTORE=$USERDIR/Local Storage/chrome-extension_${EXTENSIONID}_0.localstorage
+LCSTOREJRNL=$USERDIR/Local Storage/chrome-extension_${EXTENSIONID}_0.localstorage-journal
+
+#flush existing current temporary archive if exists
+if [ -f kc3backup.current.tgz ]; then rm kc3backup.current.tgz;fi
+
+#backup the latest Kc3Kai data.
+tar -czf kc3backup.current.tgz "$INDEXDB" "$LCSTORE" "$LCSTOREJRNL"
+
+#conditionals for multi-stage backup
+if [ ! -d "$BACKUP" -a -f kc3backup.03.tgz ];then mkdir "$BACKUP";fi
+if [ -f kc3backup.03.tgz ];then mv kc3backup.03.tgz "$BACKUP[date -u +"%Y-%m-%d %H:%M"].tgz";fi
+if [ -f kc3backup.02.tgz ];then mv kc3backup.02.tgz kc3backup.03.tgz;fi
+if [ -f kc3backup.01.tgz ];then mv kc3backup.03.tgz kc3backup.02.tgz;fi
+if [ -f "$DESTINATION" ];then mv kc3backup.03.tgz kc3backup.01.tgz;fi
+if [ -f kc3backup.current.tgz ] then;mv kc3backup.current.tgz "$DESTINATION"
+</pre>
+
+Reserving this thread name for developing faction-based gameplay.
+<!--
+Japan: Same as Kancolle, with extra perks
+<br>+ Excellent in first-strike capacity.
+<br>+ Aircraft Proficiency max rank is one rank higher than all other navies, significantly increases air power and critical hit rate.
+<br>+ Outstanding torpedo capacity (even Akizuki-class is no slouch with it)
+<br>+ Can equip naval armaments in supplementary slots (reduces morale cap)
+<br>- Aircraft Proficiency completely resets when plane slot is 0 (which is very bad thing with Zeroes and cigar bombers)
+<br>- Low-quality radars
+
+USA:
+<br>+ Highest resource cap limit
+<br>+ Can build destroyer escorts for expeditions
+<br>+ Has widest alliance network
+<br>+ Lowest degradation in Aircraft Proficiency
+<br>- ALL ships eats MOAR fuel than they do in other navies. (Yamato ate nearly twice as much in USN than in IJN when fully upgraded)
+<br>- Some advanced equipments requires reverse engineering from foreign armaments.
+<br>- Late-model capital-tier shipgirls are only available in large-scale construction.
+<br>- Torpedo accuracy significantly reduced (except for torpedo bombers in Air Supremacy).
+
+Britain:
+<br>+ Lowest morale reduction rate
+<br>+ Has excellent anti-air and anti-submarine armaments
+<br>- Resources are vulnerable to air raids
+
+German: 
+<br>+ Can develop proto-improved equipment (German science is the best in the world)
+<br>+ Has powerful landing forces
+<br>+ Excellent in submarine raids. (thanks to U-boats)
+<br>- Limited aviation projection capacity. (mostly land-based)
+
+-->
+[[Category:Blog posts]]

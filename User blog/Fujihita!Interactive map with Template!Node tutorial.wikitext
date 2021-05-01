@@ -1,0 +1,292 @@
+==Introduction==
+A new event page layout shipped with Interactive map comes out [[Fall 2015 Event|this Fall]]. 
+
+This blog is a step-by-step tutorial on how to create a multi-difficulty interactive map from scratch using [[Template:Node]]. This tutorial will cover the usage steps beyond what was covered in the template's documentation.
+
+Each step of the tutorial includes a sample code and the corresponding preview of the code. New code sections added during each step will be denoted in '''bold''', changeable parameters will be denoted in <span style="color:red">red</span>. Editors are ''expected'' to change the red parameters to suit the circumstance
+
+-- [[User:Fujihita|Fujihita]] ([[User talk:Fujihita|talk]]) 14:58, November 10, 2015 (UTC)
+
+==Set Map==
+
+[[:File:Map_placeholder_branch.png]]
+
+Set the background as the above image, the dimension of the background map to 300px
+{| class="wikitable mw-collapsible mw-collapsed" width="100%"
+!colspan="2"|Set Map code
+|-
+!Code
+|
+<code><nowiki><tabber>Easy=</nowiki>
+
+<nowiki><div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;"></nowiki>
+'''<nowiki>[[</nowiki><span style="color:red">File:Map_placeholder_branch.png</span><nowiki>|</nowiki><span style="color:red">300px</span><nowiki>|link=]]</nowiki>'''
+
+<nowiki><!-- Enemy pattern list start--></nowiki>
+
+
+<nowiki></tabber></nowiki></code>
+|-
+!Output
+|
+<tabber>Easy=
+<div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;">[[File:Map_placeholder_branch.png|300px|link=]]
+
+</div>
+<!-- Enemy pattern list start-->
+</tabber>
+|}
+
+
+==Set Node==
+Set the nodes on the map by filling out coordinates, node type, and link.
+
+See [[Template:Node]] for more information.
+{| class="wikitable mw-collapsible mw-collapsed" width="100%"
+!colspan="2"|Set Node code
+|-
+!Code
+|
+<code><nowiki><tabber>Easy=</nowiki>
+
+<nowiki><div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;"></nowiki>
+<nowiki>[[File:Map_placeholder_branch.png|300px|link=]]</nowiki>
+
+'''<nowiki>{{Node|x-axis=</nowiki><span style="color:red"><nowiki>50</nowiki></span><nowiki>|y-axis=</nowiki><span style="color:red"><nowiki>50</nowiki></span><nowiki>|type=</nowiki><span style="color:red"><nowiki>boss</nowiki></span><nowiki>|link=</nowiki><span style="color:red"><nowiki>Sandbox/Event#Z (Easy)</nowiki></span><nowiki>}}{{Clear}}</nowiki>'''
+'''<nowiki>{{Node|x-axis=</nowiki><span style="color:red"><nowiki>120</nowiki></span><nowiki>|y-axis=</nowiki><span style="color:red"><nowiki>100</nowiki></span><nowiki>|type=</nowiki><span style="color:red"><nowiki>normal</nowiki></span><nowiki>|link=</nowiki><span style="color:red"><nowiki>Sandbox/Event#A (Easy)</nowiki></span><nowiki>}}{{Clear}}</nowiki>'''
+
+<nowiki><!-- Enemy pattern list start--></nowiki>
+
+
+<nowiki></tabber></nowiki></code>
+|-
+!Output
+|
+<tabber>Easy= <div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div> <div style="position:relative;">[[File:Map_placeholder_branch.png|300px|link=]] {{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z (Easy)}}{{Clear}}
+{{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (Easy)}}{{Clear}}
+<!-- Enemy pattern list start--></tabber>
+|}
+
+===Coordinate===
+To find the <code>x-axis</code> and <code>y-axis</code> coordinates, download the image to any image editor of choice (Photoshop/GIMP), scale the image to down to the dimension (300px) set in the '''Set Map''' step.
+
+Alternatively, one can set the coordinate with decent precision via trial and error with Wiki's Preview button
+
+===Tabview Link===
+In tabview model whose hierarchy is:
+*Main page
+**Main page/Sub page 1
+**Main page/Sub page 2
+The link for node Z, Easy difficulty should be <code><span style="color:red">Main page</span>#Z (Easy)</code> instead of <code><span style="color:red">Main page/Sub page 1</span>#Z (Easy)</code>. This will work correctly when viewed from the main page.
+
+More information, see [[Help:Tabview]]
+
+==Copy to other difficulties==
+
+Copy the entire code after <code><nowiki><difficulty>=</nowiki></code> and before <code><nowiki></tabber></nowiki></code> to another tab. This way, the same map can be used across difficulties without remapping. See [[Help:Tabber]] for instruction on how to use tabbers.
+{| class="wikitable mw-collapsible mw-collapsed" width="100%"
+!colspan="2"|Copy to other difficulties code
+|-
+!Code
+|
+<code><nowiki><tabber>Easy=</nowiki>
+
+<nowiki><div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;"></nowiki>
+<nowiki>[[File:Map_placeholder_branch.png|300px|link=]]</nowiki>
+
+<nowiki>{{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z (Easy)}}{{Clear}} {{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (Easy)}}{{Clear}}</nowiki>
+
+<nowiki><!-- Enemy pattern list start--></nowiki>
+
+
+'''<nowiki>|-|Medium=</nowiki>'''
+
+'''<nowiki><div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;"></nowiki>'''
+'''<nowiki>[[File:Map_placeholder_branch.png|300px|link=]]</nowiki>'''
+
+'''<nowiki>{{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z ((</nowiki><span style="color:red">Medium</span><nowiki>)}}{{Clear}} {{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (</nowiki><span style="color:red">Medium</span><nowiki>)}}</nowiki>'''
+
+'''<nowiki><!-- Enemy pattern list start--></nowiki>'''
+
+
+<nowiki></tabber></nowiki></code>
+|-
+!Output
+|
+<tabber>Easy=
+
+<div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div> <div style="position:relative;"> [[File:Map_placeholder_branch.png|300px|link=]]
+
+{{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z (Easy)}}{{Clear}} {{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (Easy)}}{{Clear}}
+
+<!-- Enemy pattern list start-->
+|-|Medium=
+
+<div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div> <div style="position:relative;"> [[File:Map_placeholder_branch.png|300px|link=]]
+
+{{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z (Medium)}}{{Clear}} {{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (Medium)}}{{Clear}}
+
+<!-- Enemy pattern list start-->
+</tabber>
+|}
+
+==Extra: Enemy pattern list==
+Insert these pattern lists below the comment <code><nowiki><!-- Enemy pattern list start--></nowiki></code> in the appropriate section from the above codes.
+
+The "back to map" links should be changed to the appropriate level 2 section reference. This sub-section should be the one that's right before the <code><nowiki><tabber></nowiki></code> code.
+
+Level 3 section headers (A Easy, Z Easy, etc.) and what goes inside NodeInfo should be changed accordingly, however, these fields won't be marked red or covered in this tutorial.
+
+{| class="wikitable mw-collapsible mw-collapsed" width="100%"
+!colspan="2"|Enemy pattern list code
+|-
+!Code
+|
+<code><nowiki>===A (Easy)===</nowiki><br/>
+<nowiki>{{NodeInfo</nowiki><br/>
+<nowiki>| A</nowiki><br/>
+<nowiki>| Normal</nowiki><br/>
+<nowiki>| Line Ahead / Double Line</nowiki><br/>
+<nowiki>| Heavy Cruiser Ri-Class/Flagship</nowiki><br/>
+<nowiki>| Destroyer I-Class</nowiki><br/>
+<nowiki>| Destroyer I-Class</nowiki><br/>
+<nowiki>}}<div style="text-align:right">[[</nowiki><span style="color:red">Sandbox/Event#Enemy patterns</span><nowiki>|back to map]]</div></nowiki><br/>
+<nowiki>===Z (Easy)===</nowiki><br/>
+<nowiki>{{NodeInfo</nowiki><br/>
+<nowiki>| A</nowiki><br/>
+<nowiki>| Normal/Boss</nowiki><br/>
+<nowiki>| Line Ahead / Double Line</nowiki><br/>
+<nowiki>| Heavy Cruiser Ri-Class/Flagship</nowiki><br/>
+<nowiki>| Heavy Cruiser Ri-Class/Elite</nowiki><br/>
+<nowiki>| Light Cruiser Ho-Class</nowiki><br/>
+<nowiki>| Destroyer Ro-Class/Late Model</nowiki><br/>
+<nowiki>| Destroyer I-Class</nowiki><br/>
+<nowiki>| Destroyer I-Class</nowiki><br/>
+<nowiki>}}<div style="text-align:right">[[</nowiki><span style="color:red">Sandbox/Event#Enemy patterns</span><nowiki>|back to map]]</div></nowiki></code>
+|-
+!Output
+|
+===A (Easy)===
+{{NodeInfo
+| A
+| Normal
+| Line Ahead / Double Line
+| Heavy Cruiser Ri-Class/Flagship
+| Destroyer I-Class
+| Destroyer I-Class
+}}<div style="text-align:right">[[Sandbox/Event#Enemy patterns|back to map]]</div>
+===Z (Easy)===
+{{NodeInfo
+| A
+| Normal/Boss
+| Line Ahead / Double Line
+| Heavy Cruiser Ri-Class/Flagship
+| Heavy Cruiser Ri-Class/Elite
+| Light Cruiser Ho-Class
+| Destroyer Ro-Class/Late Model
+| Destroyer I-Class
+| Destroyer I-Class
+}}<div style="text-align:right">[[Sandbox/Event#Enemy patterns|back to map]]</div>
+|}
+===Hide section header===
+To hide the section header, use <code><span style="color:red"><nowiki><div id="A (Easy)"></div></nowiki></span></code> instead of <code><span style="color:red"><nowiki>===A (Easy)===</nowiki></span></code>
+
+==Final result==
+
+{| class="wikitable mw-collapsible mw-collapsed" width="100%"
+!colspan="2"|Final result code
+|-
+!Code
+|
+<code><nowiki><tabber>Easy=</nowiki>
+
+<nowiki><div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;"></nowiki>
+<nowiki>[[File:Map_placeholder_branch.png|300px|link=]]</nowiki>
+
+<nowiki>{{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z (Easy)}}{{Clear}} {{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (Easy)}}{{Clear}}</nowiki>
+
+<nowiki><!-- Enemy pattern list start--></nowiki><br/>
+<b><nowiki>===A (Easy)===</nowiki><br/>
+<nowiki>{{NodeInfo</nowiki><br/>
+<nowiki>| A</nowiki><br/>
+<nowiki>| Normal</nowiki><br/>
+<nowiki>| Line Ahead / Double Line</nowiki><br/>
+<nowiki>| Heavy Cruiser Ri-Class/Flagship</nowiki><br/>
+<nowiki>| Destroyer I-Class</nowiki><br/>
+<nowiki>| Destroyer I-Class</nowiki><br/>
+<nowiki>}}<div style="text-align:right">[[Sandbox/Event#Enemy patterns|back to map]]</div></nowiki><br/>
+<nowiki>===Z (Easy)===</nowiki><br/>
+<nowiki>{{NodeInfo</nowiki><br/>
+<nowiki>| A</nowiki><br/>
+<nowiki>| Normal/Boss</nowiki><br/>
+<nowiki>| Line Ahead / Double Line</nowiki><br/>
+<nowiki>| Heavy Cruiser Ri-Class/Flagship</nowiki><br/>
+<nowiki>| Heavy Cruiser Ri-Class/Elite</nowiki><br/>
+<nowiki>| Light Cruiser Ho-Class</nowiki><br/>
+<nowiki>| Destroyer Ro-Class/Late Model</nowiki><br/>
+<nowiki>| Destroyer I-Class</nowiki><br/>
+<nowiki>| Destroyer I-Class</nowiki><br/>
+<nowiki>}}<div style="text-align:right">[[Sandbox/Event#Enemy patterns|back to map]]</div></nowiki></b>
+
+<nowiki>|-|Medium=</nowiki>
+
+<nowiki><div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;"></nowiki>
+<nowiki>[[File:Map_placeholder_branch.png|300px|link=]]</nowiki>
+
+<nowiki>{{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z ((Medium)}}{{Clear}} {{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (Medium)}}</nowiki>
+
+<nowiki><!-- Enemy pattern list start--></nowiki>
+
+
+<nowiki></tabber></nowiki></code>
+|-
+!Output
+|
+<tabber>Easy=
+
+<div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div> <div style="position:relative;"> [[File:Map_placeholder_branch.png|300px|link=]]
+
+{{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z (Easy)}}{{Clear}} {{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (Easy)}}{{Clear}}
+
+<!-- Enemy pattern list start-->
+===A (Easy)===
+{{NodeInfo
+| A
+| Normal
+| Line Ahead / Double Line
+| Heavy Cruiser Ri-Class/Flagship
+| Destroyer I-Class
+| Destroyer I-Class
+}}<div style="text-align:right">[[Sandbox/Event#Enemy patterns|back to map]]</div>
+===Z (Easy)===
+{{NodeInfo
+| A
+| Normal/Boss
+| Line Ahead / Double Line
+| Heavy Cruiser Ri-Class/Flagship
+| Heavy Cruiser Ri-Class/Elite
+| Light Cruiser Ho-Class
+| Destroyer Ro-Class/Late Model
+| Destroyer I-Class
+| Destroyer I-Class
+}}<div style="text-align:right">[[Sandbox/Event#Enemy patterns|back to map]]</div>
+
+|-|Medium=
+
+<div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div> <div style="position:relative;"> [[File:Map_placeholder_branch.png|300px|link=]]
+
+{{Node|x-axis=50|y-axis=50|type=boss|link=Sandbox/Event#Z ((Medium)}}{{Clear}} {{Node|x-axis=120|y-axis=100|type=normal|link=Sandbox/Event#A (Medium)}}
+
+<!-- Enemy pattern list start-->
+
+
+</tabber>
+|}
+[[Category:Blog posts]]

@@ -1,0 +1,83 @@
+__TOC__
+==Introduction==
+Currently, there are three known purposes for Line of Sight (LoS):
+* Increasing success rate in the detection phase, which allows participation in aerial combat.
+* A higher '''Fleet total LoS''' (FLoS, or known as '''Simple LoS''') [[Artillery_Spotting#The_Trigger_Chance_of_Artillery_Spotting:_(Beta_ver.)|positively correlates]] with the '''trigger chance of [[Combat#Combat_Equipment_Setups|artillery spotting]]''' for a ship's double/cut-in attack in day battle.
+** Fleet total LoS is simply the summation of all LoS stats from your ships, including bonuses from the equipment.
+* '''Effective LoS '''(eLoS), which allows the fleet to '''reach a specific node''' (usually a pre-boss or boss node) instead of being diverted to a dead end.
+** Effective LoS has been employed in many [[Events|Event Maps]] since [[Spring 2014 Event]], Extra Operation Maps (including 1-6, 2-5, 3-5, 4-5), and some [[World 6]] Maps.
+** There are special formulas being used to calculate eLoS. As a general consensus, LoS bonuses from equipment (especially reconnaissance seaplanes) are more important than an individual ship's LoS stats.
+** See sections below for the currently established formula on how to calculate eLoS.
+*Reconnaissance Seaplane equipped on a light cruiser with no plane slots can contribute to LoS.<ref>http://kancolle.aemedia.org/forum.php?mod=viewthread&tid=44&extra=page%3D1</ref> But if it is equipped onto ships and then shot down, it cannot contribute to LoS check performed afterward.
+
+== Effective Line of Sight calculation method ==
+<!--
+=== 2-5 old formula ===
+To avoid confusion, content here is archived into [[Line_of_Sight/Deprecated_Formula#Effective_Line_of_Sight_.282-5_old_formula.29|a sub-page]] which only serves as a reference. Note that the values obtained from the 2-5 old formula are not compatible with those from 2-5 new/fall formula nor the simplified formula.
+
+=== 2-5 old formula ===
+Deprecated, click [[Line_of_Sight/Deprecated_Formula#2-5_fall_formula|this link]] for details.
+
+=== new fall simplified ===
+It is a tidy up version of 2-5 fall formula. Click [[Line_of_Sight/Deprecated_Formula#new_fall_simplified|this link]] for details.
+-->
+
+===Formula 33===
+
+The current standard for LoS routing calculations.  It is described as follows<ref>http://ja.kancolle.wikia.com/wiki/%E3%83%9E%E3%83%83%E3%83%97%E7%B4%A2%E6%95%B5</ref>:
+
+<math>
+\begin{align}
+\phi &= \sum_{s \in \text{Ships}} \sqrt{L_s} + C_{n} \sum_{l \in \text{Slots}}C_{l} ( S_{l} + S_l^{\star} ) - \lceil 0.4 H \rceil + 2(6-N) \\
+S_l^{\star} &= C_l^{\star} \cdot \sqrt{\bigstar_l}
+\end{align}
+</math>
+
+*<math>L_s</math>is the ship's base LoS
+*<math>C_{n}</math>is the node factor, it represents the weighting of the formula that is '''known to vary''' across different maps and nodes. For example, in 6-2, the node factor of C<sub>n</sub> = 3 means that equipment is 3 times as important compared to the original formula (as tested in 6-2-F/H). See following section for more details.
+*<math>C_{l}</math>is the equipment multiplier:
+**Carrier-Based Fighter: 0.6
+**Carrier-Based Dive Bomber: 0.6
+**Carrier-Based Torpedo Bomber: 0.8
+**Carrier-Based Reconnaissance Aircraft: 1
+**Reconnaissance Seaplane: 1.2
+**Seaplane Bomber: 1.1
+**Small Radar: 0.6
+**Large Radar: 0.6
+**ASW Patrol Aircraft: 0.6
+**Searchlight (Small and Large): 0.6
+**Fleet Command Facility: 0.6
+**SCAMP: 0.6
+**Skilled Lookouts: 0.6
+**Sonar: 0.6
+**Large Flying Boat: 0.6
+**Seaplane Fighter: 0.6
+**Midget Submarine: 0.6
+*<math>S_{l}</math>is the displayed LoS value of the equipment
+*<math>S_l^{\star}</math>is the equipment's improvement bonus to eLoS
+**This is calculated by multiplying<math>C_l^{\star}</math>, the improvement multiplier of that equipment, with the square root of the equipment's improvement level.
+***The improvement multiplier of Small Radars is 1.25, Large Radars is 1.4, Reconnaissance Seaplanes is 1.2, and Searchlight is 0 (that is, it receives no eLoS bonus when improved)
+*<math>H</math>is the HQ level. The ceil operation means that the value is rounded up every 2.5 HQ levels.
+*<math>N</math>represents the amount of ships you have in your fleet.
+**It is unknown whether this value increases mid-sortie if a ship disappears from your fleet (e.g. sinking).
+
+====Equipment LoS weighting modifier====
+*Also known as node factor
+*In some maps, weighting of equipment would be higher than that others.
+*It is represented as C<sub>n</sub> in the formula.
+*For all tested nodes, C<sub>n</sub> for 2-5 is 1, for 3-5 and 6-1 are 4, for 6-2 and 6-3 are 3.
+**That mean equipment LoS are 3 times more important in 6-2 and 6-3 compare to 2-5 and four time as important in 3-5 and 6-1.
+**In other words, ship LoS are less effective in those maps with higher equipment weighting modifier.
+*In 2-5, F33(C<sub>n</sub>=1) have to be larger than 31 to have a chance to enter boss and 33 to guarantee boss entry.
+*In 6-2, F33(C<sub>n</sub>=3) have to be less than 43 to guarantee F>H and more than 40 to guarantee H>K
+
+====Special Notice to users of KCV v.4.2.5 as well as older version of some other software====
+*Please update your software to a more recent version which patched a calculation mistake.
+
+==References==
+<references />
+[[Category:Calculation]]
+[[Category:Example]]
+[[Category:Help]]
+[[Category:Game System]]
+[[Category:Game Mechanics]]

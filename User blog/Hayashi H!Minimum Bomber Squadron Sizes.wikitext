@@ -1,0 +1,544 @@
+'''Due to controversy over the assumptions used by these, the below post is on freeze status at the moment, to be revived in the indefinite future should the mechanism for AA be better understood. They can be taken as suggestive, but not necessarily conclusive, in the meantime - but I'm not going to spend any more time calculating for another 15 maps if there are possible problems with the model. All links to other threads have been broken, so if you're here you used either the search autocomplete function or the User Blogs list - if you proceed further you agree that you know the following may not necessarily be correct.'''
+
+The purpose of this is to determine the minimum amount of bombers of any time a player must bring to have a 100% chance the equation will not be wiped out, by first determining the maximum loss rate of bombers at every single node, and then backcalculating the point where the sum of all losses will reduce a squadron's size to exactly 1, as well as the maximum number of bombers lost if a full 46-slot squadron is sortied on {{ShipBattleCardKai|Kaga/Kai}}.
+
+In each world's summary '''Bold text''' indicates the path with the highest losses on kaga/the highest minimum slot size needed to prevent wipeout, where a large enough slot size can still guarantee survival. ''Italic text'' indicates when it is impossible to prevent a wipeout using slot numbers alone - in these instances Admirals may wish to consider upgrading to Air Supremacy from Air Superiority, using a fleet composition with a different routing, or proceeding on the sortie with more than one bomber per carrier, with the awareness that one of the squadrons may have to be retrained from zero should the worst occur. <span class="wikicolor" style="color:Red">Red text</span> indicates any pathing that includes the boss node.
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+| colspan=9 style="text-align:center;"|'''World 1: Naval Base Region'''
+|-
+! scope="col"|Map
+! scope="col"|Node
+! scope="col"|Max AA Ship
+! scope="col"|AA Stat
+! scope="col"|Fleet AA Stat
+! scope="col"|Losses to fighters
+! scope="col"|Max Var AA
+! scope="col"|Max Fixed AA
+! scope="col"|Air Power
+|-
+| rowspan=5|1-1
+|A
+|{{ShipBattleCardKai|Destroyer Ro-Class|flagship=true}}
+|7
+|0
+|0
+|1/60
+|0
+|Any
+|-
+|B
+|{{ShipBattleCardKai|Destroyer Ro-Class|flagship=true}}
+|7
+|0
+|0
+|1/60
+|0
+|Any
+|-
+|<span class="wikicolor" style="color:Red">C<br />Boss Node</span>
+|{{ShipBattleCardKai|Light Cruiser Ho-Class|flagship=true}}
+|10
+|0
+|0
+|1/40
+|1
+|Any
+|-
+|Min safe
+| colspan=7|AB = 1; <span class="wikicolor" style="color:Red">'''AC = 2.'''</span>
+|-
+|46-slot
+| colspan=7|AB = 0; <span class="wikicolor" style="color:Red">'''AC = 2.'''</span>
+|-
+| rowspan=5|1-2
+|A
+|{{ShipBattleCardKai|Light Cruiser He-Class|flagship=true}}
+|12
+|0
+|0
+|1/36
+|1
+|Any
+|-
+|<span class="wikicolor" style="color:Red">B<br />Boss Node</span>
+|{{ShipBattleCardKai|Light Cruiser He-Class|flagship=true}}
+|12
+|0
+|0
+|1/36
+|1
+|Any
+|-
+|D
+|{{ShipBattleCardKai|Light Cruiser He-Class|flagship=true}}
+|12
+|0
+|0
+|1/36
+|1
+|Any
+|-
+|Min safe
+| colspan=7|<span class="wikicolor" style="color:Red">'''AB = 3;'''</span> CD = 2.
+|-
+|46-slot
+| colspan=7|<span class="wikicolor" style="color:Red">'''AB = 4;'''</span> CD = 2.
+|-
+| rowspan=6|1-3
+|A
+|{{ShipBattleCardKai|Light Cruiser He-Class|flagship=true}}
+|12
+|0
+|0
+|1/36
+|1
+|Any
+|-
+|E
+|{{ShipBattleCardKai|Light Cruiser He-Class|flagship=true}}
+|12
+|0
+|0
+|1/36
+|1
+|Any
+|-
+|F
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class|flagship=true}}
+|16
+|0
+|0
+|7/180
+|1
+|Any
+|-
+|<span class="wikicolor" style="color:Red">G<br />Boss Node</span>
+|{{ShipBattleCardKai|Battleship Ru-Class|flagship=true}}
+|70
+|1
+|0
+|7/40
+|7
+|Any
+|-
+|Min safe
+| colspan=7|BEF = 3; <span class="wikicolor" style="color:Red">BCDG = 9; '''ADG = 10.'''</span>
+|-
+|46-slot
+| colspan=7|BEF = 4; <span class="wikicolor" style="color:Red">BCDG = 15; '''ADG = 16.'''</span>
+|-
+| rowspan=13|1-4
+|A
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class|flagship=true}}
+|16
+|0
+|0
+|7/180
+|1
+|Any
+|-
+|B
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class|flagship=true}}
+|16
+|0
+|0
+|7/180
+|1
+|Any
+|-
+| rowspan=2|E
+| rowspan=2|{{ShipBattleCardKai|Heavy Cruiser Ri-Class}}
+| rowspan=2|16
+| rowspan=2|0
+|1/10
+| rowspan=2|7/180
+| rowspan=2|1
+|48+
+|-
+|2/5
+|24-47
+|-
+| rowspan=2|<span class="wikicolor" style="color:Red">F<br />Boss Node</span>
+| rowspan=2|{{ShipBattleCardKai|Standard Carrier Wo-Class|flagship=true}}
+| rowspan=2|30
+| rowspan=2|0
+|1/10
+| rowspan=2|3/40
+| rowspan=2|3
+|60+
+|-
+|2/5
+|30-59
+|-
+| rowspan=2|I
+| rowspan=2|{{ShipBattleCardKai|Heavy Cruiser Ri-Class}}
+| rowspan=2|16
+| rowspan=2|0
+|1/10
+| rowspan=2|7/180
+| rowspan=2|1
+|48+
+|-
+|2/5
+|24-47
+|-
+|J
+|{{ShipBattleCardKai|Battleship Ru-Class|flagship=true}}
+|70
+|1
+|0
+|7/40
+|7
+|Any
+|-
+| rowspan=2|Min safe
+| colspan=6|<span class="wikicolor" style="color:Red">ACEF, BCEF = 6; ACDF, BCDF = 5; GHIF = 5;</span> '''GHIJ = 11.'''
+|60+
+|-
+| colspan=6|<span class="wikicolor" style="color:Red">ACEF, BCEF = 12; ACDF, BCDF = 7; GHIF = 11;</span> '''GHIJ = 16.'''
+|30-59
+|-
+| rowspan=2|46-slot
+| colspan=6|<span class="wikicolor" style="color:Red">ACEF, BCEF = 13; ACDF, BCDF = 9; GHIF = 15;</span> '''GHIJ = 20.'''
+|60+
+|-
+| colspan=6|<span class="wikicolor" style="color:Red">'''ACEF, BCEF = 35;''' ACDF, BCDF = 24; GHIF = 34;</span> GHIJ = 31.
+|30-59
+|}
+
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+| colspan=9 style="text-align:center;"|'''World 2: Southwestern Archipelago Region'''
+|-
+! scope="col"|Map
+! scope="col"|Node
+! scope="col"|Max AA Ship
+! scope="col"|AA Stat
+! scope="col"|Fleet AA Stat
+! scope="col"|Losses to fighters
+! scope="col"|Max Var AA
+! scope="col"|Max Fixed AA
+! scope="col"|Air Power
+|-
+| rowspan=11|2-1
+|A
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class|flagship=true}}
+|16
+|0
+|0
+|7/180
+|1
+|Any
+|-
+| rowspan=2|C
+| rowspan=2|{{ShipBattleCardKai|Heavy Cruiser Ri-Class}}
+| rowspan=2|16
+| rowspan=2|0
+|1/10
+| rowspan=2|7/180
+| rowspan=2|1
+|72+
+|-
+|2/5
+|36-71
+|-
+| rowspan=2|<span class="wikicolor" style="color:Red">E<br />Boss Node</span>
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class|flagship=true}}
+| rowspan=2|70
+| rowspan=2|1
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|84+
+|-
+|2/5
+|42-83
+|-
+| rowspan=2|F
+| rowspan=2|{{ShipBattleCardKai|Heavy Cruiser Ri-Class}}
+| rowspan=2|16
+| rowspan=2|0
+|1/10
+| rowspan=2|7/180
+| rowspan=2|1
+|72+
+|-
+|2/5
+|36-71
+|-
+| rowspan=2|Min safe
+| colspan=6|ABC, ADF = 3; '''<span class="wikicolor" style="color:Red">ADE = 10.</span>'''
+|84+
+|-
+| colspan=6|ABC, ADF = 3; '''<span class="wikicolor" style="color:Red">ADE = 15.</span>'''
+|42-83
+|-
+| rowspan=2|46-slot
+| colspan=6|ABC, ADF = 8; '''<span class="wikicolor" style="color:Red">ADE = 20.</span>'''
+|84+
+|-
+| colspan=6|ABC, ADF = 21; '''<span class="wikicolor" style="color:Red">ADE = 30.</span>'''
+|42-83
+|-
+| rowspan=9|2-2
+|A
+|{{ShipBattleCardKai|Light Cruiser He-Class|flagship=true}}
+|12
+|0
+|0
+|1/36
+|1
+|Any
+|-
+|D
+|{{ShipBattleCardKai|Battleship Ru-Class|flagship=true}}
+|70
+|1
+|0
+|7/40
+|7
+|Any
+|-
+| rowspan=2|<span class="wikicolor" style="color:Red">F<br />Boss Node</span>
+| rowspan=2|{{ShipBattleCardKai|Standard Carrier Wo-Class/Elite|flagship=true}}
+| rowspan=2|40
+| rowspan=2|2
+|1/10
+| rowspan=2|1/10
+| rowspan=2|4
+|162+
+|-
+|2/5
+|81-161
+|-
+|G
+|{{ShipBattleCardKai|Battleship Ru-Class|flagship=true}}
+|70
+|1
+|0
+|7/40
+|7
+|Any
+|-
+| rowspan=2|Min safe
+| colspan=6|ABC = 2; '''ABD, AEG = 10;''' <span class="wikicolor" style="color:Red">AEF = 6; EF = 5;</span> EG = 9.
+|162+
+|-
+| colspan=6|ABC = 2; '''ABD, AEG = 10;''' <span class="wikicolor" style="color:Red">AEF = 8; EF = 7;</span> EG = 9.
+|81-161
+|-
+| rowspan=2|46-slot
+| colspan=6|ABC = 2; '''ABD, AEG = 16;''' <span class="wikicolor" style="color:Red">AEF = 14; EF = 12;</span> EG = 15.
+|162+
+|-
+| colspan=6|ABC = 2; ABD, AEG = 16; <span class="wikicolor" style="color:Red">'''AEF = 25;''' EF = 24;</span> EG = 15.
+|81-161
+|-
+| rowspan=14|2-3
+|B
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Elite|flagship=true}}
+|30
+|1
+|0
+|3/40
+|3
+|Any
+|-
+|C
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Elite|flagship=true}}
+|30
+|1
+|0
+|3/40
+|3
+|Any
+|-
+| rowspan=2|F
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class}}
+| rowspan=2|70
+| rowspan=2|1
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|78+
+|-
+|2/5
+|39-77
+|-
+| rowspan=2|<span class="wikicolor" style="color:Red">G<br />Boss Node</span>
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class/Elite|flagship=true}}
+| rowspan=2|70
+| rowspan=2|3
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|111+
+|-
+|2/5
+|56-110
+|-
+| rowspan=2|H
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class}}
+| rowspan=2|70
+| rowspan=2|1
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|78+
+|-
+|2/5
+|39-77
+|-
+| rowspan=2|K
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class}}
+| rowspan=2|70
+| rowspan=2|1
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|78+
+|-
+|2/5
+|39-77
+|-
+| rowspan=2|Min safe
+| colspan=6|ABEF, CDEF, ACHIJ = 12; '''ACHIK = 25;''' <span class="wikicolor" style="color:Red">ABEG, CDEG = 12.</span>
+|111+
+|-
+| colspan=6|'''ABEF, CDEF, ACHIJ = 18;''' ''ACHIK = 47;'' '''<span class="wikicolor" style="color:Red">ABEG, CDEG = 18.</span>'''
+|56-110
+|-
+| rowspan=2|46-slot
+| colspan=6|ABEF, CDEF, ACHIJ = 23; '''ACHIK = 35;''' <span class="wikicolor" style="color:Red">ABEG, CDEG = 23.</span>
+|111+
+|-
+| colspan=6|'''ABEF, CDEF, ACHIJ = 33;''' ''ACHIK = 46;'' '''<span class="wikicolor" style="color:Red">ABEG, CDEG = 33.</span>'''
+|56-110
+|-
+| rowspan=19|2-4
+|A
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Elite|flagship=true}}
+|30
+|2
+|0
+|3/40
+|3
+|Any
+|-
+|C
+|{{ShipBattleCardKai|Battleship Ru-Class|flagship=true}}
+|70
+|2
+|0
+|7/40
+|7
+|Any
+|-
+| rowspan=2|D
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class}}
+| rowspan=2|70
+| rowspan=2|4
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|246+
+|-
+|2/5
+|123-245
+|-
+|F
+|{{ShipBattleCardKai|Battleship Ru-Class|flagship=true}}
+|70
+|2
+|0
+|7/40
+|7
+|Any
+|-
+| rowspan=2|H
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class}}
+| rowspan=2|70
+| rowspan=2|4
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|246+
+|-
+|2/5
+|123-245
+|-
+|I
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship|flagship=true}}
+|40
+|1
+|0
+|1/10
+|4
+|Any
+|-
+|<span class="wikicolor" style="color:Red">J<br />Boss Node</span>
+|{{ShipBattleCardKai|Battleship Ru-Class/Flagship|flagship=true}}
+|80
+|8
+|0
+|1/5
+|9
+|Any
+|-
+|L
+|{{ShipBattleCardKai|Battleship Ru-Class|flagship=true}}
+|70
+|2
+|0
+|7/40
+|7
+|Any
+|-
+| rowspan=2|N
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class}}
+| rowspan=2|70
+| rowspan=2|4
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|246+
+|-
+|2/5
+|123-245
+|-
+|O
+|{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship|flagship=true}}
+|40
+|2
+|0
+|1/10
+|4
+|Any
+|-
+| rowspan=2|P
+| rowspan=2|{{ShipBattleCardKai|Battleship Ru-Class}}
+| rowspan=2|70
+| rowspan=2|4
+|1/10
+| rowspan=2|7/40
+| rowspan=2|7
+|246+
+|-
+|2/5
+|123-245
+|-
+| rowspan=2|Min safe
+| colspan=6|ABCDE, AKLMN = 23; '''<span class="wikicolor" style="color:Red">AFGHJ = 43;</span>''' AFGIJ = 33; AKLOJ = 33; AKLOP = 30.
+|246+
+|-
+| colspan=6|ABCDE, AKLMN = 25; <span class="wikicolor" style="color:Red">AFGHJ = ; AFGIJ = ; AKLOJ = 33;</span> AKLOP = 36.
+|123-245
+|-
+| rowspan=2|46-slot
+| colspan=6|ABCDE, AKLMN = ; <span class="wikicolor" style="color:Red">AFGHJ = ; AFGIJ = ; AKLOJ = ;</span> AKLOP = .
+|246+
+|-
+| colspan=6|ABCDE, AKLMN = ; ''<span class="wikicolor" style="color:Red">AFGHJ = 46;</span>'' AFGIJ = ; AKLOJ = ; AKLOP = .
+|123-245
+|}

@@ -1,0 +1,103 @@
+==Notice==
+<p style="font-size: 2em; color: red; line-height: 1.1em;">This template has been replaced with the following: [[Template:NanaminFleetKai]]. The documentation on how to use it is also there. You may still ask questions about either one here, however.<br />
+<br />
+For Combined Fleets, please use [[Template:CombinedFleet]] instead.</p>
+
+==Updates (Newest First)==
+<ul>
+  <li>This template has now been abandoned for the new [[Template:NanaminFleetKai]]. It has, however, been left as it last was so those who were using it do not experience problems.</li>
+  <li>Fixed an issue with the calculating of fighter power. The first ship was not clearing out, so a good deal of fighter power was being loaded on the flagship (like 60% for a CV-heavy fleet).</li>
+  <li>My old color scheme looked like cotton candy, so now it's blue-based because...I like blue. I've also made it easy to distinguish locked slots, although I opted not to have unequipped slots with the same scheme.</li>
+  <li>I found out why the route taken wasn't showing. I also found out that HQ level was not being used in the eLoS equation because of the same reason. <b>This is now fixed. Thank God.</b></li>
+</ul>
+
+==Preface==
+
+As I feel very...uncompelled to do calculations by hand when I'm putting together a fleet composition, I ended up making this. Special thanks to [[User:Ckwng]] for putting together all the modules I dipped into. There was a lot of source code to read :3....
+
+Also a special thanks to [[User:Flonnaru]] for the inspiration of doing this. I didn't really take anything directly, but his/her template still served as the starting point for making this.
+
+==The Skeleton==
+<pre>{{NanaminFleet
+|Ship/Remodel/LoS
+|Equip
+|Equip
+|Equip
+|Equip
+|Ship/Remodel/LoS
+|Equip
+|Equip
+|Equip
+|Equip
+|Ship/Remodel/LoS
+|Equip
+|Equip
+|Equip
+|Equip
+|Ship/Remodel/LoS
+|Equip
+|Equip
+|Equip
+|Equip
+|Ship/Remodel/LoS
+|Equip
+|Equip
+|Equip
+|Equip
+|Ship/Remodel/LoS
+|Equip
+|Equip
+|Equip
+|Equip
+|!hq=
+|!route=
+|!difficulty=
+|!drops=
+}}</pre>
+
+==The Result==
+{{NanaminFleet
+|Ro-500/Regular/32
+|Prototype FaT Type 95 Oxygen Torpedo Kai
+|61cm Quint (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-58/Kai/32
+|61cm Quint (Oxygen) Torpedo Mount
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-168/Kai/22
+|61cm Quad (Oxygen) Torpedo Mount
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|I-8/Regular/22
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|!-
+|Maruyu/Kai/11
+|61cm Quad (Oxygen) Torpedo Mount
+|!-
+|!-
+|!-
+|-
+|!-
+|!-
+|!-
+|!-
+|!hq=97
+|!route=A-B-C-D
+}}
+
+==Notes==
+<ul>
+  <li>If you put "-" for an equipment slot, it will display "- Unequipped -". Alternatively, "!-" will display "- Locked -" for equipment slots that you cannot equip anything on. As the parts that calculate the eLoS and fighter power are in a separate section, it would be hacky to check if the slots were already locked, so please overlook that I'm delegating that part to you.</li>
+  <li>For ease of detection, I've made it mandatory to have the "/" in the ship name and remodel designation. "Regular" is for non-kai. "Kai", "Kai Ni", "zwei" and "drei" are for their respective remodels. The capitalization does matter, so please pay attention to that.</li>
+  <li>Putting a "-" in place of a ship name will use a blank card filler. You can't put a "!" in front of it.</li>
+  <li>Equipment names <b>may differ</b> from the ones you're used to. The most easily notable are radars which adopt a "No. ##" format instead of "Type ##". The full list is available on the Sandbox [[Sandbox/EquipmentListKai/TypeSorted|here]].</li>
+  <li>I realized that LoS can increase with level, so now it has a spot on the template. <b>Please remember that LoS of ships is their base LoS, so you must subtract the LoS of equipment they have on.</b></li>
+  <li>The fleet composition table can be shown with 1, 2 or 3 rows. If you subtract lines from it (that's 10 for 2 ship declarations and 8 equipment declarations), it will cut those off from the resulting table. Might be useful for 1-5 compositions where you only use 4 ships.</li>
+</ul>
+[[Category:Blog posts]]

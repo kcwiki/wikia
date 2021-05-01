@@ -1,0 +1,1 @@
+console.log("Transferred to: MediaWiki:CommentQuote.js");

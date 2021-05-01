@@ -1,0 +1,14 @@
+<includeonly>[[{{#ifexist:{{{1}}}|{{{1}}}|wikipedia:{{#ifeq:{{{wp|}}}||{{{1}}}|{{{wp}}}}}}}|{{#ifeq:{{{2|}}}||{{{1}}}|{{{2}}}}}]]</includeonly><noinclude>
+Function: Connect a page to wikipedia before its expected creation.
+
+Usage:
+
+{{t|FPage|xxx}} for {{FPage|xxx}}
+
+or
+
+{{t|FPage|xxx|yyy}} for {{FPage|xxx|yyy}}
+
+Note: Add a wp= parameter for different wp link
+
+</noinclude>

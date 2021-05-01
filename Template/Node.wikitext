@@ -1,0 +1,13 @@
+<!--Implementation-->
+<span class="map-node" style="
+	position:absolute;
+	left:{{#expr:{{{x-axis|0}}}-{{#switch:{{{type|}}}|unknown = {{{size|20}}}|select = {{{size|20}}}|empty = {{{size|20}}}|resource = {{{size|20}}}|storm = {{{size|20}}}|normal = {{{size|20}}}|boss = {{{size|37}}}|aerial = {{{size|71}}}|{{{size|20}}}}}/2 round 0}}px;
+	top:{{#expr:{{{y-axis|0}}}-{{#switch:{{{type|}}}|unknown = {{{size|20}}}|select = {{{size|20}}}|empty = {{{size|20}}}|resource = {{{size|20}}}|storm = {{{size|20}}}|normal = {{{size|20}}}|boss = {{{size|40}}}|aerial = {{{size|45}}}|{{{size|20}}}}}/2 round 0}}px;
+	width:{{#switch:{{{type|}}}|unknown = {{{size|20}}}|select = {{{size|20}}}|empty = {{{size|20}}}|resource = {{{size|20}}}|storm = {{{size|20}}}|normal = {{{size|20}}}|boss = {{{size|37}}}|aerial = {{{size|71}}}|{{{size|20}}}}}px;
+	height:{{#switch:{{{type|}}}|unknown = {{{size|20}}}|select = {{{size|20}}}|empty = {{{size|20}}}|resource = {{{size|20}}}|storm = {{{size|20}}}|normal = {{{size|20}}}|boss = {{{size|40}}}|aerial = {{{size|45}}}|{{{size|20}}}}}px;
+	{{#if: {{{tooltip|}}}|cursor:help;" title="{{{tooltip|}}}"|"}}>
+[[File:{{#switch:{{{type|}}}|unknown = Unknown_node.png|select = Old Blue node.png|empty = Old Blue node.png|resource = Old Green node.png|storm = Old Purple node.png|boss = Old Boss node.png|normal=Old Red node.png|aerial = Old Aerial node.png|maelstrom = Purple node 2.png|air defense = Old Raid node.png|Blank_square.svg}}|{{#if:{{{type|}}}||{{{size|20}}}px{{!}}}}link={{{link|}}}]]
+</span>
+<noinclude>
+{{Documentation}}
+</noinclude>

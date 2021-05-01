@@ -1,0 +1,13 @@
+<includeonly><div {{#if:{{{1|}}}|class="toclimit-{{{1|}}}"}}>__TOC__</div></includeonly><noinclude>
+==Usage==
+<pre>{{toclimit|<limit>}}</pre>
+Inserts a [http://community.wikia.com/wiki/Help:Table_of_contents table of contents] with subheadings only up to <code><limit></code> level included. For example, <code><nowiki>{{toclimit|3}}</nowiki></code> on a page with ==subheadings== being top-level subheadings will create a TOC that includes ==subheadings==, ===subheadings===, and ====subheadings====, but omits any subheadings below that level (i.e., =====subheadings===== and ======subheadings======).
+
+==Test==
+===2===
+====3====
+=====4=====
+======5======
+<pre>{{toclimit|3}}</pre>
+{{toclimit|3}}
+</noinclude>

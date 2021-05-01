@@ -1,0 +1,48 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Moray Sea
+|jp = モーレイ海
+|romaji = Mōrei kai
+|strategy_name = Moray Sea Patrol
+|strategy_name_ja = モーレイ海哨戒
+|strategy_info = Advance into Northern waters and patrol the Moray Sea!
+|strategy_info_ja = 北方海域に艦隊を進出させ、モーレイ海を哨戒せよ！
+|exp_hq = 110
+|exp_hq_boss = 1420
+}}
+{{MapBranchingTable
+|title = 3-1 Branching Rules
+|expand = true
+|id = 3-1
+
+|C -> B,D,F = 
+*Meet '''ANY''' of the following to '''FORCE''' node D
+**DD+DE ≤ 1
+**CV(L/B) ≥ 3
+*Chance of going to node B if meeting '''ANY''' of the following (''If the roll of getting this chance failed, this rule is skipped'')
+**Fleet contains AV or AO (35%)
+**BBV+CL+AS ≥ 3 (50%)
+*Go to F if (F)BB(V)+CV(L/B) ≤ 2
+*Otherwise, D
+
+|D -> E/empty = * Do not meet the requirements to go to either F or G.
+|D -> F = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to G.
+** Amount of SS(V) ≤ 5
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+|D -> G = 
+* Meet '''ALL''' of the following requirements:
+** Fleet contains AS ([[Taigei]])
+** Amount of SS(V) = 5
+}}
+
+==Composition==
+* '''2 DD 2 [CV(L/B)+(F)BB(V)] 2 XX''' routes {{Event/Route|C|red|F|red|G|red}}
+**The sum of carriers and battleships in your fleet must not exceed 2
+**AV and AO not allowed
+**The sum of BBV and CL must not exceed 2
+**Having ≥ 3 [CV(L/B)+(F)BB(V)] will route you {{Event/Route|C|red|D|red|F|red|G|red}} instead
+**Having ≥ 5 [CV(L/B)+(F)BB(V)] will route you to the deadend node E
+
+{{Map/Footer}}

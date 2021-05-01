@@ -1,0 +1,27 @@
+<includeonly><span class="map-node" style="
+    position: absolute;
+    {{#if:{{{overlay|}}}|border:1px solid yellow;}}
+    left:     {{#expr:{{{x|0}}} - {{{size|40}}} / 2 round 0}}px;
+    top:      {{#expr:{{{y|0}}} - {{{size|40}}} / 2 round 0}}px;
+    width:    {{{size|40}}}px;
+    height:   {{{size|40}}}px;"><span class="map-node-label" style="{{#if:{{{overlay|}}}|display:inline;|display:none;}}position:absolute;color:yellow">{{{1|}}}</span><span class="square-link" title="{{{1|}}}">[[#{{#explode:{{PAGENAME}}|/|1}} {{{1|}}} {{{2|}}}| ]]</span><!--[[File:Blank_square.svg|{{{size|40}}}px|link=]]--></span></includeonly><noinclude>
+Used to add clickable nodes to [[Template:Event/Map]] (a call per each node).
+==Parameters==
+===[1]===
+Node label (A, B, etc.), should correspond to an existing [[Template:NodeInfo]] node for it to be clickable.
+===[2]===
+Difficulty (Easy, Medium, or Hard), should correspond to an existing [[Template:NodeInfo]] node for it to be clickable.
+===x, y===
+Coordinates of the node center (roughly).
+===size===
+Size (diameter) of the clickable area, defaults to 40.
+==Examples==
+<pre>
+{{Event/Map|
+{{Event/MapNode|A|Easy|x=...|y=...}}
+{{Event/MapNode|B|Easy|x=...|y=...}}
+...
+}}
+</pre>
+See [[Winter 2017 Event/E-3/Enemy patterns]] for example.
+</noinclude>

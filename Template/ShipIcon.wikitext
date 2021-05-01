@@ -1,0 +1,18 @@
+<includeonly>[[File:Ship Icon {{#replace:{{{1}}}|/|&#32;}}{{#if:{{{damaged|}}}|&#32;Damaged}}.png|{{{size|50px}}}|link={{{link|{{#replace:{{{1}}}|/|&#32;}}}}}|{{{caption|{{#replace:{{{1}}}|/|&#32;}}}}}]]</includeonly><noinclude>
+This template is used to display round ship icons.
+==Usage==
+===Parameters===
+*<code>[1]</code>: name of the ship to display.
+*<code>damaged</code>: set to display damaged icon.
+*<code>size</code>: icon size, defaults to <code>50px</code>.
+*<code>link</code>: icon link, defaults to ship name.
+*<code>caption</code>: icon caption, defaults to ship name.
+===Examples===
+<pre>{{ShipIcon|Umikaze}}</pre>
+{{ShipIcon|Umikaze}}
+
+<pre>{{ShipIcon|Umikaze Kai|caption=DD|link=DD|damaged=yes|size=60px}}</pre>
+{{ShipIcon|Umikaze Kai|caption=DD|link=DD|damaged=yes|size=60px}}
+==Credits==
+Ship icons provided by https://github.com/26841/Kancolle_Icons. See [[Ship/Rarity]] for a full list of uploaded icons.
+</noinclude>

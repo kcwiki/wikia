@@ -1,0 +1,5 @@
+Right now, our [[MediaWiki:Common.css]] only loads for Monobook, which means we don't have a place to put common CSS like the CSS for Dragonjet's new Route template. Apparently this can be turned on at request. <small>(Confusingly, Common.css says it loads for all skins in a comment.)</small>
+
+The only contents of Common.css right now are a 3 quality of life items for [[Special:AllPages]] and [[Special:Watchlist]], one of which is in the basic style for both skins already, and the route template CSS, so almost nothing should break if this is turned on. However, it will make it easier to not ignore Monobook users (no matter how few they may be in number), and keep our CSS cleaner (I hope).
+
+Any objections? If not, I will make the request.<ac_metadata title="Making MediaWiki:Common.css actually load for Oasis"> </ac_metadata>

@@ -1,0 +1,193 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Patrol the Fleet Gathering Area! Hitokappu Bay Anchorage
+|jp = 艦隊集結地哨戒! 単冠湾泊地
+|tag = E1
+ <!--
+|transport = true
+-->
+|romaji = Kantai-shūketsuchi shōkai! Hitokappu-wan hakuchi
+|hp_casual = 330
+|hp_easy = 330
+|hp_medium = 330
+|hp_hard = 650
+|show_kills = true
+|kills_casual = 7
+|kills_easy = 7
+|kills_medium = 5
+|kills_hard = 5
+|reward_casual_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_casual_1_x = 1
+|reward_casual_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture Fairy]]
+|reward_casual_2_x = 1
+|reward_casual_3 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_casual_3_x = 1
+|reward_easy_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_easy_1_x = 2
+|reward_easy_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture Fairy]]
+|reward_easy_2_x = 1
+|reward_easy_3 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_easy_3_x = 1
+|reward_easy_4 = {{EquipmentCardKai|Reppuu Kai|size=50px}}
+|reward_easy_4_x = 1
+|reward_medium_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_medium_1_x = 3
+|reward_medium_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture Fairy]]
+|reward_medium_2_x = 1
+|reward_medium_3 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Reppuu Kai|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_hard_1_x = 3
+|reward_hard_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture Fairy]]
+|reward_hard_2_x = 1
+|reward_hard_3 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_hard_3_x = 2
+|reward_hard_4 = {{EquipmentCardKai|Reppuu Kai|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|expand = true
+|id = 43-1
+|order = D,B,C,I,L,Q,P,O
+
+|D/empty -> B/empty, H/empty = * Active branching
+
+|B/empty -> A = * Do not meet the requirements to go to C.
+|B/empty -> C = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DE+DD ≥ 2
+** Amount of CA(V) ≤ 1
+** Amount of CL+CT ≤ 2
+
+|C -> E = * Do not meet the requirements to go to F.
+|C -> F =
+* Meet '''ALL''' of the following requirements:
+** Amount of DE+DD ≥ 2
+** Amount of CT+CA(V) ≤ 3
+
+|I -> J = 
+* Do not meet the requirements to go to either K or L.
+|I -> K = 
+* Meet '''ANY''' of the following requirements:
+** Fleet contains SS(V).
+** Amount of ships ≤ 3
+|I -> L/empty =
+* Meet '''ALL''' of the following requirements:
+** No CA(V) (Easy+)
+** No SS(V)
+** Amount of ships ≥ 4
+** If '''Slow''' fleet:
+*** Amount of ships = 6
+*** CL+CT = 1
+*** No CLT
+** If '''Fast''' fleet:
+*** Amount of DD ≥ 4
+*** Amount of ships ≤ 6 '''OR''' Fleet contains CL.
+
+|L/empty -> O, Q = * Active branching
+
+|Q -> P =
+* Meet '''ALL''' of the following requirements:
+** Amount of ships = 6
+** Amount of CL+CT = 1
+** If fleet contains CLT, fleet must also contain CA.
+** No AV
+|Q -> T = 
+* Do not meet the requirements to go to P.
+
+|P -> N/empty = * Fail the LoS check.
+|P -> S = * Pass the LoS check.
+
+|O -> R/empty = * Fail the LoS check.
+|O -> V = * Pass the LoS check, but fail to meet the requirements to go to W.
+|O -> W = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of DD ≥ 2
+** Amount of ships equipped with '''Surface''' Radars ≥ 3 (Medium+)
+** Amount of CA(V) ≤ 1 (Hard)
+}}
+==Before Starting the Event==
+*If you wish to challenge any difficulty above Easy this event, it is highly advised for players to read up the [[Spring_2019_Event/Info|Info tab]] first to understand about difficulty selection and ship-locking. 
+
+==Map Guide==
+*This is a '''single fleet''' map.
+*'''Carriers(CV/L/B), Battleships (F/BB/V) and LHA cannot enter this Map.'''
+*The boss node {{Event/Route|W|Red}} must be unlocked before the HP gauge can be depleted.
+*One [[Land Base Aerial Support]] squadron is available for sortie (see range below).
+
+{{clear}}
+
+===Map progression===
+{{#tag:gallery|
+Spring19_E1_p1.png{{!}}Map before unlocking the boss node W
+Spring_2019_Event_E-1_Map.png{{!}}Full map after unlocking the boss node W
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+===Part 1: Unlocking the boss node W===
+*To unlock the boss node, admirals must visit anchor nodes {{Event/Route|G|Green}} and {{Event/Route|U|Green}}, and also S? rank surface nodes {{Event/Route|O|Red}} and {{Event/Route|S|Red}}. The steps can be done in any order.
+*'''NOTE:'''Those requirements have been tested for '''HARD MODE''', lower difficulties might not need to do all the steps listed in order to unlock the boss node.
+**'''Node G'''
+***Route:{{Event/Route|D|Blue|B|Blue|C|Red|F|Red|G|Green}}
+****1CL 5DD
+****1CL 1CA(V) 4DD
+****1CL 4DD 1DE
+**'''Node U'''
+***Route:{{Event/Route|D|Blue|H|Blue|I|Red|L|Blue|Q|Red|T|Red|U|Green}}
+****2CL 4DD
+****1CL 4DD
+****1CL 3DD 1DE
+*****Will route {{Event/Route|I|Red}} to {{Event/Route|J|Red}}
+**'''Node S'''
+***Route:{{Event/Route|D|Blue|H|Blue|I|Red|L|Blue|Q|Red|P|Red|S|Red}}
+****1CL 5DD
+****1CL 1CA(V) 4DD
+*****Will route {{Event/Route|I|Red}} to {{Event/Route|J|Red}} (easy+ only)
+****1CL 4DD 1DE
+***There is a LoS check from {{Event/Route|P|Red}} to {{Event/Route|S|Red}}.
+****'''27+''' {{LOS}} using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=2)]] formula is required in order to safely pass.
+**'''Node O''' ('''MEDIUM+ ONLY''')
+***Route:{{Event/Route|D|Blue|H|Blue|I|Red|L|Blue|O|Red}}
+****1CL 5DD
+****2CL 4DD
+****1CL 1CA(V) 4DD
+*****Will route {{Event/Route|I|Red}} to {{Event/Route|J|Red}} (easy+ only)
+****1CL 4DD 1DE
+
+===Part 2: Beat the boss===
+*Fleets used to reach node {{Event/Route|O|Red}} during the first part can be sortied for the boss node {{Event/Route|W|Red}} after it unlocks.
+**Route:{{Event/Route|D|Blue|H|Blue|I|Red|L|Blue|O|Red|W|Red}}
+***1CL 5DD
+***2CL 4DD
+***1CL 1AV 4DD
+***1CL 1CA(V) 4DD
+****Will route to {{Event/Route|J|Red}} from {{Event/Route|I|Red}} (easy+ only)
+***1CL 4DD 1DE
+*There is a LoS check from {{Event/Route|O|Red}} to {{Event/Route|W|Red}}.
+*'''50+''' {{LOS}} using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula is required in order to safely pass.
+*The fleet must also be equipped with at least 3 surface radars '''(medium+)''' to be able to reach the boss node.
+*The boss node is a surface fleet with {{ShipLink|Light Cruiser Tsu-Class Flagship|text=Light Cruiser Tsu-Class}} as the flagship.
+**It is recommended to equip your fleet with [[Combat/Equipment Guide|Double Attack]] setups.
+**To clear the map, the flagship must be '''SUNK''' during the '''Last Dance'''.
+*The Vanguard formation can be used on preboss nodes to increase survivability, however it is not recommended at the boss node as it is exclusively a defensive formation.
+*'''LBAS''': Sending a squadron to the boss node can help (4 bombers with range 5+), however keep in mind that there is heavy enemy Anti-Air that can make the high bauxite loss coming with each run not worth it.
+**Using [[Expedition/Support Expedition|boss support expedition]] instead is recommended if you have difficulties clearing the enemies at the boss (You can also use both LBAS and support, I'm not stopping you).
+
+===LBAS Flight Range===
+[[File:Spring19_E1_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

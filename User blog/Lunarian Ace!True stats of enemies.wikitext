@@ -1,0 +1,1229 @@
+This is just a post of all the enemies' stats with their proper equipment equipped and accounted for, and includes some extra calculations such as ASW power and dive bombing/torpedo bombing power. '''This page makes the heavy assumption that the enemy uses the same damage formulae as us. '''The ASW formula is also under revision for the BBV/CVL section. If it's necessary I'll convert this to a proper page. 
+
+'''All attack powers here refer to the basic attacking power, the true damage dealt depends on your armor, and the formation the enemy uses.'''
+
+For CV(L)s, since planes will inevitably be shot down, the ''Torpedo Bomber power'' listed is the highest value where 0 planes are shot down. Note that the true attacking power is actually '''less''' than what is listed here. I won't be listing the attack power of dive bombers, the torpedo bombers will always have a power greater or equal to the dive bombers.
+
+As submarines are level 50 while all other ships are level 1, and how evasion increases with level isn't known yet, I will leave the evasion tab under the SSes as blank for now.
+
+Please ignore pink-shaded tabs, those are just personal markings.
+
+<p style="text-align:center;">'''Destroyers'''</p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|I-class Destroyers
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|Additional Accuracy
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|20
+| style="text-align:center;"|6
+| style="text-align:center;"|5
+| style="text-align:center;"|15
+| style="text-align:center;"|14
+| style="text-align:center;"|6
+| style="text-align:center;"|0
+| style="text-align:center;"|6
+| style="text-align:center;"|3
+| style="text-align:center;"|1
+| style="text-align:center;"|26
+| style="text-align:center;"|0
+| style="text-align:center;"| 11
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|30
+| style="text-align:center;"|16
+| style="text-align:center;"|12
+| style="text-align:center;"|37
+| style="text-align:center;"|30
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|35
+| style="text-align:center;"|6
+| style="text-align:center;"|10
+| style="text-align:center;"|32
+| style="text-align:center;"|0
+| style="text-align:center;"| 21
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|39
+| style="text-align:center;"|32
+| style="text-align:center;"|24
+| style="text-align:center;"|60
+| style="text-align:center;"|63
+| style="text-align:center;"|29
+| style="text-align:center;"|0
+| style="text-align:center;"|60(+28)
+| style="text-align:center;"|26
+| style="text-align:center;"|1
+| style="text-align:center;"|65
+| style="text-align:center;"|24
+| style="text-align:center;"| 27
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Ro-class Destroyers
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|Additional Accuracy
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|22
+| style="text-align:center;"|9
+| style="text-align:center;"|6
+| style="text-align:center;"|16
+| style="text-align:center;"|15
+| style="text-align:center;"|7
+| style="text-align:center;"|0
+| style="text-align:center;"|25
+| style="text-align:center;"|3
+| style="text-align:center;"|1
+| style="text-align:center;"|30
+| style="text-align:center;"|0
+| style="text-align:center;"| 14
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|35
+| style="text-align:center;"|22
+| style="text-align:center;"|12
+| style="text-align:center;"|37
+| style="text-align:center;"|30
+| style="text-align:center;"|12
+| style="text-align:center;"|0
+| style="text-align:center;"|35
+| style="text-align:center;"|6
+| style="text-align:center;"|10
+| style="text-align:center;"|32
+| style="text-align:center;"|0
+| style="text-align:center;"| 27
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|43
+| style="text-align:center;"|35
+| style="text-align:center;"|24
+| style="text-align:center;"|70
+| style="text-align:center;"|52
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|55(+7)
+| style="text-align:center;"|10
+| style="text-align:center;"|20
+| style="text-align:center;"|43
+| style="text-align:center;"|0
+| style="text-align:center;"| 40
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Ha-class Destroyers
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|24
+| style="text-align:center;"|8
+| style="text-align:center;"|7
+| style="text-align:center;"|18
+| style="text-align:center;"|16
+| style="text-align:center;"|6
+| style="text-align:center;"|0
+| style="text-align:center;"|30
+| style="text-align:center;"|4
+| style="text-align:center;"|1
+| style="text-align:center;"|31
+| style="text-align:center;"|0
+| style="text-align:center;"| 13
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|40
+| style="text-align:center;"|17
+| style="text-align:center;"|16
+| style="text-align:center;"|42
+| style="text-align:center;"|35
+| style="text-align:center;"|14
+| style="text-align:center;"|0
+| style="text-align:center;"|40
+| style="text-align:center;"|7
+| style="text-align:center;"|10
+| style="text-align:center;"|33
+| style="text-align:center;"|0
+| style="text-align:center;"| 22
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|47
+| style="text-align:center;"|32
+| style="text-align:center;"|27
+| style="text-align:center;"|70
+| style="text-align:center;"|54
+| style="text-align:center;"|24
+| style="text-align:center;"|0
+| style="text-align:center;"|60(+7)
+| style="text-align:center;"|12
+| style="text-align:center;"|20
+| style="text-align:center;"|44
+| style="text-align:center;"|0
+| style="text-align:center;"| 37
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Ni-class Destroyers
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="background-color:rgb(255,192,203);text-align:center;"|Normal type
+| style="text-align:center;"|28
+| style="text-align:center;"|10
+| style="text-align:center;"|9
+| style="text-align:center;"|26
+| style="text-align:center;"|18
+| style="text-align:center;"|8
+| style="text-align:center;"|0
+| style="text-align:center;"|35
+| style="text-align:center;"|4
+| style="text-align:center;"|5
+| style="text-align:center;"|32
+| style="text-align:center;"| 0
+| style="text-align:center;"| 15
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|45
+| style="text-align:center;"|22
+| style="text-align:center;"|18
+| style="text-align:center;"|50
+| style="text-align:center;"|40
+| style="text-align:center;"|48
+| style="text-align:center;"|0
+| style="text-align:center;"|45
+| style="text-align:center;"|7
+| style="text-align:center;"|10
+| style="text-align:center;"|34
+| style="text-align:center;"| 0
+| style="text-align:center;"| 27
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|
+|}
+<p style="text-align:center;">'''Light Cruisers'''</p>
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Ho-class CL
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|33
+| style="text-align:center;"|16
+| style="text-align:center;"|15
+| style="text-align:center;"|24
+| style="text-align:center;"|15
+| style="text-align:center;"|13
+| style="text-align:center;"|2
+| style="text-align:center;"|30(+1)
+| style="text-align:center;"|11
+| style="text-align:center;"|1
+| style="text-align:center;"|32
+| style="text-align:center;"|0
+| style="text-align:center;"| 21
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|48
+| style="text-align:center;"|32
+| style="text-align:center;"|30
+| style="text-align:center;"|40
+| style="text-align:center;"|24
+| style="text-align:center;"|23
+| style="text-align:center;"|2
+| style="text-align:center;"|40(+1)
+| style="text-align:center;"|11
+| style="text-align:center;"|10
+| style="text-align:center;"|34
+| style="text-align:center;"|0
+| style="text-align:center;"| 37
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|53
+| style="text-align:center;"|44
+| style="text-align:center;"|36
+| style="text-align:center;"|72
+| style="text-align:center;"|44
+| style="text-align:center;"|29
+| style="text-align:center;"|8
+| style="text-align:center;"|70(+16)
+| style="text-align:center;"|20
+| style="text-align:center;"|20
+| style="text-align:center;"|55
+| style="text-align:center;"|0
+| style="text-align:center;"| 49
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|He-class CL
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|36
+| style="text-align:center;"|19
+| style="text-align:center;"|18
+| style="text-align:center;"|28
+| style="text-align:center;"|15
+| style="text-align:center;"|16
+| style="text-align:center;"|2
+| style="text-align:center;"|40(+1)
+| style="text-align:center;"|11
+| style="text-align:center;"|1
+| style="text-align:center;"|34
+| style="text-align:center;"|0
+| style="text-align:center;"| 24
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|52
+| style="text-align:center;"|37
+| style="text-align:center;"|32
+| style="text-align:center;"|48
+| style="text-align:center;"|26
+| style="text-align:center;"|27
+| style="text-align:center;"|2
+| style="text-align:center;"|45(+1)
+| style="text-align:center;"|11
+| style="text-align:center;"|10
+| style="text-align:center;"|35
+| style="text-align:center;"|0
+| style="text-align:center;"| 42
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|57
+| style="text-align:center;"|51
+| style="text-align:center;"|39
+| style="text-align:center;"|80
+| style="text-align:center;"|46
+| style="text-align:center;"|33
+| style="text-align:center;"|8
+| style="text-align:center;"|80(+16)
+| style="text-align:center;"|29
+| style="text-align:center;"|20
+| style="text-align:center;"|57
+| style="text-align:center;"|0
+| style="text-align:center;"| 56
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|To-class CL
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;background-color:rgb(255,192,203);"|Normal type
+| style="text-align:center;"|39
+| style="text-align:center;"|27
+| style="text-align:center;"|20
+| style="text-align:center;"|30
+| style="text-align:center;"|15
+| style="text-align:center;"|16
+| style="text-align:center;"|6
+| style="text-align:center;"|50
+| style="text-align:center;"|11
+| style="text-align:center;"|5
+| style="text-align:center;"|35
+| style="text-align:center;"|0
+| style="text-align:center;"| 32
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;background-color:rgb(255,192,203);"|Elite type
+| style="text-align:center;"|55
+| style="text-align:center;"|39
+| style="text-align:center;"|36
+| style="text-align:center;"|50
+| style="text-align:center;"|28
+| style="text-align:center;"|28
+| style="text-align:center;"|6
+| style="text-align:center;"|50
+| style="text-align:center;"|11
+| style="text-align:center;"|10
+| style="text-align:center;"|35
+| style="text-align:center;"|0
+| style="text-align:center;"| 44
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"| ---
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Chi-class CLT
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;background-color:rgb(255,192,203);"|Normal type
+| style="text-align:center;"|48
+| style="text-align:center;"|20
+| style="text-align:center;"|22
+| style="text-align:center;"|52
+| style="text-align:center;"|18
+| style="text-align:center;"|12
+| style="text-align:center;"|6
+| style="text-align:center;"|30
+| style="text-align:center;"|4
+| style="text-align:center;"|5
+| style="text-align:center;"|31
+| style="text-align:center;"|0
+| style="text-align:center;"| 25
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|50
+| style="text-align:center;"|38
+| style="text-align:center;"|34
+| style="text-align:center;"|82
+| style="text-align:center;"|30
+| style="text-align:center;"|23
+| style="text-align:center;"|6
+| style="text-align:center;"|40
+| style="text-align:center;"|10
+| style="text-align:center;"|10
+| style="text-align:center;"|33
+| style="text-align:center;"|0
+| style="text-align:center;"| 43
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|70
+| style="text-align:center;"|
+53
+| style="text-align:center;"|60
+| style="text-align:center;"|140
+| style="text-align:center;"|55
+| style="text-align:center;"|33
+| style="text-align:center;"|3
+| style="text-align:center;"|50
+| style="text-align:center;"|15
+| style="text-align:center;"|30
+| style="text-align:center;"|35
+| style="text-align:center;"|0
+| style="text-align:center;"| 58
+| style="text-align:center;"| ---
+|}
+<p style="text-align:center;">'''Heavy Cruisers'''</p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Ri-class CA
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;background-color:rgb(255,192,203);"|Normal type
+| style="text-align:center;"|58
+| style="text-align:center;"|40
+| style="text-align:center;"|28
+| style="text-align:center;"|34
+| style="text-align:center;"|12
+| style="text-align:center;"|19
+| style="text-align:center;"|9
+| style="text-align:center;"|0
+| style="text-align:center;"|15
+| style="text-align:center;"|1
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| 45
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|60
+| style="text-align:center;"|69
+| style="text-align:center;"|60
+| style="text-align:center;"|42
+| style="text-align:center;"|20
+| style="text-align:center;"|37
+| style="text-align:center;"|12
+| style="text-align:center;"|0
+| style="text-align:center;"|25
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| 74
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|76
+| style="text-align:center;"|79
+| style="text-align:center;"|70
+| style="text-align:center;"|58
+| style="text-align:center;"|50
+| style="text-align:center;"|46
+| style="text-align:center;"|16
+| style="text-align:center;"|0
+| style="text-align:center;"|25
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| 84
+| style="text-align:center;"| ---
+|}
+<p style="text-align:center;">'''Battleships'''</p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Ru-class BB
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|90
+| style="text-align:center;"|92
+| style="text-align:center;"|70
+| style="text-align:center;"|0
+| style="text-align:center;"|3
+| style="text-align:center;"|79
+| style="text-align:center;"|9
+| style="text-align:center;"|0
+| style="text-align:center;"|25
+| style="text-align:center;"|5
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| 97
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|90
+| style="text-align:center;"|132
+| style="text-align:center;"|85
+| style="text-align:center;"|0
+| style="text-align:center;"|16
+| style="text-align:center;"|83
+| style="text-align:center;"|12
+| style="text-align:center;"|0
+| style="text-align:center;"|25
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"| 137
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|98
+| style="text-align:center;"|130
+| style="text-align:center;"|99
+| style="text-align:center;"|0
+| style="text-align:center;"|40
+| style="text-align:center;"|91
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|40
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"| 135
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Ta-class BB
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|84
+| style="text-align:center;"|97
+| style="text-align:center;"|80
+| style="text-align:center;"|0
+| style="text-align:center;"|20
+| style="text-align:center;"|72
+| style="text-align:center;"|16
+| style="text-align:center;"|0
+| style="text-align:center;"|30
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| 102
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|88
+| style="text-align:center;"|117
+| style="text-align:center;"|88
+| style="text-align:center;"|0
+| style="text-align:center;"|40
+| style="text-align:center;"|77
+| style="text-align:center;"|16
+| style="text-align:center;"|0
+| style="text-align:center;"|35
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"| 122
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|90
+| style="text-align:center;"|125
+| style="text-align:center;"|96
+| style="text-align:center;"|0
+| style="text-align:center;"|55
+| style="text-align:center;"|81
+| style="text-align:center;"|16
+| style="text-align:center;"|0
+| style="text-align:center;"|50
+| style="text-align:center;"|30
+| style="text-align:center;"|0
+| style="text-align:center;"|15
+| style="text-align:center;"| 130
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Re-class BB
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|180
+| style="text-align:center;"|117
+| style="text-align:center;"|110
+| style="text-align:center;"|110
+| style="text-align:center;"|45
+| style="text-align:center;"|96
+| style="text-align:center;"|140
+| style="text-align:center;"|90(+7)
+| style="text-align:center;"|50
+| style="text-align:center;"|60
+| style="text-align:center;"|35(?)
+| style="text-align:center;"|0
+| style="text-align:center;"|112
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|270
+| style="text-align:center;"|157
+| style="text-align:center;"|138
+| style="text-align:center;"|138
+| style="text-align:center;"|50
+| style="text-align:center;"|116
+| style="text-align:center;"|180
+| style="text-align:center;"|100(+7)
+| style="text-align:center;"|70
+| style="text-align:center;"|70
+| style="text-align:center;"|37(?)
+| style="text-align:center;"|5
+| style="text-align:center;"|162
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|
+|}
+<p style="text-align:center;">'''Light Carriers'''</p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Nu-class CVL
+! scope="col"|HP
+! scope="col"|Dive
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|65
+| style="text-align:center;"|3
+| style="text-align:center;"|25
+| style="text-align:center;"|4
+| style="text-align:center;"|3
+| style="text-align:center;"|17
+| style="text-align:center;"|54
+| style="text-align:center;"|0(+3)
+| style="text-align:center;"|35
+| style="text-align:center;"|1
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|67
+| style="text-align:center;"|42
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|70
+| style="text-align:center;"|3
+| style="text-align:center;"|35
+| style="text-align:center;"|4
+| style="text-align:center;"|10
+| style="text-align:center;"|20
+| style="text-align:center;"|72
+| style="text-align:center;"|0(+3)
+| style="text-align:center;"|35
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|67
+| style="text-align:center;"|45
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|84
+| style="text-align:center;"|6
+| style="text-align:center;"|70
+| style="text-align:center;"|6
+| style="text-align:center;"|40
+| style="text-align:center;"|41
+| style="text-align:center;"|88
+| style="text-align:center;"|0(+8)
+| style="text-align:center;"|45
+| style="text-align:center;"|30
+| style="text-align:center;"|26
+| style="text-align:center;"|0
+| style="text-align:center;"|103
+| style="text-align:center;"|53<ref name="notes">Flagship Nu has 2 slots of torpedo bombers, hence the maximum power is 106 if both slots are aimed at one single ship.</ref>
+|}
+<p style="text-align:center;">'''Standard Carriers'''</p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Wo-class CV
+! scope="col"|HP
+! scope="col"|Dive
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|85
+| style="text-align:center;"|3
+| style="text-align:center;"|40
+| style="text-align:center;"|4
+| style="text-align:center;"|3
+| style="text-align:center;"|32
+| style="text-align:center;"|81
+| style="text-align:center;"|3
+| style="text-align:center;"|45
+| style="text-align:center;"|1
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|67
+| style="text-align:center;"|46
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|88
+| style="text-align:center;"|6
+| style="text-align:center;"|55
+| style="text-align:center;"|6
+| style="text-align:center;"|12
+| style="text-align:center;"|37
+| style="text-align:center;"|90
+| style="text-align:center;"|6
+| style="text-align:center;"|55
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|76
+| style="text-align:center;"|58
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|96
+| style="text-align:center;"|6
+| style="text-align:center;"|80
+| style="text-align:center;"|6
+| style="text-align:center;"|45
+| style="text-align:center;"|55
+| style="text-align:center;"|96
+| style="text-align:center;"|6
+| style="text-align:center;"|55
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|114
+| style="text-align:center;"|60
+|-
+| style="text-align:center;"|Flagship Kai type
+| style="text-align:center;"|160
+| style="text-align:center;"|6
+| style="text-align:center;"|120
+| style="text-align:center;"|22
+| style="text-align:center;"|50
+| style="text-align:center;"|107
+| style="text-align:center;"|144
+| style="text-align:center;"|16
+| style="text-align:center;"|60
+| style="text-align:center;"|30
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|160
+| style="text-align:center;"|91<ref name="notes 2">Wo Kai has 2 slots of torpedo bombers, hence the maximum power is 182 if both slots are aimed at one single ship.</ref>
+|}
+<p style="text-align:center;">'''Submarines'''</p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;background-color:rgb(255,192,203);"|Ka-class SS
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|19
+| style="text-align:center;"|0
+| style="text-align:center;"|7
+| style="text-align:center;"|46
+| style="text-align:center;"|???
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|6
+| style="text-align:center;"|1
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| ---
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|27
+| style="text-align:center;"|0
+| style="text-align:center;"|21
+| style="text-align:center;"|78
+| style="text-align:center;"|???
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|8
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| ---
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|37
+| style="text-align:center;"|0
+| style="text-align:center;"|30
+| style="text-align:center;"|108
+| style="text-align:center;"|???
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| ---
+| style="text-align:center;"| ---
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Yo-class SS
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|24
+| style="text-align:center;"|0
+| style="text-align:center;"|9
+| style="text-align:center;"|62
+| style="text-align:center;"|???
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|7
+| style="text-align:center;"|5
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| ---
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|34
+| style="text-align:center;"|0
+| style="text-align:center;"|27
+| style="text-align:center;"|94
+| style="text-align:center;"|???
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|9
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| ---
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|44
+| style="text-align:center;"|0
+| style="text-align:center;"|36
+| style="text-align:center;"|121
+| style="text-align:center;"|???
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| ---
+| style="text-align:center;"| ---
+|}
+<p style="text-align:center;">'''Transport ships'''</p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|Wa-class AP
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|70
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|1
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|1
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|80
+| style="text-align:center;"|18
+| style="text-align:center;"|35
+| style="text-align:center;"|0
+| style="text-align:center;"|6
+| style="text-align:center;"|2
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|23
+| style="text-align:center;"| ---
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|130
+| style="text-align:center;"|62
+| style="text-align:center;"|65
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"|7
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|10
+| style="text-align:center;"|20
+| style="text-align:center;"|0
+| style="text-align:center;"|0
+| style="text-align:center;"|67
+| style="text-align:center;"| ---
+|}
+<p style="text-align:center;">'''Bosses (this may not be added)'''</p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" style="width:200px;"|
+! scope="col"|HP
+! scope="col"|Firepower
+! scope="col"|Armor
+! scope="col"|Torpedo
+! scope="col"|Evasion
+! scope="col"|Anti-air
+! scope="col"|Aircraft
+! scope="col"|ASW
+! scope="col"|LOS
+! scope="col"|Luck
+! scope="col"|ASW power
+! scope="col"|<span style="font-weight:bold;">Additional Accuracy</span>
+! scope="col"|Shelling power
+! scope="col"|Torpedo bombing power
+|-
+| style="text-align:center;"|Normal type
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|Elite type
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|Flagship type
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|}
+
+==Notes==
+{{reflist}}
+[[Category:Blog posts]]

@@ -1,0 +1,132 @@
+''(This builds on [[User blog:Martirsadota/Utilizing Wireshark for Kancolle Asset Grabbing|my previous post.]])''
+
+<table style="background:#FCC;border:3px solid #FAA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''This post is for educational purposes only!''' I neither promote/encourage nor condone practices of this sort. By utilizing the information in this guide, you understand that '''you are utilizing this information out of your own accord,''' and you agree that '''you will ''NOT'' hold me liable for any and all damages that may directly or indirectly arise from such usage!'''</td>
+</tr>
+</table>
+
+=Intro=
+
+For most files, like images or audio files, you can just use them as soon as you grab them off the Kancolle servers. Flash files (those with the extension <span style="font-family:monospace;">.swf</span>), however, need some extra treatment before they reveal their goodies.
+
+<table class="mw-collapsible mw-collapsed" style="background:#CDF;border:3px solid #ACF;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<tr><th></th><th>'''Technical Stuff! (You may safely skip this)'''</th></tr>
+<tr>
+<td style="vertical-align:middle;text-align:center;" width="100px">[[File:Improved Kanhon Type Turbine 033 Full.png|100px]]</td>
+<td style="vertical-align:middle;text-align:center;" >'''Flash files''' are probably better known for games (like Kancolle itself). However, aside from serving as the user interface (i.e, the part of the game that you can see and interact with), Flash files serve another purpose: it can also be a nice little container for game assets. For instance, in Kancolle, when it needs an image of a shipgirl, it actually downloads a Flash file with ''all'' the images of the shipgirl in question (normal, damaged forms, resupply banners, etc...) packaged neatly inside, instead of several image files. This reduces the amount of requests for files that the game must make, and also eases organization of files within your computer (or the game servers). On the down side (from the perspective of a user; I'm sure game devs would appreciate this point), it makes it a bit more difficult to extract the images/audio files/other files in question (but not ''completely'' impossible).</td>
+</tr>
+</table>
+
+For this, we need a program called a '''Flash decompiler'''. What it does is it takes in a Flash file, breaks it apart (''decompiles'' it), and shows all the goodies contained in it—not just images and audio, but also whatever code contained in it (which should entertain any geek who knows ActionScript for hours).
+
+So far, you have two choices for a Flash decompiler program<ref>Referenced from [[User_blog:Crazy_teitoku/Ripping_data_from_kancolle_servers|Crazy Teitoku's guide]].</ref>:
+
+{| class="mw-wikitable"
+|-
+! Name
+! Pros
+! Cons
+|-
+| [http://www.sothink.com/product/flashdecompiler/ Sothink SWF Decompiler]
+| None I can think of
+| Proprietary (requires $$$, but you can have the 30-day trial)
+|-
+| [https://www.free-decompiler.com/flash/ JPEXS Free Flash Decompiler]
+| Free and open-source
+| Requires [http://www.java.com Java.]
+|}
+
+I personally use JPEXS, despite the Java woes. [[File:Amagi.png|48px]] The rest of this section will use this program for a quick walkthrough regarding resource extraction (i.e, the instructions below are for JPEXS); if you ''did'' end up paying for Sothink's decompiler, kindly consult its help file to help with translating this process for that program.
+
+If you haven't installed your decompiler of choice, do so now. Once done, read on.
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin:6px auto auto auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>If you're installing JPEXS, it'll offer to install Java for you if you don't have it installed. I personally would recommend just letting the installer do it for you, rather than you grabbing Java and installing it yourself.</td>
+</table>
+
+=The Quick Walkthrough Regarding Resource Extraction=
+
+For this walkthrough, I'm going to assume you already grabbed an SWF file to break apart. If you haven't, [[User blog:Martirsadota/Utilizing Wireshark for Kancolle Asset Grabbing|do so now]].
+
+Open the file in JPEXS (via the '''File > Open...''' menu item, right-click, drag-and-drop, whatever works for you).
+
+[[File:Clip_(2015-11-07_at_07.20.26).png|550px|thumb|center|I hate the Ribbon, so I have it disabled. If you hate it too, I'll tell you how to disable it... later.]]
+
+Much of your work here will involve the left pane, which I'd call the '''Navigation Pane'''. You can call the larger, right pane the '''Viewing Pane'''.
+
+The contents of the Navigation Pane change depending on what kind of assets JPEXS found inside the Flash file. For instance, you might see an '''images''' folder when it finds images, '''sounds''' when it finds sounds, etc.
+
+What you want to do here is click the folder you're interested in. Since our example file contains images, let's click, well, ''images'':
+
+[[File:Ss_(2015-11-07_at_07.28.35).jpg|600px|center]]
+
+Bam. So ''that's'' where they're hiding!
+
+Now, come to think of it, this is like navigating a typical Windows Explorer window. And when we see rows of thumbnails and we want to open one, what do we do? That's right, '''double-click!'''
+
+So let's double-click one of the image thumbnails in the Viewing Pane.
+
+[[File:Clip_(2015-11-07_at_07.37.48).jpg|550px|center]]
+
+There we are, Bucky in all her glory. You'll also notice that the Navigation Pane morphs a bit and highlights the row of the file for us. Right-click the highlighted row, and...
+
+[[File:Clip_(2015-11-07_at_07.47.46).png|center]]
+
+There we are! Click '''Export Selection'''.
+
+[[File:Clip_(2015-11-07_at_07.50.33).jpg|center]] 
+
+A little '''Export...''' box will appear. Just ignore it and hit '''OK'''.
+
+[[File:Clip_(2015-11-07_at_07.54.37).jpg|400px|center]]
+
+This deserves a bit of discussion. JPEXS needs a '''''folder''''', not a file, in this dialog box. I'd recommend you create one folder for each Flash file you're disassembling; you'll see why in a bit.
+
+So let's create a folder to house Bucky's assets, choose that folder as our destination...
+
+[[File:Clip_(2015-11-07_at_08.04.07).jpg|400px|center]]
+
+And then hit (as strange as it may seem) '''Open'''.
+
+Now try navigating to the folder we saved the assets in.
+
+[[File:Clip_(2015-11-07_at_08.06.21).jpg|400px|center]]
+
+As you can see, JPEXS created an '''images''' folder for us. (If we exported an audio file [more on this later], we'd have a '''sounds''' folder, etc.)
+
+Open that folder, and the prize is yours.
+
+==Extra Note: Audio Files==
+
+[[File:Clip_(2015-11-07_at_08.29.00).png|thumb|300px]] Getting at the audio files is a bit different, since you can't use the "click-the-thumbnail-in-the-Viewing-Pane" technique for them. Instead, do this:
+
+# Expand the '''sounds''' folder by double-clicking it (or clicking the [+] button to the left of it).
+# Preview a sound by clicking its respective row. The Viewing Pane will change into a basic media player where you can play/pause, stop or enable/disable looping of the sound.
+# Once you found a sound you'd like to export, right-click it, click '''Export Selection''', and proceed with the steps above.
+
+=Tips=
+
+* Aside from exporting a single file, you can export an entire folder by right-clicking that and choosing '''Export Selection'''.
+** You can also export all the resources of the SWF file by right-clicking on the SWF's filename in the Navigation Pane and choosing '''Export Selection'''.
+* If you don't intend to export everything, you can export a selection of files by using your [https://www.google.com/search?q=techniques+for+selecting+multiple+files standard techniques for selecting multiple files] (<span style="font-family:monospace;">Ctrl</span>+clicking and <span style="font-family:monospace;">Shift</span>+clicking).
+** Combine this with the tip above to export any selection (even a combination of files and folders) you desire.
+
+=Afterthoughts=
+
+Easy, isn't it? It's always nice to have a program that does the heavy lifting for you. If you poke around a bit more, once in a blue moon, you might find something interesting (like an icon that isn't ''even'' used in-game)—you just found an [[Easter Eggs|Easter Egg]]!
+
+==PS: Disabling JPEXS' Ribbon==
+[[File:Clip_(2015-11-07_at_09.07.41).png|thumb|300px]]
+# Go to the '''Settings Tab > Advanced Settings'''.
+# Under the '''Interface''' tab, uncheck '''Ribbon interface'''.
+# Hit '''OK'''.
+# JPEXS will ask you if you want to restart the program; hit '''Yes'''.
+# ???
+# PROPHET!
+
+=Footnotes=
+<references/>
+[[Category:Blog posts]]

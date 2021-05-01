@@ -1,0 +1,723 @@
+Last updated: 16-04-2017
+
+
+Branching rules are one of the most important core components in the game's strategy. They basically decide what ships you are allowed to bring into the map and whether the ship combination you are using gives you an optimized route. Everything from strategies to recommendations starts with branching rules, because without branching rules, you do not know what the optimal setups are to reach your goal. Reading a branching table is easy if it exists... but what if a new event happens and you actually have to chart one out by yourself with the data provided?
+
+This blog serves as an introduction to the different types of nodes, as well as the branching rules mechanics. Here, I will explain how branching tables are created from scratch during events and mostly how I do it every time. This blog is highly technical and assumes that you are at '''least''' not a newface. Even if you're not a newface, this blog is absolutely not meant for casuals who have no interest in understanding the underlying mechanics and especially not for the faint-hearted.
+
+In case you are interested on assisting in the charting of branching rules though, this blog would be an excellent place to start. Even if you're not interested, I assure you that if you are interested in the mechanics, this will be a good reading experience for you.
+
+{{toclimit|2}}
+
+=The Basics=
+Let's first start with some basic re-cap of the knowledge you '''should''' be knowing, if you are playing this game. This includes being able to understand what all the nodes mean on the map and on how to read the branching rule tables that are listed everywhere.
+{{Clear}}
+==Node Types==
+All node types except the boss node are initially white, until you have visited that node once. After you re-enter the map, the nodes you have visited will be colored depending on the type of the node, with the exception of blue nodes.
+
+'''Note:''' Not all nodes are actually relevant to the topic of this blog, but for the sake of completion, everything is listed.
+{| class="wikitable"
+|-
+! colspan="3" |Node Types
+|-
+! scope="col"|Node
+! scope="col"|Name
+! scope="col"|Description
+|-
+| align="center" | [[File:Start node.png]]
+|Start Node
+|Starting point of a fleet. Note that this is not restricted to 1 per map, and maps where multiple starting points are present, uses branching rule mechanics to determine where the player's fleet is allowed to start at.
+|-
+| align="center" | [[File:Red node.png]]
+|Battle Node
+|Starts a battle. This can either be day or a night battle.
+|-
+| align="center" | [[File:Air defense node.png]]
+|Air Defense
+|The enemy fleet will launch an airstrike against you, which you have to defend yourself against. You cannot pursue the enemy and you cannot attack the enemy outside of using [[LBAS]], but the rank you receive will depend on how much damage you have taken from the airstrike. Taking no damage results in an S rank.
+|-
+| align="center" | [[File:Aerial battle node.png]]
+|Aerial Battle
+|In this node, 2 air phases takes place from both sides, in an attempt to bomb each other. After that, the player has the choice to pursue after the enemy in a night battle. Unlike the Air Defense, your rank is not decided by the amount of damage you have taken from the bombing phases.
+|-
+| align="center" | [[File:Hybrid node.png]]
+|Hybrid Node
+|A node that either turns into an empty node or a battle node, depending on which direction you approached the node from.
+|-
+| align="center" | [[File:Boss node.png]]
+|Boss Node
+|Starts a boss battle. When a boss node is present, you have to obtain a victory against the boss or destroy the enemy flagship to clear the map, depending on whether a health bar is involved or not.
+|-
+| align="center" | [[File:Anchor node.png]]
+|Anchor Node
+|In case a map does not feature a boss, it will have an Anchor Node instead. No battle will take place on this node and reaching this node with your fleet will count as a clear. Reaching this node will also give the player resources.
+|-
+| align="center" | [[File:Blue node.png]]
+|Empty Node
+|No battle takes place on this node and the fleet will move on as usual. Empty Nodes can sometimes also be a '''Choice Node''', where you can select which direction you want to go to. This type of node will always appear as red nodes on maps that you re-enter, but it will revert back to blue again when approached.
+|-
+| align="center" | [[File:Purple node 2.png]]
+|Storm Node
+|No battle takes place, but your fleet will suffer either a fuel or ammo penalty instead, which will affect your current sortie. You can however, reduce the penalty by equipping radars.
+|-
+| align="center" | [[File:Green node.png]]
+|Resource Node
+|No battle takes place and your fleet has found resources. The resources found on maps will only be added to your stockpile on either retreat or if you have finished the map. Attempts on cheesing this through refreshing will not work.
+|-
+| align="center" | [[File:Scout node.png]]
+|Scout Node
+|Seaplanes are sent out on this node to scout for resources. The resources and items you can find depends on what kind of seaplanes you have used and whether normal success or great success has been achieved. The success rate is dependent on how many seaplanes you have equipped on your fleet, but whether {{LOS}} plays a role here is unknown. After you have obtained the resources from the nodes, you must obtain a victory at the boss node to claim your rewards, or you will lose all the resources and items found during the run.
+|}
+{{Clear}}
+
+==Reading and Understanding the Branching Rule Tables==
+The next thing you need to know of course, is on how to effectively read the branching rules listed here. While each site has their own design and method of listing the branching rules, the principle remains the same for all of them. In case you are already familiar with branching tables, you might want to jump straight to the [[#Introduction to charting Branching Rules|branching rules]] to avoid boring yourself to death.
+{{Clear}}
+As [[1-5]] is the first map where fleet specific branching rules are introduced, it would also serve as the best example here to know how much branching rules can affect your progress.
+{{Clear}}
+{{World1-5}}
+{{MapBranchingTable|id = 1-5
+|B/battle -> C/battle =
+* If the amount of ships in fleet is ≦ 4, the routing is guaranteed
+* If the amount of ships in fleet is ≧ 5, the routing is random
+|B/battle -> D/battle = 
+* Random routing if the amount of ships in fleet is ≧ 5
+|C/battle -> F/battle = 
+* Fleet contains (F)BB (BBV does not count)
+* Fleet contains SS
+* Amount of CL in fleet is ≧ 3 (CLT and CT does not count)
+* Amount of ships in the fleet is ≧ 5
+|C/battle -> E/empty = 
+* Does not meet any of the requirement to go to F
+|D/battle -> H/empty =
+* Amount of ships in fleet is ≧ 5
+|D/battle -> I/battle = 
+* Amount of ships in fleet is ≦ 4
+|E/empty -> G/battle = 
+* 70-90% chance of off routing if:
+** Fleet contains no CVL, AV, LHA or CAV
+** Amount of CVL ≧ 2
+** Amount of AV ≧ 2
+** Amount of CAV ≧ 2
+|E/empty -> I/battle =
+* Guaranteed if the fleet contains at least a CVL, AV, LHA or CAV '''AND''' the fleet does not meet the requirements to off route to G.
+}}
+{{Clear}}
+===The possible routes===
+First, you have to determine which routes you can take to reach the goal, which is node I. There are 2 possible routes from what we can see:
+* Route A-B-D-I
+* Route A-B-C-E-I
+
+When deciding on which route is the most efficient, you check all the nodes that all have a branching route in them, which are node B, C, D and E. Of course you should only check the nodes that are relevant to you and nothing else, so let's split this investigation in 2 part.
+{{Clear}}
+===Route A-B-D-I===
+Node B is where the first branching takes place, and the branching rule is as follows:
+* If the amount of ships in fleet is ≦ 4, the routing is guaranteed to C
+* Random routing if the amount of ships in fleet is ≧ 5
+
+Which translates to that if you have 4 or fewer ships in your fleet, you will always go to C, while if you have more ships, the routing pattern becomes random. In other words, to be able to reach node D, you are forced into a random routing in which there is a possibility that you might also go to C. So for this route, you have to consider what you should do in case you do get sent to C, instead of your intended route of D, which we will check out later.
+
+Lets check out the next set of branching rules in case you do hit node D:
+* Node H
+** Amount of ships in fleet is ≧ 5
+* Node I
+** Amount of ships in fleet is ≦ 4
+
+Combine that with the information you have from the previous node, it means that you need at least 5 or more ships to have a ''chance'' of reaching node D and to reach the boss node, you are not allowed to have 5 or more ships. In other words, unless you somehow manage to sink your 5th ship on node D to reduce your amount of ships in the fleet to 4, getting to the boss this way is '''impossible'''. With that, the A-B-D-I route is obviously ruled out.(Adding that I have no interest in advertising strategies which involves sinking your own ships.)
+{{Clear}}
+===Route A-B-C-E-I===
+In this route, you will also pass through node B. While having 4 or less does guarantee you the routing to C, you will have to think about whether lowering your firepower justifies you having a guaranteed routing.
+
+However, if we take a look at node C's branching rules, we have the following:
+* Node E
+**Does not meet any of the requirement to go to F
+* Node F
+**Fleet contains (F)BB (BBV does not count)
+**Fleet contains SS
+**Amount of CL in fleet is ≧ 3 (CLT and CT does not count)
+**Amount of ships in the fleet is ≧ 5
+
+This changes quite a few things, mainly the last branching rule. When we explored node B, we had to consider whether using 4 ships or fewer and thus a lower firepower, would justify having a guaranteed routing. However, this is no longer relevant, because the branching rules now clearly states that if you do not use 4 or fewer ships in the fleet, you cannot reach the boss at all.
+
+Continuing on at Node E:
+*Node G
+**70-90% chance of off routing if:
+***Fleet contains no CVL, AV, LHA or CAV
+***Amount of CVL ≧ 2
+***Amount of AV ≧ 2
+***Amount of CAV ≧ 2
+*Node I
+** Guaranteed if the fleet contains at least a CVL, AV, LHA or CAV '''and''' the fleet does not meet the requirements to off route to G.
+
+So from your fleet of 4 ships, you must at least have either a CVL, AV, LHA or CAV in your fleet to guarantee the routing to the boss, or you will suffer a random chance of offrouting to G instead.
+
+Now that we have gone through every node to the boss, we can sum up all the requirements we need to reach the boss. To effectively reach the boss with an optimal setup, we need the following in your fleet:
+* Amount of ships in your fleet = 4
+* Amount of CL in fleet must remain ≦ 2
+* You are not allowed to use any SS(V)
+* You are not allowed to use FBB or BB, but BBV is still allowed
+* To guarantee your routing to the boss, have at least 1 CVL, AV, LHA or CAV, but do not bring 2 or more of the same class. Bringing 2 CVL for example will fail, for example.
+
+While this analysis looks intimidating and long, once you get the hang of it, you probably don't even need this wall of text explanation of mine to properly understand the branching rules. The analysis only looks long, because I have taken into consideration of every possible outcome, which is probably not even necessary and a waste of time to do in [[1-5]].
+
+With this, you should be able to have a grasp as to how the branching rules are set up. Keep in mind the following few things though when it comes to branching rules in general:
+* Depending on the circumstances, you might not be able to get the most optimal route. Some quests for [[1-5]] for example, forces you to use 4 DD, which effectively prevents you from using a CVL, AV, LHA or CAV for the guaranteed routing.
+* Using stronger setups will usually give you longer routes, while lighter setups give you shorter routes. In those cases, you have to decide whether having a longer route but stronger fleet is worth the trouble, or that it might be doable with a lighter fleet at the risk of having a higher retreat rate and lower chance of defeating the boss. This is especially very common in events.
+* The best route might not be available to everyone due to not having the required ships or there might not even be a best route at all.
+
+
+Reading branching rule tables is easy enough, but how about making one yourself? Read on.
+{{Clear}}
+
+==Introduction to charting Branching Rules==
+As someone who has charted the branching rules of the events for quite a while now, I can say that it is quite complex, especially if you have nothing to base your data on.<br />
+When starting out, you need some preparations while also knowing the following:
+* Do you know all the branching rule types? This is important as you are usually working from a clean slate during the events. It helps that you know what kind of branching rules exists and where to look for in that time.
+* In light of a new branching rule mechanic being a possibility, do you know where to look at when dealing with weird results? As every event is different, you will always have to keep a lookout on new mechanics that might influence the branching rules in any way. A strong example is [[Winter 2017 Event]], which introduced dynamic routing for the first time.
+* Do you have people willing to test compositions for you? Or do you somehow have access to a large data size, for example? Having people willing to help you out is always nice to have and having a big data size for you to work with is definitely very good. It is also the reason why I have set up google submission forms for the people every event, so that I can collect data for everyone who is interested in working with it.
+* Did you obtain all the information you can get from the historians? As event themes are all related to in real life operations during the 2nd world war, there is nobody better you could ask than the historians. The people of history might know what has happened in each operation to give you an idea as to how the event will go and also importantly, which ships are involved for the historical routing.
+
+{{Clear}}
+
+==Branching Rules==
+In case you don't know all the possible branching rules (yet), fear not, as I will list all the possible scenarios here.
+The list will be presented in the following format:
+* '''Name''': The unofficial name which I have dubbed for the specific branching rule.
+* '''Frequency''': How often this type of branching rule is used in general and on which portion of the map it is used usually. Note that knowing this is not important at all, but it is an interesting thing to know regardless.
+* '''Description''': A description as to what the branching rule checks and how it works.
+* '''Example''': An example(s) will be given for the branching rule type.
+
+<!--
+===Name===
+====Frequency====
+
+{{Clear}}
+
+====Description====
+
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = Example
+
+}}
+{{Clear}}
+<br />
+<br />
+-->
+
+
+{{Clear}}
+===Meet none of the requirements===
+====Frequency====
+Commonly seen everywhere
+{{Clear}}
+
+====Description====
+The branching rule that checks whether you actually have met any requirements at all to go to a node. In cases where you don't fully meet the requirements to go to any nodes, it will default to either random routing or in some cases, a default route to a certain node. This also applies to cases where there is no branching rules at all, like the majority of [[World 1: 鎮守府海域|World 1]] maps.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 2-5
+|0 -> A/battle =
+* Fleet contains at least 3DD + (1DD '''OR'''1CL), AV ≦ 1 and there are no carriers
+* Amount of SS(V) ≧ 4
+* Two ships in the fleet are equipped with at least 1 drum
+* Random if none of the requirements are met
+|0 -> B/battle =
+* Fleet contains carriers
+* Amount of AV ≧ 2
+* Fleet contains (F)BB(V) while not meeting any requirements to go to A
+* Random if none of the requirements are met
+
+|A/battle -> C/empty =
+* Amount of SS(V) ≧ 3
+|A/battle -> D/battle =
+* Does not meet the requirements to go to C
+}}
+{{Clear}}
+<br />
+<br />
+===Choice Node===
+====Frequency====
+Not seen often, but rather common on event maps.
+{{Clear}}
+
+====Description====
+Allows the player to freely select which direction the fleet should go.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 4-5
+|A/empty -> C,D = *Choice node
+|B/empty -> C,E = *Choice node
+|G/empty -> F,I = *Choice node
+}}
+{{Clear}}
+<br />
+<br />
+===Ship Count Check===
+====Frequency====
+Very rarely observed after first seen in [[1-5]].
+{{Clear}}
+
+====Description====
+Sets a restriction that checks how many ships you have in your fleet during the sortie. Ironically, while it is introduced first in [[1-5]], it isn't often used at all after that. It is also most likely contributed from the fact that nobody would intentionally use fewer ships without a good reason.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 1-5
+|D -> H/empty = * Amount of ships in fleet is ≧ 5
+|D -> I = * Amount of ships in fleet is ≦ 4
+}}
+{{Clear}}
+<br />
+<br />
+===Ship Type Count Check===
+====Frequency====
+Literally everywhere
+{{Clear}}
+
+====Description====
+Sets a restriction based on the amount of one ship type or a count of multiple ship types added together. This branching rule could force you to have a CL in your fleet, use a certain amount of DD in your fleet, prevent you from using too many BB/CV or even flat out ban the use of some ship types. The count is not restricted to 1 type of ships, it could also be a count of multiple ship types grouped together.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 3-5
+|0 -> A = 
+*Guaranteed if one of the following requirements are met:
+**Amount of SS(V) ≧ 3
+**Amount of (F)BB(V) ≧ 2
+**Amount of (F)BB(V) + CA(V) ≧ 3
+**Fleet contains CV(L)
+**Fleet contains CLT
+*Random routing if none of the requirements are met
+|0 -> B = 
+*Guaranteed if ALL of the following requirements are met:
+**Does not meet the requirements to go to A
+**Fleet contains no (F)BB(V)
+**Fleet contains no CV(L)
+**Fleet contains no CA(V)
+**Fleet contains no CLT
+**Fleet contains no AV
+**Fleet contains no AO
+**Amount of CL ≦ 1
+**Amount of DD ≧ 4
+*Random routing if none of the requirements are met
+}}
+{{Clear}}
+<br />
+<br />
+===Flagship Check===
+====Frequency====
+Uncommon
+{{Clear}}
+
+====Description====
+It checks whether a ship type is currently the flagship or not. Rarely does it check for a specific ship and not the type. In case of a ship type check, the requirement is usually a CL.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 6-4
+|1 -> A = * Do not meet the requirements to go to B
+|1 -> B = 
+* If the fleet speed is '''Fast''', meet one of the following requirements:
+** CL is flagship and the amount of DD ≧ 3
+** Amount of DD ≧ 4
+}}
+{{Clear}}
+<br />
+<br />
+===Route Check===
+====Frequency====
+Not seen often, but there is usually at least one during events.
+{{Clear}}
+
+====Description====
+This branching rule checks which nodes you have traveled through or on which starting point you have started. Through that method, it will decide which node you get sent to next.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 6-5
+|I -> H = * Fleet started at point 1
+|I -> J = * Fleet started at point 2
+}}
+{{Clear}}
+<br />
+<br />
+===Speed Check===
+====Frequency====
+Very common
+{{Clear}}
+
+====Description====
+Checks whether the speed of the fleet is Slow, Fast, Fast+ or Fastest.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 5-5
+|A -> C = * Do not meet the requirements to go to either D or F
+|A -> D = 
+* Fast Fleet
+* Fleet contains exactly 2 CV and 1 CVL
+|A -> F = 
+* Amount of SS(V) ≧ 3
+}}
+{{Clear}}
+<br />
+<br />
+===Equipment Check===
+====Frequency====
+Rarely seen on maps.
+{{Clear}}
+
+====Description====
+Checks whether you have a certain amount of equipment equipped. This could also be a total requirement over multiple ships, preventing you from equipping the requirement total on a single ship. Drums and seaplanes are the most common requirements, but there have been cases of other requirements.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 2-5 Start
+|0 -> A = 
+* Fleet contains at least 3DD + (1DD OR1CL), AV ≦ 1 and there are no carriers
+* Amount of SS(V) ≧ 4
+* Two ships in the fleet are equipped with at least 1 drum
+* Random if none of the requirements are met
+|0 -> B = 
+* Fleet contains carriers
+* Amount of AV ≧ 2
+* Fleet contains (F)BB(V) while not meeting any requirements to go to A
+* Random if none of the requirements are met
+}}
+{{Clear}}
+<br />
+<br />
+===LoS check===
+====Frequency====
+Seen often in normal maps, but seen literally everywhere on event maps, especially at the node that is right before the boss node.
+{{Clear}}
+
+====Description====
+Checks whether you have the required [[LoS]] in your fleet. A passed LoS check is noticed through a seaplane animation that appears on the map. The seaplane will then fly to the node you are supposed to go and then fly back, your fleet will then move over to the next node.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 2-5 LoS
+|H/empty -> J = 
+* Fail the LoS check with less than 31 in the F33 formula (Cn=1)
+* Random if you do not meet any requirements (Higher chance to J if it is closer to 31)
+|H/empty -> L =
+* Pass the LoS check by reaching 33 or higher with the F33 formula (Cn=1)
+* Random if you do not meet any requirements (Higher chance to L if it is closer to 33
+}}
+{{Clear}}
+<br />
+<br />
+===Specific Ship Check===
+====Frequency====
+Very rare.
+{{Clear}}
+
+====Description====
+Checks whether a specific ship is in the fleet or not. The requirements can sometimes require you to have her as flagship.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 6-1
+|id = 6-1A
+|A -> C = Fleet does not contain {{ShipLink|Taigei}}
+|A -> D = {{ShipLink|Taigei}} is in the fleet
+}}
+{{Clear}}
+<br />
+<br />
+===Conditional Check===
+====Frequency====
+Very common
+{{Clear}}
+
+====Description====
+A conditional branching rule that must be fulfilled, before the underlying branching rules can be fulfilled. Multiple conditionals can exist on a node.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = 6-1
+|id = 6-1B
+|0 -> A/empty = 
+* Fleet contains only submarines and the amount of SS(V) ≧ 3
+* If the fleet contains {{ShipLink|Taigei}}:
+** Amount of CL ≦ 1
+** Routing becomes random between A and B if the fleet contains DD
+** Nothing else allowed, except SS(V)
+}}
+{{Clear}}
+<br />
+<br />
+===Combined Fleet Check===
+====Frequency====
+None in normal maps, but common in events.
+{{Clear}}
+
+====Description====
+Checks what kind of combined fleet has been used to decide which node the fleet goes to.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = Fall 2016 E-5
+|2 -> K = 
+* Carrier Task Force
+|2 -> M = 
+* Transport Escort Combined Fleet
+* Surface Task Force and (F)BB+CV ≦ 1 in main fleet
+|2 -> U = 
+* Surface Task Force with the following requirements:
+** (F)BB+CV ≧ 4
+}}
+{{Clear}}
+<br />
+<br />
+===Historic Routing===
+====Frequency====
+None on normal maps, but there is always at least one during events.
+{{Clear}}
+
+====Description====
+A branching rule that checks whether you have the required amount of ships in the fleet that has historical references to the map theme. Depending on the importance of a ship during the 2nd world war, some ships have double the weight and some even requires you to have a specific historic ship in your fleet.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = Fall 2016 E-3
+|I -> H = * Amount of (F)BB(V) + CV ≧ 4 in the '''main''' fleet
+|I -> K = 
+* Amount of DD = 2 in fleet
+* Historical ships is present but the amount is ≦ 5.
+|I -> L = 
+* Amount of DD ≧ 3 in '''escort''' fleet
+* Historical ships in fleet ≧ 6 '''(Overrides any other branching rules)'''
+|I -> O/empty = * Do not meet any requirements to go to either L or K
+}}
+'''Historical Ships''':
+*(F)BB(V):{{ShipLink|Ise}}, {{ShipLink|Hyuuga}}
+*CV(L): {{ShipLink|Souryuu/Kai Ni|text=Souryuu}}, {{ShipLink|Hiryuu/Kai Ni|text=Hiryuu}}
+*CA: {{ShipLink|Atago}}, {{ShipLink|Maya/Kai Ni|text=Maya}}, {{ShipLink|Choukai/Kai Ni|text=Choukai}}, {{ShipLink|Myoukou/Kai Ni|text=Myoukou}}, {{ShipLink|Haguro/Kai Ni|text=Haguro}}, {{ShipLink|Nachi/Kai Ni|text=Nachi}}
+*CL(T) {{ShipLink|Jintsuu/Kai Ni|text=Jintsuu}}, {{ShipLink|Kiso/Kai Ni|text=Kiso}}
+*DD: {{ShipLink|Nowaki}}
+*AV:
+{{Clear}}
+<br />
+<br />
+
+==Dynamic Branching Rules==
+Introduced in Winter 2017, dynamic branching rules are branching rules that uses the current state of a map as conditionals to change the branching rules. This means that people in different phases on the same map, would get very different branching rules.
+
+===Difficulty Check===
+====Frequency====
+Common
+{{Clear}}
+
+====Description====
+Gives you a set of branching rules depending on the difficulty you selected for the map.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = Winter 2017 E-1
+|id = WinterA
+|D -> A = * Does not meet any requirements to go to C
+|D -> C/empty = 
+* If the fleet contains '''only''' SS(V)
+** Amount of SS(V) ≧ 1 on Easy/2 on Medium/3 on Hard
+* If the difficulty is Easy, meet '''all''' of the following requirements
+** Amount of DD ≧ 2
+** Amount of CV(L/B) ≦ 1
+* If the difficulty is Medium, meet '''all''' of the following requirements
+** Amount of DD ≧ 2
+** Amount of SS(V) ≧ 2
+** Amount of CV(L/B) ≦ 1
+*If the difficulty is Hard, meet '''all''' of the following requirements
+** Amount of DD ≧ 2
+** Amount of SS(V) ≧ 3
+}}
+{{Clear}}
+<br />
+<br />
+
+
+===TP Bar State===
+====Frequency====
+Common
+{{Clear}}
+
+====Description====
+Gives you a set of branching rules depending on the TP state of the map.
+{{Clear}}
+
+====Example====
+{{MapBranchingTable
+|title = Winter 2017 E-1
+|id = WinterB
+|G/empty -> D = 
+* TP gauge is ≧ 1
+* The TP gauge is destroyed and the fleet contains '''only''' SS(V)
+* If the TP gauge is destroyed, meet '''all''' of the following requirements
+** Amount of CL ≧ 1
+** Amount of DD ≧ 3
+** Fast Fleet
+** Fleet contains no CV(L/B)
+|G/empty -> L = 
+* TP gauge is 0 and the gauge isn't destroyed yet
+* The gauge is destroyed and you do not meet the requirements to go to D
+}}
+{{Clear}}
+<br />
+<br />
+
+==Charting a Branching Rule Table==
+When you have to start with a new set of branching rules, the question you will often ask yourselves is where you have to start. The beginning is essentially the hardest part, since you have literally nothing to reference on, you can only use the data size you might have as reference to create a start.
+
+Well, we all have to start somewhere and what better than to use a past example as an exercise?
+[[File:Fall 2016 Event E-1 Map.png|400px]]<br />
+[https://docs.google.com/spreadsheets/d/1SybHvKEJFjjKkzNKp2DeQUpCaW6sVkI4Q4Pg9LXnuQ8 Google Data Sheet]
+
+{{MapBranchingTable
+|title = Fall 2016 E-1
+|id = FallA
+|A -> C = * ???
+|A -> B = * ???
+
+|C -> F = * ???
+|C -> E = * ???
+
+|B -> E = * ???
+|B -> D = * ???
+
+|F -> H = * ???
+|F -> E = * ???
+
+|E -> D = * ???
+|E -> F = * ???
+|E -> H = * ???
+
+|D -> E = * ???
+|D -> H = * ???
+
+|H -> L = * ???
+|H -> G = * ???
+
+|I -> J = * ???
+|I -> K = * ???
+}}
+[[Template:MapBranchingTable]]
+===Knowing where to begin===
+When creating a new branching table, you are immediately presented with a few problems:
+* You have no idea what the color of each nodes are.
+* Some nodes are vague enough that you do not know which way the route goes. You can't accurately see whether F goes to E or whether D goes to E, for example.
+
+This is a good time to start gathering information regarding the map and there are various ways to do it:
+* No doubt the front liners have already charged into the map and probably even cleared it. If they are willing to, they might be able to answer the questions you have.
+* Watching streams of front liners on places like twitch is also an excellent way to get some primary info regarding the map.
+* Check other information sites like wikiwiki. Of course it is a bit tedious if you do not understand Japanese, but if you know your way around these sites, you will undoubtedly find another source which you can cross reference on.
+* And of course, you can have people you know help you do some blind runs. Heck, you can even do it yourself if you want to. It is also a way to get some first samples of the run.
+
+After a while, no doubt you will eventually find all the node colors, as well as discover that node A is a choice node, while node H and node I are LoS checks. The data sheet also starts becoming more populated, and you discover in which direction some node routes go now, like how you find a sample of someone going from D to E to F. One thing you have to keep in mind when discerning which way a route goes, is that all routes are usually always one-way, unless there is a special gimmick involved. It is thus safe to draw that conclusion.
+
+With the new information that is discovered, we adjust the table again.
+
+{{MapBranchingTable
+|title = Fall 2016 E-1
+|id = FallB
+|A/empty -> B,C = * Choice Node
+
+|B -> E = * ???
+|B -> D = * ???
+
+|C -> F = * ???
+|C -> E = * ???
+
+|D -> E = * ???
+|D -> H = * ???
+
+|E -> F = * ???
+|E -> H/resource = * ???
+
+|F -> H/resource = * ???
+|F -> E = * ???
+
+|H/resource -> L = * Pass the LoS check
+|H/resource -> G/resource = * Fail the LoS check
+
+|I/storm -> J = * Pass the LoS check
+|I/storm -> K/empty = * Fail the LoS check
+}}
+
+===Working on the Branching Rules===
+Now that you have completed the table somewhat, it is a good time to start checking out the data and discover some discrepancies between the samples. The first thing you notice is that the route A-C-F-H-L is a very commonly taken route, but some failed and off routed from C to E instead. For convenience sake, I have marked all the relevant samples in this case with an <span style="color:#ffa500">orange</span> color.
+
+The following can observed from the fleet samples marked in <span style="color:#ffa500">orange</span>:
+* There have been no instance of a fleet containing CV successfully going from C to F. Likewise, all fleet containing a CV have all off routed to E.
+* However, each fleet containing a CV also contained (F)BB(V)s, so it is hard to say whether the off routing is caused by simply having a CV in the fleet, or because they brought too many capital ships with them.
+* There is a case where someone used SS(V) and off routed, but considering that you don't really want to use SS(V) in a map where you have to fight against submarines, trying to pursue that doesn't contribute to much and is thus skipped.
+* Interestingly enough, there is a case of a 1FBB 1CVL 2CL 2DD off routing to E. However, it is also true that there are plenty of people having successfully gone from C to F using 1FBB 1CVL 1CL 3DD. This can mean one of the 2 following things:
+** The off route is caused by having 2 or more CL.
+** The off route is caused by not bringing at least 3 DD with you.
+* Luckily, there are 2 instances where people cleared with 2CL and at least 3DD. This mean that if you want to reach node F, you must have at least 3DD in your fleet.
+
+Due to the insufficient sample size, the capital ship branching rule remains an unconfirmed mystery. However, if this were to happen during the event, you can of course take measures to have this tested and verified. For now, there is simply no way of confirming it, hence we have to label it as unconfirmed. With the data that is already there, we can add the following statements to the branching table:
+
+{{MapBranchingTable
+|title = Fall 2016 E-1
+|id = FallC
+|A/empty -> B,C = * Choice Node
+
+|B -> E = * ???
+|B -> D = * ???
+
+|C -> F = * Does not meet the requirement to go to E
+|C -> E = 
+* Fleet contains CV(B) (Unconfirmed)
+* Amount of DD in fleet is ≦ 2
+
+|D -> E = * ???
+|D -> H = * ???
+
+|E -> F = * ???
+|E -> H/resource = * ???
+
+|F -> H/resource = * ???
+|F -> E = * ???
+
+|H/resource -> L = * Pass the LoS check
+|H/resource -> G/resource = * Fail the LoS check
+
+|I/storm -> J = * Pass the LoS check
+|I/storm -> K/empty = * Fail the LoS check
+}}
+
+
+And yes, this process is repeated on every node until the whole table has been completed. While the process looks tedious, it is really just comes down to simple deductions based on the data you already have, while trying to get the data that you need to make sure there are no loose ends in your claims.
+
+Now that you have seen an example, I at least hope that you have a basic understanding of how the branching tables are set up, and maybe in the near future, even chart and create your own ones during events.
+
+Some things to keep in mind, especially when you decide to help out during the event times:
+* Try and get '''anything''' out of a report, no matter how minuscule it is. Small details like equipment setups led to the discovery that the branching rule which checks the amount of seaplanes equipped was a thing. Before, it was always thought that it was restricted to checking drum cans only.
+* Work as a community, not alone. Trying to do everything alone is completely unnecessary and also time consuming, especially if there is a whole community sharing the same goals that you have.
+* Historians are your friend. Especially ask them whether they know anything about an operation that is announced through a tweet. Knowing what an operation is about can give you good insight as to what you could expect during the event.
+* Do not 100% rely on user submitted data. While people have good intentions, mistakes can happen and there are of course those who maliciously submit false data as well. Having a strong bullshit detector helps.
+* Maintain a professional stance and report the data as accurate as possible. The whole community relies on the information you publish, meaning that inaccurate information will usually be fatal to the readers who don't know better. When you have tested BBs for example, do not report it as (F)BB(V), because you strictly only have tested standard BBs. That isn't to say that mistakes aren't allowed, but always double check your work and take measures in minimizing the possible mistakes.
+* While it is perfectly fine to help out the community, it does not have to end up with as a self sacrifice. Make sure that you yourself have enough time to finish the event.
+
+With that said, good luck!
+[[Category:Blog posts]]

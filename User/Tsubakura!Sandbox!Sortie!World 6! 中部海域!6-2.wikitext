@@ -1,0 +1,335 @@
+__NOTOC__
+=={{Anchor|6-2}}World 6-2: MS諸島沖 MS Archipelago==
+{{Sortieworld
+| map = {{World6-2}}
+| difficulty = ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆
+| item = None
+| exp = 420
+| code = MS諸島防衛戦 (Defense of the MS Archipelago)
+| text = MS諸島沖前面に展開し、同諸島方面に接近しつつある敵攻略部隊を捕捉、全力で撃滅せよ！
+
+Expand to the forward part of the MS Archipelago sea, seize the enemy fleet that is slowly advancing to capture the archipelago, and destroy them with all your might!
+
+}}
+
+===Stage Guide===
+{{MapBranchingTable
+|title = 6-2 Branching Rules
+|id = 6-2
+
+|0 -> A =
+* 3+ BB
+* 4+ of [CL + DD]
+* Otherwise, random
+|0 -> B =
+* 3 or less of [BB + CV(L)]
+* Otherwise, random
+
+|A ->  B  = 
+* 3+ BB or 3+ CV(L) 
+* Otherwise, random
+|A -> D/storm =
+* 0 - 1 [BB(V) + CV(L)] & 0 - 1 [CA(V) + CLT] & 4+ [CL + DD] 
+* Otherwise, random 
+
+|B -> C/empty =
+* 6 [BB(V) + CV(L) + CA(V)] 
+* 4+ [BB(V) + CV(L)],  with chance to go to C (?)
+|B -> D/storm = * Does not meet the requirements to go to either C or F (?)
+|B -> F/empty = * 0 - 1 BB & 0 - 2 [BB + CV(L)] 
+
+|D/storm -> E = * Does not meet the requirements to go to G (?)
+|D/storm -> G = * 3+ DD & 4+ [CL + DD] & 0 [BB + CV] (?)
+
+|E -> H = * Fixed route
+
+|F/empty -> E = * Does not meet the requirements to go to either H or I
+|F/empty -> H = * BB ≤ 1 & CV(L) ≤ 1 & DD ≥ 2, AND [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] < 43
+|F/empty -> I = * BB ≤ 1 & CV(L) ≤ 1 & DD ≥ 2, AND [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] > 43
+
+|G -> J/empty = * Random or fixed route LoS check (to node K) failed (boundary unknown) 
+|G -> K = * [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula > 40
+
+|H -> J/empty = * Random or fixed route LoS check (to node K) failed (boundary unknown) 
+|H -> K = * [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula > 40
+}}
+
+Requires sinking the flagship at the boss node '''3''' times to deplete the gauge.
+===Tips===
+* This map uses the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula, this means that '''LoS from equipments weights 3 times more''' than usual.
+*'''B-F-H/I-K''' : 1 BB(V), 1 CV, 2 DD, 2 CA(V) / 1 BB(V), 1 CV, 2 DD, 2 CLT / 1 BB(V), 1 CV(B), 2 DD, 1 CA(V), 1 CLT
+** There is a LoS check for F -> I. Using either composition that fails this LoS check will to go to H instead. However, H does not contain any Flagship Kai-grade enemies, so failing this LoS check may be preferable. There is also a LoS check for H -> K. When the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] LoS value is between 40 and 43, it guarantees going H and passing the second LoS check.
+*'''B-F-E-H-K''': [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/Jgk9Ija.png 1BB + 1CV + 1CA + 3CLTs] / 2CLT, 2CA(V), 1CV, 1BB or 2CV, 2CA(V), 2CLT
+** Higher chance to kill the boss, but inefficient for farming. Lower route consists of at least 1 flagship Kai ship while upper route will face one whirpool node.
+*'''A-D-G-K''': CA(V), 2CL, 3DD (Unknown LOS check on G-K). Strongly recomended to use a CAV with at least a seaplane bomber.
+*'''A-B-F-I-K''' : 3DD, CVL, 1CA(V), 1CL
+
+===Nodes And Enemy Encounters===
+
+<div class="mw-customtoggle-6-2-enemy wikia-menu-button">Show/Hide Nodes and Enemy Encounters</div>
+
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-6-2-enemy"
+! colspan="5" style="text-align:center;" |Nodes and Enemy Encounters
+|-
+!Area
+!Pattern
+! width="500px" |Encountered vessels
+!Form
+!Air
+|-
+| rowspan="6" style="text-align:center;" |A<br />敵攻略支援部隊A群
+| rowspan="3" style="text-align:center;" |Pattern 1
+| rowspan="3" |[[File:CA Ri Class3.png|Heavy Cruiser Ri-class Flagship|link=Heavy Cruiser Ri-Class]][[File:CVL Nu Class2.png|Light Carrier Nu-class Elite|link=Light Carrier Nu-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| rowspan="3" style="text-align:center;" |Pattern 2
+| rowspan="3" |[[File:CA Ri Class3.png|Heavy Cruiser Ri-class Flagship|link=Heavy Cruiser Ri-Class]][[File:CVL Nu Class2.png|Light Carrier Nu-class Elite|link=Light Carrier Nu-Class]][[File:CVL Nu Class2.png|Light Carrier Nu-class Elite|link=Light Carrier Nu-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{DoubleLine}}{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />144
+|-
+| style="text-align: center;" |'''AS'''<br />72
+|-
+| rowspan="9" style="text-align:center;" |B<br />敵攻略支援部隊B群
+| rowspan="3" style="text-align:center;" |Pattern 1
+| rowspan="3" |[[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:CA Ri Class2.png|Heavy Cruiser Ri-class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruiser Ri-class Elite|link=Heavy Cruiser Ri-Class]][[File:CVL Nu Class2.png|Light Carrier Nu-class Elite|link=Light Carrier Nu-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{DoubleLine}}
+|-
+| style="text-align: center;" |'''AS+'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| rowspan="3" style="text-align:center;" |Pattern 2
+| rowspan="3" |[[File:CVL_Nu_Class3.png|Light Carrier Nu-class Flagship|link=Light Carrier Nu-Class]][[File:CVL_Nu_Class3.png|Light Carrier Nu-class Flagship|link=Light Carrier Nu-Class]][[File:BB Ru Class2.png|Battleship Ru-class Elite|link=Battleship Ru-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />138
+|-
+| style="text-align: center;" |'''AS'''<br />69
+|-
+| rowspan="3" style="text-align:center;" |Pattern 3
+| rowspan="3" |[[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:CVL Nu Class2.png|Light Carrier Nu-class Elite|link=Light Carrier Nu-Class]][[File:CA Ri Class2.png|Heavy Cruiser Ri-class Elite|link=Heavy Cruiser Ri-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| style="text-align: center;" |C
+| colspan="4" rowspan="1" style="text-align: center;" |"Must be my imagination" (battle avoided)
+|-
+| style="text-align: center;" |D
+| colspan="4" rowspan="1" style="text-align: center;" |Maelstorm: {{Ammo}} -15
+|-
+| rowspan="9" style="text-align:center;" |E<br />敵空母機動部隊
+| rowspan="3" style="text-align:center;" |Pattern 1
+| rowspan="3" |[[File:CV Wo Class5.png|Standard Carrier Wo-class Flagship II|link=Standard Carrier Wo-Class]][[File:CV Wo Class5.png|Standard Carrier Wo-class Flagship II|link=Standard Carrier Wo-Class]][[File:CL Tsu Class2.png|Light Cruiser Tsu-class Elite|link=Light Cruiser Tsu-Class]][[File:DD Ro Class 4.png|Destroyer Ro-class Late Model|link=Destroyer Ro-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />504
+|-
+| style="text-align: center;" |'''AS'''<br />252
+|-
+| rowspan="3" style="text-align:center;" |Pattern 2
+| rowspan="3" |[[File:CV Wo Class5.png|Standard Carrier Wo-class Flagship II|link=Standard Carrier Wo-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{DoubleLine}}{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />252
+|-
+| style="text-align: center;" |'''AS'''<br />126
+|-
+| rowspan="3" style="text-align:center;" |Pattern 3
+| rowspan="3" |[[File:CV Wo Class5.png|Standard Carrier Wo-class Flagship II|link=Standard Carrier Wo-Class]][[File:CA Ri Class3.png|Heavy Cruiser Ri-class Flagship|link=Heavy Cruiser Ri-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />252
+|-
+| style="text-align: center;" |'''AS'''<br />126
+|-
+| style="text-align: center;" |F
+| colspan="4" rowspan="1" style="text-align: center;" |"Must be my imagination" (battle avoided)
+|-
+| rowspan="5" style="text-align:center;" |G<br />敵高速水上打撃部隊
+| style="text-align:center;" |Pattern 1
+| [[File:BB Ta Class3.png|Battleship Ta-class Flagship|link=Battleship Ta-Class]][[File:CA Ri Class2.png|Heavy Cruiser Ri-class Elite|link=Heavy Cruiser Ri-Class]][[File:CL Tsu Class2.png|Light Cruiser Tsu-class Elite|link=Light Cruiser Tsu-Class]][[File:DD Ha Class 4.png|Destroyer Ha-class Late Model|link=Destroyer Ha-Class]][[File:DD Ro Class 4.png|Destroyer Ro-class Late Model|link=Destroyer Ro-Class]][[File:DD Ro Class 4.png|Destroyer Ro-class Late Model|link=Destroyer Ro-Class]]
+| style="text-align:center;" |{{LineAhead}}
+|
+|-
+| rowspan="3" style="text-align:center;" |Pattern 2
+| rowspan="3" |[[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:CVL_Nu_Class3.png|Light Carrier Nu-class Flagship|link=Light Carrier Nu-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD Ha Class 4.png|Destroyer Ha-class Late Model|link=Destroyer Ha-Class]][[File:DD Ni Class 4.png|Destroyer Ni-class Late Model|link=Destroyer Ni-Class]]
+| rowspan="3" style="text-align:center;" |{{LineAhead}}{{DoubleLine}}
+|-
+| style="text-align: center;" |'''AS+'''<br />69
+|-
+| style="text-align: center;" |'''AS'''<br />35
+|-
+| style="text-align:center;" |Pattern 3
+| [[File:BB Ta Class3.png|Battleship Ta-class Flagship|link=Battleship Ta-Class]][[File:CA Ri Class3.png|Heavy Cruiser Ri-class Flagship|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruiser Ri-class Elite|link=Heavy Cruiser Ri-Class]][[File:CL Tsu Class2.png|Light Cruiser Tsu-class Elite|link=Light Cruiser Tsu-Class]][[File:DD Ha Class 4.png|Destroyer Ha-class Late Model|link=Destroyer Ha-Class]][[File:DD Ha Class 4.png|Destroyer Ha-class Late Model|link=Destroyer Ha-Class]]
+| style="text-align:center;" |{{LineAhead}}
+|
+|-
+| rowspan="4" style="text-align:center;" |H<br />敵任務部隊B群
+| style="text-align:center;" |Pattern 1
+| [[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD Ro Class 4.png|Destroyer Ro-class Late Model|link=Destroyer Ro-Class]][[File:DD Ro Class 4.png|Destroyer Ro-class Late Model|link=Destroyer Ro-Class]]
+| style="text-align:center;" |{{LineAhead}}{{DoubleLine}}
+|
+|-
+| rowspan="3" style="text-align:center;" |Pattern 2
+| rowspan="3" |[[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:CVL_Nu_Class3.png|Light Carrier Nu-class Flagship|link=Light Carrier Nu-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD Ha Class 4.png|Destroyer Ha-class Late Model|link=Destroyer Ha-Class]][[File:DD Ni Class 4.png|Destroyer Ni-class Late Model|link=Destroyer Ni-Class]]
+| rowspan="3" style="text-align:center;" |{{LineAhead}}{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />69
+|-
+| style="text-align: center;" |'''AS'''<br />35
+|-
+| rowspan="7" style="text-align:center;" |I<br />敵任務部隊A群
+| style="text-align:center;" |Pattern 1
+| [[File:BB_Ru_Class4.png|Battleship Ru Class kai Flagship|link=Battleship Ru-Class]][[File:BB Ru Class2.png|Battleship Ru-class Elite|link=Battleship Ru-Class]][[File:BB Ru Class2.png|Battleship Ru-class Elite|link=Battleship Ru-Class]][[File:CL Tsu Class2.png|Light Cruiser Tsu-class Elite|link=Light Cruiser Tsu-Class]][[File:DD Ha Class 4.png|Destroyer Ha-class Late Model|link=Destroyer Ha-Class]][[File:DD Ha Class 4.png|Destroyer Ha-class Late Model|link=Destroyer Ha-Class]]
+| style="text-align:center;" |{{LineAhead}}
+|
+|-
+| rowspan="3" style="text-align:center;" |Pattern 2
+| rowspan="3" |[[File:CV_Wo_Class4.png|Standard Carrier Wo Class kai Flagship|link=Standard Carrier Wo-Class]][[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:CL Tsu Class2.png|Light Cruiser Tsu-class Elite|link=Light Cruiser Tsu-Class]][[File:DD Ha Class 4.png|Destroyer Ha-class Late Model|link=Destroyer Ha-Class]][[File:DD Ro Class 4.png|Destroyer Ro-class Late Model|link=Destroyer Ro-Class]][[File:DD Ro Class 4.png|Destroyer Ro-class Late Model|link=Destroyer Ro-Class]]
+| rowspan="3" style="text-align:center;" |{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />306
+|-
+| style="text-align: center;" |'''AS'''<br />153
+|-
+| rowspan="3" style="text-align:center;" |Pattern 3
+| rowspan="3" |[[File:CA_Ri_Class4.png|Heavy Cruiser Ri Class kai Flagship|link=Heavy Cruiser Ri-Class]][[File:BB Ru Class3.png|Battleship Ru-class Flagship|link=Battleship Ru-Class]][[File:CVL Nu Class2.png|Light Carrier Nu-class Elite|link=Light Carrier Nu-Class]][[File:CL Tsu Class.png|Light Cruiser Tsu Class|link=Light Cruiser Tsu-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]][[File:DD I Class 4.png|Destroyer I-class Late Model|link=Destroyer I-Class]]
+| rowspan="3" style="text-align:center;" |{{DoubleLine}}
+|-
+| style="text-align: center;" |'''AS+'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| style="text-align: center;" |J
+| colspan="4" rowspan="1" style="text-align: center;" |"Must be my imagination" (battle avoided)
+|-
+| rowspan="4" style="text-align:center;" |'''<span style="color:red">K<br />敵攻略部隊本体<br />Boss Node </span>'''
+| style="text-align:center;" |Pattern 1
+| [[File:Wa_flagship_card.png|Transport Wa-class Flagship|link=Transport ship Wa-Class]][[File:BB_Ru_Class4.png|Battleship Ru Class kai Flagship|link=Battleship Ru-Class]][[File:CL Tsu Class2.png|Light Cruiser Tsu-class Elite|link=Light Cruiser Tsu-Class]][[File:CL Tsu Class2.png|Light Cruiser Tsu-class Elite|link=Light Cruiser Tsu-Class]][[File:DD Ni Class 4.png|Destroyer Ni-class Late Model|link=Destroyer Ni-Class]][[File:DD Ni Class 4.png|Destroyer Ni-class Late Model|link=Destroyer Ni-Class]]
+| style="text-align:center;" |{{LineAhead}}
+|
+|-
+| rowspan="3" style="text-align:center;" |Pattern 2
+| rowspan="3" |[[File:Wa_flagship_card.png|Transport Wa-class Flagship|link=Transport ship Wa-Class]][[File:CV Wo Class5.png|Standard Carrier Wo-class Flagship II|link=Standard Carrier Wo-Class]][[File:BB_Ru_Class4.png|Battleship Ru Class kai Flagship|link=Battleship Ru-Class]][[File:CL Tsu Class2.png|Light Cruiser Tsu-class Elite|link=Light Cruiser Tsu-Class]][[File:DD Ni Class 4.png|Destroyer Ni-class Late Model|link=Destroyer Ni-Class]][[File:DD Ni Class 4.png|Destroyer Ni-class Late Model|link=Destroyer Ni-Class]]
+| rowspan="3" style="text-align:center;" |{{Line Ahead}}{{Diamond}}
+|-
+| style="text-align: center;" |'''AS+'''<br />252
+|-
+| style="text-align: center;" |'''AS'''<br />126
+|}
+
+===Drops===
+
+<div class="mw-customtoggle-6-2-drop wikia-menu-button">Show/Hide Drops</div>
+
+
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-6-2-drop"
+!Node
+!Destroyers
+!Light Cruisers
+!Heavy Cruisers
+!Seaplane Tender
+!Aircraft Carrier
+!Battleship
+!Submarine
+!Others
+|-
+|A
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+|B
+| style="text-align:center;" |[[Murakumo]], [[Fubuki]], [[Nenohi]], [[Asashio]], [[Kasumi]], [[Arashio]], [[Hatsuyuki]]
+| style="text-align:center;" |[[Sendai]], [[Naka]], [[Natori]], [[Jintsuu]], [[Isuzu]], [[Kinu|'''<span style="color:red">Kinu</span>''']]
+| style="text-align:center;" |[[Atago]], [[Haguro]], [[Maya]], [[Aoba]], [[Kako]]
+|
+| style="text-align:center;" |[[Hiyou]], [[Junyou]], [[Shouhou]]
+|
+|
+|
+|-
+|C
+|
+|
+|
+|
+|
+|
+|
+
+|
+|-
+|E
+| style="text-align:center;" |[[Fubuki]], [[Asashio]], [[Hatsushimo]], [[Nenohi]], [[Kasumi]], [[Murakumo]], [[Wakaba]], [[Isonami]]
+| style="text-align:center;" |[[Kinu|'''<span style="color:red">Kinu</span>''']], [[Natori]], [[Yura]], [[Isuzu]], [[Sendai]], [[Jintsuu]], [[Naka]]
+| style="text-align:center;" |[[Mogami]], [[Myoukou]], [[Ashigara]], [[Haguro]], [[Takao]], [[Maya]], [[Choukai]], [[Furutaka]], [[Kinugasa|'''<span style="color:red">Kinugasa</span>''']], [[Tone]]
+|
+| style="text-align:center;" |[[Hiyou]], [[Shouhou]], [[Jun'you]]
+| style="text-align:center;" |[[Fusou]], [[Ise]], [[Hyuuga]]
+|
+|
+|-
+|G
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+|H
+| style="text-align:center;" |[[Yuugumo|'''<span style="color:red">Yuugumo</span>''']], [[Arashio]], [[Hatsuyuki]], [[Ooshio]], [[Shirayuki]], [[Hatsuharu]], [[Wakaba]]
+| style="text-align:center;" |[[Jintsuu]], [[Nagara]], [[Naka]], [[Isuzu]], [[Kinu|'''<span style="color:red">Kinu</span>''']], [[Natori]]
+| style="text-align:center;" |[[Ashigara]], [[Myoukou]] [[Tone]], [[Kinugasa|'''<span style="color:red">Kinugasa</span>''']], [[Suzuya|'''<span style="color:red">Suzuya</span>''']], [[Kumano|'''<span style="color:red">Kumano</span>''']], [[Aoba]], [[Chikuma]], [[Choukai]]
+|
+| style="text-align:center;" |[[Junyou]], [[Shouhou]]
+| style="text-align:center;" |[[Yamashiro]], [[Mutsu|'''<span style="color:red">Mutsu</span>''']]
+|
+| style="text-align:center;" |[[Akashi|'''<span style="color:red">Akashi</span>''']]
+|-
+|I
+|
+| style="text-align:center;" |[[Kinu|'''<span style="color:red">Kinu</span>''']], [[Sendai]], [[Isuzu]], [[Nagara]], [[Naka]]
+| style="text-align:center;" |[[Kinugasa|'''<span style="color:red">Kinugasa</span>''']], [[Suzuya|'''<span style="color:red">Suzuya</span>''']], [[Kumano|'''<span style="color:red">Kumano</span>''']], [[Takao]], [[Choukai]], [[Haguro]]
+|
+|[[Junyou]]
+| style="text-align:center;" |[[Ise]], [[Hyuuga]], [[Mutsu|'''<span style="color:red">Mutsu</span>''']]
+|
+| style="text-align:center;" |[[Akashi|'''<span style="color:red">Akashi</span>''']]
+|-
+|J
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+| style="color:red" |'''K'''
+| style="text-align:center;" |[[Yuugumo|'''<span style="color:red">Yuugumo</span>''']], [[Shimakaze|'''<span style="color:red">Shimakaze</span>''']], [[Hamakaze|'''<span style="color:red">Hamakaze</span>''']], [[Uranami|'''<span style="color:red">Uranami</span>''']]
+| style="text-align:center;" |[[Yuubari|'''<span style="color:red">Yuubari</span>''']], [[Sakawa|'''<span style="color:red">Sakawa</span>''']], [[Yahagi|'''<span style="color:red">Yahagi</span>''']]
+| style="text-align:center;" |[[Myoukou]], [[Tone]], [[Atago]], [[Kinugasa|'''<span style="color:red">Kinugasa</span>''']], [[Suzuya|'''<span style="color:red">Suzuya</span>''']], [[Kumano|'''<span style="color:red">Kumano</span>''']], [[Mogami]]
+|
+| style="text-align:center;" |[[Shoukaku|'''<span style="color:red">Shoukaku</span>''']], [[Zuikaku|'''<span style="color:red">Zuikaku</span>''']], [[Shouhou]], [[Junyou]], [[Zuihou]], [[Ryuujou]]
+| style="text-align:center;" |[[Nagato|'''<span style="color:red">Nagato</span>''']], [[Mutsu|'''<span style="color:red">Mutsu</span>''']], [[Kirishima]], [[Haruna]], [[Fusou]], [[Yamashiro]], [[Hyuuga]], [[Ise]], [[Hiei]]
+| style="text-align:center;" |[[I-168|'''<span style="color:red">I-168</span>''']], [[I-19|'''<span style="color:red">I-19</span>''']], [[Maruyu|'''<span style="color:red">Maruyu</span>''']]
+|
+|}

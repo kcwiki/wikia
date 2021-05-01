@@ -1,0 +1,35 @@
+<infobox>
+  <title source="title2"/>
+  <title source="title1">
+    <default>{{PAGENAME}}</default>
+  </title>
+  <image source="image1">
+    <caption source="caption1"/>
+  </image>
+  <data source="row1">
+    <label>Label</label>
+  </data>
+  <data source="row2">
+    <label>Label</label>
+  </data>
+  <data source="row3">
+    <label>Label</label>
+  </data>
+  <data source="row4">
+    <label>Label</label>
+  </data>
+</infobox>
+<noinclude>
+Example usage:<pre>
+{{E
+|title2=Example
+|title1=Example
+|image1=Example
+|caption1=Example
+|row1=Example
+|row2=Example
+|row3=Example
+|row4=Example
+}}
+</pre>
+</noinclude>

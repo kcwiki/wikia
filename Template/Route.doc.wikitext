@@ -1,0 +1,55 @@
+A simple route display tool which allows colorization.
+
+==Parameters==
+The following are the parameters that can be passed.
+
+===Node===
+
+The letter for the node as it appears on the map.
+
+===Color===
+
+The [http://www.w3schools.com/colors/colors_picker.asp hexadecimal notation for the color] to be used as the background color for that node.
+
+The following color codes are used (you may wish to refer to [[Template:Node|node template]] for more information on ramifications with various node types):
+
+{| class="article-table"
+| style="background-color:#FF0000;" | #FF0000
+| Battle/Boss/Aerial attack/Air defense node
+|-
+| style="background-color:#00CCFF;" | #00CCFF
+| Battle avoided/Empty/Node selection node
+|-
+| style="background-color:#33aa00;" | #33aa00
+| Resource node
+|-
+| style="background-color:#CDBDFC;" | #CDBDFC
+| Maelstrom node
+|-
+| style="background-color:#777777;" | #777777
+| Non-nodes, usually the starting node.
+|}
+
+===Example/Result===
+<pre>
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#777777;
+|C|#00CCFF;
+|G|#FF0000;
+|J|#FF0000;
+|K|#33aa00;
+|L|#CDBDFC;
+|N|#FF0000;
+}}
+</div>
+</pre>
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#777777;
+|C|#00CCFF;
+|G|#FF0000;
+|J|#FF0000;
+|K|#33aa00;
+|L|#CDBDFC;
+|N|#FF0000;
+}}
+</div>

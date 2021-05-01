@@ -1,0 +1,31 @@
+This page displays existing visible equipment stat bonuses for different ships.
+__TOC__
+==Definitions==
+*'''Air Radar''': any radar that has an {{AA}} stat on it.
+*'''LoS Radar''': any radar with 5 or more {{LoS}} stat on it.
+*Radars are able to function as both types provided they fulfill both conditions (example: {{EquipmentLink|Type 42 Air Radar}}).
+
+==Things to Note==
+As of 22nd February 2018, the following bonus stats have an erroneous effect on gameplay:
+*{{Firepower}}: Bonus visible Firepower from recon planes does not work on Carriers. Otherwise works as per normal.
+** Bonus visible Firepower from Night Planes does not count towards night carrier damage at night.
+*{{ASW}}: Counts toward [[OASW]] value requirements, but does not affect damage.
+*{{AA}}: Does not have any effect on gameplay. AA Guns will not have increased shotdowns, Plane bonus AA will not have increased Air Power.
+*{{LoS}}: {{EquipmentLink|SG Radar (Initial Model)}} LOS Visible Fit Bonus does not work. {{EquipmentLink|Type 2 Reconnaissance Aircraft}}'s LoS Bonus has been tested to count as ship LOS and not equipment, for routing purposes.
+*{{Torpedo}}, {{Armor}} and {{Evasion}} have been confirmed to be working normally.
+
+<tabview>
+Equipment Bonuses/All|All
+Equipment Bonuses/Small Guns|Small Guns
+Equipment Bonuses/Medium Guns|Medium Guns
+Equipment Bonuses/Large Guns|Large Guns
+Equipment Bonuses/Torpedoes|Torpedoes
+Equipment Bonuses/Planes|Planes
+Equipment Bonuses/Other|Other
+</tabview>
+
+==See Also==
+*[https://docs.google.com/spreadsheets/d/1bInH11S_xKdaKP754bB7SYh-di9gGzcXkiQPvGuzCpg "Equipment visible bonus" spreadsheet]
+*[[Combat/Overweight Penalty and Fit Gun Bonus]]
+
+{{Equipmentlist}}

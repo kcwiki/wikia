@@ -1,0 +1,83 @@
+Last updated: 08-03-2017
+
+There have been moments where you see all the bombers of the enemy get obliterated. It would usually leave you with a smile on your face as your fleet is now unharmed by it, but you probably don't know as to how that exactly happened. There were times where all your own bombers get obliterated from seemingly out of nowhere, which often results to admirals blaming the abyssal of using AACI on them. Then there are times where you randomly lost a plane out of nowhere, even though you're fighting against submarines.
+
+Even with the guides around outlaying the exact formulas and mechanics of the [[Aerial Combat]], it is still a known issue that the majority of the people do not understand exactly how {{AA}} actually works, resulting its current reputation of being the most useless stat. This blog serves as an extension of the [[Aerial Combat]] page to help people understand how the planes are exactly shot down and hopefully, allows them to implement their newfound knowledge to their current strategies.
+
+This blog only covers the 1st phase to some degree, but primarily the 2nd phase of the [[Aerial Combat]], where the majority of the planes are shot down. You're recommended to know the basics of the [[Aerial Combat]] before you continue reading this article, as it will be quite hard to understand what I'm talking about if you don't. In case you have trouble understanding this blog, I recommend to either check out the [[Aerial Combat]] article we have, or check out [https://www.reddit.com/r/kancolle/wiki/intermediate#wiki_aerial_combat this guide], which is part of the reddit's intermediate guide.
+
+Without further ado, enjoy!
+
+__TOC__
+{{Clear}}
+
+==1st Phase: Establishing Air Superiority==
+Before we move on to the 2nd phase, the 1st Phase deserves some special mention, since players are still unaware that planes can be shot down here even though planes are supposed to be immune to {{AA}} fire in this phase.
+
+Aircraft are immune to {{AA}} fire, so who is exactly shooting down your planes? The answer is the air control itself. That's right, the very mechanic which is there to establish the air control is also there to shoot down your planes based on the air state you're in.
+
+<div class="mw-collapsible" data-expandtext="Show Table" data-collapsetext="Hide Table">
+{| class="article-table" style="width:700px;"
+|-
+! scope="col" style="width:190px; text-align:center;" |Fighter Power
+! scope="col" style="width:100px; text-align:center;" |Result
+! scope="col" style="width:165px; text-align:center;" |Text Display
+! scope="col" style="width:110px; text-align:center;" | % Shot Down
+! scope="col" style="width:110px; text-align:center;" | % Being Shot Down
+! scope="col" style="width:100px; text-align:center;" |[[Combat#Contact|Contact]]
+! scope="col" style="width:100px; text-align:center;" |[[Combat Screens]]
+|-
+| style="text-align:center;" |FP ≥ 3*EFP
+| style="text-align:center;" |Air Supremacy<br />(AS+)
+| style="text-align:center;" |<span style="color:green">'''制空権確保!'''</span><br />''Seikuuken Kakuho!''
+| style="text-align:center;" |0~100%
+| style="text-align:center;" |7/256～15/256
+| style="text-align:center;" |Allied only
+| style="text-align:center;" |[[File:Combat_supremacy.jpg|150px]]
+|-
+| style="text-align:center;" |3*EFP > FP ≥ 1.5*EFP
+| style="text-align:center;" |Air Superiority<br />(AS)
+| style="text-align:center;" |<span style="color:green">'''航空優勢! '''</span><br />''Koukuu Yuusei!''
+| style="text-align:center;" |0~80%
+| style="text-align:center;" |20/256～45/256
+| style="text-align:center;" |Both sides
+| style="text-align:center;" |[[File:Combat_superiority.jpg|150px]]
+|-
+| style="text-align:center;" |1.5*EFP > FP > 2/3*EFP
+| style="text-align:center;" |Air Parity
+| style="text-align:center;" |No text displayed
+| style="text-align:center;" |0~60%
+| style="text-align:center;" |30/256～75/256
+| style="text-align:center;" |Both sides
+| style="text-align:center;" |[[File:Combat_parity and incapability.jpg|150px]]
+|-
+| style="text-align:center;" |2/3*EFP ≥ FP > 1/3*EFP
+| style="text-align:center;" |Air Denial
+| style="text-align:center;" |No text displayed
+| style="text-align:center;" |0~40%
+| style="text-align:center;" |40/256～105/256
+| style="text-align:center;" |Both sides
+| style="text-align:center;" |[[File:Combat_parity and incapability.jpg|150px]]
+|-
+| style="text-align:center;" |FP ≤ 1/3*EFP
+|
+<p style="text-align:center;">Air Incapability</p>
+| style="text-align:center;" |<span style="color:red">'''制空権喪失! '''</span><br />''Seikuuken Soushitsu!''
+| style="text-align:center;" |0~10%
+| style="text-align:center;" |65/256～150/256
+| style="text-align:center;" |Enemy only
+|[[File:Combat_denial.jpg|150px]]
+|}
+</div>
+
+If you check out the '''% Being Shot Down''' column, you can see how many planes gets shot down depending on the air state. The ratio is higher on worse air states, meaning that you're always encouraged to achieve as high air control as possible, to reduce the losses here.
+* A plane in a 46 slot for example, will always lose 1 plane and sometimes 2 planes, even on AS+.
+* A 17 slot plane will never lose any planes on AS+, but will always either lose 1 or 2 planes on AS.
+* A 1 slot plane will '''never''' lose any planes regardless of air state, pretty much effectively making them invincible during the 1st phase.
+'''WARNING:''' Unless you're fighting against submarines only, avoid placing bombers in small slots, because they participate in the 2nd phase as well.
+
+All shot downs caused by the air control are '''always''' proportional, never fixed. This means that a plane slot could never be wiped out during the 1st phase. Since {{GreenPlane}} and {{Seaplane}}Fighters only ever participates in the 1st Phase, this also means that it's impossible to wipe them out.
+{{Clear}}
+
+==2nd Phase: The Fleet Aerial Defense==
+The 2nd Phase is the phase where the defenders are actively participating in shooting down the bombers of the opposing fleet. In other words, this is where all the {{AA}} action happens in the battle.

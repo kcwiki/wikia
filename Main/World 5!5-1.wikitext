@@ -1,0 +1,64 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Forefront of the Southern Sea
+|jp = 南方海域前面
+|romaji = Nampō-kaiiki zenmen
+|exp_hq = 160
+|exp_hq_boss = 2020
+|strategy_name = Southern Sea Advancement Tactics
+|strategy_name_ja = 南方海域進出作戦
+|strategy_info = With organization high trained surface task force, attempt to advance it Southern Waters! Fleet, advance the southward!
+|strategy_info_ja = 練度の高い水上打撃部隊を編成し、南方海域への進出を図れ！艦隊、南方へ進出せよ！
+}}
+{{MapBranchingTable
+|title = 5-1 Branching Rules
+|expand = true
+|id = 5-1
+|0 -> A/storm, B = 
+*Meet '''ANY''' of the following to '''FORCE''' A
+**(F)BB(V)+CV(B) ≥ 4
+**(F)BB(V)+CV(B/L) ≥ 5
+* Meet '''ANY''' of the following requirements to go to B
+**DD ≥ 2 and (F)BB(V)+CV(L/B) ≤ 2
+**CA(V) ≥ 4 and fleet contains CL
+**CA(V) ≥ 2 and CL = 1
+*Otherwise, random routing
+**If fleet contains CA(V) or CV(L/B), you're more likely going to go to A
+**If fleet contains 3 (F)BB(V), 1 CL and 2 DD, you're more likely going to go to B
+
+|B -> C/resource = 
+* Meet '''ALL''' of the following requirements:
+** No CV(B)
+** Amount of CVL ≤ 1
+** Amount of (F)BB(V) ≤ 2
+|B -> E = * Do not meet the requirements to go to C.
+
+|F -> G, H/resource, J = 
+*'''FORCE''' node G if SS(V) ≥ 2
+*Go to H if fleet does not contain CL and DDs
+*Random routing if (F)BB(V)+CV(L/B) ≥ 3
+*Otherwise
+**Go to G if DD ≤ 1 ('''Ignored if the fleet is Fastest''')
+**Meet '''ANY''' of the following to go to J
+***DD ≥ 4
+***'''Fastest''' Fleet
+***Fleet contains CL and DD ≥ 2
+**Otherwise, random between G and J (If fleet contains DD = 3, you more likely to go to J)
+
+|G -> I/empty, J = 
+*Go to I if (F)BB(V)+CV(L/B) ≥ 5
+* Meet '''ANY''' of the following requirements to go to J
+** Amount of DD ≥ 2, fleet contains CL, no CV(L/B)
+** Amount of DD ≥ 2, (F)BB(V)+CVL ≤ 2, no CV(B)
+* Otherwise, random routing.
+}}
+
+===Compositions===
+*{{Event/Route|B|red|C|green|F|red|J|red}}
+**2 (F)BB(V) 1 CA(V)/CLT 1 CL 2 DD
+***One (F)BB(V) can be replaced with a CVL, CA(V) or CLT
+**3 CA(V) 1 CL 2 DD ('''Quest Bq7''')
+*{{Event/Route|B|red|E|red|G|red|J|red}} or {{Event/Route|A|purple|D|red|E|red|G|red|J|red}}
+**3 (F)BB(V) 1 CL 2 DD ('''Quest Bm4''')
+
+{{Map/Footer}}

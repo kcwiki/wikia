@@ -1,0 +1,142 @@
+==Basic==
+;Description
+:This template is used to generate an infobox for furniture 
+;Syntax
+:Fill in the form below. Some fields can be omitted (see simplified sample for mandatory fields)
+::<code><nowiki>{{FurnitureInfo</nowiki></code><br/>
+::<code><nowiki>| name=</nowiki></code><br/>
+::<code><nowiki>| rarity=</nowiki></code>
+::<code><nowiki>| type=</nowiki></code><br/>
+::<code><nowiki>| japanesename=</nowiki></code><br/>
+::<code><nowiki>| kana=</nowiki></code>
+::<code><nowiki>| en-description=</nowiki></code><br/>
+::<code><nowiki>| jp-description=</nowiki></code><br/>
+::<code><nowiki>| kana-description=</nowiki></code><br/>
+::<code><nowiki>| image=</nowiki></code><br/>
+::<code><nowiki>| coin=</nowiki></code><br/>
+::<code><nowiki>| fairy=</nowiki></code><br/>
+::<code><nowiki>| BGM=</nowiki></code><br/>
+::<code><nowiki>| feature=</nowiki></code><br/>
+::<code><nowiki>| releasenote=</nowiki></code><br/>
+::<code><nowiki>| gallery= }}</nowiki></code>
+;Types and color mapping
+:Each furniture type has a corresponding color scheme as showed below
+:*wall = <span style="color:#cc9966">#cc9966</span>
+:*floor = <span style="color:#cc9999">#cc9999</span>
+:*desk = <span style="color:#9999cc">#9999cc</span>
+:*window = <span style="color:#99cccc">#99cccc</span>
+:*object = <span style="color:#66cc99">#66cc99</span>
+:*chest = <span style="color:#cccc99">#cccc99</span>
+:*default = <span style="color:lightgray">lightgray</span>
+
+===Simplified sample===
+<pre>
+{{FurnitureInfo
+| name=Final boss
+| rarity=3
+| japanesename=朝雲
+| kana=あさぐも
+| image=NPC_FinalBoss.png
+}}
+</pre>
+{{FurnitureInfo
+| name=Final boss
+| rarity=3
+| japanesename=朝雲 
+| kana=あさぐも
+| image=NPC_FinalBoss.png
+}}
+===Full sample===
+<pre>
+{{FurnitureInfo
+| name=Thanks to 2,000,000" scroll
+| rarity=5
+| type=object
+| japanesename=「200万の感謝」掛け軸
+| kana=「200まんのかんしゃ」かけじく
+| en-description=Lovely scroll isn't it!
+| jp-description=素敵な掛け軸ですね！
+| kana-description=すてきなかてじくですね！
+| image=Thanks to 2,000,000 scroll.png
+| coin=15000
+| fairy=1
+| BGM=Template BGM
+| feature=Template Feature, this item has awesome special feature that will blow your mind, or not, it'll just change color according to the time of date.
+*What else can I say?
+*This is awesome!
+| releasenote=Available since 1/1/2014. Reward for those who logged in during 1/1~1/3/2014
+| gallery = Thanks to 2,000,000 scroll.png
+Thanks to 2,000,000 scroll.png
+Thanks to 2,000,000 scroll.png
+}}
+</pre>
+{{FurnitureInfo
+| name=Thanks to 2,000,000" scroll
+| rarity=5
+| type=object
+| japanesename=「200万の感謝」掛け軸
+| kana=「200まんのかんしゃ」かけじく
+| en-description=Lovely scroll isn't it!
+| jp-description=素敵な掛け軸ですね！
+| kana-description=すてきなかてじくですね！
+| image=Thanks to 2,000,000 scroll.png
+| coin=15000
+| fairy=1
+| BGM=Template BGM
+| feature=Template Feature, this item has awesome special feature that will blow your mind, or not, it'll just change color according to the time of date.
+*What else can I say?
+*This is awesome!
+| releasenote=Available since 1/1/2014. Reward for those who logged in during 1/1~1/3/2014
+| gallery = Thanks to 2,000,000 scroll.png
+Thanks to 2,000,000 scroll.png
+Thanks to 2,000,000 scroll.png
+}}
+
+==Advanced image operations==
+:Some furniture types will have these values predefined, they can be overwritten by redefining the field.
+:*<code>position=</code> field allows customized positioning within the frame
+:*<code>size=</code> field allows different scaling/zooming value
+:Find below the default values according to furniture type:
+{| style="margin:20px; border: 1px solid black;padding:10px;" width="60%"
+|align="center"| Wall
+|rowspan="5" style="background:gray;"| 
+|
+|align="center"| 600px
+|-
+|align="center"| Floor
+|align="center"| right:100%;
+|
+|-
+|align="center"| Desk
+|
+|align="center"|265px
+|-
+|align="center"| Window
+|
+|align="center"| 300px
+|-
+|align="center"| Chest
+|align="center"| left:10%; bottom:80px;
+|align="center"| 220px
+|}
+===Sample===
+<pre>
+{{FurnitureInfo
+| name=Final boss
+| japanesename=朝雲 
+| kana=あさぐも
+| image=NPC_FinalBoss.png
+| position=left:20%;bottom:30px;
+| size=100px
+| coin=200000
+}}
+</pre>
+{{FurnitureInfo
+| name=Final boss
+| japanesename=朝雲
+| kana=あさぐも 
+| image=NPC_FinalBoss.png
+| position=left:20%;bottom:30px;
+| size=100px
+| coin=200000
+}}

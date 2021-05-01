@@ -1,0 +1,53 @@
+This template is used to convert <code>api_id</code> values to ship and equipment names.
+
+==Usage==
+For ship names:
+<pre>
+{{FromApi|api_id}}
+{{FromApi|ship = api_id}}
+</pre>
+For equipment names:
+<pre>
+{{FromApi|api_id|equipment = true}}
+{{FromApi|equipment = api_id}}
+</pre>
+
+==Specializations==
+*[[Template:ShipFrom]]: ships only.
+*[[Template:EquipmentFrom]]: equipment only.
+
+==Tests==
+<pre>
+{{FromApi|195}}
+[[{{#replace:{{FromApi|195}}|/|&#32;}}]]
+{{ShipBattleCard|{{FromApi|195}}}}
+[[{{FromApi|1501}}]]
+{{FromApi|ship = 1501}}
+{{ShipBattleCard|{{FromApi|1501}}}}
+{{FromApi|128|equipment = true}}
+[[{{FromApi|equipment = 128}}]]
+{{EquipmentCardKai|{{FromApi|equipment = 128}}}}
+{{ShipFrom|195}}
+{{EquipmentFrom|128}}
+</pre>
+{{FromApi|195}}
+
+[[{{#replace:{{FromApi|195}}|/|&#32;}}]]
+
+{{ShipBattleCard|{{FromApi|195}}}}
+
+[[{{FromApi|1501}}]]
+
+{{FromApi|ship = 1501}}
+
+{{ShipBattleCard|{{FromApi|1501}}}}
+
+{{FromApi|128|equipment = true}}
+
+[[{{FromApi|equipment = 128}}]]
+
+{{EquipmentCardKai|{{FromApi|equipment = 128}}}}
+
+{{ShipFrom|195}}
+
+{{EquipmentFrom|128}}

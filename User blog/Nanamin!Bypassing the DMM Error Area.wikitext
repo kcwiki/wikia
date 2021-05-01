@@ -1,0 +1,55 @@
+<div style="color: red;">THIS POST IS FROM 2015. IT IS 100% OUTDATED AT THE CURRENT POINT IN TIME AND SHOULD ONLY BE USED AS A REFERENCE AND NOT A GUIDE.</div>
+
+'''The thread here may be relevant for viewers of this post: [[User_blog:Dragonjet/DMM_Cookies:_August_2015#comm-294426]].'''
+
+You may implement the above fix by manually running the below in your console:
+
+  document.cookie = "cklg=welcome;expires=Sun, 09 Feb 2019 09:00:09 GMT;domain=dmm.com;path=/"
+  document.cookie = "ckcy=1;expires=Sun, 09 Feb 2019 09:00:09 GMT;domain=dmm.com;path=/netgame/"
+  document.cookie = "ckcy=1;expires=Sun, 09 Feb 2019 09:00:09 GMT;domain=dmm.com;path=/netgame_s/"
+
+However, this requires it be run -every single page- unless you're persisting the cookies with EditThisCookie (linked below).
+
+==Original Post==
+
+So quite recently (like within the last day or two?), DMM changed something and a lot of people are getting the error area problem, the one where "This service is not available in your country" shows up. I looked into it and found that the issue was that the "ckcy" cookie now updates whenever you reload a page. Here's how I got around that:
+
+<div style="color: red;">Please do note that this method is for Google Chrome. I don't use the other browsers, so I don't know their specifics, but they should be capable of something similar to this.</div>
+
+'''Before you attempt this, you should see if you can use the shorter method of simply going straight to the game URL. Click here: http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/.'''
+
+Step 1:
+
+Download this: https://chrome.google.com/webstore/detail/editthiscookie/fngmhnnpilhplaeedifhccceomclgfbg?hl=en.
+
+Step 2: Navigate to DMM's homepage: http://www.dmm.com/.
+
+Step 3: Open EditThisCookie's popup window and find "ckcy" in the list. Its value at this time should be "2".
+
+[[File:Nanamin_dmm_bypass_1.png|500px]]
+
+Step 4: Change the value to "1" and hit the checkmark at the bottom of the popup window.
+
+[[File:Nanamin_dmm_bypass_2.png|500px]]
+
+Step 5: Open "ckcy" again in the list and click the lock symbol to the left of the textboxes.
+
+[[File:Nanamin_dmm_bypass_3.png|500px]]
+
+Step 6: Do the same thing for "cklg". The value to use is "welcome" or some other random string.
+
+That should fix it. If you have any issues, feel free to comment them below.
+
+If you want to try the other random stuff I did in case it might help, I ran the following in the console:
+  document.cookie = "dtmu=YToyOntzOjI6Iml2IjtzOjg6IvuKOYjhQsbLIjtzOjU6InZhbHVlIjtzOjI0OiISSVwxDtQ2LV5yzFI2RJypG4IprrrwWGQiO30; expires=Sun, 09-Feb-2019 09:00:09 GMT; path=/; domain=dmm.com"
+  document.cookie = "dtmh=3.b7a603e3347091c051828f956e59e4163ff51ecb9c9aa9ed1e3fc2c820f41853; expires=Sun, 09-Feb-2019 09:00:09 GMT; path=/; domain=dmm.com"
+  document.cookie = "ckcy=2; expires=Sun, 09-Feb-2019 09:00:09 GMT; path=/; domain=dmm.com"
+  document.cookie = "dtmu=YToyOntzOjI6Iml2IjtzOjg6IvuKOYjhQsbLIjtzOjU6InZhbHVlIjtzOjI0OiISSVwxDtQ2LV5yzFI2RJypG4IprrrwWGQiO30; expires=Sun, 09-Feb-2019 09:00:09 GMT; path=/; domain=dmm.com"
+  document.cookie = "dtmd=1501716581; expires=Sun, 09-Aug-2019 09:00:09 GMT; path=/; domain=dmm.com"
+  document.cookie = "dtmd=1501716581; expires=Sun, 09-Aug-2019 09:00:09 GMT; path=/; domain=dmm.com"
+  document.cookie = "ckcy=1;expires=Sun, 09 Feb 2019 09:00:09 GMT;domain=osapi.dmm.com;path=/";
+  document.cookie = "ckcy=1;expires=Sun, 09 Feb 2019 09:00:09 GMT;domain=203.104.209.7;path=/";
+  document.cookie = "ckcy=1;expires=Sun, 09 Feb 2019 09:00:09 GMT;domain=www.dmm.com;path=/netgame/";
+  document.cookie = "ckcy=1;expires=Sun, 09 Feb 2019 09:00:09 GMT;domain=log-netgame.dmm.com;path=/";
+  document.cookie = "ckcy=1;expires=Sun, 09 Feb 2019 09:00:09 GMT;domain=dmm.com;path=/netgame/";
+[[Category:Blog posts]]

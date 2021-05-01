@@ -1,0 +1,196 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Operation Shō-Ichi-Gō, commence preparation!
+|jp = 捷一号作戦、発動準備
+|romaji = Shō-Ichi-Gō Sakusen、Hatsudō-jyumbi
+|tag = E1
+|mechanics = Striking Force@Striking_Force, LoS Check@Events/Mechanics#LoS_Check, Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Ship Locking@Events/Mechanics#Ship_Locking, Unlockable Nodes@Events/Mechanics#Node_specific_details, Land Base Aerial Support@Land Base Aerial Support
+
+|transport = true
+|hp_all = 
+|hp_easy = 330
+|hp_medium = 370
+|hp_hard = 400
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCard|Sado}}
+|reward_easy_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}Mamiya{{!}}link=Fatigue]]
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}Mamiya{{!}}link=Fatigue]]
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 2 Depth Charge|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Prototype Toukai|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}Mamiya{{!}}link=Fatigue]]
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Type 2 Depth Charge|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = [[File:New Model Gun Mount Improvement Material Icon.png{{!}}50px{{!}}link=New Model Gun Mount Improvement Material]]
+|reward_hard_4_x = 2
+|reward_hard_5 = {{EquipmentCardKai|Prototype Toukai|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules
+
+|0 -> 1 =  
+* Do not meet the requirements to start at 2.
+|0 -> 2 =  
+* Meet all of the following requirements:
+** Starting point 2 is unlocked.
+** No SS(V)
+** No AV
+** No AO
+
+|A -> B/empty =
+* Meet all of the following requirements:
+** No CVL
+** No SS(V)
+** Amount of Shima Fleet members ≧ 2 (Medium/Hard)
+** Amount of DD/DE ≧ 2
+|A -> D = 
+* Do not meet the requirements to go to B.
+
+|B/empty -> C, F = * Active branching
+
+|F -> G/empty = 
+* Meet all of the following requirements:
+** No slow BB
+** Amount of DD ≧ 2
+** Amount of Shima Fleet members ≧ 2 (Medium/Hard)
+|F -> H = * Do not meet the requirements to go to G.
+
+|G/empty -> I, J = * Active branching
+
+|I -> K = * Fixed Route
+
+|Q -> I = 
+* Do not meet the requirements to go to either K or L.
+|Q -> K = 
+* Meet all of the following requirements:
+** Fast Fleet
+** Amount of CLT ≦ 1
+** Do not meet the requirement to go to L.
+** If amount of Shima Fleet members ≧ 0/2/3 on Easy/Medium/Hard:
+*** Amount of (F)BB(V) ≦ 1
+*** Amount of CVL ≦ 1
+** Else:
+*** No (F)BB(V) or CVL allowed.
+|Q -> L = 
+* Meet all of the following requirements:
+** Fast Fleet
+** No F(BB)V
+** No CVL
+** Amount of CLT ≦ 1
+** Amount of DD ≧ ?/2/3 on Easy/Medium/Hard
+** Amount of Shima Fleet members ≧ 3/4 on Medium/Hard
+
+|N/resource -> O/empty = * Fail the LoS check.
+|N/resource -> P = * Pass the LoS check.
+}}
+
+===Task Description:===
+第二遊撃部隊により、戦果誤認と敵機動部隊の健在が確認された。捷一号作戦正面で迎撃する！作戦準備に掛かれ！
+
+Second Strike Force has confirmed that the report of victory was erroneous and that the enemy's mobile fleet still stands. We will meet them with the brunt of Operation Sho-go! Commence preparation for the operation!
+
+===Historical Fleet: The Second Striking Force (Shima Fleet)===
+One of the 2 fleets of the "Southern Force" during the Battle of Leyte Gulf led by Kiyohide Shima.  Members gain a 1.15x post-cap bonus during shelling at the boss node.<ref>https://twitter.com/syoukuretin/status/934694554522886144</ref>
+* CA: {{ShipLink|Ashigara Kai Ni|text=Ashigara}}, {{ShipLink|Nachi Kai Ni|text=Nachi}}
+* CL: {{ShipLink|Abukuma Kai Ni|text=Abukuma}}
+* DD: {{ShipLink|Akebono Kai|text=Akebono}}, {{ShipLink|Kasumi Kai Ni|text=Kasumi}}, {{ShipLink|Shiranui}}, {{ShipLink|Ushio Kai Ni|text=Ushio}}
+
+{{Clear}}
+
+==Map Information==
+* '''{{Type|CV}}/{{Type|CVB}} cannot be used in this map however {{Type|CVL}} are allowed.'''
+<gallery type="slideshow">
+2017-11-19 01-59-52 33.jpg|Click the NEXT arrow to see the 7th ship
+2017-11-19 01-59-54 19.jpg|Click the NEXT arrow to see the 1st and 2nd ship
+</gallery>
+*Starting from this Map, it is possible to sortie to sortie a SINGLE '''seven-ship fleet''' known as the "Striking Force" (not Combined Fleet) formed in the Third Fleet.
+**Striking Force can be accessed '''FROM THE THIRD FLEET''' and third fleet only. It will be automatically unlocked the moment that you cleared E-1.
+***Check carefully, you will notice that there's an arrow sign glowing that said "NEXT" that appears when viewing the Third Fleet. 3rd fleet shall be the only fleet and not 2nd nor 4th; 1st is out of the question. Still, you can only sortie Striking force with your 3rd fleet.
+***Fleet presets cannot register the seventh ship and will only register the first six.
+***As such, '''the 1st fleet will be inactive whenever a Striking Force is used.'''
+**Putting a Standard Aircraft Carrier in the First Fleet is a good way to avoid accidentally trying to send the First Fleet into this Map, as CV(B)s are barred from being able to sortie into this map.  Ships docked for repair also prevent sortie.
+**[[Akashi#Anchorage_Repair|Akashi]] Anchorage Repair can be performed in First Fleet while using Striking Force fleets, as sortieing the Third Fleet will not interrupt the repair timers.
+**Be careful if the seventh ship is in ''taiha ''status.  It is not always discernable from every menu view.
+*This is a Transport Operation.
+**You are recommended to bring as many as {{EquipmentLink|Drum Canister (Transport Use)}} and/or {{EquipmentLink|Daihatsu Landing Craft}} possible for faster depletion of the map's TP Bar.
+**You are required to obtain A or S Rank Victory at the Boss Node (P) in order to deplete your TP Bar.
+***Obtaining B Rank Victory will result in a failure where your TP Bar will not deplete.
+*'''LBAS''': 1 [[Land Base Aerial Support]] is available for sortie in this map.
+**5+ range is required to reach the boss node P.
+*Node J Farming would be a bit difficult after you've unlocked the second starting point (Unlockable Paths) because of the requirements to not start from the second starting point. But if you want to get Unryuu from the J node when you're already unlocked the hidden route:
+**AV + FBB + CLT + CL/DD + DE/DD + DD (A-B-F-G-J / A-B-C-E-G-J) note:Historical ship(s) would be needed
+**AV + FBB + CVL + CL + DD + DD (A-D-F-G-J)
+*About '''TP gauge and final pattern''', formation will change as soon as you start a sortie with enough TP points to clear on scoring a S. There is no way to cram in TP points before and trying to skip the final form.
+** Can use this as an advantage to bring TP bar close to depleting and ditching the transport equipment on the last sortie.
+
+==Quests==
+There is a quest that you should activate in order to complete it while clearing the map. There are also two most 'event-related' quests that are not map-focused that you can be checked in the "Info" tab.
+{{QuestList|
+ {{Quest
+  |ID              = Le1B1
+|Use_ID = B1
+  |Title_JP        = 「捷一号作戦」兵站補給線を確保せよ！
+  |Title_EN        = Secure the Supply Line Logistics for Operation Sho-Ichi-Go!
+  |Requirements    = Sortie to E-2 and obtain 2 A-rank or better victories at the boss node.
+  |Rewards_RSC     = 1500 / 1500 / 0 / 0
+  |Rewards_Items   = [[File:Food supply ship mamiya.png|30px|link=Fatigue]][[Glossary#Food_supply_ship_Mamiya|"Mamiya"]] x 1, <br />'''choice between'''<br/>{{EquipmentLink|Type 13 Air Radar|image=30px}}[[Type 13 Air Radar]] X 2<br/> or <br/> {{EquipmentLink|Type 22 Surface Radar|image=30px}} [[Type 22 Surface Radar]] X 2 <br/> or <br/> {{EquipmentLink|Action Report|image=30px}}[[Action Report]] X 1 
+  |Note            = 
+ }}
+}}
+
+==Hidden Route Gimmick==
+*A hidden gimmick exists where you will be able to open the New Starting Point #2.
+===Requirements===
+*Obtain S-Rank Victory in node J
+**Node J contains [[New Submarine Princess]] mixed with other Submarines, Enemy Destroyers and Light Cruiser.
+***Route: {{Event/Route|A|red|B|blue|F|red|G|blue|J|red}}
+***Recommended Fleet for this portion: 2 CA 1 CAV 1 CL 3 DD
+****It is recommended for you to bring OASW-capable CL and/or DDs.
+****If achieving S rank is difficult, swapping a CA for a F(BB)V can be done in order to obtain a second shelling round and make sinking the princess easier, keep in mind however that the battleship '''MUST''' have a fast speed or the fleet will go through the extra node H before reaching node J.
+****Sending a [[Land Base Aerial Support]] with a setup of 4 bombers with 4+ range is recommended if you have difficulties wiping out the surface ships.
+***A New Mechanic from the Fall 2017 Event Update includes the ability for your [[Land Base Aerial Support]] to attack Submarines, as long it has 1 or more Bombers above 7+ ASW {{ASW}} stats on the Equipment.
+***The [[Expedition/Support Expedition|Support Expedition]] Mechanic has also changed where Aerial Support Expeditions are now able to attack Submarines, though the Support Expedition Fleet members require [[List of light aircraft carriers by upgraded maximum stats|CVLs]] to be equipped with Bombers and Aircrafts for ASW use, and [[List of destroyers by upgraded maximum stats|DDs]] and [[List of coastal defense ships by upgraded maximum stats|DEs]] being equipped for ASW as well.
+*Obtain Air Superiority (航空優勢) or higher in node C and D
+**Node C
+***'''This is Not required in Easy mode.'''
+***To enter node C, you may opt to use the same fleet as before, 2 CA 1 CAV 1 CL 3 DD.
+****It is recommended that your CAV is equipped with multiple Seaplane Fighters.
+*****You may choose to replace a CA with {{ShipLink|Akitsu Maru/Kai}} equipped with 3 [[List of Fighters by stats|Fighters]] for higher Air Power gain.
+**Node D
+***'''This is Not required in Medium/Easy mode.'''
+***To enter node D, you are required to bring [[List of light aircraft carriers by upgraded maximum stats|CVL(s)]] to get into that route.
+****Equip your CVL with 4x Fighter to gain Air Superiority easily in node D.
+**It is recommended that you setup your [[Land Base Aerial Support]] WITH 4 Fighters and send it to node C and D respectively.
+*Reaching Node J after the shortcut is opened requires an AV or a SS(V) in the fleet. Using a SS(V), however, will route you through A-D-F-H and can't be avoided even by raising the submarine's speed to fast. 
+==Map progression==
+{{#tag:gallery|
+Fall 2017 Event E-2 part 1.png{{!}}Map before unlocking second starting point.
+Fall 2017 Event E-2 Map.png{{!}}Full map after unlocking second starting point.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+==LBAS Flight Range==
+[[File:Fall_2017_Event_E2_Flight_Range.jpg|500px|center]]
+==References==
+<references/>
+{{Event/MapPageFooter}}

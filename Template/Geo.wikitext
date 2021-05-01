@@ -1,0 +1,5 @@
+<includeonly>{{#vardefine:link|[http://tools.wmflabs.org/geohack/geohack.php?params={{#replace:{{#replace:{{#replace:{{{1|}}}|°|_}}|′|_}}| |_}}&pagename={{#replace:{{{pagename|{{PAGENAMEE}}}}}| |_}} {{{1|}}}]}}{{#var:link}}{{#if:{{{for_page|}}}|<span style="position:absolute;top:0px;right:0px;float:right;line-height:1.5em;text-align:right;font-size:11px;white-space:nowrap">{{wikipedia|Geographic coordinate system|Coordinates}}: {{#var:link}}</span>}}</includeonly><noinclude>
+*{{geo|08°03′S 157°13′E}}
+*{{geo|08°03′S 157°13′E|pagename=Murasame}}
+*{{geo|08°03′S 157°13′E|for_page=true}}
+</noinclude>

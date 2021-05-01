@@ -1,0 +1,241 @@
+__NOTOC__
+== {{#if:{{{thread|}}}|[[Partials/Updates/2016 April 1st/Content|Content]]|[[Thread:414346|1st April]]}} ==
+{{#if:{{{thread|}}}||''For a full debriefing on the game update (including developer tweets), you may wish to refer to [[Partials/Updates/2016_April_1st|this link]].''}}
+
+====Summary====
+* [[Ooshio Kai Ni]]
+* New Quests
+* [[Underway Replenishment]] & [[Combat Ration]] system changes
+* Removal of White Day Voice lines & Gyūdon artworks
+* New [[Seasonal/Spring_2016|Spring Season]] voice lines
+* Limited-time ship drops
+* New furniture
+* Mutsuki & Kisaragi buff
+* Kai-2 destroyer stat buffs
+* Aerial Combat animations update
+
+
+====[[Ooshio Kai Ni]]====
+{| class="wikitable"
+|-
+! colspan="2"|[[Ooshio#Second_Upgrade|Ooshio Kai Ni at Level 65]]
+|-
+| {{ShipGraphicKai|Ooshio/Kai Ni|size=300px}}
+| {{ShipGraphicKai|Ooshio/Kai Ni|size=300px|damaged=true}}
+|}
+* Second remodelling of {{ShipLink|Ooshio|link=Ooshio}}.
+* '''Remodelling Level 65'''.
+* '''Blueprint required!'''
+* Stock equipment:
+** {{RedGunLight}} [[12.7cm Twin Gun Mount Model B Kai 2]]
+** {{TorpedoWeapon}} [[61cm Quadruple (Oxygen) Torpedo Mount]]
+** {{LandingCraft}} [[Daihatsu Landing Craft]]
+* She can equip [[:Category:Landing Craft|Landing Crafts]] and [[:Category:Special Amphibious Landing Craft|Special Amphibious Landing Crafts]].
+* Combat voice lines have been updated.
+
+
+====[[Quests|New Quests]]====
+{{QuestList|
+{{Quest
+|ID = B63
+|Title_JP = 製油所地帯を防衛せよ！
+|Title_EN = Defend the Oil Refinery Zone!
+|Requirements = Sortie a torpedo squadron (1 CL 5 DD) to [[1-3|World 1-3]] and obtain '''three''' S-Ranks at the boss
+|Rewards_RSC = {{ItemStack
+|item = [[File:Fuel.png{{!}}30px{{!}}link=File:Fuel.png]]
+|text = 400
+}}{{ItemStack
+|item = [[File:Ammunition.png{{!}}30px{{!}}link=File:Ammunition.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Steel.png{{!}}30px{{!}}link=File:Steel.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Bauxite.png{{!}}30px{{!}}link=File:Bauxite.png]]
+|text = 0
+}}
+|Rewards_Items = {{ItemStack
+|item = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue#Food_Supply_Ship_.22Irako.22{{!}}"Irako"]]
+|text = x 1}}{{ItemStack
+|item = [[File:Medal_Reward.png{{!}}50px{{!}}link=Medal{{!}}"Medal"]]
+|text = x 1}}
+|Note = Requires: [[Quests#Bd2|Bd2]]
+}}
+{{Quest
+|ID = B64
+|Title_JP = 南西諸島防衛線を強化せよ！
+|Title_EN = Reinforce the Nansei Islands Defence Line!
+|Requirements = Sortie to [[1-4|World 1-4]] and obtain '''five''' S-Ranks at the boss
+|Rewards_RSC = {{ItemStack
+|item = [[File:Fuel.png{{!}}30px{{!}}link=File:Fuel.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Ammunition.png{{!}}30px{{!}}link=File:Ammunition.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Steel.png{{!}}30px{{!}}link=File:Steel.png]]
+|text = 400
+}}{{ItemStack
+|item = [[File:Bauxite.png{{!}}30px{{!}}link=File:Bauxite.png]]
+|text = 0
+}} 
+|Rewards_Items = {{ItemStack
+|item = [[File:Combat_Provisions.png{{!}}50px{{!}}link=Combat Ration{{!}}"Combat Ration"]]
+|text = x 1}}{{ItemStack
+|item = [[File:Furniture_fairy.png{{!}}50px{{!}}link=Furniture{{!}}"Furniture Fairy"]] 
+|text = x 1
+}}
+|Note = Requires: [[Quests#B63|B63]], [[#F31|F31]]
+}}
+{{Quest
+|ID = B65
+|Title_JP = オリョール海の制海権を確保せよ！
+|Title_EN = Secure Control of the Orel Sea!
+|Requirements = Sortie a fleet with {{ShipLink|Ooshio|link=Ooshio}} (model doesn't matter) as flagship to [[2-3|World 2-3]] and obtain '''six''' S-Ranks at the boss
+|Rewards_RSC = {{ItemStack
+|item = [[File:Fuel.png{{!}}30px{{!}}link=File:Fuel.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Ammunition.png{{!}}30px{{!}}link=File:Ammunition.png]]
+|text = 400
+}}{{ItemStack
+|item = [[File:Steel.png{{!}}30px{{!}}link=File:Steel.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Bauxite.png{{!}}30px{{!}}link=File:Bauxite.png]]
+|text = 200
+}} 
+|Rewards_Items = {{ItemStack
+|item = [[File:Medal_Reward.png{{!}}50px{{!}}link=Medal{{!}}"Medal"]]
+|text = x 1}}{{ItemStack
+|item = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue#Food_Supply_Ship_.22Irako.22{{!}}"Irako"]]
+|text = x 2}}
+|Note = Requires: [[Quests#B64|B64]]
+}}
+{{Quest
+|ID = B66
+|Title_JP = 旗艦「大潮」出撃せよ！
+|Title_EN = Sortie the flagship "Ooshio"!
+|Requirements = Sortie a fleet with {{ShipLink|Ooshio/Kai Ni|link=Ooshio Kai Ni}} as flagship to [[3-5|World 3-5]] and obtain an S-Rank at the boss
+|Rewards_RSC = {{ItemStack
+|item = [[File:Fuel.png{{!}}30px{{!}}link=File:Fuel.png]]
+|text = 500
+}}{{ItemStack
+|item = [[File:Ammunition.png{{!}}30px{{!}}link=File:Ammunition.png]]
+|text = 500
+}}{{ItemStack
+|item = [[File:Steel.png{{!}}30px{{!}}link=File:Steel.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Bauxite.png{{!}}30px{{!}}link=File:Bauxite.png]]
+|text = 0
+}}
+|Rewards_Items = {{ItemStack
+|item = [[File:Combat_Provisions.png{{!}}50px{{!}}link=Combat Ration{{!}}"Combat Ration"]]
+|text = x 1}}{{ItemStack
+|item = [[File:Improvement Materials.png{{!}}50px{{!}}link=Akashi's_Improvement_Arsenal{{!}}"Improvement Material"]] 
+|text = x 3
+}}
+|Note = Requires: [[Quests#B65|B65]]
+}}
+{{Quest
+|ID = F31
+|Title_JP = 新家具の準備
+|Title_EN = Preparations for New Furniture
+|Requirements = Scrap 9 pieces of equipment
+|Rewards_RSC = {{ItemStack
+|item = [[File:Fuel.png{{!}}30px{{!}}link=File:Fuel.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Ammunition.png{{!}}30px{{!}}link=File:Ammunition.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Steel.png{{!}}30px{{!}}link=File:Steel.png]]
+|text = 90
+}}{{ItemStack
+|item = [[File:Bauxite.png{{!}}30px{{!}}link=File:Bauxite.png]]
+|text = 0
+}} 
+|Rewards_Items = {{ItemStack
+|item = [[File:Furniture_fairy.png{{!}}50px{{!}}link=Furniture{{!}}"Furniture Fairy"]] 
+|text = x 1
+}}
+|Note = Requires: [[Quests#Bd2|Bd2]]
+}}
+}}
+
+
+====[[Underway Replenishment]] & [[Combat Ration]] system update====
+[[File:Manual Food Consumption.png|thumb|right]]
+* You can now '''freely choose''' whether or not you want to consume these items regardless of any item trigger conditions, '''but only when your fleet goes to a boss node'''.
+* Option appears after spinning the compass.
+** 許可: Allow use
+** 却下: Dismiss
+* All other trigger conditions still apply (i.e. [[Combat Ration]]s can still trigger randomly and [[Underway Replenishment]] still triggers if the fleet's average resources fall below a certain point)
+* [[Combat Ration|Combat Rations]] & [[Canned Mackerel|Canned Mackerels]] now give a damage boost to [[:Category:Landing Craft|Landing Crafts]] & [[:Category:Special Amphibious Landing Craft|Special Amphibious Landing Crafts]] when they trigger.
+
+
+====Seasonal Content====
+* New [[Seasonal/Spring 2016|Spring Season voice lines]] for more than 50 ship girls.
+* Removal of Sukiya promotional artworks & White Day voice lines.
+** Artworks have been added to the in-game library.
+* End of White Day Cookie sales.
+* "Spring of the Type-B Sisters" poster no longer available upon login.
+
+
+====New Furniture====
+<gallery type="slideshow" widths="300" hideaddbutton="true">
+Uzuki's floor.png|Uzuki's floor
+Uzuki's wallpaper.png|Uzuki's wallpaper
+Uzuki's window.png|Uzuki's window
+Uzuki's desk.png|Uzuki's desk
+Uzuki's wallscroll.png|Uzuki's wallscroll
+Uzuki window 1.png|Uzuki's window (animation frame 1 of 4)
+Uzuki window 2.png|Uzuki's window (animation frame 2 of 4)
+Uzuki window 3.png|Uzuki's window (animation frame 3 of 4)
+Uzuki window 4.png|Uzuki's window (animation frame 4 of 4)
+Uzuki window 5.png|Uzuki's window (all animation combined) - DOES NOT APPEAR IN GAME
+Uzuki's window animated.gif|Uzuki's window (animated GIF file)
+Uzuki's wallscroll animation.gif|Uzuki's wallscroll - animated
+</gallery>
+<!--Pyon-emoticon.png|Uzuki
+Catdive-emoticon.png|404 Files not uploaded yet
+Kappa.png|Deal with it-->
+* 卯月の床 ''[[Furniture/Floor#Uzuki's_floor|Uzuki's floor]]'' (Price: 400 [[File:Furniture coin.png|20px]])
+* 卯月の壁紙 ''[[Furniture/Wall#Uzuki's_wallpaper|Uzuki's wallpaper]]'' (Price: 1400 [[File:Furniture coin.png|20px]])
+* 卯月の窓 ''[[Furniture/Window#Uzuki's_window|Uzuki's window]]'' (Price: 400 [[File:Furniture coin.png|20px]] + [[File:Furniture fairy.png|20px]])
+* 卯月の机 ''[[Furniture/Desk#Uzuki's_desk|Uzuki's desk]]'' (Price: 3400 [[File:Furniture coin.png|20px]] + [[File:Furniture fairy.png|20px]] 
+* 卯月の掛け軸 ''[[Furniture/Object#Uzuki's_wallscroll|Uzuki's wallscroll]]'' (Price: 104000 [[File:Furniture coin.png|20px]] '''OR''' 400 [[File:Furniture coin.png|20px]] + [[File:Furniture fairy.png|20px]])
+
+
+====Limited-time Ship Drops====
+* {{ShipLink|Uzuki}} & {{ShipLink|Akashi}} now drop in several Extra Operation maps.
+* {{ShipLink|Uzuki}} drops for everyone, and quite often to boot.
+* {{ShipLink|Akashi}} drops in [[1-5|World 1-5]] only if you don't have one.
+
+
+====Mutsuki & Kisaragi buff====
+* {{ShipLink|Mutsuki/Kai Ni|link=Mutsuki Kai Ni}} & {{ShipLink|Kisaragi/Kai Ni|link=Kisaragi Kai Ni}} can now equip [[:Category:Landing Craft|Landing Crafts]]
+* However, they '''cannot''' equip [[:Category:Special Amphibious Landing Craft|Special Amphibious Landing Crafts]].
+
+
+====Kai-2 destroyer stat buffs====
+* The following ships' maximum stats have been increased:
+** {{ShipLink|Hatsuharu/Kai Ni|link=Hatsuharu Kai Ni}}: {{Torpedo}}'''88→90 (+2)'''
+** {{ShipLink|Hatsushimo/Kai Ni|link=Hatsushimo Kai Ni}}: {{Firepower}}'''50→52 (+2)''' , {{AA}}'''80→81 (+1)'''
+** {{ShipLink|Shigure/Kai Ni|link=Shigure Kai Ni}}: {{Firepower}}'''57→59 (+2)'''
+** {{ShipLink|Akatsuki/Kai Ni|link=Akatsuki Kai Ni}}: {{Firepower}}'''60→62 (+2)'''
+** {{ShipLink|Murakumo/Kai Ni|link=Murakumo Kai Ni}}: {{Firepower}}'''55→57 (+2)'''
+** {{ShipLink|Ushio/Kai Ni|link=Ushio Kai Ni}}: {{Evasion}}'''94→95 (+1)''' , {{Armor}}'''55→56 (+1)'''
+
+
+====Visual Changes====
+* Aerial Combat animations for seaplane bombers like [[Zuiun]] and seaplane fighters like [[Type 2 Seaplane Fighter Kai]] have been updated.
+* Land-based planes, once implemented, will have a similar animation.
+
+
+====Other====
+* Changes to the game's startup API temporarily caused several viewers to not load their info tabs properly, but this has since been fixed. Just get the latest update.
+* {{ShipLink|Akitsushima}}'s equipment pool coding was messed up shortly after the update, which prevented her from equipping [[:Category:Landing Craft|Landind Crafts]], [[List of Secondary Guns by stats|Secondary Guns]] and [[Emergency Repair Personnel|Emergency]] [[Emergency Repair Goddess| Repairs]], but allowed her to equip [[Prototype 51cm Twin Gun Mount|Prototype 51cm Twin Gun Mounts]]. This has already been fixed, unfortunately.
+* Abyssal Carriers incorrectly displayed [[Abyssal Liberation Land-based Dive Bomber|land-based dive bombers]] as their equipment during the launch animation. This was just a visual bug without any bearing on their actual equipment and has already been fixed.<noinclude>
+[[Category:Game Updates]]</noinclude>

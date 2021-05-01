@@ -1,0 +1,166 @@
+{{Event/MapPageHeader
+|form = QfRdjug7aAFeliYB2
+|spreadsheet = 1fIgeHsX8hha4SaUUiPedOSQatRVWpKph0cpoZ5-2Yus
+|thread = 547889
+}}
+{{Event/MapInfo
+|en = The Northern Witch
+|jp = 北の魔女
+|romaji = Kita no Majo
+|tag = 
+|mechanics = Land Base Aerial Support@Land Base Aerial Support, Combined Fleet@Combined Fleet, Boss Debilitation@Events/Mechanics#Map-specific_Mechanics, Abyssal Combined Fleet@Abyssal Combined Fleet
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_easy = 3000
+|hp_medium = 3080
+|hp_hard = 3850
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = 4
+|kills_medium = 4
+|kills_hard = 5
+-->
+|reward_all = {{ShipBattleCardKai|Gangut}}
+|reward_easy_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_1_x = 1
+
+|reward_medium_1 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_medium_1_x = 8
+|reward_medium_2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model III A (54th Squadron)|size=50px}}
+|reward_medium_3_x = 1
+
+|reward_hard_1 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_hard_1_x = 10
+|reward_hard_2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_2_x = 2
+|reward_hard_3 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model II (64th Squadron)|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = [[File:First-class Medal 061 useitem.png|50px|link=Medal]]
+|reward_hard_4_x = 1
+}}
+{{MapBranchingTable
+|title = E-5 Branching Rules
+
+|0 -> 1 = * Carrier Task Force
+|0 -> 2 = * Surface Task Force
+
+|A -> D, E = * Active Branching
+
+|E -> F = 
+* Amount of CV(B) in main fleet ≧ 3 (CVL do not count)
+* Amount of (F)BB(V)+CV(L/B) in main fleet ≧ 5
+|E -> H = 
+* Do not meet the requirements to go to F.
+
+|F -> H = * The map has been cleared.
+|F -> J/empty = * The map has not been cleared yet.
+
+|G -> L = * Amount of (F)BB(V)+CV(B) in main fleet ≧ 4
+|G -> M = * ???
+
+|H -> I/storm = 
+* If the map is not cleared yet, meet one of the following requirements:
+** ???
+* If the map is cleared, meet one of the following requirement:
+** Amount of CLT ≧ 3
+|H -> M = 
+* If the map is not cleared yet, meet one of the following requirements:
+** ???
+* If the map is cleared, meet one of the following requirements:
+** Fleet contains AO
+** Amount of (F)BB(V) ≧ 4
+|H -> G = 
+* Do not meet the requirements to go to either I or M.
+
+|J/empty -> K, N = * Active Branching
+
+|K -> O = * Pass the LoS check.
+|K -> Q/empty = * Fail the LoS check.
+
+|L -> M = * Pass the LoS check, but fail to meet the requirements to go to R.
+|L -> P/empty = * Fail the LoS check.
+|L -> R = 
+* Amount of historical ships ≧ 4 on Both Easy & Medium
+* You cannot go through this route on Hard.
+
+|M -> Q/empty = * Fail the LoS check.
+|M -> R = * Pass the LoS check.
+
+|O -> S/empty = * Fail the LoS check.
+|O -> T = * Pass the LoS check.
+}}
+===Historical Ships===
+The following ships can be used in this map for historical mechanics as well as dealing extra damage against both boss fleets. The Russian ships have a stronger multiplier.
+
+====The 5th Fleet====
+The members of the 5th Fleet that can be used in this map:
+* CA: {{ShipLink|Nachi|Nachi/Kai Ni}}
+* CLT: {{ShipLink|Kiso|Kiso/Kai Ni}}
+* CL: {{ShipLink|Abukuma|Abukuma/Kai Ni}}, {{ShipLink|Tama}}
+* DD: {{ShipLink|Ushio|Ushio/Kai Ni}}, {{ShipLink|Kasumi|Kasumi/Kai Ni}}, {{ShipLink|Shiranui}}, {{ShipLink|Hatsushimo|Hatsushimo/Kai Ni}}
+
+====Russian Ships====
+The Russian ships currently available:
+* FBB: {{ShipLink|Гангут|Октябрьская революция|Гангут два}}
+* DD: {{ShipLink|Верный}} (Hibiki and Hibiki Kai do not count)
+
+===Map Info===
+*The map has two boss gauges. First is [[Battleship Princess]] at R node, followed by the appearance of [[Northern Water Princess]] at T node.
+**Resetting the map will reset to the start of the first gauge.
+*Three [[Land Base Aerial Support]] bases are available to sortie.
+**[https://puu.sh/vFdTJ/6a42b0fb43.png Range map]
+*On Hard, two enemy raids on land bases will occur before reaching the boss node.  On Easy, 1 or 2 will occur.
+*'''Caution''': After clearing this map, node F will always route to H.
+
+===Special Damage Modifiers===
+*The historical ships (5th Fleet and Russian ships)gain a post-cap damage multiplier bonus against '''both boss ''fleets'''''.  The bonus is higher for Верный.
+** The 5th Fleet members will deal 1.2x extra damage.
+** The Russian ships will deal 1.5x extra damage instead.
+*Carrier-based Dive Bomber bombing and any carriers equipped with {{RedPlane}} also gain a bonus post-cap damage against the boss fleets.
+** The bonus damage is estimated to be at least 1.5x extra damage.
+*Land-based bombers have a high damage modifier against Battleship Princesses on this map.
+
+===Boss Armor Debuff===
+
+*Trigger requirements:[https://twitter.com/Lambda39/status/860482517228331008]
+**1 Perfect S rank at C
+**1 S rank each at D and E nodes
+**(Medium and Hard) 1 damageless enemy raid (white text after raid)
+[[File:【KanColle】Spring 2017 Event E-5 How to Debuff the Boss|200 px]]
+*The mission complete sound will play upon returning to base after the debuff is triggered.  Northern Water Princess's graphic will also change. Nothern Water Princess-Broken's introduction line will change.
+*Changing the E-5 map difficulty to Hard will reset the debuff.
+*Effects:
+**Both Battleship Princess at R and Northern Water Princess at T will have their defense power lowered.
+
+===Player Submitted Fleet Compositions===
+*'''First Boss:'''
+**Route: A-D-G-L-M-R
+***CTF: 2BB(V) 4CV(B) 2DD 1CL 3XX
+***Using 4 historical ships on Easy/5 on Medium will avoid node M
+***The combined LOS requirement (between both fleets) to reach Boss Node M is 34 (formula 33).
+*'''Second Boss:'''
+**Route: A-E-F-J-N-O-T
+***CTF: 2BB(V) 4CV(B) 2DD 1CL 3XX
+**Route: B-C-F-J-N-O-T
+***STF: 4BB(V) 2CVL 2DD 1CL 3XX
+
+===Tips===
+*CTF fleets start at point 1, making it good for clearing the first gauge.
+*STF starts at point 2 and can reach the upper boss node with more ammo than CTF.
+*~420 Fighter Power is enough to get Air Superiority at C & F, Air Parity at O, and Air Supremacy at the boss Node (with LBAS).
+*While Kitakami and Ooi do not gain the same bonuses Kiso and Abukuma do in this map, their preemptive torpedoes and high night battle power still make them effective for reaching and clearing the boss nodes.
+*Utilizing a {{EquipmentLink|Fleet Command Facility}} will increase consistency during gauge chipping.  Keep in mind however, that retreating a carrier can potentially reduce your fighter power below the requirements. Retreating a ship can also cause your LoS to drop below the branching requirements as well.
+*For clearing the first gauge and depleting the second gauge, using one base for Air Defense will reduce resource loss due to enemy raids.
+**The boss nodes before the final form are relatively easy to clear with only two bases attacking.
+*For last dance consider setting all 3 land bases to attack the boss node.
+** 1-2 fighters, 2-3 bombers per base is recommended (7 range is needed to reach node T).
+* For farming Littorio and Roma from T:
+** Consider resetting the gauge before clearing the map.  After the map is cleared, STF becomes unviable due to routing changes.  While CTF can still reach the boss, it is considerably less efficient.
+** Both drop from A and S ranks on all difficulties.
+
+{{Event/MapPageFooter}}

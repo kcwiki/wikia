@@ -1,0 +1,366 @@
+==Introduction==
+Combat is where the majority of the game's action takes place. When sortieing to a map, you will notice along the way that there are red nodes scattered all over the maps. These are combat nodes, in which your goal is to sink the enemy ships. Combat is completely automated, save for a few decisions you can make during some sections.
+
+This article explains the basic flow of combat mechanics and is more focused for beginners to gain an understanding as to how combat works. In case you already have a basic understanding of this, use the tabs above to navigate to the topic you're interested in.
+
+This article will explain the following combat phases in order:
+*Formation Selection
+*Detection
+*Aerial Combat
+*Engagement Form Modifier
+*Day Combat
+*Night Combat
+{{Clear}}
+
+==Damage Calculation==
+Before we actually explore each combat phase though, it is important to know what the relevant stats are when dealing damage and how they are applied during each phase.
+{| class="wikitable"
+|-
+!Icon
+!Description
+|-
+| align="center" |{{HP}}
+|The health of a ship. If a ship reaches 0 {{HP}}, she will be sunk. A player's ship can only be sunk when the fleet advances to a new node on the map while one of the ships in the fleet is <span style="color:red">heavily damaged</span>.
+|-
+| align="center" |{{Firepower}}
+|The {{Firepower}} stat decides how much damage you do to your opponents per shot during the shelling phase.
+|-
+| align="center" |{{Torpedo}}
+|The {{Torpedo}} stat increases the damage of all forms of torpedo attacks against your opponents. Affects all form of torpedo attacks. 
+|-
+| align="center" |{{ASW}}
+|For Anti-Submarine Warfare (ASW). This stat affects how much damage you do against enemy submarines.
+|-
+| align="center" |{{Armor}}
+|The {{Armor}} stat generates an armor roll that decides how much damage is subtracted in case the ship suffers a direct hit. Higher armor stats increases the scope of the armor roll value.
+|}
+
+Each form of attack has their own mechanics associated with them as well as a damage cap. The damage cap is also known as the softcap and any damage value that goes past the damage cap will be met with diminishing returns. Of course, there are exceptions to anything, but more to that later.
+{| class="wikitable"
+|-
+!Type
+!Relevant Stats
+!Damage Cap
+!Description
+|-
+|Shelling Attacks
+| align="center" |{{Firepower}}
+| align="center" |220
+|Attacks that involves firing a barrage at your opponents.
+|-
+|Torpedo Attacks
+| align="center" |{{Torpedo}}
+| align="center" |180
+|Any form of torpedo attacks that are performed during the day.
+|-
+|Opening Airstrikes
+| align="center" |{{Dive}} or {{Torpedo}}
+| align="center" |170
+|The aerial attack of an opening airstrike.
+|-
+|ASW
+| align="center" |{{ASW}}
+| align="center" |170
+|Anti-Submarine attacks, which involves attacking the enemy submarine with depth charges or by attacking them with aircraft.
+|-
+|Night Battle
+| align="center" |{{Firepower}} + {{Torpedo}}
+| align="center" |360
+|During night battle, all forms of attacks are treated the same.
+|}
+
+'''Note:''' The damage caps have been changed in the [https://en.kancollewiki.net/Game_Updates/2021/March_1st March 1st 2021 update]. (Previously 180, 150, 150 ,150, 300)
+
+''For more information about damage calculation, click [[Combat/Damage Calculation|here]]''
+{{Clear}}
+
+==Formation Selection==
+When approaching a red node, you are given the choice to select a fleet formation. There are 5 formations for the player to choose and each formation has its advantages and disadvantages.
+
+However, in case the player has less than 4 ships, you will not be given the choice and the fleet will default to Line Ahead formation.
+
+'''Note:''' Keep in mind that the formation you select here, will only affect your '''own''' fleet.
+{{Clear}}
+
+
+===Formation Modifier===
+{| class="article-table" style="text-align:center; font-size:12px"
+|-
+! scope="col" style="text-align:center;" rowspan="2" |Formation
+! scope="col" style="text-align:center;" rowspan="2" |Icon
+! scope="col" style="text-align:center;" colspan="4" |Damage Modifier
+! scope="col" style="text-align:center;" colspan="4" |Accuracy Modifier
+! scope="col" style="text-align:center;" rowspan="2" |<abbr title="Flagship Protection Rate">FS Prot</abbr>
+|-
+! scope="col" style="text-align:center;" |<abbr title="Day Shelling/Bombing">Shelling</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Anti-Submarine">ASW</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Night Battle">Night</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Anti-Air">AA</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Day Shelling/Bombing">Shelling</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Anti-Submarine">ASW</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Day Torpedo">Torp</abbr>
+! scope="col" style="text-align:center;" |Night
+|-
+| style="text-align:left;" | Line Ahead<br /><span style="cursor:help;" title="Tanjuu-jin">単縦陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{LineAhead}}
+| style="color:red;" |'''100%'''
+|60%
+|100%
+|100%
+|100%
+|100%
+| style="color:red;" |'''100%'''
+| style="color:red;" |'''100%'''
+|45%
+|-
+| style="text-align:left;" | Double Line<br /><span style="cursor:help;" title="Fukujuu-jin">複縦陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{DoubleLine}}
+|80%
+|80%
+|100%
+|120%
+| style="color:red;" |'''120%'''
+| style="color:red;" |'''120%'''
+|80%
+|90%
+|60%
+|-
+| style="text-align:left;" | Diamond<br /><span style="cursor:help;" title="Rinkei-jin">輪形陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{Diamond}}
+|70%
+|120%
+|100%
+| style="color:red;" |'''160%'''
+|100%
+|100%
+|40%
+|70%
+| style="color:red;" |'''75%'''
+|-
+| style="text-align:left;" | Echelon<br /><span style="cursor:help;" title="Teikei-jin">梯形陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{Echelon}}
+|75%
+|110%
+|100%
+|100%
+| style="color:red;" |'''120%'''
+| style="color:red;" |'''120%'''
+|60%
+|80%
+|60%
+|-
+| style="text-align:left;" | Line Abreast<br /><span style="cursor:help;" title="Tan'ou-jin">単横陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{LineAbreast}}
+|60%
+| style="color:red;" |'''130%'''
+|100%
+|100%
+| style="color:red;" |'''120%'''
+| style="color:red;" |'''120%'''
+|30%
+|80%
+|60%
+|}
+'''Note:'''
+* The values are based from data found in Kancolle Vita. All the analysis and tests done on the browser version seems to match the current values so far.
+** Echelon formation was strengthened during the [[Thread:711264|February 27, 2019 update]]
+* This table consists of only damage and hit rate modifiers of each attack, which are the basic essentials. In case you are interested in the full table, check out [[Combat/Day Combat|Day Combat]] for more info.
+*The surface damage modifier applies to both shelling and torpedo attacks but does not affect Opening Airstrikes or Anti-Submarine attacks.
+*All attacks during night battle have a 100% damage modifier, regardless of formation.
+**The exception being against submarines.
+*Enemy's fleet is affected by the same formation modifier as us; furthermore, the formation shown on screen is based on the perspective of both fleet. This may result in the situation where the formations of both sides are shown as "line ahead" icon on-screen, but it is actually "line abreast".
+*Flagship protection is the situation where a non-flagship ship protects the flagship from being damaged by receiving the attack instead. This will only work if there is a healthy (<span style="color:green">green health</span>) non-flagship ship available in the fleet. In case all the requirements are met, the chances will trigger every time a flagship is targeted.
+
+{{:Combat/Main/Vanguard_Formation}}
+
+'''Factors that decides which formation you should choose:'''
+*'''Line Ahead: '''This formation has the highest offensive power for surface combat. This is generally the choice you should always be choosing when surface combat is involved. Keep in mind though that ASW damage is very poor.
+*'''Double Line:''' This formation increases the shelling accuracy, but lowers the damage output in return during the day. This is a good choice in case the enemy fleet contains a mix of submarines and surface fleets, but because of the firepower penalty, you are recommended not to choose this formation for the increased accuracy.
+*'''Diamond:''' This formation has the strongest anti-air modifier and is almost as good as Line Abreast for ASW purposes. Diamond is the formation you should always be using when you have to defend yourself in an '''Air Raid''' node. This is also a good alternative to Double Line when you are faced with mixed fleets.
+** Keep in mind that Diamond formation is only available when there are at least 5 ships in the fleet.
+*'''Echelon:''' A somewhat balanced formation with relatively high ASW damage but relatively low firepower and torpedo accuracy that is a good option for engaging submarine fleets that also contain surface ships.
+*'''Line Abreast:''' Line Abreast is the best formation for anti-sub purposes, but has the worst damage modifier against surface targets during the day. Please be advised that although this formation does have the highest Evasion modifier among the five for Night Battle Nodes, due to the Evasion Cap, it will have diminishing returns, and therefore you are more recommended to go Line Ahead.
+
+{{Clear}}
+
+==Detection==
+{| class="wikitable" style="width:660px; text-align:center;"
+|-
+!Success
+!Failed
+|-
+|[[File:Combat_detect_success.jpg|200px]]
+|[[File:Combat_detect_fail.jpg|200px]]
+|-
+! colspan="2" |Effects
+|-
+|style="width:140px" |Allows the participation of allied planes.<br />
+'''Note:''' While it states that {{Hit}} and {{Evasion}} have increased, there is no evidence of that actually being the case.
+|style="width:140px" |Prevents the participation of allied planes.
+|-
+|colspan="2" | Fleet LOS affects Detection rate.
+|}
+In detection, your fleet attempts to detect the enemy fleet by either sending out recon seaplanes, using radars or detect them using sonars, in case you are dealing with submarines. The success rate of a detection is influenced by the {{LOS}} of your fleet.
+
+In case your fleet fails to detect the enemy fleet, your fleet will not participate in the [[Combat#Aerial_Combat|Aerial Combat Phase]], resulting in an automatic Air Incapability. Failing the detection will also run the risk of your recon seaplane getting shot down.
+{{Clear}}
+
+==Aerial Combat==
+Aerial combat is a phase where both friendly fleet and opponents send their planes out at the same time trying to determine the air control status while shooting down each others' planes. The fleets then start their anti-air defense against bombers and the remaining surviving bombers would then launch an attack on the enemy ships.
+
+The important main stages that take place in aerial combat are in the following order:
+* Fighter Combat
+* Fleet Anti-Air Defense
+* Bombing Phase
+
+{{Clear}}
+
+===Fighter Combat (First Stage)===
+[[File:Combat_parity_and_incapability.jpg|thumb|256px|Fighting for Air Superiority]]
+In this phase, all fighters and bombers fight for the air control to establish air superiority. The air state is dependent on how many fighter power your fleet has, compared to the enemy fleet. Planes are proportionally shot down depending on which air state has been achieved. The air states are as follows:
+* <span style="color:green">'''AS+:'''</span> Air Supremacy
+* <span style="color:green">AS:</span> Air Superiority
+* AP: Air Parity
+* <span style="color:red">AD:</span> Air Denial
+* <span style="color:red">'''AI:'''</span> Air Incapability
+
+In case your opponent does not have any fighter power, you will gain Air Supremacy by default. If neither side have aircraft that can participate in the fighter combat, the air control will default to parity. You are advised to always attempt to obtain at least Air Superiority and in cases where it's possible, Air Supremacy. The stronger your air control, the more advantages you gain in your favor.
+{{Clear}}
+
+===Fleet Anti-Air Defense (Second Stage)===
+[[File:Bandicam_2014-11-20_02-55-57-126.avi_snapshot_00.26_-2014.11.20_03.09.34-.jpg|thumb|256px|An Anti-Air Cut-In]]
+After the first stage, all the fighters will retreat, as they already finished their job of establishing air control. In this phase, all your bombers will approach the opponent fleet in an attempt to attack them, while the enemy will attempt to shoot them down through {{AA}} fire.
+
+The strength of the {{AA}} fire is heavily dependent on the {{AA}} equipment and Anti-Air Cut-In attacks. While base {{AA}} stats of a ship do contribute to your anti-air, it is the least relevant.
+
+{{Clear}}
+
+===Bombing Phase (Third Stage)===
+[[File:2-5_boss_node.png|thumb|256px|An airstrike being carried out]]
+All remaining surviving bombers will randomly choose and attack a target among the enemy fleet. The damage done is affected by the amount of planes in a slot and whether you have used a dive bomber or a torpedo bomber.
+
+'''Note:''' Opening Airstrike accuracy is not affected by morale and the damage is not affected by formations or engagement modifiers.
+
+''For more information about aerial combat, click [[Combat/Aerial Combat|here]].''
+{{Clear}}
+
+==Engagement Form Modifier==
+During every battle, an engagement form is declared, which further modifies the amount of damage you can potentially deal.
+{| class="article-table" style="width: 400px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center; width:200px;" |Form
+! scope="col" style="text-align:center; width:100px;" |Damage Modifier
+! scope="col" style="text-align:center; width:100px;" |Chance
+! scope="col" style="text-align:center; width:100px;" |Chance with {{EquipmentLink|Saiun}}
+! scope="col" style="text-align:center; width:100px;" |[[Combat Screens]]
+|-
+|Crossing the T ('''<span style="color:green">Advantage</span>''')<br />{{Nihongo|T字戦有利|''T Ji-sen Yuuri''|}}
+| style="text-align:center;" |120%
+| style="text-align:center;" |15%
+| style="text-align:center;" |15%
+| style="text-align:center;" |[[File:Combat_greent.jpg|150px]]
+|-
+|Parallel Engagement<br />{{Nihongo|同航戦|''Doukousen''|}}
+| style="text-align:center;" |100%
+| style="text-align:center;" |45%
+| style="text-align:center;" |45%
+| style="text-align:center;" |[[File:Combat_parallel.jpg|150px]]
+|-
+|Head-on Engagement<br />{{Nihongo|反航戦|''Hankousen''|}}
+| style="text-align:center;" |80%
+| style="text-align:center;" |30%
+| style="text-align:center;" |40%
+| style="text-align:center;" |[[File:Combat_headon.jpg|150px]]
+|-
+| style="white-space: nowrap;" |Crossing the T ('''<span style="color:red">Disadvantage</span>''')<br />{{Nihongo|T字戦不利|''T Ji-sen Furi''|}}
+| style="text-align:center;" |60%
+| style="text-align:center;" |10%
+| style="text-align:center;" |0%
+| style="text-align:center;" |[[File:Combat_redt.jpg|150px]]
+|}
+'''Note:'''
+*All engagement forms '''affect both sides equally''', including crossing the T (<span style="color:green">Advantage</span> or <span style="color:red">Disadvantage</span>). In the case of <span style="color:green">Green T</span>, both sides will gain a 120% boost in firepower.
+* Night battle and aerial combat are not affected by engagement forms. However, day torpedo attacks ''are'' affected by engagement forms.
+* Engagement modifiers ''do'' affect opening phases like Opening Torpedo or Opening ASW, even though they happen before the engagement modifier is declared.
+*Equipping a {{EquipmentLink|Saiun|icon=yes}} effectively prevents <span style="color:red">Red T</span>.
+
+==Day Combat==
+{{Main|Day Combat|tab=true}}
+
+During day combat, your fleet and the enemy will exchange fire and attempt to sink each other. It is basically the phase where also the most action happens, including the majority of the phases that was explained above.
+
+This is further categorized into two categories:
+* '''Opening Phases:''' The opening phases consists of stages where attacks are fired pre-emptively against your opponents before any other attacks are performed. This phase ends when the formation modifier gets displayed.
+* '''Shelling Phase:''' After the formation modifier is displayed, the shelling phase will start. In this phase, all surface ships will each take a turn in firing a barrage against the enemy fleet. This can extend to a 2nd shelling phase if a battleship is present.
+* '''Torpedo Phase:''' The end of the shelling phase is concluded with a torpedo phase, in which all ships with torpedo capabilities will fire off a torpedo against their enemies. In case there are no enemies present who are vulnerable to torpedo attacks, this phase will be skipped instead.
+
+Due to the length of the day combat phase, you are recommended to check out [[Combat/Day Combat|Day Combat]] instead for more in-depth information regarding this phase.
+{{Clear}}
+
+
+===Support Expeditions===
+[[File:Support_expedition.png|thumb|Support Shelling initiated]]
+Support expedition involves sending a fleet into an expedition to provide additional support to the current fleet that is at sortie. Depending on whether you used a node support that supports you on the way or a boss support, the expedition fleet will appear on the battle nodes and fire an opening barrage against the enemy fleet. The type of support you receive depends completely on what kind of ships you have sent to the expedition. This mechanic is part of the ''Opening Phase''.
+
+'''Note:''' Keep in mind that this is only available for [[World 5]] and event maps.
+
+''For more information regarding support expeditions, check out [[Expedition/Support Expedition|Support Expedition]].''
+{{Clear}}
+
+
+
+===Artillery Spotting===
+[[File:KanColle-140425-17422431.png|thumb|Cut-in Type Observed Fire using 1 Main 1 Sec & Type 91 AP shell]]
+When at least Air Superiority is achieved during the Aerial phase, ships that are equipped with a {{Seaplane}}Seaplane will be eligible to use [[Artillery Spotting]] during the day shelling phase. Artillery Spotting is either a strong but accurate single attack (Cut-In) or a powerful double attack (Double Attack) that deals double the amount of damage against surface targets.
+
+All forms of artillery spotting attack deal extra post-cap damage, meaning that the extra damage is not restricted by the damage cap. Note that Artillery Spotting does not work against submarines because guns are useless against them. Note that Artillery Spotting does not work during the night, as no aerial combat takes place in the night phase.
+
+''If you want to learn more about artillery spotting, check out the [[Day_Combat#Day_Battle_Special_Attacks_.28Artillery_Spotting.29|Artillery Spotting requirements]].''
+{{Clear}}
+
+
+===Anti-Submarine Warfare===
+Any submarine present in the enemy fleet will force Destroyers, Light Cruisers, Torpedo Cruisers, Training Cruisers, and {{ShipLink|Hayasui}} to target them during the shelling phases even if there are surface targets present. It also applies to Aviation Heavy Cruisers, Aviation Battleships, Seaplane Tenders, Light Carriers and {{ShipLink|Akitsu Maru}} equipped with seaplane bombers, {{EquipmentLink|Ka Type Observation Autogyro|text=Ka-type Autogyro|icon=yes}} or {{EquipmentLink|Type 3 Command Liaison Aircraft (ASW)|text=Liaison Aircraft|icon=yes}}.
+
+'''Note:''' Guns are completely useless against submarines, hence they should not be used if you are only facing submarines as enemies, like [[1-5]].
+
+''To find more information about ASW among other things, check out the [[Combat/Day Combat|Day Combat]].''
+{{Clear}}
+
+==Night Combat==
+
+{{:Combat/Night Battle|Night Battle}}
+
+[[File:Night Battle Intro.png|thumb|Entering Night Battle]]
+[[File:night_cut_in.png|thumb|An example of a cut-in]]
+[[File:Recon2.jpg|thumb|Searchlight, Starshell and Night Recon]]
+In the scenario that the enemy fleet has not been defeated yet during Day Combat, the player has the choice to pursue them in a Night battle (夜戦) to finish them off.
+During night battle, the following effects are applied:
+*The ammo usage on that node is increased by 50% if night battle is entered from day-battle. As most nodes on normal and event maps alike use 20% ammo, this will be increased to 30% for example.
+*During night, the firepower is {{Firepower}} and {{Torpedo}} stats combined together. Consequently, DDs, CLs, CLTs and CAs have drastically increased strength at night.
+*Any vessel that is heavily damaged (<span style="color:red;">'''大破'''</span>) are not allowed to attack during the night battle.
+*Night battle damage cap is raised to '''300'''.
+* Any attack against submarines in regular Night Battles are automatically nullified and reduced to scratch damages, practically making them invincible. Avoid going into a night battle against a submarine, unless one of the following happens, which allows you to do damage against submarines as normal:
+** You are using a [[Combat/Combined Fleet|Combined Fleet]].
+** The battle started at night.
+*Formation '''damage modifiers''' and Engagement Form damage modifiers do not apply in Night Battle (i.e. they are always 100%).
+
+===Night Battle Special Attacks===
+*Certain combinations of weapon equipment will cause Cut-In or Double Attacks at night, greatly increasing accuracy and/or firepower.
+*If night combat nodes are anticipated, it can be very helpful to utilize specialized night battle equipment such as {{EquipmentLink|Star Shell}}s, {{EquipmentLink|Searchlight}} and {{EquipmentLink|Type 98 Recon Seaplane (Night Scout)}}, as they provide bonuses during night-battle and also increases your Cut-In chances.
+
+'''Note:''' Unlike Artillery Spotting attacks, the special attacks performed during the night are not post-cap, meaning that it will be affected by the damage cap.
+
+''For more information regarding night battle and the setups, check out [[Combat/Night Battle|Night Battle]].''
+
+
+{{:Partials/Victory Conditions (Legacy)}}
+
+==Additional Explanation/Details==
+
+{{reflist}}
+[[Category:Calculation]]
+[[Category:Example]]
+[[Category:Help]]
+[[Category:Game System]]
+[[Category:Game Mechanics]]

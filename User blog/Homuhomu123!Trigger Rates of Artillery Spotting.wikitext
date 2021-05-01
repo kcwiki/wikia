@@ -1,0 +1,805 @@
+==Foreword==
+
+This post is used for saving experiment data from other Kancolle testers, on the '''trigger rates of Artillery Spotting'''. For a higher level of objectivity, I will refrain from concluding or formulating from anything below. In order to help readers understand the exp't, I attached some information beside the original data according to my understanding of the experiments. Therefore you're always welcome to evaluate my work & translation.
+
+Since the following tests are all about '''probability''', data from smaller sample sizes would be surrounded by parenthesis, indicating less reliability. For more information on the significance of larger sample sizes, you may visit [http://kancolle.wikia.com/wiki/User_blog:Wizongod/Calculating_Confidence_Intervals_for_Underlying_Probabilities Calculating Confidence Intervals for Underlying Probabilities] by Winzongod.
+
+Since some info below were ''pasted from websites with no explicit citation'', please contact me if you know any of the sources. Also, if you consider any unauthorized using of exp't data, you'll have my apology and associated content shall be deleted immediately.
+
+If you noticed an error on my translation, ambiguity in the language, any important info were missing, or just need help with anything, please leave me a comment. I hope the following will be helpful.
+
+<span style="color:rgb(0,0,0);">A </span>'''[http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project summary]'''<span style="color:rgb(0,0,0);"> of the following reports (along with other exp'ts) has been conducted by Homuhomu123.</span>
+
+
+
+
+==I - Trigger Rates of Artillery Spotting by Kuubowokyuu==
+
+
+'''Exp't name: '''[http://kankoregouchin.blog.fc2.com/blog-entry-23.html 弾着観測射撃（弾着修正射撃）検証]
+
+'''Blog / Author: '''[http://kankoregouchin.blog.fc2.com/ 艦これ-チラ裏検証-] / by''' くうぼをきゅう'''
+
+'''Exp't Date:''' Apr 27 ~ Aug 30, 2014
+
+'''Full Translation: '''by''' '''Homuhomu123
+
+'''Explanation:'''
+
+A series of experiments were done by Kuubowokyuu over 4 months, namely ''Artillery Spotting Tests pt.1~12（弾着観測射撃（弾着修正射撃）検証 その 1~12）''. Testing conditions were firmly controlled by the author. To illustrate: 
+* Test ship conditions: ''Always above minor damage; keep morale at 49.''
+* Fleet condition: ''Line ahead formation, and AS+ achieved for all except exp't 18 (AS).''
+* Enemy condition: ''Line ahead formation, except No.17~18 (diamond).''
+* Maps used, '''''Spring E-1-1''''' ''(No.1~8),'' '''''1-2''''' ''(No.10~12),'' '''''5-4-1 '''(No.17~18), and'' '''''3-2-1''''' ''(No.6b & All the others).''
+
+
+=== <u>Original Data</u>===
+
+'''- Terminology & Notes'''
+* ''#CI/ DA              Number of cut-in and/or double attacks. A consecutive DA is counted once in the table.''
+* ''#ATK                  Number of attacks (Attack chances)''
+* LoS                    Line of sight
+* FP                     Fighter power
+* ''AS+                   Air supremacy''
+* ''AS                     Air superiority''
+* (カ)                    Cut-in ''(hybrid)''
+* (連)                    Double attack'' (hybrid)''
+* 水上偵察機         Type 0 recon seaplane
+* 電探                   Radar
+* '''''Blue = DA;  Yellow = CI;  Green = Hybrid (CI+DA)'''''
+
+[[File:ASTRE_PT-A_BY_Kuubowokyuu_Translation.jpg|left]]
+[[File:ASTRE_PT-B_BY_Kuubowokyuu_Translation.jpg|left]]
+[[File:ASTRE_PT-C_BY_Kuubowokyuu_Translation.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+''NOTE: The motion of translating the tables above had been approved by the author.''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==II - Factors Affecting DA Chances==
+
+'''Exp't name: ??? ''("Kinugasa Tests", [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_339 339] , [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_399 399] , [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_468 468] )'''''
+
+'''Blog / Author: ???'''<span style="color:rgb(0,0,0);"> (Pasted on </span>[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/index.html 検証スレ勝手にまとめ]<span style="color:rgb(0,0,0);">) </span>
+
+'''Exp't Date:''' May, 2014
+
+'''Explanation:'''
+
+A series of experiments were done by using Kinugasa under various test conditions. By doing so we may tell the effects from different factors.
+
+
+
+=== <u>Original Data</u>===
+===='''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_339 Flagship & Health State]'''====
+
+- Map 1-1-1.
+
+- Placement:
+*Flagship (upper section)
+*Companion ship (lower section)
+
+- Equipment: 20.3cm x 2  + ''' Type 0 Obsv.S''' '''x 2'''
+
+- Health State: (From left to right)
+*Beyond minor damage (blue)
+*Minor damage (red)
+- FLoS = 137 ~> 139
+
+- Always sparkled ??
+
+[[File:DBDA-FS_HP.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===='''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_399 Sparkling Test]'''====
+
+- Map 1-1-1.
+
+'''- Flagship position,'''
+
+- Equipment: 20.3cm x 2  +  '''Type 0 Obsv.S x 2'''
+
+- Beyond minor damage.
+
+- FLoS = 137 ~> 139
+
+- The upper section represents not sparkled. The lower section represents sparkled.
+
+- Exact values of morale were '''not''' mentionted.
+
+[[File:DBDA-KIRA.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===='''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_468 Extra Seaplane & #32 Radar]'''====
+
+- Map 1-1-1.
+
+'''- Flagship position, '''
+
+- Equipment:
+*20.3cm x2, Type 0 Ob.S
+*20.3cm x2, Type 0 Ob.S x2
+*20.3cm x2, Type 0 Ob.S, T32 Radar
+- Beyond minor damage.
+
+- FLoS:
+*133~134
+*137~139
+*144
+- Always sparkled ??
+
+[[File:DBDA-SEAPLANE_RADAR.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==III - Fleet LoS & Trigger Rates of the AP Shell Special Attacks==
+
+'''Exp't name: ??? ''("FLoS & AP Shell Special Attacks", ''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_599 599] , [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_643 643]  )'''
+
+'''Blog / Author: ???'''<span style="color:rgb(0,0,0);"> (Pasted on </span>[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/index.html 検証スレ勝手にまとめ]<span style="color:rgb(0,0,0);">) </span>
+
+'''Exp't Date:''' May~June, 2014
+
+'''Explanation:'''
+
+
+
+=== <u>Original Data</u>===
+===='''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_599 AP Shell Hybrid Setup]'''====
+*Map 1-2-1
+*Morale 40 ~ 49
+*Beyond minor damage.
+*'''Flagship position'''
+*Nagato (luck 30) & Mutsu (luck 5)
+*15.2cm + AP + Type 0 Ob.S
+
+[[File:DBAPMIX-LOS.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+*Green curve = Total artillery spotting chances (CI + DA)
+*Blue curve = Cut-in
+*Orange curve = Double Attack
+
+
+
+
+===='''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_643 AP Shell Cut-In Setup. ]'''====
+
+- Data from the previous table (AP hybrid setup) were also included.
+
+[[File:DB-APMIX_APCI-LOS.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+* '''Blue curves: AP Shell Hybrid Setup'''
+** Dark blue curve (top, solid) = Total artillery spotting chances (CI + DA).
+** Dark blue curve (mid, dash) = Cut-in chance ''(i.e. "Main + Main cut-in") ''
+** Light blue curve (bot, dash) = DA chance.
+* '''Red curves: AP Shell Cut-in Setup'''
+** Dark red curve (top, solid) = Total cut-in chances
+** Pink curve (mid, dash) = AP shell cut-in chance
+** Maroon curve (bot, dash) = Sec.gun cut-in chance.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==IV - Further Study on the Advanced Setups (Sec+Radar, 2*Main+Sec, Sec+AP, 2*Main+AP)==
+
+'''''Exp't name: ??? ("Test on the Adv.Setups", [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_658 658], [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_880 880], [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_988 988], [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#13_218 218])'''''
+
+'''Blog / Author: KCRDB'''
+
+'''Exp't Date:''' June ~ July, 2014
+
+'''Explanation:'''
+
+<u>Objective:</u>
+
+: To test the priority in triggering each mode of special attack. Accuracy & critical rates of each attack mode were also recoreded. 
+
+<u>Test Conditions: </u>
+
+: Test map was 1-2-1. Ships were all placed in '''non-flagship position''', kept beyond minor damage and severely fatigued. 
+
+
+=== <u>Original Data</u>===
+===='''''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_658 Sec + Radar (CI) ]'''''====
+*3 CAs (Furutaka class or equivalent)
+*Low ship levels (25+, 53+)
+*'''20.3cm, 15.5cm(sec), Type 0 Recon, #22 Surface Radar.'''
+*FLoS = 130. (estimate)
+
+[[File:DB-CI_RADAR.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===='''''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_880 2*Main + Sec (CI+DA)]'''''====
+*3 CAs (Furutaka class or equivalent)
+*Low ship levels (27+, 54+)
+*'''20.3cm, 20.3cm, 15.5cm(sec), Type 0 Recon'''
+*FLoS = 133 ~> 136
+
+'''''[[File:DB-SECMIX.jpg|left]] '''''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===='''''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#12_988 Sec + AP (CI)]'''''====
+*2 BBVs (Fusou Kai + Hyuua Kai)
+*High ship levels (81+)
+*'''46cm, 15.5cm(sec), Type 91 AP Shell, Type 0 Recon.'''
+*FLoS = 140 ~ 141
+
+[[File:DB-CI_AP.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===='''''[https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/hirucutin.html#13_218 2*Main + AP (CI+DA)]'''''====
+*2 BBVs (Fusou Kai + Hyuua Kai)
+*High ship levels (82+)
+*'''46cm, 46cm, Type 91 AP Shell, Type 0 Recon.'''
+*FLoS = 142 ~> 143
+
+'''''[[File:DB-APMIX.jpg|left]]'''''
+[[Category:Blog posts]]

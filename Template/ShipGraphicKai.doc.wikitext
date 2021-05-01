@@ -1,0 +1,60 @@
+This template uses ship data modules to display the graphic for the requested ship.
+
+==Example==
+
+ <nowiki>{{ShipGraphicKai|U-511}}</nowiki>
+ <nowiki>{{ShipGraphicKai|Taihou/Kai|damaged=true}}</nowiki>
+ <nowiki>{{ShipGraphicKai|Taihou/Kai|hd=true}}</nowiki>
+ <nowiki>{{ShipGraphicKai|Taihou/Kai|damaged=true|hd=true}}</nowiki>
+
+becomes
+
+{{ShipGraphicKai|U-511}}
+{{ShipGraphicKai|Taihou/Kai|damaged=true}}
+{{ShipGraphicKai|Taihou/Kai|hd=true}}
+{{ShipGraphicKai|Taihou/Kai|damaged=true|hd=true}}
+
+==Parameters==
+The following are the parameters that can be passed.
+
+===[1]===
+
+The ''key'' of the ship, which consists of: The name of the ship, followed by a slash (/), optionally followed by the suffix of the ship.
+
+This method is included as a shortcut and for convenience. ''name'' and ''model'' will take precedence over this.
+
+===name===
+The name of the ship, without any suffixes.
+
+===model===
+The model of the ship, ie. the suffix. For example, Kai or Kai Ni.
+
+To specify the base model you can omit model or leave model empty.
+
+===damaged===
+
+Boolean. Set to <code>true</code> to show the damaged card. Defaults to <code>false</code>.
+
+===hd===
+
+Boolean. Set to <code>true</code> to use HD (HTML5) assets.
+
+===link===
+
+String. If set, the image (and any layer images) becomes a link to the parameter's value. Set to <code>nil</code> to have images to link to themselves (like plain wikitext images). Set to <code>false</code> to force images to be unlinked.
+
+===caption===
+
+String. If set, hovering over the image will show the parameter's value as a tooltip. Will default to the link like normal wikitext image behaviour.
+
+===size===
+
+String. If set, the card is resized to the specified size. Not recommended for use with layers. The format of the string is the same as for normal wikitext images.
+
+===mode===
+
+String. Changes the mode of the template. The default mode returns a fully formatted image.
+
+Set to <code>source</code> to return the image's filename. All image formatting parameters are ignored in this mode. This mode is intended for use in conjunction with the <code>gallery</code> tag called via the <code>#tag</code> parser function.
+
+<includeonly>[[Category:Templates that use ship data modules|{{PAGENAME}}]]</includeonly><noinclude>[[Category:Template documentation|{{PAGENAME}}]]</noinclude>.

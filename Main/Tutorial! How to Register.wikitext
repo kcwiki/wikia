@@ -1,0 +1,99 @@
+{{Tutorialportal}}
+{{Warning|text_align=left|title=This page is outdated.|
+
+Currently, to create a new KanColle account:
+
+* If you don't have a DMM.com account, create it in the usual way (using any interface language, Japanese or English, and any account creation method, email, Google, etc.)
+* Login into your DMM.com account
+* Switch your connection to a Japanese VPN, so that you have an authentic Japanese IP address
+* Navigate to KanColle and create the game account
+* Now VPN connection can be turned off and a [[Tutorial:_Connection#Bypassing_Blocks|non-VPN connection method]] can be used.
+}}
+Occasional system maintenance of the game will also stop new players from registering new account(s). Usually that would be addressed within the same week whenever such an event occurs. You may wish to read the game's [https://twitter.com/KanColle_STAFF/ official twitter page] for further details, or the information above should there be any (rough) translated official tweets.
+
+==Registration==
+Future Admirals must create an account on [https://www.dmm.com/en/my/-/register/ DMM]. '''An English DMM account is fine ("Nutaku" is not)''', for some countries you may need a VPN/Proxy in order to access DMM Japanese website. (Region Cookie method does not necessarily work for account creation). [http://www.dmm.com/en/rule/=/category=onlinegame_service/ According to DMM's terms of service] only those who are aged 18 or above can use their service, and those aged below 20 require parental guidance. Check out the [[Tutorial: Connection|Connection]] guide for more info on how to do this. Please read the FAQ section down below before asking any questions.
+
+If you get redirected to a page describing that you should register and play at nutaku.com <ref>http://kancolle.wikia.com/wiki/Talk:Tutorial:_How_to_Register/@comment-202.67.40.27-20160110103907</ref> <ref>http://kancolle.wikia.com/wiki/Talk:Tutorial:_How_to_Register/@comment-KITbleu-20160107204353</ref> <ref>http://kancolle.wikia.com/wiki/Talk:Tutorial:_Connection/@comment-KITbleu-20160107204157</ref> then you need to change the language setting on DMM website to Japanese before proceeding.
+
+In recent attempts of acquiring an account from DMM, it says that there is a problem every time someone tries to verify their e-mail. To solve this, first click the e-mail link to verify your account, then when the page has opened saying there is an error, copy the url of the error page and paste it to a new tab and then hit enter. It should say that the verification is complete. It seems the site has a bug.
+
+==Registration Process==
+<gallery type="slideshow" widths="300">
+Tutorial-servernotfull.jpg|Click on a server which has a green/blue bar.
+Tutorial-fullserver.jpg|Servers are full, try again soon.
+Error.png|A network error has occurred.
+Maintenance.jpg|Game/site is on maintenance. Try again tomorrow.
+</gallery>
+Navigate to the [http://www.dmm.com/netgame/social/-/gadgets/=/app_id=854854/game website] once you have registered a DMM account.
+
+Here are tips from the staffs to ensure you have a successful registration:
+*Before connecting to the site, clear your browser cache.
+*'''Set your PC timezone to JST''' (UTC+09:00, 5 minutes time deviation is ok).
+**You can revert back to your local time once you have chosen a server.
+
+*Set your browser cache to at least 1024MB (''not mandatory, but recommended'').
+{| class="mw-collapsible mw-collapsed wikitable"
+|-
+! colspan="1" |How to enlarge cache size
+|-
+|
+* '''Microsoft Windows Chrome:'''
+:* Create another shortcut to Chrome (go to the program folder) and append its "Target" path (right click > Properties) with this at the end:
+
+{{Talkquote|text='''<nowiki>chrome.exe --disk-cache-size=1073741824</nowiki>'''}}
+* '''Apple Macintosh Chrome:'''
+:* Create a .command file with the following command (Replace /Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome with your app location):
+
+{{Template:Talkquote|text = '''<nowiki>#!/bin/sh</nowiki>
+
+'''<nowiki>/Applications/Google\ Chrome.app/Contents/MacOS/Google\ Chrome --disk-cache-size=1073741824 &</nowiki>'''
+}}
+
+
+
+
+<br />'''Remember to close your Chrome (Mac Users must make sure it has Quit) before restarting once you have changed your disk cache size.'''
+|}
+{| class="mw-collapsible mw-collapsed wikitable"
+|-
+! colspan="1" |How to check cache size
+|-
+|
+* To verify the current disk cache size of your Chrome, go to this address:
+**chrome://net-internals/#httpCache
+**Look for '''Max size'''. It should now be '''1073741824'''.
+|}
+
+{{clr}}
+
+==FAQ==
+'''Help! I am getting (cat) errors!'''
+*'''Read [[Tutorial:_Troubleshooting|here]]''' for any unspecific error that are not listed below.
+'''Help! I'm getting a B-001 error when attempting to register!'''
+*First off make sure that you have tried inserting region cookie
+*'''If''' that fails, try using VPN/proxy method.
+*Try using a different VPN
+*Clear your cache
+*This can also be fixed by visiting the English website without VPN, logging in there and then turning on your VPN to visit the Japanese website.
+'''This page is not available in your area.'''
+*Connect to VPN first before opening KanColle.
+*Refresh the page. (It's just a false error from DMM)
+'''When I connected to the game all the servers were full''', '''what do I do?'''
+*You may check later and read the official tweets for more information.
+*You may also want to check <span class="plainlinks">[http://flatisjustice.moe/open_kc_servers this site]</span> for when there is a server is open to new players/accounts.
+**Do note that the link above is '''not''' always updated, but instead periodically updated.
+'''NOTE: '''If you receive the screen with the servers list and they appear full you may still have gotten a place click on all the servers to make sure. Only servers showing "満" are actually full.
+
+==References==
+<references/>
+{{CommentWarning
+|background = #DEF
+|border = #ACE
+|title = Commenting Reminders for NEW Threads
+|title_size = 16px
+|message = <span style="font-weight:bold; font-size: 12pt;">Before posting your question make sure to read this page: [[Tutorial:_Troubleshooting]] as your questions would most likely have been covered already.</span> Please do <span style="font-weight:bold;">not</span> post a new thread if your issue(s) <span style="font-weight:bold;">without</span> first consulting the aforementioned page.
+|message_size = 14px
+}}
+[[Category:Tutorial]]
+[[Category:Help]]

@@ -1,0 +1,782 @@
+{{Map/Header}}
+{{Map/Info
+|en = Naval Base Adjacent Sea Route
+|jp = 鎮守府近海航路
+|romaji = Chinjufu kinkai-kōro
+
+|mechanics = LoS Check@Line of Sight
+
+|strategy_name = Transport Ships Escort Operation
+|strategy_name_ja = 輸送船団護衛作戦
+|strategy_info = Form a fleet consisting of ships that excel at anti-submarine warfare and in anti-aircraft capabilities, and protect the transport ship routes!
+|strategy_info_ja = 対潜及び防空能力に優れた艦艇<br>を基幹戦力とした艦隊を編成、<br>輸送船団航路の護衛にあたれ！
+
+|exp_hq = 80
+
+|show_kills = true
+|kills = 7
+
+|reward_1 = {{ItemCard|Present Box|size=50px}}
+|ranking = 75
+}}
+{{MapBranchingTable
+|id = 1-6
+|0 -> A/empty = 
+* Meet '''ALL''' of the requirements
+** Amount of DD+DE ≧ 4
+** Fleet doesn't contain CA(V), BBV or CVL
+|0 -> C/battle = 
+* Meet '''ANY''' of the requirements
+** Fleet contains CA, BBV or CVL
+** Amount of DD + DE in fleet is ≦ 3
+
+|G/resource -> F/battle = 
+* Fleet consists of 1 CL + 5 [DD + DE]
+* 75% chance if the requirement isn't met
+|G/resource -> K/battle = 
+* 25% chance if the requirement to go to node F isn't met
+
+|M/resource -> J/battle =
+*Meet '''ALL''' of the following requirements:
+** Fleet with at least 3 DD + DE 
+** CVL + BBV + CA + CAV ≦ 2 
+** Pass the LoS check by reaching 30 or higher with the F33 formula (C<sub>n</sub>=3)
+|M/resource -> L/battle =
+*Meet '''ANY''' of the following requirements:
+** Fleet has more 3 or more CVL + BBV + CA + CAV
+** Fleet doesn't have 3 DD + DE
+** Fail the LoS check
+}}
+*World 1-6 is unlocked by clearing World 1-5. The monthly map resets also locks 1-6 again, thus making it necessary to clear 1-5 every month to gain access to 1-6.
+*[http://i.imgur.com/lbADcMs.png The monthly map reset is conducted at 23h59 JST on the last day of the month.] It is necessary to refresh the game/reload the API in order to view the reset lock - '''if you complete it after this time limit, you will not receive any map-clear reward''' but you can still get those resources and experience from the nodes themselves.
+* '''The following ship types are not allowed on this map: (F)BB, CV, CLT, SS(V)'''
+** You may bring: BBV, CA(V), CVL, AV, CL, DD, DE, [[Akitsu Maru|LHA]], [[Katori|CT]], [[Akashi|AR]], [[Taigei|AS]], [[Hayasui|AO]].
+** '''NOT RECOMMENDED TO USE BBV, CA, CVL AT ALL'''.
+* Reaching node N '''7 times''' clears the map, rewarding you with '''1 [[Present Box]] & 75 ranking points''' and no medal. (no boss battle)
+** If you reach Node N again after clearing the map, you will only be rewarded with either 50, 70, or 100 fuel, ammo, steel, or bauxite until the bar is reset on the 1st day of a new month.
+**Because Node N (the node after node B and D) is the Ending Huge Resource Node, you may advance to the node with a Heavy Damaged Ship after fighting the enemy fleet in node B or D, as you won't be facing any enemies in node N. Furthermore, you can use a [[Emergency_Repair_Personnel|repair team]] on the flagship and proceed after node B or D even if the flagship is heavily damaged, the repair team won't be consumed.
+*Using 3 CL 3 DD or 4 CL 2 DD will take you to node C.
+*Using BBV, CA, CVL will take you to node C or K, which will take you to a route where there are very difficult enemies such as Flagship Wo-class, Flagship Ru-class waiting for you. Line Ahead Submarines also exist.
+*Node A is an empty node. No Battle.
+*Node E is Submarine Node with Echelon formation. Because this node is so minor in nature, bringing Anti-Submarine equipments is not required.
+*Double-arrow nodes (D, F, L) are Aerial battle nodes like those in the [[Summer 2014 Event]]. On these nodes, only two Aerial Combat phases occur during day battle. Only CV/CVL participate here unless night battle is pursued (Originally ill-advised but an April 23, 2015 update promised to make this more feasible; its degree is still unknown)
+**Having Anti-Air Cut-In equipment on your ships is highly recommended to survive node F.
+**You can bring either 2 AV or Akitsu Maru + CAV to have a chance at getting a B rank on Node F.
+===Tips===
+* Node E is a good place for Players above Level 80 HQ to do their Daily Quest Bd8 (Sink 6 Submarines) and Weekly Quest Bw5 (Sink 15 Submarines).
+* You can use a CL who is capable to bring some seplane bombers ([http://kancolle.wikia.com/wiki/Yura Yura Kai Ni] for example) to avoid losing node F without having to go to night battle. B-Rank+ can still not be guaranteed though, first testing about 60% with just Zuiun)
+* Pros and Cons:
+** (+) A bit more morale per run, which can sum up while farming
+** (+) A bit more experience per run (60 vs 42 at B-Rank)
+** (+) Often one additional kill through air strike in node E afterwards, if some bombers survive
+** (-) Bombers have just 1-slot or 2-slot and are wiped often (testing: wiped roughly 80% 1-slot, 33% 2-slot)
+** (-) loss of profiency and up to 15 bauxite per run
+** (-) no additional kill for sure through air strike in node E when no planes survive
+* Seaplane fighters instead of bombers:
+** (+) You can increase your chances of survival in node F a bit this way.
+** (+) No loss of bauxite.
+** (-) No victory possible in node F (a bit less exp., 2 more morale loss per run)
+'''Recommended Fleet Compositions:'''
+*A - E - G - F - B - N (Huge Resource Node)
+**1 CL + 5 DD (Ensures movement from Node G to F). Since only CV/CVL participate in node F's aerial battle, the rank for this node will usually be D (i.e.,a loss). This can be avoided by pursuing night battle but enemy evasion is increased for aerial battle nodes and there is the risk of a ship receiving great damage before the final battle node B (which has some rare drops if cleared with a S rank). Therefore, it is usually better to just accept the defeat on node F. One should still keep their sortie ratio in mind when doing this (>75% for event participation), though running 1-1 a couple of times should be enough to return to a 'safe' ratio.
+**4 DD + ( 2 AV or 1 CAV + 1 LHA or 1 CL + 1 AV or 1 CAV + 1 AV or 1 CL+ 1 AO) (Has a chance to go from Node G to K. The advantage with this composition is the possibility of a B rank at Node F.) (Using Akitsushima could also help meet node J's LoS requirement and thus give a higher chance at finishing the run even if one is diverted away from the AEGFBN route)
+'''Recommended Equipment:'''
+*Set some of your destroyers to allow them to use [[Combat#Anti-Air Cut-In|Anti-Air Cut-In]].
+===Resource Nodes===
+The resource nodes in Node G and M are fixed at 20 Ammo and 40 Fuel respectively, but can increase their yield as long as you have Daihatsus equipped, up to a max.
+*Node G: 20 Ammo, with +5 per Daihatsu equipped, up to a max of 35.
+*Node M: 40 Fuel, with +10 per Daihatsu equipped, up to a max of 70.
+Note that if you use the [[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]], the bonus is instead +1 and +3 respectively.
+===Trivia===
+Actual location:<sup>[https://twitter.com/isokaze183/status/586466309103169536]</sup>
+{| class="mw-collapsible mw-collapsed wikitable"
+! Click '''[Expand]''' to see the map.
+|-
+|[[File:1-6 IRL.png]]
+|}
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=201|y=260}}
+{{Map/ImageNode|C|x=255|y=191}}
+{{Map/ImageNode|E|x=288|y=300}}
+{{Map/ImageNode|G|x=369|y=313}}
+{{Map/ImageNode|H|x=393|y=191}}
+{{Map/ImageNode|K|x=514|y=191}}
+{{Map/ImageNode|M|x=616|y=173}}
+{{Map/ImageNode|L|x=514|y=152}}
+{{Map/ImageNode|J|x=460|y=92}}
+{{Map/ImageNode|I|x=393|y=152}}
+{{Map/ImageNode|D|x=255|y=152}}
+{{Map/ImageNode|F|x=310|y=257}}
+{{Map/ImageNode|B|x=217|y=226}}
+{{Map/ImageNode|N|x=110|y=177}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{NodeInfo
+|A
+|Empty
+}}
+{{Map/Nodes|name=任務部隊C群前衛部隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|Light Cruiser He-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|Light Cruiser He-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|Light Cruiser He-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|Light Cruiser He-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=通商破壊潜水艦隊II群
+|C
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|20
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Abreast}}
+|20
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|30
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|30
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Abreast}}
+|40
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|50
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{Map/Nodes|name=任務部隊A群機動部隊(第二波)
+|D
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|110
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|D
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|110
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|D
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|120
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|130
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|140
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|150
+|Standard Carrier Wo-Class/Flagship II
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=通商破壊潜水艦隊III群
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|20
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|20
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|30
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|30
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|40
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|50
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{Map/Nodes|name=任務部隊C群機動部隊
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|50
+|Standard Carrier Wo-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|50
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|60
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|60
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|70
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|70
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|70
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|80
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+}}
+{{NodeInfo
+|G
+|Resource
+|Ammo
+|20 + ({{LandingCraft}} * 5) up to a max of 35
+}}
+{{NodeInfo
+|H
+|Empty
+}}
+{{Map/Nodes|name=通商破壊潜水艦隊I群
+|I
+|Normal/BaseXP
+|{{Formation|Line Ahead}}<br>{{Formation|Echelon}}
+|20
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Line Ahead}}<br>{{Formation|Echelon}}
+|30
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Line Ahead}}<br>{{Formation|Echelon}}
+|40
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{Map/Nodes|name=任務部隊A群機動部隊本隊
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|170
+|Standard Carrier Wo-Class/Flagship
+|Light Cruiser He-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|170
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Transport Ship Wa-Class
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|180
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|200
+|Standard Carrier Wo-Class/Flagship II
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|220
+|Standard Carrier Wo-Class/Flagship II
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|220
+|Standard Carrier Wo-Class/Kai Flagship
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=任務部隊支援水上打撃部隊
+|K
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|70
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|K
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|80
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|K
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|90
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|K
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|Heavy Cruiser Ri-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|K
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|Heavy Cruiser Ri-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+}}
+{{Map/Nodes|name=任務部隊A群機動部隊(第一波)
+|L
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|100
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|L
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|100
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|L
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|110
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|L
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|120
+|Standard Carrier Wo-Class/Flagship II
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|L
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|120
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|L
+|Aerial/BaseXP
+|{{Formation|Diamond}}
+|130
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship II
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class
+|Destroyer I-Class
+}}
+{{NodeInfo
+|M
+|Resource
+|Fuel
+|40 + ({{LandingCraft}} * 10) up to a max of 70
+}}
+{{NodeInfo
+|N
+|Resource
+|Fuel
+|300-500-700-1000 ('''pre-clear''')
+|-
+|N
+|Resource
+|Ammo
+|300-500 ('''pre-clear''')
+|-
+|N
+|Resource
+|Steel
+|100-300 ('''pre-clear''')
+|-
+|N
+|Resource
+|Bauxite
+|100-200 ('''pre-clear''')
+|-
+|N
+|Resource
+|Fuel
+|30-50-70-100 ('''post-clear''')
+|-
+|N
+|Resource
+|Ammo
+|50-70-100 ('''post-clear''')
+|-
+|N
+|Resource
+|Steel
+|50-70-100 ('''post-clear''')
+|N
+|Resource
+|Bauxite
+|50 ('''post-clear''')
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = B, C, D, E, F, I, J, K, L
+|boss = N
+|Akebono: B, D, E, F, K
+|Aoba: B, D, J
+|Arare: B, C, D, E, K
+|Arashio: E
+|Asagumo: B, J
+|Chitose: B, D
+|Chiyoda: B, D
+|Fumizuki: B, D, E
+|Hamakaze: B, D
+|Hatsushimo: B, D, E
+|Hatsuyuki: B, D
+|Hibiki: B, C, D, E
+|Houshou: B, D, E, J
+|Ikazuchi: E
+|Inazuma: B
+|Isuzu: B, D
+|Junyou: B, D
+|Kasumi: B, D, E, J
+|Kikuzuki: B, D, E
+|Kisaragi: B, D
+|Kitakami: B, D
+|Kuroshio: E, F
+|Michishio: E, J
+|Mikazuki: B, D
+|Miyuki: B, D, K
+|Mochizuki: B, D, E
+|Murakumo: B, D
+|Murasame: B, D, E
+|Nagara: B, D
+|Nagatsuki: B, D, E
+|Nenohi: B, D, E
+|Oboro: B, D, E, K
+|Ooshio: B, C, D, E
+|Ooyodo: B, J
+|Samidare: B, D, E
+|Satsuki: E
+|Sazanami: B, D, E
+|Shigure: B, D, E, F
+|Shikinami: B, D, E
+|Shiranui: B, D, E
+|Tatsuta: B, D
+|Tenryuu: B, D
+|Tone: B, D
+|Urakaze: B, D
+|Ushio: B, C, D, E
+|Wakaba: B, D, E
+|Yuubari: B, D
+|Yuudachi: B, D, E
+}}
+{{SectionEnd}}

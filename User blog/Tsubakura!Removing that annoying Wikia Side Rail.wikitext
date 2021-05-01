@@ -1,0 +1,51 @@
+The side rail (or sidebar, whatever you want to call it) has been there for a long time, but it sadly came with an annoying price to pay (the fact that it shrinks your actual content on the article page and FANDOM uses it to display ads). We had thought about simply getting rid of it to allow people to utilize more space in an article, except it was against the FANDOM's ToS. We had even contacted the FANDOM staff for a way to get rid of it, but their excuse is apparently that they don't want us to utilize the extra space, due to it not displaying properly on mobile devices.
+
+Putting aside that the site had always looked like shit for mobile users and that their own ToS effectively prevents our admin team from fixing the problem, we have clearly received the message that they won't assist us with resolving this issue. Since they don't want to resolve this, we have decided to take the matters in our own hands.
+
+==Workaround==
+While their ToS mentions that we are not allowed to do anything about the rail on a global scale, there are no rules preventing people from using customization which only affects themselves. In other words, it's perfectly fine to customize or even remove the rail yourself, as long as it doesn't affect anyone else.
+
+[[File:Button.png|thumb|New features!]]
+
+With that existing loophole, I will now teach you a method to get rid of it. This method creates 2 new buttons on the top right corner of your screen. The '''Wide page''' button stretches your page even further, allowing more content to fit in. This is especially useful for people with a large monitor size, but the downside is that stretching the screen might not necessarily solve the space problem. The '''Hide sidebar''' button however, will get rid of the sidebar rail once and for all, immediately putting all the extra space it left behind to good use.
+
+[[File:Beforehide.png|Before...|200px]]
+
+[[File:Afterhide.png|After!|200px]]
+
+Of course the sidebar is only hidden and if you ever feel like seeing it again, you can uncheck the button and it will pop up again. This process only takes a minute at most as its mostly a process of copy pasting, the hard part has already been done for you. Don't worry about not being a programmer either, simply follow the steps and you'll be fine.
+
+Special thanks to [[User:がか|がか]] for providing all the codes and allowing this to be possible.
+
+===Step 1: Enable personal JavaScript===
+As the feature is JavaScript, you will need to enable personal JavaScript in your user settings as it is disabled by default. Go to your [[Special:Preferences#mw-prefsection-under-the-hood|Preference Settings]] and '''Enable personal JavaScript'''. The button is displayed under the '''Advanced display options''' header, so it shouldn't be too hard to spot.
+
+===Step 2: Copy the JavaScript import code to your personal JavaScript===
+Access your personal JavaScript file [https://kancolle.fandom.com/wiki/Special:MyPage/common.js here] and create the page.
+
+Copy and paste the following code into the page and save it!
+
+<syntaxhighlight lang="JavaScript">
+// window.headerColor = "white";
+// ^ on some communities you may want to uncomment this
+
+importArticles({ type: "script", article: "u:kancolle:User:Botkaze/common.js"});
+</syntaxhighlight>
+
+That will import [https://kancolle.fandom.com/wiki/User:Botkaze/common.js this] script, so you don't need to worry about updating your version.
+
+You might have to press Ctrl+F5 to purge the cache but you should be able to see 2 new buttons and a clock at the top right corner now. Have fun. :)
+
+Additional features of the script include:
+
+* JST clock / [[Help:purge|purge]] button / [[mw:NewPP parser report|NewPP]] info tooltip.
+* Wikitext table rendering for Lua debug console.
+* Loading external images under <code>.external-image</code>.
+* Various cosmetic and ad fixes (it is also recommended to always use [https://chrome.google.com/webstore/detail/ublock-origin/cjpalhdlnbpafiamejdnhcphjbkeiagm uBlock Origin] for general ad blocking on FANDOM sites).
+
+===Bonus Step: Enable this feature personally across all FANDOM communities===
+The above steps only enables this feature on KanColle Wikia. Chances are that you are a member across multiple communities and you wish to make use of this feature anywhere. Fear not as this is also a possibility. In fact, it's nothing special either as you will be doing steps 2 and 3 again, but this time on the community central environment of FANDOM.
+
+Go [https://community.fandom.com/wiki/Special:MyPage/global.js here] and copy paste the code as described in Step 2. You're done already. :)
+
+If this blog has helped you, feel free to leave a comment. If not, feel free to leave a comment anyway.

@@ -1,0 +1,812 @@
+{{Map/Nodes
+|A
+|Storm
+|Ammo
+|10
+|-
+|A
+|Storm
+|Ammo
+|15
+}}
+{{Map/Nodes
+|B
+|Resource
+|Ammo
+|10
+|-
+|B
+|Resource
+|Ammo
+|15
+}}
+{{Map/Nodes
+|C
+|Empty
+|-
+|C
+|Normal
+|{{Formation|Line Ahead}}
+|Destroyer Ro-Class
+}}
+{{Map/Nodes
+|D
+|Select
+|-
+|D
+|Normal
+|{{Formation|Line Ahead}}
+|Destroyer Ro-Class
+}}
+
+{{EquipmentLink|Blueprint}}, {{EquipmentLink|New Model Gun Mount Improvement Material}}, {{EquipmentLink|Action Report}}, {{EquipmentLink|Prototype Flight Deck Catapult}}
+==To Do List==
+* Expand and update on the myth busting, after the day cap increased to 180.
+* Create a new blog about oldfaces giving advice to newfaces in a mythbusting format.
+
+==Testing grounds==
+{{ShipLink|Гангут}}
+{{ShipLink|Октябрьская революция}}
+{{ShipLink|Гангут два}}
+
+===ASW [[Combat/Damage Calculation|Damage Calculation]]===
+<div class="mw-collapsible mw-collapsed">
+On the final form of 4-5, you will only face at most the following enemies:
+* {{ShipLink|Harbour Princess II}}
+* {{ShipLink|Floating Fortress}}
+* {{ShipLink|Floating Fortress II}}
+* {{ShipLink|Floating Fortress III}}
+
+The damage formula for ASW is the following:<br />
+'''(2 × √(Ship ASW) + 1.5 × Equipment ASW + ASW Upgrades + Type) × Bonus'''<br />
+Where:
+* Ship ASW is the base {{ASW}} stats of a ship. Since they all have 0 base {{ASW}} stats, this modifier is ignored.
+* Equipment ASW is the {{ASW}} stats on the equipment.
+* Type is the type of ASW attack performed. Its 13 for depth charging types, and 8 for aircraft attacks. Since they all uses aircraft to attack submarines, they will receive a value of 8.
+* Bonus being the synergy bonus for having a {{DepthCharge}} and {{Sonar}} equipped at the same time. Does not apply in this case.
+The formula doesn't stop there, because its not complete. Luckily, we always can depend on 検証wiki when it comes to it. With the completed formula [http://ja.kancolle.wikia.com/wiki/%E5%AF%BE%E6%BD%9C here]:<br />
+'''Result from the previous formula x Damage Penalty x Engagement x Formation x Critical hit'''<br />
+Where:
+* Damage Penalty is the penalty you suffer from being either moderate or heavily damaged. Since we assume that the boss is healthy, there will be no damage penalty.
+* Engagement is the engagement modifier displayed. We assume Green-T here, which is always 120%.
+* Critical hit is basically another 1.5x multiplier on top of it.
+The resulting value will then be '''FLOORED'''.
+
+With this, we can math out exactly as to how much damage they are capable of dealing.<br />
+Keep in mind the following:
+* Of all the enemies listed above that appears on the final form of 4-5, '''all''' of them has a base {{ASW}} stats of 0. This means that their only source of ASW damage are from equipment.
+* All the enemies listed above only have 1 equipment that gives {{ASW}} stats.
+* Formation is '''always''' Line Ahead on 4-5 boss node. Line Ahead has an {{ASW}} modifier of 60%.
+* We will always assume the worst case scenario, meaning that we assume no damage penalty, Green-T and a critical hit on all of them.
+
+
+===={{ShipLink|Harbour Princess II}}====
+Wanko final form has the [[Abyssal Revenge Torpedo Bomber]], which has +5 {{ASW}} stats.<br />
+5 x 1.5 + 8 = 15.5<br />
+15.5 x 1.2 x 0.6 x 1.5 = 16.74<br />
+
+So Wanko in the final form is capable of dealing 16 {{ASW}} damage.
+
+===={{ShipLink|Floating Fortress}}====
+The first fortress variant has a [[Abyssal Dive Bomber Mark.II]], which is a mere +2 {{ASW}}.<br />
+2 x 1.5 + 8 = 11<br />
+11 x 1.2 x 0.6 x 1.5 = 11.88<br />
+
+The first fortress variant deals thus 11 {{ASW}} damage.
+
+===={{ShipLink|Floating Fortress II}}====
+The second fortress variant uses a [[Abyssal Torpedo Bomber Mark.II]] instead, which is +4 {{ASW}}.<br />
+4 x 1.5 + 8 = 14<br />
+14 x 1.2 x 0.6 x 1.5 = 15.12<br />
+
+So the second fortress variant deals 15 {{ASW}} damage.
+
+===={{ShipLink|Floating Fortress III}}====
+The third fortress also uses a [[Abyssal Torpedo Bomber Mark.II]]. In fact, the equipment load out and stats are '''exactly the same''' as its second variant.
+
+Basically, the third variant also deals 15 {{ASW}} damage.
+
+===The Armor Roll===
+Now we got the damage values, so all we need are the armor rolls of the high armor submarines.<br />
+{{ShipLink|I-14/Kai}} has a base armor of 23 {{Armor}}.<br />
+23 x 0.7 = 16.1<br />
+16.1 + ((23-1) x 0.6) = 29.3<br />
+
+So a ship with 23 {{Armor}} gets an armor roll between 16.1 ~ 29.3.<br />
+In other words, a ship has to deal at least 17.1 damage to have a '''chance''' of dealing 1 damage, since 16.1 is the '''lowest''' possible armor roll {{ShipLink|I-14/Kai}} can have.
+
+Any attacks that falls below that become '''scratch damage''', and you '''cannot''' sink a ship with scratch damage. Seeing as none of the ships listed above can do anything more than a scratch, it is '''impossible''' for a submarine to sink, even if you get the worst possible circumstances smacked in your face by RNG. It's no longer RNG if your submarine survival chance has become 100%.
+
+===Conclusion===
+Any submarine with at least 23 {{Armor}} '''cannot''' be sunk on the boss node during LD. Did you really thought I would put such a strategy here if it wasn't intensively tested? I had a whole group doing tests in the [https://discord.gg/RtSadWM KC Discord] and I even had involved enkcwiki in this business.
+
+You obviously don't know who I am from the way you approach me, but you're obviously 100 years too early to attempt to lecture me as to how this game works.
+
+</div>
+{{Clear}}
+
+==AACI Chart for Asashio bot-chan==
+<div class="mw-collapsible mw-collapsed">
+{| class="article-table" style="width: 650px; font-size:90%" cellspacing="1" cellpadding="1" border="0"
+|-
+! scope="row" style="text-align:center;" |API value
+! scope="col" style="text-align:center;" |''Type''
+! scope="col" style="text-align:center;" width="150" |''Type''
+! scope="col" |#Shot down
+per slot
+! scope="col" |K Value
+! scope="col" style="text-align:center;" |Uncontrolled test prob.
+! scope="col" style="text-align:center;" |''User''
+! scope="col" style="text-align:center;" |''Note''
+|-
+! scope="row" style="text-align:center;" |1
+| style="text-align:center;" |'''''H.H.R.'''''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:GreenGunDP.png]][[File:Radar.png]]
+| style="text-align:center;" |'''+7'''
+| style="text-align:center;" |1.7
+| style="text-align:center;" |'''67%'''
+| rowspan="3" style="text-align:center;" |'''''Akizuki-Class'''''
+| style="text-align:center;" |'''''[H]A mount *2 + [R]adar'''''
+|-
+! scope="row" style="text-align:center;" |2
+| style="text-align:center;" |''H.R.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:Radar.png]]
+| style="text-align:center;" | +6
+| style="text-align:center;" |1.7
+| style="text-align:center;" |58%
+| style="text-align:center;" |''HA mount + Radar.''
+|-
+! scope="row" style="text-align:center;" |3
+| style="text-align:center;" |''H.H.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:GreenGunDP.png]]
+| style="text-align:center;" | +4
+| style="text-align:center;" |1.6
+| style="text-align:center;" |~62%
+| style="text-align:center;" |''HA mount *2.''
+|-
+! scope="row" style="text-align:center;" |4
+| style="text-align:center;" |''M.S.A.R.''
+| style="text-align:center;" |[[File:RedGunHeavy.png]][[File:GreenAmmo.png]][[File:Aafd_c.png]][[File:Radar.png]]
+| style="text-align:center;" | +6
+| style="text-align:center;" |1.5
+| style="text-align:center;" |?
+| style="text-align:center;" |''Battleships''
+| style="text-align:center;" |''Large Main Gun + [S]anshiki + AAFD + [R]adar''
+|-
+! scope="row" style="text-align:center;" |5
+| style="text-align:center;" |'''''B.B.R.'''''
+| style="text-align:center;" |[[File:Customized HA plus AAFD icon.png]][[File:Customized HA plus AAFD icon.png]][[File:Radar.png]]
+| style="text-align:center;" |'''+4'''
+| style="text-align:center;" |1.5
+| style="text-align:center;" |'''~62%'''
+| style="text-align:center;" |All
+| style="text-align:center;" |'''''[B]uilt-in HA mount *2 + radar'''''
+|-
+! scope="row" style="text-align:center;" |6
+| style="text-align:center;" |''M.S.A.''
+| style="text-align:center;" |[[File:RedGunHeavy.png]][[File:GreenAmmo.png]][[File:Aafd_c.png]]
+| style="text-align:center;" | +4
+| style="text-align:center;" |1.45
+| style="text-align:center;" |~50% ?
+| style="text-align:center;" |''Battleships''
+| style="text-align:center;" |''Large Main Gun + Sanshiki + AAFD''
+|-
+! scope="row" style="text-align:center;" |7
+| style="text-align:center;" |''H.A.R.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:Aafd c.png]][[File:Radar.png]]
+| style="text-align:center;" | +3
+| style="text-align:center;" |1.35
+| style="text-align:center;" |~45%
+| rowspan="3" style="text-align:center;" |All
+| style="text-align:center;" |''HA mount + [A]AFD + Radar.''
+|-
+! scope="row" style="text-align:center;" |8
+| style="text-align:center;" |''B.R.''
+| style="text-align:center;" |[[File:Customized HA plus AAFD icon.png]][[File:Radar.png]]
+| style="text-align:center;" | +4
+| style="text-align:center;" |1.4
+| style="text-align:center;" |~40%
+| style="text-align:center;" |''Built-in HA mount + Radar.''
+|-
+! scope="row" style="text-align:center;" |9
+| style="text-align:center;" |''H.A.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:Aafd c.png]]
+| style="text-align:center;" | +2
+| style="text-align:center;" |1.3
+| style="text-align:center;" |34%~43%
+| style="text-align:center;" |''HA mount + AAFD ''
+|-
+! scope="row" style="text-align:center;" |10
+| style="text-align:center;" |'''''H.C.R.'''''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:CDMG.png]][[File:Radar.png]]
+| style="text-align:center;" |'''+8'''
+| style="text-align:center;" |1.65
+| style="text-align:center;" |'''~62%'''
+| rowspan="2" style="text-align:center;" |'''''Maya K2'''''
+| style="text-align:center;" |'''''HA + [C]DMG + Radar'''''
+|-
+! scope="row" style="text-align:center;" |11
+| style="text-align:center;" |''H.C.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:CDMG.png]]
+| style="text-align:center;" | +6
+| style="text-align:center;" |1.5
+| style="text-align:center;" |~56% ?
+| style="text-align:center;" |''HA + CDMG''
+|-
+! scope="row" style="text-align:center;" |12
+| style="text-align:center;" |''C.G.R.''
+| style="text-align:center;" |[[File:CDMG.png]][[File:GreenGunMG.png]][[File:Radar.png]]
+| style="text-align:center;" | +3
+| style="text-align:center;" |1.25
+| style="text-align:center;" |?
+| style="text-align:center;" |All
+| style="text-align:center;" |''CDMG + AA [G]un + Radar''
+|-
+! scope="row" style="text-align:center;" |13
+| colspan="8" style="text-align:center;" |''cannot be activated''
+|-
+! scope="row" style="text-align:center;" |14
+| style="text-align:center;" |''H.G.R.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:GreenGunMG.png]][[File:Radar.png]]
+| style="text-align:center;" | +4
+| style="text-align:center;" |1.45
+| style="text-align:center;" |?
+| rowspan="2" style="text-align:center;" |''Isuzu K2''
+| style="text-align:center;" |''HA + AA Gun + Radar''
+|-
+! scope="row" style="text-align:center;" |15
+| style="text-align:center;" |''H.G.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:GreenGunMG.png]]
+| style="text-align:center;" | +3
+| style="text-align:center;" |1.3
+| style="text-align:center;" |58%
+| style="text-align:center;" |''HA + AA Gun''
+|-
+! scope="row" style="text-align:center;" |16
+| style="text-align:center;" |''H.G.R.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:GreenGunMG.png]][[File:Radar.png]]
+| style="text-align:center;" | +4
+| style="text-align:center;" |1.4
+| style="text-align:center;" |?
+| rowspan="2" style="text-align:center;" |''Kasumi K2B''
+| style="text-align:center;" |''HA + AA Gun + Radar''
+|-
+! scope="row" style="text-align:center;" |17
+| style="text-align:center;" |''H.G.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:GreenGunMG.png]]
+| style="text-align:center;" | +2
+| style="text-align:center;" |1.25
+| style="text-align:center;" |?
+| style="text-align:center;" |''HA + AA Gun''
+|-
+! scope="row" style="text-align:center;" |18
+| style="text-align:center;" |''C.''
+| style="text-align:center;" |[[File:CDMG.png]]
+| style="text-align:center;" | +2
+| style="text-align:center;" |1.2
+| style="text-align:center;" |?
+| style="text-align:center;" |''Satsuki K2''
+| style="text-align:center;" |''CDMG''
+|-
+! scope="row" style="text-align:center;" |19
+| style="text-align:center;" |''H.C.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:CDMG.png]]
+| style="text-align:center;" | +5
+| style="text-align:center;" |1.45
+| style="text-align:center;" |?
+| rowspan="2" style="text-align:center;" |''Kinu K2''
+| style="text-align:center;" |''HA + CDMG''<br />'''No Built-In HA Mount'''
+|-
+! scope="row" style="text-align:center;" |20
+| style="text-align:center;" |''C.''
+| style="text-align:center;" |[[File:CDMG.png]]
+| style="text-align:center;" | +3
+| style="text-align:center;" |1.25
+| style="text-align:center;" |?
+| style="text-align:center;" |''CDMG''
+|-
+! scope="row" style="text-align:center;" |21
+| style="text-align:center;" |''H.R.''
+| style="text-align:center;" |[[File:GreenGunDP.png]][[File:Radar.png]]
+| style="text-align:center;" | +5
+| style="text-align:center;" |1.45
+| style="text-align:center;" |?
+| style="text-align:center;" |''Yura K2''
+| style="text-align:center;" |''HA + Radar''
+|-
+! scope="row" style="text-align:center;" |22
+| style="text-align:center;" |''C.''
+| style="text-align:center;" |[[File:CDMG.png]]
+| style="text-align:center;" | +2
+| style="text-align:center;" |1.2
+| style="text-align:center;" |?
+| style="text-align:center;" |''Fumizuki K2''
+| style="text-align:center;" |''CDMG''
+|}
+'''http://kancolle.wikia.com/wiki/Aerial_Combat#Anti-Air_Cut-In '''
+</div>
+{{Clear}}
+==LoS Table==
+
+<div class="mw-collapsible mw-collapsed">
+{| class="wikitable"
+|-
+!colspan="4" style="text-align:center;"|F33 LoS routing
+|-
+!style="text-align:center;"|Map
+!style="text-align:center;"|Weight
+!style="text-align:left;"|Random ~ Guaranteed
+!style="text-align:left;"|Additional Branching Rules/Notes
+|-
+!1-6
+|style="text-align:center;"|Cn3
+|'''North (Node M):''' 30+
+|
+|-
+!2-5
+|style="text-align:center;"|Cn1
+|31+ ~ 33+
+|
+|-
+!rowspan="2" |3-5
+|rowspan="2" style="text-align:center;"|Cn4
+|'''North:''' 23+ ~ 28+
+|Meet all of the following requirements:
+
+
+*Amount of (F)BB(V) + CV(L) ≦ 3.
+*Amount of (F)BB(V) + CV(L) ≦ 1 if Akitsu Maru is in the fleet.
+|-
+|'''South:''' 23+ ~ 28+
+|
+|-
+!rowspan="3" |6-1
+|rowspan="3" style="text-align:center;"|Cn4
+|'''Node E:''' 12+ ~ 16+
+|Meet all of the following requirements:
+
+
+*Amount of SS(V) ≧ 3.
+*Amount of BB(V) + CV(L) + CA(V) ≦ 1.
+|-
+|'''Node F (Taigei):''' 20+ ~ 25+
+|Both LoS checks needs to be passed to reach the boss.
+|-
+|'''Node F (No Taigei):''' 20+ ~ 36+
+|Both LoS checks needs to be passed to reach the boss.
+|-
+!rowspan="3" |6-2
+|rowspan="3" style="text-align:center;"|Cn3
+|'''North (Node G):''' 40+
+|
+|-
+|'''South (Node F):''' 43+
+|Meet all of the following requirements or you will be sent to '''E''' instead:
+* Amount of DD ≧ 2.
+* Amount of (F)BB(V) ≦ 1.
+* Amount of CV(L/B) ≦ 1.
+|-
+|'''Middle (Node H):''' 40+
+|
+|-
+!6-3
+|style="text-align:center;"|Cn3
+|36+ ~ 38+
+|
+|-
+!6-5
+|style="text-align:center;"|Cn2
+|''''North:''' 32+ ~ 34+
+|
+|-
+|colspan="4"|The Cn weight signifies how effective the LoS stats displayed on your equipment are for routing purposes.<br />
+For example, a map with a weight of Cn4 means that your equipment LoS will be 4 times more effective than usual. Keep in mind that this multiplier only applies to your equipment during LoS checks, your artillery spotting rates will not be affected in any way whatsoever.
+|}
+</div>
+
+{{Clear}}
+
+==Special Yasen Attacks Table==
+<div class="mw-collapsible mw-collapsed">
+{| class="article-table"
+|-
+!API
+!Attack Mode
+!Prerequisite
+!Damage Modifier
+!Trigger Rate
+|-
+|style="background-color:#f28787;"|'''1'''
+|style="background-color:#f28787;"|'''Double Attack (DA)'''
+|style="background-color:#f28787;"|'''{{RedGunHeavy}} + {{YellowGun}} + {{GreenGunDP}} = 2'''
+|style="background-color:#f28787;"|'''120% x 2'''
+|style="background-color:#f28787;"|'''~99%'''
+|-
+|style="background-color:#bdd6ff;"|'''2'''
+|style="background-color:#bdd6ff;"|'''Hybrid Cut-In (HCI)'''
+|style="background-color:#bdd6ff;"|'''{{Template:RedGunHeavy}} + {{TorpedoWeapon}}'''
+|style="background-color:#bdd6ff;"|'''130% x 2'''
+|style="background-color:#bdd6ff;"|'''Luck Based'''
+|-
+|style="background-color:#9596ff;"|'''3'''
+|style="background-color:#9596ff;"|'''Torpedo Cut-In (TCI)'''
+|style="background-color:#9596ff;"|'''{{TorpedoWeapon}} + {{TorpedoWeapon}}'''
+|style="background-color:#9596ff;"|'''150% x 2'''
+|style="background-color:#9596ff;"|'''Luck Based'''
+|-
+|style="background-color:#f2b58b;"|'''4'''
+|style="background-color:#f2b58b;"|'''Secondary Cut-In (SCI)'''
+|style="background-color:#f2b58b;"|'''{{RedGunHeavy}} + {{RedGunHeavy}} + {{YellowGun}}'''
+|style="background-color:#f2b58b;"|'''175%'''
+|style="background-color:#f2b58b;"|'''Luck Based'''
+|-
+|style="background-color:#ffa366;"|'''5'''
+|style="background-color:#ffa366;"|'''Main Cut-In (MCI)'''
+|style="background-color:#ffa366;"|'''{{RedGunHeavy}} + {{RedGunHeavy}} + {{RedGunHeavy}}'''
+|style="background-color:#ffa366;"|'''200%'''
+|style="background-color:#ffa366;"|'''Luck Based'''
+|}
+
+{{Clear}}
+{| class="article-table"
+|-
+!Double Attack (DA)
+|-
+|style="background-color:#f28787;"|{{RedGunHeavy}}{{RedGunHeavy}}
+|-
+|style="background-color:#f28787;"|{{GreenGunDP}}{{GreenGunDP}}
+|-
+|style="background-color:#f28787;"|{{RedGunHeavy}}{{YellowGun}}
+|-
+|style="background-color:#f28787;"|{{YellowGun}}{{YellowGun}}
+|-
+|style="background-color:#f28787;"|{{RedGunHeavy}}{{YellowGun}}{{YellowGun}}{{YellowGun}}
+|-
+|style="background-color:#f28787;"|{{YellowGun}}{{YellowGun}}{{TorpedoWeapon}}
+|}
+
+{{Clear}}
+{| class="article-table"
+|-
+!Hybrid Cut-In (HCI)
+|-
+|style="background-color:#bdd6ff;"|{{RedGunHeavy}}{{TorpedoWeapon}}
+|-
+|style="background-color:#bdd6ff;"|{{GreenGunDP}}{{GreenGunDP}}{{TorpedoWeapon}} '''(DD)'''
+|-
+|style="background-color:#bdd6ff;"|{{RedGunHeavy}}{{YellowGun}}{{YellowGun}}{{TorpedoWeapon}}
+|}
+
+{{Clear}}
+{| class="article-table"
+|-
+!Torpedo Cut-In (TCI)
+|-
+|style="background-color:#9596ff;"|{{TorpedoWeapon}}{{TorpedoWeapon}}
+|-
+|style="background-color:#9596ff;"|{{TorpedoWeapon}}{{TorpedoWeapon}}{{TorpedoWeapon}}
+|-
+|style="background-color:#9596ff;"|{{RedGunHeavy}}{{RedGunHeavy}}{{TorpedoWeapon}}{{TorpedoWeapon}}
+|}
+
+{{Clear}}
+{| class="article-table"
+|-
+!Secondary Cut-In (SCI)
+|-
+|style="background-color:#f2b58b;"|{{RedGunHeavy}}{{RedGunHeavy}}{{YellowGun}}
+|-
+|style="background-color:#f2b58b;"|{{RedGunHeavy}}{{RedGunHeavy}}{{YellowGun}}{{YellowGun}}
+|-
+|style="background-color:#f2b58b;"|{{RedGunHeavy}}{{RedGunHeavy}}{{YellowGun}}{{TorpedoWeapon}}
+|-
+|style="background-color:#f2b58b;"|{{RedGunHeavy}}{{RedGunHeavy}}{{TorpedoWeapon}}{{TorpedoWeapon}}{{GreenGunDP}}
+|}
+
+{{Clear}}
+{| class="article-table"
+|-
+!Main Cut-In (MCI)
+|-
+|style="background-color:#ffa366;"|{{RedGunHeavy}}{{RedGunHeavy}}{{RedGunHeavy}}
+|-
+|style="background-color:#ffa366;"|{{RedGunHeavy}}{{RedGunHeavy}}{{RedGunHeavy}}{{TorpedoWeapon}}
+|-
+|style="background-color:#ffa366;"|{{RedGunHeavy}}{{RedGunHeavy}}{{RedGunHeavy}}{{RedGunHeavy}}
+|-
+|style="background-color:#ffa366;"|{{RedGunHeavy}}{{RedGunHeavy}}{{RedGunHeavy}}{{YellowGun}}
+|}
+
+</div>
+{{Clear}}
+==Planes Table==
+Table for explaining plane types. Blaming AsianLyf for this Kappap
+<div class="mw-collapsible mw-collapsed">
+{| class="article-table"
+|-
+!ID
+!Category
+!Appearance
+!Main Role
+|-
+|style="background-color:#d2f6d3;"|'''1'''
+|style="background-color:#d2f6d3;"|'''Fighter'''
+|style="background-color:#d2f6d3;"|{{Fighter}}
+|style="background-color:#d2f6d3;"|Provides substantial fighter power to your fleet in your fight for air control.<br />Useless if your opponent has no fighter power.
+|-
+|style="background-color:#bdd6ff;"|'''2'''
+|style="background-color:#bdd6ff;"|'''Torpedo Bomber'''
+|style="background-color:#bdd6ff;"|{{BluePlane}}
+|style="background-color:#bdd6ff;"|Allow carriers to perform day attacks. Opening attack is inconsistent but potentially stronger than the Dive Bomber.<br />Bombers with {{AA}} are also called Fighter-Bombers.
+|-
+|style="background-color:#fdb2a4;"|'''3'''
+|style="background-color:#fdb2a4;"|'''Dive Bomber'''
+|style="background-color:#fdb2a4;"|{{RedPlane}}
+|style="background-color:#fdb2a4;"|Allow carriers to perform day attacks, but prevents them from attacking Installations. Consistent opening attacks.<br />Bombers with {{AA}} are also called Fighter-Bombers.
+|-
+|style="background-color:#f3fda0;"|'''4'''
+|style="background-color:#f3fda0;"|'''Recon'''
+|style="background-color:#f3fda0;"|{{YellowPlane}}
+|style="background-color:#f3fda0;"|Provides high amount of {{LOS}} and contact rate.<br />The Saiun can also help prevent <span style="color:red">'''Red-T'''</span>.
+|-
+|style="background-color:#effd80;"|'''5'''
+|style="background-color:#effd80;"|'''Jets'''
+|style="background-color:#effd80;"|[[File:Jet-powered Fighter-Bomber Icon 1.png]][[File:Jet-powered Fighter-Bomber Icon 2.png]]
+|style="background-color:#effd80;"|Functions like Dive Fighter-Bombers, but initiates another bombing run during the Jet Assault phase before the actual Aerial Combat takes place.
+|-
+|style="background-color:#a9fd9c;"|'''6'''
+|style="background-color:#a9fd9c;"|'''Land-Based Bomber'''
+|style="background-color:#a9fd9c;"|{{Land-based Attack Aircraft}}{{Interceptor Fighter 2}}
+|style="background-color:#a9fd9c;"|Powerful bombers that can attack any ground targets, but can only be launched from Land Bases (LBAS).
+|-
+|style="background-color:#a9fd9c;"|'''7'''
+|style="background-color:#a9fd9c;"|'''Interceptor'''
+|style="background-color:#a9fd9c;"|{{Interceptor Fighter}}{{Interceptor Fighter 2}}
+|style="background-color:#a9fd9c;"|Powerful fighters that engage enemy aircraft, but can only be launched from Land Bases (LBAS).
+|-
+|style="background-color:#da9cfd;"|'''8'''
+|style="background-color:#da9cfd;"|'''Night Fighter'''
+|style="background-color:#da9cfd;"|{{NightFighter}}
+|style="background-color:#da9cfd;"|Functions like a Fighter, but also allows carriers to participate in night aerial attacks if the requirements are met.
+|-
+|style="background-color:#da9cfd;"|'''9'''
+|style="background-color:#da9cfd;"|'''Night Bomber'''
+|style="background-color:#da9cfd;"|{{NightBomber}}
+|style="background-color:#da9cfd;"|Functions like a Torpedo/Dive Bomber, but also allows carriers to participate in night aerial attacks if the requirements are met.
+|}
+
+{{Clear}}
+{{EquipmentLink||icon=x}}
+===Fighter===
+{| class="article-table"
+|-
+!Fighters
+!Notes
+|-
+|style="background-color:#d2f6d3;"|
+* {{EquipmentLink|Type 96 Fighter|icon=x}}
+* {{EquipmentLink|Reppuu|icon=x}}
+* {{EquipmentLink|Shiden Kai 2|icon=x}}
+|style="background-color:#d2f6d3;"|
+* Mainly used to increase the fighter power of your fleet for obtaining Air Superiority.
+* Does not participate in the bombing phase of the aerial combat.
+* Having too much excessive fighter power than necessary does not do anything beneficial.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#d2f6d3;" colspan="2"|
+* Gain a flat fighter power bonus, up to ~25.
+|}
+
+{{Clear}}
+
+===Torpedo Bomber===
+{| class="article-table"
+|-
+!Torpedo Bombers
+!Notes
+|-
+|style="background-color:#bdd6ff;"|
+* {{EquipmentLink|Tenzan|icon=x}}
+* {{EquipmentLink|Ryuusei Kai|icon=x}}
+* {{EquipmentLink|Swordfish|icon=x}}
+|style="background-color:#bdd6ff;"|
+* Allows a carrier to attack during the day.
+* Inconsistent airstrike, but potentially more powerful than a dive bomber.
+* Can perform Contact.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#bdd6ff;" colspan="2"|
+* Gain a minuscule amount of flat fighter power bonus.
+* Gain a bonus to accuracy.
+* Gain increased critical hit rate.
+* Gain increased critical hit damage, up to 10%. (The bonus is doubled on the first slot)
+|}
+
+{{Clear}}
+===Dive Bomber===
+{| class="article-table"
+|-
+!Dive Bombers
+!Notes
+|-
+|style="background-color:#fdb2a4;"|
+* {{EquipmentLink|Suisei|icon=x}}
+* {{EquipmentLink|F4U-1D|icon=x}}
+* {{EquipmentLink|Prototype Nanzan|icon=x|text=Nanzan}}
+|style="background-color:#fdb2a4;"|
+* Allows a carrier to attack during the day.
+* Each point of {{Dive}} contributes more to the shelling firepower compared to {{Torpedo}}.
+* The carrier equipped with this is incapable of attacking Installations.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#fdb2a4;" colspan="2"|
+* Gain a minuscule amount of flat fighter power bonus.
+* Gain a bonus to accuracy.
+* Gain increased critical hit rate.
+* Gain increased critical hit damage, up to 10%. (The bonus is doubled on the first slot)
+|}
+
+{{Clear}}
+===Recon===
+{| class="article-table"
+|-
+!Carrier-based Recons
+!Notes
+|-
+|style="background-color:#f3fda0;"|
+* {{EquipmentLink|Saiun|icon=x}}
+* {{EquipmentLink|Type 2 Reconnaissance Aircraft|icon=x|text=T2 Recon}}
+* {{EquipmentLink|Prototype Keiun (Carrier-based Reconnaissance Model)|icon=x|text=Prototype Keiun}}
+|style="background-color:#f3fda0;"|
+* Has high {{LOS}} stats, which also helps in increasing your contact rate.
+* {{EquipmentLink|Saiun|icon=x}} effectively prevents <span style="color:Red">'''Red-T'''</span> engagements.
+* Capable of increasing the flight range of a Land Base when set to Sortie.
+* Grants a fighter power multiplier bonus of a Land Base when set to Defense.
+* Cannot be shot down.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#f3fda0;" colspan="2"|
+* Gains an increase in Contact rate.
+* Gains a bonus to fleet {{LOS}}.
+|}
+
+{{Clear}}
+
+===Jets===
+{| class="article-table"
+|-
+!Jets
+!Notes
+|-
+|style="background-color:#effd80;"|
+* {{EquipmentLink|Jet Keiun Kai|icon=x}}
+* {{EquipmentLink|Kikka Kai|icon=x}}
+|style="background-color:#effd80;"|
+* Initiates a Jet Assault, in which only Jets can participate.
+* After the assault, the surviving bombers joins the aerial combat for another bombing run.
+* More resilient against shot downs during the fight for air control.
+* Behaves like a Dive Fighter-Bomber.
+* Can only be equipped on Zuikaku K2A and Shoukaku K2A.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#effd80;" colspan="2"|
+* Gain a minuscule amount of flat fighter power bonus.
+* Gain a bonus to accuracy.
+* Gain increased critical hit rate.
+* Gain increased critical hit damage, up to 10%. (The bonus is doubled on the first slot)
+|}
+
+{{Clear}}
+
+===LBAA===
+{| class="article-table"
+|-
+!Land-Based Bombers
+!Notes
+|-
+|style="background-color:#a9fd9c;"|
+* {{EquipmentLink|Type 1 Land-based Attack Aircraft|icon=x|text=Type 1 LBAA}}
+* {{EquipmentLink|Ginga|icon=x}}
+* {{EquipmentLink|Bomb-carrying Type 1 Fighter Hayabusa Model III Kai (55th Squadron)|icon=x|text=Hayabusa Model III Kai}}
+|style="background-color:#a9fd9c;"|
+* Can only be launched from Land bases (LBAS).
+* Uses {{Torpedo}} when attacking surface ships and {{Dive}} when attacking Installations.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#a9fd9c;" colspan="2"|
+* Gain a minuscule amount of flat fighter power bonus.
+* Gain increased critical hit damage, up to 10%. (The bonus is doubled on the first slot)
+|}
+
+{{Clear}}
+
+===Interceptor===
+{| class="article-table"
+|-
+!Interceptors
+!Notes
+|-
+|style="background-color:#a9fd9c;"|
+* {{EquipmentLink|Raiden|icon=x}}
+* {{EquipmentLink|Type 3 Fighter Hien|icon=x}}
+* {{EquipmentLink|Spitfire Mk.V|icon=x}}
+|style="background-color:#a9fd9c;"|
+* Can only be launched from Land bases (LBAS).
+* Has the unique Anti-Bombing and Intercept stats.
+** 1 point of Anti-Bombing is worth 2 {{AA}} stat on defense, but is useless on sorties.
+** 1 point of Intercept is equal to 1 {{AA}} on defense, but is worth 1.5 {{AA}} on sorties.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#a9fd9c;" colspan="2"|
+* Gain a flat fighter power bonus, up to ~25.
+|}
+
+{{Clear}}
+
+===Night Fighter===
+{| class="article-table"
+|-
+!Night Fighters
+!Notes
+|-
+|style="background-color:#da9cfd;"|
+* {{EquipmentLink|F6F-3N|icon=x}}
+* {{EquipmentLink|F6F-5N|icon=x}}
+|style="background-color:#da9cfd;"|
+* Allows a carrier to participate in night aerial attacks, if they meet the requirements.
+* Behaves like a regular Fighter during day.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#da9cfd;" colspan="2"|
+* Gain a flat fighter power bonus, up to ~25.
+|}
+
+{{Clear}}
+
+===Night Bomber===
+{| class="article-table"
+|-
+!Night Bombers
+!Notes
+|-
+|style="background-color:#da9cfd;"|
+* {{EquipmentLink|TBM-3D|icon=x}}
+|style="background-color:#da9cfd;"|
+* Allows a carrier to participate in night aerial attacks, if they meet the requirements.
+* Behaves like a regular bomber during day.
+|-
+!style="text-align:center;" colspan="2"|
+[[File:Aircraft Proficiency Blue Line 1.png]] → [[File:Aircraft Proficiency Blue Line 2.png]] → [[File:Aircraft Proficiency Blue Line 3.png]] → [[File:Aircraft Proficiency Gold Line 1.png]] → [[File:Aircraft Proficiency Gold Line 2.png]] → [[File:Aircraft Proficiency Gold Line 3.png]] → [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|style="background-color:#da9cfd;" colspan="2"|
+* Gain a minuscule amount of flat fighter power bonus.
+* Gain a bonus to accuracy.
+* Gain increased critical hit rate.
+* Gain increased critical hit damage, up to 10%. (The bonus is doubled on the first slot)
+|}
+
+{{Clear}}
+</div>
+
+==Sandbox links==
+* [[User:Tsubakura/Sandbox/Introduction to Aerial Defense mechanics]]
+* [[User:Tsubakura/Sandbox/Akashi Development Introduction]]
+* [[User:Tsubakura/Sandbox/Death Usagi's Blog Verification Page]]
+* [[User:Tsubakura/Sandbox/Introduction to Node Types and Branching Rules]]
+* [[User:Tsubakura/Sandbox/Sortie]]

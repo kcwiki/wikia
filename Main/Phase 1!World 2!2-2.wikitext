@@ -1,0 +1,287 @@
+{{Map/Header}}
+{{Map/Info
+|en = Bashi Island
+|jp = バシー島沖
+|romaji = Bashī-tō oki
+|strategy_name = [http://ja.wikipedia.org/wiki/%E6%9F%B3%E8%88%B9 Weeping Willow Transport] Tactics
+|strategy_name_ja = 柳輸送作戦
+|strategy_info = Eliminate the enemy fleet and transport bauxite from Bashi Island!
+|strategy_info_ja = 敵艦隊を排除し、バシー島に集積されたボーキサイト資材を輸送せよ！
+|exp_ship = 150
+|exp_hq = 70
+|exp_hq_boss = 840
+}}
+{{MapBranchingTable
+|expand = true
+|id = 2-2
+|0 -> A, E/resource = * Random 50%/50% chance
+
+|A -> B/resource, E/resource = * Random 50%/50% chance
+
+|B/resource -> C/resource, D = * Random 50%/50% chance
+
+|E/resource -> F/battle =
+* 70% chance if the fleet contains at least one CV, CVL or AV ('''[[CVB]] does not count''')
+* 30% chance if the fleet does not have any CV, CVL or AV
+|E/resource -> G/battle = 
+* 70% chance if the fleet does not have any CV, CVL or AV
+* 30% chance if the fleet contains at least one CV, CVL or AV
+}}
+A perfect place for low level HQ Admiral to catch some BB class; just make sure you have at least 2 CV(L) loaded with torpedo and fighter Aircraft.
+The fastest route & easy way to clear quest:
+* Daily: [[Quests#Bd5|Bd5]], [[Quests#Bd6|Bd6]], [[Quests#Bd7|Bd7]]
+* Weekly: [[Quests#Bw3|Bw3]], [[Quests#Bw4|Bw4]]
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=118|y=148}}
+{{Map/ImageNode|E|x=172|y=219}}
+{{Map/ImageNode|B|x=236|y=127}}
+{{Map/ImageNode|G|x=284|y=288}}
+{{Map/ImageNode|C|x=168|y=70}}
+{{Map/ImageNode|D|x=347|y=108}}
+{{Map/ImageNode|F|x=347|y=198}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵水雷戦隊
+|A
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Echelon}}
+|Light Cruiser To-Class
+|Torpedo Cruiser Chi-Class
+|Torpedo Cruiser Chi-Class
+|Destroyer Ro-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Line Abreast}}
+|Light Cruiser He-Class
+|Light Cruiser He-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Torpedo Cruiser Chi-Class
+|Torpedo Cruiser Chi-Class
+|Destroyer Ha-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+{{NodeInfo
+|B
+|Resource
+|Bauxite
+|5-10-15
+}}
+{{NodeInfo
+|C
+|Resource
+|Itorch
+|1
+}}
+{{Map/Nodes|name=敵運送船団
+|D
+|Normal
+|{{Formation|Double Line}}
+|Battleship Ru-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Battleship Ru-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+}}
+{{NodeInfo
+|E
+|Resource
+|Bauxite
+|15-20-25-30-35
+}}
+{{Map/Nodes|name=敵通商破壊艦隊
+|F
+|Boss
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class/Elite
+|Light Cruiser He-Class
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|-
+|F
+|Boss
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class
+|Torpedo Cruiser Chi-Class/Elite
+|Light Cruiser He-Class
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|-
+|F
+|Boss
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+}}
+{{Map/Nodes|name=敵運送船団
+|G
+|Normal
+|{{Formation|Double Line}}
+|Battleship Ru-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|G
+|Normal
+|{{Formation|Double Line}}
+|Battleship Ru-Class
+|Light Cruiser To-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|G
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|G
+|Normal
+|{{Formation|Double Line}}
+|Battleship Ru-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, D, F, G
+|boss = F
+|Akatsuki: A, D, G
+|Aoba: A, D, F, G
+|Arare: A, D, G
+|Arashio: D, G
+|Asashio: A
+|Ashigara: A, D, F, G
+|Atago: A, D, F, G
+|Chikuma: A, D, F, G
+|Chitose: F
+|Chiyoda: F
+|Choukai: A, D, F, G
+|Fubuki: A, D, G
+|Fumizuki: A, D, G
+|Furutaka: A, D, F, G
+|Fusou: A, D, F, G
+|Haguro: A, D, F, G
+|Hamakaze: F
+|Hatsuharu: A, D, G
+|Hatsushimo: A, D, G
+|Hatsuyuki: A, D, G
+|Hibiki: A, D, G
+|Hiei: F
+|Hiyou: A, D, F, G
+|Ikazuchi: A, D, G
+|Inazuma: A, D, G
+|Ise: F
+|Isonami: A, D, G
+|Isuzu: A, D, F, G
+|Jintsuu: A, D, F, G
+|Junyou: A, D, F, G
+|Kaga: F
+|Kagerou: A, D, G
+|Kako: A, D, F, G
+|Kasumi: A, D, G
+|Kikuzuki: A, D, G
+|Kirishima: F
+|Kisaragi: A, D, G
+|Kiso: F
+|Kitakami: F
+|Kongou: F
+|Kuma: F
+|Kuroshio: A, D, G
+|Maya: A, D, F, G
+|Michishio: A, D, G
+|Mikazuki: A, D, G
+|Miyuki: A, D, G
+|Mochizuki: A, D, G
+|Mogami: A, D, F, G
+|Murakumo: A, D, G
+|Murasame: A, D, G
+|Myoukou: A, D, F, G
+|Nachi: A, D, F, G
+|Nagatsuki: A, D, G
+|Naka: A, D, F, G
+|Natori: A, D, F, G
+|Nenohi: A, D, G
+|Ooshio: A, D, G
+|Ryuujou: A, D, F, G
+|Samidare: A, D, G
+|Satsuki: A, D, G
+|Sendai: A, D, F, G
+|Shigure: A, D, G
+|Shikinami: A, D, G
+|Shiranui: A, D, G
+|Shirayuki: A, D, G
+|Shouhou: A, D, F, G
+|Souryuu: F
+|Takao: A, D, F, G
+|Tama: F
+|Tatsuta: A, D, G
+|Tenryuu: A, D, G
+|Tone: A, D, F, G
+|Wakaba: A, D, G
+|Yamashiro: A, D, F, G
+|Yayoi: F
+|Yura: A, F, G
+|Yuudachi: A, D, G
+}}
+{{SectionEnd}}

@@ -1,0 +1,98 @@
+Earlier in the day, [[User:Persocom01]] edited evasion modifier bonuses onto [[Combat]]. Now, I'm not exactly the biggest fan of statistics but I was told that the source wasn't valid. I will be translating that source here for any who would read it. Please discuss its validity.
+
+The original blog post: http://bs-arekore.at.webry.info/201506/article_4.html
+
+A zoomed version of picture 1: http://userdisk.webry.biglobe.ne.jp/024/587/63/N000/000/002/143441912851948189179.png
+
+A zoomed version of picture 2: http://userdisk.webry.biglobe.ne.jp/024/587/63/N000/000/002/143441914502280330179.png
+
+==Main Post==
+
+;Preface
+:As I've finally amassed a sufficient amount of data for the accuracy and evasion of Line Abreast, I will be making a report.
+:The increased evasion, which was previously denied, actually existed and it became clear that the enemy formation changes the effects.
+
+;Testing Environment
+:I went with 4 ships in Line Abreast. This was so I would have minimal damage to the enemies while being able to gather a lot of data on being hit. ......I lost quite a bit.
+:Other than that, all the other variables are the same as always:
+*All equipment that boosted accuracy or evasion or was fit for the ship was removed
+*Ships were fatigued sufficiently
+*Ships consisted of DDs, CLs, CAs, BBs, AVs, etc.
+
+:Levels and their destinations are as below:
+*Level 1 fleet to 3-2-A
+*Level 64-65 fleet to 2-1-A
+*Level 95-96 fleet to 3-3-A
+
+:I collected the accuracy and evasion data by sortieing the above levels.
+:They were sorted based on the enemy's formation and my ships' evasions and totaled.
+:Also, I totaled the accuracy data and evasion differences against the Abyssals.
+
+;My Fleet: Line Abreast Evasion Data
+:I will compare with my previous evasion data from my Line Ahead fleets.
+
+[[File:Formation_evasion_table_and_graph.jpg|center]]
+
+:Compared to my fleet in Line Ahead, my fleet in Line Abreast had the below differences in shelling evasion.
+:Against Line Ahead: 6~10% increase in shelling evasion
+:Against Double Line: 26~30% increase in shelling evasion
+:Against Double Line, it negated the increased accuracy effect and still increased evasion compared to normal.
+
+:Also, while the samples are insufficient, I saw no increase in shelling evasion against Echelon.
+
+:I have no data against Diamond and Line Abreast (meaning both fleets are in Line Abreast).
+
+;Abyssal Ship Accuracy Data
+:I will be comparing against my previous data from my level 1 fleet in Line Ahead and Double Line.
+
+[[File:Formation_accuracy_table_and_graph.jpg|center]]
+
+:As with Double Line, an approximate 20% increase was seen.
+
+;Conclusion
+:I saw the following effects from Line Abreast:
+*Approximately 20% increase in shelling accuracy
+*Against Line Ahead: Shelling evasion +6~10%
+*Against Double Line: Shelling evasion +26~30%
+*Against Echelon: No shelling evasion increase?
+*Diamond and Line Abreast are unknown
+
+;Inquiry
+:Now then, the problem is how the evasion is being increased.
+
+:As of today (June 2015), I estimate Line Ahead's evasion to be calculated as follows:
+::If ship evasion * 1.3 < 50: evasion = 0.03 + ship evasion * 1.3 / 100
+::If ship evasion * 1.3 ≧ 50: evasion = 0.03 + ship evasion * 1.3 / (ship evasion * 1.3 + 50)
+
+:I believe the "1.3" above to be the formation multiplier.
+:For Line Abreast, it would be 1.7.
+
+:Also, for accuracy, I think it's the below formula.
+::Accuracy = (0.95 + √Level / 45 + equipment and luck modifiers) * formation modifier * morale modifier
+::Line Ahead formation modifier: 1
+::Double Line, Line Abreast formation modifier: 1.2
+::Diamond, Echelon formation modifier: Unknown
+
+:I am currently gathering data on Echelon. As of today (June 2015), I believe Echelon's modifier to be around 1.1.
+:I have absolutely no data on Diamond.
+
+;It is possible that it is simply a scalar addition. For example, an increase of 20% for Double Line and an increase of 7.5% for Line Abreast.
+
+:One more thing, it seems that the effects are not set and can change depending on the enemy's formation.
+:For example, the nullification of Double Line's accuracy boost when against a Line Abreast fleet.
+:That means that investigating formations will require 5v5s. Uwah, how troublesome.
+
+;Impression
+:Line Abreast's shelling evasion boosting effect was denied before but it really existed when I checked.
+:Though I say that, I only saw a dramatic effect against Double Line.
+:It's not that big of an increase against Line Ahead and Line Abreast has its demerits of lowered firepower and torpedo damage as well as lowered night battle accuracy so it doesn't seem to have any use there.
+:In the end, it feels like Line Abreast has very limited usage cases outside of fighting submarines.
+:Along the way against Double Line, when I switched to CVs and such as the main components for my fleet, they had enough firepower even in Line Abreast.
+:Also, maybe it would work for times when your firepower is just too low for even Line Ahead to have any effect and you just want to lower the damage as much as possible?
+
+;Hereafter
+:There is a need to gather even more data for Line Abreast against Diamond, Echelon and Line Abreast enemy formations.
+:It seems like I can gather Echelon and Line Abreast data at 2-4-A and Diamond at 5-4.
+
+:After that, I'd like to look into the accuracy and evasion of Echelon, the rumor that AP shells increase critical hit rates and I'd like to also investigate the accuracy and evasion of married ships.
+[[Category:Blog posts]]

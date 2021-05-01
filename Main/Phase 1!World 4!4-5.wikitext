@@ -1,0 +1,531 @@
+{{Map/Header}}
+{{Map/Info
+|en = Curry Ocean Ri-Lanka Island
+|jp = カレー洋リランカ島沖
+|romaji = Karē-yō Ri Lanka-tō oki
+
+|mechanics = LoS Check@Line of Sight, Manual Node Selection@Events/Mechanics#Node specific details 
+
+|show_kills = true
+|kills = 5
+
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 180
+|strategy_name = [[wikipedia:Easter Sunday Raid|Operation "Diminish the Oriental Abyssal Fleet"]]
+|strategy_name_ja = 深海東洋艦隊漸減作戦
+|strategy_info = The Oriental enemy forces have received a major blow by our fleet and are currently regathering at the Ri-Lanka Island harbour. Organise a military raid unit and destroy the enemy reinforcements!
+|strategy_info_ja = 我が艦隊により大打撃を受けた敵東洋艦隊がリランカ島の港湾に再集結しつつある。遊撃部隊を編成し、敵増援を撃滅せよ！
+|exp_hq = 180
+|exp_hq_boss = 2380
+}}
+{{MapBranchingTable
+|id = 4-5
+|order = A,B,G,I,F,H,J
+|0 -> A/empty = 
+* Meet '''ALL''' of the following requirements:
+** Amount of is CL ≧ 1
+** Amount of is DD ≧ 2
+** Amount of (F)BB(V)/CLT/CV(B)/AR/SS(V) combined is ≦ 2 (CVL does not count)
+|0 ->B/empty = *Do not meet the requirements to go to A
+
+|A/empty -> C,D = *Choice node
+
+|B/empty -> C,E = *Choice node
+
+|G/empty -> F,I = *Choice node
+
+|I -> F = 
+* Amount of (F)BB(V) is ≧ 2
+* Amount of CV(L/B) is ≧ 3
+|I-> J = Do not meet the requirements to go to F
+
+|F -> J = 
+* Meet '''ANY''' of the following requirements:
+** Amount of (F)BB(V) + CV(L/B) ≦ 3
+** Amount of 1 DD + 1 DD/AV
+|F -> H = * Do not meet the requirements to go to J
+
+|H -> K/empty = 
+* Amount of SS(V) is ≧ 2
+* Fail the LoS check
+|H -> M = 
+* Amount of SS(V) is ≦ 1
+* Pass the LoS check by reaching 43 or higher with the F33 formula (C<sub>n</sub>=3)
+
+|J -> L/empty = 
+* Fail the LoS check 
+* Fleet contains SS(V)
+|J -> M = 
+* Meet '''all''' of the following requirements:
+** Pass the LoS check
+** No SS(V) allowed in the fleet
+}}
+* '''IMPORTANT:''' '''5-1 MUST''' be cleared in order to unlock this map.
+* Clearing this map gives you '''1 medal & 180 ranking points'''.  Like the other Extra Operations, it resets at the start of every month and then can be cleared again.
+
+===Tips===
+* By selecting the southern path (Node E), you'll only enter 2 battles before the boss, but you will have to endure a Night Battle followed by a battle with the {{ShipLink|Light Cruiser Demon|Light Cruiser Demon II|text=Light Cruiser Demon}}, {{ShipLink|Standard Carrier Wo-Class Flagship|text=Hellcat Wos}} and a {{ShipLink|Battleship Ru-Class Kai Flagship|text=Flagship Ru-Kai}} battleship.
+* Node F is a Submarine Node.
+* The boss is a soft Installation Type. It is '''strongly recommended''' to equip {{GreenAmmo}}[[Type 3 Shell]]s or {{AntiGroundArtillery}}[[WG42 (Wurfgerät 42)|Wurfgerät 42s]] on participating ships when applicable.
+** Carriers cannot target the boss if any {{RedPlane}}Dive bombers are equipped. However, this may be preferable as they are forced to attack/sink something else, increasing the chance that your BBs and CAs target the boss instead of another ship.
+** It is possible to bring a SS as bait against the boss, although it's not recommended. This is because your submarine is very vulnerable on the map and this will also sacrifice your fleet's firepower in wiping out the escort before finishing the flagship off.
+* The boss flagship '''must be sunk 5 times''' in order to clear this map.  After the first 4 kills, the boss node will change to its final form.
+* The boss composition ''does not revert'' back to its original form and ''will change'' to a post-clear composition after clearing the map, but it will revert back at the start of a new month.
+====Recommended Compositions====
+*'''B-C-F-J-M''': 2BB 1CV 3CA(V); 1FBB 2CV(B) 3CA(V); 2BBV 2CAV 1CA 1CV; 3CA(V) 3CV(B)
+** Using {{Seaplane}}Zuiuns may cause you to be unable to artillery spot and are in general ineffective due to the presence of Tsu-class, so they are not recommended.
+*'''B-C-F-H-M or B-E-H-M''': 3 BB(V) + 2 CV + 1 CA / [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/ffKQ2F3.png 4BB(V) + 2CV] / [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/wO9ZSaR.png 5BB(V) + 1CV] ,[https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://vignette2.wikia.nocookie.net/kancolle/images/3/34/4-5_Final.png (passing the night battle)] / [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/ULBttsn.png 2BB(V) + 4CV(B)] / [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/XeYkbnu.png 3(F)BB(V) + 2CV(B) + 1SS(V)]
+**A more expensive alternative, but with better chances of killing the boss. This is also the recommended option during its final form.
+**While traveling through node E will result in having a higher ammo reserve at the boss node due to the route being shorter, keep in mind that node E itself is incredibly hazardous due to it being a night battle node. It doesn't help either that your fleet usually at least consists of 2-3 carriers, which cannot attack during the night under normal circumstances.
+**H-node may contain 2 {{ShipLink|Battleship Ru-Class Kai Flagship|text=Flagship Ru-Kai}} battleships. However, they are not especially dangerous due to its diamond formation.
+** Using {{Seaplane}}Zuiuns may cause you to be unable to artillery spot and are in general ineffective due to the presence of Tsu-class, so they are not recommended.
+** Yamato-class battleships are a viable option on this map considering the high firepower and armor of the preboss and boss but are not required.
+** 2BB(V) + 4CV(B) should only be used in Last Dance due to high bauxite cost. When using this, try to aim for AS+ (Around 340 Fighter Power is enough) at boss node for less bauxite cost, higher chance of triggering Double Attack and preventing enemy from doing contact. All CV(B) should have Fighters and good Torpedo Bombers only (such as [[Ryuusei Kai]] with [[Aircraft Proficiency|Double Chevron Proficiency]]) so that they can hit [[Harbour Princess]] hard with proper critical hit.
+** 3(F)BB(V) + 2CV(B) + 1SS(V) is a subcheesing strategy, which allows you to effectively tank the attacks from the enemy {{ShipLink|Floating Fortress}} and {{ShipLink|Harbour Princess II}} on the final form. Both their {{ASW}} stats are terrible to the point that they can only deal '''scratch damages''' against high armor submarines. High armor submarines practically become invincible on the boss node on the final form, because a ship cannot be sunk from scratch damages. While this strategy can be used before the final form, you cannot advance to the boss if your submarine is already heavily damaged, limiting the usefulness of this setup.
+*** '''WARNING''': Make sure your [[SS|submarine]] has at least 22 {{Armor}} ({{ShipLink|I-400}}, {{ShipLink|I-401}}, {{ShipLink|I-13}} or {{ShipLink|I-14}} with sufficiently [[Modernization|modernized]] armor) and you are indeed on the '''final form''' before attempting this, you will then be able to advance '''to the boss node''' even if your submarine is heavily damaged. Your submarine will not sink on the boss node during the final form if done correctly. It is still advised to equip a {{EquipmentLink|Emergency Repair Personnel|text=damecon|icon=true}} (the above is based on the [[Damage_Calculation|damage ''theory'']], even though a well-tested one).
+*'''A-D-G-I-J or A-D-G-I''': 1 CL 2 DD 1 CVL/CA 2 XX
+** This route is designed for farming drops (like regular drops {{ShipLink|Z1}}, {{ShipLink|Libeccio}} or limited drops {{ShipLink|Littorio}}) and not for killing the boss.
+** Some ship drops in I/J node can be farmed via this route. Using this route to farm node J can save resources. If a certain ship drops in node I and J at similar rate, farming only node I might help save some buckets while increasing the amount of time and resource consumption.
+** 1CL 2DD are required to enter this route.
+** Due to the low firepower of the fleet composition used to enter this route, it is fairly difficult to defeat the boss using this route especially if the WG42 is not used. It will also increase bucket cost per run by quite a bit, thus it is not advised to advance to boss node with this composition.
+** Note that while using regular carrier is possible, all nodes in this route have a chance to pop {{ShipLink|Light Cruiser Tsu-Class|Light Cruiser Tsu-Class Elite|text=Light Cruiser Tsu-Class}}, so the bauxite cost may be relatively high.
+** By using zero battleships, it is possible to avoid second round shelling by {{ShipLink|Heavy Cruiser Ri-Class/Kai Flagship|text=Ri-class Kai Flagship}} in node D.
+** Having two BB will lead to node F which one would probably want to avoid.
+** Having three BB(V)/CLT/CV/AR/SS(V) will lead to node B.
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=501|y=109}}
+{{Map/ImageNode|B|x=482|y=256}}
+{{Map/ImageNode|D|x=412|y=70}}
+{{Map/ImageNode|C|x=419|y=174}}
+{{Map/ImageNode|E|x=399|y=290}}
+{{Map/ImageNode|F|x=344|y=193}}
+{{Map/ImageNode|G|x=317|y=88}}
+{{Map/ImageNode|H|x=308|y=279}}
+{{Map/ImageNode|I|x=246|y=140}}
+{{Map/ImageNode|J|x=240|y=250}}
+{{Map/ImageNode|K|x=228|y=311}}
+{{Map/ImageNode|L|x=191|y=174}}
+{{Map/ImageNode|M|x=135|y=283}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{NodeInfo
+|A
+|Select
+}}
+{{NodeInfo
+|B
+|Select
+}}
+{{Map/Nodes|name=東洋方面反攻先遣隊
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|200
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|210
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|210
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{Map/Nodes|name=東洋方面威力偵察部隊
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|190
+|Heavy Cruiser Ri-Class/Kai Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|Heavy Cruiser Ri-Class/Kai Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+{{Map/Nodes|name=東洋艦隊新編水上打撃部隊
+|E
+|Night/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|220
+|Heavy Cruiser Ri-Class/Kai Flagship
+|Battleship Ta-Class/Elite
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|E
+|Night/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|250
+|Heavy Cruiser Ri-Class/Kai Flagship
+|Battleship Ta-Class/Elite
+|Battleship Ta-Class/Elite
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+}}
+{{Map/Nodes|name=深海東洋方面潜水艦隊
+|F
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|200
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|210
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|220
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|220
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|230
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{NodeInfo
+|G
+|Select
+}}
+{{Map/Nodes|name=深海東洋艦隊機動部隊
+|H
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|310
+|Light Cruiser Demon
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ru-Class/Kai Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|320
+|Light Cruiser Demon
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser He-Class/Flagship
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|330
+|Light Cruiser Demon/II
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser He-Class/Flagship
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|340
+|Light Cruiser Demon/II
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ru-Class/Kai Flagship
+|Battleship Ru-Class/Kai Flagship
+|Light Cruiser He-Class/Flagship
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|350
+|Light Cruiser Demon/II
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship II
+|Battleship Ru-Class/Kai Flagship
+|Battleship Ru-Class/Kai Flagship
+|Light Cruiser He-Class/Flagship
+}}
+{{Map/Nodes|name=東洋方面後方兵站部隊
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|200
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|220
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|240
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=深海東洋方面増援艦隊
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|310
+|Light Carrier Nu-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|320
+|Light Carrier Nu-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{NodeInfo
+|K
+|Empty
+}}
+{{NodeInfo
+|L
+|Empty
+}}
+{{Map/Nodes|name=リランカ島港湾守備隊
+|M
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|360
+|Harbour Princess
+|Escort Fortress/II
+|Escort Fortress/III
+|Battleship Ru-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|M
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|380
+|Harbour Princess
+|Escort Fortress/II
+|Escort Fortress/III
+|Battleship Ru-Class/Kai Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|M
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|Harbour Princess
+|Escort Fortress/II
+|Escort Fortress/III
+|Battleship Ru-Class /Kai Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|M
+|Boss/BaseXP/Final
+|{{Formation|Line Ahead}}
+|420
+|Harbour Princess/II
+|Escort Fortress/II
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Elite
+|-
+|M
+|Boss/BaseXP/Final
+|{{Formation|Line Ahead}}
+|440
+|Harbour Princess/II
+|Escort Fortress
+|Escort Fortress/II
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Transport Ship Wa-Class/Flagship
+|-
+|M
+|Boss/BaseXP/Clear
+|{{Formation|Line Ahead}}
+|400
+|Harbour Princess/II
+|Escort Fortress
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|-
+|M
+|Boss/BaseXP/Clear
+|{{Formation|Line Ahead}}
+|400
+|Harbour Princess/II
+|Escort Fortress/II
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = C, D, E, F, H, I, J, M, 
+|boss = M
+|Akatsuki: C, E, F, H, I, J
+|Aoba: H, J, M
+|Asashimo: M
+|Ashigara: H, I, J, M
+|Atago: H, I, J, M
+|Ayanami: C, D, F, H, I, J
+|Chikuma: H, I, J, M
+|Choukai: C, H, I, J, M
+|Fubuki: C, I, J
+|Furutaka: I, J, M
+|Fusou: I
+|Haguro: H, I, J, M
+|Haruna: I, J, M
+|Hatsuharu: D
+|Hatsuyuki: E, I, J
+|Hayashimo: M
+|Hibiki: C, I
+|Hiei: J, M
+|Hiyou: M
+|Houshou: C, F, H, I, J, M
+|Hyuuga: M
+|I-8: I
+|Ikazuchi: C, I, J
+|Inazuma: C, D, H, I, J
+|Ise: M
+|Isonami: C, H, J
+|Isuzu: C, J, M
+|Jintsuu: C, H, I
+|Junyou: F, M
+|Kaga: F, M
+|Kagerou: M
+|Kako: H, I, J, M
+|Kinugasa: H, I, J, M
+|Kirishima: I, J, M
+|Kiso: I, J
+|Kitakami: M
+|Kiyoshimo: M
+|Kongou: I, J, M
+|Kuma: J, M
+|Kumano: M
+|Libeccio: H, I, J
+|Maikaze: M
+|Maruyu: M
+|Maya: C, H, I, J, M
+|Mikazuki: M
+|Mikuma: M
+|Miyuki: C, I
+|Mogami: I, M
+|Murakumo: C, F, H, J
+|Myoukou: I, J, M
+|Nachi: H, I, J, M
+|Nagara: C, H, I, J, M
+|Naka: C, M
+|Natori: C, I, M
+|Nowaki: M
+|Ryuujou: M
+|Sendai: C, I, J, M
+|Shikinami: C, H
+|Shiranui: M
+|Shirayuki: C, F, I, J
+|Shouhou: C, I, J
+|Suzuya: M
+|Takao: H, I, J, M
+|Tama: H, J, M
+|Tone: I, J, M
+|Yamashiro: H, I
+|Yura: C, H, I, M
+|Z1: I
+}}
+{{SectionEnd}}

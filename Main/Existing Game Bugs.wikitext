@@ -1,0 +1,126 @@
+The following lists current known bugs in the game, ranging from visual to actual in-game issues.
+
+==Gameplay Affecting Bugs==
+===LBAS Recon Planes do not gain ranks===
+*'''What happens:''' Any {{Seaplane}}{{YellowPlane}} recon type plane will not gain experience in proficiency after sorties, but will conversely still lose ranks if the planes are somehow lost during combat. This impacts {{EquipmentLink|Type 2 Land-based Reconnaissance Aircraft}} and its skilled variant the most.
+*'''Predicted Cause''' Recon planes gain experience only during Detection Phase, and LBAS waves count only as Air Phases. Thus there is no available way in-game to increase ranks for {{EquipmentLink|Type 2 Land-based Reconnaissance Aircraft}}.
+
+===Ignored Default Plane Proficiency on Wipe===
+*'''What happens:''' If a plane that has a default initial proficiency is emptied, it will reset to that default rank after the sortie. However, sortieing that plane again will reset its proficiency down to 0, before gaining ranks normally again.
+*'''Predicted Cause:''' When a plane is emptied, only its displayed rank (0-7) will be set to its default value, whereas its internal exp value (0-120) will always be set to 0. After sortieing the plane again and its exp changes, its displayed rank will be updated to the correct value of 0 to match the exp.
+
+===Equipment Fit Bonuses having no effect===
+*'''What happens:''' In any calculation that requires equipment and ship stats to be evaluated separately, bonus stats from equipping certain equipment on ships will not be considered at all. Conversely any formula that obtains the whole sum of visible stat of the ship will utilize the bonus stats from equipment fits.
+*'''Formulas affected:'''
+** '''ASW Attack Damage''' - Bonus {{ASW}} ASW from Sonars/Depth Charges/Gyrocopters is not considered neither ship nor equipment ASW.
+** '''Aerial Power''' - Bonus {{AA}} AA from fighter planes is not considered part of the plane's AA.
+** '''Airstrike''' - Bonus {{Torpedo}} Torpedo from night bomber planes is not considered part of the plane's torpedo stat.
+** '''Anti-Air Defense''' - Bonus {{AA}} AA from AA Guns is not considered neither ship nor equipment AA.
+** '''Day Shelling''' - Bonus {{Torpedo}} Torpedo from night bomber planes is not considered part of the plane's torpedo stat.
+** '''Night Carrier Damage''' - Bonus {{Firepower}} Firepower from Night Fighters is not considered neither the ship nor plane's firepower stat. Bonus {{Torpedo}} Torpedo from night bomber planes is not considered part of the plane's torpedo stat.
+** '''Artillery Spotting Rate''' - Bonus {{LOS}} from radars and seaplanes are not considered neither the ship nor equipment's LoS.
+** '''Accuracy''' - Bonus {{Hit}} from equipment like {{EquipmentLink|Type 2 Reconnaissance Aircraft}} and {{EquipmentLink|41cm Twin Gun Mount Kai Ni}} does not actually grant the fit portion of the stat.
+*'''Formulas unaffected:'''
+** '''Day Shelling''' - Both Normal Shelling and Carrier Shelling count bonus {{Firepower}} firepower normally. (Only partially unaffected; Refer to above)
+** '''Torpedo''' - Bonus {{Torpedo}} Torpedo is accounted for normally.
+** '''Defense Power''' - Bonus {{Armor}} armor is accounted for normally.
+** '''Evasion''' - Bonus {{Evasion}} evasion is accounted for normally.
+** '''LoS Routing''' - Bonus {{LOS}} LOS is counted for as Ship LOS.
+** '''Opening ASW''' - Bonus {{ASW}} is counted towards the 100 {{ASW}} requirement.
+
+===Torpedo Support Expedition===
+*'''What happens:''' Torpedo-type Support Expeditions seem to have a base attack power of 0, causing them to only deal scratch damage, regardless of any Firepower or Torpedo stat.
+
+===Ship "Zombification"===
+*'''What happens:''' When sinking a ship on a time-limited event map, by closing the game before the battle ends (Aka. Before battle result screen is shown), and refraining from logging in until a maintenance in which the time-limited map is removed from the game occurs. Upon entering the game after the map is removed, the sunken ship will remain in the game, at 0 HP and with a 轟沈(Sunk) status. The ship can be repaired as per normal; removing this status, and sortieing it at 0HP will cause it to return to 1HP.
+*'''Predicted Cause:''' The game is unable to resolve the battle state due to the map the ship was sunk in, no longer existing. This presumably aborts the game's attempt to check for and delete the sunken ship in question from your roster. Opening the game at any time before the map is removed, or sinking a ship in a normal map will not enact this behavior, regardless of whether a maintenance has occurred or not.
+
+===Combined Fleet Torpedo Phase===
+*'''What happens:''' Player side torpedoes will resolve their damage before Abyssal side torpedoes, causing Abyssal torpedoes to deal reduced, or zero damage if the Abyssal is damaged or sunk. So far this is only observed to occur during Combined Fleet vs Combined Fleet scenarios.
+
+===ASW Synergy Inconsistencies===
+*'''What happens:''' Newer Depth Charge equipment do not gain additional synergy bonuses when equipped together with {{EquipmentLink|Type 95 Depth Charge|icon=x}} or {{EquipmentLink|Type 2 Depth Charge|icon=x}}
+**The following equipment are currently unable to procure the damage bonus when paired:
+** {{DepthCharge}}{{EquipmentLink|Lightweight ASW Torpedo (Initial Test Model)}}
+** {{DepthCharge}}{{EquipmentLink|RUR-4A Weapon Alpha Kai}}
+** {{DepthCharge}}{{EquipmentLink|Prototype 15cm 9-tube ASW Rocket Launcher}}
+** {{DepthCharge}}{{EquipmentLink|Type 3 Depth Charge Projector (Concentrated Deployment)}}
+** {{DepthCharge}}{{EquipmentLink|Type 2 12cm Mortar Kai}}
+** {{DepthCharge}}{{EquipmentLink|Type 2 12cm Mortar Kai (Concentrated Deployment)}}
+*'''Predicted Cause:''' As all the involved equipment are of the same equipment type, both {{EquipmentLink|Type 94 Depth Charge Projector}} and {{EquipmentLink|Type 3 Depth Charge Projector}} are hard coded into the synergy check with T95 and T2 DC. Any new depth charge equipment afterwards thus is not eligible for the bonus as their specific equipment ID is not accounted for in the code.
+
+===Grecale Kai's Base Evasion===
+*'''What happens:''' {{ShipLink|Grecale/Kai}}'s base evasion is 18 instead of a suspected 48, causing her evasion growth to be incredibly high, giving her a projected 152{{Evasion}} evasion at level 175 instead of 129{{Evasion}}.
+
+===Anti Air Cut In API 13===
+*'''What happens:''' Anti-Air Cut In API Type 13 is impossible to activate, due to sharing similar requirements to API 8 ({{GreenGunDP}} with >= 8{{AA}} + {{Radar}} with >=2 {{AA}}), but being checked after API 8 and having a lower activation rate. Since the same RNG number is used to compare to each AACI, API 13 remains impossible to activate, as any possible generated RNG number will activate API 8 instead.
+
+===Combined Fleet Echelon Using Old Values===
+*'''What happens:''' The shelling damage modifier for echelon when using it in Combined Fleet (via entering a Night Battle Node) is still set at 60% instead of 75%. This can be observed through measuring the damage of Support Shelling, which uses the shelling modifier of the formation.
+
+===Going Above Resource Hard-Cap===
+*'''What happens:''' Sinking a ship adds the current fuel and ammo supply of the ship to your resources. Gaining resources in this way ignores the usual hard-cap and lets you go above 300000.
+
+===Transport Quests Double Counting===
+*'''What happens:''' If both Bd5 (3 transports) and Bd6 (5 tranports) are active at once, both quests receive double credit for each transport sunk, meaning Bd5 may be completed with only 2 transport, and Bd6 may be completed with only 3. Also, if only one of these quests is active, the other still receives credit, even though it's not active. The same behaviour also happens with C3 (5 PVP victories) and certain one-time PVP quests (including C10).
+*'''Predicted Cause:''' Bd5 and Bd6 share the same counter internally, so if both are active when 1 transport is sunk, the counter gets +1 for Bd5 and +1 for Bd6, effectively giving +2 to both of them.
+
+===Colorado Special Cut In with 5 Slot Battleships===
+*'''What happens:''' When using Colorado's Special Cut-in attack, in which if the 2nd Ship has 5 equipment slots and an empty Reinforcement Expansion slot, the 5th Slot's item (If AP Shell/Radar) will be counted again as a separate bonus multiplier for the 3rd Ship's total multiplier.
+
+*'''Example:''' If the 2nd Ship has an AP Shell + Radar equipped, and the AP Shell in the 2nd Ship's 5th slot, the bonus conferred onto the 3rd would be (1.35 * 1.35 * 1.15) due to this bug.
+
+==Visual Bugs==
+===World 3-2 Listed Resource Error===
+*'''What happens:''' World 3-2 still lists {{Steel}} instead of {{Ammo}} as being obtainable in the map.
+
+[[File:6-5LBAS_Error.png|thumb|250px|The incorrect Land Base positioning in HTML5's client.]]
+===World 6-5 LBAS Legend Offset===
+*'''What happens:''' World 6-5's LBAS Legend is incorrectly positioned in Phase 2's HTML 5 client, causing it to appear to be in the middle of the ocean instead of the island. It is correctly positioned in the Android client.
+
+{{clear}}
+
+[[File:ChuuhaAnimationBug.png|thumb|250px|Wrong chuuha shard coordinates]]
+===Chuuha animation wrong shard coordinates===
+*'''What happens:''' During the Chuuha'd animation, one of the shards has wrong coordinates, appearing to play from wrong location.
+
+{{clear}}
+
+
+===Sazanami Incorrect Rarity Background===
+*'''What happens:''' {{ShipLink|Sazanami}} has an incorrect rarity background on her card in Phase 2's HTML 5 client. It is the correct color background in the Android client.
+
+===Level Up Visual Bugs===
+*'''What happens:''' Occasionally, when leveling up, ships do not actually show the level up animation, nor increase in level in Phase 2's HTML 5 client. This happens when the level up is supposed to play in the last frame of the animation, and goes beyond the border. While the client checks if you crossed an XP border on each frame, it only checks if you hit the border exactly (as in, no XP over this border) on the last frame. 
+*'''Reproducability''': This will happen when you gain 540 XP with a ship at 539 XP remaining. There's also  [https://flatisjustice.moe/bugs a calculator] to find when/where it happens for a given XP gain, since the animation is 2 seconds long and the game runs at 60 FPS, this issue will happen when you go over with less than 1/120th of the XP gained.
+*'''What happens:''' Additionally, when hitting the level before the cap (at the time of writing, Lv. 174), the exp required for the next level afterwards will not be displayed, as the server does not send the API information required to display the exp.
+
+===Star Shell Display Bug===
+*'''What happens:''' In 12vs6 night battles when the escort fleet is moving backwards to the left of the screen, sometimes the escort fleet moving left and star shell animations overlap slightly, causing the ship banner not to slide forward before the star shell firing animation plays.
+
+===Black HP Bars===
+* '''What happens:''' If a ship's HP is close to exactly 2/3 full, but slightly below it (for example 233/350 on {{ShipLink|Aircraft Carrier Princess}}), its battle banner's HP bar becomes black. (More exactly, if the HP ratio is between 0.665365 and 2/3rd.) This is caused by some rounding error in the calculation of the green-ness of the color. Within this range, the green color would become round(>=255.5) = 256, causing an overflow in the final color value, resulting in the color 0x1000000 being used instead of a color around 0xFFFF00.
+* '''Reproducability''': There's [https://flatisjustice.moe/bugs a calculator] to find at which HP value(s) this happens given a max HP.
+
+<!-- ==Impending Bugs==
+These are bugs that will happen in the future, as a result of external factors. -->
+
+==Fixed Bugs==
+===LBAS Swap Crash===
+*<s>'''What happens:''' The game will crash when attempting to change planes in the LBAS menu, if you equip anything onto a ship's empty equip slot ''from another ship'' beforehand.</s>
+*<s>'''Cause:''' The server does not send an updated list of unequipped equipment when transferring equipment into an empty slot from another ship, causing the former unequipped slot to become undefined. This crashes LBAS plane swapping as the game attempts to check every equipment type while doing so and attempts to read the now null slot, crashing the entire game.</s>
+*<s>'''Migitation:''' After using the transfer equip feature, equip another empty slot normally.</s>
+*<s>'''Update:''' As of [https://twitter.com/KanColle_STAFF/status/1287083004418904066 26th July 2020, the devs have acknowledged this bug] and are working on a fix.</s>
+*'''Resolved:''' As of the hotpatch on [https://twitter.com/KanColle_STAFF/status/1287582353775198208 27th of July 2020, at 12:00 JST], this bug has been fixed.
+
+[[File:MapLetterUnlock.png|thumb|250px|Darker node letters]]
+===Node unlock making letters darker===
+*<s>'''What happens:''' When a new route/node gets unlocked (like Q->T), all the hidden nodes will be redrawn. This'll make the letters darker.</s>
+*'''Resolved:''' This might have gotten resolved with the Rainy-Summer Event 2020 as it didn't happen in E-6.
+
+{{clear}}
+
+===Sound settings will not load===
+*<s>'''What happens:''' Sound settings will reset every reload starting from Chrome 80. </s>
+*<s>'''Cause:''' The game stores sound settings in cookies, starting from Chrome 80, [https://www.chromestatus.com/feature/5088147346030592 cookies will default to SameSite=Lax]. Because the game is loaded from dmm, this will cause the cookies to not be loaded. A simple fix of adding SameSite=None won't work since the same update will force these cookies to be marked Secure[https://www.chromestatus.com/feature/5633521622188032].</s>
+*'''Resolved:''' As of the 14th January 2020 patch, this issue has been mitigated.

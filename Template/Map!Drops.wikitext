@@ -1,0 +1,3 @@
+<includeonly>{{#if: {{{no_legend|}}}||<div style="border: 2px solid #aa5; background: #ffc; padding: 5px; margin: 15px auto 20px;">See [[Template:DropList/doc]] on how to use/edit the table</div>
+}}{{#if: {{{filter_button|}}}|<div class="toggle" data-target="droplist-non-rare-ship" data-default="hide" style="display: none;"><span class="toggle-show" style="cursor: pointer; color: #006cb0;">☑ All drops (enabled)</span><span class="toggle-hide" style="cursor: pointer; color: #006cb0;">☒ All drops (disabled, only rare drops)</span></div>
+|}}<div style="max-height: {{{height|429}}}px; overflow: auto;">{{ {{{subst|safesubst:}}}#invoke:DropList|show}}</div></includeonly><noinclude>{{Documentation}}</noinclude>

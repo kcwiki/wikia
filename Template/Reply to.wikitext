@@ -1,0 +1,14 @@
+{{#if:{{{1|<noinclude>$</noinclude>}}}
+ |@[[User:{{{1|Example}}}|{{{1|Example}}}]]{{#if:{{{2|}}}
+  |, [[User:{{{2}}}|{{{2}}}]]{{#if:{{{3|}}}
+   |, [[User:{{{3}}}|{{{3}}}]]{{#if:{{{4|}}}
+    |, [[User:{{{4}}}|{{{4}}}]]{{#if:{{{5|}}}
+     |, [[User:{{{5}}}|{{{5}}}]]
+    }}
+   }}
+  }}
+ }}:
+ |{{error|Error in replyto template: Username not given. See [[Template:Reply to]] for usage.}}
+}}<noinclude>
+{{documentation}}
+</noinclude>

@@ -1,0 +1,74 @@
+Combat related calculations (damage calculations, trigger/evasion/accuracy rates, etc.).
+
+==Parameters==
+
+===[1]===
+
+Ship name in the <code><name>/<suffix></code> format.
+
+===[2], [3], ...===
+
+Values to generate, will be in a row (using starting <code>|-</code> and <code>|</code> delimiter) for multiple arguments, a single value will be produced otherwise.
+
+If an argument is starting with underscore, <code>_<function></code> will be used to generate a value (or <code>N/A</code> if there is no such function), otherwise the argument will be used as is.
+
+The following functions are defined:
+
+{| class="wikitable typography-xl-optout" style="width:100%;"
+!Function
+!Description
+!style="width:33%"|Note
+|-
+|<code>_full_name</code>
+|Ship name with suffix
+|
+|-
+|<code>_link</code>
+|Ship name linked to the ship page
+|
+|-
+|<code>_<Lua stat></code>
+|Any stat from a ship module (e.g. <code>_firepower_max</code>) can be used
+|
+|-
+|<code>_fp</code>
+|Maximal firepower (<code>_firepower_max</code> alias)
+|
+|-
+|<code>_tp</code>
+|Maximal torpedo (<code>_torpedo_max</code> alias)
+|
+|-
+|<code>_fp_tp</code>
+|Firepower + torpedo
+|
+|-
+|<code>_db</code>
+|Day battle attack power
+|rowspan="8"|Post-cap, all modifiers = 1, except attack modifier defined by "default" equipment setup, damage highlighted for over the cap values, boost values highlighted arbitrarily
+|-
+|<code>_db_max</code>
+|Day battle attack power with ★+10 equipment
+|-
+|<code>_nb</code>
+|Night battle double attack power
+|-
+|<code>_nb_max</code>
+|Night battle double attack power with ★+10 equipment
+|-
+|<code>_nb_ci</code>
+|Night battle cut-in power
+|-
+|<code>_nb_ci_max</code>
+|Night battle cut-in power with ★+10 equipment
+|-
+|<code>_nb_ci_boost</code>
+|Difference between double attack and cut-in
+|-
+|<code>_nb_ci_boost_max</code>
+|Difference between double attack and cut-in with ★+10 equipment
+|-
+|<code>_luck</code>
+|Initial luck
+|Highlighted arbitrarily, tooltips for base trigger rate and Maruyu cost to reach the cap
+|}

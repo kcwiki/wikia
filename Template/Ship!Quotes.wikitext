@@ -1,0 +1,164 @@
+<includeonly>{{ {{{subst|safesubst:}}}#invoke:Quotes|ShipQuotes|pagename={{SUBPAGENAME}}|basepagename={{BASEPAGENAME}}}}</includeonly><noinclude>
+__TOC__
+==Basic Usage==
+<pre>
+{{ShipQuotes
+|Introduction = 
+|Introduction/En = 
+|Introduction/Note = 
+
+|Library = 
+|Library/En = 
+|Library/Note = 
+
+|Secretary 1
+|Secretary 1/En = 
+|Secretary 1/Note = 
+
+|Secretary 2 = 
+|Secretary 2/En = 
+|Secretary 2/Note = 
+
+|Secretary 3 = 
+|Secretary 3/En = 
+|Secretary 3/Note = 
+
+|Idle = 
+|Idle/En = 
+|Idle/Note = 
+
+|Secretary Married = 
+|Secretary Married/En = 
+|Secretary Married/Note = 
+
+|Wedding = 
+|Wedding/En = 
+|Wedding/Note = 
+
+|Looking At Scores = 
+|Looking At Scores/En = 
+|Looking At Scores/Note = 
+
+|Joining A Fleet = 
+|Joining A Fleet/En = 
+|Joining A Fleet/Note = 
+
+|Equipment 1 = 
+|Equipment 1/En = 
+|Equipment 1/Note = 
+
+|Equipment 2 = 
+|Equipment 2/En = 
+|Equipment 2/Note = 
+
+|Equipment 3 = 
+|Equipment 3/En = 
+|Equipment 3/Note = 
+
+|Supply = 
+|Supply/En = 
+|Supply/Note = 
+
+|Docking Minor = 
+|Docking Minor/En = 
+|Docking Minor/Note = 
+
+|Docking Major = 
+|Docking Major/En = 
+|Docking Major/Note = 
+
+|Construction = 
+|Construction/En = 
+|Construction/Note = 
+
+|Returning From Sortie = 
+|Returning From Sortie/En = 
+|Returning From Sortie/Note = 
+
+|Starting A Sortie = 
+|Starting A Sortie/En = 
+|Starting A Sortie/Note = 
+
+|Battle Start = 
+|Battle Start/En = 
+|Battle Start/Note = 
+
+|Attack = 
+|Attack/En = 
+|Attack/Note = 
+
+|Night Battle = 
+|Night Battle/En = 
+|Night Battle/Note = 
+
+|Night Attack = 
+|Night Attack/En = 
+|Night Attack/Note = 
+
+|MVP = 
+|MVP/En = 
+|MVP/Note = 
+
+|Minor Damage 1 = 
+|Minor Damage 1/En = 
+|Minor Damage 1/Note = 
+
+|Minor Damage 2 = 
+|Minor Damage 2/En = 
+|Minor Damage 2/Note = 
+
+|Major Damage = 
+|Major Damage/En = 
+|Major Damage/Note = 
+
+|Sunk = 
+|Sunk/En = 
+|Sunk/Note = 
+}}
+</pre>
+==Converting from [[Template:Shipquote]]==
+[[Template:Shipquote]] calls can be converted to ShipQuotes calls using (run in JS console on a ship page, ShipQuotes call will be copied into clipboard)
+<pre>
+copy(`{{ShipQuotes
+${$(".shipquote-line").map((_, e) => {
+    const line = $(e).data("line-name");
+    const td = $(e).find("td");
+    const ja = $(td[1]).html().split("<br><br>")
+    const en = $(td[2]).html().split("<br><br>")
+    const note = $(td[3]).html().split("<br><br>")
+    function genLine(ja, en, note, form = "") {
+        ja = $($.parseHTML(ja)).text().trim().replace(/\s*（改）/, "");
+        en = $($.parseHTML(en)).text().trim().replace(/\s*\(Kai\)/, "");
+        note = $($.parseHTML(note)).text().trim();
+        return `|${line}${form} = ${ja}
+|${line}${form}/En = ${en}${note !== ""
+    ? `\n|${line}${form}/Note = ${note}`
+    : ""}`;
+    }
+    return `${genLine(ja[0], en[0], note[0])}${ja[1]
+    ? `\n\n${genLine(ja[1], en[1] || "", note[1] || "", "/Kai")}`
+    : ""}`;
+}).toArray().join("\n\n")}
+}}`);
+</pre>
+* <code><nowiki><br><br></nowiki></code> should be a separator for base/kai lines
+* works only with base/kai lines in one table (no kai ni/etc. or multiple tables)
+* HTML elements (bolding/links/etc.) should be converted manually afterwards.
+
+==Converting to KC3Kai JSON==
+<pre>
+(() => {
+    const quotes = {};
+    $(".shipquote").each((_, e) => {
+        e = $(e);
+        const id = e.data("shipquote-id");
+        const form = e.data("shipquote-form") || "Kai";
+        const en = e.find(".shipquote-en").text().trim();
+        const ja = e.find(".shipquote-ja").text().trim();
+        quotes[form] = quotes[form] || {};
+        quotes[form][id] = en;
+    });
+    copy(JSON.stringify(quotes, null, 4));
+})();
+</pre>
+</noinclude>

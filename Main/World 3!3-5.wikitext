@@ -1,0 +1,119 @@
+{{Map/Header}}
+{{Map/Info
+|en = Northern AL Waters
+|jp = 北方AL海域
+|romaji = Hoppō AL-kaiiki
+|mechanics = LoS Check@Line of Sight
+|exp_hq = 190
+|exp_hq_boss = 2880
+|show_kills = true
+|kills = 4
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 150
+|strategy_name = Northern Water Combat Patrols
+|strategy_name_ja = 北方海域戦闘哨戒
+|strategy_info = There is a movement of enemy reinforcements to the Northern waters. Dispatch a medium sized surface combat fleet, capture the enemy reinforcements and destroy them!
+|strategy_info_ja = 北方海域に敵増援の動きがある。中規模の水上打撃部隊を派遣し、敵増援を捕捉、これを撃破せよ！
+}}
+{{MapBranchingTable
+|id = 3-5
+|0 -> B = 
+*Guaranteed if one of the following requirements are met:
+**Amount of SS(V) ≧ 3
+**Amount of (F)BB(V) ≧ 2
+**Amount of (F)BB(V) + CA(V) ≧ 3
+**Fleet contains CV(L)
+**Fleet contains [[CLT]]
+* 25% chance of B when amount of DD = 4
+* 50% chance of B when amount of DD ≦ 3
+|0 -> F = 
+* Does '''not''' meet the requirements to go to B
+* Guaranteed if the amount of DD ≧ 5
+* 75% chance of F when amount of DD = 4
+* 50% chance of F when amount of DD ≦ 3
+
+|B -> D = 
+* Meet '''ANY''' of the following requirements:
+** Amount of CLT ≧ 2
+** Amount of CV(L) ≧ 2
+** Amount of (F)BB(V) ≧ 3 ('''Overrides E node branching''')
+** Amount of CA(V) ≧ 2 and use neither a DD / CL
+<!-- 2 CA(V) are required, but something else is, unknown; above is guess that works for most cases -->
+|B -> C/empty = *Does not meet the requirements to go to the other nodes
+|B -> E = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DD ≧ 2
+** Amount of CL = 1
+** Fleet contains no CV(L/B)
+|B -> A/empty = 
+* Meet '''ANY''' of the following requirements:
+** Amount of SS(V) ≧ 4
+** Amount of CV(L/B) ≧ 4
+** Amount of CV(L/B) + (F)BB(V) ≧ 5
+
+|F -> E = 
+*Guaranteed if one of the following requirements are met:
+**Fleet contains CV(L/B), (F)BB(V) or [[LHA]]
+<!-- **Amount of CA(V) ≧ 2 -->
+* 25% chance of E if none of the requirements are met
+|F -> G = 
+*Guaranteed if '''ALL''' of the following requirements are met:
+**Amount of CL ≦ 2
+<!-- **Amount of DD + CL + AV + SS + CT + AO ≧ 5 -->
+**Fleet contains no LHA, CA(V), (F)BB(V) or CV(L/B)
+* 75% chance of G if none of the requirements are met
+
+|E -> H = *Fixed route
+
+|H -> J/resource = 
+*Meet '''ANY''' of the following requirements (LoS check pass is ignored):
+**Amount of (F)BB(V) + CV(B/L) ≧ 2 '''AND''' Fleet contains {{ShipLink|Akitsu Maru}}
+<!-- no LHA samples; unverified -->
+**Amount of (F)BB(V) + CV(B/L) ≧ 4
+*Fail the LoS check
+|H -> K = 
+*Pass the LoS check '''(~40 Cn4)''' '''AND''' do not meet the requirements to go to node J
+
+|G -> I/empty = 
+*Fail the LoS check with a [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] LoS value of < 23
+*Random routing if the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] LoS value is between 23 and 28
+|G -> K =  
+*Pass the LoS check with a [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] LoS value of > 28
+*Random routing if the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] LoS value is between 23 and 28
+}}
+* To clear 3-5, you need to sink the boss flagship 4 times.
+* [[LoS]] requirement is 28 in [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] for G->K.
+** C<sub>n</sub>=4 indicates that the LoS you receive from equipment weights 4x more than usual.
+* Clearing this map rewards a [[Medal]] and 150 [[Experience_and_Rank#Monthly_Ranking|ranking points]].
+
+===Tips===
+* The central routes (B-E-H-K or F-E-H-K) are not recommended as there is an enemy submarine on E node, which diverts attacks from DD & CL while stronger enemy ships deal heavy damage.
+* Some recommended fleet compositions:
+====North Route (B-D-H-K)====
+*[https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/nllP6mz.png 3 CV + 2 CLT + 1 SS] / [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://imgur.com/OdjEZDb.png 3 CLT + 3 CV] / [https://i.imgur.com/lkvKsTS.jpg 3CV + 3SS]
+**Opening torpedo and air attack can clear out the enemy easily, but it's not effective against {{ShipLink|Northern Princess III|text=Hoppou}}.
+**{{ShipLink|Northern Princess III|text=Hoppou}} is always forced to attack submarines and her {{ASW}} is weak, but other light enemy ships are a threat to your submarine.
+**With {{EquipmentLink|12cm 30-tube Rocket Launcher Kai Ni}}, all CV and CAV that have this equipped will have a chance of taking no damage during airstrike.
+*3 CV(B) + 3 CA(V)
+**CA(V) can bring {{GreenAmmo}}[[Type 3 Shell]] to disable/destroy {{ShipLink|Northern Princess III|text=Hoppou}}. This is completely unnecessary if you wish to only reach the boss.
+
+====South Route (F-G-K)====
+*1 CL + 5 DD / 1 AV + 5 DD
+**Guaranteed to reach the boss via F-G-K if you can pass the LOS check.
+**Bring more surface RADAR if you cannot meet the LoS requirement with a seaplane only.
+**You should bring your best DD, players without enough good DD should consider an alternative option.
+
+==== South Route (F-G-K) OR (B-C-F-G-K) with CL and AV====
+*[http://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/qyUiWiP.png 2 AV + 2 CL + 2 DD] / 4 AV + 2 CL
+**Allowing more CL to utilize and AV for opening attacks while preventing Air Incapability
+**You are allowed to freely interchange DDs with AVs if you want, you can even go for 4 AV + 2 CL.
+**However, the downside of this setup is that the risk of off-routing to B at the beginning. But in case you survived the B node, you can still continue down the B-C-F-G-K route as routing from F to G is always guaranteed.
+
+==== South Route (B-C-F-G-K) with {{ShipLink|Hayasui Kai}} and 2 AVs ====
+* {{ShipLink|Hayasui Kai}} + {{ShipLink|Abukuma Kai Ni}} + 1 CLT + 1CL + 2 AV
+** This setup takes the longer route but allows for stronger openings compared to the fleets presented above. A total of 3 opening torpedoes, 2 Torpedo Bombers and at least 2-3 Seaplane Bombers can be brought, making this fleet very useful for taking out a high number of ships before the shelling phase. The main issue of this fleet are the inflated costs if {{ShipLink|Hayasui Kai}} gets damaged and the first battle at node B. Otherwise, it should not pose serious threats on nodes F and G for the reasons mentioned above. You are recommended to put {{ShipLink|Hayasui Kai}} as flagship for her extreme frailty to reduce the chances of being targeted by any enemy ship. She is best used with 2 {{BluePlane}} and a {{EquipmentLink|Skilled Carrier-based Aircraft Maintenance Personnel|text=SCAMP}} to increase her shelling power significantly. Do note however, that her very small slots are subject to rank losses against the {{ShipLink|Light Cruiser Tsu-Class}} at the Boss node.
+
+*'''NOTE:''' Enemy patterns below with (Final) will always be encountered when the boss gauge is 1/4 or if you've already completed this map.<br /> 
+** Although there is no visual difference, players at HQ 84 and below will face a weaker version of the {{ShipLink|Northern Princess III|text=Northern Princess}} at node H.
+
+{{Map/Footer}}

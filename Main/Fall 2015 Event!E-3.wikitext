@@ -1,0 +1,166 @@
+__NOTOC__
+
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;">
+{| width="100%"
+|'''Report threads'''
+|-
+|
+*Report your fleet composition [[Thread:355316|here]]
+*Report enemy pattern [[Thread:355313|here]]
+|}
+</div>
+
+==Information==
+
+{{Infobox
+|title = Weigh anchor! Maritime transport fleet
+|kanji = 抜錨!海上輸送部隊
+|romaji = Batsubyou! Kaijou yusoubutai
+|image = Fall_2015_E3_Banner.png
+|label1 = Mechanics
+|value1 = [[Combined Fleet]] (Transport Escort)<br>[[Event#Ship_Locking|Ship locking]] (Green)<br>[[Fall_2015_Event/Info#New_mechanic:_Transport_off-load_Gauge|Transport off-load Gauge]]<br>[[Event#Manual_Node_Selection|Node Selection]]<br/>
+[[Event#LoS_Check|LoS Check]]
+|label2 = Boss
+|value2 = Easy: 350 HP {{ShipBattleCardKai|Seaplane Tender Princess}}<br/>Medium: 350 HP {{ShipBattleCardKai|Seaplane Tender Princess/II}}<br/>Hard: 350 HP {{ShipBattleCardKai|Seaplane Tender Princess/III}}
+|label3 = Transport gauge
+|value3 = '''Easy:''' 300 TP<br/>'''Normal:''' 500 TP<br/>'''Hard:''' 800 TP
+|label4 = Reward
+|value4 =
+'''All:''' <br/>{{ShipBattleCardKai|Kashima}}<br>
+'''Normal:''' <br/>{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|text = x1}} <br/>
+'''Hard:''' <br/>{{ItemStack|item = {{EquipmentCardKai|Type 4 Passive Sonar|size=50px}}|text = x1}}{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|text = x1}}{{ItemStack|item = [[File:Improvement Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]]|text = x4}}
+}}
+
+===Branching rules===
+<span style="color:#f00;">If you see long colored boxes and not round nodes, clear your cache to see the updated styles.</span>
+*If node B is chosen, route 100% 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|B|#FF0000;
+|F|#FF0000;
+|E|#FF0000;
+|G|#33aa00;
+|I|#00CCFF;
+|H|#FF0000;
+}}</div>
+*If node C is chosen, the following apply:
+:*If BBV is present in main fleet, route 100% 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|C|#FF0000;
+|E|#FF0000;
+|G|#33aa00;
+|I|#00CCFF;
+|H|#FF0000;
+}}</div>
+:*If AV or LHA is present in main fleet, or if the main fleet contains at least 5 DDs, route 100% 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|C|#FF0000;
+|D|#FF0000;
+|G|#33aa00;
+|I|#00CCFF;
+|H|#FF0000;
+}}</div>
+*Otherwise, random between
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|C|#FF0000;
+|E|#FF0000;
+|G|#33aa00;
+|I|#00CCFF;
+|H|#FF0000;
+}}</div>
+::and 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|C|#FF0000;
+|D|#FF0000;
+|G|#33aa00;
+|I|#00CCFF;
+|H|#FF0000;
+}}</div>
+*If the LoS check is failed after node H, proceed to node J.
+*Otherwise, proceed to node K.
+Rules apply in order. For instance, a fleet with both a BBV and an LHA will proceed to node E. Hayasui is '''suspected''' to also force D routing in #4 and also transports a greater base amount of TP. Admirals without AV or LHA who wants to clear on Medium, may be able to use a Hayasui-4DD-CAV (4 Zuiun build) main fleet as a branch option.
+
+====Suggested Fleet Compositions:====
+*1 [CAV or Hayasui] 4 DD 1 LHA + 1 CL 2 CA(V) 3 DD 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|C|#FF0000;
+|D|#FF0000;
+|G|#33aa00;
+|I|#00CCFF;
+|H|#FF0000;
+}}</div> 
+:- Recommended for clears on Medium and Hard difficulty, and Easy difficulty farming.
+*1 [CAV or Hayasui] 4 DD 1 AV + 1 CL 2 CA(V) 3 DD 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|C|#FF0000;
+|D|#FF0000;
+|G|#33aa00;
+|I|#00CCFF;
+|H|#FF0000;
+}}</div> 
+:- For Easy difficulty boss S-rank clears and TP drain on Medium difficulty for Admirals who do not possess Akitsu Maru.
+*2 BBV 4 DD + 1 CL 2 CA 3 DD 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|C|#FF0000;
+|E|#FF0000;
+|G|#33aa00;
+|I|#00CCFF;
+|H|#FF0000;
+}}</div> 
+:- For Medium Final clear ONLY for Admirals who do not possess Akitsu Maru.
+*1 BBV 1 CAV 4 DD + 1 CL 2 CAV 3 DD 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|B|#FF0000;
+|F|#FF0000;
+}}</div> 
+:- Easy difficulty [[Asashimo]] farming ONLY. Do NOT proceed to node E
+
+===Tips===
+*This map uses a new type of combined fleet which requires 4 DD in main fleet (and allows only ships capable of equipping [[Drum Canister (Transport Use)|Drum Canisters]]), and requires a flagship CL, 3 DD in escort fleet (and allows only CA, CL and DD).
+*Due to the extreme resource requirements of S-Ranking the boss node on any difficulty except easy (requires either passing through the night battle at node E or at least using a boss support expedition), Admirals are recommended to obtain all drops on Easy first before clearing the map on a higher difficulty for higher resource efficiency.
+====AS Values====
+*Easy: PA:15, AS:33, AS+:66
+*Medium: Normal: PA:15, AS:33, AS+:66 / Final: PA:48, AS:108, AS+:216
+*Hard: Normal: PA:48, AS:108, AS+:216 / Final: PA:59, AS:132, AS+:264
+====Map Clearing (Medium, Hard difficulties)====
+*[[Akitsu Maru]] will single-handedly achieve Air Superiority and is highly recommended, as all other ships can use maximum damage builds. '''Admirals are not recommended to do hard difficulty unless they possess Akitsu Maru.'''
+*Planes in the escort fleet do not contribute to air power. Akitsu Maru, AVs or CAVs used for this purpose must be in the '''main '''fleet.
+*BBVs are '''not recommended''' as they will direct the fleet to the E-node, which will probably lead to annihilation at the hands of [[PT Imp Pack|PT Imp Packs']] torpedo cut-ins at harder difficulty settings.
+*One of the only ways to achieve air superiority at the boss without Akitsu Maru (which is required to survive her attacks on Medium), is to have 2 or 3 maxed proficiency Zuiun variants loaded on CAV, AV or BBV. Tone-class CAVs are especially useful. Although, this is not recommended as equipment will have to be sacrificed in order to gain Air Superiority. But due to the resource requirements of LSC, this is the most effective option for Admirals who do not already possess Akitsu Maru. Against the Final boss on Medium, the only way to get Air Superiority without Akitsu Maru is to have 8 maxed proficiency Zuiun variants loaded on two BBVs.
+*If your Air Superiority with [[Akitsu Maru]] is high enough without using all of her equipment slots, it is desirable to equip [[Daihatsu-class Landing Craft]] on her remaining slots, to help decrease the TP Health Bar faster.
+*Just like in E-2, it is highly recommended to bring multiple [[Drum Canister]]s on your Destroyers to decrease the TP Health Bar faster. At higher difficulties sinking the boss becomes more difficult (especially when using BBVs as they cannot use the ACDGIHK route), it is more efficient to aim for clearing with A-rank with the maximum number of drums and Daihatsu equipped rather than to attempt to S-rank the boss.
+*Since the main fleet cannot participate in night battles and goes second in day battles, it is preferable to load them up with [[Drum Canister]]s while letting the escort fleet use the equipment for double/cut-in attacks to secure the win. 
+*On the final clear, use maximum combat setups in order to increase the chances of getting through the boss's final form, as TP-depletion is no longer a consideration.
+*Air parity is a practical minimum as getting hit by double attacks by Ta-class battleships and the AV princess is generally not survivable.
+
+====Drop Farming (Easy difficulty)====
+*Asashimo drops only on nodes F and H. Most of the other event-only drops in the map drop in the boss node. When farming Asashimo, terminate at node F - Node H's drop rate is low in Easy, and getting to node H involves taking inordinate amounts of damage from the yasen at node E.
+*For those who intend to obtain all event-only drops and also complete the map on a higher difficulty, the most efficient route would be to farm ACEGIHK or ACDGIHK boss routes on easy with full power setups for S-ranks until all drops except Asashimo are obtained, swap to ABF and farm on easy until Asashimo is obtained, then end with ACDGIHK route on the desired difficulty with drums, aiming only to get A-rank for gauge depletion followed by a B+rank Final clear. Admirals who already possess Asashimo or have no interest in her will only farm ACEGIHK or ACDGIHK Easy, and clear ACDGIHK in their target difficulty.
+*The [[PT Imp Pack]]s are the main threats in node E. On Easy, it is still possible to cross as very few of them have the ability to cut-in, so the [[Fleet Command Facility]] can take care of them. In higher difficulties, they are significantly larger threats as there will be multiple torpedo CI users. Do this node with the Line Abreast formation as sinking targets reliably is more important than the yasen CI suppression effect of Echelon. Your CAs should be last in the escort fleet firing order as they are unlikely to hit the [[PT Imp Pack]]s. E is a viable route if the Admiral requires BBVs to secure S-rank wins on the Easy boss node, but results in the need for more repairs as the main fleet's double shelling phase because the AV Princess gets to shoot twice, and node E can lead to chuuha/taiha than more often then node D.
+
+{{clear}}
+
+==Drop list==
+{{DropList
+|nodes = B, C, D, E, F, H, K
+|boss = K
+|Akashi : K/Easy
+|Akizuki : K/Easy
+|Asashimo : F/Easy, H/Easy
+|Hatsukaze : K/Easy, H/Easy, F/Easy
+|Maruyu : F/Easy, K/Easy, H/Medium
+|Mizuho : K/Easy
+|Umikaze : K/Easy
+|Akigumo: K/Easy, H/Easy, F/Easy
+}}
+
+{{:Fall 2015 Event/E-3/Enemy patterns}}
+[[Category:Events]]

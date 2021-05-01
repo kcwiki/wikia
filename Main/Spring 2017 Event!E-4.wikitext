@@ -1,0 +1,132 @@
+{{Event/MapPageHeader
+|form = ks0DBug5hCxlzmRp2
+|spreadsheet = 1F1dp7824akFfapnp1CE5ac_MgVvxgo_ALvmcZ8pY8kw
+|thread = 547888
+}}
+{{Event/MapInfo
+|en = Interception! Protect of the Warrior Spirit
+|jp = 迎撃! 士魂の護り
+|romaji = Gēgeki! Shikon no Mamori
+|tag = E3
+|mechanics = Abyssal Combined Fleet@Abyssal Combined Fleet, Land Base Aerial Support@Land Base Aerial Support
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_easy = 2900
+|hp_medium = 3150
+|hp_hard = 3300
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = 5
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = 
+|reward_easy_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_1_x = 1
+|reward_easy_2 = [[File:Prototype Flight Deck Catapult 065 useitem.png{{!}}50px{{!}}link=Prototype Flight Deck Catapult]]
+|reward_easy_2_x = 1
+
+|reward_medium_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_medium_1_x = 1
+|reward_medium_2 = [[File:Skilled Crew Member Icon.png{{!}}50px{{!}}link=Skilled Crew Member]]
+|reward_medium_2_x = 1
+|reward_medium_3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_3_x = 1
+|reward_medium_4 = [[File:Prototype Flight Deck Catapult 065 useitem.png{{!}}50px{{!}}link=Prototype Flight Deck Catapult]]
+|reward_medium_4_x = 1
+
+|reward_hard_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_hard_1_x = 1
+|reward_hard_2 = [[File:Skilled Crew Member Icon.png{{!}}50px{{!}}link=Skilled Crew Member]]
+|reward_hard_2_x = 1
+|reward_hard_3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Bomb-carrying Type 1 Fighter Hayabusa Model III Kai (55th Squadron)|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = [[File:Prototype Flight Deck Catapult 065 useitem.png{{!}}50px{{!}}link=Prototype Flight Deck Catapult]]
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-4 Branching Rules
+
+|0 -> A = 
+* If the fleet contains SS(V):
+** Fleet will always go to A, anything else is irrelevant.
+* If the fleet does not contain SS(V):
+** Meet '''all''' of the following requirements:
+*** No CV(L/B) allowed
+*** Fast Fleet
+*** Amount of CL ≧ 1
+*** Amount of DD ≧ 3
+|0 -> D = * Does not meet the requirements to go to A.
+
+|A -> B = * Fixed Route
+
+|C -> F/empty = * Fail the LoS check
+|C -> E = * Pass the LoS check
+
+|D -> A = * ???
+|D -> G = * ???
+
+|J/empty -> L, N = * Active Branching
+
+|L -> K = * ???
+|L -> O = * ???
+
+|N -> O = * ???
+|N -> Q = * ???
+
+|O -> P = * Fixed route?
+
+|K -> I = * Pass the LoS check
+|K -> M/empty = * Fail the LoS check
+}}
+
+===Recommended Fleet===
+'''NOTE''': All Battleships (BB(V)) cannot enter this map.
+*'''Route''': A - B - C - E - H - I
+**1 CA(V) 4 CV(B) 1 SS(V)
+**2 CA(V) 3 CV(B) 1 SS(V) 
+**2 CA(V) 3 DD 1 CL
+***This formation avoids the high potential for SS(V)s to be heavily damaged at node C, at the expense of air power due to the lack of CV(B)s. Recommended to bring a DD capable of AACI.
+
+===Map Guide/Information===
+*The [[Northernmost Landing Princess]] is a hybrid Installation Boss.
+**A very notable difference between her and the other Installations, is that she is '''not''' immune to {{Torpedo}} stat. This means that during a night battle, the ships with torpedo capabilities will deal full damage against her. Note that she is still immune to torpedo based attacks, which does not include the airstrikes.
+**She is very weak against {{EquipmentLink|Type 3 Shell}}, {{EquipmentLink|WG42 (Wurfgerät 42)}}, and {{EquipmentLink|Toku Daihatsu Landing Craft}}/{{EquipmentLink|Toku Daihatsu Landing Craft + 11th Tank Regiment}}.
+**{{EquipmentLink|Daihatsu Landing Craft}}, {{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)}}, and {{EquipmentLink|Special Type 2 Amphibious Tank}} are not effective.
+**Just like all other Installation-types, CVs equipped with Dive Bombers cannot attack her excluding the Opening Aerial Strike.
+**If all of her Bombers are shot down to 0, she will be disabled from attacking your fleet during the Day Battle. (She will still attack you during Night Battle if she is not Heavily Damaged)
+*It is recommended that you bring CAVs and equip them with both WG42 and Type 3 Shell for damage bonus.
+**A CA(V) only having a single Type 3 Shell or WG42 equipped may have trouble giving out a good damage output against the Boss.
+*It is recommended that you have around ~360 Fighter Power from the Start, assuming Hard mode.
+**333 Air power is needed for AS+ (Air Supremecy) on C node, and 348/408 for AS+ on E node.
+**With the use of 4 CV(B)s, just bringing a large amount of bombers and few fighters can reach this amount of Air Power with ease. (Please make sure to check your Air Power accordingly)
+** The fighter power requirement for E node depends on which formation you encounter and is always random.
+*There are 3 total [[Land Base Aerial Support]] available, but only 2 may be used for Sortie mode.
+**You can use 4 [[List of Land-based Attack Aircraft by stats|Land-based Attack Aircrafts]] and/or [[List of Torpedo Bombers by stats|Torpedo Bombers]] on your Land-base, and send them all to the Boss node, as the Enemy Air Power in Boss node is weak. However, if the bombers lack any {{AA}} stat, considering substituting one of the bombers with a Fighter instead.
+**There is an Enemy Air Raid against your [[Land Base Aerial Support|Land Base]]; however, depending on your difficulty, the amount of raid will vary:
+***'''Easy''': None
+***'''Medium''': 1
+***'''Hard''': 2
+*** Setup one of your LBAS with [[List of Fighters by stats|Fighters]] with high stats and/or [[List of Interceptor Fighters by stats|Interceptors]] on Air Defense mode to defend your bases from attacks. Keep in mind that you will not be raided on Easy, so in case you plan on using all your bases for sorties in E-5, leave the third base empty for now.
+**Since the distance between Air Base and Boss node is only 1, you can put [[List of Jet-powered Fighter-Bombers by stats|jets aircraft]] to activate Jet Assault phase without equipping them on Shoukaku or Zuikaku (since equip Jets will prevent them to attack boss during Shelling Phase.)
+*The SS(V) may choose to equip a [[Type 98 Reconnaissance Seaplane (Night Recon)]] to give some support during Night Battle for the CA(V) to sink the Boss.
+*SS(V) may equip WG42 combined with Type 2 Amphibious Tank to deal damage to the boss.  However, SSV are very likely to be heavily damaged at the boss.
+*The [[Light Carrier Nu-Class|Light Carrier Nu-Class Kai Elite/Flagship]] is capable of doing Pre-emptive ASW Strike via Bombing against your Submarine, and they are capable of damaging your SS(V) down to Medium/Heavy Damage.
+*The LOS requirement for node C are 17.3 (formula 33). LOS requirement for node K are still under investigation.
+
+===Special Damage Modifiers===
+*Any carriers equipped with plane that list from below will deal extra damage to all enemies in boss node during shelling phase. The bonuses from different plane will be multiplied together.
+** {{EquipmentLink|Type 97 Torpedo Bomber}} give 1.4x extra damage.
+** {{EquipmentLink|Type 97 Torpedo Bomber (931 Air Group)}}, {{EquipmentLink|Type 97 Torpedo Bomber (Tomonaga Squadron)}}, {{EquipmentLink|Type 97 Torpedo Bomber (Murata Squadron)}} give 1.3x extra damage.
+** {{EquipmentLink|Type 97 Torpedo Bomber (Skilled)}} does '''not''' give any bonus damage.
+** {{EquipmentLink|Type 99 Dive Bomber (Egusa Squadron)}} and {{EquipmentLink|Suisei (Egusa Squadron)}} give 1.2x extra damage.
+** {{EquipmentLink|Jet Keiun Kai}} and {{EquipmentLink|Kikka Kai}} give 1.3x extra damage.
+
+'''Warning:''' Even though Dive Bombers and Jets do give bonus damages against the boss, equipping them on carriers will still effectively prevent them from shelling the boss during the shelling phase.
+
+{{Event/MapPageFooter}}

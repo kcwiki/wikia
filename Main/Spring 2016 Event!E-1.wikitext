@@ -1,0 +1,78 @@
+__NOTOC__
+<!--{{Ambox
+|type = protection
+|title = Editing this article is limited to wikia users for a week of the event.
+|message = This is to prevent trolling, vandalizing, conflicting or unwarranted edits.
+|users = [[User:McDerp|McDerp]]
+}}-->
+{{Notice
+|style = text-align:left
+|'''Report threads'''
+*Report your fleet composition [[Thread:418714|here]]
+*Report enemy pattern [[Thread:418703|here]]
+}}
+
+{{Spring 2016 Event Nav}}
+==Information==
+{{Infobox
+|title = Secure the Frontline Naval Superiority![[File:Spring 2016 Event Ship Tag Combined Fleet.png]]
+|kanji = 前線制海権を確保せよ！
+|romaji = Zensen seikaiken o kakuho seyo!
+|image = Spring_2016_E1_Banner.png
+|label1 = Mechanics
+|value1 = [[Events/Mechanics#Combined_Fleet|Combined Fleet]]<br/>[[Events/Mechanics#Node_specific_details|Selection node]]<br/>[[Events/Mechanics#Ship_Locking|<p style="background-color:lightblue;color:white">Ship Locking</p>]] 
+|label2 = [[Spring_2016_Event/Mechanics#map-hp|Boss gauge <sup>?</sup>]]
+|value2 = '''Easy''': 440 HP<br/>'''Normal/Hard''': 450 HP
+|label3 = Kills required
+|value3 = '''All:''' 5 kills
+|label4 = Reward
+|value4 = '''Easy:'''<br>{{ItemStack|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]] | text = 1 }}{{ItemStack|item = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]] | text = 1 }}{{ItemStack|item = {{EquipmentCardKai|Daihatsu Landing Craft|size=50px}} |text = 1}}<br/>'''Normal:'''<br>{{ItemStack|item = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]] | text = 1 }}{{ItemStack|item = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]] | text = 1 }}{{ItemStack|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]] | text = 1 }}{{ItemStack|item = {{EquipmentCardKai|Daihatsu Landing Craft |size=50px}} |text = 1}}<br/>'''Hard:'''<br>{{ItemStack|item = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]] | text = 1 }}{{ItemStack|item = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]] | text = 2 }}{{ItemStack|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]] | text = 2 }}{{ItemStack|item = {{EquipmentCardKai|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|size=50px}} |text = 1}}<br/>
+}}
+
+===Branching rules===
+*This map is a [[Combined Fleet]] map
+
+All fleets start at node B.
+*Fast fleet with at least 5 DD will route B → D → E.
+*Otherwise route B → A → C → E.
+**E → F → I → G can be selected by the player.
+**E → G can be selected by the player.
+***If LoS check is failed, deadend offroute G → K. LoS requirement is unknown, but very low.
+***Otherwise G → H → J.
+
+===Recommended compositions===
+*2 FBB + 2 CA + 2 CVL | CL + 5 DD will route B → D → E → G → H → J.
+*4 CA + 2 CVL | CL + 5 DD will route B → D → E → G → H → J.
+*Note that these require '''Fast''' CVLs like Shouhou, Zuihou, Chitose, Chiyoda and Ryuujou.
+
+===Tips===
+*'''One time Notice''': Check the [[Spring_2016_Event/Info#Maps|Map Ship-locking Info]] to see how the [[Events/Mechanics#Ship_Locking|Ship Locking]] mechanics are distributed in this event. Read and prepare your fleet accordingly to avoid "screwing" yourself over. Remember, no Ship-lock in Easy. 
+*Nodes G and C have subs; node A, D and H have Ru-class battleships.
+*On Hard difficulty, H has either a Battleship Princess and 2 Ru-class battleships (Flagship), or an Aircraft Carrier Princess and a Ru-class battleship (Flagship).
+**Boss node has 2 PT Imp Packs, so Support Fleet or the Double Line-equivalent (Formation 2) may be desired to dispatch them. Additionally, using secondary gun can help.
+**Hard may not be preferable for admirals low on resources and/or buckets, due to the nature of node H (preboss node).
+***However, the Landing Force Daihatsu is only available on Hard. Admirals intending to challenge E-2 on Medium+ should take note of this.
+*[[Fleet Command Facility]] is recommended to reduce the rate of retreats on Hard, especially when using a 1CL 5DD Escort Fleet.
+
+{{clear}}
+
+==Drop list==
+<!-- Refer to http://kancolle.wikia.com/wiki/Template:DropList/doc -->
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = C, F, H, I, J
+|boss = J
+|Agano: J/Easy
+|Akitsu Maru: I/Easy{Hard: 1.6% per S}
+|Hayashimo: H/Easy, I/Easy, J/Easy
+|Hayasui: H/Easy{Hard: 0.9% per S}, I/Easy{Hard: 1.9% per S}
+|Kiyoshimo: H/Easy, I/Easy, J/Easy
+|Maruyu: I/Easy{Hard: 1.6% per S}, J/Easy{Hard: 2.1% per S}
+|Taigei: J/Easy
+|Uzuki: C/Easy, F/Easy, H/Easy, I/Easy, J/Easy
+|Yayoi: C/Easy, F/Medium, H/Easy, I/Easy, J/Easy
+|Yukikaze: J/Easy
+|I-19: H/Easy
+}}
+{{:Spring 2016 Event/E-1/Enemy patterns}}

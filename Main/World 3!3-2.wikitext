@@ -1,0 +1,86 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Kis Island
+|jp = キス島沖
+|romaji = Kisu-tō oki
+|exp_hq = 120
+|exp_hq_boss = 1740
+|strategy_name = [[wikipedia:Japanese_occupation_of_Kiska|Kis Island Withdrawal Tactics]]
+|strategy_name_ja = キス島撤退作戦
+|strategy_info = With a fast fleet of which main force is destroyers, rush into Kis Island in Northern waters surrounded by enemies!
+Rescue the garrison force safely!
+|strategy_info_ja = 駆逐艦を主力とした高速艦隊で、敵に包囲された北方海域キス島に突入！守備隊を無事収容せよ！
+}}
+{{MapBranchingTable
+|title = 3-2 Branching Rules
+|expand = true
+|id = 3-2
+|0 -> A = * Do not meet the requirements to go to C.
+|0 -> C = 
+* Meet '''ANY''' of the following requirements:
+** Fleet contains (F)BB(V) or CV(L/B)
+** Amount of CL = 1 '''AND''' amount of DD ≥ 4
+** Amount of DD = 6
+
+|C -> A, E/empty, G/storm = 
+* Meeting '''ANY''' of the following '''FORCES''' you to A:
+** Amount of DD ≤ 3
+** Amount of (F)BB(V)+CV(B) ≥ 2
+*Go to G if fleet contains slow ship
+*Meet '''ALL''' of the following to go to E
+**Fleet contains 6 ships
+**'''Fastest''' Fleet
+**Fleet contains CL and DD only
+**4 ships carrying radars
+*The following affects your chances of going to E if you don't meet any of the above conditions
+** Fleet contains AO '''AND''' Fast Fleet, ~40% E, 60% G.
+** Fast+ Fleet, ~10% E, ~90% G.
+** Fastest Fleet, ~50% E, 50% G.
+* Otherwise, go to G.
+
+|E/empty -> D/empty, F/empty =
+* If fleet contains AO, ~25% D, ~75% F.
+* Otherwise, go to F.
+
+|G/storm -> F/empty, H, J = 
+* Meeting '''ANY''' of the following '''FORCES''' you to J:
+** Fleet contains CV(B) or SS(V)
+** Amount of (F)BB(V)+CV(L/B) ≥ 2
+* If Slow Fleet, go to H.
+*Meet '''ALL''' of the following to go to F
+**Fleet contains 6 ships
+**'''Fast+''' Fleet
+**Fleet contains CL and DD only
+**Fleet carries at least 1 radar
+* The following affects your chances of going to F if not meeting any of the above conditions
+** 6 DD, ~50% F, ~50% H.
+** 1CL + 5DD, ~30% F, ~70% H.
+** Fleet contains AO '''AND''' Fast Fleet, ~40% F, 60% H.
+* Otherwise, go to H.
+
+|H -> F/empty = * Amount of CL+DD+AO = 6
+|H -> I/resource = * Do not meet the requirements to go to F.
+}}
+
+=='''Important:'''==
+*[[World_1:_鎮守府海域#/1-5|1-5]] is required to unlock [[World_3/3-2|3-2]]
+*Leveling in 3-2C with submarine tanking is still possible (like 3-2A) but not efficient anymore as the EXP you obtained is about half less than before.
+
+==Compositions==
+*According to the branching rules, it's possible to go {{Event/Route|C|red|E|blue|F|blue|L|red}} all the time by using the '''Fastest fleet consisting of 1 CL 5 DD while having 4 ships carrying radar'''. But due to the massive amount of {{EquipmentLink|New Model High Temperature High Pressure Boiler}} needed in order to effectively form a Fastest fleet, this comp is generally not recommended and thus can be ignored.
+<br />
+*{{Event/Route|C|red|E|blue|F|blue|L|red}} '''or''' {{Event/Route|C|red|G|purple|F|blue|L|red}}
+**1 CL 5 DD
+**6 DD
+***Requires '''Fast+''' fleet and fleet carries at least 1 radar
+*{{Event/Route|C|red|G|purple|H|red|F|blue|L|red}}
+**1 CL 5 DD
+**1 AO 1 CL 4 DD
+**6 DD
+***Requires '''Fast''' fleet as slow ships such as {{ShipLink|Samuel B. Roberts}} will force node {{Event/Route|H|red}}
+***Assuming the fleet is '''Fast''', there is 50% chance it can skip node {{Event/Route|H|red}}
+
+==Ammo Farming==
+Bring 1 ship equipped with Damage Control Crew or Damage Control Goddess, continue the sortie to the ammo node after node A. Damage control will not be consumed. This DOESN'T work for (F)BB(V) or CV(L/B). Any other ship type will route to A.
+
+{{Map/Footer}}

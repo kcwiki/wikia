@@ -1,0 +1,259 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Commence Operation Shō-Ichi-Gō!
+|jp = 捷一号作戦、作戦発動!
+|romaji = Shō-Ichi-Gō Sakusen、Sakusen Hatsudō!
+|tag = E3
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Ship Locking@Events/Mechanics#Ship_Locking, Unlockable Nodes@Events/Mechanics#Node_specific_details, Land Base Aerial Support@Land Base Aerial Support, Striking Force@Striking_Force, LoS Check@Events/Mechanics#LoS_Check
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_easy = 660 HP, 530 TP, 1225
+|hp_medium = 765 HP, 570 TP, 1400
+|hp_hard = 1020 HP, 700 TP, 1575
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|show_kills = 
+|kills_all = 
+|kills_easy = 
+|kills_medium = 
+|kills_hard = 
+|reward_all = 
+|reward_easy_1 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_easy_1_x = 2
+|reward_easy_2 = {{EquipmentCardKai|Fleet Command Facility|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Type 4 Fighter Hayate|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_medium_3_x = 2
+|reward_medium_4 = {{EquipmentCardKai|Fleet Command Facility|size=50px}}
+|reward_medium_4_x =  1
+|reward_medium_5 = {{EquipmentCardKai|Type 4 Fighter Hayate|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_2_x = 3
+|reward_hard_3 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = {{EquipmentCardKai|Fleet Command Facility|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Type 4 Fighter Hayate|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Toukai (901 Air Group)|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Starting Points
+
+|0 -> 1 =  
+* Do not meet the requirements to start at either 2 or 3.
+|0 -> 2 =  
+* Meet all of the following requirements:
+** Starting point 2 is unlocked.
+** Transport Combined Fleet
+** Do not meet the requirement to start at 3.
+|0 -> 3 = 
+* Meet all of the following requirements:
+** Starting point 3 is unlocked.
+** Carrier Task Force
+}}
+
+{{MapBranchingTable
+|title = E-3 Branching Rules Part 1
+
+|B -> C = 
+* Do not meet the requirements to go to D.
+|B -> D = 
+* Meet one of the following requirements while using a Transport Combined Fleet:
+** All 3 members of the Troop Transport Unit are present.
+** All 3 members of the Second Striking Force Escort are present.
+* Or meet all of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V) = 0 '''OR''' 2
+** Main Fleet contains no CV(L/B) while using a Surface/Carrier Task Force.
+
+|C -> D = 
+* Do not meet the requirements to go to F.
+|C -> F =
+* Meet all of the following requirements:
+** Surface Task Force
+** Fast Fleet
+** Main Fleet contains no CV(L/B)
+** If the amount of Kurita Fleet members ≧ 10:
+*** Amount of (F)BB(V) ≦ 3
+** Else:
+*** Amount of (F)BB(V) ≦ 1 (Hard?)
+
+|E -> F =
+* Do not meet the requirements to go to H.
+|E -> H =
+* Meet all of the following requirements:
+** Node H is unlocked.
+** Transport Combined Fleet
+
+|F -> G = * Fixed Route
+
+|H -> I/empty = * Fail the LoS check.
+|H -> J = * Pass the LoS check.
+}}
+
+{{MapBranchingTable
+|title = E-3 Branching Rules Part 2
+|order = M, K, N, P, R
+
+|M/empty -> K, P = * Active branching
+
+|K -> L = * ???
+|K -> N = * ???
+
+|N -> L = * Do not meet the requirements to go to Q.
+|N -> Q = 
+* Meet all of the following requirements:
+** Amount of (F)BB(V) + CV(L/B) ≦ 6
+** If Escort contains a battleship:
+*** Fleet must be Fast.
+
+|P -> N = 
+* Do not meet the requirements to go to either Q or R.
+|P -> Q = 
+* Meet all of the following requirements:
+** Do not meet the requirements to go to R.
+** Escort may contain no (F)BB(V)
+** Amount of (F)BB(V) + CV(L/B) ≦ 5.
+** Amount of CV ≦ 1 (CVB does not count).
+** Amount of Ozawa Fleet members ≧ 3/4/6 on Easy/Medium/Hard.
+|P -> R = 
+* Meet all of the following requirements:
+** Escort may contain no (F)BB(V)
+** Amount of (F)BB(V) + CV(L/B) ≦ 3
+** Amount of CV ≦ 1 (CVB does not count).
+** Amount of Ozawa Fleet members ≧ 3/4/6 on Easy/Medium/Hard.
+** ???
+
+|R -> S = * Pass the LoS check.
+|R -> T/empty = * Fail the LoS check.
+}}
+
+===Task Description:===
+主力艦隊を作戦海域へ投入、また、作戦を支援する前線へ基地航空隊を展開！敵艦隊を迎撃する。捷一号作戦発動！
+
+Move the main fleet to the operation zone, and establish LBAS at the frontline to support the operation! We will intercept the enemy fleet. Commence Operation Sho-go!
+
+===Introduction===
+E-3 is composed of Three Parts for you to accomplish in order to fully clear the Operation.
+*Phase 1: Defeat the [[Air Defense Princess]] by destroying her HP Gauge Bar
+**Surface Task Force must be used.
+*Phase 2: Clear the Transport Operation by depleting the TP Bar.
+**Transport Escort Combined Fleet must be used.
+*Phase 3: Defeat the [[Aircraft Carrier Princess]] by destroying her HP Gauge Bar.
+**Carrier Task Force must be used.
+*'''LBAS''': 2 [[Land Base Aerial Support|Land Base Aerial Supports]] are available to sortie in this map.
+**4+ range is required to reach the first boss node G.
+**2+ range is required to reach the second boss node J.
+**6+ range is required to reach the third boss node S.
+
+===Historical Fleet: Battle of Cape Engaño===
+====The Center Force (Kurita Fleet)====
+The most powerful attacking force during the Battle of Leyte Gulf led by Takeo Kurita. Members of the Kurita Fleet will gain a post-cap damage bonus on node G.
+* (F)BB: {{ShipLink|Yamato}}, {{ShipLink|Musashi}}, {{ShipLink|Nagato Kai Ni|text=Nagato}}, {{ShipLink|Kongou Kai Ni|text=Kongou}}, {{ShipLink|Haruna Kai Ni|text=Haruna}}
+* CA(V): {{ShipLink|Atago Kai|text=Atago}}, {{ShipLink|Takao Kai|text=Takao}}, {{ShipLink|Maya Kai Ni|text=Maya}}, {{ShipLink|Choukai Kai Ni|text=Choukai}}, {{ShipLink|Myoukou Kai Ni|text=Myoukou}}, {{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kumano Kai Ni|Kumano Carrier Kai Ni|text=Kumano}}, {{ShipLink|Suzuya Kai Ni|Suzuya Carrier Kai Ni|text=Suzuya}}, {{ShipLink|Tone Kai Ni|text=Tone}}, {{ShipLink|Chikuma Kai Ni|text=Chikuma}}
+* CL: {{ShipLink|Noshiro Kai|text=Noshiro}}, {{ShipLink|Yahagi Kai|text=Yahagi}}
+* DD: {{ShipLink|Shimakaze Kai|text=Shimakaze}}, {{ShipLink|Hayashimo Kai|text=Hayashimo}}, {{ShipLink|Okinami Kai|text=Okinami}}, {{ShipLink|Naganami Kai|text=Naganami}}, {{ShipLink|Nowaki Kai|text=Nowaki}}, {{ShipLink|Kiyoshimo Kai|text=Kiyoshimo}}, {{ShipLink|Urakaze Kai|text=Urakaze}}, {{ShipLink|Yukikaze Kai|text=Yukikaze}}, {{ShipLink|Hamakaze Kai|text=Hamakaze}}, {{ShipLink|Isokaze Kai|text=Isokaze}}
+
+====Shō-Ichi-Gō Troop Transport Unit====
+Members of the Troop Transport Unit will gain a post-cap damage bonus on node J.
+* CA: {{ShipLink|Aoba}}
+* CL: {{ShipLink|Kinu Kai Ni|text=Kinu}}
+* DD: {{ShipLink|Uranami}}
+
+====The Second Striking Force (Shima Fleet) Escort Unit====
+* DD: {{ShipLink|Hatsuharu Kai Ni|text=Hatsuharu}}, {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}}, {{ShipLink|Wakaba Kai|text=Wakaba}}
+
+====The Northern Force (Ozawa Fleet)====
+The Northern Force led by Jisaburō Ozawa during the Battle of Leyte Gulf. Members of the Ozawa Fleet will gain a post-cap damage bonus on node S.
+* CV(B): {{ShipLink|Zuikaku Kai Ni A|text=Zuikaku}}
+* CVL: {{ShipLink|Chitose A|Chitose Carrier Kai Ni|text=Chitose}}, {{ShipLink|Chiyoda A|Chiyoda Carrier Kai Ni|text=Chiyoda}}, {{ShipLink|Zuihou Kai|text=Zuihou}}
+* BBV: {{ShipLink|Hyuuga Kai|text=Hyuuga}}, {{ShipLink|Ise Kai|text=Ise}}
+* CL: {{ShipLink|Isuzu Kai Ni|text=Isuzu}}, {{ShipLink|Ooyodo Kai|text=Ooyodo}}, {{ShipLink|Tama Kai|text=Tama}}
+* DD: {{ShipLink|Akizuki}}, {{ShipLink|Hatsuzuki}}
+
+'''Note:''' Keep in mind that the historical requirement requires you to bring the whole set of either the Troop Transport Unit or the Shima Escort Unit during the 2nd Phase, mixing them will not fulfill the requirement.
+
+{{clear}}
+
+==Part 1: Defeating the Air Defense Princess==
+*You must use Surface Task Force Combined Fleet.
+*You have two options you may take for this Part
+===Shortest Route===
+*Route: A - B - C - F - G
+*Requires for you to have 0 CV(L) in the main fleet.
+** You can still bring 1 Fast CVL in the escort fleet and equip her with {{EquipmentLink|Night Operation Aviation Personnel}} to enable participation in night battle.
+** Equipping Seaplane Fighters are recommended to achieve Air Parity or higher at the boss node, especially at higher difficulties.
+*Requires you to have a Fast Fleet, and only 1 Battleship.
+*Fleet Used: 1 FBB 4 CA(V) 1 CL/DD + 1 CL 2 DD 1 CA/CVL 2 CLT
+**A compromise between route and firepower/survivability, as the CLTs could deliver preemptive strikes to enemy surface vessels; while reducing the risk of having your DDs crippled in 2nd fleet.
+
+===Longest Route===
+*Route: A - B - C - D - E - F - G
+*Player is free to compose any kind of Fleet they want through Surface Task Force, including slow ships.
+**Recommended Fleet is 4 BB(V) 2 CVL + 1 CL 2 DD 3 CLTs
+*This route will consist of 2 Submarine nodes, 2 Air Raid nodes, and 2 Normal Battles.
+**It is recommended that you bring at least 2 OASW capable DD/CL (ex. {{ShipLink|Isuzu/Kai Ni}}, {{ShipLink|Asashio/Kai Ni D}}) for the Submarine nodes.
+*Although it a much longer route (with two Submarine nodes), it allows the player to establish a fleet with greater firepower which can reach and take down the boss reliably as long as the ASW is properly addressed.
+
+==Part 2: Transport Operation==
+*You must fully clear the TP Gauge Bar of this Part.
+*You must use Transport Escort Combined Fleet.
+*Just like any other Transport Operations, you must obtain at least a minimum of A-Rank Victory to deplete the TP Gauge Bar.
+*It is recommended for you to bring some OASW-capable DD/CL, especially if you are doing Medium/Hard
+*During this Phase, your [[Land Base Aerial Support]] will be attacked by Enemy Air Raids.
+**'''DOES NOT''' occur in Easy mode.
+**For Hard mode, the Player is required to have their LBAS fulfill a 0 Damage Defense against the Enemy Air Raid at least once in order to open up the Part 3.
+***For this requirement, you are recommended to have your LBAS setup with 4 of your best [[List of Interceptor Fighters by stats|Interceptors]] and/or [[List of Fighters by stats|Fighters]] on both LBAS and set them to Air Defense.
+***This [[User_blog:Setakat/Interceptor_Fighter_Effectiveness_Reference|guide]] lists out the effective fighter power for all interceptors and fighters in LBAS.
+***Since the enemy Air power is too high to score Air Supremacy, multiple sorties may be required to score a 0 Damage Defense.
+*You may wish to use Support Expedition for Pre-Boss nodes as it has many enemies who can potentially hit your ship(s) down to Heavy Damage with ease, especially so in Medium and Hard mode.
+
+==Part 3: Defeat the Aircraft Carrier Princess==
+*You must completely defeat the [[Aircraft Carrier Princess]] by destroying her Boss HP Gauge Bar.
+*You are required to use Carrier Task Force
+*You require a certain number of Ships from the Historical Ozawa Fleet as listed above
+**Requires at least 3/4/6 members minimum for Easy/Medium/Hard mode.
+*Hard mode requires a very high Fleet Air Power. At least 570~600 for Pre-Final and 700~720 for Final Kill.
+*To take the P - R route, you must only have a maximum of 3 CV(L/B)+ (F)BB(V) in the fleet.
+**If you bring 4 CV(L) in the fleet, you will be taken to P - Q routing, but as Node Q is a Minor Air Raid node, you may wish to just take this extra node to bring more heavy ships.
+*Historical Route: O-M-P-R-S
+**1CV(B) 2CVL 3XX (XX cannot be (F)BB(V) or CV(L/B)) + 1CL 2DD 3XX (XX ships of your choice)
+***Must be fast fleet
+*Historical Route: O-M-P-Q-R-S
+**1CVB 2CVL 1CV 1(F)BB(V) 1XX (XX cannot be (F)BB(V) or CV(L/B)) + 1CL 2DD 3XX (XX are ships of your choice)
+**2CVB 1-2CVL 0-1CV 1(F)BB(V) 1XX (XX cannot be (F)BB(V) or CV(L/B)) + 1CL 2DD 3XX (XX cannot be FBB) (XX are ships of your choice)
+**1CV 3CVL 1(F)BB(V) 1XX (XX cannot (F)BB(V) or CV(L/B)) + 1CL 2DD 3XX (XX are ships of your choice)
+
+==Map progression==
+{{#tag:gallery|
+Fall 2017 Event E-3 part 1.png{{!}}Map on HP phase at node G.
+Fall 2017 Event E-3 part 2.png{{!}}Map on TP phase at node J.
+Fall 2017 Event E-3 Map.png{{!}}Full map on HP phase at node S.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+{{clear}}
+
+==LBAS Flight Range==
+[[File:Fall 2017 Event E3 Flight Range.jpg|500px|center]]
+{{Event/MapPageFooter}}

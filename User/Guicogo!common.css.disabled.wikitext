@@ -1,0 +1,2774 @@
+/*
+=================================
+     Kancolle wiki darkmode
+=================================
+Version: 0.2
+Release date: 28-jan-2018
+Source: Runescape wiki darkmode
+GitHub: https://github.com/CephHunter/RS-wiki-DarkMode
+
+
+If on firefox, add "@-moz-document domain("kancolle.wikia.com") { }" around code
+*/
+.WikiaArticle .infobox {
+  background-color: #36393E;
+/*  color: #c5c5c5; */
+  color: #36393E;
+  border: none;
+}
+table.wikitable {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: none;
+}
+table.wikitable > tr > td,
+table.wikitable > * > tr > td {
+  border: solid 1px #52555a;
+}
+table.wikitable > tr > th,
+table.wikitable > * > tr > th {
+  background-color: #2F3136;
+  border: solid 1px #52555a;
+}
+.lighttable .highlight-over,
+#pengLocations .highlight-over {
+  background-color: #006d13;
+}
+.lighttable .highlight-on,
+#pengLocations .highlight-on {
+  background-color: #1e5400;
+}
+table.jquery-tablesorter.sortable th.headerSort .chevron,
+table.jquery-tablesorter2 th.headerSort .chevron {
+  border-color: #c5c5c5 transparent transparent;
+}
+table.jquery-tablesorter.sortable th.headerSort .chevron:first-child,
+table.jquery-tablesorter2 th.headerSort .chevron:first-child {
+  border-color: transparent transparent #c5c5c5;
+}
+.table-na {
+  background: #2f3136;
+}
+table.wikitable tr[style*="background"] td {
+  color: #000;
+}
+table.wikitable tr[style*="background"] td a {
+  color: #458eba;
+}
+table.wikitable td[style*="background"],
+table.wikitable th[style*="background"] {
+  color: #000;
+}
+table.wikitable td[style*="background"] a,
+table.wikitable th[style*="background"] a {
+  color: #458eba;
+}
+.article-thumb,
+.gifresize,
+.extimage,
+.WikiaArticle .thumbinner {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  background-image: none;
+}
+.article-thumb .caption,
+.gifresize .caption,
+.extimage .caption,
+.WikiaArticle .thumbinner .caption,
+.article-thumb .thumbcaption,
+.gifresize .thumbcaption,
+.extimage .thumbcaption,
+.WikiaArticle .thumbinner .thumbcaption {
+  width: auto;
+  color: #c5c5c5;
+  border-top: solid 1px #52555a;
+}
+.musicplayer {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+img.tex {
+  -webkit-filter: invert(0.85);
+  filter: invert(0.85);
+}
+.rsw-tooltip {
+  background: #36393E;
+}
+.rsw-tooltip a {
+  color: #5799c1;
+}
+#rsw-config {
+  border-color: #2f69a8;
+}
+#rsw-config #rsw-config-header {
+  background-color: #2F3136;
+  color: #c5c5c5;
+  border-bottom-color: #52555a;
+}
+#rsw-config #rsw-config-footer {
+  background-color: #2F3136;
+  color: #c5c5c5;
+  border-top-color: #52555a;
+}
+#rsw-config #rsw-config-body {
+  background-color: #262626;
+  color: #c5c5c5;
+}
+#rsw-config #rsw-config-body #rsw-config-delay input {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#rsw-config #rsw-config-body #rsw-config-note {
+  border-bottom-color: #52555a;
+}
+#rsw-config-background {
+  background-color: #262626;
+}
+.js-tooltip-wrapper,
+.js-tooltip-wrapper .js-tooltip-text {
+  background-color: #2e2e2e;
+}
+.popover.top .arrow,
+.popover.wikiaBar .arrow,
+.popover.wikiaBarMessage .arrow {
+  border-top-color: #2F3136;
+}
+.popover.right .arrow {
+  border-right-color: #2F3136;
+}
+.popover.bottom .arrow {
+  border-bottom-color: #2F3136;
+}
+.popover.left .arrow {
+  border-left-color: #2F3136;
+}
+.popover .popover-inner {
+  border-color: #52555a;
+  background-color: #2F3136;
+}
+.popover .popover-inner .popover-content {
+  background-color: #2F3136;
+  color: #c5c5c5;
+}
+.tooltip.top .tooltip-arrow {
+  border-top-color: #2F3136;
+}
+.tooltip.right .tooltip-arrow {
+  border-right-color: #2F3136;
+}
+.tooltip.bottom .tooltip-arrow {
+  border-bottom-color: #2F3136;
+}
+.tooltip.left .tooltip-arrow {
+  border-left-color: #2F3136;
+}
+.tooltip .tooltip-inner {
+  border-color: #52555a;
+  background-color: #2F3136;
+}
+.blackout {
+  background-color: #262626;
+}
+.wikiaThrobber {
+  background-color: #36393E;
+}
+.modalWrapper {
+  background-color: #262626;
+  color: #c5c5c5;
+}
+.modalWrapper a {
+  color: #5799c1;
+}
+.modalWrapper h1 {
+  color: #5799c1;
+}
+.modalWrapper .WikiaPhotoGalleryPreviewItemMenu,
+.modalWrapper .WikiaPhotoGalleryPreviewItemMenu a {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.modalWrapper .WikiaPhotoGalleryPreviewItemMenu:hover,
+.modalWrapper .WikiaPhotoGalleryPreviewItemMenu a:hover,
+.modalWrapper .WikiaPhotoGalleryPreviewItemMenu:active,
+.modalWrapper .WikiaPhotoGalleryPreviewItemMenu a:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.modalWrapper .accent {
+  border-color: #2f69a8;
+}
+.LightboxModal .WikiaLightbox .LightboxHeader,
+.LightboxModal .WikiaLightbox .LightboxCarousel {
+  background-color: #36393E;
+}
+.LightboxModal .LightboxHeader {
+  border-bottom-color: #52555a !important;
+}
+.LightboxModal .LightboxHeader .more-info-button,
+.LightboxModal .LightboxHeader .share-button,
+.LightboxModal .LightboxHeader .close {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.LightboxModal .LightboxHeader .more-info-button:hover,
+.LightboxModal .LightboxHeader .share-button:hover,
+.LightboxModal .LightboxHeader .close:hover,
+.LightboxModal .LightboxHeader .more-info-button:active,
+.LightboxModal .LightboxHeader .share-button:active,
+.LightboxModal .LightboxHeader .close:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.LightboxModal .LightboxHeader .more-info-button::before,
+.LightboxModal .LightboxHeader .share-button::before,
+.LightboxModal .LightboxHeader .close::before {
+  filter: invert(85%);
+}
+.LightboxModal .LightboxCarousel {
+  border-top-color: #52555a !important;
+}
+.LightboxModal .LightboxCarousel .carousel-arrow.next::after {
+  border-left-color: #c5c5c5 !important;
+}
+.LightboxModal .LightboxCarousel .carousel-arrow.previous::after {
+  border-right-color: #c5c5c5 !important;
+}
+.WikiaLightbox a {
+  color: #5799c1;
+}
+#WikiaPhotoGalleryEditor .preview::-webkit-scrollbar,
+#WikiaPhotoGallerySearchResults::-webkit-scrollbar {
+  width: 12px;
+}
+#WikiaPhotoGalleryEditor .preview::-webkit-scrollbar-track,
+#WikiaPhotoGallerySearchResults::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+#WikiaPhotoGalleryEditor .preview::-webkit-scrollbar-thumb,
+#WikiaPhotoGallerySearchResults::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+.modal.large > header,
+.modal.medium > header,
+.modal.small > header,
+.modal.large > footer,
+.modal.medium > footer,
+.modal.small > footer {
+  background-color: #2F3136;
+}
+.modal.large > header,
+.modal.medium > header,
+.modal.small > header,
+.modal.large > footer,
+.modal.medium > footer,
+.modal.small > footer,
+.modal.large > header h3,
+.modal.medium > header h3,
+.modal.small > header h3,
+.modal.large > footer h3,
+.modal.medium > footer h3,
+.modal.small > footer h3 {
+  color: #c5c5c5;
+}
+.modal.large > header .close,
+.modal.medium > header .close,
+.modal.small > header .close,
+.modal.large > footer .close,
+.modal.medium > footer .close,
+.modal.small > footer .close {
+  filter: invert(85%);
+}
+.modal.large section,
+.modal.medium section,
+.modal.small section {
+  background-color: #262626;
+  color: #c5c5c5;
+}
+.modal.large .button.primary,
+.modal.medium .button.primary,
+.modal.small .button.primary,
+.modal.large .button.normal.primary,
+.modal.medium .button.normal.primary,
+.modal.small .button.normal.primary {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.modal.large .button.primary:hover,
+.modal.medium .button.primary:hover,
+.modal.small .button.primary:hover,
+.modal.large .button.normal.primary:hover,
+.modal.medium .button.normal.primary:hover,
+.modal.small .button.normal.primary:hover,
+.modal.large .button.primary:active,
+.modal.medium .button.primary:active,
+.modal.small .button.primary:active,
+.modal.large .button.normal.primary:active,
+.modal.medium .button.normal.primary:active,
+.modal.small .button.normal.primary:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.modal.large .button.secondary,
+.modal.medium .button.secondary,
+.modal.small .button.secondary,
+.modal.large .button.normal.secondary,
+.modal.medium .button.normal.secondary,
+.modal.small .button.normal.secondary {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.modal.large .button.secondary:hover,
+.modal.medium .button.secondary:hover,
+.modal.small .button.secondary:hover,
+.modal.large .button.normal.secondary:hover,
+.modal.medium .button.normal.secondary:hover,
+.modal.small .button.normal.secondary:hover,
+.modal.large .button.secondary:active,
+.modal.medium .button.secondary:active,
+.modal.small .button.secondary:active,
+.modal.large .button.normal.secondary:active,
+.modal.medium .button.normal.secondary:active,
+.modal.small .button.normal.secondary:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+#MyToolsConfigurationWrapper section a {
+  color: #5799c1;
+}
+#MyToolsConfigurationWrapper section .search-box {
+  border-color: #52555a;
+}
+#MyToolsConfigurationWrapper section .search-box input.search {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#MyToolsConfigurationWrapper section .popular-tools-group {
+  background-image: -webkit-linear-gradient(90deg, #333333, #404040);
+  background-image: -moz-linear-gradient(90deg, #333333, #404040);
+  background-image: -ms-linear-gradient(90deg, #333333, #404040);
+  background-image: -o-linear-gradient(90deg, #333333, #404040);
+  background-image: linear-gradient(0deg, #333333, #404040);
+  color: #c5c5c5;
+  border-color: #52555a;
+}
+#MyToolsConfigurationWrapper section .popular-tools-group .popular-toggle {
+  color: #c5c5c5;
+}
+#MyToolsConfigurationWrapper section .popular-tools-group .popular-toggle .icon-hide {
+  border-bottom-color: #c5c5c5;
+}
+#MyToolsConfigurationWrapper section .popular-tools-group .popular-toggle .icon-show {
+  border-top-color: #c5c5c5;
+}
+#MyToolsConfigurationWrapper section .autocomplete {
+  background-color: #2F3136;
+  border-color: #52555a;
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+#MyToolsConfigurationWrapper section .autocomplete li > a {
+  color: #c5c5c5;
+}
+#MyToolsConfigurationWrapper section .autocomplete li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#MyToolsConfigurationWrapper section .autocomplete ul::before,
+#MyToolsConfigurationWrapper section .autocomplete ul::after {
+  background: none;
+}
+#MyToolsConfigurationWrapper section .autocomplete .selected {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#MyToolsConfigurationWrapper section .options-list {
+  border-color: #52555a;
+}
+#MyToolsConfigurationWrapper section .options-list li {
+  border-bottom-color: #52555a;
+}
+#MyToolsConfigurationWrapper section .options-list li .tree-visual {
+  background-color: #46484d;
+}
+#MyToolsConfigurationWrapper section .options-list li:hover {
+  color: #c5c5c5;
+  background-color: #3b3d44;
+}
+#MyToolsRenameItem .input-box {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#TemplateClassificationEditModal header,
+#TemplateClassificationEditModal footer {
+  background-color: #2F3136;
+}
+#TemplateClassificationEditModal header,
+#TemplateClassificationEditModal footer,
+#TemplateClassificationEditModal header h3,
+#TemplateClassificationEditModal footer h3 {
+  color: #c5c5c5;
+}
+#TemplateClassificationEditModal header .close,
+#TemplateClassificationEditModal footer .close {
+  filter: invert(85%);
+}
+#TemplateClassificationEditModal section {
+  background-color: #262626;
+  color: #acacac;
+}
+#TemplateClassificationEditModal section a {
+  color: #5799c1;
+}
+#TemplateClassificationEditModal section .tc-type-name {
+  color: #c5c5c5;
+}
+#TemplateClassificationEditModal .button.normal.primary {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+#TemplateClassificationEditModal .button.normal.primary:hover,
+#TemplateClassificationEditModal .button.normal.primary:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#TemplateClassificationEditModal .button.normal.secondary {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+#TemplateClassificationEditModal .button.normal.secondary:hover,
+#TemplateClassificationEditModal .button.normal.secondary:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+table.wikipedia {
+  background: #1d1d1d !important;
+  border: none !important;
+}
+.official,
+.forumheader,
+.messagebox,
+.messagebox.info,
+.messagebox.warn,
+.messagebox.obsolete,
+.messagebox.file,
+.messagebox.action,
+.messagebox.disambig,
+.messagebox.unsafe,
+.messagebox.easter,
+.messagebox.halloween,
+.messagebox.thanksgiving,
+.messagebox.christmas,
+.messagebox.safe {
+  background-color: #1d1d1d;
+}
+.messagebox.fimg {
+  background-color: #1d1d1d !important;
+}
+table.archive {
+  background-color: #36393E !important;
+  border: solid 1px #52555a !important;
+}
+table.wikitable td[style="text-align:right;background:#F0F0F0;"] {
+  background: #2F3136 !important;
+}
+.questdetails {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+.questdetails .questdetails-header {
+  background-color: #2F3136;
+}
+.questreq ul {
+  border-left: 1px dotted #c5c5c5;
+}
+blockquote.block {
+  background-color: #2F3136;
+}
+.blockquote-mark::before {
+  background: #262626;
+}
+.blockquote-mark::after {
+  color: #36393E;
+}
+.navbox {
+  color: #c5c5c5;
+}
+.navbox,
+.navbox .navbox-subgroup {
+  background-color: #262626;
+}
+.navbox .navbox-group {
+  background: #2F3136;
+  background-clip: padding-box;
+}
+.navbox .navbox-list,
+.navbox .navbox-group {
+  border: 2px solid #262626;
+}
+.navbox .navbox-subgroup .navbox-title,
+.navbox .navbox-subgroup .navbox-group {
+  background: #2F3136;
+  background-clip: padding-box;
+}
+.navbox .navbox-title,
+.navbox .navbox-footer {
+  border: 2px solid #262626;
+  color: #c5c5c5;
+  background-color: #265588;
+  background-clip: padding-box;
+}
+.navbox .navbox-title a,
+.navbox .navbox-footer a {
+  color: #c5c5c5 !important;
+}
+.navbox .navbox-collapsible .navbox-title,
+.navbox .navbox-collapsible .navbox-footer {
+  background-color: #2f69a8;
+}
+#DisassemblyT .header-top {
+  background: #2F3136;
+}
+.documentation {
+  background-color: #2e2e2e;
+  color: #c5c5c5;
+}
+.shortcut {
+  background: #36393E;
+  border: 1px solid #36393E;
+}
+.tabberlive ul.tabbernav li.tabberactive a {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.tabberlive ul.tabbernav li.tabberactive a:hover,
+.tabberlive ul.tabbernav li.tabberactive a:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.tabberlive ul.tabbernav li a {
+  background-color: #2e2e2e;
+  color: #c5c5c5 !important;
+}
+.tabberlive ul.tabbernav li a:hover {
+  background-color: #474747;
+}
+.tabberlive div.tabbertab {
+  background-color: #2e2e2e;
+}
+.infobox-bonuses td {
+  border: solid 1px #52555a;
+  background-color: #36393E;
+}
+.infobox-bonuses th {
+  background-color: #2F3136;
+  border: solid 1px #52555a;
+}
+#modal {
+  background-color: #262626;
+  color: #c5c5c5;
+}
+#modal #cioItem {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#modal .cioPos {
+  color: #01c023;
+}
+#modal .cioNeg {
+  color: #c02614;
+}
+#modal #cioTotals {
+  background-color: #1e5400;
+}
+.infotableBonuses .attribute-value {
+  background-color: #2F3136;
+  border: solid 1px #52555a;
+}
+.infotableBonuses .attribute-total td,
+.infotableBonuses .attribute-total th,
+.infotableBonuses .attribute-total .attribute-value {
+  background-color: #2F3136;
+  border: solid 1px #52555a;
+}
+.infobox-monster .offensive-subheader {
+  color: #861c10;
+}
+.infobox-monster .defensive-subheader {
+  color: #32637c;
+}
+.WikiaArticle .references > li:target {
+  background-color: #36393E;
+}
+.transcript {
+  background-color: #2e2e2e;
+}
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]),
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):link,
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]):visited {
+  color: #5799c1;
+}
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new,
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:link,
+.WikiaPage a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+table.wikitable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+table.prettytable a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+table.navbox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+table.messagebox a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited,
+image a:not(.button):not(.wds-button):not(.wikia-button):not([role="button"]).new:visited {
+  color: #ba0000;
+}
+.WikiaArticle pre {
+  border: solid 1px #4a4a4a;
+  background-color: #3d3d3d;
+  color: #c5c5c5;
+}
+.WikiaArticle code {
+  border: solid 1px #4a4a4a;
+  background-color: #3d3d3d;
+  color: #c5c5c5;
+}
+hr {
+  border-color: #52555a;
+}
+.WikiaPage input:not([type="submit"]):not([type=button]):not([type="reset"]),
+.modalWrapper input:not([type="submit"]):not([type=button]):not([type="reset"]) {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+textarea {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+textarea::-webkit-scrollbar {
+  width: 12px;
+}
+textarea::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+textarea::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+.WikiaPage select,
+.modalWrapper select {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+.WikiaDropdown .selected-items {
+  background-color: #3e3e3e;
+  border-color: #52555a;
+}
+.WikiaDropdown .selected-items .arrow {
+  border-top-color: #c5c5c5;
+}
+.WikiaDropdown .selected-items:hover {
+  background-color: #4b4b4b;
+}
+.WikiaDropdown .dropdown {
+  background-color: #2F3136;
+  border-color: #52555a;
+  -webkit-box-shadow: 0 3px 6px 0 #2F3136;
+  -moz-box-shadow: 0 3px 6px 0 #2F3136;
+  box-shadow: 0 3px 6px 0 #2F3136;
+}
+.WikiaDropdown .dropdown::-webkit-scrollbar {
+  width: 12px;
+}
+.WikiaDropdown .dropdown::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+.WikiaDropdown .dropdown::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+.WikiaDropdown .dropdown .toolbar {
+  background-color: #282a2e;
+  border-bottom-color: #52555a;
+}
+.WikiaDropdown .dropdown .dropdown-item:hover {
+  background-color: #3b3d44;
+}
+.WikiaDropdown .dropdown .dropdown-item.selected {
+  background-color: #34363b;
+}
+a.wikia-button,
+.wikia-single-button a,
+input[type="submit"],
+input[type="reset"],
+input[type="button"],
+.button,
+button {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+a.wikia-button:hover,
+.wikia-single-button a:hover,
+input[type="submit"]:hover,
+input[type="reset"]:hover,
+input[type="button"]:hover,
+.button:hover,
+button:hover,
+a.wikia-button:active,
+.wikia-single-button a:active,
+input[type="submit"]:active,
+input[type="reset"]:active,
+input[type="button"]:active,
+.button:active,
+button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+a.wikia-button.secondary,
+.wikia-single-button a.secondary,
+input[type="submit"].secondary,
+input[type="reset"].secondary,
+input[type="button"].secondary,
+.button.secondary,
+button.secondary {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+a.wikia-button.secondary:hover,
+.wikia-single-button a.secondary:hover,
+input[type="submit"].secondary:hover,
+input[type="reset"].secondary:hover,
+input[type="button"].secondary:hover,
+.button.secondary:hover,
+button.secondary:hover,
+a.wikia-button.secondary:active,
+.wikia-single-button a.secondary:active,
+input[type="submit"].secondary:active,
+input[type="reset"].secondary:active,
+input[type="button"].secondary:active,
+.button.secondary:active,
+button.secondary:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.GEChartBox {
+  background: #2F3136;
+}
+.highcharts-background {
+  fill: #2F3136;
+}
+.highcharts-plot-background {
+  fill: #2F3136;
+}
+.highcharts-grid-line {
+  stroke: #52555a;
+}
+.highcharts-axis-line {
+  stroke: #52555a;
+}
+.highcharts-title {
+  color: #c5c5c5 !important;
+}
+.highcharts-axis-labels > text {
+  fill: #c5c5c5 !important;
+}
+#GEchartpopup {
+  background: #2F3136;
+}
+#GEchartpopup a {
+  color: #5799c1;
+}
+.highcharts-legend-box {
+  fill: #2F3136;
+}
+.highcharts-navigator-outline {
+  stroke: #52555a;
+}
+.highcharts-label-box {
+  stroke: #52555a;
+}
+.highcharts-axis-title {
+  fill: #c5c5c5 !important;
+}
+#chartPropertiespopup {
+  color: #c5c5c5;
+}
+.highcharts-legend-item text {
+  fill: #c5c5c5 !important;
+}
+#averagepopup,
+#extraItempopup,
+.highcharts-range-selector {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+.highcharts-range-input text {
+  fill: #c5c5c5 !important;
+}
+.zoomButton .highcharts-button-box {
+  fill: #2f69a8;
+}
+.zoomButton text {
+  fill: #dfdfdf !important;
+}
+.highcharts-scrollbar-track {
+  fill: #474a51;
+  stroke: #474a51;
+}
+.highcharts-scrollbar-button {
+  fill: #5e626d;
+  stroke: #5e626d;
+}
+.highcharts-scrollbar-arrow {
+  fill: #dfdfdf;
+}
+.highcharts-scrollbar-thumb {
+  fill: #767b88;
+  stroke: #767b88;
+}
+.highcharts-scrollbar-rifles {
+  stroke: #dfdfdf;
+  stroke-width: 2px;
+}
+#rs-exchange-data {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+#rs-exchange-data:hover,
+#rs-exchange-data:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#gemw_guide {
+  color: #c5c5c5 !important;
+  border: none !important;
+  background: #1d1d1d !important;
+}
+.sg-red,
+.nocell {
+  background: #58120b;
+  color: #c5c5c5;
+}
+.sg-yellow,
+.maybecell {
+  background: #625e0f;
+  color: #c5c5c5;
+}
+.sg-green,
+.yescell {
+  background: #1e5400;
+  color: #c5c5c5;
+}
+.sg-green a,
+.yescell a {
+  color: #5799c1 !important;
+}
+.sg-yellow a,
+.maybecell a {
+  color: #7cb0cf !important;
+}
+.coins-pos {
+  color: #01c023;
+}
+.coins-neg {
+  color: #c02614;
+}
+table.calc-extra-info {
+  background-color: #2F3136 !important;
+  border: solid 1px #52555a !important;
+}
+.portal-link a,
+.portal-link.file a,
+.portal-link.article a,
+.portal-link.template a {
+  background-color: #36393E;
+  color: #c5c5c5 !important;
+}
+.portal-link a:hover {
+  background-color: #656b75;
+  color: #f8f8f8 !important;
+}
+table.alternating-rows tr:nth-child(even) {
+  background-color: #2F3136;
+}
+.mp-color {
+  background-color: #36393E;
+  color: #c5c5c5;
+}
+.mp-color .mp-endrow .mp-endbox {
+  background-color: #2F3136;
+}
+.mp-color2 {
+  background-color: #36393E;
+  color: #c5c5c5;
+}
+.mp-color2 .mp-endrow .mp-endbox2 {
+  background-color: #2F3136;
+}
+#mp-footer {
+  background: #1d1d1d;
+}
+#mp-poll-prev-results th {
+  background-color: #2F3136;
+}
+#mp-poll-prev-results .hover {
+  border-color: #52555a !important;
+}
+#mp-poll-prev-results .hover > div {
+  background-color: #52555a !important;
+}
+#mp-recent a {
+  color: #5799c1;
+}
+.timeline-Viewport::-webkit-scrollbar {
+  width: 12px;
+}
+.timeline-Viewport::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+.timeline-Viewport::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+.WikiaUserPagesHeader {
+  background: #2b2b2b;
+}
+#UserProfileMasthead a {
+  color: #5799c1;
+}
+#UserProfileMasthead .masthead-info {
+  background-color: #36393E;
+}
+#UserProfileMasthead .masthead-info hgroup {
+  background-color: #265588;
+  color: #c5c5c5;
+  background-image: -webkit-linear-gradient(90deg, #265588, #2c619c);
+  background-image: -moz-linear-gradient(90deg, #265588, #2c619c);
+  background-image: -ms-linear-gradient(90deg, #265588, #2c619c);
+  background-image: -o-linear-gradient(90deg, #265588, #2c619c);
+  background-image: linear-gradient(0deg, #265588, #2c619c);
+}
+#UserProfileMasthead .masthead-info-lower:before {
+  border-color: #36393E #36393E transparent transparent;
+}
+#UserProfileMasthead .contributions-details a {
+  color: #c5c5c5;
+}
+#UserProfileMasthead .masthead-avatar .avatar {
+  border-color: #52555a;
+}
+.tabs {
+  border-bottom: solid 1px #52555a;
+}
+.tabs .selected a {
+  background: #262626;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  border-bottom: solid 1px transparent;
+}
+.discussiontable {
+  color: #c5c5c5;
+}
+.discussiontable th {
+  background-color: #2f69a8;
+}
+.discussiontable th a {
+  color: #dfdfdf !important;
+}
+.discussiontable.noresults th {
+  background-color: #5a5a5a;
+}
+.discussiontable.noresults th a {
+  color: #c5c5c5 !important;
+}
+.discussiontable.noresults .topic,
+.discussiontable.noresults .edited,
+.discussiontable.noresults .edited-by,
+.discussiontable.noresults .yg-archive {
+  background-color: #4d4d4d;
+  color: #c5c5c5;
+}
+.discussiontable .topic,
+.discussiontable .edited,
+.discussiontable .edited-by,
+.discussiontable .yg-archive {
+  background-color: #4d4d4d;
+  color: #c5c5c5;
+}
+.Search .result-count {
+  color: #c5c5c5;
+}
+.Search .SearchInput {
+  background-color: #36393E;
+  border-color: #36393E;
+}
+.Search .SearchInput .sprite {
+  -webkit-filter: brightness(85%);
+  filter: brightness(85%);
+}
+.Search .WikiaSearch .search-tabs .selected {
+  background-color: #333333;
+}
+.Search .WikiaSearch .search-tabs .selected a {
+  color: #5799c1;
+}
+.Search .WikiaSearch .search-tabs li a:hover {
+  background-color: #3a3a3a;
+}
+.mw-plusminus-pos {
+  color: #01c023;
+}
+.mw-plusminus-neg {
+  color: #c02614;
+}
+.mw-tag-markers,
+.mw-tag-markers a {
+  color: red !important;
+}
+.mw-tag-marker-visualeditor a,
+.mw-tag-marker-visualeditor-needcheck a {
+  color: #e49f10 !important;
+}
+.recentchangestext .speedy-delete,
+.recentchangestext .speedy-move {
+  color: #cb1c00 !important;
+}
+.community-page-card-module {
+  background: #36393E;
+}
+.community-page-card-module .community-page-card-module-header {
+  background-color: #2f69a8;
+  color: #c5c5c5;
+}
+.community-page-card-module .community-page-card-module-header-icon {
+  fill: #2f69a8;
+}
+.community-page-card-module .community-page-card-module-full-list-link {
+  color: #5799c1;
+}
+.community-page-todo-list-module-content .portal-link a {
+  background: #36393E;
+  color: #c5c5c5 !important;
+}
+.community-page-todo-list-module-content .portal-link a:hover {
+  color: white !important;
+}
+.community-page-rail {
+  background: #36393E;
+}
+.community-page-rail .community-page-module-box {
+  background-color: #2F3136;
+}
+.community-page-rail .community-page-module-section-title {
+  color: #c5c5c5;
+}
+.WikiaPage .page-header__counter {
+  color: #c5c5c5;
+}
+.UploadPhotos .options {
+  background-color: #2e2e2e;
+}
+div.mw-warning-with-logexcerpt,
+.WikiaArticle .noarticletext,
+.WikiaArticle fieldset,
+#sp-contributions-footer {
+  background-color: #36393E;
+  border-color: #36393E;
+}
+.WikiaArticle #pagehistory li.selected {
+  background-color: #36393E;
+}
+table.diff,
+td.diff-otitle,
+td.diff-ntitle {
+  background-color: #2e2e2e;
+  color: #c5c5c5;
+}
+td.diff-context,
+.ArticlePreview.modalContent td.diff-context {
+  background: #36393E;
+  border-color: #36393E;
+  color: #c5c5c5;
+}
+td.diff-deletedline,
+td.diff-addedline {
+  color: #c5c5c5;
+  background-color: #2e2e2e;
+}
+div#viewingold-warning,
+div#viewingnew-warning {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#mw-revision-info,
+#mw-revision-info-current,
+#mw-revision-nav {
+  color: #c5c5c5;
+}
+#EditPageHeader {
+  background-color: #383838;
+  border-color: #52555a;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+#EditPageHeader,
+#EditPageHeader h2 {
+  color: #c5c5c5;
+}
+#EditPageHeader a,
+#EditPageHeader > h1 > a {
+  color: #5799c1;
+}
+#EditPage .EditPageToolbar {
+  background-color: #262626;
+  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: linear-gradient(0deg, #262626 0%, #383838 50%);
+  -webkit-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 0 4px 2px 0 rgba(0, 0, 0, 0.3);
+  border-color: #52555a;
+}
+#EditPage .EditPageToolbar .cke_toolbar_expand a,
+#EditPage .EditPageToolbar .diff-link {
+  color: #c5c5c5;
+}
+#EditPage .preview_box {
+  border-color: #52555a;
+}
+#EditPage .preview_box h3.preview-header {
+  color: #c5c5c5;
+  background: none;
+}
+#EditPage .preview_box svg {
+  fill: #c5c5c5;
+}
+#EditPage .preview_box .preview_icon {
+  border-color: #52555a;
+}
+#EditPage .diff-link {
+  color: #5799c1;
+}
+#EditPage .wpMinoredit,
+#EditPage .wpSummaryFields,
+#EditPage .scribunto_ignore_errors {
+  color: #c5c5c5;
+}
+#EditPage #wpSummary {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#EditPage #wpSummary::-webkit-input-placeholder {
+  color: #9f9f9f;
+}
+#EditPage #wpSummary:-moz-placeholder {
+  color: #9f9f9f;
+}
+#EditPage #wpSummary::-moz-placeholder {
+  color: #9f9f9f;
+}
+#EditPage #wpSummary:-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#EditPage #wpSummary::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#EditPage #EditPageEditorWrapper,
+#EditPage #EditPageMain {
+  background-color: #383838;
+}
+#EditPage #EditPageRail {
+  background-color: #262626;
+  -webkit-box-shadow: -2px 2px 2px #383838, -1px 0 0 #383838;
+  -moz-box-shadow: -2px 2px 2px #383838, -1px 0 0 #383838;
+  box-shadow: -2px 2px 2px #383838, -1px 0 0 #383838;
+}
+#EditPage .module_content {
+  background-color: #262626;
+  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: linear-gradient(0deg, #262626 0%, #383838 50%);
+}
+#EditPage.editpage-sourcewidemode-on .module_content,
+#EditPage.editpage-sourcewidemode-on #EditPageRail {
+  background: none;
+}
+#EditPage.editpage-sourcewidemode-on .arrow {
+  border-right-color: #c5c5c5;
+}
+#EditPage .editpage-widemode-trigger {
+  border-left-color: #52555a;
+}
+#EditPage .editpage-widemode-trigger .arrow {
+  border-left-color: #c5c5c5;
+}
+#EditPage .module h3 {
+  background-color: #262626;
+  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 100%);
+  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 100%);
+  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 100%);
+  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 100%);
+  background-image: linear-gradient(0deg, #262626 0%, #383838 100%);
+  color: #c5c5c5;
+}
+#EditPage .module h3 img {
+  filter: invert(85%);
+}
+#EditPage .cke_button a {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+#EditPage .cke_button a:hover,
+#EditPage .cke_button a:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#EditPage .cke_button a:hover {
+  background-image: none;
+}
+#EditPage .cke_button a span {
+  color: #c5c5c5;
+}
+#EditPage .CategorySelect .input::-webkit-input-placeholder {
+  color: #9f9f9f;
+}
+#EditPage .CategorySelect .input:-moz-placeholder {
+  color: #9f9f9f;
+}
+#EditPage .CategorySelect .input::-moz-placeholder {
+  color: #9f9f9f;
+}
+#EditPage .CategorySelect .input:-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#EditPage .CategorySelect .input::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#EditPage .CategorySelect .categories {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#EditPage .CategorySelect .categories .category {
+  color: #c5c5c5;
+}
+#EditPage .CategorySelect .categories .category:hover {
+  background-color: #676767;
+}
+#EditPage #wpTextbox0 {
+  background-color: #a9a9a9 !important;
+}
+#EditPage #wpTextbox1 {
+  color: black;
+}
+/*#EditPage #wpTextbox1::-webkit-scrollbar,
+#EditPage #wpTextbox1::-webkit-scrollbar-track,
+#EditPage #wpTextbox1::-webkit-scrollbar-thumb {
+  all: unset; 
+}*/
+#EditPage .loading-background,
+#EditPage .loading-message,
+#EditPage .loading-throbber {
+  background-color: #a9a9a9;
+}
+#EditPageEditTools #editpage-specialchars {
+  border-color: #52555a !important;
+}
+.modalContent .ImageUploadRight {
+  background-color: #2e2e2e;
+  border-bottom-color: #52555a;
+}
+#EditPageDialog.preview .modalContent .ArticlePreview {
+  border-color: #52555a;
+}
+#EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar {
+  width: 12px;
+}
+#EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+#EditPageDialog.preview .modalContent .ArticlePreview::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+.ve-init-mw-viewPageTarget-toolbar {
+  border-top-color: #52555a;
+}
+.oo-ui-toolbar-bar {
+  background-color: #262626;
+  background-image: -webkit-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -moz-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -ms-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: -o-linear-gradient(90deg, #262626 0%, #383838 50%);
+  background-image: linear-gradient(0deg, #262626 0%, #383838 50%);
+  color: #c5c5c5;
+  border-bottom-color: #52555a;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button:hover,
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-saveButton .oo-ui-buttonElement-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-cancelButton .oo-ui-buttonElement-button {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-cancelButton .oo-ui-buttonElement-button:hover,
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .ve-ui-toolbar-cancelButton .oo-ui-buttonElement-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.oo-ui-toolbar-bar .oo-ui-toolbar-actions .oo-ui-toolbar-bar {
+  background: none;
+}
+.oo-ui-toolbar-bar .oo-ui-menuToolGroup {
+  border-color: #46484d;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled {
+  background-color: #2F3136;
+  border-color: #52555a;
+  background-image: -webkit-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: -moz-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: -ms-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: -o-linear-gradient(90deg, #2F3136, #474a51);
+  background-image: linear-gradient(0deg, #2F3136, #474a51);
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools li > a {
+  color: #c5c5c5;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools ul::before,
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools ul::after {
+  background: none;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools .oo-ui-tool-title {
+  color: #c5c5c5;
+}
+.oo-ui-toolbar-bar .oo-ui-popupToolGroup-active.oo-ui-widget-enabled .oo-ui-toolGroup-tools > span:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+.oo-ui-toolbar-bar .oo-ui-toolGroup.oo-ui-widget-enabled:hover {
+  border-color: #52555a;
+}
+.oo-ui-toolbar-bar .oo-ui-toolGroup.oo-ui-widget-enabled .oo-ui-tool.oo-ui-widget-enabled:hover {
+  border-color: #5e6267;
+}
+.oo-ui-toolbar-bar .oo-ui-toolGroup.oo-ui-widget-enabled .oo-ui-tool-active.oo-ui-widget-enabled {
+  background-color: #2F3136;
+  border-color: #52555a;
+  background-image: -webkit-linear-gradient(90deg, #383b41, #50545c);
+  background-image: -moz-linear-gradient(90deg, #383b41, #50545c);
+  background-image: -ms-linear-gradient(90deg, #383b41, #50545c);
+  background-image: -o-linear-gradient(90deg, #383b41, #50545c);
+  background-image: linear-gradient(0deg, #383b41, #50545c);
+}
+.oo-ui-indicator-alert {
+  filter: invert(1);
+}
+.oo-ui-iconElement-icon,
+.oo-ui-indicatorElement-indicator {
+  filter: invert(85%);
+}
+.oo-ui-popupWidget-popup {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+.oo-ui-popupWidget-popup .ve-ui-contextOptionWidget .oo-ui-labelElement-label {
+  color: #c5c5c5;
+}
+.oo-ui-popupWidget-popup .oo-ui-optionWidget-highlighted {
+  background-color: #3b3d44;
+}
+.oo-ui-popupWidget-popup input,
+.oo-ui-popupWidget-popup textarea {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.oo-ui-popupWidget-popup input::-webkit-input-placeholder,
+.oo-ui-popupWidget-popup textarea::-webkit-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input:-moz-placeholder,
+.oo-ui-popupWidget-popup textarea:-moz-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input::-moz-placeholder,
+.oo-ui-popupWidget-popup textarea::-moz-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input:-ms-input-placeholder,
+.oo-ui-popupWidget-popup textarea:-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input::-ms-input-placeholder,
+.oo-ui-popupWidget-popup textarea::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-popupWidget-popup input:focus,
+.oo-ui-popupWidget-popup textarea:focus {
+  background-color: #3e3e3e !important;
+  color: #c5c5c5 !important;
+  border: solid 1px #52555a !important;
+  -webkit-box-shadow: none !important;
+  -moz-box-shadow: none !important;
+  box-shadow: none !important;
+}
+.oo-ui-popupWidget-anchored .oo-ui-popupWidget-anchor::before {
+  border-bottom-color: #52555a;
+}
+.oo-ui-popupWidget-anchored .oo-ui-popupWidget-anchor::after {
+  border-bottom-color: #2F3136;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog {
+  background-color: rgba(38, 38, 38, 0.5);
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame {
+  border-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-head,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-foot {
+  background-color: #2F3136;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body {
+  -webkit-box-shadow: 0 0 0.33em #52555a;
+  -moz-box-shadow: 0 0 0.33em #52555a;
+  box-shadow: 0 0 0.33em #52555a;
+  background-color: #262626;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel {
+  border-right-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel .oo-ui-optionWidget-selected,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel .oo-ui-optionWidget-pressed {
+  background-color: #3b3d44;
+  text-shadow: 0px 1px 1px rgba(0, 0, 0, 0.4);
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-bookletLayout-outlinePanel > .oo-ui-outlineControlsWidget {
+  background-color: #2e2e2e;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-surfaceWidget-toolbar > .oo-ui-toolbar-bar,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-surfaceWidget-surface {
+  border-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-webkit-input-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-webkit-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input:-moz-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea:-moz-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-moz-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-moz-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input:-ms-input-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea:-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body input::-ms-input-placeholder,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body textarea::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .ve-ui-mwTemplateDialog-filter {
+  background-color: #36383e;
+  border-bottom-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-labelElement-label {
+  color: #dfdfdf;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-searchWidget-results .oo-ui-optionWidget {
+  background-color: #34363b;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-searchWidget-results .oo-ui-optionWidget-highlighted {
+  background-color: #3b3d44;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-searchWidget-results .ve-ui-mwParameterResultWidget-description {
+  color: #9f9f9f;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-window-body .oo-ui-searchWidget-results .ve-ui-mwParameterResultWidget-name {
+  color: #c5c5c5;
+  background-color: #474a51;
+  border-color: #52555a;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button:hover,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button.secondary {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button.secondary:hover,
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog > .oo-ui-window-frame .oo-ui-buttonElement-button.secondary:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.oo-ui-windowManager-modal.oo-ui-windowManager-floating > .oo-ui-dialog-overlayless {
+  background-color: transparent;
+}
+.ve-ui-wikiaSingleMediaCartWidget {
+  background-color: #2e2e2e;
+}
+.ve-ui-wikiaSingleMediaCartOptionImage {
+  border-color: #52555a;
+}
+.ve-ui-wikiaSingleMediaDialog .ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget .oo-ui-labelElement-label,
+.ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget .oo-ui-labelElement-label {
+  background-color: #36393E;
+}
+.oo-ui-optionWidget-highlighted {
+  background-color: #3b3d44;
+}
+.ve-ui-wikiaMediaResultsWidget .ve-ui-mwMediaResultWidget-thumbnail.ve-ui-texture-transparency {
+  border-color: #52555a;
+}
+.ve-ui-wikiaCartWidget-wrapper {
+  border-left-color: #52555a;
+}
+.oo-ui-window-content-ready .oo-ui-buttonElement-button .oo-ui-labelElement-label {
+  color: #dfdfdf !important;
+}
+.oo-ui-panelLayout-scrollable::-webkit-scrollbar,
+.oo-ui-selectWidget::-webkit-scrollbar {
+  width: 12px;
+}
+.oo-ui-panelLayout-scrollable::-webkit-scrollbar-track,
+.oo-ui-selectWidget::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+.oo-ui-panelLayout-scrollable::-webkit-scrollbar-thumb,
+.oo-ui-selectWidget::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+#ca-edit,
+#ca-ve-edit,
+#ca-addsection,
+#ca-viewsource {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+  border-right-color: #dfdfdf;
+}
+#ca-edit:hover,
+#ca-ve-edit:hover,
+#ca-addsection:hover,
+#ca-viewsource:hover,
+#ca-edit:active,
+#ca-ve-edit:active,
+#ca-addsection:active,
+#ca-viewsource:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#ca-edit:hover,
+#ca-ve-edit:hover,
+#ca-addsection:hover,
+#ca-viewsource:hover {
+  border-right-color: #dfdfdf;
+}
+#ca-edit img,
+#ca-ve-edit img,
+#ca-addsection img,
+#ca-viewsource img {
+  -webkit-filter: brightness(85%);
+  filter: brightness(85%);
+}
+#ca-edit + div.wds-dropdown .wds-button,
+#ca-ve-edit + div.wds-dropdown .wds-button,
+#ca-addsection + div.wds-dropdown .wds-button,
+#ca-viewsource + div.wds-dropdown .wds-button {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+  border-left-color: #dfdfdf;
+}
+#ca-edit + div.wds-dropdown .wds-button:hover,
+#ca-ve-edit + div.wds-dropdown .wds-button:hover,
+#ca-addsection + div.wds-dropdown .wds-button:hover,
+#ca-viewsource + div.wds-dropdown .wds-button:hover,
+#ca-edit + div.wds-dropdown .wds-button:active,
+#ca-ve-edit + div.wds-dropdown .wds-button:active,
+#ca-addsection + div.wds-dropdown .wds-button:active,
+#ca-viewsource + div.wds-dropdown .wds-button:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#ca-edit + div.wds-dropdown .wds-button:hover,
+#ca-ve-edit + div.wds-dropdown .wds-button:hover,
+#ca-addsection + div.wds-dropdown .wds-button:hover,
+#ca-viewsource + div.wds-dropdown .wds-button:hover {
+  border-left-color: #dfdfdf;
+}
+#ca-edit + div.wds-dropdown::before,
+#ca-ve-edit + div.wds-dropdown::before,
+#ca-addsection + div.wds-dropdown::before,
+#ca-viewsource + div.wds-dropdown::before {
+  border-bottom-color: #52555a;
+}
+#ca-edit + div.wds-dropdown::after,
+#ca-ve-edit + div.wds-dropdown::after,
+#ca-addsection + div.wds-dropdown::after,
+#ca-viewsource + div.wds-dropdown::after {
+  border-bottom-color: #2F3136;
+}
+#ca-edit + div.wds-dropdown .wds-dropdown__content,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content,
+#ca-addsection + div.wds-dropdown .wds-dropdown__content,
+#ca-viewsource + div.wds-dropdown .wds-dropdown__content {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+#ca-edit + div.wds-dropdown .wds-dropdown__content li > a,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content li > a,
+#ca-addsection + div.wds-dropdown .wds-dropdown__content li > a,
+#ca-viewsource + div.wds-dropdown .wds-dropdown__content li > a {
+  color: #c5c5c5;
+}
+#ca-edit + div.wds-dropdown .wds-dropdown__content li > a:hover,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content li > a:hover,
+#ca-addsection + div.wds-dropdown .wds-dropdown__content li > a:hover,
+#ca-viewsource + div.wds-dropdown .wds-dropdown__content li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#ca-edit + div.wds-dropdown .wds-dropdown__content ul::before,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content ul::before,
+#ca-addsection + div.wds-dropdown .wds-dropdown__content ul::before,
+#ca-viewsource + div.wds-dropdown .wds-dropdown__content ul::before,
+#ca-edit + div.wds-dropdown .wds-dropdown__content ul::after,
+#ca-ve-edit + div.wds-dropdown .wds-dropdown__content ul::after,
+#ca-addsection + div.wds-dropdown .wds-dropdown__content ul::after,
+#ca-viewsource + div.wds-dropdown .wds-dropdown__content ul::after {
+  background: none;
+}
+#prevent-edit-button-styling,
+#ca-edit + .wds-dropdown #ca-edit,
+#ca-edit + .wds-dropdown #ca-ve-edit,
+#ca-edit + .wds-dropdown #ca-addsection,
+#ca-ve-edit + .wds-dropdown #ca-edit,
+#ca-ve-edit + .wds-dropdown #ca-ve-edit,
+#ca-ve-edit + .wds-dropdown #ca-addsection,
+#ca-addsection + .wds-dropdown #ca-edit,
+#ca-addsection + .wds-dropdown #ca-ve-edit,
+#ca-addsection + .wds-dropdown #ca-addsection,
+#ca-edit ~ .WikiaMenuElement #ca-edit,
+#ca-edit ~ .WikiaMenuElement #ca-ve-edit,
+#ca-edit ~ .WikiaMenuElement #ca-addsection,
+#ca-ve-edit ~ .WikiaMenuElement #ca-edit,
+#ca-ve-edit ~ .WikiaMenuElement #ca-ve-edit,
+#ca-ve-edit ~ .WikiaMenuElement #ca-addsection,
+#ca-addsection ~ .WikiaMenuElement #ca-edit,
+#ca-addsection ~ .WikiaMenuElement #ca-ve-edit,
+#ca-addsection ~ .WikiaMenuElement #ca-addsection {
+  color: #c5c5c5;
+  background: none;
+  border: none;
+}
+#prevent-edit-button-styling:hover,
+#ca-edit + .wds-dropdown #ca-edit:hover,
+#ca-edit + .wds-dropdown #ca-ve-edit:hover,
+#ca-edit + .wds-dropdown #ca-addsection:hover,
+#ca-ve-edit + .wds-dropdown #ca-edit:hover,
+#ca-ve-edit + .wds-dropdown #ca-ve-edit:hover,
+#ca-ve-edit + .wds-dropdown #ca-addsection:hover,
+#ca-addsection + .wds-dropdown #ca-edit:hover,
+#ca-addsection + .wds-dropdown #ca-ve-edit:hover,
+#ca-addsection + .wds-dropdown #ca-addsection:hover,
+#ca-edit ~ .WikiaMenuElement #ca-edit:hover,
+#ca-edit ~ .WikiaMenuElement #ca-ve-edit:hover,
+#ca-edit ~ .WikiaMenuElement #ca-addsection:hover,
+#ca-ve-edit ~ .WikiaMenuElement #ca-edit:hover,
+#ca-ve-edit ~ .WikiaMenuElement #ca-ve-edit:hover,
+#ca-ve-edit ~ .WikiaMenuElement #ca-addsection:hover,
+#ca-addsection ~ .WikiaMenuElement #ca-edit:hover,
+#ca-addsection ~ .WikiaMenuElement #ca-ve-edit:hover,
+#ca-addsection ~ .WikiaMenuElement #ca-addsection:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#page-header-add-new-photo {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+#page-header-add-new-photo:hover,
+#page-header-add-new-photo:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#page-header-add-new-photo img {
+  -webkit-filter: brightness(85%);
+  filter: brightness(85%);
+}
+.wds-button.wds-is-secondary,
+.WikiaPage .page-header .wds-button.wds-is-secondary {
+  color: #c5c5c5;
+  border-color: #52555a;
+}
+.wikia-menu-button {
+  border: none;
+}
+.wikia-menu-button .codepage-publish-button,
+.wikia-menu-button .drop {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.wikia-menu-button .codepage-publish-button:hover,
+.wikia-menu-button .drop:hover,
+.wikia-menu-button .codepage-publish-button:active,
+.wikia-menu-button .drop:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.wikia-menu-button img.chevron {
+  border-top-color: #c5c5c5;
+}
+.wikia-menu-button ul {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+.wikia-menu-button ul li {
+  border-top: 1px solid #52555a;
+}
+.wikia-menu-button ul li a {
+  color: #c5c5c5 !important;
+}
+.wikia-menu-button ul li a:hover {
+  background-color: #3b3d44;
+}
+.wikia-menu-button ul li:first-child {
+  border-top: none;
+}
+.wikia-menu-button ul li:hover {
+  background-color: transparent !important;
+}
+#PageHeader .page-header__languages::before {
+  border-bottom-color: #52555a;
+}
+#PageHeader .page-header__languages::after {
+  border-bottom-color: #2F3136;
+}
+#PageHeader .page-header__languages .wds-dropdown__content {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+#PageHeader .page-header__languages .wds-dropdown__content li > a {
+  color: #c5c5c5;
+}
+#PageHeader .page-header__languages .wds-dropdown__content li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#PageHeader .page-header__languages .wds-dropdown__content ul::before,
+#PageHeader .page-header__languages .wds-dropdown__content ul::after {
+  background: none;
+}
+#PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar {
+  width: 12px;
+}
+#PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+#PageHeader .page-header__languages .wds-dropdown__content ul::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+.wds-community-header {
+  background-color: #265588;
+}
+.wds-community-header::before {
+  background-image: -webkit-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+  background-image: -moz-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+  background-image: -ms-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+  background-image: -o-linear-gradient(-180deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+  background-image: linear-gradient(270deg, rgba(38, 85, 136, 0.5) 0px, rgba(38, 85, 136, 0.5) 200px, #265588 430px);
+}
+.wds-community-header .wds-community-header__sitename a,
+.wds-community-header .wds-community-header__counter,
+.wds-community-header .wds-tabs__tab-label {
+  color: #dfdfdf;
+}
+.wds-community-header #DisplayClockJS {
+  color: #dfdfdf !important;
+}
+.wds-community-header .wds-button.wds-is-secondary {
+  color: #dfdfdf;
+  border-color: #dfdfdf;
+}
+.wds-community-header .wds-button.wds-is-secondary svg {
+  fill: #dfdfdf;
+}
+.wds-community-header .wds-dropdown::before {
+  border-bottom-color: #52555a;
+}
+.wds-community-header .wds-dropdown::after {
+  border-bottom-color: #2F3136;
+}
+.wds-community-header .wds-dropdown__content,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked,
+.wds-community-header .wds-dropdown__content .wds-dropdown-level-2 .wds-dropdown-level-2__content,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+.wds-community-header .wds-dropdown__content li > a,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked li > a,
+.wds-community-header .wds-dropdown__content .wds-dropdown-level-2 .wds-dropdown-level-2__content li > a,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content li > a {
+  color: #c5c5c5;
+}
+.wds-community-header .wds-dropdown__content li > a:hover,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked li > a:hover,
+.wds-community-header .wds-dropdown__content .wds-dropdown-level-2 .wds-dropdown-level-2__content li > a:hover,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+.wds-community-header .wds-dropdown__content ul::before,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked ul::before,
+.wds-community-header .wds-dropdown__content .wds-dropdown-level-2 .wds-dropdown-level-2__content ul::before,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content ul::before,
+.wds-community-header .wds-dropdown__content ul::after,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked ul::after,
+.wds-community-header .wds-dropdown__content .wds-dropdown-level-2 .wds-dropdown-level-2__content ul::after,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked .wds-dropdown-level-2 .wds-dropdown-level-2__content ul::after {
+  background: none;
+}
+.wds-community-header .wds-dropdown__content li:hover > a,
+.wds-community-header .wds-dropdown__content .wds-list.wds-is-linked li:hover > a {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#globalNavigation {
+  -webkit-box-shadow: 0 1px 0 0 #0c0c0c;
+  -moz-box-shadow: 0 1px 0 0 #0c0c0c;
+  box-shadow: 0 1px 0 0 #0c0c0c;
+}
+#globalNavigation,
+#globalNavigation .wds-global-navigation__account-menu,
+#globalNavigation .wds-global-navigation__link,
+#globalNavigation .wds-global-navigation__logo,
+#globalNavigation .wds-global-navigation__notifications-menu,
+#globalNavigation .wds-global-navigation__search,
+#globalNavigation .wds-global-navigation__start-a-wiki,
+#globalNavigation .wds-global-navigation__user-menu,
+#globalNavigation .wds-global-navigation__wikis-menu {
+  background-color: #262626;
+}
+#globalNavigation .wds-global-navigation__account-menu:hover,
+#globalNavigation .wds-global-navigation__link:hover,
+#globalNavigation .wds-global-navigation__notifications-menu:hover,
+#globalNavigation .wds-global-navigation__user-menu:hover,
+#globalNavigation .wds-global-navigation__wikis-menu:hover {
+  background-color: #404040;
+}
+#globalNavigation .wds-global-navigation__logo-image.wds-is-wds-company-logo-fandom > g > path:last-of-type,
+#globalNavigation .wds-global-navigation__logo-image.wds-is-wds-company-logo-powered-by-wikia > path {
+  fill: #c5c5c5 !important;
+}
+#globalNavigation a {
+  color: #c5c5c5;
+}
+#globalNavigation .wds-global-navigation__wikis-menu span {
+  color: #c5c5c5;
+}
+#globalNavigation .wds-global-navigation__wikis-menu path {
+  fill: #c5c5c5;
+}
+#globalNavigation .wds-global-navigation__notifications-menu path {
+  fill: #acacac;
+}
+#globalNavigation .wds-global-navigation__user-menu .wds-dropdown__toggle-chevron {
+  fill: #acacac;
+}
+#globalNavigation .wds-global-navigation__user-menu:hover {
+  color: #acacac;
+}
+#globalNavigation .wds-global-navigation__account-menu {
+  color: #c5c5c5;
+}
+#globalNavigation .wds-global-navigation__account-menu path {
+  fill: #acacac;
+}
+#globalNavigation .wds-global-navigation__account-menu .wds-global-navigation__account-menu-dropdown-caption {
+  color: #c5c5c5;
+}
+#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in:hover,
+#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-sign-in:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-register {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-register:hover,
+#globalNavigation .wds-global-navigation__account-menu #global-navigation-anon-register:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+#globalNavigation .wds-global-navigation__start-a-wiki a:hover {
+  color: #5799c1;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-label {
+  background-color: #262626;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-label path {
+  fill: #9f9f9f;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input {
+  background-color: #262626;
+  color: #c5c5c5;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input::-webkit-input-placeholder {
+  color: #9f9f9f;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input:-moz-placeholder {
+  color: #9f9f9f;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input::-moz-placeholder {
+  color: #9f9f9f;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input:-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-input::-ms-input-placeholder {
+  color: #9f9f9f;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-submit {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-submit:hover,
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-submit:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+#globalNavigation .wds-global-navigation__search .wds-global-navigation__search-suggestions .wds-is-selected a {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#globalNavigation .wds-dropdown::before {
+  border-bottom-color: #52555a;
+}
+#globalNavigation .wds-dropdown::after {
+  border-bottom-color: #2F3136;
+}
+#globalNavigation .wds-dropdown__content {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+#globalNavigation .wds-dropdown__content li > a {
+  color: #c5c5c5;
+}
+#globalNavigation .wds-dropdown__content li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#globalNavigation .wds-dropdown__content ul::before,
+#globalNavigation .wds-dropdown__content ul::after {
+  background: none;
+}
+#globalNavigation .wds-sign-out__button {
+  color: #c5c5c5;
+}
+#globalNavigation .wds-sign-out__button:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#globalNavigation .wds-notifications__dropdown-content {
+  color: #c5c5c5;
+}
+#globalNavigation .wds-notifications__dropdown-content .wds-notifications__zero-state {
+  color: #9f9f9f;
+}
+#globalNavigation #GlobalNavigationWallNotifications {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+#globalNavigation #GlobalNavigationWallNotifications .notification {
+  border: none;
+  color: #c5c5c5;
+}
+#globalNavigation #GlobalNavigationWallNotifications .notification.empty {
+  background: #2F3136;
+  color: #9f9f9f;
+}
+#globalNavigation #GlobalNavigationWallNotifications .notification.empty:hover {
+  background: #36383e;
+}
+#globalNavigation #GlobalNavigationWallNotifications li > a {
+  color: #c5c5c5;
+}
+#globalNavigation #GlobalNavigationWallNotifications li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+#globalNavigation #GlobalNavigationWallNotifications ul::before,
+#globalNavigation #GlobalNavigationWallNotifications ul::after {
+  background: none;
+}
+
+.CategorySelect.articlePage div.toolbar {
+  background-color: #222222;
+  border-top-color: #52555a;
+}
+.CategorySelect.articlePage div.toolbar #CategorySelectCancel {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.CategorySelect.articlePage div.toolbar #CategorySelectCancel:hover,
+.CategorySelect.articlePage div.toolbar #CategorySelectCancel:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.CategorySelect.articlePage div.toolbar #CategorySelectSave {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+.CategorySelect.articlePage div.toolbar #CategorySelectSave:hover,
+.CategorySelect.articlePage div.toolbar #CategorySelectSave:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+.CategorySelect.articlePage .category.new {
+  border-color: #656b75;
+  color: #dfdfdf;
+}
+.CategorySelect.articlePage .category.new,
+.CategorySelect.articlePage .category.new ul.toolbar {
+  background-color: #656b75;
+}
+.CategorySelect.articlePage,
+.article-categories {
+  background: #1d1d1d;
+}
+#CategorySelectAdd {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+#CategorySelectAdd:hover,
+#CategorySelectAdd:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.WikiaArticle li.gallerybox {
+  border-color: #52555a;
+  background-color: #2F3136;
+}
+.WikiaArticle li.gallerybox div.thumb {
+  background: #36393E;
+  border-color: #36393E;
+}
+.ogg-player-options {
+  border-color: #52555a;
+}
+.ns-120 .mw-content-text > ul li b:first-child,
+.transcript > ul li b:first-child,
+.ns-120 .mw-content-text > ul ul li b:first-child,
+.transcript > ul ul li b:first-child {
+  color: #01c023;
+}
+.ns-120 .mw-content-text > ul li:hover,
+.transcript > ul li:hover,
+.ns-120 .mw-content-text > ul ul li:hover,
+.transcript > ul ul li:hover {
+  background-color: #333333;
+  outline-color: #52555a;
+}
+.ns-120 .mw-content-text > ul li:hover li:hover,
+.transcript > ul li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover,
+.transcript > ul ul li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover li:hover {
+  background-color: #292929;
+}
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.ns-120 .mw-content-text > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover,
+.transcript > ul ul li:hover li:hover li:hover li:hover li:hover li:hover li:hover {
+  background-color: #333333;
+}
+.quest-action:hover {
+  background-color: #333333;
+  outline-color: #52555a;
+}
+#theme-solarized-light {
+  background-color: #2e2e2e;
+  color: #b8b8b8;
+}
+.ace-solarized-light {
+  background-color: #2e2e2e;
+  color: #b8b8b8;
+}
+.ace-solarized-light .ace_gutter {
+  background-color: #3a3a3a;
+  color: #c5c5c5;
+}
+.ace-solarized-light .ace_marker-layer .ace_active-line,
+.ace-solarized-light .ace_gutter-active-line {
+  background-color: #474747;
+}
+.ace-solarized-light .ace_marker-layer .ace_selection {
+  background-color: rgba(173, 173, 173, 0.2);
+}
+.ace-solarized-light .ace_cursor {
+  color: #c5c5c5;
+}
+.EditPageEditor .editpage-editarea {
+  border-color: #52555a;
+}
+.ace_scrollbar::-webkit-scrollbar,
+.ace_scrollbar-h::-webkit-scrollbar {
+  width: 12px;
+}
+.ace_scrollbar::-webkit-scrollbar-track,
+.ace_scrollbar-h::-webkit-scrollbar-track {
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  border-radius: 10px;
+  background-color: #333333;
+  border: solid 1px #383838;
+}
+.ace_scrollbar::-webkit-scrollbar-thumb,
+.ace_scrollbar-h::-webkit-scrollbar-thumb {
+  border-radius: 10px;
+  -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+  background-color: #4d4d4d;
+}
+.ace-solarized-light .ace_storage,
+#theme-solarized-light .kw0 {
+  color: #14dc1c;
+}
+.ace-solarized-light .ace_indent-guide {
+  filter: brightness(60%);
+}
+.ace-solarized-light .ace_entity.ace_name.ace_function,
+.ace-solarized-light .ace_entity.ace_name.ace_tag,
+.ace-solarized-light .ace_support.ace_function,
+.ace-solarized-light .ace_variable,
+.ace-solarized-light .ace_variable.ace_language,
+#theme-solarized-light .me1,
+#theme-solarized-light .kw3 {
+  color: #4ca2df;
+}
+.ace-solarized-light .ace_keyword,
+.ace-solarized-light .ace_meta,
+.ace-solarized-light .ace_support.ace_class,
+.ace-solarized-light .ace_support.ace_type,
+#theme-solarized-light .kw1 {
+  color: #c9e411;
+}
+#EditPage #mw-scribunto-console {
+  color: #c5c5c5;
+}
+#EditPage #mw-scribunto-console,
+#EditPage #mw-scribunto-console .mw-scribunto-console-fieldset {
+  background-color: #36393E;
+}
+#EditPage #mw-scribunto-console legend,
+#EditPage #mw-scribunto-console .mw-scribunto-message {
+  background: none;
+  color: #acacac;
+}
+#EditPage #mw-scribunto-console .mw-scribunto-input {
+  color: #5799c1;
+}
+#EditPage #mw-scribunto-console .mw-scribunto-normalOutput {
+  background: none;
+  color: #c5c5c5;
+}
+#EditPage #mw-scribunto-console .mw-scribunto-error {
+  background: none;
+}
+#EditPage #mw-scribunto-console #mw-scribunto-input {
+  background-color: #3e3e3e;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+#EditPage #mw-scribunto-console input {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #2f69a8;
+  border-color: #2f69a8;
+}
+#EditPage #mw-scribunto-console input:hover,
+#EditPage #mw-scribunto-console input:active {
+  color: #dfdfdf;
+  background-image: none;
+  background-color: #4082ca;
+  border-color: #4082ca;
+}
+body.background-dynamic.skin-oasis {
+  background-color: #232323;
+}
+body.background-dynamic.skin-oasis::before {
+  margin-left: -1282px;
+  -webkit-box-shadow: inset 40px -40px 40px 0px #232323, inset -40px -10px 40px 0px #232323;
+  -moz-box-shadow: inset 40px -40px 40px 0px #232323, inset -40px -10px 40px 0px #232323;
+  box-shadow: inset 40px -40px 40px 0px #232323, inset -40px -10px 40px 0px #232323;
+}
+body.background-dynamic.skin-oasis::after {
+  margin-right: -1282px;
+  background-position: -710px 0;
+  -webkit-box-shadow: inset -40px -40px 40px 0px #232323, inset 40px -10px 40px 0px #232323;
+  -moz-box-shadow: inset -40px -40px 40px 0px #232323, inset 40px -10px 40px 0px #232323;
+  box-shadow: inset -40px -40px 40px 0px #232323, inset 40px -10px 40px 0px #232323;
+}
+body.background-dynamic.skin-oasis::before,
+body.background-dynamic.skin-oasis::after {
+  background-image: url('https://kancolle.wikia.com/wiki/Special:FilePath/Wiki-background-dark.jpeg');
+  width: 790px;
+  height: 844px;
+}
+body.background-dynamic.skin-oasis .background-image-gradient {
+  background: none;
+}
+body.background-dynamic.skin-oasis .background-image-gradient::before {
+  left: -webkit-calc(50% - 532px);
+  left: calc(50% - 532px);
+  background: rgba(0, 0, 0, 0);
+  background: -moz-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #262626 100%);
+  background: -webkit-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #262626 100%);
+  background: -ms-linear-gradient(left, rgba(0, 0, 0, 0) 0%, #262626 100%);
+  background: linear-gradient(to right, rgba(0, 0, 0, 0) 0%, #262626 100%);
+}
+body.background-dynamic.skin-oasis .background-image-gradient::after {
+  right: -webkit-calc(50% - 532px);
+  right: calc(50% - 532px);
+  background: #262626;
+  background: -moz-linear-gradient(left, #262626 0%, rgba(0, 0, 0, 0) 100%);
+  background: -webkit-linear-gradient(left, #262626 0%, rgba(0, 0, 0, 0) 100%);
+  background: -ms-linear-gradient(left, #262626 0%, rgba(0, 0, 0, 0) 100%);
+  background: linear-gradient(to right, #262626 0%, rgba(0, 0, 0, 0) 100%);
+}
+body.background-dynamic.skin-oasis .background-image-gradient::before,
+body.background-dynamic.skin-oasis .background-image-gradient::after,
+body.background-dynamic.skin-oasis .background-image-gradient {
+  height: 834px;
+}
+.WikiaPage {
+  border: 1px solid #52555a;
+}
+.WikiaPage .WikiaPageBackground {
+  background-color: #262626;
+}
+.WikiaPage .page-header__title {
+  color: #c5c5c5;
+}
+body {
+  color: #c5c5c5;
+}
+.WikiaArticle h2 {
+  border-bottom: solid 1px #c5c5c5;
+}
+.WikiaArticle .toc {
+  background-color: #36393E;
+  color: #c5c5c5;
+  border: solid 1px #52555a;
+}
+.WikiaArticleInterlang {
+  background: #1d1d1d;
+}
+#WikiaRail .rail-module,
+#WikiaRail .module {
+  background: #2F3136;
+}
+#WikiaRail a {
+  color: #5799c1;
+}
+#WikiaRail .edit-info-time,
+#WikiaRail .rail-sticky-module .premium-recirculation-rail .content {
+  color: #c5c5c5;
+}
+#WikiaRail #wikia-recent-activity h2.has-icon {
+  border-bottom-color: #52555a;
+}
+#WikiaRail #wikia-recent-activity h2.has-icon svg {
+  fill: #9f9f9f;
+}
+#WikiaRail #wikia-recent-activity .community-page-rail-module {
+  border-top-color: #52555a;
+}
+#WikiaRail #wikia-recent-activity .community-page-rail-module .wds-avatar {
+  border-color: #52555a;
+}
+#WikiaRail .content-review-module-test-mode-enable {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+#WikiaRail .content-review-module-test-mode-enable:hover,
+#WikiaRail .content-review-module-test-mode-enable:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+#WikiaRail #rsw-discord .wds-button {
+  color: #fff;
+}
+#WikiaRail #WikiaAdInContentPlaceHolder svg {
+  fill: #9f9f9f;
+}
+.wikia-paginator ul .paginator-page.active {
+  color: #c5c5c5 !important;
+}
+.wikia-paginator ul .paginator-prev,
+.wikia-paginator ul .paginator-next {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #656b75;
+  background-color: #656b75;
+}
+.wikia-paginator ul .paginator-prev:hover,
+.wikia-paginator ul .paginator-next:hover,
+.wikia-paginator ul .paginator-prev:active,
+.wikia-paginator ul .paginator-next:active {
+  color: #dfdfdf;
+  background-image: none;
+  border-color: #4e5259;
+  background-color: #4e5259;
+}
+.wikia-paginator ul .paginator-prev::after {
+  border-right-color: #dfdfdf;
+}
+.wikia-paginator ul .paginator-next::after {
+  border-left-color: #dfdfdf;
+}
+body .ui-autocomplete {
+  background-color: #2F3136;
+  border-color: #52555a;
+  -webkit-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+  -moz-box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+  box-shadow: 3px 3px 6px 0 rgba(0, 0, 0, 0.3);
+}
+body .ui-autocomplete li > a {
+  color: #c5c5c5;
+}
+body .ui-autocomplete li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+body .ui-autocomplete ul::before,
+body .ui-autocomplete ul::after {
+  background: none;
+}
+body .ui-autocomplete .ui-menu-item a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+.WikiaBarWrapper .tools-menu {
+  background-color: #2F3136;
+  border-color: #52555a;
+}
+.WikiaBarWrapper .tools-menu li > a {
+  color: #c5c5c5;
+}
+.WikiaBarWrapper .tools-menu li > a:hover {
+  color: #5799c1;
+  background-color: #3b3d44;
+}
+.WikiaBarWrapper .tools-menu ul::before,
+.WikiaBarWrapper .tools-menu ul::after {
+  background: none;
+}
+.WikiaBarWrapper .tools-menu > li {
+  border-top-color: #52555a;
+}
+
+/*# sourceMappingURL=Darkmode.css.map */
+
+/*Personal edits*/
+.color1, .color1 a, .yui-panel .hd, .WikiaPage {
+  color: #333333 !important;
+}
+
+.SpeechBubble .speech-bubble-message {
+  background: #262626 !important;
+  color: white !important;
+}
+
+.WikiaArticleComments #article-comments > .MiniEditorWrapper #article-comm-form textarea {
+  background: #262626;
+  color: white;
+}
+
+.article-table, .WikiaTable {
+  background: #262626;
+}
+
+.article-table th, .WikiaTable th {
+  background: #262626;
+}
+
+.Wall .quote, .WallPreview .quote {
+  background-color: #262626;
+}
+
+.quest_details_A > td:nth-child(4n+3), .quest_details_B > td:nth-child(4n+3), .quest_details_C > td:nth-child(4n+3), .quest_details_D > td:nth-child(4n+3), .quest_details_E > td:nth-child(4n+3), .quest_details_F > td:nth-child(4n+3), .quest_details_G > td:nth-child(4n+3) {
+  background: #262626;
+}
+
+.mw-datatable td {
+  background: #262626 !important;
+  color: #fff;
+}
+
+.EditPageEditor .editpage-editarea textarea {
+  color: #ffffff !important;
+  background-color: #3a3a3a !important;
+}
+
+table.wikitable td[style*="background"], table.wikitable th[style*="background"] {
+  color: #fff;
+}
+
+.WikiaArticleComments .MiniEditorWrapper .editarea textarea {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+.deleteorremove-infobox {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+.deleteorremove-infobox .deleteorremove-bubble {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+html > body #Wall textarea, .Wall .new-reply .mode-source textarea, .Wall .MiniEditorWrapper.mode-source textarea, .Wall .MiniEditorWrapper .editarea textarea, .Wall .new-reply .speech-bubble-message textarea, .MiniEditorWrapper .editarea .wikiaEditor, .Wall .new-reply textarea, .Wall .new-reply textarea, .Wall textarea, .SpeechBubble textarea, textarea {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+.WikiaArticle .table-is-wide table, table.mw-abuselog-details {
+  background-color: #3a3a3a;
+  color: #666666;
+}
+
+div.kcMultiTweet-EN, div.kcMultiTweet-Link, div.kcMultiTweet-Translator, div.kcMultiTweet-JP, div#mw-customcollapsible {
+  background-color: #3a3a3a;
+  color: #ffffff;
+}
+
+div.kcMultiTweet-JP mw-collapsible-content {
+  color: #000;
+}
+
+.infobox.infobox-kai, infobox, .WikiaArticle .infobox, .WikiaArticle .wikia-infobox, table.wikitable, table.infobox.infobox-kai {
+  background-color: #3a3a3a !important;
+}
+
+/*
+.infobox.infobox-kai tr, infobox tr, .WikiaArticle .infobox tr, .WikiaArticle .wikia-infobox tr, table.wikitable tr, table.infobox.infobox-kai tr {
+ background-color: #2F3136 !important;
+ color: #fff;
+ border: solid 1px #52555a;
+}
+
+.infobox.infobox-kai, infobox, .WikiaArticle .infobox, .WikiaArticle .wikia-infobox, table.wikitable, table.infobox.infobox-kai, td {
+ background-color: #3a3a3a;
+ color: #fff;
+ border: solid 1px #52555a;
+}
+*/
+
+div.mw-collapsible.infobox-kai-expandable-cells.mw-made-collapsible, div.mw-collapsible-content, div.CategoryTreeTag {
+ background-color: #3a3a3a;
+ color: #fff;
+ border: solid 1px #52555a;
+}
+
+.WikiaArticleComments .MiniEditorWrapper .editarea, div.editarea, textarea#article-comm, .WikiaArticleComments #article-comments > .MiniEditorWrapper #article-comm-form textarea, .WikiaArticleComments .MiniEditorWrapper .editarea {
+ box-shadow: 0px 0px 4px 0 #006cb0 !important;
+ background-color: #3a3a3a;
+}
+
+.WikiaArticleComments .MiniEditorWrapper .editarea {
+ border: solid 1px #006cb0;
+}
+
+.Wall a.vote img {
+ background-image: url('https://slot1-images.wikia.nocookie.net/__cb1520610706/common/extensions/wikia/Wall/images/kudo_20x20_white.png');
+}
+
+.SpeechBubble.even .speech-bubble-message:after, .SpeechBubble.owner .speech-bubble-message:after, .SpeechBubble .speech-bubble-message:after {
+ border-color: transparent #262626 #262626 transparent;
+}
+
+.deleteorremove-infobox .deleteorremove-bubble .message .reason {
+ background-color: #3a3a3a;
+ color: #fff;
+}
+
+.mw-abusefilter-history-changed {
+ background-color: #ffe0e0;
+ font-weight: bold;
+ color: #000;
+}
+
+/* Needed for syntax highlighting when in source editor mode */
+textarea#wpTextbox1.highlighted {
+ background-color: transparent !important;
+ color: #000 !important;
+}

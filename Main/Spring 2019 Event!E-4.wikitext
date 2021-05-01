@@ -1,0 +1,283 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = The 2nd Hawaii Operation<br>
+|jp = 第二次ハワイ作戦
+|romaji = Dai-niji Hawai sakusen
+|mechanics = 
+|tag = E4
+|tag2 = E5
+|hp_casual = 3000
+|hp_easy = 3000
+|hp_medium = 4000
+|hp_hard = 4500
+|show_kills = true
+|kills_all = 5
+|reward_casual_1 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_casual_2_x = 2
+|reward_easy_1 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_easy_2_x = 3
+|reward_easy_3 = {{EquipmentCardKai|GFCS Mk.37|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_3_x = 3
+|reward_medium_4 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_medium_4_x = 2
+|reward_medium_5 = {{EquipmentCardKai|GFCS Mk.37|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_3_x = 3
+|reward_hard_4 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_hard_4_x = 2
+|reward_hard_5 = {{EquipmentCardKai|GFCS Mk.37|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Reppuu Kai Ni Model E|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-4 Branching Rules
+|id = 44-4
+|order = 0,1,A,C,G,I,J,L,Q,H,N,S,3,W,X,Y,O,R
+
+|0 -> 1 = * Do not meet the requirements to start at either 2 or 3.
+|0 -> 2 = * Transport Combined Fleet
+|0 -> 3 = 
+* Meet '''ALL''' of the following requirements:
+** Starting point 3 is unlocked.
+** Surface Task Force
+
+|1 -> A = * Carrier Task Force
+|1 -> B = * Surface Task Force
+
+|A/empty -> C, D = * Active branching
+
+|C -> G = * Do not meet the requirements to go to I.
+|C -> I = 
+* Meet '''ALL''' of the following requirements:
+** Fast+ Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+** Amount of CV(L/B) ≤ 2
+
+|G -> I = * Do not meet the requirements to go to J.
+|G -> J = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V) ≤ 2
+** Amount of CV(B) ≤ 3
+* Alternatively, use a Fast+ Fleet to go straight to J.
+
+|I -> J = * Do not meet the requirements to go to L.
+|I -> L = * Fast+ Fleet
+
+|J -> L = * Do not meet the requirements to go to O.
+|J -> O = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+** Amount of CV(L/B) ≤ 3
+** Amount of CLT ≤ 2
+
+|L -> O = * Do not meet the requirements to go to Q.
+|L -> Q = 
+* Meet '''ANY''' of the following requirements:
+* Slow Fleet
+* Fast+ Fleet '''AND''' fleet contains AV.
+
+|Q -> O = * Do not meet the requirements to go to T.
+|Q -> T = * Meet '''ALL''' of the following requirements:
+** Fleet contains AV.
+** Pass the LoS check.
+
+|H -> K = * Do not meet the requirements to go to M.
+|H -> M = * No (F)BB(V)
+
+|N -> P = * Do not meet the requirements to go to S.
+|N -> S = 
+* Meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V)+CV(B) ≤ 3
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+
+|S -> O = 
+* Meet '''ANY''' of the following requirements:
+** Transport Combined Fleet
+** Starting point 3 is not unlocked yet.
+|S -> R = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to O.
+** Surface Task Force
+** Starting point 3 is unlocked.
+|S -> U/empty = * Do not meet the requirements to go to either O or R.
+
+|3 -> W = Do not meet the requirements to go to X.
+|3 -> X = 
+* Meet '''ANY''' of the following requirements:
+** Amount of (F)BB(V)+CV(L/B) ≤ 3 '''and''' Amount of '''Slow''' (F)BB(V) ≤ 1 (Engines irrelevant)
+** Amount of (F)BB(V)+CV(L/B) ≤ 2
+
+|W -> K = * Do not meet the requirements to go to X.
+|W -> X = 
+* Meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V)+CV(B) ≤ 3
+** Amount of '''Slow''' (F)BB(V) ≤ 2 (Engines irrelevant)
+
+|X -> K = * Do not meet the requirements to go to Y.
+|X -> Y = 
+* Meet '''ALL''' of the following requirements:
+** If amount of (F)BB(V)+CV(B) ≥ 3, no '''Slow''' (F)BB(V) allowed (Engines irrelevant)
+** Amount of CV(L/B) ≤ 1
+
+|Y -> O = * Fast Fleet
+|Y -> S = * Slow Fleet
+
+|O -> V = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships equipped with '''Surface''' Radars ≥ 4
+|O -> R = * Do not meet the requirements to go to V.
+
+|R -> U/empty = * Do not meet the requirements to go to V.
+|R -> V = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships equipped with '''Surface''' Radars ≥ 3
+}}
+==Map Guide==
+*This is a '''combined fleet''' map.
+*There are two ship locks that apply to your ships depending on the type of combined fleet they are in (as usual, locks don't apply to casual/easy) :
+**'''Yellow''' for ships in a '''Surface Task Force''' or '''Transport Escort'''.
+**'''Green''' for ships in a '''Carrier Task Force'''.
+*Two [[Land Base Aerial Support]] squadrons are available for sortie.
+**A third base is also available but exclusively for defense.
+*This map is divided in two parts :
+** First, you have to unlock the third starting point.
+** Second, you defeat {{ShipLink|Central Princess}} with a fleet starting from the new point.
+*Aircraft carriers '''CANNOT''' attack installations if they have a {{DiveBomb icon}} equipped '''UNLESS''' it's one of the bombers from the following list:
+**{{EquipmentLink|Prototype Nanzan}}
+**{{EquipmentLink|F4U-1D}}
+**{{EquipmentLink|FM-2}}
+**{{EquipmentLink|Ju 87C Kai}}
+**{{EquipmentLink|Ju 87C Kai Ni (w/ KMX)}}
+**{{EquipmentLink|Ju 87C Kai Ni (w/ KMX/Skilled)}}
+**{{EquipmentLink|Suisei Model 12 (634 Air Group w/ Type 3 Cluster Bombs)}}
+ {{clear}}
+
+The following are ships with noticeable bonuses Mapwide:<br />
+* {{ShipLink|Akagi}} - 1.3x
+*{{ShipLink|Shoukaku}}, {{ShipLink|Zuikaku}} - 1.25x
+* {{ShipLink|Kaga}} - 1.2x
+* {{ShipLink|Hiei}}, {{ShipLink|Kirishima}}, {{ShipLink|Hiryuu}}, {{ShipLink|Souryuu}}, {{ShipLink|Tone}}, {{ShipLink|Chikuma}}, {{ShipLink|Abukuma}}, {{ShipLink|Arare}}, {{ShipLink|Kasumi}}, {{ShipLink|Shiranui}}, {{ShipLink|Kagerou}}, {{ShipLink|Urakaze}} - 1.15x
+* Everyone after unlocking the new starting point - 1.15x (Multiplicative, stacks with other bonuses)
+
+===Equipment treated as a "Surface Radar"===
+*Despite the name "Surface Radar", certain Air Radars are also treated as a Surface Radar under the Branching Rules due to their {{LOS}} LOS Stat.
+**The Radar must have at least 5+ {{LOS}} LOS Stats to fall under the category.
+{{:Winter 2019 Event/Info/Surface Radar}}
+
+===Map progression===
+{{#tag:gallery|
+Spring19_E4_p1.png{{!}}Map before unlocking the third starting point
+Spring_2019_Event_E-4_Map.png{{!}}Full map after unlocking the third starting point
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+===Part 1: Open the third starting point===
+{{Warning|As mentioned before, each combined fleet gets its own lock and '''you will be forced to lock ships to each fleet to open the starting point'''. You will be finishing off the boss node with a '''STF''' so plan your ships accordingly (keeping the ships that deal bonus damage to the boss node for this fleet is recommended).}}
+
+*'''NOTE:''' the following requirements have been tested on '''HARD MODE''', you may not need to do them all if you are on a lower difficulty.
+
+*Achieve an S rank at node {{Event/Route|J|Red}} ('''required in ALL difficulties''')
+**Route : {{Event/Route|1|black|A|blue|C|red|G|red|J|red}} or {{Event/Route|1|black|A|blue|D|orange|G|red|J|red}}
+**'''CTF''': 3CV(B) 3CA(V) + 1CL 2DD 1FBB 2XX '''(MUST BE FAST FLEET)'''
+***The first node is a selection node between submarine node {{Event/Route|C|Red}} and an airstrike node {{Event/Route|D|orange}}. Pick your poison.
+***You cannot bring more than 4CV+FBB combined and no more than 3CV.
+***You can put the FBB in the main fleet instead of the escort.
+***This node features {{ShipLink|Aircraft Carrier Water Demon}} in a heavy carrier fleet.
+****AACI setup is highly recommended.
+****You can send LBAS squadrons to node {{Event/Route|J|Red}} in order to help you, node support can also be considered.
+
+*Achieve Air Superiority (AS) at air defense node {{Event/Route|L|orange}} ('''required in HARD and MEDIUM MODE''') and
+*Achieve an S rank at node {{Event/Route|T|Red}} ('''not required in CASUAL MODE''')
+**Route : {{Event/Route|1|black|A|blue|C|red|G|red|I|red|J|red|L|orange|Q|red|T|red}}
+**'''CTF''': 3CV(B) 1AV 2CA(V) + 1CL 2DD 1(F)BB(V) 2XX '''(MUST BE SLOW FLEET)'''
+***Same fleet as before but you bring an [[List of Seaplane Tenders by upgraded maximum stats|AV]] to route to node {{Event/Route|T|Red}}.
+****Make sure your fleet is '''slow'''.
+****The AV can be put in the escort.
+***There is a LoS check from {{Event/Route|Q|Red}} to {{Event/Route|T|Red}}.
+****Please be mindful about retreating ships with {{EquipmentLink|Fleet Command Facility}} as it may lower your fleet LoS enough to make you fail the check.
+***Node {{Event/Route|T|Red}} is an enemy transport combined fleet.
+***Send LBAS to node {{Event/Route|J|Red}} to help passing it easily, node support is recommended.
+***Send LBAS squadrons to node {{Event/Route|L|orange}} consisting of fighters/interceptor to make achieving AS easier.
+
+* Achieve Air Superiority (AS) at air defense node {{Event/Route|K|orange}} ('''required in HARD MODE only''') and 
+* S rank node {{Event/Route|S|Red}} ('''required in ALL difficulties''')
+**Route : {{Event/Route|1|black|B|red|F|orange|H|red|K|orange|N|red|S|red}}
+**'''STF''': 1CV(B) 2FBB 3CA(V) + 1CL 2DD 3XX
+***You can bring CLTs in the escort to help you deal with {{ShipLink|Seaplane Tender Water Princess}} at node {{Event/Route|S|red}} and achieve S rank.
+***Node {{Event/Route|N|red}} has enemy submarines in line ahead, it is HIGHLY RECOMMENDED to bring ships capable of [[Partials/Opening ASW|OASW]] in the escort.
+***Send LBAS squadrons to node {{Event/Route|K|orange}} consisting of fighters/interceptor to make achieving AS easier.
+
+*Achieve Air Superiority during an enemy air raid against your LBAS  ('''required in HARD, MEDIUM and EASY MODE, unknown for CASUAL MODE''')
+**Just like in E-3, your LBAS will be attacked by enemy airstrikes.
+***Set your third LBAS squadron to defense mode with your best interceptors to counter their attacks.
+**This should come naturally while you are working for the other requirements.
+
+*Bring the Boss HP gauge to 33% of its total HP (40% for casual)
+**Route : {{Event/Route|1|black|A|blue|C|red|G|red|J|red|O|red|V|red}}
+**'''CTF''': 3CV(B) 2CA(V) 1XX + 1CL 2DD 1FBB 1CLT 1CA(V) '''(MUST BE FAST FLEET)'''
+***You can bring more than 1CLT if you wish.
+***You cannot have more than 4 CV+BB combined and no more than 3CV.
+***There is a radar check at node {{Event/Route|O|red}} ('''does not apply to casual/easy''').
+****You need 4 Surface radars equipped on 4 members of the combined fleet in order to pass the check.
+*****A fleet with 3 radars also reaches the boss but will have to go through the extra air defense node {{Event/Route|R|orange}}
+***Choosing node {{Event/Route|D|orange}} at the beginning is not recommended in order to limit your carrier's plane losses.
+***It is highly recommended to send node support to help deal with nodes {{Event/Route|J|Red}} and {{Event/Route|O|Red}}.
+****Boss support can also be considered to help at the boss node.
+**The boss node {{Event/Route|V|Red}} features an installation type enemy in an abyssal combined fleet.
+***The same advices against installations mentioned in E-3 also apply here. 
+***'''LBAS''':
+****It is recommended to send a squadron with 1 fighters/interceptors and 3 bombers to boss node {{Event/Route|V|red}}.
+*****The boss node requires planes with range 7+
+*****[[List of Land-based Attack Aircraft by stats|Land-based bombers]] deal extremely high damage to {{ShipLink|Artillery Imp}} and {{ShipLink|Supply Depot Princess}}!
+****It is recommended to send a squadron to node {{Event/Route|J|red}} to help dealing with its heavy fleet.
+***Please keep in mind that your fleet will reach the boss node in an extremely weak state and may have difficulty dealing with its heavy installation fleet let alone sink the flagship. Do your best.
+{{Hard Anti-installation Weapons}}
+
+===Part 2: Beat the boss starting from the new point===
+*Once you have fulfilled the requirements during the last part, the third starting point will unlock. Moreover the boss fleet will be debuffed and your fleet will deal '''1.15x bonus damage''' (stacks with the other bonuses).
+*Route:{{Event/Route|3|black|X|red|Y|orange|O|red|V|red}}
+*'''STF''': 1CV(B) 2FBB 3CA(V) + 1CL 2DD 3XX ('''MUST BE FAST FLEET''')
+**Using as many historical ships as possible for this part is highly recommended.
+**Replacing a CA in the main fleet for a CL/DD/AV with {{WG42}} + {{LandingCraft}} + {{SpecialAmphibiousTank}} setup to help deal with {{ShipLink|Supply Depot Princess}} at the boss node can be considered.
+**Node {{Event/Route|X|Red}} has an enemy submarine that has a 1/3 risk of being in line ahead.
+***It is recommended to bring 1 OASW ship and use cruising formation 2 in order to deal with it (or leave it be and try your luck).
+***The radar check at node {{Event/Route|O|red}} still applies during this part for medium/hard.
+*'''LBAS''':Sending both bases with 1 fighter/interceptor and 3 bombers to boss is highly recommended.
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+{{Fleets|friend=Spring 2019 Event|map=E-4}}
+
+===LBAS flight range===
+[[File:Spring19_E4_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

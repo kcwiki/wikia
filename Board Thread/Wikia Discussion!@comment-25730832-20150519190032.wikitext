@@ -1,0 +1,89 @@
+Greetings denizens of Kancolle Wiki. As some of you might notice, the format of the wiki (especially the tables) seems a bit off here and there. Now hold your keyboards, before you start typing stuffs like "Why you change it!?"; this time, it isn't us.
+
+----
+
+'''The Update - What happened? Who dunnit? Why did they do it?'''
+
+This update came from Wikia Staffs. To put it simple, the editors want to make wiki more mobile friendly, but it turns out to cause problem to both mobile-users and the existing Desktop users. Here is an example of what the update did:
+
+http://orig01.deviantart.net/a76e/f/2015/139/d/0/wikiatf_by_intelman-d8tyjmc.jpg
+
+For more information regarding the update, read here (the comments are a good place to figure out most of the problem that occured):
+
+http://community.wikia.com/wiki/User_blog:Rupert_Giles/Layout_Changes:_Breakpoints_and_Typography
+
+'''NOTE: For people with small screen, you'll notice the problem when you ZOOM OUT of the page. '''
+
+----
+
+'''The Update - What should we do? Temporary Solution?'''
+
+We might not have a permanent one yet, but we do have a 2 temporary solutions. The first method is more permanent but requires more work while second method is quick but a pain to do it all the time.
+
+'''Method A -Slow but Rewarding'''
+
+The first method is to modify your personal CSS. 
+
+Setting all the CSS terms aside, I'll use my profile as an example during the guide. First, you'll need the CSS code. Copy the text below (Highlight the whole line below, then CTRL + C):
+
+ @import url("http://community.wikia.com/index.php?title=User:Undead.exe/OldOasis.css&action=raw&ctype=text/css");
+
+Next, you'll be putting those text into your '''[[w:c:community:Special:MyPage/global.css|PERSONAL CSS]]'''. <---Click the link
+
+Create a page for your own personal .css and put the code you copied from above in there. Then you publish it. Example of the finished verions is shown below:
+
+ http://community.wikia.com/wiki/User:Ckwng/global.css
+
+In case you wonder "Why can't we just put this in the site's .css?", the thing is Wikia doesn't allow us to do that. So this change will only be seen from you and anyone else who wants it needs to go through the process.
+
+PLEASE NOTE! This method WILL NOT work for Anons (sorry anons) since you need an account for the global .css page.
+
+'''Method B -Fast but Repeating'''
+
+The second method is to change its Parameter. After every page's link, include this into it:
+
+ ?oasisbreakpoints=0&oasistypography=0
+To put it simple what this does is that it negates the update that Wikia did by telling the page not to include it. Although it only help to a certain extent. For example:
+
+ http://kancolle.wikia.com/wiki/Equipment
+ Changes to
+ http://kancolle.wikia.com/wiki/Equipment?oasisbreakpoints=0&oasistypography=0
+
+For more information regarding how the trick works, read here:
+
+http://community.wikia.com/wiki/User_blog:Undead.exe/Breakpoint_0,_Typography_0
+
+'''NOTE: For people with small screen, you'll notice the problem when you ZOOM OUT of the page.'''
+
+----
+
+'''The Update - What got screwed?'''
+
+Many pages were affected by this update. Some of you probably figured out by now that most of the pages that got affected are one with tables in it. Especially tables with dense information. The expedition and furniture page escaped this fate due to Fujihita.
+
+''Here are the list of pages that are affected by the update:''
+
+*http://kancolle.wikia.com/wiki/Ship_list
+*http://kancolle.wikia.com/wiki/Ship_Maximum_Status - EVERY SUB-PAGE
+*http://kancolle.wikia.com/wiki/Quests
+*http://kancolle.wikia.com/wiki/Akashi%27s_Improvement_Arsenal
+*http://kancolle.wikia.com/wiki/Equipment
+
+[They are probably more, but the writer of this thread is lazy]
+
+''Additional page that got screwed up (maybe before this update?):''
+
+*http://kancolle.wikia.com/wiki/Special:Search?search=Zel-melon&fulltext=Search&ns6=1
+
+----
+
+And that covers the update. Questions and concerns can be posted here if wanted. Now you know something. It's good to learn something new eh? And now...just for fun:
+
+<poll>
+What do you think about the new Wikia update?
+The new update is awesome, I like it 
+The new update is meh, it doesn't affect me anyways 
+WTF? KC anime producers are on Wikia staff team now? They don't know what they're doing!
+What update?
+I was fapping/shlicking (gender equality).
+</poll><ac_metadata title="[20th May 2015] Wikia Layout Update" notify_everyone="1432064557"> </ac_metadata>

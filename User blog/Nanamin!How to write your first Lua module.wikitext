@@ -1,0 +1,256 @@
+:Okay, so in the other blog post, I described the major points I needed to understand how Lua works with the wikia coming from a programming background. That's obviously not where everybody comes from, so this one is a lot more hand holding and a lot more basics.
+
+:This guide is written for those who want to have a starting point. It provides a way to at least get through the first parts of developing a module so you can go straight to getting script errors for what you wrote instead of what you haven't written yet.
+
+==Setting up the Superstructure==
+:So you have three choices for the superstructure:
+#A module which acts the recipient of the template page call and calls your module
+#A module which contains the function which calls your main function
+#A module which uses the function called as the main function
+
+:Which one you choose is up to personal preference, basically. If you plan to have multiple templates call from the same module or a lot of modules working together, the first option may be best. 2 and 3 are best for standalone modules.
+
+:All examples below will be done assuming you are trying to have your module on [[Template:MyModule]] and [[Module:MyModule]]. Method 1 will have [[Module:MyModuleCaller]].
+
+:<span style="color: red;">Below, I will detail only 1 and 2.</span>
+
+===Using Method 1===
+:First, we will setup [[Module:MyModuleCaller]]. What we put is this:
+
+<pre>local MyModuleCaller = {}
+local MyModule = require('Module:MyModule')
+local getArgs = require('Module:GetArgs')
+ 
+function MyModuleCaller.Begin(frame)
+	local args = getArgs{frame = frame:getParent()}
+	return MyModule:Main(args)
+end
+ 
+return MyModuleCaller</pre>
+
+;Code Breakdown
+:''local MyModule = require('Module:MyModule')'' includes [[Module:MyModule]] to this module. As we are passing to a function within [[Module:MyModule]], we need it to exist.
+
+:''local getArgs = require('Module:GetArgs')'' does the heavy lifting of breaking down arguments from the calls for you. If an argument is not provided with a name (ie. declared like ''name=something''), then it is indexed starting from index 1.
+
+:We'll skip the function call because that's self-explanatory. The args line is also self-explanatory.
+
+:''return MyModule:Main(args)'' is how you call your module. As you can see, it has a return in front of it, so you need to return something in ''MyModule:Main''.
+
+====The Module Itself====
+:So with the caller out of the way, we now must look at the actual module. Here's a very basic version of what it could look like:
+
+<pre>local MyModule = {
+    _message = "Some random message",
+}
+
+function MyModule:Main(args)
+    local values = {}
+    for key, value in ipairs(args) do
+        table.insert(values, tostring(value))
+    end
+    return self._message .. table.concat(values, " ")
+end
+
+return MyModule</pre>
+
+;Code Breakdown
+:''MyModule'' is defined as a table. It can have values in it and these values are always available to you via ''self'', assuming you use a colon (:) in the function declaration. This can be seen on line 10.
+
+:''ipairs'' is an iterator which goes over the indexed values in order. It's very nice for doing it in order.
+
+:''table.insert'' will be your friend in Lua. It inserts the second argument into the next empty index of the first argument (a table).
+
+:''table.concat'' takes all the values in the first argument (a table) and connects every element in the first argument using the second element.
+
+;Example
+:If the above were to be run with <nowiki>{{MyModule|hello|world}}</nowiki>, then it would print out the following where it was executed:
+
+<pre>Some random messagehello world</pre>
+
+====The Template====
+:The template is very simple, you simply call [[Module:MyModuleCaller]] with some defined syntax.
+
+<pre>{{#invoke:MyModuleCaller|Begin}}</pre>
+
+:To add documentation to this page, you must wrap it in <nowiki><noinclude></nowiki> tags. This is to ensure it will not try to include the documentation as part of the template. It will look like the below:
+
+<pre>{{#invoke:MyModuleCaller|Begin}}<noinclude>
+{{Documentation}}</noinclude></pre>
+
+:To modify your documentation, you must then go to [[Module:MyModule/doc]].
+
+===Using Method 2===
+:So we go to [[Module:MyModule]] and put this in:
+
+<pre>local getArgs = require('Module:GetArgs')
+
+local MyModule = {
+    _message = "Some random message",
+}
+
+function MyModule:Main(args)
+    local values = {}
+    for key, value in ipairs(args) do
+        table.insert(values, tostring(value))
+    end
+    return self._message .. table.concat(values, " ")
+end
+
+function MyModule.Begin(frame)
+	local args = getArgs{frame = frame:getParent()}
+	return MyModule:Main(args)
+end
+
+return MyModule</pre>
+
+;Code Breakdown
+:''local getArgs = require('Module:GetArgs')'' does the heavy lifting of breaking down arguments from the calls for you. If an argument is not provided with a name (ie. declared like ''name=something''), then it is indexed starting from index 1.
+
+:''MyModule'' is defined as a table. It can have values in it and these values are always available to you via ''self'', assuming you use a colon (:) in the function declaration. This can be seen on line 10.
+
+:''return MyModule:Main(args)'' is how you call your module. As you can see, it has a return in front of it, so you need to return something in ''MyModule:Main''.
+
+:''ipairs'' is an iterator which goes over the indexed values in order. It's very nice for doing it in order.
+
+:''table.insert'' will be your friend in Lua. It inserts the second argument into the next empty index of the first argument (a table).
+
+:''table.concat'' takes all the values in the first argument (a table) and connects every element in the first argument using the second element.
+
+====The Template====
+:For method 2, you call [[Module:MyModule]]'s ''Begin'' function. It looks basically the same as method 1 here.
+
+<pre>{{#invoke:MyModule|Begin}}</pre>
+
+:To add documentation to this page, you must wrap it in <nowiki><noinclude></nowiki> tags. This is to ensure it will not try to include the documentation as part of the template. It will look like the below:
+
+<pre>{{#invoke:MyModule|Begin}}<noinclude>
+{{Documentation}}</noinclude></pre>
+
+:To modify your documentation, you must then go to [[Module:MyModule/doc]].
+
+==Example Project==
+:Let's take a look at an example case. Perhaps we're like [[User:Crazy teitoku]] and want to have a mini-wiki as our profile page. In such cases, it quickly becomes unwieldy and ridiculous to even maintain. This is where we switch to a module because it can do all the heavy lifting in the background, while we just load a nicely formatted module call when looking at the source.
+
+:For this example, we will be making what is currently on [[User:Crazy teitoku/Sandbox]] into a module. In the event that the page has been changed, its current revision has been made available below:
+
+<pre class="mw-collapsible mw-collapsed">{| style="width: 100%; text-align: left;"
+!
+! colspan="2" style="text-align: center;" | {{ Nihongo | | '''装備名''' | Furigana=<span style="font-size: 10px;">そうびめい</span> | }}
+! style="text-align: center;" | {{ Nihongo | | '''装備数''' | Furigana=<span style="font-size: 10px;">そうびかず</span> | }}
+|-
+| rowspan="4" style="text-align: center;" | <div class="mw-customtoggle-127cmTwinGunMountTypeBKai2">[[File:Equipment63-1.png|150x150px|link=]]</div>
+| [[File:RedGunLight.png|link=]]
+| <div class="mw-customtoggle-127cmTwinGunMountTypeBKai2"> [[12.7cm Twin Mount Type-B Kai 2 | 12.7cm Twin Mount Type-B Kai 2]] </div> 
+| rowspan="3" style="background:#ADEFFF;text-align: center;" | 1
+|-
+| {{ Nihongo | | '''ゲーム内の名前''' | Furigana=<span style="font-size: 10px;">ゲームないのなまえ</span> | }}
+| 12.7cm連装砲B型改二
+|-
+| {{ Nihongo | | '''振り仮名''' | Furigana=<span style="font-size: 10px;">ふりがな</span> | }}
+| {{ Nihongo | | 十二糎七連装砲B型改二 | Furigana=<span style="font-size: 10px;">じゅうにせんちしちれんそうほうビがたかいに</span> | }}
+|-
+| {{ Nihongo | | '''仮名''' | Furigana=<span style="font-size: 10px;">かな</span> | }}
+| じゅうにせんちしちれんそうほうビがたかいに
+| style="background:#ADEFFF;text-align: center;" | ★+0
+|-
+| colspan="4" |
+  {| class="mw-collapsible mw-collapsed" id="mw-customcollapsible-127cmTwinGunMountTypeBKai2" style="width: 100%; text-align: left;"
+  | style="padding-left: 50px;" | {{ Nihongo | | '''もっと見える''' | Furigana=<span style="font-size: 10px;">もっとみえる</span> | }}
+  | [[12.7cm Twin Mount Type-B Kai 2 | 12.7cm Twin Mount Type-B Kai 2]]
+  |-
+  | style="padding-left: 50px;" | {{ Nihongo | | '''正式名/別名''' | Furigana=<span style="font-size: 10px;">せいしきめい/べつめい</span> | }}
+  | 50口径三年式12.7センチB型改二砲
+  |-
+  | style="padding-left: 50px;" | {{ Nihongo | | '''振り仮名''' | Furigana=<span style="font-size: 10px;">ふりがな</span> | }}
+  | {{ Nihongo | | 五十口径三年式十二センチ七B型改二砲 | Furigana=<span style="font-size: 10px;">ごじゅうこうけいさんねんしきじゅうにセンチしちビがたかいにほう</span> | }}
+  |-
+  | style="padding-left: 50px;" | {{ Nihongo | | '''仮名''' | Furigana=<span style="font-size: 10px;">かな</span> | }}
+  | ごじゅうこうけいさんねんしきじゅうにセンチしちビがたかいにほう
+  |}
+|-
+| rowspan="4" style="text-align: center;" |  <div class="mw-customtoggle-127NavalGun">[[File:01.png|150x150px]]</div>
+| [[File:RedGunLight.png|link=]]
+| <div class="mw-customtoggle-127NavalGun"> [[12.7cm Naval Gun | 12.7cm Naval Gun]] </div>
+| rowspan="3" style="background:#ADEFFF;text-align: center;" | 0
+|-
+| {{ Nihongo | | '''ゲーム内の名前''' | Furigana=<span style="font-size: 10px;">ゲームないのなまえ</span> | }}
+| 12.7cm連装砲
+|-
+| {{ Nihongo | | '''振り仮名''' | Furigana=<span style="font-size: 10px;">ふりがな</span> | }}
+| {{ Nihongo | | 十二糎七連装砲 | Furigana=<span style="font-size: 10px;">じゅうにせんちしちれんそうほう</span> | }}
+|-
+| {{ Nihongo | | '''仮名''' | Furigana=<span style="font-size: 10px;">かな</span> | }}
+| じゅうにせんちたんそうほう
+| style="background:#ADEFFF;text-align: center;" | ★+0
+|-
+| colspan="3" |
+  {| class="mw-collapsible mw-collapsed" id="mw-customcollapsible-127NavalGun" style="width: 100%; text-align: left;"
+  | style="padding-left: 50px;" | {{ Nihongo | | '''もっと見える''' | Furigana=<span style="font-size: 10px;">もっとみえる</span> | }}
+  | [[12.7cm Naval Gun | 12.7cm Naval Gun]]
+  |-
+  | style="padding-left: 50px;" | {{ Nihongo | | '''正式名/別名''' | Furigana=<span style="font-size: 10px;">せいしきめい/べつめい</span> | }}
+  | 45口径三年式12cm砲
+  |-
+  | style="padding-left: 50px;" | {{ Nihongo | | '''振り仮名''' | Furigana=<span style="font-size: 10px;">ふりがな</span> | }}
+  | {{ Nihongo | | 四十五口径三年式十二糎砲 | Furigana=<span style="font-size: 10px;">よんじゅうごこうけいさんねんしきにじゅうせんちほう</span> | }}
+  |-
+  | style="padding-left: 50px;" | {{ Nihongo | | '''仮名''' | Furigana=<span style="font-size: 10px;">かな</span> | }}
+  | よんじゅうごこうけいさんねんしきにじゅうせんちほう
+  |}
+|-
+|}</pre>
+
+:<span style="color: red;">One does not simply walk into Crazy teitoku's page and understand wtf is going on.</span>
+
+:So the first order of business for something like the above is to determine just what a single cell looks like and what parts need to be changeable. This turns into the below:
+
+<pre>| rowspan="${rowspan}" style="text-align: center;" | <div class="mw-customtoggle-${toggle_class}">${equipment_image}</div>
+| ${equipment_icon}
+| <div class="mw-customtoggle-${toggle_class}">${equipment_link}</div>
+| rowspan="${count_rowspan}" style="background:#ADEFFF;text-align: center;" | 1
+|-
+| ${label}
+| ${display}
+| style="background:#ADEFFF;text-align: center;" | ★+${stars}
+|-
+| colspan="4" |
+  {| class="mw-collapsible mw-collapsed" id="mw-customcollapsible-${toggle_class}" style="width: 100%; text-align: left;"
+  | style="padding-left: 50px;" | ${label}
+  | ${display}
+  |}</pre>
+
+:Wait! Where did all the rows go? They got removed because we don't need them. Each thing that uses a similar format can simply be replaced by looping with a template.
+
+:This planned layout eventually turns into this in the module:
+
+<pre>local Equipment = require("Module:Equipment")
+
+local MyModule = {
+    _table_start = [[{| style="width: 100%; text-align: left;"]],
+    _table_end = [[|}]],
+    _row_starter = "|-",
+
+    _equipment_template = [[| rowspan="${rowspan}" style="text-align: center;" |<div class="mw-customtoggle-${toggle_class}">${equipment_image}</div>
+| ${equipment_icon}
+| <div class="mw-customtoggle-${toggle_class}">${equipment_link}</div>
+| rowspan="${count_rowspan}" style="background: #ADEFFF; text-align: center;" |${count}]],
+    _equipment_info_template = [[| ${label}
+| ${display}]],
+    _equipment_star_template = [[| style="background: #ADEFFF; text-align: center;" | ★+${stars}]],
+
+    _nested_column_start = [[| colspan="4" |]],
+    _nested_table_start = [[{| class="mw-collapsible mw-collapsed" id="mw-customcollapsible-${toggle_class}" style="width: 100%; text-align: left;"]],
+    _nested_table_info_template = [[| style="padding-left: 50px;" | ${label}
+| ${display}]],
+}
+
+function MyModule:Main(args)
+end
+
+function MyModule.Begin(frame)
+    local args = getArgs{frame = frame:getParent()}
+    return MyModule:Main(args)
+end
+</pre>
+[[Category:Blog posts]]

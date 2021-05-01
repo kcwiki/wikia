@@ -1,0 +1,41 @@
+<includeonly>{{#vardefine:even_break|{{#if:{{{10|}}}||<br>}}}}<span class="advanced-tooltip">{{#if:{{{link_class|}}}{{{link_category|}}}|[[:Category:{{#if:{{{link_class|}}}|{{#replace:{{{link_class}}}| |_}}_Class|{{#if:{{{link_category|}}}|{{#replace:{{{link_category}}}| |_}}}}}}|{{#if:{{{text|}}}|{{{text}}}|{{#replace:{{{1|}}}|/|&#32;}}}}]]|[[{{#if:{{{link|}}}|{{{link}}}|{{#replace:{{{1|}}}|/|&#32;}}}}|{{#if:{{{text|}}}|{{{text}}}|{{#replace:{{{1|}}}|/|&#32;}}}}]]}}<span class="tooltip-contents">{{ShipBattleCardHD|{{{1|}}}}}{{#if:{{{kai|}}}|<br>{{ShipBattleCardHD|{{{1|}}}/Kai}}|}}{{#if:{{{kai_ni|}}}|<br>{{ShipBattleCardHD|{{{1|}}}/Kai Ni}}|}}{{#if:{{{2|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{2}}}}}}}{{#if:{{{3|}}}|<br>{{ShipBattleCardHD|{{{3}}}}}}}{{#if:{{{4|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{4}}}}}}}{{#if:{{{5|}}}|<br>{{ShipBattleCardHD|{{{5}}}}}}}{{#if:{{{6|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{6}}}}}}}{{#if:{{{7|}}}|<br>{{ShipBattleCardHD|{{{7}}}}}}}{{#if:{{{8|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{8}}}}}}}{{#if:{{{9|}}}|<br>{{ShipBattleCardHD|{{{9}}}}}}}{{#if:{{{10|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{10}}}}}}}{{#if:{{{11|}}}|<br>{{ShipBattleCardHD|{{{11}}}}}}}{{#if:{{{12|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{12}}}}}}}{{#if:{{{13|}}}|<br>{{ShipBattleCardHD|{{{13}}}}}}}{{#if:{{{14|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{14}}}}}}}{{#if:{{{15|}}}|<br>{{ShipBattleCardHD|{{{15}}}}}}}{{#if:{{{16|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{16}}}}}}}{{#if:{{{17|}}}|<br>{{ShipBattleCardHD|{{{17}}}}}}}{{#if:{{{18|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{18}}}}}}}{{#if:{{{19|}}}|<br>{{ShipBattleCardHD|{{{19}}}}}}}{{#if:{{{20|}}}|{{#var:even_break}}{{ShipBattleCardHD|{{{20}}}}}}}</span></span>{{#if:{{{help|}}}|<span style="color:red;"><sup>?</sup></span>}}</includeonly><noinclude>
+Links with ship battle card tooltips. Uses [[Template:ShipBattleCardHD]] and so is not limited by Lua limits (but is limited in features compared to [[Template:ShipBattleCardKai]], see [[Template:ShipBattleCardHD#Notes]]).
+==Usage==
+<pre>{{ShipLink|Nagato}}</pre>
+{{ShipLink|Nagato}}
+<pre>{{ShipLink|Hiryuu/Kai Ni}}</pre>
+{{ShipLink|Hiryuu/Kai Ni}}
+<pre>{{ShipLink|Hiryuu/Kai Ni|help=true}}</pre>
+{{ShipLink|Hiryuu/Kai Ni|help=true}}
+<pre>{{ShipLink|Kongou|Hiei|Kirishima|Haruna|text=Kongou Class|link_class=Kongou|help=true}}</pre>
+{{ShipLink|Kongou|Hiei|Kirishima|Haruna|text=Kongou Class|link_class=Kongou|help=true}}
+<pre>{{ShipLink|Fusou/Kai Ni|Yamashiro/Kai Ni|text=Fusou Class (Kai Ni)|link_class=Fusou|help=true}}</pre>
+{{ShipLink|Fusou/Kai Ni|Yamashiro/Kai Ni|text=Fusou Class (Kai Ni)|link_class=Fusou|help=true}}
+<pre>{{ShipLink|Littorio|Roma|text=Vittorio Veneto|link_class=Vittorio Veneto|help=true}}</pre>
+{{ShipLink|Littorio|Roma|text=Vittorio Veneto|link_class=Vittorio Veneto|help=true}}
+<pre>{{ShipLink|Hiryuu|kai=x|kai_ni=x}}</pre>
+{{ShipLink|Hiryuu|kai=x|kai_ni=x}}
+<pre>{{ShipLink|Ro-500|text=Ro-series|link_category=Ro-series}}</pre>
+{{ShipLink|Ro-500|text=Ro-series|link_category=Ro-series}}
+==Tests==
+{{ShipLink|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+{{ShipLink|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu|Hiryuu}}
+</noinclude>

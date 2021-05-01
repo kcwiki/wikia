@@ -1,0 +1,147 @@
+__NOTOC__
+<div style="text-align:center;margin-top:20px;">{{Event/DetailToggle}}</div>
+
+==Information==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{Notice|align=left|
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/XvqznWI1C3LjM5G82 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1SybHvKEJFjjKkzNKp2DeQUpCaW6sVkI4Q4Pg9LXnuQ8 here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:494112|here]].
+}}
+
+{{Event/MapInfo
+|en = Maritime Transport Operation
+|jp = 海上輸送作戦
+|romaji = Kaijyō yusō sakusen
+|tag = Transport Fleet
+|transport = true
+|hp_easy = 200
+|hp_normal = 280
+|hp_hard = 420
+|mechanics = LoS Check@Events/Mechanics#LoS_Check, Selection Node@Events/Mechanics#Node_specific_details, Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Ship Locking@Events/Mechanics#Ship_Locking
+
+|Easyitem1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]|Easyqty1 = 1
+|Easyitem2 = {{EquipmentCardKai|Emergency Repair Personnel|size=50px}}|Easyqty2 = 1
+|Easyitem3 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]|Easyqty3 = 1
+|Easyitem4 = {{EquipmentCardKai|Type 3 Fighter Hien|size=50px}}|Easyqty4 = 1
+
+|Normitem1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]|Normqty1 = 1
+|Normitem2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}|Normqty2 = 1
+|Normitem3 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]|Normqty3 = 1
+|Normitem4 = {{EquipmentCardKai|Type 3 Fighter Hien Model 1D|size=50px}}|Normqty4 = 1
+
+|Harditem1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]|Hardqty1 = 1
+|Harditem2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}|Hardqty2 = 1
+|Harditem3 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]|Hardqty3 = 1
+|Harditem4 = {{EquipmentCardKai|Raiden|size=50px}}|Hardqty4 = 1
+|Harditem5 = {{EquipmentCardKai|Type 3 Fighter Hien Model 1D|size=50px}}|Hardqty5 = 1
+}}
+{{MapBranchingTable
+|width = default
+|A/empty -> C/battle = * Choice
+|A/empty -> B/battle = * Choice
+
+|C/battle -> F/battle = * Does not meet the requirement to go to E
+|C/battle -> E/battle =
+* Fleet contains CV(B) '''UNCONFIRMED'''
+* Amount of DD in fleet is ≦ 3 '''UNCONFIRMED'''
+* Amount of CL in fleet is ≧ 2 '''UNCONFIRMED'''
+
+|B/battle -> E/battle = * Fleet contains {{ShipLink|Akashi|kai=x}}
+|B/battle -> D/battle = * Does not meet the requirements to got E
+
+|F/battle -> H/resource = * Fixed routing
+
+|E/battle -> F/battle = 
+* Fleet contains CV(B)
+|E/battle -> H/resource =
+* Does not meet the requirements to got F
+
+|D/battle -> E/battle = 
+* Fleet contains FBB
+* Fleet contains CLT
+* Amount of DD ≦ 2
+|D/battle -> H/battle = 
+* Does not meet the requirement to go to E
+
+|H/resource -> L/battle = 
+* Pass the LoS check '''AND''' do not meet any requirements to go to G
+
+|H/resource -> G/resource = 
+* Fail the LoS check
+* Slow Fleet
+* Amount of DD in fleet is ≦ 1
+* ??? has a small chance to off route. Reason is unknown at the moment.
+
+|I/storm -> J/battle = * Pass the LoS check
+|I/storm -> K/empty = * Fail the LoS check
+}}
+===Fleet compositions===
+* '''North Route''': {{Event/Route|A|blue|C|red|F|red|H|green|L|red}}
+** [[CL]], 3 [[DD]], [[FBB]], [[CVL]]/[[AV]] (fast fleet)
+<!--** 2 [[CL]], 3 [[DD]], [[CVL]] (fast fleet)-->
+* '''South Route''': {{Event/Route|A|blue|B|red|D|red|H|green|L|red}}
+** [[CL]], 4 [[DD]], [[CAV]]/[[CVL]] (fast fleet)
+
+===Tips===
+* This is a transport map. As always, you do not need to kill the Boss units or get S-ranks, you only need to get A-ranks to deplete the gauge.
+** Getting B or lower ranks will not lower the TP bar.
+* Note that you can NOT sink enemy submarines at night.
+* Bringing any [[DD]]/[[CL]] who can reach 100+ ASW with only 1 [[Sonar]] and 1 [[Depth Charge]] is highly recommended so that they can also equip a [[Drum Canister]] or [[Daihatsu]] (for the applicable) and still be able to perform [[OASW|Opening ASW]] attacks.
+* CVL with [[Re.2001 G Kai]] equipped as their only bombers will not target submarines.
+* Bringing any slow ships such as [[CT]] ({{ShipLink|Kashima|kai=x}}, {{ShipLink|Katori|kai=x}}), slow [[CVL]] ({{ShipLink|Junyou|kai=x|kai_ni=x}}, {{ShipLink|Hiyou|kai=x}}, {{ShipLink|Ryuuhou|kai=x}}, {{ShipLink|Houshou|kai=x}}), or slow [[AV]] ({{ShipLink|Mizuho|kai=x}}, {{ShipLink|Akitsushima|kai=x}}) will lead you to node G.
+* A certain amount of e[[LoS]] is required to reach the Boss (H → L branching).
+** Bringing a [[CVL]] with 3 [[List_of_Torpedo_Bombers_by_stats|Bombers]] and 1 [[Saiun]] will guarantee you the eLoS required to reach the Boss.
+** When using a [[CAV]], 2 [[Type 0 Observation Seaplane]] should be enough to reach the Boss.
+* It is '''recommended''' that you finish this stage on Hard mode, mainly because it's incredibly easy to beat this stage and the unique interceptor rewards that you receive are incredibly useful in helping you debuff the E-3 and E-5 bosses. In case you cannot consistently S rank the boss on Hard mode and you need to farm ships at the boss, you can consider switching to a lower difficulty for farming and switch back to Hard mode when you're done with farming.
+
+===Sample Videos===
+{| {{FancyTable}}
+|-
+! colspan="3" |View Sample E-1 Runs
+|-
+! scope="col" style="text-align:center;"|1 FBB 1 CL 3 DD 1 CVL (North)
+! scope="col" style="text-align:center;"|1 FBB 1 CL 3 DD 1 AV (North)
+! scope="col" style="text-align:center;"|1 CL 4 DD 1 CVL (South)
+|-
+|[[File:【KanColle】 Fall 2016 Event E-1 North Hard (1 FBB 1 CVL 1 CL 3 DD)|200 px]]
+|[[File:【KanColle】Fall 2016 Event E-1 Hard North (1 FBB 1 CL 3 DD 1 AV)|200 px]]
+|[[File:【KanColle】 Fall 2016 Event E-1 Hard South (1 CL 4 DD 1 CVL)|200 px]]
+|-
+! style="text-align:center;"|E-1 Easy mode Clear
+! style="text-align:center;"|E-1 Medium mode Clear
+! style="text-align:center;"|E-1 Hard mode Clear
+|-
+|N/A
+|N/A
+|[[File:Fall 2016 Event E-1 Hard Final Kill|200 px]]
+|}
+
+</div>{{clear}} <!-- Information collapsible -->
+
+{{:Fall 2016 Event/E-1/Enemy patterns}}
+
+==Drop list==
+<div class="mw-collapsible mw-expanded">{{clear}}
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = J, L,
+|boss = L
+|Abukuma: J/Easy, L/Easy
+|Akashi: L/Easy
+|Akizuki: J/Easy, L/Easy
+|Hatsuzuki: L/Easy
+|Kashima: L/Easy
+|Hiryuu: L/Easy
+|I-8: L/Easy
+|I-19: L/Easy
+|I-58: L/Easy
+|Kinu: J/Easy, L/Easy
+|Nowaki: J/Easy
+|Souryuu: L/Easy
+|Uranami: J/Easy, L/Easy
+}}
+
+</div> <!-- Drop list collapsible -->

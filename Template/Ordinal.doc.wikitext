@@ -1,0 +1,26 @@
+==Usage==
+:<code><nowiki>{{Ordinal|</nowiki>''integer''<nowiki>}}</nowiki></code>
+This template will add the appropriate [[wikipedia:ordinal indicator|ordinal indicator]] to a given integer.
+
+Use <code><nowiki>{{Ordinal|</nowiki>''integer''<nowiki>|sup=yes}}</nowiki></code> to display the ordinal suffix in superscript. Do not use superscript notation in the article space, per [[Wikipedia:Manual of Style (dates and numbers)#Typography|this section]] of the [[Wikipedia:Manual of Style|Manual of Style]].
+
+For an integer ending in 2 or 3 (except for integers ending in 12 or 13), the ordinal suffix will be ''-nd'' and ''-rd'', respectively. To display -d for the ordinal suffix rather than -nd and -rd, use <code><nowiki>{{Ordinal|</nowiki>''positive integer''<nowiki>|d}}</nowiki></code>.
+
+==Examples==
+
+{| class="wikitable" border="1"
+! Code !! Result
+|-
+| <code><nowiki>{{Ordinal|101}}</nowiki></code> || {{Ordinal|101}}
+|-
+| <code><nowiki>{{Ordinal|-102}}</nowiki></code> || {{Ordinal|-102}}
+|-
+| <code><nowiki>{{Ordinal|102|sup=yes}}</nowiki></code> || {{Ordinal|102|sup=yes}}
+|-
+| <code><nowiki>{{Ordinal|103}}</nowiki></code> || {{Ordinal|103}}
+|-
+| <code><nowiki>{{Ordinal|103|d}}</nowiki></code> || {{Ordinal|103|d}}
+|}
+
+==Other==
+*This template can be substituted.

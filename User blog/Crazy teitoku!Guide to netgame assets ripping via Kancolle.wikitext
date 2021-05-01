@@ -1,0 +1,4517 @@
+__NOTOC__
+{{Warning
+|title = Disclaimer warning
+|message = 
+Whilst the information surrounding the concept of obtaining game assets/cache, etc (to an extent) has been made available to the public domain for quite some time. Depending on the path that you choose to take, you must be aware that you alone are accountable for your own sole actions. '''Neither can nor will I be accountable for any losses regardless if accrued or not'''. By enacting on the information that is provided ''' 'AS IS' ''' you solemnly hereby agree that you have acted in your own accord. 
+}}
+
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:center; margin:15px auto 20px;">
+Currently this guide is for [https://www.google.com/chrome/ Google Chrome] users and would give a bit of a bonus to those who uses [[User_blog:Dragonjet/KC3改|KC3 Kai]]. However in the case of you using some other viewer/browser/tool you may be able to find a more appropriate guide. For such information, please refer to the tab "Further reading". In theory it is possible replicate the set up mentioned here according to your needs without too much of a hassle other than just consulting manuals where appropriate.
+</div>
+<tabber>Preface=
+
+I have seen [[Thread:150077|discussions]] on how to extract data from kancolle servers [[Thread:189942|here]] and [[Thread:227053|there]] with [http://archive.is/MKyfM loose] [http://www.cat-ears.net/?p=39599 bits] and [http://jbbs.shitaraba.net/bbs/read_archive.cgi/netgame/12394/1416471485/ pieces] of information which seems like it lacks some form of unification. Gradually over time however these bits and pieces of information becomes harder to find, along with at least two other limiting factors such as either the users are unable to find the resources themselves on how to do it and/or [[w:c:community:User_blog:Yhynerson1/Please_improve_the_Wikia_search_engine|the way wikia searches work is very archaic to say at best]].
+
+The methods I shall discuss from here on in maybe a repeat or reiteration of what others may have said. Therefore please do not make a rant about how you have read the steps before and that it was a waste of blog entry blah blah blah. The purpose of this blog entry was to really collate all the bits and pieces of information into almost a "one-stop shop" for virtually anyone interested.
+
+For now, I intend to only cover the extraction of data from SWF files or better known as Shockwave files. These files usually contain sprites, key animations and other information. However there are exceptions such as cases like these whereby the topic is about a game, SWF is basically a container for various game assets and probably a good way to organise how such assets are to be stored within a filesystem as opposed to having several hundreds and thousands of small files. The method could also be easily applied for extracting images, audio or virtually any other data that may be of an interest as once the fundamentals are explained the rest is just a matter of guess work.
+
+|-|Technique=
+{{#tag:tabber|Prerequisites=
+Here are some of the most basic pre-requisites:
+* A browser that you are familiar with and can make it reveal various assets that is required for a browser to load up and render a page.
+* A download manager to download those game assets as you may not want to have your browser download them. Browsers tend to "open" files once they have been downloaded/cached and that they are readable for the browser.
+* A SWF decompiler program. There are two known variants:
+:* [http://www.free-decompiler.com/flash/ JPEXS Flash decompiler (Free and open source)] '''RECOMMENDED'''
+:* [http://www.sothink.com/product/flashdecompiler/ Sothink's Flash decompiler (Proprietary)] '''Reported to not work with the majority of the SWF assets therefore NOT recommended'''.
+
+The guide will be using Chromium web browser (which is basically the same as Google Chrome but without all the bells and whistles from Google), a command line download manager which can also be used to mirror websites known as "wget" and as well JPEXS Flash decompiler.
+
+{{!}}-{{!}}Step 1= 
+[[File:Swf_rip.png|thumb|right]]
+First off, you will need to open up your developer tools panel. Google Chrome/Chromium and Mozilla Firefox should be F12, alternative shortcut key is Ctrl+Shift+J for Google Chrome/Chromium. Otherwise refer to your browser's manual/help file on how to make it show assets that the browser needs to load in order to view a page.
+
+With Google Chrome/Chromium the moment you open up developer tools panel you may have a random tab opened, tabs are the buttons on the top of the separate window with words like Network, Console, Resources, etc. If you are not on the Network tab, go there.
+
+Ideally you should have your web page already on the netgame and that the flash game is loading (not after). 
+In the following screenshot which is using KC3 Kai (a Kancolle viewer and is also a Chrome extension) and the option of playing the game via DMM iframe. The same method may also work with playing via API key.
+
+In the following screenshot you will notice that I have Network tab opened, and that I have highlighted in red box the game assets which appear to be interesting for download and extraction.
+
+{{!}}-{{!}}Step 2= 
+[[File:Swf_rip1.png|thumb|right]]
+Here I have the type of file sorted and instead shown a portion of the screenshot with some of the game assets highlighted in red box. These assets are usually transient assets (which means that they're bound to change more frequently compared to others) and that these alone does not comprise the entire assets the server has to offer. More data will be revealed depending on which area you visit within the game whilst you have Developer tools open along with it being in Network tab.
+{{clear}}
+
+{{!}}-{{!}}Step 3=
+[[File:Swf_rip2.png|thumb|right]]
+We click on one of the SWF assets, a new split window reveals where the browser has obtained the asset from followed by the name of the file as well as other interesting bit of information such as the version of the file.
+
+I have "mogrified" the IP address of the [[Servers|server]] but the link to the asset is what you will need to throw into your download manager for it to download. If you can specify to the download manager to either output the name of the file as or rename the file to something else after it has downloaded, set it to a filename without the question mark "?" character along with the rest of the unneeded characters appended after the question mark character. This tends to upset JPEXS Flash decompiler when it comes to opening the SWF file later on.
+
+Again if you are unsure about this you should probably consult with your download manager manual/help files.
+
+
+{{!}}-{{!}}Step 4=
+[[File:Swf_rip3.png|thumb|right]]
+After the file has been downloaded, just open it with your chosen flash decompiler program. The following screenshot is JPEXS Flash decompiler. Here I have opened up a SWF file known as SallyMain.swf and have went into the shapes section on the left panel from within the program.
+
+Of course if you happen to use Sothink's version you may also want to their manual/help files on how to make it reveal the various assets hidden within the SWF file.
+}}
+
+|-|Server layout=
+===<div id="top">Overview</div>===
+<div style="text-align:center;"> <span style="font-size:xx-large;">Example: [[#top|http://]][[#serverip|125.6.189.215]][[#filesystem|/kcs/]][[#files|mainD2.swf]]</span> </div><br>
+''Note: You can actually hover the majority of the URL above and click on the links to see more information''
+Fundamentals of how the servers are laid out are as follows:
+{| class="wikitable"
+! Context
+! Example (''as shown above'')
+|-
+| [[#serverip|Server IP addresses]]
+| 125.6.189.215
+|- 
+| [[#files|Visible versus invisible assets]]
+|mainD2.swf ('''for instance''')
+|-
+| [[#filesystem|Filesystem hierarchy]]
+|/kcs/
+|- 
+| [[#exceptions|Exceptions]]
+! ''N/A''
+|}
+
+===<div id="serverip">Server IP addresses</div>===
+The list of server IP addresses that can be found on [[Servers]] page tells us the amount of servers that hosts such Kancolle data. In the very least the fundamentals of data mining requires knowledge of these IP addresses so that one can obtain game assets irrespective if the corresponding servers are "on" or not. There are at times certain servers during maintenance receives new game data first compared to others and therefore the need to discover which server gets the preferrential treatment would be beneficial but not a necessity. For every other case, it is possible to obtain game assets from other game servers within the list of [[Servers|servers]] even though one does not "belong" to the said server.
+
+===<div id="files">Visible versus invisible assets</div>===
+There are two forms of files that are on the server as one can observe from collection of various game assets. There are files that are visible to the public and there are those that aren't visible to the public. There is not much details about whatever files that are not visible to the public because of the way the servers itself are configured - that is they will either throw forbidden or not found as opposed to showing the listing of a directory (or folder). What we do not know is the backend program that is responsible for telling the outcome of RNG to the player for instance as that program is hidden. What we do know are as follows.
+
+For game assets:
+* SWF - Used mainly as a container for storing varied multimedia with the exception of a few files such as Core.swf which is used to contain API calls. Is also used to interact with the program.
+* MP3 - Used mainly to store voice lines. For various BGM or certain sound elements, they are stored as SWF.
+* PNG - Used mainly to store images such as furniture or various other static images. For furniture that features animations or for newer [[Shop]] icons/assets, these are stored as SWF instead.
+* JS - Used mainly to instruct what SWF are to be displayed as well as various other elements on the web page. These however, does not contain anything to do with how the game is to function.
+* CSS - Used mainly to describe the style of the page.
+
+For interaction with the game:
+* (JSON) - For virtually any file that does not contain a filename extension are typically plaintext files that starts with something like, "svdata=" and the details in the <nowiki>{}</nowiki> curly brackets are JSON data.
+
+A majority of the files that the game requests the browser to fetch the assets has an extra parameter, "?version=". This however is not a way to obtain older copies of the said file from the server but is used internally by the game developers to keep track of the version they are up to for each of those files. It appears that there seems to be some form of concurrent versioning system going on in the backend or something but from the public eye these older versions of the files are not accessible.
+<div style = "text-align:right">[[#top|back to top]]</div>
+
+===<div id="filesystem">Filesystem hierarchy</div>===
+Information shown with uppercase endings denotes the description and potential purpose for specified directory or folder. These are as of June 2016.
+
+<pre>
+.
+└── kcs
+     ├── Contains SWF assets that are usually loaded up when the game loads.
+    ├── gadget
+    │   ├── js
+    │   │   ├──Various JavaScript assets for handling either payments or server availability.
+    │   └── script
+    │   │   ├──Suspected to only contain aesthetic fixes.
+    ├── kcscontents
+    │   ├── css
+    │   │   ├── These files only describe how the elements are to be laid out for Kancolle stuff. Possibly only used for non-flash related content i.e. banners on DMM page, etc.
+    │   ├── dictionary
+    │   │   └── js
+    │   │   │   ├── Contains Dictionary.js which is probably used for glossary on the DMM page itself.
+    │   ├── image
+    │   │   ├── These are the buttons on the DMM page that you can easily see and click.
+    │   ├── information
+    │   │   └── image
+    │   │   │   ├── Images for use on the DMM page.
+    │   ├── news
+    │   │   │   ├── Contains style.jss which is used to define how the rules are meant to be displayed on the DMM page.
+    │   ├── play
+    │   │   ├── image
+    │   │   │   ├── Contains images on how to play the game. Not necessarily a game asset.
+    │   │   └── js
+    │   │   │   ├── Contains Javascripts on how the page is to interact with the user/player.
+    │   ├── script
+    │   │   │   ├── Contains Javascripts on various aesthetics.
+    │   └── twitter
+    │       └── image
+    │   │   │   ├── Contains a placeholder image for developer tweets to appear on the DMM page
+    ├── resources
+    │   ├── bgm_p
+    │   │   │   ├── Contains various in-game BackGround Music (BGM) but does not contain all BGM. Instead common ones are usually placed here.
+    │   ├── image
+    │   │   ├── furniture
+    │   │   │   ├── chest
+    │   │   │   ├── desk
+    │   │   │   ├── floor
+    │   │   │   ├── object
+    │   │   │   ├── wall
+    │   │   │   └── window
+    │   │   │   ├── These are all furniture related items and are either in PNG format or SWF format.
+    │   │   ├── slotitem
+    │   │   │   ├── airunit_banner
+    │   │   │   ├── airunit_fairy
+    │   │   │   ├── airunit_name
+    │   │   │   ├── btxt_flat
+    │   │   │   ├── card
+    │   │   │   ├── item_character
+    │   │   │   ├── item_on
+    │   │   │   ├── item_up
+    │   │   │   ├── remodal
+    │   │   │   └── statustop_item
+    │   │   │   ├── These contain various Computer Graphics (CG) such as the equipments, equipment fairies, cut-in banners, etc. PNG format.
+    │   │   ├── useitem
+    │   │   │   ├── card
+    │   │   │   ├── icon
+    │   │   │   └── icon_p
+    │   │   │   ├── These contain various "use" items such as furniture coin boxes, furniture fairies, etc. If they are not in PNG they are in SWF for newer ones.
+    │   │   └── world
+    │   │   │   ├── These are server banners. PNG format.
+    │   └── swf
+    │       │    ├── Various in-game resources appears in here. All in SWF format.
+    │       ├── map
+    │   │   │   ├── Contains maps of the "world" in SWF format.
+    │       └── ships
+    │   │   │   ├── Contains the CG for the ships in SWF format.
+    ├── scenes
+    │       ├── Contains various assets in SWF format.
+    └── sound
+        ├── Voice lines for ships
+        └── titlecall
+            ├── Voice lines for introduction - Game start screen
+</pre>
+<div style = "text-align:right">[[#top|back to top]]</div>
+
+===<div id="exceptions">Exceptions</div>===
+* Of all the servers listed under [[Servers|here]], there is actually one more other server that is not noted. [[:Category:Gadget|However the said server does not actually host players but instead host other game details such as the outcome of the ranking rewards for the past months, the various event banners, etc.]]
+* Not all the hierarchy will be accessible to the player as some of them may also be hosted on a particular server (see former bullet point) or that it does not really belong as a game asset but rather as some asset to display the information on Kancolle from the DMM page.
+* If using game cache dumps (as listed in the next tab), the contents may not be the same as the directory structure as listed above but the principle is virtually the same.
+<div style = "text-align:right">[[#top|back to top]]</div>
+
+|-|Caveats=
+{{#tag:tabber|Overview=
+* Some assets within SWF file cannot be extracted out easily, in the case of <tt>Fonts.swf</tt> for my operating system (Linux) I was unable to extract the font assets into TTF (TrueType Font) but instead into WOFF file.
+* <s><tt>Core.swf</tt> cannot be decompiled or at least probably no useful stuff can be found within that file.</s> A possible de-obfuscation method has been mentioned [http://blog.mukio.org/articles/remove-kancolle-obfus/ (Simplified Chinese only) here] with [https://github.com/aristotle9/kancolle-worker/tree/master/src/kancolle_worker a link] discussing another viewer? 
+:* I also found this [[:User_blog:Ilufang/Decoded_Core.swf|blog entry]] which may contain information <s>but it seems old. Not sure if still relevant</s>. More information from Ilufang [[:User_blog:Ilufang/Analysis_on_Kancolle_Code_Obfuscation|here]].
+* A more updated blog entry by another author describes a simpler way; [http://dazzyd.org/blog/2016/03/17/kantai-collection-obfuscation-anti-obfuscation Blog entry on deobfuscating <tt>Core.swf</tt> (Simplified Chinese only)]. [https://twitter.com/yukixz Author's twitter].
+** [http://dazzyd.org/blog/2016/03/17/kantai-collection-obfuscation-anti-obfuscation/#rank-rate The ranking part of the blog entry] - it was also rumoured that around 15th of July update {{cite}} that the player ID was obfuscated, thereby preventing the likes of senka.me to function properly.
+* Not all assets can be found within SWF files. There are cases where files are stored as individual jpg, mp3, etc.
+
+{{!}}-{{!}}がか's analysis on Core.swf=
+''The following is an analysis by [[User:がか|がか]] on Core.swf.''<br><br>
+* <span style="background-color:#BCE2E8;"><tt>api_rate</tt></span> was added to <span style="background-color:#BCE2E8;"><tt>api_req_ranking/getlist</tt></span>, <span style="background-color:#BCE2E8;"><tt>api_member_id</tt></span> was removed:
+{{MultiTweet
+|MultiTweetID = api_rate
+|color = #ace
+|title = api_rate analysis
+|user = __taba__
+
+|link01 = https://twitter.com/__taba__/status/754032006279798784
+|JP01 = 解読オワタ。わしのIDの下1桁は3なんで、それ以外の人誰か試してみて。
+api_rate/順位/[2, 5, 7, 2, 7, 3, 1, 6, 9, 9][ID%10]
+|EN01 = 解読オワタ。わしのIDの下1桁は3なんで、それ以外の人誰か試してみて。
+api_rate/順位/[2, 5, 7, 2, 7, 3, 1, 6, 9, 9][ID%10]
+|TL01 = 
+}}
+* The intention of all these obfuscation with player ID was to disrupt kcvdb. With it (the obfuscation of player ID) now in place, it is possible to track players via <span style="background-color:#BCE2E8;"><tt>api_nickname</tt></span> but it can give conflicts.
+* In regards to <span style="background-color:#BCE2E8;"><tt>Core.swf</tt></span> itself, the process of getting proper <span style="background-color:#BCE2E8;"><tt>Core.swf</tt></span> (that can be decompiled) isn't "de-obfuscation", but decoding instead (with <span style="background-color:#BCE2E8;"><tt>___</tt></span> function from <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span> being an encoder, that function is obfuscated). Once you decode and decompile <span style="background-color:#BCE2E8;"><tt>Core.swf</tt></span>, there are plenty of unobfuscated code, just certain things are obfuscated. So [http://dazzyd.org/blog/2016/03/17/kantai-collection-obfuscation-anti-obfuscation/ this blog entry] has a decoder <span style="background-color:#BCE2E8;"><tt>Core-decode.py</tt></span>, two results on deobfuscation (for event maps and ranking points calculation), and a copy of the converting code for voice filenames. Another decoding method (that can work even if <span style="background-color:#BCE2E8;"><tt>___</tt></span> will get changed) is to disassemble <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span> (https://github.com/CyberShadow/RABCDAsm), use http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/FileReference.html#save() after <span style="background-color:#BCE2E8;"><tt>___</tt></span>, and then use <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span> itself as a decoder (ignoring <span style="background-color:#BCE2E8;"><tt>___</tt></span> content), running it in the flash player in a trusted directory.
+** <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span> is actually, a decryptor (or decoder rather), as <span style="background-color:#BCE2E8;"><tt>Core.swf</tt></span> is already encrypted/encoded when you download it from a server (there is this part in <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span>):
+{{Template:Talkquote|text = <pre>
+         if(loaderInfo.loaderURL.match(new RegExp("^file:")) == null)
+         {
+            ___(_loc4_,_loc3_,_loc6_);
+            _core.loadBytes(_loc3_,_loc5_);
+         }
+         else
+         {
+            _core.loadBytes(_loc4_,_loc5_);
+         }</pre>
+}}
+** literally using [[wikipedia:Transposition cipher|Transposition cipher]], some medieval encryption.
+** A note: using <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span> as a <span style="background-color:#BCE2E8;"><tt>Core.swf</tt></span> decoder.
+
+# https://github.com/CyberShadow/RABCDAsm, https://www.adobe.com/support/flashplayer/debug_downloads.html, https://www.macromedia.com/support/documentation/en/flashplayer/help/settings_manager04.html, http://help.adobe.com/en_US/FlashPlatform/reference/actionscript/3/flash/net/FileReference.html#save(), also get <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span> and (encrypted) <span style="background-color:#BCE2E8;"><tt>Core.swf</tt></span>
+# Disassemble <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span>: <span style="background-color:#BCE2E8;"><tt>abcexport mainD2.swf</tt></span>, <span style="background-color:#BCE2E8;"><tt>rabcdasm mainD2-0.abc</tt></span>
+# Edit <span style="background-color:#BCE2E8;"><tt>mainD2-0/mainD2-0.main.asasm</tt></span>
+# Assemble it back: <span style="background-color:#BCE2E8;"><tt>rabcasm mainD2-0/mainD2-0.main.asasm</tt></span>, <span style="background-color:#BCE2E8;"><tt>abcreplace mainD2.swf 0 mainD2-0/mainD2-0.main.abc</tt></span>
+# Run it with flash player form a trusted location with encrypted <span style="background-color:#BCE2E8;"><tt>Core.swf</tt></span> in it, it should prompt to save a decrypted <span style="background-color:#BCE2E8;"><tt>CoreDecoded.swf</tt></span>
+About 2<span class="mw-customtoggle-easteregg" style="cursor:text;">.</span>: using <span style="background-color:#BCE2E8;"><tt>FileReference.save</tt></span> to save decoded <span style="background-color:#BCE2E8;"><tt>ByteArray</tt></span>.
+
+Modify <span style="background-color:#BCE2E8;"><tt>_handleLoadComplete</tt></span> by replacing everything after
+{{Template:Talkquote|text = <pre>
+      getlex              QName(PackageNamespace("flash.system"), "ApplicationDomain")
+      getproperty         QName(PackageNamespace(""), "currentDomain")
+      setproperty         QName(PackageNamespace(""), "applicationDomain")</pre>
+}}
+
+and before
+{{Template:Talkquote|text = <pre>
+      returnvoid</pre>
+}}
+
+with the following code
+{{Template:Talkquote|text = <pre>
+      findpropstrict      QName(PrivateNamespace("mainD2"), "___")
+      getlocal            4
+      getlocal3
+      getlocal            6
+      callpropvoid        QName(PrivateNamespace("mainD2"), "___"), 3
+      findpropstrict      QName(PackageNamespace("flash.net"),"FileReference")
+      constructprop       QName(PackageNamespace("flash.net"),"FileReference"), 0
+      coerce              QName(PackageNamespace("flash.net"), "FileReference")
+      setlocal2
+      getlocal2
+      getlocal3
+      pushstring          "CoreDecoded.swf"
+      callpropvoid        QName(PackageNamespace(""), "save"), 2</pre>
+}}
+
+<span style="background-color:#BCE2E8;"><tt>___</tt></span> is a decoder function defined in <span style="background-color:#BCE2E8;"><tt>mainD2.swf</tt></span> and <span style="background-color:#BCE2E8;"><tt>FileReference.save</tt></span> is a standard function that asks user to save data (decoded <span style="background-color:#BCE2E8;"><tt>ByteArray</tt></span> in this case) to a file
+
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-easteregg">
+{{MultiTweet
+|MultiTweetID = api_rate0
+|color = #ace
+|title = [[Partials/Updates/2016 August 01st|2016 August 01st updates]]
+
+|link01 = https://twitter.com/KanColle_STAFF/status/760035226944876544
+|JP01 = 11▼接続環境整備/表示等の更新<br>
+・各サーバ群の整備/補強<br>
+・一部ボイスデータの再圧縮/再実装<br>
+・一部文字/艦娘表示の修正<br>
+・「ラバウル基地サーバ」の大幅増強/拡張<br>
+・一部通信方法の更新
+|EN01 = 11▼Update on UI and Network Environment<br>
+・Certain servers have been reinforced, reorganized<br>
+・Some voice data have been recompressed and reimplemented<br>
+・Some kanmusu-related UIs and text have been modified<br>
+・"[[:Category:Rabauru|Rabaul]]" Server has been significantly reinforced and expanded<br>
+・Certain network communication methods have been updated.
+|TL01 = [[User:Rephira|Rephira]]<br> [[User:Crazy teitoku|Crazy teitoku]]
+}}
+
+{{MultiTweet
+|MultiTweetID = api_rate1
+|color = #ace
+|title = api_rate analysis
+|user = Watch_Kensho
+
+|link01 = https://twitter.com/Watch_Kensho/status/760054364140474372
+|JP01 = そして本日のアップデートにて、再度、戦果部分に関する通信方法の更新が実施されました。<br>https://twitter.com/KanColle_STAFF/status/760035226944876544
+|EN01 = そして本日のアップデートにて、再度、戦果部分に関する通信方法の更新が実施されました。<br>https://twitter.com/KanColle_STAFF/status/760035226944876544
+|TL01 = 
+}}
+
+I can fix the client for collecting, but to update the site I need to decode this first [[File:Pacman.png]]<br>
+
+{{MultiTweet
+|MultiTweetID = api_rate2
+|color = #ace
+|title = api_rate analysis
+|user = Nishisonic
+
+|link01 = https://twitter.com/Nishisonic/status/760036027171909632
+|JP01 = api_rate消えたら笑います
+|EN01 = api_rate消えたら笑います
+|TL01 = 
+}}
+
+https://github.com/gakada/senka/releases
+this should work for collecting, but no updates right now<br>
+if you ok with collecting and waiting on api stuff<br>
+I got something, wonder if it will work for data from other user/server<br>
+tanaka's cryptography Kappa<br>
+https://discordcdn.com/attachments/176208846153318400/209682231734697985/list.csv_-_Microsoft_Excel_2016-08-01_23-41-42.png<br>
+okay, tanaka's constants are the same<br>
+my tanaka parameter is 6<br>
+juu's is 7<br>
+[[File:Pacman.png]]<br>
+that means it still needs to be decoded, but I can keep updating saiki and kanoya<br>
+also will start hashi<br>
+<span style="background-color:#BCE2E8;"><tt>real_rate = (encoded_rate / (tanaka_constants[(place - 1) % 13] * 13 * tanaka_parameter(client_id))) - 91</tt></span>
+https://gakada.github.io/senka/kanoya_ranking.html updated<br>
+also this bug xD<br>
+https://discordcdn.com/attachments/176208846153318400/209694895189917696/Ranking_Data__Kanoya_Ranking_Table_-_Google_Chro_2016-08-02_00-32-22.png<br>
+{{Template:Talkquote|text = <pre>
+// old function
+function decodeApiRate(rate: number, no: number, id: number): number {
+    const id_magic = [2, 5, 7, 2, 7, 3, 1, 6, 9, 9];
+    return rate / no / id_magic[id % 10];
+}
+
+// new function
+function decodeApiRate2(rate: number, no: number, id: number): number {
+    const no_magic = [1201, 1156, 5061, 4569, 4732, 3779, 4568, 5695, 4619, 4912, 5669, 6586, 8931],
+          id_magic = [21, 58, 78, 29, 71, 32, 15, 64, 91, 91];
+    return rate / no_magic[(no - 1) % 13] / id_magic[id % 10] - 91;
+}</pre>
+}}
+nice try SeemsGood<br>
+{{Template:Talkquote|text = <pre>
+function decodeApiMedals(medals: number, no: number): number {
+    const no_magic = [3054, 3009, 6914, 6422, 6585, 5632, 6421, 7548, 6472, 6765, 7522, 8439, 10784];
+    return medals / no_magic[(no - 1) % 13] - 157;
+}</pre>
+}}
+</div>
+}}
+
+|-|Further reading=
+{{#tag:tabber|Flash related links=
+* [[:Thread:150077|Kancolle flash on Dragonjet's message wall]]
+* [[:Thread:189942|Need help: Background and flash extraction on Dragonjet's message wall]]
+* [[:Thread:227053|Downloading SWF Files from server by Dragonjet]]
+* [[:User_blog:Dragonjet/Game_Extracts|Game Extracts by Dragonjet (deprecated)]]
+* [[:User_blog:Martirsadota/Utilizing_Wireshark_for_Kancolle_Asset_Grabbing|Utilizing Wireshark for Kancolle Asset Grabbing by Martirsadota]]
+* [[:User_blog:Martirsadota/A_Rapid-fire_Tutorial_on_Flash_Decompiling_(JPEXS-focused)|A Rapid-fire Tutorial on Flash Decompiling (focuses mainly on JPEXS) by Martirsadota]]
+* [[:User_blog:Ar-cen-ciel/Caching_Kanmusu_Sprite_Files|Caching Kanmusu Sprite Files by Ar-cen-ciel]]
+* [[:User_blog:Ilufang/Decoded_Core.swf|Decoded Core.swf by Ilufang]]
+* [[:User_blog:Ilufang/Analysis_on_Kancolle_Code_Obfuscation|Analysis on Kancolle Code Obfuscation by Ilufang]]
+{{#tag:tabber|Sound/music links=
+* <s>[[:User_blog:%E3%81%8C%E3%81%8B/Sound_Ripping_Note|Sound Ripping Note by がか]]</s> Dead link
+* [[:Thread:280227|Kancolle Start Screen Voice by Erupi]]
+* [[:User_blog:RedeyeTTK/Misc_Music_%26_Sound_Effect_List|Misc Music & Sound Effect List by RedeyeTTK]]
+* [[:User_blog:Vlrxnlr21/Soundbank_Reference_Index|Soundbank Reference Index by Vlrxnlr21 (deprecated)]]
+{{!}}-{{!}}API related links=
+* [[:User_blog:Dragonjet/Decoding_the_Ships_Master_Record|Decoding the Ships Master Record by Dragonjet (deprecated)]]
+* [[:User_blog:Tel.ladder/β_version_Kancolle|β version Kancolle by Tel.ladder (old blog entry - only talks about API strings)]]
+* [[:User_blog:Rephira/Guide_to_reading_Raw_API_Data|Guide to reading Raw API Data by Rephira]]
+* [[:User_blog:Martirsadota/A_Guide_on_Helping_Out_the_Wiki_Using_API_Data|A Guide on Helping Out the Wiki Using API Data by Martirsadota and Rephira]]
+}}
+
+{{!}}-{{!}}External links=
+* <s>[http://the-united-front.blogspot.com/2014/04/blog-post_28.html (Japanese only) various game assets and how they are organised (old)]</s> Dead link
+** [http://archive.is/MKyfM (Japanese only) 艦隊これくしょん～艦これ～・データ・ダウンローダー開発メモ - 失った時を数えて] Mirror for aforementioned dead link
+* [http://www.cat-ears.net/?p=39599 (Japanese only) some explanation of game assets. Not as concise as former link but may contain other interesting information. (old)]
+* [https://github.com/gakada/KCTools/blob/master/Data/Ships.csv List of ships along with their API filename as well as the link to their respective swf by がか]
+* [http://jbbs.shitaraba.net/bbs/read.cgi/netgame/12394/1416471485/ (Japanese only) ongoing discussion of various in-game assets and where they are stored, etc.]
+* [http://unlockacgweb.galstars.net/Index/gameCache (Chinese only) ShimakazeGo cache dump]
+* [http://www.acggate.net/acgpower/ (Chinese only) ACGPower cache dump]
+* [http://codegenerater.blogspot.com/2013/10/hacking-kancolle.html (Korean only) Hacking Kancolle - explains how to obtain filenames via wireshark (old)]
+* [http://b.hatena.ne.jp/kakipo/%E8%89%A6%E3%81%93%E3%82%8C/ (Japanese only) Unassorted information on various historical Kancolle data (old)]
+* [http://yun.baidu.com/wap/share/home?third=0&uk=2819251929&start=640 (Chinese only) ShimakazeGo's archived stuff - contains things other than just Kancolle related]
+* [https://docs.google.com/spreadsheets/d/1gSYgCPTMV7_bDerWTs_KCgVnhdaJQnFVFXcw5cFCqos/edit?pref=2&pli=1#gid=1474047856 (Japanese only) Nishisonic Archive - Contains old/current maps as well as other misc. stuff Google Spreadsheet]
+* [http://blog.mukio.org/articles/remove-kancolle-obfus/ (Simplified Chinese only) Blog entry on deobfuscating Core.swf (old)]
+* [http://dazzyd.org/blog/2016/03/17/kantai-collection-obfuscation-anti-obfuscation/#rank-rate Blog entry on deobfuscating Core.swf (Simplified Chinese only)]
+* [http://blog.livedoor.jp/hiroumauma/archives/1637086.html Stuff on asset ripping, API, as well as other de-obfuscation stuff - forum part? (Japanese only)]
+* [http://www.darkhorse.mydns.jp/contents/kancolle Owner of the said site with all the information from the link (forum part) above (Japanese only)]
+
+{{!}}-{{!}}ShimakazeGo_KanColle_cache_20160212-filelist=
+''Removed for brevity sake. To download the list of files, click [[:File:Filelist-ShimakazeGo-12-02-2016.pdf‎|here]]. You will need a PDF viewer to view the contents of this PDF file.''
+}}
+
+|-|Alternative method=
+Thanks to [[User:Qunow|Qunow]] for informing the existance of these services as links so that if (for whatever reason) you want to avoid ripping data from KC servers directly and/or you want to have basically a layout of KC server's filesystem with the majority of the contents being made available without the need to rip those assets by hand. The Chinese has offered ways to allow you to do just that - of course at the expense of knowing some Chinese.
+
+Currently only two sources of groups are known to offering these "game cache dumps";
+* ShimakazeGo, and
+* ACGPower 
+
+Ironically, the said same two groups also offers game cache dumps of various other select few DMM games;
+{| class="wikitable"
+|[[w:c:kanpani:Kanpani_Wiki|Kanpani Girls]]
+|[[w:c:flowerknight:Flower_Knight_Girl_Wikia|Flower Knight Girls]]
+|[[w:c:to-loveru:To_Love-Ru_Wiki|To Love Ru]]
+|[[w:c:touken-ranbu:Touken_Ranbu_Wiki|Touken Ranbu]]
+|[[w:c:kamihime-project:Kamihime_Project_Wikia|Kamihime Project]]
+|[[w:c:shinken-dmm:Shinken!!_Wikia|Shinken!!]]
+|-
+|[[w:c:zh.oz-chrono-chronicle:Oz_chrono_chronicle_Wiki|Oz chrono chronicle (Link is Chinese only link)]]
+|[[w:c:shiroprore:Shiro_Project:RE_Wikia|Shiro Project]]
+|[http://wikiwiki.jp/x-overd/ X-Overd (Link is Japanese only link)]
+|[http://wiki.gineita.info/ Gineita (Link is Japanese only link)]
+|[[w:c:zh.aigis:Aigis_Site|Aigis (Link is Chinese only link)]]
+|Monster Hunter
+|}
+
+Baidu file hosting service is pretty unstable outside of China as it is known to forcibly disconnect users from their servers at random intervals and/or to force captcha. Thanks to [[User:Horadrimus|Horadrimus]], I personally recommend you to try a download manager called [http://jdownloader.org/home/index JDownloader] which can potentially make life easier.
+
+{{#tag:tabber|Disclaimer=
+
+I can not be responsible for any losses should the file you download contains malicious data which sabotages your computer and/or your network in any particular way. 
+
+Some of these files personally tested [http://unlockacgweb.galstars.net/Index/gameCache ShimakazeGo cache dump] via their Baidu links and have witnessed that they do not appear to contain any malicious data despite the browser has constantly tried to block the downloads for the files.
+
+If you're using Google Chrome and/or other Chrome based browsers (Chromium, Opera, etc): the option (notably for Google Chrome) "Protect you and your device from dangerous sites" ticked under chrome://settings particularly under "Advanced settings". Downloading these cache dumps (especially from Baidu) '''may''' be prohibited by your browser. To bypass this issue (for Google Chrome at least) you may want to refer to [http://superuser.com/a/883583 this reply on superuser website].
+
+'''You are still advised to exercise at your own discretion either way.'''
+
+{{!}}-{{!}}ShimakazeGo cache dump=
+[http://unlockacgweb.galstars.net/Index/gameCache http://unlockacgweb.galstars.net/Index/gameCache]<br>
+<span style="color:#f00;">As of approximately 13th the August 2017, the owner has disabled viewing of their cloud account. The following information may be inaccurate.</span><br>
+{{#tag:tabber|Full archive guide=
+'''''Correct terminology should be: Complete archive guide. Shortened for brevity sake.'''''<br><br>
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1c1KbQms ShimakazeGo_KanColle_cache_20170929.7z]
+{{!}}-
+! Last updated
+{{!}} 2017-09-29 23:30
+{{!}}}
+The words, "完整缓存包 YYYY年MM月DD日 HH:MM 更新" where:
+:* YYYY is the year in four digits via four "Y",
+:* M indicates the month in two digits via two "M",
+:* D indicates day in two digits via two "D",
+:* H indicates hours in two digits and via two "H",
+:* M indicates minutes in two digits via two "M".
+Choose the available file host provider as listed. I personally recommend Baidu which is "度盘". On the Baidu site you just need to click on the button that says "下載"
+
+{{!}}-{{!}}Part. archive guide=
+'''''Correct terminology should be: Incremental archive guide. Shortened for brevity sake.'''''<br><br>
+{{{!}} class="wikitable" style="margin:0px"
+! Latest incremental archive
+{{!}} [https://pan.baidu.com/s/1i4Ln425 ShimakazeGo_KanColle_cache_CacheDifference_Last20170929.7z]
+{{!}}-
+! Last updated
+{{!}} 2017-09-29 23:30
+{{!}}}
+The words, "缓存差分包 YYYY年MM月DD日 HH:MM 更新" where:
+:* YYYY is the year in four digits via four "Y",
+:* M indicates the month in two digits via two "M",
+:* D indicates day in two digits via two "D",
+:* H indicates hours in two digits and via two "H",
+:* M indicates minutes in two digits via two "M".
+indicates an "[[wikipedia:Incremental backup|incremental archive]]" you will see that it will indicate from when the original updates were offered in the same format as above till the latest one that it was updated to.
+
+{{!}}-{{!}}Full archive link (Baidu)=
+'''''Correct terminology should be: Complete archive links. Shortened for brevity sake.'''''
+{{#tag:tabber|2014=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} ShimakazeGo_Cache20140117.rar
+{{!}} 2014-01-17 06:42
+{{!}} http://pan.baidu.com/s/1gduYgOr
+{{!}}-
+{{!}} ShimakazeGo_cache_20140409.7z
+{{!}} 2014-04-09 20:05
+{{!}} http://pan.baidu.com/s/1o6BaJJO
+{{!}}- 
+{{!}} ShimakazeGo_cache_20140409.7z
+{{!}} 2014-04-09 20:06
+{{!}} http://pan.baidu.com/s/1o6kCybK
+{{!}}-
+{{!}} ShimakazeGo_cache_20140814.7z
+{{!}} 2014-08-15 00:37
+{{!}} http://pan.baidu.com/s/1nt3F9pv
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20141120.7z
+{{!}} 2014-11-20 23:06
+{{!}} http://pan.baidu.com/s/1kTxavEf
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20141201.7z
+{{!}} 2014-12-01 18:42
+{{!}} http://pan.baidu.com/s/1cukKA
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20141202.7z
+{{!}} 2014-12-02 06:19
+{{!}} http://pan.baidu.com/s/1sjsK8P3
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20141212.7z
+{{!}} 2014-12-12 18:20
+{{!}} http://pan.baidu.com/s/1c0zrbJM
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20141226.7z
+{{!}} 2014-12-26 20:25
+{{!}} http://pan.baidu.com/s/1ntt9vsP
+{{!}}}
+
+{{!}}-{{!}}2015=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150101.7z
+{{!}} 2015-01-01 06:07
+{{!}} http://pan.baidu.com/s/1i3orXQH
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20150108.7z
+{{!}} 2015-01-08 21:27
+{{!}} http://pan.baidu.com/s/1bnztLl9
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20150109.7z
+{{!}} 2015-01-09 18:57
+{{!}} http://pan.baidu.com/s/1i33lt5r
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20150121.7z
+{{!}} 2015-01-21 19:13
+{{!}} http://pan.baidu.com/s/1qWE2JAO
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20150123.7z
+{{!}} 2015-01-23 23:58
+{{!}} http://pan.baidu.com/s/1dDs47sd
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150207.7z
+{{!}} 2015-02-07 03:36
+{{!}} http://pan.baidu.com/s/1i37pUlv
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150212.7z
+{{!}} 2015-02-12 08:02
+{{!}} http://pan.baidu.com/s/1hq8EcTY
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150218.7z
+{{!}} 2015-02-19 00:01
+{{!}} http://pan.baidu.com/s/1mgh1EQG
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150223.7z
+{{!}} 2015-02-23 18:44
+{{!}} http://pan.baidu.com/s/1jG46y8I
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150224.7z
+{{!}} 2015-02-24 14:56
+{{!}} http://pan.baidu.com/s/1pJ7Kbv9
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150313.7z
+{{!}} 2015-03-13 18:58
+{{!}} http://pan.baidu.com/s/1hqJ4nyO
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150327.7z
+{{!}} 2015-03-27 19:17
+{{!}} http://pan.baidu.com/s/1o63J1NG
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150410.7z
+{{!}} 2015-04-10 18:17
+{{!}} http://pan.baidu.com/s/1hqeTHTM
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150411.7z
+{{!}} 2015-04-14 23:35
+{{!}} http://pan.baidu.com/s/1ntiN0AP
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150422.7z
+{{!}} 2015-04-23 03:34
+{{!}} http://pan.baidu.com/s/1gdkvWOz
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150428.7z
+{{!}} 2015-04-28 23:03
+{{!}} http://pan.baidu.com/s/1hqrLFF2
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150429.7z
+{{!}} 2015-04-29 15:55
+{{!}} http://pan.baidu.com/s/1nt9S0D7
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150430.7z
+{{!}} 2015-04-30 07:13
+{{!}} http://pan.baidu.com/s/1kTsvDdH
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150430.7z
+{{!}} 2015-04-30 07:13
+{{!}} http://pan.baidu.com/s/1kTmVXcz
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20150518.7z
+{{!}} 2015-05-18 18:54
+{{!}} http://pan.baidu.com/s/1i3zSeOH
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150529.7z
+{{!}} 2015-05-29 17:50
+{{!}} http://pan.baidu.com/s/1gderUnD
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150530.7z
+{{!}} 2015-05-30 19:33
+{{!}} http://pan.baidu.com/s/1pJGBuif
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150612.7z
+{{!}} 2015-06-12 19:37
+{{!}} http://pan.baidu.com/s/1i3lajHV
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150626.7z
+{{!}} 2015-06-26 23:31
+{{!}} http://pan.baidu.com/s/1sjHoMNN
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150703.7z
+{{!}} 2015-07-03 21:07
+{{!}} http://pan.baidu.com/s/1jGtMWWQ
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150718.7z
+{{!}} 2015-07-19 02:15
+{{!}} http://pan.baidu.com/s/1sIvxG
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150721.7z
+{{!}} 2015-07-22 03:33
+{{!}} http://pan.baidu.com/s/1pJmm5kf
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150731.7z
+{{!}} 2015-07-31 18:34
+{{!}} http://pan.baidu.com/s/1bnHJE39
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150811.7z
+{{!}} 2015-08-11 21:09
+{{!}} http://pan.baidu.com/s/1bnx1Id5
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150813.7z
+{{!}} 2015-08-14 00:30
+{{!}} http://pan.baidu.com/s/1bnDaXkV
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150815.7z
+{{!}} 2015-08-15 05:59
+{{!}} http://pan.baidu.com/s/1bnjUJ0r
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150907.7z
+{{!}} 2015-09-07 18:33
+{{!}} http://pan.baidu.com/s/1gdpnWY3
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150920.7z
+{{!}} 2015-09-21 00:52
+{{!}} http://pan.baidu.com/s/1bn5BWIV
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150925.7z
+{{!}} 2015-09-25 19:07
+{{!}} http://pan.baidu.com/s/1x6KLS
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151009.7z
+{{!}} 2015-10-09 21:46
+{{!}} http://pan.baidu.com/s/1qW5mSuo
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151010.7z
+{{!}} 2015-10-10 23:42
+{{!}} http://pan.baidu.com/s/1ntoyhDZ
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151011.7z
+{{!}} 2015-10-11 21:38
+{{!}} http://pan.baidu.com/s/1jG4JpCq
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151030.7z
+{{!}} 2015-10-31 00:15
+{{!}} http://pan.baidu.com/s/1eQ36XJs
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151031.7z
+{{!}} 2015-10-31 16:56
+{{!}} http://pan.baidu.com/s/1kTlLSwf
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151102.7z
+{{!}} 2015-11-02 22:26
+{{!}} http://pan.baidu.com/s/1pJjBYpd
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151105.7z
+{{!}} 2015-11-05 21:52
+{{!}} http://pan.baidu.com/s/1pJzloBh
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151118.7z
+{{!}} 2015-11-19 01:01
+{{!}} http://pan.baidu.com/s/1t7bl0
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151121.7z
+{{!}} 2015-11-21 19:52
+{{!}} http://pan.baidu.com/s/1gdJf8Mf
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151208.7z
+{{!}} 2015-12-08 18:59
+{{!}} http://pan.baidu.com/s/1skdPHhz
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151224.7z
+{{!}} 2015-12-24 18:28
+{{!}} http://pan.baidu.com/s/1jHmSE7k
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20151230.7z
+{{!}} 2015-12-30 03:28
+{{!}} http://pan.baidu.com/s/1c1crBY4
+{{!}}}
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160101.7z
+{{!}} 2016-01-01 21:26
+{{!}} http://pan.baidu.com/s/1sjTeQ8t
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160119.7z
+{{!}} 2016-01-19 18:47
+{{!}} http://pan.baidu.com/s/1jH1WoHC
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160210.7z
+{{!}} 2016-02-11 01:43
+{{!}} http://pan.baidu.com/s/1geoDATX
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160211.7z
+{{!}} 2016-02-11 16:08
+{{!}} http://pan.baidu.com/s/1jHvZtx8
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160212.7z
+{{!}} 2016-02-12 18:20
+{{!}} http://pan.baidu.com/s/1eRwhXmi
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160229.7z
+{{!}} 2016-02-29 23:00
+{{!}} http://pan.baidu.com/s/1eQOz5r8
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160312.7z
+{{!}} 2016-03-12 05:07
+{{!}} http://pan.baidu.com/s/1mhbiHRi
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160402.7z
+{{!}} 2016-04-03 00:13
+{{!}} http://pan.baidu.com/s/1eRIO3g2
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160427.7z
+{{!}} 2016-04-28 01:27
+{{!}} http://pan.baidu.com/s/1nuOHbi5
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160508.7z
+{{!}} 2016-05-09 02:26
+{{!}} http://pan.baidu.com/s/1i5pUhm9
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160607.7z
+{{!}} 2016-06-07 15:34
+{{!}} http://pan.baidu.com/s/1gfdOqEf
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160630.7z
+{{!}} 2016-06-30 23:55
+{{!}} http://pan.baidu.com/s/1qYvOg4c
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160715.7z
+{{!}} 2016-07-16 00:05
+{{!}} http://pan.baidu.com/s/1kUIJ4Jd
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20160801.7z
+{{!}} 2016-08-01 20:34
+{{!}} http://pan.baidu.com/s/1eR6Jysa
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20160812.7z
+{{!}} 2016-08-13 05:38
+{{!}} http://pan.baidu.com/s/1kVxwF9l
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20160812.7z
+{{!}} 2016-08-20 05:21
+{{!}} http://pan.baidu.com/s/1gfE0l6z
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20160831.7z
+{{!}} 2016-09-01 00:31<br> 2016-09-16 19:22
+{{!}} https://pan.baidu.com/s/1pKSh1UF<br> https://pan.baidu.com/s/1dETiBJz
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20160916.7z
+{{!}} 2016-09-16 20:09
+{{!}} https://pan.baidu.com/s/1jHIjcCA
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20161005.7z
+{{!}} 2016-10-05 22:35
+{{!}} https://pan.baidu.com/s/1hsdmNHE
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20161006.7z
+{{!}} 2016-10-06 16:59
+{{!}} https://pan.baidu.com/s/1i5g8A1J
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20161021.7z
+{{!}} 2016-10-21 22:09
+{{!}} https://pan.baidu.com/s/1o7CDbN8
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20161119.7z
+{{!}} 2016-11-19 04:54
+{{!}} https://pan.baidu.com/s/1o8trWH8
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20161209.7z
+{{!}} 2016-12-09 23:28
+{{!}} https://pan.baidu.com/s/1hrZm6VU
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20161222.7z
+{{!}} 2016-12-23 05:06
+{{!}} https://pan.baidu.com/s/1pL0JrQj
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20161229.7z
+{{!}} 2016-12-29 05:11
+{{!}} http://pan.baidu.com/s/1eSC7ugi
+{{!}}}
+
+{{!}}-{{!}}2017=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20170110.7z
+{{!}} 2017-01-10 21:34
+{{!}} https://pan.baidu.com/s/1b7aoai
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20170126.7z
+{{!}} 2017-01-26 22:45
+{{!}} https://pan.baidu.com/s/1i5mewdf
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20170228.7z
+{{!}} 2017-03-01 01:07
+{{!}} https://pan.baidu.com/s/1i4JFOQp
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20170320.7z
+{{!}} 2017-03-31 02:05
+{{!}} https://pan.baidu.com/s/1mhJB0zY
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20170503.7z
+{{!}} 2017-05-03 03:20
+{{!}} https://pan.baidu.com/s/1dFCao85
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20170504.7z
+{{!}} 2017-05-04 05:00
+{{!}} https://pan.baidu.com/s/1bpKlPXt
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20170606.7z
+{{!}} 2017-06-07 01:12
+{{!}} https://pan.baidu.com/s/1i5Jvx5N
+<!--Cache dumps missing in-between these dates as user appears to have forbade viewing of own storage. 13/08/2017-->
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20170706.7z
+{{!}} 2017-07-06 22:30
+{{!}} https://pan.baidu.com/s/1dFzmrr7
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20170929.7z
+{{!}} 2017-09-29 23:30
+{{!}} https://pan.baidu.com/s/1c1KbQms
+{{!}}}
+}}
+
+{{!}}-{{!}}Part. archive link (Baidu)=
+'''''Correct terminology should be: Incremental archive links. Shortened for brevity sake.'''''
+{{#tag:tabber|2014=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} ShimakazeGo_cache_20140409_small.7z
+{{!}} 2014-04-09 20:21
+{{!}} http://pan.baidu.com/s/1pJNjZv1
+{{!}}- 
+{{!}} ShimakazeGo_cache_20140409_small.7z
+{{!}} 2014-07-03 22:14
+{{!}} http://pan.baidu.com/s/12Fham
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20141120_small.7z
+{{!}} 2014-11-20 23:06
+{{!}} http://pan.baidu.com/s/1mg2xX5u
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20141201_small.7z
+{{!}} 2014-12-01 18:42
+{{!}} http://pan.baidu.com/s/1hqGd86g
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20141202_small.7z
+{{!}} 2014-12-02 06:20
+{{!}} http://pan.baidu.com/s/1jGA9PVg
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20141212_small.7z
+{{!}} 2014-12-12 18:20
+{{!}} http://pan.baidu.com/s/1qWsMSGk
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20141226_small.7z
+{{!}} 2014-12-26 20:25
+{{!}} http://pan.baidu.com/s/1sjqJwHv
+{{!}}}
+
+{{!}}-{{!}}2015=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_20150101_small.7z
+{{!}} 2015-01-01 06:08
+{{!}} http://pan.baidu.com/s/1o6NZCL0
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150108_small.7z
+{{!}} 2015-01-08 21:28
+{{!}} http://pan.baidu.com/s/1ntFUyYd
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150109_small.7z
+{{!}} 2015-01-09 18:57
+{{!}} http://pan.baidu.com/s/1mgn6kNe
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150123_small.7z
+{{!}} 2015-01-24 02:05
+{{!}} http://pan.baidu.com/s/1jGtas30
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150207_small.7z
+{{!}} 2015-02-07 03:37
+{{!}} http://pan.baidu.com/s/1jGEF2jO
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150212_small.7z
+{{!}} 2015-02-12 08:03
+{{!}} http://pan.baidu.com/s/1jGBrNts
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150218_small.7z
+{{!}} 2015-02-18 23:56
+{{!}} http://pan.baidu.com/s/1sj8vPkL
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150223_small.7z
+{{!}} 2015-02-23 18:45
+{{!}} http://pan.baidu.com/s/1jG9WjcE
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150224_small.7z
+{{!}} 2015-02-24 14:57
+{{!}} http://pan.baidu.com/s/1eQGjXj8
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150313_small.7z
+{{!}} 2015-03-13 18:59
+{{!}} http://pan.baidu.com/s/1jG03rCE
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150327_small.7z
+{{!}} 2015-03-27 19:17
+{{!}} http://pan.baidu.com/s/1gdCLnb1
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_20150410_small.7z
+{{!}} 2015-04-10 18:17
+{{!}} http://pan.baidu.com/s/1i3zQzeH
+{{!}}- 
+{{!}} KanColle_CacheDifference_Last2015-04-10.7z
+{{!}} 2015-04-11 04:36
+{{!}} http://pan.baidu.com/s/1kTrEO1x
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150422.7z
+{{!}} 2015-04-23 02:13
+{{!}} http://pan.baidu.com/s/1EYrsa
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150428.7z
+{{!}} 2015-04-30 07:13
+{{!}} http://pan.baidu.com/s/1hqEg15y
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150518.7z
+{{!}} 2015-05-19 04:44
+{{!}} http://pan.baidu.com/s/1o6JuIZS
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150529.7z
+{{!}} 2015-05-30 19:18
+{{!}} http://pan.baidu.com/s/1mgvcHnU
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150612.7z
+{{!}} 2015-06-12 19:34
+{{!}} http://pan.baidu.com/s/1jGhAtHc
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150626.7z
+{{!}} 2015-06-26 23:30
+{{!}} http://pan.baidu.com/s/1o6wwij4
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150703.7z
+{{!}} 2015-07-03 21:03
+{{!}} http://pan.baidu.com/s/1gdB4d9L
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150717.7z
+{{!}} 2015-07-19 01:39
+{{!}} http://pan.baidu.com/s/1bn4REnd
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150721.7z
+{{!}} 2015-07-21 17:51
+{{!}} http://pan.baidu.com/s/1eQtWsHc
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150731.7z
+{{!}} 2015-07-31 18:30
+{{!}} http://pan.baidu.com/s/1pJFZr1T
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150810.7z
+{{!}} 2015-08-15 05:53
+{{!}} http://pan.baidu.com/s/1eQlQ4Lk
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150907.7z
+{{!}} 2015-09-07 18:31
+{{!}} http://pan.baidu.com/s/1o6tJyLs
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150810.7z
+{{!}} 2015-09-08 23:25
+{{!}} http://pan.baidu.com/s/1bnFeGBP
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150920.7z
+{{!}} 2015-09-21 00:50
+{{!}} http://pan.baidu.com/s/1kTtkvJp
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150925.7z
+{{!}} 2015-09-25 18:57
+{{!}} http://pan.baidu.com/s/1o6GfiSa
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150925.7z
+{{!}} 2015-09-25 19:08
+{{!}} http://pan.baidu.com/s/1eQoBh3k
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20151009.7z
+{{!}} 2015-10-10 04:38
+{{!}} http://pan.baidu.com/s/1i3B6H8L
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501009fix3.7z
+{{!}} 2015-10-11 21:25
+{{!}} http://pan.baidu.com/s/1kTEkFn5
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501030fix.7z
+{{!}} 2015-10-31 00:11
+{{!}} http://pan.baidu.com/s/1hqAo0Mo
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501030fix2.7z
+{{!}} 2015-10-31 16:54
+{{!}} http://pan.baidu.com/s/1jGMvEHg
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501030fix3.7z
+{{!}} 2015-11-02 21:55
+{{!}} http://pan.baidu.com/s/1dD8YK7n
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501030fix4.7z
+{{!}} 2015-11-05 21:43
+{{!}} http://pan.baidu.com/s/1c0v3U96
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501118.7z
+{{!}} 2015-11-18 22:19
+{{!}} http://pan.baidu.com/s/1gd9BRI7
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501118fix1.7z
+{{!}} 2015-11-19 00:53
+{{!}} http://pan.baidu.com/s/1o6OqGp8
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501118fix2.7z
+{{!}} 2015-11-21 19:32
+{{!}} http://pan.baidu.com/s/1i3k59hr
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501208.7z
+{{!}} 2015-12-08 18:42
+{{!}} http://pan.baidu.com/s/1kUkN6o3
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501223.7z
+{{!}} 2015-12-24 18:13
+{{!}} http://pan.baidu.com/s/1kUmQCtx
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501229.7z
+{{!}} 2015-12-30 03:11
+{{!}} http://pan.baidu.com/s/1bnKIGlL
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501231.7z
+{{!}} 2016-01-01 03:11
+{{!}} http://pan.baidu.com/s/1i4eQbVv
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501231fix1.7z
+{{!}} 2016-01-01 08:29
+{{!}} http://pan.baidu.com/s/1jH24DHs
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last201501231fix2.7z
+{{!}} 2016-01-01 21:24
+{{!}} http://pan.baidu.com/s/1i4uz4m5
+{{!}}}
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160119.7z
+{{!}} 2016-01-19 18:46
+{{!}} http://pan.baidu.com/s/1UwEvW
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160212.7z
+{{!}} 2016-02-12 18:19
+{{!}} http://pan.baidu.com/s/1i42N0ZN
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160212fix2.7z
+{{!}} 2016-02-13 13:28
+{{!}} http://pan.baidu.com/s/1c1p0NzM
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160229.7z
+{{!}} 2016-02-29 19:02
+{{!}} http://pan.baidu.com/s/1boyx30j
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160229fix1.7z
+{{!}} 2016-02-29 22:48
+{{!}} http://pan.baidu.com/s/1jHrxDUe
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160311.7z
+{{!}} 2016-03-12 05:09
+{{!}} http://pan.baidu.com/s/1dEqqquX
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160402.7z
+{{!}} 2016-04-03 00:13
+{{!}} http://pan.baidu.com/s/1nvxlL5B
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160427.7z
+{{!}} 2016-04-28 01:23
+{{!}} http://pan.baidu.com/s/1i5au45J
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160503.7z
+{{!}} 2016-05-03 06:04
+{{!}} http://pan.baidu.com/s/1pKA0ct1
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160503fix.7z
+{{!}} 2016-05-09 01:15
+{{!}} http://pan.baidu.com/s/1jI6hdPk
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20150810.7z
+{{!}} 2016-05-15 22:06
+{{!}} http://pan.baidu.com/s/1kVrSnKr
+{{!}}- 
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160607.7z
+{{!}} 2016-06-07 14:48
+{{!}} http://pan.baidu.com/s/1c2hYmJ2
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160630.7z
+{{!}} 2016-06-30 23:54
+{{!}} http://pan.baidu.com/s/1hsjTiyo
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160715.7z
+{{!}} 2016-07-16 00:05
+{{!}} http://pan.baidu.com/s/1kUYsAuN
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160801.7z
+{{!}} 2016-08-01 19:54
+{{!}} http://pan.baidu.com/s/1hsNk8D2<br>http://pan.baidu.com/s/1hsDbkGG
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160812.7z
+{{!}} 2016-08-13 05:38
+{{!}} http://pan.baidu.com/s/1qXQI0TQ
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160812fix.7z
+{{!}} 2016-08-20 05:22
+{{!}} http://pan.baidu.com/s/1kUUWMV1
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160831.7z
+{{!}} 2016-09-01 00:31<br> 2016-09-16 19:21
+{{!}} https://pan.baidu.com/s/1geCOFyr<br> https://pan.baidu.com/s/1cywPbC
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20160916.7z
+{{!}} 2016-09-16 20:09
+{{!}} https://pan.baidu.com/s/1kVpWXeB
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20161005.7z
+{{!}} 2016-10-05 22:34
+{{!}} https://pan.baidu.com/s/1eRKucls
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20161005fix.7z
+{{!}} 2016-10-06 16:58
+{{!}} https://pan.baidu.com/s/1mhGecYk
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20161021.7z
+{{!}} 2016-10-21 21:33
+{{!}} https://pan.baidu.com/s/1o8wElGu
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20161105.7z
+{{!}} 2016-11-05 16:59
+{{!}} https://pan.baidu.com/s/1dFdu4d7
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20161118.7z
+{{!}} 2016-11-19 04:52
+{{!}} https://pan.baidu.com/s/1jIK4yMy
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20161209.7z
+{{!}} 2016-12-09 23:28
+{{!}} https://pan.baidu.com/s/1jIE0afO
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20161222.7z
+{{!}} 2016-12-23 05:06
+{{!}} https://pan.baidu.com/s/1c23NBC8
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20161227.7z
+{{!}} 2016-12-29 05:10
+{{!}} http://pan.baidu.com/s/1kVPoweV
+{{!}}}
+
+{{!}}-{{!}}2017=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170101.7z
+{{!}} 2017-01-01 03:48
+{{!}} http://pan.baidu.com/s/1b6ZG5K<br>https://pan.baidu.com/s/1qY73V3m
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170110.7z
+{{!}} 2017-01-10 22:38
+{{!}} https://pan.baidu.com/s/1qYnRhaW
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170110fix.7z
+{{!}} 2017-01-10 22:39
+{{!}} https://pan.baidu.com/s/1dES8Pah
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170125.7z
+{{!}} 2017-01-26 22:44
+{{!}} https://pan.baidu.com/s/1nuN9DzV
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170211.7z
+{{!}} 2017-02-11 23:28
+{{!}} https://pan.baidu.com/s/1geNgFhp
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170211fix.7z
+{{!}} 2017-02-12 05:02
+{{!}} https://pan.baidu.com/s/1eSkjy2u
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170211fix2.7z
+{{!}} 2017-02-13 04:01
+{{!}} https://pan.baidu.com/s/1dFFZ76x
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170228.7z
+{{!}} 2017-02-28 23:37
+{{!}} https://pan.baidu.com/s/1jHD8ka6
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170320.7z
+{{!}} 2017-03-21 01:24
+{{!}} https://pan.baidu.com/s/1pL2PWpl
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170502.7z
+{{!}} 2017-05-03 02:31
+{{!}} https://pan.baidu.com/s/1slnpn8T
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170502fix.7z
+{{!}} 2017-05-04 04:40
+{{!}} https://pan.baidu.com/s/1hsiNTti
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170606.7z
+{{!}} 2017-06-07 01:10
+{{!}} https://pan.baidu.com/s/1eRBJHXw
+<!--Cache dumps missing in-between these dates as user appears to have forbade viewing of own storage. 13/08/2017-->
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170810.7z
+<!--Partial cache noted to be from 2017-07-07 to this date.-->
+{{!}} 2017-08-10 23:00
+{{!}} https://pan.baidu.com/s/1c21YqwK
+{{!}}-
+{{!}} ShimakazeGo_KanColle_cache_CacheDifference_Last20170929.7z
+{{!}} 2017-09-29 23:30
+{{!}} https://pan.baidu.com/s/1i4Ln425
+{{!}}}
+}}
+
+}}
+
+{{!}}-{{!}}ACGPower cache dump=
+[http://www.acggate.net/acgpower/ http://www.acggate.net/acgpower/]<br>
+<span style="color:#f00;">As of approximately 13th the August 2017, the owner has disabled viewing of their cloud account. The following information may be inaccurate. In addition, ACGPower's website appears to be login-only. However, old game cache dump links are still valid.</span><br>
+'''Under the section "本地缓存包" and the subsection "舰娘本地缓存："'''
+
+{{#tag:tabber|Full archive guide=
+'''''Correct terminology should be: Complete archive guide. Shortened for brevity sake.'''''<br><br>
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1gfKDBFH kcs-1-14-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2017-01-14 12:22
+{{!}}}
+The words, "下载完整缓存包：百度网盘（YYYY-MM-DD HH:MM更新）" where:
+:* YYYY is the year in four digits via four "Y",
+:* M indicates the month in two digits via two "M",
+:* D indicates day in two digits via two "D",
+:* H indicates hours in two digits and via two "H",
+:* M indicates minutes in two digits via two "M".
+indicates a complete archive.
+
+{{!}}-{{!}}Part. archive guide=
+'''''Correct terminology should be: Incremental archive guide. Shortened for brevity sake.'''''<br><br>
+{{{!}} class="wikitable" style="margin:0px"
+! Latest incremental archive
+{{!}} [https://pan.baidu.com/s/1gfI5207 kcs-update-9-18-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-09-18 16:38
+{{!}}}
+The words, "下载更新缓存包：百度网盘（YYYY-MM-DD HH:MM更新）" where:
+:* YYYY is the year in four digits via four "Y",
+:* M indicates the month in two digits via two "M",
+:* D indicates day in two digits via two "D",
+:* H indicates hours in two digits and via two "H",
+:* M indicates minutes in two digits via two "M".
+indicates "[[wikipedia:Incremental backup|incremental archive]]". Again "百度" means Baidu file hosting site.
+
+{{!}}-{{!}}Full archive link (Baidu)=
+'''''Correct terminology should be: Complete archive links. Shortened for brevity sake.'''''
+{{#tag:tabber|2015=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} kcs-7-19-1.7z
+{{!}} 2015-07-20 14:08
+{{!}} http://pan.baidu.com/s/1sj7gZ7J
+{{!}}-
+{{!}} kcs-8-2-1.7z
+{{!}} 2015-08-02 13:01
+{{!}} http://pan.baidu.com/s/120G2
+{{!}}- 
+{{!}} kcs-8-11-1.7z
+{{!}} 2015-08-11 18:45
+{{!}} http://pan.baidu.com/s/1pJJxTYN
+{{!}}- 
+{{!}} kcs-9-7-1.7z
+{{!}} 2015-09-08 01:08
+{{!}} http://pan.baidu.com/s/1bnwNGHT
+{{!}}- 
+{{!}} kcs-9-29-1.7z
+{{!}} 2015-09-29 18:50
+{{!}} http://pan.baidu.com/s/1bndmpKN
+{{!}}- 
+{{!}} kcs-10-12-1.7z
+{{!}} 2015-10-12 13:49
+{{!}} http://pan.baidu.com/s/1c0DJet6
+{{!}}- 
+{{!}} kcs-10-31-1.7z
+{{!}} 2015-10-31 15:21
+{{!}} http://pan.baidu.com/s/1sj3k5Ox
+{{!}}- 
+{{!}} kcs-11-20-1.7z
+{{!}} 2015-11-20 14:03
+{{!}} http://pan.baidu.com/s/1kTo5gdp
+{{!}}- 
+{{!}} kcs-11-20-1.7z
+{{!}} 2015-11-20 14:19
+{{!}} http://pan.baidu.com/s/1sj1Qdel
+{{!}}- 
+{{!}} kcs-12-09-1.7z
+{{!}} 2015-12-09 19:35
+{{!}} http://pan.baidu.com/s/1ntTiAk5
+{{!}}- 
+{{!}} kcs-12-30-1.7z
+{{!}} 2015-12-30 14:43
+{{!}} http://pan.baidu.com/s/1dEq2LlJ
+{{!}}}
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} kcs-1-6-1.7z
+{{!}} 2016-01-06 13:48
+{{!}} http://pan.baidu.com/s/1dEm1Ycp
+{{!}}- 
+{{!}} kcs-1-20-1.7z
+{{!}} 2016-01-20 19:31
+{{!}} http://pan.baidu.com/s/1sjVoyGP
+{{!}}- 
+{{!}} kcs-2-11-1.7z
+{{!}} 2016-02-11 22:12
+{{!}} http://pan.baidu.com/s/1i42hk6T
+{{!}}- 
+{{!}} kcs-3-2-1.7z
+{{!}} 2016-03-02 16:48
+{{!}} http://pan.baidu.com/s/1sjZ9iiT
+{{!}}- 
+{{!}} kcs-6-11-1.7z
+{{!}} 2016-06-11 12:59
+{{!}} http://pan.baidu.com/s/1pLzmSVx
+{{!}}-
+{{!}} kcs-9-18-1.7z
+{{!}} 2016-09-18 16:38
+{{!}} https://pan.baidu.com/s/1qYKUYny
+{{!}}-
+{{!}} kcs-11-30-1.7z
+{{!}} 2016-11-30 14:02
+{{!}} https://pan.baidu.com/s/1nuCHf3F
+{{!}}}
+
+{{!}}-{{!}}2017=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} kcs-1-14-1.7z
+{{!}} 2017-01-14 12:22
+{{!}} https://pan.baidu.com/s/1gfKDBFH
+{{!}}}
+}}
+
+{{!}}-{{!}}Part. archive link (Baidu)=
+'''''Correct terminology should be: Incremental archive links. Shortened for brevity sake.'''''
+{{#tag:tabber|2015=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} kcs-update-7-19-1.7z
+{{!}} 2015-07-20 14:08
+{{!}} http://pan.baidu.com/s/1bntwvqn
+{{!}}- 
+{{!}} kcs-update-8-2-1.7z
+{{!}} 2015-08-02 12:00
+{{!}} http://pan.baidu.com/s/1mgtKQ84
+{{!}}- 
+{{!}} kcs-update-8-10-2.7z
+{{!}} 2015-08-11 01:12
+{{!}} http://pan.baidu.com/s/1c0uHJaS
+{{!}}- 
+{{!}} kcs-update-8-11-1.7z
+{{!}} 2015-08-11 18:46
+{{!}} http://pan.baidu.com/s/1kTtN9af
+{{!}}- 
+{{!}} kcs-update-9-7-1.7z
+{{!}} 2015-09-08 01:08
+{{!}} http://pan.baidu.com/s/1o6EIfay
+{{!}}- 
+{{!}} kcs-update-10-12-1.7z
+{{!}} 2015-10-12 13:49
+{{!}} http://pan.baidu.com/s/1kTnMsoZ
+{{!}}- 
+{{!}} kcs-update-10-31-1.7z
+{{!}} 2015-10-31 15:01
+{{!}} http://pan.baidu.com/s/1gdGwh7X
+{{!}}- 
+{{!}} kcs-update-12-09-1.7z
+{{!}} 2015-12-09 19:07
+{{!}} http://pan.baidu.com/s/1skdjO2T
+{{!}}- 
+{{!}} kcs-update-12-30-1.7z
+{{!}} 2015-12-30 14:43
+{{!}} http://pan.baidu.com/s/1nu2xJnz
+{{!}}}
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! File name
+! Timestamp
+! Link
+{{!}}-
+{{!}} kcs-update-1-6-1.7z
+{{!}} 2016-01-06 13:48
+{{!}} http://pan.baidu.com/s/1o7hzY7g
+{{!}}-
+{{!}} kcs-update-1-20-1.7z
+{{!}} 2016-01-20 19:31
+{{!}} http://pan.baidu.com/s/1qWRSHQG
+{{!}}- 
+{{!}} kcs-update-3-2-1.7z
+{{!}} 2016-03-02 16:48
+{{!}} http://pan.baidu.com/s/1bqsDT8
+{{!}}- 
+{{!}} kcs-update-3-12-1.7z
+{{!}} 2016-03-12 22:50
+{{!}} http://pan.baidu.com/s/1boqu5JL
+{{!}}- 
+{{!}} kcs-update-5-7-1.7z
+{{!}} 2016-05-08 00:29
+{{!}} http://pan.baidu.com/s/1hrIMhBQ
+{{!}}- 
+{{!}} kcs-update-6-11-1.7z
+{{!}} 2016-06-11 13:03
+{{!}} http://pan.baidu.com/s/1slrHrnJ
+{{!}}-
+{{!}} kcs-update-7-20-1.7z
+{{!}} 2016-07-20 23:16
+{{!}} http://pan.baidu.com/s/1bpr6avX
+{{!}}-
+{{!}} kcs-update-8-1-1.7z
+{{!}} 2016-08-02 01:28
+{{!}} http://pan.baidu.com/s/1eSDLmHO
+{{!}}-
+{{!}} kcs-update-9-18-1.7z
+{{!}} 2016-09-18 16:38
+{{!}} https://pan.baidu.com/s/1gfI5207
+{{!}}}
+}}
+
+}}
+
+}}
+
+|-|Misc.=
+{{#tag:tabber|Notice=
+Game cache dumps of other (DMM) "netgame" are also hosted on the Baidu file hosting service from both ShimakazeGo as well as ACGPro are as follows:
+* These links are Baidu links. You may wish to refer to the information provided under the "Alternative method" tab for some tips/info.
+** <span style="color:#f00;">Since the last snapshot on approximately 20th of August 2016. As of 25th of August 2016, Baidu has adopted [[wikipedia:HTTPS|HTTPS]] standard as a way of linking each and every users' shared files. TL;DR basically old links predating 25th of August 2016 may become invalidated.</span>
+** <span style="color:#f00;">As of approximately 13th the August 2017, these owners has disabled viewing of their cloud account. The following game cache dumps may be incomplete.</span>
+* I will do my best to update these as I go along but the same disclaimer applies,
+** I will not be responsible for your loss of any sort when obtaining these game cache data.
+** I will also not be updating these links as frequently due to the way the uploaders imposed certain filenaming structures that is beyond my knowledge as well as the depth.
+
+{{!}}-{{!}}Other game assets/cache links=
+{{#tag:tabber|From ShimakazeGo=
+<div id="top3"></div>
+{{{!}} style="width:100%;" class="toptextcells"
+{{!}} <br><!--style="float:left; text-align:left; valign:top;" {{!}} [http://pan.baidu.com/share/home?uk=2819251929 Last snapshot] (included in here for personal reasons only):
+<br><span style="color:#f00;">ShimakazeGo_KanColle_cache_20170606.7z</span>
+<br><span style="color:#f00;">ShimakazeGo_KanColle_cache_CacheDifference_Last20170606.7z</span>
+<br>net.galstars.shimakazego-1.0.0.22-new-https.apk
+<br>SwitchyOmega.crx
+<br>ShimakazeGo_1.7.0.3.7z
+<br>net.galstars.shimakazego-1.0.0.22-print-logout.apk
+<br>ShimakazeGo_1.7.0.2.7z
+<br><span style="color:#f00;">ShimakazeGo_KanColle_cache_20170504.7z</span>
+<br><span style="color:#f00;">ShimakazeGo_KanColle_cache_CacheDifference_Last20170502fix.7z</span>
+<br>net.galstars.shimakazego-1.0.0.22.apk
+<br><span style="color:#f00;">ShimakazeGo_KanColle_cache_20170503.7z</span>
+<br><span style="color:#f00;">ShimakazeGo_KanColle_cache_CacheDifference_Last20170502.7z</span>
+<br>ShimakazeGo_1.7.0.0.7z
+<br>ShimakazeGo_1.7.0.0.7z
+<br>ShimakazeGo_1.7.0.0.7z
+<br><span style="color:#f00;">ShimakazeGo_kanpani_cache_20170414.7z.004</span>
+<br><span style="color:#f00;">ShimakazeGo_kanpani_cache_20170414.7z.003</span>-->
+{{!}} style="background:#bce2e8; valign:top; width:40%;" {{!}}
+{{{!}} style= "float:right;" class="mw-collapsible"
+{{!}} style="text-align:center" {{!}} '''Table of Contents'''
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#akatsuki|Akatsuki]]
+{{!}}- 
+{{!}} style="text-align:left" {{!}} [[#ichibanketsu2|Ichibanketsu]]
+{{!}}- 
+{{!}} style="text-align:left" {{!}} [[#toukenranbu1|Touken Ranbu]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#toukenranbuapk|Touken Ranbu Android App]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#kamihime1|Kamihime Project]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#shiroprore1|Shiro Pro:RE]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#kanpani1|Kanpani Girls]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#flowerknight1|Flower Knight Girls]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#shinken1|Shinken!!]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#toloveru1|To-Love Ru]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#osawari1|Ultra Adventures Go Go Osawari Island]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#monsterhunt1|Monster Hunter Mezeporta Reclamation]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#shiropro1|Shiro Project]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#criminal|Criminal Girls]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#granblue|Gran Blue Fantasy]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#sengokupro|Sengoku Providence]]
+{{!}}}
+{{!}}}
+
+== <div id="akatsuki"> Akatsuki</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1jIHwcnW ShimakazeGo_Akatuki_cache_20170826.7z]
+{{!}}-
+! Last updated
+{{!}} 2017-09-26
+{{!}}-<!--
+! Latest incremental archive
+{{!}} [https://pan.baidu.com/s/1miJazXY ShimakazeGo_Akatuki_cache_CacheDifference_Last20160901.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-09-02 16:27 -->
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_Akatuki_cache_20160902.7z
+{{!}} https://pan.baidu.com/s/1cp8DaQ
+{{!}} 2016-09-02 05:56
+{{!}}-
+{{!}} ShimakazeGo_Akatuki_cache_20160908.7z
+{{!}} https://pan.baidu.com/s/1dFmKUDN
+{{!}} 2016-09-08 06:12
+{{!}}-
+{{!}} ShimakazeGo_Akatuki_cache_20170826.7z
+{{!}} https://pan.baidu.com/s/1jIHwcnW
+{{!}} 2017-09-26
+{{!}}-
+{{!}} 
+{{!}}}
+
+<!--{{!}}-{{!}}Incremental archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}}  
+{{!}} 
+{{!}} 
+{{!}}}-->
+}}
+
+{{!}}-{{!}}Notes=
+* Website as of 02/09/2016 started listing this as an entry. 
+* Complete archive filename format: ShimakazeGo_Akatuki_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+<!--
+* Website as of 26/08/2016 started listing incremental game cache dump as an entry.
+* Incremental game cache dump filename format: ShimakazeGo_Akatuki_cache_CacheDifference_LastYYYYMMDD
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",-->
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="ichibanketsu2"> Ichibanketsu</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1i5tH6zN ShimakazeGo_ItchiBanketsu_cache_20170826.7z]
+{{!}}-
+! Last updated
+{{!}} 2017-08-26
+{{!}}-
+! Latest incremental archive
+{{!}} [https://pan.baidu.com/s/1gfFMQzx ShimakazeGo_ItchiBanketsu_cache_CacheDifference_Last20160902.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-09-03 05:56
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160805.7z
+{{!}} 2016-08-05 19:50
+{{!}} http://pan.baidu.com/s/1geRGtRt
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160811.7z
+{{!}} 2016-08-11 06:38
+{{!}} http://pan.baidu.com/s/1c0wIiM
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160823.7z
+{{!}} 2016-08-23 05:21
+{{!}} http://pan.baidu.com/s/1qXFTDYO
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160826.7z
+{{!}} 2016-08-26 19:28
+{{!}} https://pan.baidu.com/s/1o79Stgm
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160828.7z
+{{!}} 2016-08-28 03:27
+{{!}} https://pan.baidu.com/s/1eR1vokU
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160829.7z
+{{!}} 2016-08-29 07:33
+{{!}} https://pan.baidu.com/s/1pKR1xVl
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160831.7z
+{{!}} 2016-08-31 05:15
+{{!}} https://pan.baidu.com/s/1qYcUIi4
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160902.7z
+{{!}} 2016-09-02 16:26
+{{!}} https://pan.baidu.com/s/1bpqm9pd
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160903.7z
+{{!}} 2016-09-03 05:56
+{{!}} https://pan.baidu.com/s/1eROwiOi
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20160916.7z
+{{!}} 2016-09-16 18:45
+{{!}} https://pan.baidu.com/s/1b0OySY
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20170310.7z
+{{!}} 2017-03-10 23:03
+{{!}} https://pan.baidu.com/s/1dF3PGch
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_20170826.7z
+{{!}} 2017-08-26
+{{!}} https://pan.baidu.com/s/1i5tH6zN
+{{!}}}
+
+{{!}}-{{!}}Incremental archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_CacheDifference_Last20160826.7z
+{{!}} 2016-08-26 19:24
+{{!}} https://pan.baidu.com/s/1dFG65ix
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_CacheDifference_Last20160827.7z
+{{!}} 2016-08-28 03:28
+{{!}} https://pan.baidu.com/s/1qYGkm1Q
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_CacheDifference_Last20160829.7z
+{{!}} 2016-08-29 07:32
+{{!}} https://pan.baidu.com/s/1gfjYAHX
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_CacheDifference_Last20160831.7z
+{{!}} 2016-08-31 05:15
+{{!}} https://pan.baidu.com/s/1hsK4zti
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_CacheDifference_Last20160901.7z
+{{!}} 2016-09-02 16:27
+{{!}} https://pan.baidu.com/s/1miJazXY
+{{!}}-
+{{!}} ShimakazeGo_ItchiBanketsu_cache_CacheDifference_Last20160902.7z
+{{!}} 2016-09-03 05:56
+{{!}} https://pan.baidu.com/s/1gfFMQzx
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes=
+* Website as of 05/08/2016 started listing this as an entry. 
+* Complete archive filename format: ShimakazeGo_ItchiBanketsu_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Website as of 26/08/2016 started listing incremental game cache dump as an entry.
+* Incremental game cache dump filename format: ShimakazeGo_ItchiBanketsu_cache_CacheDifference_LastYYYYMMDD
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="toukenranbu1">[[w:c:touken-ranbu:Touken_Ranbu_Wiki|Touken Ranbu]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1qY4Y8A4 ShimakazeGo_ToukenRanbu_cache_20170826.7z]
+{{!}}-
+! Last updated
+{{!}} 2017-08-26
+{{!}}-
+! Latest incremental archive
+{{!}} [https://pan.baidu.com/s/1o84Th2q ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20170307.7z]
+{{!}}-
+! Last updated
+{{!}} 2017-03-08 04:31
+{{!}}-
+! Latest skip OP
+{{!}} [https://pan.baidu.com/s/1dFt64uP ShimakazeGo_cache_ToukenRanbu_skipop.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-09-06 23:01
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{#tag:tabber|2015=
+<div id="toukenranbufull2015"></div>
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150115.7z
+{{!}} 2015-01-15 06:12
+{{!}} http://pan.baidu.com/s/1kT87eCn
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150116.7z
+{{!}} 2015-01-16 05:42
+{{!}} http://pan.baidu.com/s/1bnGUVYB
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150118.7z
+{{!}} 2015-01-19 00:26
+{{!}} http://pan.baidu.com/s/1c0m0SxE
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150121.7z
+{{!}} 2015-01-21 19:11
+{{!}} http://pan.baidu.com/s/1ntzFGPN
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150212.7z
+{{!}} 2015-02-12 08:07
+{{!}} http://pan.baidu.com/s/1jG68dt8
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150218.7z
+{{!}} 2015-02-19 00:01
+{{!}} http://pan.baidu.com/s/1o6wqDtC
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150310.7z
+{{!}} 2015-03-10 19:02
+{{!}} http://pan.baidu.com/s/1c0pQaTM
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150317.7z
+{{!}} 2015-03-17 19:57
+{{!}} http://pan.baidu.com/s/1hqzlAG8
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150410.7z
+{{!}} 2015-04-10 21:48
+{{!}} http://pan.baidu.com/s/1o6JtbLK
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150414.7z
+{{!}} 2015-04-14 23:35
+{{!}} http://pan.baidu.com/s/1Cqii6
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150421.7z
+{{!}} 2015-04-21 18:47
+{{!}} http://pan.baidu.com/s/1hqxRa1Q
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150501.7z
+{{!}} 2015-05-01 19:17
+{{!}} http://pan.baidu.com/s/1gdCMD0Z
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150522.7z
+{{!}} 2015-05-22 20:39
+{{!}} http://pan.baidu.com/s/1i3tM9ZR
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150615.7z
+{{!}} 2015-06-15 06:13
+{{!}} http://pan.baidu.com/s/1nt23gpF
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150625.7z
+{{!}} 2015-06-26 01:17
+{{!}} http://pan.baidu.com/s/1hqnKQ48
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150701.7z
+{{!}} 2015-07-01 23:41
+{{!}} http://pan.baidu.com/s/1nt3QjNz
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150711.7z
+{{!}} 2015-07-11 20:59
+{{!}} http://pan.baidu.com/s/1bnFG3iJ
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150722.7z
+{{!}} 2015-07-23 01:37
+{{!}} http://pan.baidu.com/s/1o67nnSI
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150804.7z
+{{!}} 2015-08-05 00:49
+{{!}} http://pan.baidu.com/s/1v1w5o
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150807.7z
+{{!}} 2015-08-08 01:18
+{{!}} http://pan.baidu.com/s/1ntDweO5
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150811.7z
+{{!}} 2015-08-11 21:16
+{{!}} http://pan.baidu.com/s/1DcL5s
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150818.7z
+{{!}} 2015-08-19 00:31
+{{!}} http://pan.baidu.com/s/1eQuEro2
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150825.7z
+{{!}} 2015-08-26 01:22
+{{!}} http://pan.baidu.com/s/1eQ32r8Q
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150908.7z
+{{!}} 2015-09-08 19:22
+{{!}} http://pan.baidu.com/s/1sjIFSy5
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20150930.7z
+{{!}} 2015-09-30 03:19
+{{!}} http://pan.baidu.com/s/1i3xsPRR
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20151011.7z
+{{!}} 2015-10-11 21:18
+{{!}} http://pan.baidu.com/s/1jGKsvR4
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20151020.7z
+{{!}} 2015-10-20 17:43
+{{!}} http://pan.baidu.com/s/1kH6gA
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20151029.7z
+{{!}} 2015-10-30 01:30
+{{!}} http://pan.baidu.com/s/1eQptNay
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20151104.7z
+{{!}} 2015-11-04 23:10
+{{!}} http://pan.baidu.com/s/1gdAWMS7
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20151110.7z
+{{!}} 2015-11-11 01:27
+{{!}} http://pan.baidu.com/s/1jGMwyOm
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20151113.7z
+{{!}} 2015-11-13 07:36
+{{!}} http://pan.baidu.com/s/1eQwMr3k
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20151120.7z
+{{!}} 2015-11-20 06:58
+{{!}} http://pan.baidu.com/s/1c0nx0ic
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20151231.7z
+{{!}} 2015-12-31 04:13
+{{!}} http://pan.baidu.com/s/1jHuwDEI
+{{!}}}
+<div style = "text-align:right">[[#toukenranbufull2015|back to the top of Touken Ranbu complete cache dumps 2015]]</div>
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160207.7z
+{{!}} 2016-02-08 00:21
+{{!}} http://pan.baidu.com/s/1c0RIpMg
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160412.7z
+{{!}} 2016-04-12 21:21
+{{!}} http://pan.baidu.com/s/1hswa3eW
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160427.7z
+{{!}} 2016-04-28 01:22
+{{!}} http://pan.baidu.com/s/1qXI5rBm
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160519.7z
+{{!}} 2016-05-20 01:12
+{{!}} http://pan.baidu.com/s/1o7Z5zrs
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160726.7z
+{{!}} 2016-07-27 01:23
+{{!}} http://pan.baidu.com/s/1eRF67o2
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160807.7z
+{{!}} 2016-08-08 04:41
+{{!}} http://pan.baidu.com/s/1nvk1gnf
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160824.7z
+{{!}} 2016-08-25 03:05
+{{!}} https://pan.baidu.com/s/1boAoB9t
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160920.7z
+{{!}} 2016-09-20 23:52
+{{!}} https://pan.baidu.com/s/1kVdfWCB
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20160920fix.7z
+{{!}} 2016-09-24 06:37
+{{!}} https://pan.baidu.com/s/1nuQkQPb
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161004.7z
+{{!}} 2016-10-04 21:34
+{{!}} https://pan.baidu.com/s/1nuIJNJj
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161011.7z
+{{!}} 2016-10-12 01:03
+{{!}} https://pan.baidu.com/s/1kV6noUz
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161019.7z
+{{!}} 2016-10-19 04:54
+{{!}} https://pan.baidu.com/s/1sl5vzrR
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161108.7z
+{{!}} 2016-11-09 01:39
+{{!}} https://pan.baidu.com/s/1geCSlZt
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161118.7z
+{{!}} 2016-11-18 20:01
+{{!}} https://pan.baidu.com/s/1cABso2
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161125.7z
+{{!}} 2016-11-25 05:44
+{{!}} https://pan.baidu.com/s/1i5a58qh
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161201.7z
+{{!}} 2016-12-01 20:56
+{{!}} https://pan.baidu.com/s/1pKKeGnp
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161208.7z
+{{!}} 2016-12-08 17:23
+{{!}} https://pan.baidu.com/s/1nuH1vFN
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161220.7z
+{{!}} 2016-12-20 23:48
+{{!}} https://pan.baidu.com/s/1boYbzWF
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161227.7z
+{{!}} 2016-12-28 05:04
+{{!}} http://pan.baidu.com/s/1hrFAM1Y
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20161229.7z
+{{!}} 2016-12-30 03:58
+{{!}} http://pan.baidu.com/s/1slo4xsT
+{{!}}}
+<div style = "text-align:right">[[#toukenranbufull2015|back to the top of Touken Ranbu complete cache dumps 2016]]</div>
+
+{{!}}-{{!}}2017=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20170117.7z
+{{!}} 2017-01-18 01:33<br>2017-02-04 01:15
+{{!}} https://pan.baidu.com/s/1o8c0rxC<br>https://pan.baidu.com/s/1pLS5LNX
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20170203.7z
+{{!}} 2017-02-05 03:47
+{{!}} https://pan.baidu.com/s/1jIv6gtS
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20170221.7z
+{{!}} 2017-02-21 23:46
+{{!}} https://pan.baidu.com/s/1kUNFf3x
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20170302.7z
+{{!}} 2017-03-02 05:53
+{{!}} https://pan.baidu.com/s/1cemS4Q
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20170308.7z
+{{!}} 2017-03-08 04:32
+{{!}} https://pan.baidu.com/s/1c1FgHkk
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_20170826.7z
+{{!}} 2017-08-26
+{{!}} https://pan.baidu.com/s/1qY4Y8A4
+{{!}}}
+}}
+
+{{!}}-{{!}}Incremental archive=
+<div id="toukenranbuinc2015"></div>
+{{#tag:tabber|2015=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150414.7z
+{{!}} 2015-04-14 23:36
+{{!}} http://pan.baidu.com/s/1dD0EFTJ
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150421.7z
+{{!}} 2015-04-21 18:47
+{{!}} http://pan.baidu.com/s/1fMvGa
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150501.7z
+{{!}} 2015-05-01 19:17
+{{!}} http://pan.baidu.com/s/1bng0JCz
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150522.7z
+{{!}} 2015-05-22 20:38
+{{!}} http://pan.baidu.com/s/1i3tM9ZB
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150611.7z
+{{!}} 2015-06-26 01:17
+{{!}} http://pan.baidu.com/s/1eQfb2jo
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150630.7z
+{{!}} 2015-07-01 23:40
+{{!}} http://pan.baidu.com/s/1gdCPSD9
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150710.7z
+{{!}} 2015-07-11 20:57
+{{!}} http://pan.baidu.com/s/1qWxEYM4
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150722.7z
+{{!}} 2015-07-23 00:53
+{{!}} http://pan.baidu.com/s/1dDlQVEp
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150804.7z
+{{!}} 2015-08-05 00:47
+{{!}} http://pan.baidu.com/s/1dDhOeJZ
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150807.7z
+{{!}} 2015-08-08 01:16
+{{!}} http://pan.baidu.com/s/1bnuJ9EZ
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150811.7z
+{{!}} 2015-08-11 21:14
+{{!}} http://pan.baidu.com/s/1bn153Xl
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150804.7z
+{{!}} 2015-08-11 22:57
+{{!}} http://pan.baidu.com/s/1pJ1MVgB
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150804.7z
+{{!}} 2015-08-12 17:16
+{{!}} http://pan.baidu.com/s/1v1VBK
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150818.7z
+{{!}} 2015-08-19 00:29
+{{!}} http://pan.baidu.com/s/1qWN0mzM
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150825.7z
+{{!}} 2015-08-26 01:20
+{{!}} http://pan.baidu.com/s/1gdvYDVX
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150908.7z
+{{!}} 2015-09-08 19:20
+{{!}} http://pan.baidu.com/s/1eQ33obS
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20150929.7z
+{{!}} 2015-09-30 03:17
+{{!}} http://pan.baidu.com/s/1bndSsLT
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20151011.7z
+{{!}} 2015-10-11 21:14
+{{!}} http://pan.baidu.com/s/1kTngv2Z
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20151020.7z
+{{!}} 2015-10-20 17:40
+{{!}} http://pan.baidu.com/s/1nt3XUx7
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20151029.7z
+{{!}} 2015-10-30 01:24
+{{!}} http://pan.baidu.com/s/1t5AWY
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20151104.7z
+{{!}} 2015-11-04 23:08
+{{!}} http://pan.baidu.com/s/1dDwNLML
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20151110.7z
+{{!}} 2015-11-11 01:25
+{{!}} http://pan.baidu.com/s/1c0CzrgO
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20151112.7z
+{{!}} 2015-11-13 07:34
+{{!}} http://pan.baidu.com/s/1nty9UiP
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20151119.7z
+{{!}} 2015-11-20 06:56
+{{!}} http://pan.baidu.com/s/1sjtc6IT
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20151230.7z
+{{!}} 2015-12-31 04:15
+{{!}} http://pan.baidu.com/s/1mhywu1q
+{{!}}}
+<div style = "text-align:right">[[#toukenranbuinctop|back to the top of Touken Ranbu incremental cache dumps 2015]]</div>
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160206.7z
+{{!}} 2016-02-08 00:16
+{{!}} http://pan.baidu.com/s/1kUpQ5F5
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160412.7z
+{{!}} 2016-04-12 21:21
+{{!}} http://pan.baidu.com/s/1kVwAtZx
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160427.7z
+{{!}} 2016-04-28 01:22
+{{!}} http://pan.baidu.com/s/1kVCQek3
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160519.7z
+{{!}} 2016-05-20 01:13
+{{!}} http://pan.baidu.com/s/1kUR4beJ
+{{!}}- 
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160726.7z
+{{!}} 2016-07-27 01:22
+{{!}} http://pan.baidu.com/s/1pLGQuj5
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160807.7z
+{{!}} 2016-08-08 04:41
+{{!}} http://pan.baidu.com/s/1pLCNrdh
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160824.7z
+{{!}} 2016-08-25 03:04
+{{!}} https://pan.baidu.com/s/1o8tn5jG
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160920.7z
+{{!}} 2016-09-20 23:51
+{{!}} https://pan.baidu.com/s/1nuABDJN
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20160920fix.7z
+{{!}} 2016-09-24 06:37
+{{!}} https://pan.baidu.com/s/1gfySWwF
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161004.7z
+{{!}} 2016-10-04 21:02
+{{!}} https://pan.baidu.com/s/1qYF6gmK
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161011.7z
+{{!}} 2016-10-12 01:02
+{{!}} https://pan.baidu.com/s/1b2lAWY
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161018.7z
+{{!}} 2016-10-19 04:52
+{{!}} https://pan.baidu.com/s/1gfmIXNl
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161108.7z
+{{!}} 2016-11-09 01:39
+{{!}} https://pan.baidu.com/s/1eR74C4E
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161118.7z
+{{!}} 2016-11-18 20:00
+{{!}} https://pan.baidu.com/s/1nv77bmD
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161124.7z
+{{!}} 2016-11-25 05:44
+{{!}} https://pan.baidu.com/s/1kVyiaj1
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161201.7z
+{{!}} 2016-12-01 20:56
+{{!}} https://pan.baidu.com/s/1nu9txqx
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161208.7z
+{{!}} 2016-12-08 15:52
+{{!}} https://pan.baidu.com/s/1eRZW2Oi
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161220.7z
+{{!}} 2016-12-20 23:47
+{{!}} https://pan.baidu.com/s/1hs6xk4c
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161227.7z
+{{!}} 2016-12-28 05:04
+{{!}} http://pan.baidu.com/s/1o82N7Ay
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20161229.7z
+{{!}} 2016-12-30 01:53<br>2016-12-30 03:57
+{{!}} http://pan.baidu.com/s/1slLEwS9<br>http://pan.baidu.com/s/1hrEUUR6
+{{!}}}
+<div style = "text-align:right">[[#toukenranbuinctop|back to the top of Touken Ranbu incremental cache dumps 2016]]</div>
+
+{{!}}-{{!}}2017=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20170117.7z
+{{!}} 2017-01-18 01:31<br>2017-02-04 01:14
+{{!}} https://pan.baidu.com/s/1jILnLm2<br>https://pan.baidu.com/s/1nu5ZbxZ
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20170118.7z
+{{!}} 2017-02-05 03:45
+{{!}} https://pan.baidu.com/s/1hrS3WX2
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20170204.7z
+{{!}} 2017-02-21 23:46
+{{!}} https://pan.baidu.com/s/1qXMOVb2
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20170301.7z
+{{!}} 2017-03-02 05:52
+{{!}} https://pan.baidu.com/s/1bYNkAi
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbu_cache_CacheDifference_Last20170307.7z
+{{!}} 2017-03-08 04:31
+{{!}} https://pan.baidu.com/s/1o84Th2q
+{{!}}}
+}}
+
+{{!}}-{{!}}Skip opening title patch=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_cache_ToukenRanbu_skipop.7z
+{{!}} 2015-03-06 21:13
+{{!}} http://pan.baidu.com/s/1c0yDyk4
+{{!}}- 
+{{!}} ShimakazeGo_cache_ToukenRanbu_skipop.7z
+{{!}} 2015-03-10 19:38
+{{!}} http://pan.baidu.com/s/1c0nimty
+{{!}}- 
+{{!}} ShimakazeGo_cache_ToukenRanbu_skipop.7z
+{{!}} 2015-07-11 21:24
+{{!}} http://pan.baidu.com/s/1sj7My7r
+{{!}}-
+{{!}} ShimakazeGo_cache_ToukenRanbu_skipop.7z
+{{!}} 2016-09-06 23:01
+{{!}} https://pan.baidu.com/s/1dFt64uP
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete game cache dump filename format: ShimakazeGo_ToukenRanbu_cache_YYYYMMDD
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Incremental game cache dump filename format: ShimakazeGo_ToukenRanbu_cache_CacheDifference_LastYYYYMMDD
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Skip opening title patch filename format: ShimakazeGo_cache_ToukenRanbu_skipop.7z
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="toukenranbuapk">[[w:c:touken-ranbu:Touken_Ranbu_Wiki|Touken Ranbu]] Android App</div>==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest Android PacKage (APK)
+{{!}} [http://pan.baidu.com/s/1pK4MnOn com.dmm.games.touken.galstars.hack5_1.0.2.apk]
+{{!}}-
+! Last updated
+{{!}} 2016-03-05 08:35
+{{!}}-
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1c1uZqSg ShimakazeGo_ToukenRanbuAndroid_cache_20160305.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-03-05 09:11
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|APK=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} com.dmm.games.touken.galstars.hack_1.0.2.apk
+{{!}} 2016-03-05 08:34
+{{!}} http://pan.baidu.com/s/1kUdkh07
+{{!}}- 
+{{!}} com.dmm.games.touken.galstars.hack2_1.0.2.apk
+{{!}} 2016-03-05 08:34
+{{!}} http://pan.baidu.com/s/1o7lR1pC
+{{!}}- 
+{{!}} com.dmm.games.touken.galstars.hack3_1.0.2.apk
+{{!}} 2016-03-05 08:34
+{{!}} http://pan.baidu.com/s/1hrdqkNa
+{{!}}- 
+{{!}} com.dmm.games.touken.galstars.hack4_1.0.2.apk
+{{!}} 2016-03-05 08:35
+{{!}} http://pan.baidu.com/s/1skaqaJF
+{{!}}- 
+{{!}} com.dmm.games.touken.galstars.hack5_1.0.2.apk
+{{!}} 2016-03-05 08:35
+{{!}} http://pan.baidu.com/s/1pK4MnOn
+{{!}}- 
+{{!}}
+{{!}}}
+
+{{!}}-{{!}}Touken Ranbu Android cache dump=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ToukenRanbuAndroid_cache_20160305.7z
+{{!}} 2016-03-05 09:11
+{{!}} http://pan.baidu.com/s/1c1uZqSg
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* APK filename format?: com.dmm.games.touken.galstars.hackX_v.v.v.apk
+** Where:
+*** X is probably the amount of times a hack or a variant of a hack that has attempted to make the app behave in a particular way.
+*** v is the version number, used to keep track of changes within each update.
+* Cache dump filename format: ShimakazeGo_ToukenRanbuAndroid_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="kamihime1">[[w:c:kamihime-project:Kamihime_Project_Wikia|Kamihime Project]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1hsQCVWw ShimakazeGo_KamiHime_cache_20161026.7z.001] <br> [https://pan.baidu.com/s/1pLRKCxd ShimakazeGo_KamiHime_cache_20161026.7z.002]
+{{!}}-
+! Last updated
+{{!}} 2016-10-27 06:37
+{{!}}-
+! Latest incremental archive
+{{!}} [http://pan.baidu.com/s/1o8OWrB8 ShimakazeGo_KamiHime_cache_CacheDifference_Last20160519.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-05-20 03:18
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_KamiHime_cache_20160418.7z
+{{!}} 2016-04-18 17:01
+{{!}} http://pan.baidu.com/s/1pLipuKr
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20160430.7z
+{{!}} 2016-04-30 05:10
+{{!}} http://pan.baidu.com/s/1dEF3Zih
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20160502.7z
+{{!}} 2016-05-02 06:40
+{{!}} http://pan.baidu.com/s/1c2BcD3q
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20160517.7z.001
+{{!}} 2016-05-17 05:20
+{{!}} http://pan.baidu.com/s/1geDyVF9
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20160517.7z.002
+{{!}} 2016-05-17 05:20
+{{!}} http://pan.baidu.com/s/1mh63fNa
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20160520.7z.001
+{{!}} 2016-05-20 03:18
+{{!}} http://pan.baidu.com/s/1c9fKNs
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20160520.7z.002
+{{!}} 2016-05-20 03:18
+{{!}} http://pan.baidu.com/s/1i5ezvI9
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20160702.7z.001
+{{!}} 2016-07-03 05:04
+{{!}} http://pan.baidu.com/s/1miETm1U
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20160702.7z.002
+{{!}} 2016-07-03 05:04
+{{!}} http://pan.baidu.com/s/1kVEVqLL
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_20161026.7z.001
+{{!}} 2016-10-27 06:37
+{{!}} https://pan.baidu.com/s/1hsQCVWw
+{{!}}-
+{{!}} ShimakazeGo_KamiHime_cache_20161026.7z.002
+{{!}} 2016-10-27 06:37
+{{!}} https://pan.baidu.com/s/1pLRKCxd
+{{!}}-
+{{!}} 
+{{!}}}
+
+{{!}}-{{!}}Incremental archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_KamiHime_cache_CacheDifference_Last20160502.7z
+{{!}} 2016-05-02 06:39
+{{!}} http://pan.baidu.com/s/1c11YVDI
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_CacheDifference_Last20160517.7z
+{{!}} 2016-05-17 05:19
+{{!}} http://pan.baidu.com/s/1hsczvnQ
+{{!}}- 
+{{!}} ShimakazeGo_KamiHime_cache_CacheDifference_Last20160519.7z
+{{!}} 2016-05-20 03:18
+{{!}} http://pan.baidu.com/s/1o8OWrB8
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_KamiHime_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Incremental archive filename format: ShimakazeGo_KamiHime_cache_CacheDifference_LastYYYMMDD
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="shiroprore1">[[w:c:shiroprore:Shiro_Project:RE_Wikia|Shiro Pro:RE]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1hsv7B4w ShimakazeGo_ShiroproRe_cache_20161217.7z.001] <br> [https://pan.baidu.com/s/1bo2TfbD ShimakazeGo_ShiroproRe_cache_20161217.7z.002]
+{{!}}-
+! Last updated
+{{!}} 2016-12-17 08:27
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ShiroproRe_cache_20160720.7z
+{{!}} 2016-07-20 23:30
+{{!}} http://pan.baidu.com/s/1geXLbfd
+{{!}}- 
+{{!}} ShimakazeGo_ShiroproRe_cache_20161217.7z.001
+{{!}} 2016-12-17 08:27
+{{!}} https://pan.baidu.com/s/1hsv7B4w
+{{!}}-
+{{!}} ShimakazeGo_ShiroproRe_cache_20161217.7z.002
+{{!}} 2016-12-17 08:27
+{{!}} https://pan.baidu.com/s/1bo2TfbD
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_ShiroproRe_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+** This is a new project for cache dumps as of 20th July 2016. It is for Shiro Project:Revamp.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="kanpani1">[[w:c:kanpani:Kanpani_Wiki|Kanpani Girls]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1mhY5wrI ShimakazeGo_kanpani_cache_20170414.7z.001] <br> [https://pan.baidu.com/s/1c2b3FdY ShimakazeGo_kanpani_cache_20170414.7z.002] <br> [https://pan.baidu.com/s/1kVhuSjt ShimakazeGo_kanpani_cache_20170414.7z.003] <br> [https://pan.baidu.com/s/1nuMskNR ShimakazeGo_kanpani_cache_20170414.7z.004]
+{{!}}-
+! Last updated
+{{!}} 2017-04-17 00:59
+{{!}}-
+! Latest incremental archive
+{{!}} [https://pan.baidu.com/s/1i4VJh57 ShimakazeGo_Kanpani_cache_CacheDifference_Last20161001.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-10-02 23:56
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive?=
+{{#tag:tabber|2014=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20141221.7z
+{{!}} 2014-12-21 23:01
+{{!}} http://pan.baidu.com/s/1dDCg1Ol
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20141226.7z
+{{!}} 2014-12-26 21:29
+{{!}} http://pan.baidu.com/s/1jG44KJk
+{{!}}- 
+{{!}} 
+{{!}}}
+
+{{!}}-{{!}}2015=
+<div id="kanpanifull2015"></div>
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150105.7z
+{{!}} 2015-01-06 02:45
+{{!}} http://pan.baidu.com/s/1mgiMtvU
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150109.7z
+{{!}} 2015-01-09 20:39
+{{!}} http://pan.baidu.com/s/1gd7ZjoR
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150109.7z
+{{!}} 2015-01-09 22:53
+{{!}} http://pan.baidu.com/s/1CTa5S
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150117.7z
+{{!}} 2015-01-17 06:17
+{{!}} http://pan.baidu.com/s/1hqFyPZA
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150124.7z
+{{!}} 2015-01-24 04:28
+{{!}} http://pan.baidu.com/s/1dDfDxxJ
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150130.7z
+{{!}} 2015-01-31 00:23
+{{!}} http://pan.baidu.com/s/1bnnjkon
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150212.7z
+{{!}} 2015-02-12 08:02
+{{!}} http://pan.baidu.com/s/1dDChYpF
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150214.7z
+{{!}} 2015-02-14 04:40
+{{!}} http://pan.baidu.com/s/1mg5OcAG
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150328.7z
+{{!}} 2015-03-28 06:15
+{{!}} http://pan.baidu.com/s/1gdhDflL
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150410.7z
+{{!}} 2015-04-11 04:07
+{{!}} http://pan.baidu.com/s/1hq3WlAs
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150418.7z
+{{!}} 2015-04-18 03:41
+{{!}} http://pan.baidu.com/s/1dDlfHcd
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150424.7z
+{{!}} 2015-04-24 22:37
+{{!}} http://pan.baidu.com/s/1ntj3Otr
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150425.7z
+{{!}} 2015-04-25 16:19
+{{!}} http://pan.baidu.com/s/1sjv6V7J
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150430.7z
+{{!}} 2015-05-04 06:50
+{{!}} http://pan.baidu.com/s/1c0cvcOw
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150509.7z
+{{!}} 2015-05-09 08:30
+{{!}} http://pan.baidu.com/s/1bnnSBTX
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150509.7z
+{{!}} 2015-05-13 23:15
+{{!}} http://pan.baidu.com/s/1sj7dhaX
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150509.7z
+{{!}} 2015-05-13 23:16
+{{!}} http://pan.baidu.com/s/1o6FqJQa
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150515.7z
+{{!}} 2015-05-15 22:17
+{{!}} http://pan.baidu.com/s/1gdD3p3H
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150529.7z
+{{!}} 2015-05-30 06:31
+{{!}} http://pan.baidu.com/s/1jGKPoR8
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150602.7z
+{{!}} 2015-06-03 02:37
+{{!}} http://pan.baidu.com/s/1c02eNWc
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150606.7z
+{{!}} 2015-06-06 19:36
+{{!}} http://pan.baidu.com/s/1bnHGbO7
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150614.7z
+{{!}} 2015-06-14 16:34
+{{!}} http://pan.baidu.com/s/1c0jO548
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150621.7z
+{{!}} 2015-06-21 18:32
+{{!}} http://pan.baidu.com/s/1gdGSTr1
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150711.7z
+{{!}} 2015-07-11 04:21
+{{!}} http://pan.baidu.com/s/1pJutnb9
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150717.7z
+{{!}} 2015-07-18 07:13
+{{!}} http://pan.baidu.com/s/1gdvVTtD
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150731.7z
+{{!}} 2015-08-01 04:19
+{{!}} http://pan.baidu.com/s/1qWJvjfI
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150903.7z
+{{!}} 2015-09-03 22:20
+{{!}} http://pan.baidu.com/s/1mgL79X2
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150918.7z
+{{!}} 2015-09-18 18:36
+{{!}} http://pan.baidu.com/s/1gduEtyj
+{{!}}- 
+{{!}} 
+{{!}}}
+<div style = "text-align:right">[[#kanpanifull2015|back to the top of Kanpani complete cache dumps 2015]]</div>
+
+{{!}}-{{!}}2016=
+<div id="kanpanifull2016"></div>
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160106.7z.001
+{{!}} 2016-01-07 01:36
+{{!}} http://pan.baidu.com/s/1mgSBlbE
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160106.7z.002
+{{!}} 2016-01-07 01:36
+{{!}} http://pan.baidu.com/s/1skuRoUL
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160106.7z.001
+{{!}} 2016-01-07 01:37
+{{!}} http://pan.baidu.com/s/1hrznwUg
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160106.7z.002
+{{!}} 2016-01-07 01:38
+{{!}} http://pan.baidu.com/s/1o7j2kqA
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160216.7z.001
+{{!}} 2016-02-17 02:28
+{{!}} http://pan.baidu.com/s/1dEiEJSH
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160216.7z.002
+{{!}} 2016-02-17 02:28
+{{!}} http://pan.baidu.com/s/1dDXPysp
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160313.7z.001
+{{!}} 2016-03-13 08:19
+{{!}} http://pan.baidu.com/s/1gdVTAOr
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160313.7z.002
+{{!}} 2016-03-13 08:20
+{{!}} http://pan.baidu.com/s/1bmYNVo
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160402.7z.001
+{{!}} 2016-04-02 22:21
+{{!}} http://pan.baidu.com/s/1pKHkngR
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160402.7z.002
+{{!}} 2016-04-02 22:22
+{{!}} http://pan.baidu.com/s/1o8IOxr8
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160609.7z.001
+{{!}} 2016-06-10 06:04
+{{!}} http://pan.baidu.com/s/1hr6C0sO
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160609.7z.002
+{{!}} 2016-06-10 06:05
+{{!}} http://pan.baidu.com/s/1eRD2gue
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160609.7z.001
+{{!}} 2016-06-10 06:04
+{{!}} http://pan.baidu.com/s/1hr6C0sO
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160609.7z.002
+{{!}} 2016-06-10 06:05
+{{!}} http://pan.baidu.com/s/1eRD2gue
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20160808.7z.001
+{{!}} 2016-08-08 04:42
+{{!}} http://pan.baidu.com/s/1dFBLJjV
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20160808.7z.002
+{{!}} 2016-08-08 04:42
+{{!}} http://pan.baidu.com/s/1bo6jSTL
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20160808.7z.003
+{{!}} 2016-08-08 04:43
+{{!}} http://pan.baidu.com/s/1sl5rDgh
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20160916.7z.001
+{{!}} 2016-09-17 08:04
+{{!}} https://pan.baidu.com/s/1geLDciv
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20160916.7z.002
+{{!}} 2016-09-17 08:04
+{{!}} https://pan.baidu.com/s/1o7SQpLo
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20160916.7z.003
+{{!}} 2016-09-17 08:04
+{{!}} https://pan.baidu.com/s/1nuAB1Mx
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20161001.7z.001
+{{!}} 2016-10-03 00:00
+{{!}} https://pan.baidu.com/s/1o8yFhOY
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20161001.7z.002
+{{!}} 2016-10-03 00:00
+{{!}} https://pan.baidu.com/s/1bNjS78
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20161001.7z.003
+{{!}} 2016-10-03 00:00
+{{!}} https://pan.baidu.com/s/1dFDQ7Qh
+{{!}}}
+<div style = "text-align:right">[[#kanpanifull2016|back to the top of Kanpani complete cache dumps 2016]]</div>
+
+{{!}}-{{!}}2017=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20170414.7z.001
+{{!}} 2017-04-17 00:59
+{{!}} https://pan.baidu.com/s/1mhY5wrI
+{{!}}-
+<!-- Invalid MD5 checksum, Baidu provided: 8f353fbd8dd7b54b9fe48bc1cd3dabee -->
+{{!}} ShimakazeGo_kanpani_cache_20170414.7z.002
+{{!}} 2017-04-17 00:59
+{{!}} https://pan.baidu.com/s/1c2b3FdY
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20170414.7z.003
+{{!}} 2017-04-17 00:59
+{{!}} https://pan.baidu.com/s/1kVhuSjt
+{{!}}-
+{{!}} ShimakazeGo_kanpani_cache_20170414.7z.004
+{{!}} 2017-04-17 01:00
+{{!}} https://pan.baidu.com/s/1nuMskNR
+{{!}}}
+}}
+
+{{!}}-{{!}}Incremental archive?=
+{{#tag:tabber|2014=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20141106_small_fix.7z
+{{!}} 2014-11-06 23:23
+{{!}} http://pan.baidu.com/s/1hqGIWtu
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20141106_fix.7z
+{{!}} 2014-11-06 23:23
+{{!}} http://pan.baidu.com/s/1gdelu7L
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20141221_small.7z
+{{!}} 2014-12-21 23:02
+{{!}} http://pan.baidu.com/s/1vX3Ue
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20141226_small.7z
+{{!}} 2014-12-26 21:29
+{{!}} http://pan.baidu.com/s/1bnjeuEr
+{{!}}- 
+{{!}} 
+{{!}}}
+
+{{!}}-{{!}}2015=
+<div id="kanpaniinc2015"></div>
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150105_small.7z
+{{!}} 2015-01-06 02:46
+{{!}} http://pan.baidu.com/s/1sj0nd0p
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150109_small.7z
+{{!}} 2015-01-09 20:39
+{{!}} http://pan.baidu.com/s/1dDpguzf
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150117_small.7z
+{{!}} 2015-01-17 06:17
+{{!}} http://pan.baidu.com/s/1gdkYJw3
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150124_small.7z
+{{!}} 2015-01-24 04:28
+{{!}} http://pan.baidu.com/s/1bnGVk79
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150130_small.7z
+{{!}} 2015-01-31 00:23
+{{!}} http://pan.baidu.com/s/1c0xW2So
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150212_small.7z
+{{!}} 2015-02-12 08:02
+{{!}} http://pan.baidu.com/s/1i3oZllF
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150214_small.7z
+{{!}} 2015-02-14 04:40
+{{!}} http://pan.baidu.com/s/1eQCfYeQ
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150328_small.7z
+{{!}} 2015-03-28 06:16
+{{!}} http://pan.baidu.com/s/1kToW05p
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150410_small.7z
+{{!}} 2015-04-11 04:08
+{{!}} http://pan.baidu.com/s/1i3CHE7N
+{{!}}- 
+{{!}} ShimakazeGo_kanpani_cache_20150418_small.7z
+{{!}} 2015-04-18 03:41
+{{!}} http://pan.baidu.com/s/1hqCJZiG
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150417.7z
+{{!}} 2015-04-18 03:42
+{{!}} http://pan.baidu.com/s/1jGDvQQU
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150424.7z
+{{!}} 2015-04-25 15:52
+{{!}} http://pan.baidu.com/s/1hq7uANy
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150430.7z
+{{!}} 2015-04-30 21:49
+{{!}} http://pan.baidu.com/s/1qWqP6Lu
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150430.7z
+{{!}} 2015-04-30 21:54
+{{!}} http://pan.baidu.com/s/1c08OViK
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150508.7z
+{{!}} 2015-05-09 08:30
+{{!}} http://pan.baidu.com/s/1kTxLFy3
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150515.7z
+{{!}} 2015-05-16 17:50
+{{!}} http://pan.baidu.com/s/1tuCTw
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150529.7z
+{{!}} 2015-06-03 02:36
+{{!}} http://pan.baidu.com/s/1nt9TWkp
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150605.7z
+{{!}} 2015-06-06 19:36
+{{!}} http://pan.baidu.com/s/1qWPxdrI
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150612.7z
+{{!}} 2015-06-14 16:34
+{{!}} http://pan.baidu.com/s/1gdeYGMZ
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150619.7z
+{{!}} 2015-06-21 18:13
+{{!}} http://pan.baidu.com/s/1mgEaOWS
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150918.7z
+{{!}} 2015-09-18 17:57
+{{!}} http://pan.baidu.com/s/1nts0qyH
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150710.7z
+{{!}} 2015-07-11 03:35
+{{!}} http://pan.baidu.com/s/1c0ttHsO
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150717.7z
+{{!}} 2015-07-18 06:41
+{{!}} http://pan.baidu.com/s/1eQjMJmE
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150731.7z
+{{!}} 2015-08-01 01:58
+{{!}} http://pan.baidu.com/s/1eQHDBWm
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20150930.7z
+{{!}} 2015-10-03 07:09
+{{!}} http://pan.baidu.com/s/1hqLbGn6
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20151009.7z
+{{!}} 2015-10-10 04:38
+{{!}} http://pan.baidu.com/s/1i3B6H8L
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20151016.7z
+{{!}} 2015-10-17 07:31
+{{!}} http://pan.baidu.com/s/1dDz4ol7
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20151023.7z
+{{!}} 2015-10-25 08:32
+{{!}} http://pan.baidu.com/s/1i38Qh5V
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20151030.7z
+{{!}} 2015-10-30 22:33
+{{!}} http://pan.baidu.com/s/1dDwNzYL
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20151205.7z
+{{!}} 2015-12-05 04:26
+{{!}} http://pan.baidu.com/s/1i3ZwcF7
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20151214.7z
+{{!}} 2015-12-14 06:29
+{{!}} http://pan.baidu.com/s/1o6S0Vpg
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20151220.7z
+{{!}} 2016-01-06 05:37
+{{!}} http://pan.baidu.com/s/1jHtdvH8
+{{!}}- 
+{{!}} 
+{{!}}}
+<div style = "text-align:right">[[#kanpaniinc2015|back to the top of Kanpani incremental cache dumps 2015]]</div>
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20160215.7z
+{{!}} 2016-02-17 00:25
+{{!}} http://pan.baidu.com/s/1kUzxBt9
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20160312.7z
+{{!}} 2016-03-13 08:28
+{{!}} http://pan.baidu.com/s/1kTZPoF1
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20160402.7z
+{{!}} 2016-04-02 22:22
+{{!}} http://pan.baidu.com/s/1mhICoIk
+{{!}}- 
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20160916.7z
+{{!}} 2016-09-20 23:51
+{{!}} https://pan.baidu.com/s/1nuABDJN
+{{!}}-
+{{!}} ShimakazeGo_Kanpani_cache_CacheDifference_Last20161001.7z
+{{!}} 2016-10-02 23:56
+{{!}} https://pan.baidu.com/s/1i4VJh57
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_kanpani_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+** Archive is now split into two parts.
+* Incremental archive filename format: ShimakazeGo_Kanpani_cache_CacheDifference_LastYYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+** Website as of 01/07/2016 does show incremental archives. As a result both filenames ending with either "small" or contains "cacheDifference" indicates potentially an incremental cache archive.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="flowerknight1">[[w:c:flowerknight:Flower_Knight_Girl_Wikia|Flower Knight Girls]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1eSqijDK ShimakazeGo_FlowerKnightGirls_cache_20161005.7z.001] <br> [https://pan.baidu.com/s/1hs5DffQ ShimakazeGo_FlowerKnightGirls_cache_20161005.7z.002]
+{{!}}-
+! Last updated
+{{!}} 2016-10-06 03:00
+{{!}}-
+! Latest incremental archive
+{{!}} [https://pan.baidu.com/s/1dFDQHDB ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20161004.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-10-06 02:59
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{#tag:tabber|2015=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150619.7z
+{{!}} 2015-06-19 02:46
+{{!}} http://pan.baidu.com/s/1dNtmA
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150621.7z
+{{!}} 2015-06-21 23:37
+{{!}} http://pan.baidu.com/s/1o643vFc
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150621.7z
+{{!}} 2015-06-30 02:01
+{{!}} http://pan.baidu.com/s/1qWtA6aK
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150729.7z
+{{!}} 2015-07-30 04:10
+{{!}} http://pan.baidu.com/s/1ntvK1xJ
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150804.7z
+{{!}} 2015-08-04 03:59
+{{!}} http://pan.baidu.com/s/1mgxOMjm
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150810.7z
+{{!}} 2015-08-11 07:20
+{{!}} http://pan.baidu.com/s/1bn0j1AR
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150907.7z
+{{!}} 2015-09-08 02:16
+{{!}} http://pan.baidu.com/s/1sjNz8V7
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150916.7z
+{{!}} 2015-09-16 22:47
+{{!}} http://pan.baidu.com/s/1qW5RjY0
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20150930.7z
+{{!}} 2015-09-30 04:42
+{{!}} http://pan.baidu.com/s/1gdlRAOb
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20151027.7z
+{{!}} 2015-10-27 07:13
+{{!}} http://pan.baidu.com/s/1pJMRm2Z
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20151102.7z
+{{!}} 2015-11-03 03:32
+{{!}} http://pan.baidu.com/s/1i34MVUt
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20151205.7z
+{{!}} 2015-12-05 05:23
+{{!}} http://pan.baidu.com/s/1eRd5U5W
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20151228.7z
+{{!}} 2015-12-29 01:27
+{{!}} http://pan.baidu.com/s/1mgVpuJY
+{{!}}}
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160114.7z
+{{!}} 2016-01-14 02:51
+{{!}} http://pan.baidu.com/s/1borsWoB
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160119.7z
+{{!}} 2016-01-20 00:14
+{{!}} http://pan.baidu.com/s/1mhip9WW
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160225.7z
+{{!}} 2016-02-25 06:14
+{{!}} http://pan.baidu.com/s/1c0NfNnM
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160701.7z.001
+{{!}} 2016-07-03 05:03
+{{!}} http://pan.baidu.com/s/1kVRg5fx
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160701.7z.002
+{{!}} 2016-07-03 05:03
+{{!}} http://pan.baidu.com/s/1c11weSo
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160801.7z.001
+{{!}} 2016-08-02 05:26
+{{!}} http://pan.baidu.com/s/1pLRGcfL
+{{!}}-
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160801.7z.002
+{{!}} 2016-08-02 05:26
+{{!}} http://pan.baidu.com/s/1nvxrXgd
+{{!}}-
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160824.7z.001
+{{!}} 2016-08-25 03:04
+{{!}} https://pan.baidu.com/s/1bpuVNjD
+{{!}}-
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20160824.7z.002
+{{!}} 2016-08-25 03:04
+{{!}} https://pan.baidu.com/s/1c2dYNRy
+{{!}}-
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20161005.7z.001
+{{!}} 2016-10-06 03:00
+{{!}} https://pan.baidu.com/s/1eSqijDK
+{{!}}-
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_20161005.7z.002
+{{!}} 2016-10-06 03:00
+{{!}} https://pan.baidu.com/s/1hs5DffQ
+{{!}}}
+}}
+
+{{!}}-{{!}}Incremental archive=
+{{#tag:tabber|2015=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20150803.7z
+{{!}} 2015-08-04 03:20
+{{!}} http://pan.baidu.com/s/1hqKX4Le
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20150810.7z
+{{!}} 2015-08-11 07:14
+{{!}} http://pan.baidu.com/s/1kTvj2C3
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20150907.7z
+{{!}} 2015-09-08 02:00
+{{!}} http://pan.baidu.com/s/1jGKqapw
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20150916.7z
+{{!}} 2015-09-16 22:36
+{{!}} http://pan.baidu.com/s/1c015RIo
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20150918.7z
+{{!}} 2015-09-20 03:49
+{{!}} http://pan.baidu.com/s/1gddJzCf
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20150929.7z
+{{!}} 2015-09-30 04:05
+{{!}} http://pan.baidu.com/s/1c0i9YGK
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20151026.7z
+{{!}} 2015-10-27 07:09
+{{!}} http://pan.baidu.com/s/1o64CtF8
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20151102.7z
+{{!}} 2015-11-03 03:06
+{{!}} http://pan.baidu.com/s/1ntu50cp
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20151205.7z
+{{!}} 2015-12-05 05:16
+{{!}} http://pan.baidu.com/s/1nu0spAT
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20151228.7z
+{{!}} 2015-12-29 00:24
+{{!}} http://pan.baidu.com/s/1qXpzSHA
+{{!}}}
+
+{{!}}-{{!}}2016=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20160113.7z
+{{!}} 2016-01-14 02:35
+{{!}} http://pan.baidu.com/s/1kTYfJgz
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20160118.7z
+{{!}} 2016-01-20 00:00
+{{!}} http://pan.baidu.com/s/1sjXpYFz
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20160224.7z
+{{!}} 2016-02-25 06:18
+{{!}} http://pan.baidu.com/s/1nunlXGH
+{{!}}- 
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20160801.7z
+{{!}} 2016-08-02 05:25
+{{!}} http://pan.baidu.com/s/1miD9aFe
+{{!}}-
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20160824.7z
+{{!}} 2016-08-25 03:03
+{{!}} https://pan.baidu.com/s/1pLAgy3D
+{{!}}-
+{{!}} ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_Last20161004.7z
+{{!}} 2016-10-06 02:59
+{{!}} https://pan.baidu.com/s/1dFDQHDB
+{{!}}}
+}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_FlowerKnightGirls_cache_YYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+** Xunlei links are either invalid or no longer work.
+** Archive is now split into two parts.
+* Incremental archive filename format: ShimakazeGo_FlowerKnightGirls_cache_CacheDifference_LastYYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+** Xunlei links are either invalid or no longer work.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="shinken1">[[w:c:shinken-dmm:Shinken!!_Wikia|Shinken!!]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1skIVrtF ShimakazeGo_Shinken_cache_20170929.7z]
+{{!}}-
+! Last updated
+{{!}} 2017-09-29 05:00
+{{!}}-
+! Latest incremental archive
+{{!}} [http://pan.baidu.com/s/1mghCPYw ShimakazeGo_Shinken_cache_CacheDifference_Last20150917.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-09-17 21:52
+{{!}}-
+! Latest WinXP playable transformation magic
+{{!}} [http://pan.baidu.com/s/1pKb1BGf ShimakazeGo_LocalHack_Shinken_winXP.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-01-29 03:36
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive?=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_Shinken_cache_20150424.7z
+{{!}} 2015-04-24 22:59
+{{!}} http://pan.baidu.com/s/1o6ol49s
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150427.7z
+{{!}} 2015-04-27 16:08
+{{!}} http://pan.baidu.com/s/1kTgQkVt
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150501.7z
+{{!}} 2015-05-01 06:36
+{{!}} http://pan.baidu.com/s/1eQpieGy
+{{!}}-
+{{!}} ShimakazeGo_Shinken_cache_20150522.7z
+{{!}} 2015-05-22 23:13
+{{!}} http://pan.baidu.com/s/1o6BnvwI
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150621.7z
+{{!}} 2015-06-21 18:43
+{{!}} http://pan.baidu.com/s/1kTxNOiF
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150711.7z
+{{!}} 2015-07-11 03:29
+{{!}} http://pan.baidu.com/s/1pJkjQcj
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150719.7z
+{{!}} 2015-07-20 01:47
+{{!}} http://pan.baidu.com/s/1c00fSqs
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150731.7z
+{{!}} 2015-08-01 04:18
+{{!}} http://pan.baidu.com/s/1pJj5tqz
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150828.7z
+{{!}} 2015-08-28 07:51
+{{!}} http://pan.baidu.com/s/1sjFrsHf
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150901.7z
+{{!}} 2015-09-02 00:20
+{{!}} http://pan.baidu.com/s/1ntkrGiH
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20150917.7z
+{{!}} 2015-09-17 21:53
+{{!}} http://pan.baidu.com/s/1c04TLRi
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20151219.7z
+{{!}} 2015-12-19 22:47
+{{!}} http://pan.baidu.com/s/1dEnc12L
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_20170929.7z
+<!-- Invalid MD5 checksum, Baidu provided: 828dca47cbcde743a632b264c0e07c2c -->
+{{!}} 2017-09-29 05:00
+{{!}} https://pan.baidu.com/s/1skIVrtF
+{{!}}-
+{{!}} 
+{{!}}}
+
+{{!}}-{{!}}Incremental archive?=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_Shinken_cache_CacheDifference_Last20150901.7z
+{{!}} 2015-09-02 00:15
+{{!}} http://pan.baidu.com/s/1pJvcXUN
+{{!}}- 
+{{!}} ShimakazeGo_Shinken_cache_CacheDifference_Last20150917.7z
+{{!}} 2015-09-17 21:52
+{{!}} http://pan.baidu.com/s/1mghCPYw
+{{!}}- 
+{{!}} 
+{{!}}}
+
+{{!}}-{{!}}WinXP playable transformation magic=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_LocalHack_Shinken_winXP.7z
+{{!}} 2016-01-29 03:36
+{{!}} http://pan.baidu.com/s/1pKb1BGf
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_Shinken_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Incremental archive filename format: ShimakazeGo_Shinken_cache_CacheDifference_LastYYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+** Website as of 01/07/2016 does show incremental archives. As a result both filenames ending with either "small" or contains "cacheDifference" indicates potentially an incremental cache archive.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="toloveru1">[[w:c:to-loveru:To_Love-Ru_Wiki|To Love-Ru]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1nty1pd3 ShimakazeGo_ToLove_cache_20150714.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-07-14 05:45
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_ToLove_cache_20150519.7z
+{{!}} 2015-05-19 07:25
+{{!}} http://pan.baidu.com/s/1mgxeivu
+{{!}}- 
+{{!}} ShimakazeGo_ToLove_cache_20150714.7z
+{{!}} 2015-07-14 05:45
+{{!}} http://pan.baidu.com/s/1nty1pd3
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_ToLove_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+** Xunlei links are either invalid or no longer work.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="osawari1">[[w:c:osawari-island:Osawari_Island_Wikia|Ultra Adventures Go Go Osawari Island]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1pJp00eJ ShimakazeGo_Osawari_cache_20141110.7z]
+{{!}}-
+! Last updated
+{{!}} 2014-11-10 05:02
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_Osawari_cache_20141110.7z
+{{!}} 2014-11-10 05:02
+{{!}} http://pan.baidu.com/s/1pJp00eJ
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_Osawari_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Website as of 01/07/2016 does NOT list this as an entry, however it is still visible within the owner's Baidu cloud storage.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="monsterhunt1">[[w:c:monsterhunter:Monster_Hunter_Mezeporta_Reclamation|Monster Hunter Mezeporta Reclamation]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1jGMgupg ShimakazeGo_MonsterHunter_cache_20150116.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-01-16 05:40
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_MonsterHunter_cache_20141110.7z
+{{!}} 2014-11-10 05:04
+{{!}} http://pan.baidu.com/s/1gdmsRgn
+{{!}}- 
+{{!}} ShimakazeGo_MonsterHunter_cache_20141128.7z
+{{!}} 2014-11-28 03:40
+{{!}} http://pan.baidu.com/s/1pJwmxvX
+{{!}}- 
+{{!}} ShimakazeGo_MonsterHunter_cache_20150109.7z
+{{!}} 2015-01-09 19:38
+{{!}} http://pan.baidu.com/s/1kTj44nX
+{{!}}- 
+{{!}} ShimakazeGo_MonsterHunter_cache_20150116.7z
+{{!}} 2015-01-16 05:40
+{{!}} http://pan.baidu.com/s/1jGMgupg
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_MonsterHunter_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Website as of 01/07/2016 does NOT list this as an entry, however it is still visible within the owner's Baidu cloud storage.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="shiropro1">[[w:c:shiropro:Shiro_Project_Wiki|Shiro Project]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1ntn6o5r ShimakazeGo_Shiropro_cache_20150321.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-03-21 06:42
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_Shiropro_cache_20141121.7z
+{{!}} 2014-11-21 03:16
+{{!}} http://pan.baidu.com/s/1dDcnQgT
+{{!}}- 
+{{!}} ShimakazeGo_Shiropro_cache_20150109.7z
+{{!}} 2015-01-09 22:57
+{{!}} http://pan.baidu.com/s/1eQCeWFK
+{{!}}- 
+{{!}} ShimakazeGo_Shiropro_cache_20150121.7z
+{{!}} 2015-01-21 19:12
+{{!}} http://pan.baidu.com/s/1eQzTY06
+{{!}}- 
+{{!}} ShimakazeGo_Shiropro_cache_20150123.7z
+{{!}} 2015-01-24 04:28
+{{!}} http://pan.baidu.com/s/1c0wAvfE
+{{!}}- 
+{{!}} ShimakazeGo_Shiropro_cache_20150321.7z
+{{!}} 2015-03-21 06:42
+{{!}} http://pan.baidu.com/s/1ntn6o5r
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_Shiropro_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Website as of 01/07/2016 does NOT list this as an entry, however it is still visible within the owner's Baidu cloud storage.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="criminal">[[w:c:criminal-girls:Criminal_Girls_Wiki|Criminal Girls]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1kTqXcoR ShimakazeGo_CriminalGirls_cache_20150212.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-02-12 08:03
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_CriminalGirls_cache_20150109.7z
+{{!}} 2015-01-20 06:31
+{{!}} http://pan.baidu.com/s/1gdiqYaf
+{{!}}-
+{{!}} ShimakazeGo_CriminalGirls_cache_20150121.7z
+{{!}} 2015-01-21 19:12
+{{!}} http://pan.baidu.com/s/1mg85mic
+{{!}}- 
+{{!}} ShimakazeGo_CriminalGirls_cache_20150128.7z
+{{!}} 2015-01-28 19:55
+{{!}} http://pan.baidu.com/s/1c0rQKt6
+{{!}}- 
+{{!}} ShimakazeGo_CriminalGirls_cache_20150128.7z
+{{!}} 2015-01-29 05:10
+{{!}} http://pan.baidu.com/s/1pJiGTmV
+{{!}}- 
+{{!}} ShimakazeGo_CriminalGirls_cache_20150205.7z
+{{!}} 2015-02-05 06:38
+{{!}} http://pan.baidu.com/s/1o6oOMOq
+{{!}}- 
+{{!}} ShimakazeGo_CriminalGirls_cache_20150212.7z
+{{!}} 2015-02-12 08:03
+{{!}} http://pan.baidu.com/s/1kTqXcoR
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Complete archive filename format: ShimakazeGo_CriminalGirls_cache_YYYYMMDD.7z
+** Where:
+*** YYYY is the year in four digits via four "Y",
+*** M indicates the month in two digits via two "M",
+*** D indicates day in two digits via two "D",
+* Website as of 01/07/2016 does NOT list this as an entry, however it is still visible within the owner's Baidu cloud storage.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="granblue">[[w:c:granblue-fantasy:Granblue_Fantasy_Wiki|Gran Blue Fantasy]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1kTnhfx1 GranblueFantasy_img.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-10-21 19:19
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} GranblueFantasy_img.7z
+{{!}} 2015-10-21 19:19
+{{!}} http://pan.baidu.com/s/1kTnhfx1
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Website as of 01/07/2016 does NOT list this as an entry, however it is still visible within the owner's Baidu cloud storage.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+== <div id="sengokupro">[[w:c:senpro:SenPro_Wikia|Sengoku Providence]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1skzrfB3 ShimakazeGo_Senpro_cache_20160301.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-03-01 12:44
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ShimakazeGo_Senpro_cache_20160301.7z
+{{!}} 2016-03-01 12:44
+{{!}} http://pan.baidu.com/s/1skzrfB3
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Website as of 01/07/2016 does NOT list this as an entry, however it is still visible within the owner's Baidu cloud storage.
+}}
+<div style = "text-align:right">[[#top3|back to top]]</div>
+
+{{!}}-{{!}}From ACGPro=
+<div id="top2"></div>
+{{{!}} style="width:100%;" class="toptextcells"
+{{!}} <br><!-- style="float:left; text-align:left; valign:top;" {{!}} [http://pan.baidu.com/share/home?uk=554160418#category/type=0 Last snapshot] (included in here for personal reasons only):
+<br>acgpower2.2.7.9.zip
+<br>acgpower2.2.7.8.zip
+<br>acgpower2.2.7.7.zip
+<br>acgpower2.2.7.6.zip
+<br>acgpower2.2.7.5.zip
+<br>acgpower2.2.7.4.zip
+<br>acgpower2.2.7.3.zip
+<br>acgpower-mac-sv-patch.7z
+<br>acgpower2.2.7.3.zip
+<br>acgpower-mac-sv-patch.zip
+<br>acgpower2.2.7.2.zip
+<br>acgpower2.2.7.1.zip
+<br>acgpower-sv-patch.zip
+<br>ACGPOWER-FOR-MAC-1.7.zip
+<br>acgpower2.2.7.0.zip
+<br>acgpower2.2.6.9.zip
+<br>acgpower2.2.6.8.zip
+<br><span style="color:#f00;">kcs-1-14-1.7z</span>
+<br>ACGPOWER-FOR-MAC-1.6.6.zip
+<br>SwitchyOmega_2_3_19.zip
+<br>acgpower2.2.6.7.zip
+<br>acgpower2.2.6.6.zip
+<br>acgpower2.2.6.5.zip-->
+{{!}} style="background:#bce2e8; valign:top; width:40%;" {{!}}
+{{{!}} style= "float:right;" class="mw-collapsible"
+{{!}}  style="text-align:center" {{!}} '''Table of Contents'''
+{{!}}- 
+{{!}} style="text-align:left" {{!}} [[#osawari2|Ultra Adventures Go Go Osawari Island]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#kanpani2|Kanpani Girls]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#kanpaniapk|Kanpani Girls Android App]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#monsterhunt2|Monster Hunter Mezeporta Reclamation]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#overlegendendlesstower|Over Legend Endless Tower]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#toukenranbu2|Touken Ranbu]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#toukenranbuapk2|Touken Ranbu Android App]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#flowerknight2|Flower Knight Girls]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#toloveru2|To-Love Ru]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#aigis|Aigis]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#gineita|Gineita]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#xoverd|X-Overd]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#sengokubas|Sengoku BASARA X]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#shiropro2|Shiro Project]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#kamihime2|Kamihime Project]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#ozchrono|Oz Chrono Chronicle]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#shinken2|Shinken!!]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#ichibanketsu1|Ichibanketsu]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#kairi|Kai-ri-sei Million Arthur]]
+{{!}}-
+{{!}} style="text-align:left" {{!}} [[#bunal|Bungou to Alchemist]]
+{{!}}}
+{{!}}}
+
+== <div id="osawari2">[[w:c:osawari-island:Osawari_Island_Wikia|Ultra Adventures Go Go Osawari Island]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1ntl1mkh 超大冒險緩存包-11-30-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2014-11-30 15:43
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} 超大冒險緩存包-11-30-1.7z
+{{!}} 2014-11-30 15:43
+{{!}} http://pan.baidu.com/s/1ntl1mkh
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: 超大冒險緩存包-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="kanpani2">[[w:c:kanpani:Kanpani_Wiki|Kanpani Girls]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1i3s1nRv kanpani-6-4-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-06-05 15:00
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} kanpani-6-4-1.7z
+{{!}} 2015-06-05 15:00
+{{!}} http://pan.baidu.com/s/1qWwWFEG
+{{!}}- 
+{{!}} kanpani-6-4-1.7z
+{{!}} 2015-06-05 15:00
+{{!}} http://pan.baidu.com/s/1i3s1nRv
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: kanpani-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="kanpaniapk">[[w:c:kanpani:Kanpani_Wiki|Kanpani Girls]] Android App</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1bbIQtS kanpaniAnd.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-01-06 14:27
+{{!}}-
+! Latest incremental archive
+{{!}} [http://pan.baidu.com/s/1sk6NtVn kanpaniAnd-update-3-14-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-03-14 14:45
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} kanpaniAnd-12-30-1.7z
+{{!}} 2015-12-30 19:19
+{{!}} http://pan.baidu.com/s/1dEgt3LB
+{{!}}- 
+{{!}} kanpaniAnd.7z
+{{!}} 2016-01-06 14:03
+{{!}} http://pan.baidu.com/s/1c0ZCMhM
+{{!}}- 
+{{!}} kanpaniAnd.7z
+{{!}} 2016-01-06 14:27
+{{!}} http://pan.baidu.com/s/1bbIQtS
+{{!}}- 
+{{!}} 
+{{!}}}
+
+{{!}}-{{!}}Incremental archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} kanpaniAnd-update-3-14-1.7z
+{{!}} 2016-03-14 14:45
+{{!}} http://pan.baidu.com/s/1sk6NtVn
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: kanpaniAnd-M-D-X.7z -or- kanpaniAnd-update-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="monsterhunt2">[[w:c:monsterhunter:Monster_Hunter_Mezeporta_Reclamation|Monster Hunter Mezeporta Reclamation]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1nt425Rj mh-4-19-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-04-24 01:49
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} mh-4-19-1.7z
+{{!}} 2015-04-24 01:49
+{{!}} http://pan.baidu.com/s/1nt425Rj
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: mh-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="overlegendendlesstower">[[w:c:olet:Ole_Tower_Wiki|Over Legend Endless Tower]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1gdLKKUZ ole-3-14-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-03-14 16:16
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ole-7-19-1.7z
+{{!}} 2015-07-20 14:21
+{{!}} http://pan.baidu.com/s/1sjwX9q1
+{{!}}- 
+{{!}} ole-10-12-1.7z
+{{!}} 2015-10-12 13:48
+{{!}} http://pan.baidu.com/s/1dD4n64x
+{{!}}- 
+{{!}} ole-11-15-1.7z
+{{!}} 2015-11-15 19:56
+{{!}} http://pan.baidu.com/s/19LQr0
+{{!}}- 
+{{!}} ole-12-31-1.7z
+{{!}} 2015-12-31 13:59
+{{!}} http://pan.baidu.com/s/1c1pPmUW
+{{!}}- 
+{{!}} ole-1-20-1.7z
+{{!}} 2016-01-20 19:33
+{{!}} http://pan.baidu.com/s/1o6Xw1SY
+{{!}}- 
+{{!}} ole-3-14-1.7z
+{{!}} 2016-03-14 16:16
+{{!}} http://pan.baidu.com/s/1gdLKKUZ
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: ole-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="toukenranbu2">[[w:c:touken-ranbu:Touken_Ranbu_Wiki|Touken Ranbu]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1bnTX7yB touken-3-6-1.zip]
+{{!}}-
+! Last updated
+{{!}} 2016-03-06 13:30
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} touken-7-19-1.7z
+{{!}} 2015-07-20 14:07
+{{!}} http://pan.baidu.com/s/1dDycaTr
+{{!}}- 
+{{!}} token-11-15-1.7z
+{{!}} 2015-11-15 19:55
+{{!}} http://pan.baidu.com/s/1pJ7ZyH1
+{{!}}- 
+{{!}} touken-1-6-1.7z
+{{!}} 2016-01-06 13:49
+{{!}} http://pan.baidu.com/s/1o71cLU6
+{{!}}- 
+{{!}} touken-3-6-1.zip
+{{!}} 2016-03-06 13:30
+{{!}} http://pan.baidu.com/s/1bnTX7yB
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: touken-M-D-X.7z -or- token-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="toukenranbuapk2">[[w:c:touken-ranbu:Touken_Ranbu_Wiki|Touken Ranbu]] Android App</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1hr0Vlw4 touken-and-3-1-1.zip]
+{{!}}-
+! Last updated
+{{!}} 2016-03-01 16:39
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} touken-and-3-1-1.zip
+{{!}} 2016-03-01 16:39
+{{!}} http://pan.baidu.com/s/1hr0Vlw4
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: touken-and-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="flowerknight2">[[w:c:flowerknight:Flower_Knight_Girl_Wikia|Flower Knight Girls]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1sjIDVlj fkg-8-11-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-08-12 02:06
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} fkg-7-14-1.7z
+{{!}} 2015-07-16 14:30
+{{!}} http://pan.baidu.com/s/1sjDSwvN
+{{!}}- 
+{{!}} fkg-8-11-1.7z
+{{!}} 2015-08-12 02:06
+{{!}} http://pan.baidu.com/s/1sjIDVlj
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: fkg-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="toloveru2">[[w:c:to-loveru:To_Love-Ru_Wiki|To Love-Ru]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1ntGcDJF tolove-7-19-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-07-20 14:07
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} tolove-7-19-1.7z
+{{!}} 2015-07-20 14:07
+{{!}} http://pan.baidu.com/s/1ntGcDJF
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: tolove-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="aigis">[[w:c:zh.aigis:Aigis_Site|Aigis]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1pKsQwpd millenniumwar-12-30-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-12-30 19:57
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} millenniumwar-8-8-1.zip
+{{!}} 2015-08-08 13:59
+{{!}} http://pan.baidu.com/s/1eQpnQZS
+{{!}}- 
+{{!}} millenniumwar-10-12-1.7z
+{{!}} 2015-10-12 13:49
+{{!}} http://pan.baidu.com/s/1c0z5UZe
+{{!}}- 
+{{!}} millenniumwar-11-15-1.7z
+{{!}} 2015-11-15 19:56
+{{!}} http://pan.baidu.com/s/1o6tOthK
+{{!}}- 
+{{!}} millenniumwar-12-30-1.7z
+{{!}} 2015-12-30 19:57
+{{!}} http://pan.baidu.com/s/1pKsQwpd
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: aigis-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="gineita">[http://wiki.gineita.info/ Gineita]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1jHb8Uhw gineita-1-21-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-01-22 00:35
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} gineita-1-21-1.7z
+{{!}} 2016-01-22 00:35
+{{!}} http://pan.baidu.com/s/1jHb8Uhw
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: gineita-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="xoverd">[http://wikiwiki.jp/x-overd/ X-Overd]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1o705Pxg xoverd-1-28-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-01-28 18:50
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} xoverd-1-28-1.7z
+{{!}} 2016-01-28 18:50
+{{!}} http://pan.baidu.com/s/1o705Pxg
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: xoverd-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="sengokubas">[[w:c:sengokubasara:Sengoku_BASARA_X|Sengoku BASARA X]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1i3MYCux senpro-3-3-1.zip]
+{{!}}-
+! Last updated
+{{!}} 2016-03-04 00:19
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} senpro-3-3-1.zip
+{{!}} 2016-03-04 00:19
+{{!}} http://pan.baidu.com/s/1i3MYCux
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: senpro-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="shiropro2">[[w:c:shiropro:Shiro_Project_Wiki|Shiro Project]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1mh5NXpA shiropro-6-3-1.zip]
+{{!}}-
+! Last updated
+{{!}} 2016-06-03 15:09
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} shiropro-3-4-1.7z
+{{!}} 2015-03-04 16:02
+{{!}} http://pan.baidu.com/s/1hqF0isk
+{{!}}- 
+{{!}} shiropro-3-25-1.7z
+{{!}} 2016-03-25 17:39
+{{!}} http://pan.baidu.com/s/1bpqdBJ5
+{{!}}- 
+{{!}} shiropro-6-3-1.zip
+{{!}} 2016-06-03 15:09
+{{!}} http://pan.baidu.com/s/1mh5NXpA
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: shiropro-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+* This game cache dump is ''not'' related to Shiro Project:Revamp.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="kamihime2">[[w:c:kamihime-project:Kamihime_Project_Wikia|Kamihime Project]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1slBr0k9 kamihimeproject-4-17-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-04-17 04:06
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} kamihimeproject-4-17-1.7z
+{{!}} 2016-04-17 04:06
+{{!}} http://pan.baidu.com/s/1slBr0k9
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: kamihimeproject-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="ozchrono">[[w:c:zh.oz-chrono-chronicle:Oz_chrono_chronicle_Wiki|OZ Chrono Chronicle]]</div> == 
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1dFykJj7 oz-5-29-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-05-29 17:38
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} oz-5-29-1.7z
+{{!}} 2016-05-29 17:38
+{{!}} http://pan.baidu.com/s/1dFykJj7
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Filename format: oz-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="shinken2">[[w:c:shinken-dmm:Shinken!!_Wikia|Shinken!!]]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1hq3yDUG shinken-9-1-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2015-09-02 00:36
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} shinken-7-19-1.7z
+{{!}} 2015-07-20 14:08
+{{!}} http://pan.baidu.com/s/1hqJAB5q
+{{!}}- 
+{{!}} shinken-8-1-1.7z
+{{!}} 2015-08-01 12:48
+{{!}} http://pan.baidu.com/s/1i3s4XyH
+{{!}}- 
+{{!}} shinken-9-1-1.7z
+{{!}} 2015-09-02 00:36
+{{!}} http://pan.baidu.com/s/1hq3yDUG
+{{!}}- 
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Website as of 01/07/2016 does NOT list this as an entry, however it is still visible within the owner's Baidu cloud storage.
+* Filename format: shinken-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="ichibanketsu1"> Ichibanketsu</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [http://pan.baidu.com/s/1geOY4SV itchibanketsu-8-5-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-08-05 23:16
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} itchibanketsu-8-3-1.7z
+{{!}} 2016-08-04 00:14
+{{!}} http://pan.baidu.com/s/1miyad4k
+{{!}}-
+{{!}} itchibanketsu-8-4-1.7z
+{{!}} 2016-08-04 18:53
+{{!}} http://pan.baidu.com/s/1nv6L5ot
+{{!}}-
+{{!}} itchibanketsu-8-5-1.7z
+{{!}} 2016-08-05 23:16
+{{!}} http://pan.baidu.com/s/1geOY4SV
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Website as of 04/08/2016 started listing this as an entry.
+* Filename format: itchibanketsu-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="kairi"> [http://wiki.famitsu.com/kairi/ Kai-ri-sei Million Arthur]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1qXUP1LE ma-10-14-2.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-10-14 19:04
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} ma-10-14-1.7z
+{{!}} 2016-10-14 03:26
+{{!}} https://pan.baidu.com/s/1dF7L2RR
+{{!}}-
+{{!}} ma-10-14-2.7z
+{{!}} 2016-10-14 19:04
+{{!}} https://pan.baidu.com/s/1qXUP1LE
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Website as of 14/10/2016 started listing this as an entry.
+* Filename format: ma-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+
+== <div id="bunal"> [https://twitter.com/bunal_pr Bungou to Alchemist]</div> ==
+{{#tag:tabber|Information=
+{{{!}} class="wikitable" style="margin:0px"
+! Latest complete archive
+{{!}} [https://pan.baidu.com/s/1hsoJ4nM bungo-11-1.7z]
+{{!}}-
+! Last updated
+{{!}} 2016-11-02 01:10
+{{!}}}
+
+{{!}}-{{!}}Archive=
+{{#tag:tabber|Complete archive=
+{{{!}} class="wikitable sortable" style="margin:0px"
+! Filename
+! Date
+! Link(s)
+{{!}}-
+{{!}} bungo-11-1.7z
+{{!}} 2016-11-02 01:10
+{{!}} https://pan.baidu.com/s/1hsoJ4nM
+{{!}}-
+{{!}} 
+{{!}}}
+}}
+
+{{!}}-{{!}}Notes= 
+* Website as of 02/11/2016 started listing this as an entry.
+* Filename format: bungo-M-D-X.7z
+** Where M indicates month in either single digit if month was between January till September. Otherwise in two digits.
+** Where D indicates day in either single digit if day is less than 10th day. Otherwise in two digits.
+** Where X indicates package changes? and package changes happens on both the same day as well as the same month.
+}}
+<div style = "text-align:right">[[#top2|back to top]]</div>
+}}
+}}
+</tabber>

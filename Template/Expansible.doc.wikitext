@@ -1,0 +1,33 @@
+;Description
+:This template is used for inserting expansible sections, spoiler-like menus into articles. 
+:The main use of this template is in [[Tutorial: FAQ]] page.
+:Automatically generate wiki header level 3 for table of contents but edit link does not work.
+;Syntax
+:Fill in the form
+<pre>{{Expansible
+|id=<ID>
+|header=<header>
+|content=<content>
+}}</pre>
+;Notes:
+:<code><nowiki><ID></nowiki></code> field must be unique within an article. Assignment of this field is optional. If multiple report templates are assigned the same ID, they will be linked and collapse/expand together.
+:By default the template uses timestamp id but manual assignment might be necessary in some cases.
+:<span style="color:red">Blank space and some special characters are not allowed in the ID. If the template doesn't expand, check your ID first.</span>
+:To use nested tables and tabbers in the template, replace all instances of <code><nowiki>"|"</nowiki></code> (pipe character) with <code><nowiki>"{{!}}"</nowiki></code>
+;Sample outputs
+<pre>
+{{Expansible
+|id=FAQ54
+|header=What's the difference between CV and CVL?
+|content=
+CVs are big eaters.
+[[File:赤城.jpg|200px]]
+}}
+</pre>
+{{Expansible
+|id=FAQ54
+|header=What's the difference between CV and CVL?
+|content=
+CVs are big eaters.
+[[File:赤城.jpg|200px]]
+}}

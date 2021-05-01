@@ -1,0 +1,95 @@
+==Preface==
+:Starting with [[User:Ckwng]]'s work, Lua is becoming more and more prevalent on the wiki. With that prevalence, more people will come to wonder just how the heck you even use it. This post will aim to answer some of the starter questions.
+
+:I will not be covering basic programming here. That is too expansive for something like this and there are many resources for it already. If you really must start from the beginning, please refer to [[http://lua-users.org/wiki/LuaTutorial a full Lua tutorial]]. You should also refer to the [[http://www.mediawiki.org/wiki/Extension:Scribunto/Lua_reference_manual Scribunto reference manual]]. This post will only cover topics more specific to this wiki.
+
+:The modules covered here will be mostly the ones that were meant to be sub-classed or instanced.
+
+==How does Lua work on the wiki?==
+:First of all, Lua on the wiki is developed in ''Modules''. Modules are reached by adding "Module:Something Here" after "http://kancolle.wikia.com/wiki/" in your address bar. For example, you may go to [[Module:BaseTable]] and look at your link.
+
+:Each of the main modules does basically the same thing, so I'll only discuss [[Module:Ship]] for how it works. [[Module:Ship]] defers actions to the ''create'' function. This then takes the ''name'' and ''model'' values passed to it to attempt to (1) find the module and (2) get the values for that specific model. In its simplified form, this means it does the following:
+
+<pre>function Ship:create(name, model)
+    require("Module:ShipData")
+    ship_table = mw.ustring.format(require("Module:%s"), name)
+    ship = ShipData(ship_table)[model]
+    return ship
+end</pre>
+
+:This is the basic form of how it goes, ignoring any optimization and failure checks.
+
+:<b style="color: red;">tl;dr Just read the section below.</b>
+
+===What does that mean for me?===
+:All you really need to take away from the above is that you can get the information for any ship like this:
+
+<pre>local ship = Ship("Name", "Model")</pre>
+
+:''Name'' and ''Model'' are replaced by values such as "Sendai" and "Kai Ni" respectively.
+
+:For ''Equipment'', this is how it looks:
+
+<pre>local equip = Equipment("35.6cm Twin Gun Mount")</pre>
+
+==Why can't I access my args list?==
+:If you haven't read through all the modules and went straight to creating a module, you probably ran into an issue where you can't tell what any of your variables are. For example, you might declare it like this on some page you want to use it at:
+
+<pre>{{MyModule|Value|Value|value=Value}}</pre>
+
+:The expected way this would appear for the args table would be the following:
+
+<pre>[1] = "Value"
+[2] = "Value"
+["value"] = "Value"</pre>
+
+:However, you would instead get some error about attempting to index local args which is nil. This is because you need to invoke a function separate from your main one. The most basic form looks like this:
+
+<pre>local getArgs = require('Module:GetArgs')
+
+local MyModule = {}
+
+function MyModule:Main(args)
+    --Do something here
+end
+
+function MyModule.Begin()
+    local args = getArgs{frame = frame:getParent()}
+    return MyModule:Main(args)
+end
+
+return MyModule</pre>
+
+:After you have this, you would go to the [[Template:MyModule]] page and put this for the page:
+
+<pre>{{#invoke:MyModule|Begin}}</pre>
+
+:With all those in place, you would be ready to use your module. Please note, however, that args will be local to the MyModule:Main function in the case above, so you may wish to use '''''self._args = args''''' to preserve it so it may be used anywhere in the code.
+
+==Q/A==
+
+===I noticed there's a difference in the declaration of Main and Begin above, but why?===
+:Okay, so maybe it was too minor and you didn't realize it. Either way, you need to know this.
+
+:When you declare a function in Lua, there are two ways to separate ''MyModule'' from the function name. These are the colon (":") and the period ("."). You will mostly be using the colon one.
+
+:The colon takes ''MyModule'' as the first argument '''without it appearing as an argument''' and makes the local variable ''self'' equal to it. For most intents and purposes, this gives you pseudo-global variables (the variables assigned used ''self'' are not limited in scope to the function you declared them in).
+
+:The period, on the other hand, will not pass ''MyModule'' in as the ''self'' variable. This is basically a static function. An example of how it can be used is [[Module:NanaminFunctions|here]].
+
+===How do I get things to display from my module?===
+:If you used the basic form for a module written above, then you could have this in the ''Main'' function where it says "--Do something here":
+
+<pre>return "Some random text that will show up where you called the module"</pre>
+
+:This would display the above text where you called the module.
+
+===Some of my code is coming out as plain text===
+:This will happen if you use something prohibited by the system in your code. As far as I know, this includes <nowiki><tabber>, <style> and <script></nowiki>. It also encompasses any inline Javascript.
+
+==Afterword==
+:I'm not sure I've covered all the topics that people need to start using Lua in this post. If there is anything you notice is missing, please comment it and I will look into adding it.
+
+==Links==
+:[[Kancolle Wiki:Lua]] for a list of all the stuff [[User:Ckwng]] is working on.
+[[Category:Blog posts]]

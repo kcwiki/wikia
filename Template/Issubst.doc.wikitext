@@ -1,0 +1,15 @@
+=== Usage ===
+Meta template that returns "yes" if evaluated during substitution, and the empty string if evaluated during transclusion.<br />Note that this template must be used in [[meta:Help:Safesubst|safesubst]] mode to work properly:
+
+:<code><nowiki>{{ {{{|safesubst:}}}issubst}}</nowiki></code>
+
+=== Examples ===
+*"<code><nowiki>{{issubst}}</nowiki></code>" → "{{issubst}}"
+*"<code><nowiki>{{subst:issubst}}</nowiki></code>" → "yes"
+
+<includeonly>
+[[Category:Boolean, register, and condition testing templates|{{PAGENAME}}]]
+</includeonly>
+
+=== Source ===
+https://en.wikipedia.org/wiki/Template:Issubst/doc

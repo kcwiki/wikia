@@ -1,0 +1,379 @@
+{{Map/Header}}
+{{Map/Info
+|en = MS Archipelago
+|jp = MS諸島沖
+|romaji =MS-shotō oki
+
+|mechanics = LoS Check@Line of Sight
+
+|show_kills = true
+|kills = 3
+|strategy_name = Defense of the MS Archipelago
+|strategy_name_ja = MS諸島防衛戦
+|strategy_info = Expand to the forward part of the MS Archipelago sea, seize the enemy fleet that is slowly advancing to capture the archipelago, and destroy them with all your might!
+|strategy_info_ja = MS諸島沖前面に展開し、同諸島方面に接近しつつある敵攻略部隊を捕捉、全力で撃滅せよ！
+
+|exp_ship = 420
+|exp_hq = 180
+|exp_hq_boss = 2560
+
+}}
+{{MapBranchingTable
+|id = 6-2
+
+|0 -> A =
+* Guaranteed if CL + DD ≧ 4
+* Random if requirements for A/B aren't met
+|0 -> B =
+* Guaranteed if (F)BB(V) + CV(L/B) ≦ 3 and requirement for A isn't met
+* Random if requirements for A/B aren't met
+
+|A ->  B  = 
+* Amount of CL + DD + AV ≧ 5
+<!-->
+Unsure about AV, whatever was here wasn't correct anyway
+Quite a bit of CL + DD >= 5 samples, all routed
+Only one other sample that routed to B, CL + DD + AV >= 5
+No conflicting samples with this rule (yet)
+-->
+|A -> D/storm =
+* Requirements for B aren't met.
+
+|B -> C/empty =
+* 6 [BB(V) + CV(L) + CA(V)] 
+* 4+ [BB(V) + CV(L)],  with chance to go to C (?)
+|B -> D/storm = * Does not meet the requirements to go to either C or F (?)
+|B -> F/empty = * 0 - 1 BB & 0 - 2 [BB + CV(L)] 
+
+|D/storm -> E = * Does not meet the requirements to go to G (?)
+|D/storm -> G = * 3+ DD & 4+ [CL + DD] & 0 [BB + CV] (?)
+
+|E -> H = * Fixed route
+
+|F/empty -> E = * Does not meet the requirements to go to either H or I
+|F/empty -> H = * BB ≤ 1 & CV(L) ≤ 1 & DD ≥ 2, AND [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] < 43
+|F/empty -> I = * BB ≤ 1 & CV(L) ≤ 1 & DD ≥ 2, AND [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] > 43
+
+|G -> J/empty = * Random or fixed route LoS check (to node K) failed (boundary unknown) 
+|G -> K = * [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula > 40
+
+|H -> J/empty = * Random or fixed route LoS check (to node K) failed (boundary unknown) 
+|H -> K = * [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula > 40
+}}
+===Tips===
+* This map uses the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula, this means that '''LoS from equipments weights 3 times more''' than usual.
+===Possible Fleet compositions===
+*{{Event/Route|B|red|F|blue|H|red|K|red}} or {{Event/Route|B|red|F|blue|I|red|K|red}}
+**1(F)BB(V) 1CV(B) 2DD 2CA(V)
+**1(F)BB(V) 1CV 2DD 2CLT
+**1(F)BB(V) 1CV(B) 2DD 1CA(V) 1CLT
+*** There is a LoS check for F -> I. Using either composition that fails this LoS check will to go to H instead. However, H does not contain any Flagship Kai-grade enemies, so failing this LoS check may be preferable. There is also a LoS check for H -> K. When the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] LoS value is between 40 and 43, it guarantees going H and passing the second LoS check.
+*{{Event/Route|B|red|F|blue|E|red|H|red|K|red}}
+**[https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/Jgk9Ija.png 1BB 1CV(B) 1CA(V) 3CLT]
+**2CLT 2CA(V) 1CV(B) 1(F)BB(V
+**2CV(B) 2CA(V) 2CLT
+*** Higher chance to kill the boss, but inefficient for farming.
+*{{Event/Route|A|red|D|purple|G|red|K|red}}
+** 1CA(V) 2CL 3DD (Unknown LOS check on G-K)
+***Strongly recomended to use a CAV with at least a seaplane bomber.
+*{{Event/Route|A|red|B|red|F|blue|I|red|K|red}}
+** 3DD 1CVL 1CA(V) 1CL
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=207|y=133}}
+{{Map/ImageNode|B|x=238|y=221}}
+{{Map/ImageNode|C|x=165|y=274}}
+{{Map/ImageNode|D|x=360|y=117}}
+{{Map/ImageNode|E|x=370|y=201}}
+{{Map/ImageNode|F|x=361|y=289}}
+{{Map/ImageNode|G|x=466|y=90}}
+{{Map/ImageNode|J|x=445|y=160}}
+{{Map/ImageNode|H|x=484|y=234}}
+{{Map/ImageNode|I|x=555|y=237}}
+{{Map/ImageNode|K|x=598|y=100}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵攻略支援部隊A群
+|A
+|Normal
+|{{Formation|Diamond}}
+|Heavy Cruiser Ri-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|A
+|Normal
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|Heavy Cruiser Ri-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=敵攻略支援部隊B群
+|B
+|Normal
+|{{Formation|Double Line}}
+|Battleship Ru-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|B
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|B
+|Normal
+|{{Formation|Diamond}}
+|Battleship Ru-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{NodeInfo
+|C
+|Empty
+}}
+{{NodeInfo
+|D
+|Storm
+|Ammo
+|15
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|E
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship II
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|E
+|Normal
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship II
+|Light Cruiser Tsu-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|E
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship II
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{NodeInfo
+|F
+|Empty
+}}
+{{Map/Nodes|name=敵高速水上打撃部隊
+|G
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|G
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ha-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|-
+|G
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{Map/Nodes|name=敵任務部隊B群
+|H
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|H
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Diamond}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ha-Class/Late Model
+|Destroyer Ni-Class/Late Model
+}}
+{{Map/Nodes|name=敵任務部隊A群
+|I
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Kai Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|I
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Kai Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|I
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class/Kai Flagship
+|Battleship Ru-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{NodeInfo
+|J
+|Empty
+}}
+{{Map/Nodes|name=敵攻略部隊本体
+|K
+|Boss
+|{{Formation|Line Ahead}}
+|Transport Ship Wa-Class/Flagship
+|Battleship Ru-Class/Kai Flagship
+|Light Cruiser Tsu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|-
+|K
+|Boss
+|{{Formation|Line Ahead}}{{Formation|Diamond}}
+|Transport Ship Wa-Class/Flagship
+|Standard Carrier Wo-Class/Flagship II
+|Battleship Ru-Class/Kai Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, E, G, H, I, K
+|boss = K
+|Akashi: H, I
+|Aoba: B, H
+|Arashio: B, H
+|Asashio: B, E
+|Ashigara: E, H
+|Atago: B, K
+|Chikuma: H
+|Choukai: E, H, I
+|Fubuki: B, E
+|Furutaka: E
+|Fusou: E, K
+|Haguro: B, E, I
+|Hamakaze: K
+|Haruna: K
+|Hatsuharu: H
+|Hatsushimo: E
+|Hatsuyuki: B, H
+|Hiei: K
+|Hiyou: B, E
+|Hyuuga: E, I, K
+|I-168: K
+|I-19: K
+|Ise: E, I, K
+|Isonami: E
+|Isuzu: B, E, H, I
+|Jintsuu: B, E, H
+|Junyou: B, E, H, I, K
+|Kako: B
+|Kasumi: B, E
+|Kinu: B, E, H, I
+|Kinugasa: E, H, I, K
+|Kirishima: K
+|Kumano: H, I, K
+|Maruyu: K
+|Maya: B, E
+|Mogami: E, K
+|Murakumo: B, E
+|Mutsu: H, I, K
+|Myoukou: E, H, K
+|Nagara: H, I
+|Nagato: K
+|Naka: B, E, H, I
+|Natori: B, E, H
+|Nenohi: B, E
+|Ooshio: H
+|Ryuujou: K
+|Sakawa: K
+|Sendai: B, E, I
+|Shimakaze: K
+|Shirayuki: H
+|Shouhou: B, E, H, K
+|Shoukaku: K
+|Suzuya: H, I, K
+|Takao: E, I
+|Tone: E, H, K
+|Uranami: K
+|Wakaba: E, H
+|Yahagi: K
+|Yamashiro: H, K
+|Yura: E
+|Yuubari: K
+|Yuugumo: H, K
+|Zuihou: K
+|Zuikaku: K
+}}
+{{SectionEnd}}

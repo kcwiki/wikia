@@ -1,0 +1,147 @@
+{{Event/MapPageHeader
+|form = D18LTzzlbVJDv0B63
+|spreadsheet = 1AhrieQbH92NqzUOEAJM0QynFMZeQjKvplINOPhNX-ew
+|thread = 
+}}
+{{Event/MapInfo
+|en = Commence Recross Operation
+|jp = 再打通作戦発動
+|romaji =Saidatsū sakusen hatsudō 
+|tag = E1 
+|mechanics = Ship Locking@Events/Mechanics#Ship_Locking, LoS Check@Events/Mechanics#LoS_Check
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_easy = 700
+|hp_medium = 1240
+|hp_hard = 1700
+|show_kills = true
+|kills_all = 
+|kills_easy = 4
+|kills_medium = 6.5
+|kills_hard = 4.5
+
+|reward_all = 
+|reward_easy_1 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_easy_1_x = 1
+|reward_easy_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_medium_1_x = 3
+|reward_medium_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_hard_1_x = 4
+|reward_hard_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Swordfish|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+
+|order = F, C, I, J, D, K, L, R
+
+|0 -> F = * Do not meet the requirements to go to I.
+|0 -> I/empty = 
+* Meet '''all''' of the following requirements:
+** Amount of DD/DE ≧ 2 (DD and DE are interchangeable)
+** Amount of CL+DD+DE ≧ 3
+** Amount of CVL ≦ 1
+** Amount of CT ≦ 1
+** Amount of CLT ≦ 1
+** Fleet contains no SS(V)
+
+|I/empty -> H,J/empty = * Active Branching
+
+|J/empty -> G,L = * Active Branching
+
+|C -> A/empty = * Fail the LoS check
+|C -> P = * Pass the LoS check
+
+|D -> B/empty = * Fail the LoS check
+|D -> P = * Pass the LoS check
+
+|K -> M/resource = * Do not meet the requirements to go to Q.
+|K -> Q/resource = 
+* Meet all of the following requirements:
+**Fast Fleet
+** No CVL allowed
+** No BBV allowed
+
+|L -> N = * Do not meet the requirements to go to R.
+|L -> R = 
+* Meet all of the following requirements:
+** No CVL allowed
+** No BBV allowed
+** Pass the LoS check
+
+|N -> O/empty = * Do not meet the requiremenets to go to R.
+|N -> R = 
+* Meet all of the following requirements:
+** Amount of CVL + BBV ≦ 1
+** Pass the LoS check
+}}
+==Map Guide==
+*'''This map does not allow the use of (F)BB, CV(B). BBVs and CVLs are fine, however.'''
+
+
+* Node E and node N are submarine nodes.
+* Node Q, node R and node S are hidden nodes:
+** to unlock node Q, you need to reach the anchor node M once.
+** to unlock node R and node S, you need to reach the anchor node Q once. Use a torpedo squadron (ex. 1 CAV 2 CL 3 DD to reach node Q).
+*'''Note''': To farm node S where Sagiri resides, you will need at least 8 ships if you want to unlock the route to node S; 6 originally and 2 to replace your BBV and CVL later on to form a fast fleet. Please note that Sagiri also drops in E-2.
+* The LoS requirement to reach the boss node P is estimated to be at least 24 using the F33 Cn1 formula.
+*Going Northwest route (F-E-C-P) is not recommended even on easy due to the presence of {{ShipLink|Light Carrier Nu-Class/Kai Flagship}} in Node C and having 3 battle nodes compared to 2 in South route (I-J-G-D-P).
+**SS(V) will force northwest route so they are not recommended at all.
+*The Boss is {{ShipLink|New Submarine Princess/Flagship|text=New Submarine Princess}}. It is recommended to bring OASW capable ships like DDs or CLs.
+**Boss node has also a light carrier; don't forget to bring some fighters on your CVL. In hard, Nu-class Kai Elite can show up pre-LD, but in LD, it will be Kai Flagship.
+
+==Possible Fleet Composition== 
+*{{Event/Route|I|blue|J|blue|G|red|D|red|P|red}}: 
+**1 CVL 1 BBV 2 DD/DE + 2 DD/DE/CL
+**1 CVL 1 BBV 2 DD/DE 1 CLT  + 1 DD/DE/CL
+*'''Note: You can only bring a maximum of 1 CLT, bringing more will make you route to F instead of I.'''
+
+==Node S (Sagiri) Farming==
+{{Section|no_clear=true}}{{clear}}
+*'''Equipping {{GreenGunMG}}, {{GreenGunDP}}, {{RedGunLight}}, {{EquipmentLink|Skilled Lookouts}} and/or {{YellowGun}} will give extra accuracy bonuses against  {{ShipLink|PT Imp Pack}}.'''
+**Currently, {{EquipmentLink|Skilled Lookouts}} can be obtained from {{ShipLink|Takanami Kai}} and {{ShipLink|Kazagumo Kai}} (also Choukai, but needs Blueprint). Both drop in E-4 and E-6. Consider lvling them to Kai before removing them from your fleet.
+**There appears to be synergy bonuses between different kinds of equipment, but stacking multiple guns seems to also work.
+**For all ships except Destroyers, {{EquipmentLink|Skilled Lookouts}} are required to trigger synergy.
+**Skilled Lookouts appear to give the highest bonus when in combination with {{GreenGunMG}}.
+**The most effective combination seems to be {{GreenGunMG}}, {{EquipmentLink|Skilled Lookouts}}, and one of {{YellowGun}} {{GreenGunDP}} {{RedGunLight}}, which can reach 99% accuracy fairly reliably.
+***Ship girls with expansion slots can equip two guns for night battle DA and more firepower, or LoS equipment for routing.
+*During Night battle, the <u>bonus accuracy doesn't seem to apply</u>. Logically speaking, it is '''best to defeat all PT Imps before Night Battle'''. They can be hit during Night Battle, but it will require more luck.
+*Due to the equipment slot demands, most fleets will need either one AV, CVL, or BBV to compensate for the low LoS of the rest of the fleet.
+**For Node N → O/R, the lowest LoS (according to F33 formula, read [[Line_of_Sight|here]]) that route to R '''eLoS ≥ 10.7''', below eLoS = 10.1 will route to O. Between 10.1 and 10.7 was not tested and should be approached with caution.
+**For Node L → N/R, the lowest LoS tested is '''eLoS = 15.6'''. Below this was not tested yet.
+===Formation Recommendations===
+*Node L = Line Ahead
+*Node N = Line Abreast
+*Node R and S = Double Line (for accuracy increase)
+===Fleet Composition===
+*{{Event/Route|I|blue|J|blue|L|red|N|red|R|red|S|red}}
+**1 BBV + 2-5 DD + 0-3 CL (at least 2 DD are needed to go to Node I)
+This fleet is highly recommended due to multiple reasons:
+*Most admirals will already invest at least 2-3 DD and 1-2 CL here along with a BBV and CVL.
+*'''This allows for 2nd shelling''', which is crucial to avoiding letting enemies survive day battle until closing torpedoes.
+*In addition, BBV can provide LoS needed with enough seaplanes. At least 3 seaplanes are needed. These can also help with clearing out surface enemies during opening phases.
+*One of the DD/CL '''is recommended to be able to perform OASW''', so that the submarines in node N can be sunk consistently before closing torpedoes. [[Isuzu Kai Ni]] is a good option due to her light OASW requirements.
+===References===
+[https://docs.google.com/spreadsheets/d/1G_OyRZLjI4Cwdop1y3Z_0AcA47ae8r2iEfNSjl_fKpc/edit#gid=581448890 1]
+[https://twitter.com/amzis289/status/899250073279750146 2]
+{{SectionEnd}}
+
+{{Event/MapPageFooter}}

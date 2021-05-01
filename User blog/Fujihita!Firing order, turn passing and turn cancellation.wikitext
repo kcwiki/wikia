@@ -1,0 +1,208 @@
+This guide explains how firing order is determined, how turn cancellation and turn passing work, and tips on how to take full advantage of the system.
+
+==Forewords==
+Firing order is an important mechanics of the game. It is important to know because damaged ships have reduced attack power and many ship types simply cannot fight back. Yet, it's only documented in brief in [[Combat#Combat Stages|one section of the Combat article]] and it's not the whole story.
+
+Firing order varies from one combat stage to another. The differences might be minor, but they are there and such a difference can be a matter of winning the ultimate medal or grate your junk with salt, [[User_blog:TScript/OH_HO_HO_HO_I_LOST_MY_FUEL|on a grater of course]]. The wrong fleet line up can result in devastating consequences.
+
+Not to mention, firing order for the Abyssal fleet is calculated differently from that for the player fleets. It aims to give the player an edge in battle. Although, goddess of bad luck has always been known to turn that into a double-edge at vital times.
+
+==Basic==
+
+Let's review what we know about firing order from Combat page. There are three relevant combat phases:
+:First shelling: Range order
+:Second shelling: Line Up order
+:Night battle: Line Up order
+
+===Range order===
+{| class="wikitable" align="center" style="text-align:center"
+! colspan="13"| Range order
+|-
+!Turn
+! colspan="2" |1
+! colspan="2" |2
+! colspan="2" |3
+! colspan="2" |4
+! colspan="2" |5
+! colspan="2" |6
+|-
+!Team
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+|-
+!Ship
+| colspan="12"| Ships in each team take turn to fire based on weapon range
+|} 
+
+
+In range order case, firing order is determined by the range of the equipment that provides the longest range. Firing range is a stat denoted by this icon [[File:Icon_Range.png|link=]] and can be found on many equipment and all ship cards. Unequipped ships use their default firing range stat which is mostly based the ship type with a few exceptions (such as Isuzu who is a Short range cruiser)
+:'''Short range:''' Destroyer, Light carriers, Standard carriers
+:'''Medium range:''' Light cruisers, Heavy cruisers
+:'''Long range:''' Battleships
+:'''Very long range:''' Yamato-class battleships
+
+Very long range ships fire first, then Long range and so on to Short range. Ships sharing the same range tier have their firing order randomized. <span style="color:red">Range order affects the order of which ships on the same team fire and does not affect the alternating of turns between the two team.</span>
+
+===Line Up order===
+{| class="wikitable" align="center" style="text-align:center"
+! colspan="13"| Line Up order
+|-
+!Turn
+! colspan="2" |1
+! colspan="2" |2
+! colspan="2" |3
+! colspan="2" |4
+! colspan="2" |5
+! colspan="2" |6
+|-
+!Team
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+|-
+!Slot
+|[[File:Ship_position_1_icon.png|link=]]
+|[[File:Ship_position_1_icon.png|link=]]
+|[[File:Ship_position_2_icon.png|link=]]
+|[[File:Ship_position_2_icon.png|link=]]
+|[[File:Ship_position_3_icon.png|link=]]
+|[[File:Ship_position_3_icon.png|link=]]
+|[[File:Ship_position_4_icon.png|link=]]
+|[[File:Ship_position_4_icon.png|link=]]
+|[[File:Ship_position_5_icon.png|link=]]
+|[[File:Ship_position_5_icon.png|link=]]
+|[[File:Ship_position_6_icon.png|link=]]
+|[[File:Ship_position_6_icon.png|link=]]
+|} 
+
+In line up order, the slot position of the ship determines the firing order on both sides.
+
+==Advance==
+Now that's the basic, here comes the more tricky part that was not discussed anywhere before.
+
+===Passing and Cancelling===
+When a ship cannot take her turn for some reasons, two scenarios can happen:
+#<span style="color:blue">'''an eligible allied ship'''</span> takes her turn instead. The turn is passed.
+#<span style="color:red">'''an eligible enemy ship'''</span> takes her turn instead. The turn is cancelled.
+Several factors determine whether the turn is passed or canceled.
+
+===Determination procedure===
+To better understand the mechanics in this section, I must make it clear about the time when and how firing order is calculated:
+:First of all, the firing order is determined between the start of the combat phase and the end of the previous phase. 
+:Secondly, when determination happens, the game takes into account of all eligible ships on both sides, filtering out the ineligible ones.
+:Finally, the firing order is assigned to both sides following the basic rules.
+What we need to focus on is the second step of the procedure. This makes the difference between turn passing and turn cancelling. To put it bluntly, ships ruled out by eligibility check get their turn passed and ships became ineligible after the procedure get their turn cancelled.
+
+===Ship eligibility===
+*Sunk ships cannot fire and thus are not eligible
+*In PvP, 1 HP ships on the opposing fleet are considered sunk and thus are not eligible
+*In daytime, carriers without any bombers cannot participate in shelling and thus are not eligible
+A special note to the last condition, carriers whose bombers are wiped out in aerial phase cannot participate in shelling but are still considered eligible.
+
+===Night battle===
+Only turn cancelling works in night battle. The firing order in night battle follow a strict top-down slot order. Eligibility evaluation is skipped completely.
+
+==Analysis==
+Here's an example of how turn cancelling can mess up the battle completely:
+
+#Player's flagship sinks Abyssal slot 6 (cancel)
+#Abyssal flagship disables Player's slot 2 (cancel)
+#Abyssal slot 2 disables Player's slot 4 (cancel)
+#Player's slot 3 sinks Abyssal flagship (inconsequential)
+#Abyssal slot 3 disables Player's slot 6 (cancel)
+#The rest is inconsequential
+
+This battle can be interpreted as follow:
+
+{| class="wikitable" align="center" style="text-align:center"
+! colspan="13"| Line Up order
+|-
+!Turn
+! colspan="2" |1
+! colspan="2" |2
+! colspan="2" |3
+! colspan="2" |4
+! colspan="2" |5
+! colspan="2" |6
+|-
+!Team
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+| style="background:lightblue"| Player
+| style="background:lightgray"| Abyssal
+|-
+!Slot
+|[[File:Ship_position_1_icon.png|link=]]
+|[[File:Ship_position_1_icon.png|link=]]
+|x
+|[[File:Ship_position_2_icon.png|link=]]
+|[[File:Ship_position_3_icon.png|link=]]
+|[[File:Ship_position_3_icon.png|link=]]
+|x
+|[[File:Ship_position_4_icon.png|link=]]
+|[[File:Ship_position_5_icon.png|link=]]
+|[[File:Ship_position_5_icon.png|link=]]
+|x
+|x
+|} 
+
+In this scenario, '''the player's fleet can fire 3 times while the Abyssal can fire 5 times.'''
+
+As it stands, turn cancelling can snowball quickly. Furthermore, because player's ship cannot be sunk in the same battle, the only applicable case for a human player to pass the turn is via "carriers without bombers". This makes the turn passing, turn cancelling mechanic somewhat advantageous for the opposing fleet.
+
+Luckily, this is balanced out by the fact that enemy ships might target disabled ships again. Any ship eligible for a turn is also an eligible target. Although, arguably, event boss fleets at final form appear to have a lower chance of doing this and thus tend to be even more overpowered than they already are.
+
+A note to the above is a notorious PvP glitch where the opposing fleet has 1 HP ships who are not yet considered sunk and thus could soak up more damage from the player's fleet. The number of shots wasted matters in most cases since we only get so many turns and we all want to finish battle as quickly as possible.
+
+But hey, '''the player always gets to go first''' is a major balancing factor. At least, until they disable the flagship and effectively cancelling her turn...
+
+==Tips==
+So yes, we know how it works, it's all RnG. What can we do about it?
+
+Well, of course we can do something about it.
+
+===Strong ships fire first===
+To start off, since we know turn cancelling can potentially ruin the day, we will want to have the strong ships fire first to avoid turn cancelling as well as to turn cancel the enemy team.
+
+This is the first rule of thumb ''unless devastating the entire enemy fleet is not a viable option'', then we might want to save the big guns later when there are fewer fodders blocking an awesome torpedo cut-in in the boss's face. Keep in mind that a chance at boss kill has a risk of turn cancelling.
+
+===No bomber in flagship Reppuu mule===
+Then, we also know that flagship position is the safest slot in the fleet. In many cases, this is where a full Reppuu carrier will be. Putting a Reppuu mule in flagship position takes advantage of turn passing mechanic. Firing order in daytime battle would not be affected by this carrier.
+
+This is why people shouldn't sneak a Suisei bomber on the last slot of Reppuu mules just to get that extra sickeningly weak and unbearably useless extra attack and risk getting a more important ship turn canceled. Just use Saiun or FCF there instead.
+
+===Reppuu mule with bomber in the last slot===
+
+Now there's another way to go about this. There will be trade-offs, of course, there're always trade-offs. Having a Reppuu mule with bomber in any other slot, especially the last slot, will not affect the flow of battle.
+
+Carriers being short-range by nature will fire last in range order and being in last slot means they'll also fire last in line up order. This tactic adheres to the first rule "strong ships fire first" although last slot is also the most vulnerable position.
+
+
+[[Category:Blog posts]]

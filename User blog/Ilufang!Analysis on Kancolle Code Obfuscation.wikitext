@@ -1,0 +1,47 @@
+== Notice ==
+
+
+'''This is a translation of [http://blog.mukio.org/articles/remove-kancolle-obfus/ http://blog.mukio.org/articles/remove-kancolle-obfus/]'''
+
+'''The original passage was written by LAN FAN'''
+
+Please note that the article was written in August 2014. The Kancolle API now has added more obfuscations, parameters (like Core.swf and api_serial_cid) and new algorithms. The article reveals some basic mechanisms of the obfuscation, but the tool provided does not fully deobfuscate the code used in the latest Kancolle version.
+
+== Analysis on Kancolle Code Obfuscation ==
+
+After I played Kancolle, I once wrote a automatic expedition program with Clojure: kancolle-worker.
+
+This program uses the kancolle api and basic game logic models. Anyone who know Clojure can easily make an automatic expedition program.
+
+However, a new parameter was added to the Kancolle API: api_port to prevent bots. The generation of this parameter is obfuscated and unreadable. If you want to make a bot, you have to parse something like the following, and reimplement that in another language:
+
+<code>new RegExp(".")(new RegExp("...$")(~(~[][{}] << ~[][{}])))</code>
+
+This code represents "6". Observing the expression, you can find that all parts of it are constants, thus the expression evaluates to a constant. Looking further into it, <code>[][{}]</code> is <code>null</code>, <code>~null</code> is <code>-1</code>, <code>-1<<-1</code> is <code>-2147483648</code>, <code>~(-2147483648)</code> is <code>2147483647</code>, <code>(new RegExp("...$")(2147483647)</code> is <code>647</code> (the RegExp takes the last 3 characters), and <code>new RegExp(".")("647")</code> is <code>6</code> (the RegExp takes the first character)
+
+This method of obfuscation is quite new.
+
+Since Air SDK is separated from Flex tools, a lot of functions were added. Among them was a basic  constant evaluation, which replaces the constant expression in the code with the evaluated constant value to save calculation time and improve program efficiency. For example, var a:int = 1+1; is equivalent to var a:int = 2;. I tried to recompile the above expression with Air SDK, however it was not evaluated probably because the expression used some implicit conversion in ActionScript 3, like empty arrays, empty objects and Regular Expressions. These are beyond the constant expression detection of the compiler.
+
+There is a simple way to evaluate <code>~(~[][{}] << ~[][{}])</code>. Open the javascript console of Chrome and run the code. But the regular expression syntax is exclusive to AS3 and cannot be evaluated with Javascript. For example, <code>/./"234"</code> is legal syntax in AS3 and evaluates to 2, but it is illegal in Javascript.
+
+In order to parse the code, I wrote this [http://blog.mukio.org/articles/remove-kancolle-obfus/demo.swf Flash] program.
+
+On top of that, there is another type of obfuscation that turns simple operations into function calls. For example, x+y is replaced with k.a(x,y). This method was used together with the method mentioned above, and the resulting code is extremely hard to read. So I also added the replacement of such expressions in my flash analyzer.
+
+The main goal of this flash tool is to analyze the obfuscated code and turn them into readable form. It does not support all language features. It is limited to the operations used in the obfuscation. The call to RegExps are included as well so that constant expressions and variable expressions are separated in the output (Expr and VExpr). Finally, I corrected an operation priority issue of a Flash decompiler.
+
+With this tool, the obfuscated algorithm can be parse easily, and I can carry on with my automatic expedition tool. But remember: USE BOTS AT YOUR OWN RISK!
+
+'''Appendix 1: Usage'''
+
+1. Get Core.swf
+
+2. Decompile api_port with my tool
+
+3. Analyze the algorithm with my tool
+
+'''Appendix 2: Source code'''
+
+(See original page)
+[[Category:Blog posts]]

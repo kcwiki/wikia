@@ -1,0 +1,50 @@
+{{FrontpageRailBox|id = updates
+|title = {{{month|}}} {{{year|2017}}} Updates and Info
+|content = {{{content|}}}
+{{#if:{{{timer_start|}}}|<div style="text-align:center;">{{{timer_start_text|Countdown till the next maintenance starts:}}}</div>
+{{Timer
+|time = {{{timer_start|}}}
+|style = font-weight:bold; color:#f00; font-size:14px; text-align:center;
+|endClass = frontpage-timer-start
+|endText = {{{timer_start_message|}}}
+}}|}}{{#if:{{{timer_end|}}}|<div style="text-align:center;">{{{timer_end_text|Countdown till the maintenance ends:}}}</div>
+{{Timer
+|time = {{{timer_end|}}}
+|style = font-weight:bold; color:#f00; font-size:14px; text-align:center;
+|endClass = frontpage-timer-end
+|endText = {{{timer_end_message|}}}
+}}|}}
+{{#if:{{{teaser_1|}}}|{{{!}} align="center"
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_1|}}}|[[File:{{{teaser_1|}}}|80px]]|}}
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_2|}}}|[[File:{{{teaser_2|}}}|80px]]|}}
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_3|}}}|[[File:{{{teaser_3|}}}|80px]]|}}
+{{#if:{{{teaser_4|}}}|{{!}}-
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_4|}}}|[[File:{{{teaser_4|}}}|80px]]|}}
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_5|}}}|[[File:{{{teaser_5|}}}|80px]]|}}
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_6|}}}|[[File:{{{teaser_6|}}}|80px]]|}}
+{{#if:{{{teaser_7|}}}|{{!}}-
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_7|}}}|[[File:{{{teaser_7|}}}|80px]]|}}
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_8|}}}|[[File:{{{teaser_8|}}}|80px]]|}}
+{{!}} style="width:80px;" {{!}} {{#if:{{{teaser_9|}}}|[[File:{{{teaser_9|}}}|80px]]|}}|}}|}}
+{{!}}}|}}
+{{#if:{{{update_1_day|}}}|{{{update_1_content|}}}<div class="kcRailUpdate">
+<div class="kcRailUpdateTitle">[[Recent Updates|{{#if:{{{update_1_ranking|}}}|{{{update_1_ranking|}}} Ranking Rewards|{{{update_1|{{#if:{{{update_1_live|}}}|Live&nbsp;|}}Update: {{ordinal|{{{update_1_day|}}}}} {{{month|}}} {{{year|2017}}}}}}}}]]</div>
+<div class="kcRailUpdateTime">{{ordinal|{{{update_1_day|}}}}} {{{month|}}} {{#if:{{{update_1_page|}}}|[[{{{update_1_page|}}}|[Info. Page]]]|[[Thread:{{{update_1_thread|FIXME}}}|[Info. Thread]]]}}</div>
+</div>|}}
+{{#if:{{{update_2_day|}}}|<div class="kcRailUpdate">
+<div class="kcRailUpdateTitle">[[Recent Updates|{{#if:{{{update_2_ranking|}}}|{{{update_2_ranking|}}} Ranking Rewards|{{{update_2|{{#if:{{{update_2_live|}}}|Live&nbsp;|}}Update: {{ordinal|{{{update_2_day|}}}}} {{{month|}}} {{{year|2017}}}}}}}}]]</div>
+<div class="kcRailUpdateTime">{{ordinal|{{{update_2_day|}}}}} {{{month|}}} {{#if:{{{update_2_page|}}}|[[{{{update_2_page|}}}|[Info. Page]]]|[[Thread:{{{update_2_thread|FIXME}}}|[Info. Thread]]]}}</div>
+</div>|}}
+{{#if:{{{update_3_day|}}}|<div class="kcRailUpdate">
+<div class="kcRailUpdateTitle">[[Recent Updates|{{#if:{{{update_3_ranking|}}}|{{{update_3_ranking|}}} Ranking Rewards|{{{update_3|{{#if:{{{update_3_live|}}}|Live&nbsp;|}}Update: {{ordinal|{{{update_3_day|}}}}} {{{month|}}} {{{year|2017}}}}}}}}]]</div>
+<div class="kcRailUpdateTime">{{ordinal|{{{update_3_day|}}}}} {{{month|}}} {{#if:{{{update_3_page|}}}|[[{{{update_3_page|}}}|[Info. Page]]]|[[Thread:{{{update_3_thread|FIXME}}}|[Info. Thread]]]}}</div>
+</div>|}}
+{{#if:{{{update_4_day|}}}|<div class="kcRailUpdate">
+<div class="kcRailUpdateTitle">[[Recent Updates|{{#if:{{{update_4_ranking|}}}|{{{update_4_ranking|}}} Ranking Rewards|{{{update_4|{{#if:{{{update_4_live|}}}|Live&nbsp;|}}Update: {{ordinal|{{{update_4_day|}}}}} {{{month|}}} {{{year|2017}}}}}}}}]]</div>
+<div class="kcRailUpdateTime">{{ordinal|{{{update_4_day|}}}}} {{{month|}}} {{#if:{{{update_4_page|}}}|[[{{{update_4_page|}}}|[Info. Page]]]|[[Thread:{{{update_4_thread|FIXME}}}|[Info. Thread]]]}}</div>
+</div>|}}
+{{#if:{{{update_5_day|}}}|<div class="kcRailUpdate">
+<div class="kcRailUpdateTitle">[[Recent Updates|{{#if:{{{update_5_ranking|}}}|{{{update_5_ranking|}}} Ranking Rewards|{{{update_5|{{#if:{{{update_5_live|}}}|Live&nbsp;|}}Update: {{ordinal|{{{update_5_day|}}}}} {{{month|}}} {{{year|2017}}}}}}}}]]</div>
+<div class="kcRailUpdateTime">{{ordinal|{{{update_5_day|}}}}} {{{month|}}} {{#if:{{{update_5_page|}}}|[[{{{update_5_page|}}}|[Info. Page]]]|[[Thread:{{{update_5_thread|FIXME}}}|[Info. Thread]]]}}</div>
+</div>|}}
+}}

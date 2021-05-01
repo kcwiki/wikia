@@ -1,0 +1,184 @@
+{{Map/Header}}
+{{Map/Info
+|en = Okinoshima Sea
+|jp = 沖ノ島沖
+|romaji = Okinoshima oki
+|mechanics = LoS Check@Line of Sight
+|exp_hq = 160
+|exp_hq_boss = 2320
+|show_kills = true
+|kills = 4
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 100
+|strategy_name = Okinoshima Combat Patrol
+|strategy_name_ja = 沖ノ島沖戦闘哨戒
+|strategy_info = From Okinoshima sea, it has been reported signs of enemy fleet's approach. Form a patrol force on which cruisers are centered and monitor enemy's movement with it.  
+|strategy_info_ja = 同方面に敵艦隊接近の兆候が報告された。巡洋艦を中心とした哨戒部隊を編成、敵艦隊の動向を探れ
+}}
+{{MapBranchingTable
+|expand = true
+|id = 2-5
+|0 -> B , C = 
+*'''FORCE''' node B if SS(V) ≥ 4
+* Meet '''ANY''' of the following to go to C
+**Fleet contains CV(B/L)
+**AV ≥ 2
+* Meet '''ANY''' of the following to go to B
+**DD+DE ≥ 4
+**Fleet contains CL and DD ≥ 3
+**Amount of ships equipped with drum canisters ≥ 2
+*Otherwise, random routing, with higher chance of going to C
+
+|B -> A/empty = * Amount of SS(V) ≤ 2
+|B -> F = * Do not meet the requirement to go to A.
+
+|C -> D/empty, E = 
+* Meeting '''ANY''' of the following '''FORCES''' you to D
+** Amount of CV(L/B) ≥ 3 
+** Amount of (F)BB(V) ≥ 3 
+* Meet '''ANY''' of the following requirements to go to E
+**Fleet contains CL and DD ≥ 2
+**CAV ≥ 2 and DD ≥ 2
+* Otherwise, random routing.
+
+|E -> G/storm = * Do not meet the requirements to go to I.
+|E -> I/empty = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of DD ≥ 3 
+** Fleet contains CL
+** Amount of CVL ≤ 2
+** Amount of CA(V)+CV(B) ≤ 1
+** No (F)BB(V)
+
+|F -> E, J = 
+* Meet '''ALL''' of the following requirements to go to E:
+** Fast Fleet 
+** Fleet contains CL
+** Amount of DD ≥ 2
+* Go to J if Slow Fleet or (F)BB(V) ≥ 3
+* Otherwise, 40% E, 60% J.
+
+|G/storm -> I/empty = 
+* Meet '''ALL''' of the following requirements
+**Fleet contains no (F)BB(V) or CV(L/B)
+**CL+DD ≥ 4
+**CL ≤ 1
+
+|G/storm -> K/empty, L= 
+* LoS check using the F33 formula (Cn=1):
+** Go to L if LoS ≥ 41
+** Go to K if LoS < 34
+** Otherwise, random routing between K and L.
+
+|I/empty -> H/empty, O = 
+* LoS check using the F33 formula (Cn=1):
+** Go to O if LoS ≥ 34
+** Go to H if LoS < 31
+** Otherwise, random routing.
+
+|J -> H/empty, O = 
+* LoS check using the F33 formula (Cn=1):
+** Go to O if LoS ≥ 49
+** Go to H if LoS < 42
+** Otherwise, random between H and O
+|J -> M/resource = *Fleet that contains (F)BB(V) ≥ 4 has a chance to go to M
+
+|L -> N/resource, O = 
+* Meet '''ALL''' of the following requirements to go to O:
+** Amount of DD ≥ 2
+** Fleet contains CL
+* Otherwise, random routing
+}}
+
+===Tips===
+*Use of High LoS Equipment such as {{EquipmentLink|Saiun|Type 2 Reconnaissance Aircraft|text=Recon Aircraft}} on CVL, {{EquipmentLink|Type 0 Reconnaissance Seaplane|text=Seaplane}} and {{EquipmentLink|Type 32 Surface Radar|Type 33 Surface Radar|text=Radars}} on your Surface Ships is mandatory to reach the minimum LoS '''(F33)''' {{LOS}} requirement as listed below.
+**Please be advised that your Ships' Level matters as well, as a Ship gains higher LoS values from higher levels.
+***This is most critical for the North Route which requires much higher LoS and especially for the Monthly [[Quests#Bm7|Quest Bm7]] as well, which requires to use 4 Destroyers whose fleet will have trouble reaching the required minimum LoS (F33) Value if lacking in Levels and/or High LoS Equipment.
+****Another option in such case is to turn a single Destroyer in the Fleet into a LoS mule with multiple Radars.
+
+===Recommended Fleets===
+====South Route====
+{{Event/Route|C|red|E|red|I|blue|O|red}}
+*1 CV 1 CVL 1 CL 3 DD '''(Fast Fleet Only)'''
+**LoS '''(F33)''' {{LOS}} Cn=1 must be '''34.0''' or higher in order to have 100% chance to pass the check.
+
+====North Route====
+{{Event/Route|B|red|F|red|J|red|O|red}}
+*1 BBV 2 CAV 3 CA
+**1 {{Drum}} {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canister}} must be equipped on each CAV.
+***LoS '''(F33)''' {{LOS}} Cn=1 must be '''49.0''' or higher to succeed at 100% chance the check.
+***Recommended for [[Quests#Bm1|Monthly Quest Bm1]].
+*3 BB(V) 3CA(V)
+**Also requires 2 Drum canisters equipped on 2 out of the 3 CA(V)s, and goes through the same route as with the 1 BBV 2CAV 3CA fleet.
+**While this fleet cannot guarantee routing for Bm1 like the option above, it is a much heavier variant, and thus can deal with the boss node more easily, especially in the case of low-medium level player fleets.
+**Recommended to use {{ShipLink|Ise/Kai Ni}} or {{ShipLink|Hyuuga/Kai Ni}} for her ability to carry [[List of Fighters by stats|carrier-based fighters]], and thus reduce or outright remove the need for seaplane fighter muling.
+
+====Monthly [[Quests#Bm7|Quest Bm7]] Fleet====
+{{Event/Route|B|red|F|red|E|red|I|blue|O|red}}
+*DD '''(Flagship)'''+ 1 CA 1 CL 3 DD '''(Fast Fleet Only)'''
+**LoS '''(F33)''' {{LOS}} Cn=1 must be '''34.0''' or higher to succeed at 100% chance the check.
+**Due to the restriction on the usage of CAVs, seaplane fighter-carrying CLs ({{ShipLink|Yura/Kai Ni}} or {{ShipLink|Tama/Kai Ni}}) or Italian CAs ({{ShipLink|Zara/Due}} or {{ShipLink|Pola/Kai}}) are practically mandatory to survive the boss node, especially in the case of encountering the Wo formation. The air power supplied by them is enough to gain Air Parity, preventing the enemy BBs from performing Artillery Spotting on the player fleet and massively increasing the chance of player ships surviving into night battle.
+
+==Sample Fleets==
+{{Section|no_clear=true}}
+{{Fleets
+|!South Route
+|!!Example 1 (For Beginners)
+|-|Jintsuu/Kai Ni|20.3cm Twin Gun Mount|20.3cm Twin Gun Mount|Type 0 Reconnaissance Seaplane
+|-|Akagi/Kai|Ryuusei|Suisei|Ryuusei Kai|Prototype Reppuu Late Model
+|-|Shouhou/Kai|Ryuusei Kai|Suisei|Prototype Reppuu Late Model|Saiun
+|-|Shimakaze/Kai|12.7cm Twin Gun Mount|12.7cm Twin Gun Mount|Type 22 Surface Radar
+|-|Yuudachi/Kai Ni|12.7cm Twin Gun Mount Model B Kai 2|12.7cm Twin Gun Mount|Type 22 Surface Radar
+|-|Shigure/Kai Ni|10cm Twin High-angle Gun Mount|10cm Twin High-angle Gun Mount|Type 22 Surface Radar
+|!!Example 2 (Advanced)
+|-|Akagi/Kai Ni|
+Suisei Model 22 (634 Air Group/Skilled)|
+Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)|Prototype Type 97 Torpedo Bomber Kai No. 3 Model E (w/ Type 6 Airborne Radar Kai)|Reppuu Kai Ni Model E (CarDiv 1/Skilled)|
+Night Operation Aviation Personnel
+|-|Zuihou/Kai Ni B|TBM-3D|Suisei (Egusa Squadron)|F6F-5N|
+Night Operation Aviation Personnel + Skilled Deckhands
+|-|Abukuma/Kai Ni|
+20.3cm (No.3) Twin Gun Mount|152mm/55 Triple Rapid Fire Gun Mount Kai|
+Type C Kouhyouteki
+|-|Kagerou/Kai Ni|12.7cm Twin Gun Mount Model C Kai 2|12.7cm Twin Gun Mount Model C Kai 2|
+GFCS Mk.37
+|-|Naganami/Kai Ni|12.7cm Twin Gun Mount Model D Kai 2|12.7cm Twin Gun Mount Model D Kai 2|
+GFCS Mk.37
+|-|Kuroshio/Kai Ni|12.7cm Twin Gun Mount Model C Kai 2|12.7cm Twin Gun Mount Model C Kai 2|
+GFCS Mk.37
+|!North Route
+|!!Example 1 (Bm1 variant)
+|-|Fusou/Kai Ni|41cm Twin Gun Mount|41cm Twin Gun Mount|Type 2 Seaplane Fighter Kai|Zuiun Model 12
+|-|Myoukou/Kai Ni|20.3cm (No.2) Twin Gun Mount|20.3cm (No.2) Twin Gun Mount|Type 0 Observation Seaplane|Type 32 Surface Radar
+|-|Nachi/Kai Ni|20.3cm (No.2) Twin Gun Mount|20.3cm (No.2) Twin Gun Mount|Type 0 Observation Seaplane|Type 32 Surface Radar
+|-|Haguro/Kai Ni|20.3cm (No.2) Twin Gun Mount|20.3cm (No.2) Twin Gun Mount|Type 0 Observation Seaplane|Type 32 Surface Radar
+|-|Tone/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Zuiun (634 Air Group)|Drum Canister (Transport Use)
+|-|Chikuma/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Zuiun (634 Air Group)|Drum Canister (Transport Use)
+|!!Example 2 (Heavy variant)
+|-|Ise/Kai Ni|41cm Triple Gun Mount Kai Ni|41cm Triple Gun Mount Kai|
+Type 0 Fighter Model 53 (Iwamoto Squadron)|Zuiun Kai Ni (634 Air Group/Skilled)|Type 91 Armor Piercing Shell
+|-|Bismarck/Drei|38cm Twin Gun Mount Kai|38cm Twin Gun Mount Kai|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|Type 91 Armor Piercing Shell
+|-|Warspite/Kai|38.1cm Mk.I/N Twin Gun Mount Kai|38.1cm Mk.I/N Twin Gun Mount Kai|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|Type 91 Armor Piercing Shell
+|-|Kumano/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Drum Canister (Transport Use)|Prototype Seiran
+|-|Suzuya/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Drum Canister (Transport Use)|Prototype Seiran
+|-|Tone/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Seiran (631 Air Group)|FuMO25 Radar
+|!Monthly Quest Bm7
+|!!Example 1
+|-|Akatsuki/Kai Ni|10cm Twin High-angle Gun Mount|10cm Twin High-angle Gun Mount|Type 33 Surface Radar
+|-|Kinugasa/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 0 Observation Seaplane|Type 0 Observation Seaplane
+|-|Ooyodo/Kai|15.5cm Triple Gun Mount|15.5cm Triple Gun Mount|Type 0 Observation Seaplane|Type 0 Observation Seaplane
+|-|Yuudachi/Kai Ni|12.7cm Twin Gun Mount Model B Kai 2|12.7cm Twin Gun Mount|Type 33 Surface Radar
+|-|Fubuki/Kai Ni|10cm Twin High-angle Gun Mount|10cm Twin High-angle Gun Mount|Type 33 Surface Radar
+|-|Ayanami/Kai Ni|10cm Twin High-angle Gun Mount|10cm Twin High-angle Gun Mount|Type 33 Surface Radar
+|!!Example 2
+|-|Tashkent/Kai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|Type 33 Surface Radar|Type 33 Surface Radar
+|-|Zara/due|Zuiun Model 12|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Kyoufuu Kai
+|-|Ooyodo/Kai|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 0 Observation Seaplane|Type 32 Surface Radar
+|-|Kagerou/Kai Ni|12.7cm Twin Gun Mount Model C Kai 2|12.7cm Twin Gun Mount Model C Kai 2|Type 33 Surface Radar
+|-|Naganami/Kai Ni|12.7cm Twin Gun Mount Model D Kai 2|12.7cm Twin Gun Mount Model D Kai 2|Type 33 Surface Radar
+|-|Ayanami/Kai Ni|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|Type 33 Surface Radar
+}}
+{{SectionEnd}}
+{{Clear}}
+{{Map/Footer}}

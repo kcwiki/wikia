@@ -1,0 +1,78 @@
+I have not taken a close look at how AA combat mechanics worked before, but how it works now is of course different.  I'll try to go over some of the things that I took data on or took notice of. Unfortunately there are a lot of things to cover and not much data, but hopefully you'll find something of interest.
+
+Topics covered:
+
+How data was obtained<br />
+Detection<br />
+AA defense and AA cut-in<br />
+AA defense and AA cut-in with AS+<br />
+
+
+
+=How data was obtained=
+
+"api_stage1":{"api_f_count":140,"api_f_lostcount":2,"api_e_count":180,"api_e_lostcount":96,"api_disp_seiku":1,"api_touch_plane":[59,-1]},
+
+"api_stage2":{"api_f_count":46,"api_f_lostcount":0,"api_e_count":43,"api_e_lostcount":34,"api_air_fire":{"api_idx":0,"api_kind":1,"api_use_items":[122,122,106]}},
+
+This is a sample of network traffic during combat.<br />
+S1 or stage 1 consists of the air to air combat numbers and the resulting air supremacy results.<br />
+S2 or stage 2 consists of the air to air defense numbers along with the inclusion of the cut-in proc.<br />
+
+To break things down:<br />
+api_f_count = how many of my planes are involved in this stage<br />
+api_f_lostcount = how many of my planes are shot down in this stage<br />
+api_e_count = how many enemy planes are involved in this stage<br />
+api_e_lostcount = how many enemy planes are shot down in this stage<br />
+api_disp_seiku = resulting air combat result (1 = AS+, 2 = AS, 3 = parity, 4 = denial)<br />
+api_touch_plane = if my assumption is correct, this is the 'contact' plane. The first value is my plane (type 0 observation in this case) and the second value is the enemy (-1 for no contact).<br />
+api_air_fire = AA cut-in happened. If this isn't present, then no AA cut-in occurs.<br />
+api_use_items = the ID# of the equipment used. In this case 122 = 10cm+FD and 106 = type 13 kai radar<br />
+
+Stage 1: Air to Air combat<br />
+Stage 1 includes ALL planes. I entered combat with 140 total planes and lost 2 in air to air combat. The enemy consisted of 180 planes and lost 96. Air supremacy was obtained.<br />
+
+Stage 2: Air to Air defense<br />
+Stage 2 includes ONLY BOMBERS. I entered the AA defense phase with 46 bombers and lost 0. The enemy had 43 remaining bombers, ate an AA cut-in, and lost 34 bombers. This 34 includes both regular AA defense and the AA cut-in bonus whatever that was.<br />
+
+
+=Detection=
+I didn't realize this until recently, but there is detection, and there is contact (shows how much I read the combat page). Failing a detection means that you can't airstrike your opponent, and your opponent will bomb you without you seeing their fleet. Contact is for bonus damage during the opening airstrike with the plane making contact in the enemy's radar blip. This wasn't included above, but api_search refers to successful detection or not.
+
+Just a side note that I noticed, but when my fleet failed detection, no enemy planes were shot down in S1. However, when detection was successful, some enemy fighters and/or bombers would be shot down in S1 even if I did not have any planes of my own. This also works both ways. Even if the enemy has no carriers, I will usually lose a few planes in S1. Enemy fighter or bomber kills in detection were generally proportional to the number of fighters or bombers that the enemy has, and would hover around 5%. This value gets lost somewhere in air to air combat when both sides have carriers.
+
+
+=AA defense and AA cut-in=
+First test I ran was on 5-5 solo Akizuki level 89-92 morale (40-49). Equipment given 2 x 10cm+FD and a type 13 kai radar for 140 total AA.<br /><br />
+[[File:AA_cut-in_test_1.png]]
+
+This test only looked at the S2 value of planes being shot down in stage 2 (bomber kills only). Bold values are successful detection runs which reduced the number of enemy planes.<br />
+AA cut-in activated 36/53 (67.9%) attempts<br />
+AA cut-in resulted in an average of 57.8% of planes shot down in S2.<br />
+Non AA cut-in resulted in an average of 55.2% of planes shot down in S2.<br />
+
+Overall not much different. Small data sample, and values of planes shot down were varied from low double digits to over 200. Instead of a coin flip, it's more like a dice roll where you're pretty much guaranteed to shoot down something, but just how much is very RNG.
+
+
+Second test I ran was on 5-5 with Akizuki flag level 92-94 morale (40-49) same equipment as test 1. The difference is I added 4 random level 1-4 ships that I had lying around and a maruyu with which to tank.<br /><br />
+[[File:AA_cut-in_test_2.png]]
+
+This test again looked at the S2 values of bombers being shot down. Bold values for successful detections.<br />
+AA cut-in activated 27/41 (65.8%) attempts<br />
+AA cut-in resulted in an average of 33.7% of planes shot down in S2.<br />
+Non AA cut-in resulted in an average of 11% of planes shot down in S2.<br />
+
+First off more ships (and LoS), more detection, yay for free plane kills.<br />
+Secondly, what the hell happened to my great score. It does appear that each bomber picks a ship at random just like the old AA defense system. In 5-5 you have Re with 140 planes along with either 1 or 2 Nu which have 3 bombers slots each (22 bombers per slot). A lot of times Re's bomber (or any bomber) wouldn't pick Akizuki and the pitiful AA results are as you see in the right column. On the left side you have a good distribution around 25-30% and some values which spike up to 65-70%. I'm guessing the higher values are for when Re's bomber drew the Akizuki card and took a major hit. While the first test did not have much of an improvement between cut-in or not cut-in when every bomber was targeting solo Akizuki, the second test shows a significant AoE blast attack on possibly all the bombers who didn't target Akizuki.
+
+
+=AA defense and AA cut-in with AS+=
+As I was doing 3-3 for my World 3 weeklies this week, I thought I might as well take some data. Akizuki as flag, level 94 morale (40-5X) and same equipment as all previous tests. 2 CA 1 CLT 1 CVL 1 CV as my additional ships with enough for AS+ on all nodes.
+
+[[File:AA_cut-in_test_3.png]]
+
+F = Fighters, B = Bombers, S1 = stage 1 kills, S2 = stage 2 kills, bold for non AA cut-ins.<br />Of particular note is the "S2 B kill %" column which tracks what % of remaining bombers were shot down by AA defense and/or AA cut-in. As my fleet this time was higher level and max AA stat, the kill count was significantly better. Not enough data to make much analysis of, but something to look at. Even with AS+ only about 40-60% of all enemy planes were shot down from S1. It was up to AA defense and AA cut-in to help reduce down the rest of the bombers.
+
+
+In closing there are a lot of things that can be looked at if only there was the time and buckets. This is just a small look at the AA system that we have now.
+[[Category:Blog posts]]

@@ -1,0 +1,398 @@
+{{Map/Header}}
+{{Map/Info
+|en = Sav Island
+|jp = サブ島沖海域
+|romaji = Sabu-tō oki kaiiki
+|show_kills = true
+|kills = 5
+|strategy_name = [[wikipedia:Battle_of_Savo_Island|First Battle of the Solomon Sea]]
+|strategy_name_ja = 第一次サーモン沖海戦 
+|strategy_info = Engage in a daring night raid against the enemy fleet. Your goal is to destroy the transport they are escorting!
+|strategy_info_ja = 敵泊地に対して水上打撃部隊による夜戦突撃を敢行し、艦隊後方の敵輸送艦を叩け！ 
+
+|exp_ship = 400
+|exp_hq = 180
+|exp_hq_boss = 2660
+}}
+{{MapBranchingTable
+|id = 5-3
+|A/empty -> B = * 80% chance of going to B if your fleet is Slow.
+|A/empty -> C = * Fast Fleet.
+
+|D -> E = 
+* Fleet contains CV(L/B)
+<!--
+Here used to be >= 3 (F)BB(V) rule that couldn't be disproven from TsunDB data. However, a lot of the other rules weren't true so didn't re-add that one.
+-->
+* Otherwise, random between node E (10%), F (30%) and I (60%) if you do not meet any other requirements.
+|D -> F = 
+* Guaranteed if fleet contains ≧ 2 CA(V) '''AND''' ≧ 1 CL
+* Otherwise, random between node E (10%), F (30%) and I (60%) if you do not meet any other requirements.
+|D -> I/empty = 
+* Random between node E (10%), F (30%) and I (60%) if you do not meet any other requirements.
+
+|G/resource -> H/resource,I/empty = * Random 50%/50% chance
+
+|I/empty -> K = 
+* Guaranteed if amount of DD in fleet ≧ 2
+* Otherwise 25% chance
+|I/empty -> J = * 75% of going to J if the amount of DD ≦ 1
+}}
+
+===Tips===
+*All nodes, except end nodes, are night battles only; there's also a submarine node if you have any slow ships in your fleet.
+*'''Sinking the Flagship Wa-class transport ship at the boss node will lower the boss gauge by 20%'''. You need to do this 5 times to clear the map.
+* After the 17 November 2017 update, the use of '''[[Expedition/Support Expedition|Support Expeditions]]''' is '''highly recommended''' for both '''pre-boss''' and '''boss''' fights.
+** With normal support expedition help, you can minimize the risk of your ships getting heavily damaged and subsequently increase the chances of your fleet arriving to the boss node in good conditions.
+** With boss support expedition help, it is possible to sink the entire enemy fleet.
+*** It is also possible to [https://imgur.com/a/OJ0Fw sink the flagship at the boss node] with only the help of the the Support Expedition but it may require some luck. 
+** The use of Support Shelling is '''highly recommended''', as Aerial Support will not trigger on pre-boss nodes, while Long Range Torpedo Attacks may activate but will cause a negligible amounts of damage.
+*2DD, fast ship, and high torpedo stat (for night battle) is recommended. You can also use an all submarine fleet, but it will often be directed to J instead of Boss.
+*Taking advantage of night battle equipment ([[Star Shell]], [[Searchlight]], and [[Type 98 Recon Seaplane (Night Scout)]] ) is recommended and [[Morale/Fatigue#Effects|Sparkling]] your ships should be considered as well.
+*Unless you need S rank for drops, '''you do not need to destroy the Hime nor the submarine''' and you can bring a light fleet to deal with the Flagship Wa-class transport to clear the map instead.
+**Although the S rank on boss gives you decent drops on this map, it is highly advisable to just disregard the S rank boss drop here and settle for A or B rank. All the drops here can be farmed later in the next maps which is easier to S rank for the boss.
+*There's a gold submarine in the boss node. A possible tactic is to bring 1 CL flag with heavy ASW gear and 5 DD, enter battle in Line Abreast formation to deal with it quickly, get less damage from enemy ships, and thus focus on night battle. This fleet composition is the most resource efficient and can often succeed. Try Double Line or Line Abreast on pre-boss nodes to absorb enemy cut-in attacks better.
+*Another possible strategy is to run [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/6iuXFIh.png 2 Fast Battleships, 2 CA(V), and 2 DD]. This has a high chance of reaching the boss node and can get a lucky kill on the Wa-Class but costs more fuel, steel, and ammo. Make sure not to equip bomber seaplanes such that your ships do not target the SS. A variation of this is to replace 1-2 CA(V) with CLT, but 2 CA(V) should be used for the final form because of the changes in the boss composition. If using CAV equipping them with 2 seaplane bombers and 2 seaplane fighters will allow you to obtain Air Superiority while clearing the bar.
+*A possible strategy is to run 3 CLTs, 1 CA(V), and 2 DDs. This is the most efficient with highest Attack power/torpedo and lowest possible encounter rate (C-D-I-K).
+*'''Both enemy and ally submarines do not have increased evasion during battles STARTING at night, i.e., hitting them is as easy as in any day battle'''.
+*[[Akitsu Maru]] can gain air superiority at boss node with 2 [[Reppuu (Strong Gale)|Reppu]] or [[Shiden Kai 2]] at maximum [[Aircraft Proficiency|proficiency]], and air supremacy can be achieved with 3 [[Shiden Kai 2]] at maximum [[Aircraft Proficiency|proficiency]], enabling artillery spotting for your fleet.
+*Another possible tactic is to send a fleet consisting of 4 or more SS. This composition is very resource-efficient, but the drawback is a lower chance of going to the boss node from I (25%). This lower chance is often offset by the higher rate of reaching the pre-boss node without suffering critical damage and allowing you to clear the stage in 20-30 sorties on average (depending on ship levels). A SS fleet tends to go to node B, where you can avoid damage by getting a D rank.
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=223|y=82}}
+{{Map/ImageNode|B|x=312|y=157}}
+{{Map/ImageNode|C|x=369|y=150}}
+{{Map/ImageNode|D|x=466|y=210}}
+{{Map/ImageNode|E|x=557|y=158}}
+{{Map/ImageNode|F|x=548|y=254}}
+{{Map/ImageNode|G|x=485|y=310}}
+{{Map/ImageNode|H|x=350|y=304}}
+{{Map/ImageNode|I|x=250|y=265}}
+{{Map/ImageNode|J|x=171|y=288}}
+{{Map/ImageNode|K|x=177|y=185}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{NodeInfo
+|A
+|Empty
+}}
+{{Map/Nodes|name=敵潜水警戒艦隊
+|B
+|Night
+|{{Formation|Echelon}}
+|Submarine Yo-Class/Flagship
+|Submarine Yo-Class/Flagship
+|Submarine Yo-Class/Elite
+|Submarine Yo-Class/Elite
+|-
+|B
+|Night
+|{{Formation|Echelon}}
+|Submarine Yo-Class/Flagship
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|B
+|Night
+|{{Formation|Echelon}}
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Flagship
+|Submarine Yo-Class/Flagship
+|Submarine Yo-Class/Flagship
+|Submarine Yo-Class
+|Submarine Yo-Class
+}}
+{{Map/Nodes|name=敵潜水警戒艦隊
+|C
+|Night
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ha-Class/Flagship
+|-
+|C
+|Night
+|{{Formation|Line Ahead}}
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Flagship
+|-
+|C
+|Night
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+}}
+{{Map/Nodes|name=敵泊地護衛主力艦隊
+|D
+|Night
+|{{Formation|Double Line}}
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|-
+|D
+|Night
+|{{Formation|Line Ahead}}
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ro-Class/Flagship
+}}
+{{Map/Nodes|name=敵任務部隊
+|E
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|-
+|E
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Battleship Ta-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+}}
+{{Map/Nodes|name=敵泊投錨中輸送船団
+|F
+|Night
+|{{Formation|Double Line}}
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|-
+|F
+|Night
+|{{Formation|Double Line}}
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|-
+|F
+|Night
+|{{Formation|Double Line}}
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+}}
+{{NodeInfo
+|G
+|Resource
+|Fuel
+|30-90
+}}
+{{NodeInfo
+|H
+|Resource
+|Ammo
+|30-90
+}}
+{{NodeInfo
+|I
+|Empty
+}}
+{{Map/Nodes|name=敵支援艦隊
+|J
+|Normal
+|{{Formation|Line Abreast}}
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|-
+|J
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Flagship
+|-
+|J
+|Normal
+|{{Formation|Double Line}}
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+}}
+{{Map/Nodes|name=敵サーモン方面主力艦隊
+|K
+|Boss
+|{{Formation|Diamond}}
+|Transport Ship Wa-Class/Elite
+|Southern War Princess
+|Battleship Ta-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Submarine Ka-Class/Flagship
+|-
+|K
+|Boss/Final
+|{{Formation|Diamond}}
+|Transport Ship Wa-Class/Elite
+|Southern War Princess
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Submarine Yo-Class/Flagship
+|-
+|K
+|Boss/Clear
+|{{Formation|Diamond}}
+|Transport Ship Wa-Class/Elite
+|Southern War Princess
+|Battleship Ta-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+|Submarine Ka-Class/Flagship
+|-
+|K
+|Boss/Clear
+|{{Formation|Diamond}}
+|Transport Ship Wa-Class/Elite
+|Southern War Princess
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Submarine Yo-Class/Flagship
+|-
+|K
+|Boss/Clear
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship
+|Southern War Princess
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = B, C, D, E, F, J, K
+|boss = K
+|Akagi: K
+|Akebono: C, D, F
+|Akigumo: K
+|Aoba: C, D, F, J, K
+|Arashio: D
+|Asashio: C, D
+|Ashigara: B, C, D, K
+|Atago: B, C, D, F, K
+|Ayanami: C, D
+|Chikuma: C, D, E, K
+|Chitose: B, C, D, F, K
+|Chiyoda: C, K
+|Choukai: C, D, J, K
+|Fubuki: C, D
+|Furutaka: C, D, E, F, J, K
+|Fusou: B, C, D, K
+|Haguro: C, D, K
+|Haruna: K
+|Hatsuharu: B, C, D
+|Hiei: B, C, D, E, F, K
+|Hiryuu: K
+|Hiyou: C, D, F, K
+|Houshou: K
+|Hyuuga: B, C, D, F, J, K
+|I-168: D, K
+|I-58: K
+|Ise: C, D, F, J, K
+|Isuzu: C, D, E, J, K
+|Jintsuu: B, C, D
+|Junyou: B, C, K
+|Kaga: K
+|Kako: C, D, F, K
+|Kasumi: C, D, F
+|Kinugasa: B, C, D, E, F, J, K
+|Kirishima: B, C, D, E, F, J, K
+|Kisaragi: C
+|Kiso: C, D, J
+|Kitakami: K
+|Kongou: K
+|Kuma: B, C, D, F, K
+|Maya: C, E, K
+|Michishio: D, F
+|Mizuho: K
+|Mogami: C, D, E, J, K
+|Mutsuki: C, D, E
+|Myoukou: B, C, F, K
+|Nachi: C, D, J, K
+|Naganami: K
+|Nagara: K
+|Naka: C, D, E, F, J
+|Natori: C, D, J, K
+|Ooi: K
+|Ryuujou: C, D, E, J, K
+|Sazanami: B, C, D, F, J
+|Sendai: K
+|Shikinami: B, C, D, F
+|Shouhou: B, C, F, K
+|Shoukaku: K
+|Souryuu: K
+|Suzuya: K
+|Takao: C, D, F, J, K
+|Tama: C, D, J
+|Tatsuta: B, C, D, F, K
+|Tenryuu: B, C, D, E, K
+|Tone: B, D, K
+|Uzuki: K
+|Yamagumo: K
+|Yamashiro: C, E, F, K
+|Yayoi: K
+|Yura: C, D, F, K
+|Yuubari: B, C, D, E, F, J, K
+|Yuudachi: B, C, D, F, J
+|Yuugumo: K
+|Zuikaku: K
+}}
+{{SectionEnd}}

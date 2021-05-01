@@ -1,0 +1,46 @@
+== Purpose ==
+
+To simplify the deployment of event specific forum threads either prior or during the event time. For each and every event map there is and that requires some form of centralised way of keeping track this template was made to address those specific niche.
+
+== Usage ==
+<pre>{{ForumEventsFleetComp/Draft
+|Eventseason = Winter 2016 Event
+|Eventmap = E-1
+|mapname = Winter 2016 Event E-1.png
+|ForumEventsEnemyComp = 391515
+|suggestcomp = 
+|otherroute = 
+}}
+</pre>
+
+== Parameters ==
+
+=== Eventseason ===
+Sets the parameter as being a page that is accessible within the wiki.
+
+Defaults to [[Winter 2016 Event]] if not set.
+
+=== Eventmap ===
+Sets the parameter as the actual map within the event page as a literal link. Usually works in combination with Eventseason above.
+
+Defaults to "E-1" and without Eventseason parameter set the full link would become [[Winter 2016 Event/E-1]].
+
+=== mapname ===
+Sets the name of the map with the filename extension (e.g. ".png" or ".jpg").
+
+Defaults to a placeholder map if not set.
+
+=== ForumEventsEnemyComp ===
+Sets the forum thread to a "sister" forum thread that talks about the same map but for Enemy compositions. This parameter only needs the digits of the forum link, i.e. not Thread:391515 for instance.
+
+Defaults to "391515" which is [[Winter 2016 Event/E-1]]'s [[Thread:391515|Fleet composition report Thread:391515]]
+
+=== suggestcomp ===
+Defines any fleet compositions as a suggestion for the specified map. The first set of information has been set as a bullet point but thereafter requires one to make use of <nowiki>*</nowiki> to append more bullet points.
+
+Defaults to ''T.B.A.'' if not set.
+
+=== otherroute ===
+Defines any other routings for the specified map. The first set of information has been set as a bullet point but thereafter requires one to make use of <nowiki>*</nowiki> to append more bullet points.
+
+Defaults to ''T.B.A.'' if not set.

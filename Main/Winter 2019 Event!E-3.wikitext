@@ -1,0 +1,255 @@
+{{Warning|Please be advised the information below are still under investigation and are subject to further revisions and changes upon verification. Please use the information at your own discretion.}}
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = South Seas 4th Garrison Force Transport Operation
+|jp = 南海第四守備隊輸送作戦
+|romaji = Nankai daiyon-shubitai yusō sakusen
+|tag = E4
+|mechanics = 
+<!--
+|transport = true
+-->
+|hp_all = 380 TP + 4000
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCard|Nisshin}}
+
+
+|reward_casual_1 = {{ItemStack|item = [[File:Jervaited.png{{!}}50px]]|text = Nothing}}
+|reward_casual_1_x = 
+
+|reward_easy_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Type C Kouhyouteki|size=50px}}
+|reward_easy_2_x = 1
+
+|reward_medium_1 = [[File:Screw.png|50px|link=Improvement Material]]
+|reward_medium_1_x = 7
+|reward_medium_2 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Type C Kouhyouteki|size=50px}}
+|reward_medium_3_x = 2
+
+|reward_hard_1 = [[File:Screw.png|50px|link=Improvement Material]]
+|reward_hard_1_x = 10
+|reward_hard_2 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_hard_2_x = 2
+|reward_hard_3 = {{ItemStack|item={{EquipmentCardKai|Type C Kouhyouteki|size=50px|caption=Type C Kouhyouteki ☆4}}|text=☆4|text-position=right:4px;bottom:12px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = [[File:First-class Medal 061 useitem.png|50px|link=Medal]]
+|reward_hard_4_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules
+|id = 43-3
+|order = A,C,E,G,K,O,Q,P,T,V,W
+
+|A/empty -> C, F = * Active branching
+
+|C -> D = * Do not meet the requirements to go to either F or G.
+|C -> F = 
+* Single Fleet
+|C -> G/empty = 
+* Meet '''ALL''' of the following requirements:
+** ???
+** ???
+** ???
+
+|E -> B/ambush = 
+* Do not meet the requirements to go to either H or I.
+|E -> H/storm = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships with '''Surface Radars''' equipped ≥ 0/3/4/5 on Casual/Easy/Medium/Hard
+** Amount of DD ≥ 2 (Easy+)
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+** Do not meet the requirements to go to I.
+|E -> I = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships with '''Surface Radars''' equipped ≥ 0/3/4/5 on Casual/Easy/Medium/Hard
+** Fleet must contain a CL.
+** Amount of DD ≥ 2
+** Amount of CV(L/B) ≤ 2
+
+|G/empty -> J, K = * Active branching
+
+|K -> N = 
+* Meet '''ALL''' of the following requirements:
+** Single Fleet
+** No SS(V)
+|K -> O = * Do not meet the requirements to go to N.
+
+|O -> N = * Do not meet the requirements to go to T.
+|O -> T = 
+* Meet '''ALL''' of the following requirements:
+** Node T is unlocked.
+** Carrier/Surface Task Force
+
+|Q -> R/ambush = * Do not meet the requirements to go to P.
+|Q -> P/resource = * Amount of ships with '''Surface Radars''' equipped ≥ 0/1/3? on Casual/Easy/Medium+
+
+|P/resource -> M/empty = * Fail the LoS check.
+|P/resource -> S = * Pass the LoS check.
+
+|T -> U,V,ZZ = 
+* Meet '''ALL''' of the following requirements to go to ZZ:
+** Node ZZ is unlocked.
+** Flagship of the '''Main Fleet''' has a '''Surface Radar''' equipped.
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+** Amount of ships with '''Surface Radars''' equipped ≥ 6
+* Else, random routing between ZZ, U or V.
+** Having less '''Surface Radars''' equipped increases your chance of going to U if you fail to go to ZZ.
+
+|V -> X/empty = * Fail the LoS check.
+|V -> Z = * Pass the LoS check.
+
+|W -> Y/empty = * Fail the LoS check.
+|W -> Z = * Pass the LoS check.
+}}
+
+===Historical Ship Bonus===
+*For Node Z's bonus, the following values are '''after''' unlocking Node {{Event/Route|ZZ|red}}. Prior to unlocking it all modifiers are based on 'Node S Bonus' table.
+{{:Winter 2019 Event/E-3/Historical Ship Bonus}}<!--
+====Node S Bonus====
+*{{ShipLink|Isokaze}}, {{ShipLink|Arashi}}, {{ShipLink|Hagikaze}} - 1.77x
+*{{ShipLink|Kawakaze}} - 1.43x
+*{{ShipLink|Shigure}}, {{ShipLink|Yukikaze}}, {{ShipLink|Samidare}}, {{ShipLink|Hamakaze}}, {{ShipLink|Shiratsuyu}}, {{ShipLink|Naganami}}, {{ShipLink|Shiranui}} - 1.3x
+*{{ShipLink|Sendai}}, {{ShipLink|Myoukou}}, {{ShipLink|Hatsushimo}}, {{ShipLink|Tanikaze}}, {{ShipLink|Kagerou}}, {{ShipLink|Kuroshio}} - 1.25x
+
+====Node Z Bonus====
+*{{ShipLink|Isokaze}}, {{ShipLink|Arashi}}, {{ShipLink|Hagikaze}}: 2x
+*{{ShipLink|Kawakaze}} - 1.65x
+*{{ShipLink|Shigure}}, {{ShipLink|Yukikaze}}, {{ShipLink|Hatsushimo}}, {{ShipLink|Shiratsuyu}}, {{ShipLink|Tanikaze}}, {{ShipLink|Urakaze}}, {{ShipLink|Shiranui}}, {{ShipLink|Kagerou}}, {{ShipLink|Hamakaze}}, {{ShipLink|Naganami}} - 1.5x
+*{{ShipLink|Yuudachi}}, {{ShipLink|Ayanami}}, {{ShipLink|Akizuki}}, {{ShipLink|Asashio}}, {{ShipLink|Kasumi}}, {{ShipLink|Hatsuzuki}}, {{ShipLink|Ooshio}} - 1.3x
+*{{ShipLink|Sendai}}, {{ShipLink|Myoukou}}, {{ShipLink|Haguro}} - 1.25x
+-->
+
+===Phase 1: Transport Operation===
+*Route: {{Event/Route|A|lightblue|F|orange|E|red|I|orange|L|red|P|green|S|red}}
+*Possible fleets:
+**1CL 5DD
+**1CL 1CA(V) 4DD
+** 1CV(L/B) 1BB(V) 1CL 3DD
+*You must also meet all of the requirements:
+**Amount of ships with Surface Radars equipped must be at least 0/3/4/5 for Casual/Easy/Medium/Hard respectively.
+**Have at least approximately 18.8+ eLoS (Cn=1) to pass the LoS Check.
+*As this is a Transport Operation, you are recommended to bring as many as possible {{Drum}} {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canisters}} and/or {{LandingCraft}} {{EquipmentLink|Daihatsu Landing Craft}}.
+*As there are two powerful Air Raid Nodes, you are recommended to bring a Ship who can utilize AACI.
+*Use of Vanguard Formation is highly recommended to pass the Enemy Surface Combat nodes {{Event/Route|E|red|L|red}} if your fleet is very light.
+*You are highly recommended to send 12 {{Land-based Attack Aircraft}} {{EquipmentLink|Type 96 Land-based Attack Aircraft|Type 1 Land-based Attack Aircraft|text=Land-based Attack Aircrafts}} down to the Boss Node {{Event/Route|S|red}}.
+**Bringing a 7 range fighter is a possibility to attain a better airstate but this is not necessary and the additional bombing power will most of the time help you more.
+*Once you clear the TP Gauge, the Route to the Boss Node {{Event/Route|Z|red}} will appear.
+
+{{:Winter 2019 Event/Info/Surface Radar}}
+
+===Phase 2: Opening Node ZZ===
+{{Warning|[[Winter 2019 Event/E-3#Historical Ship Bonus|Historical Ship Bonus]] for the boss node Z will be increased once you have unlocked Node ZZ, and if you don't unlock it, the multiplier will actually be lower. <br>'''It is recommended to open the hidden route regardless of whether you plan to go through ZZ or not for clearing.'''}}[[File:【KanColle】 Winter 2019 Event E-3 Unlocking Node ZZ|right|250 px]]
+*Because the Routes to the Boss Node is very harsh, especially in Node {{Event/Route|V|red}} and {{Event/Route|W|red}}, you are recommended to open up the Secret Node {{Event/Route|ZZ|red}}.
+**Node {{Event/Route|V|red}} contains Two {{ShipLink|Battleship Re-Class|Battleship Re-Class Elite||text=Battleship Re-Class}} waiting for you.
+***However if doing Casual to Medium, going down into {{Event/Route|V|red}} may actually be preferable as the Re-Class is only Standard and not the dangerous Elite variant (Casual and Easy difficulty only has 1, while Medium has a pattern that has 2).
+****Please be aware however, that Node {{Event/Route|ZZ|red}} is a Submarine Node which doesn't take {{Ammo}} Ammo, while since Node {{Event/Route|V|red}} is a surface combat Node, it will deplete your Fleet's Ammo, giving them a penalty of having lower Firepower at the Boss Node.
+**During Route to Node {{Event/Route|W|red}}, the previous Node {{Event/Route|U|red}} has a heavy Enemy Air Raid of high Air Power, then Node {{Event/Route|W|red}} itself will contain 1x {{ShipLink|Standard Carrier Wo-Class Kai Flagship|text=Wo-class Kai Flagship}} and 2 or 3x {{ShipLink|Light Carrier Nu-Class  Flagship|text =Nu-class Kai Flagships}} alongside 1 or 2 {{ShipLink|Battleship Princess}}.
+**Node {{Event/Route|ZZ|red}} contains a Submarine Fleet with {{ShipLink|New Submarine Princess}}.
+
+====Requirements====
+*To open up Node ZZ, you must do the following (in any order):
+**Obtain Air Supremacy (AS+) ( <span style="color:green">'''制空権確保! '''</span>) from against an Enemy Air Raid Two '''(2)''' Times via LBAS Air Defense. (Once for '''EASY''', and not required for '''CASUAL''')
+**Obtain S-Rank Victory in {{Event/Route|S|red}} One '''(1)''' Time.
+***This must be done '''AFTER''' the Phase 1: Transport Operation.
+**Obtain Air Supremacy (AS+) ( <span style="color:green">'''制空権確保!'''</span> ) in the Air Raid Nodes
+***{{Event/Route|F|red|I|red|K|red|N|red}} '''(HARD/MEDIUM)'''
+***{{Event/Route|F|red|I|red|K|red}} '''(EASY)'''
+***{{Event/Route|F|red|I|red|K|red}} '''(CASUAL)'''
+**Obtain Air Superiority (AS) ( <span style="color:green">'''航空優勢! '''</span>) in the Air Raid Nodes 
+***{{Event/Route|T|red|U|red}} '''(HARD/MEDIUM)'''
+***{{Event/Route|T|red}} '''(EASY)'''
+**<span style="color:red;">'''WARNING'''</span>: Please be advised that you must send down [[Land Base Aerial Support]] to the Nodes. Otherwise, it will not count!
+**You are advised to send your LBAS equipped with the appropriate {{Fighter}} Carrier-Based Fighters or {{Interceptor Fighter 2}} Land-Based Fighters down to the Nodes (Please see below for the LBAS Range Map).
+
+====Obtaining S-Rank Victory in Node S====
+*You can use the same fleet used for the transport phase.
+**As you don't need any Transport Equipment this time, you may go in with your Full Combat Setup, though you still need at least 5 Ships with a Surface Radar equipped.
+**'''NOTE:''' You must obtain the S-Rank '''AFTER''' Phase 1. Victories from Phase 1 will not count!
+
+====Nodes F & I====
+*Route: {{Event/Route|A|lightblue|F|orange|E|red|H|violet|I|orange|L|red|P|green|S|red}}
+*You may use 3 CV 1 CAV/AV 2 DD with several Fighters (Seaplane Fighters in case of CAV/AV) to go into Nodes {{Event/Route|F|red}} and {{Event/Route|I|red}}.
+**You are required to have ships with Surface Radars equipped ≥ 0/3/4/5 on Casual/Easy/Medium/Hard to go {{Event/Route|E|red|H|violet}}
+***Failing to meet these requirement will force you into the Radar Ambush Node {{Event/Route|B|orange}}.
+
+====Nodes D / T / U====
+*You may use a Carrier Task Force Combined Fleet with 4 CV 2 CA(V) + 1 CL 2 DD 3 XX (Any Ships) to go down the Nodes {{Event/Route|D|red|T|red|U|red}}.
+
+====Nodes K & N====
+*You may use a Transport Combined Fleet or a Submarine Fleet with as many {{Seaplane Fighter}} Seaplane Fighters as possible to enter Nodes {{Event/Route|K|orange|N|orange}}.
+*Route:{{Event/Route|A|lightblue|C|red|D|orange|G|lightblue|K|orange|O|red|N|orange}}
+**'''NOTE:''' it is possible to reach node {{Event/Route|K|Red|}} with any combined fleet other than a Transport Combined Fleet, but you will route to {{Event/Route|T|orange}} instead of {{Event/Route|N|orange}} after getting past {{Event/Route|O|red}}!
+**With a Transport Combined Fleet, in order to gain AS+ in these nodes, you will need to either bring {{ShipLink|Ise/Kai Ni}}, {{ShipLink|Gambier Bay/Kai}}, {{ShipLink|Zuihou/Kai Ni B}}, {{ShipLink|Taiyou/Kai Ni}}, or {{ShipLink|Shinyou/Kai Ni}} as Fighter Mule (you can only bring 1 CVL).
+**Otherwise, use CAV/BBV/AV as {{Seaplane Fighter}} {{EquipmentLink|Type 2 Seaplane Fighter Kai|text=Seaplane Fighter}} Mule.
+
+====Obtaining Two Perfect LBAS Defenses====
+*You may sortie a single submarine to travel the Routes starting from Node {{Event/Route|C|red}}, up to {{Event/Route|K|red}}.
+**Setup your entire LBAS with Fighters and set them all into Air Defense mode.
+
+===Final Phase: Defeating the {{ShipLink|Abyssal Sun Princess|text=Final Boss}}===
+*You may either use Carrier Task Force or Surface Task Force to go into the Boss Node.
+*Carrier Task Force: 2 BB 1 CV(B) 3 CVL + 1 CL 2 DD 3 XX (DD, CLT, Up to 2 CA(V), 1 CVL is possible)
+*Surface Task Force: 3 BB 2 CVL 1 CA(V)/AV + 1 CL 2 DD 3 XX (DD, CLT, Up to 2 CA(V), 1 CVL is possible)
+**You must also meet all of the following requirements:
+***Amount of ships with Surface Radars equipped ≥ 6 or more on (Medium+).
+***Flagship must have a Surface Radar equipped.
+**Route: {{Event/Route|A|lightblue|C|red|D|orange|G|lightblue|J|red|T|orange|ZZ|red|Z|red}}
+***<span style="color:red;">'''WARNING'''</span> : even after fulfilling all the requirements, there is still a risk to route to node {{Event/Route|U|red}} instead of {{Event/Route|ZZ|red}}.
+***For fleets that always route to {{Event/Route|ZZ|red}}, '''see below'''.
+
+====Recommended Fleets guaranteed to go into Node ZZ 100%====
+The general fleets to go into Node {{Event/Route|ZZ|red}} are the following:
+*3 BB(V) and 3 from CA(V)/AV/{{ShipLink|Akitsu Maru/Kai}} + 1 CL 2 DD and 3 from CA(V)/CLT/DD
+*2 BB(V) 1 CV(B) and 3 from CA(V)/AV/{{ShipLink|Akitsu Maru/Kai}} + 1 CL 2 DD and 3 from CA(V)/CLT/DD
+**The CAV/AV and Akitsumaru Kai are there to gain Air Power and do not affect the Routing.
+**The Flagship must have a Surface Radar.
+***Amount of ships with Surface Radars equipped ≥ 6 or more on (Medium+).
+**The fleet may have difficulty obtaining Air Superiority (AS) (<span style="color:green">'''航空優勢! '''</span>) during Last Dance especially on harder difficulties.
+**Failing the Radar requirements (Flagship not equipped with a radar and/or not enough radars in the fleet) will route the fleet to {{Event/Route|V|red}} instead of {{Event/Route|ZZ|red}} which may be preferable especially on medium or lower difficulties.
+
+====Recommendations====
+*Please see Top of Page for the [[Winter 2019 Event/E-3#Historical Ship Bonus|Historical Ship Bonus]] to choose your members of the Fleet.
+*You may opt to bring 1 to 3 OASW capable Ships for Pre-Finals to pass Nodes {{Event/Route|C|red}} and {{Event/Route|ZZ|red}} more safely, as they contain the {{ShipLink|New Submarine Princess}}.
+**As majority of the Enemy Nodes in the route towards the Boss are all Air Raid Nodes, you may opt to use the ASW Aerial Support Expedition to help you in the {{Event/Route|C|red}} and {{Event/Route|ZZ|red}}.
+***Example Fleet:
+****2 CVL 2 CV 2 DD
+***They should be equipped with the best Bombers and Aircrafts with high {{ASW}} ASW Stats, such as {{EquipmentLink|Type 97 Torpedo Bomber (931 Air Group)}}, {{EquipmentLink|Tenzan (931 Air Group)}}, {{EquipmentLink|Ju 87C Kai Ni (w/ KMX)}}, {{EquipmentLink|Ka Type Observation Autogyro}}, {{EquipmentLink|Type 3 Command Liaison Aircraft (ASW)}}.
+***Please note that the 2 Destroyers don't contribute to the ASW {{ASW}} Damage towards the Enemies in the Support Expedition.
+*Use of {{ShipLink|Nagato/Kai Ni}}'s Special Attack or {{ShipLink|Nelson}}'s Nelson Touch Attack Mechanics can be a great way to clean out Enemies at the Boss Node.
+*It is recommended to send 4 Waves of Land Base Aerial Support to the Boss Node and 1 Wave loaded with ASW planes to each of Node C and ZZ.
+*In addition to the fighters of your LBAS planes your fleet roughly needs 530 fighterpower to achieve Air Superiority in Hard mode Final Composition.
+
+===[[Friend Fleet]]s===
+{{Fleets|friend=Winter 2019 Event|map=E-3}}
+
+===Phases===
+{| class="wikitable"
+|-
+! Phase 1
+! Phase 2
+|-
+| [[File:Winter_2019_Event_E-3_Map_A.png|325px]]
+| [[File:Winter_2019_Event_E-3_Map_B.png|325px]]
+|-
+! Phase 3
+|-
+| [[File:Winter_2019_Event_E-3_Map.png|325px]]
+|}
+
+=== LBAS Flight Range ===
+[[File:Winter_2019_Event_E-3_LBAS_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

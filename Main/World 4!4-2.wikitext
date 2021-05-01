@@ -1,0 +1,86 @@
+{{Map/Header}}
+{{Map/Info
+|en = Curry Ocean Area
+|jp = カレー洋海域
+|romaji = Karē-yō Kaiiki
+|exp_hq = 120
+|exp_hq_boss = 1640
+|strategy_name = [[wikipedia:Indian_Ocean_raid|Curry Ocean Takeover Battle]]
+|strategy_name_ja = カレー洋制圧戦
+|strategy_info = You are going to gain over the Curry Ocean. Get hold of a resource zone on this direction, neutralize enemy fleets on the Curry Peninsula waters!
+|strategy_info_ja = カレー洋の制圧作戦を行う。同方面資源地帯を確保しつつ、カレー半島水域の敵艦隊を無力化せよ！
+}}
+{{MapBranchingTable
+|expand = true
+|id = 4-2
+|0 -> A, B = 
+*Random routing, but the amount of DDs in your fleet affects your chances of going to A:
+** 0 DD = 6%
+** 1 DD = 11%
+** 2 DD = 61%
+** 3 DD = 71%
+** 4 DD = 86%
+** 5 DD = 91%
+** 6 DD = 96%
+
+|A -> C, E = 
+* Meeting '''ALL''' of the following requirements to go to C
+** Amount of DD ≥ 3
+** CL+DD ≥ 4
+*Go to E if DD+DE ≤ 1
+*Otherwise, random routing
+
+|C -> G, L =
+* Meeting '''ANY''' of the following requirements to '''FORCE''' L
+**DD ≥ 4
+**CL ≥ 1, (F)BB(V)+CV(L/B) ≤ 2 and DD ≥ 2
+*Meeting '''ANY''' of the following to go to G
+**DD ≤ 1
+**(F)BB(V)+CV(L/B) ≥ 4
+*Otherwise, random routing
+
+|D -> C, H = 
+*Go to H if (F)BB(V)+CV(L/B) = 6
+*Random routing if fleet contains any SS(V)
+*Meeting '''ANY''' of the following to go to C
+**CL+DD ≥ 4
+**(F)BB(V)+CV(L/B) ≤ 2 and DD ≥ 2
+*Otherwise, random routing
+
+|G -> F/empty, I/empty, L = 
+*Go to L if DD ≥ 2 and meet one of the following
+**CL+CAV+AV ≥ 1
+**(F)BB(V) ≥ 4
+*Higher chance of going to I if (F)BB(V)+CV(L/B) ≥ 5
+*Very high chance of going to F if fleet contains any SS(V)
+*Go to F if fleet contains AS ([[Taigei]])
+*Otherwise, random routing
+
+|H -> G, K/resource =
+* Go to G if amount of DD ≥ 2
+* Higher chance of going to K if CV(B) ≥ 3
+*Otherwise, random routing
+}}
+===Unlocking the map===
+*To unlock World 4-2, you must clear [[World 7/7-1|World 7-1]] in addition to World 4-1.
+
+===Recommended Fleets===
+*2 XX 1 CL 3 DD
+**Routes differ depending on the Start Point, which is random.
+***{{Event/Route|A|red|C|red|L|red}}
+***{{Event/Route|B|red|D|red|C|red|L|red}}
+**Goes straight to Boss through the shortest route possible, though it will skip {{Event/Route|G|red}} which has a load of {{ShipLink|Transport Ship Wa-Class|text=Enemy Transports}}. Has the possibility of being routed to node {{Event/Route|D|red}} instead, which contains strong enemies which your semi-light fleet might have trouble dealing with.
+* 2 CV 1 CVL 1 CL 2 DD
+**A more resilient fleet, at the cost of consistency.
+***{{Event/Route|A|red|C|red|L|red}}
+***{{Event/Route|A|red|C|red|G|red|L|red}}
+***{{Event/Route|A|red|E|red|G|red|L|red}}
+***{{Event/Route|B|red|D|red|C|red|L|red}}
+***{{Event/Route|B|red|D|red|C|red|G|red|L|red}}
+***{{Event/Route|B|red|D|red|H|red|G|red|L|red}}
+**This fleet is capable of doing [[Quests#Bw4|Transports Weekly Quest]] and to some degree, [[Quests#Bw6|World 4 Weekly Quest]], at the same time. However, the routing is inconsistent due to random routing and it is possible that node {{Event/Route|G|red}} might even be skipped. The fleet will always arrive at the Boss Node, but this map is inconsistent and possibly expensive in repairs compared to 4-4 if the goal is to clear [[Quests#Bw6|World 4 Weekly Quest]], due to the possibility of arriving at the boss at 20% ammo and fuel.
+* 4 BB(V) 2 DD
+**{{Event/Route|A|red|E|red|G|red|L|red}} or {{Event/Route|B|red|D|red|H|red|G|red|L|red}}
+**For quest [[Quests#B31|B31]]
+
+{{Map/Footer}}

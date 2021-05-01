@@ -1,0 +1,558 @@
+<tabber>Node Behavior=
+==Speed-buff routing==
+There are several maps in phase 2 where if your fleet speed is high enough, you can bypass several branching rules or get better routing. There are few things to note:
+*Whatever applied to '''Fast+''' fleet will also be applied for '''Fastest''' fleet, so if 1CL 5DD '''Fast+''' skips a node for example, 1CL 5DD '''Fastest''' will do the same
+*However, it may not work for the other way around, it's not guaranteed that '''Fastest''' fleet rule will also be applied the same for '''Fast+''' fleet
+**One good example for this is 5-1 node F, only '''Fastest''' can go to the boss directly, '''Fast+''' is not enough
+*Well, another interesting thing to point out is if the node that has the speed-buff branching rule is right before the boss node, it will also skip the LoS check as well if there is one. Therefore, it's possible to have a '''Fast+''' fleet with a really low amount of LoS, but still be able to fight the boss (Check it in 5-4, I'm not kidding !)
+**Map 4-5 '''Fast+''' fleet is a weird case but kinda works the same way. In reality, H-T branch is not an LoS check, but you technically "skip an LoS check" too as you never go to node K anyway
+**Obviously not all the nodes allow you to use any kind of fleet that let you skip the LoS check as long as its speed-buffed, there are some nodes with heavy ship limit too. For instance, map 5-4 and 5-5 north east branch right before the boss node, it only allows a limited amount of heavy ships in your fleet to skip the LoS actually (4 max for 5-4 and 5 max for 5-5 for '''Fast+''' fleet). If you exceed this limit, it's back to random routing !
+***5-5 north east gets a better treatment though, it's also known that if your fleet is '''Fastest (Yes, Fastest not just Fast+)''', you can bring a whooping 6 heavy and skip the LoS check, route to the boss node all the time. But still, damn ! Who would be able to form a Fastest fleet while still maintaining enough firepower for the boss fight ? As of this point, those 5-5 speed-buff routing are just meme. The branching rule is there, but it's not effective !
+Below is the table of all maps that have speed-buff related branching rules
+*Legends:
+**'''<font color="red">Red</font>''' = Map has both '''Fastest''' & '''Fast+''' routing
+**'''<font color="orange">Orange</font>''' = Map has only '''Fastest''' routing
+**'''<font color="yellow">Yellow</font>''' = Map has only '''Fast+''' routing
+{| class = "wikitable" style="margin-left: auto; margin-right: auto; border: none;"
+|+ Speed-Buffed Map Table
+!
+!World 1
+!World 2
+!World 3
+!World 4
+!World 5
+!World 6
+!World 7
+|-
+|X-1
+|
+|
+|
+|
+|style="background-color: #ffa500;"|
+|
+|
+|-
+|X-2
+|
+|
+|style="background-color: #ff0000;"|
+|
+|style="background-color: #ffff00;"|
+|
+|style="background-color: #ffff00;"|
+|-
+|X-3
+|
+|
+|
+|
+|style="background-color: #ffff00;"|
+|
+| style="background-color: #000000;"|
+|-
+|X-4
+|
+|
+|style="background-color: #ffff00;"|
+|
+|style="background-color: #ffff00;"|
+|
+| style="background-color: #000000;"|
+|-
+|X-5
+|
+|
+|
+|style="background-color: #ff0000;"|
+|style="background-color: #ff0000;"|
+|
+| style="background-color: #000000;"|
+|-
+|X-6
+|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+|}
+
+==Whirlpool / Tornado==
+You know why I hate whirlpool in Phase 2 more than in Phase 1 ? Some of them are actually '''very mean''', like.... '''VERY MEAN''' ! They wipe your fuel is one thing, but damn, sometimes they can wipe '''your entire remaining fuel''' too, causing your evasion to suck so bad after that point.
+*At least the rule with the ships carrying radar still works. Having more ships with radar help reduce resource loss, but it still doesn't help much against the '''very mean''' whirlpool though (Yes, I am gonna call them '''very mean''' whirlpool now whenever I talk about the type that can wipe your entire remaining fuel !)
+*There are 2 types of whirlpool in Phase 2:
+**1. The type that will alway wipe only a certain amount of your resource, not entirely
+**2. The type that either does the same as above '''OR''' wipe your resource entirely ('''Very mean''' type right here)
+Below is the table of all whirlpool across all the maps of P2.
+*Legends:
+**'''<font color="#bcadc4">Light Purple</font>''' = Normal whirlpool
+**'''<font color="#566db8">Blue</font>''' = '''Very mean''' whirlpool
+**'''<font color="purple">Dark Purple</font>''' = Map has both of the above
+{| class = "wikitable" style="margin-left: auto; margin-right: auto; border: none;"
+|+ Whirlpool Table
+!
+!World 1
+!World 2
+!World 3
+!World 4
+!World 5
+!World 6
+!World 7
+|-
+|X-1
+|
+| 
+|
+|
+|style="background-color: #bcadc4;"|Fuel
+|
+|style="background-color: #bcadc4;"|Ammo
+|-
+|X-2
+|
+|
+|style="background-color: #bcadc4;"|Fuel
+|
+|style="background-color: #a749c4;"|Fuel
+|style="background-color: #566db8;"|Ammo
+|style="background-color: #bcadc4;"|Fuel
+|-
+|X-3
+|style="background-color: #566db8;"|Fuel
+|
+|style="background-color: #a749c4;"|Fuel
+|style="background-color: #bcadc4;"|Fuel
+|style="background-color: #566db8;"|Fuel
+|
+| style="background-color: #000000;"|
+|-
+|X-4
+|
+|style="background-color: #bcadc4;"|Fuel
+|style="background-color: #a749c4;"|Fuel
+|style="background-color: #566db8;"|Fuel
+|style="background-color: #a749c4;"|Fuel
+|
+| style="background-color: #000000;"|
+|-
+|X-5
+|
+|style="background-color: #566db8;"|Fuel
+|
+|style="background-color: #566db8;"|Fuel
+|style="background-color: #a749c4;"|Fuel
+|
+| style="background-color: #000000;"|
+|-
+|X-6
+|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+| style="background-color: #000000;"|
+|}
+
+{| class = "wikitable" style="margin-left: auto; margin-right: auto; border: none;"
+|+ Whirlpool Wipe Rate Table (RS = Amount of ship carrying radar)
+!
+!0 RS
+!1 RS
+!2 RS
+!3 RS
+!4 RS
+!5 RS
+!6 RS
+|-
+|'''1-3'''
+|40% / 100%
+|30% / 100%
+|24% / 90%
+|20% / 75%
+|18% / 67%
+|16% / 63%
+|16% / 60%
+|-
+|'''2-4'''
+|30%
+|30%
+|30%
+|30%
+|30%
+|30%
+|30%
+|-
+|'''2-5'''
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|-
+|'''3-2'''
+|28%
+|21%
+|16%
+|14%
+|12%
+|11%
+|11%
+|-
+|'''3-3'''
+|C: 24%, F: 40%/100%
+|C: 18%, F: 30%/100%
+|C: 14%, F: 24%/90%
+|C: 12%, F: 20%/75%
+|C: 10%, F: 18%/67%
+|C: 10%, F: 16%/63%
+|C: 10%, F: 16%/60%
+|-
+|'''3-4'''
+|D: 30%, F: 40%/100%
+|D: 22%, F: 30%/100%
+|D: 18%, F: 24%/90%
+|D: 15%, F: 20%/75%
+|D: 13%, F: 18%/67%
+|D: 13%, F: 16%/63%
+|D: 13%, F: 16%/60%
+|-
+|'''7-1'''
+|?
+|?
+|?
+|?
+|?
+|?
+|?
+|-
+|'''7-2'''
+|30%
+|22%
+|18%
+|15%
+|13%
+|13%
+|13%
+|-
+|'''4-3'''
+|?
+|?
+|?
+|?
+|?
+|?
+|?
+|-
+|'''4-4'''
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|-
+|'''4-5'''
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|-
+|'''5-1'''
+|?
+|?
+|?
+|?
+|?
+|?
+|?
+|-
+|'''5-2'''
+|A: 30%, M: 40%/100%
+|A: 22%, M: 30%/100%
+|A: 18%, M: 24%/90%
+|A: 15%, M: 20%/75%
+|A: 13%, M: 18%/67%
+|A: 13%, M: 16%/63%
+|A: 13%, M: 16%/60%
+|-
+|'''5-3'''
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|? / ?
+|-
+|'''5-4'''
+|D: 30%, K: 40%/100%
+|D: 22%, K: 30%/100%
+|D: 18%, K: 24%/90%
+|D: 15%, K: 20%/75%
+|D: 13%, K: 18%/67%
+|D: 13%, K: 16%/63%
+|D: 13%, K: 16%/60%
+|-
+|'''5-5'''
+|D: 30%, L: 40%/100%
+|D: 24%, L: 30%/100%
+|D: 14%, L: 24%/90%
+|D: 7%, L: 20%/75%
+|D: 7%, L: 18%/67%
+|D: 7%, L: 16%/63%
+|D: 7%, L: 16%/60%
+|-
+|'''6-2'''
+|40% / 100%
+|30% / 100%
+|24% / 90%
+|20% / 75%
+|18% / 67%
+|16% / 63%
+|16% / 60%
+|}
+''Data are sourced from JP wikiwiki [https://wikiwiki.jp/kancolle] so some information are not fully completed yet''
+|-|Theory=
+Conditions for GS in expedition are splited into 3 types:
+{| class="wikitable"
+|-
+!Expedition Type
+!GS Conditions
+|-
+|style="background-color: #7df83a; text-align:center;"|'''Type I (Normal type)'''
+|'''All ships''' must be sparkled<br/>
+'''All numerical expeditions (Excluding World 7 ones, i.e 41-45) that don't require drums''' follow this rule
+*'''A1, B1, B2 and 42''' also follow this rule
+*24 and 40 are the '''only''' exception that don't follow this
+|-
+|style="background-color: #15f4ee; text-align:center;"|'''Type II (Drum type)'''
+|'''4 ships''' must be sparkled<br/>
+Number of the '''total drums brought must be 135%''' the amount of the requirement (rounded down)<br/>
+'''All drum expeditions follow this rule, i.e 21 37 38 44'''
+*'''24 and 40 also follow this rule''', despite not being a drum expedition for some reason. They both require 4 drums to meet the 135% drum condition above
+|-
+|style="background-color: #ffff00; text-align:center;"|'''Type III (Level type)'''
+|Greatly depends on the flagship level, meet '''one''' of the following:
+*'''Flagship Lv 128+ and 4 ships''' in the fleet sparkled
+*'''Flagship Lv 33+ and 5 ships''' in the fleet sparkled
+*'''Flagship Lv 32- and all ships''' must be sparkled (This ideally meets the same condition as '''Type I''', but I will include it here anyway)
+'''All World 7 and letter expeditions (Excluding some of the letter ones mentioned above obviously) follow this rule, i.e A2-A6, B3-B5, 41, 43, 45, D1-D2, E1'''
+*'''32 also follows this rule''' although it's unlikely players will use expedition 32 due to it's long duration
+|}
+{| class="wikitable" style="text-align: center;"
+|-
+!World 1
+!World 2
+!World 3
+!World 7
+!World 4
+!World 5
+|-
+| style="background-color: #7df83a;" |1
+| style="background-color: #7df83a;" |9
+| style="background-color: #7df83a;" |17
+| style="background-color: #FFFF00;" |41
+| style="background-color: #7df83a;" |25
+|33
+|-
+| style="background-color: #7df83a;" |2
+| style="background-color: #7df83a;" |10
+| style="background-color: #7df83a;" |18
+| style="background-color: #7df83a;" |42
+| style="background-color: #7df83a;" |26
+|34
+|-
+| style="background-color: #7df83a;" |3
+| style="background-color: #7df83a;" |11
+| style="background-color: #7df83a;" |19
+| style="background-color: #FFFF00;" |43
+| style="background-color: #7df83a;" |27
+| style="background-color: #7df83a;" |35
+|-
+| style="background-color: #7df83a;" |4
+| style="background-color: #7df83a;" |12
+| style="background-color: #7df83a;" |20
+| style="background-color: #15F4EE;" |44
+| style="background-color: #7df83a;" |28
+| style="background-color: #7df83a;" |36
+|-
+| style="background-color: #7df83a;" |5
+| style="background-color: #7df83a;" |13
+| style="background-color: #15F4EE;" |21
+| style="background-color: #FFFF00;" |45
+| style="background-color: #7df83a;" |29
+| style="background-color: #15F4EE;" |37
+|-
+| style="background-color: #7df83a;" |6
+| style="background-color: #7df83a;" |14
+| style="background-color: #7df83a;" |22
+|
+| style="background-color: #7df83a;" |30
+| style="background-color: #15F4EE;" |38
+|-
+| style="background-color: #7df83a;" |7
+| style="background-color: #7df83a;" |15
+| style="background-color: #7df83a;" |23
+|
+| style="background-color: #7df83a;" |31
+| style="background-color: #7df83a;" |39
+|-
+| style="background-color: #7df83a;" |8
+| style="background-color: #7df83a;" |16
+| style="background-color: #15F4EE;" |24
+|
+| style="background-color: #ffff00;" |32
+| style="background-color: #15F4EE;" |40
+|-
+| style="background-color: #7df83a;" |A1
+| style="background-color: #7df83a;" |B1
+|
+|
+| style="background-color: #FFFF00;" |D1
+| style="background-color: #FFFF00;" |E1
+|-
+| style="background-color: #FFFF00;" |A2
+| style="background-color: #7df83a;" |B2
+|
+|
+| style="background-color: #FFFF00;" |D2
+|
+|-
+| style="background-color: #FFFF00;" |A3
+| style="background-color: #FFFF00;" |B3
+|
+|
+|
+|
+|-
+| style="background-color: #FFFF00;" |A4
+| style="background-color: #FFFF00;" |B4
+|
+|
+|
+|
+|-
+| style="background-color: #FFFF00;" |A5
+| style="background-color: #FFFF00;" |B5
+|
+|
+|
+|
+|-
+| style="background-color: #FFFF00;" |A6
+|
+|
+|
+|
+|
+|}
+|-|Tier=
+*For section 2 and 7, you only need to meet '''one of the requirements'''
+*As of current, the only glowing 6-star equipment that can be maxed is [[16inch Triple Gun Mount Mk.7 + GFCS]]
+{| class = "wikitable" style="text-align: center;"
+!
+!Newbie
+!Middle
+!Veteran I
+!Veteran II
+!Veteran III
+!Veteran IV
+|-
+|'''1. Map unlocked'''
+|1-1
+|5-3
+|6-5
+|style="background-color: #ffff00;" |<-
+|style="background-color: #ffff00;" |<-
+|style="background-color: #ffff00;" |<-
+|-
+|'''2.1 Ships owned'''
+|
+|110
+|150
+|160
+|200
+|250
+|-
+|'''2.2 Ships married'''
+|
+|2
+|10
+|11
+|20
+|25
+|-
+|'''3. % of ships above X lv'''
+|
+|50% > 50
+|75% > 80
+|75% > 90
+|99% > 90
+|style="background-color: #ffff00;" |<-
+|-
+|'''4. Equip improvement lv'''
+|
+|
+|Plus 4
+|Plus 9
+|style="background-color: #ffff00;" |<-
+|style="background-color: #ffff00;" |<-
+|-
+|'''5. All once quest finished'''
+|
+|
+|
+|Yes
+|style="background-color: #ffff00;" |<-
+|style="background-color: #ffff00;" |<-
+|-
+|'''6. FCM'''
+|
+|
+|
+|1
+|4
+|12
+|-
+|'''7.1 Ranking'''
+|
+|
+|
+|T500 once
+|T100 once
+|Rank every months or > T100
+|-
+|'''7.2 Ginga + Nonaka'''
+|
+|
+|
+|2
+|4
+|5
+|-
+|'''8. Jet'''
+|
+|
+|
+|
+|2
+|3
+|-
+|'''9. Max 6-star glowing equip'''
+|
+|
+|
+|
+|
+|Yes
+|}
+</tabber>

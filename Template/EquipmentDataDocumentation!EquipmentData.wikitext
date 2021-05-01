@@ -1,0 +1,322 @@
+==Equipment Data Format==
+{{Notice|"Refer to" are meant to refer to API and client code, see for example [https://github.com/andanteyk/ElectronicObserver/blob/master/ElectronicObserver/Other/Information/apilist.txt][https://github.com/andanteyk/ElectronicObserver/blob/master/ElectronicObserver/Other/Information/kcmemo.md][https://github.com/kcwiki/kancolle-data][https://github.com/KagamiChan/kcsapi.ts].}}
+
+This module should return a table with key value pairs describing the equipment.
+
+===_name===
+String. The name of the equipment.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_page===
+String. The [[Kancolle Wiki]] page for the equipment. If it is the same as the name, set to <code>false</code>.
+
+===_id===
+Integer. The id of the equipment. Refer to <code>api_sortno</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_japanese_name===
+String. The japanese name of the equipment. Refer to <code>api_name</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_localized_name===
+String. The localized name of the equipment. Specify this if the equipment has a non-translated name, like [[Reppuu]].
+
+Set to <code>false</code> if not needed.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_type===
+Integer. The type of the equipment. Refer to <code>api_type[2]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_icon===
+Integer. The icon that the equipment uses. Refer to <code>api_type[3]</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_rarity===
+Integer. The rarity of the equipment. Refer to <code>api_rare</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_back===
+Integer. The background of the equipment card. Defaults to the rarity.
+
+===_stars===
+Integer. The amount of stars on the equipment card. Defaults to the background value.
+
+===_card===
+String. The name of the ship card image on [[Kancolle Wiki]]. Omit the "File:" namespace.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_card_name===
+String. The name of the equipment on the card. 
+
+Set to <code>false</code> if the name on the card is not different.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_card_japanese_name===
+String. The japanese name of the equipment on the card. See _japanese_name. Only used if _card_name is set.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_card_reading===
+String. The furigana for the name of the equipment on the card. See _reading. Only used if _card_name is set.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_card_localized_name===
+String. The localization of the name of the equipment on the card. See _localized_name. Only used if _localized_name is set.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_firepower===
+Integer. The firepower bonus granted by the equipment. Refer to <code>api_houg</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_bombing===
+Integer. The bombing bonus granted by the equipment. Refer to <code>api_baku</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_torpedo===
+Integer. The torpedo bonus granted by the equipment. Refer to <code>api_raig</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_aa===
+Integer. The AA bonus granted by the equipment. Refer to <code>api_tyku</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_armor===
+Integer. The armor bonus granted by the equipment. Refer to <code>api_souk</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_asw===
+Integer. The ASW bonus granted by the equipment. Refer to <code>api_tais</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_shelling_accuracy===
+Integer. The accuracy bonus granted by the equipment. Refer to <code>api_houm</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_torpedo_accuracy===
+Integer. The torpedo accuracy bonus granted by the equipment. Refer to <code>api_raim</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_evasion===
+Integer. The evasion bonus granted by the equipment. Refer to <code>api_houk</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_los===
+Integer. The LOS bonus granted by the equipment. Refer to <code>api_saku</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_speed===
+Integer. The speed granted by this equipment. Refer to <code>api_soku</code>.
+
+If no speed is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_luck===
+Integer. The luck bonus granted by this equipment. Refer to <code>api_luck</code>.
+
+If no bonus is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_range===
+Integer. The range granted by this equipment. Refer to <code>api_leng</code>.
+
+If no range is granted, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_special===
+String. The special effect granted by this equipment.
+
+If no effect, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_scrap_fuel===
+Integer. The amount of fuel returned when this equipment is scrapped. Refer to <code>api_broken[0]</code>.
+
+If no fuel is returned, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_scrap_ammo===
+Integer. The amount of ammo returned when this equipment is scrapped. Refer to <code>api_broken[1]</code>.
+
+If no ammo is returned, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_scrap_steel===
+Integer. The amount of steel returned when this equipment is scrapped. Refer to <code>api_broken[2]</code>.
+
+If no steel is returned, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_scrap_bauxite===
+Integer. The amount of bauxite returned when this equipment is scrapped. Refer to <code>api_broken[3]</code>.
+
+If no bauxite is returned, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+===_buildable===
+Boolean. Whether the equipment is buildable through [[Development]].
+
+If unknown, omit or set to <code>nil</code>.
+
+===_upgradable===
+Table. A table containing information on the equipment's upgradability in [[Akashi's Improvement Arsenal]].
+
+If the equipment is not upgradable, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.
+
+====_fuel====
+Integer. The amount of fuel it takes to upgrade this equipment.
+
+If unknown, omit or set to <code>nil</code>.
+
+====_ammo====
+Integer. The amount of ammo it takes to upgrade this equipment.
+
+If unknown, omit or set to <code>nil</code>.
+
+====_steel====
+Integer. The amount of steel it takes to upgrade this equipment.
+
+If unknown, omit or set to <code>nil</code>.
+
+====_bauxite====
+Integer. The amount of bauxite it takes to upgrade this equipment.
+
+If unknown, omit or set to <code>nil</code>.
+
+====_ship====
+Table. A table containing key-value pairs of the ships that can help in upgrading the equipment, and a table describing the days they can help in upgrading.
+
+=====<code>ship_name</code> or <code>ship_name</code>/<code>suffix</code> or <code>false</code>=====
+
+String: Table. As explained above. 
+
+Use <code>false</code> in lieu of a ship name if no helper ship is required. 
+
+Use just the <code>ship_name</code> if all forms of the ship apply. 
+
+Use a blank suffix to refer to the base form of a ship. Use two different <code>ship_name</code>/<code>suffix</code> keys if more than one, but not all forms of a ship apply.
+
+======Monday======
+Boolean. Whether the equipment is upgradable on Monday.
+
+If unknown, omit or set to <code>nil</code>.
+
+======Tuesday======
+Boolean. Whether the equipment is upgradable on Tuesday.
+
+If unknown, omit or set to <code>nil</code>.
+
+======Wednesday======
+Boolean. Whether the equipment is upgradable on Wednesday.
+
+If unknown, omit or set to <code>nil</code>.
+
+======Thursday======
+Boolean. Whether the equipment is upgradable on Thursday.
+
+If unknown, omit or set to <code>nil</code>.
+
+======Friday======
+Boolean. Whether the equipment is upgradable on Friday.
+
+If unknown, omit or set to <code>nil</code>.
+
+======Saturday======
+Boolean. Whether the equipment is upgradable on Saturday.
+
+If unknown, omit or set to <code>nil</code>.
+
+======Sunday======
+Boolean. Whether the equipment is upgradable on Sunday.
+
+If unknown, omit or set to <code>nil</code>.
+
+====<code>tier</code>====
+Integer: Table. A table describing the requirements to upgrade at this tier.
+
+The <code>_fuel</code>, <code>_ammo</code>, <code>_steel</code>, <code>_bauxite</code>, and <code>_ship</code> properties may be specified here as well if the tier has special requirements for upgrading.
+
+=====_development_material=====
+Integer. The amount of development materials it takes to upgrade at this tier.
+
+If unknown, omit or set to <code>nil</code>.
+
+=====_development_material_x=====
+Integer. The amount of development materials it takes to upgrade at this tier with guaranteed success.
+
+If unknown, omit or set to <code>nil</code>.
+
+=====_improvement_material=====
+Integer. The amount of improvement materials it takes to upgrade at this tier.
+
+If unknown, omit or set to <code>nil</code>.
+
+=====_improvement_material_x=====
+Integer. The amount of improvement materials it takes to upgrade at this tier with guaranteed success.
+
+If unknown, omit or set to <code>nil</code>.
+
+=====_equipment=====
+Table. A table containing the equipment consumed at this tier when upgrading.
+
+Use <code>"self"</code> to refer to the current equipment. Use the name of the equipment otherwise.
+
+If no equipment is consumed at this tier when upgrading, set to <code>false</code>.
+
+=====_to=====
+String. The equipment that results from an upgrade at this tier.
+
+If the equipment does not upgrade to another at this tier, set to <code>false</code>.
+
+If unknown, omit or set to <code>nil</code>.

@@ -1,0 +1,461 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Mortal Combat at Ironbottom Sound
+|jp = 鉄底海峡の死闘
+|tag = E6 <!--
+|transport = true
+-->
+|romaji = Tettē-kaikyō no Shitō
+|hp_easy = ?
+|hp_medium = ?
+|hp_hard = 4080 HP + 6650
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|South Dakota}}
+|reward_casual_1 = {{ItemStack|item = [[File:Catbomb.png{{!}}50px{{!}}link=]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Type 2 Large Flying Boat|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Type 97 Torpedo Bomber (Murata Squadron)|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai/Stars|Type 2 Large Flying Boat|size=50px|2}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|16inch Triple Gun Mount Mk.6 mod.2|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai/Stars|Type 97 Torpedo Bomber (Murata Squadron)|size=50px|2}}
+|reward_medium_4_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai/Stars|Type 2 Large Flying Boat|size=50px|4}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai/Stars|16inch Triple Gun Mount Mk.6 mod.2|size=50px|2}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai/Stars|6inch Triple Rapid Fire Gun Mount Mk.16 mod.2|size=50px|2}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai/Stars|Tenzan Model 12 (Murata Squadron)|size=50px|2}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-6 Branching Rules
+|expand = true
+|id = 48-6
+|order = A,B,C,E,H,M,N,R,S
+
+|A/empty -> B, C = * Active branching
+
+|B -> D = * Do not meet the requirements to go to H.
+|B -> H/empty = 
+* Meet '''ANY''' of the following requirements:
+** Carrier Task Force
+** Fast Surface Task Force
+
+|C -> E = * Do not meet the requirements to go to either G or K.
+|C -> G = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to K.
+** Amount of DD ≥ 4
+** No CV(L/B)
+** Amount of (F)BB(V) ≤ 2
+* Alternatively, use a Transport Combined Fleet.
+|C -> K/empty = 
+* Meet '''ALL''' of the following requirements:
+** Route to node K is unlocked.
+** Fast Fleet
+** Amount of DD ≥ 4
+** Amount of CV(L/B) ≤ 1
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+* Alternatively, use a Transport Combined Fleet if node K is unlocked.
+
+|E -> G = * Amount of CV(L/B) ≤ 1
+|E -> I = * Do not meet the requirements to go to G.
+
+|H/empty -> J, M = * Active branching
+
+|M -> L = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to either Q or R.
+** Pass the LoS check.
+** Amount of CL+DD ≥ 4 (5 on Hard)
+** Amount of CL+DD ≥ 5 (6 on Medium+) '''OR''' Fast Fleet
+** If Surface Task Force, amount of (F)BB(V) ≤ 2
+** Amount of CV(B) ≤ 2
+** Amount of CV(L/B) ≤ 3
+** Amount of (F)BB(V)+CV(L/B)+CA(V)+CLT ≤ 7 (6 on Hard) '''OR''' Surface Task Force
+|M -> P = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to L or Q.
+** Carrier Task Force
+** Pass the LoS check.
+|M -> Q = 
+* Meet '''ALL''' of the following requirements:
+** Transport Combined Fleet
+** No (F)BB(V) or CV(L/B)
+|M -> R = 
+* Do not meet the requirements to go to either L, P or Q.
+
+|N -> O = * Do not meet the requirements to go to either Q or S.
+|N -> Q = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to S.
+** No CV(L/B)
+** Amount of (F)BB(V) ≤ 3
+* Alternatively, use a Transport Combined Fleet that failed to go to S.
+|N -> S/night = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of DD ≥ 4
+** Amount of CA(V) ≤ 4
+** No CV(L/B)
+** Amount of FBB ≤ 2
+** Amount of (F)BB(V) ≤ 3
+* Alternatively, meet '''ALL''' of the following requirements:
+** Transport Combined Fleet
+** No BBV/CVL '''OR''' Fast Fleet
+
+|R -> T = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Fleet came from node P.
+|R -> W/empty = * Do not meet the requirements to go to T.
+
+|S/night -> U/empty = * Do not meet the requirements to go to either X, Y or Z.
+|S/night -> X = 
+* If Phase 1, pass the LoS check.
+* If Phase 2, pass the LoS check '''AND''' meet '''ANY''' of the following requirements:
+** Transport Escort Fleet
+** Surface Task Force '''AND''' fleet contains either SS(V) or {{ShipLink|Shinshuu Maru}}
+|S/night -> Y/empty = * Pass the LoS check '''AND''' fleet contains {{ShipLink|Akitsushima Kai}} or {{ShipLink|Akashi Kai}}
+|S/night -> Z = 
+* Meet '''ALL''' of the following requirements:
+** Route to node Z is unlocked.
+** Pass the LoS check.
+** Do not meet the requirements to go to either X or Y.
+}}
+
+==Map Guide==
+===Map Progression===
+{{#tag:gallery|
+Rainy2020E6HP1.png{{!}}Map during 1st HP phase at node X
+Rainy2020E6HP2.png{{!}}Map during 2nd HP phase without the route to node Z unlocked
+Rainy2020E6HP3.png{{!}}Map after unlocking the route to node Z but shortcut C>K not unlocked
+Rainy-Summer_2020_Event_E-6_Map.png{{!}}Full map after unlocking the shortcut C>K
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=220}}
+{{clear}}
+===Map Bonuses===
+<font color="red">'''DISCLAIMER:''' ''This information is based on user submitted data and is subject to revisions as more data is gathered. Any version of the ship receives the bonus regardless of remodel.''</font>
+{|class="wikitable" style="text-align: center; vertical-align: middle; width:660px"
+|-
+!colspan="3" rowspan="2"|Ship
+!colspan="5"|Damage Bonus
+|-
+! Mapwide
+! {{Event/Route|Q|Red|S|Red|X|Red}}
+! {{Event/Route|Z|Red}}
+! {{Event/Route|T|Red|V|Red|P|Red}}
+|-
+!{{ShipBattleCard|Atago/Kai}}
+!{{ShipBattleCard|Takao/Kai}}
+!{{ShipBattleCard|Sendai/Kai Ni}}
+| rowspan="2"|1.15x
+| rowspan="2"|1.265x
+| rowspan="2"|1.38x
+| rowspan="2"|1.15x
+|-
+!{{ShipBattleCard|Atlanta/Kai}}
+!{{ShipBattleCard|Fletcher/Mk.II}}
+!
+|-
+! colspan="7"|
+|-
+!{{ShipBattleCard|Hiei/Kai Ni C}}
+!{{ShipBattleCard|Kirishima/Kai Ni}}
+!{{ShipBattleCard|South Dakota/Kai}}
+| rowspan="6"|1.25x
+| colspan="2" rowspan="6"|1.5x
+| rowspan="6"|1.25x
+|-
+!{{ShipBattleCard|Nagara/Kai}}
+!{{ShipBattleCard|Shigure/Kai Ni}}
+!{{ShipBattleCard|Yuudachi/Kai Ni}}
+|-
+!{{ShipBattleCard|Shiratsuyu/Kai Ni}}
+!{{ShipBattleCard|Murasame/Kai Ni}}
+!{{ShipBattleCard|Ayanami/Kai Ni}}
+|-
+!{{ShipBattleCard|Shikinami/Kai Ni}}
+!{{ShipBattleCard|Akatsuki/Kai Ni}}
+!{{ShipBattleCard|Inazuma/Kai}}
+|-
+!{{ShipBattleCard|Harusame/Kai}}
+!{{ShipBattleCard|Teruzuki/Kai}}
+!{{ShipBattleCard|Amatsukaze/Kai}}
+|-
+!{{ShipBattleCard|Yukikaze/Kai}}
+!{{ShipBattleCard|Samidare/Kai}}
+!
+|-
+! colspan="7"|
+|-
+!{{ShipBattleCard|Kongou/Kai Ni C}}
+!{{ShipBattleCard|Haruna/Kai Ni}}
+!
+| 1.15x
+| 1.38x
+| 1.15x
+| 1.38x
+|-
+! colspan="7"|
+|-
+!{{ShipBattleCard|Junyou/Kai Ni}}
+!{{ShipBattleCard|Maya/Kai Ni}}
+!{{ShipBattleCard|Choukai/Kai Ni}}
+| colspan="3" rowspan="5"|1.15x
+| rowspan="5"|1.38x
+|-
+!{{ShipBattleCard|Suzuya/Kai Ni}}
+!{{ShipBattleCard|Kumano/Kai Ni}}
+!{{ShipBattleCard|Tone/Kai Ni}}
+|-
+!{{ShipBattleCard|Chikuma/Kai Ni}}
+!{{ShipBattleCard|Kinugasa/Kai Ni}}
+!{{ShipBattleCard|Tenryuu/Kai Ni}}
+|-
+!{{ShipBattleCard|Asashio/Kai Ni}}
+!{{ShipBattleCard|Michishio/Kai Ni}}
+!{{ShipBattleCard|Kazagumo/Kai Ni}}
+|-
+!{{ShipBattleCard|Yuugumo/Kai Ni}}
+!
+!
+|-
+! colspan="8"| Debuff Modifier (Multiplicative with above)
+|-
+! colspan="3"| Against New Southern Battleship Princess ONLY
+| colspan="5"| 1.1x
+|}
+
+Additionally, the following equipment has additional multiplicative bonuses in specific nodes.
+
+{|class="wikitable" style="text-align: center; vertical-align: middle; width:660px"
+|-
+! Equipment Bonuses
+! {{Event/Route|S|Red}}
+! {{Event/Route|X|Red}}
+! {{Event/Route|Z|Red}}
+|-
+! {{GreenAmmo}} {{EquipmentLink|Type 3 Shell|Type 3 Shell Kai|text=Type 3 Shells}}
+| 1.12x
+| 1.25x
+| 1.15x
+|-
+! {{RedAmmo}} {{EquipmentLink|Type 91 Armor Piercing Shell|Type 1 Armor Piercing Shell|Type 1 Armor Piercing Shell Kai|text=AP Shells}}
+| 1.12x
+| 1.1x
+| 1.25x
+|}
+
+===Phase 1: Defeating Lycoris Princess===
+This part is very straightforward. You just need to defeat the boss at node {{Event/Route|X|Red}} with a Surface Taskforce.<br />
+
+
+'''Route:''' {{Event/Route|A|Blue|C|Red|G|Red|K|Blue|N|Red|S|Purple|X|Red}}<br />
+'''Fleet:''' 2FBB 3CA(V) 1CL + 1CL 1CA 4DD or 2FBB 3CA(V) 1AV + 1CL 1CA 4DD
+*Fleet must be fast
+*Slow fleets will go through one extra fight at node Q
+*Lycoris Princess is an Installation type enemy. Anti-Installation equipment is required to kill her.
+*An AACI is recommended for the route and Anti-PT Imp setup for the 2 Imps accompanying the Princess.
+
+===Phase 2: Unlocking the 2nd Boss Node===
+Do the following to unlock the 2nd boss node
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|V|Red}}
+! {{Event/Route|O|Red}}
+! LB Defense
+|-
+! Hard
+| S x2
+| AS
+| AS x2
+|-
+! Medium
+| A x2
+| AS
+| AS
+|-
+! Easy
+| S
+| -
+| AS
+|-
+! Casual
+| -
+| -
+| -
+|}
+
+'''Route:''' {{Event/Route|A|Blue|B|Red|H|Blue|M|Red|P|Red|R|Red|T|Red|V|Red}}
+
+*Ex. Slow CTF: 2FBB 2CV CA(V) 1CL + 2CA 1CL 3DD
+
+*Ex. Slow CTF: FBB 2CV 2CA(V) 1AV + FBB 1CA 1CL 3DD
+
+*Ex. Slow CTF: 2FBB 2CV 2CVL + 1CL 3DD 0-2CA 0-2 CLT
+*Must be a''' slow fleet '''or compass will offroute to Node L
+*Node M has a New Submarine Princess which you will have to pass on the way to V
+**1 base of Toukais to M helps pass rate, and/or heavy OASW in 2nd fleet
+*Node V contains a Abyssal combined fleet with Ne-class Kai Summer mode in every difficulty except for Casual
+**Bringing one TCI for a finisher is an option, although historical DA is very powerful as well
+'''Route:''' {{Event/Route|A|Blue|B|Red|H|Blue|M|Red|L|Red|O|Red}}<br />
+'''Fleet:''' CTF with 2FBB 2CV 1CA(V) 1CL + 1CA 1CL 4DD or STF with 2FBB 3CA(V) 1AV + 1CA 1CL 4DD
+*{{Event/Route|B|Red}}, {{Event/Route|L|Red}} and {{Event/Route|O|Red}} are Air Defense nodes. Bringing at least one strong AACI is recommended.
+
+'''Phase 2.5:''' Optional unlocking of the Shortcut {{Event/Route|C|Red}} -> {{Event/Route|K|Red}}<br />
+Use the same fleets as above and in Phase 1 to reach the different nodes required.
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|C|Red}}
+! {{Event/Route|V|Red}}
+! {{Event/Route|G|Red}}
+! {{Event/Route|O|Red}}
+! LB Defense
+|-
+! Hard
+| S
+| S
+| AS
+| AS
+| AS x2
+|-
+! Medium
+! -
+| S
+| AS
+| AS
+| AS x2
+|-
+! Easy
+! -
+| S
+| AS
+! -
+| AS x1
+|-
+! Casual
+! -
+| S
+| AS
+! -
+| AS x1
+|}
+'''C, G & O'''
+
+Slow CTF: 2(F)BB 2CV 2CVL + 1CL 3DD 0-2CA 0-2CLT
+<br>
+Route: {{Event/Route|A|Blue|C|Red|E|Red|I|Red|G|Red|K|Blue|N|Red|O|Red}}
+*C and E are sub nodes
+*I, G and O are air raid nodes
+*About 550 air power needed on Hard
+
+===Phase 3: Bringing the 2nd Boss to Last Dance===
+Again a very straightforward mission. Hit the boss until you get her to Last Dance.<br />
+'''Route:''' {{Event/Route|A|Blue|C|Red|K|Blue|N|Red|S|Purple|Z|Red}} with shortcut or {{Event/Route|A|Blue|C|Red|G|Red|K|Blue|N|Red|S|Purple|Z|Red}} without shortcut.<br />
+*'''Fleet Option 1'''
+**[[Nelson]], 2FBB 3CA(V) 1CL + 1CA 1CL 4DD (Use Touch Attack at boss node)
+*'''Fleet Option 2'''
+**3(F)BB 3CA(V) + 1CA 1CL 4DD (If you cannot use Touch Attack at boss node)
+*Fleet must be Fast. If you bring the touch attack make sure to equip turbine + boiler for fast speed.
+*Unlocking the shortcut will avoid the Air Defense node {{Event/Route|G|Red}}, the only node with enemy air power on the route. Thus you are able to obtain AS+ with a single Seaplane Fighter. Without the shortcut try to get at least AP on the Air Defense node.
+*Hiei & Kirishima recieve large bonuses on this map and can be considered as BBs for it. However, keep in mind that they also have bonuses on E-7 and you might rather use them for one of the 3 shiplocking tags there.
+*The 2nd boss is an Abyssal FBB. You can use regular equipment setups against her.
+
+===Phase 4: Debuff the 2nd Boss===
+Only do the following requirements when the Boss is in Last Dance:
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|M|Red|V|Red}}
+! {{Event/Route|X|Red}}
+! {{Event/Route|B|Red|F|Red}}
+! {{Event/Route|L|Red|O|Red}}
+! {{Event/Route|J|Red|Q|Red}}
+! LB Defense
+|-
+! Hard
+| S
+| A+
+| AS
+| AS
+| S
+| AS x2
+|-
+! Medium
+| S
+| A+
+| AS
+! -
+! -
+| AS
+|-
+! Easy
+| S
+| A+
+| AS
+! -
+! -
+| AS
+|-
+! Casual
+| S
+| A+
+| AS
+! -
+! -
+| AS
+|}
+
+===Phase 5: Finish the 2nd Boss and clear the map===
+'''Route:''' {{Event/Route|A|Blue|C|Red|K|Blue|N|Red|S|Purple|Z|Red}}<br />
+*'''Fleet Option 1'''
+**[[Nelson]], 2FBB 3CA(V) 1CL + 1CA 1CL 4DD (Use Touch Attack at boss node)
+*'''Fleet Option 2'''
+**3(F)BB 3CA(V) + 1CA 1CL 4DD (If you cannot use Touch Attack at boss node)
+*Fleet must be Fast. If you bring the touch attack make sure to equip turbine + boiler for fast speed.
+
+For last dance, Four [[Destroyer Na-Class Late Model II Elite]] appear and fire four opening torpedo attacks.
+Four enemies that can be called Hime ( Battleship Princess and CA Ne-class Kai) attend as a main part of enemy combined fleet, and even if you use Nelson Touch attack, it's not easy to reduce the number of them.
+It is highly recommended to use boss support shelling and add double chevron to your LB Attackers. Before opening torpedo phase, if you couldn't exterminate Na Class DDs, you have a slim chance to beat the boss, [[New Southern Battleship Princess]].
+
+Fleet composition and LBAS conposition are same as in Pre-Final state. In your combined fleet escort part, you should put 4 to 5 Historcal-ships that can use the Torpedo Cut-in Attack. If you want to use ships with low luck status, consider using [[Reinforcement Expansion]] and [[Skilled Lookouts]]. Give finish blows to the boss in night battle phase.
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+{{Fleets|friend=Rainy-Summer 2020 Event|node=E-6 Z}}
+
+===LBAS Flight Range===
+[[File:Rainy2020E6LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

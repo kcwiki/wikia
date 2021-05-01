@@ -1,0 +1,19 @@
+<includeonly><div style="width:{{{width|90%}}}; border:2px solid #faa; background:#fcc; margin:10px auto 10px; padding: 10px;"><div style="height:30px; line-height:30px; font-weight:bold; text-align:center; color:#c55; font-size:16px;">{{{title|Notice}}}</div><div style="text-align:{{{text_align|center}}};">{{{message|{{{1|}}}}}}</div></div></includeonly><noinclude>
+==Usage==
+<pre>
+{{Warning
+|title = Title here
+|message = Message here
+}}
+</pre>
+Result:
+{{Warning
+|title = Title here
+|message = Message here
+}}
+<pre>
+{{Warning|Message here}}
+</pre>
+Result:
+{{Warning|Message here}}
+</noinclude>

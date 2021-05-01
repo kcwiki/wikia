@@ -1,0 +1,17 @@
+{{#vardefine:background|{{#switch:{{{variant|}}}|elite=FF0000|flagship=FCC800|lm=87CEEB|lme=FF0000|lmf=FCC800|}}}}
+| style="background-color:#{{#var:background}}; text-align: center;" | {{ShipBattleCardKai|{{{Name}}}}}
+| style="text-align: center; " | {{{Lv|}}}
+! style="background-color: Pink; color: #000; text-align:center;" |{{{HP|}}}
+! style="background-color: LightCoral; color: #000; text-align:center;" | {{{FP|}}}
+! style="background-color: LightSkyBlue; color: #000; text-align:center;" | {{{Torp|}}}
+! style="background-color: SandyBrown; color: #000; text-align:center;" | {{{AA|}}}
+! style="background-color: Yellow; color: #000; text-align:center;" | {{{Armor|}}}
+| style="text-align: center;" |
+*[[{{{Equip1|}}}]]
+{{#if:{{{Equip2|}}}|*[[{{{Equip2|}}}]]|}}
+{{#if:{{{Equip3|}}}|*[[{{{Equip3|}}}]]|}}
+{{#if:{{{Equip4|}}}|*[[{{{Equip4|}}}]]|}}
+| style="text-align: center;" |{{{Combo|}}}
+| style="text-align: center;" |{{{AP|}}}
+| style="text-align: center;" |{{{Notes|}}}
+|-

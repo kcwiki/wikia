@@ -1,0 +1,782 @@
+This page include players report on devices that can run the kancolle Android client.
+==Interrim Summary==
+According to reports contributed by users below and on other sites, it appears that
+* The game can run on almost any device with Android 4.0 or above
+* Device with higher resolution, for instance, 2K screen, can lead to laggy expericence. It can be countered by using apps like [https://play.google.com/store/apps/details?id=com.samsung.android.gametuner.thin&hl=en Game Tuner] to reduce the rendering resolution for the app.
+* No clear sign in which company's cpu/gpu being superior to others'.
+* Enable the "Force GPU Rendering" option in your device's setting menu → developer setting appears to help increase the performance in most of the cases. "Force 4x MSAA" and "Disable HW overlays" also seems help.
+* According to a few reports from those who tested multiple smartphones, it have been reported that experience on Samsung phones, even S7 Edge, are not as smooth compare to phones from other brands.
+* Although it can run on device with down to 512MB RAM, but having at least 2GB RAM seems to help.
+__TOC__
+
+==Smartphone==
+
+=== Alcatel ===
+{| class="article-table"
+!Name
+!Model
+!Android Version
+!CPU
+!GPU
+!Resolution
+!Client Version
+!Status
+!Note
+|-
+|One Touch Soleil
+|5021E
+|4.2.2
+|Mediatek MT6577 1.0Ghz Dual Core
+|PowerVR SGX531
+|800x480
+|1.0.8
+|Runs fine, with some FPS issues.
+|Rooted
+|}
+
+===ASUS===
+{|class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Zenfone 2||ZE551ML||5.0||Atom Z3580||PowerVR G6430||1920×1080||1.0.0||Working rather smoothly.||
+|-
+|Zenfone C
+|ZC451CG
+|4.4.2
+|Intel Atom Z2520 Dual Core 1.2 Ghz
+|PowerVR SGX544MP2
+|480 x 854
+|1.0.0
+|Works fine, but have connection issues
+|
+|-
+|Zenfone 2 Laser
+|ZE500KG
+|5.0.2
+|Quad-core 1.2 GHz Cortex-A53
+|Adreno 306
+|720 x 1280
+|1.0.0
+|Works fine but some fps issue during battle with sound.
+|
+|-
+|Zenfone 2 Laser
+|ZE601KL
+|6.0.1
+|Qualcomm MSM8939v2 Snapdragon 616 Octa-core (4x1.7 GHz Cortex-A53 & 4x1.2 GHz Cortex-A53)
+|Adreno 405
+|1080 x 1920
+|1.0.9
+|Playable, but expect some dropped framerate.
+|Upgraded android from 5.0.2 to 6.0.1
+|-
+|Zenfone Go
+|X014D
+|5.1.1
+|Quad-core 1.2 GHz Cortex-A7
+|Adreno 302
+|480 x 854
+|1.0.0
+(Phase 3)
+|A few frame lags but works fine.
+|
+|-
+|Zenfone 5
+|A501CG
+|4.4.2
+|Intel Atom Z2520
+Dual-core 1.2 GHz
+|PowerVR SGX544MP2
+|720 x 1280
+|1.0.0
+|slight lag but otherwise, playable
+|
+|-
+|Zenfone 4 Max
+|ZC520KL
+|7.1.1
+|Quad-core 1.4 GHz Cortex-A53
+|Adreno 308
+|720 x 1280
+|1.0.13
+|Run smoothly
+|
+|}
+
+=== HTC ===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Evo 3D||N/A ||4.0.3||Dual-core 1.2 GHz Scorpion||Adreno 220||960×540||1.0.0||Working. (Some fps issues.)||
+|-
+|One A9
+|
+|6.0.1
+|Qualcomm Snapdragon™ 617 Octa-core
+(4x1.5 GHz Cortex-A53 & 4x1.2 GHz Cortex-A53)
+|Adreno 405
+|1920x1080
+|1.0.0
+|Works fine overall
+|
+|-
+|M9+
+|OPK7110
+|5.0.2
+|Mediatek MT6795T Helio X10
+|PowerVR G6200
+|1440 x 2560
+|1.0.0
+|Works fine, but suffered alot of fps drops during attack animations and sound issues during battle sequences.
+|
+|-
+|Pixel 2
+|N/A
+|8.1.0
+|
+Qualcomm Snapdragon™ 835 Octa-core (4 × 2.35 GHz, 4 × 1.9 GHz) Kryo
+|Adreno 540
+|1920 × 1080
+|1.0.13
+|Works great, have yet to encounter an issue.
+|
+|}
+
+===Huawei===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Stream S||302HW ||4.4.2||Kirin 910||Mali 450||1280×720||1.0.0||Working smoothly, no any problems yet.||
+|-
+|P8 Lite||ALE-L||5.0.1||Snapdragon 615||Mali 450||1280x720||1.0.0||Running smoothly.||
+|-
+|P10 Lite||WAS-LX1A||7.0||Kirin 658||Mali-T830 MP2||1920x1080||1.0.11||Running smoothly.||
+|-
+|Nova 2i||RNE-L22||8.0.0||Kirin 659||Mali-T830 MP2||1080x2160||1.0.13||Runs smoothly.||Does not fully fit in screen due to 18:9 ratio.
+|}
+
+===LG===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Nexus 4||E960 ||6.0.1||4x Qualcomm Krait @ 1512 MHz||Adreno(TM) 320||768×1280||1.0.0||Lags when scrolling through 230+ Kanmusus||Not Working after upgrading to Android 7.1
+|-
+|G5
+|H860N
+|6.0.1
+|Qualcomm Snapdragon 820 Kryo
+
+Dual core @ 2.15 Ghz & Dual core @ 1.2 Ghz
+|Adreno™ 530
+|1440 x 2560
+|1.0.0
+|Lags, especially on Compass screen and while scrolling through ship list.
+|
+|}
+
+===Motorola===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Moto X (1st Gen.)
+|XT1058
+|5.1
+|Snapdragon S4 Pro 1.7 GHz Dual Core
+|Adreno 320
+|720 x 1280
+|1.0.8
+|Working. FPS drop at the battle report screen.
+|
+|-
+|Moto X Play Dual SIM||XT1562||6.0.1||Snapdragon 615 MSM8939||Adreno 405||1920×1200||1.0.0||Working rather smoothly, occasionally slowing down when in the battle.||
+|-
+|Moto X Pure
+|XT1575
+|6.0
+|Snapdragon 808 MSM8992
+|Adreno 418
+|1440x2560
+|1.0.8
+|Working.
+|
+|-
+|Moto G (2nd Gen.)
+|XT1068
+|6.0
+|Snapdragon™ 400 quad-core 1.2 GHz
+|Adreno 305
+|720×1280
+|1.0.9
+|Operational
+|
+|-
+|Moto G (3rd Gen.)
+|XT1540
+|6.0
+|Snapdragon 410
+MSM8916
+|Adreno 306
+|720×1280
+|1.0.0
+|Working. (FPS drop when smoke animation is present)
+|
+|-
+|Moto E (2nd Gen.)
+|XT1526
+|5.1
+|Snapdragon 410
+|Adreno 306
+|540x960
+|
+|Working, no major drops in FPS noticed.
+|
+|}
+
+===Nokia===
+{| class="article-table"
+!Name
+!Model
+!Android Version
+!CPU
+!GPU
+!Resolution
+!Client Version
+!Status
+!Note
+|-
+|Nokia 6
+|TA-1021
+|8.1
+|Octa-core 1.4 GHz Cortex-A53
+|Adreno 505
+|1920x1080
+|1.0.13
+|Some FPS issues, especially during battle, but otherwise working. There is a slight heat during playing sessions.
+|Didn't test Nokia 6.1 yet.
+|}
+
+===Nvidia===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Shield K1||940-81761-2500-500||6.0.1||Quad-core 2.2 GHz Cortex-A15||GK20A (Kepler)||1920×1200||1.0.0||Working, maybe have a stuttering.||
+|}
+
+===OnePlus===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|OnePlus One||A0001||6.0.1||Snapdragon 801 4x Krait@2.5GHz||Adreno 330||1080x1920||1.0.6||Working||Minor FPS lag
+|-
+|OnePlus 2||A2005||6.0.1||Snapdragon 810 4x Cortex-A53@1.56GHz & 4x Cortex-A57@1.82GHz||Adreno 430||1080x1920||1.0.6||Working||
+|-
+|OnePlus
+3
+|A3003
+|6.0.1
+|Qualcomm Snapdragon 820<br />
+Quad Core, Kryo: 2x 2.2 GHz, 2x 1.6 GHz
+|Adreno 530
+|1080x1920
+|1.0.8
+|Working
+|Minor
+FPS
+
+Lag
+|-
+|OnePlus X
+|E1005
+|5.1.1
+|Snapdragon 801 4x Krait@2.3Ghz
+|Adreno 330
+|1080x1920
+|
+|Working
+|
+|}
+
+===OPPO===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|OPPO Mirror 3
+|3006
+|4.4.4
+|Qualcomm MSM8916 Snapdragon 410 Quad-core 1.2 GHz 64-bit
+|Adreno 306
+|1280 x 720
+|1.0.8
+|Working.
+|
+|-
+|OPPO Neo 7
+|A33w
+|5.1
+|Mediatek MT6582 Quad-core 1.3 GHz Cortex-A7
+|Mali-400MP2
+|540 x 960
+|
+|Doing terribly well beyond my expectation.
+|Just test it twice cause some internet problem (yeah, I`m Indonesian)
+|-
+|OPPO R815 Find Clover
+|
+|4.2.1
+|Mediatek MT6589 Quad-core 1.2 GHz Cortex-A7
+|PowerVR SGX544
+|480 x 800 pixels (~217 ppi pixel density)
+|1.0.9
+|Smooth Gameplay, Just a little bit of stutter during Battle.
+Stucked with 3G connection.
+|
+|-
+|OPPO F3
+|
+|6.0
+|Mediatek MT6750T
+
+Octa-core 1.5 GHz Cortex-A53
+|Mali-T860MP2
+|1080x1920
+|1.0.10
+|Working.
+|FPS drops during post-battle confetti and the sparkle animation when acquiring a new ship, but perfectly playable.
+|}
+
+===Samsung===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Galaxy Exhibit
+|SGH-T599N
+|4.1.2
+|Cortex A9
+|Mali-400MP4
+|480 x 800
+|1.0.8
+|Working
+(A bit laggy sometimes but playable)
+|
+|-
+|GalaxyllSM-G900I
+|5.0 (Currently)
+|Quad-core 2.5 GHz Krait 400
+|Adreno 330
+|1080×1920
+|1.0.0
+|Working. (Few fps drops here and there.)4412||Mali 400||1280×720||1.0.0||Working. (Some fps issues from time to time.) ||
+|-
+|
+|-
+|Galaxy S5
+|SM-G900F
+|6.0.1
+|Quad-core 2.5 GHz Krait 400
+|Adreno 330
+|1080×1920
+|1.0.0
+|Working. (Minor fps drop on compass animation)
+|
+|-
+|Galaxy S6
+|SM-G920A
+|6.0.1
+|Exynos 7420
+|Mali T760
+|2560×1440
+|1.0.8
+|Working. Minor slowdowns when loading screens.
+|
+|-
+|Galaxy S6 Edge
+|SM-G925I
+|6.0.1
+|Exynos 7420
+|Mali-T760
+|2560×1440
+|1.0.6
+|Working smoothly but with minor lags here and there.
+|
+|-
+|Galaxy Note 8.0
+|GT-N5110
+|4.4.2
+|Quad-core 1.6 GHz Cortex-A9
+|Mali 400MP4
+|1280×800
+|1.0.0
+|Working rather smoothly but little lag.
+|
+|-
+|Galaxy Xcover 2
+|GT-S7710L
+|4.1.2
+|Dual-core 1.0 GHz Cortex-A9
+|Mali 400MP
+|1280×800
+|1.0.0
+|Working. (Some fps issues her and there.)
+|
+|-
+|Galaxy XCover 3
+|SM-G388F
+|5.1.1
+|Quad-core 1.2 GHz Cortex-A53
+|Vivante GC7000
+|480x800
+|1.0.8
+|Working.
+|
+|-
+|Galaxy Tab 7.7
+|GT-P6800
+|4.1.2
+|Dual-core 1.4 GHz Cortex-A9
+|Mali 400
+|1280×800
+|1.0.0
+|Working.
+|
+|-
+|Galaxy Tab A
+|SM-T550
+|6.0.1
+|Quad-Core 1.2 GHz Cortex-A53
+|Adreno 306
+|1024 x 768
+|1.0.6
+|Working.
+|
+|-
+|Galaxy Note II
+|SGH-I317M
+|4.4.2
+|Quad-core 1.6 GHz Cortex-A9
+|Mali 400MP4
+|1280×720
+|1.0.0
+|Working but little lag.
+|
+|-
+|Galaxy Note III
+|SM-N9005
+|5.1.1
+|Quad-core 2.3 GHz Krait 400
+|Adreno 330
+|1080×1920
+|1.0.0
+|Working fine
+|
+|-
+|[http://www.gsmarena.com/samsung_galaxy_note_edge-6631.php Galaxy Note Edge]
+|SM-N915G
+|5.1.1 (currently)
+|Qualcomm APQ8084 Snapdragon 805 Quad-core 2.7 GHz Krait 450
+|Adreno 420
+|2560x1600
+|1.0.8
+|Working with some lag.
+|Rooted
+|-
+|Galaxy A5
+|SM-A500F
+|5.0.2
+|Quad-Core 1.2GHz Cortex-A53
+|Adreno 306
+|1280x720
+|1.0.0
+|Working with some lag.
+|
+|-
+|Galaxy S4 mini
+|GT-I9190
+|4.4.2 (latest update)
+|Dual-core 1.7 GHz Krait 300
+|Adreno 305
+|540 x 960 pixels
+|1.0.6
+|Working. Minor rps fluctuation during sorties.
+|
+|-
+|Galaxy S4
+|GT-I9500
+|5.0.1
+|Quad-core 1.6 GHz Cortex-A15
+|Adreno 320
+|1080 x 1920 pixels
+|
+|Working. Lags during expedition.
+|
+|-
+|Galaxy J7
+|SM-J700F
+|5.1.1
+|Quad-core 1.4 GHz Cortex-A53
+|Adreno 405
+|1280x720
+|1.0.8
+|Working
+|
+|-
+|Galaxy J7 Prime Dual Sim
+|SM-G610F/DS
+|6.0.1
+|Exynos 7870
+|Mali-T830
+|1080 x 1920
+|1.0.8
+|Working with some lag
+|
+|-
+|Galaxy S8 Exynos
+|SM-G950F
+|7.0
+|Exynos 8895 2.3 GHz
+|Mali-G71 GPU
+|5.8 pouces WQHD+ HDR Super Amoled
+|1.0.11
+|Working. App crashes in "fill screen" mode
+|
+|-
+|Galaxy J2 Prime
+|G532G
+|6.0.1
+|Quad-core 1.4 GHz Cortex-A53
+|Mali-T720MP2
+|540 x 960 pixels
+|1.0.11
+|Working.
+|
+-expect frequent fps drops (it's a low-end phone).
+-the resolution is kinda bad.
+
+[https://twitter.com/kij_92/status/984869950274732032 (source)]
+|}
+
+===Sony===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Xperia Z1 Compact||D5503||5.1.1||Snapdragon 800 MSM8974||Adreno 330||1280×720||1.0.8||Works great.||
+|-
+|Xperia C4 Dual||E5333||5.1||MediaTek MT6752||Mali-T760||1920×1080||1.0.6||FPS drops on results, smokes, texts appearance.||
+|-
+|Xperia SP
+|C5303
+|4.1.2
+|Dual-core 1.7 GHz MSM8960T Snapdragon S4 Pro
+|Adreno 320
+|1280×720
+|1.0.8
+|Working fine since 1.0.0.
+|
+|-
+|Xperia Z5 Compact||E5823||6.0||Snapdragon 810 MSM8994||Adreno 430||1280x720||1.0.0||Works great so far. Shipgirl thumbnails can take a few seconds to load, but doesn't really pose a problem.||
+|-
+|Xperia Z
+|C6603
+|5.1.1
+|Snapdragon S4 Pro
+|Adreno 320
+|1920x1080
+|1.0.0
+|Working fine
+|
+|-
+|Xperia C5 Ultra
+|E5553
+|5.1
+|Cortex-A53 (1.7 GHz octa-core)
+|Mali-T760MP2
+|1920x1080
+|1.0.8
+|Working fine since 1.0.0. Minor slowdowns / FPS drops; sometimes hangs up, requiring killing KCA.
+|Rooted
+|}
+
+===Starmobile===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Up Snap||N/A||4.4.2||Quad-core 1.2 GHz Cortex-A7||VideoCore IV||854×480||1.0.0||Working smoothly with choppy frame rate when overheating.||
+|}
+
+===tp-link===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+| style="text-align:center;"|Neffos X1 Max|| style="text-align:center;"|TP903C|| style="text-align:center;"|7.0||
+<p style="text-align:center;">Helio P10 Octa-core Processor MT6755 4*Cortex-A53 2.0GHz + 4*Cortex-A53 1.2GHz</p>
+| style="text-align:center;"| ARM mali-T860MP2 728MHz
+| style="text-align:center;"|1920×1080
+| style="text-align:center;"|1.0.13
+| style="text-align:center;"|Operational
+| style="text-align:center;"|N/A
+|}
+
+===Xiaomi===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|Mi 5 64GB||N/A||6.0||Snapdragon 820 MSM8996||Adreno 530||1920×1080||1.0.0||Working rather smoothly. (Fps drops while rotating compass and has sparkly animation while opening new ship.)||
+|-
+|Redmi Note 4G||N/A||4.4.4||Snapdragon 400 MSM8928||Adreno 305||1280×720||1.0.0||Working smoothly, but frame rate drops when overheating.||Rooted
+|-
+|Redmi 2
+|N/A
+|4.4.4
+|Qualcomm Snapdragon 410
+|Adreno 306
+|1280 x 720
+|1.0.0
+|fps drop everywhere. rotating compass, modernizating, incoming new equip or ship. but at least better than my PC. So all good
+|
+|-
+|Redmi 1S
+|N/A
+|4.4.4
+|Qualcomm MSM8228 Snapdragon 400
+|Adreno 305
+|1280 x 720
+|1.0.0
+|It's working, with some FPS drop. better than expected.
+|
+|-
+|Redmi 3 Pro
+|N/A
+|5.1.1
+|Qualcomm Snapdragon 616 (MSM8939v2)
+|Adreno 405
+|1280*720
+|1.0.8
+|Working Smoothly as expected.
+no fps drops atm, will test further.
+|Rooted Devices
+|-
+|Mi 4i
+|N/A
+|5.0.2
+|Qualcomm MSM8939 Snapdragon 615
+|Adreno 405
+|1080 x 1920 pixels (~441 ppi pixel density)
+|1.0.8
+|Slight lags when playing on balanced mode especially on compass rotation. Performance mode somewhat eases the lag but expect a few crashes on either mode. Clearing the cache before you play seems to ease the lag as well.
+|
+Factory Settings
+|-
+|
+Redmi Note 3
+
+(3GB RAM/32GB Internal)
+|N/A
+|5.1.1
+|Qualcomm Snapdragon 650
+|Adreno 510
+|1080 x 1920 (~403 ppi
+|1.0.8
+|Work smoothly
+|
+Developer setting :
+
+- Force GPU Rendering
+
+- Force 4x MSAA
+
+- Disable HW Rendering
+|-
+|
+
+Redmi
+
+Note 4
+
+(3GB
+
+RAM/64GB
+
+Internal)
+|Nickel
+|6.0.0
+|MediaTek
+
+Helios x20
+|Adreno
+506
+|1080 x 1920 (~401 ppi pixel density)
+|1.0.10
+|Work with some lag du to network connectivity
+|Rooted Device / ROM MIUI changed for AOSP
+|}
+
+===ZTE===
+{| class="wikitable"
+|-
+!Name!!Model!!Android Version!!CPU!!GPU!!Resolution!!Client Version!!Status!!Note
+|-
+|ZTE Blade V7 Lite||ZTE Blade V0720||6.0||Quad-core 1.0 GHz Cortex-A53||Mali-T720MP2||720 x 1280||1.0.6||Working smoothly with choppy frame rate occasionally when have smoke||
+|}
+
+===Lenovo<nowiki/>===
+{| class="article-table"
+!Name
+!Model
+!Android
+Version
+!CPU
+!GPU
+!Resolution
+!Client
+Version
+!Status
+!Note
+|-
+|Vibe K4 Note
+|N/A
+|5.1.1
+|
+
+Octa-core
+
+1.3 GHz Cortex-A53
+|Mali-T720MP3
+|1080 x 1920
+|1.0.8
+|Start Up OK, Voice Playback OK, appears to work fine in general.
+|Tested on a new phone - will require further testing & verification
+|-
+|Vibe P1m
+|N/A
+|5.1
+|Quad-core 1.0 GHz Cortex-A53
+|Mali-T720MP2
+|720 x 1280
+|1.0.8
+|Working smoothly even with 300MB free memory. frame rate is choppy when have smoke.
+|
+|-
+|A 2010
+|N/A
+|5.1
+|Quad-core 1.0 GHz Cortex-A53
+|Mali-T720MP2
+|480 x 854
+|1,0.8
+|Start up often stuck. but, frame rate normal in battle, on repair dock and consumption, always lags when have smoke.
+|
+|}
+
+  

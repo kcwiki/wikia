@@ -1,0 +1,47 @@
+*Green : Outstanding
+*Yellow : Above average
+==Small Guns==
+{{EquipmentComparisonKai
+|iterator = equipmentByType|type = 1|sort = _icon
+|firepower_outstanding = 3
+|firepower_good = 2
+|aa_outstanding = 9
+|aa_good = 6
+|asw_outstanding = 0
+|armor_outstanding = 0
+|shelling_accuracy_good = 0
+|shelling_accuracy_outstanding = 1
+|evasion_good = 0
+|evasion_outstanding = 1
+}}
+==Medium Guns==
+{{EquipmentComparisonKai
+|iterator = equipmentByType|type = 2
+|firepower_outstanding = 9
+|firepower_good = 8
+|aa_outstanding = 4
+|armor_outstanding = 0
+|aa_good = 3
+|shelling_accuracy_outstanding = 3
+|shelling_accuracy_good = 2
+|shelling_accuracy_bad = -1
+|evasion_outstanding = 0
+}}
+==Large Guns==
+{{EquipmentComparisonKai
+|iterator = equipmentBy|pred = is_large_caliber_main_gun|sort = _type
+|firepower_outstanding = 24
+|firepower_good = 21
+|aa_outstanding = 6
+|aa_good = 4
+|armor_good = 0
+|armor_outstanding = 1
+|shelling_accuracy_outstanding = 6
+|shelling_accuracy_good = 4
+|shelling_accuracy_bad = -1
+|evasion_good = 0
+|evasion_outstanding = 1
+|evasion_bad = -1
+}}
+==See Also==
+{{Equipmentlist}}

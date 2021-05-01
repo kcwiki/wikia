@@ -1,0 +1,1115 @@
+== Understanding The Drop Rates ==
+===Intro===
+Hey Fellow Teitokus, in this topic, I am going to show you what the drop rates of ships mean, in a mathematical way. And I advise you to read this before attempting long farming runs.
+
+You might have wondered "How much is my chance to get Prinz?", then taken a look at the drop rates either from here or another website (such as poi). "Oh, it is 0.3 percent. Okay". Even though you saw how little it is, you started farming anyway. But how many runs will it take? Are your resources going to be able to bear the heavy burden of limitless runs? Here, I'll try to give you an idea about how long it can take for you to drop a kanmusu.
+
+Here, I'll use the formula '''P(A) = 1 - P(A')''', which means "The probability of something happening = 1 - the probability of it not happening". So, if our drop rate is 2%, our chances of dropping it in 10 times is = (1 - 98%^10) which equals to 18%.
+
+However note that you must fullfill the conditions for that particular drop. If a shipgirl only drops with S ranks, getting A rank will not give you any extra chance, obviously. If one shipgirl drops in both S and A ranks, this is how you can calculate the odds:
+
+= 1 - S^(Ts) * A^(Ta). Where;
+
+S : the chance of her not dropping in S rank,
+
+Ts : the number of Trials which ended with an S rank
+
+A: the chance of her not dropping in A rank,
+
+Ta : the number of Trials which ended with an A rank
+
+
+
+I'll give an example from 2016 Winter Event :
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; width: 832pt; text-align: center;" width="1107"|'''E-2 Easy Mode O Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Drop Rate </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Makigumo
+| class="xl66" style="text-align: center;"|4,297%
+| class="xl65" style="text-align: center;"|36%
+| class="xl65" style="text-align: center;"|73%
+| class="xl65" style="text-align: center;"|89%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Harusame
+| class="xl66" style="text-align: center;"|2,550%
+| class="xl65" style="text-align: center;"|23%
+| class="xl65" style="text-align: center;"|54%
+| class="xl65" style="text-align: center;"|73%
+| class="xl65" style="text-align: center;"|92%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Amagi
+| class="xl66" style="text-align: center;"|2,012%
+| class="xl65" style="text-align: center;"|18%
+| class="xl65" style="text-align: center;"|46%
+| class="xl65" style="text-align: center;"|64%
+| class="xl65" style="text-align: center;"|87%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Okinami
+| class="xl66" style="text-align: center;"|0,972%
+| class="xl65" style="text-align: center;"|9%
+| class="xl65" style="text-align: center;"|25%
+| class="xl65" style="text-align: center;"|39%
+| class="xl65" style="text-align: center;"|62%
+| class="xl65" style="text-align: center;"|86%
+| class="xl65" style="text-align: center;"|95%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+|}
+
+
+
+Here you see some of E-2 boss node drops in easy difficulty. Let's assume that you want Amagi.
+
+Your chance of dropping her in 10 runs is 18%. Only lucky admirals will be able to do this.
+
+Your chance of dropping her in 30 runs is almost 1/2.
+
+In 100 runs it is 87%, which is a very good rate. You'll only fail this if you get very unlucky.
+
+In 200 runs, Amagi is almost guaranteed. If you fail this much, you must have been cursed. Go purify yourself or something.
+
+Note that the '''100%''' chances you see are '''INCORRECT'''. Those values are very high such as 99.999%. So <u>there is no such thing as a guaranteed drop</u>, i'm sorry.
+
+
+
+In this situation, I prefer to use ''70-80%'' drop rate which is quite safe to assume in my calculations. So, I should be getting amagi somewhere between ''50-100 runs''. However, this is'' just my opinion'', not a fact. If you think you can risk 100 runs for a 50% drop chance, go for it.
+
+To understand how many trials a percentage requires, check the following examples below. I'll give different examples ranging from 5% to 0.2% chances of drop. Just look at the tables and understand how many runs it might take you to get your desired shipgirl. (More examples are given at different parts of this thread)
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; width: 832pt; text-align: center;" width="1107"|'''E-3 Hard Mode L Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Maruyu
+| class="xl66" style="text-align: center;"|3,142%
+| class="xl65" style="text-align: center;"|27%
+| class="xl65" style="text-align: center;"|62%
+| class="xl65" style="text-align: center;"|80%
+| class="xl65" style="text-align: center;"|96%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Kumano
+| class="xl66" style="text-align: center;"|2,054%
+| class="xl65" style="text-align: center;"|19%
+| class="xl65" style="text-align: center;"|46%
+| class="xl65" style="text-align: center;"|65%
+| class="xl65" style="text-align: center;"|87%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Shoukaku
+| class="xl66" style="text-align: center;"|1,430%
+| class="xl65" style="text-align: center;"|13%
+| class="xl65" style="text-align: center;"|35%
+| class="xl65" style="text-align: center;"|51%
+| class="xl65" style="text-align: center;"|76%
+| class="xl65" style="text-align: center;"|94%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Libeccio
+| class="xl66" style="text-align: center;"|0,865%
+| class="xl65" style="text-align: center;"|8%
+| class="xl65" style="text-align: center;"|23%
+| class="xl65" style="text-align: center;"|35%
+| class="xl65" style="text-align: center;"|58%
+| class="xl65" style="text-align: center;"|82%
+| class="xl65" style="text-align: center;"|93%
+| class="xl65" style="text-align: center;"|97%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|99%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Taigei
+| class="xl66" style="text-align: center;"|0,737%
+| class="xl65" style="text-align: center;"|7%
+| class="xl65" style="text-align: center;"|20%
+| class="xl65" style="text-align: center;"|31%
+| class="xl65" style="text-align: center;"|52%
+| class="xl65" style="text-align: center;"|77%
+| class="xl65" style="text-align: center;"|89%
+| class="xl65" style="text-align: center;"|95%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|99%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Graf
+| class="xl66" style="text-align: center;"|0,666%
+| class="xl65" style="text-align: center;"|6%
+| class="xl65" style="text-align: center;"|18%
+| class="xl65" style="text-align: center;"|28%
+| class="xl65" style="text-align: center;"|49%
+| class="xl65" style="text-align: center;"|74%
+| class="xl65" style="text-align: center;"|87%
+| class="xl65" style="text-align: center;"|93%
+| class="xl65" style="text-align: center;"|96%
+| class="xl65" style="text-align: center;"|98%
+|}
+
+
+===Resource Calculation and Efficiency===
+We don't know how much resource we will spend while farming as we don't know how many runs it will take. But this doesn't change the fact that using the least amount of resources is efficient. Even more so on high number of runs.
+
+As for how we can calculate it, (for exemplory purposes) I'll use ''my assumption of 70-80%'' drop rates to see how many runs it will take me to drop a shipgirl. (Checking the table just above) to get Tanikaze in E-2M M node with an S rank, 50 runs should give me a pretty good chance to drop her. Then what to do is to prepare the <u>cheapest</u> fleet which is able to reach M node and S rank it <u>reliably</u>. Then have a test run and see how much resources it costs (repair costs and buckets are counted). Then multiply that value by your assumption (which was 50 in my case). And there you have it, your "potential resource lose" for farming that shipgirl.
+
+The importance of an efficient fleet will matter considerably, especially if you expect to have a very high number of runs (possibly 100+, but it helps you to save resources even in 10 runs) or if you expect to have very hard battles (in which you have high risk to retreat due to prebosses, compass trolls, random taiha etc.. or a very hard enemy composition which you may not be able to S rank easily). Even if you expect to get drops soon, using a resource efficient fleet is definitely and strongly recommended!
+
+
+
+I want to give an example about this resource difference. I'll show both my and Hayashi H's resource consumption of E-3 Hard clear in Winter 2016 event. (For the HP bar drain + final kill. TP bar is not shown here because i didn't think it would be important)
+
+I used a heavy fleet, 4BB 2CVL (even added Musashi for the final kill) and used both support expeditions in final kill. I had 13 runs for the HP drain and 7 runs for the final kill. And I rushed to complete the map in a day or 2.
+
+Hayashi H used a very resource efficient fleet, he actually used 4 CAs + a Fusou class BB + CV. He had 14 runs for the HP drain and 57 (!) runs for the final kill. And he took things slowly and patiently.
+
+Our escort fleets were almost the same. And none of us have used support expeditions for the HP drain runs. And the resource comparison between us is:
+{| border="0" cellpadding="0" cellspacing="0" width="560"
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="6" height="20" style="height: 15pt; width: 299pt; text-align: center;" width="398"|'''Resources spent on E-3 Hard Clear'''
+| style="width:122pt" width="162"|
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| style="text-align: center;"|<u>Fuel </u>
+| class="xl65" style="text-align: center;"|<u>Ammo</u>
+| class="xl65" style="text-align: center;"|<u>Steel</u>
+| style="text-align: center;"|<u>Bauxite</u>
+| style="text-align: center;"|<u>Bucket</u>
+| style="text-align: center;"|<u>Total number of Runs </u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|dynamitMC
+| style="text-align: center;"|23723
+| style="text-align: center;"|17953
+| style="text-align: center;"|24653
+| style="text-align: center;"|2000
+| style="text-align: center;"|138
+| style="text-align: center;"|13 + 7
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Hayashi H
+| style="text-align: center;"|17749
+| style="text-align: center;"|11904
+| style="text-align: center;"|17559
+| style="text-align: center;"|3322
+| style="text-align: center;"|186
+| style="text-align: center;"|14 + 57
+|}
+You see, I had a total of <u>20 runs</u> when he had <u>71 runs</u> (3.5 times as mine) and yet his resource loss is less then mine by a huge amount.
+
+[After making this comparison, I am ashamed of how wasteful I am >.< ]
+
+Note that an efficienct fleet is not the only thing that determines this. As he didn't rush like me, he had time to regenerate more resources, especially if he was under the soft cap.
+
+
+===Very Rare Drops===
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; width: 832pt; text-align: center;" width="1107"|'''E-3 Hard Mode T Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Kinugasa
+| class="xl66" style="text-align: center;"|5,190%
+| class="xl65" style="text-align: center;"|41%
+| class="xl65" style="text-align: center;"|80%
+| class="xl65" style="text-align: center;"|93%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Mutsu
+| class="xl66" style="text-align: center;"|4,122%
+| class="xl65" style="text-align: center;"|34%
+| class="xl65" style="text-align: center;"|72%
+| class="xl65" style="text-align: center;"|88%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Okinami
+| class="xl66" style="text-align: center;"|3,289%
+| class="xl65" style="text-align: center;"|28%
+| class="xl65" style="text-align: center;"|63%
+| class="xl65" style="text-align: center;"|81%
+| class="xl65" style="text-align: center;"|96%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Akagi
+| class="xl66" style="text-align: center;"|2,184%
+| class="xl65" style="text-align: center;"|20%
+| class="xl65" style="text-align: center;"|48%
+| class="xl65" style="text-align: center;"|67%
+| class="xl65" style="text-align: center;"|89%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Mikuma
+| class="xl66" style="text-align: center;"|2,056%
+| class="xl65" style="text-align: center;"|19%
+| class="xl65" style="text-align: center;"|46%
+| class="xl65" style="text-align: center;"|65%
+| class="xl65" style="text-align: center;"|87%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Hatsukaze
+| class="xl66" style="text-align: center;"|1,773%
+| class="xl65" style="text-align: center;"|16%
+| class="xl65" style="text-align: center;"|42%
+| class="xl65" style="text-align: center;"|59%
+| class="xl65" style="text-align: center;"|83%
+| class="xl65" style="text-align: center;"|97%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Prinz
+| class="xl66" style="text-align: center;"|0,470%
+| class="xl65" style="text-align: center;"|5%
+| class="xl65" style="text-align: center;"|13%
+| class="xl65" style="text-align: center;"|21%
+| class="xl65" style="text-align: center;"|38%
+| class="xl65" style="text-align: center;"|61%
+| class="xl65" style="text-align: center;"|76%
+| class="xl65" style="text-align: center;"|85%
+| class="xl65" style="text-align: center;"|91%
+| class="xl65" style="text-align: center;"|94%
+|}
+
+
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; width: 832pt; text-align: center;" width="1107"|'''E-3 Hard Mode S Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Mutsu
+| class="xl66" style="text-align: center;"|3,966%
+| class="xl65" style="text-align: center;"|33%
+| class="xl65" style="text-align: center;"|70%
+| class="xl65" style="text-align: center;"|87%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Okinami
+| class="xl66" style="text-align: center;"|2,693%
+| class="xl65" style="text-align: center;"|24%
+| class="xl65" style="text-align: center;"|56%
+| class="xl65" style="text-align: center;"|74%
+| class="xl65" style="text-align: center;"|93%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Zuihou
+| class="xl66" style="text-align: center;"|2,055%
+| class="xl65" style="text-align: center;"|19%
+| class="xl65" style="text-align: center;"|46%
+| class="xl65" style="text-align: center;"|65%
+| class="xl65" style="text-align: center;"|87%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Mikuma
+| class="xl66" style="text-align: center;"|2,177%
+| class="xl65" style="text-align: center;"|20%
+| class="xl65" style="text-align: center;"|48%
+| class="xl65" style="text-align: center;"|67%
+| class="xl65" style="text-align: center;"|89%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Maruyu
+| class="xl66" style="text-align: center;"|1,970%
+| class="xl65" style="text-align: center;"|18%
+| class="xl65" style="text-align: center;"|45%
+| class="xl65" style="text-align: center;"|63%
+| class="xl65" style="text-align: center;"|86%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Akitsushima
+| class="xl66" style="text-align: center;"|1,339%
+| class="xl65" style="text-align: center;"|13%
+| class="xl65" style="text-align: center;"|33%
+| class="xl65" style="text-align: center;"|49%
+| class="xl65" style="text-align: center;"|74%
+| class="xl65" style="text-align: center;"|93%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Prinz
+| class="xl66" style="text-align: center;"|0,373%
+| class="xl65" style="text-align: center;"|4%
+| class="xl65" style="text-align: center;"|11%
+| class="xl65" style="text-align: center;"|17%
+| class="xl65" style="text-align: center;"|31%
+| class="xl65" style="text-align: center;"|53%
+| class="xl65" style="text-align: center;"|67%
+| class="xl65" style="text-align: center;"|78%
+| class="xl65" style="text-align: center;"|85%
+| class="xl65" style="text-align: center;"|89%
+|}
+
+
+Lets compare these drop rates for very rare drops. For instance, for Prinz. Her drop rate is insanely low, meaning that you must be insane for farming her with that drop rate. But let's say that you are farming for her anyway. We see that her drop rate is higher on T node, but that's the final boss node. No one is crazy enough to farm her there, especially in Hard mode, forget that. But you might go for S node in which it is fairly easy to get S ranks. But even in 100 tries, your chance of getting her will be only 31%. Getting her in 200 tries will be like flipping a coin. I pray for sanity for those who are farming Prinz in Hard mode.
+
+But for some reason, drop rate of Prinz seems to be much higher in lower difficulties (which we didn't think it would be). That's probably because she is a conditional drop (which I'll mention below) or because most people farmed her on lower difficulties. So you should try farming for her on those difficulties. I won't tell you which nodes, go to [http://db.kcwiki.moe/drop/map/333/3/S-SAB.html poi website] and learn how to check a drop rate <u>by yourself</u>. (Oh, you are lucky. someone has done something for you : [[User_blog:SlumDragon/Event_Drops,_Poi.Statistics_and_You]])
+
+
+
+All of us had different experiences. Some lucky #### got their drops in like first 5 attempts while others couldn't get what they wanted in 300 runs. And some ran out of their resources during the process. The RNG element of the game is always there, but you should know what you are aiming for and whether or not you can achieve it. Let's see something crazy :
+
+
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; width: 832pt; text-align: center;" width="1107"|'''E-1 Hard Mode I Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Mizuho
+| class="xl66" style="text-align: center;"|1,446%
+| class="xl65" style="text-align: center;"|14%
+| class="xl65" style="text-align: center;"|35%
+| class="xl65" style="text-align: center;"|52%
+| class="xl65" style="text-align: center;"|77%
+| class="xl65" style="text-align: center;"|95%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|'''Akizuki'''
+| class="xl66" style="text-align: center;"|'''0,255%'''
+| class="xl65" style="text-align: center;"|'''3%'''
+| class="xl65" style="text-align: center;"|'''7%'''
+| class="xl65" style="text-align: center;"|'''12%'''
+| class="xl65" style="text-align: center;"|'''23%'''
+| class="xl65" style="text-align: center;"|'''40%'''
+| class="xl65" style="text-align: center;"|'''54%'''
+| class="xl65" style="text-align: center;"|'''64%'''
+| class="xl65" style="text-align: center;"|'''72%'''
+| class="xl65" style="text-align: center;"|'''78%'''
+|}
+
+In E-1, Akizuki only drops in Hard Mode I node. But the chance of dropping her is incredibly small, meaning that, if you try to go for her on this map, you'll most likely fail. You can't blame RNG for this failure. BUT, fortunately she drops in another map!
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; width: 832pt; text-align: center;" width="1107"|'''E-2 Medium Mode N Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Hamakaze
+| class="xl66" style="text-align: center;"|2,635%
+| class="xl65" style="text-align: center;"|23%
+| class="xl65" style="text-align: center;"|55%
+| class="xl65" style="text-align: center;"|74%
+| class="xl65" style="text-align: center;"|93%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|'''Akizuki'''
+| class="xl66" style="text-align: center;"|'''1,263%'''
+| class="xl65" style="text-align: center;"|'''12%'''
+| class="xl65" style="text-align: center;"|'''32%'''
+| class="xl65" style="text-align: center;"|'''47%'''
+| class="xl65" style="text-align: center;"|'''72%'''
+| class="xl65" style="text-align: center;"|'''92%'''
+| class="xl65" style="text-align: center;"|'''98%'''
+| class="xl65" style="text-align: center;"|'''99%'''
+| class="xl65" style="text-align: center;"|'''100%'''
+| class="xl65" style="text-align: center;"|'''100%'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Amatsukaze
+| class="xl66" style="text-align: center;"|1,153%
+| class="xl65" style="text-align: center;"|11%
+| class="xl65" style="text-align: center;"|29%
+| class="xl65" style="text-align: center;"|44%
+| class="xl65" style="text-align: center;"|69%
+| class="xl65" style="text-align: center;"|90%
+| class="xl65" style="text-align: center;"|97%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Akashi
+| class="xl66" style="text-align: center;"|0,439%
+| class="xl65" style="text-align: center;"|4%
+| class="xl65" style="text-align: center;"|12%
+| class="xl65" style="text-align: center;"|20%
+| class="xl65" style="text-align: center;"|36%
+| class="xl65" style="text-align: center;"|59%
+| class="xl65" style="text-align: center;"|73%
+| class="xl65" style="text-align: center;"|83%
+| class="xl65" style="text-align: center;"|89%
+| class="xl65" style="text-align: center;"|93%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; text-align: center;"|'''E-2 Medium Mode M Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Tanikaze
+| class="xl66" style="text-align: center;"|2,848%
+| class="xl65" style="text-align: center;"|25%
+| class="xl65" style="text-align: center;"|58%
+| class="xl65" style="text-align: center;"|76%
+| class="xl65" style="text-align: center;"|94%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Amatsukaze
+| class="xl66" style="text-align: center;"|1,426%
+| class="xl65" style="text-align: center;"|13%
+| class="xl65" style="text-align: center;"|35%
+| class="xl65" style="text-align: center;"|51%
+| class="xl65" style="text-align: center;"|76%
+| class="xl65" style="text-align: center;"|94%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|'''Akizuki'''
+| class="xl66" style="text-align: center;"|'''1,137%'''
+| class="xl65" style="text-align: center;"|'''11%'''
+| class="xl65" style="text-align: center;"|'''29%'''
+| class="xl65" style="text-align: center;"|'''44%'''
+| class="xl65" style="text-align: center;"|'''68%'''
+| class="xl65" style="text-align: center;"|'''90%'''
+| class="xl65" style="text-align: center;"|'''97%'''
+| class="xl65" style="text-align: center;"|'''99%'''
+| class="xl65" style="text-align: center;"|'''100%'''
+| class="xl65" style="text-align: center;"|'''100%'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Akashi
+| class="xl66" style="text-align: center;"|0,748%
+| class="xl65" style="text-align: center;"|7%
+| class="xl65" style="text-align: center;"|20%
+| class="xl65" style="text-align: center;"|31%
+| class="xl65" style="text-align: center;"|53%
+| class="xl65" style="text-align: center;"|78%
+| class="xl65" style="text-align: center;"|89%
+| class="xl65" style="text-align: center;"|95%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|99%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Umikaze
+| class="xl66" style="text-align: center;"|0,648%
+| class="xl65" style="text-align: center;"|6%
+| class="xl65" style="text-align: center;"|18%
+| class="xl65" style="text-align: center;"|28%
+| class="xl65" style="text-align: center;"|48%
+| class="xl65" style="text-align: center;"|73%
+| class="xl65" style="text-align: center;"|86%
+| class="xl65" style="text-align: center;"|93%
+| class="xl65" style="text-align: center;"|96%
+| class="xl65" style="text-align: center;"|98%
+|}
+
+If you check the map, almost all of you will agree with me to farm Akizuki on M node which is much easier and cheaper to reach. As for the small differences of her drop rate, that much is trivial compared to the amount of tries and resources you'll be spending.
+
+
+===Exceptional Situations===
+Sometimes, the drop rate you see in poi may not be really accurate, or rather not be accurate '''for you'''. This might be caused by a few things.
+
+1st one is that the said drop might be a conditional drop. For instance, admirals who already had Graf in their base were not able to drop her again. When these players sortie to a map which drops Graf, they are not going to drop Graf, and when this is recorded in databases such as poi, the drop rate of Graf will look '''less than''' what it actually might be. So when you see something like 0,6%, don't be afraid. It is actually higher than that. As for how much it differs, that matters the ratio between the people who sortied the map with Graf and without Graf.
+
+2nd one is the sample size. This is especially misleading in the first days of an event. As databases collect info from players who sortie on the event maps, they can only collect as much as the players who back that database. If you happen to see very low sample sizes, probably less than 100, keep it in mind that it might be wrong. The drop rates stabilize after more people sortie on those event maps.
+
+3rd one is that, the difficulty of the map can drastically change your opinions on these drop rates. Say, if you assume that you'll need around 100 S ranks, you had better give up against final map bosses as they are very hard to S rank. On easy maps, you can easily handle even 300 runs (but I'm not sure if your heart can handle 300 runs...)
+
+4th one is that, in 2016 Spring event E-3 map, the drop rate of Yuu depended on the number of Yuus or Ros on your base. The more Yuu you have, the less chance to drop her. It is speculated that her drop rate "for those who don't have Yuu nor Ro" is around '''2-3%'''; "for those who have 1 Yuu/Ro", it is '''1%'''; and "for those who have at least 2 Yuu/Ro", it is '''0.5%'''. In this kind of a situation, you might wanna scrap your previous Yuus/Ros to increase your drop chance by a huge amount. However, some admirals have married to Yuu or Ro, as they are unable to scrap their wifes, they'll have less chance than anyone else to farm Yuu. - In poi database, the rates that you see most probably belong to the admirals who have at least 1 Yuu, so the chance to drop her is higher than that, provided that you scrap your previous ones.
+
+
+===The "Limit" Of A Drop===
+As you might notice in all the tables in this thread, the possibility to drop a shipgirl '''decreases''' after every sortie. If the drop rate is 3%, your chance to drop her in 2nd trial will be 5,91% which means that your 2nd trial will give you a +2,91% chance instead of 3%. And your 3rd trial will give you a +2,82% chance. And this will keep decreasing more and more as you keep farming, until to a point that 1 sortie of yours will net you about 0,1% or even less. In these kind of situations, I recommend you to '''give up'''. You will have another chance to get her in another event.
+
+But still, some people keep farming for the sake of <strike>salt</strike> getting their future wifes. We had some many reports saying that they got their girls after 300, or even 400 runs. In this thread, I wanted to inform you that after a certain amount of farming, your chance of getting that drop will be very very small. However, it is still up to you to make that decision. If you think that you can't wait until the next event to get her and that your resources can take the burden, then why not?
+
+Normally, it'd be a good point to stop in 95%. For very important girls, ''I would'' increase that number to 98-99%. If getting to those possibilities requires more than 300 runs, ''I don't attempt it. (Until the girl in my dreams appear in the game)''
+
+
+
+<u>I came up with an opinion about these drop rates. You may wish to accept it or not. I'll just write what i think of them:</u>
+*4% or higher : Very easy to drop. If your target has this much chance, go definitely farm her!
+*Around 3% : Easy to farm. Getting 50 S ranks should give you a very high chance to drop her. Give up when the map is too hard to get S ranks reliably.
+*Around 2% : Be prepared to sortie 100 times. Make sure your resources are ready. Of course it may take less or more than 100, but 100 is a good deal.
+*Around 1% : Well, good luck getting her >.<
+*Less than 1% : I hope she drops in the next event T_T
+
+
+===Aiming for More Than 1 Drop===
+In case you want to have more than 1 drop for various reasons (being a relatively new admiral, or for farming rare equipment, etc..) and you want to maximize your chance of '''getting something''', you may want to come up with a strategy.
+
+Let's say that you want Amagi. She only drops in E-2 boss. And you decided to farm her on easy. You have 2 routes to the boss node. You can either visit N node or M node. [Here, i have to point out that you might need over 100 runs for Amagi, so picking the most resource efficient path might be better for you]. If you pass by '''M node''', you might be able to get Urakaze, Amatsukaze, Uzuki or Akashi (noted down some of the random drops, there are more, but different admirals may lack different ships, so you should make your own tables). But Akashi may not drop even in 100 runs so don't expect to get her so easily. If you pass by '''N node''', you might be able to get Hamakaze, Amatsukaze, Akashi or Akizuki. Again, Akashi and especially Akizuki will most probably won't drop before you drop Amagi. But, you never know what might happen. Also note that you might get multiples of these drops.
+
+It'll be better to choose the resource efficient route, so let's consider that you are passing by '''M node'''. When you sortie to the map, you'll have around '''5,81%''' chance to drop something nice in M node, and '''7,51%''' chance to drop something nice in the boss node (2,01% of it is Amagi).
+
+
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="8" height="20" style="height: 15pt; width: 484pt; text-align: center;" width="645"|'''E-2 Easy Mode O Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl67" style="text-align: center;"|<u>Base<span style="mso-spacerun:yes"> </span> </u>
+| class="xl67" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 300 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Harusame
+| class="xl69" style="text-align: center;"|2,55%
+| class="xl70" style="text-align: center;"|23%
+| class="xl70" style="text-align: center;"|54%
+| class="xl70" style="text-align: center;"|73%
+| class="xl70" style="text-align: center;"|92%
+| class="xl70" style="text-align: center;"|99%
+| class="xl70" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|'''Amagi'''
+| class="xl69" style="text-align: center;"|'''2,01%'''
+| class="xl70" style="text-align: center;"|18%
+| class="xl70" style="text-align: center;"|46%
+| class="xl70" style="text-align: center;"|64%
+| class="xl70" style="text-align: center;"|87%
+| class="xl70" style="text-align: center;"|98%
+| class="xl70" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Kinu
+| class="xl69" style="text-align: center;"|1,97%
+| class="xl70" style="text-align: center;"|18%
+| class="xl70" style="text-align: center;"|45%
+| class="xl70" style="text-align: center;"|63%
+| class="xl70" style="text-align: center;"|86%
+| class="xl70" style="text-align: center;"|98%
+| class="xl70" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Okinami
+| class="xl69" style="text-align: center;"|0,97%
+| class="xl70" style="text-align: center;"|9%
+| class="xl70" style="text-align: center;"|25%
+| class="xl70" style="text-align: center;"|39%
+| class="xl70" style="text-align: center;"|62%
+| class="xl70" style="text-align: center;"|86%
+| class="xl70" style="text-align: center;"|95%
+|- height="20" style="height:15.0pt"
+| class="xl68" height="20" style="height:15.0pt"|'''Total'''
+| class="xl71" style="text-align: center;"|'''7,51%'''
+| class="xl70" style="text-align: center;"|54%
+| class="xl70" style="text-align: center;"|90%
+| class="xl70" style="text-align: center;"|98%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+|}
+(Amagi is bold because you want her the most)
+
+
+{| border="0" cellpadding="0" cellspacing="0" width="645"
+|- height="20" style="height:15.0pt"
+| class="xl66" colspan="8" height="20" style="height: 15pt; width: 484pt; text-align: center;" width="645"|'''E-2 Easy Mode M Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl67" style="text-align: center;"|<u>Base<span style="mso-spacerun:yes"> </span> </u>
+| class="xl67" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl67" style="text-align: center;"|<u>In 300 Runs</u>
+|- height="20" style="height:15.0pt"
+| class="xl68" height="20" style="height:15.0pt"|Urakaze
+| class="xl69" style="text-align: center;"|2,66%
+| class="xl70" style="text-align: center;"|24%
+| class="xl70" style="text-align: center;"|55%
+| class="xl70" style="text-align: center;"|74%
+| class="xl70" style="text-align: center;"|93%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| class="xl68" height="20" style="height:15.0pt"|Amatsuakze
+| class="xl69" style="text-align: center;"|1,46%
+| class="xl70" style="text-align: center;"|14%
+| class="xl70" style="text-align: center;"|36%
+| class="xl70" style="text-align: center;"|52%
+| class="xl70" style="text-align: center;"|77%
+| class="xl70" style="text-align: center;"|95%
+| class="xl70" style="text-align: center;"|99%
+|- height="20" style="height:15.0pt"
+| class="xl68" height="20" style="height:15.0pt"|Uzuki
+| class="xl69" style="text-align: center;"|1,42%
+| class="xl70" style="text-align: center;"|13%
+| class="xl70" style="text-align: center;"|35%
+| class="xl70" style="text-align: center;"|51%
+| class="xl70" style="text-align: center;"|76%
+| class="xl70" style="text-align: center;"|94%
+| class="xl70" style="text-align: center;"|99%
+|- height="20" style="height:15.0pt"
+| class="xl68" height="20" style="height:15.0pt"|Akashi
+| class="xl69" style="text-align: center;"|0,27%
+| class="xl70" style="text-align: center;"|3%
+| class="xl70" style="text-align: center;"|8%
+| class="xl70" style="text-align: center;"|12%
+| class="xl70" style="text-align: center;"|23%
+| class="xl70" style="text-align: center;"|41%
+| class="xl70" style="text-align: center;"|55%
+|- height="20" style="height:15.0pt"
+| class="xl68" height="20" style="height:15.0pt"|'''Total'''
+| class="xl71" style="text-align: center;"|'''5,81%'''
+| class="xl70" style="text-align: center;"|45%
+| class="xl70" style="text-align: center;"|83%
+| class="xl70" style="text-align: center;"|95%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+|}
+
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="8" height="20" style="height: 15pt; width: 484pt; text-align: center;" width="645"|
+
+
+'''E-2 Easy Mode N Node S Rank Drop Rates'''
+| class="xl71" style="width:67pt" width="89"|
+| class="xl71" style="width:65pt" width="87"|
+| class="xl71" style="width:66pt" width="88"|
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="width: 48pt; text-align: center;" width="64"|<u>Base<span style="mso-spacerun:yes"> </span> </u>
+| class="xl66" style="width: 62pt; text-align: center;" width="82"|<u>In 10 Runs</u>
+| class="xl66" style="width: 62pt; text-align: center;" width="83"|<u>In 30 Runs</u>
+| class="xl66" style="width: 57pt; text-align: center;" width="76"|<u>In 50 Runs</u>
+| class="xl66" style="width: 63pt; text-align: center;" width="84"|<u>In 100 Runs</u>
+| class="xl66" style="width: 65pt; text-align: center;" width="87"|<u>In 200 Runs</u>
+| class="xl66" style="width: 65pt; text-align: center;" width="87"|<u>In 300 Runs</u>
+| class="xl66" style="width: 67pt; text-align: center;" width="89"|<u>In 400 Runs</u>
+| class="xl66" style="width: 65pt; text-align: center;" width="87"|<u>In 500 Runs</u>
+| class="xl66" style="width: 66pt; text-align: center;" width="88"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Hamakaze
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|2,49%
+| class="xl68" style="width: 62pt; text-align: center;" width="82"|22%
+| class="xl68" style="width: 62pt; text-align: center;" width="83"|53%
+| class="xl68" style="width: 57pt; text-align: center;" width="76"|72%
+| class="xl68" style="width: 63pt; text-align: center;" width="84"|92%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|99%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|100%
+| class="xl68" style="width: 67pt; text-align: center;" width="89"|100%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|100%
+| class="xl68" style="width: 66pt; text-align: center;" width="88"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Amatsukaze
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|1,40%
+| class="xl68" style="width: 62pt; text-align: center;" width="82"|13%
+| class="xl68" style="width: 62pt; text-align: center;" width="83"|34%
+| class="xl68" style="width: 57pt; text-align: center;" width="76"|51%
+| class="xl68" style="width: 63pt; text-align: center;" width="84"|76%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|94%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|99%
+| class="xl68" style="width: 67pt; text-align: center;" width="89"|100%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|100%
+| class="xl68" style="width: 66pt; text-align: center;" width="88"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Akashi
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|0,72%
+| class="xl68" style="width: 62pt; text-align: center;" width="82"|7%
+| class="xl68" style="width: 62pt; text-align: center;" width="83"|19%
+| class="xl68" style="width: 57pt; text-align: center;" width="76"|30%
+| class="xl68" style="width: 63pt; text-align: center;" width="84"|51%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|76%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|88%
+| class="xl68" style="width: 67pt; text-align: center;" width="89"|94%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|97%
+| class="xl68" style="width: 66pt; text-align: center;" width="88"|99%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Akizuki
+| class="xl67" style="width: 48pt; text-align: center;" width="64"|0,42%
+| class="xl68" style="width: 62pt; text-align: center;" width="82"|4%
+| class="xl68" style="width: 62pt; text-align: center;" width="83"|12%
+| class="xl68" style="width: 57pt; text-align: center;" width="76"|19%
+| class="xl68" style="width: 63pt; text-align: center;" width="84"|34%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|57%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|71%
+| class="xl68" style="width: 67pt; text-align: center;" width="89"|81%
+| class="xl68" style="width: 65pt; text-align: center;" width="87"|88%
+| class="xl68" style="width: 66pt; text-align: center;" width="88"|92%
+|- height="20" style="height:15.0pt"
+| class="xl65" height="20" style="height:15.0pt;width:62pt" width="82"|'''Total'''
+| class="xl72" style="text-align: center;"|'''5,02%'''
+| class="xl70" style="text-align: center;"|40%
+| class="xl70" style="text-align: center;"|79%
+| class="xl70" style="text-align: center;"|92%
+| class="xl70" style="text-align: center;"|99%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+| class="xl70" style="text-align: center;"|100%
+|}
+
+
+In this case, if you also want to get Akizuki, I suggest you to farm in E-2 Medium. You can do this either by getting Amagi first in easy mode, and doing runs for akizuki in medium mode, or by farming both in medium mode. (A good recommendation by me would be not to use many destroyers in medium mode as the enemy boss consists of elite Wa class which our DDs can't kill reliably, which might make things harder at the night battle)
+
+
+
+Well, that's it. I hope this helped you. And for those who want to see more or compare drop rates, I'll put more examples below.
+
+
+{| border="0" cellpadding="0" cellspacing="0" width="1107"
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; width: 832pt; text-align: center;" width="1107"|'''E-1 Medium Mode F Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Ooi
+| class="xl66" style="text-align: center;"|3,664%
+| class="xl65" style="text-align: center;"|31%
+| class="xl65" style="text-align: center;"|67%
+| class="xl65" style="text-align: center;"|85%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Ooyodo
+| class="xl66" style="text-align: center;"|1,160%
+| class="xl65" style="text-align: center;"|11%
+| class="xl65" style="text-align: center;"|30%
+| class="xl65" style="text-align: center;"|44%
+| class="xl65" style="text-align: center;"|69%
+| class="xl65" style="text-align: center;"|90%
+| class="xl65" style="text-align: center;"|97%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Mizuho
+| class="xl66" style="text-align: center;"|1,048%
+| class="xl65" style="text-align: center;"|10%
+| class="xl65" style="text-align: center;"|27%
+| class="xl65" style="text-align: center;"|41%
+| class="xl65" style="text-align: center;"|65%
+| class="xl65" style="text-align: center;"|88%
+| class="xl65" style="text-align: center;"|96%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; text-align: center;"|'''E-1 Hard Mode I Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Mizuho
+| class="xl66" style="text-align: center;"|1,446%
+| class="xl65" style="text-align: center;"|14%
+| class="xl65" style="text-align: center;"|35%
+| class="xl65" style="text-align: center;"|52%
+| class="xl65" style="text-align: center;"|77%
+| class="xl65" style="text-align: center;"|95%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Akizuki
+| class="xl66" style="text-align: center;"|0,255%
+| class="xl65" style="text-align: center;"|3%
+| class="xl65" style="text-align: center;"|7%
+| class="xl65" style="text-align: center;"|12%
+| class="xl65" style="text-align: center;"|23%
+| class="xl65" style="text-align: center;"|40%
+| class="xl65" style="text-align: center;"|54%
+| class="xl65" style="text-align: center;"|64%
+| class="xl65" style="text-align: center;"|72%
+| class="xl65" style="text-align: center;"|78%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+| class="xl65"|
+|- height="20" style="height:15.0pt"
+| class="xl67" colspan="11" height="20" style="height: 15pt; text-align: center;"|'''E-1 Hard Mode J Node S Rank Drop Rates'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>Base </u>
+| class="xl65" style="text-align: center;"|<u>In 10 Runs </u>
+| class="xl65" style="text-align: center;"|<u>In 30 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 50 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 100 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 200 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 300 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 400 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 500 Runs</u>
+| class="xl65" style="text-align: center;"|<u>In 600 Runs</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|I-58
+| class="xl66" style="text-align: center;"|8,023%
+| class="xl65" style="text-align: center;"|57%
+| class="xl65" style="text-align: center;"|92%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Harusame
+| class="xl66" style="text-align: center;"|2,703%
+| class="xl65" style="text-align: center;"|24%
+| class="xl65" style="text-align: center;"|56%
+| class="xl65" style="text-align: center;"|75%
+| class="xl65" style="text-align: center;"|94%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Umikaze
+| class="xl66" style="text-align: center;"|2,010%
+| class="xl65" style="text-align: center;"|18%
+| class="xl65" style="text-align: center;"|46%
+| class="xl65" style="text-align: center;"|64%
+| class="xl65" style="text-align: center;"|87%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Kawakaze
+| class="xl66" style="text-align: center;"|1,165%
+| class="xl65" style="text-align: center;"|11%
+| class="xl65" style="text-align: center;"|30%
+| class="xl65" style="text-align: center;"|44%
+| class="xl65" style="text-align: center;"|69%
+| class="xl65" style="text-align: center;"|90%
+| class="xl65" style="text-align: center;"|97%
+| class="xl65" style="text-align: center;"|99%
+| class="xl65" style="text-align: center;"|100%
+| class="xl65" style="text-align: center;"|100%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Sakawa
+| class="xl66" style="text-align: center;"|0,794%
+| class="xl65" style="text-align: center;"|8%
+| class="xl65" style="text-align: center;"|21%
+| class="xl65" style="text-align: center;"|33%
+| class="xl65" style="text-align: center;"|55%
+| class="xl65" style="text-align: center;"|80%
+| class="xl65" style="text-align: center;"|91%
+| class="xl65" style="text-align: center;"|96%
+| class="xl65" style="text-align: center;"|98%
+| class="xl65" style="text-align: center;"|99%
+|}
+(In this one, it took me 110 S ranks to get Umikaze, which equals to 89% drop chance)
+
+
+
+<u>References</u>
+
+All of these percentages are taken from [http://db.kcwiki.moe/drop/map/333/3/S-SAB.html poi statistics].
+
+
+
+<u>Special thanks to :</u>
+
+37.5.40.152 - For pointing out the conditional drops
+
+[[User:がか|がか]] - For the suggestion of coming up with a strategy for multiple drops
+
+[[User:SlumDragon|SlumDragon]] - For making the guide for the players to understand statistics from poi
+
+[[User:Hayashi H|Hayashi H]] - Thank you for everything :V
+[[Category:Blog posts]]

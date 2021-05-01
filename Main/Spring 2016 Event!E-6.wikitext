@@ -1,0 +1,169 @@
+__NOTOC__
+<!--{{Ambox
+|type = protection
+|title = Editing this article is limited to wikia users for a week of the event.
+|message = This is to prevent trolling, vandalizing, conflicting or unwarranted edits.
+|users = [[User:McDerp|McDerp]]
+}}-->
+{{Notice
+|style = text-align:left
+|'''Report threads'''
+*Report your fleet composition [[Thread:421412|here]]
+*Report enemy pattern [[Thread:421405|here]]
+}}
+{{Spring 2016 Event Nav}}
+==Information==
+{{Infobox
+|title =  Friendly anchorage Recapturing Strategy [[File:Spring 2016 Event Ship Tag Task Force.png]]
+|kanji = 友軍泊地奪還作戦
+|romaji = Yūgun hakuchi Dakkan sakusen
+|image = Spring_2016_E6_Banner.png
+|label1 = Mechanics
+|value1 =  [[Events/Mechanics#Combined_Fleet|Combined Fleet]]<br/>[[Events/Mechanics#Node_specific_details|Selection node]]<br/>[[Events/Mechanics#Ship_Locking|<p style="background-color:yellow;color:black">Ship Locking</p>]] 
+|label2 = [[Spring_2016_Event/Mechanics#map-hp|Boss gauge <sup>?</sup>]]
+|value2 =  '''Easy''': 2800<br/>'''Normal''': 4800<br/>'''Hard''': 5400
+|label3 = Kills required
+|value3 = '''Easy:''' 5 kills<br/>'''Normal/Hard:''' 6 kills
+|label4 = Reward
+|value4 = '''Easy:''' <br> {{ItemStack|item = [[File:PBY-5A_Catalina_178_Card.png{{!}}50px{{!}}link=PBY-5A Catalina]] |text = 1}}{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |text = 1}}<br>'''Normal:''' <br> {{ItemStack|item = [[File:PBY-5A_Catalina_178_Card.png{{!}}50px{{!}}link=PBY-5A Catalina]] |text = 1}}{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |text = 1}}{{ItemStack|item = [[File:Improvement_Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]] |text = 7}} <br/>'''Hard:'''<br>{{ItemStack|item = [[File:PBY-5A_Catalina_178_Card.png{{!}}50px{{!}}link=PBY-5A Catalina]] |text = 1}}{{ItemStack|item = [[File:Type_1_Land-based_Attack_Aircraft_%28Nonaka_Squadron%29_170_Card.png{{!}}50px{{!}}link=Type 1 Land-based Attack Aircraft (Nonaka Squadron)]] |text = 1}}{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |text = 1}}{{ItemStack|item = [[File:Improvement_Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]] |text = 8}}
+}}
+
+===Branching rules===
+*This map is a [[Combined_Fleet| Combined Fleet]] map.
+*You may only use a Carrier-Task Force (CTF) on this map.
+*Start nodes are decided by the number of carriers in the fleet. Light Carriers and Armored Carriers are also considered as carriers for this purpose, while Akitsumaru and Hayasui are not.
+*Presence of Fast Battleships in escort fleet will increase the chance the fleet will route in a partial circle.
+*No 100% short boss route has been found yet. All compositions found so far have a chance of going offroute, but the probability can be modified.
+*1LHA, 2BBV, 2CVB, 1CA + 2DD, 1CLT, 1CL, 2CA - 100% routing  [https://www.youtube.com/watch?v=fdgoFOXoHdg D->G->F->H->N]
+*2CAV, 2BBV, 2CV + 2DD, 1CLT, 1CL, 2CA has a fairly good chance to reach the boss node from <span style="font-weight:normal;">H → N</span>
+
+Using 4 carriers starts at start point 1.
+*Fast fleet will route A → C.
+*Slow fleet routes A → B → C.
+**C → F → H is guaranteed routing.
+***H → N is more likely to occur when there is no Fast Battleship in Escort fleet.
+***H → K → M → N is more likely to occur otherwise.
+***Offroute condition for K → P unknown.
+
+Using 2 carriers starts at start point 2.
+*D → G → F → H normally occurs.
+*LOS check? G → F, upon failing G → O.
+**H → N is more likely to occur when there is no Fast Battleship in Escort fleet.
+**H → K → M → N is more likely to occur otherwise.
+***Offroute condition for K → P unknown.
+
+Using 3 carriers starts at start point 3.
+*E → I → K → M normally occurs.
+*Offroute condition for K → P unknown.
+**Having only two carriers in your fleet can guarantee M → N routing.<ref>http://bbs.ngacn.cc/read.php?tid=9298906</ref> To achieve the condition of having only two carriers in your fleet while still starting at point 3, you can send a carrier back home via FCF escort before the node.<ref>Sinking a carrier also work but that is highly not recommended, see http://bbs.ngacn.cc/read.php?tid=9301277 </ref>
+**There might be a higher chance to go <span style="font-weight:normal;">M → N if there is 1CVL+2CV/CVB rather than 3CV/CVB (</span>'''Requires Confirmation''').
+**M → L is more likely to occur when there is Fast Battleship in Escort fleet.
+** In KC3 prior to Version 30.1.0, node L is displayed as N. Players who experiences this are recommended to '''perform a data backup''' before upgrading KC3 to latest version.
+**M → L → J → N is more likely to occur otherwise.
+**Offroute condition for J → O unknown.
+
+===Tips===
+*Players intending to farm Oyashio on Medium and higher difficulties may find the northern routing efficient regardless of the random factor; should the compass direct the player to the boss, attempt to clear the boss. Otherwise if offrouted to L, S-rank node L for Oyashio drop chance, retreat, and repeat.
+
+{{Hard Anti-installation Weapons}}
+
+===Boss-weakening mechanics===
+*[[Summer_2015_Event#E-7_Boss_Special_Mechanism|Boss-weakening mechanics]] are present on this map.
+
+*'''According to the devs:'''
+**Clearing any two of the following nodes once at S Rank can result in an increase of Aerial Attack Capability against Central Princess
+***E-5-I, E-6-A/G/L
+**Clearing all four nodes can result in a further increase in Aerial Attack ability against Central Princess, and doing so would also change her initial appearance voiceline. (If debuffed correctly the boss will say "Masaka..." at the end of her line (but currently not on the subtitle).)
+***There is currently NO visual change in the boss.
+
+*Changing difficulty does not reset this debuff<ref>https://twitter.com/Kensho_KanColle/status/728979522683424768</ref>
+*The debuff does not reset at 0000/0500 JST<ref>https://twitter.com/Kensho_KanColle/status/728976768548245504</ref>
+*Some were not be able to hear the debuff voiceline even if they did all the steps above. Try clearing cache and etc., but some report that they still can't get the alternative voiceline in this way. Possible action for those admirals would be a.) wait for May 13 fix, or b.) proceed anyway as the core part of the debuff effect is not linked to the voiceline
+
+=== Aerial Attacks ===
+After May 5 patch update, it is possible to significantly damage or outright sink the [[Central Princess]] with '''dive bombers''' (including Zuiun) in E6. These are some of the methods people used to trigger those huge amounts of damage.
+*'''Warning''': Using some of the methods listed here could reduce your fleet's firepower, and due to the unstable nature of Aerial Support/Opening Air Strike, this is a very RNG intensive method. Be sure you have enough resource/bucket/time for many failures before relying on this method.
+*Some claim that they ''feel'' armor debuff could increase the chance of successfully getting a critical off the Opening Air Strike.
+
+====Initial Airstrike Setup====
+'''Carriers Equipment Setup:'''
+* At least 234 Fighter Power required for AS, 468 FP for AS+ at boss node for Hard Last dance.
+* Equip the remaining slots with dive bombers {{RedPlane}} '''only'''.
+** Carriers equipped with '''any number of dive bombers''' cannot attack installation during '''shelling phase'''. By doing so, you're placing all your bets on the Opening Airstrike.
+
+'''Aviation Battleship Equipment Setup:'''
+* At least one [[Zuiun]] and 1 [[Type 3 Shell]], loaded onto BBVs.
+**Multiple Zuiun maximizes the amount of airstrikes at the expense of artillery shelling on BBVs.
+**All Seaplane Bombers are considered dive bombers and will receive damage bonus from the debuff mechanism. Feel free to use [[Prototype Seiran]] or other Zuiun variants if you have them.
+
+'''Hayasui or Akitsumaru:'''
+*Under Investigation
+
+'''Escort Fleet Equipment Setup:'''
+* Equip them accordingly for anti-installation night battle
+
+====Aerial Support Expedition====
+*Aerial Support engages the enemy carriers in a second Aerial Combat phase. For this reason it is recommended to give your support fleet at least some fighter planes.
+**The support fleet's Fighter Power is calculated in the same way as that of a regular main fleet but Aircraft Proficiency Bonuses are excluded from the calculation.
+**Depending on the outcome of the Opening Airstrike, the enemy fleet will have less fighter planes for your support fleet to worry about.
+**Having a lot of Fighter Power is not required to achieve AS/AS+, so a single fighter in the smallest slot of each carrier should be enough.
+**Achieving AS/AS+ reduces the number of bombers that are shot down, saving bauxite and allowing you to keep dealing heavy damage, however, that would mean you have fewer slot to equip your bombers and slightly reducing your chance of success.
+* Dive bombers (red planes) deals devastating damage to [[Central Princess]] due to the debuff mechanism. It is highly recommended to use only dive bombers.
+* <s>Some might also load Zuiun onto AVs.</s> 
+**"Zuiun nuke" is confirm to be result of debuff mechanism which affects all dive bombing attacks. There's no reason to use Zuiun because carrier based dive bombers outclass Zuiun. 
+*Preboss support is optional.
+
+====Routing====
+
+Your fleet will have to rely on initial airstrike to sink the Central Princess. Because of this, it is of paramount importance that your fleet made it to the boss node with your bombers reasonably intact (≥60% of starting bombers). Achieving AS/AS+ in Air combat can help a lot in making sure these bombers survive.
+
+As you may have realized already, you have 3 routes to choose from, starting with different amounts of bombers at each point (due to carrier-oriented starting points)
+
+Choose a route where you feel you will not lose a lot of bombers along the way, and that you feel will reach the boss with reasonably good HP.
+A tip is to have at least 150 bombers starting the aerial battle at the Boss.
+
+====Warning====
+*This method is '''VERY''' RNG heavy. Be sure you have enough patience before and when trying this method.
+
+Sinking the Central Princess through initial airstrike requires:
+*Enough bombers to target the [[Central Princess]] (very big RNG point)
+*A reasonable amount of surviving bombers
+*Supporting bombers to target Hime
+*Reasonable amount of bombers in aerial phase
+*Decent to good RNG damage rolls
+
+If you couldn't get this approach to work, you should try to debuff the boss with the above-mentioned method. If you couldn't get the airstrike to work even after the debuff, you may consider to change your fleet composition to get more dive bombers to survive to the boss node or even change the map difficulty altogether.
+
+===References===
+<references />
+
+{{clear}}
+
+==Drop list==
+<!-- Refer to http://kancolle.wikia.com/wiki/Template:DropList/doc -->
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = F, G, I, L, N
+|boss = N
+|Akagi: L/Easy, N/Easy
+|Akizuki: N/Easy
+|Graf Zeppelin: N/Hard
+|Hiryuu: L/Easy, N/Easy
+|Kumano: F/Hard, G/Easy, I/Easy, L/Easy, N/Easy
+|Maikaze: L/Easy
+|Mikuma: F/Hard, G/Easy, I/Easy, L/Easy, N/Easy
+|Mutsu: N/Easy
+|Nagato: N/Easy
+|Nowaki: L/Hard
+|Ooyodo: N/Easy
+|Oyashio: L/Easy
+|Shoukaku: G/Easy, L/Easy, N/Easy
+|Suzuya: F/Hard, G/Easy, I/Easy, L/Easy, N/Easy
+|Yuubari: N/Easy
+|Zuihou: L/Easy, N/Easy
+|Zuikaku: L/Easy, N/Easy
+}}
+As of the update on 13 May 2016, the Easy patterns for node L now drop Oyashio.
+
+{{:Spring 2016 Event/E-6/Enemy patterns}}

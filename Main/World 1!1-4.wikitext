@@ -1,0 +1,58 @@
+{{Map/Header}}
+{{Map/Info
+|en = A Defense Line for the Nansei Islands
+|jp = 南西諸島防衛線
+|romaji = Nansē-shotō bōēsen
+|exp_hq = 60
+|exp_hq_boss = 720
+|strategy_name = First Southern Operation Tactics
+|strategy_name_ja = 南1号作戦
+|strategy_info = An enemy invasion fleet is pressing on the defensive line in the Nansei Islands. Sail out at full force and destroy them!
+|strategy_info_ja = 南西諸島の防衛ライン上の<br>敵侵攻艦隊を捕捉、<br>全力出撃でこれを撃滅せよ！
+}}
+{{Map/Branching
+|expand = true
+|id = 1-4
+|0 -> A/empty, B = * Random routing
+
+|B -> C/resource, D = 
+*Meet '''ANY''' of the following to '''FORCE''' D
+**Fleet contains no DD and DE
+**CV(B/L) ≥ 3
+**(F)BB(V) ≥ 3
+*Go to C if DD+DE ≥ 3
+*Otherwise, random routing
+**If fleet contains CL, 80% to C
+**Otherwise, 65% to C
+
+|D -> E/resource, G/resource =
+*Go to E if fleet contains AS
+*Go to G if fleet contains AV
+*Otherwise, random routing
+
+|F/empty -> E/resource, H, I = 
+*Meet '''ANY''' of the following to go to E
+**DD+DE ≥ 4
+**Fleet contains AV and DD+DE ≥ 2
+**BBV ≥ 2 and DD+DE ≥ 2
+*Random between E and H if DD+DE ≥ 2
+*Otherwise, random routing between H and I.
+
+|J -> K/empty, L = 
+*Meet '''ANY''' of the following to go to L
+**DD ≥ 4 and SS(V) = 0
+**Fleet contains both AV and CL, with DD+DE ≥ 2
+*Otherwise, random routing
+}}
+
+New players will notice that this map marks the first appearance of enemy aircraft carriers. As you will most likely be lacking carriers of your own at this point in time, you will have to rely on brute force without any carrier support.
+
+After playing this stage once, you may notice that standard aircraft carriers kind of hurt. For now, your only countermeasures are farming for heavy cruisers and training them, crafting battleships and using them to push through with their firepower and armor, or building your own aircraft carrier and equipping fighters of your own to shoot down enemy aircraft. If you have Isuzu, getting her to level 12 and Remodeling her gives a huge boost to Anti-Air which also helps. Note that getting an aircraft carrier will also help to complete the Akagi quests ([[Quests#A11|A11]] and [[Quests#B10|B10]]).
+===Recommended Fleet===
+*4 DD + 2 XX
+**No SS(V) in fleet
+*1 AV + 1 CL + 2 DD/DE + 2 XX
+*1 AS + 5 XX
+Either of these fleets will bring you to the boss node without any chance of off-routing to node {{Event/Route|K|blue}}
+
+{{Map/Footer}}

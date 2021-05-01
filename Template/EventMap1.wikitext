@@ -1,0 +1,140 @@
+<noinclude>
+__NOTOC__ 
+==Template Preview==
+</noinclude>
+{| border="0" width="100%" style="background:#def;"
+|-
+|rowspan="2" valign="top" |
+{| width="100%" style="margin:0px 0px 10px 0px;"
+|-
+|style="font-weight:bold; font-size:16px; color:#00f"|{{{map_name|No map name yet}}}
+|-
+|{{{map_japanese|No map name yet}}}
+|-
+|style="font-weight:bold; font-size:16px;"|{{{report_link|}}}
+|}
+<span style="font-weight:bold; font-size:14px;">Information</span>
+{{{information|* No information so far
+}}}
+|style="width:317px;" valign="top" |{{{banner|[[File:Map_placeholder.png|317px]]}}}
+|-
+|valign="top" |{{{map_image|[[File:Map_placeholder_branch.png|317px]]}}}
+|-
+|colspan="2" |
+<span style="font-weight:bold; font-size:14px;">Branching rules</span>
+{{{branching|* No branching rules known
+}}}
+|-
+|colspan="2" |
+<span style="font-weight:bold; font-size:14px;">Tips</span>
+{{{tips|* No tips specified
+}}}
+|-
+|colspan="2" |
+<span style="font-weight:bold; font-size:14px;">Drops</span>
+<table class="mw-collapsible mw-collapsed wikitable" width="100%">
+<tr>
+	<th style="width:50px;">Node</th>
+	<th>Ship List</th>
+</tr>
+{{#if:{{{dropsA|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">A</td><td>
+{{{dropsA|}}}
+</td></tr>}}{{#if:{{{dropsB|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">B</td><td>
+{{{dropsB|}}}
+</td></tr>}}{{#if:{{{dropsC|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">C</td><td>
+{{{dropsC|}}}
+</td></tr>}}{{#if:{{{dropsD|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">D</td><td>
+{{{dropsD|}}}
+</td></tr>}}{{#if:{{{dropsE|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">E</td><td>
+{{{dropsE|}}}
+</td></tr>}}{{#if:{{{dropsF|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">F</td><td>
+{{{dropsF|}}}
+</td></tr>}}{{#if:{{{dropsG|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">G</td><td>
+{{{dropsG|}}}
+</td></tr>}}{{#if:{{{dropsH|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">H</td><td>
+{{{dropsH|}}}
+</td></tr>}}{{#if:{{{dropsI|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">I</td><td>
+{{{dropsI|}}}
+</td></tr>}}{{#if:{{{dropsJ|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">J</td><td>
+{{{dropsJ|}}}
+</td></tr>}}{{#if:{{{dropsK|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">K</td><td>
+{{{dropsK|}}}
+</td></tr>}}{{#if:{{{dropsL|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">L</td><td>
+{{{dropsL|}}}
+</td></tr>}}{{#if:{{{dropsM|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">M</td><td>
+{{{dropsM|}}}
+</td></tr>}}{{#if:{{{dropsN|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">N</td><td>
+{{{dropsN|}}}
+</td></tr>}}{{#if:{{{dropsO|}}}|
+<tr><td style="text-align:center; font-size:18px; font-weight:bold;">O</td><td>
+{{{dropsO|}}}
+</td></tr>}}
+</table>
+|}
+<noinclude>
+
+==Template Information==
+===Details===
+* Used for [[Events|Event maps]].
+* For Maps with long horizontal banners, use [[Template:EventMap2]].
+
+===Usage===
+<pre>
+{{EventMap1
+|banner = [[File:Map_placeholder.png|317px]]
+|map_image = [[File:Map_placeholder_branch.png|317px]]
+|information = 
+* A
+* B
+|branching = 
+* C
+* D
+|tips =
+* E
+* F
+|drops =
+}}
+</pre>
+
+===Sample===
+{{EventMap1
+|banner = [[File:Spring-2014-E1-banner.png|317px]]
+|map_image = [[File:6-1 (1252523).jpg|317px]]
+|report_link = [[Thread:94409|< Report your results here >]]
+|information = 
+* A
+* B
+|branching = 
+* C
+* D
+|tips =
+* E
+* F
+|dropsA = 
+*'''DD''': [[Naganami]], [[Makigumo]]
+*'''SS''': [[I-401]], [[Maruyu]]
+|dropsH = 
+
+*'''DD''': [[Naganami]], [[Makigumo]]
+*'''SS''': [[I-401]], [[Maruyu]]
+|dropsM = 
+
+*'''DD''': [[Naganami]], [[Makigumo]]
+*'''SS''': [[I-401]], [[Maruyu]]
+}}
+
+</noinclude>

@@ -1,0 +1,26 @@
+Starting kancolle whilst running linux can be a bit annoying initially. However, nothing is impossible if you have an open mind. By no means do I guarantee this guide is perfect nor will I be liable for any loss. 
+
+==SoftEtherVPN method==
+For the majority of this guide I would personally recommend reading up on a blogger
+whom managed to do it successfully and with a decent enough explanation:
+[http://lukeluo.blogspot.com/2013/11/how-to-set-up-softehter-vpn-client.html How to set-up SoftEther VPN client]
+
+Unlike the windows version of the SoftEther VPN client things like automatically getting an IP address from within the VPN, routing or even the progress of the connection is being shown - most of it has to be done by hand. Again the majority of that is explained on that recommended site with the exception on checking the progress of the connection to make sure that you are actually properly connected to the VPN server.
+
+Personally I recommend once you have managed to make the initial connection to a VPN server is to keep checking on the progress on the connection to make sure that you are properly connected. To do that you will need to do this:
+{{Template:Talkquote|text = '''<nowiki> accountstatusget (name of VPN Connection Setting Name) </nowiki>'''}}
+Where (name of VPN Connection Setting Name) is where you substitute it with the actual VPN Connection Setting Name that you used. Say for instance you named the created VPN Connection Setting Name is japan it would be:
+{{Template:Talkquote|text = '''<nowiki> accountstatusget japan </nowiki>'''}}
+Check to see if it shows Connected under Status area, if it does not show Connected within about 10 seconds there is a good chance that the server is either offline, refusing connections or otherwise a fake server. If that is the case you will need to find another server to connect to. Doing this extra step is well worth comparing to trying to setup the routing and all assuming that you will get connected and to find that the connection does not work.
+
+==OpenVPN method via NetworkManager==
+If you dislike the idea of using Command Line Interface (CLI) and/or you did not have much success with the former method. There is an alternative and that is to use NetworkManager which is usually bundled with popular linux distributions.
+
+A guide into setting it up using NetworkManager can be found here:
+[https://naveensnayak.wordpress.com/2013/03/04/ubuntu-openvpn-with-ovpn-file/ Ubuntu openvpn with .ovpn file]
+
+==Closing remarks==
+There are myriads of ways to connect to most VPN servers along with various proxies as well as linux distributions and their respective configurations. Of course I do not intend to cover them all and most guides are usually adequate enough to get by - for special cases you can always search up to cases specifically tailoring to your needs.
+
+Questions? Comments? You can also use my message wall to contact me.
+[[Category:Blog posts]] [[Category:Guide]]

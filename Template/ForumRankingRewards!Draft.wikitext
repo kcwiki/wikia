@@ -1,0 +1,358 @@
+<noinclude>{{Ambox
+| type = construction
+| title = Features are being completed.
+| message = While this message is present, parts of the below information may not be correct. Please be patient and check again later.
+| users = [[User:Nanamin|Nanamin]]
+}}</noinclude>
+==Content==
+* {{{month|January}}} {{{year|2016}}} Ranking Rewards
+
+{{#ifexpr: {{{rewarditem|0}}} = 1 |{{{!}} class="wikitable" style="text-align:center;width:100%;"
+! {{#if:{{{newreward|}}}|<sup><span style="color:red;">New item!</span></sup>&nbsp;&nbsp;&nbsp;[[{{{newreward}}}]]|New item?}}
+{{!}}-
+{{!}} style="height:150px;" {{!}} {{#if:{{{newreward|}}}|[[File:{{{newreward}}}|150px]]|}}
+{{!}}}
+|
+{{{!}} class="wikitable" style="text-align:center;width:100%;"
+!colspan="4" {{!}} {{#if:{{{newreward|}}}|<sup><span style="color:red;">New item!</span></sup>&nbsp;&nbsp;&nbsp;[[{{{newreward}}}]]|New item?}}
+{{!}}-
+{{!}} style="height:150px;" {{!}} {{#if:{{{newreward|}}}|{{EquipmentCardKai|{{{newreward}}}|link=nil|size=150px}}|}}
+{{!}} {{#if:{{{newreward|}}}|{{EquipmentGraphicKai|{{{newreward}}}|link=nil|size=150px}}|}}
+{{!}} {{#if:{{{newreward|}}}|{{EquipmentGraphicKai|{{{newreward}}}|fairy=true|link=nil|size=150px}}|}}
+{{!}} {{#if:{{{newreward|}}}|{{EquipmentGraphicKai|{{{newreward}}}|fairy=only|link=nil|size=150px}}|}}
+{{!}}}
+}}
+{{#if: {{{rewarditem|}}}|
+<table class="wikitable" style="text-align:center;">
+<tr>
+<th {{#switch: {{{rewarditem|1}}}|1 = colspan="1"|2 = colspan="2"|3 = colspan="3"|4= colspan="4"}}>{{new}}&nbsp;&nbsp;&nbsp;{{#switch: {{{rewarditem|1}}}|1 = [[{{{newreward1|No Input}}}]]|2 = [[{{{newreward1|No Input}}}]] + [[{{{newreward2|No Input}}}]]|3 = [[{{{newreward1|No Input}}}]] + [[{{{newreward2|No Input}}}]] + [[{{{newreward3|No Input}}}]]|4 = [[{{{newreward1|No Input}}}]] + [[{{{newreward2|No Input}}}]] + [[{{{newreward3|No Input}}}]] + [[{{{newreward4|No Input}}}]]}}</th>
+</tr>
+<tr>
+<td>{{#ifexpr: {{{rewarditem|1}}} >= 1 |{{#if:{{{newreward1| }}}|{{EquipmentCardKai|{{{newreward1}}}|link=nil|size=150px}}|<div style="width:150px;height:150px;"></div>}}|<div style="width:150px;height:150px;"></div>}}{{#ifexpr: {{{rewarditem|1}}} >= 2 |{{#if:{{{newreward2|}}}|</td><td>{{EquipmentCardKai|{{{newreward2}}}|link=nil|size=150px}}|</td><td><div style="width:150px;height:150px;"></div>}}|}}{{#ifexpr: {{{rewarditem|1}}} >= 3 |{{#if:{{{newreward3|}}}|</td><td>{{EquipmentCardKai|{{{newreward3}}}|link=nil|size=150px}}|</td><td><div style="width:150px;height:150px;"></div>}}|}}{{#ifexpr: {{{rewarditem|1}}} >= 4 |{{#if:{{{newreward4|}}}|</td><td>{{EquipmentCardKai|{{{newreward4}}}|link=nil|size=150px}}|</td><td><div style="width:150px;height:150px;"></div>}}|}}
+</td>
+</tr>
+</table>|}}
+==Related Tweets==
+{{MultiTweet
+|MultiTweetID = RelatedTweet
+|color = #ace
+|title = Related Tweets
+
+|link01 = {{{reltweetslink1|}}}
+|JP01 = {{{reltweetsJP1|}}}
+|EN01 = {{{reltweetsEN1|}}}
+|TL01 = {{{reltweetsTL1|}}}
+
+|link02 = {{{reltweetslink2|}}}
+|JP02 = {{{reltweetsJP2|}}}
+|EN02 = {{{reltweetsEN2|}}}
+|TL02 = {{{reltweetsTL2|}}}
+
+|link03 = {{{reltweetslink3|}}}
+|JP03 = {{{reltweetsJP3|}}}
+|EN03 = {{{reltweetsEN3|}}}
+|TL03 = {{{reltweetsTL3|}}}
+
+|link04 = {{{reltweetslink4|}}}
+|JP04 = {{{reltweetsJP4|}}}
+|EN04 = {{{reltweetsEN4|}}}
+|TL04 = {{{reltweetsTL4|}}}
+
+|link05 = {{{reltweetslink5|}}}
+|JP05 = {{{reltweetsJP5|}}}
+|EN05 = {{{reltweetsEN5|}}}
+|TL05 = {{{reltweetsTL5|}}}
+}}
+==Rewards List==
+{{#tag:tabber|Stylish=
+'''Note:''' 
+* Click on the words in grey/gray boxes to reveal equipment names.
+* This "viewing mode" is '''only''' for those who do not prefer "Classic" view. In other words, you will only receive the rewards once.
+
+{{{!}} class="wikitable" style="text-align:center;"
+! style="background:gray;color:white;font-size:18px" colspan="4" {{!}} <span style="cursor:pointer;" title="Click to reveal the names of equipment in text"><div class="mw-customtoggle-top5"><span style="cursor:help;" title="Kangou Kantai Kikan Kantai">聯合艦隊基幹艦隊</span> 1st~5th place</div>
+{{!}}-
+<!-- First item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item1|}}}|{{EquipmentCardKai|{{{item1}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty1|}}}|x{{{qty1}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">{{#if:{{{item1|}}}|[[{{{item1}}}]]|&nbsp;}}</div>
+<!-- Second item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item2|}}}|{{EquipmentCardKai|{{{item2}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty2|}}}|x{{{qty2}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">{{#if:{{{item2|}}}|[[{{{item2}}}]]|&nbsp;}}</div>
+<!-- Third item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item3|}}}|{{EquipmentCardKai|{{{item3}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty3|}}}|x{{{qty3}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">{{#if:{{{item3|}}}|[[{{{item3}}}]]|&nbsp;}}</div>
+<!-- Last item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item4|}}}|{{EquipmentCardKai|{{{item4}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty4|}}}|x{{{qty4}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">{{#if:{{{item4|}}}|[[{{{item4}}}]]|&nbsp;}}</div>
+<!-- End Top 5 -->
+{{!}}-
+! style="background:gray;color:white;font-size:18px" colspan="4" {{!}} <span style="cursor:pointer;" title="Click to reveal the names of equipment in text"><div class="mw-customtoggle-6to20"><span style="cursor:help;" title="Shuuryoku Kantai Dai Ichi Gun">主力艦隊第一群</span> 6th~20th place</div>
+{{!}}-
+<!-- First item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item5|}}}|{{EquipmentCardKai|{{{item5}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty5|}}}|x{{{qty5}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-6to20">{{#if:{{{item5|}}}|[[{{{item5}}}]]|&nbsp;}}</div>
+<!-- Second item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item6|}}}|{{EquipmentCardKai|{{{item6}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty6|}}}|x{{{qty6}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-6to20">{{#if:{{{item6|}}}|[[{{{item6}}}]]|&nbsp;}}</div>
+<!-- Third item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item7|}}}|{{EquipmentCardKai|{{{item7}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty7|}}}|x{{{qty7}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-6to20">{{#if:{{{item7|}}}|[[{{{item7}}}]]|&nbsp;}}</div>
+<!-- Last item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item8|}}}|{{EquipmentCardKai|{{{item8}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty8|}}}|x{{{qty8}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-6to20">{{#if:{{{item8|}}}|[[{{{item8}}}]]|&nbsp;}}</div>
+<!-- End rank 6 to 20 -->
+{{!}}-
+! style="background:gray;color:white;font-size:18px" colspan="4" {{!}} <span style="cursor:pointer;" title="Click to reveal the names of equipment in text"><div class="mw-customtoggle-21to100"><span style="cursor:help;" title="Shuuryoku Kantai Dai Ni Gun">主力艦隊第二群</span> 21st~100th place</div>
+{{!}}-
+<!-- First item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item9|}}}|{{EquipmentCardKai|{{{item9}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty9|}}}|x{{{qty9}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-21to100">{{#if:{{{item9|}}}|[[{{{item9}}}]]|&nbsp;}}</div>
+<!-- Second item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item10|}}}|{{EquipmentCardKai|{{{item10}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty10|}}}|x{{{qty10}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-21to100">{{#if:{{{item10|}}}|[[{{{item10}}}]]|&nbsp;}}</div>
+<!-- Third item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item11|}}}|{{EquipmentCardKai|{{{item11}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty11|}}}|x{{{qty11}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-21to100">{{#if:{{{item11|}}}|[[{{{item11}}}]]|&nbsp;}}</div>
+<!-- Last item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item12|}}}|{{EquipmentCardKai|{{{item12}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty12|}}}|x{{{qty12}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-21to100">{{#if:{{{item12|}}}|[[{{{item12}}}]]|&nbsp;}}</div>
+<!-- End Rank 21 to 100 -->
+{{!}}-
+! style="background:gray;color:white;font-size:18px" colspan="4" {{!}} <span style="cursor:pointer;" title="Click to reveal the names of equipment in text"><div class="mw-customtoggle-101to500"><span style="cursor:help;" title="Shuuryoku Kantai Dai San Gun">主力艦隊第三群</span> 101st~500th place</div>
+{{!}}-
+<!-- First item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item13|}}}|{{EquipmentCardKai|{{{item13}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty13|}}}|x{{{qty13}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-101to500">{{#if:{{{item13|}}}|[[{{{item13}}}]]|&nbsp;}}</div>
+<!-- Second item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item14|}}}|{{EquipmentCardKai|{{{item14}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty14|}}}|x{{{qty14}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-101to500">{{#if:{{{item14|}}}|[[{{{item14}}}]]|&nbsp;}}</div>
+<!-- Third item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item15|}}}|{{EquipmentCardKai|{{{item15}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|font-size = 18px
+|text = {{#if:{{{qty15|}}}|x{{{qty15}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-101top500">{{#if:{{{item15|}}}|[[{{{item15}}}]]|&nbsp;}}</div>
+<!-- Last item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{item16|}}}|{{EquipmentCardKai|{{{item16}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{qty16|}}}|x{{{qty16}}}|&nbsp;}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-101top500">{{#if:{{{item16|}}}|[[{{{item16}}}]]|&nbsp;}}</div>
+<!-- End of fancy table -->
+{{!}}}
+
+{{!}}-{{!}}Classic=
+'''Note:'''
+* This "viewing mode" is '''only''' for those who do not prefer "Stylish" view. In other words, you will only receive the rewards once.
+
+===1~5===
+{{{!}} class="wikitable"
+! Equipment name
+! Quantity
+{{!}}-
+{{!}} {{#if:{{{item1|}}}|[[{{{item1}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty1|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item2|}}}|[[{{{item2}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty2|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item3|}}}|[[{{{item3}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty3|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item4|}}}|[[{{{item4}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty4|}}}</div>
+{{!}}}
+
+===6~20===
+{{{!}} class="wikitable"
+! Equipment name
+! Quantity
+{{!}}-
+{{!}} {{#if:{{{item5|}}}|[[{{{item5}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty5|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item6|}}}|[[{{{item6}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty6|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item7|}}}|[[{{{item7}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty7|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item8|}}}|[[{{{item8}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty8|}}}</div>
+{{!}}}
+
+===21~100===
+{{{!}} class="wikitable"
+! Equipment name
+! Quantity
+{{!}}-
+{{!}} {{#if:{{{item9|}}}|[[{{{item9}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty9|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item10|}}}|[[{{{item10}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty10|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item11|}}}|[[{{{item11}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty11|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item12|}}}|[[{{{item12}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty12|}}}</div>
+{{!}}}
+
+===101~500===
+{{{!}} class="wikitable"
+! Equipment name
+! Quantity
+{{!}}-
+{{!}} {{#if:{{{item13|}}}|[[{{{item13}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty13|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item14|}}}|[[{{{item14}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty14|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item15|}}}|[[{{{item15}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty15|}}}</div>
+{{!}}-
+{{!}} {{#if:{{{item16|}}}|[[{{{item16}}}]]|&nbsp;}}
+{{!}} <div style="text-align:center;">{{{qty16|}}}</div>
+{{!}}}
+
+{{!}}-{{!}}Raw (Japanese)=
+'''Note:'''
+* This "viewing mode" is '''only''' for those who prefer to only read the original quoted text from Japanese sites. In other words, you will only receive the rewards once.
+{{{rawinfo|''Original text from Japanese sites not provided''}}}
+}}
+
+Sources:
+* {{{source|}}}
+
+Notes:
+* {{{notes|}}}
+
+Thanks to:
+* {{{credits|}}}
+
+__NOTOC__ __NOEDITSECTION__
+<noinclude>
+{{documentation}}
+</noinclude>

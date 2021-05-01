@@ -1,0 +1,141 @@
+==Basic==
+;Description
+:This template is a re-make of [[Module:NanaminFleet]]. Its purpose is to create a fleet table displaying ships and their equipment.
+;Skeleton
+<pre>{{NanaminFleetKai
+| #Header
+| <Ship>/<Model>/<Level>
+| <Equipment>
+| <Equipment>
+| <Equipment>
+| <Equipment>
+|-
+| hq = 
+| route = 
+| difficulty = 
+| drops = 
+| use_los = true
+}}</pre>
+
+==Syntax==
+*''Ship'' is the ship's name. For example, "Sendai".
+*''Model'' is the ship's remodel. This may be "", "Kai", "Kai Ni", "A", "Carrier", "Carrier Kai", "Carrier Kai Ni", "zwei" or "drei".
+*''Level'' is the ship's current level. Alternatively, if ''use_los'' is set, this will be the ship's base line of sight (LoS) value (without any equipment on).
+*''Equipment'' is the ship's equipment. Slot order does matter as it is used to calculate the ship's fighter power.
+
+===Special Values===
+*''Header'' places a row that stretches across the full width of the table and contains the text after the #. This can only be placed at the top of odd-numbered rows.
+*''hq'' is the user's current HQ level.
+*''route'' is the route taken on the map. This is used as-is, so you can write it how you like. For example, "A-B/C-D/E-F" and "A-B-D-F or A-C-E-F" are both valid entries.
+*''difficulty'' is the difficulty setting chosen for an event. It is used as-is, but it is recommended to use "Easy", "Medium" or "Hard" for clarity. '''This field is optional.'''
+*''drops'' contains the names of ships the user obtained from the map. It is a list of ship names with forward slashes separating them. For example, "Akizuki/Akashi/Taigei/U-511/Tokitsukaze/Maikaze". '''This field is optional.'''
+*''use_los'' defines whether the ''Level'' field will be read as the ship's current level or base LoS. As modules may not be 100% accurate due to missing information or otherwise, users may opt to input the base LoS values themselves.
+
+===Styling Values===
+:All fields here are '''optional'''.
+*''header_bg'' is the background color of any headers inserted. The default value is "#98D2F0".
+*''ship_card_bg'' is the background color of the ship card cell. The default value is "transparent".
+*''equip_icon_bg'' is the background color of the equipment icon cell. The default value is "#8DCDEE".
+*''equip_bg'' is the background color of the equipment cell when there is an equip. The default value is "#E4F3FB".
+*''equip_locked_bg'' is the background color of the equipment cell when there is nothing equipped or the slot is locked. The default value is "#CDDBE2".
+*''extra_cells_bg'' is the background color for the cells before the main table body. The default value is "#98D2F0".
+
+==Example==
+<pre>{{NanaminFleetKai
+| #Main Fleet
+| Maya/Kai Ni/1
+| 20.3cm (No.3) Twin Gun Mount
+| 25mm Triple Autocannon Mount Concentrated Deployment
+| 10cm Twin High-angle Gun Mount (Carriage)
+| Type 0 Observation Seaplane
+|-
+| Amagi/Kai/1
+| Suisei (601 Air Group)
+| Type 0 Fighter Model 62 (Fighter-bomber)
+| Reppuu (601 Air Group)
+| Skilled Carrier-based Aircraft Maintenance Personnel
+|-
+| Zuikaku/Kai/1
+| Reppuu
+| Zero Fighter Model 52C (601 Air Group)
+| Suisei (Egusa Squadron)
+| Ryuusei (601 Air Group)
+|-
+| Shoukaku/Kai/1
+| Reppuu
+| Zero Fighter Model 52C (601 Air Group)
+| Tenzan Model 12 (Tomonaga Squadron)
+| Suisei (601 Air Group)
+|-
+| #Escort Fleet
+| Chikuma/Kai Ni/1
+| 20.3cm (No.3) Twin Gun Mount
+| 20.3cm (No.2) Twin Gun Mount
+| Zuiun (634 Air Group)
+| No. 32 Surface Radar
+|-
+| Kiso/Kai Ni/1
+| Kouhyouteki
+| 20.3cm (No.2) Twin Gun Mount
+| 20.3cm (No.2) Twin Gun Mount
+|-
+| hq = 100
+| route = A-B-C-D or A-E-F-G
+| difficulty = {{Salt}}
+| drops = Akizuki/Akashi/Taigei/U-511/Tokitsukaze/Maikaze
+| header_bg = #98D2F0
+| ship_card_bg = transparent
+| equip_icon_bg = #8DCDEE
+| equip_bg = #E4F3FB
+| equip_locked_bg = #CDDBE2
+| extra_cells_bg = #98D2F0
+}}</pre>
+{{NanaminFleetKai
+| #Main Fleet
+| Maya/Kai Ni/1
+| 20.3cm (No.3) Twin Gun Mount
+| 25mm Triple Autocannon Mount Concentrated Deployment
+| 10cm Twin High-angle Gun Mount (Carriage)
+| Type 0 Observation Seaplane
+|-
+| Amagi/Kai/1
+| Suisei (601 Air Group)
+| Type 0 Fighter Model 62 (Fighter-bomber)
+| Reppuu (601 Air Group)
+| Skilled Carrier-based Aircraft Maintenance Personnel
+|-
+| Zuikaku/Kai/1
+| Reppuu
+| Zero Fighter Model 52C (601 Air Group)
+| Suisei (Egusa Squadron)
+| Ryuusei (601 Air Group)
+|-
+| Shoukaku/Kai/1
+| Reppuu
+| Zero Fighter Model 52C (601 Air Group)
+| Tenzan Model 12 (Tomonaga Squadron)
+| Suisei (601 Air Group)
+|-
+| #Escort Fleet
+| Chikuma/Kai Ni/1
+| 20.3cm (No.3) Twin Gun Mount
+| 20.3cm (No.2) Twin Gun Mount
+| Zuiun (634 Air Group)
+| No. 32 Surface Radar
+|-
+| Kiso/Kai Ni/1
+| Kouhyouteki
+| 20.3cm (No.2) Twin Gun Mount
+| 20.3cm (No.2) Twin Gun Mount
+|-
+| hq = 100
+| route = A-B-C-D or A-E-F-G
+| difficulty = {{Salt}}
+| drops = Akizuki/Akashi/Taigei/U-511/Tokitsukaze/Maikaze
+| header_bg = #98D2F0
+| ship_card_bg = transparent
+| equip_icon_bg = #8DCDEE
+| equip_bg = #E4F3FB
+| equip_locked_bg = #CDDBE2
+| extra_cells_bg = #98D2F0
+}}

@@ -1,0 +1,97 @@
+My first blog and first personal project
+==World 6-3: グアノ環礁沖海域==
+: [[File:6-3_Map.jpg|thumb|left|238px]]
+A small map which only allow you to use CLs, DDs and AVs (and katori, but why using her). Due to its ship restriction, the branching rules are simple:
+* A is a choice node, you can choose to go to B or C
+* 1 CL 4 DD 1 AV will ensure E-G, replace 1 DD with another CL and you will randomly go to G or F, other compositions ensure E-F
+* H-F is a eLoS check
+: This map is the first map to have "resource check" node. When you reach node G and H, a seaplane (or flying boat if your AV have it) animation will "fly" to the X spot and return with some resource. You can also get a great success, getting more resource than usual. BUT in order to get the resource, you need to get a B rank or higher in the next battle node, which is the boss node in this case. Since I is a non-combat node, you wont get anything if you reach there
+
+: You also need to sink the flagship at boss node 5 times to clear this map. You can visit World 6 page to see the enemies there (it's not an easy battle btw)
+== Why did i make this blog?==
+: A little flashback, shall we?
+
+: During the first 4 kills, i used [http://i.imgur.com/7TIBcUH.png this] composition
+
+: Sometimes, i used Akitsushima (2 flying boats + 1 zuiun) instead of Chitose A
+
+: It tooks me about 30 runs (cant help it, they arent as strong as top-tier DDs but i love using them) to finally reached final kill. During those 30-ish runs, i always get something from G-X and H-X.
+
+: For the final kill, i used "alternative compo" in the data file below
+
+: It only tooks me 3 runs (exp 1 to 3) to finish the hime (ushio's torp CI deals 230+ dmg). During those runs, i failed H-X check (get nothing there) but still get something from G-X, and it reached boss node all of the times
+
+: Due to my fleet's low eLoS, i think eLoS would affect the result of the resource check. Therefore this test were made to check that theory
+==The Result==
+: All data (composition, HQ level, ships equipment and base LoS, ...) are recorded in the file below (download it for better viewing)
+
+: https://drive.google.com/file/d/0B7MmNLRZ4PkZQTZMOU50Y2J4aHM/view?usp=sharing
+
+: During the test (at exp. 8), my fleet reached node I, which means eLoS is not enough to ensure H-J so i also check the H-J minimum eLoS
+
+: NOTE: Since im saving buckets for the incoming event and real-life stuff, the sample size is pretty low (~100 samples).
+
+
+==Analysis==
+: '''NOTE: Because the sample size is low, all results may not be 100% accurate yet (some of them are just theories). So DONT TAKE THIS SO SERIOUSLY'''
+<p style="text-align: center;">'''About the resource check'''</p>
+
+
+*'''G-X check'''
+: Exp. 51: i replace night scout and searchlight (total 8 eLoS) with type 33 surface Radar and another 15.5cm (total 7 eLoS) and failed G-X check
+
+: Exp. 52: i replace the type 33 surface Radar (7 eLoS) with night scout (6 eLoS) and G-X check success => even with lower eLoS, G-X still success
+
+: Exp 54: ooyodo's equipments are the same as exp. 51, but other DDs get their radar (17 eLoS more than exp 51) and still failed G-X check
+
+: => the "eLoS affect the resource check" is false
+
+: The difference between those test is the number of seaplane equipped. Exp 1-50 have 2 seaplanes (night scout and zuiun) and they always success (except exp 23-only 1 seaplane and exp 36-mentioned later) while Exp 51-100 (excluding the special exp) have only 1 seaplane and failed everytime
+
+: =>'''you need at least 2 seaplanes for G-X check'''
+*'''H-X check'''
+: Since the success of G-X check depends on the number of seaplane equipped, i think the same rule would be applied to H-X check.
+
+: All exp have the same result: failed H-X check. But, during the first 4 kills, i used 3 seaplanes (night recon + 2 zuiun) and always success H-X check (it sounds biased, i know) so i believe '''at least 3 seaplanes are needed for H-X check'''
+*'''About [[Type 2 Large-sized Flying Boat|Flying Boats]]'''
+: The test is mainly focus on Chitose A (whose is unable to use taitei-chan) so i dont have many samples about her, but i've conducted 2 exp. on her (the mini test).
+
+: Exp 10': 1 night scout and 1 taitei equipped, G-X check and H-X check success
+
+: Exp 59': only 1 taitei equipped, only G-X success
+
+: =>'''1 taitei can act as 2 seaplanes '''
+
+: Of course, this is the most biased theory in this test. It would be nice if someone else can help me check this
+* '''Special mention: Exp 36'''
+: In Exp 36, my fleet face tsu-class and 4 DDs in double line at node E. Due to tsu-class high AA and increase AA defense in double line, only 1 zuiun survive after that node. 1 zuiun = it still contribute to fleet eLoS, and normally, with it and night recon, G-X would be a success but nope
+
+: => seems like number of planes shooted down also affect the resource check
+
+: Since it's hard to meet tsu-class in double line, dont worry too much about this
+
+:
+<p style="text-align: center;">'''About H-J eLoS check'''</p>
+
+
+: Since i used skilled lookouts (its LoS modifier is unknown) so i use the excel file from [http://kancolle.wikia.com/wiki/User:Kouma231 Kouma231] (which can be found in [[Line of Sight|this page]]). '''All eLoS listed below is calculated WITHOUT 2 skilled lookout '''
+*Exp 51-56: 18.59 (excluding 52, 54)
+*Exp 57-74: 18.73
+*Exp 75: 18.95
+*Exp 76: 19.08
+*Exp 77: 19.23
+*Exp 78-82: 18.93
+*Exp 83-89: 18.62
+*Exp 90-94: 18.78
+*Exp 95+96: 18.90
+*Exp 97-100: 18.77
+: eLoS in exp 1-50 are roughly 1 point higher than these eLoS (8 eLoS from night scout + searchlight vs. 7 from type 33 surface RADAR)
+
+: Exp 51-74: the sample size is low, but seems like 18.73 eLoS have no chance to reach H-J (maybe it's really a really low-chance like 2-5 ammo node)
+
+: Exp 95+96: it's able to reach H-J with 18.90 eLoS
+
+: about Exp 90-94 and 97-100: the sample is too small to prove anything
+
+: Remember, those eLoS are calculated WITHOUT skilled lookout, i could have used other equipments to get better results, but too lazy for that :v
+[[Category:Blog posts]]

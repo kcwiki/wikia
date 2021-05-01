@@ -1,0 +1,11 @@
+<div style="height:{{#expr:480*{{{scale|0.8}}}}}px;width:{{#expr:800*{{{scale|0.8}}}}}px;overflow:hidden;position:relative;{{#switch:{{{align|}}}|right = margin:0 0 0 auto|center = margin:0 auto|}}"><div style="height:480px; width:800px;transform-origin:top left;transform:scale({{{scale|0.8}}});"><div style="position:absolute;top:280px;">[[File:{{{floor|Chinju-fu_standard_floor.png}}}|link=]]</div>
+<div style="position:absolute;top:0px;">[[File:{{{wall|Common wallpaper.png}}}|link=]]</div>
+{{#if:{{{background|}}}|<div style="position:absolute;{{{background-pos|left:180px}}};">[[File:{{{background|}}}|link=]]</div>|}}
+<div style="position:absolute;left:200px;">[[File:{{{window|Window with red curtain.png}}}|link=]]</div>
+{{#if:{{{object|}}}|<div style="position:absolute;{{{object-pos|left:0px}}};">[[File:{{{object|}}}{{!}}link=]]</div>|}}
+{{#if:{{{chest|}}}|<div style="position:absolute;{{{chest-pos|right:0px}}};">[[File:{{{chest|}}}{{!}}link=]]</div>|}}
+<div style="position:absolute;{{{desk-pos|top:130px}}};">[[File:{{{desk|Common cardboard.png}}}|link=]]</div>
+{{#if:{{{ship|}}}|<div style="position:absolute;{{{ship-pos|right:0px}}};">{{{ship|}}}</div>|}}</div></div>
+<noinclude>
+{{Documentation}}
+</noinclude>

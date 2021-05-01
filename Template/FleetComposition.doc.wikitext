@@ -1,0 +1,179 @@
+{{Ambox
+|type = notice
+|title = This template has been superseded by [[Template:EventComp]]
+|users = [[User:Fujihita|Fujihita]]
+}}
+
+;Description
+:This template is used to do insert collapsible fleet composition report with simple battle cards and unchecked equipment field into articles. Automatically hide excess ship slots, useful for fleets under 6 ships.
+
+:The goal of this template is to eliminate input validation restrictions of the previous templates and support further customization via wiki-text in exchange for low automation (No automatic fighter power or LoS calculator, users will have to add them manually in the post).
+;Syntax
+:Fill in the form
+<pre>{{FleetComposition|id=<ID>
+|<Ship name>/<Model>
+|
+:<Equipment>
+:<Equipment>
+:<Equipment>
+:<Equipment>
+|-
+|<Ship name>/<Model>
+|
+:<Equipment>
+:<Equipment>
+:<Equipment>
+:<Equipment>
+|-
+|<Ship name>/<Model>
+|
+:<Equipment>
+:<Equipment>
+:<Equipment>
+:<Equipment>
+|-
+|<Ship name>|<Model>
+|
+:<Equipment>
+:<Equipment>
+:<Equipment>
+:<Equipment>
+|<Ship name>/<Model>
+|
+:<Equipment>
+:<Equipment>
+:<Equipment>
+:<Equipment>
+|-
+|<Ship name>/<Model>
+|
+:<Equipment>
+:<Equipment>
+:<Equipment>
+:<Equipment>
+}}</pre>
+;Notes:
+:<code><nowiki><ID></nowiki></code> field must be unique within an article. Assignment of this field is optional. If multiple report templates are assigned the same ID, they will be linked and collapse/expand together.
+:By default the template uses timestamp id but manual assignment might be necessary in some cases.
+:<span style="color:red">Blank space and some special characters are not allowed in the ID. If the template doesn't expand, check your ID first.</span>
+
+;Sample outputs
+:{{FleetComposition|id=Fujihita-E1
+|Inazuma
+|
+:[[61cm Quint (Oxygen) Torpedo Mount|Quint O2 torp]]
+:[[61cm Quint (Oxygen) Torpedo Mount|Quint O2 torp]]
+:[[Skilled Lookouts]]
+|-
+|Akatsuki/Kai
+|
+:[[12.7cm Twin High-Angle Mount (Late Model)|12.7cm HA Late model]]
+:[[Akizuki's gun]]
+:[[Type 3 SONAR]]
+|-
+|Yuudachi/Kai Ni
+|
+:[[Akizuki's gun]]
+:[[Akizuki's gun]]
+:[[Type 22 Surface RADAR Kai 4]]
+|-
+|Sendai/Kai Ni
+|
+:[[SKC34 20.3cm Twin Cannon|SKC34 20.3cm]]
+:[[SKC34 20.3cm Twin Cannon|SKC34 20.3cm]]
+:[[Type 0 Observation Seaplane]]
+|-
+|Shigure/Kai Ni
+|
+:[[12.7cm Twin High-Angle Mount (Late Model)|12.7cm HA Late model]]
+:[[12.7cm Twin High-Angle Mount (Late Model)|12.7cm HA Late model]]
+:[[Type 3 SONAR]]
+|-
+|Ooyodo/Kai
+|
+:[[20.3cm(no.2) Twin Gun Mount|20.3cm (no.2)]]
+:[[20.3cm(no.2) Twin Gun Mount|20.3cm (no.2)]]
+:[[FuMO25 Radar]]
+:[[Type 3 SONAR]]
+}}
+<pre>
+:{{FleetComposition|id=Fujihita-E1
+|Inazuma
+|
+:[[61cm Quint (Oxygen) Torpedo Mount|Quint O2 torp]]
+:[[61cm Quint (Oxygen) Torpedo Mount|Quint O2 torp]]
+:[[Skilled Lookouts]]
+|-
+|Akatsuki/Kai
+|
+:[[12.7cm Twin High-Angle Mount (Late Model)|12.7cm HA Late model]]
+:[[Akizuki's gun]]
+:[[Type 3 SONAR]]
+|-
+|Yuudachi/Kai Ni
+|
+:[[Akizuki's gun]]
+:[[Akizuki's gun]]
+:[[Type 22 Surface RADAR Kai 4]]
+|-
+|Sendai/Kai Ni
+|
+:[[SKC34 20.3cm Twin Cannon|SKC34 20.3cm]]
+:[[SKC34 20.3cm Twin Cannon|SKC34 20.3cm]]
+:[[Type 0 Observation Seaplane]]
+|-
+|Shigure/Kai Ni
+|
+:[[12.7cm Twin High-Angle Mount (Late Model)|12.7cm HA Late model]]
+:[[12.7cm Twin High-Angle Mount (Late Model)|12.7cm HA Late model]]
+:[[Type 3 SONAR]]
+|-
+|Ooyodo/Kai
+|
+:[[20.3cm(no.2) Twin Gun Mount|20.3cm (no.2)]]
+:[[20.3cm(no.2) Twin Gun Mount|20.3cm (no.2)]]
+:[[FuMO25 Radar]]
+:[[Type 3 SONAR]]
+}}
+</pre>
+
+{{FleetComposition
+|Battleship Water Demon
+|
+:Excalibur
+:Klein Field
+:Supergravity Cannon
+|-
+|Battleship Princess
+|
+:Carnival
+:Carnival
+:CARNIVAL DAYO!
+|-
+|Inazuma/Kai
+|
+:Corrosive Torpedo Mk.34
+:Corrosive Torpedo Mk.34
+:[[Skilled Lookouts]]
+}}
+<pre>
+{{FleetComposition
+|Battleship Water Demon
+|
+:Excalibur
+:Klein Field
+:Supergravity Cannon
+|-
+|Battleship Princess
+|
+:Carnival
+:Carnival
+:CARNIVAL DAYO!
+|-
+|Inazuma/Kai
+|
+:Corrosive Torpedo Mk.34
+:Corrosive Torpedo Mk.34
+:[[Skilled Lookouts]]
+}}
+</pre>

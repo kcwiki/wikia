@@ -1,0 +1,57 @@
+{{Ambox
+|type = delete
+|title = This template is deprecated.<br>
+|message = This template is deprecated in favor of [[Template:Event/Map]] and [[Template:Event/MapNode]]. For this template to work, node images should cover nodes on the map exactly, which leads to the following problems:
+* It is impossible with the current implementation, nodes will be tossed around on different [http://community.wikia.com/wiki/User_blog:Rupert_Giles/Layout_Changes:_Breakpoints_and_Typography screen breakpoints], even if by few pixels.
+* It requires finding node coordinates with one pixel precision.
+Both problems are solved by using 50px blank clickable areas and editing node images into the map itself, it is easy enough to edit the maps, while 50px areas can be placed loosely or automatically (see, e.g., [https://github.com/yukixz/kcmap kcmap]). This template can be reimplemented for displaying node images outside of the maps, in tables, text, etc.
+}}
+==Purpose==
+:Sortie node template to be used in a position:relative divider frame.
+:Intended for interactive maps.
+==Positioning arguments==
+:<code><nowiki>x-axis</nowiki></code>, <code><nowiki>y-axis</nowiki></code>
+:*Top-left most pixel is the origin
+:*Measured in pixel, input without px unit
+:*'''Images are scaled down to 700px width-wise to fit the screen. If you're using the full size image to make those coordinate, you're off by miles.'''
+==Node type argument==
+:<code><nowiki>type</nowiki></code>
+:*Select the type of node to display (case-sensitive). The default value is a blank 30px square.
+:*normal = [[File:Old Red node.png]]
+:*select = [[File:Old Blue node.png]]
+:*empty = [[File:Old Blue node.png]]
+:*storm = [[File:Old Purple node.png]]
+:*resource = [[File:Old Green node.png]]
+:*boss = [[File:Old Boss node.png]]
+:*aerial = [[File:Old Aerial node.png]]
+:*maelstrom = [[File:Purple node 2.png]]
+:*air defense = [[File:Old Raid node.png]]
+:*unknown = [[File:Unknown_node.png]]
+:*[[File:Blank_square.svg|30px]]
+
+==Embedded link & tooltip arguments==
+:<code><nowiki>tooltip</nowiki></code>
+:*Add a mouse-over tooltip with <code><nowiki>cursor:help</nowiki></code> CSS style.
+:<code><nowiki>link</nowiki></code>
+:*Override <code><nowiki>tooltip</nowiki></code> and embed internal wiki link.
+==Sample/result==
+<pre>
+<div style="position:relative;">[[File:Summer_2015_E2_Map.png|700px|link=]]
+{{Node
+|x-axis=339
+|y-axis=287
+|link=Sandbox/Event/E-2#D (Easy)
+|size=15
+|type=storm
+|tooltip=Battle node
+}}</div>
+</pre>
+<div style="position:relative;">[[File:Summer_2015_E2_Map.png|700px|link=]]
+{{Node
+|x-axis=339
+|y-axis=287
+|link=Sandbox/Event/E-2#D (Easy)
+|size=15
+|type=storm
+|tooltip=Battle node
+}}</div>

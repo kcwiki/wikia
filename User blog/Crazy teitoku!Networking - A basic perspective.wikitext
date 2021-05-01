@@ -1,0 +1,107 @@
+{| style="width:100%"
+|-
+| valign="top" |__TOC__
+| valign="top" |[[File:2-4_Map.jpg|300px|right|What networking looks like in a minute scale - crudely speaking.]]
+|}
+
+===Preface===
+From time and time again I see questions about networking and how people appear to assume that networking is either a non-issue or a trivial issue at that.
+
+I'll cut to the chase that networking by no means is anything small, it is often a very complex issue that gets overlooked.
+
+Even as a gamer it never hurts to understand how things work in the background as it helps pave way to a better understanding and hopefully assist in diagnosing issues if and when they arrive.
+
+In this blog entry I won't go into a long winded discussion on the aspects of networking as it is very technical and requires lots of reading. I am sure interested readers would follow on reading as needed from proper sources such as books and what not about networking philosophies. The aim here is to try and give an overview of networking at best.
+
+===Networking in a nutshell===
+The way computer networks are often described in plain terms as water pipes, another interesting way to look at it is to theorise it as one physically going from A to B except instead of the "packet" going from A to B, it will be you going from A to B physically yourself.
+
+What are packets exactly? packets are data sent to and fro from computers, in human terms it is kind of how I am speaking to you using text in this blog. If we were to communicate in human terms we could also use voice as well as text to communicate with each other but to computers it is text. Like the human communication, we have languages and each of these languages has rules in which they are to be used - better known as grammar. In networking computers too have to speak in a certain manner known as a protocol which is relatively the same thing.
+
+Packets needs a medium for communication, these could be wired or wireless depending on how it is set up by whoever is in charge. Generally speaking:
+* [[File:Red_LAN.gif|thumb|right]]The network formed by your own router and the devices that are connected (both wired as well as wireless) is only you in charge. This is loosely known as LAN or Local Area Network. Other cases of LAN could be anything like a computer laboratory in university campus is also known as LAN if all computers are only connected to each other and that there is a router + switch within the vicinity that manages it.{{clear}} 
+* [[File:Wide_area_network.gif|thumb|right]]A WAN or Wide Area Network is for set up where universities for instance is usually maintained by IT administrators within the respective campus.{{clear}}
+* [[File:Metropolitan_area_network.gif|thumb|right]]A MAN or Metropolitan Area Network is for city-wide set up.{{clear}}
+* [[File:Typical_large_ISP_room.jpg|thumb|right]] ISP or Internet Service Providers generally fit around the MAN category, depending on the size and scope of their operation.{{clear}} 
+* Then you have entities such as NOC or Network Operations Centre/Center which handles ISP/backbone operations and oversees the connectivity between various routes.
+[[File:AT-T_NOC.jpg|700px]]
+
+
+Each has their own benefits as well as their own weaknesses however generally for long distance connections are made via [[wikipedia:Submarine_communications_cable|submarine communications cable]].
+
+Here you can see how big and how complex networking is ('''Warning: ~9MB if viewed in original size'''):
+[[File:Submarine-cable-map-2015-x.png|700px]]
+
+Ok so now you may wonder what has this got to do with networking and how it affects you. In the next section I shall describe some of the issues that can arise from networking.
+
+===Issues with networking===
+In most home scenarios whereby you have several computers or better known as nodes connected to a network. Your average smart TV, mobile/cell phone, laptop, multifunction devices such as scanner/printers, tablets, etc are usually all connected to your "gateway" device which is usually known here as your router (or modem, but technically it is better known as router). If all these nodes require internet access to display stuff, they all need to share the same internet pipe. If lets say you are stuck on a slow internet and everyone is using internet, the speeds are shared. This is more or less the same as for example turning on taps in virtually every bathroom in your house/dwelling. As each tap requires to push water out the amount of water that gets pushed out is sort of shared between each tap that is turned on.
+
+The problem doesn't stop there with networking, there could be other issues such as congestion or broken pipes. Examples of these are for instance when you try turning the tap on but no water comes out and you wonder why, all these theories more or less applies to networking in practical terms. You can also imagine going from A to B and all of the sudden there are road blocks of sort, whether it be an accident, construction or just a closure on the road for some reason.
+
+In KanColle (the game) you can easily see how there is a similar relations with how your ships go from nodes to nodes and that there is a map that you must follow. Imagine the map is kind of like your connection between your computer to the internet and to another computer on that internet, the ship is your packet and the dotted route to each node is the cabling between nodes. The only real exception here is that unlike the game, in networking the routes are not determined by Random Number Generator (RNG for short) it is determined often by where a packet is intended to go and when networks are optimised they are often sent in the shortest route possible. When there is a broken pipe somewhere along the way, imagine that as your ships going through maelstrom except instead of losing a bit of resources in the game your ship is lost. That is what happens to packets when they arrive to a dead-end, they cannot forsee that along the way there was an issue and hence those packets gets dropped or lost in the process. In virtually all of the scenarios this is not always the case as like the game in some retrospects certain nodes are able to tell each other if and when certain destination nodes are missing. When that happens, your packets gets sent back often to you. This is similar to how writing emails or mails for instance and they get sent back because there was an error with it.
+
+[[File:6-31a.jpg]]
+
+So how do you avoid that? read on to the next section.
+
+===Re-routing===
+[[File:Detour.jpg|thumb|right]]
+When you can't connect to certain websites for instance or when you get cat bombed or even when there is an error with the game, it is a simple sign telling you that there was an issue with the communication between your computer and the server on the other end. More often than not the issue lies with the routing that goes on in between. You may think that the server is down on the other end but that isn't necessarily the case. A breakdown partway between is often the cause of such issues and there could be many causes for instance one of the nodes is down due to errors or maintenance. It could also be that the cabling in between broke down, either because of physical wear and tear (over prolonged periods) or that it was severed for some other reason.
+{{clear}}
+
+[[File:Overview_bypass.jpg|thumb|right]]
+In order to avoid issues like that you need to find a workaround solution, an alternative way to get your packet sent to the server. This is where the likes of proxies or Virtual Private Network (abbreviated as VPN) comes in handy because it changes the route you go from A to B. Often more than not with alternative routing it is going the longer way, similar to how it is in KanColle where reaching the destination may require you to take longer route to get there. It gets there but it just takes longer than usual because the shortest route may no longer be possible. 
+
+As it takes longer for one packet to go from A to B the effects are multiplied in terms of latencies. What are latencies? think of how you get from A to B, if there was a slow down somewhere it means that there is a delay and a change in the scheduled time due to the nature of it all. Similarly if there are many packets going through a specific node that is very slow the latency increases between you and the destination. Think of it as water flowing in from one big pipe to a smaller pipe and then back up to a big pipe, with large amounts of water flowing through the pipes the smaller pipe is the cause of the bottleneck. Again this is similarly the case as is above with how you may have several devices connected to your router at home and all of them requiring internet access. In virtually all the home scenarios you have big pipes between your devices because they all share the same pipe however, your Internet Service Provider (short for ISP) has only given you certain speeds and those speeds govern the size of the pipe.
+
+In gaming perspective especially with real time games - latencies are important. As congestion occurs at any random moment compounds the issues and latencies to newer levels. Most network demanding games often has a well known networking term known as a "ping". Ping is a way to test your connectivity between your computer to the destination it intends to go to, it is also another term for testing latencies but also has other uses.
+
+What are other potential factors that may impede your connectivity? Read on to the next section.
+
+===Other factors===
+
+Now that you understand the fundamental causes of what causes issues with networking in basic sense, it is time to elevate the complexities with networking.
+
+On this wiki, you would have noticed there is a page discussing VPN such as [[Tutorial: Proxy Connection]]. A VPN is one of several ways to redirect or otherwise re-route your connectivity by other means. However, VPN like other methods are not invulnerable to congestions or breakdowns partway. Besides, VPN is not a simple "do all, be all and end all" solution to your problems. If the issue happens from your ISP level regardless of how many VPN you try it will not solve the issue. This is similar to a case with for instance in a multi storey building where you are on level 5 for instance and you turn on the water but wonder why it is either flowing slowly or not even flowing at all but the same thing happens regardless if you are on other levels. Another case is when you for example visit your friend's place and the first thing that blocks/slows your way to getting there is an obstruction from either your front door or on your street. If and when such scenarios happen, this is inevitable and the only best way is to talk to whoever that is blocking your path in which for this instance it is your ISP.
+
+Another issue may also arise if you are using wireless networking. Examples of where you use wireless networking is often found with the use of mobile/cell phones or even tablets whereby you are not connected to a network via a physical wire. Wireless networking operates similarly as wired networking in most aspects except that it is talking over the air via radio waves. Most computer wireless networks operates on a single band (2.4GHz), as more and more such devices are active on the said band it can easily get congested. Your neighbours may also be using wireless networks and are probably streaming something at high definition and whilst they are doing that, you share the same band but are somewhat restricted to a slower speed because they are taking up a portion of your bandwidth over the radio waves. Again this is similar to how it is if you have several taps turned on in your house, the more devices there are and that they require to display certain information the more demanding they are and therefore the more slower they become because they are all bound to the same pipe. If you gave your ISP a call when you have issues with your internet for instance, one of the first few questions they will either ask or make you do is to use wired networking as wireless networks are often the source of the issue.
+
+In the final section I shall discuss the more technical aspects to troubleshooting.
+
+===Technical troubleshooting===
+
+In this section I will be brief on covering the technical troubleshooting aspects as there are several subjects to cover and requires lots of reading on your part.
+
+Computers on networks are bound to a term known IP addresses when communicating to each other. It is no different from the numbers you have assigned to your mobile/cell phone or the number for your house or even just your full name (probably not the best example to use full names and that will be covered later on). These IP addresses allows computers to be able to talk to each other directly.
+
+For starters, it all starts with MAC addresses, they connect to router and they are given an IP address which maybe a temporary IP address. They then talk to each other via IP addresses which are usually different IP addresses (via DHCP or Dynamic Host Configuration Protocol) to your internet IP address. Your internet IP address is the same usually for home environments because they all go through the same line and therefore the same router so to speak. This is a term known as masquerading and similarly the same happens to an extent when either using proxies and/or VPN solutions, etc.
+
+When you want to say visit Google, your computer would ask what is the IP address of Google and the IP address of Google is provided to your computer. Computers don't "speak" to each other like how I speak to you but they communicate in numbers. The service that is responsible for translating human terms such as google.com into an IP address are known as Domain Name Server (DNS).
+
+Now, when you send a ping (technically known as ICMP Ping or Internet Control Message Protocol Ping) your computer first has to query/ask your DNS what is the IP address of a certain hostname (for example google.com unless you happen to know the IP address). Your computer, after it knows the IP address for google.com sends a ping packet to google.com asking to see if google.com is "alive". The packets transverses through various networks as it gets to the destination. Once a response is heard another packet is sent back to tell you in this case google.com is "alive".
+
+To see which routes it would take through internet to get from A to B you use a software known as tracert (for windows) or traceroute, etc for Mac/Linux/BSD, etc. A traceroute software allows you to see which IP address and/or the name of the host (short for hostname) as it goes through and provides latency times in miliseconds the time it takes. A loss or filtered node will be shown mostly in asterisk form. Filtered nodes by definition are firewalls which can be designed in various ways such as to block ICMP Ping.
+
+That in general is a brief overview of technical stuff in networking. I could have covered it in much more depth such as Masquerading, ToS, QoS, various TCP/IP flags and even specific wireless stuff but as said before if you are keen you can read on in various information I provide below (under further reading).
+
+===Final remarks===
+
+I hope you have enjoyed reading this rather long winded blog entry and have taken at least a bit of knowledge in. Networking is by no means something that is easy to understand neither it is something that should not even be looked at because of whatever false assumptions you may have. Understanding networking can greatly help you understand how your computer sort of works and that you don't sound dumbfounded when it comes to troubleshooting issues as they arise.
+
+However by no means I make this blog entry a comprehensive or otherwise fully technical blog entry. For that there are several sources that I can point in the next section where you are free to read more as you desire. This blog entry was really designed for gamers by gamers and I am sure if I were to make it for geeks I would be posting this blog in the wrong area for starters. :v Besides it is well known that surely nobody likes to read long winded stuff that is either too technical or too deep hence this is really just a brief overview of a much rather complex topic overall.
+
+I am sure for geeks - especially networking geeks could easily spot the flaws in my blog entry. I cannot deny that it lacks depth nor that it is perfect overview of a technical topic. However a balance has to be struck somewhere between writing something that could easily be shrugged off as TL;DR or something that may make me look like I have some network engineering degree and talk in technical jargon that only likeminded people can comprehend.
+
+===Further (technical) reading/watching===
+* [[wikipedia:Computer_network| Wikipedia's entry on computer network]]
+* [https://www.youtube.com/watch?v=O7CuFlM4V54 How a packet moves through network (Youtube video)]
+* [https://support.microsoft.com/en-us/kb/103884 The OSI Model's Seven Layers Defined and Functions Explained]
+* http://www.redbooks.ibm.com/redbooks/pdfs/gg243376.pdf - TCP/IP Tutorial and
+Technical Overview (PDF Document)
+* [http://www.computerhope.com/issues/ch000445.htm Basic network troubleshooting]
+* [http://www.cisco.com/cisco/web/solutions/small_business/resource_center/articles/work_from_anywhere/what_is_a_wireless_network/index.html What Is a Wireless Network?: The Basics]
+* [http://lifehacker.com/5940565/why-you-should-start-using-a-vpn-and-how-to-choose-the-best-one-for-your-needs Why You Should Start Using a VPN (and How to Choose the Best One for Your Needs)]
+* [http://traceroute.org/ A list of traceroute servers sorted by countries and more information on tracerouting]
+* [http://isup.me A simple tool to check if a website is up or not]
+[[Category:Blog posts]] [[Category:Guide]]

@@ -1,0 +1,19 @@
+<includeonly>{| border="1" cellpadding="1" cellspacing="1" align="center" style="width: 100%;" class="article-table {{#switch: {{{collapsible|}}} |1= mw-collapsible mw-collapsed" |2= mw-collapsible" |" }}
+|-
+! scope="col" colspan=4 style="text-align:center;" | Equipment List
+|-
+! scope="col"|
+! scope="col"|Equip Name
+! scope="col" style="width:20px;text-align:center;"|Upgrade
+! scope="col" style="text-align:center;"|Amount
+{{#if: {{{list|}}} |{{{list}}} | }}
+|}</includeonly>
+<noinclude>
+{{FujiEquipList| collapsible=1 |list=}}
+
+
+{{FujiEquipList| collapsible=2 |list=}}
+
+
+{{FujiEquipList| list=}}
+</noinclude>

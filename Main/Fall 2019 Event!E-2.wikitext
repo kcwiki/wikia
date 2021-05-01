@@ -1,0 +1,189 @@
+{{Event/MapPageHeader}}
+{{Event/MapInfo
+|en = Assault! The 2nd Battle of Java Sea
+|jp = 強襲！第二次ジャワ沖海戦
+<!--
+|tag = Kyōshū! Dai-niji Jawa-oki kaisen
+-->
+|tag = E-2
+|romaji = Kyōshū! Dai-niji Jawa-oki kaisen
+|mechanics = <!--
+|transport = true
+-->
+|hp_easy = 1980
+|hp_medium = 2340
+|hp_hard = 2340
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_casual_1 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_casual_2_x = 2
+|reward_easy_1 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_easy_2_x = 2
+|reward_easy_3 = {{EquipmentCardKai|Type124 ASDIC|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = {{EquipmentCardKai|New Model Rocket Development Material|icon=true|size=50px}}
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_3_x = 2
+|reward_medium_4 = {{EquipmentCardKai|Type144/147 ASDIC|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|New Model Rocket Development Material|icon=true|size=50px}}
+|reward_hard_2_x = 2
+|reward_hard_3 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_4_x = 2
+|reward_hard_5 = {{EquipmentCardKai|HF/DF + Type144/147 ASDIC|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules
+|expand = true
+|id = 46-2
+|order = I,F,B,G,J,L,Q,O
+
+|I -> F/empty, J = * Active branching
+
+|F/empty -> C = * Do not meet the requirements to go to E.
+|F/empty -> E = * Amount of CV(L/B)+(F)BB(V) ≤ 2
+
+|B -> D/empty = * Fast Fleet
+|B -> G = * Slow Fleet
+
+|G -> D/empty = * ???
+|G -> H = * ???
+
+|J -> K = * Do not meet the requirements to go to either L or S.
+|J -> L = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to S.
+** No CV
+** Amount of CVL+(F)BB(V) ≤ 1
+** Amount of CA(V) ≤ 3
+** Amount of DD ≥ 2
+|J -> S/empty = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of DD ≥ 4
+** No CV
+** Amount of CVL+(F)BB(V) ≤ 1
+** Amount of CA(V) ≤ 3
+** Short is unlocked.
+
+|L -> N = * Do not meet the requirements to go to P.
+|L -> P = 
+* Meet '''ALL''' of the following requirements:
+**Fleet contains CL(T)
+** No (F)BB(V)
+** No CV
+** Amount of CA(V) ≤ 3
+
+|Q -> O = * Do not meet the requirements to go to R.
+|Q -> R = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** No CV(B)
+** No BB(V)
+** Amount of CVL+FBB ≤ 1
+
+|O -> M/empty = * Do not meet the requirements to go to R.
+|O -> R = 
+* Meet '''ALL''' of thhe following requirements:
+** Pass the LoS check.
+** No CV(B)
+}}
+==Overview==
+*You have access to 1 [[Land Base Aerial Support|LBAS]] to use in this Map.
+*This is a Single Fleet Map.
+
+===Map progression===
+{{#tag:gallery|
+Fall19_E2_p1.png{{!}}Map without node S shortcut
+Fall_2019_Event_E-2_Map.png{{!}}Map with shortcut unlocked
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+
+===Map Bonuses===
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="2"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="2"| Covering Force
+!colspan="2"| Mapwide
+|-
+!{{ShipBattleCardKai|Choukai/Kai Ni}}
+!{{ShipBattleCardKai|Sendai/Kai Ni}}
+|colspan="2" rowspan="3"|1.25x
+|-
+!{{ShipBattleCardKai|Yura/Kai Ni}}
+!{{ShipBattleCardKai|Amagiri/Kai}}
+|-
+!{{ShipBattleCardKai|Uranami/Kai}}
+!{{ShipBattleCardKai|Isonami/Kai}}
+|-
+! colspan="4"|
+|-
+!{{ShipBattleCardKai|Kongou/Kai Ni C}}
+!{{ShipBattleCardKai|Haruna/Kai Ni}}
+|colspan="2" rowspan="3"|1.15x
+|-
+!{{ShipBattleCardKai|Atago/Kai}}
+!{{ShipBattleCardKai|Takao/Kai}}
+|-
+!{{ShipBattleCardKai|Ryuujou/Kai Ni}}
+|-
+!colspan="2"| Bombing of Darwin
+!Mapwide
+!{{Event/Route|A|Red}}
+|-
+!{{ShipBattleCardKai|Akagi/Kai Ni E}}
+!{{ShipBattleCardKai|Kaga/Kai}}
+|rowspan="2"|1.1x
+|rowspan="2"|1.3x
+|-
+!{{ShipBattleCardKai|Souryuu/Kai Ni}}
+!{{ShipBattleCardKai|Hiryuu/Kai Ni}}
+|}
+* Bonuses listed are flat and not multiplicative with each other within the table.
+Please be advised {{ShipLink|Yura/Kai Ni|text=Yura}} and {{ShipLink|Ryuujou/Kai Ni|text=Ryuujou}} also have Historical Bonuses in E-4. ('''1.1x''' and '''1.2x''' respectively)
+
+===Phase 1: Opening Shortcut Nodes J to S (OPTIONAL)===
+*To open the Shortcut Nodes J to S you must A+ Rank Node {{Event/Route|A|Red}} '''2 Times''' (Casual to Medium only requires Once).
+**The Enemy in Node A is {{ShipLink|Harbour Water Demon}}, who is a Soft-Shell Installation Enemy, weak against most standard Anti-Installation Equipment such as {{GreenAmmo}} {{EquipmentLink|Type 3 Shell|Type 3 Shell Kai|text=Type 3 Shell (Kai)}}, {{WG42}} {{EquipmentLink|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher}} and {{EquipmentLink|WG42 (Wurfgerät 42)}}.
+**Recommended Fleet: 2 CA(V) 1 CV 1 CL 2 DD '''(Fast Fleet)'''
+**Route: {{Event/Route|I|Blue|F|Blue|E|Red|B|Orange|D|Blue|A|Red}}
+
+===Phase 2: Defeat [[Heavy Cruiser Princess]]===
+*The Boss is a Single Fleet with a {{ShipLink|Heavy Cruiser Princess}}.
+*The Recommended Fleet and Route differs depending on whether you have unlocked the Node J to S Shortcut.
+You are recommended to take the option that fits your fleet the most.
+
+====Recommended Fleet If Shortcut NOT Opened====
+*Route: {{Event/Route|I|Blue|J|Orange|L|Orange|P|Red|Q|Red|R|Red}}
+*Fleet: 2 CA(V) 1 CL(T) 1 CVL 2 DD '''(Any Speed)'''
+**This Fleet takes an extra Air Raid Node which results in having 2 Air Raid + 2 Surface Battle before Boss, but allows you to bring Slow Fleet, bring more Medium Ships including a CVL, and be allowed to take only 2 DDs.
+
+====Recommended Fleet if Shortcut Unlocked====
+*Route: {{Event/Route|I|Blue|J|Orange|S|Blue|P|Red|Q|Red|R|Red}}
+*Fleet: 1 CVL/FBB 1 CL/CLT/CA(V) 4 DD '''(Fast Fleet)'''
+**This Fleet skips the 2nd Air Raid Node {{Event/Route|L|Orange}}, taking only 1 Air Raid + 2 Surface Battles before Boss.
+**This option allows you to bring a FBB, giving you access to a 2nd Shelling Phase.
+***However, you will be required to bring a Fast Fleet and 4 Destroyers, making the fleet slightly weaker and more vulnerable to Retreats, if compared to the above Fleet options if the Shortcut is not unlocked.
+
+===LBAS Flight Range===
+[[File:Fall19_E2_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

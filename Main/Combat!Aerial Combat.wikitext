@@ -1,0 +1,1075 @@
+{{Under Construction
+|Scope  = article
+|Desc   = Day Combat
+|Help   = rewriting the page to be more friendly to the viewers
+|Missing Information = This page has to be rewritten to a format that is more friendly towards the reader's eyes.
+|Page Adopted   = 
+}}
+
+'''Aerial Combat''' refers to one of the stages conducted during combat in the game, conducted after detection and before Support Expedition, Opening Torpedo Salvo (if condition for them to happen are fulfilled), and display of the engagement form.
+
+In Aerial Battle nodes, after finishing Aerial Combat rundown for the first time, the engagement form will be displayed a second process of Aerial Combat will occur, with the potential exception of the contact phase.
+
+In Night Battle nodes, Aerial Combat usually does not occur. In some rare cases when Night Battle nodes can conditionally be turned into Day Battle, the Aerial Combat phase will start immediately without a detection phase.
+
+If Jet plane(s) is(/are) carried by carrier(s), then an additional jet assault would occur before the regular opening air strike phase.
+
+For the mechanism applied on aircrafts in support expedition, land-based aerial support, shelling phase and anti-submarine operations, please refer to respective pages for further information.
+
+Note that, unless otherwise specified, all the numerical values on this page are only applicable to the player's side.
+__TOC__
+<!--
+==Overview==
+
+(The following table is sourced from [http://wikiwiki.jp/kancolle/?%B9%D2%B6%F5%C0%EF this Japanese KanColle wiki page], but it is out of date compared with the original, and it needs further explanation. For a given combat role (column), aircraft types (rows) marked ◯ are supposed to be generally more effective than those marked △. For fighter combat, types marked × do not take part at all and are not affected.)
+
+{| class="wikitable"
+|-
+! rowspan="2" |Type
+! colspan="7" |Capability
+! rowspan="2" |Equippable on
+|-
+!Fighter Combat!!Opening Airstrike!!Shelling!!ASW!!LoS!!Contact!!Artillery Spotting
+|-
+!Fighter
+|◯||||||||||||||Carriers, LHA
+|-
+!Torpedo Bombers
+|△||◯||◯||△||△||△||||Carriers, Hayasui Kai
+|-
+!Dive Bombers
+|△||◯||◯||△||△||||||Carriers
+|-
+!Carrier Recon
+|×||||||||◯||◯||||Carriers
+|-
+!Liaison Planes
+|×||||||◯||||||||CVL, LHA
+|-
+!Autogyro
+|×||||||◯||||||||CVL, BBV, CAV, LHA, AS, AR
+|-
+!Seaplane Recon
+|×<ref group="†">However, they can be shot down during detection phase. AA value of Seaplane Recon are used for Anti-Air Fire except when placed in LBAS.</ref>||||||||◯||◯||◯||Cruisers, Battleships, AV, AS
+|-
+!Seaplane Bombers
+|△||△||||△||◯||||△||BBV, CAV, AV, AO, AS, Italian
+|-
+!Seaplane Fighter
+|◯||||||||||||||A number of specific ships
+|-
+!Large-sized Flying Boat
+|×||||||△||◯||◯||||Akitsushima
+|}
+-->
+==Aerial Combat Stages==
+{| class="article-table"
+|-
+! colspan="2" scope="col" style="text-align:center;" |Stage<!--stage numbers are base on ja.kancolle.wikia.com's categorization-->
+! scope="col" style="text-align:center;" |Notes
+|-
+| rowspan="2" |Stage 1
+|Fighter Combat
+|Battle for air supremacy. Determines if Artillery Spotting and/or Contact are possible. Both fighters and bombers are shot down in this phase.
+|-
+|Contact
+|Successful Contact would increase Opening Air Strike damage.
+|-
+| rowspan="2" |Stage 2
+|Fleet Anti-air Defense 
+|Fleet defends against enemy bombers, shooting down a number of enemy bombers
+|-
+|Anti-air Cut-in
+|An anti-aircraft fire director-guided attack may cause damage to all enemy bombers
+|-
+| rowspan="1" |Stage 3
+|Bombing
+|Each bomber squad attacks one random target. See ''Damage Calculation'' for details
+|}
+
+==Stage 1==
+===Fighter Combat===
+
+<center>
+<math>F_{Power} = \sum^\text{All Slots} \left \lfloor \sqrt{N_{slot}} \left ( A_{p} + \bigstar_{p} \right ) + P_{p} \right \rfloor</math> <ref group="Example">Example on how to calculate a ship's fighter power using the formula.
+Akagi Kai's fighter power with Reppuu in slots 1 and 2, Reppuu Kai in slot 3, Type 0 Fighter Model 62  (Fighter-bomber) in slot 4. All aircraft without proficiency.
+<math style="width:100%">\begin{align}
+F_{Power} & = \left \lfloor \sqrt{N_{\text{Slot1}}} \cdot E_{\text{Reppuu}} \right \rfloor + \left \lfloor \sqrt{N_{\text{Slot2}}} \cdot E_{\text{Reppuu}} \right \rfloor + \left \lfloor \sqrt{N_{\text{Slot3}}} \cdot E_{\text{ReppuuKai}} \right \rfloor + \left \lfloor \sqrt{N_{\text{Slot4}}} \cdot E_{\text{M62}} \right \rfloor \\
+& = \left \lfloor \sqrt{20} \cdot 10 \right \rfloor + \left \lfloor \sqrt{20} \cdot 10 \right \rfloor + \left \lfloor \sqrt{32} \cdot 12 \right \rfloor + \left \lfloor \sqrt{10} \cdot 4 \right \rfloor \\
+& = 44 + 44 + 67 + 11 \\
+& = 166
+\end{align}</math>
+</ref>
+</center>
+
+Where:
+*<math>F_{Power}</math> is the total Fighter Power of the fleet.
+*<math>N_{slot}</math> is the current plane count (slot size) of that slot.
+*<math>A_{p}</math> is the plane's displayed AA stat.
+*<math>\bigstar_{p}</math> is the plane's improvement bonus to the AA stat.
+**<math>\bigstar_{p} = \bigstar \cdot 0.2</math> for fighters, <math>\bigstar_{p} = \bigstar \cdot 0.25</math> for (fighter-)bombers
+*<math>P_{p}</math> is the plane's Aircraft Proficiency bonus.
+
+Notes:
+* {{GreenPlane}}{{Seaplane Fighter}} Fighter planes and {{Jet-powered Fighter-Bomber 1}}{{BluePlane}}{{RedPlane}}{{Seaplane}} Jet/Torpedo / Dive / Seaplane bombers participate in the Fighter Combat.
+** Depending on the air state achieved, '''all''' the above planes will be subjected to plane loss, regardless if they had or didn't have an AA stat.
+* Recon planes (carrier based{{YellowPlane}} or seaplane recon{{Seaplane}}) will '''NOT''' participate in Fighter Combat.
+** Recon planes are unaffected by the results of Air State and suffer no plane loss from this stage.
+* [[Aircraft Proficiency]] is factored into Fighter Power on top of the above formula. The exact formula is under investigation.
+* The allied fleet and enemy fleet's Fighter Powers are compared to determine the result of Fighter Combat:
+{| class="article-table" style="width:90%;"
+|-
+! scope="col" style="width:190px; text-align:center;" |Fighter Power
+! scope="col" style="width:100px; text-align:center;" |Result
+! scope="col" style="width:165px; text-align:center;" |Text Display
+! scope="col" style="width:110px; text-align:center;" | % Enemy Planes Shot Down (Approx.)
+! scope="col" style="width:110px; text-align:center;" | % Allied Planes Shot Down (Approx.)
+! scope="col" style="width:100px; text-align:center;" |[[Combat#Contact|Contact]]
+! scope="col" style="width:100px; text-align:center;" |[[Combat Screens]]
+|-
+| style="text-align:center;" |FP ≥ 3*EFP
+| style="text-align:center;" |Air Supremacy<br />(AS+)
+| style="text-align:center;" |<span style="color:green">'''制空権確保!'''</span><br />''Seikuuken Kakuho!''
+| style="text-align:center;" |0~100%
+| style="text-align:center;" |2.5~5.83%
+| style="text-align:center;" |Allied only
+| style="text-align:center;" |[[File:Combat_supremacy.jpg|150px]]
+|-
+| style="text-align:center;" |3*EFP > FP ≥ 1.5*EFP
+| style="text-align:center;" |Air Superiority<br />(AS)
+| style="text-align:center;" |<span style="color:green">'''航空優勢! '''</span><br />''Koukuu Yuusei!''
+| style="text-align:center;" |0~70%
+| style="text-align:center;" |7.5~17.5%
+| style="text-align:center;" |Both sides
+| style="text-align:center;" |[[File:Combat_superiority.jpg|150px]]
+|-
+| style="text-align:center;" |1.5*EFP > FP > 2/3*EFP
+| style="text-align:center;" |Air Parity
+| style="text-align:center;" |No text displayed
+| style="text-align:center;" |0~50%
+| style="text-align:center;" |12.5~29.1%
+| style="text-align:center;" |Neither side
+| style="text-align:center;" |[[File:Combat_parity and incapability.jpg|150px]]
+|-
+| style="text-align:center;" |2/3*EFP ≥ FP > 1/3*EFP
+| style="text-align:center;" |Air Denial
+| style="text-align:center;" |No text displayed
+| style="text-align:center;" |0~30%
+| style="text-align:center;" |17.5~40.8%
+| style="text-align:center;" |Both sides
+| style="text-align:center;" |[[File:Combat_parity and incapability.jpg|150px]]
+|-
+| style="text-align:center;" |FP ≤ 1/3*EFP
+|
+<p style="text-align:center;">Air Incapability</p>
+| style="text-align:center;" |<span style="color:red">'''制空権喪失! '''</span><br />''Seikuuken Soushitsu!''
+| style="text-align:center;" |0~10%
+| style="text-align:center;" |25~58.3%
+| style="text-align:center;" |Enemy only
+| style="text-align:center;" | [[File:Combat_denial.jpg|150px]]
+|}
+<strong>Note: For the users who are aware of the terminology switch between {{Tooltip|AD|Air Denial}} and {{Tooltip|AI|Air Inferiority}}, this was caused by a mistranslation. The correct order is {{Tooltip|AD|Air Denial}} > {{Tooltip|AI|Air Incapability}}.</strong>
+
+*EFP: Enemy Fighter Power, FP: Fighter Power. Abbreviated to save space.
+*If both sides launch no planes, then the air state is considered Air Parity.
+** If any planes were launched during the aerial phase, but the fighter power of both sides are zero (Eg. Enemy only launched bombers with 0 AA Stat), the allied fleet will be awarded Air Supremacy. (Due to meeting the AS+ requirement of 0*3=0)
+* Carriers will participate in Aerial Phase regardless of their damage state, provided they have planes.
+* Night Contact can be triggered under the same air states as normal Day Contact, with the exception of PvP Battles, or when the battle starts at Night.
+
+The formula for '''allied''' plane loss (On a per-slot basis) is as follows:
+<center>
+<math>\text{Plane Loss} =  \big \lfloor S * 0.1 * ( \text{random} \in \left [ 0 , \left ( A / 3 * 100 \right ) \right ]   / 100 + \left ( A / 4 \right ) ) \big \rfloor</math>
+</center>
+
+Where:
+*<math> S </math> is the plane's slot size.
+*<math> A </math> is the Air State modifier, where:
+**<math>A = \begin{cases} 1, & \text{ for Air Supremacy} \\ 3, & \text{ for Air Superiority } \\ 5, & \text{ for Air Parity } \\ 7, & \text{ for Air Denial } \\ 10, & \text{ for Air Incapability } \end{cases}</math>
+*Random function takes an random integer within <math>0</math> and <math>\left ( A / 3 * 100 \right )</math> in a linear distribution.
+
+The formula for '''enemy''' plane loss (On a per-slot basis) is as follows:
+<center>
+<math>\text{Plane Loss} =  \big \lfloor S * \left ( 0.035 *  \text{random} \in \left [ 0 ,  A \right ]  +  0.065 *  \text{random} \in \left [ 0 ,  A \right ] \right ) \big \rfloor</math>
+</center>
+
+Where:
+*<math> S </math> is the enemy plane's slot size.
+*<math> A </math> is the '''Player's''' Air State modifier, where:
+**<math>A = \begin{cases} 10, & \text{ for Air Supremacy} \\ 7, & \text{ for Air Superiority } \\ 5, & \text{ for Air Parity } \\ 3, & \text{ for Air Denial } \\ 1, & \text{ for Air Incapability } \end{cases}</math>
+*Random function takes an random integer within <math>0</math> and <math>A</math> in a linear distribution.
+
+===Contact===
+[[File:Combat_contact.jpg|right]] Contact takes place during the Aerial Combat phase. It increases bombing damage for all allied bombers. When successful, an image of the squadron performing contact is shown in the opposing fleet's formation indicator, with the text "触接中".
+*Trigger conditions:
+**Air Denial, Air Superiority, or Air Supremacy (''i.e. ''not Air Incapability or Air Parity)
+**At least one carrier scout plane, seaplane scout, or torpedo bomber equipped.
+***Seaplane bombers, [[Type 3 Spotter/Liaison (ASW)|Type 3 Spotter]], and [[Ka-type_Observation_Autogyro|Ka-type Autogyros]] cannot perform contact.
+**Trigger rate depends on the number, slot size, and types of planes equipped, detailed below.
+<span style="font-size:14px;font-weight:bold;">Contact Trigger Chance</span>
+
+The process that determines whether or not Contact triggers consists of two parts.<ref>http://bbs.ngacn.cc/read.php?tid=8652088</ref>
+
+=====Phase 1: Contact Trigger=====
+
+In this stage, the system merely determines whether Contact triggers at all.
+
+Which plane triggers it has not been determined yet.
+
+Each plane has its own "trigger rate", which according to current research is based on the plane's LoS and the size of the slot it's in. The trigger rates of all planes in your fleet are then added together to determine the chance of successful Contact. A provisional approximation formula is given by:
+
+<math>P_{\text{Contact}} = \sum^{\text{All Slots}} \left ( \sqrt{N} \cdot E_{l} \cdot E_{m} \cdot C \right )</math>
+
+Where:
+*<math>P_{\text{Contact}}</math> is the overall chance of successful Contact
+*<math>N</math> is the current plane count (slot size) of that slot
+*<math>E_{l}</math> is the plane's displayed LoS stat
+*<math>E_{m}</math> is the plane type modifier.
+**For Carrier-based Reconnaissance and Reconnaissance Seaplanes, <math>E_{m} = 0.04</math>
+**For Torpedo Bombers, the value would be much smaller.
+*<math>C</math> is the Air Control Status.
+**For Air Supremacy (AS+), <math>C = 1</math>
+**For Air Superiority (AS), <math>C = 0.6</math>
+
+If Contact is determined to be successful, the system proceeds to Stage 2. If Contact fails, nothing else happens.
+
+=====Phase 2: Contact Plane Selection=====
+
+Now that Phase 1 has been successful the system has to determine ''which'' plane is going to trigger Contact. The priority among planes is as follows:
+* Higher Accuracy stats mean higher priority
+* If two or more planes have the same amount of Accuracy, the selection process goes through them from top to bottom, start from the first ship first slot then first ship second slot and end with the sixth ship last slot.
+
+The system goes through each plane from top to bottom priority until either one is selected or none is. Current data suggests that a plane's selection rate is determined by its LoS stat and that improvements seems to increase the chances as well<ref>https://twitter.com/noratako5/status/704574021048741888</ref>. Another provisional approximation formula is given by:
+
+<math>P_{\text{Select}} = E_{l} \cdot C</math>
+
+Where:
+*<math>P_{\text{Select}}</math> is the selection rate of a given plane
+*<math>E_{l}</math> is the plane's displayed LoS value
+*<math>C</math> is the Air Control Status.
+**For Air Supremacy (AS+), <math>C = 0.07</math>
+**For Air Superiority (AS), <math>C = 0.06</math>
+**For Air Denial (AD), <math>C = 0.055</math>
+
+If no plane is selected in the end, then Contact is cancelled and doesn't trigger.
+
+===='''Contact Damage Modifier'''====
+*The damage increase depends on the +accuracy bonus {{Template:Hit}} of the squadron performing contact.
+{| class="article-table" cellspacing="1" cellpadding="1" border="0"
+|-
+! scope="col" style="text-align:center;" |Accuracy<br />Bonus
+! scope="col" style="text-align:center;" |Damage<br />Modifier
+! scope="col" style="text-align:center;" |Example Planes
+|-
+| style="text-align:center;" | +0
+| style="text-align:center;" |112%
+|[[Ryuusei Kai]]
+|-
+| style="text-align:center;" | +1
+| style="text-align:center;" |112%
+|[[Type 0 Reconnaissance Seaplane]], [[Ryuusei (601 Air Group)]], [[Type 2 Large Flying Boat]]
+|-
+| style="text-align:center;" | +2
+| style="text-align:center;" |117%
+|[[Type 0 Observation Seaplane]], [[Saiun]], [[PBY-5A Catalina]], [[Prototype Keiun (Carrier-based Reconnaissance Model)|Prototype Keiun]]
+|-
+| style="text-align:center;" | +3 or more
+| style="text-align:center;" |120%
+|[[Type 2 Reconnaissance Aircraft]], [[Tenzan Model 12 (Tomonaga Squadron)]], [[Type 97 Torpedo Bomber (Tomonaga Squadron)]]
+|}
+
+===='''Notes'''====
+*{{Template:YellowPlane}}[[Type_2_Recon_Aircraft|Type 2 Recon Aircraft]] is useful in the case that the bombing damage bonus is desired while not removing the chance for T-disadvantage, due to its high trigger rate.
+*With contact, the maximum attack power of bombing (before defense, critical and ammo) is around 180. With some luck, it's possible to sink even Ru-class Flagships (Armor = 99) in one strike without a critical.
+*Contact only triggers during {{Tooltip|AD|Air Denial}}, {{Tooltip|AS|Air Superiority}} or {{Tooltip|AS+|Air Supremacy}}. This means that it does not work during {{Tooltip|AI|Air Incapability}} or {{Tooltip|AP|Air Parity}}.
+
+==Stage 2==
+===Fleet Anti-air Defense===
+The Fleet Anti-air Defense system was updated on 14 November 2014, alongside the addition of the Anti-air Cut-in system. It was then patched on 26 June 2015 to fix several bugs.
+
+====System Mechanics====
+*Each enemy bomber slot is assigned at random to a defending ship.
+*Those ships then, for each assigned enemy slot, have two approximately 50% concurrent but independent chances to shoot down enemy planes.
+**The first chance (termed Proportional Air Defense) can shoot down a number proportional to the initial size of the enemy bomber squadron after anti-bomber combat.
+**The second chance (termed Fixed Air Defense) can shoot down a fixed number of enemy bombers determined by stats and equipment only.
+**Simply speaking, There's a 25% chance you can trigger both Proportional and Fixed Air Defense, 25% only trigger Proportional, 25% only Fixed, and 25% none of them being triggered, for every slot.
+*Finally, one bomber from each enemy squadron will always be shot down regardless of success or failure of the previous two chances for friendly ships on abyssal. If AACI was committed, then it would also shoot down a specific amount of planes per slot according to the AACI's API type.
+
+The numbers of planes shot down are given by the equations below:
+
+<center>
+<math>S_{\text{Proportional}} = \left \lfloor \frac{ f ( \hat{A} ) \cdot C }{400} \cdot N \right \rfloor</math>
+
+<math>S_{\text{Fixed}} = \left \lfloor \frac{ \big ( f ( \hat{A} ) + \lfloor \hat{F} \rfloor \big ) \cdot K C }{10} \right \rfloor</math>
+</center>
+
+Where:
+*<math>S_{\text{Proportional}}</math> is the number of planes shot down by Proportional Air Defense
+*<math>S_{\text{Fixed}}</math> is the number of planes shot down by Fixed Air Defense
+*<math>\hat{A} = A_{base} + \sum^{\text{All Slots}} \bigg ( \left ( E_{mod} \cdot E_{aa} \right ) + \left ( E_{\bigstar} \cdot \sqrt{\bigstar} \right ) \bigg )</math>
+**<math>\hat{A}</math> is the adjusted AA value of the ship, following the formula above.
+**<math>A_{base}</math> is the basic AA value of the ship; that is, its numeric AA value without factoring equipment.
+**<math>E_{mod}</math> is the equipment type modifier (see: '''Equipment Modifiers''').
+**<math>E_{aa}</math> is the equipment's displayed AA stat.
+**<math>E_{\bigstar}</math> is the equipment's improvement modifier to adjusted AA.
+***High-Angle Mounts: 3
+***Air Radars: 0
+***Anti-Air Guns: 4
+*<math>N</math> is the current plane count (slot size) of the targeted slot.
+*<math>\hat{F} = 1.54 \cdot \left \lfloor F \cdot \sum^\text{All Ships} \bigg \lfloor \sum^{\text{All Slots}} \left ( \left ( E_{fmod} \cdot E_{aa} \right ) + \left ( E_{f\bigstar} \cdot \sqrt{\bigstar} \right ) \right ) \bigg \rfloor \right \rfloor</math>
+**<math>\hat{F}</math> is the adjusted AA value of the fleet, following the formula above. This is only added to the adjusted AA value for Fixed Air Defense, as a bonus.
+**<math>F</math> is the formation modifier. (see: '''Formation Modifiers''')
+**<math>E_{fmod}</math> is the equipment type multiplier for fleet AA (see: '''Equipment Modifiers'''), not to be confused with the regular equipment type modifier.
+**<math>E_{f\bigstar}</math> is the equipment's improvement modifier to fleet AA.
+***High-Angle Mounts: 3
+***Air Radars: 1.5
+***Anti-Air Guns: 0
+*<math>f( x ) = q \cdot \left \lfloor \frac{x}{q} \right \rfloor</math>
+**If the ship is not equipped with anything, <math>q = 1</math>
+**If the ship is equipped with something, <math>q = 2</math>
+*<math>\left \lfloor x \right \rfloor</math> is the floor function; that is, the rounding down of input <math>x</math>
+*<math>K</math> is the Anti Air Cut-In multiplier to Fixed Air Defense, default 1 if no AACI is triggered. This is a modifier independent of the flat shootdown caused by AACI, and depends on the API identity of the triggered AACI. When AACI is triggered, this multiplier is applied individually for '''each ship''' in the fleet, not only the ship performing AACI. See the Anti Air Cut In table in the respective section for a list of K-values corresponding to different AACI API numbers.
+*<math>C</math> is the Combined Fleet modifier. Defaults to 1 if the fleet is not combined.
+**Main Fleet: 0.72
+**Escort Fleet: 0.48
+
+To see this formula in use, click below.
+{| class="mw-collapsible mw-collapsed wikitable" style="width:100%"
+|-
+! colspan="1" |Anti-Air Defense Formula Example
+|-
+|
+Example on how to use the Fleet Anti-air Defense formula to calculate the number of planes shot down by Fixed and Proportional Air Defense.
+
+This example is for a fleet consisting of Maya Kai Ni, with 90mm Single High-angle Gun Mount +4 / 90mm Single High-angle Gun Mount +4 / Bofors 40mm Quadruple Autocannon Mount / Type 21 Air Radar Kai.
+
+To begin, we start by calculating the adjusted AA value for Maya.
+
+<math style="width:100%">
+\begin{align}
+\hat{A} 
+& = A_{\text{Maya K2}} + \left (E_{\text{Modifier}} \cdot E_{\text{90mm}} + E_{\bigstar} \cdot \sqrt{\bigstar} \right ) + \left (E_{\text{Modifier}} \cdot E_{\text{90mm}} + E_{\bigstar} \cdot \sqrt{\bigstar} \right ) + \left (E_{\text{Modifier}} \cdot E_{\text{Bofors}} + E_{\bigstar} \cdot \sqrt{\bigstar} \right ) + \left (E_{\text{Modifier}} \cdot E_{\text{T21K}} + E_{\bigstar} \cdot \sqrt{\bigstar} \right ) \\
+& = 106 + (4 \cdot 8 + 3 \cdot \sqrt{4}) + (4 \cdot 8 + 3 \cdot \sqrt{4}) + (6 \cdot 10 + 0 \cdot \sqrt{0}) + (3 \cdot 5 + 0 \cdot \sqrt{0}) \\
+& = 106 + 38 + 38 + 60 + 15 \\
+& = 257
+\end{align}
+</math>
+
+Afterwards, we can pass this value into the step function <math>f(x)</math>, which rounds down the adjusted AA value in steps of 2 when a ship has equips.
+
+<math>f(\hat{A}) = f(257) = 256</math>
+
+Then, we calculate the adjusted AA value for the fleet, which in this example only includes Maya Kai Ni herself.
+
+<math style="width:100%">
+\begin{align}
+\hat{F}
+& = 1.54 \cdot \left \lfloor F_{\text{Line Ahead}} \cdot \left \lfloor (E_{\text{Multiplier}} \cdot E_{\text{90mm}} + E_{f\bigstar} \cdot \sqrt{\bigstar}) + ( E_{\text{Multiplier}} \cdot E_{\text{90mm}} + E_{f\bigstar} \cdot \sqrt{\bigstar} ) + (E _{\text{Multiplier}} \cdot E_{\text{Bofors}} + E_{f\bigstar} \cdot \sqrt{\bigstar} ) + ( E_{\text{Multiplier}} \cdot E_{\text{T21K}} + E_{f\bigstar} \cdot \sqrt{\bigstar} ) \right \rfloor \right \rfloor \\ 
+& = 1.54 \cdot \left \lfloor 1.0 \cdot \lfloor ( 0.35 \cdot 8 + 3 \cdot \sqrt{4} ) + ( 0.35 \cdot 8 + 3 \cdot \sqrt{4} ) + ( 0.2 \cdot 10 + 0 \cdot \sqrt{0} ) + ( 0.4 \cdot 5 + 1.5 \cdot \sqrt{0} ) \rfloor \right \rfloor \\
+& = 1.54 \cdot \left \lfloor 8.8 + 8.8 + 2 +2 \right \rfloor \\
+& = 1.54 \cdot 21 \\
+& = 32.34
+\end{align}
+</math>
+
+Using these two values, we can calculate the number of planes shot down by Proportional Air Defense:
+
+<math>
+\begin{align}
+S_{\text{Proportional}}
+& = \left \lfloor \frac{ f ( \hat{A} ) }{400} \cdot N \right \rfloor \\
+& = \left \lfloor \frac{256}{400} \cdot N \right \rfloor \\
+& = \left \lfloor 0.64 \cdot N \right \rfloor
+\end{align}
+</math>
+
+And the number of planes shot down by Fixed Air Defense, assuming AACI activates, with a multiplier K = 1.65
+
+<math>
+\begin{align}
+S_{\text{Fixed}} 
+& = \left \lfloor \frac{ ( f ( \hat{A} ) + \lfloor \hat{F} \rfloor ) \cdot K }{10} \right \rfloor \\
+& = \left \lfloor \frac{ ( 256 + \lfloor 32.34 \rfloor  ) \cdot 1.65 }{10} \right \rfloor \\
+& = \left \lfloor \frac{288 \cdot 1.65}{10} \right \rfloor \\
+& = 47
+\end{align}
+</math>
+
+From these two numbers, we can conclude that Maya Kai Ni with the previously mentioned setup will shoot down '''64%''' of an enemy plane slot with Proportional Air Defense, and/or '''47''' planes from Fixed Air Defense. We can add this number to the AACI shootdown and the single plane always shot down, to get a final value of '''56''' planes shot down, if both AACI and Fixed Air Defense triggers.
+|}
+{{clear}}
+
+====Abyssal Anti Air Formula====
+<ref>http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1439793270/47</ref>
+
+<center>
+<math>S_{\text{Proportional}} = \left \lfloor  \frac{ \lfloor \hat{A} \rfloor }{400} \cdot N \right \rfloor</math>
+
+<math>S_{\text{Fixed}} = \left \lfloor \frac{ \lfloor \hat{A} + \hat{F} \rfloor }{10.6} \right \rfloor</math>
+</center>
+
+Where:
+*<math>\hat{A} = \bigg (2 \cdot \sqrt{A_{base}} + \sum^{\text{All Slots}} \left ( E_{mod} \cdot E_{aa} \right ) \bigg )  \cdot R</math>
+*<math>\hat{F} = 2 \cdot \left \lfloor F \cdot \sum^\text{All Abyssals} \bigg \lfloor \sum^{\text{All Slots}} \left ( E_{fmod} \cdot E_{aa} \right ) \bigg \rfloor \right \rfloor \cdot \hat{R}</math>
+*<math> R </math> is the '''Ship AA Resistance''' of the plane the ship is defending against. (See '''Plane AA Resist Modifiers''')
+*<math> \hat{R} </math> is the '''Fleet AA Resistance''' of the plane the ship is defending against.
+
+====Formation Modifiers====
+{| class="article-table" style="width:80%;"
+|-
+! scope="col" style="text-align:center;" |Formation
+! scope="col" style="text-align:center;" |Modifier
+|-
+|Line Ahead, Line Abreast, Echelon
+| style="text-align:center;" |1.0
+|-
+|Double Line
+| style="text-align:center;" |1.2
+|-
+|Diamond
+| style="text-align:center;" |1.6
+|-
+! colspan="2" style="text-align:center;" | Combined Fleet
+|-
+| Cruising Formation 1
+| style="text-align:center;" |1.1
+|-
+| Cruising Formation 2
+| style="text-align:center;" |1.0
+|-
+| Cruising Formation 3
+| style="text-align:center;" |1.5
+|-
+| Cruising Formation 4
+| style="text-align:center;" |1.0
+|}
+
+====Equipment Modifiers====
+{| class="article-table" style="width:80%;"
+|-
+! scope="col" |Equipment Type
+! scope="col" style="text-align:center;" |Ship AA Modifier
+! scope="col" style="text-align:center;" |Fleet AA Modifier
+|-
+|High-angle Mounts, Anti-aircraft Fire Directors
+| style="text-align:center;" |4
+| style="text-align:center;" |0.35
+|-
+|Machine Guns & Rocket Launchers
+| style="text-align:center;" |6
+| style="text-align:center;" |0.2
+|-
+|AA Radars
+| style="text-align:center;" |3
+| style="text-align:center;" |0.4
+|-
+|Main Gun, Seaplanes
+| style="text-align:center;" |0
+| style="text-align:center;" |0.2
+|-
+|Type 3 Shell
+| style="text-align:center;" |0
+| style="text-align:center;" |0.6
+|-
+| colspan="3" |
+|-
+|Other Abyssal AA Equipment, including CIC, High-angle Single-Mount
+| style="text-align:center;" |0
+| style="text-align:center;" |0.2
+|}
+*There may be other types of equipment with modifiers that affect the air defense equations which are not yet known.
+
+====Plane AA Resist Modifiers====
+
+{| class="article-table" style="width:80%;"
+|-
+! colspan="4" style="text-align:center;" | {{BluePlane}} Torpedo Bombers
+|-
+! scope="col" |Plane Type
+! scope="col" style="text-align:center;" |Air State Modifier
+! scope="col" style="text-align:center;" |Ship AA Modifier
+! scope="col" style="text-align:center;" |Fleet AA Modifier
+|-
+|{{EquipmentLink|Type 97 Torpedo Bomber (Murata Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Tenzan Model 12 (Murata Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Type 97 Torpedo Bomber (Tomonaga Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Tenzan Model 12 (Tomonaga Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Tenzan Model 12A Kai (Skilled w/ Type 6 Airborne Radar Kai)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Ryuusei Kai (CarDiv 1/Skilled)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+! colspan="4" style="text-align:center;" | {{RedPlane}} Dive Bombers
+|-
+! scope="col" |Plane Type
+! scope="col" style="text-align:center;" |Air State Modifier
+! scope="col" style="text-align:center;" |Ship AA Modifier
+! scope="col" style="text-align:center;" |Fleet AA Modifier
+|-
+|{{EquipmentLink|Type 99 Dive Bomber (Egusa Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Suisei (Egusa Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |0.7
+|-
+|{{EquipmentLink|Zero Fighter Model 62 (Fighter-bomber / Iwai Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |0.7
+|-
+|{{EquipmentLink|Suisei Model 12 (634 Air Group w/ Type 3 Cluster Bombs)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+! colspan="4" style="text-align:center;" | {{Seaplane}} Seaplane Bombers
+|-
+! scope="col" |Plane Type
+! scope="col" style="text-align:center;" |Air State Modifier
+! scope="col" style="text-align:center;" |Ship AA Modifier
+! scope="col" style="text-align:center;" |Fleet AA Modifier
+|-
+|{{EquipmentLink|Zuiun (634 Air Group)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Zuiun Model 12}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Zuiun Model 12 (634 Air Group)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |0.7
+|-
+|{{EquipmentLink|Zuiun (634 Air Group/Skilled)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |0.7
+|-
+|{{EquipmentLink|Zuiun Kai Ni (634 Air Group)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.5
+| style="text-align:center;" |0.7
+|-
+|{{EquipmentLink|Zuiun Kai Ni (634 Air Group/Skilled)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.5
+| style="text-align:center;" |0.5
+|-
+! colspan="4" style="text-align:center;" | {{Jet-powered Fighter-Bomber 1}} {{Jet-powered Fighter-Bomber 2}} Jets
+|-
+! scope="col" |Plane Type
+! scope="col" style="text-align:center;" |Air State Modifier
+! scope="col" style="text-align:center;" |Ship AA Modifier
+! scope="col" style="text-align:center;" |Fleet AA Modifier
+|-
+|{{EquipmentLink|Jet Keiun Kai}}
+| style="text-align:center;" |0.6
+| style="text-align:center;" |0.5
+| style="text-align:center;" |0.7
+|-
+|{{EquipmentLink|Kikka Kai}}
+| style="text-align:center;" |0.6
+| style="text-align:center;" |0.5
+| style="text-align:center;" |0.5
+|-
+! colspan="4" style="text-align:center;" | {{Land-based Attack Aircraft}} Land-based Attack Aircraft
+|-
+! scope="col" |Plane Type
+! scope="col" style="text-align:center;" |Air State Modifier
+! scope="col" style="text-align:center;" |Ship AA Modifier
+! scope="col" style="text-align:center;" |Fleet AA Modifier
+|-
+|{{EquipmentLink|Type 1 Land-based Attack Aircraft (Nonaka Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Ginga (Egusa Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|-
+|{{EquipmentLink|Bomb-carrying Type 1 Fighter Hayabusa Model III Kai (65th Squadron)}}
+| style="text-align:center;" |1
+| style="text-align:center;" |0.6
+| style="text-align:center;" |1
+|}
+
+====Notes====
+*The ship selected to defend is not necessarily the target of the bomber. Any allied ship, including submarines, may be chosen to defend against bombers.
+*The forward sliding and machine gun animations seem to have no correlation with the calculations.
+*As per formula above, abyssal fleets use a different anti-air formula (and is believed to be weaker than player's anti-air in most of the cases).
+
+=== Anti-Air Cut-In ===
+: ''This section mainly describe the effect of Anti-Air Cut-In. For perspective on how to setup Anti-Air Cut-In, Please read the Anti-Air Cut-In tab in [[Combat#Combat_Equipment_Setup]] section of the page.''
+[[File:Bandicam_2014-11-20_02-55-57-126.avi_snapshot_00.26_-2014.11.20_03.09.34-.jpg|thumb|256px|An Anti-Air Cut-In]]
+Certain equipment combinations (see below) will provide a chance for an Anti-Air Cut-In (AACI) during the Aerial Combat Phase. When activated, the cut-in animation (shown on the right) appears before engaging the enemy fighters. However, the effect of an Anti-Air Cut-In '''does not affect the resulting air control state''' (AS+, AS, Air Parity or Denial), and calculation-wise, it only takes effect after fighters engage bombers in air combat.
+With an AA Cut-In and a good anti-air composition, it is sometimes possible to obliterate all incoming bombers before they inflict any damage, and even prevent enemy carriers from attacking during the shelling phase (due to having 0 bombers left).
+
+Although several ships can be equipped with an AACI setup in one fleet, '''only one ship can perform an AACI during the aerial phase'''. The number of planes shot down is dependent on the ship performing the AACI and their equipment. Bringing more AACI capable ships will '''NOT''' increase the number of planes shot down via AACI.
+
+[[:Category:Akizuki Class|Akizuki-class destroyers]] and [[Maya |Maya Kai-2]] have a hidden bonus to certain AA Cut-in setups which increases the effectiveness tremendously.
+
+In PVP Exercises, opposing fleets can do AACI, but the animation is not shown.
+
+As of the 17th November 2017 update and Fall 2017 event, Abyssals are now able to AACI as long as they follow the proper equipment setup, but the animation is not shown. Known instances are [[Air Defense Princess]] and [[Artillery Imp|Artillery Imp III]].
+
+Trigger chance of AACI is solely determined by the API type. Fleet AA does not affect trigger chances<ref>http://kankoregouchin.blog.fc2.com/blog-entry-45.html</ref>. Luck does not affect AACI trigger rate<ref>http://kankoregouchin.blog.fc2.com/blog-entry-40.html</ref>.
+
+Be noted that AACI effects are added on to the regular anti-air fire of your fleet, thus anti-air stat of other ships or/and equipment on those ships in your fleet would still matter even if an AACI has been activated.
+
+====Equipment, API====
+The following table summarizes current known information about the various AACI types.<ref>http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Trigger_Rates_%26_Effectiveness_of_Anti-Air_Cut-In_(AACI)</ref><ref>https://www.ptt.cc/bbs/KanColle/M.1428751788.A.613.html</ref><ref>http://ja.kancolle.wikia.com/wiki/%E5%AF%BE%E7%A9%BA%E3%82%AB%E3%83%83%E3%83%88%E3%82%A4%E3%83%B3</ref><ref>http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:363?file=%E5%A4%89%E5%8B%95%E3%83%9C%E3%83%BC%E3%83%8A%E3%82%B9.png#8</ref>
+{| class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+!API value
+!style="width:25%"|Type
+!Shot down per slot
+!K value
+!Proc Rate
+!User
+!Note
+|-
+!None
+|'''-'''
+|'''+1'''
+|1.0
+|N/A
+|Player's fleet only
+|Triggers if no other AACI is activated
+|-
+!1
+|nowrap|'''HHR'''<br />{{GreenGunDP}}{{GreenGunDP}}{{Radar}}
+|'''+8'''
+|nowrap|1.7<ref group="†">1.75 in Vita</ref>
+|65%
+|rowspan="3"|'''{{ShipLink|Akizuki/Kai|Teruzuki/Kai|Hatsuzuki/Kai|Suzutsuki/Kai|text=Akizuki-Class}}'''
+|'''HA mount x2 + Radar'''
+|-
+!2
+|nowrap|HR<br />{{GreenGunDP}}{{Radar}}
+| +7
+|1.7
+|58%
+|HA mount + Radar
+|-
+!3
+|nowrap|HH<br />{{GreenGunDP}}{{GreenGunDP}}
+| +5
+|1.6
+|50%
+|HA mount x2
+|-
+!4
+|nowrap|MSAR<br />{{RedGunHeavy}}{{GreenAmmo}}[[File:Aafd_c.png]]{{Radar}}
+| +7
+|1.5
+|52%
+|'''Battleships'''
+|Large Main Gun + Sanshiki + AAFD + Air Radar
+|-
+!5
+|nowrap|'''BBR'''<br />[[File:Customized HA plus AAFD icon.png]][[File:Customized HA plus AAFD icon.png]]{{Radar}}
+|'''+5'''
+|nowrap|1.5<ref group="†">1.55 in Vita</ref>
+|55%
+|'''All'''
+|'''Built-in HA mount x2 + Air Radar'''
+|-
+!6
+|nowrap|MSA<br />{{RedGunHeavy}}{{GreenAmmo}}[[File:Aafd_c.png]]
+| +5
+|nowrap|1.45<ref group="†">1.5 in Vita</ref>
+|40%
+|'''Battleships'''
+|Large Main Gun + Sanshiki + AAFD
+|-
+!7
+|nowrap|HAR<br />{{GreenGunDP}}[[File:Aafd_c.png]]{{Radar}}
+| +4
+|1.35
+|45%
+|rowspan="3"|'''All'''
+|HA mount + AAFD + Air Radar
+|-
+!8
+|nowrap|BR<br />[[File:Customized HA plus AAFD icon.png]]{{Radar}}
+| +5
+|nowrap|1.4<ref group="†">1.45 in Vita</ref>
+|50%
+|Built-in HA mount + Air Radar
+|-
+!9
+|nowrap|HA<br />{{GreenGunDP}}[[File:Aafd_c.png]]
+| +3
+|1.3
+|40%
+|HA mount + AAFD
+|-
+!10
+|nowrap|'''HCR'''<br />{{GreenGunDP}}[[File:CDMG.png]]{{Radar}}
+|'''+9'''
+|1.65
+|60%
+|rowspan="2"|'''{{ShipLink|Maya/Kai Ni}}'''
+|'''HA + CDMG + Air Radar'''
+|-
+!11
+|nowrap|HC<br />{{GreenGunDP}}[[File:CDMG.png]]
+| +7
+|1.5
+|55%
+|HA + CDMG
+|-
+!12
+|nowrap|CGR<br />[[File:CDMG.png]]{{GreenGunMG}}{{Radar}}
+| +4
+|1.25
+|45%
+|'''All'''
+|CDMG + AA Gun + Air Radar
+|-
+!13
+|colspan="6"|''cannot be activated''
+<ref group="†">Non-MayaK2, Akigun + CDMG + AA Radar, 35%, +4, K-value 1.35</ref>
+|-
+!14
+|nowrap|HGR<br />{{GreenGunDP}}{{GreenGunMG}}{{Radar}}
+|nowrap| +5<ref>used to be Z+4 before 2016-01-19 update</ref>
+|1.45
+|
+|rowspan="2"|'''{{ShipLink|Isuzu/Kai Ni}}'''
+|HA + AA Gun + Air Radar
+|-
+!15
+|nowrap|HG<br />{{GreenGunDP}}{{GreenGunMG}}
+| +4
+|1.3
+|
+|HA + AA Gun
+|-
+!16
+|nowrap|HGR<br />{{GreenGunDP}}{{GreenGunMG}}{{Radar}}
+| +5
+|1.4
+|
+|'''{{ShipLink|Kasumi/Kai Ni B}}'''<br />'''{{ShipLink|Yuubari/Kai Ni}}
+|HA + AA Gun + Air Radar
+|-
+!17
+|nowrap|HG<br />{{GreenGunDP}}{{GreenGunMG}}
+| +3
+|1.25
+|
+|'''{{ShipLink|Kasumi/Kai Ni B}}'''
+|HA + AA Gun
+|-
+!18
+|nowrap|C<br />[[File:CDMG.png]]
+| +3
+|1.2
+|
+|'''{{ShipLink|Satsuki/Kai Ni}}'''
+|CDMG
+|-
+!19
+|nowrap|HC<br />{{GreenGunDP}}[[File:CDMG.png]]
+| +6
+|1.45
+|
+|rowspan="2"|'''{{ShipLink|Kinu/Kai Ni}}'''
+|HA + CDMG<br />(Cannot be Built-in HA)
+|-
+!20
+|nowrap|C<br />[[File:CDMG.png]]
+| +4
+|1.25
+|
+|CDMG
+|-
+!21
+|nowrap|HR<br />{{GreenGunDP}}{{Radar}}
+| +6
+|1.45
+|
+|'''{{ShipLink|Yura/Kai Ni}}'''
+|HA + Air Radar
+|-
+!22
+|nowrap|C<br />[[File:CDMG.png]]
+| +3
+|1.2
+|
+|'''{{ShipLink|Fumizuki/Kai Ni}}'''
+|CDMG
+|-
+!23
+|nowrap|G<br />{{GreenGunMG}}
+| +2
+|1.05
+|
+|'''{{ShipLink|UIT-25}} or<br />{{ShipLink|I-504}}'''
+|AA Gun (Cannot be CDMG)
+|-
+!24
+|nowrap|HG<br />{{GreenGunDP}}{{GreenGunMG}}
+| +4
+|1.25
+|
+|'''{{ShipLink|Tatsuta/Kai Ni}}'''
+|HA + AA Gun (Cannot be CDMG)
+|-
+!25
+|nowrap|GRS<br />{{GreenGunMG}}{{Radar}}{{GreenAmmo}}
+| +8
+|1.55
+|
+|'''{{ShipLink|Ise/Kai Ni|Hyuuga/Kai Ni|text=Ise-class Kai/Kai Ni}}'''
+|Rocket Launcher K2 + Air Radar + Sanshiki 
+|-
+!26
+|nowrap|HR<br />{{GreenGunDP}}{{Radar}}
+| +7
+|1.4
+|
+|'''{{ShipLink|Musashi/Kai Ni}}'''
+|10cm Twin HA Mount Kai + Air Radar
+|-
+!27
+!colspan="6"|Unknown
+|-
+!28
+|nowrap|GR<br />{{GreenGunMG}}{{Radar}}
+| +5
+|1.4
+|
+|'''{{ShipLink|Ise/Kai Ni|Hyuuga/Kai Ni|text=Ise-class Kai/Kai Ni}} &<br />{{ShipLink|Musashi/Kai Ni}}'''
+|Rocket Launcher K2 + Air Radar 
+|-
+!29
+|nowrap|HR<br />{{GreenGunDP}}{{Radar}}
+| +6
+|1.55
+|
+|'''{{ShipLink|Hamakaze/B Kai}} &<br />{{ShipLink|Isokaze/B Kai}}'''
+|HA + Air Radar<br />Using Akiguns has a high chance to proc AACI 5/8 instead.
+|-
+!30
+|nowrap|HHH<br />{{GreenGunDP}}{{GreenGunDP}}{{GreenGunDP}}
+| +4
+|1.3
+|
+|rowspan="2"|'''{{ShipLink|Tenryuu/Kai Ni}} &'''<br />'''{{ShipLink|Gotland/Kai}}'''
+|HA + HA + HA
+|-
+!31
+|nowrap|HH<br />{{GreenGunDP}}{{GreenGunDP}}
+| +3
+|1.2
+|
+|HA + HA
+|-
+!32
+|nowrap|{{EquipmentCardKai|16inch Mk.I Triple Gun Mount Kai + FCR Type 284|size=70px}}{{EquipmentCardKai|QF 2-pounder Octuple Pom-pom Gun Mount|size=70px}}<br />'''OR'''<br />{{EquipmentCardKai|20-tube 7inch UP Rocket Launchers|size=70px}}{{EquipmentCardKai|20-tube 7inch UP Rocket Launchers|size=70px}}<br />'''OR'''<br />{{EquipmentCardKai|20-tube 7inch UP Rocket Launchers|size=70px}}{{EquipmentCardKai|QF 2-pounder Octuple Pom-pom Gun Mount|size=70px}}
+| +4
+|1.2
+|
+|'''{{ShipLink|Nelson/Kai|Warspite/Kai|Ark Royal/Kai|Jervis/Kai|Janus/Kai|text=Royal Navy Ships}} &<br /> {{ShipLink|Kongou/Kai Ni C|Hiei/Kai Ni|Kirishima/Kai Ni|Haruna/Kai Ni|text=Kongou-class Kai Ni}}'''
+|[[16inch Mk.I Triple Gun Mount Kai + FCR Type 284|16inch Mk.I Triple + FCR]] + [[QF 2-pounder Octuple Pom-pom Gun Mount|QF 2-pounder]] <br />'''OR'''<br /> [[20-tube 7inch UP Rocket Launchers|20-tube 7inch UP]] + [[20-tube 7inch UP Rocket Launchers|20-tube 7inch UP]] / [[QF 2-pounder Octuple Pom-pom Gun Mount|QF 2-pounder]]
+|-
+!33
+|nowrap|HG<br />{{GreenGunDP}}{{GreenGunMG}}
+| +4
+|1.35
+|
+|'''{{ShipLink|Gotland/Kai}}'''
+|HA + AA Gun
+|-
+!34
+|nowrap|{{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37|size=70px}}{{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37|size=70px}}
+| +8
+|1.6
+|
+|rowspan="4"|'''{{ShipLink|Fletcher/Kai|Johnston/Kai|text=Fletcher-Class}}'''
+|
+|-
+!35
+|nowrap|{{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37|size=70px}}{{EquipmentCardKai|5inch Single Gun Mount Mk.30|size=70px}}
+| +7
+|1.55
+|
+|rowspan="2"|The {{EquipmentLink|5inch Single Gun Mount Mk.30 Kai|text=Kai}} variant can also be used in place of the {{EquipmentLink|5inch Single Gun Mount Mk.30|text=Base}} variant.
+|-
+!36
+|nowrap|{{EquipmentCardKai|5inch Single Gun Mount Mk.30|size=70px}}{{EquipmentCardKai|5inch Single Gun Mount Mk.30|size=70px}}{{EquipmentCardKai|GFCS Mk.37|size=70px}}
+| +7
+|1.55
+|
+|-
+!37
+|nowrap|{{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai|size=70px}}{{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai|size=70px}}
+| +5
+|1.45
+|
+|Both HA guns must be {{EquipmentLink|5inch Single Gun Mount Mk.30 Kai|text=Kai}} variant.
+|-
+!38
+!colspan="6"|Unknown
+|-
+!39
+|nowrap|{{EquipmentCardKai|GFCS Mk.37 + 5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|size=70px}}{{EquipmentCardKai|5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|size=70px}}
+| '''+11'''
+|1.7
+|
+|rowspan="4"|'''{{ShipLink|Atlanta/Kai|text=Atlanta-class}}'''
+|
+|-
+!40
+|nowrap|{{EquipmentCardKai|5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|size=70px}}{{EquipmentCardKai|5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|size=70px}}{{EquipmentCardKai|GFCS Mk.37|size=70px}}
+| '''+11'''
+|1.7
+|
+|The {{EquipmentLink|GFCS Mk.37 + 5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|text=GFCS+5inch(CD)}} variant of the gun can also be used.
+|-
+!41
+|nowrap|{{EquipmentCardKai|5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|size=70px}}{{EquipmentCardKai|5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|size=70px}}
+| '''+10'''
+|1.65
+|
+||The {{EquipmentLink|GFCS Mk.37 + 5inch Twin Dual-purpose Gun Mount (Concentrated Deployment)|text=GFCS+5inch(CD)}} variant of the gun can also be used.
+|}
+* [[File:CDMG.png]] and [[File:Customized HA plus AAFD icon.png]] are provisional icons to display CDMG and Built-in HA Mount-type guns.
+** '''Built-in HA mount''' is defined as a single {{GreenGunDP}} High-Angle gun that has 8{{AA}} stat or higher.
+**CDMG is defined as any Anti-Air gun that has 9{{AA}} stat or higher.
+*'''API 1/2''' are the only AACIs that can be activated with any Radar regardless of AA Stat. All other AACIs require that a radar with at least 2 {{AA}} or higher be equipped.
+*The probability of AACI occurring is '''fixed''' (Approx 40-65% depending on API) and is not affected by any in-game stat.
+*'''If a ship fulfills multiple requirements, the API with the highest priority will be checked first'''
+**A single roll is done to check for all AACIs in descending priority. This means that an AACI with lower priority but higher trigger chance can occur.
+**For instance Akizuki with 2 akiguns and a T13K air radar fulfills the requirements of AACI with API values 1, 2, 3, 5, 8 - the only API that will ever trigger is 1. This is because API 1 has both the highest trigger probability and priority. In the event that the Akizuki fails the roll for API 1, no other AACI can succeed as their trigger probabilities are below that of API 1.
+**Fletcher-class and Atlanta AACIs (API 34-37 & API 39-41) have the unique exception of independently rolling for each AACI they currently fulfil the conditions of. If all these rolls fail, they will roll an additional time for API 5. This effectively drastically increases their AACI chance when fulfilling multiple conditions. 
+**AACI priority is currently being determined, but some notable situations are highlighted below.
+***For instance, AACI with the API values of 7 and 8 can both be triggered by the same ship if she has fulfilled both requirements.<ref>https://gyazo.com/2472468c10c0dacd28a493a79ff140da</ref>
+***Another instance of that happening is with API values 19 and 20. [[Kinu Kai Ni]] can trigger API 20 as well if she fulfills the requirements for API 19.
+***The same thing happens with API 8 and 20, 5 and 29.
+*'''If multiple ships fulfill AACI requirements, the one with the highest API number will be triggered first'''
+**Due to higher API numbers having priority rather than AACI strength, a weaker AACI may be triggered first if present in the fleet. Take note when equipping your fleet.
+
+==Stage 3==
+===Opening Air Strike===
+*Bombers attack ships in this stage<ref>http://ja.kancolle.wikia.com/wiki/%E8%88%AA%E7%A9%BA%E6%88%A6</ref>
+**If [[Combat#Detection|Detection]] fails, this stage will not occur.
+*Each slot's planes would target one ship and attack for one time.
+*<math>Damage=\lfloor (\lfloor cap_{150}\{(25 + P\sqrt{N})R\}C_v \rfloor T-A)L \rfloor</math><ref>shitaraba 6-502,515,531,540,</ref>
+**<math>P</math> refer to bombing or torpedo value
+**<math>N</math> refer to number of plane in the slot
+**<math>R</math> is a fixed <math>1.0</math> for Dive Bombers, but is a random <math>0.8</math> or <math> 1.5 </math> for Torpedo Bombers/<ref>shitaraba 6-531,540,攻1-601 http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1400461230/601</ref>
+***The probability for Torpedo Bombers acquiring an <math>1.5</math> multiplier in 1-1-A is around 50% <ref>shitaraba 6-533,539</ref>
+**<math>cap_{150}(x)</math> refer to the attack power cap, see [[Combat]] page for detail.
+**<math>C_v</math> refer to Critical hit bonus from Aircraft Proficiency system. See [[Combat]] page and [[Aircraft Proficiency]] for details about its effect and etc.
+***If you bring more proficient planes, the rate to trigger it would increase.<ref name=":0">http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:464#15</ref>
+***With max proficiency [[Suisei Model 12A]] on 3 slot of a ship, critical hit rate is around 20%.<ref name=":1">http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1439793270/13-14</ref>
+**<math>T</math> refer to contact multiplier, <math>1.0</math> if contact failed
+**<math>A</math> refer to enemy armor, see [[Combat]] page for detail.
+**<math>L</math> refer to ammo modifier, see [[Combat]] page for detail.
+*No effect from engagement/formation/ship health when they launch planes/morale/fatigue on firepower or accuracy. <ref>shitaraba 4-531,576,579</ref>
+*Affected by the [[Aircraft Proficiency]] system.<ref name=":0">http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:464#15</ref><ref name=":1">http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1439793270/13-14</ref>
+*Carrier's level and plane's accuracy stat do not affect this stage.<ref>shitaraba攻1-119,121</ref>
+**Accuracy is around 80% against destroyers in 1-1-A.
+
+===Anti-air Propellant Barrage===
+Added during the 2018 January 27 update, Anti-air Propellant Barrage (AAPB) is a system by which bombing damage can be negated on individual ships.  Unlike other anti-air mechanics, this mechanic negates damage instead of reducing enemy bomber counts.
+====Activation requirements====
+To trigger:
+*Ship must be AV, BBV, CAV, CV or CVL
+**Note: BB, CA, etc. do not count
+*Ship must be equipped with one or more [[12cm 30-tube Rocket Launcher Kai Ni]]
+====Activation chance====
+Each ship triggers AAPB individually. Activation chance is affected by:
+*Ship adjusted AA
+*Ship luck {{Luck}}
+*Ise-class bonus
+*Number of 12cm 30-tube Rocket Launcher Kai Ni equipped on ship
+
+Activation chance can be estimated by:
+
+<math>\text{AAPB}% = \frac{AdjustedAA + 0.9 \cdot Luck}{281} + (N - 1) \cdot 15 + C_b </math><ref>See Noratako's posts: https://kancolle.fandom.com/ja/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:2471#5. See also his newer research https://twitter.com/noratako5/status/1062027534026428416. Further verification still needed.</ref>
+*<math>N</math> is number of 12cm 30-tube Rocket Launcher Kai Ni equipped.<ref>Minegumo Teitoku (@hata_mine) reports that three 12cm 30-tube Rocket Launcher Kai Ni may increase the activation chance by 30%: https://twitter.com/hata_mine/status/1044262169087369217. The details of the testing are, however, not provided.</ref>
+*<math>C_b</math> is the class bonus, 25 for Ise-class BBVs.
+
+<!-- Obsoleted formula, based on an early speculation 
+<math>\text{AAPB}% = \frac{AdjustedAA + 0.9 \cdot Luck}{400 - ( R + N_b + C_b )} </math>
+*<math>R</math> is the barrage constant. For the Rocket Launcher Kai Ni, it is 48.
+*<math>N_b</math> is the bonus for having more related equipment. 
+*For the Rocket Launcher Kai Ni, it is calculated by <math>N_b = 40 + 30 \cdot N</math>, where <math>N</math> is number of 12cm 30-tube Rocket Launcher Kai Ni equipped. 
+*<math>C_b</math> is the class bonus, 70 for Ise-class BBVs.
+*For calculation of adjusted AA, see [[Combat#/Aerial#System_Mechanics|Fleet Anti-Air]].
+-->
+
+'''Notes:'''
+*There seems to be diminishing returns on luck.  The exact relationship is still unclear.<ref>For instance, Muu suggests the existence of Luck cap. See https://kancolle.fandom.com/ja/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:2471#6. </ref>
+*It's possible to achieve 100% activation rate.
+*The formula above is only for 12cm 30-tube Rocket Launcher Kai Ni, there are two other barrages: Type 3 Shell and Type 3 Shell + Rocket Launcher Kai Ni. Effects and trigger chance currently unknown.
+
+====Effects====
+*The ship card will slide forward, and the text "噴進弾幕成功" will be displayed on the right. [[File:Aarb.png|thumb|Anti-air Propellant Barrage visual effects]]
+*Any damage to the ship(s) performing AARB by opening airstrikes will be negated (no damage or miss text is shown).
+
+Note that activation of AARB does not mean the ship was targeted by opening airstrikes.
+
+==Jet Assault==
+If any carriers on either side are equipped with jet-powered aircraft, a '''Jet Assault''' phase will commence '''before''' the main aerial combat phase and [[Land Base Aerial Support]] phases.
+
+If jet-powered aircraft exist in the Land Base Aerial Support phase, then that aircraft with perform its own Jet Assault phase before the main Land Base Aerial Support.
+
+Jet Assault phase will not take place where aerial combat does not happen, for instance in night battle nodes or anti-submarine-only nodes. Additionally, Jet Assault will not occur in Air Raid node.
+
+Ships sank by jets in Jet Assault phase will not launch planes for aerial combat and is likely not going to commence anti-air fire, however their anti-air equipment would still contribute to Fleet Anti-Air. <ref>https://docs.google.com/spreadsheets/d/1_mL4UKnQ-wahaKk-p4HiSSHzgGO1VEv92fC_1hH_tPE/edit#gid=627125573</ref>
+
+The jet assault phase does not involve the contact mechanic.<ref>https://docs.google.com/spreadsheets/d/1xUjN11cckDBpnC0NGl805Gcqoris1HNS0u_rQrF8Qbo/edit#gid=798242294</ref>
+
+The mechanics of this phase are identical to the standard air combat phase, however only jet aircraft on both sides will be able to participate.
+
+==Notes==
+<references group="†" />
+==Examples==
+<references group="Example" />
+==References==
+<references />
+[[Category:Calculation]]
+[[Category:Example]]
+[[Category:Help]]
+[[Category:Game System]]
+[[Category:Game Mechanics]]

@@ -1,0 +1,31 @@
+This is a guide on how to move comments from one article to another.
+
+'''Notes'''
+* This does not move replies to the comment. Make sure you do this early on when no one has replied yet.
+* It will not take effect immediately, wait a few hours.
+
+
+See example: [[Sandbox/WikiaRail#comm-213484]] which was prevously on the [[Sandbox]] page.
+
+
+1) First get the direct link to the comment, usually by right-clicking the time (''16 hours ago'') and '''Copy link adress''' ''for Chrome''. Similar actions for firefox and other browsers.
+* e.g. http://kancolle.wikia.com/wiki/Talk:Sandbox/WikiaRail/@comment-Dragonjet-20150328112424?permalink=213484#comm-213484
+
+
+2) Remove <code style="color:#00f">?permalink=</code> onwards. Copy starting from the <code style="color:#00f">Talk:</code>.
+* becomes: '''Talk:Sandbox/WikiaRail/@comment-Dragonjet-20150328112424'''
+
+
+3) Use it on the MovePage feature:
+* Special:MovePage/<code style="color:#00f">the_direct_link_here</code>
+* e.g. [[Special:MovePage/Talk:Sandbox/WikiaRail/@comment-Dragonjet-20150328112424]]
+
+
+4) Change the ''title'' to where ever you want to move it to:
+* from: '''Sandbox/WikiaRail/@comment-Dragonjet-20150328112424'''
+* to: '''Recent Updates/@comment-Dragonjet-20150328112424'''
+
+
+5) '''UNCHECK "Leave a redirect behind"'''
+
+6) Confirm<ac_metadata title="[How-To] Moving Article Comments" related_topics="General Discussion|Recent Updates"> </ac_metadata>

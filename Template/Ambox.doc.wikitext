@@ -1,0 +1,102 @@
+To be used on articles when the content has issues.
+
+==Usage==
+<pre>
+{{Ambox|type = protection
+|title = This page is locked because of an edit war.
+|message = If you want to discuss the issue, please check this thread.
+|user_act = Edit war between:
+|users = [[Special:Contributions/190.27.112.124|190.27.112.124]]
+and [[Special:Contributions/69.120.133.5|69.120.133.5]]
+}}
+</pre>
+gives
+{{Ambox|type = protection
+|title = This page is locked because of an edit war.
+|message = If you want to discuss the issue, please check this thread.
+|user_act = Edit war between:
+|users = [[Special:Contributions/190.27.112.124|190.27.112.124]]
+and [[Special:Contributions/69.120.133.5|69.120.133.5]]
+}}
+
+==Parameters==
+* '''type''' : ambox type. Possible types:
+** '''[[#stub|stub]]''' : adds the article to [[:Category:Stubs|Stubs]] category.
+** '''[[#construction|construction]]''' : adds the article to [[:Category:Under Construction Articles|Under Construction Articles]] category.
+** '''[[#translation|translation]]'''
+** '''[[#delete|delete]]''' : adds the article to [[:Category:Candidates for deletion|Candidates for deletion]] category. See also [[Template:Delete]] for a shorthand.
+** '''[[#cleanup|cleanup]]'''
+** '''[[#outdated|outdated]]''' : adds the article to [[:Category:Outdated Articles|Outdated Articles]] category.
+** '''[[#notice|notice]]'''
+** '''[[#disclaimer|disclaimer]]'''
+** '''[[#move|move]]'''
+** '''[[#protection|protection]]'''
+** '''[[#renovate|renovate]]'''
+** [[#default|default]], when '''type''' is not set.
+* '''title''' : the bold text in the description.
+* '''message''' : the normal text in the description.
+* '''user_act''' : phrase before the users, e.g., "Proposed by: ".
+* '''users''' : list of involved users and links to their profiles.
+* '''style''' : optional style for the ambox div.
+
+===Types===
+====stub====
+{{Ambox|type = stub
+|message = You can help the wiki by expanding it.
+|users = [[User:McDerp|McDerp]]
+}}
+====construction====
+{{Ambox|type = construction
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====translation====
+{{Ambox|type = translation
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====delete====
+{{Ambox|type = delete|
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====cleanup====
+{{Ambox|type = cleanup
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====outdated====
+{{Ambox|type = outdated
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====notice====
+{{Ambox|type = notice
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====disclaimer====
+{{Ambox|type = disclaimer
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====move====
+{{Ambox|type = move
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====protection====
+{{Ambox|type = protection
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====renovate====
+{{Ambox|type = renovate
+|message = This is your custom message for this ambox.
+|users = [[User:McDerp|McDerp]]
+}}
+====default====
+{{Ambox
+|message = This is your custom message for this ambox.
+}}
+<includeonly>[[Category:Article management templates|{{PAGENAME}}]]</includeonly><noinclude>[[Category:Template documentation|{{PAGENAME}}]]</noinclude>

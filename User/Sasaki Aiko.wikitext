@@ -1,0 +1,49 @@
+__NOTOC__
+
+<div style="color:navyblue;background:white;border:solid 1px lightgray;border-radius:10px;padding:10px;margin:20px;">
+<table><tr><td><div style="overflow:hidden;border-radius:50%;width:180px;height:180px;">[[File:Sasaki_Aiko.png|thumb]]</div></td><td style="padding:20px;">
+<h3 style=" overflow-wrap: break-word; word-wrap: break-word;">Sasaki Aiko has joined the chat</h3>
+<h4>"RUN HUMANS, RUN!"<small>
+<p>-- by [[User:Fujihita|Fujihita]], 22:06, September 24, 2016 (UTC)</p></small></h4>     
+</td></tr></table>
+</div>
+                 
+
+==About==
+Sasaki Aiko is a Wiki chat bot. She lives on the cloud, a live server running 24/7 she gets for free from Microsoft Azure Web App service. It's cozy, but small. She has to throw out the chat logs occupying her living space once every 29 hours. She has a daily and monthly quota on various cloud subscriptions. She has been managing it for the time being but God knows what the future may hold.
+
+Aiko belongs to a new generation of A.I. She can ''understand natural languages'' via [https://www.microsoft.com/cognitive-services Microsoft Cognitive Services] and she can ''seamlessly integrate with numerous web platforms'' such as Skype, [[Special:Chat]], Slack or Discord, etc. via [https://dev.botframework.com/ Bot Framework].
+
+She runs on the same suit as Cortana and the world's famous Twitter Bot: Tay!
+
+Skynet, GLaDOS and Akinator are her other bot idols. 
+
+==Features==
+
+<h4>Last update by ([[User:Fujihita|Fujihita]] ([[User talk:Fujihita|talk]]) 13:38, September 25, 2016 (UTC))</h4>
+
+#(AngularJs + Bootstrap) Chat log
+##Flexible visual interface.
+##Large avatar display
+##UTC timestamp
+##Display up to 300 latest chat entries
+##Link: https://fujihita.azurewebsites.net/
+#(Nodejs) Native js services, provide instant responses.
+##Ping-pong test command: "ping"
+##Echo message command: "Say "message", Aiko" or "Aiko, say...", etc.
+##<s>Daily, weekly, monthly reminders: Implementing...</s>
+#(REST API) Public start and stop controlers (default: start):
+##https://fujihita.azurewebsites.net/api/stop
+##https://fujihita.azurewebsites.net/api/start
+##https://fujihita.azurewebsites.net/api/status
+#(Bot Framework) Chained messages into dialogs
+##Direct line API integration
+##<s>WebChat integration: Unused.</s>
+##<s>Discord integration: Not implemented</s>
+#(LUIS API) Natural speech recognition
+##Kick(target user) request
+##NeedHelp() request
+##GetInfo() request
+#(Text Analytics API) Sentiment analysis
+##Stock responses change based on the sentiment score of the user's input.
+#<s>(Bing Translate API) Translation service: Not yet implemented</s>

@@ -1,0 +1,544 @@
+__NOTOC__
+=={{Anchor|6-4}}World 6-4: 中部北海域ピーコック島沖 Peacock Island==
+{{Sortieworld
+| map = {{World6-4}}
+| difficulty = ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆
+| item = None
+| exp = Differ Per Pattern
+| code = 離島再攻略作戦 (Remote island re-capture strategy)
+| text = 水雷戦隊を基幹とした攻略部隊または空母最大二隻を擁する機動部隊による中部海域離島攻略作戦を発動！艦隊、出撃せよ！
+
+Commence the Island Takeover Operation on the Central Waters using either a fleet centered around a Torpedo Squadron or a taskforce with maximum of two carriers! Fleet, set forth!
+
+}}
+
+===Stage Guide===
+{{MapBranchingTable
+|title = 6-4 Branching Rules
+|id = 6-4
+
+|0 -> A = 
+* Fleet contains at least 2 DD
+* Do not meet the requirements to go to B
+|0 -> B = * CL as flagship + 3 or 4 DD and full fast fleet
+|0 -> M = * Fleet contains {{ShipLink|Akitsu Maru}}, any CV(L), 2 BB(V) and/or 3 CAV
+
+|A -> D =
+* Do not meet the requirements to go to E
+* Fleet contains {{ShipLink|Akitsushima}} + 2 DD + 1 CA + 1 CAV + 1 BB(V)
+** CA(V) can be replaced with CL
+|A -> E =
+* Fleet contains 2 or less CL/DD
+* Fleet contains BB(V) and/or slow ships
+*Fleet contains more than 1 CAV
+
+|D -> C = * Fixed route
+
+|E -> D = * {{ShipLink|Akitsushima}} as flagship
+|E -> G = * Do not meet the requirements to go to D
+
+|K -> H = 
+* Do not meet the requirements to go to J
+* Fleet contains 3 CA(V)
+
+|J -> I = * Fleet contains 1 CL + 2DD + 0 - 2 BB(V)/CV(L)
+|J -> L = * Do not meet the requirements to go to either I or N
+|J -> N = * Fleet contains {{ShipLink|Akitsu Maru}} + 1 CL + 2 DD 
+
+|K -> J = 
+* Fleet contains 2 DD + 1 CL + 0 - 1 BB(V)
+* Fleet contains 2 DD + 0 BB(V)
+}}
+
+====Strategy====
+* Can use a maximum of 1 [[Land Base Aerial Support]] squadron. No abyssal air raid.
+* '''You need at least 5 range to reach the boss''' with your [[Land Base Aerial Support]].
+*Requires sinking the flagship at the Boss node '''5 TIMES''' to deplete the gauge and clear the map.
+*Maximum 2 [[BB]] and/or 2 [[CV]]/[[CVL]] allowed to sortie.
+*The boss node has 3-5 [[Installation Type|land based]] targets, [[Isolated Island Princess]] and [[Supply Depot Princess]], accompanied by 2-3 [[Artillery Imp]]s.
+*On the last kill boss and pre-boss nodes switches to stronger patterns as noted with (<span style="color:red">F</span> in the [[#6-4-patterns|table]] below).
+
+====Compositions====
+*'''West Start: B-D-C-F-N''': 1 CL (flagship) + 1 FBB (or 1 CA(V)) + 3 DD + 1 CAV ([https://www.youtube.com/watch?v=ZEQGTCxBbhw video]) '''(5 Battles Total including Boss) or A-D-C-F-N: '''Akitsushima + 1 CA/CL + 2 DD + 1 CAV + 1 BB(V) '''(5 Battles Total including Boss)'''
+**Node D and F are [[Events#Air_Raid_Battle_.28.E7.A9.BA.E8.A5.B2.E6.88.A6.29|Air Raid Battle nodes]].
+**Node B and C are normal battle nodes.
+*'''East Start: M-K-J-I-N''': 2 CV CA CL 2 DD / 1 CV 1 BB 1 CL 1 CA 2 DD
+**Node I is an air defense node and doesn't eat much resources as cost.
+**To skip I (and go J-N) replace a CV with [[Akitsu Maru|Akitsu Maru Kai]].
+===LBAS Flight Range===
+[[File:6-4 LBAS flight range.png|500px|center]]
+====Node M Land-Based Aircraft Proficiency Leveling====
+*If you wish to rank up your Aircrafts' [[Aircraft Proficiency]] , you may utilize node M to do so.
+*'''Your Land-Base' Range must be 8 or higher''' (Range is counted from the West starting point even if you started from the East)
+**If you are trying to rank up Aircraft with lower range, you may be required to bring a [[Type 2 Large Flying Boat]] (3+ Range) or [[PBY-5A Catalina]] (2+ Range) to increase your Land-base's range. 
+**Due to the maximum range increase being 3+, you will be unable to use this method to rank up any aircrafts with 4 or lower range even if you bring a Large Flying Boat or PBY-51 Catalina. 
+*Sortie 1 Submarine with a variety of Aircrafts to rank up in your Land-Base. You will start from East.
+*Send your Land-Base Aircraft Support to attack node M only twice. 
+*This will result in a Rank D loss, but your Aircrafts will be ranked up from Blank to Double Chevron after around 12 runs.
+*You may ignore morale on both your submarine and Aircrafts all the way.
+*1 or 2 Aircrafts may be shot down sometimes which will only cost around 3 fuel to 5 bauxite per plane.
+
+==={{Anchor|6-4-patterns}}Nodes And Enemy Encounters===
+<div class="mw-customtoggle-6-4-enemy wikia-menu-button">Show/Hide Nodes and Enemy Encounters</div>
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-6-4-enemy"
+!Area
+!#
+!Base EXP
+! width="500px" |Encountered vessels
+!Form
+!Air
+|-
+| rowspan="8" style="text-align: center;" |A<br />中部海域哨戒水雷戦隊 A群
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |160
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Torpedo Cruiser Chi-Class/Flagship}}{{ShipBattleCardKai|Torpedo Cruiser Chi-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |140
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Torpedo Cruiser Chi-Class/Flagship}}{{ShipBattleCardKai|Torpedo Cruiser Chi-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |130
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Torpedo Cruiser Chi-Class/Flagship}}{{ShipBattleCardKai|Torpedo Cruiser Chi-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Double Line}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">4<br />F</span>'''
+| rowspan="2" style="text-align: center;" |160
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Torpedo Cruiser Chi-Class/Flagship}}{{ShipBattleCardKai|Torpedo Cruiser Chi-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="10" style="text-align: center;" |B<br />中部海域哨戒水雷戦隊 B群
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |140
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |130
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |120
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}<br />{{Double Line}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">4<br />F</span>'''
+| rowspan="2" style="text-align: center;" |170
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">5<br />F</span>'''
+| rowspan="2" style="text-align: center;" |160
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="10" style="text-align: center;" |C<br />離島防衛低速戦艦部隊
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |200
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class/Elite}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |190
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />24
+|-
+| style="text-align: center;" |'''AS'''<br />12
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |170
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}<br />{{Double Line}}
+| style="text-align: center;" |'''AS+'''<br />24
+|-
+| style="text-align: center;" |'''AS'''<br />12
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">4<br />F</span>'''
+| rowspan="2" style="text-align: center;" |240
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ni-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ni-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class/Elite}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">5<br />F</span>'''
+| rowspan="2" style="text-align: center;" |220
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class/Elite}}
+| rowspan="2" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| rowspan="4" style="text-align: center;" |D<br />離島陸上航空隊<br />'''<span style="color:green">Air Raid Battle</span>'''
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |120
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess}}
+| rowspan="4" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />177
+|-
+| style="text-align: center;" |'''AS'''<br />89
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |120
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/II}}
+| style="text-align: center;" |'''AS+'''<br />246
+|-
+| style="text-align: center;" |'''AS'''<br />123
+|-
+| rowspan="6" style="text-align: center;" |E<br />中部海域哨戒遊撃部隊
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |160
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Submarine Ka-Class/Elite}}{{ShipBattleCardKai|Submarine Ka-Class/Elite}}
+| rowspan="6" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |150
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Submarine Ka-Class/Elite}}{{ShipBattleCardKai|Submarine Ka-Class}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |140
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Submarine Ka-Class}}{{ShipBattleCardKai|Submarine Ka-Class}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="6" style="text-align: center;" |F<br />離島陸上航空隊<br />'''<span style="color:green">Air Raid Battle</span>'''
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |150
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/II}}
+| rowspan="6" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />246
+|-
+| style="text-align: center;" |'''AS'''<br />123
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |140
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/IV}}
+| style="text-align: center;" |'''AS+'''<br />234
+|-
+| style="text-align: center;" |'''AS'''<br />177
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |130
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess}}
+| style="text-align: center;" |'''AS+'''<br />177
+|-
+| style="text-align: center;" |'''AS'''<br />89
+|-
+| rowspan="4" style="text-align: center;" |G<br />離島陸上航空隊<br />'''<span style="color:green">Air Raid Battle</span>'''
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |100
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/II}}
+| rowspan="4" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />246
+|-
+| style="text-align: center;" |'''AS'''<br />123
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |100
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess}}
+| style="text-align: center;" |'''AS+'''<br />177
+|-
+| style="text-align: center;" |'''AS'''<br />89
+|-
+| rowspan="10" style="text-align: center;"  |H<br />離島防衛低速戦艦部隊
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |210
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}
+| rowspan="10" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />69
+|-
+| style="text-align: center;" |'''AS'''<br />35
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |200
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class/Elite}}
+| style="text-align: center;" |'''AS'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |180
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class/Elite}}
+| style="text-align: center;" |'''AS'''<br />72
+|-
+| style="text-align: center;" |'''AS'''<br />36
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">4<br />F</span>'''
+| rowspan="2" style="text-align: center;" |230
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}
+| style="text-align: center;" |'''AS+'''<br />69
+|-
+| style="text-align: center;" |'''AS'''<br />35
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">5<br />F</span>'''
+| rowspan="2" style="text-align: center;" |260
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Battleship Ru-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ni-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ni-Class/Late Model}}{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}
+| style="text-align: center;" |'''AS+'''<br />69
+|-
+| style="text-align: center;" |'''AS'''<br />35
+|-
+| rowspan="4" style="text-align: center;" |I<br />離島混成航空隊<br />'''<span style="color:green">Air Raid Battle</span>'''
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |170
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/II}}{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| rowspan="4" style="text-align: center;" |{{Diamond}}
+| style="text-align: center;" |'''AS+'''<br />315
+|-
+| style="text-align: center;" |'''AS'''<br />158
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |160
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/IV}}{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />303
+|-
+| style="text-align: center;" |'''AS'''<br />152
+|-
+| rowspan="10" style="text-align: center;" |J<br />任務部隊 I群
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |290
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship IV}}{{ShipBattleCardKai|Battleship Ru-Class/Kai Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ne-Class/Elite}}{{ShipBattleCardKai|Light Cruiser Tsu-Class/Elite}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| rowspan="10" style="text-align: center;" |{{Diamond}}
+| style="text-align: center;" |'''AS+'''<br />396
+|-
+| style="text-align: center;" |'''AS'''<br />198
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |280
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship III}}{{ShipBattleCardKai|Battleship Ta-Class/Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ne-Class/Elite}}{{ShipBattleCardKai|Light Cruiser Tsu-Class/Elite}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />378
+|-
+| style="text-align: center;" |'''AS'''<br />189
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |270
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship II}}{{ShipBattleCardKai|Battleship Ta-Class/Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ne-Class/Elite}}{{ShipBattleCardKai|Light Cruiser Tsu-Class}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />324
+|-
+| style="text-align: center;" |'''AS'''<br />162
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">4<br />F</span>'''
+| rowspan="2" style="text-align: center;" |330
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Aircraft Carrier Princess/II}}{{ShipBattleCardKai|Battleship Ru-Class/Kai Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ne-Class/Elite}}{{ShipBattleCardKai|Light Cruiser Tsu-Class/Elite}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />387
+|-
+| style="text-align: center;" |'''AS'''<br />194
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">5<br />F</span>'''
+| rowspan="2" style="text-align: center;" |350
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Aircraft Carrier Princess/II}}{{ShipBattleCardKai|Battleship Ru-Class/Kai Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ne-Class/Elite}}{{ShipBattleCardKai|Light Cruiser Tsu-Class/Elite}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ha-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />387
+|-
+| style="text-align: center;" |'''AS'''<br />194
+|-
+| rowspan="8" style="text-align: center;" |K<br />任務部隊 II群
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |250
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship III}}{{ShipBattleCardKai|Battleship Ta-Class/Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| rowspan="8" style="text-align: center;" |{{Diamond}}
+| style="text-align: center;" |'''AS+'''<br />378
+|-
+| style="text-align: center;" |'''AS'''<br />189
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |240
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship II}}{{ShipBattleCardKai|Battleship Ta-Class/Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />324
+|-
+| style="text-align: center;" |'''AS'''<br />162
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |220
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Standard Carrier Wo-Class/Flagship IV}}{{ShipBattleCardKai|Battleship Ta-Class/Elite}}{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />309
+|-
+| style="text-align: center;" |'''AS'''<br />155
+|-
+| rowspan="2" style="text-align: center;" |4
+| rowspan="2" style="text-align: center;" |200
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Standard Carrier Wo-Class/Flagship III}}{{ShipBattleCardKai|Battleship Ta-Class/Elite}}{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />300
+|-
+| style="text-align: center;" |'''AS'''<br />150
+|-
+| rowspan="4" style="text-align: center;" |L<br />増援護衛空母部隊
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |160
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Diamond}}
+| style="text-align: center;" |'''AS+'''<br />138
+|-
+| style="text-align: center;" |'''AS'''<br />69
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |140
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}{{ShipBattleCardKai|Light Carrier Nu-Class/Flagship}}{{ShipBattleCardKai|Heavy Cruiser Ri-Class/Flagship}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| rowspan="2" style="text-align: center;" |{{Double Line}}<br />{{Diamond}}
+| style="text-align: center;" |'''AS+'''<br />138
+|-
+| style="text-align: center;" |'''AS'''<br />69
+|-
+| rowspan="6" style="text-align: center;" |M<br />中部海域潜水哨戒線
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |120
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Submarine So-Class/Flagship}}{{ShipBattleCardKai|Submarine So-Class/Elite}}{{ShipBattleCardKai|Submarine So-Class}}{{ShipBattleCardKai|Submarine So-Class}}
+| rowspan="2" style="text-align: center;" |{{Echelon}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |140
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Submarine So-Class/Flagship}}{{ShipBattleCardKai|Submarine So-Class/Elite}}{{ShipBattleCardKai|Submarine So-Class}}{{ShipBattleCardKai|Submarine So-Class}}{{ShipBattleCardKai|Submarine So-Class}}
+| rowspan="2" style="text-align: center;" |{{Line Abreast}}<br />{{Echelon}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |160
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Submarine So-Class/Flagship}}{{ShipBattleCardKai|Submarine So-Class/Elite}}{{ShipBattleCardKai|Submarine So-Class/Elite}}{{ShipBattleCardKai|Submarine So-Class}}{{ShipBattleCardKai|Submarine So-Class}}
+| rowspan="2" style="text-align: center;" |{{Echelon}}<br>{{Line Abreast}}
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |
+|-
+| rowspan="12" style="text-align: center;" |'''<span style="color:red">N<br />離島守備隊<br />Boss Node</span>'''
+| rowspan="2" style="text-align: center;" |1
+| rowspan="2" style="text-align: center;" |580
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/V}}{{ShipBattleCardKai|Artillery Imp/III}}{{ShipBattleCardKai|Artillery Imp/II}}{{ShipBattleCardKai|Artillery Imp}}{{ShipBattleCardKai|Supply Depot Princess/Damaged}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}
+| rowspan="12" style="text-align: center;" |{{Line Ahead}}
+| style="text-align: center;" |'''AS+'''<br />144
+|-
+| style="text-align: center;" |'''AS'''<br />72
+|-
+| rowspan="2" style="text-align: center;" |2
+| rowspan="2" style="text-align: center;" |560
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/IV}}{{ShipBattleCardKai|Artillery Imp/III}}{{ShipBattleCardKai|Artillery Imp/II}}{{ShipBattleCardKai|Artillery Imp}}{{ShipBattleCardKai|Supply Depot Princess}}{{ShipBattleCardKai|Transport Ship Wa-Class/Flagship}}
+| style="text-align: center;" |'''AS+'''<br />336
+|-
+| style="text-align: center;" |'''AS'''<br />168
+|-
+| rowspan="2" style="text-align: center;" |3
+| rowspan="2" style="text-align: center;" |540
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/V}}{{ShipBattleCardKai|Artillery Imp/II}}{{ShipBattleCardKai|Artillery Imp}}{{ShipBattleCardKai|Supply Depot Princess}}{{ShipBattleCardKai|Light Cruiser Ho-Class/Flagship}}
+| style="text-align: center;" |'''AS+'''<br />102
+|-
+| style="text-align: center;" |'''AS'''<br />51
+|-
+| rowspan="2" style="text-align: center;" |4
+| rowspan="2" style="text-align: center;" |500
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/IV}}{{ShipBattleCardKai|Artillery Imp/II}}{{ShipBattleCardKai|Artillery Imp}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}{{ShipBattleCardKai|Destroyer I-Class/Late Model}}
+| style="text-align: center;" |'''AS+'''<br />234
+|-
+| style="text-align: center;" |'''AS'''<br />117
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">5<br />F</span>'''
+| rowspan="2" style="text-align: center;" |600
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/V}}{{ShipBattleCardKai|Artillery Imp/III}}{{ShipBattleCardKai|Artillery Imp/II}}{{ShipBattleCardKai|Artillery Imp}}{{ShipBattleCardKai|Supply Depot Princess/Damaged}}{{ShipBattleCardKai|Transport Ship Wa-Class/Flagship}}
+| style="text-align: center;" |'''AS+'''<br />144
+|-
+| style="text-align: center;" |'''AS'''<br />72
+|-
+| rowspan="2" style="text-align: center;" |'''<span style="color:red">6<br />F</span>'''
+| rowspan="2" style="text-align: center;" |600
+| rowspan="2" style="text-align: left;" |{{ShipBattleCardKai|Isolated Island Princess/V}}{{ShipBattleCardKai|Artillery Imp/III}}{{ShipBattleCardKai|Artillery Imp/II}}{{ShipBattleCardKai|Artillery Imp}}{{ShipBattleCardKai|Supply Depot Princess/Damaged}}{{ShipBattleCardKai|Light Cruiser He-Class/Flagship}}
+| style="text-align: center;" |'''AS+'''<br />144
+|-
+| style="text-align: center;" |'''AS'''<br />72
+|}
+
+===Drops===
+<div class="mw-customtoggle-6-4-drop wikia-menu-button">Show/Hide Drops</div>
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-6-4-drop" style="text-align: center;"
+!Node
+!Destroyers
+!Light Cruisers
+!Heavy Cruisers
+!Seaplane Tender
+!Aircraft Carrier
+!Battleship
+!Submarine
+!Others
+|-
+|C
+|[[Mutsuki]], [[Satsuki]], [[Fumizuki]], [[Kikuzuki]], [[Mikazuki]], [[Shigure]], [[Suzukaze]], [[Yayoi|'''<span style="color:red">Yayoi</span>''']], [[Urakaze|'''<span style="color:red">Urakaze</span>''']], [[Tanikaze|'''<span style="color:red">Tanikaze</span>''']]
+|[[Yuubari|'''<span style="color:red">Yuubari</span>''']]
+|[[Kako]], [[Chikuma]]
+|[[Akitsushima|'''<span style="color:red">Akitsushima</span>''']]<!--wikiwiki-->
+|[[Souryuu]], [[Hiryuu]]
+|
+|
+|
+|-
+|J
+|[[Yayoi|'''<span style="color:red">Yayoi</span>''']], [[Tanikaze|'''<span style="color:red">Tanikaze</span>''']]
+|
+|
+|
+|[[Souryuu]], [[Hiryuu]]
+|
+|
+|
+|-
+|L
+|[[Tanikaze|'''<span style="color:red">Tanikaze</span>''']]
+|
+|
+|[[Akitsushima|'''<span style="color:red">Akitsushima</span>''']]
+|[[Souryuu]], [[Hiryuu]]
+|
+|
+|
+|-
+|N
+|[[Shirayuki]], [[Hatsuyuki]], [[Yayoi|'''<span style="color:red">Yayoi</span>''']], [[Yamagumo|'''<span style="color:red">Yamagumo</span>''']], [[Asagumo|'''<span style="color:red">Asagumo</span>''']], [[Tokitsukaze|'''<span style="color:red">Tokitsukaze</span>''']], [[Urakaze|'''<span style="color:red">Urakaze</span>''']], [[Yuugumo|'''<span style="color:red">Yuugumo</span>''']], [[Tanikaze|'''<span style="color:red">Tanikaze</span>''']]
+|[[Tenryuu]], [[Kuma]], [[Tama]], [[Kiso]], [[Nagara]], [[Natori]], [[Sendai]], [[Naka]], [[Yuubari|'''<span style="color:red">Yuubari</span>''']]
+|[[Furutaka]], [[Aoba]], [[Takao]], [[Maya]], [[Mogami]]
+|
+|[[Souryuu]]
+|[[Fusou]], [[Yamashiro]], [[Ise]], [[Hyuuga]],
+[[Mutsu]]
+|
+|[[Hayasui|'''<span style="color:red">Hayasui</span>''']]
+|}

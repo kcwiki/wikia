@@ -1,0 +1,49 @@
+{{Equipment
+
+|en = 
+This night recon seaplane was developed for use on DesRon flagships.<br/>The airframe is painted black, has an excellent loiter time, and includes within the crew a skilled spotter trained in night operations. (It can also spot for allied ships during nighttime reconnaissance.)
+
+|notes = 
+Can provide the following effects when a ship equipped with this enters a night battle:
+* Provides an accuracy bonus of around 10%<ref group="NR" name="夜戦" />
+* Increases base attack power by 5 (pre-cap, before special attack multipliers)<ref group="NR" name="kancollecalc" /><ref group="NR" name="nightscout tweet" />
+* Increases critical hit rate<ref group="NR" name="nightscout tweet" />
+[[File:Recon2.jpg|thumb|left|380px]]
+* Note that these effects are applied only if the scouting phase during a night battle is successful.
+
+This only has a chance to trigger when:
+* The Night Recon is equipped on a ship in your fleet that participates in the night battle.
+** Equipping on a 0 plane slot will '''not''' work. However, in case of multiple night recons, having a Night Recon in a 0 plane slot will not affect your Night Contact Rate if you have another one in a slot that is not 0.
+* The battle starts at night.
+* The battle starts at day (non-PvP), and either air denial, superiority or supremacy was obtained.
+* The battle is PvP, and air denial or above was obtained.
+
+If all the requirements are met, the activation chance is<ref group="NR" name="Dewy in #Strategy" /><br />
+
+<!--<math>N_{\text{contact}}% = \sqrt{50 \cdot ShipLevel} - 3 </math>
+older formula-->
+<math>N_{\text{contact}}% = \lfloor \sqrt{3 \cdot ShipLevel}\rfloor*4</math>
+
+The full scouting phase animation will not be displayed during a night battle; instead, the '''night recon plane's animation''' will appear in the '''enemy fleet's''' radar '''only''' if the scouting phase was successful (as seen in this picture,''' top right''').
+
+Can also be used to trigger artillery spotting during day battles but is a less effective daytime spotter than standard recon seaplanes.
+
+The formula listed only accounts for ship level for calculating activation chance, and thus Night Recon improvements '''do not''' increase chance of activation.
+
+'''Note''': Keep in mind that the night recon can still activate, even if the ship equipped with it has retreated. It is unknown whether this is intended or a developer's oversight which they didn't bother to fix.
+
+|trivia = 
+
+|see also = 
+* [[wikipedia:Aichi E11A|Aichi E11A - Wikipedia]]
+* [[wikipedia:ja:九八式水上偵察機|九八式水上偵察機 - Wikipedia]] (Japanese link)
+
+==References==
+<references group="NR">
+<ref name="kancollecalc">http://kancollecalc.web.fc2.com/damage_formula.html#5-1-6</ref>
+<ref name="nightscout tweet">https://twitter.com/KanColle_STAFF/status/479870093468250112</ref>
+<ref name="夜戦">http://ja.kancolle.wikia.com/wiki/%E5%A4%9C%E6%88%A6</ref>
+<ref name="Dewy in #Strategy">https://imgur.com/a/6OImEgy</ref>
+</references>
+
+}}

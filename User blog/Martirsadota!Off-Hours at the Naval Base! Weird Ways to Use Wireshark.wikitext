@@ -1,0 +1,62 @@
+<table style="background:#CCF;border:3px solid #A8C;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''This post is just for fun!''' This isn't a guide or anything of that sort. While I do not prohibit you from following along, do note that in doing so you understand that '''you are utilizing this information out of your own accord,''' and you agree that '''you will ''NOT'' hold me liable for any and all damages that may directly or indirectly arise from such usage!'''</td>
+</tr>
+</table>
+
+=Intro=
+
+You might have ended up with Wireshark after my [[User blog:Martirsadota/Utilizing Wireshark for Kancolle Asset Grabbing|little tutorial]], and now that you're proficient with it, you might want to go a bit deeper.
+
+Scratch that. You might want to have a ''little'' fun with it.
+
+Scratch that, ''again''. You might want to satisfy your geek self.
+
+Well, this ''isn't'' the guide for you.
+
+This post will describe the unusual ways you can use Wireshark in relation to Kancolle. Things that will make you go, "Why do I even want to do ''this''?" yet still tickles your inner geek.
+
+A-tinkering we go!
+
+=Use Coloring Rules the Kancolle Way=
+
+I mentioned in my tutorial about the "scrolling rows of colored text," more formally called the '''Packet List''' area. The way they're colored is, of course, not random, but predetermined by a set of rules, called—you guessed it—'''coloring rules'''.
+
+Coloring rules are accessible via '''View > Coloring rules...'''. Try accessing it now:
+
+[[File:Clip_(2015-11-25_at_10.06.53).png|450px|center|thumb]]
+
+Aside from the default rules set, you can make up your own rules. This requires a bit of knowledge of Wireshark's filter syntax, but once you get over that you can color any row that meets a certain criteria any way you wish.
+
+For instance, you might notice that my Packet List area is all blue and yellow, when in the tutorial screenshots it's decked out in green and black. Why so?
+
+The answer: I created a coloring rule that colors all traffic coming from the Kancolle servers that way.
+
+I know, I know: "If you already filtered your capture so that only Kancolle traffic will appear, why even color them to be distinct? Isn't that moot?"
+
+Simply because ''I can''. [[File:Amagi.png|48px|link=]]
+
+Anyways, if you want to do the same to your Wireshark installation, do the following:
+
+# With the Coloring Rules window still open (if you closed it already, open it again), Hit the '''New''' button, on the upper-left.<br/>[[File:Clip_(2015-11-25_at_10.20.23).jpg|center|300px]]
+# A new window pops up where you can create your new coloring rule. Give it a '''Name'''; for this purpose,  we'll use <code>Kancolle</code>.
+# Next, we'll need a filter '''String'''. This determines which rows would be colored. For now, copy-paste this ugly filter string:<pre style="word-wrap:break-word;">ip.addr eq 203.104.209.71 || ip.addr eq 125.6.184.15 || ip.addr eq 125.6.184.16 || ip.addr eq 125.6.187.205 || ip.addr eq 125.6.187.229 || ip.addr eq 125.6.187.253 || ip.addr eq 125.6.188.25 || ip.addr eq 203.104.248.135 || ip.addr eq 125.6.189.7 || ip.addr eq 125.6.189.39 || ip.addr eq 125.6.189.71 || ip.addr eq 125.6.189.103 || ip.addr eq 125.6.189.135 || ip.addr eq 125.6.189.167 || ip.addr eq 125.6.189.215 || ip.addr eq 125.6.189.247 || ip.addr eq 203.104.209.23 || ip.addr eq 203.104.209.39 || ip.addr eq 203.104.209.55 || ip.addr eq 203.104.209.102</pre>These are the IP addresses of the twenty (so far) Kancolle servers online.
+# Click the '''Foreground Color...''' button, and fiddle around with the color mixer that appears until you find a color that strikes your fancy. Hit '''OK'''.
+# Do the same with the '''Background Color...''' button.
+# Once you find a combination that's pleasing to you, hit '''OK''' on the Edit Coloring Rule window.
+# Finally, hit '''OK''' on the Coloring Rules window.
+
+You should now see all the Kancolle traffic in the colors you chose.
+
+Armed with this and proficiency of the filter syntax (which I'll leave to you as an exercise), you can now color any row containing interesting events in Kancolle, and highlight them. Here are a few ideas:
+
+* Highlight rows when [[Aerial Combat#Anti-Air Cut-In|AACI]] triggers:<pre>data-text-lines contains "\"api_air_fire\":"</pre>(take note that you need to escape the quotes)
+* Highlight rows when [[Expedition#Support expedition|Support Expedition]] triggers:<pre>data-text-lines contains "\"api_support_flag\":1"</pre>
+* Highlight rows whenever [[Combat#Night Combat|Night Battle]] is needed:<pre>data-text-lines contains "\"api_midnight_flag\":1"</pre>
+* Highlight rows when you get your favorite ship:<pre>data-text-lines contains "api_get_ship" && data-text-lines contains "\"api_ship_id\":80"</pre>This example highlights [[Nagato]] drops; to highlight your favorite ship, replace <code>80</code> with the <code>api_id</code> of the ship in question, which you can look up [https://github.com/gakada/KCTools/blob/master/Data/Ships.csv here.]
+
+You may ask why you should be doing this, though, since you can just get the same effect by using KC3Kai. Well, like I said, the answer is simple:
+
+<div style="font-size:32px;line-height:32px;width:100%;text-align:center;">'''You do it because ''you can''.''' [[File:Amagi.png|72px|link=]]</div>
+[[Category:Blog posts]]

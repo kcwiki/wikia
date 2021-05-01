@@ -1,0 +1,263 @@
+{{Map/Header}}
+{{Map/Info
+|en = Cam Ranh Peninsula
+|jp = カムラン半島
+|romaji = Kamuran-hantō
+|strategy_name = Operation Ka - Interception
+|strategy_name_ja = カ号迎撃戦
+|strategy_info = There is an enemy fleet patrolling off the Cam Ranh Peninsula. Intercept them!
+|strategy_info_ja = カムラン半島付近に遊弋する敵艦隊を捕捉、これを迎撃せよ！
+|exp_ship = 120
+|exp_hq = 60
+|exp_hq_boss = 720
+}}
+{{MapBranchingTable
+|expand = true
+|id = 2-1
+|A -> B/resource, D/resource = * Random 50%/50% chance
+
+|D/resource -> E = * 70% if the fleet contains CAV, CV(L), BB(V) or AV
+* 30% otherwise
+|D/resource -> F = * 30% if the fleet contains CAV, CV(L), BB(V) or AV
+* 70% otherwise
+}}
+This is a good place to finish Bw2 (20 CV/CVL) since all end nodes consist of 2-3 CV/CVL in every enemy's fleet composition allowing you to finish it in at most 10 runs while possibly finishing your Bd7 (5 Bosses) along the way.
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=192|y=289}}
+{{Map/ImageNode|B|x=157|y=231}}
+{{Map/ImageNode|D|x=222|y=170}}
+{{Map/ImageNode|C|x=111|y=162}}
+{{Map/ImageNode|F|x=311|y=75}}
+{{Map/ImageNode|E|x=138|y=90}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵前衛部隊
+|A
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|A
+|Normal
+|{{Formation|Diamond}}
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Light Cruiser He-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Light Cruiser He-Class
+|Destroyer I-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|A
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+}}
+{{NodeInfo
+|B
+|Resource
+|Steel
+|10-20-25-30
+}}
+{{Map/Nodes|name=敵護衛空母群
+|C
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|C
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|C
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser Ho-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+{{NodeInfo
+|D
+|Resource
+|Itorch
+|1
+}}
+{{Map/Nodes|name=敵主力艦隊
+|E
+|Boss
+|{{Formation|Double Line}}
+|Battleship Ru-Class
+|Standard Carrier Wo-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|E
+|Boss
+|{{Formation|Double Line}}
+|Battleship Ru-Class
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|E
+|Boss
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+}}
+{{Map/Nodes|name=敵護衛空母群
+|F
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|F
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|F
+|Normal
+|{{Formation|Diamond}}
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser Ho-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, C, E, F
+|boss = E
+|Akatsuki: E
+|Aoba: A, C, E, F
+|Arare: A, C, F
+|Arashio: A, C, F
+|Ashigara: A, C, E, F
+|Atago: A, E
+|Ayanami: E
+|Chikuma: E
+|Chitose: A, C, E, F
+|Chiyoda: A, C, E, F
+|Choukai: A, C, E, F
+|Fubuki: E
+|Fumizuki: A, E
+|Furutaka: A, C, E, F
+|Fusou: E
+|Haguro: A, C, E, F
+|Haruna: E
+|Hatsushimo: E
+|Hatsuyuki: A, C, F
+|Hibiki: A, C, E, F
+|Hiyou: A, C, E, F
+|Houshou: A, C, E, F
+|Ikazuchi: A, C, E, F
+|Inazuma: A, C, E, F
+|Isonami: A, C, F
+|Isuzu: A, C, E, F
+|Jintsuu: A, C, E, F
+|Junyou: A, C, E, F
+|Kako: A, C, E, F
+|Kasumi: A, C, F
+|Kikuzuki: A, C, E, F
+|Kirishima: E
+|Kisaragi: A, C, E, F
+|Kiso: A, C, E, F
+|Kitakami: E
+|Kuma: A, C, E, F
+|Kuroshio: A, C, E, F
+|Maya: A, C, E, F
+|Michishio: A, C, F
+|Mikazuki: A, C, E, F
+|Miyuki: A, C, E, F
+|Mochizuki: A, C, E, F
+|Mogami: A, C, E, F
+|Murakumo: A, C, E, F
+|Murasame: A, C, F
+|Mutsuki: A, E
+|Myoukou: A, C, E, F
+|Nachi: A, C, E, F
+|Nagara: A, C, E, F
+|Nagatsuki: A, C, E, F
+|Naka: A, C, E, F
+|Natori: A, C, E, F
+|Nenohi: A, C, F
+|Ooshio: A, C, F
+|Ryuujou: A, C, E, F
+|Samidare: A, C, F
+|Satsuki: A, C, E, F
+|Sendai: A, C, E, F
+|Shigure: A, C, E, F
+|Shikinami: A, C, E, F
+|Shiranui: A, C, F
+|Shirayuki: A, C, E, F
+|Shouhou: A, C, E, F
+|Takao: E
+|Tama: A, C, E, F
+|Tatsuta: E
+|Tenryuu: E
+|Tone: E
+|Wakaba: A, C, F
+|Yamashiro: E
+|Yura: A, C, E, F
+|Yuudachi: A, C, F
+}}
+{{SectionEnd}}

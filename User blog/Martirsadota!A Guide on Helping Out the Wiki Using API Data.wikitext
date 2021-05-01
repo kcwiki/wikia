@@ -1,0 +1,450 @@
+<!-- STILL WIP, BUT LET'S NOT TELL THEM
+<table style="background:#FCC;border:3px solid #FAA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''This is a work in progress!''' ''It's not completely done yet!'' Please be ''very'' careful in utilizing the information contained herein!</td>
+</tr>
+</table>
+-->
+<table style="background:#FCC;border:3px solid #FAA;width:85%;height:120px;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>By utilizing the information in this guide, you understand that '''you are utilizing this information out of your own accord,''' and you agree that '''you will ''NOT'' hold me liable for any and all damages that may directly or indirectly arise from such usage!'''</td>
+</tr>
+</table>
+
+<table style="background:#CFC;border:3px solid #AFA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width=50px">[[File:Ryuusei Kai 052 Full.png|55px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;font-size:20px;">'''TL;DR?'''</span><br/>Click the links below to jump in!<br/>
+<small>[[#kc3|Chrome via KC3Kai]] &middot; [[#fiddler|KCV via Fiddler]] ([http://kancolle.wikia.com/wiki/User_blog_comment:Martirsadota/A_Guide_on_Helping_Out_the_Wiki_Using_API_Data/@comment-%E3%81%8C%E3%81%8B-20160207154658/@comment-%E3%81%8C%E3%81%8B-20160209150154?permalink=391334#comm-391334 Shortcut!]) &middot; [[#vanilla|What If I Only Have My Browser?]] <!--&middot; KCV via Wireshark (soon) &middot; Browsers (via DevTools) (soon) -->&middot; [[#Prettifying_Your_Data|Prettifying Your Data]]</small></td>
+</tr>
+</table>
+
+=Intro=
+
+<table style="background:#FCC;border:3px solid #FAA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''DISCLAIMER:'''</span><br/>What I write in this section is personal imagination for dramatic effect and is not in any way a depiction of the admins of this wiki.</td>
+</tr>
+</table>
+
+Every event, the admins of Kancolle Wiki scramble in order to put up timely, accurate intel that will enable us overcome whatever salt Tanaka (and the rest of the Kadokawa dev team) throws our way. Such a Herculean task is not an easy one, even for an experienced team as them. This is where the "community" aspect of a Wiki comes in: they enlist the help of us to share whatever intel we have in order to enrich the community's pool of intel. Everybody benefits from this process.
+
+However, the admins still face the task of making sure that everything is verifiable and accurate. To this end, many admins prefer firsthand information in the form of screenshots and raw API data, which they can easily counter-check with their own observations and other peoples' reports.
+
+This guide covers the basics of obtaining the latter form of data, '''API data''', as well as a short discussion about the information it contains.
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:16inch Triple Gun Mount Mk.7 161 Character.png|60px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Shameless Plug!'''<br/>If this stirred your interest into diving deeper into the realm of reading API data, head on over to [[User blog:Rephira/Guide to reading Raw API Data|Rephira's guide to reading API data]], which is the Wiki's (unofficial) reference manual about all things API.</td>
+</table>
+
+==What's API data?==
+
+'''API data''' is raw data coming from the Kancolle servers to your browser. It's a gold mine of information, and reading it gives us the ''exact same info'' as what is displayed on your Kancolle client: how much damage a ship girl / abyssal would receive, which abyssals appear in which node, which node will the fairies send you next, etc. It's the exact same data your viewer (KC3Kai or KCV, take your pick) reads to display the info it shows you.
+
+==Why API data?==
+
+API data is preferred mainly for two reasons:
+
+# '''API data comes ''direct from the source.''''' It's data straight from the Kancolle servers themselves; hence it's reliable, first-hand information.<ref>While API data can be tampered with relative ease (hello, Notepad!), counter-checking from other sources / observations to detect such tampering is equally easy.</ref>
+# '''API data ''tells stuff screenshots can't.''''' Some enemies look identical at first glance, but in reality are completely different ships. [[Standard Carrier Wo-Class]] is a prime example of this; the Kai Flagship forms can be a major pain to document as they look identical on screenshots. API data resolves this ambiguity.
+
+=Obtaining API Data=
+
+==First, Some Words of Reassurance==
+
+If you're reading this guide I'm going to assume you're one of those guys who go "mm-hmm, I want to help, but I'm just an Admiral! What the heck is this geeky stuff?" Well, I'm here to reassure you:
+
+<table style="background:#FCD;border:3px solid #FAC;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:center;" width="100px">[[File:NPC compass4a.png|100px]]</td>
+<td style="vertical-align:middle;text-align:center;" >'''Remember!'''<br/>'''Just do it!''' Just do what the instructions say, and let the Wiki admins handle the rest.</td>
+</table>
+
+Yes, '''API data looks like Greek to the non-initiated'''<ref>Okay, not Greek; it's [[wikipedia:JSON|JSON]].</ref>. But you '''''must not'' fear'''. '''Just do it''', okay? <code style="background-color:#FF0;border:3px solid #FF0;border-radius:50%;">''';)'''</code>
+
+(Then, when you get the hang of this stuff, you can advance to ''interpreting'' them instead of just ''copying'' them.)
+
+==Diving Into the Deep <small>(aka the actual guide)</small>==
+<span id="guide"></span>
+
+There are two ways to get at the API data, depending on what you usually use to play the game. If you're playing via a browser (Chrome, Firefox, Chrome with KC3Kai, etc...) there's an easy way; if you're using a "standalone" viewer (like KCV), the technique is a bit more complex, but not impossible.
+
+<span id="kc3"></span>
+===Grabbing API Data Using Browsers (via KC3Kai)===
+Let's start with this one, since it's the easiest method around.
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:16inch Triple Gun Mount Mk.7 161 Character.png|60px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Great News!'''<br/>While still unconfirmed, [[User:Dragonjet|Dragonjet]] is (apparently) working on a feature that would simplify the process of obtaining API data in KC3Kai. Once done, you can just use that instead of resorting to the instructions below.</td>
+</table>
+
+====For this trick, you'll need:====
+* A browser (we'll use Chrome because that's the only browser that supports KC3Kai [[File:Amagi.png|48px|link=]]).
+* [[User blog:Dragonjet/KC3改|KC3Kai]].
+* A sharp eye.
+* The ability to tolerate large walls of text.
+
+====And here's how you'll do it:====
+Using KC3Kai, log in to Kantai Collection. Any method (API Link, natively via DMM, via a DMM frame) works fine, but for this guide I'll use the native website method, because I'm paranoid.
+
+[[File:Ss_(2016-01-30_at_06.08.25).png|400px|center]]
+
+Ah, the familiar welcome screen. You know what to do here; hit <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">F12</code> (or <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">Ctrl+Shift+I</code> or <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">Cmd+Opt+I</code>) and click <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">KanColle</code> in the new window/panel (hereafter called the '''DevTools window/panel''') that appears.
+
+Do what you normally do: log in, wait a few minutes, (optionally) brew some tea, etc. Once you get to homeport, it's time to hit the rat's nest.
+
+=====Rat's Nest: The ''Network'' tab=====
+
+This is where things get different from your daily Admiral life. Instead of staying in the <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">KanColle</code> tab, we'll go somewhere else: the <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">Network</code> tab. Look at the image below, and do what it says.
+
+[[File:Clip_(2016-01-30_at_06.51.42).jpg|650px|center]]
+
+<span id="network">Welcome to Signals, Admiral.</span> This is where all communication between the Kancolle server and your browser are recorded, along with whatever data that was exchanged in those communications. Some of these contain the API data that we're seeking.
+
+[[File:Ss_(2016-01-30_at_08.14.05).jpg|thumb|500px|center|Screencap of Chrome mid-sortie. The DevTools panel is at the bottom, with the Network tab active. (Click for larger image.)]]
+
+=====Eyes on the Prize: Getting at the Data=====
+
+The intel you'll most frequently report to the Wiki would be enemy compositions, accessible by copying data from an <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">api_req_sortie/battle</code> request (<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">api_req_combined_battle/battle</code> [or <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">battle_water</code>] for combined fleets).
+
+For practice (and so I could level Ushio a bit), we'll sortie to 4-3 and capture the required composition data. Feel free to follow along.
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>If you don't have 4-3 unlocked, you can just use any map you have unlocked; the technique is still the same.</td>
+</table>
+
+Keep the DevTools panel on the Network tab at all times.<ref>For now. Once you get used to this, you can switch back to the <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">KanColle</code> tab while you're sortieing, then switch to the <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">Network</code> tab when it's time to copy data.</ref>
+
+[[File:Ss_(2016-02-06_at_12.52.19).jpg|500px|center]]
+
+Start the sortie, spin that compass (if required by the map you chose), etc. Once you get to the Formation Selection screen, pick your formation, then '''train that sharp eye onto the <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">Network</code> panel.''' As the battle starts you should see something named '''<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">battle</code>''' (or sometimes, <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">battle_water</code>).
+
+[[File:Clip_(2016-02-06_at_01.27.26).jpg|500px|center]]
+
+Bam! Intercept successful. Let's get at the data.
+
+Click the word '''<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">battle</code>'''. A new panel should appear.
+
+[[File:Ss_(2016-02-06_at_01.37.59).png|650px|center]]
+
+Now click the '''<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">Response</code>''' tab in that new panel.
+
+[[File:Ss_(2016-02-06_at_01.42.51).png|650px|center]]
+
+'''Jackpot!''' Copy-paste that '''entire blob ''(this is important)''''' of text into the reporting thread. (Add a <code><nowiki><blockquote></nowiki></code> tag before the text blob and a <code><nowiki></blockquote></nowiki></code> after it so it looks a bit less ugly). Include notes of the map you went in, the node where the battle happened, and (if applicable) the difficulty you chose.
+
+As an example, here's the output from the 4-3 run I used for this guide:
+
+<div class="mw-customtoggle-kc3raw wikia-menu-button">Show/hide raw code</div>
+
+<pre style="word-wrap:break-word;" id="mw-customcollapsible-kc3raw" class="mw-collapsible mw-collapsed">
+'''4-3F'''
+
+<blockquote>
+svdata={"api_result":1,"api_result_msg":"\u6210\u529f","api_data":{"api_dock_id":1,"api_ship_ke":[-1,532,530,530,530,518,519],"api_ship_lv":[-1,50,50,50,50,1,1],"api_nowhps":[-1,15,82,56,78,40,39,27,19,19,19,48,52],"api_maxhps":[-1,15,82,56,78,43,47,27,19,19,19,48,52],"api_midnight_flag":0,"api_eSlot":[[515,513,513,-1,-1],[513,513,-1,-1,-1],[513,513,-1,-1,-1],[513,513,-1,-1,-1],[504,525,-1,-1,-1],[506,525,-1,-1,-1]],"api_eKyouka":[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],"api_fParam":[[14,36,22,10],[104,0,82,92],[82,79,52,79],[35,0,66,66],[63,139,49,63],[63,49,70,68]],"api_eParam":[[0,64,0,21],[0,42,0,7],[0,42,0,7],[0,42,0,7],[30,40,20,30],[34,48,23,32]],"api_search":[1,1],"api_formation":[5,4,2],"api_stage_flag":[1,1,1],"api_kouku":{"api_plane_from":[[4],[-1]],"api_stage1":{"api_f_count":80,"api_f_lostcount":1,"api_e_count":0,"api_e_lostcount":0,"api_disp_seiku":1,"api_touch_plane":[54,-1]},"api_stage2":{"api_f_count":28,"api_f_lostcount":0,"api_e_count":0,"api_e_lostcount":0},"api_stage3":{"api_frai_flag":[-1,0,0,0,0,0,0],"api_erai_flag":[-1,0,0,0,0,0,0],"api_fbak_flag":[-1,0,0,0,0,0,0],"api_ebak_flag":[-1,0,0,0,0,1,0],"api_fcl_flag":[-1,0,0,0,0,0,0],"api_ecl_flag":[-1,0,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,0,0,24,0]}},"api_support_flag":0,"api_support_info":null,"api_opening_flag":1,"api_opening_atack":{"api_frai":[-1,0,0,0,0,5,0],"api_erai":[-1,1,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,0,0,0,0],"api_fydam":[-1,0,0,0,0,0,0],"api_eydam":[-1,0,0,0,0,0,0],"api_fcl":[-1,0,0,0,0,0,0],"api_ecl":[-1,0,0,0,0,0,0]},"api_hourai_flag":[1,1,0,0],"api_hougeki1":{"api_at_list":[-1,2,4,6,5,1],"api_at_type":[-1,3,0,0,0,0],"api_df_list":[-1,[11],[12],[9],[10],[8]],"api_si_list":[-1,[25,104,12],[-1],[25],[-1],[45]],"api_cl_list":[-1,[1],[2],[2],[1],[1]],"api_damage":[-1,[44],[58],[50.1],[42],[54.1]]},"api_hougeki2":{"api_at_list":[-1,1],"api_at_type":[-1,0],"api_df_list":[-1,[7]],"api_si_list":[-1,[45]],"api_cl_list":[-1,[2]],"api_damage":[-1,[74]]},"api_hougeki3":null,"api_raigeki":null}}
+</blockquote>
+</pre>
+
+Which turns into:
+
+<div class="mw-customtoggle-kc3out wikia-menu-button">Show/hide parsed output</div>
+
+<div id="mw-customcollapsible-kc3out" class="mw-collapsible mw-collapsed">
+'''4-3F'''
+
+<blockquote>
+svdata={"api_result":1,"api_result_msg":"\u6210\u529f","api_data":{"api_dock_id":1,"api_ship_ke":[-1,532,530,530,530,518,519],"api_ship_lv":[-1,50,50,50,50,1,1],"api_nowhps":[-1,15,82,56,78,40,39,27,19,19,19,48,52],"api_maxhps":[-1,15,82,56,78,43,47,27,19,19,19,48,52],"api_midnight_flag":0,"api_eSlot":[[515,513,513,-1,-1],[513,513,-1,-1,-1],[513,513,-1,-1,-1],[513,513,-1,-1,-1],[504,525,-1,-1,-1],[506,525,-1,-1,-1]],"api_eKyouka":[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],"api_fParam":[[14,36,22,10],[104,0,82,92],[82,79,52,79],[35,0,66,66],[63,139,49,63],[63,49,70,68]],"api_eParam":[[0,64,0,21],[0,42,0,7],[0,42,0,7],[0,42,0,7],[30,40,20,30],[34,48,23,32]],"api_search":[1,1],"api_formation":[5,4,2],"api_stage_flag":[1,1,1],"api_kouku":{"api_plane_from":[[4],[-1]],"api_stage1":{"api_f_count":80,"api_f_lostcount":1,"api_e_count":0,"api_e_lostcount":0,"api_disp_seiku":1,"api_touch_plane":[54,-1]},"api_stage2":{"api_f_count":28,"api_f_lostcount":0,"api_e_count":0,"api_e_lostcount":0},"api_stage3":{"api_frai_flag":[-1,0,0,0,0,0,0],"api_erai_flag":[-1,0,0,0,0,0,0],"api_fbak_flag":[-1,0,0,0,0,0,0],"api_ebak_flag":[-1,0,0,0,0,1,0],"api_fcl_flag":[-1,0,0,0,0,0,0],"api_ecl_flag":[-1,0,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,0,0,24,0]}},"api_support_flag":0,"api_support_info":null,"api_opening_flag":1,"api_opening_atack":{"api_frai":[-1,0,0,0,0,5,0],"api_erai":[-1,1,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,0,0,0,0],"api_fydam":[-1,0,0,0,0,0,0],"api_eydam":[-1,0,0,0,0,0,0],"api_fcl":[-1,0,0,0,0,0,0],"api_ecl":[-1,0,0,0,0,0,0]},"api_hourai_flag":[1,1,0,0],"api_hougeki1":{"api_at_list":[-1,2,4,6,5,1],"api_at_type":[-1,3,0,0,0,0],"api_df_list":[-1,[11],[12],[9],[10],[8]],"api_si_list":[-1,[25,104,12],[-1],[25],[-1],[45]],"api_cl_list":[-1,[1],[2],[2],[1],[1]],"api_damage":[-1,[44],[58],[50.1],[42],[54.1]]},"api_hougeki2":{"api_at_list":[-1,1],"api_at_type":[-1,0],"api_df_list":[-1,[7]],"api_si_list":[-1,[45]],"api_cl_list":[-1,[2]],"api_damage":[-1,[74]]},"api_hougeki3":null,"api_raigeki":null}}
+</blockquote>
+</div>
+
+And if you want it to look even prettier, have a look at the '''Prettifying Your Data''' section, [[#Prettifying_Your_Data|below]].
+
+'''That's it!''' You have acquired the '''Intel Gatherer''' skill. Go forth and help out the Wiki.
+
+<span id="fiddler"></span>
+===Grabbing API Data From Viewers (Like KCV) Using Fiddler===
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:16inch Triple Gun Mount Mk.7 161 Character.png|60px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Great News!'''<br/>[[User:がか|がか]] has baked into [https://github.com/gakada/KanColleViewer/releases/tag/v3.8.2r561 his KCV fork] an easier way to obtain API data. See [http://kancolle.wikia.com/wiki/User_blog_comment:Martirsadota/A_Guide_on_Helping_Out_the_Wiki_Using_API_Data/@comment-%E3%81%8C%E3%81%8B-20160207154658/@comment-%E3%81%8C%E3%81%8B-20160209150154?permalink=391334#comm-391334 his comment below] for quick instructions on using it.</td>
+</table>
+For viewers, like KCV, you ''don't'' have a DevTools panel/window. So how do you get at the data?
+
+Answer: '''Install a program that intercepts communications between the Kancolle server and the viewer.'''
+
+Choices for such programs are plenty, but in this guide we'll look at '''Fiddler''' and '''Wireshark'''.
+
+Fiddler is the easier one to use between the two, so we'll start with that. However, you'll need to configure your viewer a bit in order to utilize it. Let's dig in!
+
+====For this trick, you'll need:====
+* Your viewer of choice (we'll use [https://github.com/gakada/KanColleViewer/releases KCV] for this guide).
+* [https://www.telerik.com/download/fiddler Fiddler.]
+* A sharp eye.
+* The ability to tolerate large walls of text.
+
+====And here's how you'll do it:====
+
+Download, install, and start up Fiddler. Then start up your viewer.
+
+=====Connect your viewer to Fiddler=====
+
+This is the important bit. Don't do this, and Fiddler would be about as useful as an [[Akitsushima]].
+
+What you will do here is use Fiddler as a sort of [[wikipedia:Proxy server|proxy server]] so that communication between the Kancolle servers and your viewer will have to pass through Fiddler, enabling Fiddler to capture those communications.
+
+Poke around your viewer and check if it has a setting for specifying a proxy server. If it doesn't, you can't use that viewer for this method. You can still capture data from it, though; check out the Wireshark guide below.
+
+KCV has such a setting; here's how you'll set it up:
+
+[[File:Clip_(2016-02-06_at_03.02.32).jpg|400px|thumb|right]]
+
+# Go to the '''Network''' tab.
+# Under '''Proxy Settings''', check the '''Use a proxy to connect to the server''' checkbox. (Depending on your flavor of KCV, the wording of this option may vary)
+# For the '''Host''', type in '''<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">127.0.0.1</code>'''.
+# For the '''Port''', type in '''<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">8888</code>'''.
+# Leave the other options as they are.
+
+For other viewers, just go to your respective proxy server setting, enable it as needed, and type in the '''Host''' and '''Port''' values shown above.
+
+That's it. Your viewer is now connected to Fiddler, and you're now ready to capture API data.
+
+Almost.
+
+Oh, yeah—one '''''very'' important''' reminder:
+
+<table style="background:#FCC;border:3px solid #FAA;width:85%;height:120px;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''DO ''NOT'' exit Fiddler without disabling the proxy''' (by unchecking the '''Use a proxy to connect to the server''' checkbox or similar)! If you exit Fiddler without disabling the proxy, your next click in the Kancolle client '''''WILL''''' give you a catbomb!<br/><br/>If you need to exit Fiddler while connected to your viewer, '''Disable the proxy''' first in your viewer, ''then'' exit Fiddler.<br/><br/>If that doesn't work, '''you may need to restart your viewer''', but make sure to '''disable the proxy before doing so!'''</td>
+</tr>
+</table>
+
+
+=====Set up Fiddler's filter<s>s</s>=====
+
+When you started up Fiddler, you may have noticed that it already has some communications recorded, possibly from your browser:
+
+[[File:Clip_(2016-02-06_at_03.14.21).png|500px|center]]
+
+But we don't want ''all'' of that taking up screen space. Fortunately, we can instruct Fiddler to focus on just the viewer and nothing else.
+
+Do this:
+
+# Resize the Fiddler window so you can see your viewer and Fiddler at once.
+# On Fiddler's toolbar near the top of the window, there should be an icon that looks like an aiming reticle, labeled '''Any Process'''. Drag that...
+# ...and drop the crosshair that appears onto your viewer's window. If you did it right, the words '''Any Process''' would change to display your viewer's name along with a bunch of numbers.<ref>Technically, the '''process ID''' of your viewer, which changes every time you start up your viewer.</ref>
+# That's it! You can maximize the Fiddler window back, if you prefer.
+
+See the image below for reference.
+
+[[File:Clip_(2016-02-08_at_02.28.34).png|450px|center]]
+
+Now we have Fiddler all set up. It's time to gather data.
+
+=====Eyes on the Prize: Getting at the Data=====
+
+The intel you'll most frequently report to the Wiki would be enemy compositions, accessible by copying data from an <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">api_req_sortie/battle</code> request (<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">api_req_combined_battle/battle</code> [or <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">battle_water</code>] for combined fleets).
+
+For practice (and so I could level Ushio a bit), we'll sortie to 4-3 and capture the required composition data. Feel free to follow along.
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>If you don't have 4-3 unlocked, you can just use any map you have unlocked; the technique is still the same.</td>
+</table>
+
+[[File:Clip_(2016-02-08_at_02.49.12).jpg|500px|thumb|center]]
+
+Start the sortie, spin that compass (if required by the map you chose), etc. Once you get to the Formation Selection screen, pick your formation, then '''train that sharp eye onto the left-hand panel of the Fiddler window''', where all communication is recorded. (The right side allows you to inspect data transmitted during that communication, which is what we'll do later.)
+
+As the battle starts you should see something named <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">kcsapi/api_req_sortie/battle</code> (<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">kcsapi/api_req_combined_battle/battle</code> [or <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">battle_water</code>] for combined fleet battles) under the '''URL''' column. (You may need to resize the left-hand panel and the URL column a bit to see it.)
+
+[[File:Clip_(2016-02-08_at_03.35.14).jpg|500px|center]]
+
+Bam! Intercept successful. Let's get at the data.
+
+Click that row (the one that says<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">kcsapi/api_req_sortie/battle</code> or similar).
+
+[[File:Ss_(2016-02-08_at_03.37.32).png|500px|center]]
+
+On the right-hand side of the Fiddler window, make sure you're on the '''Inspectors''' tab, then click the '''TextView''' tab (the one at the ''bottom'', ''not'' the one on the top).
+
+[[File:Ss_(2016-02-08_at_03.46.01).png|500px|center]]
+
+'''Jackpot!''' Copy-paste that '''entire blob ''(this is important)''''' of text into the reporting thread. (Add a <code><nowiki><blockquote></nowiki></code> tag before the text blob and a <code><nowiki></blockquote></nowiki></code> after it so it looks a bit less ugly). Include notes of the map you went in, the node where the battle happened, and (if applicable) the difficulty you chose.
+
+As an example, here's the output from the 4-3 run I used for this guide:
+
+<div class="mw-customtoggle-fiddlerraw wikia-menu-button">Show/hide raw code</div>
+
+<pre style="word-wrap:break-word;" id="mw-customcollapsible-fiddlerraw" class="mw-collapsible mw-collapsed">
+'''4-3J'''
+
+<blockquote>
+svdata={"api_result":1,"api_result_msg":"\u6210\u529f","api_data":{"api_dock_id":1,"api_ship_ke":[-1,543,555,521,521,517,517],"api_ship_lv":[-1,1,1,1,1,1,1],"api_nowhps":[-1,15,82,56,72,43,37,90,57,50,50,45,45],"api_maxhps":[-1,15,82,56,78,43,47,90,57,50,50,45,45],"api_midnight_flag":0,"api_eSlot":[[509,509,525,529,-1],[506,525,542,543,-1],[506,514,514,-1,-1],[506,514,514,-1,-1],[502,515,-1,-1,-1],[502,515,-1,-1,-1]],"api_eKyouka":[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],"api_fParam":[[16,38,23,10],[104,0,82,92],[82,79,52,79],[35,0,66,66],[63,139,49,63],[63,49,70,68]],"api_eParam":[[85,0,70,96],[48,80,30,39],[35,72,20,34],[35,72,20,34],[20,40,18,18],[20,40,18,18]],"api_search":[1,1],"api_formation":[1,1,3],"api_stage_flag":[1,1,1],"api_kouku":{"api_plane_from":[[4],[-1]],"api_stage1":{"api_f_count":80,"api_f_lostcount":3,"api_e_count":0,"api_e_lostcount":0,"api_disp_seiku":1,"api_touch_plane":[25,-1]},"api_stage2":{"api_f_count":27,"api_f_lostcount":0,"api_e_count":0,"api_e_lostcount":0},"api_stage3":{"api_frai_flag":[-1,0,0,0,0,0,0],"api_erai_flag":[-1,0,0,0,0,0,0],"api_fbak_flag":[-1,0,0,0,0,0,0],"api_ebak_flag":[-1,0,0,1,0,0,0],"api_fcl_flag":[-1,0,0,0,0,0,0],"api_ecl_flag":[-1,0,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,14,0,0,0]}},"api_support_flag":0,"api_support_info":null,"api_opening_flag":1,"api_opening_atack":{"api_frai":[-1,0,0,0,0,6,0],"api_erai":[-1,0,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,0,0,0,141],"api_fydam":[-1,0,0,0,0,141,0],"api_eydam":[-1,0,0,0,0,0,0],"api_fcl":[-1,0,0,0,0,1,0],"api_ecl":[-1,0,0,0,0,0,0]},"api_hourai_flag":[1,1,0,0],"api_hougeki1":{"api_at_list":[-1,2,7,5,9,8,3,6,11,1],"api_at_type":[-1,3,0,0,0,0,0,0,0,0],"api_df_list":[-1,[7],[4],[10],[5],[4],[9],[8],[3],[11]],"api_si_list":[-1,[25,104,12],[509],[5],[506],[506],[90],[5],[502],[-1]],"api_cl_list":[-1,[1],[2],[1],[2],[0],[1],[0],[0],[1]],"api_damage":[-1,[81],[37],[61],[21.1],[0],[86],[0],[0.1],[11]]},"api_hougeki2":{"api_at_list":[-1,1,7,2,8,3,5],"api_at_type":[-1,0,0,4,0,0,0],"api_df_list":[-1,[8],[1],[11],[1],[8],[7]],"api_si_list":[-1,[-1],[509],[25,142,104],[506],[90],[5]],"api_cl_list":[-1,[1],[0],[1],[0],[1],[1]],"api_damage":[-1,[4],[0],[165],[0],[101.1],[15]]},"api_hougeki3":null,"api_raigeki":null}}
+</blockquote>
+</pre>
+
+Which turns into:
+
+<div class="mw-customtoggle-fiddlerout wikia-menu-button">Show/hide parsed output</div>
+
+<div id="mw-customcollapsible-fiddlerout" class="mw-collapsible mw-collapsed">
+'''4-3J'''
+
+<blockquote>
+svdata={"api_result":1,"api_result_msg":"\u6210\u529f","api_data":{"api_dock_id":1,"api_ship_ke":[-1,543,555,521,521,517,517],"api_ship_lv":[-1,1,1,1,1,1,1],"api_nowhps":[-1,15,82,56,72,43,37,90,57,50,50,45,45],"api_maxhps":[-1,15,82,56,78,43,47,90,57,50,50,45,45],"api_midnight_flag":0,"api_eSlot":[[509,509,525,529,-1],[506,525,542,543,-1],[506,514,514,-1,-1],[506,514,514,-1,-1],[502,515,-1,-1,-1],[502,515,-1,-1,-1]],"api_eKyouka":[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],"api_fParam":[[16,38,23,10],[104,0,82,92],[82,79,52,79],[35,0,66,66],[63,139,49,63],[63,49,70,68]],"api_eParam":[[85,0,70,96],[48,80,30,39],[35,72,20,34],[35,72,20,34],[20,40,18,18],[20,40,18,18]],"api_search":[1,1],"api_formation":[1,1,3],"api_stage_flag":[1,1,1],"api_kouku":{"api_plane_from":[[4],[-1]],"api_stage1":{"api_f_count":80,"api_f_lostcount":3,"api_e_count":0,"api_e_lostcount":0,"api_disp_seiku":1,"api_touch_plane":[25,-1]},"api_stage2":{"api_f_count":27,"api_f_lostcount":0,"api_e_count":0,"api_e_lostcount":0},"api_stage3":{"api_frai_flag":[-1,0,0,0,0,0,0],"api_erai_flag":[-1,0,0,0,0,0,0],"api_fbak_flag":[-1,0,0,0,0,0,0],"api_ebak_flag":[-1,0,0,1,0,0,0],"api_fcl_flag":[-1,0,0,0,0,0,0],"api_ecl_flag":[-1,0,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,14,0,0,0]}},"api_support_flag":0,"api_support_info":null,"api_opening_flag":1,"api_opening_atack":{"api_frai":[-1,0,0,0,0,6,0],"api_erai":[-1,0,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,0,0,0,141],"api_fydam":[-1,0,0,0,0,141,0],"api_eydam":[-1,0,0,0,0,0,0],"api_fcl":[-1,0,0,0,0,1,0],"api_ecl":[-1,0,0,0,0,0,0]},"api_hourai_flag":[1,1,0,0],"api_hougeki1":{"api_at_list":[-1,2,7,5,9,8,3,6,11,1],"api_at_type":[-1,3,0,0,0,0,0,0,0,0],"api_df_list":[-1,[7],[4],[10],[5],[4],[9],[8],[3],[11]],"api_si_list":[-1,[25,104,12],[509],[5],[506],[506],[90],[5],[502],[-1]],"api_cl_list":[-1,[1],[2],[1],[2],[0],[1],[0],[0],[1]],"api_damage":[-1,[81],[37],[61],[21.1],[0],[86],[0],[0.1],[11]]},"api_hougeki2":{"api_at_list":[-1,1,7,2,8,3,5],"api_at_type":[-1,0,0,4,0,0,0],"api_df_list":[-1,[8],[1],[11],[1],[8],[7]],"api_si_list":[-1,[-1],[509],[25,142,104],[506],[90],[5]],"api_cl_list":[-1,[1],[0],[1],[0],[1],[1]],"api_damage":[-1,[4],[0],[165],[0],[101.1],[15]]},"api_hougeki3":null,"api_raigeki":null}}
+</blockquote>
+</div>
+
+And if you want it to look even prettier, have a look at the '''Prettifying Your Data''' section, [[#Prettifying_Your_Data|below]].
+
+'''That's it!''' You have acquired the '''Signals Interceptor''' skill. Go forth and help out the Wiki.
+<span id="vanilla"></span>
+===But What If I Only Have My Browser?===
+
+Easy. Access the '''DevTools window/panel''', usually accessible by hitting <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">F12</code> (if that doesn't work, try <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">Ctrl+Shift+I</code> or <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">Cmd+Opt+I</code>). Once the panel/window appears, click the Network tab, then proceed with [[#network|intel gathering]].
+
+This will work on Google Chrome, Mozilla Firefox and Internet Explorer 11 or later. Earlier browsers may not have the Network tab functionality.
+
+==Prettifying Your Data==
+Okay, now we have gathered our data. We need to post it. But it looks really ugly. Can we do anything about it?
+
+Yes, we can!
+
+===About Prettifying===
+While not ''absolutely'' required (admins can read your data anyway), prettifying makes it easier for them (and for you, actually!) to read what you just posted. Compare the two code snippets below, from the same 4-3 run from an earlier section:
+
+<div class="mw-collapsible mw-collapsed">
+'''Un-prettified:'''
+<div class="mw-collapsible-content">
+<pre style="line-height:16.8px;word-wrap:break-word !important;">svdata={"api_result":1,"api_result_msg":"\u6210\u529f","api_data":{"api_dock_id":1,"api_ship_ke":[-1,543,555,521,521,517,517],"api_ship_lv":[-1,1,1,1,1,1,1],"api_nowhps":[-1,15,82,56,72,43,37,90,57,50,50,45,45],"api_maxhps":[-1,15,82,56,78,43,47,90,57,50,50,45,45],"api_midnight_flag":0,"api_eSlot":[[509,509,525,529,-1],[506,525,542,543,-1],[506,514,514,-1,-1],[506,514,514,-1,-1],[502,515,-1,-1,-1],[502,515,-1,-1,-1]],"api_eKyouka":[[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0],[0,0,0,0]],"api_fParam":[[16,38,23,10],[104,0,82,92],[82,79,52,79],[35,0,66,66],[63,139,49,63],[63,49,70,68]],"api_eParam":[[85,0,70,96],[48,80,30,39],[35,72,20,34],[35,72,20,34],[20,40,18,18],[20,40,18,18]],"api_search":[1,1],"api_formation":[1,1,3],"api_stage_flag":[1,1,1],"api_kouku":{"api_plane_from":[[4],[-1]],"api_stage1":{"api_f_count":80,"api_f_lostcount":3,"api_e_count":0,"api_e_lostcount":0,"api_disp_seiku":1,"api_touch_plane":[25,-1]},"api_stage2":{"api_f_count":27,"api_f_lostcount":0,"api_e_count":0,"api_e_lostcount":0},"api_stage3":{"api_frai_flag":[-1,0,0,0,0,0,0],"api_erai_flag":[-1,0,0,0,0,0,0],"api_fbak_flag":[-1,0,0,0,0,0,0],"api_ebak_flag":[-1,0,0,1,0,0,0],"api_fcl_flag":[-1,0,0,0,0,0,0],"api_ecl_flag":[-1,0,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,14,0,0,0]}},"api_support_flag":0,"api_support_info":null,"api_opening_flag":1,"api_opening_atack":{"api_frai":[-1,0,0,0,0,6,0],"api_erai":[-1,0,0,0,0,0,0],"api_fdam":[-1,0,0,0,0,0,0],"api_edam":[-1,0,0,0,0,0,141],"api_fydam":[-1,0,0,0,0,141,0],"api_eydam":[-1,0,0,0,0,0,0],"api_fcl":[-1,0,0,0,0,1,0],"api_ecl":[-1,0,0,0,0,0,0]},"api_hourai_flag":[1,1,0,0],"api_hougeki1":{"api_at_list":[-1,2,7,5,9,8,3,6,11,1],"api_at_type":[-1,3,0,0,0,0,0,0,0,0],"api_df_list":[-1,[7],[4],[10],[5],[4],[9],[8],[3],[11]],"api_si_list":[-1,[25,104,12],[509],[5],[506],[506],[90],[5],[502],[-1]],"api_cl_list":[-1,[1],[2],[1],[2],[0],[1],[0],[0],[1]],"api_damage":[-1,[81],[37],[61],[21.1],[0],[86],[0],[0.1],[11]]},"api_hougeki2":{"api_at_list":[-1,1,7,2,8,3,5],"api_at_type":[-1,0,0,4,0,0,0],"api_df_list":[-1,[8],[1],[11],[1],[8],[7]],"api_si_list":[-1,[-1],[509],[25,142,104],[506],[90],[5]],"api_cl_list":[-1,[1],[0],[1],[0],[1],[1]],"api_damage":[-1,[4],[0],[165],[0],[101.1],[15]]},"api_hougeki3":null,"api_raigeki":null}}</pre>
+</div></div>
+
+<div class="mw-collapsible mw-collapsed">
+'''Prettified:'''
+<div class="mw-collapsible-content">
+<pre style="line-height:16.8px;">
+svdata = {
+    "api_result": 1,
+    "api_result_msg": "\u6210\u529f",
+    "api_data": {
+        "api_dock_id": 1,
+        "api_ship_ke": [-1, 543, 555, 521, 521, 517, 517],
+        "api_ship_lv": [-1, 1, 1, 1, 1, 1, 1],
+        "api_nowhps": [-1, 15, 82, 56, 72, 43, 37, 90, 57, 50, 50, 45, 45],
+        "api_maxhps": [-1, 15, 82, 56, 78, 43, 47, 90, 57, 50, 50, 45, 45],
+        "api_midnight_flag": 0,
+        "api_eSlot": [[509, 509, 525, 529, -1], [506, 525, 542, 543, -1], [506, 514, 514, -1, -1], [506, 514, 514, -1, -1], [502, 515, -1, -1, -1], [502, 515, -1, -1, -1]],
+        "api_eKyouka": [[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]],
+        "api_fParam": [[16, 38, 23, 10], [104, 0, 82, 92], [82, 79, 52, 79], [35, 0, 66, 66], [63, 139, 49, 63], [63, 49, 70, 68]],
+        "api_eParam": [[85, 0, 70, 96], [48, 80, 30, 39], [35, 72, 20, 34], [35, 72, 20, 34], [20, 40, 18, 18], [20, 40, 18, 18]],
+        "api_search": [1, 1],
+        "api_formation": [1, 1, 3],
+        "api_stage_flag": [1, 1, 1],
+        "api_kouku": {
+            "api_plane_from": [[4], [-1]],
+            "api_stage1": {
+                "api_f_count": 80,
+                "api_f_lostcount": 3,
+                "api_e_count": 0,
+                "api_e_lostcount": 0,
+                "api_disp_seiku": 1,
+                "api_touch_plane": [25, -1]
+            },
+            "api_stage2": {
+                "api_f_count": 27,
+                "api_f_lostcount": 0,
+                "api_e_count": 0,
+                "api_e_lostcount": 0
+            },
+            "api_stage3": {
+                "api_frai_flag": [-1, 0, 0, 0, 0, 0, 0],
+                "api_erai_flag": [-1, 0, 0, 0, 0, 0, 0],
+                "api_fbak_flag": [-1, 0, 0, 0, 0, 0, 0],
+                "api_ebak_flag": [-1, 0, 0, 1, 0, 0, 0],
+                "api_fcl_flag": [-1, 0, 0, 0, 0, 0, 0],
+                "api_ecl_flag": [-1, 0, 0, 0, 0, 0, 0],
+                "api_fdam": [-1, 0, 0, 0, 0, 0, 0],
+                "api_edam": [-1, 0, 0, 14, 0, 0, 0]
+            }
+        },
+        "api_support_flag": 0,
+        "api_support_info": null ,
+        "api_opening_flag": 1,
+        "api_opening_atack": {
+            "api_frai": [-1, 0, 0, 0, 0, 6, 0],
+            "api_erai": [-1, 0, 0, 0, 0, 0, 0],
+            "api_fdam": [-1, 0, 0, 0, 0, 0, 0],
+            "api_edam": [-1, 0, 0, 0, 0, 0, 141],
+            "api_fydam": [-1, 0, 0, 0, 0, 141, 0],
+            "api_eydam": [-1, 0, 0, 0, 0, 0, 0],
+            "api_fcl": [-1, 0, 0, 0, 0, 1, 0],
+            "api_ecl": [-1, 0, 0, 0, 0, 0, 0]
+        },
+        "api_hourai_flag": [1, 1, 0, 0],
+        "api_hougeki1": {
+            "api_at_list": [-1, 2, 7, 5, 9, 8, 3, 6, 11, 1],
+            "api_at_type": [-1, 3, 0, 0, 0, 0, 0, 0, 0, 0],
+            "api_df_list": [-1, [7], [4], [10], [5], [4], [9], [8], [3], [11]],
+            "api_si_list": [-1, [25, 104, 12], [509], [5], [506], [506], [90], [5], [502], [-1]],
+            "api_cl_list": [-1, [1], [2], [1], [2], [0], [1], [0], [0], [1]],
+            "api_damage": [-1, [81], [37], [61], [21.1], [0], [86], [0], [0.1], [11]]
+        },
+        "api_hougeki2": {
+            "api_at_list": [-1, 1, 7, 2, 8, 3, 5],
+            "api_at_type": [-1, 0, 0, 4, 0, 0, 0],
+            "api_df_list": [-1, [8], [1], [11], [1], [8], [7]],
+            "api_si_list": [-1, [-1], [509], [25, 142, 104], [506], [90], [5]],
+            "api_cl_list": [-1, [1], [0], [1], [0], [1], [1]],
+            "api_damage": [-1, [4], [0], [165], [0], [101.1], [15]]
+        },
+        "api_hougeki3": null ,
+        "api_raigeki": null 
+    }
+}
+</pre>
+</div></div>
+
+As you can see, despite the increase in height of the prettified code, it is obviously the easier one to read, with parts of the data organized so you can easily follow along the tree-like structure of the data. And as will be explored further later on, this makes the important data, the ones needed by the admins, stand out.
+
+Convinced? Let me show you how to do it yourself.
+
+===How Do I Prettify My Data?===
+
+This has as many techniques as there are tools and apps that offer data prettifying, but for this guide, we'll use a quick-and-dirty method that uses nothing but your browser. No, seriously.
+
+====For this trick, you'll need:====
+* Your browser of choice (we'll use Chrome for this guide).
+* A good mousehand.
+* Fingers to press <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">Ctrl+C</code> and <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">Ctrl+V</code>.
+
+====And here's how you'll do it:====
+Starting with the data you have just gathered, copy it to the Clipboard. The go to Chrome.
+
+At this point I'm pretty sure you now know how to get to the DevTools panel/window (Hint: press <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">F12</code>). When you get there, go to the '''Sources''' tab, then to the '''Snippets''' tab.
+
+[[File:Clip_(2016-05-02_at_05.21.37).png|thumb|450px|center]]
+
+Create a new file by '''right-clicking''' anywhere in the '''Snippets''' tab > '''New'''.
+
+[[File:Clip_(2016-05-02_at_05.28.53).png|center]]
+
+Chrome will give you a brand-new file and will prompt you to name it. At this point naming your file is optional, unless you want to save it for later reference.
+
+The file will also open in another tab at the main pane in the center of the DevTools window/panel. Paste your data there!
+
+Now comes the important bit. See the <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">'''{&nbsp;}'''</code> button there? Click it!
+
+[[File:Clip_(2016-05-02_at_05.50.12).png|thumb|450px|center]]
+
+'''Bingo!''' Now copy-paste that '''entire blob ''(this is important)''''' of text into the reporting thread. (Add a <code><nowiki><blockquote></nowiki></code> tag before the text blob and a <code><nowiki></blockquote></nowiki></code> after it). Include notes of the map you went in, the node where the battle happened, and (if applicable) the difficulty you chose.
+
+'''That's it!''' You have acquired the '''Data Prettifier''' skill. Go forth and make pretty reports.
+
+=Footnotes and References=
+<references/>
+[[Category:Blog posts]]

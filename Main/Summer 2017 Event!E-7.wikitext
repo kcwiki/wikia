@@ -1,0 +1,227 @@
+{{Event/MapPageHeader
+|form = 8f1VREvzDGlC1QQF3
+|spreadsheet = 11WGImBM9gRwQI0T8Ttwq496_-eDmhGLVWJqhfEqLfeo
+|thread = 
+}}
+{{Event/MapInfo
+|en =Battle of Dover Strait 
+|jp =ドーバー海峡沖海戦 
+|romaji =Dōbā-kaikyō oki kaisen 
+|tag = 
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Land Base Aerial Support@Land Base Aerial Support, LoS Check@Events/Mechanics#LoS_Check
+<!--
+|transport = true
+-->
+|hp_all = 5280
+|hp_easy = 5280
+|hp_medium = 5280
+|hp_hard = 5280
+|show_kills = true
+|kills_all = 6
+|kills_easy = 6
+|kills_medium = 6
+|kills_hard = 6
+|reward_all = {{ShipBattleCardKai|Ark Royal}}
+|reward_easy_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_1_x = 1
+|reward_medium_1 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_medium_1_x = 8
+|reward_medium_2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Swordfish Mk.II (Skilled)|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_hard_1_x = 10
+|reward_hard_2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_2_x = 2
+|reward_hard_3 = {{EquipmentCardKai|Swordfish Mk.III (Skilled)|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = [[File:First-class Medal 061 useitem.png|50px|link=Medal]]
+|reward_hard_4_x = 1
+}}
+{{MapBranchingTable
+|title = E-7 Branching Rules
+
+|order = C, A, E, G, D, H, L, O, T
+
+|C/empty -> A, G = * Active branching
+
+|A -> B = * Do not meet the requirements to go to E.
+|A -> E = 
+* Meet all of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V) ≦ 2
+** Amount of CV(B) ≦ 2
+
+|E -> I, J = * Random
+
+|G -> D = 
+* Slow Fleet
+* Random routing if you do not meet the requirements to go to either D or H.
+|G -> H = 
+* Transport Escort Fleet
+* Meet all of the following requirements:
+** Fast Fleet
+** Main Fleet contains a DD or CL.
+** Boss is successfully debuffed.
+* Random routing if you do not meet the requirements to go to either D or H.
+
+|D -> F = 
+* Do not meet the requirements to go to H.
+|D -> H = 
+* Meet all of the following requirements:
+** Main Fleet contains a DD or CL.
+** Amount of (F)BB(V) + CV(L/B) ≦ 3 '''OR''' Boss is succesfully debuffed.
+
+|H -> O/empty = 
+* Meet all of the following requirements:
+** Carrier Task Force
+** Fast Fleet
+** Shortcut is unlocked
+|H -> L = 
+* Do not meet the requirements to go to O
+
+|L -> O/empty = 
+* Do not meet the requirements to go to either M or P.
+|L -> M = 
+* Meet all of the following requirements:
+** Surface Task Force
+** Slow Fleet
+** Boss is not debuffed yet.
+|L -> P = 
+* Transport Escort Fleet
+* Meet all of the following requirements:
+** Surface Task Force
+** Fast Fleet
+** Boss is not debuffed yet.
+
+|O/empty -> Q, R = * Active branching
+
+|T -> U = * Pass the LoS check (Hard, [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=1)]] ≧ 45)
+|T -> V = * Fail the LoS check
+}}
+==Guides and Tips==
+*This map '''DOES NOT''' have a tag; therefore, any previously used ships can be used here.
+*This is a combined fleet map.
+*There are two hidden gimmicks (see below).  Activating both is strongly recommended in order to make the map defeatable.
+**Changing difficulties will reset the map gimmicks.
+*There are 3 LBAS available for you to use.
+*A minimum range of '''9''' is required to reach the boss node U. (See map below)
+** Because of the high range requirements, it is recommended to use {{EquipmentLink|Type 2 Large Flying Boat}} or {{EquipmentLink|PBY-5A Catalina}} in order to increase the maximum range of your land bases and reach the boss node.
+** Alternatively, bases comprising of entirely 9+ range attack aircraft may be used.
+*Unlike previous maps, this map has enemy air raids against player land bases that can damage your LBAS aircraft and resources, however on easy mode the air raids won't appear.
+**You can consider setting up one of the land bases in air defense mode and fill it with [[List of Interceptor Fighters by stats|Interceptors]] and [[List of Fighters by stats|Fighters]] to reduce the amount of damage dealt to your bases and resources.
+***This is not advisable on any difficulty, due to loss of firepower.
+*This map is infested with boss-level ships at multiple nodes including 3 that guard the boss route and '''there is no way around them'''
+**{{ShipLink|Destroyer Princess}} leads a torpedo squadron at the G node.
+***While not dangerous in shelling, the enemies here can deal heavy damage to the escort fleet if they are able to launch torpedoes in the closing torpedo phase.
+****Destroyer Princess in particular is fairly sturdy (100 or 115 armor) and can be difficult to bring down to ''chuuha'' before torpedoes.
+***A strong opening phase (aircraft bombing, opening torpedo, support shelling) is key to avoiding damage here.
+***Bringing 1-2 FBB for Carrier Task Force escort fleets is a good option here.
+**{{ShipLink|New Submarine Princess/Flagship|text=New Submarine Princess}} awaits at node J, node K and node H.
+***Having at least 2 OASW ships in the escort fleet is advised to mitigate damage from these nodes.
+***Focusing more on firepower at the boss encounter and relying on evasion (''i.e.'' sparkling) or armor (''i.e.'' battleships in escort) are also options.
+***For S-ranking submarine nodes for the gimmick (see below), 5+ OASW ships is recommended.
+**{{ShipLink|Aircraft Carrier Summer Princess}} awaits in an abyssal combined fleet at node Q.
+***Bringing {{ShipLink|Akizuki|Teruzuki|Hatsuzuki|link_class=Akizuki|text=Akizuki-Class DDs}} for AACI is recommended. Due to routing constraints Maya Kai Ni is not advised.
+**One to three {{ShipLink|Battleship Summer Princess}} await at preboss node T.
+***Her escort contains many {{ShipLink|PT Imp Pack|PT Imp Pack III|PT Imp Pack IV|text=PT Imps}}. Sending one base full of land-based bombers here (range 8+) can help mitigate damage here, as many admirals will not have enough high range planes to sortie all three bases to the boss node.
+***Because the enemies here have no air power, equipping many torpedo bomber aircraft to main fleet carriers is desirable to deal high opening damage.
+**A [[Fleet Command Facility]] is vital here for increasing success rate of reaching the boss during the gauge chipping phase before the final kill.
+*The boss node itself contains the sturdy and powerful {{ShipLink|European Princess|European Princess/Damaged|text=European Princess}}.
+**On Easy and Medium, one tanky {{ShipLink|Battleship Summer Princess}} enters the boss fleet for the final kill phase.
+**On Hard, two {{ShipLink|Battleship Summer Princess}} are present before the final kill phase, and an {{ShipLink|Aircraft Carrier Summer Princess}} joins for the final kill, making for one of the sturdiest enemy fleets seen so far.
+**Land base aerial support is highly desirable here to shave down the enemy fleet (especially Tsu-class), but sending more to the boss instead of preboss means a less stable means of getting to the boss.
+**Due to the 1.3x post-cap modifer given by the map gimmick (see below), it's very possible to output high damage in the day battle phase.
+***As >> rank bombers give carriers increased critical chance and critical damage on top of shelling firepower, bringing at least two bombers on each carrier is highly recommended.
+***Considering head-on engagement, opening airstrikes, and stabilizing the pass rate long the route, 3-4 bombers on each carrier is a very viable option.
+****To maintain air control at Q and the boss, equipping seaplane fighters (''e.g.'' to {{ShipLink|Yura Kai Ni}} in the main fleet) or bringing a light carrier in the second fleet are viable measures.
+**For night battle, torpedo cruisers are a reliable source of damage, and torpedo cut-in setups on DDs and CLs can also help.
+***For Hard, the boss armor is ''very'' high (269, 289 for damaged form) so bringing ships that can approach the night battle firepower cap is desirable.
+****For ships that can't output high damage at night, going for scratch damage against the high HP of the boss is also a valid option.
+***On Easy/Medium, double attack setup torpedo cruisers can output good damage against the boss, so it's not highly important to bring torpedo cut-in setups.
+*Both support fleets are highly recommended for clearing the gauge.
+
+==Player Submitted Fleet compositions==
+*'''Gimmick 1: Opening shortcuts'''
+**{{Event/Route|C|blue|A|orange|E|red|J|red|N|red|O|blue|R|red}}
+**{{Event/Route|C|blue|A|orange|E|red|I|red|K|red|O|blue|R|red}}
+***Surface Task Force(Fast):
+****2 FBB 2 CA(V) 2 CVL + 1 CL 3 DD 2 CLT
+****1 FBB 3 CA(V) 2 CVL + 1 CL 3 DD 2 CLT
+**{{Event/Route|C|blue|G|red|D|orange|H|red|L|orange|P|red}}
+***Surface Task Force:
+****1 FBB 3 CA(V) 2 CVL(fast) + 1 CL 3 DD 2 CLT
+****2 FBB 3 CA(V) 1 CV + 1 CL 3 DD 2 CLT
+**{{Event/Route|C|blue|G|red|H|red|L|orange|P|red}}
+***Carrier Task Force:
+****2 CA(V) 2 CV(B) 2 DD + 1 CL 1 CLT 4 DD
+****2 CA(V) 2 CV(B) 2 DD + 1 CL 1 CLT 1 CA(V) 3 DD
+
+*'''Gimmick 2: The Debuff'''
+**{{Event/Route|C|blue|A|orange|E|red|J|red|N|red|O|blue|R|red}}
+**{{Event/Route|C|blue|A|orange|E|red|I|red|K|red|O|blue|R|red}}
+***Surface Task Force:
+****2 FBB 2 CA(V) 2CVL + 1 CL 3 DD 2 CLT
+**{{Event/Route|C|blue|G|red|H|red|L|orange|P|red}}
+***Transport Combined Fleet:
+****2 BBV 4 DD + 1 CL 2 CA 3 DD
+****1 BBV [[Taiyou]] 4 DD + 1 CL 2 CA 3 DD
+****1 BBV 1 CAV 4 DD + 1 CL 2 CA 3 DD
+***Surface Task Force:
+****1 FBB 1 CV 2 CA(V) 2 CL + 1 CL 3 DD 2 CLT
+
+*'''Defeating the Boss''' - shortcut, use '''after''' the debuff was done. '''<u>Do not use</u>''' before unlocking the Second Gimmick (see below)
+**{{Event/Route|C|blue|G|red|H|red|O|blue|Q|red|S|blue|T|red|U|red}}
+***Carrier Task Force (most recommended):
+****4 CV(B) 1 BB(fast) 1 CL/DD + 1 CL 2 DD 0-1 CA(V) 0-3 CLT 0-2 FBB(fast) 0-1 AO(fast) 0-1 CVL(fast)
+**{{Event/Route|C|blue|G|red|H|red|L|orange|O|blue|Q|red|S|blue|T|red|U|red}}
+***European Surface Task Force:
+****4 BB(fast) 1 CV(B) 1 CL/DD + 1 CL 2-3 DD 0-3 CLT 0-1 FBB(fast) 0-1 CVL(fast) 0-1 CA
+*****Requires 1?/2?/3 Europeans for easy/medium/hard routing
+*****Main fleet CL better be Yura Kai Ni for air power
+
+==Map Gimmicks==
+There are currently '''TWO''' gimmicks on this map.
+===Unlocking the First Gimmick - Shortcut===
+Obtain A+ rank once on nodes P and R.  For medium and hard, <span style="font-weight:normal;">S rank each of the following nodes once: H, J, K.</span>
+*'''Node H, J, and K (medium and hard only)''':
+**These nodes feature {{ShipLink|New Submarine Princess/Flagship|text=New Submarine Princess}}, requiring a large amount of ASW equipment in order to obtain an S rank victory. Because this is a combined fleet map, even if submarines are not defeated in day, they may still be damaged normally and sunk in night battle.
+*'''Node P''':
+**This node contains installations, {{ShipLink|PT Imp Pack|text=PT Imps}} and a pattern that can feature submarines. Only an A rank is required here (8 out of 12 enemy ships sunk) so defeating the installations is not necessary.
+**It is recommended to equip ship girls with machine guns, <span style="font-weight:normal;">[[Skilled Lookouts]],</span> small-caliber guns and/or secondary guns to help deal with PT imps.
+**Support shelling and LBAS support have relatively high accuracy versus PT imps.
+*'''Node R''':
+**This node contains mostly transports and destroyers (flagship may vary). It's relatively simple to obtain an A rank or higher here, so it may be worthwhile to use some of the land bases to reduce the difficulty of E node.
+After successfully completing the conditions listed above, two shortcuts (H → O and L → O) will appear.
+
+===Unlocking the Second Gimmick - Increased firepower at nodes Q, T & U===
+The second gimmick can be unlocked '''only''' after unlocking the first gimmick.
+In order to trigger the second gimmick, obtain A+ rank victories on both nodes P and R '''one more time'''.
+*'''Node P''':
+**Node P can be reached with a Transport Combined Fleet. Other fleets are possible, but due to the appearance of the H → O and L → O routes, additional branching conditions make Transport Combined Fleets more convenient for unlocking the second gimmick.
+**Route support expeditions, seaplane fighters, {{ShipLink|Taiyou/Kai Ni}}, AACI, {{ShipLink|Abukuma/Kai Ni}} and OASW can help stabilize reaching P node while using a transport fleet.
+*'''Node R''':
+**The same approach as when unlocking the hidden routes may be used.
+**Alternatively, the shortcut may be utilized with a Carrier Task Force to take advantage of the new route
+***However, it is important for you to '''check the branching rule''' before utilizing this route. Using the recommended composition will result in a long route ({{Event/Route|C|blue|G|red|D|red|F|red|H|red|L|red|O|blue|R|red}}) to node R.
+After successfully unlocking the second gimmick, the "Quest Completion Sound Effect" ({{Audio|file=Sound_se_30.ogg}}) will play when returning from sortie.
+
+===Second Gimmick Effects===
+*A post-cap modifier of 1.3x is applied to all allied attacks at Q node.[https://twitter.com/syoukuretin/status/897664327209160704][https://twitter.com/syoukuretin/status/897665936249020416][https://docs.google.com/spreadsheets/d/1g669a58de-5DU_CQOHj2R0bbkBk7B2cUUwQsV4ME6MQ/edit#gid=818120013]
+*A post-cap modifier of 1.3x is applied to all allied attacks at T node.[https://docs.google.com/spreadsheets/d/1g669a58de-5DU_CQOHj2R0bbkBk7B2cUUwQsV4ME6MQ/edit#gid=818120013]
+*A post-cap modifier of at least 1.3x is applied to all allied attacks at the Boss node U.[https://twitter.com/syoukuretin/status/897657867783872512][https://docs.google.com/spreadsheets/d/1g669a58de-5DU_CQOHj2R0bbkBk7B2cUUwQsV4ME6MQ/edit#gid=818120013]
+**<s>Certain other conditions (AO in fleet?) may increase this bonus further[https://twitter.com/syoukuretin/status/896889255254835202].</s> After the data was rechecked, there appears to only be a 1.3x post-cap modifier. [https://twitter.com/syoukuretin/status/899233343488761856] Only use AO if underway replenishment is needed.
+**Due to the relatively low air power of the boss node, air parity and lower are not covered in the current analyses, but anecdotal evidence ([https://twitter.com/Odoke_mono/status/901823628588679170]) suggests the modifier applies even in air parity and lower.
+
+==Drop Farming==
+*Node P drops Prinz Eugen, Warspite, U-511, and several other rare ships even on Easy difficulty, but S rank is required.
+**It's best to farm on Easy mode and '''before doing the route unlock gimmick''' so the strongest STF fleet can be used to reach P.
+**After clearing the map, Transport Escort Fleets must be used to reach P.
+*The boss drops Graf Zeppelin, Warspite, U-511 and several other rare ships.
+**Aiming for either A or S rank is feasible, but resource consumption will be high.
+*It seems that ''at least'' Graf Zeppelin and Warspite are limited to one per naval base. (There aren't many reports of duplicate Prinz Eugen.)
+
+==LBAS Flight Range==
+[[File:Summer 2017 Event E7 LBAS Range map.png|500px|center]]
+{{Event/MapPageFooter}}

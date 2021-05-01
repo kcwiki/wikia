@@ -1,0 +1,64 @@
+<includeonly>__NOTOC__
+{{#ifexist:File:{{{page|{{PAGENAME}}}}}_Banner.{{{banner_type|gif}}}|<div style="margin:10px 0px 10px 0px;">[[File:{{{page|{{PAGENAME}}}}}_Banner.{{{banner_type|gif}}}|600px|center]]</div>|{{#if:{{{started|}}}||<div style="margin:10px 0px 10px 0px;">[[File:Event_banner_placeholder.jpg|600px|center]]</div>}}}}{{#ifexist:File:{{{page|{{PAGENAME}}}}}_Banner_2.{{{banner2_type|gif}}}|<div style="margin:10px 0px 10px 0px;">[[File:{{{page|{{PAGENAME}}}}}_Banner_2.{{{banner2_type|gif}}}|600px|center]]</div>}}<div style="font-size:22px; font-weight:bold; text-align:center; margin:10px 0px 10px 0px;">{{#if:{{{started|}}}|{{{title|{{PAGENAME}} has started!}}}|{{{text|}}}}}</div>{{#if:{{{thread|}}}|<div style="font-size:16px; font-weight:bold; text-align:center; margin:10px 0px 10px 0px;">[[Thread:{{{thread}}}|{{{thread_text|View pre-event/patch notes and new content thread}}}]]</div>}}{{#if:{{{started|}}}|{{#if:{{{event_end|}}}|<div style="font-size:20px; color:#00f; text-align:center; font-weight:bold; margin:10px 0px 10px 0px;">Time remaining until {{{page|{{PAGENAME}}}}} ends:
+{{Timer
+|time = {{#replace:{{{event_end|}}}|+0900}} +0900
+|style = font-weight:bold; color:#f00; font-size:22px;
+|data-options = no-leading-zeros
+|endClass = event-end-timer
+|endText = The {{{page|{{PAGENAME}}}}} has ended
+}}
+</div>}}{{#if:{{{eo_start|}}}|<div style="font-size:20px; color:#00f; text-align:center; font-weight:bold; margin:10px 0px 10px 0px;">Time remaining until the Extra Operations start
+{{Timer
+|time = {{#replace:{{{eo_start|}}}|+0900}} +0900
+|style = font-weight:bold; color:#f00; font-size:22px;
+|data-options = no-leading-zeros
+|endClass = eo-start-timer
+|endText = {{{page|{{PAGENAME}}}}} Extra Operations are now available. Good Luck Admirals!
+}}
+</div>}}|{{#if:{{{maintenance_start|}}}|<div style="font-size:20px; color:#00f; text-align:center; font-weight:bold; margin:10px 0px 10px 0px;">Time remaining until the maintenance starts:
+{{Timer
+|time = {{#replace:{{{maintenance_start|}}}|+0900}} +0900
+|style = font-weight:bold; color:#f00; font-size:22px;
+|data-options = no-leading-zeros
+|endClass = maintenance-start-timer
+|endText = The {{{page|{{PAGENAME}}}}} maintenance has started
+}}
+</div>}}{{#if:{{{maintenance_end|}}}|<div style="font-size:20px; color:#00f; text-align:center; font-weight:bold; margin:10px 0px 10px 0px;">Time remaining until the maintenance ends:
+{{Timer
+|time = {{#replace:{{{maintenance_end|}}}|+0900}} +0900
+|style = font-weight:bold; color:#f00; font-size:22px;
+|data-options = no-leading-zeros
+|endClass = event-start-timer
+|endText = The {{{page|{{PAGENAME}}}}} has started!
+}}
+</div>}}}}{{#if:{{{started|}}}||{{#if:{{{meme|}}}|<div style="margin:10px 0px 10px 0px;">[[File:{{{meme}}}|{{{meme_size|600px}}}|center]]</div>}}}}<div style="text-align:center; margin:10px 0px 10px 0px;">{{Event/DetailToggle}}</div>{{#if:{{{no_category|}}}||[[Category:Events]]}}</includeonly><noinclude>
+Top part of the event page: event banner, title, thread, timers, etc.
+==Parameters==
+===page===
+Name of the event and its page. Defaults to <code><nowiki>{{PAGENAME}}</nowiki></code>.
+*<code><page> Banner.[[#banner_type|<banner_type>]]</code> will be used as an event banner if it exists (<code><page> Banner 2.[[#banner_type|<banner_type>]]</code> for an optional second banner). [http://kancolle.wikia.com/wiki/File:Event_banner_placeholder.jpg Event banner placeholder.jpg] is used if it doesn't exists and [[#started|started]] isn't set.
+===banner_type===
+Extension of the banner image, defaults to <code>gif</code> (similarly for <code>banner2_type</code>).
+===title===
+Event title, displayed when [[#started|started]] is set. Defaults to <code><nowiki>{{PAGENAME}} has started!</nowiki></code>.
+===text===
+Use for pre/post-event words, etc.
+===thread===
+Event thread ID.
+===thread_text===
+Text of the event thread link, defaults to <code>View pre-event/patch notes and new content thread</code>.
+===meme===
+Any additional image to show.
+===meme_size===
+Size of the additional image. Defaults to <code>600px</code>.
+===maintenance_start===
+Set to show maintenance start timer, e.g., <code>May 2 2017 11:00:00</code>.
+===maintenance_end===
+Set to show event start timer, e.g., <code>May 2 2017 22:00:00</code>.
+===event_end===
+Set to show event ending timer, e.g., <code>September 11 2017 11:00:00</code>. Requires <code>started</code> to be set.
+===eo_start===
+Set to show EO opening timer, e.g., <code>February 21 2018 21:30:00</code>. Requires <code>started</code> to be set.
+===started===
+Set when event is ongoing, hides banner placeholder, meme image, maintenance timers, and pre/post-event words, shows event ending timer, if any.
+</noinclude>

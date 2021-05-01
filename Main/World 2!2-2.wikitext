@@ -1,0 +1,63 @@
+{{Map/Header}}
+{{Map/Info
+|en = Bashi Channel
+|jp = バシー海峡
+|romaji = Bashī-kaikyō
+|exp_hq = 70
+|exp_hq_boss = 840
+|strategy_name = Operation Yanagi
+|strategy_name_ja = 柳作戦
+|strategy_info = Deploy a fleet in Bashi channel! Hold the mastery of this sea, protect resource transportation from the south, and strengthen the defenses!
+|strategy_info_ja = 艦隊をバシー海峡に展開せよ！同方面の制海権を確保し、南方からの資源輸送の安全に務め、防衛体制を強化せよ！
+}}
+{{MapBranchingTable
+|expand = true
+|id = 2-2
+|C/empty -> B, D, E = 
+* Meeting '''ANY''' of the following requirements forces you to B:
+** Amount of CV(L/B) ≥ 3
+** Amount of BBV ≥ 2
+** Fleet contains AO, but no SS(V).
+*Go to E if fleet contains AV/AS but no BBV
+* Random routing between B and E if fleet contains both BBV and AV
+* Random routing between B and D if fleet contains BBV but no AV
+* Otherwise, random routing between D and E.
+
+|E -> F/resource, G, K =
+* Go to G if amount of CV(L/B)+(F)BB(V) ≥ 4
+*Go to F if DE ≥ 2
+*Random routing between G and K if fleet contains any CV(L/B)+(F)BB(V) '''or''' DD+DE ≤ 1
+*Go to K if fleet contains CL and the fleet is fast
+* Otherwise, random routing between F and K.
+
+|G -> H/empty, K = 
+*Meet '''ANY''' of the following to go to H
+**Fleet contains CV(L/B)
+**Fleet contains no DDs
+*Otherwise, random routing
+
+|H/empty -> I/empty, J/resource, K = 
+*Random between I and K if 
+**(F)BB(V)+CV(L/B) ≥ 4
+**Fleet contains SS(V)
+*Go to K if fleet contains CV(L/B) or AV
+*Otherwise, random between J and K if fleet contains CL and DD
+*Otherwise, random between I and K
+}}
+
+===Recommended Fleet===
+* 1 AV 2 CVL 2 DE 1 CL
+**Routes: {{Event/Route|C|blue|E|red|F|green|H|blue|K|red}}
+* 1 AV 2 DD 1 CL(T) 2 CA(V) ('''All Fast''')
+**Routes: {{Event/Route|C|blue|E|red|K|red}}
+**Using CL will guarantee {{Event/Route|E|red|K|red}}, while using CLT can route you {{Event/Route|F|green|H|blue|K|red}} instead. Nevertheless, both choices will avoid node G which has [[Battleship Ru-Class]]
+**You can replace the AV with an AS if you are using a CL.
+
+===Enemy Transport Ships Farming===
+*Bringing at least 3 CV(L) guarantees routing towards Node B which contains a light Enemy Fleet including two Enemy {{ShipLink|Transport Ship Wa-Class|text=Transport}} Ships. This gives the player an easy way to clear the Transport Daily/Weekly Quests [[Quests#Bd5|Bd5]], [[Quests#Bd6|Bd6]], [[Quests#Bw3|Bw3]], and [[Quests#Bw4|Bw4]].
+**Bringing an additional SS along prevents 4/6 ships from attacking you during shelling phase.
+**Bringing additional DD/CLs carrying {{EquipmentLink|
+Drum Canister (Transport Use)|text=Drum }}/{{EquipmentLink|
+Daihatsu Landing Craft|text=Daihatsu}} can increase the amount of bauxite obtained albeit minuscule.
+
+{{Map/Footer}}

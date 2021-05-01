@@ -1,0 +1,644 @@
+{{Ambox
+|type = construction
+|message = Adding [[DE]] table, {{EquipmentLink|Type 2 Depth Charge}} & {{EquipmentLink|Type 95 Depth Charge}}<br><br>
+'''Progress:''' currently only partially done the Destroyer Table
+|users = 
+}}
+
+{{#if:{{{no_intro|}}}||
+The opening anti-submarine attack (OASW) can be performed by any ship with displayed ASW value of 100 or greater (ship's ASW stat + ''any'' equipment ASW stats, not counting equipment [[improvements]]) and at least one [[sonar]].
+*{{ShipLink|Isuzu Kai Ni}} and {{ShipLink|Tatsuta Kai Ni}} can always perform OASW, even with less than 100 displayed ASW or without any ASW equipment.
+*{{ShipLink|Taiyou}} can perform OASW with [[Type 97 Torpedo Bomber (931 Air Group)]] or [[Tenzan (931 Air Group)]] and displayed ASW of 65 or greater. For {{ShipLink|Taiyou/Kai}} and {{ShipLink|Taiyou/Kai Ni}} the bombers are not required, 65 displayed ASW is sufficient (however, if she is not using a torpedo or dive bomber with ASW stat, she will be able to perform OASW attack but will be unable to perform ASW attacks in the shelling phase). OASW attacks will be performed even if she is at medium damage or all her planes were shot down.
+*[[:Category:Coastal Defense Ships|Coastal Defense Ships]] can perform OASW with displayed ASW of 60 or greater. With displayed ASW of 75 or greater and equipment ASW of 4 or greater they can perform OASW without a sonar equipped.
+<!--*The following enemy ships can perform OASW: [[Destroyer Ha-Class Late Model Elite]], [[Destroyer Ni-Class Late Model Elite]], [[Light Carrier Nu-Class Kai Elite]] and [[Light Carrier Nu-Class Kai Flagship|Flagship]].-->
+*If several ships fulfill the requirements, then they all can perform preemptive attacks, each attacking a random submarine in the enemy fleet. The firing order is determined by the range order, similar to the First Shelling Phase. The order for ships of the same range is random.
+*The damage follows the [[Damage Calculation|usual ASW formula]] and is affected by the usual modifiers (formation, engagement, health, ammo), as well as equipment [[improvements]].
+}}
+The following tables show how much base ASW is needed (in form of required ship level) to enable OASW with a given equipment setup (T4: {{EquipmentLink|Type 4 Passive Sonar}}, T3: {{EquipmentLink|Type 3 Active Sonar}}, DP: {{EquipmentLink|Type 3 Depth Charge Projector}}, D2: {{EquipmentLink|Type 2 Depth Charge}}, D95: {{EquipmentLink|Type 95 Depth Charge}}).
+<!--
+function group(array) {
+    const groups = [];
+    let i = 0;
+    for (const element of array) {
+        if (!groups[i]) {
+            groups.push({count: 1, element: element});
+        } else if (element === groups[i].element) {
+            ++groups[i].count;
+        } else {
+            ++i;
+            groups.push({count: 1, element: element});
+        }
+    }
+    return groups;
+}
+
+function calc_level_for_asw(remodel_level, base, max, target) {
+    const level = Math.ceil(99 * (target - base) / (max - base));
+    return level < remodel_level ? remodel_level : level;
+}
+
+const oasw_breakpoints = [64, 66, 68, 70, 72, 73, 76, 78, 80, 82, 88, 90];
+
+function calc_levels_for_asw(ship, remodel_level, base, max) {
+    return oasw_breakpoints.map((target) => calc_level_for_asw(remodel_level, base, max, target));
+}
+
+function gen_row(ship, remodel_level, base, max) {
+    const format_cell = (group) => `|${group.count > 1 ? `colspan="${group.count}" ` : ""}style="background:#${group.element < 90 ? "c8e6c9" : group.element < 100 ? "ffe0b2" : group.element <= 155 ? "ffcdd2" : "cfd8dc"}"|${group.element <= 155 ? group.element : "N/A"}`
+    return `|-\n|{{ShipLink|${ship}}}\n${group(calc_levels_for_asw(ship, remodel_level, base, max)).map(format_cell).join("\n")}`;
+}
+
+// e.g.
+// gen_row("Asashio Kai Ni D", 85, 45, 89);
+-->
+{{Detail|button=true|target=3slot|show_text=Showing 3slot|hide_text=Show 3slot (hidden)|}}
+{{Detail|button=true|target=2slot|show_text=Showing 2slot|hide_text=Show 2slot (hidden)}}
+{{Detail|button=true|target=2slot|show_text=Showing 2slot|hide_text=Show 2slot (hidden)}}
+{{Detail|button=true|target=1slot|show_text=Showing 1slot|hide_text=Show 1slot (hidden)}}
+{| class="wikitable typography-xl-optout mw-collapsible {{#if:{{{collapsed|}}}|mw-collapsed|}}" style="width:100%;text-align:center;"
+|-
+!colspan="14"|[[DD]]
+|-
+!rowspan="2"|Ship
+!{{Detail|target=4slot}} colspan="7"|4 Slots
+!colspan="7"|3 Slots
+!colspan="2"|2/3 Slots
+!colspan="2"|2 Slots
+!colspan="2"|1 Slot
+|-
+!style="font-size:10px"|T4/T4/T4<br>36 + 64
+!style="font-size:10px"|T4/T4/T3<br>34 + 66
+!style="font-size:10px"|T4/T4/T4<br>36 + 64
+!style="font-size:10px"|T4/T4/T3<br>34 + 66
+!style="color:orange; font-size:10px"|T4/T4/DP<br>32 + 68
+!style="color:orange; font-size:10px"|<span style="color:black;">T3/T3/T3<br>OR</span><br>T4/T3/DP<br>30 + 70
+!style="color:orange; font-size:10px"|T3/T3/DP<br>28 + 72
+!style="color:red; font-size:10px"|T4/DP/D2<br>28 + 73 
+!style="color:red; font-size:10px"|T3/DP/D2<br>28 + 75
+!style="font-size:10px"|<span style="color:red;">T4/DP/D95</span><br>OR<br>T4/T4<br>28 + 76
+!style="font-size:10px"|<span style="color:red;">T3/DP/D95</span><br>OR<br>T4/T3<br>28 + 78
+!style="color:orange; font-size:10px"|T4/DP<br>20 + 80
+!style="color:orange; font-size:10px"|T3/DP<br>18 + 82
+!style="font-size:10px"|T4<br>12 + 88
+!style="font-size:10px"|T3<br>10 + 90
+|-
+|{{ShipLink|Asashio Kai Ni D|text=Asashio K2D}}
+|colspan="11" style="background:#c8e6c9"|85
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|102
+|-
+|{{ShipLink|Libeccio Kai}}
+|{{Detail|target=3slot}} style="background:#c8e6c9"|60
+|{{Detail|target=2.5slot}} style="background:#c8e6c9"|65
+|{{Detail|target=2slot}} style="background:#c8e6c9"|70
+|{{Detail|target=1slot}}style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|80
+|style="background:#c8e6c9"|82
+|style="background:#c8e6c9"|87
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|95
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|104
+|style="background:#ffcdd2"|119
+|style="background:#ffcdd2"|124
+|-
+|{{ShipLink|Satsuki Kai Ni|text=Satsuki K2}}
+|colspan="3" style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|78
+|style="background:#c8e6c9"|82
+|style="background:#c8e6c9"|84
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|94
+|style="background:#ffe0b2"|98
+|style="background:#ffcdd2"|101
+|style="background:#ffcdd2"|113
+|style="background:#ffcdd2"|117
+|-
+|{{ShipLink|Fumizuki Kai Ni|text=Fumizuki K2}}
+|colspan="3" style="background:#c8e6c9"|77
+|style="background:#c8e6c9"|78
+|style="background:#c8e6c9"|82
+|style="background:#c8e6c9"|84
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|94
+|style="background:#ffe0b2"|98
+|style="background:#ffcdd2"|101
+|style="background:#ffcdd2"|113
+|style="background:#ffcdd2"|117
+|-
+|{{ShipLink|Asashimo Kai}}
+|style="background:#c8e6c9"|66
+|style="background:#c8e6c9"|70
+|style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|79
+|style="background:#c8e6c9"|84
+|style="background:#ffe0b2"|93
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|106
+|style="background:#ffcdd2"|120
+|style="background:#ffcdd2"|124
+|-
+|{{ShipLink|Ushio Kai Ni|text=Ushio K2}}
+|style="background:#c8e6c9"|74
+|style="background:#c8e6c9"|79
+|style="background:#c8e6c9"|83
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|93
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|106
+|style="background:#ffcdd2"|111
+|style="background:#ffcdd2"|116
+|style="background:#ffcdd2"|129
+|style="background:#ffcdd2"|134
+|-
+|{{ShipLink|Верный}}
+|style="background:#c8e6c9"|77
+|style="background:#c8e6c9"|81
+|style="background:#c8e6c9"|86
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|95
+|style="background:#ffcdd2"|104
+|style="background:#ffcdd2"|108
+|style="background:#ffcdd2"|113
+|style="background:#ffcdd2"|117
+|style="background:#ffcdd2"|131
+|style="background:#ffcdd2"|135
+|-
+|{{ShipLink|Akizuki Kai}}<br>{{ShipLink|Teruzuki Kai}}<br>{{ShipLink|Hatsuzuki Kai}}
+|style="background:#c8e6c9"|81
+|style="background:#c8e6c9"|85
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|95
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|109
+|style="background:#ffcdd2"|114
+|style="background:#ffcdd2"|118
+|style="background:#ffcdd2"|123
+|style="background:#ffcdd2"|137
+|style="background:#ffcdd2"|142
+|-
+|{{ShipLink|Harukaze Kai}}
+|style="background:#c8e6c9"|84
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|96
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|107
+|style="background:#ffcdd2"|111
+|style="background:#ffcdd2"|115
+|style="background:#ffcdd2"|119
+|style="background:#ffcdd2"|131
+|style="background:#ffcdd2"|135
+|-
+|{{ShipLink|Matsukaze Kai}}
+|style="background:#c8e6c9"|76
+|style="background:#c8e6c9"|84
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|107
+|style="background:#ffcdd2"|123
+|style="background:#ffcdd2"|131
+|style="background:#ffcdd2"|139
+|style="background:#ffcdd2"|147
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|-
+|{{ShipLink|Shigure Kai Ni|text=Shigure K2}}
+|style="background:#c8e6c9"|83
+|style="background:#c8e6c9"|87
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|112
+|style="background:#ffcdd2"|116
+|style="background:#ffcdd2"|121
+|style="background:#ffcdd2"|126
+|style="background:#ffcdd2"|141
+|style="background:#ffcdd2"|145
+|-
+|{{ShipLink|Kamikaze Kai}}
+|style="background:#c8e6c9"|87
+|style="background:#ffe0b2"|91
+|style="background:#ffe0b2"|95
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|104
+|style="background:#ffcdd2"|112
+|style="background:#ffcdd2"|117
+|style="background:#ffcdd2"|121
+|style="background:#ffcdd2"|125
+|style="background:#ffcdd2"|138
+|style="background:#ffcdd2"|143
+|-
+|{{ShipLink|Yuudachi Kai Ni|text=Yuudachi K2}}<br>{{ShipLink|Murakumo Kai Ni|text=Murakumo K2}}<br>{{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo K2}}<br>{{ShipLink|Mutsuki Kai Ni|text=Mutsuki K2}}
+|style="background:#c8e6c9"|87
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|107
+|style="background:#ffcdd2"|116
+|style="background:#ffcdd2"|121
+|style="background:#ffcdd2"|126
+|style="background:#ffcdd2"|131
+|style="background:#ffcdd2"|145
+|style="background:#ffcdd2"|150
+|-
+|{{ShipLink|Hatsuharu Kai Ni|text=Hatsuharu K2}}
+|style="background:#c8e6c9"|87
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|107
+|style="background:#ffcdd2"|117
+|style="background:#ffcdd2"|122
+|style="background:#ffcdd2"|127
+|style="background:#ffcdd2"|132
+|style="background:#ffcdd2"|148
+|style="background:#ffcdd2"|153
+|-
+|{{ShipLink|Kisaragi Kai Ni|text=Kisaragi K2}}
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|107
+|style="background:#ffcdd2"|116
+|style="background:#ffcdd2"|121
+|style="background:#ffcdd2"|125
+|style="background:#ffcdd2"|130
+|style="background:#ffcdd2"|144
+|style="background:#ffcdd2"|149
+|-
+|{{ShipLink|Fubuki Kai Ni|text=Fubuki K2}}
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|95
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|104
+|style="background:#ffcdd2"|109
+|style="background:#ffcdd2"|118
+|style="background:#ffcdd2"|123
+|style="background:#ffcdd2"|128
+|style="background:#ffcdd2"|132
+|style="background:#ffcdd2"|147
+|style="background:#ffcdd2"|151
+|-
+|{{ShipLink|Kasumi Kai Ni|Kasumi Kai Ni B|text=Kasumi K2}}
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|95
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|104
+|style="background:#ffcdd2"|109
+|style="background:#ffcdd2"|119
+|style="background:#ffcdd2"|124
+|style="background:#ffcdd2"|129
+|style="background:#ffcdd2"|134
+|style="background:#ffcdd2"|149
+|style="background:#ffcdd2"|154
+|-
+|{{ShipLink|Asakaze Kai}}
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|96
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|103
+|style="background:#ffcdd2"|107
+|style="background:#ffcdd2"|115
+|style="background:#ffcdd2"|119
+|style="background:#ffcdd2"|123
+|style="background:#ffcdd2"|127
+|style="background:#ffcdd2"|139
+|style="background:#ffcdd2"|143
+|-
+|{{ShipLink|Akatsuki Kai Ni|text=Akatsuki K2}}
+|style="background:#ffe0b2"|94
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|105
+|style="background:#ffcdd2"|110
+|style="background:#ffcdd2"|115
+|style="background:#ffcdd2"|126
+|style="background:#ffcdd2"|131
+|style="background:#ffcdd2"|136
+|style="background:#ffcdd2"|141
+|style="background:#ffcdd2"|157
+|style="background:#ffcdd2"|162
+|-
+|{{ShipLink|Ooshio Kai Ni|text=Ooshio K2}}
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|105
+|style="background:#ffcdd2"|110
+|style="background:#ffcdd2"|115
+|style="background:#ffcdd2"|120
+|style="background:#ffcdd2"|131
+|style="background:#ffcdd2"|136
+|style="background:#ffcdd2"|141
+|style="background:#ffcdd2"|146
+|style="background:#ffcdd2"|162
+|style="background:#cfd8dc"|N/A
+|-
+|{{ShipLink|Ayanami Kai Ni|text=Ayanami K2}}<br>{{ShipLink|Kawakaze Kai Ni|text=Kawakaze K2}}
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|107
+|style="background:#ffcdd2"|113
+|style="background:#ffcdd2"|118
+|style="background:#ffcdd2"|123
+|style="background:#ffcdd2"|133
+|style="background:#ffcdd2"|139
+|style="background:#ffcdd2"|144
+|style="background:#ffcdd2"|149
+|style="background:#ffcdd2"|165
+|style="background:#cfd8dc"|N/A
+|-
+|{{ShipLink|Arashio Kai Ni|text=Arashio K2}}
+|style="background:#ffcdd2"|114
+|style="background:#ffcdd2"|120
+|style="background:#ffcdd2"|126
+|style="background:#ffcdd2"|132
+|style="background:#ffcdd2"|138
+|style="background:#ffcdd2"|150
+|style="background:#ffcdd2"|156
+|style="background:#ffcdd2"|162
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|-
+|{{ShipLink|Shimakaze Kai}}<br>{{ShipLink|Yukikaze Kai}}
+|style="background:#ffcdd2"|115
+|style="background:#ffcdd2"|121
+|style="background:#ffcdd2"|127
+|style="background:#ffcdd2"|134
+|style="background:#ffcdd2"|140
+|style="background:#ffcdd2"|152
+|style="background:#ffcdd2"|158
+|style="background:#ffcdd2"|164
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|}
+{| class="wikitable typography-xl-optout mw-collapsible {{#if:{{{collapsed|}}}|mw-collapsed|}}" style="width:100%;text-align:center;"
+|-
+!colspan="12"|[[CL]]/[[CLT]]
+|-
+!rowspan="2"|Ship
+!colspan="5"|3 Slots
+!colspan="4"|2 Slots
+!colspan="2"|1 Slot
+|-
+!T4/T4/T4<br>36 + 64
+!T4/T4/T3<br>34 + 66
+!style="color:red"|T4/T4/DP<br>32 + 68
+!style="color:red"|T4/T3/DP<br>30 + 70
+!style="color:red"|T3/T3/DP<br>28 + 72
+!T4/T4<br>24 + 76
+!T4/T3<br>22 + 78
+!style="color:red"|T4/DP<br>20 + 80
+!style="color:red"|T3/DP<br>18 + 82
+!T4<br>12 + 88
+!T3<br>10 + 90
+|-
+|{{ShipLink|Kinu Kai Ni|text=Kinu K2}}
+|colspan="6" style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|80
+|style="background:#c8e6c9"|86
+|style="background:#ffe0b2"|91
+|style="background:#ffcdd2"|108
+|style="background:#ffcdd2"|113
+|-
+|{{ShipLink|Naka Kai Ni|text=Naka K2}}
+|style="background:#c8e6c9"|48
+|style="background:#c8e6c9"|49
+|style="background:#c8e6c9"|54
+|style="background:#c8e6c9"|59
+|style="background:#c8e6c9"|65
+|style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|81
+|style="background:#c8e6c9"|86
+|style="background:#ffe0b2"|91
+|style="background:#ffcdd2"|108
+|style="background:#ffcdd2"|113
+|-
+|{{ShipLink|Sakawa Kai}}
+|style="background:#c8e6c9"|63
+|style="background:#c8e6c9"|66
+|style="background:#c8e6c9"|70
+|style="background:#c8e6c9"|74
+|style="background:#c8e6c9"|77
+|style="background:#c8e6c9"|85
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|96
+|style="background:#ffcdd2"|107
+|style="background:#ffcdd2"|110
+|-
+|{{ShipLink|Yura Kai Ni|text=Yura K2}}
+|colspan="5" style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|79
+|style="background:#c8e6c9"|85
+|style="background:#ffe0b2"|91
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|114
+|style="background:#ffcdd2"|120
+|-
+|{{ShipLink|Abukuma Kai Ni|text=Abukuma K2}}
+|colspan="5" style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|82
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|94
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|117
+|style="background:#ffcdd2"|123
+|-
+|{{ShipLink|Kiso Kai Ni|text=Kiso K2}}
+|style="background:#c8e6c9"|65
+|style="background:#c8e6c9"|68
+|style="background:#c8e6c9"|72
+|style="background:#c8e6c9"|76
+|style="background:#c8e6c9"|80
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|96
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|111
+|style="background:#ffcdd2"|115
+|-
+|{{ShipLink|Agano Kai}}<br>{{ShipLink|Noshiro Kai}}<br>{{ShipLink|Yahagi Kai}}
+|style="background:#c8e6c9"|68
+|style="background:#c8e6c9"|71
+|style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|78
+|style="background:#c8e6c9"|82
+|style="background:#c8e6c9"|89
+|style="background:#ffe0b2"|92
+|style="background:#ffe0b2"|96
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|110
+|style="background:#ffcdd2"|114
+|-
+|{{ShipLink|Jintsuu Kai Ni|text=Jintsuu K2}}
+|style="background:#c8e6c9"|60
+|style="background:#c8e6c9"|65
+|style="background:#c8e6c9"|70
+|style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|80
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|95
+|style="background:#ffe0b2"|99
+|style="background:#ffcdd2"|104
+|style="background:#ffcdd2"|119
+|style="background:#ffcdd2"|124
+|-
+|{{ShipLink|Kitakami Kai Ni|text=Kitakami K2}}<br>{{ShipLink|Ooi Kai Ni|text=Ooi K2}}
+|style="background:#c8e6c9"|71
+|style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|79
+|style="background:#c8e6c9"|82
+|style="background:#c8e6c9"|86
+|style="background:#ffe0b2"|94
+|style="background:#ffe0b2"|98
+|style="background:#ffcdd2"|101
+|style="background:#ffcdd2"|105
+|style="background:#ffcdd2"|117
+|style="background:#ffcdd2"|120
+|-
+|{{ShipLink|Kuma Kai}}<br>{{ShipLink|Tama Kai}}<br>{{ShipLink|Natori Kai}}
+|style="background:#c8e6c9"|72
+|style="background:#c8e6c9"|76
+|style="background:#c8e6c9"|80
+|style="background:#c8e6c9"|83
+|style="background:#c8e6c9"|87
+|style="background:#ffe0b2"|94
+|style="background:#ffe0b2"|98
+|style="background:#ffcdd2"|101
+|style="background:#ffcdd2"|105
+|style="background:#ffcdd2"|116
+|style="background:#ffcdd2"|119
+|-
+|{{ShipLink|Sendai Kai Ni|text=Sendai K2}}
+|style="background:#c8e6c9"|72
+|style="background:#c8e6c9"|77
+|style="background:#c8e6c9"|83
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|94
+|style="background:#ffcdd2"|105
+|style="background:#ffcdd2"|110
+|style="background:#ffcdd2"|116
+|style="background:#ffcdd2"|121
+|style="background:#ffcdd2"|138
+|style="background:#ffcdd2"|143
+|-
+|{{ShipLink|Tenryuu Kai}}<br>{{ShipLink|Tatsuta Kai}}
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|93
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|106
+|style="background:#ffcdd2"|115
+|style="background:#ffcdd2"|119
+|style="background:#ffcdd2"|124
+|style="background:#ffcdd2"|129
+|style="background:#ffcdd2"|141
+|style="background:#ffcdd2"|146
+|}
+{| class="wikitable typography-xl-optout mw-collapsible {{#if:{{{collapsed|}}}|mw-collapsed|}}" style="width:100%;text-align:center;"
+|-
+!colspan="7"|4 Slots [[DD]]/[[CL]]/[[CT]]
+|-
+!rowspan="2"|Ship
+!colspan="6"|4 Slots
+|-
+!T4/T4/T4/T4<br>48 + 52
+!T4/T4/T4/T3<br>46 + 54
+!style="color:red"|T4/T4/T4/DP<br>44 + 56
+!style="color:red"|T4/T4/T3/DP<br>42 + 58
+!style="color:red"|T4/T3/T3/DP<br>40 + 60
+!style="color:red"|T3/T3/T3/DP<br>38 + 62
+|-
+|{{ShipLink|Yuubari Kai}}<br>{{ShipLink|Kashima Kai}}
+|style="background:#c8e6c9"|62
+|style="background:#c8e6c9"|66
+|style="background:#c8e6c9"|71
+|style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|80
+|style="background:#c8e6c9"|84
+|-
+|{{ShipLink|Katori Kai}}
+|style="background:#c8e6c9"|75
+|style="background:#c8e6c9"|80
+|style="background:#c8e6c9"|85
+|style="background:#ffe0b2"|90
+|style="background:#ffe0b2"|95
+|style="background:#ffe0b2"|99
+|-
+|{{ShipLink|Ooyodo Kai}}
+|style="background:#ffcdd2"|132
+|style="background:#ffcdd2"|138
+|style="background:#ffcdd2"|143
+|style="background:#ffcdd2"|148
+|style="background:#ffcdd2"|153
+|style="background:#ffcdd2"|158
+|-
+!rowspan="2"|Ship
+!colspan="5"|3 Slots
+|-
+!T4/T4/T4<br>36 + 64
+!T4/T4/T3<br>34 + 66
+!style="color:red"|T4/T4/DP<br>32 + 68
+!style="color:red"|T4/T3/DP<br>30 + 70
+!style="color:red"|T3/T3/DP<br>28 + 72
+|-
+|{{ShipLink|Yuubari Kai}}<br>{{ShipLink|Kashima Kai}}
+|style="background:#c8e6c9"|88
+|style="background:#ffe0b2"|93
+|style="background:#ffe0b2"|97
+|style="background:#ffcdd2"|102
+|style="background:#ffcdd2"|106
+|-
+|{{ShipLink|Katori Kai}}
+|style="background:#ffcdd2"|104
+|style="background:#ffcdd2"|109
+|style="background:#ffcdd2"|114
+|style="background:#ffcdd2"|119
+|style="background:#ffcdd2"|124
+|-
+|{{ShipLink|Ooyodo Kai}}
+|style="background:#ffcdd2"|163
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|-
+!rowspan="2"|Ship
+!colspan="4"|2 Slots
+!colspan="2"|1 Slot
+|-
+!T4/T4<br>24 + 76
+!T4/T3<br>22 + 78
+!style="color:red"|T4/DP<br>20 + 80
+!style="color:red"|T3/DP<br>18 + 82
+!T4<br>12 + 88
+!T3<br>10 + 90
+|-
+|{{ShipLink|Yuubari Kai}}<br>{{ShipLink|Kashima Kai}}
+|style="background:#ffcdd2"|115
+|style="background:#ffcdd2"|119
+|style="background:#ffcdd2"|124
+|style="background:#ffcdd2"|129
+|style="background:#ffcdd2"|141
+|style="background:#ffcdd2"|146
+|-
+|{{ShipLink|Katori Kai}}
+|style="background:#ffcdd2"|134
+|style="background:#ffcdd2"|139
+|style="background:#ffcdd2"|144
+|style="background:#ffcdd2"|149
+|style="background:#ffcdd2"|164
+|style="background:#cfd8dc"|N/A
+|-
+|{{ShipLink|Ooyodo Kai}}
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|style="background:#cfd8dc"|N/A
+|}

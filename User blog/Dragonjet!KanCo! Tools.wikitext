@@ -1,0 +1,90 @@
+This project has been abandoned in favor of the new player:
+
+[[User_blog:Dragonjet/KanColle_Command_Center|KanColle Command Center]] (KC3)
+
+The old KanCo! Tools article has been hidden, but you can view it below.
+<div class="mw-customtoggle-myTable wikia-menu-button">Show Old KanCo! Tools Article</div>
+
+{| class="mw-collapsible mw-collapsed mw-expanded wikitable" id="mw-customcollapsible-myTable"
+|-
+|
+[[File:New_menu.jpg|right|150px]]
+
+'''KanCo! Tools''' is a Chrome Extension made especially for playing the game. It will show an icon in the browser's top-right corner,with a menu containing links to play the game, and bookmarks to frequently used links about the game. Choosing Play Game will even allow you to play without VPN/Proxy, all automated!
+
+==Download==
+
+The latest version is '''003'''. You can download the extension in one of these links:
+
+*[http://www.mediafire.com/download/ec40ysoiqd39ztd/kancotools_003.zip MediaFire (v003)]
+
+==Installation==
+'''Installing the extension'''
+
+The downloaded zip contains a '''.crx''' file, which is a chrome extension. To install this, open your extensions page in chrome. Go to your file explorer, and browse for the file. Drag the file into the chrome extensions page. This is [http://www.howtogeek.com/120743/how-to-install-extensions-from-outside-the-chrome-web-store/ another page] that explains how to install .crx chrome extensions.
+
+'''Setting up the game'''
+
+If you already have an API link, you may skip this section and proceed to '''Existing API link'''.
+
+Once the browser extension has been installed, you can see a new icon at the top-right of your browser (see menu screenshot at the top). If you click that, there is a menu to play the game, and some bookmarks. If you choose to play the game, you will be directed to our special game page, but the game has not been setup yet.
+
+''Setup is easy!'' You just login to the game as usual. Note that players outside Japan will still need VPN/Proxy ONLY during this setup process.
+
+After logging in, the extension will automatically get your Game API link and save it on your local computer. This is so that you can play again next time your open the browser. The Game API link will now be opened in the extension's special game page (see screenshot at the bottom). At this point your may now disconnect from your VPN/Proxy.
+
+'''Existing API link'''
+
+For those who already have an API link, just supply it in the Settings area (there's a menu at the bottom of the extension page).
+
+'''Important note for new Admirals'''
+
+If you haven't passed the lottery yet, please do not use or just disable this tool. This is only designed for playing the game. The lottery is a different story.
+
+Also, if you've just passed the lottery, do not immediately enable the extension, you'll need to provide your Admiral name in the starting screens and all renaming (admiral name and fleet names) are disabled on third-party viewers.
+
+==Updating==
+Uninstall the previous version via chrome extensions page. Install the new crx file.
+
+==Features==
+'''Play without VPN/Proxy'''
+
+You only need to connect to VPN/Proxy once, during the setup. Once the game has been setup, you can disconnect, play indefinitely. And next time your comeback, your can still play directly!
+
+'''Acquiring Game API Link'''
+
+Still prefer another third-party mod? No problem! They still need your game API link, which this extension can provide you. Just setup the game as per Installation instructions, and the special game page (see screenshot at the bottom) will have the game API link at the top!
+
+'''Timers'''
+
+While upholding the idea that this tool is safe and does not access game internals, timers are manually triggered. This means if you start an expedition, click "start timer" yourself. Anyways if that same fleet is just repeating the same expedition, the previous hour-minute you specified is retained and its 1-click away. Same is true for docking and construction.
+
+'''Quest manager'''
+
+Since you are here, reading this  an know English, the Quest Manager is in English. Here, you can click on specific quests and their coloring will change. '''Yellow'''-ongoing / '''Green'''-done / '''Transparent'''-disabled. If you just finished a quest, mark it green. If its in progress, mark it yellow. If you can't have the quest (map not yet unlocked or anyreason of your choice), mark it transparent. C''licking on that specific quest will cycle through colors!''
+
+Your markers will '''not''' reset upon refresh or closing the browser. It will '''only''' reset if you click on the reset button at the right of dailies and weeklies. So you can actually track your weeklies everyday.
+
+==FAQ==
+'''Your timers are inaccurate, my repair or expedition finished before your timer ran out!'''
+
+Remember, docking and expedition will instantly complete if you visit the docking screen (repair), or visit the main screen (expedition), if there is less than 1 minute left in the timers! That's also a reason why in this tool's timers, there's only hours and minutes. Seconds will not matter because of what I just mentioned.
+
+'''I cannot rename my fleets! or set my Admiral name!'''
+
+If you want to do this, you'll need to disable the extension and go to DMM to rename your fleet. This is a limitation for all third-party viewers. Settings fleet names and admiral name should be done on DMM playthrough itself. When you're done you can re-enable the extension and play normally.
+
+==Credits==
+GitHub (<em>source code of this extension</em>) - [https://github.com/dragonjet/kancotools Link]<br />
+Hibiki Chibi Icon - [http://hoshiusagi.deviantart.com/art/KanColle-Hibiki-406107023 Link]<br />
+v002 Default Wallpaper - [http://www.wallpaperup.com/156797/kantai_collection_blood_cus-tom_isuzu_(kancolle)_kantai_collection_twintails.html Link]
+
+==Screenshots==
+<gallery orientation="square">
+Gamescreen.jpg|Extension's Game Screen
+Ss timers.jpg|Timers
+Ss settings.jpg|Settings
+ss_quests.jpg|Quest manager
+</gallery>
+|}
+[[Category:Blog posts]]

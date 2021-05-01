@@ -1,0 +1,115 @@
+==What this is about==
+Some of my previous posts have dealt with survivability, but in KanColle, it is not just about surviving hits. For victory, you must also deal hits. And if you can kill things with a single attack, you don't need to care about survivability, as sunken Abyssals don't shoot back. But how much firepower exactly is enough? While we know {{ShipBattleCardKai|Yamato/Kai|flagship=true}} will kill the basic {{ShipBattleCardKai|Destroyer I-Class}} as long as it she hits, we also know that using her for this purpose is a waste of resources.
+
+What this spreadsheet does is provide the minimum amount of attack power you need to kill anything IF you hit. Whether you hit or not is out of this scope. The only atttack types I have bothered to include in the spreadsheet are those that are used in [[User Blog:Hayashi H/Advanced Equipment Guide|the equipment guide I wrote]], since the other types are not optimal anyway.
+
+The amount of numbers in the chart is too big, so it's impractical to host it on the Wiki. Instead, the chart is hosted on GoogleDocs, but the instructions will be in this post.
+
+'''The most efficient solution is to sortie the fleet with the minimum resource cost that can still guarantee one-hit kills for the vast majority of the Abyssals you are concerned with in a map, if they have an acceptably low risk of receiving heavy damage in preboss nodes. Using heavier ships than needed increases resource costs, and is thus unadvisable - winning battles with low enough resource efficiency is of such a Pyrrhic nature it can be a greater failure than winning slightly less often with much higher resource efficiency.'''
+==How to use==
+First, search for the name of abyssal you want to sink. Then look up the relevant value of attack from the column associated with the attack type you are using. A list of attack types is given below. Finally you need to compute the relevant firepower/torpedo values for your ship based on that attack value. If your ship has that value, you will sink the abyssal 100% of the time without critical hits if the 'min' column is used, and more than 0% of the time if the 'max' column is used. If you want to determine the value with a critical hit, divide the value by your critical damage factor. If you want to determine the value in scenarios that are not parallel engagement + line ahead, divide the values by your relevant formation/engagement forms. An example will be given later.
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|Column
+! scope="col"|Attack Value
+|-
+|SA
+|All day single attacks including carrier shelling and non-contact carrier bombing, with NO AP SHELL EQUIPPED.
+|-
+|DA
+|Day double attacks done by a CL, CA/V or BB/V with Artillery Spotting and NO AP SHELL EQUIPPED.
+|-
+|CB
+|Initial airstrike damage dealt by a bomber under the influence of a Saiun's Contact. If Contact does not occur use SA.
+|-
+|APSA
+|Applies only to BB/V, and is the damage dealt by a single attack WITH AN AP SHELL EQUIPPED.
+|-
+|APCI
+|Applies only to BB/V, and is the damage dealt by an Armour-Piercing Shell Cut-In attack.
+|-
+|APDA
+|Applies only to BBV, and is the damage dealt by a day double attack WITH AN AP SHELL EQUIPPED.
+|-
+|NBSA
+|Night battle single attack and gun cut-in damage.
+|-
+|NBDA
+|Night battle double attack, mixed cut-in and torpedo cut-in damage.
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|Attack Type
+! scope="col"|Attack Computation
+|-
+|Day Shelling
+|Firepower + 5
+|-
+|Day T3 Shelling
+|(Firepower + 5) * 2.5 (Installation w/ T3 Shell only)
+|-
+|Day Torpedo
+|Torpedo + 5
+|-
+| rowspan="2"|ASW
+|AV/CAV/BBV/CVL 2*SQRT(ASW stat) + 1.5*(Equip ASW) + 8
+|-
+|DD/CL: (2*SQRT(ASW stat) + 1.5*(Equip ASW) + 13) * Mult, where Mult is 1.15 if both a sonar an depth charge is equipped, and 1 otherwise
+|-
+|Carrier Shelling
+|1.5*(Firepower + Torpedo) + 2.0*(Bombing) + 55
+|-
+|rowspan=2|Carrier Initial Strike
+|(Torpstat or Bombstat) * SQRT(Slotsize) + 25
+|-
+|If dive bomber, above applies regardless. If torpedo bomber, multiply the above values by 0.8 or 1.5.
+|-
+|Night Single Attack
+|Firepower + Torpedo [Against non-installations]
+|-
+|Night T3 Shelling
+|Firepower * 2.5 (Installation w/ T3 Shell only)
+|-
+|Night T3 Double Attack
+|Firepower * 3.0 (Installation w/ T3 Shell only)
+|-
+|Night Double Attack
+|(Firepower + Torpedo) * 1.2
+|-
+|Night Mixed Cut-In
+|(Firepower + Torpedo) * 1.3
+|-
+|Night Torpedo Cut-In
+|(Firepower + Torpedo) * 1.5
+|-
+|Night Main Gun Cut-In
+|(Firepower + Torpedo) * 2.0
+|}
+In most cases, the critical damage factor is 1.5. Carriers with the first slot equipped with a >> bomber squadron add 0.3 to this, while the other three slots equipped with >> bomber squadrons will add 0.15 per slot. So a Carrier with the 1st, 2nd and 3rd slots filled with >> bombers (maybe the 4th is for Saiun) will deal 2.1x critical damage.
+==The actual spreadsheet==
+[http://tinyurl.com/KCdmgCalcF Get it from this folder under Abyssal OHKO Chart.]
+
+Yellow highlights indicate damage levels are above the damage cap, but can still be dealt with a critical hit. Red highlights indicate damage levels needed are so high they cannot be sunk in one attack even with a critical hit. The critical hit value used for this formatting is 1.5, which will apply in all cases except carriers. Yasen cells are highlighted in gray for easier differentiation, as the attack cap they use is 300, while day attacks are capped at 150.
+==Example==
+*Let's say you want to sink a 'Black Rick Shooter', formally known as the Heavy Cruiser Ri Kai. {{ShipBattleCardKai|Heavy Cruiser Ri-Class/Kai Flagship}}
+*A battleship with the AP-type equipment setup will need 70-111 firepower to sink it with a double attack, 83-115 firepower to sink it with a AP cut-in attack, and at least 126 firepower to sink it with a single attack. As the higher value is in the yellow zone, a single attack which hits it by a battleship may not sink it for sure, while the other two attack types will. If you don't understand why these numbers are smaller by 5, read the second table.
+*A carrier's initial strike will need 121-166 attack to sink it if Saiun procs. If the bomber slot is Kaga Kai's 46-slot third slot, then to reliably sink it half the time without crit, a torpedo bomber will need to have a stat of at least ((166/1.5)-25)/SQRT(46) = 12.63 - so a Ryuusei Kai is needed. Any lower torpedo bomber does not have a 100% chance of sinking it if the 1.5 modifier is rolled.
+*A carrier's shelling will need at least 141 attack in order to sink the Ri-Kai, as carrier shelling is considered as a single attack. There is no guarantee of sinking it.
+*A cruiser needs 76 to 120 firepower to sink the Ri-Kai with double attacks. As 120 firepower is not possible for a heavy cruiser, there will never be a guarantee of sinking it. Light cruisers have even lower firepower values. Jintsuu with twin 15.2 for instance will only have 78 firepower, so she can very barely do a one-hit kill without critical hits. The other light cruisers will never be able to one-hit a Ri Kai without critical hits or a Green T engagement form, in the same equipment setup.
+*A destroyer can only sink a Ri Kai in night battle. In order to guarantee sinking her with a double attack, destroyers need at least 125 firepower + torpedo stat. If you don't understand why this is not 150, read the second table. For instance, Mutsuki Kai Ni can guarantee the sink with twin 10cm HA guns as she will have 128 firepower + torpedo. However, Z1 Zwei cannot with the same setup, as she will only have 124 out of the needed 125 - so there is a small chance the BRS may survive with 2 HP.
+==ASW Example==
+*Let's say you want to sink a Yo Flagship, boss of 1-5. {{ShipBattleCardKai|Submarine Yo-Class/Flagship}}
+*You need 68-92 attack to sink her. In Line Abreast formation, this translates to 53 to 71 attack.
+*If you are using a CVL like Junyou Kai Ni, to sink her in one hit, you need at least 45 attack from equipment alone, which translates to a total ASW stat of 30. The maximum ASW stat you may have per CVL equip is 9 from the Autogyro, which adds to 36. Therefore, you need at least 4 pieces of ASW gear to have a chance of sinking her.
+*If you are using Ushio Kai Ni, to guarantee sinking her in one hit, you need 49 attack from equipment and base stat. Since her base stat contributes 16 attack, 33 attack remains for ASW equipment to handle. 28 ASW stat is provided by 2x T3 sonars and T3 depth charge, so they will need to be upgraded in order for the kill to be confirmed. Otherwise she may occasionally need more than one attack. Conversely if using unupgraded gear, you need a ship with at least 121 ASW stat to guarantee sinking the submarine in one hit without a critical hit, if using only these three pieces of equipment - since even Isuzu Kai Ni has only 94, the only ships that can do this with unupgraded equipment are the 4-slot light cruisers which can mount 38 ASW stat in equipment, leaving only a need for a base ASW stat of 36 to guarantee sinking. All three 4-slot light cruisers can do this.
+==Further Reading==
+*[[Combat|Main article on Combat mechanics]]
+*[[Enemy Vessel|Abyssal base stats (equipment stats NOT included in base stat)]]
+===Other Guides===
+*[[User_blog:Hayashi_H/Advanced_Mechanics_Guide|Advanced game mechanics, like overweight mechanisms and more]]
+*[[User_blog:Hayashi_H/Advanced_Equipment_Guide|What equipment should each ship mount?]]
+*[[User blog:Hayashi H/Anti-BWS Fleets|How to survive attacks by firepower-capped targets like the BWS]]
+*[[User blog:Hayashi H/Grinding DDs and CLs on 3-2A|Levelling your CLs and DDs quickly and cheaply]]
+*[[User_blog:Hayashi_H/Max-efficiency_Map-clear_Formations|Efficient formations used in repeated quests and EOs]]
+*[[User_blog:Hayashi_H/Max_efficiency_expedition_setups|Recovering resources at maximum rates]]
+[[Category:Blog posts]]

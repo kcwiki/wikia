@@ -1,0 +1,196 @@
+__NOTOC__
+<div style="text-align:center;margin-top:20px;">{{Event/DetailToggle}}</div>
+
+==Information==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{Notice|align=left|
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/CCaitbKH60O6H8jJ3 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/14SYFR8o-UwyWacofKCbMB-xzh_0ik_g4Qnh1VXYaBA8 here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:494119|here]].
+}}
+
+{{Event/MapInfo
+|en = Shangri-la Search-and-Chase, Fleet Forward Placement
+|jp = シャングリラ捜索追撃 艦隊前進配備
+|romaji =Shangri-la sōsaku tsuigeki  Kantai zenshin haibi
+|tag = Reinforcement Fleet
+|hp_easy = 1625 (5 kills)
+|hp_normal = 1750 (5 kills)
+|hp_hard = 1750 (5 kills)
+|mechanics = Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Abyssal Combined Fleet@Abyssal Combined Fleet, Ship Locking@Events/Mechanics#Ship_Locking
+
+|Easyitem1 = {{EquipmentCardKai|Type 96 Land-based Attack Aircraft|size=50px}}|Easyqty1 = 1
+|Easyitem2 = [[File:Skilled Crew Member Icon.png{{!}}50px{{!}}link=Skilled Crew Member]]|Easyqty2 = 1
+|Easyitem3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Easyqty3 = 1
+
+|Normitem1 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft Model 22A|size=50px}}|Normqty1 = 1
+|Normitem2 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]|Normqty2 = 1
+|Normitem3 = [[File:Skilled Crew Member Icon.png{{!}}50px{{!}}link=Skilled Crew Member]]|Normqty3 = 1
+|Normitem4 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Normqty4 = 1
+
+|Harditem1 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft Model 34|size=50px}}|Hardqty1 = 1
+|Harditem2 = [[File:Prototype Flight Deck Catapult 065 useitem.png{{!}}50px{{!}}link=Prototype Flight Deck Catapult]]|Hardqty2 = 1
+|Harditem3 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]|Hardqty3 = 1
+|Harditem4 = [[File:Skilled Crew Member Icon.png{{!}}50px{{!}}link=Skilled Crew Member]]|Hardqty4 = 1
+|Harditem5 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Hardqty5 = 1
+}}
+===Branching Rules===
+
+This map has two phases: Transport and Combat phase. Please plan your fleet accordingly.
+
+'''Transport Phase'''
+{{MapBranchingTable
+|width = default
+|1 -> A = * Does not meet the requirements to go to C
+|1 -> C = * Amount of DD ≧ 2
+
+|B -> E = ???
+|B -> G = ???
+
+|C -> D =
+* If amount of SS(V) = 0
+** Fleet contains F(BB)V or CV(B)
+** No CL in the fleet '''(UNCONFIRMED)'''
+** Amount of CL ≧ 2
+** Amount of CA(V) + CLT ≧ 3
+|C -> H =
+* If amount of SS(V) ≧ 1 '''AND''' DD ≧ 2
+** Anything is allowed
+** Fleet speed is irrelevant
+** Overrides any branching rules that goes to D, this has the highest priority
+* Does not meet the requirements to go to D
+
+|E -> G = * If CV = 1(?)
+|E -> H = * ???
+
+|F/resource -> I/storm =
+* Slow Fleet
+* FBB + CV(B) ≧ 2 
+* No CL in the fleet '''(UNCONFIRMED)'''
+|F/resource -> J = * Does not meet the requirements to go to I
+
+|K/resource -> L/empty = * Fail the LoS check
+|K/resource -> M = * Pass the LoS check
+}}
+
+'''Combat Phase'''
+{{MapBranchingTable
+|width = default
+|2 -> O = * Fixed route
+|P -> N =
+* Slow Fleet '''AND''' no SS(V) in the fleet
+* CV + BB ≧ 5
+* Does not meet the requirements to go to R
+|P -> R = 
+* Fast Fleet '''AND''' does not meet the requirements to go to S
+* CV + BB ≦ 4
+* Amount of SS(V) is ≧ 1, speed irrelevant
+|P -> S = 
+* If amount of SS(V) is ≧ 4
+** Anything is allowed
+** Fleet Speed is irrelevant
+* If amount of FBB+CV(B) ≦ 1
+** Fast Fleet
+** Amount of CVL+CAV+CLT ≦ 2
+** Amount of CL ≦ 1
+** Amount of CL+DD ≧ 3
+* If amount of FBB+CV(B) ≧ 2
+** Fast Fleet
+** Amount of CV ≦ 1
+** Amount of FBB ≦ 1
+** Amount of CL ≦ 1
+** Amount of CL+DD ≧ 4
+|R -> S = * Does not meet the requirements to go to T
+|R -> T/resource = * {{ShipLink|Akitsu Maru}}, {{ShipLink|Kinu}}, {{ShipLink|Nagato}}, {{ShipLink|Saratoga}}, or {{ShipLink|Prinz Eugen}} is in the fleet
+|Q -> U/empty = * Fail the LoS check
+|Q -> V = * Pass the LoS check
+}}
+
+===Fleet compositions & Tips===
+</div>
+
+'''NOTE:''' If you clear the Transportation phase, you CANNOT go back there unless you reset the map. Do take note of this when considering farming node M for [[Asakaze]]
+
+==== 1/ Transport Phase ====
+*3DD + 1CL + 2CAV = C-H-K-M (2 battles)
+*1CV(B) + 1CL + 2DD + 2CAV = C-D-F-J-H-K-M
+*3CV(L) + 3DD = C-D-F-I-J-H-K-M
+*2CV(B) + 2(F)BB(V) + 2DD  = C-D-F-I-J-H-K-M
+
+===Transport Phase Tips===
+*1CV(B) + 1CL + 2DD + 2CAV will detour you to the north route, but it will avoid the maelstrom node. This setup is the most consistent, because you can get AS at node H while minimizing the risk.
+*Using 3CV(L) + 3DD will give you more firepower, being able to achieve AS at node H. However, this will force you to go through the maelstrom node.
+*On the other hand, 2 CAV + CL + 3DD is the cheapest and gives you the shortest route, but you will only be able to reach AP at node H at most and on harder difficulties, double chevron seaplane fighters are recommended.
+*Sparkling is recommended.
+*As the map has very tough preboss nodes, it is strongly recommended to bring node support shelling.
+*There is a LoS check before boss, be sure to bring some planes.
+==== 2/ HP Bar Phase ====
+
+<div class="mw-collapsible mw-expanded">
+<u>Long route (From P->N/R):</u>
+*2 (F)BB(V), 4CV(L) or 2 CV(L) 4 (F)BB(V) = O-P-N-R-S-Q-V
+*2 CVL/CA, 2 CV, 2 FBB/CV all '''fast fleet''' = O-P-R-S-Q-V. (CV+FBB More than 4 will go to Node N)
+*Due to the heavy Abyssal forces, it is recommended to use one of these two formations.Light ships are more likely to be heavily damaged at air battle node.
+** Note: If you are unable to finish last dance, you can also replace a CV with a high luck DD as flagship and with torpedo cut-in or use the "short route fleet" below.
+
+<u>Shorter route (From P->S):</u>
+
+*FBB + 2CVL + 2DD + CL all '''fast fleet''' = O-P-S-Q-V. You can also replace a CVL with CAV or CLT.
+*Abukuma Kai Ni and Akizuki-class DD are recommended for short route setup.
+**Alternatively to Abukuma, a high firepower+torpedo CL can be used if another scout is needed for routing (primarily a concern with CLT compositions).
+*Roughly at least 20 33-formula LoS is required to have a chance of reaching the boss.
+*AS: 194+ for easy, ~300+ for hard (pre-final), ~550+ for hard final
+</div>
+
+===Combat Phase Tips===
+*You are up against 12 enemy ships with only 6 ships. Plan accordingly!
+**Sparkling is recommended, but not crucial.
+**Boss support is recommended for chipping and last dance.
+*As the map has very tough S node, it is strongly recommended to bring node support shelling even if it only affect one or two nodes.
+*E-4 on hard is undoubtedly the hardest map of this event. Please be prepared with equipment, ships, resources and '''''patience''''' if you choose this difficulty as there is no highly consistent approach to clearing the final form of the map.
+**It is worth noting the reward plane from normal has a combat range of 10 and the plane from hard has 8 range with 1 additional AA and accuracy. Players should consider the value of both planes carefully as clearing E-4 on normal still allows for E-5 hard to be selected.
+*It is possible to do high damage or to sink in one shot the boss at V node using {{BluePlane}}[[List of Torpedo Bombers by stats|Torpedo Bombers]]. Proof: [http://www.nicovideo.jp/watch/sm30083467 1]. <strike>'''It has not been tested on Last Dance.'''</strike> Works on last dance/final kill. [http://i.imgur.com/8pHotqZ.jpg Proof]
+
+===References===
+<references />
+
+{{clear}} <!-- Information collapsible -->
+
+{{:Fall 2016 Event/E-4/Enemy patterns}}
+
+==Drop list==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = H, M, R, S, V
+|boss = M, V
+|Arashi: H/Medium, R/Easy, S/Easy
+|Akigumo: V/Easy
+|Asakaze: M/Medium, V/Easy
+|Hagikaze: M/Easy, R/Easy, V/Easy
+|Hamakaze: M/Easy, V/Easy
+|Harusame: S/Easy, R/Easy
+|Hayashimo: H/Easy, R/Easy, S/Easy
+|Hayasui: M/Easy, V/Easy
+|I-401: R/Medium
+|Kazagumo: R/Easy, S/Easy
+|Kinugasa: R/Hard
+|Kiyoshimo: M/Easy, R/Easy, S/Easy
+|Maikaze: S/Easy, R/Easy
+|Mutsu: M/Medium, R/Medium, S/Easy, V/Easy
+|Nagato: M/Hard, R/Easy, S/Medium
+|Ooyodo: M/Easy, V/Easy
+|Oyashio: V/Easy
+|Shimakaze: M/Medium, V/Easy
+|Tanikaze: M/Easy, V/Easy
+|Urakaze: M/Easy, V/Easy
+|Yukikaze: R/Easy, S/Easy
+|Yuubari: R/Easy, S/Easy
+|Zuihou: S/Easy
+|Kinu: R/Medium
+}}
+
+</div> <!-- Drop list collapsible -->

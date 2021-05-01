@@ -1,0 +1,578 @@
+<div id="toc1">{{tocright}}</div>
+== Purpose ==
+To simplify ranking rewards forum thread into a layout that is easier to understand.
+
+== Usage ==
+For simplicity sake you may just want to copy the layout below and edit as per needed.
+<pre>{{ForumRankingRewards/Draft
+|month = 
+|year = 
+|newreward = 
+|newimage1 = 
+|newimage2 = 
+|newimage3 = 
+|newimage4 = 
+
+|reltweetslink1 = 
+|reltweetsJP1 = 
+|reltweetsEN1 = 
+|reltweetsTL1 = 
+
+|reltweetslink2 = 
+|reltweetsJP2 = 
+|reltweetsEN2 = 
+|reltweetsTL2 = 
+
+|reltweetslink3 = 
+|reltweetsJP3 = 
+|reltweetsEN3 = 
+|reltweetsTL3 = 
+
+|reltweetslink4 = 
+|reltweetsJP4 = 
+|reltweetsEN4 = 
+|reltweetsTL4 = 
+
+|reltweetslink5 = 
+|reltweetsJP5 = 
+|reltweetsEN5 = 
+|reltweetsTL5 = 
+
+|newitem1 = 
+|olditem1 = 
+|newqty1 = 
+|oldqty1 = 
+
+|newitem2 = 
+|olditem2 = 
+|newqty2 = 
+|oldqty2 = 
+
+|newitem3 = 
+|olditem3 =  
+|newqty3 = 
+|oldqty3 = 
+
+|newitem4 = 
+|olditem4 = 
+|newqty4 = 
+|oldqty4 = 
+
+|newitem5 = 
+|olditem5 = 
+|newqty5 = 
+|oldqty5 = 
+
+|newitem6 = 
+|olditem6 = 
+|newqty6 = 
+|oldqty6 = 
+
+|newitem7 = 
+|olditem7 = 
+|newqty7 = 
+|oldqty7 = 
+
+|newitem8 = 
+|olditem8 = 
+|newqty8 = 
+|oldqty8 = 
+
+|newitem9 = 
+|olditem9 = 
+|newqty9 = 
+|oldqty9 = 
+
+|newitem10 =  
+|olditem10 = 
+|newqty10 = 
+|oldqty10 = 
+
+|newitem11 = 
+|olditem11 = 
+|newqty11 = 
+|oldqty11 = 
+
+|newitem12 = 
+|olditem12 = 
+|newqty12 = 
+|oldqty12 = 
+
+|newitem13 = 
+|olditem13 = 
+|newqty13 = 
+|oldqty13 = 
+
+|newitem14 = 
+|olditem14 = 
+|newqty14 = 
+|oldqty14 = 
+
+|newitem15 = 
+|olditem15 = 
+|newqty15 = 
+|oldqty15 = 
+
+|newitem16 = 
+|olditem16 = 
+|newqty16 = 
+|oldqty16 = 
+|rawinfo = 
+
+|source = 
+|notes = 
+|credits = 
+}}</pre>
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+== Parameters ==
+=== month ===
+Sets the month to display on top of the forum thread, e.g. "month = January" becomes January XXXX ranking rewards. Defaults to "January" if not specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== year ===
+Sets the year to display on top of the forum thread, e.g. "year = 2016" becomes XXXX 2016 ranking rewards. Defaults to "2016" if not specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== newreward ===
+Sets the title of the new reward within the table and makes the words a wiki link. Defaults to [[12cm Single Gun Mount]] if not specified. Note: this parameter does not need one to enclose the name of the equipment/item with square brackets.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== newimage{1,4} ===
+Sets the rewards to show within the "New reward" section. Arbitrarily allows the use of:
+* [[Template:EquipmentCardKai]]
+* [[Template:EquipmentGraphicKai]]
+* [[Template:ItemStack]]
+* [[:File:]]
+Defaults to [[12cm Single Gun Mount]] in the variation of both [[Template:EquipmentCardKai]] as well as [[Template:EquipmentGraphicKai]] if not specified. Up to four images can be shown.
+
+==== Example: ====
+<pre>
+newimage1 = {{EquipmentCardKai|12cm Single Gun Mount|link=File:12cm Single Gun Mount 001 Full.png|size=150px}}
+newimage2 = {{EquipmentGraphicKai|12cm Single Gun Mount|link=File:12cm Single Gun Mount 001 Equipment.png|size=150px}}
+newimage3 = {{EquipmentGraphicKai|12cm Single Gun Mount|fairy=true|link=File:12cm Single Gun Mount 001 Card.png|size=150px}}
+newimage4 = {{EquipmentGraphicKai|12cm Single Gun Mount|fairy=only|link=File:12cm Single Gun Mount 001 Character.png|size=150px}}
+</pre>
+
+==== Becomes: ====
+{| class="wikitable" style="text-align:center;"
+|-
+| {{EquipmentCardKai|12cm Single Gun Mount|link=File:12cm Single Gun Mount 001 Full.png|size=150px}}
+| {{EquipmentGraphicKai|12cm Single Gun Mount|link=File:12cm Single Gun Mount 001 Equipment.png|size=150px}}
+| {{EquipmentGraphicKai|12cm Single Gun Mount|fairy=true|link=File:12cm Single Gun Mount 001 Card.png|size=150px}}
+| {{EquipmentGraphicKai|12cm Single Gun Mount|fairy=only|link=File:12cm Single Gun Mount 001 Character.png|size=150px}}
+|}
+
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== reltweetslink{1,5} ===
+Sets the link of the developer tweet. For more information you may want to refer to [[Template:MultiTweet]] "link" parameter. Up to 5 developer tweet links can be specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== reltweetsJP{1,5} ===
+Sets the information as per developer tweet have stated. For more information you may want to refer to [[Template:MultiTweet]] "JP0{1,5}" parameter. Up to 5 developer tweet statements can be specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== reltweetsEN{1,5} ===
+Sets the information for any translated developer tweets to be shown on the page. For more information you may want to refer to [[Template:MultiTweet]] "EN0{1,5}" parameter. Up to 5 translated developer tweet statements can be specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== reltweetsTL{1,5} ===
+Sets the information on who provided translations for developer tweets and is to be shown on the page. For more information you may want to refer to [[Template:MultiTweet]] "TL0{1,5}" parameter. An infinite amount of translators can be set per tweets but only up to 5 translations can be specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== newitem{1,16} ===
+Sets the rewards to show only on the "Stylish" tab. This parameter is usually reserved for those wishing to use [[Template:ItemStack]], [[Template:EquipmentCardKai]] or [[:File:]] and can be specified in specified something like this:
+<pre><nowiki>{{EquipmentCardKai|12cm Single Gun Mount|size=120px}}</nowiki></pre>
+Notably the developers only offers a maximum of four rewards per "tier" for rankings. "newitem{1,4}" parameter specifications would thereby imply the four rewards offered to top 5 players on any given [[Servers|server]], whereas "newitem{13,16}" parameter specifications would thereby imply (up to) four rewards for those who were ranked from 101 to 500.
+
+Defaults to <nowiki>{{EquipmentCardKai|12cm Single Gun Mount|size=120px}}</nowiki> if not specified for:
+* All four rewards in the top 5 row.
+* The first three rewards for those who were placed in between 6th to 20th place.
+* The first two rewards for those who were placed in between 21st to 100th place.
+* The first reward for those who were placed in between 101st to 500th place.
+
+==== Example: ====
+<pre>
+newitem1 = {{EquipmentCardKai|12cm Single Gun Mount|size=120px}}
+newitem2 = {{EquipmentCardKai|12.7cm Twin Gun Mount|size=120px}}
+newitem3 = {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=120px}}
+newitem4 = {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=120px}}
+</pre>
+
+==== Becomes: ====
+{| class="wikitable" style="text-align:center;"
+! style="background:gray;color:white;font-size:18px" colspan="4" | <div class="mw-customtoggle-top5"><span style="cursor:help;" title="Kangou Kantai Kikan Kantai">聯合艦隊基幹艦隊</span> 1st~5th place</div>
+|-
+<!-- First item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|12cm Single Gun Mount|size=120px}}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[]]</div>
+<!-- Second item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|12.7cm Twin Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[]]</div>
+<!-- Third item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[]]</div>
+<!-- Last item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[]]</div>
+|}
+
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== olditem{1,16} ===
+Sets the name of the reward using pure text format. This information will be displayed on both "Stylish" and "Classic" tab. Note: this parameter does not need one to enclose the name of the equipment/item with square brackets.
+
+Defaults to [[12cm Single Gun Mount]] if not specified for:
+* All four rewards in the top 5 row.
+* The first three rewards for those who were placed in between 6th to 20th place.
+* The first two rewards for those who were placed in between 21st to 100th place.
+* The first reward for those who were placed in between 101st to 500th place.
+
+==== Example: ====
+<pre>
+newitem1 = {{EquipmentCardKai|12cm Single Gun Mount|size=120px}}
+newitem2 = {{EquipmentCardKai|12.7cm Twin Gun Mount|size=120px}}
+newitem3 = {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=120px}}
+newitem4 = {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=120px}}
+olditem1 = 12cm Single Gun Mount
+olditem2 = 12.7cm Twin Gun Mount
+olditem3 = 10cm Twin High-angle Gun Mount
+olditem4 = 10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director
+</pre>
+
+==== For stylish table it becomes: ====
+{| class="wikitable" style="text-align:center;"
+! style="background:gray;color:white;font-size:18px" colspan="4" | <div class="mw-customtoggle-top5"><span style="cursor:help;" title="Kangou Kantai Kikan Kantai">聯合艦隊基幹艦隊</span> 1st~5th place</div>
+|-
+<!-- First item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|12cm Single Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[12cm Single Gun Mount]]</div>
+<!-- Second item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|12.7cm Twin Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[12.7cm Twin Gun Mount]]</div>
+<!-- Third item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[10cm Twin High-angle Gun Mount]]</div>
+<!-- Last item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]</div>
+|}
+
+==== For classic table it becomes: ====
+<nowiki>===1~5===</nowiki>
+{| class="wikitable"
+! Equipment name
+! Quantity
+|-
+| [[12cm Single Gun Mount]]
+| <div style="text-align:center;"></div>
+|-
+| [[12.7cm Twin Gun Mount]]
+| <div style="text-align:center;"></div>
+|-
+| [[10cm Twin High-angle Gun Mount]]
+| <div style="text-align:center;"></div>
+|-
+| [[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]
+| <div style="text-align:center;"></div>
+|}
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== newqty{1,16} ===
+Sets the quantity for the specified item in "newitem{1,16}" parameter. This parameter is used only on the "Stylish" tab and is used in conjunction with [[Template:ItemStack]] "text" parameter. Each "newqty{1,16}" parameter corresponds to "newitem{1,16}" parameter - that is if setting for the amount of the first item is "x1" it will show that amount as "x1" for the first reward respectively. 
+
+Defaults to "x1" if not specified for:
+* All four rewards in the top 5 row.
+* The first three rewards for those who were placed in between 6th to 20th place.
+* The first two rewards for those who were placed in between 21st to 100th place.
+* The first reward for those who were placed in between 101st to 500th place.
+
+==== Example: ====
+<pre>
+newitem1 = {{EquipmentCardKai|12cm Single Gun Mount|size=120px}}
+newitem2 = {{EquipmentCardKai|12.7cm Twin Gun Mount|size=120px}}
+newitem3 = {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=120px}}
+newitem4 = {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=120px}}
+olditem1 = 12cm Single Gun Mount
+olditem2 = 12.7cm Twin Gun Mount
+olditem3 = 10cm Twin High-angle Gun Mount
+olditem4 = 10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director
+newqty1 = x4 
+newqty2 = x3
+newqty3 = x2
+newqty4 = x1
+</pre>
+
+==== For stylish table it becomes: ====
+{| class="wikitable" style="text-align:center;"
+! style="background:gray;color:white;font-size:18px" colspan="4" | <div class="mw-customtoggle-top5"><span style="cursor:help;" title="Kangou Kantai Kikan Kantai">聯合艦隊基幹艦隊</span> 1st~5th place</div>
+|-
+<!-- First item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|12cm Single Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x4
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[12cm Single Gun Mount]]</div>
+<!-- Second item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|12.7cm Twin Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x3
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[12.7cm Twin Gun Mount]]</div>
+<!-- Third item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x2
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[10cm Twin High-angle Gun Mount]]</div>
+<!-- Last item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]</div>
+|}
+
+==== For classic table it becomes: ====
+<nowiki>===1~5===</nowiki>
+{| class="wikitable"
+! Equipment name
+! Quantity
+|-
+| [[12cm Single Gun Mount]]
+| <div style="text-align:center;"></div>
+|-
+| [[12.7cm Twin Gun Mount]]
+| <div style="text-align:center;"></div>
+|-
+| [[10cm Twin High-angle Gun Mount]]
+| <div style="text-align:center;"></div>
+|-
+| [[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]
+| <div style="text-align:center;"></div>
+|}
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== oldqty{1,16} ===
+Sets the quantity for the specified item in "olditem{1,16}" parameter. This parameter is used only on the "Classic" tab and is automatically centered for the amount as specified for the reward. Each "oldqty{1,16}" parameter corresponds to "olditem{1,16}" parameter - that is if the setting for the amount of the first item is "1" it will show that amount as "1" for the first reward respectively. 
+
+Defaults to "1" if not specified for:
+* All four rewards in the top 5 row.
+* The first three rewards for those who were placed in between 6th to 20th place.
+* The first two rewards for those who were placed in between 21st to 100th place.
+* The first reward for those who were placed in between 101st to 500th place.
+
+==== Example: ====
+<pre>
+newitem1 = {{EquipmentCardKai|12cm Single Gun Mount|size=120px}}
+newitem2 = {{EquipmentCardKai|12.7cm Twin Gun Mount|size=120px}}
+newitem3 = {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=120px}}
+newitem4 = {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=120px}}
+olditem1 = 12cm Single Gun Mount
+olditem2 = 12.7cm Twin Gun Mount
+olditem3 = 10cm Twin High-angle Gun Mount
+olditem4 = 10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director
+newqty1 = x4 
+newqty2 = x3
+newqty3 = x2
+newqty4 = x1
+oldqty1 = 4
+oldqty2 = 3
+oldqty3 = 2
+oldqty4 = 1
+</pre>
+
+==== For stylish table it becomes: ====
+{| class="wikitable" style="text-align:center;"
+! style="background:gray;color:white;font-size:18px" colspan="4" | <div class="mw-customtoggle-top5"><span style="cursor:help;" title="Kangou Kantai Kikan Kantai">聯合艦隊基幹艦隊</span> 1st~5th place</div>
+|-
+<!-- First item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|12cm Single Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x4
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[12cm Single Gun Mount]]</div>
+<!-- Second item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|12.7cm Twin Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x3
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[12.7cm Twin Gun Mount]]</div>
+<!-- Third item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x2
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[10cm Twin High-angle Gun Mount]]</div>
+<!-- Last item -->
+|{{ItemStack
+|item = {{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=120px}}
+|text-position = bottom:-55px;right:0px;
+|font-size = 18px
+|text = x1
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">
+[[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]</div>
+|}
+
+==== For classic table it becomes: ====
+<nowiki>===1~5===</nowiki>
+{| class="wikitable"
+! Equipment name
+! Quantity
+|-
+| [[12cm Single Gun Mount]]
+| <div style="text-align:center;">4</div>
+|-
+| [[12.7cm Twin Gun Mount]]
+| <div style="text-align:center;">3</div>
+|-
+| [[10cm Twin High-angle Gun Mount]]
+| <div style="text-align:center;">2</div>
+|-
+| [[10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director]]
+| <div style="text-align:center;">1</div>
+|}
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== rawinfo ===
+Allows an arbitrary text to be inserted into the Raw (Japanese) tab(ber). This area is usually reserved for those wishing to throw up Japanese ranking rewards for the time being or to provide the original source as needed.
+
+Defaults to: "Original text from Japanese sites not provided"
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== source ===
+Allows an infinite amounts of source(s) to be specified within this field. The first line is set with a bullet point, however subsequent lines will require a new line with a bullet point for any additional information.
+
+No defaults has been specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== notes ===
+Allows an infinite amounts of note(s) to be specified within this field. The first line is set with a bullet point, however subsequent lines will require a new line with a bullet point for any additional information.
+
+No defaults has been specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+=== credits ===
+Allows an infinite amounts of credit(s) to be specified within this field. The first line is set with a bullet point, however subsequent lines will require a new line with a bullet point for any additional information.
+
+No defaults has been specified.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>

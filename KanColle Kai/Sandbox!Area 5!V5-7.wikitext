@@ -1,0 +1,1237 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:60%;" | V5-7:【反攻迎撃海域】ソロモン海戦
+| rowspan="3" style="text-align:center;width:40%;" | ''No Banner''
+|-
+! Items
+| None
+|-
+! Restrictions
+| None
+|-
+! Strategy Info
+| -
+| -
+|}
+<center>[[File:Vita Map Image 5-7.png|600px]]</center>
+==Map guide==
+{{Map/Branching
+|id = A5CA
+|A/empty -> B, D = *Choice node
+}}
+*'''Node '''{{Event/Route|D|red}}''' is the only day battle node of the map. Every other node including the boss node are night battle only nodes.'''
+** It is recommended to take advantage of night battle equipment ({{StarShell}}{{EquipmentLink|Star Shell}} and {{Seaplane}}{{EquipmentLink|Type 98 Recon Seaplane (Night Scout)}}) which can be obtained as stock items of {{ShipLink|Sendai Kai Ni}}.
+** Avoid equipping your ships with day battle setups (e.g using {{Seaplane}} outside of night scout).
+*Node {{Event/Route|A|blue}} is a choice node between the day battle {{Event/Route|D|red}} and the night battle {{Event/Route|B|red}}.
+**While node {{Event/Route|D|red}} may seem a preferable choice, beware as it contains on almost every difficulty a submarine elite on line ahead that could wreck any of your ships with the opening torpedo.
+*Boss node {{Event/Route|F|red}} is a night battle against {{ShipLink|Airfield Princess|Airfield Princess/II|text=Airfield Princess}}, an installation type enemy.
+**You will only have 6 shots to make your attempts to win. It is recommended to use ships capable of equipping {{GreenAmmo}}.
+
+*Given the randomness of night battles, it is recommended to make use of the '''Combined Fleet''' mechanic which is only available for counterattack maps:
+**It is possible to sortie 2 fleets, one at a time, in the same map by having two fleets on the hexagon before the counterattack trigger.
+**The first fleet will have a choice after each battle of either letting the second fleet advance, retreating or advancing on its own.
+***if the first choice is taken, the second fleet will pick up the sortie from where the first fleet left off. This is useful to be able to advance after Taihas or to fight the boss with a fleet with no ammo nor fuel penality.
+***'''After choosing to advance with the second fleet, there is no returning back to the first fleet'''.
+
+
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=南方侵攻前衛艦隊 A群
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|602
+|566
+|527
+|592
+|576
+|576
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|380
+|601
+|566
+|527
+|591
+|576
+|576
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|360
+|566
+|527
+|555
+|591
+|575
+|575
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|340
+|527
+|527
+|555
+|591
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=南方侵攻前衛艦隊 B群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|500
+|602
+|595
+|595
+|576
+|576
+|571
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|450
+|601
+|595
+|595
+|576
+|576
+|571
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|601
+|595
+|594
+|575
+|575
+|571
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|370
+|555
+|595
+|594
+|575
+|575
+|533
+|-
+}}
+{{Map/Nodes|name=南方侵攻増援部隊
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|700
+|602
+|558
+|558
+|558
+|597
+|597
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|650
+|602
+|558
+|558
+|558
+|577
+|577
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|600
+|601
+|558
+|558
+|558
+|577
+|577
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|550
+|555
+|558
+|558
+|558
+|576
+|576
+|-
+}}
+{{Map/Nodes|name=南方侵攻戦艦部隊
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|550
+|557
+|557
+|576
+|576
+|576
+|576
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|500
+|557
+|557
+|575
+|575
+|575
+|575
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|480
+|557
+|557
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=再占領深海航空基地
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|800
+|633
+|548
+|558
+|558
+|577
+|577
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|750
+|632
+|548
+|558
+|558
+|576
+|576
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|700
+|631
+|547
+|558
+|558
+|576
+|576
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|650
+|556
+|547
+|558
+|558
+|575
+|575
+|-
+}}
+</div> <!-- overflow -->
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=南方侵攻前衛艦隊 A群
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|360
+|566
+|527
+|555
+|591
+|575
+|575
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|340
+|527
+|527
+|555
+|591
+|575
+|575
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|320
+|527
+|527
+|519
+|591
+|575
+|575
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|300
+|527
+|527
+|518
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻前衛艦隊 B群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|601
+|595
+|594
+|575
+|575
+|571
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|370
+|555
+|595
+|594
+|575
+|575
+|533
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|340
+|555
+|594
+|594
+|575
+|575
+|533
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|300
+|555
+|594
+|575
+|501
+|501
+|532
+|-
+}}
+{{Map/Nodes|name=南方侵攻増援部隊
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|650
+|602
+|558
+|558
+|558
+|577
+|577
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|600
+|601
+|558
+|558
+|558
+|577
+|577
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|550
+|555
+|558
+|558
+|558
+|576
+|576
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|500
+|555
+|558
+|526
+|526
+|575
+|575
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|450
+|555
+|526
+|526
+|526
+|575
+|575
+|-
+}}
+{{Map/Nodes|name=南方侵攻戦艦部隊
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|500
+|557
+|557
+|575
+|575
+|575
+|575
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|480
+|557
+|557
+|575
+|575
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|460
+|557
+|529
+|575
+|575
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|440
+|557
+|575
+|575
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|420
+|557
+|501
+|501
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|400
+|557
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=再占領深海航空基地
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|700
+|631
+|547
+|558
+|558
+|576
+|576
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|650
+|556
+|547
+|558
+|558
+|575
+|575
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|600
+|556
+|546
+|526
+|526
+|575
+|575
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|580
+|556
+|546
+|513
+|513
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|乙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=南方侵攻前衛艦隊 A群
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|320
+|527
+|527
+|519
+|591
+|575
+|575
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|300
+|527
+|527
+|518
+|575
+|501
+|501
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|260
+|522
+|518
+|575
+|501
+|501
+|501
+|-
+|B
+|Night/BaseXP
+|{{Formation|Double Line}}
+|230
+|522
+|518
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻前衛艦隊 B群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|340
+|555
+|594
+|594
+|575
+|575
+|533
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|300
+|555
+|594
+|575
+|501
+|501
+|532
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|250
+|555
+|575
+|575
+|501
+|501
+|532
+|-
+}}
+{{Map/Nodes|name=南方侵攻増援部隊
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|500
+|555
+|558
+|526
+|526
+|575
+|575
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|450
+|555
+|526
+|526
+|526
+|575
+|575
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|400
+|555
+|526
+|513
+|513
+|575
+|575
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|380
+|519
+|526
+|513
+|513
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻戦艦部隊
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|440
+|557
+|575
+|575
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|420
+|557
+|501
+|501
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|400
+|557
+|501
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|250
+|529
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=再占領深海航空基地
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|600
+|556
+|546
+|526
+|526
+|575
+|575
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|580
+|556
+|546
+|513
+|513
+|501
+|501
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|560
+|556
+|513
+|513
+|501
+|501
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|530
+|556
+|513
+|513
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|500
+|556
+|-
+}}
+</div> <!-- overflow -->
+|-|丙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=南方侵攻前衛艦隊 A群
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|300
+|527
+|527
+|518
+|575
+|501
+|501
+|-
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|260
+|522
+|518
+|575
+|501
+|501
+|501
+|-
+|B
+|Night/BaseXP
+|{{Formation|Double Line}}
+|230
+|522
+|518
+|575
+|501
+|501
+|-
+|B
+|Night/BaseXP
+|{{Formation|Double Line}}
+|200
+|522
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻前衛艦隊 B群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|250
+|555
+|575
+|575
+|501
+|501
+|532
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|519
+|575
+|575
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|519
+|501
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻増援部隊
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|450
+|555
+|526
+|526
+|526
+|575
+|575
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|400
+|555
+|526
+|513
+|513
+|575
+|575
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|380
+|519
+|526
+|513
+|513
+|501
+|501
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|360
+|519
+|513
+|513
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻戦艦部隊
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|400
+|557
+|501
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|250
+|529
+|501
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|200
+|524
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=再占領深海航空基地
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|580
+|556
+|546
+|513
+|513
+|501
+|501
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|560
+|556
+|513
+|513
+|501
+|501
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|530
+|556
+|513
+|513
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|500
+|556
+|-
+}}
+</div> <!-- overflow -->
+|-|丁=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=南方侵攻前衛艦隊 A群
+|B
+|Night/BaseXP
+|{{Formation|Line Ahead}}
+|260
+|522
+|518
+|575
+|501
+|501
+|501
+|-
+|B
+|Night/BaseXP
+|{{Formation|Double Line}}
+|230
+|522
+|518
+|575
+|501
+|501
+|-
+|B
+|Night/BaseXP
+|{{Formation|Double Line}}
+|200
+|522
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻前衛艦隊 B群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|519
+|575
+|575
+|501
+|501
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|519
+|501
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻増援部隊
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|380
+|519
+|526
+|513
+|513
+|501
+|501
+|-
+|E
+|Night/BaseXP
+|{{Formation|Double Line}}
+|360
+|519
+|513
+|513
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=南方侵攻戦艦部隊
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|250
+|529
+|501
+|501
+|501
+|-
+|C
+|Night/BaseXP
+|{{Formation|Double Line}}
+|200
+|524
+|501
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=再占領深海航空基地
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|530
+|556
+|513
+|513
+|-
+|F
+|Boss/Night/BaseXP
+|{{Formation|Diamond}}
+|500
+|556
+|-
+}}
+</div> <!-- overflow -->
+</tabber>
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F
+|boss = F
+|{{ShipFrom|413}} : C, F
+|{{ShipFrom|405}} : C, F
+|{{ShipFrom|116}} : C, E, F
+|{{ShipFrom|20}} : C, E, F
+|{{ShipFrom|21}} : C, E, F
+|{{ShipFrom|86}} : C, E, F
+|{{ShipFrom|85}} : C, E, F
+|{{ShipFrom|75}} : C, E, F
+|{{ShipFrom|92}} : C, E, F
+|{{ShipFrom|22}} : C, E, F
+|{{ShipFrom|55}} : C, E,
+|{{ShipFrom|45}} : B, C, D, E, F
+|{{ShipFrom|9}} : C, E, F
+|{{ShipFrom|34}} : B, C, D, E, F
+|{{ShipFrom|36}} : B, C, D, E, F
+|{{ShipFrom|37}} : B, C, D, E, F
+|{{ShipFrom|42}} : B, C, D, E, F
+|{{ShipFrom|43}} : B, C, D, E, F
+|{{ShipFrom|44}} : B, C, D, E, F
+|{{ShipFrom|46}} : B, C, D, E, F
+|{{ShipFrom|10}} : C, D, E, F
+|{{ShipFrom|32}} : B, C, D, E, F
+|{{ShipFrom|422}} : F
+|{{ShipFrom|181}} : F
+|{{ShipFrom|124}} : F
+|{{ShipFrom|125}} : F
+|{{ShipFrom|123}} : F
+|{{ShipFrom|71}} : F
+|{{ShipFrom|97}} : F
+|{{ShipFrom|51}} : F
+|{{ShipFrom|69}} : F
+}}
+|-|甲=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F
+|boss = F
+|{{ShipFrom|413}} : C, F
+|{{ShipFrom|405}} : C, F
+|{{ShipFrom|116}} : C, F
+|{{ShipFrom|20}} : C, E, F
+|{{ShipFrom|21}} : C, E, F
+|{{ShipFrom|86}} : C, E, F
+|{{ShipFrom|85}} : C, E, F
+|{{ShipFrom|75}} : C, E, F
+|{{ShipFrom|92}} : C, E, F
+|{{ShipFrom|22}} : C, E, F
+|{{ShipFrom|55}} : C, E,
+|{{ShipFrom|45}} : B, C, D, E, F
+|{{ShipFrom|9}} : C, E, F
+|{{ShipFrom|34}} : B, C, D, E, F
+|{{ShipFrom|36}} : B, C, D, E, F
+|{{ShipFrom|37}} : B, C, D, E, F
+|{{ShipFrom|42}} : B, C, D, E, F
+|{{ShipFrom|43}} : B, C, D, E, F
+|{{ShipFrom|44}} : B, C, D, E, F
+|{{ShipFrom|46}} : B, C, D, E, F
+|{{ShipFrom|10}} : C, D, E, F
+|{{ShipFrom|32}} : B, C, D, E, F
+|{{ShipFrom|422}} : F
+|{{ShipFrom|181}} : F
+|{{ShipFrom|124}} : F
+|{{ShipFrom|125}} : F
+|{{ShipFrom|123}} : F
+|{{ShipFrom|71}} : F
+|{{ShipFrom|97}} : F
+|{{ShipFrom|51}} : F
+|{{ShipFrom|69}} : F
+}}
+|-|乙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F
+|boss = F
+|{{ShipFrom|413}} : F
+|{{ShipFrom|405}} : C, F
+|{{ShipFrom|116}} : C, F
+|{{ShipFrom|20}} : C, F
+|{{ShipFrom|21}} : C, E, F
+|{{ShipFrom|86}} : C, E, F
+|{{ShipFrom|85}} : C, E, F
+|{{ShipFrom|75}} : C, E, F
+|{{ShipFrom|92}} : C, E, F
+|{{ShipFrom|22}} : C, E, F
+|{{ShipFrom|55}} : C, E,
+|{{ShipFrom|45}} : B, C, D, E, F
+|{{ShipFrom|9}} : C, E, F
+|{{ShipFrom|34}} : B, C, D, E, F
+|{{ShipFrom|36}} : B, C, D, E, F
+|{{ShipFrom|37}} : B, C, D, E, F
+|{{ShipFrom|42}} : B, C, D, E, F
+|{{ShipFrom|43}} : B, C, D, E, F
+|{{ShipFrom|44}} : B, C, D, E, F
+|{{ShipFrom|46}} : B, C, D, E, F
+|{{ShipFrom|10}} : C, D, E, F
+|{{ShipFrom|32}} : B, C, D, E, F
+|{{ShipFrom|181}} : F
+|{{ShipFrom|124}} : F
+|{{ShipFrom|125}} : F
+|{{ShipFrom|123}} : F
+|{{ShipFrom|71}} : F
+|{{ShipFrom|97}} : F
+|{{ShipFrom|51}} : F
+|{{ShipFrom|69}} : F
+}}
+|-|丙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F
+|boss = F
+|{{ShipFrom|413}} : F
+|{{ShipFrom|405}} : F
+|{{ShipFrom|116}} : C, F
+|{{ShipFrom|20}} : C, F
+|{{ShipFrom|21}} : C, E, F
+|{{ShipFrom|86}} : C, E, F
+|{{ShipFrom|85}} : C, E, F
+|{{ShipFrom|75}} : C, E, F
+|{{ShipFrom|92}} : C, E, F
+|{{ShipFrom|22}} : C, E, F
+|{{ShipFrom|55}} : C, E,
+|{{ShipFrom|45}} : B, C, D, E, F
+|{{ShipFrom|9}} : C, E, F
+|{{ShipFrom|34}} : B, C, D, E, F
+|{{ShipFrom|36}} : B, C, D, E, F
+|{{ShipFrom|37}} : B, C, D, E, F
+|{{ShipFrom|42}} : B, C, D, E, F
+|{{ShipFrom|43}} : B, C, D, E, F
+|{{ShipFrom|44}} : B, C, D, E, F
+|{{ShipFrom|46}} : B, C, D, E, F
+|{{ShipFrom|10}} : C, D, E, F
+|{{ShipFrom|32}} : B, C, D, E, F
+|{{ShipFrom|124}} : F
+|{{ShipFrom|125}} : F
+|{{ShipFrom|123}} : F
+|{{ShipFrom|71}} : F
+|{{ShipFrom|97}} : F
+|{{ShipFrom|51}} : F
+|{{ShipFrom|69}} : F
+}}
+|-|丁=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  B, C, D, E, F
+|boss = F
+|{{ShipFrom|116}} : F
+|{{ShipFrom|20}} : C, F
+|{{ShipFrom|21}} : C, E, F
+|{{ShipFrom|86}} : C, E, F
+|{{ShipFrom|85}} : C, E, F
+|{{ShipFrom|75}} : C, F
+|{{ShipFrom|92}} : C, F
+|{{ShipFrom|22}} : C, E, F
+|{{ShipFrom|55}} : C, E,
+|{{ShipFrom|45}} : B, C, D, E, F
+|{{ShipFrom|9}} : C, E, F
+|{{ShipFrom|34}} : B, C, D, E, F
+|{{ShipFrom|36}} : B, C, D, E, F
+|{{ShipFrom|37}} : B, C, D, E, F
+|{{ShipFrom|42}} : B, C, D, E, F
+|{{ShipFrom|43}} : B, C, D, E, F
+|{{ShipFrom|44}} : B, C, D, E, F
+|{{ShipFrom|46}} : B, C, D, E, F
+|{{ShipFrom|10}} : C, D, E, F
+|{{ShipFrom|32}} : B, C, D, E, F
+|{{ShipFrom|124}} : F
+|{{ShipFrom|125}} : F
+|{{ShipFrom|123}} : F
+|{{ShipFrom|71}} : F
+|{{ShipFrom|97}} : F
+|{{ShipFrom|51}} : F
+|{{ShipFrom|69}} : F
+}}
+</tabber>
+__NOTOC__

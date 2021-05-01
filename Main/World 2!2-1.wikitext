@@ -1,0 +1,62 @@
+{{Map/Header}}
+{{Map/Info
+|en = Adjacent Seas of Southwest Islands
+|jp = 南西諸島近海
+|romaji = Nansē-shotō kinkai
+|exp_hq = 60
+|exp_hq_boss = 720
+|strategy_name = Southwest Islands Patrol
+|strategy_name_ja = 南西諸島哨戒
+|strategy_info = Deploy a fleet in  the direction of Southwest Islands!  Patrol this area, and remove invaded enemies here. Secure the safety of Southwestern route!
+
+|strategy_info_ja = 艦隊を南西諸島方面に展開！同海域の哨戒を実施、同水域に侵入した敵を排除、南西航路の安全を確保せよ！
+}}
+{{MapBranchingTable
+|expand = true
+|id = 2-1
+|C -> B/resource, D, E/resource = 
+* Meeting '''ANY''' of the following requirements to '''FORCE''' B:
+** Amount of CV(L/B) ≥ 3
+** Amount of BBV ≥ 2
+*If fleet contains BBV
+**Random routing between B and E if fleet also contains AV or AS
+**Random routing between B and D otherwise
+*If fleet contains AO
+**Go to B if fleet contains no SS(V)
+**Random between D and E otherwise
+*Go to E if fleet contains AV.
+*Otherwise, random routing between D and E.
+
+|E/resource -> D, F, H = 
+*Go to F if (F)BB(V)+CV(B/L) ≥ 5
+*Go to D if fleet contains any (F)BB(V), SS(V) or CV(B/L) '''and''' contains 6 ships 
+**Random between F and D if the amount of ships in fleet is not 6 (25% F, 75% D)
+*Meet '''ANY''' of the following to go to H
+**Fast fleet, amount of ships in fleet ≤ 5, CL = 1 and DD ≥ 3 ('''Overrides D node branching above''')
+**CL ≤ 1 and DD+DE ≥ 5 (No other ship type allowed)
+**Fast fleet, CL = 1 and DD ≥ 4
+*Go to D if fleet doesn't meet any of the above conditions and contains 6 ships
+*Otherwise, random between F and D (25% F, 75% D)
+
+|F -> G/empty, H = 
+*Go to G if the amount of ships in fleet = 6 '''OR''' (F)BB(V)+CV(L/B) ≥ 5
+*Go to H if CL+DD ≥ 3
+*Otherwise, random routing
+}}
+
+===Recommended Fleet===
+As long as you have 2 or less CV(L), you will be able to reach the Boss Node.
+*2 CV(L) '''(MAX)''' + 4 XX
+**Routes: {{Event/Route|C|red|D|red|H|red}} or {{Event/Route|C|red|E|green|D|red|H|red}}
+**Due to the flexibility in Fleet Composition and being able to reach the Boss easily, this Map is an excellent option to clear [[Quests#Bd7|Daily Quest Bd7]] even with the use of multiple Submarines, though there is the risk of facing some Late-Model Enemy Destroyers packing ASW Equipment.
+**You might off-route to node G if you have 6 ships, and 5 of them are heavies ((F)BB(V) or CV(B/L)).
+* 1 CL 4 DD 1 AV (Fast)
+**Routes: {{Event/Route|C|red|E|green|H|red}}
+**This fleet will complete the map in only two battles, at the expense of sacrificing any carrier strike potential. Yura and Nisshin excel here as they are able to bring opening torpedoes as well as seaplanes to the boss. One SPF and one bomber should suffice to give you a 33% chance for AS, and guarantee at least Air Parity.
+
+===For Farming Transport + Carrier===
+With having 3 or more CV(L/B), your fleet will be automatically direct to Node B where there is a resources nodes for steel, then proceed to node A where there will be always 1 carrier and 2 Transport to farm.
+*3 or more CV(L/B) + 3 or less XX
+**Same flexibility as the Fleet Composition to the boss, these composition can clear [[Quests#Bd4|Bd4]], [[Quests#Bd5|Bd5]], [[Quests#Bd6|Bd6]], [[Quests#Bw2|Bw2]],[[Quests#Bw3|Bw3]], and [[Quests#Bw4|Bw4]] with more damage output and easier Air Superiority at the cost of little bit higher resources usage (especially Bauxite).
+
+{{Map/Footer}}

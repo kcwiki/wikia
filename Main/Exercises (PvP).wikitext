@@ -1,0 +1,251 @@
+Naval Exercises are practice matches where you combat the fleets of other admirals. Exercises reset twice daily, once at 03:00 JST and again at 15:00 JST. This means you can run a maximum of 10 exercises per day.
+
+<div style="color:red">
+#Opponent's fleet can change while you're choosing to fight it.
+#If you refresh or get disconnected<!-- i.e. don't reach api_req_practice/battle_result, night battle is ok --> during a practice match you will not get any experience from it, the rank will be calculated<!-- based on day or night battle when disconnected during night battle? -->, but it will not affect PvP quests or Admiral's PvP counters and win rate (ships' fuel and ammo also will be unchanged<!-- bauxite? morale? e.g. day battle S-rank seems to drop morale by 3 -->). That is, refresh can't be used to speed-up PvP, but can be used to avoid unwanted losses (e.g., due to 1.). Note, however, that intentional refresh is against ToS.
+#In PvP defeated ships (initial HP - dealt damage <= 0, 0 HP on the API level, can't be targeted anymore, treated as sunken by [[Combat/Main#Victory_Conditions|victory conditions]]) are displayed as having 1 HP, same as ships that weren't defeated and actually have 1 HP (initial HP - dealt damage = 1, still can be targeted).
+</div>
+
+==Benefits of Participating==
+
+The first and most obvious benefit of exercises is that participation is required for [[Quests#Exercise_Quests_.28.E6.BC.94.E7.BF.92.29|several quests]]. The exercise list is updated twice daily; however, the new exercise list is updated 2 hours before the quest reset, so you get 15 chances in total (another 5 from the next day) to complete all your daily/weekly PvP quests.
+
+Exercises are also a very safe way of gaining experience for your ships. Ships are automatically repaired back to their pre-exercise status after a battle has concluded, minus a small amount of ammo and fuel. Overall, exercises can provide the best Experience/Resources ratio in the game. You also [[Experience_and_Rank#HQ_Experience_from.C2.A0Exercises_.28PvP.29|gain HQ experience]] based on your opponent's HQ level and battle score (contrary to experience gain for ships, HQ experience gain is relatively small).
+
+Finally, winning exercises generally, results in your ships gaining [[Morale/Fatigue|morale]]. PvP modifiers for morale are generally the same as sorties; for example, a ship can gain morale by achieving MVP in an exercise. However, unlike sorties, returning from exercises does not drain morale, allowing admirals to easily generate morale for their ships for the purposes of sortieing or expeditions. Since achieving an S rank gives +1 morale to all participating ships, ships can go from 49 morale to 50, instantly sparkling them.
+
+Players are advised that if a heavily damaged ship is sent to PVP and takes enough damage during the battle, it will be treated as sunken (although displayed as still having 1 hp) until the battle is over, earning 0 exp and lowering your battle rank. However, unlike regular sorties, the ship is '''not''' permanently lost and remains in your fleet after the battle.
+
+==When to Run Exercises==
+{| class="wikitable" style="width:100%;text-align:center;font-size:12px"
+!
+!colspan="24"|Second ship level
+|-
+!{{tooltip|FS|Flagship level}}
+!1||5||10||15||20||25||30||40||50||60||70||80||90||99||110||120||130||140||150||155||160||165||170||175
+|-
+!1
+|style="color:blue"|0||style="color:blue"|3||style="color:blue"|15||style="color:blue"|35||style="color:blue"|63||100||145||260||408||style="color:red"|510||519||527||536||553||554||560||573||593||style="color:red"|618||633||641||659||667||689
+|-
+!5
+|style="color:blue"|10||style="color:blue"|13||style="color:blue"|25||style="color:blue"|45||style="color:blue"|73||110||155||270||418||style="color:red"|510||519||528||536||553||555||560||573||593||style="color:red"|618||633||641||659||667||689
+|-
+!10
+|style="color:blue"|45||style="color:blue"|48||style="color:blue"|60||style="color:blue"|80||108||145||190||305||453||style="color:red"|512||520||528||536||553||555||561||574||593||style="color:red"|618||633||641||660||667||689
+|-
+!15
+|105||108||120||140||168||205||250||365||style="color:red"|503||514||522||529||537||554||555||561||574||593||style="color:red"|618||633||641||660||667||690
+|-
+!20
+|190||193||205||225||253||290||335||450||style="color:red"|509||517||523||531||538||554||556||562||575||594||style="color:red"|619||633||641||660||668||690
+|-
+!25
+|300||303||315||335||363||400||445||style="color:red"|507||514||520||526||532||540||555||557||563||575||594||style="color:red"|619||634||642||660||668||690
+|-
+!30
+|435||438||450||470||498||style="color:red"|505||style="color:red"|508||513||518||523||528||534||541||557||558||564||576||595||style="color:red"|620||634||642||661||668||690
+|-
+!40
+|style="color:red"|516||style="color:red"|516||style="color:red"|517||style="color:red"|517||style="color:red"|518||519||520||523||526||529||534||539||545||560||561||566||578||597||style="color:red"|621||636||643||662||669||691
+|-
+!50
+|526||526||527||527||528||528||529||531||533||536||540||544||550||563||565||570||581||599||style="color:red"|623||637||645||663||671||692
+|-
+!60
+|536||536||536||536||537||537||538||539||541||543||546||550||555||568||569||574||585||style="color:red"|602||625||639||647||665||672||694
+|-
+!70
+|546||546||546||546||547||547||547||549||550||552||555||558||562||574||575||579||590||style="color:red"|606||629||642||650||667||675||696
+|-
+!80
+|557||557||557||558||558||558||558||559||561||562||564||567||571||581||582||586||596||style="color:red"|611||633||646||654||671||678||699
+|-
+!90
+|570||570||570||570||570||571||571||572||573||574||576||578||582||591||592||595||style="color:red"|604||618||639||652||659||676||683||style="color:red"|703
+|-
+!99
+|597||597||597||597||597||597||598||598||599||style="color:red"|600||style="color:red"|601||style="color:red"|603||style="color:red"|606||style="color:red"|613||style="color:red"|614||style="color:red"|616||624||636||655||666||672||688||695||style="color:red"|714
+|-
+!110
+|style="color:red"|600||style="color:red"|600||style="color:red"|600||style="color:red"|600||style="color:red"|600||style="color:red"|600||style="color:red"|600||style="color:red"|601||style="color:red"|602||603||604||606||608||615||616||619||626||638||656||668||674||690||696||style="color:red"|715
+|-
+!120
+|609||609||609||609||610||610||610||610||611||612||613||615||617||624||624||627||634||645||663||674||680||695||style="color:red"|701||720
+|-
+!130
+|631||631||631||631||631||632||632||632||633||633||635||636||638||643||644||646||652||662||678||688||694||style="color:red"|708||714||732
+|-
+!140
+|664||664||664||664||664||664||665||665||665||666||667||668||670||674||674||676||681||690||style="color:red"|704||style="color:red"|712||style="color:red"|717||730||736||752
+|-
+!150
+|style="color:red"|707||style="color:red"|707||style="color:red"|707||style="color:red"|707||style="color:red"|707||style="color:red"|707||style="color:red"|707||style="color:red"|708||style="color:red"|708||style="color:red"|709||style="color:red"|709||style="color:red"|710||style="color:red"|711||style="color:red"|715||style="color:red"|715||style="color:red"|717||style="color:red"|721||style="color:red"|728||740||747||751||762||767||782
+|-
+!155
+|732||732||732||732||732||733||733||733||733||734||734||735||736||739||740||741||745||751||762||769||773||783||787||style="color:red"|801
+|-
+!160
+|746||746||746||746||746||746||746||746||747||747||748||748||750||753||753||754||758||764||774||780||784||794||798||style="color:red"|811
+|-
+!165
+|778||778||778||778||778||778||779||779||779||779||780||781||781||784||784||786||789||794||style="color:red"|803||style="color:red"|809||style="color:red"|813||style="color:red"|822||style="color:red"|826||837
+|-
+!170
+|792||792||792||792||792||792||792||792||792||793||793||794||795||797||798||799||style="color:red"|802||style="color:red"|807||815||821||825||833||837||848
+|-
+!175
+|style="color:red"|830||style="color:red"|830||style="color:red"|830||style="color:red"|830||style="color:red"|830||style="color:red"|830||style="color:red"|830||style="color:red"|830||style="color:red"|830||style="color:red"|831||style="color:red"|831||style="color:red"|832||style="color:red"|832||style="color:red"|835||style="color:red"|835||style="color:red"|836||839||843||851||856||859||867||870||881
+|}
+
+The top row represents the level of the second ship in the fleet while the first column represents the flagship level. Generally, if the sum of the levels of the ships in the '''top two slots''' in the enemy fleet is roughly fifty or more, you can expect a [[Experience_and_Rank#Experience_from.C2.A0Exercises_.28PvP.29|base experience]] of about 500. The other four ships in the enemy fleet do not factor into [[Experience_and_Rank#Experience_from.C2.A0Exercises_.28PvP.29|the experience formula]].
+
+At low Admiral Levels, players have very low-level ships, so the experience gain from exercises tends to be bad (sometimes far lower than running sorties). Simply put, it may not be worth running many exercises until you reach higher levels. However, there is usually one admiral in your list that is three or four times your level. Even though you will likely be slaughtered by a superior force, the high base experience still means that you come out with a great deal of experience.
+
+Similar to sorties, you gain more experience with an S rank than with an A or B rank. If you can spare the resources and are certain of victory, it is almost always worth it to enter night battle to finish off a wounded enemy fleet. However, note that both A and B rank yield the same amount of experience. There is no point pursuing night battle if you have already won and still cannot finish the enemy off completely.
+
+==PvP Matching System==
+There are 3 different options:
+*演習艦隊【第一群】 Fleet Group (No.1)
+**New system #1: Opponents are selected from fleets that are stronger than those found under Fleet Group (No.2), mainly, people with higher HQ level, but will likely provide higher experience gain.
+*演習艦隊【第二群】 Fleet Group (No.2)
+**New system #2: Opponents are selected from fleets that are, what is considered "suitable", around your level. Likely to obtain less experience gain than above due to weaker fleets.
+*(Old) system
+**Old system: Opponents are selected via the previous system
+**'''NOTE''': This is the Default option for people who never change the system.
+You can choose one out of the three systems to use and switching between the three is possible. 
+*To change, click the option you preferred and wait until the next PvP reset. Your preferred system can be changed up until two hours before the PvP reset, i.e. 0100 and 1300 JST. You will not be able to make any changes after this time.
+
+==Fleet Composition==
+As always, the flagship receives bonus experience, so it makes sense to place the ship you wish to level in the flagship slot.
+
+Running carriers in exercises is not recommended. Any competent Admiral will equip their fleet with lots of anti-air, which can utterly decimate your planes. A competently equipped fleet can easily cost you 200-300 bauxite in planes. If you wish to level a carrier in exercises, consider equipping high angle guns on them instead of planes and/or maybe a fighter wing for an easy superiority. Running a carrier with bomber planes is possible if you really want that MVP boost, but you should exercise great caution in doing so; enemy destroyers and carriers are generally a no-go - the former pack AACI more often than not while the latter bring fighter planes of their own, a Maya is also a death sentence to anything with wings.
+
+''Note: As of the [[Thread:713267|22 April 2019 Update]], plane proficiency is no longer affected by exercises. This means that massive plane loss will not result in the loss of plane proficiency; on the other hand, planes cannot gain proficiency through use in exercises. Consider this while deciding whether to run any aircraft in exercises.''
+
+Battleships should form the backbone of your fleet. Their high HP and armor means that they can take a beating against all ship types, while their firepower means that they can give a beating against most ship types. The number of battleships you use should depend on the number of battleships and carriers in the enemy fleet.
+
+The air combat phase and the opening torpedo salvo can often determine who wins the fight. To this end, make sure you equip sufficient anti-air to neutralize your opponent's carriers. Fielding Kitakami and Ooi is also generally a good idea, as they can very easily one-shot ships.
+
+If the enemy has many light carriers, light cruisers, or destroyers, consider using a distraction submarine. As in sorties, anything that can target the sub will, so you can effectively divert a significant portion of the enemy's firepower to the sub. Light cruisers and destroyers will continue to target the sub (if it is still alive) in night combat, so use this to your advantage.
+
+If the enemy runs a heavy fleet filled with high-levelled battleships and fleet carriers, sometimes going toe-to-toe with them is simply unviable, in which case a submarine pack can save you the trouble. Just watch out for possible dedicated ASW elements in the mix. Fleets of less than four surface ships in any configuration are also easy pickings for your subs.
+
+One fancy trick also includes running submarine squadrons with any other ship as a flag, essentially a reverse-distraction strategy - an all-sub group always provokes the AI to form up in Line Abreast or Diamond, which can hurt your subs quite a lot under unfavourable circumstances, whereas a non-submarine flag usually makes the AI default to Line Ahead, which is awful against subs (unless their flag is a carrier, in which case it always goes Diamond and you're better off simply brute-forcing it with battleships). You are almost definitely going to lose the flag, but the rest of the fleet will do their job well, although against especially heavy fleets going night might be required. With this setup it is even possible to knock over dedicated ASW cordons, if you are feeling particularly lazy.
+===Facing Submarines===
+When facing a fleet entirely made of submarines, the line abreast formation is mandatory. As the enemy fleet's formation is based on the composition of said fleet, a fleet of four subs or more will always be in echelon formation. This is advantageous for you, as the accuracy of their preemptive torpedoes will generally suck because of this.
+
+An entire fleet consisting of submarines is ideal for leveling any ASW capable ship by securing flagship MVP. Firstly check how many submarines are in the enemy fleet and keep this in mind for it is important for securing MVP. Have your desired leveling ship in FS position loaded with ASW gear. Add enough ASW ships and a BB so that ONLY your flagship will attack twice (so total # of ASW ships in your fleet = one less than the total # of submarines in the fleet). If the enemy fleet have less than 4 submarines make sure you have a minimum of 4 ships in your fleet to enable Line Abreast formation. This strategy relies on that each ASW ship successfully knocks out one submarine until there is only 1 submarine left when 1st round shelling ends. On the second shelling, the flagship attacks and knocks out the final submarine, dealing more damage than any other ASW ship and securing MVP.
+
+Using high ASW ships is helpful, but not strictly necessary. You will still deal good damage due to the line abreast formation. Stacking ASW equipment on your ships is highly recommended. Add in any battleship to enable the second round of attacks. Finally, take a light carrier (or a carrier if you feel you don't need the extra attack) equipped with a [[Saiun]] recon plane. Saiun will ensure that the ''Crossing the T (Disadvantageous)'' formation is avoided, which is very important, as this particular engagement form significantly hinders your ability to kill subs.
+
+If the enemy fleet has a sub supported by a surface fleet (battleships, carriers, etc), the battle becomes more difficult. Consider running Kitakami and Ooi with midget subs and ASW equipment. Their pre-emptive torpedo attack will prioritize enemy ships over the sub, and they have reasonably high ASW. When using the torpedo cruisers, you should use line ahead formation in order to maximize their accuracy, as this strategy hinges on sinking or critically damaging one or two of the enemy's ships to win the surface battle. Field one or more battleships to cement your surface superiority, and possibly a carrier (light carriers will target the sub and deal ''very ''little damage due to the formation) equipped with a Saiun. Adding another good ASW ship such as Isuzu Kai 2 is a good idea too. The main problem of this enemy fleet composition tends to be killing the sub, not killing the surface ships. Another idea is to have a dedicated ASW ship in your PvP fleet and enter battle in Double Line, giving a boost in both ASW and shelling Accuracy. However ASW operations usually occur last thus the ship must survive initial shelling in order to deal sufficient damage to disable the submarine(s).
+
+As always, there is still some RNG involved with this strategy. If the enemy manages to inflict enough damage to your ASW ships, your chances of killing the sub are slim. Even then, you will probably still come out with an A or B rank.
+
+==Fleet Formations==
+Your PvP opponent's fleet formation changes depending on the ship types of both player's flagships.
+# If your '''opponent''' has a '''submarine''' as flagship, and '''at least 4 ships''' in their fleet, their formation will be '''echelon'''.
+# If your '''opponent''' has an''' aircraft carrier''' as flagship and '''at least 5 ships''', their formation will be''' diamond'''.
+# If '''you''' have a '''submarine''' as flagship and '''more than 1''' '''submarine''' in the fleet, while the enemy has '''at least 4 ships''', their formation will be '''line abreast'''.
+# In all other cases the formation will be '''line ahead'''.
+
+==PvP Reports against another Admiral==
+It is no surprise that you're not the only one doing the exercise, while you're fighting an admiral someone is also fighting you (you just don't see it). The reports can be seen by clicking the small blue arrow at the bottom of your office screen.
+
+[[File:PVP_Translate.jpg|300px|center]]
+
+<center>[Blue = Victory, Red = Defeat, Green = PvP, Orange = Name]</center>
+
+PVP (or exercises) are any reports with the symbol <span lang="ja">演習</span> besides it. Unless you can read Japanese, there's only 2 things you need to look at; your opponent (underline in orange) and the result (blue or red). The result can be either:
+*<span lang="ja">勝利</span> — Victory
+*<span lang="ja">敗北</span> — Defeat
+The log basically shows the condition of '''your''' fleet. <span lang="ja">勝利</span> indicates your fleet survived the player who challenged you, while <span lang="ja">敗北</span> means they won over yours.
+
+For quick read-through you can look through the passage and see if there's a character with one line poking in <span lang="ja">利</span> (Victory) or one line poking out <span lang="ja">北</span> (Defeat).
+
+'''Note'''
+*Result is against your first fleet.
+*Result does not affect your win/lose ratio in your profile (it's just for fun).
+<!--
+// For exp. table.
+const expTable = [
+  { level: 1, exp: 0 },
+  { level: 5, exp: 1000 },
+  { level: 10, exp: 4500 },
+  { level: 15, exp: 10500 },
+  { level: 20, exp: 19000 },
+  { level: 25, exp: 30000 },
+  { level: 30, exp: 43500 },
+  { level: 40, exp: 78000 },
+  { level: 50, exp: 122500 },
+  { level: 60, exp: 181500 },
+  { level: 70, exp: 265000 },
+  { level: 80, exp: 383000 },
+  { level: 90, exp: 545500 },
+  { level: 99, exp: 1000000 },
+  { level: 110, exp: 1055000 },
+  { level: 120, exp: 1255000 },
+  { level: 130, exp: 1785000 },
+  { level: 140, exp: 2760000 },
+  { level: 150, exp: 4360000 },
+  { level: 155, exp: 5470000 },
+  { level: 160, exp: 6120000 },
+  { level: 165, exp: 7820000 },
+  { level: 170, exp: 8580000 },
+  { level: 175, exp: 10950000 },
+]
+
+const levels = expTable.map(e => e.level)
+
+const levelToExp = level => expTable.find(e => e.level >= level).exp
+
+const basePvPExp = (l1, l2) => {
+  const preCap = levelToExp(l1) / 100 + levelToExp(l2) / 300
+  return preCap <= 500 ? Math.floor(preCap) : Math.floor(500 + Math.sqrt(preCap - 500))
+}
+
+let s = `{| class="wikitable" style="width:100%;text-align:center;font-size:12px"
+!
+!colspan="${levels.length}"|Second ship level
+|-
+!{{tooltip|FS|Flagship level}}
+!1||5||10||15||20||25||30||40||50||60||70||80||90||99||110||120||130||140||150||155||160||165||170||175
+`
+
+for (const i of levels) {
+  s += `|-\n!${i}\n`
+  for (const j of levels) {
+    const b = basePvPExp(i, j)
+    const is = {}
+    const js = {}
+    for (let e = 500; e <= 800; e += 100) {
+      for (let q = 0; q < levels.length; ++q) {
+        const i1 = levels[q]
+        const i2 = levels[Math.max(0, q - 1)] - 1
+        if (basePvPExp(i1, j) >= e && basePvPExp(i2, j) < e) {
+          is[e] = i1
+          break
+        }
+      }
+      for (let q = 0; q < levels.length; ++q) {
+        const j1 = levels[q]
+        const j2 = levels[Math.max(0, q - 1)] - 1
+        if (basePvPExp(i, j1) >= e && basePvPExp(i, j2) < e) {
+          js[e] = j1
+          break
+        }
+      }
+    }
+    const isBlue = b < 100
+    const isRed = Object.keys(is).find(e => is[e] === i) || Object.keys(js).find(e => js[e] === j)
+    s += `${j > 1 ? '|' : ''}|${isBlue || isRed ? `style="color:${isBlue && 'blue' || isRed && 'red'}"|` : ''}${b}`
+  }
+  s += '\n'
+}
+
+s += '|}'
+
+copy(s)
+-->
+[[Category:Help]]
+[[Category:Tutorial]]

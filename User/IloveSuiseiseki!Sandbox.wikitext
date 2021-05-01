@@ -1,0 +1,96 @@
+==Lua methods==
+
+===Creating a table===
+
+<pre>a = {"red","green"}</pre>
+<br>
+Creates table with values "red","green"
+<br><br>
+===Printing to console===
+<pre>print("red")</pre>
+<br>
+===Concatenation===
+Couple Ways
+<br><br>
+<ol style = font-weight:bold>
+<li><div style = font-weight:normal>
+<pre>
+table.concat(a,", ")
+</pre>
+<br>
+Returns a string "red, green"
+<br><br>
+</div>
+<li><div style = font-weight:normal>
+<pre>
+"red"..", ".."green"
+</pre>
+<br>
+Returns a string "red, green"
+<br><br>
+</div>
+</ol>
+
+===For loop===
+<pre>
+for i =1,#a do
+  print(a[i])
+end
+</pre>
+<br>
+Prints all values of the table to the console. #a returns the size of the table.
+<br><br>
+<pre>
+c = ""
+for k,v in ipairs(k) do
+  c = c..k..", "..v.."\n"
+end
+</pre>
+<br>
+Stores a string containing the keys and the values of the table. 
+<br><br>
+<pre>
+a = {x = "red", y = "green"}
+
+c = ""
+for k,v in pairs(a) do
+  c = c..k..", "..v.."\n"
+end
+</pre>
+<br>
+Stores a string containing the keys and values of the table. The table is in a record style form. Can also format table as a = {["x"] = "red", ["y"] = "green"}.
+<br><br>
+Consult http://www.luafaq.org/#T1.10 for differences between pairs and ipairs.
+<br><br>
+
+===While loop===
+<pre>
+function next(t)
+  local i = 0
+  return function()
+            i = i + 1
+            if i <= #t then 
+              return t[i] 
+            end
+  end
+end
+
+a = {10,20,30}
+iter = next(a)
+while true do
+  local element = iter()
+  if element == nil then
+    break
+  end
+  print(element)
+end
+</pre>
+<br>
+Example of a Lua iterator pattern. Shows example of a while loop as well as conditional statements and returning functions as results.
+
+{{#invoke:Sandbox/ProblemSolving
+|greet
+|John|Jacob|Joseph}}
+
+{{#invoke:Sandbox/ProblemSolving
+|buildtable}}

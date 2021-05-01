@@ -1,0 +1,199 @@
+{{Warning|'''Ship Lock Tag Warning'''<br>It is recommended to sortie Nishimura Fleet (see below for Ship List) first in the '''Strike Force Fleet(Fleet 3)''' to avoid locking the historical ships out of their proper route. <br>'''THIS APPLIES TO ALL DIFFICULTIES'''}}
+{{clear}}
+{{Event/MapPageHeader
+<!--|thread = -->
+}}
+{{Event/MapInfo
+|en = The Grand Sortie! Kurita Fleet's [Battle of the Sibuyan Sea]
+|jp = 威風堂々 出撃！栗田艦隊「シブヤン海海戦」
+|tag = E2
+|tag2 = E4
+|romaji = Ifūdōdō Syutsugeki! Kuritakantai「Shibuyan-kai kaisen」
+|mechanics = Unlockable Starting Point@Events/Mechanics#Unlockable Starting Point, Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Striking Force@Striking_Force, LoS Check@Events/Mechanics#LoS_Check,  Land Base Aerial Support@Land Base Aerial Support, Ship Locking@Events/Mechanics#Ship_Locking
+<!--
+|transport = true
+-->
+|hp_casual = 420
+|hp_easy = 420
+|hp_medium = 650
+|hp_hard = 708
+|show_kills = true
+|kills_casual = 5
+|kills_easy = 5
+|kills_medium = 7.5
+|kills_hard = 6
+|reward_all = {{ShipBattleCardKai|Hiburi}}
+|reward_casual_1 = {{ItemStack|item = [[File:Jebaited.png{{!}}50px]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|New Model Gun Mount Improvement Material|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Blueprint|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}Mamiya{{!}}link=Fatigue]]
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|New Model Gun Mount Improvement Material|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Blueprint|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}Mamiya{{!}}link=Fatigue]]
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|New Model Gun Mount Improvement Material|size=50px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = {{EquipmentCardKai|Blueprint|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Type 2 Depth Charge|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules Starting Points
+|0 -> 1 = 
+* Starting point 2 is not unlocked yet.
+* Do not meet the requirement to start at 2.
+|0 -> 2 = 
+* Meet all of the following requirements:
+** Unlock starting point 2.
+** Surface Task Force
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules Part 1
+|1 -> A = * Do not meet the requirements to go to either B or D.
+|1 -> B/empty = * Surface Task Force
+|1 -> D/empty = 
+* Meet all of the following requirements:
+** The 3rd fleet is used for sortie.
+** Everyone in the fleet must have either '''no tag or the yellow shiplock tag'''.
+
+|A -> B/empty = * 
+|A -> C = * ???
+
+|B/empty -> C = * Do not meet the requirements to go to E.
+|B/empty -> E = 
+* Meet all of the following requirements:
+** Amount of Kurita Fleet members ≧ 4/6/8 on Easy/Medium/Hard
+** Surface Task Force
+
+|G -> H = * Do not meet the requirements to go to J.
+|G -> J/empty = 
+* Meet one of the following requirements:
+** Amount of Nishimura Fleet members ≧ 2/4/6 on Easy/Medium/Hard
+** Casual players routes straight to J.
+
+|H -> J/empty = * Amount of Nishimura Fleet members ≧ 1/3/5 on Easy/Medium/Hard
+|H -> K = * Do not meet the requirements to go to J.
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules Part 2
+|L/empty -> N = * Do not meet the requirements to go to P.
+|L/empty -> P/empty =
+* Meet all of the following requirements:
+** Surface Task Force
+** Amount of Kurita Fleet members ≧ ?/?/6 on Easy/Medium/Hard
+
+|Q/empty -> R = 
+* Do not meet the requirements to go to T.
+|Q/empty -> T = 
+* Meet all of the following requirements:
+** Surface Task Force
+** Fast Fleet (Hard)
+** Amount of Kurita Fleet members ≧ 4/6/8 on Easy/Medium/Hard
+}}
+===Historical Fleets: Battle of the Sibuyan Sea===
+====The Center Force (Kurita and Suzuki Fleet)====
+The most powerful attacking force during the Battle of Leyte Gulf led by Takeo Kurita. Members of this fleet will gain a post-cap modifier of 110% on nodes W, V and Z.
+* (F)BB: {{ShipLink|Yamato}}, {{ShipLink|Musashi}}, {{ShipLink|Nagato Kai Ni|text=Nagato}}, {{ShipLink|Kongou Kai Ni|text=Kongou}}, {{ShipLink|Haruna Kai Ni|text=Haruna}}
+* CA(V): {{ShipLink|Atago Kai|text=Atago}}, {{ShipLink|Takao Kai|text=Takao}}, {{ShipLink|Maya Kai Ni|text=Maya}}, {{ShipLink|Choukai Kai Ni|text=Choukai}}, {{ShipLink|Myoukou Kai Ni|text=Myoukou}}, {{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kumano Kai Ni|Kumano Carrier Kai Ni|text=Kumano}}, {{ShipLink|Suzuya Kai Ni|Suzuya Carrier Kai Ni|text=Suzuya}}, {{ShipLink|Tone Kai Ni|text=Tone}}, {{ShipLink|Chikuma Kai Ni|text=Chikuma}}
+* CL: {{ShipLink|Noshiro Kai|text=Noshiro}}, {{ShipLink|Yahagi Kai|text=Yahagi}}
+* DD: {{ShipLink|Shimakaze Kai|text=Shimakaze}}, {{ShipLink|Hayashimo Kai|text=Hayashimo}}, {{ShipLink|Okinami Kai|text=Okinami}}, {{ShipLink|Naganami Kai|text=Naganami}}, {{ShipLink|Nowaki Kai|text=Nowaki}}, {{ShipLink|Kiyoshimo Kai|text=Kiyoshimo}}, {{ShipLink|Urakaze Kai|text=Urakaze}}, {{ShipLink|Yukikaze Kai|text=Yukikaze}}, {{ShipLink|Hamakaze Kai|text=Hamakaze}}, {{ShipLink|Isokaze Kai|text=Isokaze}}, {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}}
+
+Note: {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}} is not part of the Kurita fleet historically, but can be used in this map to meet the requirements. Meanwhile, {{ShipLink|Asashimo Kai|text=Asashimo}} is historically part of the Kurita fleet, but she cannot be used in this map to meet the requirement.
+
+====The Southern Force (Nishimura Fleet)====
+The vanguard of the "Southern Force" during the Battle of Leyte Gulf led by Shōji Nishimura. Members of this fleet will gain a post-cap modifier of 110% on node Y.
+* BBV: {{ShipLink|Yamashiro Kai Ni|text=Yamashiro}}, {{ShipLink|Fusou Kai Ni|text=Fusou}}
+* CAV: {{ShipLink|Mogami|Mogami Kai|text=Mogami}}
+* DD: {{ShipLink|Shigure Kai Ni|text=Shigure}}, {{ShipLink|Michishio Kai Ni|text=Michishio}}, {{ShipLink|Asagumo Kai|text=Asagumo}}, {{ShipLink|Yamagumo Kai|text=Yamagumo}}
+
+{{clear}}
+
+==<span style="color:red">WARNING TO ALL PLAYERS</span>==
+[[File:Vlcsnap-2018-02-17-21h00m10s258.png|thumb|All Fleet Members of the Striking Force Fleet (Fleet 3) must be Non-Tagged before Entering the Map to enter Node D]]
+*When you first enter the Map to go through the first Phase of opening the Hidden Start Point, you will be required to start from Node D in order to reach node Y. This is possible only if you sortie your fleet in the '''Strike Force Fleet (Fleet 3)''' and <span style="color:red">'''All 7 Fleet Members'''</span> are '''NON-TAGGED''', or already have '''Yellow-Tag''' applied. 
+*You are also required to bring a certain amount of Nishimura Fleet Members for the shortest route (2 (Easy) / 4 (Normal) / 6 (Hard)), and you must make sure that they are placed in the '''Strike Force Fleet (Fleet 3)''' and are are '''NON-TAGGED''' to avoid locking the historical ships out of their proper route!
+**If you have accidentally sent out your original Fleet planned out for reaching node Y into the North Route or another Map due to not following the procedures above, you will have no choice but to use other Non-Tagged Ships to make up a New Strike Force Fleet in Fleet 3.
+**Your only other option will be to abandon the opening of the Hidden Start Point and just start from the original Start Point all the way to the Boss.
+*<span style="color:red">'''THIS APPLIES TO ALL DIFFICULTIES'''</span>.
+
+Additional visual aid:
+{| border="1" cellspacing="0" cellpadding="0" style="width:100%;" class="article-table"
+|
+'''Yellow '''tag[[File:Winter_2018_Event_Ship_Tag_E4.png|thumb|left]]<br>(Nishimura Fleet)
+|'''Green''' tag[[File:Winter_2018_Event_Ship_Tag_E2.png|thumb|left]]<br>(Kurita Fleet)
+|-
+|
+* Given to all untagged ships in Fleet 3 (Striking Force Fleet)
+* Required on all ships in the fleet to access south route
+|
+* Given to all untagged ships in Fleet 1 and 2 (Single or Combined Fleet)
+* Locks the fleet out of south route
+|}
+
+==Phases==
+===Phase 1: Unlock the Second Start Point===
+[[File:【KanColle】 Winter 2018 Event E-2 Opening 2nd Start Point|thumb|right|300 px]]
+The Map at the beginning has a hidden 2nd Start Point, and you must satisfy the following requirements to open up the Hidden Start Point.
+*Obtain A+ Rank Victories on Nodes {{Event/Route|S|blue|X|blue|Y|purple}}, and reach Node {{Event/Route|T|red|}}.
+**On Casual difficulty, reaching {{Event/Route|T|red|}} is sufficient.
+***Obtaining a Victory in node {{Event/Route|T|red|}} is not required. You only have to reach the Node.
+
+====A+ Rank Victories in Nodes S / X / Y ====
+*You must use the Striking Force Fleet (Fleet 3) with 7 Ships
+**Route: {{Event/Route|D|blue|G|red|J|blue|M|orange|S|blue|X|blue|Y|purple}}
+**You are also required to bring a certain amount of Nishimura Fleet Members for the shortest route, where you require 2 (Easy) / 4 (Normal) / 6 (Hard) respectively. Failing to meet those requirements will make the fleet route to a longer route before reaching the required nodes for the unlock.
+**All Fleet Members must be either '''Non-Tagged or already have Yellow Tag''' before entering the Map to start from node D. For those who are doing Easy mode, '''Grey Tag is not allowed either.'''
+*The Striking Force is recommended to be composed of the following ships:
+**Striking Force - 2 CA 2 CL(T) 3 DD
+**Striking Force - 2 BBV 1 CAV 4 DD
+**Striking Force - 2 BBV 1 CAV 3 DD 1 SS(V)
+*For the air raid node M, having AACI setup on one or more destroyers of your fleet is recommended. Also the use of {{Seaplane Fighter}} to at least achieve Air parity (AP) or higher is advised in order to increase survivability.
+*Nodes S, X and Y are night battle nodes.
+**For Easy Mode, you only need to obtain A-rank Victory in Node S. Nodes X and Y are not required, so you don't have to continue to X and Y nodes.
+
+====Reaching node T====
+*This is done by using either a [[Combat/Combined Fleet|Surface Task Force]] Combined Fleet or a submarine fleet in the '''first fleet'''
+*Route:{{Event/Route|A|red|B|blue|C|red|E|red|F|red|I|red|L|blue|N|red|P|blue|Q|blue|R|orange|T|orange}}
+**Recommended fleet: 1-6SS(V)
+***While this route is '''very''' long, note that only node C and node I have enemies that can potentially harm your submarines; sending your LBAS full of bombers and/or sending node shelling support expedition is recommended to increase survivability.
+*Route:{{Event/Route|B|blue|E|red|F|red|I|red|L|blue|P|blue|Q|blue|T|orange}}
+**Recommended fleet: 2CVL 2-3BB 2-1CA(V) + 1CL 2DD 3XX
+***You will be required to bring (4 (Easy) / 6 (Normal) / 8 (Hard)) Kurita Fleet Members in the Fleet for the Shortest Route.
+***'''Hard-Mode Only''': Bringing a Slow-Ship will off-route you from Q to R.
+
+{{Clear}}
+
+===Phase 2: Defeating the Boss===
+After having the Secret Node Open, you will now be able to take a shorter route to the Boss Node.
+*This is done by using [[Combat/Combined Fleet|Surface Task Force]] Combined Fleet.
+*Route:{{Event/Route|L|blue|P|blue|Q|blue|T|orange|U|orange|V|red|W|red|Z|red}}
+**Recommended fleet: 2CVL 2-3BB 2-1CA(V) + 1CL 2DD 3XX
+***You will be required to bring (4 (Easy) / 6 (Normal) / 8 (Hard)) Kurita Fleet Members in the Fleet for the Shortest Route.
+***'''Hard-Mode Only''': Bringing a Slow-Ship will off-route you from Q to R.
+***Having AACI setup and enough air power for at least AP or higher in order deal with the air raid nodes is highly recommended.
+***Having {{EquipmentLink|Fleet Command Facility}} on your main fleet's flagship will increase considerably your boss node encounter rate due to the fact that there is no LoS check before node Z.
+*'''LBAS''':There is only one [[Land Base Aerial Support]] available for sortie.
+**10+ range is required in order to reach the boss node Z.
+***If you wish to send fighters/interceptors to the boss node you will need [[Type 2 Large Flying Boat]] or [[PBY-5A Catalina]] to increase their flight range and reach it with your base.
+
+==Map progression==
+{{#tag:gallery|
+Winter_2018_Event_E-2_Map p1.png{{!}}Map before unlocking the second starting point.
+Winter_2018_Event_E-2_Map.png{{!}}Full map after unlocking the second starting point.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+==LBAS Flight Range==
+[[File:Winter_2018_Event_E2_flight_range.png|500px|center]]
+
+{{Event/MapPageFooter}}

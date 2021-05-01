@@ -1,0 +1,885 @@
+{{Under Construction
+|Scope  = article
+|Desc   = Day Combat
+|Help   = rewriting the page to be more friendly to the viewers
+|Missing Information = This page has to be rewritten to a format that is more friendly towards the beginners.
+|Page Adopted   = 
+}}
+
+:''For special effect on non-installation enemies like [[PT Imp Pack]]<!--, [[Abyssal Twin Princesses]], or [[Aircraft Carrier Princess]]-->, please refer to each of their own pages.''
+'''Abyssal Land Bases''', otherwise known as '''Installations''', are enemies representing land-based military fortifications and facilities. While categorized as various different ship classes within the game, they have numerous differences from ordinary ships that grant them unique defensive strengths and weaknesses against shipborne weapons.
+
+==General Rules==
+*Cannot be attacked by [[List of Torpedoes by stats|Torpedoes]]. Torpedo stat is considered as 0 while attacking Installations. Torpedo-based attacks will either not activate (In Night Battle) or cannot target Installations (In Torpedo Phase)
+**An exception to this occurs when the ship has no equipment equipped. <ref>https://twitter.com/noratako5/status/707937418020651008</ref>
+*Submarines will be able to attack installations during shelling phase if equipped with {{EquipmentLink|Special Type 2 Amphibious Tank}}
+**Note that submarine can attack them during the night regardless of equipment.
+*Dive Bombers and Torpedo Bombers are able to attack Installations during the Opening Air Strike.
+**Torpedo Bombers, however have their torpedo stat treated as 0, and thus is only able to deal scratch damage.
+*Cannot be attacked by Carriers equipped with [[List of Dive Bombers by stats|Dive Bombers]] during the shelling phase, '''unless''' equipped with the following bombers: <ref>https://twitter.com/KanColle_STAFF/status/1110889611591507971</ref>
+**{{EquipmentLink|Suisei Model 12 (634 Air Group w/ Type 3 Cluster Bombs)}}
+**{{EquipmentLink|Prototype Nanzan}}
+**{{EquipmentLink|F4U-1D}}
+**{{EquipmentLink|FM-2}}
+**{{EquipmentLink|Ju 87C Kai}}
+**{{EquipmentLink|Ju 87C Kai Ni (w/ KMX)}}
+**{{EquipmentLink|Ju 87C Kai Ni (w/ KMX/Skilled)}}
+*Carrier are unable to perform cut-in attacks on installations in Daytime Shelling.
+*Equipping Anti-Installation equipment deals bonus damage against them.
+*Installations come in 3 different sub-classes, BB, BBV and CV.
+**BB-Type Installations use the normal shelling formula and continue to shell past Moderate Damage
+**BBV and CV-Type Installations use the carrier shelling formula and are disabled once past Moderate Damage.
+*Can be identified by their speed (None).
+*Special damage labels are shown when damaged:
+{| class="wikitable"
+! Regular (ship) damage label
+! Name in Japanese
+! Land based damage label
+! Name in Japanese
+|-
+| Slightly damaged
+| (<span style="cursor:help;" title="shouha">小破<sup><span style="color:red">?</span></sup></span>)
+| Confused
+| (<span style="cursor:help;" title="konran">混乱<sup><span style="color:red">?</span></sup></span>)
+|-
+| Moderately damaged
+| (<span style="cursor:help;" title="chuuha">中破<sup><span style="color:red">?</span></sup></span>)
+| Damaged
+| (<span style="cursor:help;" title="songai">損害<sup><span style="color:red">?</span></sup></span>)
+|-
+| Heavily damaged
+| (<span style="cursor:help;" title="taiha">大破<sup><span style="color:red">?</span></sup></span>)
+| Broken
+| (<span style="cursor:help;" title="sonkai">損壊<sup><span style="color:red">?</span></sup></span>)
+|-
+| Sunken
+| (<span style="cursor:help;" title="gekichin">撃沈<sup><span style="color:red">?</span></sup></span>)
+| Destroyed
+| (<span style="cursor:help;" title="hakai">破壊<sup><span style="color:red">?</span></sup></span>)
+|}
+
+
+=== '''Quick Guide''' ===
+{{Hard Anti-installation Weapons}}
+
+==Damage Bonus==
+
+Damage against Installations is calculated as follows:<br />
+
+<math>
+\text {Attack Power} = \operatorname{cap} \left ( ( ( (\hat{F} + I_{sub}) \cdot I_{pre} ) + I_{flat} ) \cdot M \right ) * I_{post}
+</math>
+
+Where:
+*<math>\hat{F}</math>is the ship's calculated '''shelling''' stat after equipment and improvement have been added (Refer to [[Combat/Damage_Calculation]])
+*<math> \operatorname{cap} </math>is the soft capping operation. (180 for Daytime shelling, 300 for Night Battle)
+*<math>I_{pre}</math>is the final multiplier of all eligible anti-installation pre-cap multipliers.
+*<math>I_{flat}</math>is the sum of all eligible flat pre-cap bonuses.
+*<math>I_{sub}</math>is the submarine flat pre-cap bonus.
+*<math>M</math>is the special attack modifier (e.g double attack) of any eligible attack.
+*<math>I_{post}</math>is the final multiplier of all eligible post-cap multipliers.
+
+===Bonus Tables===
+The following table is the known multipliers of anti-installation equipment versus various types of installations. With the exception of Supply Depot Princess, all multipliers listed are '''Pre-cap''' multipliers, unless otherwise specified.
+
+{|class="wikitable" style="width:100%; font-weight:bold; text-align: center; vertical-align: middle;"
+|-
+! Installation Type
+! style="width: 15%;" colspan="2" | Soft-Skinned
+! style="width: 15%;" colspan="2" | Isolated Island Princess
+! style="width: 15%;" colspan="2" | Artillery Imp
+! style="width: 15%;" colspan="2" | Harbor Summer Princess
+! style="width: 15%;" colspan="2" | Supply Depot Princess<br />(Post Cap)
+|-
+! Number Equipped
+!Single
+!Multiple
+!Single
+!Multiple
+!Single
+!Multiple
+!Single
+!Multiple
+!Single
+!Multiple
+|-
+|style="background-color:#D0EAD8"|{{GreenAmmo}}{{EquipmentLink|Type 3 Shell|Type 3 Shell Kai|text=Anti-Aircraft Shell}}
+|colspan="2" |2.5
+|colspan="2" |1.75
+!colspan="2" |
+|colspan="2" |1.75
+!colspan="2" |
+|-
+|style="background-color:#FFD1D1"|{{RedAmmo}}{{EquipmentLink|Type 91 Armor Piercing Shell|Type 1 Armor Piercing Shell|text=Armor Piercing Shell}}
+!colspan="2" |
+!colspan="2" |
+|colspan="2" |1.85
+|colspan="2" |1.3
+!colspan="2" |
+|-
+|style="background-color:#FFAFAF"|{{AntiGroundArtillery}}{{EquipmentLink|WG42 (Wurfgerät 42)}}
+|1.3
+|1.82
+|1.4
+|2.1
+|1.6
+|2.72
+|1.4
+|1.68
+|1.25
+|1.625
+|-
+|style="background-color:#FFAFAF"|{{AntiGroundArtillery}}{{EquipmentLink|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|Type 4 20cm Anti-ground Rocket Launcher (Concentrated Deployment)|text=Anti-Ground Rocket Launcher}}
+|1.25
+|1.875
+|1.3
+|2.145
+|1.5
+|2.7
+|1.25
+|1.75
+|1.2
+|1.68
+|-
+|style="background-color:#CFDFFF"|{{DepthCharge}}{{EquipmentLink|Type 2 12cm Mortar Kai|Type 2 12cm Mortar Kai (Concentrated Deployment)|text=ASW Mortar}}
+|1.2
+|1.56
+|1.2
+|1.68
+|1.3
+|1.95
+|1.1
+|1.265
+|1.15
+|1.38
+|-
+|style="background-color:#FFDFAF"|{{LandingCraft}} {{EquipmentLink|Daihatsu Landing Craft|
+Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|Toku Daihatsu Landing Craft|Toku Daihatsu Landing Craft + 11th Tank Regiment|M4A1 DD|text=Landing Craft}} Type Multiplier
+|colspan="2" |1.4
+|colspan="2" |1.8
+|colspan="2" |1.8
+|colspan="2" |1.7
+|colspan="2" |1.7
+|-
+|style="background-color:#FFDFAF"|{{Screw}} Landing Craft Improvement Multiplier
+|colspan="10"|1 + (Average ★ /50) [Max 1.2x]
+|-
+|style="background-color:#FFDFAF"|{{LandingCraft}} {{EquipmentLink|Toku Daihatsu Landing Craft}}
+|colspan="2" |1.15
+|colspan="2" |1.15
+|colspan="2" |1.15
+|colspan="2" |1.2
+|colspan="2" |1.2
+|-
+|style="background-color:#FFDFAF"|{{LandingCraft}} {{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)}}
+|1.5
+|1.95
+|1.2
+|1.68
+|1.5
+|2.1
+|1.6
+|2.4
+|1.3
+|2.08
+|-
+|style="background-color:#FFDFAF"|{{LandingCraft}} {{EquipmentLink|Toku Daihatsu Landing Craft + 11th Tank Regiment}}
+|colspan="2" |1.8
+|colspan="2" |1.8
+|colspan="2" |1.8
+|colspan="2" |1.8
+!colspan="2" |
+|-
+|style="background-color:#FFDFAF"|{{LandingCraft}} {{EquipmentLink|M4A1 DD}}
+|colspan="2" |?
+|colspan="2" |?
+|colspan="2" |1.54
+|colspan="2" |2.8
+|colspan="2" |1.2
+|-
+|style="background-color:#CFC58F"|{{SpecialAmphibiousTank}} {{EquipmentLink|Special Type 2 Amphibious Tank}}
+|1.5
+|1.8
+|2.4
+|3.24
+|2.4
+|3.24
+|2.8
+|4.2
+|1.7
+|2.55
+|-
+|style="background-color:#CFC58F"|{{Screw}} Amphibious Tank Improvement Multiplier
+|colspan="10"|1 + (Average ★ /30) [Max 1.33x]
+|-
+|style="background-color:#FFC1B1"|{{RedPlane}} Carrier-based Dive Bomber
+!colspan="2" |
+|colspan="2" |1.4
+|colspan="2" |1.5
+|colspan="2" |1.3
+!colspan="2" |
+|-
+|style="background-color:#D5EAC0"|{{Seaplane}} {{Seaplane Fighter}}<br />Seaplane Bomber/Fighter
+|colspan="2" |1.2
+!colspan="2" |
+|colspan="2" |1.5
+|colspan="2" |1.3
+!colspan="2" |
+|-
+|Destroyer / Light Cruiser (DD/CL)
+!colspan="2" |
+!colspan="2" |
+|colspan="2" |1.4
+!colspan="2" |
+!colspan="2" |
+|-
+!colspan="11"| Airstrike-Only Multipliers
+|-
+|style="background-color:#B5CAA0"|{{Land-based Attack Aircraft}} Land Based Attack Aircraft
+!colspan="2" |
+|colspan="2" |1.18
+|colspan="2" |1.6
+!colspan="2" |
+|colspan="2" |2.1
+|-
+|style="background-color:#FFC1B1"|{{Land-based Attack Aircraft}} {{Seaplane}} {{RedPlane}} Bombers (Post cap)
+!colspan="2" |
+|colspan="2" |1.7
+|colspan="2" |1.55
+!colspan="2" |
+!colspan="2" |
+|}
+To Note:
+*Each row is a separate multiplier and is multiplicative with every other row.
+*'''Multiple''' is defined as 2 or more.
+*Standard AP-Shell post-cap multipliers apply on installations as per normal.
+*Land-Based Attack Aircraft benefit from both Airstrike multipliers.
+*Seaplane Bomber/Fighter bonus works even if the slot size is 0.
+*{{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)}} has an additional further improvement bonus against Supply Depot Princess, where the improvement multiplier is multiplied again.
+*Supply Depot Princess is considered as Soft-skinned, and all Soft-skin pre-cap multipliers also apply to her.
+
+
+The following listed are the '''Flat''' Damage bonuses:
+
+{|class="wikitable" style="width:100%; font-weight:bold; text-align: center; vertical-align: middle;"
+|-
+! Amount Equipped
+! style="width: 15%;" | 1
+! style="width: 15%;" | 2
+! style="width: 15%;" | 3
+! style="width: 15%;" | 4
+|-
+|style="background-color:#FFAFAF"|{{AntiGroundArtillery}}{{EquipmentLink|WG42 (Wurfgerät 42)}}
+|75
+|110
+|140
+|160
+|-
+|style="background-color:#FFAFAF"|{{AntiGroundArtillery}}{{EquipmentLink|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher}}
+|55
+|115
+|160
+|190
+|-
+|style="background-color:#FFAFAF"|{{AntiGroundArtillery}}{{EquipmentLink|Type 4 20cm Anti-ground Rocket Launcher (Concentrated Deployment)}}
+|80
+|170
+|?
+|?
+|-
+|style="background-color:#CFDFFF"|{{DepthCharge}}{{EquipmentLink|Type 2 12cm Mortar Kai}}
+|30
+|55
+|75
+|90
+|-
+|style="background-color:#CFDFFF"|{{DepthCharge}}{{EquipmentLink|Type 2 12cm Mortar Kai (Concentrated Deployment)}}
+|60
+|110
+|150
+|?
+|-
+|style="background-color:#FFDFAF"|{{LandingCraft}} {{EquipmentLink|Toku Daihatsu Landing Craft + 11th Tank Regiment}}
+|25
+!
+!
+!
+|-
+|style="background-color:#FFDFAF"|{{LandingCraft}} {{EquipmentLink|M4A1 DD}}
+|25
+!
+!
+!
+|-
+! colspan="5"| Ship Type Bonus
+|-
+| Submarine (SS/SSV)
+| colspan="4"| 30
+|-
+! colspan="5"| Airstrike-only Bonus
+|-
+|style="background-color:#FFC1B1"|{{Land-based Attack Aircraft}} {{Seaplane}} {{RedPlane}} Bombers<br />(Supply Depot Princess Only)
+|colspan="4"| 100 (Post-cap)
+|}
+To Note:
+*With the exception of the bomber bonus, Flat damage bonuses are '''pre-cap'''
+
+===Others===
+These are Installations that (might) behave differently in regards to damage, and haven't been categorized in the above categories.
+
+====[[Central Princess]]====
+*Takes increased damage from dive bombers and seaplane bombers during opening stages.
+
+====[[Central Princess#Damaged|Central Princess Damaged Form]]====
+*Takes increased damage from WG42 and Type 2 Tanks. However, using both of them together cancels Tank bonus.[http://kancolle.wikia.com/wiki/User_blog:DynamitMC/2016_Spring_Event_E-7_Hard_Mode_Last_Kill_Preparation_Thoughts#2.29Bonuses_against_Central_fucking_go-fuck-yourself_hime_.28damaged_form.29 <nowiki>[4]</nowiki>]
+
+====[[Anchorage Water Demon Vacation Mode]]====
+*Unlike her normal version, is considered a surface ship, and thus torpedo stat and relevant attacks are able to harm her.
+*Takes increased damage from anti-installation equipment, in particular from {{EquipmentLink|M4A1 DD}} and ships with multiple Dive Bombers equipped.
+**The damage multipliers also apply to torpedo attacks that are aimed at her as well.
+
+==Ship Type==
+Despite those enemies are installations, they do have the "ship type" parameter which influence their behavior in battle.
+
+Currently, there are Aviation Battleship, Battleship, and Carrier Installations.
+
+:Aviation Battleship type: Most Installations belong to this type, firepower calculation same as carriers, shelling attack animation in both day battle and night battle [in browser game version], cannot attack in day battle if heavily damaged.
+:Battleship type: Artillery Imp and Central Princess, firepower calculation same as battleships, shelling attack animation in both day battle and night battle, '''can''' attack in day battle even if they are heavily damaged.
+:Carrier type: Lycoris Princess, firepower calculation same as carriers, '''carrier attack animation''' in day battle and shelling attack animation in night battle, cannot attack in day battle if heavily damaged. Killing them count toward carrier kill quest.
+
+==List of Installation Type Enemies==
+<categorytree mode="pages" depth="0">Abyssal Land Bases</categorytree>
+
+===List of Installation Type Enemies Sorted by Their Description<!--ary words suffixed to their names--> and Appearance===
+<tabber>Imp= 
+
+{{#tag:tabber|Artillery Imp=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Artillery Imp#Basic]]
+{{!}} {{ShipBattleCardKai|Artillery Imp}}
+{{!}} [[World 6: 中部海域]] 6-4 
+{{!}}-
+{{!}} [[Artillery Imp#Basic II]]
+{{!}} {{ShipBattleCardKai|Artillery Imp}}
+{{!}} [[World 6: 中部海域]] 6-4 
+{{!}}-
+{{!}} [[Artillery Imp#Basic III]]
+{{!}} {{ShipBattleCardKai|Artillery Imp}}
+{{!}} [[World 6: 中部海域]] 6-4 
+{{!}}}
+}}
+
+|-|Demon= 
+{{#tag:tabber|Isolated Island Demon=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Isolated Island Demon#Basic]]
+{{!}} {{ShipBattleCardKai|Isolated Island Demon}}
+{{!}} [[Spring 2014 Event]] E-5 
+{{!}}-
+{{!}} [[Isolated Island Demon#Basic II]]
+{{!}} {{ShipBattleCardKai|Isolated Island Demon/II}}
+{{!}} [[Summer 2015 Event]] E-7 [[Events#Boss_Debilitation_Mechanism|boss debilitation]] node as flagship.
+{{!}}-
+{{!}} [[Isolated Island Demon#Basic III]]
+{{!}} {{ShipBattleCardKai|Isolated Island Demon/III}}
+{{!}} [[Summer 2015 Event]] E-7 [[Events#Boss_Debilitation_Mechanism|boss debilitation]] node as flagship.
+{{!}}-
+{{!}} [[Isolated Island Demon#Basic IV]]
+{{!}} {{ShipBattleCardKai|Isolated Island Demon/IV}}
+{{!}} [[Summer 2015 Event]] E-7 [[Events#Boss_Debilitation_Mechanism|boss debilitation]] node as flagship.
+{{!}}}
+}}
+
+|-|Princess=
+{{#tag:tabber|Airfield Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Airfield Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Airfield Princess}}
+{{!}} [[Fall 2013 Event]] E-4 boss.
+{{!}}-
+{{!}} [[Airfield Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/II}}
+{{!}} [[Summer 2015 Event]] E-4 boss. Appears in the same event but under E-3X.
+{{!}}-
+{{!}} [[Airfield Princess#Basic III]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/III}}
+{{!}} [[Summer 2015 Event]] E-4 boss. Appears in the same event but under E-3X.
+{{!}}-
+{{!}} [[Airfield Princess#Basic IV]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/IV}}
+{{!}} [[Summer 2015 Event]] E-4 boss. Appears in the same event but under E-3X.
+{{!}}-
+{{!}} [[Airfield Princess#Basic V]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/V}}
+{{!}} [[Winter 2016 Event]] "aerial node" boss.
+{{!}}-
+{{!}} [[Airfield Princess#Basic VI]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/VI}}
+{{!}} [[Winter 2016 Event]] "aerial node" boss.
+{{!}}-
+{{!}} [[Airfield Princess#Basic VII]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/VII}}
+{{!}} [[Winter 2016 Event]] "aerial node" boss.
+{{!}}-
+{{!}} [[Airfield Princess#Basic VIII]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/VIII}}
+{{!}} [[Summer 2019 Event]] air raid.
+{{!}}-
+{{!}} [[Airfield Princess#Basic IX]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/IX}}
+{{!}} [[Summer 2019 Event]] air raid.
+{{!}}-
+{{!}} [[Airfield Princess#Basic X]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/X}}
+{{!}} [[Summer 2019 Event]] air raid.
+{{!}}-
+{{!}} [[Airfield Princess#Basic XI]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/XI}}
+{{!}} [[Summer 2019 Event]] air raid.
+{{!}}-
+{{!}} [[Airfield Princess#Basic XII]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/XII}}
+{{!}} [[Summer 2019 Event]] air raid.
+{{!}}-
+{{!}} [[Airfield Princess#Basic XIII]]
+{{!}} {{ShipBattleCardKai|Airfield Princess/XIII}}
+{{!}} [[Summer 2019 Event]] air raid.
+{{!}}}
+
+{{!}}-{{!}}Central Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Central Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Central Princess}}
+{{!}} [[Spring 2016 Event]] E-6 Boss for easy difficulty.
+{{!}}-
+{{!}} [[Central Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Central Princess/II}}
+{{!}} [[Spring 2016 Event]] E-6 Boss for normal/medium difficulty mainly. 
+{{!}}-
+{{!}} [[Central Princess#Basic III]]
+{{!}} {{ShipBattleCardKai|Central Princess/III}}
+{{!}} [[Spring 2016 Event]] E-6 Boss for hard difficulty mainly.
+{{!}}-
+{{!}} [[Central Princess#Damaged]]
+{{!}} {{ShipBattleCardKai|Central Princess/Damaged}}
+{{!}} [[Spring 2016 Event]] E-7 Boss for easy difficulty.
+{{!}}-
+{{!}} [[Central Princess#Damaged II]]
+{{!}} {{ShipBattleCardKai|Central Princess/Damaged II}}
+{{!}} [[Spring 2016 Event]] E-7 Boss for normal/medium difficulty mainly.
+{{!}}-
+{{!}} [[Central Princess#Damaged III]]
+{{!}} {{ShipBattleCardKai|Central Princess/Damaged III}}
+{{!}} [[Spring 2016 Event]] E-7 Boss for hard difficulty mainly.
+{{!}}}
+
+{{!}}-{{!}}Harbour Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Harbour Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Harbour Princess}}
+{{!}} ''Appears in numerous event maps, see respective page for more information.''
+{{!}}-
+{{!}} [[Harbour Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Harbour Princess/Final}}
+{{!}} Final form. ''Appears in numerous event maps, see respective page for more information.''
+{{!}}}
+
+{{!}}-{{!}}Harbour Summer Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Harbour Summer Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Harbour Summer Princess}}
+{{!}} [[Summer 2016 Event]] E-3 Boss for easy difficulty.
+{{!}}-
+{{!}} [[Harbour Summer Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Harbour Summer Princess/II}}
+{{!}} [[Summer 2016 Event]] E-3 Boss for medium difficulty. 
+{{!}}-
+{{!}} [[Harbour Summer Princess#Basic III]]
+{{!}} {{ShipBattleCardKai|Harbour Summer Princess/III}}
+{{!}} [[Summer 2016 Event]] E-3 Boss for hard difficulty.
+{{!}}-
+{{!}} [[Harbour Summer Princess#Damaged]]
+{{!}} {{ShipBattleCardKai|Harbour Summer Princess/Damaged}}
+{{!}} [[Summer 2016 Event]] E-3 Boss for easy difficulty. '''Final form'''
+{{!}}-
+{{!}} [[Harbour Summer Princess#Damaged II]]
+{{!}} {{ShipBattleCardKai|Harbour Summer Princess/Damaged II}}
+{{!}} [[Summer 2016 Event]] E-3 Boss for medium difficulty. '''Final form'''
+{{!}}-
+{{!}} [[Harbour Summer Princess#Damaged III]]
+{{!}} {{ShipBattleCardKai|Harbour Summer Princess/Damaged III}}
+{{!}} [[Summer 2016 Event]] E-3 Boss for hard difficulty. '''Final form'''
+{{!}}}
+
+{{!}}-{{!}}Isolated Island Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Isolated Island Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Isolated Island Princess}}
+{{!}} [[World 6: 中部海域]] 6-4. '''Standard Carrier Installation'''
+{{!}}-
+{{!}} [[Isolated Island Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Isolated Island Princess/II}}
+{{!}} [[World 6: 中部海域]] 6-4. '''Standard Carrier Installation'''
+{{!}}-
+{{!}} [[Isolated Island Princess#Basic III]]
+{{!}} {{ShipBattleCardKai|Isolated Island Princess/III}}
+{{!}} [[World 6: 中部海域]] 6-4. '''Standard Carrier Installation'''
+{{!}}-
+{{!}} [[Isolated Island Princess#Basic IV]]
+{{!}} {{ShipBattleCardKai|Isolated Island Princess/IV}}
+{{!}} [[World 6: 中部海域]] 6-4. '''Aviation Battleship Installation'''
+{{!}}-
+{{!}} [[Isolated Island Princess#Basic V]]
+{{!}} {{ShipBattleCardKai|Isolated Island Princess/V}}
+{{!}} [[World 6: 中部海域]] 6-4. '''Battleship Installation'''
+{{!}}}
+
+{{!}}-{{!}}Lycoris Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Lycoris Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Lycoris Princess}}
+{{!}} [[Spring 2016 Event]] E-5 Boss for easy difficulty. '''Standard Carrier Installation'''
+{{!}}-
+{{!}} [[Lycoris Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Lycoris Princess/II}}
+{{!}} [[Spring 2016 Event]] E-5 Boss for normal/medium difficulty. '''Standard Carrier Installation'''
+{{!}}-
+{{!}} [[Lycoris Princess#Basic III]]
+{{!}} {{ShipBattleCardKai|Lycoris Princess/III}}
+{{!}} [[Spring 2016 Event]] E-5 Boss for hard difficulty. '''Standard Carrier Installation'''
+{{!}}-
+{{!}} [[Lycoris Princess#Basic IV]]
+{{!}} {{ShipBattleCardKai|Lycoris Princess/IV}}
+{{!}} [[Spring 2016 Event]] E-5 Air Raid Node '''Standard Carrier Installation'''
+{{!}}-
+{{!}} [[Lycoris Princess#Basic V]]
+{{!}} {{ShipBattleCardKai|Lycoris Princess/V}}
+{{!}} [[Spring 2016 Event]] E-5 Air Raid Node '''Standard Carrier Installation'''
+{{!}}}
+
+{{!}}-{{!}}Midway Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Midway Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Midway Princess}}
+{{!}} [[Summer 2014 Event]] E-3 Pre-boss node . [[Summer 2014 Event]] E-4 boss.
+{{!}}-
+{{!}} [[Midway Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Midway Princess/Final}}
+{{!}} [[Summer 2014 Event]] E-3 Pre-boss node . [[Summer 2014 Event]] E-4 boss. '''Final form'''
+{{!}}}
+
+{{!}}-{{!}}Northern Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Northern Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Northern Princess}}
+{{!}} [[Summer 2014 Event]] E-2 boss.
+{{!}}-
+{{!}} [[Northern Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Northern Princess/Final}}
+{{!}} [[Summer 2014 Event]] E-2 boss in final form.
+{{!}}-
+{{!}} [[Northern Princess#Basic III]]
+{{!}} {{ShipBattleCardKai|Northern Princess/EO}}
+{{!}} [[World_3:_%E5%8C%97%E6%96%B9%E6%B5%B7%E5%9F%9F#3-5|World 3: 北方海域, 3-5]] Pre-boss node.
+{{!}}-
+{{!}} [[Northern Princess#Basic IV]]
+{{!}} {{ShipBattleCardKai|Northern Princess/EO Final}}
+{{!}} [[World_3:_%E5%8C%97%E6%96%B9%E6%B5%B7%E5%9F%9F#3-5|World 3: 北方海域, 3-5]] Pre-boss node but in final form. 
+{{!}}-
+{{!}} [[Northern Princess#Basic V]]
+{{!}} {{ShipBattleCardKai|Northern Princess/EO Weak}}
+{{!}} [[World_3:_%E5%8C%97%E6%96%B9%E6%B5%B7%E5%9F%9F#3-5|World 3: 北方海域, 3-5]] Pre-boss node.'''Weak form'''
+{{!}}-
+{{!}} [[Northern Princess#Basic VI]]
+{{!}} {{ShipBattleCardKai|Northern Princess/EO Weak Final}}
+{{!}} [[World_3:_%E5%8C%97%E6%96%B9%E6%B5%B7%E5%9F%9F#3-5|World 3: 北方海域, 3-5]] Pre-boss node but in final form. '''Weak form'''
+{{!}}}
+
+{{!}}-{{!}}Northernmost Landing Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Northernmost Landing Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Northernmost Landing Princess}}
+{{!}} [[Spring 2017 Event]] E-4 boss for easy difficulty.
+{{!}}-
+{{!}} [[Northernmost Landing Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Northernmost Landing Princess}}
+{{!}} [[Spring 2017 Event]] E-4 boss for medium difficulty.
+{{!}}-
+{{!}} [[Northernmost Landing Princess#Basic III]]
+{{!}} {{ShipBattleCardKai|Northernmost Landing Princess}}
+{{!}} [[Spring 2017 Event]] E-4 boss for hard difficulty.
+{{!}}-
+
+{{!}}-{{!}}Supply Depot Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Supply Depot Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess}}
+{{!}} [[Winter 2016 Event]] E-2 Boss for easy difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess#Damaged]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess/Damaged}}
+{{!}} [[Winter 2016 Event]] E-2 Boss for easy difficulty. '''Final form'''
+{{!}}-
+{{!}} [[Supply Depot Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess/II}}
+{{!}} [[Winter 2016 Event]] E-2 Boss for normal/medium difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess#Damaged II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess/Damaged II}}
+{{!}} [[Winter 2016 Event]] E-2 Boss for normal/medium difficulty. '''Final form'''
+{{!}}-
+{{!}} [[Supply Depot Princess#Basic III]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess/III}}
+{{!}} [[Winter 2016 Event]] E-2 Boss for hard difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess#Damaged III]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess/Damaged III}}
+{{!}} [[Winter 2016 Event]] E-2 Boss for hard difficulty. '''Final form'''
+{{!}}}
+
+{{!}}-{{!}}Supply Depot Princess B=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Supply Depot Princess B#Basic]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B}}
+{{!}} [[Hinamatsuri 2020 Mini-Event]] E-1 Phase 2 Boss for easy/casual difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess B#Basic II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B/II}}
+{{!}} [[Hinamatsuri 2020 Mini-Event]] E-1 Phase 2 Boss for medium difficulty. 
+{{!}}-
+{{!}} [[Supply Depot Princess B#Basic III]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B/II}}
+{{!}} [[Hinamatsuri 2020 Mini-Event]] E-1 Phase 2 Boss for hard difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess B#Damaged]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B/Damaged}}
+{{!}} [[Hinamatsuri 2020 Mini-Event]] E-1 Phase 2 Boss for easy/casual difficulty. '''Final form'''
+{{!}}-
+{{!}} [[Supply Depot Princess B#Damaged II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B/Damaged II}}
+{{!}} [[Hinamatsuri 2020 Mini-Event]] E-1 Phase 2 Boss for medium difficulty.'''Final form'''
+{{!}}-
+{{!}} [[Supply Depot Princess B#Damaged III]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B/Damaged III}}
+{{!}} [[Hinamatsuri 2020 Mini-Event]] E-1 Phase 2 Boss for hard difficulty. '''Final form'''
+{{!}}}
+
+{{!}}-{{!}}Supply Depot Princess B Summer Landing Mode=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Supply Depot Princess B Summer Landing Mode#Basic]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B Summer Landing Mode}}
+{{!}} [[Rainy-Summer 2020 Event]] E-2 Phase 1 Boss for easy/casual difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess B Summer Landing Mode#Basic II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B Summer Landing Mode/II}}
+{{!}} [[Rainy-Summer 2020 Event]] E-2 Phase 1 Boss for medium difficulty. 
+{{!}}-
+{{!}} [[Supply Depot Princess B Summer Landing Mode#Basic III]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B Summer Landing Mode/II}}
+{{!}} [[Rainy-Summer 2020 Event]] E-2 Phase 1 Boss for hard difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess B Summer Landing Mode#Damaged]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B Summer Landing Mode/Damaged}}
+{{!}} [[Rainy-Summer 2020 Event]] E-2 Phase 1 Boss for easy/casual difficulty. '''Final form'''
+{{!}}-
+{{!}} [[Supply Depot Princess B Summer Landing Mode#Damaged II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B Summer Landing Mode/Damaged II}}
+{{!}} [[Rainy-Summer 2020 Event]] E-2 Phase 1 Boss for medium difficulty.'''Final form'''
+{{!}}-
+{{!}} [[Supply Depot Princess B Summer Landing Mode#Damaged III]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess B Summer Landing Mode/Damaged III}}
+{{!}} [[Rainy-Summer 2020 Event]] E-2 Phase 1 Boss for hard difficulty. '''Final form'''
+{{!}}}
+
+{{!}}-{{!}}Supply Depot Princess Vacation Mode=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Supply Depot Princess Vacation Mode#Basic]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess Vacation Mode}}
+{{!}} [[Early Fall 2018 Event]] E-2 Phase 2 Boss for easy/casual difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess Vacation Mode#Basic II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess Vacation Mode/II}}
+{{!}} [[Early Fall 2018 Event]] E-2 Phase 2 Boss for medium difficulty. 
+{{!}}-
+{{!}} [[Supply Depot Princess Vacation Mode#Basic III]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess Vacation Mode/III}}
+{{!}} [[Early Fall 2018 Event]] E-2 Phase 2 Boss for hard difficulty.
+{{!}}-
+{{!}} [[Supply Depot Princess Vacation Mode#Damaged]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess Vacation Mode/Damaged}}
+{{!}} [[Early Fall 2018 Event]] E-2 Phase 2 Boss for easy/casual difficulty.'''Final form'''
+{{!}}-
+{{!}} [[Supply Depot Princess Vacation Mode#Damaged II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess Vacation Mode/Damaged II}}
+{{!}} [[Early Fall 2018 Event]] E-2 Phase 2 Boss for medium difficulty.'''Final form'''
+{{!}}-
+{{!}} [[Supply Depot Princess Vacation Mode#Damaged III]]
+{{!}} {{ShipBattleCardKai|Supply Depot Princess Vacation Mode/Damaged III}}
+{{!}} [[Early Fall 2018 Event]] E-2 Phase 2 Boss for hard difficulty.'''Final form'''
+{{!}}}
+
+{{!}}-{{!}}Supply Depot Summer Princess=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Supply Depot Summer Princess#Basic]]
+{{!}} {{ShipBattleCardKai|Supply Depot Summer Princess}}
+{{!}} [[Summer 2017 Event]] E-4 and E-5
+{{!}}-
+{{!}} [[Supply Depot Summer Princess#Basic II]]
+{{!}} {{ShipBattleCardKai|Supply Depot Summer Princess/II}}
+{{!}} [[Summer 2017 Event]] E-4 and E-5
+{{!}}}
+}}
+
+|-|Water Demon=
+
+{{#tag:tabber|Anchorage Water Demon=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Anchorage Water Demon#Basic]]
+{{!}} {{ShipBattleCardKai|Anchorage Water Demon}}
+{{!}} [[Spring 2015 Event]] E-5 Boss. Appears also in [[Fall 2015 Event]] E-4 node M.
+{{!}}-
+{{!}} [[Anchorage Water Demon#Basic III]]
+{{!}} {{ShipBattleCardKai|Anchorage Water Demon/III}}
+{{!}} [[Spring 2015 Event]] E-5 Boss '''"final form"'''. Appears also in [[Fall 2015 Event]] E-4 node M.
+{{!}}-
+{{!}} [[Anchorage Water Demon#Basic II]]
+{{!}} {{ShipBattleCardKai|Anchorage Water Demon/II}}
+{{!}} [[Spring 2015 Event]] E-5 Boss '''"strong form"'''.
+{{!}}-
+{{!}} [[Anchorage Water Demon#Basic IV]]
+{{!}} {{ShipBattleCardKai|Anchorage Water Demon/IV}}
+{{!}} [[Spring 2015 Event]] E-5 Boss '''"final and strong form"'''.
+{{!}}}
+
+{{!}}-{{!}}Harbour Water Demon=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Harbour Water Demon#Basic]]
+{{!}} {{ShipBattleCardKai|Harbour Water Demon}}
+{{!}} [[Spring 2015 Event]] E-4 boss.
+{{!}}-
+{{!}} [[Harbour Water Demon#Basic II]]
+{{!}} {{ShipBattleCardKai|Harbour Water Demon/II}}
+{{!}} [[Spring 2015 Event]] E-4 boss in final form.
+{{!}}-
+{{!}} [[Harbour Water Demon#Basic III]]
+{{!}} {{ShipBattleCardKai|Harbour Water Demon/III}}
+{{!}} [[Spring 2015 Event]] E-4 boss in strong form.
+{{!}}-
+{{!}} [[Harbour Water Demon#Basic IV]]
+{{!}} {{ShipBattleCardKai|Harbour Water Demon/IV}}
+{{!}} [[Spring 2015 Event]] E-4 boss in final and strong form.
+{{!}}}
+}}
+
+|-|Little Sister= 
+{{#tag:tabber|Northern Little Sister=
+{{{!}} class="wikitable"
+! Name
+! "Battle card"
+! Notes
+{{!}}-
+{{!}} [[Northern Little Sister#Basic]]
+{{!}} {{ShipBattleCardKai|Northern Little Sister}}
+{{!}} [[Spring 2019 Event]] E-3 Phase 2 Boss for hard difficulty.
+{{!}}-
+{{!}} [[Northern Little Sister#Basic II]]
+{{!}} {{ShipBattleCardKai|Northern Little Sister/II}}
+{{!}} [[Spring 2019 Event]] E-3 Phase 2 Boss for medium difficulty.
+{{!}}-
+{{!}} [[Northern Little Sister#Basic III]]
+{{!}} {{ShipBattleCardKai|Northern Little Sister/III}}
+{{!}} [[Spring 2019 Event]] E-3 Phase 2 Boss for hard difficulty.
+{{!}}-
+{{!}} [[Northern Little Sister#Damaged]]
+{{!}} {{ShipBattleCardKai|Northern Little Sister/Damaged}}
+{{!}} [[Spring 2019 Event]] E-3 Phase 2 Boss for easy/casual difficulty.'''Final form'''
+{{!}}-
+{{!}} [[Northern Little Sister#Damaged II]]
+{{!}} {{ShipBattleCardKai|Northern Little Sister/Damaged II}}
+{{!}} [[Spring 2019 Event]] E-3 Phase 2 Boss for medium difficulty.'''Final form'''
+{{!}}-
+{{!}} [[Northern Little Sister#Damaged III]]
+{{!}} {{ShipBattleCardKai|Northern Little Sister/Damaged III}}
+{{!}} [[Spring 2019 Event]] E-3 Phase 2 Boss for hard difficulty.'''Final form'''
+{{!}}}
+}}
+
+</tabber>
+
+==References==
+<references />
+[[Category:Abyssal Land Bases]]
+[[Category:Game Mechanism]]
+[[Category:Game System]]

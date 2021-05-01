@@ -1,0 +1,104 @@
+{{Map/Header}}
+{{Map/Info
+|en = Brunei Anchorage
+|jp = ブルネイ泊地沖
+|romaji = Burunei Hakuchi oki
+|exp_hq = 140
+|exp_hq_boss = 1680
+|show_kills = true
+|kills = 3
+|strategy_name = Brunei Anchorage Patrol
+|strategy_name_ja = ブルネイ泊地沖哨戒
+|strategy_info = It is recognized enemy submarines actively operate near fuel-rich Brunei anchorage. Search and suppress those enemies; strive for safety around this anchorage which is a key location.
+
+|strategy_info_ja = 燃料の豊かなブルネイ泊地近海に敵潜水艦の跳梁が見られる。これを捜索制圧し、重要拠点である同泊地周辺の安全を図れ！
+}}
+{{MapBranchingTable
+|title = 7-1 Branching Rules
+|expand = true
+|id = 7-1
+|0 -> B, D, F = 
+* Meet '''ALL''' of the following requirements to go to F:
+** Amount of ships in fleet ≤ 4
+** No (F)BB(V) or CV(L/B)
+** No SS(V)
+** No AO
+* Meet '''ALL''' of the following requirements to go to D:
+** Amount of ships in fleet = 5 '''OR''' Fleet contains AO.
+** Amount of ships in fleet ≤ 5
+** No (F)BB(V) or CV(L/B)
+** No SS(V)
+* Meet '''ANY''' of the following requirements to go to B:
+** Amount of ships in fleet = 6
+** Fleet contains (F)BB(V) or CV(L/B) '''AND''' no SS(V)
+* If fleet contains '''SS(V)''':
+** If amount of ships ≤ 4, random routing between B, D and F.
+** If amount of ships ≥ 5, random routing between B and D.
+** If fleet contains (F)BB(V) or CV(L/B), random routing between B and D.
+
+|B -> A/storm = * Do not meet the requirements to go to C.
+|B -> C = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CV(L) ≤ 1
+** No (F)BB, CA or CV(B) (BBV and CAV are allowed)
+** No SS(V)
+
+|D -> C, E/resource = 
+*'''FORCE''' node E if fleet contains DD ≥ 1 and DE ≥ 3
+*Go to C if fleet contains any CA(V), AV, CLT and CT
+*Go to E if DD ≥ 4 or DD+DE = 5
+*Otherwise, node C
+
+|H -> I/resource, J/empty, K = 
+* Fleets that contain (F)BB(V) or CV(B) are '''FORCED''' to J.
+*Go to I if fleet contains AO
+* Meeting '''ANY''' of the following requirements routes you to K:
+** Fleet contains DD '''AND''' amount of DE ≥ 3
+** Amount of CL = 1 '''AND''' amount of DD ≥ 4
+*Higher chance of going to K if the amount of ships in fleet = 5
+*Otherwise, random routing (Small chance for node J)
+}}
+
+
+===Notes===
+*Clearing this map is required in order to open [[World 4/4-2|World 4-2]].
+**To clear this map, the boss {{ShipLink|Submarine So-Class/Flagship}} must be sunk three times.
+*This is an anti-submarine operation, where use of ships capable of using [[Partials/Opening ASW|opening ASW attacks]] (OASW) is highly recommended.
+**Node {{Event/Route|G|red}} requires a surface battle against an enemy torpedo squadron.
+**Use of Light/Torpedo Cruisers and Destroyers capable of using [[Partials/Opening ASW|opening ASW attacks]] either from being able to reach 100 {{ASW}} stat or having built-in OASW capabilities (''e.g''. {{ShipLink|Isuzu Kai Ni}}, [[Tatsuta Kai Ni]], {{ShipLink|Jervis/Kai}} and [[Samuel B. Roberts]]) is highly recommended.
+**Use of [[List of coastal defense ships by upgraded maximum stats|Coastal Defense Ships]] is an option as well, but due to their poor firepower and defensive stats, they may have trouble surviving Node {{Event/Route|G|red}}.
+*Using any BB, CV(L), AV or AO will cause fleets to be sent to Node {{Event/Route|B|red}}.
+*Using 6 ships will cause fleets to route to Node {{Event/Route|B|red}}.
+*Equipping a [[Drum Canister (Transport Use)]] will increase fuel gains by +2 Fuel per Drum on node E.
+
+===Recommended Fleets===
+====1 CL 4 DD ====
+*'''This fleet has fixed routing towards the boss.'''
+*Route {{Event/Route|D|red|E|green|G|red|H|red|K|red}}
+*Use of a Light Cruiser capable of opening attacks against surface ships is an option for Node {{Event/Route|G|red}} .
+**Opening torpedo attack ({{ShipLink|Abukuma/Kai Ni}} or {{ShipLink|Yura Kai Ni}})
+**Opening airstrike via {{Seaplane}} {{EquipmentLink|Zuiun|Prototype Seiran|text=Seaplane Bombers}} (''e.g.'' {{ShipLink|Agano|Noshiro|Yahagi|Sakawa|text=Remodeled Agano-class}})
+***If neither are available, you may opt to use a Light Cruiser strong in surface combat, or a Light Cruiser capable of both surface combat and OASW together (''e.g.'' {{ShipLink|Isuzu/Kai Ni}} or {{ShipLink|Tatsuta/Kai Ni}})
+*Bringing Destroyers capable of OASW is highly advised (100 {{ASW}} ASW stat or built-in capability).
+**If ASW stat is high enough to reach OASW without three equipments, or if the ship has built-in OASW capability, mixing surface combat equipment and ASW equipment together can help stabilize the surface battle at Node G.
+**For a low number of OASW-capable Destroyers, please make sure to still equip Destroyers with full synergy setups for ASW combat:
+***'''Example 1''': Two '''(2)''' {{Sonar}} {{EquipmentLink|Type 3 Active Sonar|Type 4 Passive Sonar|text=Sonar}} & One '''(1)''' {{DepthCharge}} {{EquipmentLink|Type 3 Depth Charge Projector|Type 94 Depth Charge Projector|text=Depth Charge Projector}}
+***'''Example 2''': One '''(1)''' {{Sonar}} {{EquipmentLink|Type 3 Active Sonar|Type 4 Passive Sonar|text=Sonar}} + One '''(1)''' {{DepthCharge}} {{EquipmentLink|Type 3 Depth Charge Projector|Type 94 Depth Charge Projector|text=Depth Charge Projector}} + One '''(1)''' {{DepthCharge}} {{EquipmentLink|Type 2 Depth Charge|Type 95 Depth Charge|text=Depth Charge}}.
+*Speed is irrelevant here; i.e., {{ShipLink|Samuel B. Roberts|text=Samuel}} is allowed.
+
+===Recommended Fleets with Chances to Dead End===
+The following are fleets capable of reaching the Boss Node, however they have a chance to off-route into dead-end Nodes {{Event/Route|I|Green}} or {{Event/Route|J|Blue}}.
+*{{Event/Route|F|red|G|red|H|red|K|red}}
+**2 CLT 1 CL 1 DD
+**2 CL 2 DD
+**2 CL 2 CLT
+**1 CAV 1 CLT 2 DD
+**3 CLT 1 CL
+
+==Sample Fleets==
+{{Section|no_clear=true}}Please be advised the following are Samples, where you should try to optimize your fleet based on what is available in your Fleet. If lacking in appropriate Ships and/or Equipment, you are advised to go through further preparation to clear this Map.
+
+{{:World 7-1 Sample Fleet}}
+{{SectionEnd}}
+{{clear}}
+{{Map/Footer}}

@@ -1,0 +1,96 @@
+==About==
+Previously, I was uploading the master ship records to this blog post. Now I'm serving it from my own website, found at [http://jetri.co/kancolle jetri.co/kancolle]. (''this URL is now converted into the sortie database and the current decodes are not uploaded anywhere'')
+
+You can see all data of ships, items, consumables, etc, down to the last stat. This is driven directly from the game so this reflects data that's being used in the backend computations.
+
+You can compare it to [http://www51.atpages.jp/kancollev atpages.jp/kancollev], but in English.
+
+In the case of a new ship, new remodel, you can immediately see the statistics and artwork it has, earlier than anyone else. This is also how I provide data onto the wiki like max stats, etc, even without anyone manually doing the max upgrades. It takes a while to kai a new ship, not to mention to even up it to max modernization. So if you just wanna see the new ship, this is the way to go.
+
+So the point is, it provides data, earlier than anything else....
+==April 23 Spring Update==
+<span style="font-size:17px;font-weight:bold;">Introduction</span>
+
+I was on standby in Twitter and the English forums, and right after the maintenance, I immediately brought up my decoding scripts. I triggered the update script, which should automatically download new API data, for ships, slotitems, useitems, furniture, and stypes (''ship types''). As expected, it didn't work.
+
+''A few days earlier, I saw on some Twitter translations that their database is getting an overhaul. I feared this would affect the decoding, and it did.''
+
+I was like, ''"how am I going to provide the new data now?"'' I was previously planning to release the new ship articles here on wiki immediately, and release some artwork in the wikia fan page the earliest, earlier than anyone who could ever get the new ships as a drop. I was previously aiming that it will boost our wikia fan page and get more likes and user engagement.
+
+Actually I was not thinking about playing. I didnt even think about opening the VPN or any flash player. All in my mind is that I had to provide the new data for everyone, and release the much awaited artwork to the community.
+
+On these scenarios, what wpuld you do? Would you give up?
+
+I did not. Actually it was quite fun, I like challenges. It was like a developers race - virus vs anti-virus race of some sort. Although the game devs were't really there to race me, it was just a race against myself and how soon I can release data.
+===Initial Re-decode===
+With the decoders not working, we're back to square one. How do we even start the decoding process, I'll explain.
+
+It starts with "opening the game", but with tools such as Inspector/Console - which most modern browsers have it,just press [F12].
+
+Once the game loads, under the Network tab, your can view the requests/calls that the game makes to the server.
+
+Previously, the game client was requesting "'''master ship'''" from the server, hence this blog post's title. We inspect that specific request, and we see that the server responds with a large load of data, by that time around ~500kb, in text format, which is relatively lots and lots of characters.
+
+This large text, is in JSON-format, that when dedcoded, actually contains all ship data, including hidden stats, including the ones you don't have.
+
+This is what my decoders were downloading. But on this update, "'''master ship'''" isn't there!! Alright, no problem, so how does it work now? What is the game client requesting?
+
+Well today, we have an "'''api_start'''". Which is ALMOST the same as "'''master ship'''" except that now, it contains all data, all ships, all slotitems, all useritems, furniture, whatever. There are even new names I haven't seen before, shipgraph, slotitem_graph, whatevers.
+
+So ship data is now mixed with all these categories, something that the current decoders of the time wasn't able to read.
+
+Something that I cant re-program at that moment since this is all happening when I'm panicking.
+
+Well then why don't I just take the ship object inside the large chunk of data, and create another file which only contains ship data = something the old decoders can understand. Yes, I did this manually, highlight only the ship object in notepad++, copy, paste into new file. Though I did some techniques to do this easily.
+
+Fortunately, the new file worked out fine and decoders were able to read it. I ran the scanners as well which looks for changed data since the last decode, and yes I see the new ships, remodels, items, and enemies.
+
+===Obtaining Graphics===
+I also metioned that I wanted to release the artwork pretty early. Well this also posed to be a problem.
+
+Previously if you just wanted to get the graphics, just download:
+
+<blockquote>http://203.104.209.39/kcs/ships/000.swf</blockquote>
+
+where 000 is the ID of the ship you want.
+
+But inspecting the game requests again, the SWF files are... random multiple alphabet characters (e.g. ''gyckjmemgqoe''). This is like.. a dead end.. if I want to release the artwork of the new ships, how do I know the filenames of the new ships?!
+
+Well easy, by that time it was Natori as secretary of my alt, so I got her alphabet code.
+
+From the "'''api_start'''" which I mentioned contained everything, I did Ctrl+F for that specific alpha code and yes there is a result, and it seems the filenames are in the shipgraph.
+
+This is in the large chunk of text I was talking about earlier.
+The same way I did with ship object, manually copy-pasted the shipgraph object into a new file and decoded it. Now, we have all filenames of all ships.
+
+===Releasing Fan Page post===
+So now I have the ship data, and the ship IDs, and the counterpart filenames. As mentioned, I took the new ship IDs, got their counterpart and tried downloading the swf file. It actually worked! The file is Amatsukaze!
+
+In much surprise and delight, [https://www.facebook.com/KancolleWikia/photos/a.1410033502566886.1073741827.1409823375921232/1456765444560358 immediately uploaded Amatsukaze's full art] in the wikia fan page.
+
+Calming down a bit, I still keep my cool and continue decoding.
+
+I am pretty ambitious, and actually prepared a template beforehand. Its a flash file that will load the new ship art and dta by just providing IDs to it. Basically it won't work since the art changed filenames right?
+
+But then think about it, I downloaded the new art swfs! So I just placed the swf files into respective locations where the template will be looking for it. Again it worked, the new art shows up (via my downlads earlier). Then [https://www.facebook.com/KancolleWikia/photos/a.1410033502566886.1073741827.1409823375921232/1456774164559486 posted on the wikia fan page again] .
+
+===Generating Wikia Articles===
+Beforehand, I also created a script that will generate the wiki source for an article for a new ship. Since the ship object is now being read normally by the decoders, this worked just fine. I just needed to adjust some text for enemy ships and bosses.
+*[[Amatsukaze]]
+*[[Akashi]]
+*[[Sakawa]]
+*[[Tanikaze]]
+*[[Tone ]] (kai ni box)
+*Chikuma (kai ni box)
+*[[Bismarck ]] (zwei box)
+*[[Harbour Princess]]
+*[[Isolated Island Demon]]
+
+===Adding CG Gallery===
+As I now have the swf files in my local computer, its just a simple edit document size in flash so fit the picture and export as png, or jpeg if its the card. I uploaded immediately once I was done.
+
+===Other Notes===
+I also did leave some notes for Remodelling and Modernization. I was too tired to edit those articles so I just posted the data in the talk page.
+*http://kancolle.wikia.com/wiki/Remodelling#comm-59589
+*http://kancolle.wikia.com/wiki/Modernization#comm-59553
+[[Category:Blog posts]]

@@ -1,0 +1,186 @@
+{{Map/Header}}
+{{Map/Info
+|en = Curry Ocean Ri-Lanka Island
+|jp = カレー洋リランカ島沖
+|romaji = Karē-yō Ri Lanka-tō oki
+
+|mechanics = LoS Check@Line of Sight, Manual Node Selection@Events/Mechanics#Node specific details 
+
+|show_kills = true
+|kills = 5
+
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 180
+|strategy_name = [[wikipedia:Easter Sunday Raid|Operation "Diminish the Oriental Abyssal Fleet"]]
+|strategy_name_ja = 深海東洋艦隊漸減作戦
+|strategy_info = The Oriental enemy forces have received a major blow by our fleet and are currently regathering at the Ri-Lanka Island harbour. Organise a military raid unit and destroy the enemy reinforcements!
+|strategy_info_ja = 我が艦隊により大打撃を受けた敵東洋艦隊がリランカ島の港湾に再集結しつつある。遊撃部隊を編成し、敵増援を撃滅せよ！
+|exp_hq = 200
+|exp_hq_boss = 2900
+}}
+{{MapBranchingTable
+|id = 4-5
+|0 -> A/empty, C/empty = * Random
+|I/empty -> J, G = * Active Branching
+|D -> H = * Fixed Route
+|E -> M/empty, K = 
+* Meet '''ANY''' of the following to go to M
+** Fleet Contains AO
+** (F)BB(V)+CV(L/B) ≥ 3
+** CL = 1 '''AND''' DD ≥ 2
+* Otherwise, go to K
+
+|G -> D, H =
+*Go to H if CL = 1 '''AND''' DD ≥ 2
+*Otherwise, random routing
+
+|H -> K, T = 
+* Meet ''' ANY''' of the following to go to T
+**'''FAST+''' fleet '''AND''' (F)BB(V)+CV(L/B) ≤ 4
+**CL = 1 '''AND''' DD ≥ 3
+** Fleet did '''not''' go through node D '''AND''' contains CL '''with''' DD ≥ 2
+* Otherwise, go to K
+
+|K -> L/empty = * Fail the LoS check
+|K -> M/empty = 
+* (F)BB(V)+CV(B) ≥ 4
+* (F)BB(V)+CV(L/B) ≥ 5
+|K -> T = * Pass the LoS check ('''≥ 71 F33 Cn2''') and does not meet the condition to go to M
+
+|M/empty -> N, R/storm = 
+*Meet '''ANY''' of the following to go to N
+**'''Fastest''' fleet
+**'''Fast+''' fleet and DD ≥ 2
+**'''Fast''' fleet, (F)BB(V)+CV(B) ≤ 1, CL = 1 '''AND''' DD ≥ 2
+*Otherwise, go to R
+
+|O -> N, T =
+* Meet '''ANY''' of the following to go to N
+**(F)BB(V) ≥ 4
+**Fleet contains slow ship and (F)BB(V)+CV(L/B) ≥ 5
+**Fail the LoS Check ('''≤ 75 F33 Cn2''')
+*Otherwise, random routing
+
+|Q/empty -> N, O, P/empty =
+*Go to P if the fleet fails the LoS check ('''≤ 60 F33 Cn2''')
+*Go to O if (F)BB(V)+CV(L/B) ≥ 5
+*Go to N if fleet contains DD
+*Otherwise, O
+
+|R/storm -> N = 
+* '''Fast+''' fleet
+* '''Fast''' fleet, CL = 1, '''AND''' DD ≥ 2
+* '''Fast''' fleet, CA(V) = 1, '''AND''' DD ≥ 2
+
+|R/storm -> S = * Do not meet the requirement to go to N
+
+}}
+
+*'''IMPORTANT''': [[4-4]] and [[5-1]] '''MUST''' be cleared in order to unlock this map.
+* Clearing this map gives you '''1 medal & 180 ranking points'''.  Like the other Extra Operations, it resets at the start of every month and then can be cleared again.
+
+===Tips===
+* The boss is a [[Installation_Type#Soft-Skinned|Soft-Installation Type]]. It is '''Strongly Recommended''' to equip {{GreenAmmo}}{{EquipmentLink|Type 3 Shell|Type 3 Shell Kai}} on BB/CA(V) or {{WG42}} on CL/DD if applicable.
+**Aircraft carriers '''CANNOT''' attack installations if they have a {{DiveBomb icon}} equipped '''UNLESS''' it's one of the bombers from the following list:
+
+{{Anti-Installation Bombers}}
+* The Boss Flagship must be Sunk '''5 times''' in order to clear this map.  After the first 4 kills, the boss node will change to its final form. The boss comp will revert back to its initial Form after clearing.
+*Due to the Shelling Order during the Second Shelling Phase, it may be advantageous to order your Carriers '''before''' your CA(V)s and (F)BB(V)s, which allows the Carriers to shell first to potentially take out the escorts on the boss and allow your other ships to aim at the boss.
+
+{{clear}}
+
+===Strategies===
+There are 3 strategies for this map:
+====Standard Routing (4 Battles)====
+Routes: {{Event/Route|A|blue|D|red|H|red|K|red|T|red}} '''OR''' {{Event/Route|C|blue|D|red|H|red|K|red|T|red}}
+*Beware that Node {{Event/Route|K|red}} has a chance to Heavily Damage your ship(s) due to the presence of 1 or 2 {{ShipLink|Battleship Ru-Class Kai Flagship}}.
+*The Fleet will arrive at the Boss Node {{Event/Route|T|red}} with 60% Ammo left, where Damage Penalty won't be applied..
+*Los required to into the boss is around '''71 Formula 33 Cn=2'''
+*'''Compositions'''
+**3 CA(V) 3 CV(B)
+**1 (F)BB(V) 3 CA(V) 2 CV(B)
+**2 (F)BB(V) 1 CV(B) 2 CA 1 CAV (This suitable for Quest '''B99''' ({{ShipLink|Nagato Kai Ni}}))
+**3 CV(B) 1 CVL 2 CA(V)
+<br />
+====Fast+ Speed Fleet Routing (3 Battles)====
+Routes: {{Event/Route|A|blue|D|red|H|red|T|red}} '''OR''' {{Event/Route|C|blue|D|red|H|red|T|red}}
+*'''DISCLAIMER''': Please beware that use of this strategy is impossible without the following:
+**All Ships are highly recommended to have been applied with {{Reinforcement Expansion}} [[Reinforcement Expansion]].
+**All Ships must have {{Engine}} {{EquipmentLink|New Model High Temperature High Pressure Boiler}} '''OR''' {{EquipmentLink|Enhanced Kanhon Type Boiler}} '''AND''' {{Engine}} {{EquipmentLink|Improved Kanhon Type Turbine}} equipped to enable '''"Fast+ (高速+)"''' or '''"Fastest (最速)"''' as their Speed.
+***The turbine goes onto the Ship's [[Reinforcement Expansion]] Extra Slot if available.
+***Slow Ships must have 2x Boilers to become "Fast+", so unless you are using {{ShipLink|Ise/Kai Ni}} or {{ShipLink|Musashi/Kai Ni}} who both have 5 Equipment Slots, you are recommended to use FBBs.
+***Please read the [[Partials/Speed system|Speed Synergy]] Article if you are unfamiliar with the Speed Change Mechanic.
+*The advantage of this strategy is being able to only go through the Submarine Node {{Event/Route|D|red}} and a Light Enemy Fleet in {{Event/Route|H|red}}, then go straight into the Boss Node {{Event/Route|T|red}} afterwards and avoid going into {{Event/Route|K|red}}, which contains a Heavy Enemy Fleet.
+*The exchange is that your BB(V)/CA(V) won't be able to do [[Artillery Spotting]] due to being unable to equip {{EquipmentLink|Type 0 Observation Seaplane|text=Seaplane}}, though as they will still be outfitted with Two '''(2)''' {{RedGunMedium}} Main Guns, they will still be able to do Double Attack during Night Battle.
+*It is highly recommended that the CV(B)s are all outfitted with [[Combat/Day Combat|Aircraft Cut-In]] Setup to be able to deal with non-Installation Escort Ships quickly and efficiently.
+*You will be entering the Boss Node with 73% Fuel and 80% Ammo left, where you are able to gain more Evasion than the Standard Fleet, and therefore you will have no damage penalty at the Boss Node.
+*'''Compositions'''
+**3 CA(V) 3 CV(B) '''[Fast+]'''
+**2 CA(V) 3 CV(B) 1 CVL '''[Fast+]'''
+**1 BB(V) 2 CA(V) 3 CV(B) '''[Fast+]'''
+<br />
+
+====CL & DD Routing (3-4 Battles)====
+*Like '''Fast+''' routing, you will also skip node {{Event/Route|K|red}} which contains dangerous enemies, and have no damage penalty at the Boss Node. But in exchange, you '''MUST''' bring CL and DDs along with you, which can make it difficult to defeat [[Harbour Princess]], especially in her Final Form.
+**Please note that four-slot DD such as {{ShipLink|Tashkent Kai}}, or four-slot CL like {{ShipLink|Ooyodo Kai}}, {{ShipLink|Gotland Kai}} are useful in this situation as they can carry two {{EquipmentLink|WG42 (Wurfgerät 42)}} to deal significant damage to [[Harbour Princess]].
+*Generally not recommended for normal clearing, but can be helpful should you do the quests that require you to take CL/DDs into 4-5 Boss (i.e, quest '''B114''') or attempt to save cost from supplying and repairing ships.
+*'''Compositions'''
+**2 (F)BB(V)/CV(L/B) 1 CL 3 DD
+***Goes {{Event/Route|A|blue|D|red|H|red|T|red}} or {{Event/Route|C|blue|D|red|H|red|T|red}}
+**1 (F)BB(V)/CV(L/B) 1 CL 2 DD 2 CVL '''(FAST)'''
+***Goes {{Event/Route|C|blue|F|red|I|blue|G|red|H|red|T|red}} or {{Event/Route|A|blue|B|red|E|red|M|blue|R|magenta|N|red|T|red}}
+
+{{clear}}
+
+==Sample Fleets==
+{{Section|no_clear=true}}
+{{Fleets
+|!Standard Route (4 Battles)
+|!!3 CA(V) 3 CV(B)
+|-|Myoukou/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 0 Observation Seaplane|Type 3 Shell
+|-|Suzuya/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 3 Shell|Type 0 Observation Seaplane
+|-|Kumano/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 3 Shell|Type 0 Observation Seaplane
+|-|Shoukaku/Kai Ni A|Tenzan Model 12 (Tomonaga Squadron)|Suisei (Egusa Squadron)|Type 0 Fighter Model 52 (Skilled)|Type 0 Fighter Model 52 (Skilled)
+|-|Zuikaku/Kai Ni A|Tenzan Model 12 (Murata Squadron)|Type 99 Dive Bomber (Egusa Squadron)|Zero Fighter Model 52C (w/ Iwai Flight)|Type 2 Reconnaissance Aircraft
+|-|Taihou/Kai|Ryuusei Kai|Suisei Model 12A|Type 0 Fighter Model 53 (Iwamoto Squadron)|Saiun
+|!!1 BB(V) 3 CA(V) 2 CV(B)
+|-|Nagato/Kai Ni|Prototype 41cm Triple Gun Mount|Prototype 41cm Triple Gun Mount|Type 0 Observation Seaplane|Type 3 Shell
+|-|Haguro/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 0 Observation Seaplane|Type 3 Shell
+|-|Choukai/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 0 Observation Seaplane|Type 3 Shell
+|-|Maya/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 0 Observation Seaplane|Type 3 Shell
+|-|Shoukaku/Kai Ni A|Tenzan Model 12 (Tomonaga Squadron)|Suisei (Egusa Squadron)|Type 0 Fighter Model 53 (Iwamoto Squadron)|Type 0 Fighter Model 52 (Skilled)
+|-|Zuikaku/Kai Ni A|Tenzan Model 12 (Murata Squadron)|Type 99 Dive Bomber (Egusa Squadron)|Zero Fighter Model 52C (w/ Iwai Flight)|Saiun
+|!Fast+ Fleet (3 Battles)
+|!!1 BB(V) 2 CA(V) 3 CV(B)
+|-|Bismarck/Drei|38cm Twin Gun Mount Kai|38cm Twin Gun Mount Kai|Type 3 Shell|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Tone/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 3 Shell|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Choukai/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 3 Shell|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Shoukaku/Kai Ni A|Tenzan Model 12 (Tomonaga Squadron)|Suisei (Egusa Squadron)|Type 0 Fighter Model 53 (Iwamoto Squadron)|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Zuikaku/Kai Ni A|Tenzan Model 12 (Murata Squadron)|Type 99 Dive Bomber (Egusa Squadron)|Zero Fighter Model 52C (w/ Iwai Flight)|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Saratoga/Mk.II Mod.2|TBM-3D|F4U-1D|F6F-5|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|!!3 CA(V) 3 CV(B)
+|-|Myoukou/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 3 Shell|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Suzuya/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 3 Shell|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Kumano/Kai Ni|20.3cm (No.3) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|Type 3 Shell|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Shoukaku/Kai Ni A|Tenzan Model 12 (Tomonaga Squadron)|Suisei (Egusa Squadron)|Type 0 Fighter Model 53 (Iwamoto Squadron)|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Zuikaku/Kai Ni A|Tenzan Model 12 (Murata Squadron)|Type 99 Dive Bomber (Egusa Squadron)|Zero Fighter Model 52C (w/ Iwai Flight)|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|-|Saratoga/Mk.II Mod.2|TBF|F4U-1D|F6F-5|New Model High Temperature High Pressure Boiler|Improved Kanhon Type Turbine
+|!CL & DD Fleet (4 Battles)
+|!!3CV(B) 1CL 2DD
+|-|Saratoga/Mk.II Mod.2|TBM-3D|F4U-1D|F6F-5N|Night Operation Aviation Personnel + Skilled Deckhands
+|-|Shoukaku/Kai Ni A|Tenzan Model 12 (Tomonaga Squadron)|Suisei Model 22 (634 Air Group)|Type 0 Fighter Model 53 (Iwamoto Squadron)|Reppuu Model 11
+|-|Zuikaku/Kai Ni A|Tenzan Model 12 (Murata Squadron)|Suisei Model 22 (634 Air Group/Skilled)|Zero Fighter Model 52C (w/ Iwai Flight)|Reppuu (601 Air Group)
+|-|Ooyodo/Kai|20.3cm (No.3) Twin Gun Mount|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|WG42 (Wurfgerät 42)|WG42 (Wurfgerät 42)|10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|-|Tashkent/Kai|130mm B-13 Twin Gun Mount|130mm B-13 Twin Gun Mount|WG42 (Wurfgerät 42)|WG42 (Wurfgerät 42)
+|-|Johnston/Kai|5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37|5inch Single Gun Mount Mk.30 Kai|WG42 (Wurfgerät 42)
+|!!1FBB 2CV(B) 1CL 2DD
+|-|Iowa/Kai|16inch Triple Gun Mount Mk.7|16inch Triple Gun Mount Mk.7|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|Type 3 Shell Kai
+|-|Saratoga/Mk.II Mod.2|Tenzan Model 12 (Murata Squadron)|Suisei Model 22 (634 Air Group/Skilled)|Zero Fighter Model 52C (w/ Iwai Flight)|Reppuu Model 11
+|-|Zuikaku/Kai Ni A|Tenzan Model 12 (Tomonaga Squadron)|Suisei Model 22 (634 Air Group)|Type 0 Fighter Model 53 (Iwamoto Squadron)|Reppuu (601 Air Group)
+|-|Ooyodo/Kai|20.3cm (No.3) Twin Gun Mount|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|WG42 (Wurfgerät 42)|WG42 (Wurfgerät 42)|10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|-|Tashkent/Kai|130mm B-13 Twin Gun Mount|130mm B-13 Twin Gun Mount|WG42 (Wurfgerät 42)|WG42 (Wurfgerät 42)
+|-|Johnston/Kai|5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37|5inch Single Gun Mount Mk.30 Kai|WG42 (Wurfgerät 42)
+}}
+{{SectionEnd}}
+{{Clear}}
+{{Map/Footer}}

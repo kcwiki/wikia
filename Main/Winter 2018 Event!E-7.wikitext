@@ -1,0 +1,262 @@
+{{Event/MapPageHeader
+<!--|thread = -->
+}}
+{{Event/MapInfo
+|en = Victory over the Dawn Horizon--
+|jp = 暁の水平線に勝利を――
+|romaji = Akatsuki no Suiheisen ni Shōri o--
+|mechanics = Abyssal Combined Fleet@Abyssal Combined Fleet, Land Base Aerial Support@Land Base Aerial Support, Combined Fleet@Combined Fleet, Unlockable Nodes@Events/Mechanics#Node_specific_details, LoS Check@Events/Mechanics#LoS_Check,
+|hp_all = 2400 HP + 4500 HP
+|no_hp = true
+|hp_casual = ?
+|hp_easy = ?
+|hp_medium = ?
+|hp_hard = ?
+|show_kills = true
+|kills_all = 3 + 5.5
+|kills_casual = ?
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+|reward_all = {{ShipBattleCardKai|Intrepid}}
+|reward_casual_1 = {{ItemStack|item = [[File:TanakaLUL.png{{!}}50px]]|text = Nothing}}
+|reward_easy_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_1_x = 2
+|reward_medium_1 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_medium_1_x = 7
+|reward_medium_2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|51cm Twin Gun Mount|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_hard_1_x = 10
+|reward_hard_2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_2_x = 2
+|reward_hard_3 = {{EquipmentCardKai|Shiden Kai (343 Air Group) 301st Fighter Squadron|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|51cm Twin Gun Mount|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = [[File:First-class Medal 061 useitem.png|50px|link=Medal]]
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-7 Branching Rules Starting Points
+|0 -> 1 = 
+* Carrier Task Force
+|0 -> 2/empty = 
+* Surface Task Force
+* Transport Escort Fleet
+}}
+
+{{MapBranchingTable
+|title = E-7 Branching Rules Part 1
+|B/empty -> C = 
+* Do not meet the requirements to go to D.
+* Shortcut is not unlocked.
+|B/empty -> D/empty = 
+* Meet any of the following requirements after unlocking the shortcut:
+** '''Fast+''' Fleet
+** Fast Fleet '''AND''' Amount of (F)BB(V) ≦ 2
+
+|C -> D = * Do not meet the requirements to go to H.
+|C -> H = * '''Fast+''' Fleet
+
+|D -> G = * Slow Fleet
+|D -> I = * Fast Fleet
+|D -> M = * '''Fast+''' Fleet
+
+|M -> O/empty = * Fail the LoS check.
+|M -> Q = 
+* Meet one of the following requirements:
+** Fleet contains AV.
+** Fleet contains AS.
+** Default route when at the first unlocking Phase.
+|M -> W = 
+* Meet all of the following requirements:
+** Do not meet the requirements to go to Q.
+** The route to Node W must be unlocked.
+** Pass the LoS check.
+}}
+
+{{MapBranchingTable
+|title = E-7 Branching Rules Part 2
+|2 -> A = * Slow Fleet
+|2 -> E/empty = * Fast Fleet
+
+|E -> F = 
+* Do not meet the requirements to go to K.
+|E -> K/empty = 
+* Meet any of the following requirements:
+** '''Fast+''' Fleet
+** ???
+
+|J/empty -> K, N = * Active Branching
+
+|K -> H = 
+* Meet all of the following requirements:
+** Fast Fleet
+** Shortcut is unlocked.
+|K -> L = 
+* Do not meet the requirements to go to H.
+
+|L -> H = 
+* Meet all of the following requirements:
+** Pass the LoS check.
+** Do not meet the requirements to go to Q.
+|L -> P/empty = 
+* Fail the LoS check.
+|L -> Q = 
+* Meet all of the following requirements:
+** Pass the LoS check.
+** Fleet went through node A.
+** Amount of (F)BB(V) ≧ 5
+
+|N -> R/empty = * Fail the LoS check.
+|N -> S = 
+* Pass the LoS check, but do not meet the requirements to go to T.
+|N -> T = 
+* Meet all of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V) ≦ 4
+** Pass the LoS check.
+}}
+
+==Map Guide==
+*'''ALL''' tagged and untagged ships are usable here. Untagged ships will remain untagged if sortied.
+*'''LBAS''': Three [[Land Base Aerial Support]]s are available for sorties, but an Enemy's air raid is presented until after the map is cleared.
+** 11+ range is required in order to reach the first boss node {{Event/Route|V|red}} and 9+ for the 2nd {{Event/Route|X|red}}. It is recommended to use [[Land_Base_Aerial_Support#Distance_Calculations|Scout Planes]] in order to reach the specified range.
+*Like E-4, Friend Fleets are presented on this map for both Boss nodes. 
+*'''Note:''' For some sections of this page, the orders of difficulty abbreviations are C/E/M/H for Casual/Easy/Medium/Hard, respectively.
+*'''Note:'''There are no historical routings on this map. There are, however, two historical bonuses. It shall be termed differently:
+**Leyte Gulf Bonus (see "Historical Fleet" list)
+**Historical Bonus (an upgrade to the above's bonus, '''only applies on Medium+''')
+
+===Historical Fleet: The Complete Leyte Gulf Assemble===
+A what-if scenario fleet if Operation Sho-Gou was a success and the Leyte fleet did not suffer any casualties. The following ships - from Nishimura, Kurita, Ozawa, and Shima fleet - have a ''1.15x post-cap historical damage bonus in both boss nodes'' that '''applies to ALL difficulties''':
+* CV(B): {{ShipLink|Shoukaku Kai Ni A|text=Shoukaku}}, {{ShipLink|Zuikaku Kai Ni A|text=Zuikaku}}
+* CVL: {{ShipLink|Chitose Carrier Kai Ni|text=Chitose}}, {{ShipLink|Chiyoda Carrier Kai Ni|text=Chiyoda}}, {{ShipLink|Zuihou Kai Ni|text=Zuihou}}
+* (F)BB(V): {{ShipLink|Fusou|Fusou Kai Ni|text=Fusou}}, {{ShipLink|Haruna Kai Ni|text=Haruna}}, {{ShipLink|Hyuuga Kai|text=Hyuuga}}, {{ShipLink|Ise Kai|text=Ise}}, {{ShipLink|Kongou Kai Ni|text=Kongou}}, {{ShipLink|Musashi Kai Ni|text=Musashi}}, {{ShipLink|Nagato Kai Ni|text=Nagato}}, {{ShipLink|Yamashiro|Yamashiro Kai Ni|text=Yamashiro}}, {{ShipLink|Yamato Kai|text=Yamato}}
+* CA(V): {{ShipLink|Aoba}}, {{ShipLink|Ashigara Kai Ni|text=Ashigara}}, {{ShipLink|Atago}}, {{ShipLink|Chikuma Kai Ni|text=Chikuma}}, {{ShipLink|Choukai Kai Ni|text=Choukai}}, {{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kumano Kai Ni|text=Kumano}}, {{ShipLink|Maya Kai Ni|text=Maya}}, {{ShipLink|Mogami|Mogami Kai|text=Mogami}}, {{ShipLink|Myoukou Kai Ni|text=Myoukou}}, {{ShipLink|Nachi Kai Ni|text=Nachi}}, {{ShipLink|Suzuya Kai Ni|text=Suzuya}}, {{ShipLink|Takao}}, {{ShipLink|Tone Kai Ni|text=Tone}}
+* CL: {{ShipLink|Abukuma Kai Ni|text=Abukuma}}, {{ShipLink|Isuzu Kai Ni|text=Isuzu}}, {{ShipLink|Kinu Kai Ni|text=Kinu}}, {{ShipLink|Noshiro Kai|text=Noshiro}}, {{ShipLink|Ooyodo Kai|text=Ooyodo}}, {{ShipLink|Tama Kai Ni|text=Tama}}, {{ShipLink|Yahagi Kai|text=Yahagi}}
+* DD: {{ShipLink|Akebono}}, {{ShipLink|Akizuki}}, {{ShipLink|Asagumo}}, {{ShipLink|Asashimo Kai|text=Asashimo}}, {{ShipLink|Hamakaze}}, {{ShipLink|Hatsuharu Kai Ni|text=Hatsuharu}}, {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}}, {{ShipLink|Hatsuzuki}}, {{ShipLink|Hayashimo}}, {{ShipLink|Isokaze}}, {{ShipLink|Kasumi Kai Ni|text=Kasumi}}, {{ShipLink|Kiyoshimo}}, {{ShipLink|Michishio Kai Ni|text=Michishio}}, {{ShipLink|Naganami Kai Ni|text=Naganami}}, {{ShipLink|Nowaki}}, {{ShipLink|Okinami}}, {{ShipLink|Shigure Kai Ni|text=Shigure}}, {{ShipLink|Shimakaze}}, {{ShipLink|Urakaze}}, {{ShipLink|Uranami}}, {{ShipLink|Ushio Kai Ni|text=Ushio}}, {{ShipLink|Wakaba}}, {{ShipLink|Yamagumo}}, {{ShipLink|Yukikaze}}
+
+{{clear}}
+
+===Phases===
+The map can be divided into four distinct phases:
+# Unlock the 1st boss node {{Event/Route|V|red}}
+# Defeat {{ShipLink|Battleship Water Demon Kai}}
+# Unlock the shortcuts between nodes {{Event/Route|H|red}}-{{Event/Route|K|red}} and {{Event/Route|B|blue}}-{{Event/Route|D|red}}
+#* (Medum and Hard only) Also, obtain the Historical Bonus
+# Defeat the final boss {{ShipLink|Abyssal Crane Princess}}
+
+===Unlocking the 1st Boss Node===
+
+There are two parts:
+*Obtain A+ rank at node {{Event/Route|Q|red}} using fast fleet CTF
+*Obtain Air Superiority (AS) 0/1/2/2 (C/E/M/H) time(s) during Land Base Air Raids.
+
+'''A+ rank at node''' {{Event/Route|Q|red}}
+*'''Route''': {{Event/Route|1|black}} {{Event/Route|B|blue}} {{Event/Route|C|orange}} {{Event/Route|D|red}} {{Event/Route|I|red}} {{Event/Route|M|red}} {{Event/Route|Q|red}}
+*'''Possible composition''': 2 FBB/ 4 CV(B) + CL/ 2 DD/ 0-2 CLT/ 0-2 CA/ 0-1 CVL* (fast)
+**(*)For the CVL in escort case, it is recommended only if you have night planes for night CV Cut-in.
+*CTF is highly recommended. The fighter power required to obtain AS is 558/624/858/912 (C/E/M/H). Usage of LBAS (range 9+) is recommended if you wish to obtain AS while having functioning carriers.
+*At least one OASW ship is suggested to tackle the submarine on {{Event/Route|D|red}}.  Using Cruising Formation 2 (top right formation) here can help with ASW damage while not impacting surface combat too heavily.
+
+'''Obtain Air Superiority from Air Raid(s)'''
+*Set your LBAS to "defense" and equip all your LBAS with as many fighters and interceptors as possible. For air-defense fighter power, refer to this link for its stat (Air-defense, Calc AA. column): [https://i.imgur.com/UIO37HH.png%7Cthis]
+*As you will likely send your LBAS to node Q, these two steps are done separately. Keep sorting into the map until you obtain AS. It is recommended to use a cheap fleet.
+
+===Defeating {{ShipLink|Battleship Water Demon Kai}}===
+*'''Route''': {{Event/Route|2|black}} {{Event/Route|E|blue}} {{Event/Route|F|red}} {{Event/Route|J|blue}} {{Event/Route|N|red}} {{Event/Route|T|red}} {{Event/Route|U|red}} {{Event/Route|V|red}}
+*'''Possible composition:''' 4 fBB / 0-2 CVL / 0-1 CV(B) / 0-1 CAV + 1 CL / 2 DD / 1-2 CA(V) / 0-2 CLT / 0-1 CVL* (fast) / 0-1 AO (fast)
+**(*)For the CVL in escort case, it is recommended only if you have night planes.
+*As of the March 2nd Live Update, [[Friend Fleet]]s will appear in night battle at this boss, lowering the difficulty of clearing this node.
+*'''Notes''':
+**Obtaining AS at boss node requires 0-162/162-198/198/225 only, but node T requires 303/555/660/687. As such, you will still be equipping your carrier(s) with full fighter planes to deal with node T.
+**Multiple Torpedo Cut-in (TCI) and an Anti-air cut-in (AACI) ships are recommended.
+**Small historical post-cap bonuses (1.15x) for Shima, Kurita and Ozawa fleet members are present, so try to utilize those as much as possible.
+**LBAS requires 11+ range to reach boss node. As such, it will require {{EquipmentLink|Type 2 Large Flying Boat}} to work properly. Possible usages are as followed:
+***0-1 base of {{EquipmentLink|Prototype Toukai}} to attack node N
+***2-3 bases of 3 Bombers + 1 Boat to node V
+***Catalina + 3 Fighters with 7+ range to node T
+
+
+   
+
+===Unlocking the Pathways and Historical bonus===
+The 2nd boss is arguably easier or harder than the 1st boss depending on your difficulty; the reason will be explained later. There are two things that must be done for smoother sail to boss.
+====Pathways====
+Unlocking the shortcut between nodes H-K and B-D differs depending on difficulty:
+*'''Casual''': A+ rank nodes D and defeat L.
+*'''Easy''': A-rank+ node H, A+ rank node D, defeat L node.
+*'''Medium''': S-rank(?) node H, L, and A+ rank node D.
+*'''Hard''': S-rank(?) node G, H, L, and obtain AS at node I.
+*Node G & I Fleet Composition
+**'''Route''': {{Event/Route|1|black}} {{Event/Route|B|blue}} {{Event/Route|C|orange}} {{Event/Route|D|red}} {{Event/Route|G|red}} {{Event/Route|I|orange}}
+**'''Possible composition:''' CTF 1-2 (f)BB(V) / 4 CV(B) / 1-0 CAV + 1 CL / 2 DD / 0-2 CLT / 0-1 CVL / 0-1 fBB
+**Include a slow ship to route to G. If only I is needed, use all fast.
+*Node H & L Fleet Composition
+**'''Route''': {{Event/Route|2|black}} {{Event/Route|E|blue}} {{Event/Route|F|red}} {{Event/Route|J|blue}} {{Event/Route|K|red}} {{Event/Route|L|red}} {{Event/Route|H|red}}
+**'''Possible composition:''' STF 4 fBB / 2 CVL + 1 CL / 2-5 DD / 0-2 CLT / 0-1 CVL
+**Fast only
+**Bring ASW
+**'''This is the recommended route for reaching node H'''
+***Reaching H is possible from the north start, but will not route through L at the same time and will require a Fast+ CTF fleet which is impractical.
+**Toukai and Prototype Toukai is recommended for this node
+
+====Historical Bonus====
+For '''Medium+''' after unlocking the bonus, the Leyte Fleet (see above) and the following certain ships will all recieve a post-cap damage multiplier to replace the 1.15x from Leyfe Gulf Bonus:
+*'''For Everyone else''': 1.6x
+*'''For {{ShipLink|Zuikaku Kai Ni A|text=Zuikaku}}, {{ShipLink|Zuihou Kai Ni|text=Zuihou}}, and {{ShipLink|Musashi Kai Ni|text=Musashi}}''': 1.8x
+*'''For {{ShipLink|Shoukaku Kai Ni A|text=Shoukaku}}''': 2.4x
+*'''Note''': Casual and Easy difficulties '''DO NOT''' have this damage bonus, so players on these difficulties should skip this step. This can cause the 2nd boss to be harder for some players.
+*Obtain an '''A+ rank at node Q''' (use slow STF with at least 5 (F)BB(V)s) and '''S rank nodes M and W''' (use Fast STF). You should hear a Quest Complete Sound upon returning to base if done successfully.
+*This must be done '''after''' unlocking the shortcuts.
+*Node M & W Fleet Composition
+**'''Route''': {{Event/Route|2|black}} {{Event/Route|E|blue}} {{Event/Route|F|red}} {{Event/Route|J|blue}} {{Event/Route|K|red}} {{Event/Route|H|red}} {{Event/Route|M|red}} {{Event/Route|W|red}}
+**'''Possible composition:''' STF 4 fBB / 2 CVL + 1 CL / 2 DD / 0-3 CLT / 0-1 CVL / 0-2 CA(V)
+**Fast or higher only
+*Node Q Fleet Composition
+**'''Route''': {{Event/Route|2|black}} {{Event/Route|A|red}} {{Event/Route|E|blue}} {{Event/Route|F|red}} {{Event/Route|J|blue}} {{Event/Route|K|red}} {{Event/Route|L|red}} {{Event/Route|Q|red}}
+**'''Possible composition:''' STF 1-4 BB(V) / 0-3 fBB / 2 CVL + 1 CL / 2 DD / 1 fBB / 0-2 CLT / 0-1 CVL / 0-1 CA(V)
+
+===Defeating {{ShipLink|Abyssal Crane Princess}}===
+*'''Route''': {{Event/Route|1|black}} {{Event/Route|B|blue}} {{Event/Route|D|red}} {{Event/Route|I|orange}} {{Event/Route|M|red}} {{Event/Route|W|red}} {{Event/Route|X|red}}
+*'''Possible composition:''' 2 (f)BB(V) / 3-4CV(B) / 0-1 CVL + 1 CL / 2 DD / 0-1 CA(V) / 0-2 CLT / 0-1 CVL / 0-1 AO
+**Fast ships only to avoid extra battles.
+*Ship recommendations:
+**Battleships: {{ShipLink|Kongou Kai Ni|text=Kongou}}, {{ShipLink|Haruna Kai Ni|text=Haruna}}, {{ShipLink|Musashi Kai Ni||text=Musashi}} (fast), {{ShipLink|Iowa Kai|text=Iowa}}
+**Main Fleet carriers: (historical) {{ShipLink|Shoukaku Kai Ni A|text=Shoukaku}}, {{ShipLink|Zuikaku Kai Ni A|text=Zuikaku}}, {{ShipLink|Chitose}}, {{ShipLink|Chiyoda}} (non-historical) {{ShipLink|Taihou Kai|text=Taihou}}, {{ShipLink|Kaga Kai|text=Kaga}}, {{ShipLink|Saratoga_Mk.II Mod.2|text=Saratoga}}
+**Light cruisers: {{ShipLink|Abukuma Kai Ni|text=Abukuma}}, {{ShipLink|Yahagi Kai|text=Yahagi}}
+**Destroyers: {{ShipLink|Kasumi Kai Ni|text=Kasumi}}, {{ShipLink|Yukikaze Kai|text=Yukikaze}}, {{ShipLink|Shimakaze Kai|text=Shimakaze}}, {{ShipLink|Naganami Kai Ni|text=Naganami}}, {{ShipLink|Ushio}}, {{ShipLink|Michishio Kai Ni|text=Michishio}}, {{ShipLink|Akizuki}}, {{ShipLink|Hatsuzuki}}
+**Heavy cruiser: {{ShipLink|Maya Kai Ni|text=Maya}}, {{ShipLink|Choukai Kai Ni|text=Choukai}}
+**Escort Fleet carrier: {{ShipLink|Zuihou Kai Ni B}}
+***Escort Fleet carrier '''WILL NOT''' provide fighter power to the Combined Fleet's fighter power when faced against '''Single Abyssal fleet''' since she will not launch her planes. However, she '''WILL''' provide fighter power if faced against '''Combined Abyssal fleet''' (i.e. Boss node). Since she does not launch her planes, they will not be shotted down by the enemy prior to boss node; this allows your escort fighter planes to arrive at full force at boss node. 
+***It is an option to put enough fighters to pass node M, then let your escort carrier provide the leftover fighter power for the boss. Of course, the major drawbacks are the incapability to fight if moderately damaged and losing 1 night-battle ship if you do not have night planes.
+*The route to the boss is filled with air battles and enemy fleets with strong anti-air, so expect heavy bauxite usage regardless of map difficulty.
+*Node D contains an enemy [[Submarine So-Class|So-class submarine]] mixed into a surface fleet. Using Cruising Formation 2 and 1 OASW ships (''e.g.'' Zuihou Kai Ni B) are desirable here.
+*Allocating land bases to reduce enemy plane counts on I, M and/or X are valid options due to land-based bombers having limited effectiveness on the boss node on difficulties above Easy.
+**If your LBAS cannot reach the boss, consider the other logical method of using it on preboss nodes.
+**However, Medium and Hard are advised to send all land bases to the boss node during the final kill phase, which has more princess-type enemies that are weak to land bombers.
+*Nishimura (partial), Iron Bottom Sound, CruDiv 4, DesDiv 19, Battle of Cape Engaño and Western [[Friend Fleet]]s can appear at the boss.
+**Particularly, the Yamato-led Battle of Cape Engaño fleet is strong and contains many historical ships that receive bonuses. Consider avoiding members of that fleet in your own main and escort fleets.
+*On Medium and Hard, aiming for day cut-in attacks (CVCI and AS) with historical ships in the main fleet while setting up the escort with historical bonus night cut-ins/double attacks is a solid approach. Underway Replenishment can help with damage output and evasion.
+*Note: Enemy raids on player land bases do not occur during this phase.
+
+==[[Friend Fleet]]==
+The following friend fleets can appear in this map:
+{{:Friend Fleet/Winter 2018/E-7}}
+
+==Map Progression==
+{{#tag:gallery|
+Winter 2018 Event E-7 Map p1.png{{!}}Map without first HP phase boss node unlocked.
+Winter 2018 Event E-7 Map p2.png{{!}}Map during HP phase at node V after unlocking it.
+Winter 2018 Event E-7 Map p3.png{{!}}Map during HP phase at node X but no shortcuts.
+Winter 2018 Event E-7 Map.png{{!}}Full map after unlocking the shortcuts B->D and H->K.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=150}}
+{{clear}}
+==LBAS Flight Range==
+[[File:Winter_2018_Event_E7 LBAS_Flight_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

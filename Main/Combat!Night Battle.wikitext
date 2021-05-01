@@ -1,0 +1,414 @@
+[[File:Night Battle Intro.png|thumb|Entering Night Battle]]
+__TOC__
+In the scenario that the enemy fleet has not been defeated yet during Day Combat, the player has the choice to pursue them in a Night battle (夜戦) to finish them off. Ships who utilizes both Firepower and Torpedo stats have a drastically increased strength, giving them a stronger edge against the tougher armored opponents. The [[Damage Calculation|damage soft cap]] is raised to '''300''' during the night, allowing your ships to effectively unleash even more damage to your opponents. Bombers cannot attack during the night, unless they are equipped with the {{EquipmentLink|Night Operation Aviation Personnel}} or the {{EquipmentLink|Night Operation Aviation Personnel + Skilled Deckhands}} (exceptions being {{ShipLink|Saratoga Mk.II}}, {{ShipLink|Ark Royal}}, {{ShipLink|Graf Zeppelin}} and {{ShipLink|Taiyou Kai Ni}}).
+
+The common way of entering a night battle is by selecting 夜戦 at the end of a day battle, although there exists nodes that forces the fleet to immediately start in a night battle. Battles that start during a night battle will not transition to a day battle usually, but such nodes do exist.
+
+==Night Battle Effects==
+During night battle, the following effects are applied:
+===General===
+* The ammo usage on that node is increased by 50% if night battle is entered from day. As most nodes on normal and event maps alike uses 20% ammo, this will be increased to 30% for example.
+* Night battle damage depends on both the {{Firepower}} and {{Torpedo}} stats for attack power. Consequently, [[DD]]s, [[CL]]s, [[CLT]]s and [[CA]]s have drastically increased strength at night.
+* Any vessel that is heavily damaged (<span style="color:red;">'''大破'''</span>), is not allowed to attack during the night.
+* Certain combinations of weapon equipment ([[List of Main Guns by stats|Main Guns]], [[List of Secondary Guns by stats|Secondary Guns]], [[List of Torpedoes by stats|Torpedoes]]) will cause Cut-In or Double Attacks at night, greatly increasing accuracy and/or firepower.
+** Auxiliary equipment (e.g [[List of Radars by stats|RADAR]], [[List of Anti-Submarine Equipment by stats|SONAR]], [[List of Anti-Submarine Equipment by stats|Depth Charges]], Searchlights, Turbines, Special ammunition, [[List of Anti-Air Guns by stats|Pure AA Equipment]], Torpedo Bulges, and [[Type A Ko-hyoteki|Midget-subs]]) will not affect the combination.
+* All ASW attacks during night battle are reduced to scratch damage. This means that submarines are impossible to kill during night, as you cannot sink a ship with scratch damages. However, in battles starting at night and/or [[Combined Fleet]] sorties, ASW damage will apply as normal.
+* With the exception of Vanguard, formation damage modifiers and Engagement Form damage modifiers do not apply in Night Battle (i.e., they are always 100%).
+
+{{Clear}}
+===Night Buffs===
+* All CA(V)s gain a +5 {{Evasion}}.
+* All CA(V)s equipped with the {{EquipmentLink|20.3cm Twin Gun Mount|20.3cm (No.2) Twin Gun Mount|20.3cm (No.3) Twin Gun Mount|text=20.3cm series guns|link=Fit Gun}} gain an accuracy boost (applied after modifiers, but before the hit rate cap).
+* Destroyers equipped with {{Radar}}Surface Radar and {{Lookout}}{{EquipmentLink|Skilled Lookouts}} will gain an evasion bonus.
+The following night equipment buffs can trigger when equipped. Keep in mind that only one of them triggers if your fleet contains duplicate equipment (e.g. 2 searchlights, 2 starshells).
+{| class="wikitable typography-xl-optout"
+!Equipment
+!Effect
+!Requirement(s)
+|-
+|{{StarShell}}{{EquipmentLink|Star Shell}}
+|
+* Increase the {{Hit}} of your fleet.
+* Increase the cut-in rate of your fleet.
+* Decrease the cut-in rate of the enemy fleet.
+|
+* Ship must have at least 5 {{HP}}
+* Trigger rate is 70% each.
+|-
+|{{Searchlight}}{{EquipmentLink|Searchlight}}<br>
+{{Searchlight}}{{EquipmentLink|Type 96 150cm Searchlight|text=Large Searchlight}}
+|
+* Increase the {{Hit}} of your fleet.
+* Increase the cut-in rate of your fleet.
+* Decrease the cut-in rate of the enemy fleet.
+* <span style="color:red">The evasion of the ship equipped with it is sharply reduced and is attacked more often by the enemies.</span>
+|
+* Ship must have at least 2 {{HP}}
+|-
+|{{Lookout}}{{EquipmentLink|Skilled Lookouts}}
+|
+* Increase the cut-in rate of the ship equipped with it.
+|
+* None
+|-
+|{{Seaplane}}{{EquipmentLink|Type 98 Recon Seaplane (Night Scout)|text=Night Recon}}
+|
+* Increase the {{Hit}} of your fleet.
+* Increase the {{Firepower}} of your fleet by +5.
+* Increase the critical hit rate of your fleet.
+|
+* The recon is not equipped on a 0 slot.
+* The air control is either <span style="color:red">AD</span>, <span style="color:green">AS</span> or <span style="color:green">'''AS+'''</span>.
+* The air control is either <span style="color:red">AD</span>, AP, <span style="color:green">AS</span> or <span style="color:green">'''AS+'''</span> in PvP.
+* The success rate is dependent on the level of the ship it is equipped on.
+|}
+
+
+While entering a night battle offers many benefits, keep in mind that this also applies to your opponents! Enemy destroyers who aren't as much as a threat during the day will also gain a huge increase in firepower during the night, so be careful that you don't end up on the short end of the stick.
+
+==Night Battle Special Attacks==
+Night battle special attacks allow your ship to '''Double Attack (DA)''' and '''Cut-In (CI)''' at night. Compared to artillery spotting, these special attacks are less demanding on equipment setups and give different bonuses. Note that it is important to realize the differences between the two types of special attack and know when to use which.
+
+===Requirements===
+* Not in heavily damaged (<span style="color:red;">'''大破'''</span>) state.
+* CV(L) performing the attack is not in moderate damage (<span style="color:orange;">'''中破'''</span>) state.
+* Certain equipment setups (see below).
+
+===Setups and Attack Types===
+Different setups have chances to trigger different attack types. Attack types are '''only''' determined by the prerequisites.
+* {{RedGunHeavy}} is used to indicate a [[List of Main Guns by stats|Main Gun]]. {{RedGunLight}} is used for Destroyer Cut-Ins.
+* {{YellowGun}} is used to indicate a [[List of Secondary Guns by stats|Secondary Gun]].
+* {{TorpedoWeapon}} is used to indicate a [[List of Torpedoes by stats|Torpedo]], note that {{EquipmentLink|Kouhyouteki}} is not a torpedo.
+* For Carrier Cut-Ins (note that placeholders are used in order to avoid confusion):
+** {{NightCapableBomber}} = {{EquipmentLink|Swordfish|Swordfish Mk.II (Skilled)|Swordfish Mk.III (Skilled)|text=Swordfish|size=150px}} or {{EquipmentLink|Zero Fighter Model 62 (Fighter-bomber / Iwai Squadron)|text=Iwai F/B Squadron}}.
+** {{DiveBomb icon}} = {{EquipmentLink|Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)}} '''only'''
+** {{NightFighterEn}} = {{NightFighter}}
+** {{NightBomberEn}} = {{NightBomber}}
+* For a given attack type, any other equipment can be added on the remaining slots, as long as it does not switch the attack type. Feel free to add any auxiliary equipment ({{RedAmmo}} [[List of Shells by stats|AP shell]], {{Seaplane}} [[List of Seaplanes by stats|Seaplane]], {{GreenGunMG}} [[List of Anti-Air Guns by stats|Anti-Air Gun]], etc.).
+* When your set up fulfills the prerequisites for multiple attack types, the one '''closer to the bottom''' of the list will be used.
+* When the setup does not fulfill any prerequisites or when its special attack is not triggered, the ship will perform a normal single attack (one hit, no special damage modifiers).
+* Two hit attacks will have two independent chances to miss, hit or deal a critical hit, as well as two independent armor rolls. For Double Attacks the damage values are displayed as is for each hit twice, for two hit Cut-Ins they are displayed as a sum once.
+<!--
+* In general, more powerful cut-in types have lower trigger rates than less powerful ones (considering one hit and two hit attacks separately).
+-->
+* The animation for ships equipped with 2 different torpedoes may be different but the damage output is always the same.
+** A [[Prototype FaT Type 95 Oxygen Torpedo Kai]] + [[61cm Quint (Oxygen) Torpedo Mount]] will show a cut-in animation of FaT + Quint + Quint and if equipped the other way around, the cut-in animation will show Quint + FaT + FaT. However, both animation produces the same damage output, so the order in which you equip them is purely aesthetic.
+{| class="article-table"
+|-
+!Attack Type
+!Prerequisites
+!Notes
+![[Damage_Calculation|Pre-cap]]<br />Damage<br />Modifier
+!Hits
+
+|-
+!style="background-color:#59f" rowspan="3"|{{color|white|Double Attack}}
+|nowrap|{{RedGunHeavy}}{{RedGunHeavy}}
+|nowrap|No additional {{TorpedoWeapon}}{{RedGunHeavy}}{{YellowGun}}
+|rowspan="3"|1.2
+|rowspan="3"|2
+|-
+|nowrap|{{RedGunHeavy}}{{YellowGun}}
+|nowrap|Additional {{YellowGun}} allowed
+|-
+|nowrap|{{YellowGun}}{{YellowGun}}
+|nowrap|Additional {{YellowGun}}{{TorpedoWeapon}} allowed
+|-
+!style="background-color:gold"|Mixed Torpedo Cut-In
+|nowrap|{{TorpedoWeapon}}{{RedGunHeavy}}
+|nowrap|Additional {{RedGunHeavy}}{{YellowGun}} allowed
+|1.3
+|2
+|-
+!style="background-color:#ff7f50"|Mixed Gun Cut-In
+|nowrap|{{RedGunHeavy}}{{RedGunHeavy}}{{YellowGun}}
+|nowrap|No additional {{RedGunHeavy}}
+|1.75
+|1
+|-
+!style="background-color:#ff7f50"|Gun Cut-In
+|nowrap|{{RedGunHeavy}}{{RedGunHeavy}}{{RedGunHeavy}}
+| + Any on the remaining slots
+|2
+|1
+|-
+!style="background-color:gold"|Torpedo Cut-In
+|nowrap|{{TorpedoWeapon}}{{TorpedoWeapon}}
+| + Any on the remaining slots
+|1.5
+|2
+|-
+!style="background-color:gold" rowspan="2"|Submarine Cut-Ins
+|nowrap|{{TorpedoWeapon|caption=New Submarine Torpedo|link=Partials/New Submarine Torpedo Cut-In}}{{TorpedoWeapon|caption=New Submarine Torpedo|link=Partials/New Submarine Torpedo Cut-In}}
+|rowspan="2"|With [[Partials/New Submarine Torpedo Cut-In|New Submarine Torpedoes]]
+|1.6
+|2
+|-
+|nowrap|{{TorpedoWeapon|caption=New Submarine Torpedo|link=Partials/New Submarine Torpedo Cut-In}}{{SubmarineRadar}}
+|1.75
+|2
+|-
+!style="background-color:#ff7f50" rowspan="4"|Destroyer Cut-Ins
+|rowspan="2" nowrap|{{RedGunLight}}{{TorpedoWeapon}}{{Radar}}
+|
+|1.3
+|1
+|-
+|With {{EquipmentLink|12.7cm Twin Gun Mount Model D Kai 2|text=12.7D}}
+|{{tooltip|1.625|1.3 * 1.25}}
+|1
+|-
+|rowspan="2" nowrap|{{TorpedoWeapon}}{{Lookout}}{{Radar}}
+|Synergy with evasion bonus
+|1.2
+|1
+|-
+|With {{EquipmentLink|12.7cm Twin Gun Mount Model D Kai 2|text=12.7D}}
+|{{tooltip|1.5|1.2 * 1.25}}
+|1
+|-
+!style="background-color:#81c784" rowspan="13"|{{color|white|Carrier Cut-Ins}}
+|nowrap|{{NightFighterEn}}{{NightCapableBomber}}{{NightCapableBomber}}
+|rowspan="3"|{{NightCapableBomber}} is {{EquipmentLink|Swordfish|Swordfish Mk.II (Skilled)|Swordfish Mk.III (Skilled)|text=Swordfish|size=150px}} or {{EquipmentLink|Zero Fighter Model 62 (Fighter-bomber / Iwai Squadron)|text=Iwai F/B}}<br />
+{{NightFighterEn}} is a Night Fighter<br />
+{{NightBomberEn}} is a Night Bomber<br />
+{{DiveBomb icon}} is {{EquipmentLink|Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs)}} '''only'''
+|1.18
+|1
+|-
+|nowrap|{{NightFighterEn}}{{NightFighterEn}}{{NightCapableBomber}}
+|1.18
+|1
+|-
+|nowrap|{{NightFighterEn}}{{NightBomberEn}}{{NightCapableBomber}}
+|1.18
+|1
+|-
+|nowrap|{{NightFighterEn}}{{DiveBomb icon}}{{NightCapableBomber}}
+|
+|1.18
+|1
+|-
+|nowrap|{{NightFighterEn}}{{NightFighterEn}}{{NightFighterEn}}
+|
+|1.18
+|1
+|-
+|nowrap|{{NightFighterEn}}{{NightBomberEn}}{{NightBomberEn}}
+|
+|1.18
+|1
+|-
+|nowrap|{{NightFighterEn}}{{NightFighterEn}}{{DiveBomb icon}}
+|
+|1.18
+|1
+|-
+|nowrap|{{NightFighterEn}}{{NightBomberEn}}{{DiveBomb icon}}
+|
+|1.18
+|1
+|-
+|nowrap|{{NightFighterEn}}{{DiveBomb icon}}{{DiveBomb icon}}
+|
+|1.18?
+|1
+|-
+|nowrap|{{NightFighterEn}}{{NightBomberEn}}
+|
+|1.2
+|1
+|-
+|nowrap|{{NightFighterEn}}{{DiveBomb icon}}
+|
+|1.2
+|1
+|-
+|nowrap|{{NightBomberEn}}{{DiveBomb icon}}
+|
+|1.2
+|1
+|-
+|nowrap|{{NightFighterEn}}{{NightFighterEn}}{{NightBomberEn}}
+|
+|1.25
+|1
+|}
+
+{{:Partials/Night Battle Attacks}}
+
+===Night Double Attack Chance===
+Has a very high (~99%) and relatively consistent activation chance.<ref>[[User_blog:Homuhomu123/How_Formation_Affects_Night_Battle_Performances_%28by_Kuubowokyuu%29#Ii_-_DA_Chance_of_Your_Fleet_.26_CI_Chance_of_the_Enemies|Data on NB DA chance]]</ref> Activation rate is not dependent on luck. This typically results in more consistent and higher average damage than cut-in setup for ships with normal luck values.
+
+===Night Cut-In Chance===
+[[File:Torpedo Cut-In Rates (Vita).png|thumb|Theoretical Torpedo Cut-In Rates]]
+The probability of a Night Cut-In occurring is given by the general formula:
+
+<div style="text-align:center;margin:20px;">
+<math>\text{CI Chance} = \frac{\text{Base Value}}{\text{Type Factor}}</math>
+</div>
+The result of which can be multiplied by 100 and interpreted as a percentage.
+{{clear}}
+
+<div style="text-align:center;margin:20px;">
+<math>\text{Base Value} = \begin{cases} \big \lfloor 15 + \text{Luck} + 0.75\sqrt{\text{Level}} + \text{Modifiers} \big \rfloor, & \text{ if } \text{Luck} < 50 \\ \big \lfloor 65 + \sqrt{\text{Luck} - 50} + 0.8\sqrt{\text{Level}} + \text{Modifiers} \big \rfloor, & \text{ if } \text{Luck} \ge 50 \end{cases}</math>
+</div>
+Where:
+* '''Level''' is the ship's level
+* '''Luck''' is the ship's luck
+* '''Type Factor''': is a modifier defined by the cut-in type:
+{| class="article-table"
+|-
+!Type
+!Value
+!% per Base Value
+|-
+|Destroyer Only (Torpedo-Radar-Lookout)
+|150
+|0.66%
+|-
+|Gun Cut-In
+|140
+|0.71%
+|-
+|Mixed Gun Cut-In
+|130
+|0.77%
+|-
+|Destroyer Only (Gun-Torpedo-Radar)
+|130
+|0.77%
+|-
+|Torpedo Cut-In
+|122
+|0.82%
+|-
+|Mixed Torpedo Cut-In
+|115
+|0.87%
+|}
+* '''Modifiers''': is a sum of various other modifiers:
+{| class="article-table"
+|-
+!colspan="2" rowspan="2" style="text-align:center;"|Modifier
+!rowspan="2"|Value
+!colspan="4" style="text-align:center;"|%
+|-
+!Gun Cut-In
+!Mixed Gun Cut-In
+!Torpedo Cut-In
+!Mixed Torpedo Cut-In
+|-
+|rowspan="2"|Placement
+|Flagship
+|15
+|10.7%
+|11.5%
+|12.3%
+|13%
+|-
+|Other
+|0
+|colspan="4"|
+|-
+|rowspan="2"|Health
+|Moderate damage<br>(中破 Chuuha)
+|18
+|12.9%
+|13.8%
+|14.8%
+|15.7%
+|-
+|Any other health state
+|0
+|colspan="4"|
+|-
+|rowspan="2"|{{EquipmentLink|Searchlight}}
+|Allied
+|7
+|5%
+|5.4%
+|5.7%
+|6.1%
+|-
+|Enemy
+| -5
+| -3.6%
+| -3.8%
+| -4.1%
+| -4.3%
+|-
+|rowspan="2"|{{EquipmentLink|Type 96 150cm Searchlight|text=Large Searchlight}}
+|Allied
+|?
+|colspan="4"|
+|-
+|Enemy
+| -?
+|colspan="4"|
+|-
+|rowspan="2"|{{EquipmentLink|Star Shell}}
+|Allied
+|4
+|2.9%
+|3.1%
+|3.3%
+|3.5%
+|-
+|Enemy
+| -10
+| -7.1%
+| -7.7%
+| -8.2%
+| -8.7%
+|-
+|rowspan="2"|{{EquipmentLink|Skilled Lookouts}}
+|Allied
+|5
+|3.6%
+|3.8%
+|4.1%
+|4.3%
+|-
+|Enemy
+|0
+|colspan="4"|
+|}
+[[File:night_cut_in.png|thumb|An example of a cut-in]]
+[[File:Recon2.jpg|thumb|Searchlight, Starshell and Night Recon]]
+* The effect of {{Luck}} over the cap is negligible, thus going over it is generally not recommended. Starting at 51 {{Luck}}, any extra luck will suffer from strong diminishing returns.
+* No bonus is received when ships enter light damage state.<ref>http://ch.nicovideo.jp/HSG/blomaga/ar1145767</ref>
+* Marriage itself does not increase cut-in chances.<ref>http://ch.nicovideo.jp/HSG/blomaga/ar1204798</ref>
+* The above formula originates from [[KanColle Kai]]<ref>https://docs.google.com/document/d/1tqYyqzdc1RT_fYDKFMcUId0kOZHCdGpVsObm6yt-Yco</ref>. Generally, it's close to the previously researched formula and is in agreement with the experimental data.<ref>[http://kancolle.wikia.com/wiki/File:Torpedo_Cut-In_Rates_(Vita_vs_Haru).png Haru and Vita formulas plotted]</ref><ref>https://docs.google.com/spreadsheets/d/155L1l555hPgB2zidnw-uYu7sWYW6SAS6rC5M4mnFn9Y</ref><ref>http://bs-arekore.at.webry.info/201504/article_4.html</ref>
+** According to this formula, torpedo cut-in types have higher probabilities than gun cut-in types.
+
+
+==Destroyer Cut In Properties==
+Destroyer Cut Ins are special Night Battle attack types unique to only Destroyers when they meet the proper equipment setups. Their properties are as follows:
+
+* When Destroyer Cut-In requirements are met, they will attempt to activate first before normal night attack types. In the case of failure, the game will then attempt to roll for any other Destroyer Cut-In setup they qualify for, and then finally rolling for the first normal Night Attack type the destroyer qualifies for. 
+** This is different from normal night battle setups, which will only roll once for the highest priority attack type they qualify for.
+** For example, if a destroyer has Gun/Torpedo/Radar, the game will roll for the GTR Destroyer Cut-In, and if it fails, will roll again for Mixed Torpedo Cut-In, increasing the overall chance of cutting in.
+*Equipping '''{{EquipmentLink|12.7cm Twin Gun Mount Model D Kai 2|12.7cm Twin Gun Mount Model D Kai 3|text=12.7cm Twin Gun Mount Model D Kai 2/3}}''' can increase the damage multiplier of destroyer cut-ins, with one gun adding '''x1.25''', and the second gun adding '''x1.125'''. Both modifiers are added multiplicatively, however, only {{ShipLink|Tashkent}} is able to use the second gun multiplier due to equipment slots and cut-in equipment requirements.
+**Using a '''{{EquipmentLink|12.7cm Twin Gun Mount Model D Kai 3}}''' will also add yet another pre-cap '''x1.05''' multiplier that is multiplicative with all the other modifiers.
+
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+! colspan="4"|D Gun Multipliers
+|-
+! style="width: 40%;" |
+! style="width: 20%;" |None
+! style="width: 20%;" |1
+! style="width: 20%;" |2
+|-
+! {{RedGunLight}}{{TorpedoWeapon}}{{Radar}}
+| x1.3
+| x1.625
+| x1.828
+|-
+! {{TorpedoWeapon}}{{Radar}}{{Skilled Lookout}}
+| x1.2
+| x1.5
+| x1.687
+|}
+==Reference==
+<references/>

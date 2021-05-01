@@ -1,0 +1,140 @@
+==Data sources==
+All of the data so far is from battle APIs from [[User:AbsoluteLuck|AbsoluteLuck]] and [[User:KowaretaGuze|KowaretaGuze]], though at a later stage I may also be contributing my own data once my Maya reaches level 99.
+
+[https://docs.google.com/spreadsheets/d/11VzbIvoWxsDE6MhSH6w2J_-hgh4TBJe76qcEBvJFuMg This is the Google Document used to tally the results.] Edit rights are restricted to prevent vandalism.
+==Experimental procedure==
+The parameters of the test are as follows:
+
+Variables held constant:
+*Single ship fleet consisting of only fully modernised Maya Kai Ni level 99.
+*Maya luck held constant at 14.
+*Maya morale held constant as Red-face to maximise the observability of any accuracy effects.
+*Slots 2-4 hold [[Enhanced Kanhon Type Boiler]] and two [[New Model High Temperature High Pressure Boiler]].
+*Sortie goes to World 1-2 nodes A and D only.
+*The hit/miss/crit status is recorded separately for every enemy type attacked in Night Battle Single Attack.
+*Data for Ho, He and Ro classes will be combined as they have the same Evasion value. Data for I classes will be discussed separately as they have lower Evasion.
+*Required sample size is at least 100 non-critical attacks on the Ho, He and Ro classes combined per gun.
+
+The purpose of this test is to determine which medium gun calibres, if any, contribute to the yasen accuracy bonus on CAs. According to the official tweets, all 20.3 cm calibres should have the yasen bonus effect.<ref name=tweet /> A recent post from an unreliable Chinese source has cast doubt on whether this bonus applies to SKC 20.3 and 20.3 (No.2) guns, so this will prove once and for all if that source has the correct idea or not.
+
+Equipment used in Maya slot 1 (All equipment used have an Improvement state of 0★):
+*[[14cm Single Gun Mount]] (AbsoluteLuck)
+*''[[20.3cm (No.2) Twin Gun Mount]] (AbsoluteLuck) (Not done yet)''
+*''[[20.3cm (No.3) Twin Gun Mount]] (AbsoluteLuck) (Not done yet)''
+*[[New Model High Temperature High Pressure Boiler]] (KowaretaGuze)(This serves as a blank to test whether equipping any gun at all has any increased accuracy effect.)
+*''[[20.3cm Twin Gun Mount]] (Hayashi H) (Not done yet)''
+*''[[SKC34 20.3cm Twin Gun Mount]] (Hayashi H) (Not done yet)''
+*''[[203mm/53 Twin Gun Mount]] (Hayashi H) (Not done yet)''
+
+14cm guns are used as a baseline. Any gun with greater accuracy than expected over it has a yasen accuracy bonus. If the engine-only version has lower accuracy, then the presence of any gun at all already has a yasen accuracy bonus. Before analysis, an accuracy term is deducted from each of the guns with accuracy bonuses in order to eliminate the effect of the equipment accuracy stat. This accuracy term is tentatively estimated to be 1% per accuracy point from the previously established formula<ref name=homuhomu />, but should this not be accurate because the test is conducted in redface morale (which may affect the size of its effect), a further test will be performed with a [[Type 32 Surface Radar]] in slot 1 and compared with the engine test result to establish the expected effect size of each accuracy point.
+
+While critical hits are recorded, they will not be reported in the below tables as critical hits always hit and would unnecessarily skew the accuracy results.
+
+'''This test is only designed to <u>qualify</u> whether or not the bonus exists on the guns. The sample sizes used are too small to <u>quantify</u> the effects of the fit bonuses in question.'''
+==Results==
+===[[14cm Single Gun Mount]]===
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" align="center"|Target
+! scope="col" align="center"|Hit
+! scope="col" align="center"|Miss
+! scope="col" align="center"|Crit
+! scope="col" align="center"|Accuracy
+! scope="col" align="center"|Critrate
+|-
+|align="center"|I
+|align="center"|15
+|align="center"|48
+|align="center"|3
+|align="center"|23.8 ± 5.4%
+|align="center"|4.5 ± 2.6%
+|-
+|align="center"|Ro/He/Ho
+|align="center"|18
+|align="center"|82
+|align="center"|7
+|align="center"|18.0 ± 3.8%
+|align="center"|6.5 ± 2.4%
+|-
+|align="center"|Overall
+|align="center"|33
+|align="center"|130
+|align="center"|10
+|align="center"|20.2 ± 3.1%
+|align="center"|5.8 ± 1.8%
+|}
+===[[20.3cm (No.2) Twin Gun Mount]]===
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" align="center"|Target
+! scope="col" align="center"|Hit
+! scope="col" align="center"|Miss
+! scope="col" align="center"|Crit
+! scope="col" align="center"|Accuracy
+! scope="col" align="center"|Critrate
+|-
+|align="center"|I
+|align="center"|10
+|align="center"|19
+|align="center"|2
+|align="center"|34.5 ± 8.8%
+|align="center"|6.5 ± 4.4%
+|-
+|align="center"|Ro/He/Ho
+|align="center"|5
+|align="center"|22
+|align="center"|3
+|align="center"|18.5 ± 7.5%
+|align="center"|10.0 ± 5.5%
+|-
+|align="center"|Overall
+|align="center"|15
+|align="center"|41
+|align="center"|5
+|align="center"|26.8 ± 5.9%
+|align="center"|8.2 ± 3.5%
+|}
+===[[20.3cm (No.3) Twin Gun Mount]]===
+===[[New Model High Temperature High Pressure Boiler]]===
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col" align="center"|Target
+! scope="col" align="center"|Hit
+! scope="col" align="center"|Miss
+! scope="col" align="center"|Crit
+! scope="col" align="center"|Accuracy
+! scope="col" align="center"|Critrate
+|-
+|align="center"|I
+|align="center"|12
+|align="center"|22
+|align="center"|5
+|align="center"|35.3 ± 8.2%
+|align="center"|12.8 ± 5.4%
+|-
+|align="center"|Ro/He/Ho
+|align="center"|13
+|align="center"|35
+|align="center"|3
+|align="center"|27.1 ± 6.4%
+|align="center"|5.9 ± 3.3%
+|-
+|align="center"|Overall
+|align="center"|25
+|align="center"|57
+|align="center"|8
+|align="center"|30.5 ± 5.1%
+|align="center"|8.9 ± 3.0%
+|}
+===[[20.3cm Twin Gun Mount]]===
+===[[SKC34 20.3cm Twin Gun Mount]]===
+===[[203mm/53 Twin Gun Mount]]===
+===[[Type 32 Surface Radar]]===
+==Discussion==
+==Conclusion==
+==Test-external References==
+<references>
+<ref name=tweet>[https://twitter.com/kancolle_staff/status/380238803090145280 Kancolle_STAFF tweet on 20.3cm yasen fit bonus]</ref>
+<ref name=homuhomu>[[User_blog:Homuhomu123/Shelling_Accuracy_Test_Results|Homuhomu123's translation of accuracy effects. Note that 1/100 equipment accuracy bonus is identical to the idea that 1 acc = 1% accuracy bonus.]]</ref>
+</ref>
+[[Category:Blog posts]]

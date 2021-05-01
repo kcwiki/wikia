@@ -1,0 +1,540 @@
+[[file:moderniztion_intro01.jpg|300px|right]]
+__TOC__
+Ship '''modernization''' is used to [[#general|increase]] {{Firepower}} Firepower, {{Torpedo}} Torpedo, {{AA}} Anti-Air, and {{Armor}} Armor stats. In addition, [[Maruyu]] can be used to [[#luck|increase]] {{Luck}} Luck, while [[DE]] can [[#de|increase]] {{HP}} HP, {{ASW}} Anti-Submarine, and {{Luck}} Luck stats.
+
+To modernize a ship, first pick the ship you want to upgrade, then choose 1 to 5 ships to "merge". You will lose them in the process, make sure you didn't pick the ones you want to keep. A consumed ship's equipment is wasted as well, you will not retain any equipment still equipped on the consumed ship. Remember to remove any valuable equipment the consumable ship might possibly have. Also stock equipment can be broken down for small amounts of material though most likely not worth the effort.
+
+=={{anchor|general}}General Modernization (Firepower, Torpedo, Anti-Air, Armor)==
+*You will [[Remodel#reset|lose]] those modernization upgrades after [[Remodel|remodel]]. Don't let it discourage you from modernizing your girls though, unless they are close to remodel level.
+*There is a maximum cap for those upgrades (refer to infoboxes on [[:Category:Player ships|ship pages]] or to tables listed [[Ship Maximum Status|here]]).
+*Modernization can fail with +1 only, see the table below for details (0 will give you the penguin failure screen, all other results will display as the success message).
+*A formula to calculate the amount achieved in a '''successful''' modernization is (''i'' is summary input):
+<center><math>i + \left \lfloor \frac{i + 1}{5} \right \rfloor</math><ref name="modernization-example">For example, modernizing AA with 5 [[Isuzu Kai]]:
+* Summary input = 5 * 4 AA = 20 AA.
+* Amount modernized on success = 20 + [[wikipedia:Floor and ceiling functions|floor]]((20 + 1) / 5) = 24 AA.
+* Amount modernized on failure = floor((20 + ((20 + 2) / 5)) / 2) = 12 AA.
+</ref></center>
+*A formula to calculate the amount achieved in a '''failed''' modernization is:
+<center><math>\left \lfloor \frac{1}{2} \left ( i + \frac{i + 2}{5} \right ) \right \rfloor</math><ref name="modernization-example" /></center>
+{| class="wikitable" style="text-align:center"
+!Input!!1!!2!!3!!4!!5!!6!!7!!8!!9!!10!!11!!12!!13!!14!!15!!16!!17!!18!!19!!20
+|-
+!Success
+|1||2||3||5||6||7||8||9||11||12||13||14||15||17||18||19||20||21||23||24
+|-
+!Fail
+|0||1||2||2||3||3||4||5||5||6||6||7||8||8||9||9||10||11||11||12
+|-
+!Efficiency
+|50||75||83.3||87.5||'''90'''||83.3||85.7||87.5||88.9||'''90'''||86.4||87.5||88.5||89.3||'''90'''||87.5||88.2||88.9||89.5||'''90'''
+|-
+!Input!!21!!22!!23!!24!!25!!26!!27!!28!!29!!30!!31!!32!!33!!34!!35!!36!!37!!38!!39!!40
+|-
+!Success
+|25||26||27||29||30||31||32||33||35||36||37||38||39||41||42||43||44||45||47||48
+|-
+!Fail
+|12||13||14||14||15||15||16||17||17||18||18||19||20||20||21||21||22||23||23||24
+|-
+!Efficiency
+|88.1||88.6||89.1||89.6||'''90'''||88.5||88.9||89.3||89.7||'''90'''||88.7||89.1||89.4||89.7||'''90'''||88.9||89.2||89.5||89.7||'''90'''
+|}
+*The chance of success is 50% for each stat you're trying to boost with modernization, i.e. you can attempt to modernize for +15 firepower and +15 armor, but end up with +15 firepower and +8 armor as the result.
+*Values that are most efficient in the local cluster are bolded. Players should attempt to modernize at these values for maximum points per ship consumed. Efficiency here is the average number of points you get factoring the 50% chance for modernization success, relative to the number of points input.
+*For instance, if attempting to maximize Anti-Air efficiency, you can use 5 [[Isuzu Kai]] for +5, +5, +20 and +10. More commonly for low-level admirals, combining an [[Isuzu Kai]] from [[1-5]] with a [[Fusou]] from [[2-2]] leads to +5, +1, +5 and +5 which can be used as is, or supplemented with [[DD|destroyers]]/[[SS|submarines]] to add torpedo stat more efficiently, though torpedoes are rarely the limiting stat.
+*The calculations are modified as a ship reaches its cap. When the cap is approached, success is taken as the max addable points, while failure is still the failure points. For instance, if there are 5 points remaining, using a 5 point input yields 5-3 or an average efficiency of 80%, which is significantly inferior to either the 4 point input or 3 point input.
+
+=={{anchor|luck|Luck|maruyu}}Luck Modernization (Maruyu)==
+Following the December 2013 update, [[Maruyu]] can be used as Modernization material for +1.2 luck (+1.6 luck if she is remodeled to Maruyu Kai), result will be rounded down after adding random number below 1. You can still increase a maxed-out ship's luck through modernization. '''Luck gained through modernization is retained upon remodeling.'''
+{|
+|
+{| class="wikitable" style="text-align:center"
+!Maruyu!!1!!2!!3!!4!!5
+|-
+!Expected
+|1.2||2.4||3.6||4.8||6.0
+|-
+!Success
+|2||3||4||5||rowspan="2"|6
+|-
+!Fail
+|1||2||3||4
+|-
+!Chance
+|20%||40%||60%||80%||N/A
+|}
+|
+{| class="wikitable" style="text-align:center"
+!Maruyu Kai!!1!!2!!3!!4!!5
+|-
+!Expected
+|1.6||3.2||4.8||6.4||8.0
+|-
+!Success
+|2||4||5||7||rowspan="2"|8
+|-
+!Fail
+|1||3||4||6
+|-
+!Chance
+|60%||20%||80%||40%||N/A
+|}
+|}
+Note:
+* Although the indicator will display +6 luck for 5 Maruyu Kai before modernization, it is guaranteed to award +8 luck once carried out.
+* [[#de|DE modernization]] can also be used to increase luck.
+
+=={{anchor|de|hp}}DE Modernization (HP, ASW, Luck)==
+{{todo|[[Marriage]]?}}
+After the [[Thread:600045|29/9/17 update]] it's possible to use [[DE]] to increase HP, ASW and Luck<ref>https://twitter.com/KanColle_STAFF/status/913724302733729797</ref><ref>https://twitter.com/KanColle_STAFF/status/913725377234690048</ref><ref>https://twitter.com/KanColle_STAFF/status/914653126359080960</ref>.
+*Using at least one DE will have a chance to increase ASW and/or Luck.
+*Using two DE of the same class and different name (e.g. [[Shimushu]] + [[Kunashiri]] or [[Etorofu]] + [[Matsuwa]], referred as '''pair''' below) will have a chance to increase HP.
+*For unmarried ships HP can always be increased by maximum 2 points overall. For married ships it can be increased by maximum 2 points with the following exceptions<ref>[[Template:Calc/HP]]</ref>:
+**Maximum 1 point: {{Calc/HP|hp=true}}.
+**Can't be increased: {{Calc/HP|no_hp=true}}.
+*ASW can be increased by maximum 9 points overall.
+**Ship classes that have 0 base ASW stat will not receive the modernization.
+*Luck '''can not''' be increased past its maximal value.
+*Bonus values are preserved after [[remodel]].
+*The following are some preliminary results/speculations about success rates (note that '''or''' assumes non-maxed stats, that is, for example, +1 HP '''or''' +1 Luck with maxed Luck can give 0 HP '''and''' Luck, ~50% for +1 HP and 0% for Luck since it's maxed).<ref>https://docs.google.com/spreadsheets/d/1sTd9tQ0fIHWjKaLrAqwyGgAXSpjdYQxveVRM1W9yrVE</ref>
+{|class="wikitable" style="width:100%"
+!Combination!!Forms!!Result!!Samples
+|-
+|1 DE||Base and Kai||+1 ASW '''or''' +1 Luck, {{tooltip|60/40|+1 ASW: 61% (45-75%), +1 Luck: 39% (25-55%)}}||~50
+|-
+|1 DE pair||Kai||+1 HP '''or''' +1 Luck, {{tooltip|50/50|+1 HP: 56% (44-68%), +2 HP: 0% (0-6%), +1 Luck: 41% (28-55%), +2 Luck: 0% (0-7%)}}? Independent {{tooltip|20-30%|+1 ASW: 25% (15-37%), +2 ASW: 0% (0-6%)}} for +1 ASW?||50-60+
+|-
+|1+ DE pair + 0+ DE||Base and Kai||Still +1 HP '''or''' +1 Luck, 50/50?||10+
+|-
+|2 different DE pairs + DE||Kai||Can give +2 ASW, Does not guarantee HP or Luck||10+
+|}
+*It has been found that performing DE modernization with a combined level value of at least 103 (Eg. lv.51 + lv.52) has a ~50% chance to increase two parameters instead of just one. (Aka. HP+Luck or HP+ASW)
+** This implies that level is taken into consideration into success rates for DE modernization, though exact details are unknown.
+
+=={{anchor|av|hp}}AV Modernization (HP)==
+After the 22nd April 2019 update, certain AVs are now able to be used as modernization material to increase HP of certain ships.
+
+{{ShipBattleCardKai|Mizuho}}<br />
+'''Mizuho''' can be used as fodder to increase the HP of the following ships:
+*{{ShipLink|Mizuho}}
+*{{ShipLink|Kamoi}}
+
+{{ShipBattleCardKai|Kamoi}}<br />
+'''Kamoi''' can be used as fodder to increase the HP of the following ships:
+*{{ShipLink|Mizuho}}
+*{{ShipLink|Kamoi}}
+*{{ShipLink|Agano|Noshiro|Yahagi|Sakawa|text=Agano-class}}
+*{{ShipLink|Yamato|Musashi|text=Yamato-class}}
+
+Notes:
+*Requires minimum 2 copies of the '''same''' AV to activate.
+*There is a success rate dependent on how many copies are used in a single attempt.
+**Current theory for success rate is +30% per duplicate base AV, and +40% per duplicate kai AV.
+**If success rate is over 100%, the excess rate goes into rolling for a second HP increase. (120% means 20% to get +2 HP instead)
+*The HP mod cap is shared and has the same limitations as the DE HP mod system.
+
+=={{anchor|level|Evasion, LOS, ASW}}Leveling (Evasion, LOS, ASW)==
+Generally, those stats are unaffected by modernization and follow the following formula instead (ASW can also be raised using [[#de|DE modernization]]):
+<center><math>f(lv) = f(1) + \left \lfloor (f(99) - f(1)) \times \frac{lv}{99} \right \rfloor</math></center>
+*The current value is determined only by ship's current level <code>lv</code> and remodel form (Base, Kai, Kai Ni, etc.) with its associated constants <code>f(1)</code> and <code>f(99)</code> (refer to infoboxes on [[:Category:Player ships|ship pages]] or to tables listed [[Ship Maximum Status|here]]).
+*<code>f(1)</code> is the base or starting value for this remodel form: value at level 1 for ships in base form, arbitrary value otherwise (that is, not the value at remodel level).
+*<code>f(99)</code> is the value at level 99 (that is, not the maximal value).
+*For example, for [[Shoukaku Kai Ni A]] <code>evasion(1) = 36</code> and <code>evasion(99) = 81</code>, so evasion at remodel level (88) is <code>36 + floor((81 - 36) * 88 / 99) = 76</code>, while the maximal value at level 165 is <code>36 + floor((81 - 36) * 165 / 99) = 111</code>.
+*After [[marriage]] the value continues to grow as <code>lv</code> > 99. For example, [[Shimakaze Kai]] has less evasion than [[Yukikaze Kai]] before marriage (<code>67 + floor((99 - 67) * lv / 99) > 55 + floor((99 - 55) * lv / 99)</code> when <code>lv < 97</code>) and more after (<code>67 + floor((99 - 67) * lv / 99) < 55 + floor((99 - 55) * lv / 99)</code> when <code>lv > 101</code>).
+*With the [[#de|DE modernization]] bonus the ASW formula is
+<center><math>asw(lv) = asw(1) + \left \lfloor (asw(99) - asw(1)) \times \frac{lv}{99} \right \rfloor + bonus</math></center>
+*The end stat is always '''rounded down''' to the nearest integer.
+
+
+=={{anchor|ships|Ships|tables}}Reference Tables==
+{{Section|collapsed=true}}
+{{todo|Use an iterator.}}
+All ships will provide a fixed input for modernization.
+===Destroyers===
+{{ShipModernizationListKai
+|Shimakaze |Shimakaze/Kai
+|-
+|Fubuki |Fubuki/Kai |Fubuki/Kai Ni
+|~
+|Shirayuki |Shirayuki/Kai
+|~
+|Hatsuyuki |Hatsuyuki/Kai
+|~
+|Miyuki |Miyuki/Kai
+|~
+|Murakumo |Murakumo/Kai |Murakumo/Kai Ni
+|~
+|Isonami |Isonami/Kai
+|~
+|Uranami |Uranami/Kai
+|-
+|Ayanami |Ayanami/Kai |Ayanami/Kai Ni
+|~
+|Shikinami |Shikinami/Kai
+|~
+|Oboro |Oboro/Kai
+|~
+|Akebono |Akebono/Kai
+|~
+|Sazanami |Sazanami/Kai
+|~
+|Ushio |Ushio/Kai |Ushio/Kai Ni
+|-
+|Mutsuki |Mutsuki/Kai |Mutsuki/Kai Ni
+|~
+|Kisaragi |Kisaragi/Kai |Kisaragi/Kai Ni
+|~
+|Satsuki |Satsuki/Kai |Satsuki/Kai Ni
+|~
+|Fumizuki |Fumizuki/Kai
+|~
+|Nagatsuki |Nagatsuki/Kai
+|~
+|Kikuzuki |Kikuzuki/Kai
+|~
+|Mikazuki |Mikazuki/Kai
+|~
+|Mochizuki |Mochizuki/Kai
+|~
+|Yayoi |Yayoi/Kai
+|~
+|Uzuki |Uzuki/Kai
+|~
+|Minazuki |Minazuki/Kai
+|-
+|Akatsuki |Akatsuki/Kai |Akatsuki/Kai Ni
+|~
+|Hibiki |Hibiki/Kai |Verniy
+|~
+|Ikazuchi |Ikazuchi/Kai
+|~
+|Inazuma |Inazuma/Kai
+|-
+|Hatsuharu |Hatsuharu/Kai |Hatsuharu/Kai Ni
+|~
+|Nenohi |Nenohi/Kai
+|~
+|Wakaba |Wakaba/Kai
+|~
+|Hatsushimo |Hatsushimo/Kai |Hatsushimo/Kai Ni
+|-
+|Shiratsuyu |Shiratsuyu/Kai
+|~
+|Shigure |Shigure/Kai |Shigure/Kai Ni
+|~
+|Murasame |Murasame/Kai
+|~
+|Yuudachi |Yuudachi/Kai |Yuudachi/Kai Ni
+|~
+|Samidare |Samidare/Kai
+|~
+|Suzukaze |Suzukaze/Kai
+|~
+|Harusame |Harusame/Kai
+|~
+|Kawakaze |Kawakaze/Kai |Kawakaze/Kai Ni
+|~
+|Umikaze |Umikaze/Kai
+|-
+|Asashio |Asashio/Kai |Asashio/Kai Ni |Asashio/Kai Ni D
+|~
+|Ooshio |Ooshio/Kai |Ooshio/Kai Ni
+|~
+|Michishio |Michishio/Kai
+|~
+|Arashio |Arashio/Kai
+|~
+|Arare |Arare/Kai
+|~
+|Kasumi |Kasumi/Kai |Kasumi/Kai Ni |Kasumi/Kai Ni B
+|~
+|Asagumo |Asagumo/Kai
+|~
+|Yamagumo |Yamagumo/Kai
+|-
+|Kagerou |Kagerou/Kai
+|~
+|Shiranui |Shiranui/Kai
+|~
+|Kuroshio |Kuroshio/Kai
+|~
+|Yukikaze |Yukikaze/Kai
+|~
+|Hatsukaze |Hatsukaze/Kai
+|~
+|Maikaze |Maikaze/Kai
+|~
+|Akigumo |Akigumo/Kai
+|~
+|Hamakaze |Hamakaze/Kai
+|~
+|Tanikaze |Tanikaze/Kai
+|~
+|Amatsukaze |Amatsukaze/Kai
+|~
+|Urakaze |Urakaze/Kai
+|~
+|Isokaze |Isokaze/Kai
+|~
+|Tokitsukaze |Tokitsukaze/Kai
+|~
+|Nowaki |Nowaki/Kai
+|~
+|Arashi |Arashi/Kai
+|~
+|Hagikaze |Hagikaze/Kai
+|~
+|Oyashio |Oyashio/Kai
+|-
+|Yuugumo |Yuugumo/Kai
+|~
+|Makigumo |Makigumo/Kai
+|~
+|Naganami |Naganami/Kai
+|~
+|Hayashimo |Hayashimo/Kai
+|~
+|Kiyoshimo |Kiyoshimo/Kai
+|~
+|Asashimo |Asashimo/Kai
+|~
+|Takanami |Takanami/Kai
+|~
+|Okinami |Okinami/Kai
+|~
+|Kazagumo |Kazagumo/Kai
+|-
+|Z1 |Z1/Kai |Z1/zwei
+|~
+|Z3 |Z3/Kai |Z3/zwei
+|-
+|Akizuki |Akizuki/Kai
+|~
+|Teruzuki |Teruzuki/Kai
+|~
+|Hatsuzuki |Hatsuzuki/Kai
+|-
+|Libeccio |Libeccio/Kai
+|-
+|Kamikaze |Kamikaze/Kai
+|~
+|Harukaze |Harukaze/Kai}}
+===Light Cruisers/Torpedo Cruisers/Training Cruisers===
+{{ShipModernizationListKai
+|Tenryuu |Tenryuu/Kai
+|~
+|Tatsuta |Tatsuta/Kai
+|-
+|Kuma |Kuma/Kai
+|~
+|Tama |Tama/Kai
+|~
+|Kiso |Kiso/Kai |Kiso/Kai Ni
+|~
+|Ooi |Ooi/Kai |Ooi/Kai Ni
+|~
+|Kitakami |Kitakami/Kai |Kitakami/Kai Ni
+|-
+|Nagara |Nagara/Kai
+|~
+|Isuzu |Isuzu/Kai |Isuzu/Kai Ni
+|~
+|Natori |Natori/Kai
+|~
+|Yura |Yura/Kai
+|~
+|Kinu |Kinu/Kai
+|~
+|Abukuma |Abukuma/Kai |Abukuma/Kai Ni
+|-
+|Sendai |Sendai/Kai |Sendai/Kai Ni
+|~
+|Jintsuu |Jintsuu/Kai |Jintsuu/Kai Ni
+|~
+|Naka |Naka/Kai |Naka/Kai Ni
+|-
+|Yuubari |Yuubari/Kai
+|-
+|Agano |Agano/Kai
+|~
+|Noshiro |Noshiro/Kai
+|~
+|Yahagi |Yahagi/Kai
+|~
+|Sakawa |Sakawa/Kai
+|-
+|Ooyodo |Ooyodo/Kai
+|-
+|Katori |Katori/Kai
+|~
+|Kashima |Kashima/Kai
+}}
+===Heavy Cruisers/Aviation Cruisers===
+{{ShipModernizationListKai
+|Mogami |Mogami/Kai
+|~
+|Mikuma |Mikuma/Kai
+|~
+|Suzuya |Suzuya/Kai
+|~
+|Kumano |Kumano/Kai
+|-
+|Furutaka |Furutaka/Kai |Furutaka/Kai Ni
+|~
+|Kako |Kako/Kai |Kako/Kai Ni
+|-
+|Aoba |Aoba/Kai
+|~
+|Kinugasa |Kinugasa/Kai |Kinugasa/Kai Ni
+|-
+|Myoukou |Myoukou/Kai |Myoukou/Kai Ni
+|~
+|Nachi |Nachi/Kai |Nachi/Kai Ni
+|~
+|Ashigara |Ashigara/Kai |Ashigara/Kai Ni
+|~
+|Haguro |Haguro/Kai |Haguro/Kai Ni
+|-
+|Takao |Takao/Kai
+|~
+|Atago |Atago/Kai
+|~
+|Maya |Maya/Kai |Maya/Kai Ni
+|~
+|Choukai |Choukai/Kai |Choukai/Kai Ni
+|-
+|Tone |Tone/Kai |Tone/Kai Ni
+|~
+|Chikuma |Chikuma/Kai |Chikuma/Kai Ni
+|-
+|Prinz Eugen |Prinz Eugen/Kai
+|-
+|Zara |Zara/Kai
+|~
+|Pola |Pola/Kai
+}}
+===Battleships===
+{{ShipModernizationListKai
+|Nagato |Nagato/Kai
+|~
+|Mutsu |Mutsu/Kai
+|~
+|Kongou |Kongou/Kai |Kongou/Kai Ni
+|~
+|Hiei |Hiei/Kai |Hiei/Kai Ni
+|~
+|Haruna |Haruna/Kai |Haruna/Kai Ni
+|~
+|Kirishima |Kirishima/Kai |Kirishima/Kai Ni
+|-
+|Fusou |Fusou/Kai |Fusou/Kai Ni
+|~
+|Yamashiro |Yamashiro/Kai |Yamashiro/Kai Ni
+|-
+|Ise |Ise/Kai
+|~
+|Hyuuga |Hyuuga/Kai
+|-
+|Yamato |Yamato/Kai
+|~
+|Musashi |Musashi/Kai
+|-
+|Bismarck |Bismarck/Kai |Bismarck/zwei |Bismarck/drei
+|-
+|Littorio |Italia
+|~
+|Roma |Roma/Kai
+|-
+|Iowa |Iowa/Kai
+|-
+|Warspite |Warspite/Kai
+}}
+===Light Carriers/Seaplane Tenders/Submarine Tenders/Amphibious Assault Ships===
+{{ShipModernizationListKai
+|Houshou |Houshou/Kai
+|-
+|Ryuujou |Ryuujou/Kai |Ryuujou/Kai Ni
+|-
+|Hiyou |Hiyou/Kai
+|~
+|Junyou |Junyou/Kai |Junyou/Kai Ni
+|-
+|Shouhou |Shouhou/Kai
+|~
+|Zuihou |Zuihou/Kai
+|-
+|Chitose |Chitose/Kai |Chitose/A 
+|~
+|Chitose/Carrier |Chitose/Carrier Kai |Chitose/Carrier Kai Ni
+|~
+|Chiyoda |Chiyoda/Kai |Chiyoda/A 
+|~
+|Chiyoda/Carrier |Chiyoda/Carrier Kai |Chiyoda/Carrier Kai Ni
+|-
+|Akitsu Maru |Akitsu Maru/Kai
+|-
+|Taigei |Ryuuhou |Ryuuhou/Kai
+|-
+|Akitsushima |Akitsushima/Kai
+|-
+|Mizuho |Mizuho/Kai
+}}
+===Standard Carriers/Armored Carriers===
+{{ShipModernizationListKai
+|Akagi |Akagi/Kai
+|~
+|Kaga |Kaga/Kai
+|-
+|Souryuu |Souryuu/Kai |Souryuu/Kai Ni
+|~
+|Hiryuu |Hiryuu/Kai |Hiryuu/Kai Ni
+|-
+|Shoukaku |Shoukaku/Kai |Shoukaku/Kai Ni |Shoukaku/Kai Ni A
+|~
+|Zuikaku |Zuikaku/Kai |Zuikaku/Kai Ni |Zuikaku/Kai Ni A
+|-
+|Taihou |Taihou/Kai
+|-
+|Unryuu |Unryuu/Kai
+|~
+|Amagi |Amagi/Kai
+|~
+|Katsuragi |Katsuragi/Kai
+|-
+|Graf Zeppelin |Graf Zeppelin/Kai
+|-
+|Aquila |Aquila/Kai
+}}
+===Submarines===
+{{ShipModernizationListKai
+|I-168 |I-168/Kai
+|~
+|I-58 |I-58/Kai
+|~
+|I-19 |I-19/Kai
+|~
+|I-26 |I-26/Kai
+|~
+|I-8 |I-8/Kai
+|~
+|I-401 |I-401/Kai
+|~
+|Maruyu |Maruyu/Kai
+|~
+|U-511 |U-511/Kai |Ro-500}}
+===Misc===
+{{ShipModernizationListKai
+|Akashi |Akashi/Kai
+|~
+|Hayasui |Hayasui/Kai}}
+{{SectionEnd}}
+
+==Examples and References==
+{{reflist}}
+
+==See Also==
+* [[Remodel]]
+* [[Marriage]]
+* [[Ship Maximum Status]]
+* [http://wikiwiki.jp/kancolle/?%B6%E1%C2%E5%B2%BD%B2%FE%BD%A4 近代化改修]: modernization page on Wikiwiki
+* [https://docs.google.com/spreadsheets/d/1sTd9tQ0fIHWjKaLrAqwyGgAXSpjdYQxveVRM1W9yrVE/edit#gid=0 DE Modernization Data in JP]

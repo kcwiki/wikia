@@ -1,0 +1,220 @@
+[[File:Marriage_Banner.jpg|centre]]
+[[File:Marriage.jpg|thumb|300px|Marriage Ceremony]]
+__TOC__
+The Marriage System (ケッコンカッコカリ ''kekkon kakkokari'') was [https://twitter.com/KanColle_STAFF/status/434221877767073792 introduced] to KanColle on 14th February 2014 ([https://twitter.com/KanColle_STAFF/status/434219713862701057 Valentine's Day Update]), and allows you to marry your favorite ship.
+
+'''Requirements'''
+* A ship that has reached level 99
+* A [[Shop#Special_Corner|Marriage Ring and Documents]]
+One [[Shop#Special_Corner|Marriage Ring and Documents]] is given to every player that completes [[Marriage#Marriage Procedure|the first 4 marriage quests shown below]]. Any subsequent marriages will require additional rings which can be purchased at the [[Shop|item shop]] for 700 DMM Points (equates to ¥700).
+
+==Changes to Married Ship==
+Marrying a ship raises her level cap to 175, and gives that ship a number of benefits in stats and other trivial things. Note that unlike when you [[remodel]], marriage will '''not''' reset any [[modernization]] benefits.
+
+===Notable Benefits===
+#{{Evasion}} Evasion, {{ASW}} Anti-Submarine, {{LOS}} Line-of-Sight, {{Hit}} Accuracy, and Critical Rate will continue to [[modernization#level|grow]] with each level up ({{Hit}} Accuracy and Critical Rate are [[Combat/Accuracy and Evasion|derived]] from level and is not shown).
+#{{Luck}} Luck is increased by 3-6 upon marrying (when not constrained by the maximal value).
+#{{Fuel}} Fuel and {{Ammo}} Ammo consumption are reduced by 15%.
+#The [[Overweight_Penalty_and_Fit_Gun_Bonus|overweight penalty]] is reduced by 40% (A married Kongou with a 46cm receives a penalty of -6 instead of -10, for example).
+#Level is increased to 100 upon marrying.
+#{{HP}} HP is increased by few points (<math>hp_{max}</math> is an upper bound that can be found in tooltips on [[:Category:Player_ships|ship pages]]):
+
+<center><math>min(hp_{max}, hp + [4, 4, 4, 5, 6, 7, 7, 8, 8, 9]_{\lfloor \frac{hp}{10} \rfloor})</math></center>
+{| class="article-table mw-collapsible mw-collapsed"
+!colspan="3"|Bonus HP values
+|-
+!Ship Type!!Model!!Amount
+|-
+|BB||All||5
+|-
+|rowspan="6"|[[BB]]/[[BBV]] (remodeled)||All except the ones listed below||8
+|-
+|Bismarck||5
+|-
+|Nelson||5 (max 98)
+|-
+|Vittorio Veneto-class||6
+|-
+|Iowa-class||9
+|-
+|Yamato-class||9
+|-
+|rowspan="2"|[[BB]]/[[BBV]] (2nd remodel)||All except the ones listed below||8
+|-
+|Bismarck Zwei/Drei||3
+|-
+|CV||All||7
+|-
+|rowspan="2"|[[CV]] (remodelled)||All except the ones listed below||8
+|-
+|Souryuu & Hiryuu<br />Unryuu-class||7
+|-
+|rowspan="2"|[[CA]]||All||7
+|-
+|Mogami-class||6
+|-
+|rowspan="2"|[[CA]]/[[CAV]] (remodelled)||All except the ones listed below||7
+|-
+|Furutaka-class<br />Aoba-class||6
+|-
+|[[CA]]/[[CAV]] (2nd remodel)||All||7
+|-
+|[[CVL]]||All||5
+|-
+|rowspan="2"|[[CVL]] (remodelled)||All except the ones listed below||6
+|-
+|Chitose-class (2nd remodel)<br />Hiyou-class<br />Mogami-class (CVL)||7
+|-
+|rowspan="2"|[[AV]]||All except the ones listed below||6
+|-
+|Kamoi<br />Akitsushima, Akitsushima Kai||5
+|-
+|[[LHA]]||All||5
+|-
+|[[LHA]] (remodelled)||All||6
+|-
+|rowspan="2"|[[CL]]||All except the ones listed below||4
+|-
+|Yuubari<br />Agano-class||5
+|-
+|rowspan="2"|[[CL]]/[[CLT]] (remodelled)||All except the ones listed below||6
+|-
+|Yuubari||5
+|-
+|rowspan="2"|[[CL]]/[[CLT]] (2nd remodel)||All except the ones listed below||6
+|-
+|Jintsuu (2nd remodel)||7
+|-
+|[[DD]]||All||4
+|-
+|rowspan="2"|[[DD]] (remodelled)||All except the ones listed below||5
+|-
+|Mutsuki-class<br />Kamikaze-class||4
+|-
+|rowspan="2"|[[DD]] (2nd remodel)||All except the ones listed below||5
+|-
+|Mutsuki-class||4
+|-
+|[[SS]] / [[SSV]]||All||4
+|-
+|rowspan="2"|[[SS]] / [[SSV]] (remodelled)||All except the ones listed below||4
+|-
+|Maruyu||2
+|-
+|rowspan="2"|[[AO]]||Hayasui||2
+|-
+|Kamoi||5
+|-
+|[[AS]]||All||5
+|-
+|[[AR]]||All||5
+|-
+|[[AR]] (remodelled)||All||6
+|-
+|[[CT]]||All||5
+|-
+|[[CT]] (remodelled)||All||6
+|}
+
+{{todo|Add more links, simplify, make sortable?}}
+
+===Other changes===
+[[File:Married_Card.jpg|thumb|150px|Wedding ring appears on bottom right.]]
+[[File:Married_Banner.jpg|thumb|150px|Wedding ring appears on bottom right.]]
+*When set as secretary ship (flagship of the 1st fleet), there will be a light shower of sakura petals over the ship.
+*New line will be used when set as secretary ship.
+*A wedding ring icon will appear on the bottom right of the card, and on the bottom right of the banner of that ship.
+*Name changes from white to (sakura) pink when viewed in the fleet organization menu. (The pink is quite light, so you have to look carefully to notice it.)
+*After marriage, it is possible to re-watch the marriage ceremony or listen to the marriage line again in your ship album / library on the page of the ship girl you have married. You may only do this for the ship's remodel type at the time you married her.
+
+===Non-changes and notes===
+These parameters are not affected by marriage:
+*Bauxite cost to replace planes shot down does not change.
+*The formula for calculating repair time does not change (it continues to increase because of leveling up).
+*{{Firepower}} Firepower, {{Torpedo}} Torpedo, {{AA}} Anti-air, and {{Armor}} Armor stats do not change.
+*All modernization benefits are kept (including luck, HP, etc.), for HP stat mod however there are exceptions<ref>[[Template:Calc/HP]]</ref>:
+**Only 1 HP modernization point kept after marriage: {{Calc/HP|hp=true}}.
+**No HP modernization kept: {{Calc/HP|no_hp=true}}.
+*[[Morale]], {{Fuel}} Fuel and {{Ammo}} Ammo status do not get reset as this is not counted as a remodel (HP does get replenished due to the increase it gets from the marriage).
+
+==Marriage Procedure==
+
+[[File:Option_to_Sign.jpg|thumb|230px|Level number glows upon hitting Lv99.]]
+#You must complete the first 4 quests related to the marriage procedure to be able to marry a ship. You may do some of them even before you have a level 99 ship. These quests are listed in the table below.[[File:Signing_Confirmation.jpg|thumb|230px|Confirmation dialog. Click the left button to confirm.]]
+#Completing the 4th quest (Defeat a boss in 2-3 with a level 90-99 flagship) will give you a set of marriage ring and documents which you will need for the marriage.[[File:Couple_Futon.jpg|thumb|230px|Couple Futon furniture (bottom left).]]
+#Upon reaching level 99, in the Remodel / Modernization page, the ship's level will have a soft white glow around it. Clicking on it will bring you to a confirmation dialogue. Mousing over it will pop up a bubble that tells you to sign the marriage document.
+#Click the left button that says 「書類一式にサインする」 to sign the document.
+#Enjoy the ceremony.
+#Complete the remaining 2 quests to get the Couple Futon.
+{{QuestList|
+{{Quest
+|ID = WF01
+|Title_JP = 式の準備！(その壱)
+|Title_EN = Preparation for the Ceremony (Part I)
+|Requirements = Scrap equipment twice
+|Rewards_RSC = 88 / 88 / 0 / 0
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]]×1
+|Note = Requires: [[#A16|A16]] <br />Unlocks: [[#WC01|WC01]]
+}}
+{{Quest
+|ID = WC01
+|Title_JP = 式の準備！(その弐)
+|Title_EN = Preparation for the Ceremony (Part II)
+|Requirements = Win two battles in Exercises
+|Rewards_RSC = 0 / 0 / 88 / 88
+|Rewards_Items = [[File:Development material.png|30px|link=Construction]]×1
+|Note = Requires: [[#WF01|WF01]] <br />Unlocks: [[#WA01|WA01]]
+}}
+{{Quest
+|ID = WA01
+|Title_JP = 式の準備！(その参)
+|Title_EN = Preparation for the Ceremony (Part III)
+|Requirements = Have a level 90 to 99 ship as your flagship
+|Rewards_RSC = 88 / 88 / 88 / 88
+|Rewards_Items = [[File:Furniture box large.jpg|30px|link=Furniture]]×1
+|Note = Requires: [[#WC01|WC01]] <br />Unlocks: [[#WB01|WB01]]
+}}
+{{Quest
+|ID = WB01
+|Title_JP = 式の準備！(最終)
+|Title_EN = Preparation for the Ceremony (Final)
+|Requirements = Defeat the boss in 2-3 with a Level 90-99 flagship (with S rank)
+|Rewards_RSC = 0 / 0 / 0 / 0
+|Rewards_Items = [[File:Marriage Papers.png|30px|link=Marriage]]<br />[[Marriage|Marriage Ring and Documents]]×1
+|Note = Requires: [[#WA01|WA01]] <br />Unlocks: [[#WA02|WA02]]
+}}
+{{Quest
+|ID = WA02
+|Title_JP = 新たなる旅立ち！
+|Title_EN = A New Voyage
+|Requirements = Have a Level 100 ship as your flagship along with five others in your main fleet
+|Rewards_RSC = 200 / 200 / 200 / 200
+|Rewards_Items = [[File:EmergencyRepair.png|30px|link=Repair Team]][[Repair Team]]
+|Note = Requires: [[#WB01|WB01]] <br />Unlocks: [[#WB02|WB02]]
+}}
+{{Quest
+|ID = WB02
+|Title_JP = 二人でする初めての任務！
+|Title_EN = A Couple's First Quest
+|Requirements = Defeat the boss in 4-3 with a level 100+ flagship (with S rank)
+|Rewards_RSC = 300 / 300 / 300 / 300
+|Rewards_Items = [[Furniture#Thin Futon|Thin Futon]]
+|Note = Requires: [[#WA02|WA02]] <br />Unlocks: [[#A40|A40]]
+}}
+}}
+
+==Etymology==
+
+The system name is transliterated as ''kekkon kakkokari'', in which the first part of the name, ''kekkon'', means marriage, but it is written in an unusual way (Katakana as opposed to the kanji that would ordinarily be used to write the word: '''結婚'''). The second part of the system's name, ''kakkokari'', is also written in katakana. 'Kakko' （括弧） means parenthesis or bracket ('''{'''), and would usually be accompanied by 'kakko toji' which means "closing parenthesis/bracket." The 'kari' portion of the name is one way to read the Japanese kanji [[wikt:仮|仮]], which means 'subject to change', 'temporary', 'unreal', 'fake', or 'imaginary'.
+
+==Links and References==
+*[[Template:ShipMarriedBattleCard|Wikia template for generating a marriage battle card]]
+*[http://wikiwiki.jp/kancolle/?%A5%B1%A5%C3%A5%B3%A5%F3%A5%AB%A5%C3%A5%B3%A5%AB%A5%EA ケッコンカッコカリ: marriage page on Wikiwiki]
+*[https://twitter.com/KanColle_STAFF/status/434221877767073792 Official Twitter - Overview of Marriage System]
+*[https://twitter.com/KanColle_STAFF/status/434222176909000704 Official Twitter - Marriage System Note 1: Ceremony Preparation]
+*[https://twitter.com/KanColle_STAFF/status/434222775335534592 Official Twitter - Marriage System Note 2: "Remodelling"]
+*[https://twitter.com/KanColle_STAFF/status/434223144383959040 Official Twitter - Marriage System Note 3: Signing of Document]
+*[https://twitter.com/KanColle_STAFF/status/434223733255852032 Official Twitter - Marriage System Note 4: Getting to Level 100]
+*[https://twitter.com/KanColle_STAFF/status/434224565263155200 Official Twitter - Marriage System Note 5: Other Merits]
+*[https://twitter.com/KanColle_STAFF/status/434225406623744000 Official Twitter - Marriage System Note 6: New Voices]
+{{reflist}}

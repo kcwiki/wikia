@@ -1,0 +1,35 @@
+{{#vardefine:background|{{#switch:{{{world|}}}|1=EDEDED|2=EDEDD5|3=CFE8E8|4=C5E6D5|5=D3D3EB|EDEDED}}}}{{#vardefine:background2|{{#switch:{{{world|}}}|1=EDEDED|2=EDEDD5|3=CFE8E8|4=C5E6D5|5=9999CC|EDEDED}}}}{{#vardefine:rows|{{#switch:{{{world|}}}|1=11|2=11|3=8|4=8|5=8|E=2|8}}}}
+|-
+|align="center" height="35px" {{#if:{{{odd|}}}|style="background:#{{#var:background}};color:#000"}}|{{tooltip|{{{id|}}}|ID number as displayed in the game}}
+|align="center" height="35px" {{#if:{{{odd|}}}|style="background:#{{#var:background}};color:#000"}}|{{{name|}}}
+|align="center" height="35px" {{#if:{{{odd|}}}|style="background:#{{#var:background}};color:#000"}}|{{tooltip|{{{time|}}}|Time required for expedition}}
+{{#switch:{{{type|}}}|normal=
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{hq|}}}|Admiral experience gained upon completion from this expedition}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{ship|}}}|Ship experience gained upon completion from this expedition}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{fuel|}}}|Base resources gain from expedition (at 100% ratio)}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{ammo|}}}|Base resources gain from expedition (at 100% ratio)}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{steel|}}}|Base resources gain from expedition (at 100% ratio)}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{bauxite|}}}|Base resources gain from expedition (at 100% ratio)}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{{item1|}}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{{item2|}}}
+|require=
+{{!}}align{{=}}"center" height{{=}}"35px" style{{=}}"background:#{{#if:{{{odd|}}}|{{#var:background2}}{{!}}E8E8E8}}; color:#000"{{!}}{{{sum|}}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style="background:#{{#var:background}}; color:#000"}}{{!}}'''Lv''' {{{level|}}}
+{{!}}align{{=}}"center" height{{=}}"35px" style{{=}}"background:#{{#if:{{{odd|}}}|{{#var:background2}}{{!}}E8E8E8}}; color:#000"{{!}}{{{fleet|}}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style="background:#{{#var:background}}; color:#000"}}{{!}}{{{drums|}}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style="background:#{{#var:background}}; color:#000"}}{{!}}{{#if:{{{fuel|}}}|-{{{fuel}}}}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style="background:#{{#var:background}}; color:#000"}}{{!}}{{#if:{{{ammo|}}}|-{{{ammo}}}}}
+|regsup=
+{{!}}align{{=}}"center" height{{=}}"35px" style{{=}}"background:lightblue; color:#000" colspan{{=}}"10" rowspan="{{#var:rows}}" {{!}} '''Sortie [[Support Expedition]] (normal)'''
+|bossup=
+{{!}}align{{=}}"center" height{{=}}"35px" style{{=}}"background:lightblue; color:#000" colspan{{=}}"10" rowspan="{{#var:rows}}" {{!}} '''Sortie [[Support Expedition]] (boss)'''
+|
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{hq|}}}|Admiral experience gained upon completion from this expedition}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{ship|}}}|Ship experience gained upon completion from this expedition}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{fuel|}}}|Base resources gain from expedition (at 100% ratio)}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{ammo|}}}|Base resources gain from expedition (at 100% ratio)}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{steel|}}}|Base resources gain from expedition (at 100% ratio)}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{tooltip|{{{bauxite|}}}|Base resources gain from expedition (at 100% ratio)}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{{item1|}}}
+{{!}}align{{=}}"center" height{{=}}"35px" {{#if:{{{odd|}}}|style{{=}}"background:#{{#var:background}}; color:#000"}}{{!}}{{{item2|}}}
+}}

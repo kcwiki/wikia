@@ -1,0 +1,57 @@
+{{Warning
+|title = Notice
+|message = 
+The contents of this blog entry may not be complete. The contents of this blog entry is potentially outdated as it was written way back in 2015.}}
+
+<pre style="white-space: pre-wrap;">
+I figured that one day I will be writing this out in order to contain my thoughts on the KC wikia chat. However there are many points here that I want to point out and so I'll try my best to summarise it all.
+
+The main points are in single digit count, the minor (flow-on) points are the ones with decimal places. Before I continue, the reason why I am no longer permanently on KC wikia chat has nothing to do with certain individuals but with the overall migration process.
+
+1. Wikia chat's inherent issues.
+	1.1 Lack of text "channels".
+		1.1.1 Lack of the ability to direct conversations into appropriate places.
+			  This is the one thing that annoyed me a fair amount when we have one translator whom is unwilling to edit the KC wikia pages directly and another person who can edit the KC wikia pages directly has to make do with the amount of shenanigans when especially patch notes for the games has been released (after maintenance) and that translations were offered. 
+			  I am also going throw it in here that telling other people to not talk during patch notes that were released and translated is not effective measure, neither is the use of private message which itself has its own issues (→1.2) that I will go into detail later on.
+		1.1.2 Lack of voice chat.
+			  It is not convenient for say front runners to be forced into typing out text when they're busy trying to clear the maps. Prior to Discord we had a solution with TeamSpeak but it lacked channels in particular and that TeamSpeak works with certain platforms in terms of voice chat. Prior to all this we had Skype conference which again has its own issues of its own kind.
+			  Before you say that nobody would use voice chat. I would like to personally point out to the use case of sociable people singing in karaoke on certain days in KC subreddit discord chat. There are benefits for using voice chat and without it is a huge detriment to a chat's capabilities.
+		1.1.4 Lack of the ability to either "ping" a specific user and/or to "pin" a message/conversation for future reference.
+			  Without Monchoman45's ChatHacks.js (which also has a mixed chance of it working (→1.3.2), the ability to "ping" or otherwise highlight another user is not possible. Now, I have already discussed what were the main flaws with Wikia chat (→1.1.1), imagine as more and more active chatters flows into chat - the ability to highlight another user becomes inevitable to prevent loss of topic. Again, private messages may alleviate such issues but only to a certain extent. If you have a look at KC subreddit discord chat - the result of having multiple channels as well as Direct Message (DM but it is basically equivalent to private message or PM) for instance, it is beneficial for an inquirer to gain more opinions from others rather than having to private message each and every other person to get their perspectives, etc.
+	1.2 Random chat crashes which potentially loses any chat history buffer one may have.
+		With Discord, the losses with certain useful bit of conversation are not lost. Better yet, with the ability to also not only pin messages, they can be quickly referenced later on.
+		1.2.1 No logging function
+			  KancolleChatLogger bot used to offer this feature except for the fact that:
+			  1. It has to be hosted on one's personal computer as well as their own personal connection, therefore, discrepancies with the times of when the chat is logged are evident whenever the bot is not in the chat.
+			  2. It cannot log kicks/bans. Therefore such rules of being kicked/banned as a joke were apparent.
+			  My main reason for having logging function is for when I have to relay certain information back onto KC wikia itself (→1.1.1) for instance is annoying.
+	1.3 No longer maintained and source code is not exactly user friendly.
+		1.3.1 Lack of bots that are capable of handling user's requirements.
+			  Because we only witnessed a small minute capabilities of what a bot could (potentially) do. It had other features which gave others the wrong impressions on certain things. Now without a proper documentation on the said chat features, the bot has very limited capability coupled with the fact that it needs to run on one's PCs (→1.2.1). KC subreddit discord, being backed by Discord platform has public documentations on their specific features as well as for writing bots. Wikia chat lacks all those.
+		1.3.2 Changes within Wikia internally that affects CSS/JS also affects personal CSS/JS as a subsequent result
+			  Due to the various potential causes of one's CSS/JS for chat not working properly, it is hard to rule out as being Wikia at fault or the user at fault. However, what is known is that Wikia has been progressively trying to squeeze more advertisement content onto Wikia hosted content pages. This is certainly not the first time where users had to be on their toes to fix such issues as they see fit.
+			  Discord currently does not offer advertisements and therefore does not suffer the same sets of issues Wikia faces. Besides with the lack of documentation for Wikia chat (→1.3.1), this is somewhat seen as a flow-on effect as to why users are forced to play with this cat-and-mouse game with the "Wikia engineers", unlike Discord where the documentation is publicly visible.
+		1.3.3 Extra features that are found in dedicated chatting softwares has to be manually coded in for one to use. E.g. ignore user function.
+			  It is virtually impossible to incorporate each and every feature that makes other chatting softwares unique into a poorly documented and thus maintained wikia chat. All these extra features requires one to discover and then to either manually implement it themselves or just "wishing" for the said feature to be availabe. For those who chose to either manually implement it themselves faces an uphill battle with other users who wants the same set of features and the support to go with it.
+2. Wikia's issues.	
+	2.1 Wikia maintenances forcefully disconnecting chatters out
+		If it isn't the random chat crashes (→1.2), it is the maintenance or connection issues that forces one to lose their connection with KC wikia chat. Unlike Discord where the maintenance are essentially "gapless" (downtimes are not required), even if there is a downtime maintenance required, users who runs the Discord app will get that notification. Wikia maintenances are usually:
+		1. Sporadic even if they scheduled a downtime for their maintenance.
+		2. Makes notifications visible only as a notification bubble on the bottom of one's wikia bar. This bar is often used to contain advertisements or other things that may interest the particular user and as a subsequent result tends to blocked by their adblocker which also in turn, makes one unaware of Wikia's downtimes.
+		If and when one loses connection to KC wikia chat (for whatever the reason) they lose chat buffers (→1.2.1) in the very least. Discord, if and when they have downtime, they have a dedicated service status page where they make every effort into describing their downtimes. Wikia, however does nothing of that sort.
+	2.2 Loopholes exists both internally and externally of wikia chat
+		It isn't rare that when a certain feature that is ported from another site/platform for use elsewhere, that there is a need to maintain the source code. Ever since Wikia chat no longer maintains the source code neither do they make any effort to document it (→1.2). Whatever loophole found for the other site/platform that has been discovered potentially also works on the Wikia chat. We have seen cases of that regular spammer who repeatedly only targets Wikia chats across the Wikia network. That plus, a specific loophole has been found where it is possible to exploit the authentication mechanisms that Wikia has tried "bolting" onto the Wikia chat - as a result it is possible to bypass that mechanism.
+		Wikia chat isn't the only "extension" that faces hoards of issues. Wikia forums as well being an extension ported from where ever else hasn't been maintained and is very soon deprecated for the new "Discussions" extension which Wikia is more or less forcibly making all their "sub wiki" follow suit.
+	2.3 Extensibility/Scalability issues if extra features were to be implemented to make KC wikia chat useful.
+		This is more or less an extension to 1.3.3. Due to the lack of features that:
+		1. the chat lacks
+		2. it can randomly crash
+		3. the lack of documentation exists for it
+		It is essentially impossible to implement these extra features without some drawbacks.
+3. Migration (People) issues.
+	3.1 An extra account just for chatting purposes that are external to Wikia.
+	3.2 Desires to prefer a chat for only KC wikia members or a chat where there are lesser users.
+	3.3 Lack of emoticons and/or larger sized emoticons as well as the need to install another third party software just for extra emoticons.
+	3.4 Extra rules and obligations one must follow when using another service
+</pre>
+[[Category:Blog posts]]

@@ -1,0 +1,366 @@
+{{Map/Header}}
+{{Map/Info
+|en = Adjacent Seas of the Naval Base
+|jp = 鎮守府近海
+|romaji = Chinjufu kinkai
+
+|strategy_name = Naval base adjacent waters anti-submarine patrol
+|strategy_name_ja = 鎮守府近海対潜哨戒
+|strategy_info = Organize a small seek-and-destroy ASW fleet to clean up the submarine-infested waters near the naval base!
+|strategy_info_ja = なるべく小編成の対潜哨戒部隊<br>を編成し、鎮守府近海に出没す<br>る敵潜水艦を発見・制圧せよ！
+
+|exp_ship = 150
+|exp_hq = 75
+|exp_hq_boss = 1050
+
+|show_kills = true
+|kills = 4
+
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 75
+}}
+{{MapBranchingTable
+|id = 1-5
+|B/battle -> C/battle =
+* If the amount of ships in fleet is ≦ 4, the routing is guaranteed
+* If the amount of ships in fleet is ≧ 5, the routing is random (50% chance)
+|B/battle -> D/battle = 
+* 50% chance if the amount of ships in fleet is ≧ 5
+
+|C/battle -> F/battle = 
+*Meet '''ANY''' of the following requirements:
+** Fleet contains (F)BB (BBV does not count)
+** Fleet contains SS(V)
+** Amount of CL in fleet is ≧ 3 (CLT and CT does not count)
+** Amount of ships in the fleet is ≧ 5
+|C/battle -> E/empty = 
+* Does not meet any of the requirement to go to F
+<!--
+(F)BB ->F: 100% (10)
+>= 3 CL ->F: 100% (6)
+SS ->F: 100% (9)
+5 ships ->F: 100% (111)
+
+other ->E: 100% (38842)
+other ->F: 0% (2)
+
+other 2 offroutes?
+-> conclusion, fleet contains SS -> SS(V)
+-->
+
+|D/battle -> H/empty =
+* Amount of ships in fleet is ≧ 5
+|D/battle -> I/battle = 
+* Random? if amount of ships in fleet is ≦ 4
+<!-- 
+Exact routing unknown; testing requires sinking of ship at D node.
+Can possibly have other rules, low sample size to conclude anything.
+-->
+|E/empty -> G/battle = 
+* 50% chance of off routing by meeting '''ANY''' of the following requirements:
+<!--
+TsunDB 2018-07-11
+
+All fleets with one CVL/AV/LHA/CAV:
+E->I: 100% (37893)
+
+Fleets without CVL/AV/LHA/CAV or multiple:
+E->G: 47% (402)
+E->I: 53% (453)
+-->
+** Fleet contains no CVL, AV, LHA or CAV
+** Amount of CVL ≧ 2
+** Amount of AV ≧ 2
+** Amount of CAV ≧ 2
+|E/empty -> I/battle =
+* Guaranteed if the fleet contains at least a CVL, AV, LHA or CAV '''AND''' the fleet does not meet the requirements to off route to G.
+}}
+This is the first map which has branching rules, the first map with a boss HP bar requiring multiple completions, and the first map where you can face Flagship and Elite enemies. The map is filled with only submarines unless your fleet composition is wrong and you go off-course.
+* You are required to sink the boss submarine '''4 times''' to clear the map.
+* Since it is an Extra Operation, clearing this map is not required to continue onto [[World 2]].
+* Clearing this map rewards a [[Medal]] and 75 [[Experience_and_Rank#Monthly_Ranking|ranking points]]. At the start of each month, the boss HP bar will reset, allowing the rewards to be obtained again (if it doesn't reset, refresh the game, or get a new API link if you're using one).
+* The enemies on the map are scaled to your HQ level, which means that the enemies will rank up when you hit a certain HQ level. Nodes power up at levels 40 and 80.
+* {{ShipLink|Akashi}} drops on the boss node (Node I) for those who are HQ80+. She only drops if you currently do not have {{ShipLink|Akashi}}, meaning that you cannot get duplicates this way.
+===Tips===
+====Beginners====
+* This map is a good place for players with HQ level below 80 to level their [[DD]]s and [[CL]]s. For details, refer to the [[Tutorial: Leveling|leveling guide]].
+* Defeating the boss on this map will give you a large amount of HQ experience. If you don't want to inflate your HQ level and thus your enemies, then consider retreating on C node.
+* '''Recommended composition''': 1 [[CVL]] 1 [[BBV]] 2 [[CL]]. This will guarantee that you reach the boss node. You may replace any number of [[CL]]s with [[DD]]s if you wish.
+** '''Taking more than 4 ships will not allow you to reach the boss node'''.
+** 1 [[BBV]] is recommended since it can equip [[List of Seaplanes by stats|Seaplane Bombers]] to hit subs while allowing you to enter the [[Combat/Main#Combat_Stages|second shelling phase]].
+** 1 [[CVL]] is recommended since it can equip [[Saiun]] to prevent [[Combat/Main#Engagement_Form_Modifier|T-cross disadvantage (Red T)]], which can make killing the boss difficult without good ASW equipment.
+** It's possible to replace the [[CVL]] with a [[CAV]] or [[AV]], but it's not advisable to do so without good equipment. An [[AV]] can equip [[Depth Charge]]s, a [[CAV]] has better armor and can equip [[List of Seaplanes by stats|Seaplane Bombers]] to hit subs, but neither of them can equip [[Saiun]] to prevent the occasional Red T.
+* Putting [[Sonar]] and [[Depth Charge]] on same ship will get 15% ASW power bonus (doesn't stack, one depth charge and sonars is the usual setup).
+====OASW====
+* [[Isuzu Kai Ni]] and ships with ASW of 100 or greater (or in the case of DEs and Taiyou Kai/Kai Ni: 60 and 65, respectively) will allow you to perform [[OASW|Opening ASW attacks]], making the map much easier.
+* '''Recommended composition''': 3 OASW-capable [[DD]]/[[DE]] + 1 [[CVL]]/[[AV]]/[[LHA]]. Ideally: '''3[[DE]] + [[Kasuga Maru|Taiyou Kai (Kai Ni)]]/[[Zuihou| Zuihou Kai Ni B]]'''. This setup trades the [[BBV]] for a [[DD]] or [[DE]], reducing the resource consumption while disabling the second shelling phase, but also allows preemptive attacks that disable the enemy subs before they attack, working as if it was an extra shelling phase. You can swap up to 2 [[DD]]s for [[CL]]s. Using [[CT]]s or [[CLT]]s is also possible.
+** Drop [[CVL]]/[[AV]] can be used (that is, dropped level 1 ships), up to two times without resupplying. Generally, this doesn't affect boss, boss S rank, and bucket rates. The cost is around 50 fuel and ammo for full sortie. More drop ships ([[DD]] and [[CL]]) also can be used, reducing resource consumption even further ([[Satsuki Kai Ni]] and 3 drop ships will cost around 10 fuel and ammo per full sortie); however, this will affect boss and boss kill rates (possibly down to 50%).
+** [[CVL]]/[[AV]]/[[LHA]] range can be increased to medium/long by using [[OTO]]/[[SCAMP]] (will attack first in the first shelling phase after the OASW phase).
+** For [[DD]]/[[CL]]/[[CT]]/[[CLT]] use one [[Type 3 Depth Charge Projector]], and 2-3 [[Type 3 Active Sonar]]s or [[Type 4 Passive Sonar]]s. Generally, [[CVL]]/[[AV]]/[[LHA]] equipment don't matter, you can use [[List of Engine|boilers]], [[Anti-torpedo Bulge (Medium)|bulges]], normal ASW equipment, or default equipment if drop [[CVL]]/[[AV]] is used.
+{{:Partials/ASW Equipment|collapsed=true}}
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+
+{{Map/Image|
+{{Map/ImageNode|A|x=286|y=76}}
+{{Map/ImageNode|B|x=470|y=90}}
+{{Map/ImageNode|C|x=535|y=164}}
+{{Map/ImageNode|D|x=414|y=192}}
+{{Map/ImageNode|E|x=482|y=249}}
+{{Map/ImageNode|F|x=544|y=270}}
+{{Map/ImageNode|G|x=445|y=320}}
+{{Map/ImageNode|H|x=266|y=196}}
+{{Map/ImageNode|I|x=261|y=270}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵偵察潜水艦
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 79
+|Submarine Ka-Class
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>80 - 120
+|Submarine Ka-Class/Elite
+}}
+{{Map/Nodes|name=敵潜水艦隊A群
+|B
+|Normal
+|{{Formation|Echelon}}<br>HQ Lvl<br>1 - 39
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|B
+|Normal
+|{{Formation|Echelon}}<br>HQ Lvl<br>40 - 79
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|-
+|B
+|Normal
+|{{Formation|Echelon}}<br>HQ Lvl<br>80 - 120
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{Map/Nodes|name=敵潜水艦隊C群
+|C
+|Normal
+|{{Formation|Line Abreast}}<br>HQ Lvl<br>1 - 39
+|Submarine Yo-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal
+|{{Formation|Line Abreast}}<br>HQ Lvl<br>40 - 79
+|Submarine Yo-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal
+|{{Formation|Line Abreast}}<br>HQ Lvl<br>80 - 120
+|Submarine Yo-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{Map/Nodes|name=敵潜水艦隊B群
+|D
+|Normal
+|{{Formation|Echelon}}<br>HQ Lvl<br>1 - 39
+|Submarine Yo-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|D
+|Normal
+|{{Formation|Echelon}}<br>HQ Lvl<br>40 - 79
+|Submarine Yo-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|D
+|Normal
+|{{Formation|Echelon}}<br>HQ Lvl<br>80 - 120
+|Submarine Yo-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Yo-Class
+|Submarine Ka-Class
+}}
+{{NodeInfo
+|E
+|Empty
+}}
+{{Map/Nodes|name=敵侵攻打撃艦隊A群
+|F
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 39
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|F
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>40 - 79
+|Light Carrier Nu-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Elite
+|Destroyer I-Class/Flagship
+|Destroyer I-Class/Flagship
+|-
+|F
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>80 - 120
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer I-Class/Flagship
+|Destroyer I-Class/Flagship
+|Destroyer I-Class/Flagship
+}}
+{{Map/Nodes|name=敵侵攻打撃艦隊B群
+|G
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 39
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|G
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>40 - 79
+|Torpedo Cruiser Chi-Class/Flagship
+|Light Cruiser He-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|G
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>80 - 120
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Flagship
+|Destroyer Ha-Class/Flagship
+}}
+{{NodeInfo
+|H
+|Empty
+}}
+{{Map/Nodes|name=敵通商破壊主力艦隊
+|I
+|Boss
+|{{Formation|Echelon}}<br>HQ Lvl<br>1 - 39
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|I
+|Boss
+|{{Formation|Echelon}}<br>HQ Lvl<br>40 - 79
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|-
+|I
+|Boss
+|{{Formation|Echelon}}<br>HQ Lvl<br>80 - 120
+|Submarine Yo-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+<!--
+AUTOGENERATED, leave a comment on this subpage if you have found any issues
+(incorrect or missing info, non-optimal order, etc.)
+-->
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, C, D, F, G, I
+|boss = I
+|Akashi: I/{HQ 80+}
+|Akatsuki: I
+|Akebono: A, B, C, D, F, G
+|Aoba: I
+|Arare: A, B, C, D, G
+|Arashio: A, C, I
+|Asashio: I
+|Ayanami: I
+|Chitose: A, B, C, D, F
+|Chiyoda: A, B, C, D, G
+|Fubuki: I
+|Fumizuki: B, D, F, I
+|Furutaka: I
+|Hatsushimo: A, B, C, D, G
+|Hatsuyuki: A, B, D, I
+|Hibiki: A, B, C, D, F
+|Hiyou: I
+|Houshou: B, C, D, G, I
+|I-168: C, D, F, G, I
+|I-19: I/{HQ 40+}, C/{HQ 80+}, D/{HQ 80+}
+|I-58: C, D, F, G, I
+|I-8: I/{HQ 80+}
+|Ikazuchi: A, B, C, F
+|Inazuma: A, B, D
+|Isonami: A, B, C, D, G, I
+|Isuzu: A, B, C, D, F, I
+|Jintsuu: B, C, D, I
+|Junyou: I
+|Kagerou: I
+|Kako: I
+|Kasumi: A, C, D, G
+|Kikuzuki: A, B, C, D, G, I
+|Kinugasa: I
+|Kisaragi: A, B, C, D, F, G, I
+|Kiso: C, D, G, I
+|Kitakami: B, C, D, F
+|Kuma: I
+|Kuroshio: B, C, D, I
+|Makigumo: I
+|Michishio: A, B, C, D
+|Mikazuki: A, B, C, D, I
+|Miyuki: A, B, D, F, I
+|Mochizuki: A, B, C, F, G, I
+|Murakumo: A, B, C, G, I
+|Murasame: A, C, I
+|Mutsuki: C
+|Nagara: I
+|Nagatsuki: A, C, D, G, I
+|Naka: A, B, C, D, G, I
+|Natori: B, C, D, I
+|Nenohi: A, B, C, D, G
+|Oboro: B, C, D, I
+|Ooshio: A, B, C, D, F, G
+|Ryuujou: I
+|Samidare: A, B, D, I
+|Satsuki: A, C, D
+|Sazanami: A, B, C, D, G, I
+|Sendai: I
+|Shigure: A, B, C, D, F, I
+|Shikinami: A, B, C, G, I
+|Shiranui: A, B, C, D, I
+|Shiratsuyu: I
+|Shirayuki: A, B, C, D, G, I
+|Suzukaze: I
+|Tama: C, G, I
+|Ushio: A, B, C, D, I
+|Wakaba: B, C, D
+|Yayoi: C
+|Yura: B, C, F, G, I
+|Yuudachi: A, B, D, F
+}}
+{{SectionEnd}}

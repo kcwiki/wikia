@@ -1,0 +1,306 @@
+{{Warning|Please be advised the Information written on this Page are still under investigation and are subject to change pending further confirmations. To clear this Map at full potential with the safest compositions, you are advised to wait until all possible Compositions become confirmed and available}}
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Full-power Sortie! New Operation Rheinübung
+|jp = 全力出撃！新ライン演習作戦
+|tag = E5
+|tag2 = E6
+|romaji = Zenryoku syutsugeki! Shin rain-ensyū sakusen
+|hp_casual = 1600 HP + 3080 HP + 4500
+|hp_easy = 1600 HP + 3080 HP + 4500
+|hp_medium = 1800 HP + 3080 HP + 4500
+|hp_hard = 2120 HP + 3500 HP + 4500 
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Nelson}}
+|reward_casual_1 = {{ItemStack|item = [[File:RotaitedCry.png{{!}}50px]]|text = Nothing}}
+|reward_easy_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_1_x = 2
+|reward_medium_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_1_x = 2
+|reward_medium_2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_medium_2_x = 7
+|reward_medium_3 = {{EquipmentCardKai|16inch Mk.I Triple Gun Mount Kai + FCR Type 284|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_1_x = 2
+|reward_hard_2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_hard_2_x = 10
+|reward_hard_3 = {{EquipmentCardKai|16inch Mk.I Triple Gun Mount Kai + FCR Type 284|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Ju 87C Kai Ni (w/ KMX/Skilled)|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = [[File:First-class Medal 061 useitem.png|50px|link=Medal]]
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = Branching Rules Part 1
+|id = 42-5A
+
+|A -> B = * Do not meet the requirements to go to D.
+|A -> D/empty = 
+* Amount of historical ships ≥ 1/2/4/6 on Casual/Easy/Medium/Hard
+* Or meet '''ALL''' of the following requirements:
+** Amount of CV(B) ≤ 2
+** Amount of CLT ≤ 1
+
+|D/empty -> E,F/empty = * Active branching
+
+|E -> G/empty = * Fail the LoS check.
+|E -> J = * Pass the LoS check.
+
+|F/empty -> H, I = * Active branching
+
+|I -> G/empty = * Fail the LoS check.
+|I -> J = * Pass the LoS check.
+}}
+{{MapBranchingTable
+|title = Branching Rules Part 2
+|id = 42-5B
+|order = 0,T,Q,P,I,L
+
+|0 -> 1 = * Carrier Task Force
+|0 -> 2 = * Surface Task Force
+
+|T -> R/empty = 
+* Amount of historical ships ≥ 0/2/4/6 on Easy/Medium/Hard
+** '''Note:''' The amount of historicals needed seems to depend on how many (F)BB(V), CV(L/B) and CLTs you have in your fleet.
+* Or amount of (F)BB(V)+CV(L/B)+CLT ≤ 3
+|T -> S = * Do not meet the requirements to go to R.
+
+|Q/empty -> M = 
+* Do not meet the requirements to go to P.
+|Q/empty -> P = 
+* Meet '''ANY''' of the following requirements:
+** Fleet contains AV
+** Fleet contains AO
+** Amount of (F)BB(V)+CV(L/B) ≤ 5 (Casual/Easy)
+** Amount of (F)BB(V)+CV(L/B) ≤ 4 (Medium)
+** Amount of (F)BB(V)+CV(L/B) ≤ 3 (Hard)
+* '''Note:''' Keep in mind that the above branching rules is slightly altered once node Z3 is unlocked. Refer to part 3 after that.
+
+|P -> K = * Do not meet the requirements to go to L.
+|P -> L = 
+* Meet '''ANY''' of the following requirements:
+** Amount of (F)BB(V) ≤ 4 (Casual/Easy)
+** Amount of (F)BB(V) ≤ 3 (Medium)
+** Amount of (F)BB(V) ≤ 2 (Hard)
+
+|I -> G/empty = * Failing the LoS check '''FORCES''' you to G.
+|I -> J = * Do not meet the requirements to go to L.
+|I -> L = 
+* Meet '''ANY''' of the following requirements:
+** Surface Task Force
+** Fleet contains AO 
+** Amount of German+French ships ≥ 2 
+
+|L -> N/empty, O/empty = 
+* Go to O if amount of French+German ships ≥ 1?/2/3/4 on Casual/Easy/Medium/Hard
+* Otherwise, random routing.
+}}
+{{MapBranchingTable
+|title = Branching Rules Part 3
+|id = 42-5C
+|order = 0,Q,M,K,X,Y,Z3
+
+|0 -> 1 = * Carrier Task Force (check out Part 1 for skipping node B)
+|0 -> 2 = * Surface Task Force (check out Part 2 for skipping node S)
+
+|Q/empty -> M = 
+* Meet '''ALL''' of the following requirements:
+** No AV
+** No AO
+** Amount of CLT ≤ 2
+** Shortcut must be unlocked. (check out part 2 if shortcut is not unlocked yet)
+** Meet '''ONE''' of the following requirements:
+*** Amount of DD ≥ 3
+*** Amount of (F)BB(V)+CV(L/B) ≥ 6 (Casual/Easy)
+*** Amount of (F)BB(V)+CV(L/B) ≥ 5 (Medium)
+*** Amount of (F)BB(V)+CV(L/B) ≥ 4 (Hard)
+|Q/empty -> P = * Do not meet the requirements to go to M.
+
+|M -> K = * Do not meet the requirements to go to X.
+|M -> X/empty = * Meet '''ALL''' of the following requirements:
+** Shortcut must be unlocked.
+** Amount of (F)BB(V) ≤ 2
+** No CV(B)
+** Amount of CVL in '''MAIN''' ≤ 1 '''OR''' amount of historical ships ≥ ?/?/4/6 on Casual/Easy/Medium/Hard
+
+|K -> H = 
+* Meet '''ALL''' of the following requirements:
+** Route to H must be unlocked.
+** Amount of (F)BB(V) ≤ 2 '''OR''' amount of CL ≥ 2
+** No LHA
+|K -> I = * Do not meet the requirements to go to H.
+
+|X/empty -> Y = 
+* Meeting '''ANY''' of the following requirements '''FORCES''' you to Y:
+** Fleet contains SS(V)
+** Fleet contains CV(B) '''AND''' Slow Fleet
+** Z3 is not unlocked yet.
+** Do not meet the requirements to go to Z3.
+|X/empty -> Z3 = 
+* Meet '''ANY''' of the following requirements:
+** Surface Task Force '''AND''' amount of (F)BB(V)+CV(B) ≤ 2
+** Amount of DE+DD+CL ≥ 5
+** Fast+ Fleet
+
+|Y -> Z/empty = * Fail the LoS check.
+|Y -> Z2 = * Pass the LoS check.
+
+|Z3 -> Z/empty = * Fail the LoS check.
+|Z3 -> Z2 = * Pass the LoS check.
+}}
+===Historical Fleet: Operation Rheinübung===
+A German operation with the goal of blocking Allied shipping to the United Kingdom.
+All foreign navies (except the US) are involved in this battle.
+====Kriegsmarine====
+The navy of Germany during the 2nd World War.
+* CV: {{ShipLink|Graf Zeppelin Kai|text=Graf Zeppelin}}
+* FBB: {{ShipLink|Bismarck drei|text=Bismarck}}
+* CA: {{ShipLink|Prinz Eugen Kai|text=Prinz Eugen}}
+* DD: {{ShipLink|Z1 zwei|text=Z1}}, {{ShipLink|Z3 zwei|text=Z3}}
+* SS: {{ShipLink|U-511 Kai|Ro-500|text=U-511/Ro-500}}
+
+====Royal Navy====
+The navy of the United Kingdom.
+* CV: {{ShipLink|Ark Royal Kai|text=Ark Royal}}
+* BB: {{ShipLink|Nelson}}, {{ShipLink|Warspite Kai|text=Warspite}}
+* DD: {{ShipLink|Jervis Kai|text=Jervis}}
+
+====Marine Nationale====
+The navy of France.
+* FBB: {{ShipLink|Richelieu Kai|text=Richelieu}}
+* AV: {{ShipLink|Commandant Teste Kai|text=Commandant Teste}}
+
+====Regia Marina====
+The navy of the Kingdom of Italy during the 2nd World War.
+* CV: {{ShipLink|Aquila}}
+* FBB: {{ShipLink|Littorio|text=Littorio/Italia}}, {{ShipLink|Roma}}
+* CA: {{ShipLink|Pola}}, {{ShipLink|Zara due|text=Zara}}
+* DD: {{ShipLink|Libeccio}}, {{ShipLink|Maestrale}}
+* SS: {{ShipLink|Luigi Torelli Kai|UIT-25|I-504|text=Luigi Torelli}}
+
+====Soviet Navy (Военно-морской флот СССР)====
+The navy of the Soviet Union during the 2nd World War.
+* FBB: {{ShipLink|Gangut dva|text=Гангут/Октябрьская революция}}
+* DD: {{ShipLink|Tashkent Kai|text=Ташкент}}, {{ShipLink|Верный|text=Верный}}
+
+===Ship-lock and tag===
+There are two tags: Force H (blue) and Rheinübung (purple) tag
+*Force H tag will be given in Phase 1 when you use CTF which starts at starting point 1 (bottom left)
+*Rheinübung tag '''will be given in Phase 2 if and only if you use STF''' which starts at starting point 2 (top right). If you use CTF in this phase, you will be tagged under Force H like previously.
+*For '''Casual, Easy, and Medium''', there are no ship-locking despite the ship tagging; any ship can be used. For '''Hard''' mode, both tag cannot be mixed so plan carefully before you start.
+
+===Recommendations===
+====Phase 1: Force H Carrier Task Force====
+The 1st phase requires you to use CTF and clear the HP Gauge at boss node {{Event/Route|J|red}}.
+*Having ≥ 1/2/4/6 historical ships (see above) on Casual/Easy/Medium/Hard in your fleet, respectively, can bypass node {{Event/Route|B|orange}}. However, this is optional as {{Event/Route|B|orange}} is quite harmless relative to Phase 2 requirement; keep your historical, especially your {{ShipLink|Richelieu Kai|Commandant Teste Kai|text=French}} and {{ShipLink|Graf Zeppelin Kai|Bismarck drei|Prinz Eugen Kai|Z1 zwei|Z3 zwei|U-511 Kai|Ro-500|text=German}} ships for later if you do not have many historical ships.
+**If you happen to have 0 Historical Ships in possession, then you may use the following:
+***3 CV(B) 3 CA(V) + 1 CL 2 DD 3 XX (no FBB)
+***2 CV(B) 1 BB(V) 3 CA(V) + 1 CL 2 DD 3 XX (no FBB)
+*'''TIP''': Node {{Event/Route|J|red}} is a great location to Farm for multiple Rare ships such as {{ShipLink|Gotland}}, {{ShipLink|Bismarck}}, {{ShipLink|Prinz Eugen}}.
+====Phase 2: Operation Rheinübung fleet====
+Unless you want to deal with random routing at {{Event/Route|L|red}}, you '''must''' have at least 1?/2/3/4 French+German ships. Once you reach Phase 2, there will be 2 ways to reach {{Event/Route|W|red}}: CTF and STF.
+*'''CTF - requires a fleet oiler (AO)''': {{Event/Route|C|red|A|red|D|blue|F|blue|I|red|L|red|O|blue|W|red}}
+**A viable but unorthodox method. Other than AO, full requirement is still unknown. You will also face 3 {{ShipLink|Light Cruiser Tsu-Class|text=Tsu-class}}, one for each node, that can eliminate your planes easily.
+*'''STF''' - {{Event/Route|U|blue|V|blue|T|red|R|blue|Q|blue|P|red|L|red|O|blue|W|red}}
+**To avoid node {{Event/Route|S|red}} which has {{ShipLink|Submarine Summer Princess|text=Submarine Summer Princess}}, you must have ≥ 0/2/4/6 historical ships on Casual/Easy/Medium/Hard.
+***You may opt to use 1-2 OASW capable ships for node {{Event/Route|T|red}} in your 2nd Fleet during chipping
+***Another option is to use one LBAS full of {{EquipmentLink|Toukai (901 Air Group)}}, {{EquipmentLink|Prototype Toukai}}, and/or any Bombers with at least 7+ {{ASW}}
+**Unless you bring an AV or AO, you will have to limit the amount of (F)BB(V)+CV(L/B) that you bring to 5/5/4/3 ships for Casual/Easy/Medium/Hard.
+
+Due to the mix of multiple types of enemies that have different kinds of weaknesses, it is important that you are capable of dividing up the roles and ordering your fleet.
+*Your LBAS should be 1 fighter and 3 bombers to boss to achieve at least AD; 4 bombers is possible if you already achieve it without fighter. Unless you allocate one LBAS with Toukai to submarine node, all three should be focused at boss node.
+**They can be your main {{ShipLink|Artillery Imp}} killers but can also help in eliminating {{ShipLink|PT Imp Pack|text=PT Imps}}. Your chance will greatly increase if your LBAS or boss support managed to sink {{ShipLink|PT Imp Pack|text=PT Imps}} with the one in the main fleet being highest priority.
+*The mass presence of installations requires you to bring some {{EquipmentLink|WG42 (Wurfgerät 42)}} and/or {{EquipmentLink|Type 3 Shell}} on your '''Escort Fleet'''. Place these ships on the top positions of your fleet to take care of any surviving installations during night battle so that the other remaining ships can take care of the {{ShipLink|French Battleship Princess Vacation Mode|text=the boss}}.
+*Due to the boss' high armor, the use of torpedo cut-in setups on ships with '''high luck''' and night battle power (e.g. {{ShipLink|Prinz Eugen/Kai}}, {{ShipLink|Myoukou/Kai Ni}}, {{ShipLink|Ayanami/Kai Ni}}, {{ShipLink|Kasumi/Kai Ni}}) will be required for the final kill, especially for higher difficulties. Place them on the bottom positions.
+*It has been observed that {{ShipLink|Richelieu/Kai}}, Prinz and Bismarck have bonus damage against the boss. 
+**{{ShipLink|Commandant Teste}} with anti-installation equipment setup is capable of getting rid of the enemy installations with bonus damage output.
+*As {{ShipLink|French Battleship Princess Vacation Mode|text=French Battleship Princess}} and the {{ShipLink|Harbour Summer Princess|Airfield Princess|text=two installations bosses}} are all treated as BBV, you may choose to bring a SS(V) to aggro and tank all of their attacks.
+**Please note that if the Boss' bombers are completely shot down to 0, then she will attack your surface ships instead of the SS(V). The boss' main fleet may still attack your escort fleet if they are targeted instead of the SS(V).
+*Your BBs will benefit more from using {{EquipmentLink|Type 91 Armor Piercing Shell|text=AP shell}} than {{EquipmentLink|Type 3 Shell|text=T3 shell}} because it is effective against most enemy aside from the installation bosses and PT Imp. If you have {{ShipLink|Musashi/Kai Ni}} or {{ShipLink|Ise/Kai Ni}}, this is where their 5 slots will shine since you can bring both shells.
+
+====Revealing the Hidden Final Boss Node====
+After clearing Phase 2 Boss, the route to the Final Boss is hidden and requires the following steps to reveal it:
+* Defeat the Phase 2 Boss. 
+* Use a Carrier Task Force and obtain '''S-Rank''' Victory on node {{Event/Route|I|red}}. ('''Easy+''')
+* Use a Carrier Task Force and obtain '''S-Rank''' Victory on node {{Event/Route|H|red}}. ('''Hard''')
+Once all requirements are achieved, the Final Boss Node {{Event/Route|Z2|red}} will be unlocked.
+
+====Phase 3 Final Boss Shortcut Route Opening====
+'''DISCLAIMER''': Please note that some requirements written below may not be required on Normal or lower difficulties.
+*There is a Hidden Shortcut Route to the Boss Node {{Event/Route|Z2|red}}. You must do the following to unlock it.
+**Obtain Air Superiority (AS) [<span style="color:green">'''航空優勢! '''</span>] during LBAS Air Defenses during the Enemy Air Raids against your LBAS Two '''(2)''' times, only once on casual difficult.
+**Obtain 2 Perfect Defenses during the LBAS Air Defenses. This is only required on Hard difficulty.
+**Obtain Air Superiority (AS) [<span style="color:green">'''航空優勢! '''</span>] at {{Event/Route|K|orange}} Two '''(2)''' times on Hard, Once on Medium, not required for easy/casual.    
+***Please refer to the '''Branching Rules''' above the page, as Routing/Branching differs per Difficulty, and the Fleet Composition required to reach {{Event/Route|K|orange}} will differ per difficulty as well due to this fact.
+**Obtain '''S-Rank''' Victory in Node {{Event/Route|T|red}}(looks this is not required on casual mode).
+
+====Phase 3 Final Boss Pre-Final====
+*You may use Combined Fleet of Carrier Task Force or Surface Task Force to take down the Phase 3 Final Boss {{ShipLink|European Water Princess}} to her Final Form.
+
+====Phase 3 Final Boss Finale Debuff====
+*'''DISCLAIMER''': Please be advised that the Boss must be in '''FINAL (Damaged) FORM''' during this entire process, and the process cannot be completed post-clear. If you want this debuff to be present for post-clear farming runs, DO NOT allow the LD boss to be killed until you are on the final step.
+*After the debuff is applied, all ships in the fleet will gain a 150% postcap damage modifier on top of all the other existing bonuses at the boss node.
+**A+ Rank the Boss Node {{Event/Route|Z2|red}} with Carrier Task Force One '''(1)''' Time
+**A+ Rank the Boss Node {{Event/Route|Z2|red}} with Surface Task Force One '''(1)''' Time
+***You may still choose to attempt for a chance to Sink the Boss while doing this Debuff, but avoid doing so on the first run.
+
+====Phase 3 Final Boss Final Kill====
+*After you have applied the debuff, you may go for the kill against the boss.
+*All allied ships in the Friend Fleets providing support at the boss node also deals extra post-cap damage once the debuff has been applied.
+**Prior to the debuff, only historical ships (Germans, Italians & British) will have post-cap damage modifiers.
+*When composing fleets, be mindful that Friend Fleets containing ships in the player's fleet will '''not '''appear at the boss. 
+**This does not apply to DesDiv31 (Kishinami's fleet), which will show up even if you have them in your fleet similar to DesDiv19 in [[Winter_2018_Event| Winter 2018]]
+
+=====Phase 3 Post-cap bonus modifiers=====
+The following have been confirmed to grant post-cap damage bonuses for your ships on the boss node:
+* Debuffed: 1.5x
+* Historical: ?
+* [[Seaplane_Fighters#Seaplane_Bombers|Seaplane bombers]] (SPB) or [[Seaplane_Fighters#Seaplane_Fighters|fighters]] (SPF): 1.3x
+* {{EquipmentLink|Type 3 Shell}}: 1.2x
+** Keep in mind that it is still recommended to use an AP shell instead, as the cut-in provides a higher multiplier.
+* [[List_of_Dive_Bombers_by_stats|Dive bombers]]: 1.2 ~ 1.25x
+* {{ShipLink|Ark Royal Kai|text=Ark Royal}} unique bonuses:
+** 1x {{EquipmentLink|Swordfish|Swordfish Mk.II (Skilled)|Swordfish Mk.III (Skilled)|text=Swordfish}}: 1.35 ~ 1.45x
+** 2x {{EquipmentLink|Swordfish|Swordfish Mk.II (Skilled)|Swordfish Mk.III (Skilled)|text=Swordfish}}: 1.75x
+
+====Post-clear Composition Tips====
+=====STF to Z2 (Boss)=====
+The same routing rules and damage bonuses as prior to clearing apply, but it is recommended (especially on higher difficulties) to use {{ShipLink|Nelson|Nelson Kai|text=Nelson}} as flagship, with {{ShipLink|Bismarck drei|text=Bismarck}} in the 3rd main fleet position and a {{ShipLink|Zara due|Prinz Eugen Kai|Pola Kai|text=historical CA}} in the 5th to take advantage of the [[Nelson#Nelson_Touch|Nelson Touch]] mechanic.  Since the Nelson Touch will only activate once per sortie and only while using Cruising Formation 2 (or Double Line), it is recommended to choose other formations at pre-boss nodes.  The modifiers for the Nelson Touch stack with other bonuses at the boss node to result in massive damage and much easier S ranks.
+=====CTF Node C Leveling=====
+On Hard(甲) difficulty, node C gives 170 to 190 base EXP, and only consumes ~8% fuel and 0% ammo per battle. 
+*By utilizing OASW in the Escort Fleet, up to 12 ships at a time may be leveled fairly quickly and inexpensively.
+
+*Because the fuel consumption is so low, fleets only need to be resupplied after every 4th run to avoid fuel evasion penalties, or every 10th run if just trying to avoid 0 fuel sortie blocks.
+
+*Due to the relative ease with which this node can be cleared, ships may be sortied even at highly fatigued red morale to good effect.
+
+*It is also a good place to (re)gain ranks on land base planes.
+
+===Friend Fleets===
+{{Fleets|friend=Early Fall 2018 Event|map=E-5}}
+
+===Map Progression===
+{{#tag:gallery|
+Early Fall 2018 Event E-5 Map p1.png{{!}}Map during first HP phase at boss node J.
+Early Fall 2018 Event E-5 Map p2.png{{!}}Map during second HP phase at boss node W.
+Early Fall 2018 Event E-5 Map p3.png{{!}}Map after depleting the second HP bar but without the third boss node Z2 unlocked.
+Early Fall 2018 Event E-5 Map p4.png{{!}}Map during third HP phase at boss node Z2 but without alternative route.
+Early Fall 2018 Event E-5 Map p5.png{{!}}Full map after unlocking the alternative route
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=150}}
+
+===LBAS Flight Range===
+[[File:Early_Fall_2018_Event_E-5_LBAS_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

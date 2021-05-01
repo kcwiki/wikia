@@ -1,0 +1,196 @@
+__NOTOC__
+<div style="text-align:center;margin-top:20px;">{{Event/DetailToggle}}</div>
+
+==Information==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{Notice|align=left|
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/za1XBzofbwHeMPzD3 here].
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1HXswAHk3ukAkLiLgU4kq707UihLCeiBmUSOW7mBAqFc here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:461452|here]].
+}}
+
+{{Event/MapInfo
+|en = Night Battle of Malacca Strait
+|jp = マラッカ海峡沖夜戦
+|romaji = Malacca Kaikyô oki Yasen
+|hp_easy = 2590|hp_normal = 3010|hp_hard = 3430
+|mechanics = Combined Fleet@Events/Mechanics#Combined_Fleet@background:yellow, Boss Debilitation@Events/Mechanics#Map-specific_Mechanics, Multiple Branching Map@Events/Mechanics#Other Common Mechanics@background:yellow
+|Allreward = {{ShipBattleCardKai|Warspite}}
+|Easyitem1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|Easyqty1 = 1
+|Normitem1 = [[File:Re.2005 Kai 189 Card.png{{!}}50px{{!}}link=Re.2005 Kai]]
+|Normitem2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|Normqty2 = 8
+|Normitem3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|Normqty3 = 2
+|Harditem1 = [[File:Re.2005 Kai 189 Card.png{{!}}50px{{!}}link=Re.2005 Kai]]
+|Harditem2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|Hardqty2 = 8
+|Harditem3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|Hardqty3 = 2
+|Harditem4 = [[File:First-class_Medal_061_useitem.png{{!}}50px{{!}}link=Medal]]
+}}
+
+{| class="mw-collapsible mw-collapsed article-table typography-xl-optout"
+!colspan="3"|Branching rules
+|-
+!Node
+!Next
+!Condition
+|-
+|rowspan="2"|Start
+|1
+|Carrier Task Force
+|-
+|2
+|Surface Task Force
+|-
+|rowspan="2"|B
+|D
+|rowspan="2"|Choose
+|-
+|E
+|-
+|rowspan="2"|C
+|F
+|?
+|-
+|G
+|?
+|-
+|rowspan="2"|L
+|N
+| rowspan="2" |In case of CTF:<br>
+Topmost statement takes priority<br>
+-SS/SSV in fleet or [[Hayasui]] in escort fleet: N<br>
+-[[Kongou]] and [[Haruna]] in main fleet and [[CV]](B) ≦ 2: M [http://kancolle.wikia.com/wiki/Talk:Summer_2016_Event/@comment-Nicky008-20160818045116]<br>
+-Bismarck in escort fleet: N<br>
+-3 [[CLT]]: N<br>
+- [[Choukai]] in escort fleet, [[CV]](B) ≦ 2 and 2 CLT: M<br>
+- 2 [[CLT]]: N<br>
+- Otherwise: M?
+|-
+|M
+|-
+| rowspan="2" |M
+|P
+|eLOS < 38.8 (may not be the maximum eLOS)
+|-
+|Q
+|eLOS > 58.1 (may not be the minimum eLOS)
+|}
+
+===Fleet compositions===
+* Carrier Task Force
+** 2 [[BB]]/[[FBB]], 3 [[CVB]]/[[CV]], 1 [[CV]] '''or''' [[CA]] '''or''' [[AO]] + 1 [[CL]], 1 [[CLT]], 2-3 [[DD]], 1-2 [[CA]]/[[FBB]] can go 1B(DF/EH)IJKLMQ (refer to the branching rules): 3 battles and 2 air raids before the boss, [[Damage_Calculation#Remaining_Ammo_Modifier|32% ammo]] at the boss + [[Underway Replenishment|resupply]] when using [[AO]].
+* Surface Task Force
+** 4 [[BB]], 2 [[CVL]] '''or''' 4 [[BB]], 1 [[CV]], 1 [[AO]] + 1 [[CL]], 3 [[DD]], 1 [[CLT]], 1 [[CA]] goes 2ACFIJKLMQ: 3 battles and 3 air raids before the boss, [[Damage_Calculation#Remaining_Ammo_Modifier|28% ammo]] at the boss + [[Underway Replenishment|resupply]] when using [[AO]].
+** 3 [[FBB]], 1 [[CV]], 2 [[CAV]] + [[CL]], [[FBB]], 2 [[DD]], 2 [[CA]] goes 2AC(G/F)IJKLMQ (random for G/F).
+=== Recommended Fleets===
+====For Clearing and Boss Node Farming====
+Please note you must have above Effective LoS above 58.1. All recommended Fleets are Carrier Task Force. 
+
+'''NOTE''': Kongou & Haruna are required in the 1st fleet for you to use Bismarck in the 2nd fleet. 
+* Kongou Haruna 2 CV(B) 2 CVL + 1 CL 2 DD 2 CLT 1 CA 
+* Kongou Haruna 2 CV(B) 2 CVL + 1 CL 2 DD 2 CLT 1 FBB
+* Kongou Haruna 2 CV(B) 1 CVL 1 CA(V)/AO + 1 CL 2 DD 3 CLT 
+* Kongou Haruna 2 CV(B) 1 CVL 1 CA(V)/AO + 1 CL 2 DD 2 CLT 1 CA/FBB
+* 2 BB 4 CV(B) + 1 CL 2 DD 1 CLT 2 CA 1 FBB 
+* 2 BB 3 CV(B) 1 CA(V)/AO + 1 CL 2 DD 1 CLT 2 CA 1 FBB
+
+==== For Farming node I for Unryuu-class, Akizuki, and Libeccio ====
+If farming node I only, please make sure all your Battleships and Heavy Cruisers are equipped with [[Type 3 Shell]] . [[WG42]] is recommended to use for DD/CLs if you have any in possession. Also, please send all LBAS to attack node I (You may use all 3 for offense, or may use 2 for offense and have one used for Air Defense) 
+* 2 [F]BB(V) 4 CV(L) + 1 CL 2 DD 2 CA 1 FBB 
+* 2 [F]BB(V) 3 CV(L) 1 CA(V) + 1 CL 2 DD 2 CA 1 FBB
+==== Cheap and fun training for DDs ====
+To level up your DDs at the cost of 1 fuel and 1 ammunition bar for each DD, sortie to node A then retreat. Repeat the sortie regardless of your fleet's morale, and dock/bucket heavily damaged ships at the end of each sortie. [https://www.twitch.tv/smr_rs/v/85676229] [http://kancolle.wikia.com/wiki/Talk:Summer_2016_Event/@comment-Mystia_Lore.-20160826024720]
+
+'''NOTE:''' Form a Transport Combined Fleet with at least 1 CL as an escort. Equip AA guns on all DDs and some standard surface battle equipment on other ships. Send LBAS with fighters/interceptors to node A. On the formation selection screen for node A, select the 3rd Combined Fleet formation (Ring formation, the bottom left formation of the formation selection screen). You may also train other low consumption ships here.
+
+Recommended Fleets:
+* 6 DDs + 1 CL 5 DDs
+
+===Tips===
+* Node K is a night battle node.
+* This map is relatively bauxite-intensive if using Carrier Task Force.  Be sure to stock appropriately.
+* Consider sending air base(s) to node I.  The enemy installations there can be disabled either by direct damage (to ≦50% hp) or by eliminating all of their bombers.
+* Maya or Akizuki-class are highly recommended to reduce damage from Air Battle nodes and have chance of shooting down all planes at node I.
+* Around 410 Air Fighter Power is needed to achieve at least Air Superiority on all nodes
+* Due to the very long path to the boss node (totaling 9 nodes), the only LBAS planes that can reach it are the [[Type 1 Land-based Attack Aircraft]], [[Type 1 Land-based Attack Aircraft (Nonaka Squadron)]], [[Type 1 Land-based Attack Aircraft Model 22A]], [[Ginga]], [[Type 2 Large Flying Boat]], and [[PBY-5A Catalina]].
+** Assigning a [[Type 2 Large Flying Boat|Type 2 Flying Boat]] to a Land-Base will increase its Air Corp's range by 3.  With this, range 6 planes can also reach the boss if used together. 
+** Assigning a [[PBY-5A Catalina]] to a Land-Base will increase the its Air Corp's range by 2. With this, range 7 planes can also reach the boss if used together.
+* Hayasui with 2 drums is strongly recommended for hard mode final kill.
+
+===Boss===
+* For Medium and Hard, the boss's final form contains two tanky [[Battleship Summer Princess]]es.
+* The boss has 189 Armor and 490 HP (Hard).  Consider using torpedo cut-ins on your escort fleet ships to approach the night battle damage cap (300).
+* Shelling support expedition is strongly recommended.
+* For the final kill, due to the low fuel/evasion in the main fleet, Yamato-class battleships can be useful since they are capable of outputting capped damage at ''chuuha''.
+* Unlike other maps, the boss's formation does not change immediately at the threshold for being able to clear the map.  Therefore, it is possible to clear the map without meeting the boss's final form.
+** The prefinal formation has been observed in hard mode at >200 hp remaining on the gauge.
+** Refreshing the page at the boss before the battle results screen is loaded will cause damage to the gauge in the run to not be counted. (Use at your own risk.)
+
+===Boss Debuff Mechanism===
+This map has a debuff mechanic<ref>https://twitter.com/akankore1/status/764262129960558592</ref>.
+
+====Requirements and Effects====
+*Achieve S-Rank on 4 of the following nodes: C, D, H, I, and K. (Only need to do 4 out of 5 nodes).
+**Doing all 5 nodes is not necessary, the first four nodes that gets S-Ranked will trigger the debuff.
+**After triggering the debuff, the "Quest Completion Sound Effect" ({{Audio|file=Sound_se_30.ogg}}) will play when returning from sortie.
+*The debuff is <u>'''PERMANENT'''</u> and will not expire, it also will not reset if you switch difficulties (however, there is no significant benefits in doing the debuff on a lower difficulty than what will be used for clearing or farming).
+*The debuff decreases the defense of [[Battleship Summer Princess]]es (-23 to post armor roll deference, or around 20-30 armor reduction, depending on a roll), [[Harbour Summer Princess]] at node I (around 30-40 armor reduction), and [[Heavy Cruiser Summer Princess]] (by around 44 armor, to 145).<ref>http://ja.kancolle.wikia.com/wiki/Thread:718</ref>
+**Note that the numbers still can change slightly after further investigation.
+*The boss voice line will change, but her text and visible stats will not show any changes.
+{| class="article-table"
+|-
+! scope="col"|Status
+! scope="col"|Voice Line (Will not be displayed in game)
+! scope="col"|Sound Clip
+|-
+|Non-Debuff
+|ブスイナ……ヤツラ……メ……ッ! カエレッ!
+|{{Audio|file=Heavy Cruiser Summer Princess Intro.ogg}}
+|-
+|Debuffed
+|ブスイナ……ヤツラ……メ……ッ! カエリウチダッ!
+|{{Audio|file=Heavy Cruiser Summer Princess Intro Armor Broken.ogg}}
+|}
+
+===References===
+<references />
+
+</div>{{clear}} <!-- Information collapsible -->
+
+{{:Summer 2016 Event/E-4/Enemy patterns}}
+
+==Drop list==
+<div class="mw-collapsible mw-expanded">{{clear}}
+See tooltips for more details on A rank drops.
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = I, K, Q
+|boss = Q
+|Aquila: Q/Easy{Drops from A rank on Medium and Hard}
+|Amagi: K/Easy, I/Easy
+|Katsuragi: I/Easy
+|Unryuu: K/Easy, I/Easy
+|Libeccio: I/Easy, Q/Easy
+|Akizuki: K/Easy, I/Easy, Q/Easy{Drops from A rank on all difficulties}
+|Yamagumo: Q/Easy{Drops from A rank on all difficulties}
+|Hayashimo: I/Easy, K/Easy
+|Kiyoshimo: I/Easy, K/Easy
+|Kawakaze: Q/Easy{Drops from A rank on all difficulties}
+|Umikaze: Q/Easy{Drops from A rank on all difficulties}
+|Zuikaku: Q/Easy
+|Shoukaku: Q/Easy
+|Maruyu: Q/Easy
+|I-26: Q/Easy{Drops from A rank on all difficulties}
+|Asagumo: Q/Easy{Drops from A rank on all difficulties}
+|Nagato: Q/Easy
+|Mutsu: Q/Easy
+|Hiryuu: Q/Easy
+}}
+
+</div> <!-- Drop list collapsible -->

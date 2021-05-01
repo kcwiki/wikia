@@ -1,0 +1,211 @@
+{{Under Construction|Page Adopted = Admiral Mikado}}
+
+
+==Combat Stages==
+For most combat engagements, the battle will begin in day combat and follow the following set of stages. Several stages will not occur unless certain conditions are met. For Event maps, a [[Combined Fleet]] mechanic has been implemented which follows a modified combat order.
+
+
+===Formation Selection===
+
+[[File:Formation Selection.png|right|300px|Pick your poison]]
+The fleet's formation affects various parameters such as attack power, accuracy, evasion, defense, ASW, anti-air, etc.
+
+If the fleet contains 3 ships or less you can't select a formation, instead it defaults to Line Ahead.
+
+In order to select the Diamond formation your fleet needs at least 5 ships. 
+{{clear}}
+
+===Detection===
+
+Successful Detection requires a certain amount of Fleet [[Line of Sight|LOS]] (usually from radars and/or planes).
+
+{| class="wikitable" style="width:660px; text-align:center;"
+|-
+!Success
+!Failed
+|-
+|[[File:Combat_detect_success.jpg|200px]]
+|[[File:Combat_detect_fail.jpg|200px]]
+|-
+! colspan="2" |Effects
+|-
+|style="width:140px" |Increases {{Hit}} Accuracy & {{Evasion}} Evasion
+|style="width:140px" |Decreases {{Hit}} Accuracy & {{Evasion}} Evasion<br />Allied planes cannot participate in the [[Combat#Aerial_Combat|Aerial Combat Phase]]
+|-
+|colspan="2" | Fleet LOS affects Detection rate.
+|}
+
+
+===Aerial Combat===
+
+[[File:Combat_parity_and_incapability.jpg|250px|right]]
+Any ship that is equipped with offensive planes - torpedo bombers, dive bombers, seaplane bombers - participates in this combat phase. See [[Aerial Combat]] for details.
+{{clear}}
+
+
+===Day Combat===
+
+'''Support Expedition Shelling'''
+
+[[File:Support_expedition.png|250px|right]]
+
+Supporting fire by fleets on [[Expedition#Support Expeditions|Support Expeditions]].
+{{clear}}
+
+
+'''Opening Torpedo Salvo'''
+
+[[File:Opening Torpedo.png|250px|right]]
+The following ships fire their torpedoes simultaneously.
+
+[[EliteSS|Submarines]] at Lv.10 or higher can fire an opening torpedo regardless of equipment.<br />
+[[EliteSS|Submarines]] below Lv.10, [[EliteCLT|Torpedo Cruisers]], [[EliteAV|Seaplane Tenders]] and [[Abukuma#Second Upgrade|Abukuma Kai-2]] can fire an opening torpedo if they're equipped with [[Kouhyouteki]].
+{{clear}}
+
+
+'''Engagement Form'''
+
+The orientation of the allied and enemy fleets is displayed.
+
+===Engagement Form Modifier===
+{| class="article-table" style="width: 400px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center; width:200px;" |Form
+! scope="col" style="text-align:center; width:100px;" |Damage Modifier
+! scope="col" style="text-align:center; width:100px;" |Chance
+! scope="col" style="text-align:center; width:100px;" |Chance with [[Saiun]]
+! scope="col" style="text-align:center; width:100px;" |[[Combat Screens]]
+|-
+|Crossing the T ('''<span style="color:green">Advantage</span>''')<br />{{Nihongo|T字戦有利|''T Ji-sen Yuuri''|}}
+| style="text-align:center;" |120%
+| style="text-align:center;" |15%
+| style="text-align:center;" |15%
+| style="text-align:center;" |[[File:Combat_greent.jpg|150px]]
+|-
+|Parallel Engagement<br />{{Nihongo|同航戦|''Doukousen''|}}
+| style="text-align:center;" |100%
+| style="text-align:center;" |45%
+| style="text-align:center;" |45%
+| style="text-align:center;" |[[File:Combat_parallel.jpg|150px]]
+|-
+|Head-on Engagement<br />{{Nihongo|反航戦|''Hankousen''|}}
+| style="text-align:center;" |80%
+| style="text-align:center;" |30%
+| style="text-align:center;" |40%
+| style="text-align:center;" |[[File:Combat_headon.jpg|150px]]
+|-
+| style="white-space: nowrap;" |Crossing the T ('''<span style="color:red">Disadvantage</span>''')<br />{{Nihongo|T字戦不利|''T Ji-sen Furi''|}}
+| style="text-align:center;" |60%
+| style="text-align:center;" |10%
+| style="text-align:center;" |0%
+| style="text-align:center;" |[[File:Combat_redt.jpg|150px]]
+|}
+*Please note that all engagement forms '''affect both sides equally''', including crossing the T (<span style="color:green">Advantage</span> or <span style="color:red">Disadvantage</span>).
+* Night battle and aerial combat are not affected by engagement forms. Torpedo salvos ''are'' affected by engagement forms.
+*Equipping a {{Template:YellowPlane}}[[Saiun]] effectively makes what would have been Crossing the T (Disadvantage) become Head-on Engagement.
+*It is speculated that the Engagement form also impacts accuracy.
+
+
+'''Shelling, 1st Round (Range Order)'''
+
+[[File:Range Example.png|350px|right]]
+All ships except submarines participate in this phase.
+
+Firing order alternates between the allied and enemy fleet, starting with the former. Turn order within a single fleet depends on the ships' Range stat([[File:Icon_Range.png]] 射程). Ships with a long range act before those with a short range. If several ships share the same range, the turn order among them is random.<br />
+Range is determined either by the ship's base Range or the equipment's Range, whichever is higher. This also means that a ship's range can't be lower than the base value.
+
+Range Order: '''Very Long > Long > Medium > Short'''
+{{clear}}
+
+
+'''Shelling, 2nd Round (Lineup Order)'''
+
+[[File:Lineup Order.png|250px|right]]
+Only occurs when either side has a(n) (aviation) battleship, or the enemy fleet contains a special ship class (鬼 Oni/Ogress, 姫 Hime/Princess) that acts like a battleship.
+
+Firing order alternates between the allied and enemy fleet, starting with the former. Unlike the 1st shelling round the turn order within a single fleet now depends on the ship position. The top-most ship acts first followed by the next ship until the bottom-most ship.
+{{clear}}
+
+
+'''Closing Torpedo Salvo'''
+
+[[File:Closing Torpedo.png|250px|right|Death from below]]
+Participants: [[EliteSS|Sub]][[EliteSSV|marines]][[EliteDD|Destroyers]], [[EliteCL|Light Cruisers]], [[EliteCLT|Torpedo Cruisers]], [[EliteCA|Heavy Cruisers]], [[EliteCAV|Aviation Cruisers]], [[EliteAV|Seaplane Tenders]], [[Bismarck#Third Upgrade|Bismarck drei]]
+
+Like the opening torpedo salvo all participants attack simultaneously.
+
+Ships with 50% HP or less (i.e. at least moderately damaged) cannot participate.
+{{clear}}
+
+
+===Night Combat===
+
+[[File:Night Battle Option.png|250px|right|FINISH 'EM!]]
+Optional. You can choose to enter this phase after Day Combat.
+
+All ships except aircraft carriers participate in this phase. (Exception: enemy carriers at Flagship level or higher)
+
+[[File:Night Battle Intro.png|250px|right|START "GET REKT" PROTOCOL]]
+Ships with 25% HP or less (i.e. heavily damaged) cannot participate in this phase.
+
+Similar to the 2nd shelling phase all ships attack in lineup order.
+{{clear}}
+
+
+===Advance or Retreat===
+
+[[File:Advance or Retreat.png|250px|right]]
+Self-explanatory.
+
+Pick "Advance" to press on.
+
+Pick "Retreat" to return to the base.
+{{clear}}
+
+
+{{VictoryConditions}}
+
+==Ship Protection Mechanisms==
+
+===Sinking Mechanics===
+
+Contrary to what you might think your ships are not invincible. They can sink, and if one of them does, that particular ship is lost forever, so if you want to get her back you either have to build her again or get her as  random drop. And that's assuming said ship is available via any of these methods. If she's an event-exclusive random drop or reward, you're SOL.
+
+However, the game has certain mechanics in place that give you 100% control over whether or not your ships are at the risk of sinking.
+
+Your ship cannot sink if...
+
+* she enters the battle with <b>more than 25% HP i.e. is at worst moderately damaged (中破)</b>.
+** This also means that even if a ship gets heavily damaged (大破) in day combat and you enter night combat during the same battle, she cannot sink.
+* she's the flagship of your fleet. If she gets heavily damaged (大破) the battle proceeds normally, but after that you are forced to retreat unless your flagship is equipped with a [[Repair Team]] or [[Repair Goddess]] and you choose to use it.
+** On [[Combined Fleet]] maps that require two fleets, the flagship of the 2nd fleet cannot sink as well even though the "Forced Retreat" mechanic doesn't trigger when she gets heavily damaged, so technically speaking you can safely advance without risking losing her. 
+* she was already sunk once in a battle but revived via [[Repair Team]] or [[Repair Goddess]]. However, this only applies to the battle she was sunk in. If you advance with her in critical condition she can still sink in the next battle.
+** Basically, a ship can sink only once per battle.
+
+In short, your ships can only sink when <b>they enter a battle with 25% HP or less i.e. heavily damaged (大破)</b>. <br />
+If they aren't they can get hit as much as you want, they'll still survive with at least 1 HP remaining.
+
+
+===Plot Armour===
+
+This protection mechanic reduces the damage your ships would take under certain conditions. It applies to flagships as well as ships with 20 morale or more (i.e. not "red face" [[File:Surprised2.png]])
+
+* If the damage a ship receives would exceed her current HP, instead of taking full damage it is instead reduced to 50~79% (rounded down) of the ship's current HP.
+** For multi-hit attacks like Double Attacks or Torpedo Cut-Ins each hit is calculated separately.
+** This can occasionally prevent heavy damage (大破) because it narrows down the range of damage that would cause it.
+** Ships at full health and with an odd HP number can survive otherwise fatal hits with only light damage (小破) due to this.
+*** Example: Maruyu Kai ( 7/7 HP ) gets hit, plot armour kicks in, damage gets reduced to the lowest possible 50% of her Max HP i.e. 3.5 dmg, gets rounded down to 3 dmg, Maruyu is left with 4/7 HP and therefore only light damage.
+
+
+===Flagship Protection===
+
+Flagship Protection refers to a situation where a non-flagship ship protects the flagship and is targeted in her stead.<br />
+Unlike the previous two mechanisms Flagship Protection applies to both your and enemy fleets.<br />
+It triggers randomly, but the trigger chance depends on the fleet formation, with Diamond formation having the highest trigger rate.
+
+
+<br />
+
+
+<br />
+[[Category:Combat sandboxes]]

@@ -1,0 +1,130 @@
+Many of you would have now known about the cookie problem on DMM already. You might be experiencing it yourself, that's why you're reading this, but if not read on if you want to know what could've happened and what it means to all of us.
+
+Early August 2015, many people had been getting "Error Area" screens even if they have done the Cookie Method. There was a small panic that they won't be able to access the game anymore, however, some people claim they can actually still access it!
+
+So why is it that it only applies to some people? As far as I am informed on who discovered it, @[http://www.himeuta.net/members/47-chronomeister/ chronomeister] over at himeuta (''sorry if it's someone else, please do correct me on the comments section'') found out that accessing the game page directly will still let you play via old cookies, and that by only accessing it through the kancolle intro page on DMM will generate the "Error Area". Which means, those with the bookmarks to direct links of the game have no problems. That's why we can see a divided community experiencing it differently.
+
+__TOC__
+==Learning DMM Cookies==
+===<span style="color:#990000;">How do cookies actually work on DMM?</span>===
+<div style="padding:0px 0px 0px 20px;">
+To make it easier to understand for everybody, let's '''visualize'''. Think of '''cookies''' as a '''physical ID''' (identification card). It is given to you when you '''first visit DMM''' and choose your language. You will use this ID on various "doors" later on so your '''browser keeps it''' for you.
+
+If you use the '''same ID given to you at the front gates''', you will normally '''not''' be able to '''enter lots of doors''' on the DMM website. This includes '''doors to netgames''', the reason why you're here. This is why we'll need to "'''re-write'''" or "'''forge'''" your '''ID card'''. We will '''change''' it to something '''acceptable''' to the doors we want to enter.
+
+This is where the '''devtools and consoles''' come in. Copying the 4-line "cookie code" and pasting on your console will '''re-write your ID'''.
+
+So '''next time you visit''' the doors to online games like '''Kantai Collection''', you present your '''newly "forged" ID''' card, and you are now '''allowed to enter'''.
+</div>
+
+===<span style="color:#990000;">So why am I not allowed on these doors anymore even if I forged the ID?</span>===
+<div style="padding:0px 0px 0px 20px;">
+If you've read the previous section, you'll know that "'''ID cards'''" are the '''cookies''', and the "'''doors'''" are the different '''pages''' on the DMM website.
+
+Unfortunately, SOME of these doors '''do not give access via ID cards anymore'''. They will actually look at you and see if you're a gaijin (not literally though, we're still visualizing remember), the "'''how you look'''" phrase refers to where you're from based on '''IP address'''.
+
+For these pages, ID cards '''(cookies) mean nothing'''. These strict pages will actually even '''RE-ISSUE you a new ID card'''! Re-issue means, '''your forged ID is no more''' and was again '''overwritten'''. Thus it again '''prevents''' you from '''accessing''' the other doors! Pages that you have access earlier are '''revoked if you refresh'''.
+</div>
+
+===<span style="color:#990000;">You said only "some" doors are strict, which are they?</span>===
+<div style="padding:0px 0px 0px 20px;">
+True, '''not all pages''' are '''strict'''.
+
+There are pages you can '''still access''' just by presenting the '''"forged" ID/cookies'''. '''Non-strict''' pages FORTUNATELY includes the '''gameplay pages'''. The one you visit to play the game and take API links from. Other non-strict pages include the '''netgame home''', add friends, request list, etc.
+
+On the other hand, strict pages include, '''game introduction pages''' (the one with usually large banners and buttons), netgame '''community''' pages, netgame inbox, etc. 
+</div>
+
+
+==Getting Technical==
+[[File:Aug2015cookies.jpg|250px|right]]
+===<span style="color:#990000;">DJ, I can take it, blast me with technical terms</span>===
+<div style="padding:0px 0px 0px 20px;">
+Well for the first part on how cookies work on DMM, please check the [[Tutorial:_Proxy_Connection#Option_1:_Editing_DMM_Cookie.27s_Region_Flag_RECOMMENDED|Proxy article]], I wrote the "''How it works''" section myself, and even have a diagram for it.
+
+Lazy to visit the link? Let me copy paste some reminders on the technicals of cookies:
+# When you visit DMM website, server reponse will include limited-access cookies (ckcy=2)
+# You use devtools console to overwrite those cookies on computer (ckcy=1)
+# Revisit DMM, your browser includes NEW cookies on the HTTP request
+# DMM checks cookies on your HTTP request (ckcy=1), acknowledges it
+# DMM returns you the page on its HTTP response
+
+That's how cookies worked... before...
+</div>
+
+===<span style="color:#990000;">How does it work now?</span>===
+<div style="padding:0px 0px 0px 20px;">
+1-3 of the steps above still applies, it changed on #4. Now DMM does not check cookies on your HTTP request.
+# ''same''
+# ''same''
+# ''same''
+# Does not check cookies, instead it tries to determine where you are
+# If you're outside of Japanm it will re-issue new cookies on HTTP response, and include a "reirect" instruction
+# When your browser receives the response, browser will acknowledge new cookies they sent and will revert to (ckcy=2). Then browser will follow the redirect header and show you Error Area
+</div>
+
+===<span style="color:#990000;">Are API links affected?</span>===
+<div style="padding:0px 0px 0px 20px;">
+Nope. The cookie method is implemented by the DMM website, which as we know aren't the devs (though they're part producer of the game but not involved technically).
+
+API Links are direct links to the game server, which BYPASS DMM completely, without its mechanisms. So a change in DMM mechanism will not affect API links and how API links work, to some extent.
+</div>
+{{clr}}
+
+
+==The Fix==
+I re-wrote the [[Tutorial:_Proxy_Connection#Option_1:_Editing_DMM_Cookie.27s_Region_Flag|Cookies Section over at the Proxy article]] and should get you navigating DMM as usual if performed as instructed.
+
+===<span style="color:#990000;">How does the fix work?</span>===
+<div style="padding:0px 0px 0px 20px;">
+Thanks to [[User:%E3%81%8C%E3%81%8B|がか]], who [http://kancolle.wikia.com/wiki/User_blog_comment:Dragonjet/DMM_Cookies:_August_2015/@comment-%E3%81%8C%E3%81%8B-20150805212514?permalink=294426#comm-294426 suggested about the involvement of another cookie], '''cklg''', we were able to device a new cookie code.
+
+Let's go into visualization mode again. This other cookie "'''cklg'''", let's think of it as a "name tag". [[User:%E3%81%8C%E3%81%8B|がか]] found out that if you don't have cklg, if you don't have a name tag, then the DMM pages will acknowledge you to some extent. It will ask, since you don't have a name tag, "''hey who are you? what language do you want to see?''", and with it, shows you the page your were trying to visit.
+
+The method works, but on every page, it will ask you the same thing over and over. In your screen, it will show the popup to choose English or Japanese on every page you visit. So I checked what happens when you click a language. Can we start the succeeding pages starting from the step when you clicked on a language? Then I found out about the '''cklg=welcome'''.
+
+Usually '''cklg''' will contain "ja" or "en" depending on language chosen. However, there is a special value assign to those who are just coming in and just clicked a language, and that is "welcome". This is where we based the current cookie code. With the old cookie hack is still there ('''ckcy=1'''), and we always set our state as ''just arrived on DMM'' (cklg=welcome) we will always get the page we want, with DMM thinking you have just clicked the "Japanese" button on language selection.
+</div>
+
+===<span style="color:#990000;">What about the thing you said about DMM re-issuing cookies?</span>===
+<div style="padding:0px 0px 0px 20px;">
+Yes, there is still the problem of the cookies being re-issued by the strict pages of DMM, our old Cookie code are being overwritten to the "unhacked" version, meaning on every page:
+* '''ckcy''' is being reverted to '''2''' instead of '''1''', and
+* '''cklg''', naturally becomes "'''ja'''" because "'''welcome'''" naturally only works for one page, even without the hack
+
+So how should we deal with it? Just write them again! That's why Nanamin over at his blog post suggested about EditThisCookie which is able to "lock" cookies, and re-write them back to the values you want even if they are overwritten/re-issued by DMM.
+
+This also applies to KC3改 which also protects your cookies automatically and always write them back whenever DMM re-issues it.
+</div>
+
+
+==So are our problems over? (Philosophical FAQ)==
+NO! '''What if''' this is just [Part 1] of the total rollout of the "strict-ness" in all pages? '''What if''' they convert all DMM pages, including our gameplay pages? '''What if''' even going directly to the play page links will not honor your cookies and show you "Error Area". '''What if''' they do server-side checks all the time?
+
+This is becoming ''Ancient Aliens'' full of questions, but ''WHAT IF''?
+
+===<span style="color:#990000;">Nooo! Is that even possible?</span>===
+<div style="padding:0px 0px 0px 20px;">
+You know dmm.co.jp, the DMM Japanese site? They had these mechanisms ever since, and cookies do not work on it. If you don't know dmm.co.jp, it is more known to players as where the R-18 counterparts of our games reside. Yes, you read it right, R-18 counterparts, including KanColle with might start another Great Flood of nosebleed.
+</div>
+
+===<span style="color:#990000;">So how is the Japanese site involved?</span>===
+<div style="padding:0px 0px 0px 20px;">
+Well since playing on dmm.co.jp is already restricted, where cookies do not work, it means they can already do it and might be able to implement it even on the .com English site. If they do it, it will be the end of cookie method and everyone will resort back to proxies and VPN.
+</div>
+
+===<span style="color:#990000;">But DJ, cookies work on .co.jp for me!</span>===
+<div style="padding:0px 0px 0px 20px;">
+gtfo. yes we do have reports that it works for other people but I don't know how they do it, nor do I have the interest to try and test or fix it.
+</div>
+
+===<span style="color:#990000;">Will they really restrict English site 100%?</span>===
+<div style="padding:0px 0px 0px 20px;">
+Well, I doubt they would 100% restrict DMM.com, because it's their English site. It is understood that .CO.JP has server-side checking and does not honor cookies. Well it is the "Japanese" site so it's normal to enforce being Japanese. I don't want to talk about this really, it becomes philosophical, but let us not just close our minds that these server-side checks might also be implemented on the .COM English site
+</div>
+
+===<span style="color:#990000;">DJ, You tricked me!</span>===
+<div style="padding:0px 0px 0px 20px;">
+wat? oh about that kancolle R-18 counterpart? did you really check the .co.jp site for it? oh sorry, toplel. Only select games have R-18 counterparts.
+</div>
+[[Category:Blog posts]]

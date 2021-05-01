@@ -1,0 +1,17 @@
+This is the regex I used with AWB to do this task:
+* Alternate form redirects for enemies like [[Anchorage Water Demon II]] need a graphic added. This is to make the category listing prettier (otherwise it shows #REDIRECT <nowiki>[[...]]</nowiki>).
+** For enemy ships, add <code><nowiki>{{ShipGraphicKai|Ship/Form}}</nowiki></code> between the #REDIRECT line and the EnemyShipCategoriesKai line.
+
+
+Use '''''Find and replace/Advanced''''' in the ''Options'' tab, and do not forget to check '''''Regular expression''''' and to disable '''''Follow redirects''''' in the ''Options'' menu.
+
+;Find
+:<code><nowiki>#REDIRECT \[\[(.*)]]</nowiki></code>
+:
+:<code><nowiki>{{EnemyShipCategoriesKai\|(.*)}}</nowiki></code>
+;Replace
+:<code><nowiki>#REDIRECT [[$1]]</nowiki></code>
+:
+:<code><nowiki>{{ShipGraphicKai|$2}}</nowiki></code>
+:
+:<code><nowiki>{{EnemyShipCategoriesKai|$2}}</nowiki></code>

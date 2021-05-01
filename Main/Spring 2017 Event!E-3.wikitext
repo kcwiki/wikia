@@ -1,0 +1,134 @@
+{{Event/MapPageHeader
+|form = 69mbh4yTpbCUTHMk2
+|spreadsheet = 1L6BjFRo1cHycVBloiDJQKCd3bYoAGG-7jMc5nmU31y0
+|thread = 547887
+}}
+{{Event/MapInfo
+|en = Fleet, Head out! Reinforce the Northern Defense Line!
+|jp = 艦隊抜錨! 北方防備を強化せよ!
+|romaji = Kantai batsubyō Hoppō bōbi o kyōka seyo!
+|tag = E4
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Ship Locking@Events/Mechanics#Ship_Locking, Boss Debilitation@Events/Mechanics#Map-specific_Mechanics
+|transport = true
+|hp_all = 
+|hp_easy = 300
+|hp_medium = 400
+|hp_hard = 500
+|show_kills = true
+|kills_all = 
+|kills_easy = 4
+|kills_medium = 4
+|kills_hard = 4
+|reward_all = {{ShipBattleCardKai|Kasuga Maru}}
+|reward_easy_1 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model III A|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Daihatsu Landing Craft|size=50px}}
+|reward_easy_3_x = 1
+
+|reward_medium_1 = [[File:Screw.png|50px|link=Screw]]
+|reward_medium_1_x = 4
+|reward_medium_2 = [[File:Medal.png|50px|link=Medal]]
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model III A|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Toku Daihatsu Landing Craft + 11th Tank Regiment|size=50px}}
+|reward_medium_4_x = 1
+
+|reward_hard_1 = [[File:Screw.png|50px|link=Screw]]
+|reward_hard_1_x = 7
+|reward_hard_2 = [[File:Medal.png|50px|link=Medal]]
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model III A (54th Squadron)|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Toku Daihatsu Landing Craft + 11th Tank Regiment|size=50px}}
+|reward_hard_4_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules
+|order = J,N,S,K,H,D,I,L,U
+
+|J/empty -> K,N/empty =
+* Transport Escort always go to K
+* Carrier Task Force random between N/K
+* Surface Task Force always go to N
+
+|N/empty -> P,R = * Active Branching
+
+|S -> T/empty = * Fail the LoS check
+|S -> W = * Pass the LoS check
+
+|K -> H/empty = 
+* Fixed route during the Anchor Phase.
+* In case you're using a Transport Escort:
+** Amount of AV+LHA+AO ≧ 2 (Overrides all other routing)
+|K -> I = * Carrier Task Force
+|K -> L = * Transport Escort '''and''' Slow Fleet
+|K -> M/empty = * Transport Escort '''and''' Fast Fleet
+
+|H/empty -> F, G = * Active Branching
+
+|D/empty -> A, C/resource = * Active Branching
+
+|I -> L = * Does not meet the requirements to go to O.
+|I -> O = 
+* Meet '''all''' of the following requirements:
+** Fast Fleet
+** Amount of CV(B) ≦ 2
+
+|L -> O = * Carrier Task Force
+|L -> Q = * Transport Escort???
+
+|U/resource -> T/empty = * Fail the LoS check
+|U/resource -> V = * Pass the LoS check
+}}
+==Fighter Power Values==
+The following are the fighter power required to achieve AP/AS/AS+, respectively:
+*V hard: 74/167/333
+*W hard: 256/576/1152
+*W easy: 90/201/402 or slightly less
+*G hard: 16/35/69
+Please note that this is before LBAS reduction; LBAS with fighters can be used to help reduce the minimum required value even further by providing air control. 
+*Reminder: You are given two LBAS to use
+==Map Guide/Information==
+*This Map has two [[Land Base Aerial Support]] available. There are no Enemy Air Raids against your Landbase, where you may use both for Sortie mode. 
+*This Map consists of Three different phases to complete.
+
+===Phase 1: Reach node B, C, and E===
+*Recommended Fleet: 2 CAV 4 DD + 1 CL 2 CA 3 DD (Transport Combined Fleet)
+
+*Phase 1 requires you to reach node B, C, and E respectively.
+**Node B, C, E are Resource nodes. 
+**Reaching each node will open the routes to node V.
+
+===Phase 2: Transport Operation===
+*Phase 2 is a Transport Operation where you must deplete the TP Bar by reaching node U and clearing node V with A or S-Rank Victory.
+**This can be done by using Transport Combined Fleet or Carrier Task Force.
+**Please note using Carrier Task Force will take you to a longer and more difficult route, and can be slower to clear compared to the Transport Combined Fleet.
+**As this is a Transport Operation, please bring your [[Daihatsu Landing Craft]] and [[Drum Canister (Transport Use)|Drum Canisters]], as much as possible.
+**Node K and Q can be a bit stressful for your Destroyers in the 2nd Fleet due to presense of many enemy CAs and CLTs. Use of [[Land Base Aerial Support]] and/or Pre-Boss Support Shelling Expedition is recommended for safer runs.
+**If sending Landbase to Boss node of V, you require 9 range, making use of both Bombers and Fighters impossible unless [[Type 2 Large Flying Boat]] is used.
+**Clearing this Phase will then open up the route to node W, where the [[Escort Princess]] resides, and will start the final 3rd HP Bar phase.
+
+===Phase 3: Boss Kill===
+*Phase 3 requires you to completely sink the main boss [[Escort Princess]]
+*You must use Surface Task Force Combined Fleet.
+**Slow Ships such as Yamato-class and Nagato-class can be used here just fine.
+**You can also bring all torpedo cruisers if they aren't locked into any of the previous maps.
+*Recommended Routing is J - N - P - S - W.
+**Node R has a mixed fleet of Battleships and a Submarine in Line Ahead, and therefore not recommended to go through.
+*Boss node consists of [[Escort Princess]] as the flagship of the [[Combat/Abyssal Combined Fleet|Abyssal Combined Fleet]].
+**The Boss node requires you to have 579 AS to gain Air Superiority by the time you reach the Boss node. It is recommended that you bring 2 CVLs with 4 Fighters (3 Fighter + 1 Saiun for one of them if preferred), and you may also consider using BBVs for extra Air Power as well.
+**[[Land Base Aerial Support]] requires 8 range minimum to reach the Boss node. Therefore in order to send any Fighters to reduce the enemy air power at the boss node, you will also require the use of [[Type 2 Large Flying Boat]] or [[PBY-5A Catalina]].
+
+===Boss Debuff===
+*A Boss Debuff exists in this Map. You must S-Rank node V, P and R once respectively.
+*As mentioned beforehand, node R contains a mixed fleet of enemy Battleships and Submarines. It is recommended that your DD/CL brings [[List of Anti-Submarine Equipment by stats|SONAR and Depth Charge]].
+*You do not have to reach the Boss node after S-Ranking node P and R if you don't want to.
+*S-Rank of node V from the TP Phase will count towards the Debuff progress. 
+
+==LBAS Flight Range==
+[[File:Spring_17_E3_LBAS_Flight_Range.jpg|400px|center]]
+
+{{Event/MapPageFooter}}

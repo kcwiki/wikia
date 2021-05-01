@@ -1,0 +1,237 @@
+<includeonly>{{#vardefine:map|{{#ifeq:{{#sub:{{{page|{{PAGENAME}}}}}|0|5}}|Phase|{{#sub:{{{page|{{PAGENAME}}}}}|0|7}}_{{SUBPAGENAME}}|{{#ifeq:{{#sub:{{{page|{{PAGENAME}}}}}|0|5}}|World|{{SUBPAGENAME}}|{{#replace:{{{page|{{PAGENAME}}}}}|/|_}}}}}}}}{{#vardefine:event|{{#ifeq:{{#explode:{{{page|{{PAGENAME}}}}}|/|0}}|Sandbox|Sandbox/{{#explode:{{{page|{{PAGENAME}}}}}|/|1}}|{{#explode:{{{page|{{PAGENAME}}}}}|/|0}}}}}}{| class="typography-xl-optout" style="width:300px; border:1px solid #ccc; float:right; margin:0px 0px 0px 10px" data-map="{{#var:map}}"
+|-
+| colspan="2" style="background:#def; padding:12px 0px 7px 0px; text-align:center;" |
+<p style="margin:0px 10px 5px 10px; font-weight:bold; line-height:22px; font-size:16px;">
+{{#if:{{{en|}}}
+  |{{{en}}}
+  |{{#if:{{{jp|}}}
+    |Map name is untranslated
+    |Map name is unknown
+    }}
+}}
+{{#if:{{{tag|}}}|{{#ifexist:File:{{#replace:{{#var:event}}|/|_}}_Ship_Tag_{{{tag}}}.png|<br>[[File:{{#replace:{{#var:event}}|/|_}}_Ship_Tag_{{{tag}}}.png|{{{tag}}}|link=Events/Mechanics#Ship Locking]]{{#if:{{{tag2|}}}|{{#ifexist:File:{{#replace:{{#var:event}}|/|_}}_Ship_Tag_{{{tag2}}}.png|[[File:{{#replace:{{#var:event}}|/|_}}_Ship_Tag_{{{tag2}}}.png|{{{tag}}}|link=Events/Mechanics#Ship Locking]]{{#if:{{{tag3|}}}|{{#ifexist:File:{{#replace:{{#var:event}}|/|_}}_Ship_Tag_{{{tag3}}}.png|[[File:{{#replace:{{#var:event}}|/|_}}_Ship_Tag_{{{tag3}}}.png|{{{tag}}}|link=Events/Mechanics#Ship Locking]]}}}}}}}}}}}}
+</p>
+<p style="margin:0px 10px 5px 10px; font-weight:bold; line-height:22px; font-size:16px;">
+{{#if:{{{jp|}}}
+  |<span lang="ja">{{Tooltip|{{{jp}}}|{{{romaji|?}}}}}</span>
+  |''Japanese name is unknown''
+}}
+</p>
+|-
+| colspan="2" |
+[[File:{{#ifexist:File:{{#var:map}}_Banner.png
+  |{{#var:map}}_Banner.png
+  |Map_placeholder_banner.png
+  }}|300px|center]]{{#ifexist:File:{{#var:map}}_Banner_{{{banner2|2}}}.png
+    |[[File:{{#var:map}}_Banner_{{{banner2|2}}}.png|300px|center]]}}
+|-
+| colspan="2" |
+[[File:{{#ifexist:File:{{#var:map}}_Map.png
+  |{{#var:map}}_Map.png
+  |Map placeholder branch.png
+  }}|300px|center]]{{#ifexist:File:{{#var:map}}_Map_{{{map2|2}}}.png
+    |[[File:{{#var:map}}_Map_{{{map2|2}}}.png|300px|center]]}}{{#ifexist:File:{{#var:map}}_Map_{{{map3|3}}}.png
+    |[[File:{{#var:map}}_Map_{{{map3|3}}}.png|300px|center]]}}
+|-
+| style="background:#def; font-weight:bold; text-align:center; color:#09c;" colspan="2" |Information
+|- {{#if:{{{mechanics|}}}||style="display:none"}}
+| style="width:100px; background:#def; font-weight:bold;" |Special Mechanics
+|{{#if:{{{mechanics|}}}
+  |{{#if:{{#explode:{{{mechanics}}}|,|0}}
+    |<span style="{{#explode:{{#explode:{{{mechanics}}}|,|0}}|@|2}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|0}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|0}}|@|0}}]]</span>{{#if:{{#explode:{{{mechanics}}}|,|1}}
+      |<br/><span style="{{#explode:{{#explode:{{{mechanics}}}|,|1}}|@|2}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|1}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|1}}|@|0}}]]</span>{{#if:{{#explode:{{{mechanics}}}|,|2}}
+        |<br/><span style="{{#explode:{{#explode:{{{mechanics}}}|,|2}}|@|2}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|2}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|2}}|@|0}}]]</span>{{#if:{{#explode:{{{mechanics}}}|,|3}}
+          |<br/><span style="{{#explode:{{#explode:{{{mechanics}}}|,|3}}|@|2}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|3}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|3}}|@|0}}]]</span>{{#if:{{#explode:{{{mechanics}}}|,|4}}
+            |<br/><span style="{{#explode:{{#explode:{{{mechanics}}}|,|4}}|@|3}}">[[{{#explode:{{#explode:{{{mechanics}}}|,|4}}|@|1}}|{{#explode:{{#explode:{{{mechanics}}}|,|4}}|@|0}}]]</span>
+            |}}
+          |}}
+        |}}
+      |}}
+    |}}
+  |None
+}}
+|- {{#if:{{{exp_hq|}}}||style="display:none"}}
+| style="width:100px; background:#def; font-weight:bold;" |Experience
+| '''HQ:''' {{{exp_hq|}}} non-boss{{#if:{{{exp_hq_boss|}}}|, {{{exp_hq_boss|}}} boss}}{{#if:{{{exp_ship|}}}|<br>'''Ship:''' {{{exp_ship|}}}}}
+|- {{#ifeq:{{#sub:{{{page|{{PAGENAME}}}}}|0|5}}|World|style="display:none"|}}{{#ifeq:{{#sub:{{{page|{{PAGENAME}}}}}|0|5}}|Phase|style="display:none"|}}
+| style="width:100px; background:#def; font-weight:bold;" |[[{{#var:event}}/Info#map-hp|{{Tooltip|Boss gauge<br>(HQ 120)|HQ 120 values, see the linked table or tooltips for other values|style=cursor:pointer}}]]
+|{{#if:{{{hp_all|}}}
+  |'''All:''' <span class="advanced-tooltip explain">{{{hp_all}}}{{#if:{{{transport|}}}|&nbsp;TP|{{#if:{{{no_hp|}}}||&nbsp;HP}}}}<div class="tooltip-contents hidden">{{:{{#var:event}}/Info/HP|compact=true}}</div></span>
+  |{{#if:{{{hp_casual|}}}|'''Casual:''' <span class="advanced-tooltip explain">{{{hp_casual|?}}}{{#if:{{{transport|}}}|&nbsp;TP|{{#if:{{{no_hp|}}}||&nbsp;HP}}}}<div class="tooltip-contents hidden">{{:{{#var:event}}/Info/Casual HP}}</div></span><br>}}'''Easy:''' <span class="advanced-tooltip explain">{{{hp_easy|?}}}{{#if:{{{transport|}}}|&nbsp;TP|{{#if:{{{no_hp|}}}||&nbsp;HP}}}}<div class="tooltip-contents hidden">{{:{{#var:event}}/Info/Easy HP}}</div></span><br>'''Medium:''' <span class="advanced-tooltip explain">{{{hp_medium|{{{hp_normal|?}}}}}}{{#if:{{{transport|}}}|&nbsp;TP|{{#if:{{{no_hp|}}}||&nbsp;HP}}}}<div class="tooltip-contents hidden">{{:{{#var:event}}/Info/Medium HP}}</div></span><br>'''Hard:''' <span class="advanced-tooltip explain">{{{hp_hard|?}}}{{#if:{{{transport|}}}|&nbsp;TP|{{#if:{{{no_hp|}}}||&nbsp;HP}}}}<div class="tooltip-contents hidden">{{:{{#var:event}}/Info/Hard HP}}</div></span>
+}}
+|- {{#if:{{{show_kills|}}}||style="display:none"}}
+| style="width:100px; background:#def; font-weight:bold;" |Kills required
+|{{#if:{{{kills|}}}|<span style="cursor:help;" title="Sinking the flagship is counted as a kill, sinking other enemy vessels except the flagship is not counted as a kill">{{{kills|}}}<sup><span style="color:red">?</span></sup></span>}}
+{{#if:{{{kills_all|}}}|'''All:''' {{{kills_all}}}|{{#if:{{{kills_casual|}}}|'''Casual:''' {{{kills_casual|?}}}<br>}}{{#if:{{{kills_easy|}}}|'''Easy:''' {{{kills_easy|?}}}<br>}}{{#if:{{{kills_medium|}}}|'''Medium:''' {{{kills_medium|{{{kills_normal|?}}}}}}<br>}}{{#if:{{{kills_hard|}}}|'''Hard:''' {{{kills_hard|?}}}}}}}
+|- {{#ifeq:{{#sub:{{{page|{{PAGENAME}}}}}|0|5}}|World|{{#if:{{{reward_1|}}}||style="display:none"}}|}}{{#ifeq:{{#sub:{{{page|{{PAGENAME}}}}}|0|5}}|Phase|{{#if:{{{reward_1|}}}||style="display:none"}}|}}
+| style="background:#def; font-weight:bold; text-align:center; color:#09c;" colspan="2" |Rewards
+|- {{#ifeq:{{#sub:{{{page|{{PAGENAME}}}}}|0|5}}|World|{{#if:{{{reward_1|}}}||style="display:none"}}|}}{{#ifeq:{{#sub:{{{page|{{PAGENAME}}}}}|0|5}}|Phase|{{#if:{{{reward_1|}}}||style="display:none"}}|}}
+| style="text-align:center;" colspan="2" |{{#if:{{{reward_1|}}}||<div>{{Event/MapInfo/Reward|prefix=All|{{{reward_all|{{{Allreward|}}}}}}}}</div>
+<div>'''Casual:'''<br>{{Event/MapInfo/Reward|{{{reward_casual_1|}}}|{{{reward_casual_1_x|}}}}}{{Event/MapInfo/Reward|{{{reward_casual_2|}}}|{{{reward_casual_2_x|}}}}}{{Event/MapInfo/Reward|{{{reward_casual_3|}}}|{{{reward_casual_3_x|}}}}}{{Event/MapInfo/Reward|{{{reward_casual_4|}}}|{{{reward_casual_4_x|}}}}}{{Event/MapInfo/Reward|{{{reward_casual_5|}}}|{{{reward_casual_5_x|}}}}}</div>
+<div>'''Easy:'''<br>{{Event/MapInfo/Reward|{{{reward_easy_1|{{{Easyitem1|}}}}}}|{{{reward_easy_1_x|{{{Easyqty1|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_easy_2|{{{Easyitem2|}}}}}}|{{{reward_easy_2_x|{{{Easyqty2|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_easy_3|{{{Easyitem3|}}}}}}|{{{reward_easy_3_x|{{{Easyqty3|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_easy_4|{{{Easyitem4|}}}}}}|{{{reward_easy_4_x|{{{Easyqty4|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_easy_5|{{{Easyitem5|}}}}}}|{{{reward_easy_5_x|{{{Easyqty5|}}}}}}}}</div>
+<div>'''Medium:'''<br>{{Event/MapInfo/Reward|{{{reward_medium_1|{{{Normitem1|}}}}}}|{{{reward_medium_1_x|{{{Normqty1|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_medium_2|{{{Normitem2|}}}}}}|{{{reward_medium_2_x|{{{Normqty2|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_medium_3|{{{Normitem3|}}}}}}|{{{reward_medium_3_x|{{{Normqty3|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_medium_4|{{{Normitem4|}}}}}}|{{{reward_medium_4_x|{{{Normqty4|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_medium_5|{{{Normitem5|}}}}}}|{{{reward_medium_5_x|{{{Normqty5|}}}}}}}}</div>
+<div>'''Hard:'''<br>{{Event/MapInfo/Reward|{{{reward_hard_1|{{{Harditem1|}}}}}}|{{{reward_hard_1_x|{{{Hardqty1|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_hard_2|{{{Harditem2|}}}}}}|{{{reward_hard_2_x|{{{Hardqty2|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_hard_3|{{{Harditem3|}}}}}}|{{{reward_hard_3_x|{{{Hardqty3|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_hard_4|{{{Harditem4|}}}}}}|{{{reward_hard_4_x|{{{Hardqty4|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_hard_5|{{{Harditem5|}}}}}}|{{{reward_hard_5_x|{{{Hardqty5|}}}}}}}}{{Event/MapInfo/Reward|{{{reward_hard_6|{{{Harditem6|}}}}}}|{{{reward_hard_6_x|{{{Hardqty6|}}}}}}}}</div>}}
+<div>{{Event/MapInfo/Reward|{{{reward_1|}}}|{{{reward_1_x|}}}}}{{Event/MapInfo/Reward|{{{reward_2|}}}|{{{reward_2_x|}}}}}</div>
+<div>{{#if:{{{ranking|}}}|'''[[Experience and Rank#Monthly_Ranking|Ranking Points]]:''' {{{ranking|}}}}}</div>
+|- {{#if:{{{strategy_name|}}}||style="display:none"}}
+| style="background:#def; font-weight:bold; text-align:center; color:#09c; cursor:pointer;" colspan="2" class="mw-customtoggle-strategy" |[[#|In-game description]]
+|- {{#if:{{{strategy_name|}}}||style="display:none"}} class="mw-collapsible mw-collapsed" id="mw-customcollapsible-strategy"
+| style="width:100px; background:#def; font-weight:bold;" |Operation
+|{{{strategy_name_ja|}}}<br>{{{strategy_name|}}}
+|- {{#if:{{{strategy_info|}}}||style="display:none"}} class="mw-collapsible mw-collapsed" id="mw-customcollapsible-strategy"
+| style="width:100px; background:#def; font-weight:bold;" |Task
+|{{{strategy_info_ja|}}}<br>{{{strategy_info|}}}
+|}</includeonly><noinclude>
+Map infobox used on [[event]] map pages.
+==Parameters==
+===page===
+Defaults to <code><nowiki>{{PAGENAME}}</nowiki></code>, the page name of the map page. Used for asset auto-detection, the following images are used (if exist, <code>event</code> is the part before first <code>/</code>, e.g., <code>Winter 2017 Event</code> if <code>page</code> is <code>Winter 2017 Event/E-3</code>, when in filenames, <code>/</code> in <code>page</code> are replaced with spaces):
+*<code><event> Ship Tag [[#tag|<tag>]].png</code> for ship-locking tag.
+*<code><page> Banner.png</code> for map banner, [http://kancolle.wikia.com/wiki/File:Map_placeholder_banner.png Map placeholder banner.png] if doesn't exist.
+**Optional <code><page> Banner 2.png</code> also can be used, nothing is generated if it doesn't exist.
+*<code><page> Map.png</code> for map image, [http://kancolle.wikia.com/wiki/File:Map_placeholder_branch.png Map placeholder branch.png] if doesn't exist.
+**Optional <code><page> Map 2.png</code> also can be used, nothing is generated if it doesn't exist.
+===en===
+English name of the map.
+===jp===
+Japanese name of the map (refer to <code>api_?</code>, note that <code>api_?</code> is currently unused).
+===romaji===
+Romaji for the Japanese name.
+===tag===
+Translated name of the ship-locking tag, see [[#page|page]].
+===mechanics===
+List of applicable mechanics, the syntax is <code><mechanic>@<link>, ...</code>, e.g., <code>Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Ship Locking@Events/Mechanics#Ship Locking</code>.
+===transport===
+Set if the map gauge is a transport gauge (<code>TP</code> will be used instead of <code>HP</code>).
+===hp_all, hp_casual, hp_easy, hp_medium, hp_hard===
+HP/TP values of the map gauge, either set <code>hp_all</code> or <code>hp_casual</code> (optional), <code>hp_easy</code>, <code>hp_medium</code>, and <code>hp_hard</code>. Feel free to use [[Template:Tooltip|tooltips]] to explain details such as HQ scaling.
+===show_kills, kills_casual, kills_all, kills_easy, kills_medium, kills_hard, kills===
+Set <code>show_kills</code> to show the <code>Kills required</code> section (hidden by default). Other parameters are used similarly to <code>hp_*</code> parameters. If map is not event, use <code>kills</code> instead.
+===ranking===
+Set the ranking points earned. Used for non-event maps.
+===reward_all===
+Set if there is a reward that is common for all difficulties.
+===reward_<diff>_<n>, reward_<diff>_<n>_x===
+<code>reward_casual_1, reward_casual_1_x, reward_easy_1, reward_easy_1_x, reward_medium_1, reward_medium_1_x, reward_hard_1, reward_hard_1_x</code>, etc. Up to 6 rewards per each difficulty. <code>_x</code> is used for quantity (no number will be displayed if not set, use <code>?</code> explicitly if needed). If non-event map, you can omit the difficulty.
+
+==Examples==
+===Basic usage===
+{{Event/MapInfo
+|en = 
+|jp = 
+|romaji = 
+|tag = 
+
+|mechanics = 
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_casual = ?
+|hp_easy = ?
+|hp_medium = ?
+|hp_hard = ?
+
+|show_kills = true
+|kills_all = 
+|kills_casual = ?
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+
+|reward_all = 
+
+|reward_casual_1 = ?
+|reward_casual_1_x = 
+
+|reward_easy_1 = 
+|reward_easy_1_x = 
+
+|reward_medium_1 = 
+|reward_medium_1_x = 
+
+|reward_hard_1 = 
+|reward_hard_1_x = 
+}}
+<pre>{{Event/MapInfo
+|en = 
+|jp = 
+|romaji = 
+|tag = 
+
+|mechanics = 
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_casual = ?
+|hp_easy = ?
+|hp_medium = ?
+|hp_hard = ?
+
+|show_kills = true
+|kills_all = 
+|kills_casual = ?
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+
+|reward_all = 
+
+|reward_casual_1 = ?
+|reward_casual_1_x = 
+
+|reward_easy_1 = 
+|reward_easy_1_x = 
+
+|reward_medium_1 = 
+|reward_medium_1_x = 
+
+|reward_hard_1 = 
+|reward_hard_1_x = 
+}}</pre>{{clear}}
+==Tests==
+===Calling without parameters===
+{{Event/MapInfo}}
+<pre>{{Event/MapInfo}}</pre>{{clear}}
+===Some existing calls===
+*[http://kancolle.wikia.com/wiki/Winter_2017_Event/E-3?action=purge Winter 2017 Event/E-3]
+==TODO==
+===An alternative table saved here===
+{| class="infobox typography-xl-optout" style="width:100%;border: 1px solid darkgray; background-color: #fafafa;"
+|colspan="4" style="position: relative; text-align: center; background-color: #eebbee; cursor:pointer;"|<div style="position: absolute; right: 5px;">&#91;[[Module:World 6/6-5|Edit]]&#93;</div><p><span style="font-size:20px"><b><strong class="selflink">KW Atoll Sea</strong> | <span title="???" lang="ja" style="cursor:help;border-bottom:1px dotted;">KW環礁沖海域</span></b></span></p>
+|-
+!colspan="4" style="text-align: center; background-color: LightSkyBlue; cursor:pointer;" class="mw-customtoggle-toggle0"|[[#|Banner]]
+|- style="background-color: whitesmoke;" class="mw-collapsible" id="mw-customcollapsible-toggle0"
+|colspan="4"|[[File:6-5_icon.png|center]]
+|-
+!colspan="4" style="text-align: center; background-color: LightSkyBlue; cursor:pointer;" class="mw-customtoggle-toggle1"|[[#|Map Info]]
+|- style="background-color: whitesmoke;" class="mw-collapsible" id="mw-customcollapsible-toggle1"
+!style="width: 20%;"|<span style="float:left;padding-left:10px;">Difficulty</span>
+|style="width: 30%;"|<span style="float:left;padding-left:10px;"><span style="font-size:150%">'''☆'''</span>☆☆☆ (13)</span>
+!style="width: 20%;"|<span style="float:left;padding-left:10px;">Kills requires</span>
+|style="width: 30%;"|<span style="float:left;padding-left:10px;">6</span>
+|- style="background-color: whitesmoke;" class="mw-collapsible" id="mw-customcollapsible-toggle1"
+!style="width: 20%;"|<span style="float:left;padding-left:10px;">Ship experience</span>
+|style="width: 30%;"|<span style="float:left;padding-left:10px;"><span class="explain" title="differ per pattern (550 maximum), see the table below">Variable</span></span>
+!style="width: 20%;"|<span style="float:left;padding-left:10px;">HQ experience</span>
+|style="width: 30%;"|<span style="float:left;padding-left:10px;">3500 boss, 250 non-boss</span>
+|- style="background-color: whitesmoke;" class="mw-collapsible" id="mw-customcollapsible-toggle1"
+!style="width: 20%;"|<span style="float:left;padding-left:10px;">EO Rewards</span>
+|style="width: 30%;"|<span style="float:left;padding-left:10px;">250 [[Experience_and_Rank#Monthly_Ranking|ranking points]], [[Medal]]</span>
+!style="width: 20%;"|<span style="float:left;padding-left:10px;">Items</span>
+|style="width: 30%;"|<span style="float:left;padding-left:10px;">None</span>
+|-
+!colspan="4"  style="text-align: center; background-color: LightSkyBlue; cursor:pointer;" class="mw-customtoggle-toggle2"|[[#|Strategy Info]]
+|- style="background-color: whitesmoke;" class="mw-collapsible mw-collapsed" id="mw-customcollapsible-toggle2"
+!colspan="2" style="width: 50%;"|<span style="float:left;padding-left:10px;">Carrier Task Force Intercept Battle</span>
+!colspan="2" style="width: 50%;"|<span style="float:left;padding-left:10px;">空母機動部隊迎撃戦</span>
+|- style="background-color: whitesmoke;" class="mw-collapsible mw-collapsed" id="mw-customcollapsible-toggle2"
+|colspan="2" style="width: 50%;"|<span style="float:left;padding-left:10px;">A powerful, hostile carrier task force has invaded the central sea's front line! Join forces with the land-based air forces that are deployed in the area, intercept the enemy fleet and annihilate it!</span>
+|colspan="2" style="width: 50%;"|<span style="float:left;padding-left:10px;">中部海域最前線に有力な敵機動<br>部隊が襲来した！同戦域に展開<br>する基地航空隊と協同し、敵艦<br>隊を迎撃、これを撃滅せよ！</span>
+|-
+!colspan="4" style="text-align: center; background-color: LightSkyBlue; cursor:pointer;" class="mw-customtoggle-toggle3"|[[#|Map Image]]
+|- class="mw-collapsible" id="mw-customcollapsible-toggle3"
+|colspan="4"|[[File:6-5_Map.png|center|600px]]
+|}
+</noinclude>

@@ -1,0 +1,189 @@
+{{Event/MapPageHeader
+<!--|thread = -->
+}}
+{{Event/MapInfo
+|en = Beyond the Sea of Samar - [Battle of Leyte Gulf]
+|jp = サマール沖 その先へ――【レイテ沖海戦】
+|tag = E2
+|tag2 = E4
+|romaji = Samāru-oki sono saki e-- [Reite-oki kaisen]
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Striking Force@Striking_Force, LoS Check@Events/Mechanics#LoS_Check,  Land Base Aerial Support@Land Base Aerial Support, Ship Locking@Events/Mechanics#Ship_Locking, Unlockable Nodes@Events/Mechanics#Node_specific_details
+<!--
+|transport = true
+-->
+|hp_all = 4400
+|hp_casual = ?
+|hp_easy = ?
+|hp_medium = ?
+|hp_hard = ?
+|show_kills = true
+|kills_all = 6.5
+|kills_casual = ?
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+|reward_all = {{ShipBattleCardKai|Gambier Bay}}
+|reward_casual_1 = {{ItemStack|item = [[File:LuLEmote.png{{!}}50px]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|130mm B-13 Twin Gun Mount|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_2_x = 1
+|reward_medium_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|130mm B-13 Twin Gun Mount|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Night Operation Aviation Personnel|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_4_x = 1
+|reward_hard_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|130mm B-13 Twin Gun Mount|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Night Operation Aviation Personnel|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-4 Branching Rules Starting Points
+|0 -> 1 = 
+* Surface Task Force
+* Carrier Task Force
+|0 -> 2 =
+* Single Fleet
+* Strike Force
+}}
+{{MapBranchingTable
+|title = E-4 Branching Rules North
+|B/empty -> D = 
+* Do not meet the requirements to go to E.
+|B/empty -> E = 
+* Meet all of the following requirements:
+** Amount of ships with Slow base speed ≦ 3 (Engine irrelevant)
+** Amount of Kurita Fleet members ≧ 4/6/8 on Easy/Medium/Hard
+** Surface Task Force
+
+|E -> G = * Do not meet the requirements to go to I.
+|E -> I = 
+* Meet all of the following requirements:
+** Amount of ships with Slow base speed ≦ 4 (Engine irrelevant)
+** Surface Task Force
+
+|Q -> S/empty = 
+* Meet all of the following requirements:
+** Amount of Kurita Fleet members ≧ 5/7/10 on Easy/Medium/Hard
+** Surface Task Force
+|Q -> T = 
+* Do not meet the requirements to go to either S or P.
+|Q -> P = 
+* Meet all of the following requirements:
+** Do not meet the requirement to go to S.
+** Amount of Kurita Fleet members ≧ ?/?/9? on Easy/Medium/Hard
+** Surface Task Force
+
+|S/empty -> R, V = * Active branching
+
+|V -> U/empty = * Fail the LoS check.
+|V -> W = * Pass the LoS check.
+}}
+{{MapBranchingTable
+|title = E-4 Branching Rules South
+|H -> J = * Do not meet the requirements to go to K.
+|H -> K/empty = 
+* Fast Fleet
+* Or meet all of the following requirements:
+** Amount of Nishimura Fleet members ≧ 3/4/6 on Easy/Medium/Hard
+** Fleet contains no SS(V)
+** Fleet contains no CV(L/B)
+** Amount of (F)BB(V) ≦ 2
+}}
+===Historical Fleet: Battle of Leyte Gulf===
+====The Center Force (Kurita Fleet)====
+The most powerful attacking force during the Battle of Leyte Gulf led by Takeo Kurita. Members of this fleet will gain a post-cap modifier of 115% on nodes O, Q, R , X and W.
+* (F)BB: {{ShipLink|Yamato}}, {{ShipLink|Musashi}}, {{ShipLink|Nagato Kai Ni|text=Nagato}}, {{ShipLink|Kongou Kai Ni|text=Kongou}}, {{ShipLink|Haruna Kai Ni|text=Haruna}}
+* CA(V): {{ShipLink|Atago Kai|text=Atago}}, {{ShipLink|Takao Kai|text=Takao}}, {{ShipLink|Maya Kai Ni|text=Maya}}, {{ShipLink|Choukai Kai Ni|text=Choukai}}, {{ShipLink|Myoukou Kai Ni|text=Myoukou}}, {{ShipLink|Haguro Kai Ni|text=Haguro}}, {{ShipLink|Kumano Kai Ni|Kumano Carrier Kai Ni|text=Kumano}}, {{ShipLink|Suzuya Kai Ni|Suzuya Carrier Kai Ni|text=Suzuya}}, {{ShipLink|Tone Kai Ni|text=Tone}}, {{ShipLink|Chikuma Kai Ni|text=Chikuma}}
+* CL: {{ShipLink|Noshiro Kai|text=Noshiro}}, {{ShipLink|Yahagi Kai|text=Yahagi}}
+* DD: {{ShipLink|Shimakaze Kai|text=Shimakaze}}, {{ShipLink|Hayashimo Kai|text=Hayashimo}}, {{ShipLink|Okinami Kai|text=Okinami}}, {{ShipLink|Naganami Kai|text=Naganami}}, {{ShipLink|Nowaki Kai|text=Nowaki}}, {{ShipLink|Kiyoshimo Kai|text=Kiyoshimo}}, {{ShipLink|Urakaze Kai|text=Urakaze}}, {{ShipLink|Yukikaze Kai|text=Yukikaze}}, {{ShipLink|Hamakaze Kai|text=Hamakaze}}, {{ShipLink|Isokaze Kai|text=Isokaze}}, {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}}
+
+Note: {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}} is not part of the Kurita fleet historically, but can be used in this map to meet the requirements. Meanwhile, {{ShipLink|Asashimo Kai|text=Asashimo}} is historically part of the Kurita fleet, but she cannot be used in this map to meet the requirement.
+
+====The Southern Force (Nishimura Fleet)====
+The vanguard of the "Southern Force" during the Battle of Leyte Gulf led by Shōji Nishimura. Members of this fleet will gain a post-cap modifier of 120% on node N.
+* BBV: {{ShipLink|Yamashiro Kai Ni|text=Yamashiro}}, {{ShipLink|Fusou Kai Ni|text=Fusou}}
+* CAV: {{ShipLink|Mogami|Mogami Kai|text=Mogami}}
+* DD: {{ShipLink|Shigure Kai Ni|text=Shigure}}, {{ShipLink|Michishio Kai Ni|text=Michishio}}, {{ShipLink|Asagumo Kai|text=Asagumo}}, {{ShipLink|Yamagumo Kai|text=Yamagumo}}
+
+{{clear}}
+
+==Phases==
+*Unlocking the Boss node {{Event/Route|X|red}}
+*Defeating the {{ShipLink|Escort Water Princess}}
+*There are no air raids on your [[Land Base Aerial Support|LBAS]] on this map for both pre-clear and post-clear
+
+===Unlocking the Boss node===
+[[File:Winter 2018 Event E-4 Reveal the Boss Node|right|300 px]]
+*Depending on your difficulty, the requirement will be slightly different:
+**'''Hard''': A+ Rank Node {{Event/Route|N|red}}
+**'''Medium''': B+ Rank Node {{Event/Route|N|red}}
+**'''Easy''': Reach node {{Event/Route|N|red}}
+**'''Casual''': Reach node {{Event/Route|M|red}}
+*South Route requires the use of Striking Force Fleet (3rd Fleet) consisting of Nishimura Fleet Members of<br />3 (Easy) / 4 (Medium) / 6 (Hard) for the Shortest Route.
+**If you choose to use the Nishimura Fleet, the strategy isn't much different from doing E-2.
+***Unlike E-2 however, bringing a Submarine will off-route you to {{Event/Route|J|red}}.
+**Use of Support Expedition (All-Members Sparkled) is highly recommended for additional support on all nodes.
+**You are recommended to send your LBAS to focus on Node {{Event/Route|F|red}} especially.
+***Use of LBAS Aircraft with ASW capabilities such as {{EquipmentLink|Prototype Toukai}} is highly recommended to get rid of the Troll Submarine which is included in the node, as the Enemy Fleet in this node can appear in Line Ahead and can cause trouble for your fleet.
+**Use of the Vanguard Formation is highly recommended throughout this route.
+***If you are in Medium/Hard Mode, in Node N, use of Vanguard Formation is optional but use of Line Ahead is more recommended so that Vanguard Formation does not cause your fleet to become unable to obtain A+ Rank Victory somehow (though the chance of this happening is low).
+*'''On Easy/Casual''', it is possible to easily complete this phase using a Fleet of multiple Submarines.
+**In this case you are recommended to focus your LBAS on Nodes {{Event/Route|F|red}} and {{Event/Route|H|red}} as there are multiple Enemy Destroyers/Light Cruisers capable of high ASW attacks and may even appear in Echelon Formation, which can harm your Submarines.
+**Use of Support Expedition can be considered just in case.
+*Once you fulfill this Phase, the Boss node will become open for you.
+
+===Defeating the Boss===
+[[File:Winter 2018 Event E-4 Hard Sample Run|right|300 px|See 15:10 for Friend Fleet Appearance]]
+*You are required to use [[Combat/Combined Fleet|Surface Task Force]] Combined Fleet while having the minimum required number of Kurita/Suzuki Fleet Historical Members to go down the Shortest Route.
+**The required Number of Historicals are:
+***5 for Easy (丙)
+***7 for Medium (乙)
+***10 for Hard (甲)
+====Recommendations====
+*You are recommended to use a fleet setup of 2-4 (F)BB / 0-2 CA(V) / 2 CVL + 1 CL / 2-3 DD / 0-2 CA / 0-2 CLT.
+**On Medium and Hard, bringing one AO with two [[Underway Replenishment]]s can help for securing the final kill.
+**Please note you may only bring 3 slow ships maximum in your fleet.
+***Unusually, it seems increasing speed with turbine + boiler combinations does not help avoid the longer routing.
+*If you possess them, {{ShipLink|Suzuya/Carrier Kai Ni|Kumano/Carrier Kai Ni|text=Suzuya & Kumano CVL}} forms can help fulfill both the CVL and two of the historical ship requirements, giving you more options for other types of ships to use for your fleet.
+*As this map has high air power requirements, you are highly recommended to equip your CVLs with fighters only. (Saiun is optional)
+*Use of CAV(s) with {{EquipmentLink|Type 2 Seaplane Fighter Kai|text=Seaplane Fighters}} can help supplement your Air Power and enable you to avoid Air Parity in Nodes {{Event/Route|O|red}} and {{Event/Route|Q|red}}.
+**However there are enemy patterns with air power requirement as high as 648 for AS (in Medium & Hard) in Node {{Event/Route|Q|red}}, where you will unfortunately have to deal with Air Parity.
+**You may just choose to deal with having Air Parity in Nodes {{Event/Route|O|red}} and {{Event/Route|Q|red}} so that you can use a {{EquipmentLink|Saiun}} on one of your CVLs, and don't have to be forced to bring a CAV.
+***Easy mode only requires around 300+ AS, while Casual mode is much lower giving you more flexibility and the availability to use Bombers on your CVL.
+*As node {{Event/Route|R|red}} contains 6 {{ShipLink|Battleship Ru-Class/Elite|Battleship Ru-Class/Flagship|text=Ru-class Battleships}} (in all difficulties), you are highly recommended to send one of your LBAS into this node.
+*You are highly recommended to use a fully sparkled support expedition fleet for pre-boss nodes as without it, you will most likely have several occasions of having multiple ships go into heavy damage, especially in Nodes {{Event/Route|Q|red}} and {{Event/Route|R|red}}.
+**Use of support expedition fleets in the boss node is optional, but is highly recommended you do so for final kill.
+
+===Disabling Boss Attack in Night Battle===
+*The Boss will not attack your fleet during Night Battle if none of your fleet members has a {{Searchlight}} {{EquipmentLink|Searchlight}}, avoid using it.
+**You may use {{StarShell}} {{EquipmentLink|Star Shell}} and {{Seaplane}}{{EquipmentLink|Type 98 Reconnaissance Seaplane (Night Recon)|text=Night Recon}} instead.
+
+==[[Friend Fleet]]==
+
+The [[Friend Fleet]] is a new mechanic in which an automatic battle phase is triggered at the boss node during the start of the night battle phase before the engagement of player escort fleets. An NPC fleet arrives to fire at the enemy combined fleet in a standard top-to-bottom fashion; therefore, the enemy fleet that your escort fleet will engage in night battle may change depending on the NPC fleet's actions.
+
+There are 5 NPC fleets (shown below in no particular order). It is possible to prevent one or more undesired NPC fleets from appearing by using a ship contained in the friend fleet in the player main and/or escort fleets (support expeditions do not count). However, it is always possible for the 19th Destroyer Division fleet to appear regardless of fleet composition (perhaps to make at least one NPC fleet always available).
+
+{{:Friend Fleet/Winter 2018/E-4}}
+
+==Map progression==
+{{#tag:gallery|
+Winter_2018_Event_E-4_Map p1.png{{!}}Map before unlocking the boss node X.
+Winter_2018_Event_E-4_Map.png{{!}}Full map after unlocking the boss node X.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+==LBAS Flight Range==
+[[File:Winter_2018_Event_E4_flight_range.png|500px|center]]
+
+{{Event/MapPageFooter}}

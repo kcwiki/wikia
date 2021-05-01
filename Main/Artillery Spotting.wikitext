@@ -1,0 +1,123 @@
+Artillery spotting is a day time combat mechanic that allows ships equipped with seaplane recons or seaplane bombers, to perform a series of special attacks during day battle when [[Combat/Aerial Combat|Air Superiority]] is gained.
+
+This bonus is considered a '''Post-Cap Bonus''' and will be multiplied after daytime shelling soft cap.
+[[File:KanColle-140425-17422431.png|thumb|Cut-in Type Observed Fire using 1Main 1Sec & Type 91 AP shell]]
+
+==Requirements==
+*Air superiority (AS) or greater achieved in aerial combat phase
+* Not in heavily damaged (<span style="color:red;">'''大破'''</span>) state
+* Ship is carrying at least 1 [[List of Seaplanes by stats|Seaplane or Seaplane Bomber]]{{Seaplane}} on a non-zero plane slot.
+* Ship has at least one main gun. {{RedGunHeavy}}
+* An eligible equipment setup (See below)
+
+==Attack Types==
+'''Ships that fulfil multiple equip setups are eligible to roll for any attack that they meet the requirements for.'''
+{| class="article-table" style="width:90%;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Attack Mode
+! scope="col" style="text-align:center;" |Prerequisite
+! scope="col" style="text-align:center;" |Notes
+! scope="col" style="text-align:center;" |Damage Modifier
+! scope="col" style="text-align:center;" |Accuracy Modifier
+! scope="col" style="text-align:center;" |Base Value
+! scope="col" style="text-align:center;" |% per Base Value
+|-
+| style="background-color: #59F;" |<font color="#FFF">'''Double Attack'''</font>
+| {{Template:RedGunHeavy}}{{Template:RedGunHeavy}}{{Seaplane}}
+| '''Any auxiliary equipment'''
+| '''120%''' '''x 2'''
+| '''110%'''
+| 130
+| 0.77%
+|-
+| style="background-color: Gold;" |'''Cut-In (Secondary)'''
+| {{Template:RedGunHeavy}}{{Template:YellowGun}}{{Seaplane}}
+| '''Any auxiliary equipment'''
+| '''110%'''
+| '''130%'''
+| 120
+| 0.83%
+|-
+| style="background-color: Gold;" |'''Cut-In ( Radar )'''
+| {{Template:RedGunHeavy}}{{Template:YellowGun}}{{Seaplane}}{{Template:Radar}}
+| '''-'''
+|'''120%'''
+|'''150%'''
+| 130
+| 0.77%
+|-
+| style="background-color: Gold;" |'''Cut-In ( AP Shell )'''
+| {{Template:RedGunHeavy}}{{Template:YellowGun}}{{Seaplane}}{{Template:RedAmmo}}
+|'''-'''
+|'''130%'''
+|'''130%'''
+| 140
+| 0.71%
+|-
+| style="background-color: #7B5;" |<font color="#FFF">'''Cut-In Attack (Primary AP)'''</font>
+| {{Template:RedGunHeavy}}{{Template:RedGunHeavy}}{{Seaplane}}{{Template:RedAmmo}}
+| '''-'''
+| '''150%'''
+|'''120%'''
+| 150
+| 0.66%
+|-
+| style="background-color: #F65;" |<font color="#FFF">'''Cut-In (Zuiun)'''</font>
+| {{Template:RedGunHeavy}}{{Seaplane}}{{Seaplane}}
+| '''Ise/Hyuuga K2 Only'''
+'''Must be two Zuiuns'''
+| '''135%'''
+| ??
+| 120
+| 0.83%
+|-
+| style="background-color: #F65;" |<font color="#FFF">'''Cut-In (Suisei)'''</font>
+| {{Template:RedGunHeavy}}{{DiveBomb icon}}{{DiveBomb icon}}
+| '''Ise/Hyuuga K2 Only'''<br />
+'''Suiseis must have (634 Air Group)<br />in their name'''
+| '''130%'''
+| ??
+| 130
+| 0.77%
+|}
+*Lists of {{RedGunHeavy}}[[List of Main Guns by stats|Main Guns]] and {{YellowGun}}[[List of Secondary Guns by stats|Secondary Guns]].[[File:KanColle-140425-16133343.png|thumb|Cut-in Type Mixed Attack Observed Fire with 2 Main & Type 91 AP Shell.]]
+*Ordering is not important, so long as the correct equipment types are equipped on the same ship.
+* Abyssals are also capable of doing Artillery Spotting on your fleet, provided they obtain AS/AS+ with an eligible spotting setup.
+* The priority order of which attack is rolled first is in reverse order of the table (Example: AP Cut in is checked first, while Double Attack is checked last.)
+** For Ise/Hyuuga K2, Suisei and Zuiun cut-in is checked first.
+
+==Trigger Chance of Artillery Spotting==
+* Trigger Chance is determined by deriving a "base rate" calculated from air state (AS/AS+), fleet LoS contribution, and the ship's personal LoS amount, which is then divided by the "base value" of the attack type being checked. This final value is the ship's artillery spotting rate, for any given attack type.
+* The lower the base rate, the more likely the attack type will be activated. Fulfilling multiple attack types will cause the game to roll each attack type in succession if the first one fails, increasing the chance of at least one spotting type to be successful.
+* The priority order of which attack is rolled first is in reverse order of the table (Example: AP Cut in is checked first, while Double Attack is checked last)
+
+<center><math>\text{Base Rate} = \Big \lfloor \Big ( 10 + \lfloor \sqrt{L_{s}} \rfloor + A_{1} + F_{s} \Big ) + \Big ( \big \lfloor S_{fleet} + \left ( A_{2} \cdot S_{ship} \right ) \big \rfloor \Big )  \cdot A_{3}  \Big \rfloor</math><br />
+<math>\text{Spotting Rate} = \left ( \frac{\text{Base Rate}}{\text{Base Value}} \cdot 100 \right ) \%</math></center>
+
+Where:
+*<math>L_{s}</math>is the ship's luck
+*<math>S_{ship}</math>is the ship's total equipment LoS value
+*<math>S_{fleet} = \left \lfloor \sqrt{R} + \frac{R}{10} \right \rfloor</math>
+
+**<math>S_{fleet}</math>is the fleet's LoS contribution, which scales according to<math>R</math>:
+**<math>R = \sum^{\text{All Ships}} S_{base} + \sum^{\text{Recon/Bombers}} S_{sp} \cdot \left \lfloor \sqrt{N_{slot}} \right \rfloor</math>
+**<math>S_{base}</math>is the ship's unmodified LoS value (no equipment is to be considered).
+**<math>S_{sp}</math>is the LoS stat of a given seaplane recon/bomber.
+**<math>N_{slot}</math>is the slot size of the seaplane recon/bomber equipped.
+*<math>A_{1}</math>is the 1st air state modifier:
+**<math>A_{1} = \begin{cases} 10, & \text{ for Air Supremacy} \\ 0, & \text{ for Air Superiority } \end{cases}</math>
+*<math>A_{2}</math>is the 2nd air state modifier:
+**<math>A_{2} = \begin{cases} 1.6, & \text{ for Air Supremacy} \\ 1.2, & \text{ for Air Superiority } \end{cases}</math>
+*<math>A_{3}</math>is the 3rd air state modifier:
+**<math>A_{3} = \begin{cases} 0.7, & \text{ for Air Supremacy} \\ 0.6, & \text{ for Air Superiority } \end{cases}</math>
+*<math>F_{s}</math>is the flagship modifier,<math> 15 </math> if flagship,<math> 0 </math> otherwise.
+
+*While all personal equipment with LoS is accounted for when determining spotting rate,<math>S_{fleet}</math> only includes base ship LoS, and LoS from Seaplane Recon/Bombers.
+*Because the plane slot of seaplanes are floored after square rooting, only 1,4,9 and 16 (etc) plane slots will cause any difference in the spotting rate.
+
+{{Clear}}
+[[Category:Calculation]]
+[[Category:Example]]
+[[Category:Help]]
+[[Category:Game System]]
+[[Category:Game Mechanics]]

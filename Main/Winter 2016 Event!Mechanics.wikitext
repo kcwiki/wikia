@@ -1,0 +1,133 @@
+==[[Events#Usual_Requirements|Participation requirements]]==
+<div style="padding:0px 0px 0px 20px;" id="top"></div>
+===Common during most events===
+<span style="color:#f00;">'''Check if you fulfilled these requirements if not you can't sortie event maps!'''</span>
+* Must have a 75% sortie win ratio
+* Must have 5 empty ship slots for new ships
+* Must have 20 free equipment slots
+===Special for this event===
+*
+
+<div style = "text-align:right">[[#top|back to top]]</div>
+
+==Special Mechanics==
+===[[Events#Transport_Load-Off_gauge|Transport Loadoff]]===
+<div style="padding:0px 0px 0px 20px;"></div>
+See [[Fall 2015 Event|previous event discussion]] or just click on the [[Events#Transport_Load-Off_gauge|link above - "Transport Loadoff" word]].
+
+Note that on E3, the transport loadoff has its own dedicated route and boss node, so players can keep farming here without resetting the difficulty as the boss gauge will not be reduced after TP bar is depleted.
+<div style = "text-align:right">[[#top|back to top]]</div>
+
+===[[Events#Difficulty Selection|Difficulty Selection]]===
+<div style="padding:0px 0px 0px 20px;"></div>
+{{for|more information about the mechanic|Events#Difficulty Selection}}
+Starting from Winter 2015 Event, players can choose from the difficulty they want to play on each event map among three available difficulties: Easy (丙), Medium (乙), and Hard (甲).
+
+You need to have a HQ level of 35 for Medium and 80 for hard. Different difficulties yield different rewards with harder ones either giving more items or a better version of the same item. However, ship rewards are always given regardless of difficulty. Drops also differ with some ships available only on medium to hard maps, and drop rates for some ships are statistically better. Enemy compositions also differ with bosses and their escorts are usually weaker on easier difficulties. To finish the next map on Hard, you will need to finish the previous map on Medium or Hard. 
+
+Clearing the last map on Hard (甲) mode will reward a First Class Medal. It is not required to clear all maps on hard but to gain access to last map's hard difficulty, you'll need to clear the pre-final map with Medium or above.
+<div style = "text-align:right">[[#top|back to top]]</div>
+
+===[[Events#HP_Bar_Variance|Map HP dependent on HQ level]]===
+<div style="padding:0px 0px 0px 20px;"></div>
+Red gauge HP is known to be different for different HQ levels as shown in the following table. This was also the case for last [[Summer 2015 Event|Summer]] and [[Fall 2015 Event|Fall]] events, however, the exact mechanics '''is still unknown''', the level brackets are assumed, consider adding your HQ level in a tooltip or wikitext comment.
+
+To get the minimal number of kills required for a map: 1) for E-2, if map HP is a multiplicative of non-final form boss HP, divide map HP by non-final form boss HP and add one, <code>1 + map_hp / pre_final_boss_hp</code>, 2) otherwise, divide the difference between map HP and final form boss HP by non-final form boss HP, round up and add one, <code>1 + ⌈(map_hp - final_boss_hp) / pre_final_boss_hp⌉</code> (or, for both cases, <code>1 + ⌈map_hp / pre_final_boss_hp - [pre_final_boss_hp ∤ map_hp] * (final_boss_hp / pre_final_boss_hp)⌉</code>).
+
+<!-- 
+Please denote your exact HQ level when filling in the table!
+
+Incomplete data:
+HQ level ?, E-1: 490 easy / ? medium / ? hard
+HQ level ?, E-1: ? easy / 530 medium / ? hard
+-->
+{| style="width:100%;max-width:670px;text-align:center" class="wikitable"
+| rowspan="2" |
+! colspan="3" |Easy
+! colspan="3" |Medium
+! colspan="3" |Hard
+|-
+!E1
+!E2
+!E3
+!E1
+!E2
+!E3
+!E1
+!E2
+!E3
+|-
+!(1 -> 34)
+|390
+|
+|
+| style="background-color:#ff9933;" colspan="6" |'''Locked'''
+|-
+!(35 -> 79)
+|490
+|
+|1300
+|{{Tooltip|590|HQ 79 -> 80}}
+|
+|
+| style="background-color:#ff9933;" colspan="3" |'''Locked'''
+|-
+!(80 -> 99)
+|
+|2800
+|
+|
+|
+|1700
+|{{Tooltip|800|HQ 99}}
+|2800
+|{{Tooltip|2150 or ?|conflicting sources}}
+|-
+!(100 -> 120)
+|550
+|3000
+|1700
+|650
+|3000
+|1800
+|800
+|3000
+|{{Tooltip|2250 or 2100|conflicting sources}}
+|}
+<div style = "text-align:right">[[#top|back to top]]</div>
+
+===Abyssal land-based aerial attack===
+<div style="padding:0px 0px 0px 20px;"></div>
+Refer to [[Winter 2016 Event/FAQ#What is this new aerial-node like thingy in E1 outer route and E2?|this link]] for more information.
+<div style = "text-align:right">[[#top|back to top]]</div>
+
+===[[PT_Imp_Pack|PT Imp Packs]]===
+<div style="padding:0px 0px 0px 20px;"></div>
+Right before the event start, there's an interview on Comptiq which mentioned slightly more about how to kill them.
+
+Previous information were:
+
+* Destroyer's main guns gains an accuracy bonus{{cite}} against PT Imp Packs.
+* Secondary guns on on all other ships give an accuracy bonus{{cite}} against PT Imp Packs.
+
+The information on the latest Comptiq interview is:
+
+*If you use Middle-sized ships or anything else below them equipped with Small Caliber Main Gun/Secondary Gun/Skilled Lookout/Radar/Machine Gun/etc., then you'd be fine against those PTs.
+
+However, unlike the previous event where killing PT Imps prove to be quite a feat, PT Imps in this event are mostly easier to be dealt with, as long as you have the appropriate ship and equipment to kill them.{{cite}}
+<div style="text-align:right">[[#top|back to top]]</div>
+
+=== [[Events#Multiple_Branching_Map|Multiple Branching Map]] ===
+<div style="padding:0px 0px 0px 20px;"></div>
+Starting from [[Winter 2016 Event]], the event maps may have multiple starting points which leads to different routes, or even a completely separate routing altogether, and these fleets may encounter entirely different enemies on the way. The starting point of the fleet are dependent on type and composition of the fleet chosen to enter the maps.
+
+<center>[[File:Multiple branching.jpg|400px]]</center><div style="text-align:right"></div>As you see in the image, there are 3 starting points and 2 ending nodes in E-3 map. The first part is to deplete TP gauge by using a Transport Escort Fleet which starts with node A and ends at node S. And after that the players have the option to use either Surface Task Force (starts with node J) or Carrier Task Force (starts with node E or F) to make their way to the final boss (node T). 
+
+===<nowiki/>===
+
+<div style="text-align:right">[[#top|<nowiki/>]][[#top|back to top]]</div><!--
+===Map Clear Animation===
+<div style="padding:0px 0px 0px 20px;"></div>
+When an event map is cleared, the flagship will appear briefly just before the "red mists" are cleared off.
+<div style = "text-align:right">[[#top|back to top]]</div>
+-->

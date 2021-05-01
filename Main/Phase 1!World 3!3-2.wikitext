@@ -1,0 +1,310 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Kis Island
+|jp = キス島沖
+|romaji = Kisu-tō oki
+|strategy_name = [[wikipedia:Japanese_occupation_of_Kiska|Kis Island Withdrawal Tactics]]
+|strategy_name_ja = キス島撤退作戦
+|strategy_info = Form a torpedo squadron with a light cruiser as flagship, or a fleet with nothing but destroyers, and rush to Kis Island in the northern waters that is under siege by the enemy! Safely retrieve the island's garrison!
+|strategy_info_ja = 軽巡を旗艦とした水雷戦隊、または駆逐艦のみの艦隊で、敵包囲下の北方海域キス島に突入！ 島の守備隊を無事収容せよ！
+|exp_ship = 320
+|exp_hq = 120
+|exp_hq_boss = 1740
+}}
+{{MapBranchingTable
+|id = 3-2
+|0 -> A = 
+* Meet '''ANY''' of the requirements
+** Fleet contains anything other than [[CL]] or [[DD]]
+** Amount of CL in fleet is ≧ 2
+** CL is not the flagship
+|0 -> D/storm, E = *Random chance if you do not meet the requirements to go to A
+
+|B/resource -> C = *Fixed route
+
+|D/storm -> B/resource, F = *Random
+
+|F -> G/resource, H = *Random
+}}
+*In order to get to Boss Node H, you will need to use a fleet of destroyers lead by a light cruiser (i.e., CL + 5 DDs) or a full destroyer fleet. Using any other types of ships will direct you to Node A.
+**As of 17 July 2015, Light Cruisers are allowed as flagships for map completion. Previously, they're not. Note that the Light Cruiser must be flag ship or the fleet will be directed to Node A.
+**Other than at the start, branching is random.
+
+===Tips===
+*All destroyers should be remodeled, equipped with [[Equipment Guide|double attack setup]] and have their stats maxed (with the exception of AA).
+* You are recommended to use a K2 Light Cruiser with high stats or strong utility to clear this map, with {{ShipLink|Abukuma Kai Ni}} being the best [[CL]] you can use for this map. Alternatively, {{ShipLink|Kuma Kai}} and {{ShipLink|Nagara Kai}} are also good for helping clear the map as they have very strong stats at Kai and only a remodel level of 20.
+*Line Ahead is the only formation you should be using on this map.
+<u>'''Levelling in this map'''</u><br />
+*3-2-A is a great place to level up using the following fleet composition:
+**'''Flagship:''' whatever ship you want to level up.
+**'''If you have a submarine:''' 「CV/CVLx2 (Torpedo Bomber) CLTx1-2 (Type A ''Ko-hyoteki'') SSx1」. Enemies will prioritize attacking your submarine since all of them can attack submarines. You will therefore incur minimum cost to resources, time (Submarines are cheap and quick to repair) and risk while gaining 576 EXP per battle for flagship, 768 EXP for MVP, or 1152 EXP for flagship MVP.
+**'''If you do not have a submarine:''' 「CV/CVLx2 (Torpedo Bomber) CLTx1-2 (Type A ''Ko-hyoteki'') BBx1」. CV will take out 4-5 ships while BB takes out the remaining ships. With this composition, you can level 2 DD at the same time. Although not as resource efficient as the first, it's more reasonable if you do not have a submarine that can evade well.
+**Having the CV/CVLx2 equipped with at least 1 fighter plane each and going to 3-2-C with double line formation can help rid of problems like having to change the ships out every few times because of low morale and can also lead to additional EXP per sortie. '''However, this is risky and may result in the loss of few buckets. '''
+*Visit the [[Tutorial:_Leveling|Leveling Guide]] for more details on recommended formations to use.
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|E|x=166|y=270}}
+{{Map/ImageNode|A|x=108|y=122}}
+{{Map/ImageNode|D|x=187|y=179}}
+{{Map/ImageNode|F|x=258|y=274}}
+{{Map/ImageNode|B|x=188|y=77}}
+{{Map/ImageNode|C|x=296|y=76}}
+{{Map/ImageNode|G|x=341|y=148}}
+{{Map/ImageNode|H|x=372|y=230}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵水雷戦隊
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|A
+|Normal
+|{{Formation|Double Line}}
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class
+|Torpedo Cruiser Chi-Class
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+{{NodeInfo
+|B
+|Resource
+|Steel
+|50-150
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|C
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ni-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ha-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ha-Class/Elite
+}}
+{{NodeInfo
+|D
+|Storm
+|Fuel
+|4 bars without radar
+|-
+|D
+|Storm
+|Fuel
+|3 bars with radar
+}}
+{{Map/Nodes|name=敵水雷戦隊
+|E
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|E
+|Normal
+|{{Formation|Double Line}}
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class
+|Torpedo Cruiser Chi-Class
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|E
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+{{Map/Nodes|name=敵水上打撃艦隊
+|F
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|F
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|F
+|Normal
+|{{Formation|Echelon}}
+|Battleship Ru-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{NodeInfo
+|G
+|Resource
+|Coinbox1
+|1
+}}
+{{Map/Nodes|name=敵キス島包囲艦隊
+|H
+|Boss
+|{{Formation|Double Line}}
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser To-Class
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|-
+|H
+|Boss
+|{{Formation|Line Ahead}}
+|Light Cruiser He-Class/Flagship
+|Light Cruiser He-Class/Elite
+|Light Cruiser To-Class
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|Transport Ship Wa-Class/Elite
+|-
+|H
+|Boss
+|{{Formation|Line Ahead}}
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser Ho-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, C, E, F, H
+|boss = H
+|Akagi: H
+|Arare: A, C
+|Arashio: A, C
+|Asashio: A, C, F, H
+|Ashigara: A, C, E, F, H
+|Atago: A, C, E, H
+|Ayanami: A, C, E
+|Chikuma: A, C, E, F, H
+|Chitose: A, C, E, F, H
+|Chiyoda: A, C, E, H
+|Choukai: A, C, E, F, H
+|Fusou: A, C, E, H
+|Haguro: A, C, E, F, H
+|Haruna: A, C, E, F, H
+|Hatsuyuki: A, C, E, F
+|Hiei: A, C, E, F, H
+|Hiyou: A, F, H
+|Hyuuga: C, E, F, H
+|Ise: C, E, H
+|Isonami: A, C, F
+|Isuzu: A, C, F
+|Jintsuu: A, F
+|Junyou: A, C, E, H
+|Kaga: H
+|Kagerou: A, C, E, F, H
+|Kasumi: A
+|Kirishima: A, C, E, H
+|Kiso: A, C, F
+|Kitakami: A, C, E, F, H
+|Kongou: A, C, E, F, H
+|Kuroshio: A, C, E, F, H
+|Maya: A, C, E, F, H
+|Michishio: A, C, E
+|Miyuki: A, C, E, F
+|Mogami: A, C, F, H
+|Murakumo: A, E, F
+|Mutsu: F, H
+|Myoukou: A, C, E, H
+|Nachi: A, C, E, H
+|Naganami: H
+|Nagara: E
+|Nagato: H
+|Naka: A, C
+|Natori: A, C, E
+|Ooi: H
+|Ooshio: A, E, H
+|Ryuujou: H
+|Sazanami: A
+|Sendai: A, C, E, F
+|Shikinami: A, F
+|Shimakaze: C, H
+|Shiranui: A, C, E, F
+|Shouhou: A, C, E, H
+|Souryuu: C, E, F, H
+|Suzukaze: A, C, E, F
+|Takao: A, C, E, H
+|Tama: A, C, E, F
+|Tatsuta: A, C, E, H
+|Tenryuu: A, C, E, H
+|Tone: A, C, E, H
+|Ushio: A
+|Yamashiro: A, C, E, F, H
+|Yukikaze: H
+|Yura: A, C, E, F
+}}
+{{SectionEnd}}

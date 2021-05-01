@@ -1,0 +1,1326 @@
+==Foreword==
+
+This post is used for saving experiment data from other Kancolle testers, on the '''trigger rates night battle Cut-ins'''. For a higher level of objectivity, I will refrain from concluding or formulating from anything below. In order to help readers understand the exp't, I attached some information beside the original data according to my understanding of the experiments. Therefore you're always welcome to evaluate my work & translation.
+
+Since the following tests are all about '''probability''', data from smaller sample sizes would be surrounded by parenthesis, indicating less reliability. For more information on the significance of larger sample sizes, you may visit [http://kancolle.wikia.com/wiki/User_blog:Wizongod/Calculating_Confidence_Intervals_for_Underlying_Probabilities Calculating Confidence Intervals for Underlying Probabilities] by Winzongod.
+
+Since some info below were ''pasted from websites with no explicit citation'', please contact me if you know any of the sources. Also, if you consider any unauthorized using of exp't data, you'll have my apology and associated content shall be deleted immediately.
+
+If you noticed an error on my translation, ambiguity in the language, any important info were missing, or just need help with anything, please leave me a comment. I hope the following will be helpful.
+
+
+
+Tentative formula for night battle cut-in chance (up to March, 2015)
+
+
+
+
+<center>
+<math>(\text{Luck} + \text{Placement Modifier} + \text{Health Modifier} + \text{Searchlight Modifier} ) \% </math>
+
+''In the old formula, it was '''Luck *0.85.'''''
+</center>
+
+
+* '''Hard cap (or diminishing return) on luck over 40 for Main gun cut-ins'''
+* '''Hard cap (or diminishing return) on luck over 50 for Torpedo cut-ins.'''
+* '''Hard cap (or diminishing return) on luck over 60 for Mixed cut-ins'''
+{| class="article-table" style="width: 430px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |
+Modifier
+!
+! scope="col" style="text-align:center;" |
+Value
+|- valign="top"
+| rowspan="2" |'''Placement'''
+|Flagship
+| style="text-align:right;" | +25~30
+|-
+|Other
+| style="text-align:right;" | +15
+|- valign="top"
+| rowspan="3" |'''Health'''
+|Little or no damage
+| style="text-align:right;" |0
+|-
+|Minor damage (小破 Shouha)
+| style="text-align:right;" | +0~5
+|-
+|Moderate damage (中破 Chuuha)
+| style="text-align:right;" | +20
+|- valign="top"
+| rowspan="2" |'''Searchlight'''
+|Allied
+| style="text-align:right;" | +5
+|-
+|Enemy
+| style="text-align:right;" | -10
+|- valign="top"
+| rowspan="2" |'''Star Shell'''
+|Allied
+| style="text-align:right;" | +5
+|-
+|Enemy
+| style="text-align:right;" | -10
+|}
+
+
+
+
+
+
+
+
+
+==I - Luck, Placement & Cut-In Chances (2013 ~ 2014)==
+
+'''Exp't name: '''[http://kankoregouchin.blog.fc2.com/blog-entry-16.html 夜戦カットイン検証]
+
+'''Blog / Author: '''[http://kankoregouchin.blog.fc2.com/ 艦これ-チラ裏検証-] / by くうぼをきゅう
+
+'''Exp't Date:''' Dec 12, 2013  ~  Apr 11, '''2014'''
+
+'''Explanation:'''
+
+: A summary of all previous CI experiments done by Kuubowokyuu. Test ships had various luck stats, while carrying no night battle equipment.
+
+: In addition, searchlight was introduced to Kancolle by the end of February, 2014. Starshell was known by the end of June
+
+'''Test Condition:'''
+
+- Unless otherwise mentioned, all friendly ships were using Torpedo x 2 + Enhanced Boiler. All ship are around lv 90+, placed in non-flagship position.
+
+- Always beyond minor damage（小破未满）.
+
+- Only data from the 1st battle (node C) is recorded for friendly ships.
+
+- Morale 49 (node C)
+
+- Line Ahead vs Line Ahead (node C)
+
+- Data from the 2nd battle (node D) is recorded for the abyssal ships.
+
+
+===Original Data:===
+- 1st Row: Luck stat of the ship
+
+- 3rd Row: Notes on the condition (morale), placement (flagship), level, or equipment
+
+'''- 6th Row: Cut-in chance'''
+
+- 7th Row: Cut-in chance minus luck stat
+
+- The rows in blue represent the total / average of that data section. 
+
+[[File:NBCI.png|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+The table below is for the abyssal ships.
+
+[[File:NBCI2.png|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==II - Searchlight & Cut-In Chances==
+
+'''Exp't name: '''[http://kankoregouchin.blog.fc2.com/blog-entry-13.html 探照灯検証]
+
+'''Blog / Author: '''[http://kankoregouchin.blog.fc2.com/ 艦これ-チラ裏検証-] / by くうぼをきゅう
+
+'''Exp't Date:''' March 1 ~ 22, 2014
+
+'''Explanation:'''
+
+[https://twitter.com/intent/user?screen_name=KanColle_STAFF 「艦これ」開発/運営] <span class="tweet-full-name" style="color:rgb(136,153,166);font-size:12px;">@KanColle_STAFF</span>
+<p class="icons"><span style="white-space:pre-wrap;">【新装備アイテム「探照灯」について 1/2】 新装備【探照灯】を装備した艦娘は、夜戦突入時に耐久力が2以上残っている場合、特殊スキル【探照灯照射】を実施します。これにより、 ・味方艦隊の全艦艇の夜戦命中率up ・味方艦隊の全艦艇の夜戦カットイン攻撃率up… (続きます)。</span>[https://twitter.com/KanColle_STAFF/status/438561513339498496 10:29 PM - 25 Feb 2014]</p>
+
+
+<p class="tweet-row" style="color:rgb(41,47,51);font-family:sans-serif;line-height:18px;">[https://twitter.com/intent/user?screen_name=KanColle_STAFF 「艦これ」開発/運営]<span style="color:rgb(58,58,58);font-family:Helvetica,Arial,sans-serif;line-height:22px;"> </span><span class="tweet-full-name" style="color:rgb(136,153,166);font-size:12px;">@KanColle_STAFF</span></p>
+<p class="icons"><span style="white-space:pre-wrap;">【「探照灯」について 2/2】 探照灯照射によって… ・味方艦隊の全艦艇の夜戦命中率up ・味方艦隊の全艦艇の夜戦カットイン攻撃率up ・敵艦隊の夜戦カットイン攻撃の抑制 そして、史実ほどではありませんが… ・探照灯照射艦への敵攻撃指向率up ・探照灯照射艦の被弾率up。</span>[https://twitter.com/KanColle_STAFF/status/438562857513254913 10:35 PM - 25 Feb 2014]</p>
+
+
+
+'''Test Conditions:'''
+
+- Non-flagships were using torpedo x 2 + Boiler, Lv 90+. Searchlight equipped on flagship Jintsu.
+
+- Always beyond minor damage（小破未满）.
+
+- Morale 49. (node C)
+
+- Line Ahead vs Line Ahead (node C)
+
+- Only data from the 1st battle (node C) is recorded for friendly ships.
+
+- Data from the 2nd battle (node D) is recorded for the abyssal ships.
+
+
+===Original Data===
+- The red part represents when searchlight is equipped on Jintsu, where the blue one represents no searchlight is equipped.
+
+- '''1st Column Section:''' Ship name(Luck)
+
+- '''2nd Column Section:''' % being targeted by the abyssal ships.'' (Miss is also counted; Consecutive DA or cut-in are only counted once)''
+
+- '''3rd Column Section:''' Cut-in rate when ship's beyond minor damage
+
+- The 2 tables on the right represents cut-in chances of the abyssal ships.
+
+[[File:NBCI_SL.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Here's another graphical illustration on the test results:
+
+'''''- Top Left''': Pie chart illustrating the % being targeted by the abyssal for each friendly ship (Inner circle = no searchlight; Outer circle = searchlight equipped on '''Jintsu (DARK BLUE)''')''
+
+'''''- Top Right''':  Cut-in chance of friendly ships '''(RED = searchlight, BLUE = no searchlight)'''''
+
+'''''- Bottom Left''':  Cut-in chance of abyssal ships (node C)''
+
+'''''- Bottom Mid:'''  Cut-in chance of abyssal ships (node D)''
+
+'''''- Bottom Right''':  Differences in the cut-in chances (both friendly & abyssal) when searchlight is equipped.''
+
+[[File:20140307233013f98.jpg|thumb|left|1000px]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==III - Starshell & Cut-In Chances==
+
+'''Exp't name: '''[http://kankoregouchin.blog.fc2.com/blog-entry-29.html 照明弾検証]
+
+'''Blog / Author: '''[http://kankoregouchin.blog.fc2.com/ 艦これ-チラ裏検証-] / by くうぼをきゅう
+
+'''Exp't Date:''' June 28, 2014
+
+'''Explanation:'''
+
+[https://twitter.com/intent/user?screen_name=KanColle_STAFF 「艦これ」開発/運営]<span style="color:rgb(41,47,51);font-family:sans-serif;line-height:18px;"> </span><span class="tweet-full-name" style="font-family:sans-serif;line-height:18px;color:rgb(136,153,166);font-size:12px;">@KanColle_STAFF</span><span style="color:rgb(41,47,51);font-family:sans-serif;line-height:18px;"> </span>
+
+05▼【新装備】の実装　1/2 本日のアップデートで新装備の【照明弾】が実装されます。これを装備した艦娘は「夜戦」の開幕時において、照明弾射撃を実施する場合があります。照明弾で支援された艦隊は射撃命中率・特殊攻撃発生率が若干向上し、また敵艦隊の特殊攻撃発生を抑制します。[https://twitter.com/KanColle_STAFF/status/479862934768582656 10:46 PM - 19 Jun 2014]  
+
+
+[https://twitter.com/intent/user?screen_name=KanColle_STAFF 「艦これ」開発/運営] <span class="tweet-full-name" style="color:rgb(136,153,166);font-size:12px;">@KanColle_STAFF</span>  
+
+06▼【照明弾】の補足 ・夜戦支援効果は艦隊全体に及びます。 ・敵艦隊の夜間特殊攻撃を抑制しますが決定的ではありません。 ・照明弾射撃は装備艦が多いほど成功確率は高まります。 ・【探照灯】のように使用艦が狙われるデメリットはありません。 ・【探照灯】との併用も有効です。[https://twitter.com/KanColle_STAFF/status/479866569032343552 11:01 PM - 19 Jun 2014]
+
+
+
+'''Test Conditions:'''
+
+- Map 5-3-C (1st node)
+
+- Morale 49.
+
+- Line Ahead vs Line Ahead.
+
+- Always beyond minor damage（小破未满）.
+
+- All test ships were using the 2 x torpedo CI setup (except Yukikaze). Yukikaze used the 3 gun CI setup. (10cmHA).
+
+- Starshell equipped on the flagship Jintsu.
+
+- '''Data recorded''' '''only if starshell was activated'''.
+
+
+
+===Original Data===
+- The first row (200 | 276 | '''72.5%''') illustrates the '''activation rate of starshell'''.
+
+- The following rows represents the cut-in rates (in yellow) of each ship and other details.
+
+- Ship name followed by their luck stat in paranthesis. For example, Jintsu(13), Ooi(13), Yuudachi(20).
+
+- As for the equipment: Torpedo CI setup were shown in blue, where the 3 gun CI setup was shown in orange.
+
+- '''|'''''' ''' Shipname(Luck)  '''|'''  Cut-in  '''|''' Attack Chance '''|'''  Cut-In Rate  '''|''' Lv '''|'''    Equipment    '''|'''
+
+[[File:NBSS.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Data were compared to the previous exp'ts on the [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Trigger_Rates_of_Night_Battle_Special_Attacks#I_-_Luck.2C_Placement_.26_Night_Battle_Cut-In_Chances Base CI Chance] and [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Trigger_Rates_of_Night_Battle_Special_Attacks#II_-_Searchlight_.26_Cut-In_Chances Effects of Searchlight] .
+
+
+
+
+
+
+==IV - Combined Effects from Searchlight & Starshell==
+
+'''Exp't name: '''[http://kankoregouchin.blog.fc2.com/blog-entry-31.html 照明弾検証 その2]
+
+'''Blog / Author: '''[http://kankoregouchin.blog.fc2.com/ 艦これ-チラ裏検証-] / by くうぼをきゅう
+
+'''Exp't Date:''' July 15, 2014
+
+'''Explanation:'''
+
+: To determine the combined increase in CI chance, if both searchlight + starshell were activated during night battle.
+
+: The test results were compared to previous experiments. 
+
+'''Test Conditions:'''
+
+- Map: 5-3-C,
+
+- Morale 49.
+
+- Always beyond minor damage（小破未满）
+
+- Line Ahead vs Line Ahead.
+
+- All test ships were using the 2 x torpedo CI setup (except Yukikaze). Yukikaze used the 3 gun CI setup. 
+
+- Starshell equipped on both Yuudachi and Hibiki.
+
+''- For the first 150 battles, searchlight was on the flagship Jintsu, and night scout on the 6th ship (Naka). ''''For the latter 150 battles, Jintsu & Naka swapped equipment. '''''
+
+- '''Data recorded''' '''only if starshell was activated, plus the ship holding searchlight must be above HP1.'''
+
+
+
+===Original Data===
+- Over 300 battles, Yuudachi (3rd position) activated the starshell for 66.7% of the total, where Hibiki (4th position) activated starshell for 23.7%. (Or 71% of the remaining).
+
+- '''| ''' Shipname(Luck)  '''|'''  Cut-in  '''|''' Attack Chance '''|'''  Cut-In Rate  '''|''' Lv '''|'''    Equipment    '''|''' LoS '''|'''
+
+'''[[File:NBCI_SLSS.jpg|left]]'''
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Data were compared to the previous exp'ts on the [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Trigger_Rates_of_Night_Battle_Special_Attacks#I_-_Luck.2C_Placement_.26_Night_Battle_Cut-In_Chances Base CI Chance] and [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Trigger_Rates_of_Night_Battle_Special_Attacks#II_-_Searchlight_.26_Cut-In_Chances Effects of Searchlight] .
+
+
+
+
+
+
+
+
+==V - Health State & Cut-In Chances==
+
+'''Exp't name: ??? '''''([https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/cutin.html#12_881 Inazuma Test] & [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/cutin.html#13_75 Furutaka Test] )''
+
+'''Blog / Author: ???''' (Pasted on [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/index.html 検証スレ勝手にまとめ]) 
+
+'''Exp't Date:''' June, 2014
+
+'''Explanation:'''
+
+A series of experiments were conducted to evaluate the effects from health states on Cut-In chances, by using both '''''Torpedo CI '''''and '''''Main gun CI'''''. Test ships are Inazuma & Furutaka.
+
+
+===<u style="font-size:17px;font-style:inherit;font-weight:bold;">'''a). ''"Inazuma Test"'''''</u>===
+
+- Test Conditions:
+
+*Inazuma Kai, Lv150,
+* '''Flagship'''
+* '''''Luck 59''''': ''Initial(12) + marriage(6) + Maruyu(41)''
+* Morale is not firmly controlled by the author.
+
+- Explanation
+*Green = full health
+*Yellow = minor dmg
+*Orange = moderate dmg
+
+- '''|'''   Equip.   '''|  #'''Atk. '''|'''  #CI  '''|''' #Single '''|''' CI Rate '''|'''  95% Conf. Intv  '''| ''' 99% Conf. Intv  '''|'''.
+
+[[File:NBCI_HP.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===<u style="font-style:inherit;font-weight:inherit;">'''b). ''"Furutaka Test"'''''</u>===
+- Test Conditions
+*Furutaka Kai (Lv.131~133). 
+*'''Luck (50)'''
+*'''Flagship'''
+*Morale 40 ~ 49.
+*Map: 1-2.
+
+- Explanation
+*Blue = full health
+*Orange = minor dmg
+*Pink = moderate dmg
+
+
+====<u>'''Main Gun Cut-In'''</u>====
+
+-  ''|  '''#Cut-In  '''|''' #Single '''| '''#Total  '''| '''''CI Rate''' '''|''' Theoretical '''| '''''Diff''''' |  '''95% Conf.Intv  '''| ''' 99% Conf.Intv  '''|'''.
+
+<u style="font-style:inherit;font-weight:inherit;">'''''[[File:NBCIFURUTAKA3GUN.jpg|left]]'''''</u>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+====<u>'''Torpedo Cut-In'''</u>====
+-  ''|  '''#Cut-In  '''|''' #Single '''| '''#Total  '''| '''''CI Rate''' '''|''' Theoretical '''| '''''Diff''''' |  '''95% Conf.Intv  '''| ''' 99% Conf.Intv  '''|'''.
+[[File:NBCIFURUTAKA2TORP.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==VI - More Tests on the Cut-In Chances (2014)==
+
+'''Exp't name:  ''VARIOUS'''''
+
+'''Blog / Author:  ''VARIOUS''''' (Pasted on [https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/index.html 検証スレ勝手にまとめ]) 
+
+'''Exp't Date:''' Before July, 2014
+
+'''Explanation:'''
+
+More tests with relatively higher credibility and larger samples.
+
+All the following tests were done in morale >= 40.
+
+Some reports were based on experiments shown above, with additional number crunching / illustration.
+
+Unless otherwise mentioned, all tests below were done with non-flagship, under morale 40~49, and using formation Line Ahead.
+
+
+
+
+
+===<u>a). "Evaluation of Luck, Placement & Chyuuha Modifiers"</u>===
+- Explanation:
+*Relatively lower luck values. Thus capping is not considered too much.
+*Ships with the same luck stat are regarded as equivalent
+*Yukikaze (60) is regarded as equivalent to Shigure (50), in case of pure Torpedo cut-in.
+
+[[File:NBCI_-_A.png|left]]
+
+[[File:NBCI_-_B.png|left]]
+
+[[File:NBCI_-_LUCK_HP_FS.png|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===<u>b). "Submarine Torpedo CI Chance"</u>===
+
+''source: https://8b40eaa819a95ca736613ae455c69f1cb3424509.googledrive.com/host/0B80mPtzxVnOddUtjcUtyN09XUVk/cutin.html#13_151''
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 600px;"
+|-
+! scope="row"|
+! scope="col"|Placement
+(Luck)
+! scope="col"|Full Health
+''(Sample size)''
+! scope="col"|Minor Dmg.
+''(Sample size)''
+! scope="col"|Chyuuha
+''(Sample size)''
+|-
+! scope="row"|''I-168''
+|    Flagship
+(15)
+|49.1% ''(731)''
+|40.0% ''(175)''
+|''64.9% (57)''
+|-
+! scope="row"|''I-19''
+|       (16)
+|34.3% ''(537)''
+|''34.6% (153)''
+|''59.6% (99)''
+|-
+! scope="row"|''I-401''
+|       (24)
+|41.3%'' (426)''
+|42.6% ''(282)''
+|''56.8% (81)''
+|-
+! scope="row"|''I-8''
+|       (28)
+|44.7% ''(477)''
+|40.3%'' (211)''
+|''61.4% (101)''
+|-
+! scope="row"|''I-58''
+|       (64)
+|63.6%'' (500)''
+|64.3% ''(171)''
+|84.6%'' (177)''
+|}
+
+
+
+
+===<u>c). "Comparison of Various Setups (Low Luck)"</u>===
+- Explanation
+*Test ships being used for comparison are Yuudachi (20) & Hibiki (20).
+*Blue:  Torpedo *2.
+*Red:   Main *2 + Torpedo
+*Orange:   Main *3.
+[[File:NBCI_-_C.jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===<u>d). "Furutaka: Torpedo vs. Mixed CI"</u>===
+- Explanation:
+*Furutaka (18)
+*'''Flagship'''
+*Blue: Torpedo *2
+*Red: Main + Torpedo  (the last row is the sum of the previous two)
+[[File:NBCI_-_TYPE_(fit_size).png|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===<u>e). "Marriage & CI Chance"</u>===
+- Explanation:
+*Purpose: to verify if marriage will boost CI chance ''(beside the increase in luck stat, of course).''
+*Furutaka (18),  Yuubari (17)
+*'''Flagship'''
+*Main + Torpedo (mixed)
+
+[[File:NBCI_-_Marriage_(fit_size).jpg|left]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+===<u>f). "Mixed Cut-In: (High Luck)"</u>===
+- Explanation
+*Shigure'' (Lv.135~136)'', Yukikaze ''(Lv.95~96)''
+*'''Flagship'''
+*<span style="color:rgb(0,0,0);font-family:'TimesNewRoman';font-size:16px;line-height:normal;">Akizuki.Gun</span><span style="color:rgb(0,0,0);font-family:'TimesNewRoman';font-size:16px;line-height:normal;">★9,  </span><span style="color:rgb(0,0,0);font-family:'TimesNewRoman';font-size:16px;line-height:normal;">T13.Air.Radar.Kai,  53cmBow(Oxy)Torpedo,</span>
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|[http://jbbs.shitaraba.net/bbs/read.cgi/netgame/12394/1424879347/89 Shigure K2 Test]
+! scope="col"|Cut-In
+! scope="col"|Attack Chance
+! scope="col"|CI Rate
+|-
+|Luck (79)
+|337
+|400
+|84.3%
+|}
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|[http://jbbs.shitaraba.net/bbs/read.cgi/netgame/12394/1424879347/10 Yukikaze K Test]
+! scope="col"|Cut-In
+! scope="col"|Attack Chance
+! scope="col"|CI Rate
+|-
+|Luck (60)
+|143
+|194
+|73.7%
+|}
+
+
+
+
+
+
+
+
+
+
+
+==VI - Simplified Tables for Night Battle Cut-In Tests (2014 ~ 2015)==
+
+'''Exp't name: '' VARIOUS'''''
+
+'''Blog / Author:  ''VARIOUS'''''
+
+'''Info Collection:  ''Unknown'' ''' ''(see http://mmoloda-kancolle.x0.com/image/163527.png) ''
+
+'''Exp't Date:''' June, 2014 ~ April, 2015
+
+'''Explanation:'''
+
+Originally posted on Shitaraba BBS, ''(''<span style="line-height:20px;">''thread [http://jbbs.shitaraba.net/bbs/read_archive.cgi/netgame/12394/1424879347/#308 #308] from ''</span>''<span style="line-height:20px;">スレ</span>''<span style="line-height:20px;">''１７''</span><span style="line-height:20px;">'')''. The anonymous author categorized & tabulated all relevant data from </span>[http://jbbs.shitaraba.net/bbs/read_archive.cgi/netgame/12394/1403462402/ スレ１３] <span style="line-height:20px;"> to </span>[http://jbbs.shitaraba.net/bbs/read_archive.cgi/netgame/12394/1424879347/ スレ１７]<span style="line-height:20px;">, </span><span style="line-height:20px;">on the night battle CI chances. The test conditions were believed as follow:</span>
+* Beyond''' moderate''' damage.
+* Data collected from both friendly & abyssal ships.
+* No searchlight equipment.
+
+:
+
+<p style="margin-left:24px;">
+</p>
+===<u>Torpedo Cut-In:</u>===
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 880px;"
+|-
+! scope="col"|
+<p style="text-align:center;"><span style="font-size:14px;line-height:22px;">Flagship</span></p>
+! scope="col" style="text-align:center;"|<span style="font-size:14px;line-height:22px;">Luck</span>
+! scope="col" style="text-align:center;"|<span style="font-size:14px;line-height:22px;">CI Chance</span>
+! scope="col"|<span style="color:rgb(0,0,0);font-size:14px;font-weight:bold;line-height:22px;">Sample</span><p style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">Size</p>
+! scope="col"|<span style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">Source</span><p style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">(Spreadsheet / BBS)</p>
+! scope="col"|
+! scope="col"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|13
+| style="text-align:center;"|39.7%
+| style="text-align:center;"| 1303
+| style="text-align:center;"| -
+| style="text-align:center;"|
+| style="text-align:center;"|[http://mmoloda-kancolle.x0.com/image/163527.png Pic1]
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|15
+| style="text-align:center;"|47.4%
+| style="text-align:center;"| 1234
+| style="text-align:center;"| -
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|30
+| style="text-align:center;"|(63.8%)
+| style="text-align:center;"|(260)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|50
+| style="text-align:center;"|71.6%
+| style="text-align:center;"|1111
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|58
+| style="text-align:center;"|75.8%
+| style="text-align:center;"|400
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|59
+| style="text-align:center;"|77.0%
+| style="text-align:center;"|974
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|79
+| style="text-align:center;"|75.8%
+| style="text-align:center;"|707
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"| -
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|10
+| style="text-align:center;"|(24.4%)
+| style="text-align:center;"|(270)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|13
+| style="text-align:center;"|30.5%
+| style="text-align:center;"|860
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|16
+| style="text-align:center;"|35.0%
+| style="text-align:center;"|948
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|20
+| style="text-align:center;"|32.5%
+| style="text-align:center;"|486
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|24
+| style="text-align:center;"|41.1%
+| style="text-align:center;"|1023
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|28
+| style="text-align:center;"|43.2%
+| style="text-align:center;"|949
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|30
+| style="text-align:center;"|45.8%
+| style="text-align:center;"|406
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|50
+| style="text-align:center;"|64.9%
+| style="text-align:center;"|504
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|60
+| style="text-align:center;"|65.8%
+| style="text-align:center;"|614
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|64
+| style="text-align:center;"|63.9%
+| style="text-align:center;"|587
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|79
+| style="text-align:center;"|64.5%
+| style="text-align:center;"|538
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|}
+
+===<u>Main Gun Cut-In:</u>===
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 880px;"
+|-
+! scope="col"|
+<p style="text-align:center;"><span style="font-size:14px;line-height:22px;">Flagship</span></p>
+! scope="col" style="text-align:center;"|<span style="font-size:14px;line-height:22px;">Luck</span>
+! scope="col" style="text-align:center;"|<span style="font-size:14px;line-height:22px;">CI Chance</span>
+! scope="col"|<span style="color:rgb(0,0,0);font-size:14px;font-weight:bold;line-height:22px;">Sample</span><p style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">Size</p>
+! scope="col"|<span style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">Source</span><p style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">(Spreadsheet / BBS)</p>
+! scope="col"|
+! scope="col"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|30
+| style="text-align:center;"|48.9%
+| style="text-align:center;"|446
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|50
+| style="text-align:center;"|(65.2%)
+| style="text-align:center;"|(345)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|59
+| style="text-align:center;"|71.%
+| style="text-align:center;"|435
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|74
+| style="text-align:center;"|68.7%
+| style="text-align:center;"|(323)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"| -
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|20
+| style="text-align:center;"|30.9%
+| style="text-align:center;"|815
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|32
+| style="text-align:center;"|(35.0%)
+| style="text-align:center;"|(237)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|40
+| style="text-align:center;"|(48.6%)
+| style="text-align:center;"|(247)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|50
+| style="text-align:center;"|(52.2%)
+| style="text-align:center;"|(255)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|60
+| style="text-align:center;"|(52.4%)
+| style="text-align:center;"|(250)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|74
+| style="text-align:center;"|(55.2%)
+| style="text-align:center;"|(375)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|}
+
+===<u>Mixed Cut-In:</u>===
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 880px;"
+|-
+! scope="col"|
+<p style="text-align:center;"><span style="font-size:14px;line-height:22px;">Flagship</span></p>
+! scope="col" style="text-align:center;"|<span style="font-size:14px;line-height:22px;">Luck</span>
+! scope="col" style="text-align:center;"|<span style="font-size:14px;line-height:22px;">CI Chance</span>
+! scope="col"|<span style="color:rgb(0,0,0);font-size:14px;font-weight:bold;line-height:22px;">Sample</span><p style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">Size</p>
+! scope="col"|<span style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">Source</span><p style="font-weight:bold;color:rgb(0,0,0);font-size:14px;line-height:22px;">(Spreadsheet / BBS)</p>
+! scope="col"|
+! scope="col"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|10
+| style="text-align:center;"|(42.5%)
+| style="text-align:center;"|(240)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|17
+| style="text-align:center;"|(53.5%)
+| style="text-align:center;"|(200)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|18
+| style="text-align:center;"|(52.9%)
+| style="text-align:center;"|(361)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|20
+| style="text-align:center;"|(46.4%)
+| style="text-align:center;"|(222)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|59
+| style="text-align:center;"|79.3%
+| style="text-align:center;"|357
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|60
+| style="text-align:center;"|(73.7%)
+| style="text-align:center;"|(194)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|O
+| style="text-align:center;"|79
+| style="text-align:center;"|84.3%
+| style="text-align:center;"|400
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"| -
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|1
+| style="text-align:center;"|14.4%
+| style="text-align:center;"|201
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|10
+| style="text-align:center;"|29.6%
+| style="text-align:center;"|460
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|13
+| style="text-align:center;"|29.7%
+| style="text-align:center;"|526
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|20
+| style="text-align:center;"|35.9%
+| style="text-align:center;"|1729
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|-
+| style="text-align:center;"|
+| style="text-align:center;"|60
+| style="text-align:center;"|(62.0%)
+| style="text-align:center;"|(245)
+| style="text-align:center;"|
+| style="text-align:center;"|
+| style="text-align:center;"|
+|}
+[[Category:Blog posts]]

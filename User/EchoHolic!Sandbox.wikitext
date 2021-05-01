@@ -1,0 +1,315 @@
+==Current WIPS==
+*[[User:EchoHolic/Sandbox/Existing Game Bugs|Existing Game Bugs]]
+*[[User:EchoHolic/Sandbox/Map Mechanics|Map Mechanics]]
+
+==WIP Tables==
+{|class="wikitable" style="width:95%; text-align: center; vertical-align: middle;"
+!
+!{{ShipBattleCardKai|Yuubari}}<br/>Yuubari
+!{{ShipBattleCardKai|Yuubari/Kai Ni}}<br/>Yuubari Kai Ni
+!{{ShipBattleCardKai|Yuubari/Kai Ni Toku}}<br/>Yuubari Kai Ni Toku
+!{{ShipBattleCardKai|Yuubari/Kai Ni D}}<br/>Yuubari Kai Ni D
+|-
+!Equippable by Class
+|colspan="4"|{{RedGunLight}}{{RedGunMedium}}{{YellowGun}}{{TorpedoWeapon}}{{Seaplane}}{{Radar}}{{Sonar}}{{DepthCharge}}<br/>{{Turbine}}{{Searchlight}}{{Drum}}{{StarShell}}{{CommandFacility}}{{AntiAircraftFireDirector}}{{WG42}}{{Skilled Lookout}}
+|-
+!Expansion Slot
+|colspan="1"|{{EquipmentCardKai|Improved Kanhon Type Turbine|size=36px}}{{GreenGunMG}}{{EmergencyRepair}}{{AntiAircraftFireDirector}}{{Skilled Lookout}}{{CombatRation}}
+|colspan="3"|{{EquipmentCardKai|Improved Kanhon Type Turbine|size=36px}}{{GreenGunMG}}{{EmergencyRepair}}{{ArmorEquipment}}{{AntiAircraftFireDirector}}{{Skilled Lookout}}{{CombatRation}}
+|-
+!rowspan="2"|Ship Exceptions
+!rowspan="2"| -
+| '''Can Equip:'''<br/>{{ArmorEquipment}} <sub><sup>'''Extra Armor (Medium)'''</sup></sub>
+| '''Can Equip:'''<br/>{{ArmorEquipment}} <sub><sup>'''Extra Armor (Medium)'''</sup></sub><br/>{{TorpedoWeapon}}'''Minisubs'''<br/>{{LandingCraft}}{{SpecialAmphibiousTank}}
+| '''Can Equip:'''<br/>{{ArmorEquipment}} <sub><sup>'''Extra Armor (Medium)'''</sup></sub><br/>{{Sonar}} '''Large Sonar'''
+|-
+|'''Can't Equip:'''<br/> {{YellowGun}}{{Seaplane}}
+|'''Can't Equip:'''<br/> {{YellowGun}}{{Seaplane}}<br/>{{Radar}} '''Large Radar'''
+| '''Can't Equip:'''<br/> {{YellowGun}}{{Seaplane}}<br/>{{Radar}} '''Large Radar'''
+|-
+!rowspan="2"|Slot Exceptions
+!rowspan="2"| -
+| '''4th Slot: ''' No <br/>{{RedGunLight}}{{RedGunMedium}}<br/>{{TorpedoWeapon}}
+| '''4th Slot: ''' No <br/>{{RedGunLight}}{{RedGunMedium}}<br/>{{TorpedoWeapon}}
+| '''4th Slot: ''' No <br/>{{RedGunLight}}{{RedGunMedium}}<br/>{{TorpedoWeapon}}
+|-
+| '''5th Slot: ''' Only <br/>{{Radar}}'''Small Radar'''<br/>{{GreenGunMG}}{{Combat Ration}}
+| '''5th Slot: ''' Only <br/>{{Radar}}'''Small Radar'''<br/>{{GreenGunMG}}{{Combat Ration}}
+| '''5th Slot: ''' Only <br/>{{Radar}}'''Small Radar'''<br/>{{GreenGunMG}}{{Combat Ration}}
+|}
+{|class="wikitable"<includeonly>mw-collapsed</includeonly> style="width:95%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Fuel/Steel Primary
+|-
+! style="width: 50%;" colspan="2" rowspan="2"| Equipment
+! style="width: 26%;" colspan="4" | Resources Required
+! style="width: 12%;" rowspan="2" | HQ Level
+! style="width: 12%;" rowspan="2" | Rate
+|-
+! {{Fuel}}
+! {{Ammo}}
+! {{Steel}}
+! {{Bauxite}}
+|-
+| {{EquipmentCardKai|12.7cm Twin Gun Mount|size=90px}}
+| {{RedGunLight}}{{EquipmentLink|12.7cm Twin Gun Mount}}
+| 0
+| 10
+| 20
+| 0
+| 0+
+| 10%
+|-
+| {{EquipmentCardKai|12cm Single Gun Mount|size=90px}}
+| {{RedGunLight}}{{EquipmentLink|12cm Single Gun Mount}}
+| 0
+| 10
+| 10
+| 0
+| 0+
+| 6%
+|-
+| {{EquipmentCardKai|10cm Twin High-angle Gun Mount|size=90px}}
+| {{GreenGunDP}}{{EquipmentLink|10cm Twin High-angle Gun Mount}}
+| 0
+| 10
+| 30
+| 0
+| 10+
+| 6%
+|-
+| {{EquipmentCardKai|14cm Single Gun Mount|size=90px}}
+| {{RedGunMedium}}{{EquipmentLink|14cm Single Gun Mount}}
+| 0
+| 20
+| 10
+| 0
+| 0+
+| 6%
+|-
+| {{EquipmentCardKai|15.2cm Single Gun Mount|size=90px}}
+| {{YellowGun}}{{EquipmentLink|15.2cm Single Gun Mount}}
+| 0
+| 20
+| 20
+| 0
+| 0+
+| 6%
+|-
+| {{EquipmentCardKai|61cm Quadruple Torpedo Mount|size=90px}}
+| {{TorpedoWeapon}}{{EquipmentLink|61cm Quadruple Torpedo Mount}}
+| 10
+| 20
+| 20
+| 0
+| 0+
+| 4%
+|-
+| {{EquipmentCardKai|Type 13 Air Radar|size=90px}}
+| {{TorpedoWeapon}}{{EquipmentLink|Type 13 Air Radar}}
+| 0
+| 0
+| 100
+| 100
+| 10+
+| 4%
+|-
+| {{EquipmentCardKai|Improved Kanhon Type Turbine|size=90px}}
+| {{Turbine}}{{EquipmentLink|Improved Kanhon Type Turbine}}
+| 100
+| 0
+| 100
+| 0
+| 0+
+| 4%
+|-
+| {{EquipmentCardKai|7.7mm Machine Gun|size=90px}}
+| {{GreenGunMG}}{{EquipmentLink| 7.7mm Machine Gun}}
+| 0
+| 10
+| 10
+| 0
+| 0+
+| 4%
+|-
+| {{EquipmentCardKai|25mm Twin Autocannon Mount|size=90px}}
+| {{GreenGunMG}}{{EquipmentLink|25mm Twin Autocannon Mount}}
+| 0
+| 20
+| 10
+| 0
+| 0+
+| 4%
+|-
+| {{EquipmentCardKai|25mm Single Autocannon Mount|size=90px}}
+| {{GreenGunMG}}{{EquipmentLink|25mm Single Autocannon Mount}}
+| 0
+| 10
+| 10
+| 0
+| 10+
+| 4%
+|-
+| {{EquipmentCardKai|15.2cm Twin Gun Mount|size=90px}}
+| {{RedGunMedium}}{{EquipmentLink|15.2cm Twin Gun Mount}}
+| 0
+| 20
+| 30
+| 0
+| 20+
+| 4%
+|-
+| {{EquipmentCardKai|8cm High-angle Gun|size=90px}}
+| {{GreenGunDP}}{{EquipmentLink|8cm High-angle Gun}}
+| 0
+| 10
+| 20
+| 0
+| 30+
+| 4%
+|-
+| {{EquipmentCardKai|Drum Canister (Transport Use)|size=90px}}
+| {{Drum}}{{EquipmentLink|Drum Canister (Transport Use)}}
+| 0
+| 0
+| 10
+| 0
+| 0+
+| 4%
+|-
+| {{EquipmentCardKai|15.5cm Triple Gun Mount|size=90px}}
+| {{RedGunMedium}}{{EquipmentLink|15.5cm Triple Gun Mount}}
+| 0
+| 20
+| 50
+| 0
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|20.3cm Twin Gun Mount|size=90px}}
+| {{RedGunMedium}}{{EquipmentLink|20.3cm Twin Gun Mount}}
+| 0
+| 30
+| 40
+| 0
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|15.5cm Triple Secondary Gun Mount|size=90px}}
+| {{YellowGun}}{{EquipmentLink|15.5cm Triple Secondary Gun Mount}}
+| 0
+| 20
+| 50
+| 0
+| 10+
+| 2%
+|-
+| {{EquipmentCardKai|61cm Triple Torpedo Mount|size=90px}}
+| {{TorpedoWeapon}}{{EquipmentLink|61cm Triple Torpedo Mount}}
+| 10
+| 10
+| 10
+| 0
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|61cm Quadruple (Oxygen) Torpedo Mount|size=90px}}
+| {{TorpedoWeapon}}{{EquipmentLink|61cm Quadruple (Oxygen) Torpedo Mount}}
+| 20
+| 20
+| 20
+| 0
+| 10+
+| 2%
+|-
+| {{EquipmentCardKai|Type 97 Torpedo Bomber|size=90px}}
+| {{BluePlane}}{{EquipmentLink|Type 97 Torpedo Bomber}}
+| 10
+| 10
+| 0
+| 20
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|Type 96 Fighter|size=90px}}
+| {{GreenPlane}}{{EquipmentLink|Type 96 Fighter}}
+| 10
+| 10
+| 0
+| 10
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|Type 0 Fighter Model 21|size=90px}}
+| {{GreenPlane}}{{EquipmentLink|Type 0 Fighter Model 21}}
+| 10
+| 10
+| 0
+| 20
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|Type 99 Dive Bomber|size=90px}}
+| {{RedPlane}}{{EquipmentLink|Type 99 Dive Bomber}}
+| 10
+| 10
+| 0
+| 20
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|Type 0 Reconnaissance Seaplane|size=90px}}
+| {{Seaplane}}{{EquipmentLink|Type 0 Reconnaissance Seaplane}}
+| 10
+| 10
+| 0
+| 20
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|Type 22 Surface Radar|size=90px}}
+| {{Radar}}{{EquipmentLink|Type 22 Surface Radar}}
+| 0
+| 0
+| 150
+| 150
+| 10+
+| 2%
+|-
+| {{EquipmentCardKai|Type 33 Surface Radar|size=90px}}
+| {{Radar}}{{EquipmentLink|Type 33 Surface Radar}}
+| 0
+| 0
+| 200
+| 150
+| 20+
+| 2%
+|-
+| {{EquipmentCardKai|Enhanced Kanhon Type Boiler|size=90px}}
+| {{Turbine}}{{EquipmentLink|Enhanced Kanhon Type Boiler}}
+| 100
+| 0
+| 200
+| 0
+| 10+
+| 2%
+|-
+| {{EquipmentCardKai|12.7mm Single Machine Gun Mount|size=90px}}
+| {{GreenGunMG}}{{EquipmentLink|12.7mm Single Machine Gun Mount}}
+| 0
+| 10
+| 10
+| 0
+| 0+
+| 2%
+|-
+| {{EquipmentCardKai|Type 94 Depth Charge Projector|size=90px}}
+| {{DepthCharge}}{{EquipmentLink|Type 94 Depth Charge Projector}}
+| 0
+| 20
+| 10
+| 0
+| 0+
+| 2%
+|-
+|}

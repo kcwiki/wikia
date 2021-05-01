@@ -1,0 +1,225 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Expand the Defenses! Southwest Islands Defense Operation
+|jp = 防備拡充! 南西諸島防衛作戦
+|tag = E2
+|romaji = Bōbi kakujū! Nansē-shotō bōē sakusen
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 240 TP+ 1750
+|hp_easy = 240 TP+ 1750
+|hp_medium = 260 TP + 1750
+|hp_hard = 280 TP + 1750
+|show_kills = true
+|kills_all = 5
+|reward_all = {{ShipBattleCardKai|Hachijou}}
+|reward_casual_1 = {{ItemStack|item = [[File:Kapopa.png{{!}}x50px]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Prototype Flight Deck Catapult|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Prototype Flight Deck Catapult|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Remodel Blueprint|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Prototype Flight Deck Catapult|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Reppuu Kai (352 Air Group/Skilled)|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Remodel Blueprint|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules Phase 1
+|id = 44-2A
+
+|A/empty -> B, C = * Active branching
+
+|C -> D = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to F.
+** Amount of (F)BB(V)+CV(L/B)+CA(V) ≤ 3
+|C -> E = 
+* Do not meet the requirements to go to either D or F.
+|C -> F = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL ≥ 1
+** No (F)BB(V)
+** Amount of LHA+CVL+CA(V) ≤ 1
+
+|D -> G = * Amount of DD ≤ 2
+|D -> I = * Amount of DD ≥ 3
+
+|F -> I = * Slow Fleet
+|F -> J = * Fast Fleet
+
+|K/resource -> L = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships equipped with '''Surface''' Radars ≥ 1/2 on Medium/Hard
+|K/resource -> M/empty = * Do not meet the requirements to go to L.
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules Phase 2
+|id = 44-2B
+|order = 0, O1, O2, Q1, Q3, R, H, T
+
+|0 -> 1 = * Do not meet the requirements to start at 2.
+|0 -> 2 = * Meet '''ALL''' of the following requirements:
+** Starting point 2 is unlocked.
+** No SS(V)
+** Fleet contains (F)BB(V)
+** Amount of CVL ≤ 2
+
+|O1/empty -> O2/empty, P1 = * Active branching
+
+|O2/empty -> O3 = * Do not meet the requirements to go to P2.
+|O2/empty -> P2 = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL ≥ 1
+** No CVL
+
+|Q1 -> E = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL = 1
+** Amount of (F)BB(V) ≤ 1
+** No CVL, CA(V) or CLT
+|Q1 -> Q2 = * Do not meet the requirements to go to E.
+
+|Q3 -> R = * Amount of DD ≤ 4
+|Q3 -> S = * Amount of DD ≥ 5
+
+|R -> E = 
+* Do not meet the requirements to go to either H or S.
+|R -> H = 
+* Meet '''ANY''' of the following requirements:
+** Do not meet the requirements to go to S.
+** Amount of (F)BB(V)+CVL+CA(V) ≤ 2
+|R -> S = 
+* Meet '''ALL''' of the following requirements:
+** No CVL (Easy+)
+** Fleet contains CL
+** Amount of (F)BB(V)+CVL+CA(V) ≤ 3/1 on Casual/Easy+
+
+|H -> J = * Fleet started at 1.
+|H -> T = * Fleet started at 2.
+
+|T -> U = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check. (Estimated around 35 Cn2)
+** Amount of ships equipped with '''Surface''' Radars ≥ 1 (Hard)
+|T -> V/empty = * Do not meet the requirements to go to U.
+}}
+==Map Guide==
+*This is a '''single fleet''' map.
+*Two [[Land Base Aerial Support]] squadrons are available for sortie.
+*'''Standard and Armored Carriers (CV/B) cannot enter this Map.'''
+**CVLs however are allowed to be used.
+*This map is divided in 2 phases that consist of depleting the respective gauges of the following bosses :
+** {{ShipLink|Battleship Princess}}'s TP gauge at node {{Event/Route|L|Red}}.
+** {{ShipLink|Aircraft Carrier Princess}}'s HP gauge at node {{Event/Route|U|Red}}.
+
+{{clear}}
+The following are ships with noticeable bonuses in E-2:
+*Mapwide
+**{{ShipLink|Yamato}}, {{ShipLink|Yahagi}}, {{ShipLink|Yukikaze}}, {{ShipLink|Hatsushimo}}, {{ShipLink|Asashimo}}, {{ShipLink|Suzutsuki}}, {{ShipLink|Isokaze}}, {{ShipLink|Hamakaze}} - 1.15x
+**{{ShipLink|Kasumi}}- 1.1x
+*Everywhere '''except''' {{Event/Route|U|Red}}
+**{{ShipLink|Ryuuhou}}, {{ShipLink|Junyou}}, {{ShipLink|Sakawa}}, {{ShipLink|Hibiki}}, {{ShipLink|Ushio}} - 1.1x
+
+===Equipment treated as a "Surface Radar"===
+*Despite the name "Surface Radar", certain Air Radars are also treated as a Surface Radar under the Branching Rules due to their {{LOS}} LOS Stat.
+**The Radar must have at least 5+ {{LOS}} LOS Stats to fall under the category.
+
+{{:Winter 2019 Event/Info/Surface Radar}}
+
+===Map progression===
+{{#tag:gallery|
+Spring19_E2_p1.png{{!}}Map during the first phase at node L
+Spring_2019_Event_E-2_Map.png{{!}}Full map after unlocking the second phase at node U
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+===Phase 1: TP gauge at node L===
+*The first phase of the map is to reach the boss node L and achieve at least an A rank in order to empty the TP gauge.
+**To achieve A rank, it is required to sink 4 out 6 ships on the enemy side.
+**Achieving S rank will deplete the gauge faster compared to A rank.
+**For this purpose, it is recommended to use as many [[List of Landing Crafts by stats|Daihatsu Landing Crafts]] and {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canisters}} as you can on your ships.
+
+*Route:{{Event/Route|A|blue|C|orange|F|red|J|red|K|green|L|red}}
+**1CL 1CA(V)/CVL 4DD
+***must be '''fast fleet''', slow fleet will route through an extra submarine node {{Event/Route|I|red}}
+***must have at least 1/2 '''surface''' radars equipped for '''Medium/Hard''' difficulties.
+***There is a LoS check from {{Event/Route|K|Green}} to {{Event/Route|L|Red}}.
+****'''14+'''? {{LOS}} using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=1)]] formula is required in order to safely pass.
+
+*'''LBAS''':It is recommended to send a squadron filled with 4 [[List of Land-based Attack Aircraft by stats|Land-based bombers]] to the boss node {{Event/Route|L|Red}} in order make achieving A rank much easier. It is recommended to fill the second filled with your best [[List of Land-based Fighters by stats|interceptors]] and fighters, and send it to node {{Event/Route|C|orange}} to help mitigate its airstrike damage.
+**Lower difficulties can consider just sending 2 bombers squadrons to the boss node instead if the airstrike proves to be harmless.
+
+===Phase 1.5: Unlocking Phase 2===
+*Just like E-1, it is required to visit certain nodes in order to unlock the route to the phase 2 boss node {{Event/Route|U|red}}.
+*Admirals must visit the air defense node {{Event/Route|C|orange}} and achieve Air Superiority(AS) or higher. Admirals on '''HARD MODE''' must also achieve AS for air defense node {{Event/Route|B|orange}}.
+**This can be done by sortieing 2CVLs or 1CVL 1CAV equipped with only fighters.
+**LBAS can be sent to help reducing the airpower requirements to achieve AS.
+
+===Phase 2: HP gauge at node U===
+*For this phase, players will start their sorties from the second starting point. The boss is {{ShipLink|Aircraft Carrier Princess}} and due to the high amount of air defense nodes on the map, it is highly recommended to have at least 1 or 2 ships with [[Combat/Aerial Combat|AACI]] equipped.
+*'''NOTE''': you CANNOT reach the boss node {{Event/Route|U|Red}} from the first starting point!
+**Route:{{Event/Route|N|red|O1|blue|O2|blue|O3|orange|P3|red|Q3|orange|S|red|T|red|U|red}} '''(2 airstrikes)'''
+***1(F)BB(V) 5DD
+**Route:{{Event/Route|N|red|O1|blue|P1|orange|Q1|orange|E|orange|H|red|T|red|U|red}} '''(3 airstrikes)'''
+***1(F)BB(V) 1CL 4DD
+**Route:{{Event/Route|N|red|O1|blue|O2|blue|O3|orange|P3|red|Q3|orange|R|orange|H|red|T|red|U|red}} '''(3 airstrikes)'''
+***1(F)BB(V) 1CL 1CVL 3DD
+**Route:{{Event/Route|N|red|O1|blue|O2|blue|O3|orange|P3|red|Q3|orange|R|orange|E|orange|H|red|T|red|U|red}} '''(4 airstrikes)'''
+***1(F)BB(V) 1CL 2CVL 2DD
+***4(F)BB(V) 1DD 1CVL
+***3(F)BB(V) 1DD 2CVL
+**Route:{{Event/Route|N|red|O1|blue|P1|orange|Q1|orange|Q2|orange|R|orange|E|orange|H|red|T|red|U|red}} '''(5 airstrikes)'''
+***4(F)BB(V) 2CVL
+*There is '''no speed limitation''' for this phase.
+*There is a LoS check from {{Event/Route|T|Red}} to {{Event/Route|U|Red}}.
+**'''35+''' {{LOS}} using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=2)]] formula is required in order to safely pass.
+**On '''HARD MODE''', your fleet must also have at least 1 '''surface''' radar equipped.
+*1BB 5DD gives the shortest route to the boss node, however it will be forced to fight under Air Incapability (AI). It is recommended to equip the fleet accordingly.
+*For fleets with CVLs, 360+ airpower ensures at least AP for every air defense node on the route for hard mode.
+*For fleets with 3+ ships capable of properly utlilizing [[12cm 30-tube Rocket Launcher Kai Ni]] (BBV, CVL, CAV, etc.), equipping one to each ship, putting those ships in the bottom three positions, and selecting Vanguard formation at each air node is ''highly'' recommended.  Vanguard formation will focus most of the enemy bombing onto those positions,  and, especially with Akashi upgraded rocket launchers, damage will often be completely nullified.
+*The boss node will lock to its strongest pattern during '''LAST DANCE'''.
+**At least in hard mode, the preboss node will also lock to the line ahead formation.  Pre-boss support shelling expeditions can be valuable for passing through safely.
+*'''LBAS''':
+**A squadron filled with 4 [[List of Land-based Attack Aircraft by stats|Land-based bombers]] can be sent to node {{Event/Route|T|Red}}, which contains dangerous Ru-class battleships, to help the fleet reach the boss node at least before last dance.
+**For the boss node, sending squadrons with [[List of Land-based Fighters by stats|Land based fighters]] is recommended to help reducing AS requirements (if heavy fleet) and help mitigating airstrike damage.
+***Note however, that the planes must have 7+ range in order to reach the boss node. Scout planes such as {{EquipmentLink|Type 2 Large Flying Boat}} may be used to extend the range of your planes.
+
+===[[Friend Fleet]]s===
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see below) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+[[File:Friend Fleet Usage.png|600px|center]]
+
+{{Fleets|friend=Spring 2019 Event|map=E-2}}
+
+===Submarine Fleet Node J Farming===
+*Fleets of 3 or 6 submarines can be used to reach and S rank J node with assistance from land base aerial support on nodes H and J.  This method is a low cost way to search for {{ShipLink|Ishigaki}} drops
+*Land base setup is typically 4 bombers (maximum firepower) or 3 bombers and 1 scout (for lower cost).  H node is at 5 range and J node is at 7.
+*Rotating flagships can maintain constant sparkles on smaller fleets
+*ACEHJ route
+*Katsuragi (on medium+) and a variety of rare destroyers can also be obtained this way
+===LBAS flight range===
+[[File:Spring19_E2_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

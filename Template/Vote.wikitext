@@ -1,0 +1,20 @@
+<div class="sc_vote" data-value="{{{1|?}}}"></div>
+{{#ifeq:{{{1|}}}|Yes|
+[[File:Vote_yes.png]] '''Yes''' — {{{2|}}}
+|}}{{#ifeq:{{{1|}}}|No|
+[[File:Vote_no.png]] '''No''' — {{{2|}}}
+|}}{{#ifeq:{{{1|}}}|None|
+[[File:Clear_none.png]]{{clr}}{{{2|}}}
+|}}{{#ifeq:{{{1|}}}|E-1|
+[[File:Clear_e1.png]]{{clr}}{{{2|}}}
+|}}{{#ifeq:{{{1|}}}|E-2|
+[[File:Clear_e2.png]]{{clr}}{{{2|}}}
+|}}{{#ifeq:{{{1|}}}|E-3|
+[[File:Clear_e3.png]]{{clr}}{{{2|}}}
+|}}{{#ifeq:{{{1|}}}|E-4|
+[[File:Clear_e4.png]]{{clr}}{{{2|}}}
+|}}{{#ifeq:{{{1|}}}|E-5|
+[[File:Clear_e5.png]]{{clr}}{{{2|}}}
+|}}{{#ifeq:{{{1|}}}|E-6|
+[[File:Clear_e6.png]]{{clr}}{{{2|}}}
+|}}

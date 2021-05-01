@@ -1,0 +1,164 @@
+{{Map/Header}}
+{{Map/Info
+|en = Adjacent Seas of the Naval Base
+|jp = 鎮守府近海
+|romaji = Chinjufu kinkai
+|exp_hq = 80
+|exp_hq_boss = 1070
+|show_kills = true
+|kills = 4
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 75
+|strategy_name = Naval base adjacent waters anti-submarine patrol
+|strategy_name_ja = 鎮守府近海対潜哨戒
+|strategy_info = Form a squadron for anti-submarine patrol as small as possible, and search for enemy submarines near the naval base.  Suppress them for safe navigation on the adjacent seas!
+|strategy_info_ja = なるべく小編成の対潜哨戒部隊を編成し、鎮守府近海に出没する敵潜水艦を捜索。これを捕捉制圧、近海の安全な航行を実現せよ！
+}}
+{{Map/Branching
+|expand = true
+|id = 1-5
+|order = D,E,C,F,G
+|D -> E, F = 
+*Meet '''ANY''' of the following to go to E
+** Fleet only contains DEs
+** Fleet contains AO
+**Amount of ships in fleet = 1
+*If Amount of ships in fleet ≥ 5 ('''Overrides E node branching''')
+**Go to F if fleet also contains SS(V)
+**Otherwise, random routing 
+*Otherwise, go to F
+
+|E -> C,J = 
+*Go to C if the amount of ships in fleet ≥ 5
+*Go to J if fleet only contains DE
+*Otherwise, C
+
+|C -> B/empty, J = 
+*Meet '''ANY''' of the following to go to J
+**Fleet only contains DE
+**Amount of ships in fleet ≤ 4 and DD+DE ≥ 2
+*Random if amount of ships in fleet ≤ 4, fleet contains AO and DD+DE ≤ 1
+*Otherwise, B
+
+|F -> G/empty = * Meet '''ALL''' of the following requirements:
+** No (F)BB (BBV does not count)
+** No SS(V)
+** No CV(B)
+** Amount of CVL ≤ 1
+** Amount of CL ≤ 2
+|F -> I = 
+* Do not meet the requirements to go to G. 
+
+|G/empty -> H = * Amount of ships in fleet is ≥ 5
+|G/empty -> J = * Amount of ships in fleet is ≤ 4
+}}
+
+
+This is the first map with a boss HP bar requiring multiple completions. The map is filled with only submarines unless your fleet composition is wrong and you go off-course.
+* You are required to sink the boss submarine '''4 times''' to clear the map.
+* Clearing this map is not required to unlock [[World 2]], but required to unlock [[World 3#/3-2|3-2]].
+* Clearing this map rewards a [[Medal]] and 75 [[Experience_and_Rank#Monthly_Ranking|ranking points]]. At the start of each month, the boss HP bar will reset, allowing the rewards to be obtained again (if it doesn't reset, refresh the game).
+*All Non-Boss Submarine-Only Nodes aside from the Boss Node {{Event/Route|J|red}} do not consume Ammo {{ammo}}.
+**The same applies for any Submarine-Only nodes throughout the game.
+*'''Beginners''': Please be advised that you must use the '''Line Abreast (単横陣)''' formation as it is the most effective one against Enemy Submarines. (If you are unfamiliar with the Formations' Damage Multiplier and Roles, '''please read the [[Combat]] page'''.
+
+{{clear}}
+
+===Fleet Composition===
+Please note you can only have Four '''(4)''' Ships '''MAX'''. Having anymore will cause your fleet to off-route.
+====Beginners====
+Route: {{Event/Route|A|red|D|red|F|red|G|blue|J|red}}
+*2 DD/CL + 1 BBV + 1 CVL
+**Setup recommended for Beginners who have low quality Equipment and lacking [[Partials/Opening ASW|OASW]] capable Ships. The BBV enables 2nd Shelling Phase and therefore will cover up to 8 attacks.
+*2 DD/CL + 2 BBV
+
+====Intermediate====
+The following are only to be used if All Ships (or at least all the DD/CL) are capable of using [[Partials/Opening ASW|OASW Attack]].
+
+*Route: {{Event/Route|A|red|D|red|F|red|G|blue|J|red}}
+**3 DD/DE + 1 CVL
+**4 DD
+**1 CL 3 DD/DE
+*Route: {{Event/Route|A|red|D|red|E|red|J|red}}
+**4 DE
+
+===Equipment Recommendations===
+If you are unfamiliar in Equipment Setups for your Ships, please visit and read [[Combat/Equipment Guide|Equipment Guide]].
+*[[DE]]/[[DD]]/[[CL]]s should have One '''(1)''' or Two '''(2)''' {{Sonar}} {{EquipmentLink|Type 93 Passive Sonar|Type 3 Active Sonar|Type 4 Passive Sonar|text=SONAR}} + One '''(1)''' {{DepthCharge}} {{EquipmentLink|Type 94 Depth Charge Projector|Type 3 Depth Charge Projector|text=Depth Charge Projector}}.
+*If using a CVL, recommendation is Four '''(4)''' {{BluePlane}} Torpedo Bombers as a start if you are a Beginner.
+**Later on there are intermediate setups if using a CVL, with use of {{SubPlane}} {{EquipmentLink|Type 3 Command Liaison Aircraft (ASW)}} and/or {{Autogyro}} {{EquipmentLink|Ka Type Observation Autogyro}} Equipment and a more advanced method is the utilization of {{ShipLink|Zuihou/Kai Ni B}}, who is capable of [[Partials/Opening ASW|OASW Attack]].
+*If using a BBV, recommendation is the use of Four '''(4)''' {{Seaplane}} {{EquipmentLink|Zuiun}} '''Seaplane Bombers''' as a Start if you are a Beginner.
+**There is a more advanced method of using {{Autogyro}} {{EquipmentLink|Ka Type Observation Autogyro}} on your BBVs, but once you gain 4 Ships capable of using [[Partials/Opening ASW|OASW]] Attack later on, use of BBV will no longer be needed, so there is no need to pursue this option.
+
+==Sample Fleets==
+{{Section|no_clear=true}}Beginners are Recommended to follow the Tab with "(Beginners)" until they are able to assemble multiple [[Partials/Opening ASW|OASW]] capable CL/DD, or some [[DE]] via Quests and/or as Drops during Event(s).
+
+{{Fleets
+|!2 DD/CL 1 BBV 1 CVL (Beginners)
+|!!Example 1 
+|-|Sazanami/Kai|Type 3 Active Sonar|Type 93 Passive Sonar|Type 3 Depth Charge Projector
+|-|Shiratsuyu|Type 93 Passive Sonar|Type 94 Depth Charge Projector
+|-|Hyuuga/Kai|Zuiun|Zuiun|Zuiun|Zuiun
+|-|Junyou|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber
+|!!Example 2
+|-|Akebono/Kai|Type 3 Active Sonar|Type 93 Passive Sonar|Type 3 Depth Charge Projector
+|-|Tatsuta/Kai|Type 93 Passive Sonar|Type 3 Active Sonar|Type 94 Depth Charge Projector
+|-|Fusou/Kai|Zuiun|Zuiun|Zuiun|Zuiun
+|-|Hiyou/Kai|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber
+|!!Example 3
+|-|Kuma/Kai|Type 3 Active Sonar|Type 3 Active Sonar|Type 3 Depth Charge Projector
+|-|Tama/Kai|Type 3 Active Sonar|Type 3 Active Sonar|Type 3 Depth Charge Projector
+|-|Ise/Kai|Zuiun|Zuiun|Zuiun|Zuiun
+|-|Shouhou/Kai|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber|Type 97 Torpedo Bomber
+|!1 CL 3 DD/DE
+|!!Example 1
+|-|Isuzu/Kai Ni|Type 3 Active Sonar|Type 3 Active Sonar|Type 3 Depth Charge Projector
+|-|Libeccio/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Asashimo/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|-|Urakaze/D Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|!!Example 2
+|-|Tatsuta/Kai Ni|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|-|Etorofu/Kai|Type 4 Passive Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Hiburi/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Daitou/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|!!Example 3
+|-|Naka/Kai Ni|Type 4 Passive Sonar|Type 3 Active Sonar|Type 3 Depth Charge Projector
+|-|Matsuwa/Kai|Type 4 Passive Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Asashio/Kai Ni D|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Tsushima/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|!1 CVL 3 DD/DE
+|!!Example 1
+|-|Gambier Bay/Kai|Type 97 Torpedo Bomber (931 Air Group)|Ka Type Observation Autogyro|Type 3 Command Liaison Aircraft (ASW)
+|-|Hiburi/Kai|Type 4 Passive Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Jervis/Kai|Type124 ASDIC|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Daitou/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|!!Example 2
+|-|Taiyou/Kai|Type 97 Torpedo Bomber (931 Air Group)|Type 3 Depth Charge Projector|Type 3 Active Sonar|Type 2 Depth Charge
+|-|Sado/Kai|Type 4 Passive Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Fukae/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Asashio/Kai Ni D|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|!!Example 3
+|-|Zuihou/Kai Ni B|Type 97 Torpedo Bomber (931 Air Group)|Tenzan Model 12 (Tomonaga Squadron)|Ka Type Observation Autogyro|Type 3 Command Liaison Aircraft (ASW)
+|-|Sado/Kai|Type 4 Passive Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Fukae/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Asashio/Kai Ni D|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|!4 DD/DE
+|!!Example 1
+|-|Matsuwa/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|-|Etorofu/Kai|Type 4 Passive Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Hiburi/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Daitou/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|!!Example 2
+|-|Jervis/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|-|Asashimo/Kai|Type 4 Passive Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Asashio/Kai Ni D|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Urakaze/D Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|!!Example 3
+|-|Samuel B. Roberts/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+|-|Jervis/Kai|Type 4 Passive Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Kunashiri/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 95 Depth Charge
+|-|Shimushu/Kai|Type 3 Active Sonar|Type 3 Depth Charge Projector|Type 2 Depth Charge
+}}
+{{SectionEnd}}
+{{clear}}
+{{Map/Footer}}

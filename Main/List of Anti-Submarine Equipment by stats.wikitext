@@ -1,0 +1,39 @@
+
+Ingame, a ship equipped with both a Sonar and Depth Charge will have a 15% damage boost against enemy submarines.<br />This bonus only applies once per ship (i.e A second pair of Sonar/Depth Charge equipped on the same ship will '''NOT''' gain another 15% boost)
+
+Equipping a Seaplane Tender with a Depth Charge along with a Seaplane Bomber will increase damage against subs.
+*Green : Outstanding
+*Yellow : Above average
+
+===Depth Charges===
+{{EquipmentComparisonKai
+|iterator = equipmentByType|type = 15
+|asw_good = 6
+|asw_outstanding = 10
+
+|Type 2 12cm Mortar Kai_notes = Does bonus damage to installations.
+|Type 2 12cm Mortar Kai (Concentrated Deployment)_notes = Does bonus damage to installations․
+
+|Type 2 12cm Mortar Kai_notes_highlight = good
+|Type 2 12cm Mortar Kai (Concentrated Deployment)_notes_highlight = outstanding
+}}
+===Sonars===
+{{EquipmentComparisonKai
+|iterator = equipmentBy|pred = is_sonar|sort = _type
+|asw_outstanding = 10
+|asw_good = 9
+|los_outstanding = 0
+|shelling_accuracy_good = 1
+|evasion_outstanding = 0
+}}
+===Anti-Submarine Patrol Aircraft===
+{{EquipmentComparisonKai
+|iterator = equipmentBy|pred = is_asw_aircraft|sort = _icon
+|asw_good = 8
+|asw_outstanding = 11
+|los_good = 0
+|shelling_accuracy_good = 1
+}}
+
+==See Also==
+{{Equipmentlist}}

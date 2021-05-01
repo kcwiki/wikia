@@ -1,0 +1,178 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Central Solomon Seas Tokyo Express
+|jp = 中部ソロモン海域鼠輸送
+|romaji = Chūbu soromon-kaiiki nezumi-yusō
+|tag = E1
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 170 TP + 1600
+|hp_easy = 170 TP + 1600
+|hp_medium = 180 TP + 1600
+|hp_hard = 200 TP + 1600
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Minegumo}}
+|reward_casual_1 = {{ItemStack|item = [[File:Jebaited.png{{!}}50px]]|text = Nothing}}
+|reward_easy_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_easy_2_x = 2
+|reward_easy_3 = {{EquipmentCardKai|Type 22 Surface Radar|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_2_x = 3
+|reward_hard_3 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules Phase 1
+|id = 43-1A
+
+|0 -> A/storm = * Do not meet the requirements to go to either B or C.
+|0 -> B = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to C.
+** Amount of ships in fleet ≤ 6/5 on Casual/Easy/Medium+
+** Amount of CLT+CA ≤ 2
+** No SS(V)
+|0 -> C = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships in fleet ≤ 6/5/4 on Casual/Easy/Medium+ '''OR''' Fast+ Fleet
+** Amount of CL ≤ 1
+** Amount of CLT+CA ≤ 1
+** No SS(V)
+** Fleet contains at least one historical ship '''OR''' Fast+ Fleet. (Medium+) 
+
+|C -> D = 
+* Do not meet the requirements to go to E.
+|C -> E/night = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL ≤ 2
+** Amount of CLT+CA ≤ 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules Phase 2
+|id = 43-1B
+
+|0 -> A/storm = * Do not meet the requirements to go to either B or C.
+|0 -> B = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to C.
+** Amount of CL ≤ 2
+** Amount of CLT+CA(V) ≤ 2/1/0 on Easy/Medium/Hard
+** No SS(V)
+|0 -> C = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships in fleet ≤ 5/5/4 on Casual/Easy/Medium+
+** Amount of CL ≤ 1
+** Amount of CLT+CA ≤ 1
+** No SS(V)
+** Fleet contains at least one historical ship. (Medium+)
+
+|B -> C = * Amount of ships ≤ 5
+|B -> H = * Amount of ships = 6
+
+|C -> D,E/night,I/ambush,L = 
+* If amount of ships ≤ 5:
+** If amount of CL ≤ 2 '''AND''' amount of CLT+CA ≤ 1, go to E.
+** Else, go to D.
+* If amount of ships = 6:
+** Meet '''ALL''' of the following requirements to go to L:
+*** Amount of ships with '''Surface Radars''' equipped ≥ 2/5 on Easy/Medium+
+*** Flagship has a Surface Radar equipped.
+*** Amount of CLT+CA(V) ≥ 0/1/2 on Medium+/Easy/Casual (Failure to meet this requirement '''FORCES''' you to E)
+*** Amount of CL ≤ 2 (Failure to meet this requirement '''FORCES''' you to D)
+*** Amount of CLT+CA(V) ≤ 2 (Failure to meet this requirement '''FORCES''' you to D)
+** Else, go to I.
+
+|I -> J/ambush = * Do not meet the requirements to go to L.
+|I -> L = 
+* Meet '''ALL''' of the following requirements to go to L:
+** Amount of ships with '''Surface Radars''' equipped ≥ 1/4 on Easy/Medium+
+** Flagship has a Surface Radar equipped.
+
+|J -> K/empty = * Do not meet the requirements to go to L.
+|J -> L = * Amount of ships with '''Surface Radars''' equipped ≥ 3 on Medium+
+}}
+===Before you start the Event===
+* A friendly reminder that once you clear a map — destroying the gauge by sinking the boss on her final form — at your chosen difficulty, there is no going back to change it.
+* Please read the [[Events/Mechanics|mechanics]] tab first - especially 'Ship locking' and 'Difficulty selection' — or the [[Early_Fall_2018_Event/Info|Info]] tab to plan before starting. Consider asking the [https://discord.gg/RtSadWM Discord channel] for help.
+**Anyone who wishes to tackle Medium+ should not rush into the map. Check other maps and see their requirements unless you wish to fight later maps
+* Remember that under normal circumstances your final objective of every map is sinking the boss. You only need to deplete the gauge and sink boss one last time in order to clear a map; sinking any escort ships is optional.
+
+===Historical Fleet: Battle of Blackett Strait===
+A supply run to the Kolombangara island that turned into a naval battle after {{ShipLink|Murasame Kai Ni|text=Murasame}} and {{ShipLink|Minegumo|text=Minegumo}} encountered the Task Force 68.
+* DD: {{ShipLink|Murasame Kai Ni|text=Murasame}}, {{ShipLink|Minegumo|text=Minegumo?}}
+===Historical Bonus===
+'''WARNING'''
+*Jintsuu also has an even greater bonus in E2. It is recommended that you save her for E2 if you are doing Medium+.
+*Yuudachi (1.5x) and Shigure (see below) do have reported bonus for E-2 and E-3, respectively, and may be more useful there.
+*Ayanami has ~1.6x bonus damage for E-2 node P. It is not recommended to use her here.
+*Isokaze, Hagikaze, and Arashi are reported to have ridiculous bonus (~2x) in E-3 and should be kept. Naganami, Shiranui and Shigure also have pretty high bonus (~1.5x).
+
+The following ships and equipment have been confirmed to deal bonus damage on Node L (Phase 2 Boss):
+{{:Winter 2019 Event/E-1/Historical Ship Bonus}}
+
+===Map Guide===
+This is a '''single''' fleet map. This map is separated into two phases: TP and HP
+#The transport phase's (TP) gauge can be depleted by reaching the boss node and obtaining at least an A-Rank; you '''DO NOT''' need to sink the {{ShipLink|Light Cruiser Tsu-Class|text=boss}}
+#*Bring {{EquipmentLink|Drum Canister (Transport Use)|text=drums}} and/or {{EquipmentLink|Daihatsu Landing Craft|text=daihatsu}} on ships that can carry them; for more info, see [[Events/Mechanics#Map-specific Mechanics|mechanics]] under "Transport Load-Off".
+#*'''Compositions'''
+#**{{Event/Route|B|red|C|red|E|purple|F|green|G|red}}
+#***'''Casual/Easy''': 0-2 CL 3-6 DD 0-1 CLT/CA(V)
+#***'''Medium/Hard''': 0-2 CL 3-5 DD
+#****{{ShipLink|Murasame}} will be useful due to her absurd damage bonus. There is one night battle node; node support is not needed but can be useful here if you're having a hard time passing it. There is also one submarine node, but it's unlikely to cause any troubles.
+#The HP gauge requires you to sink {{ShipLink|Abyssal Nimbus Princess}}.
+#*In this phase, you will be introduced to the new mechanic of this event — Ambush nodes ({{Event/Route|I|orange|J|orange}}). Failing to avoid an ambush will allow the enemy ships to take free shots on your fleet without any retaliation from you. The fight functions like a day battle, therefore no cut-in will occur. If you succeed in avoiding the ambush, nothing will happen and it will act as if it was just an empty node.
+#**To avoid an 'ambush', you are required to bring a certain number of radars depending on the map. The game counts the number of ships with radars, not the total number of radars they have equipped<br />— i.e., '''E-1H Phase 2 requires 5 radars.''' If you have 6 ships, you must bring 5 radars on 5 different ships, '''not''' 5 radars on 2 ships.
+#*'''Compositions'''
+#**Route: {{Event/Route|B|red|H|red|C|red|L|red}}
+#**Amount of ships with '''surface radars''' equipped ≥ 2/5 on Easy/Medium+ if you wish to go this route. Otherwise, it will detour to {{Event/Route|I|red}} if ≥4 and {{Event/Route|J|red}} if ≥3. Flagship '''must''' have surface radar.
+#***'''Easy/Casual''': 2 (CLT/CA(V)) 4 XX (Casual) and 1 (CLT/CA(V)) 5 XX (Easy)
+#****Yes, Easy/Casual requires CLT/CA(V) in order to route to boss.
+#***'''Medium/Hard''': 0-1 CL 5-6 DD
+#****To avoid future complications, 4 ships will '''never''' bring you to boss {{Event/Route|L|red}}.
+#****Bringing CLT/CA(V) for Medium+ is possible but will route you to {{Event/Route|A|purple}} first.
+#***Since the boss has only ~200 armor, DA (double attack) setups should be sufficient. TCI (torpedo cut-in) can also be used but not required. The pre-boss nodes are all light (cruiser, destroyer) ships; line ahead will be more effective than vanguard by either sinking or moderately damage them to prevent them from firing torpedoes. Pre-boss support won't be needed. However, boss support is highly recommended.
+
+{{:Winter 2019 Event/Info/Surface Radar}}
+
+===[[Friend Fleet]]s===
+{{Fleets|friend=Winter 2019 Event|map=E-1}}
+
+===Phases===
+{| class="wikitable"
+|-
+! Phase 1
+! Phase 2
+|-
+| [[File:Winter_2019_Event_E-1_Map_A.png|325px]]
+| [[File:Winter_2019_Event_E-1_Map.png|325px]]
+|}
+
+{{Event/MapPageFooter}}

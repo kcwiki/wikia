@@ -1,0 +1,30 @@
+<includeonly>{{#if:{{{1|}}}|<span class="image-stack" style="display:inline-block;overflow:hidden;vertical-align:middle;position:relative;">[[File:{{#replace:{{{1}}}|/|&#32;}} Banner{{#if:{{{damaged|}}}|&#32;Damaged}}.png|{{#if:{{{small|}}}|160x40px|240x60px}}|link={{{link|{{#replace:{{{1}}}|/|&#32;}}}}}|{{{caption|{{#replace:{{{1}}}|/|&#32;}}}}}]]{{#if:{{{ring|}}}|<span class="image-layer" style="line-height:0px;position:absolute;{{#if:{{{small|}}}|top:19px;left:138px;|top:29px;left:210px;}}">[[File:Battle Card Marriage Ring.png|link={{{link|{{#replace:{{{1}}}|/|&#32;}}}}}|{{{caption|{{#replace:{{{1}}}|/|&#32;}}}}}]]</span>|}}{{#if:{{{ring_glow|}}}|<span class="image-layer" style="line-height:0px;position:absolute;opacity:0.7;{{#if:{{{small|}}}|top:10px;left:126px;|top:25px;left:206px;}}">[[File:Battle Card Marriage Ring Glow.png|link={{{link|{{#replace:{{{1}}}|/|&#32;}}}}}|{{{caption|{{#replace:{{{1}}}|/|&#32;}}}}}]]</span>|}}</span>|[[File:Catbomb.png|{{#if:{{{small|}}}|160x40px|240x60px}}]]}}</includeonly><noinclude>
+Simplified version of [[Template:ShipBattleCardKai]]. Doesn't use Lua, so it's possible to have (practically) unlimited number of invokes on a page. Required by [[Template:ShipLink]].
+==Usage==
+<pre>{{ShipBattleCardHD|I-401}}</pre>
+{{ShipBattleCardHD|I-401}}
+
+<pre>{{ShipBattleCardHD|I-401/}}</pre>
+{{ShipBattleCardHD|I-401/}}
+
+<pre>{{ShipBattleCardHD|I-401 Kai}}</pre>
+{{ShipBattleCardHD|I-401 Kai}}
+
+<pre>{{ShipBattleCardHD|I-401/Kai}}</pre>
+{{ShipBattleCardHD|I-401/Kai}}
+
+<pre>{{ShipBattleCardHD|I-401/Kai|damaged=true}}</pre>
+{{ShipBattleCardHD|I-401/Kai|damaged=true}}
+
+<pre>{{ShipBattleCardHD|I-401/Kai|caption=Shioi|ring=true|ring_glow=true}}</pre>
+{{ShipBattleCardHD|I-401/Kai|caption=Shioi|ring=true|ring_glow=true}}
+
+<pre>{{ShipBattleCardHD|I-401/Kai|caption=Shioi|ring=true|ring_glow=true|damaged=true|small=true}}</pre>
+{{ShipBattleCardHD|I-401/Kai|caption=Shioi|ring=true|ring_glow=true|damaged=true|small=true}}
+
+==Notes==
+*Supported parameters: ''[1]'', ''link'', ''caption'', ''ring'', ''ring_glow'', ''damaged'', ''small'' (downscale HD card to Phase 1 size).
+*The following parameters can be added: ''name'', ''model'', ''grayscale'', ''mode''.
+*Other layers also can be supported (''flagship'', etc.).
+*Automatic enemy aircraft layers are not supported.
+</noinclude>

@@ -1,0 +1,134 @@
+Exciting news, folks!
+
+I have been around to address some presentation and management issues we had in the last event. Yes, Summer event caught us pants down, I'm not going to sugarcoat it. Last time, we had a [[Thread:253544|feedback thread]], long comments in [[User_blog:Crazy_teitoku/Wikia_-_Event_preparations_for_temporary_and_permanent_moderators|an equivalently long blog post ]] and even more complaints on why the pages were messy and slow to update.
+
+Therefore, we're  taking steps to formalize event management procedures and make it easier for the average Joe to access and safely contribute to event pages. Since the information presentation revamp of this project is basically finished, I invite you to leave comments and suggestions on the new additions listed below before we make the revamp official for all future events.
+
+
+<div style="background:lightgray;border:1px solid lightgray;padding:5px;font-weight:700;margin-top:-5px;text-align:center">Event page layout</div>
+{{for|a sample of the new layout|Sandbox/Event}}
+*Tabview model <s>with localized float panes</s>
+*Quick-reference info boxes
+*Sortable drop list
+*Interactive map
+*Hassle-free input templates
+
+A new event page layout was created to ensure we're appropriately prepared for future large-scale, major-salt events.
+
+Navigation by tabview is the central idea of the new layout. Every event page will have its own article page and they are all linked to the main page by tabview model. A new way to browse and edit sortie nodes information was implemented via an interactive map. With section editing enabled, basic users can contribute to enemy pattern listing without fear of breaking the code. Finally, we have a new sortable ship drop list template (see below) using a simplified form.
+
+
+<div style="background:lightgray;border:1px solid lightgray;padding:5px;font-weight:700;margin-top:-5px;text-align:center">Equipment stacking template</div>
+{{for|detailed documentation|Template:ItemStack/doc}}
+For you profile lovers, I have a side product of the revamp that might pique your interest.
+
+ItemStack template allows you to quickly create a counter number at the bottom right corner of any 50x50 item image using in-game style. The template supports customized formatting and nested templates for advanced users. It's possible to stack images (such as ship cards) on top of one another and take full advantage of Lua-based templates' features.
+
+{| class="article-table mw-collapsible mw-collapsed"
+!Samples
+|-
+|<pre>{{ItemStack
+|item = [[File:Improvement material.png{{!}}50px{{!}}link=]]
+|text = x7
+}}</pre>
+<pre>{{ItemStack
+|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=]]
+|text = x7
+}}</pre>
+{{ItemStack
+|item = [[File:Improvement material.png{{!}}50px{{!}}link=]]
+|text = x7
+}}{{ItemStack
+|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=]]
+|text = x7
+}}
+<pre>{{ItemStack
+|item = {{EquipmentCardKai|Prototype 51cm Twin Gun Mount|size=100px}}
+|text-position = bottom:-40px;right:6px;
+|font-size = 18px
+|text = x9001
+|glow-size = 8px
+|text-color = fff
+|glow-color = f00
+}}</pre>
+{{ItemStack
+|item = {{EquipmentCardKai|Prototype 51cm Twin Gun Mount|size=100px}}
+|text-position = bottom:-40px;right:6px;
+|font-size = 18px
+|text = x9001
+|glow-size = 8px
+|text-color = fff
+|glow-color = f00
+}}
+<pre>{{ItemStack
+|item = {{ShipCardKai|Ikazuchi/Kai}}
+|text = {{ItemStack
+|item = {{ShipCardKai|Hibiki/Kai}}
+|text = {{ItemStack
+|item = {{ShipCardKai|Akatsuki/Kai}}
+|text = {{ItemStack
+|item = {{ShipCardKai|Inazuma/Kai}}
+|text = DesDiv6
+|text-position = bottom:-130px;right:5px
+|font-size = 20px
+}}
+|text-position = left:130px;
+}}
+|text-position = left:130px;
+}}
+|text-position = left:130px;
+}}</pre>
+{{ItemStack
+|item = {{ShipCardKai|Ikazuchi/Kai}}
+|text = {{ItemStack
+|item = {{ShipCardKai|Hibiki/Kai}}
+|text = {{ItemStack
+|item = {{ShipCardKai|Akatsuki/Kai}}
+|text = {{ItemStack
+|item = {{ShipCardKai|Inazuma/Kai}}
+|text = DesDiv6
+|text-position = bottom:-130px;right:5px
+|font-size = 20px
+}}
+|text-position = left:130px;
+}}
+|text-position = left:130px;
+}}
+|text-position = left:130px;
+}}
+|}
+
+
+<div style="background:lightgray;border:1px solid lightgray;padding:5px;font-weight:700;margin-top:-5px;text-align:center">Sortable drop list template</div>
+{{for|detailed documentation|Template:DropList/doc}}
+
+Courtesy by [[User:がか|がか]], this Lua-based template will generate a ship drop list sortable by ship types, ship names, nodes. Rare ships are automatically highlighted on the list according to [[Thread:295964]]'s list of rare drops. Data verification is also taken care of by the module. The input form was greatly simplified compared to its predecessors.
+
+{| class="article-table mw-collapsible mw-collapsed"
+!Sample
+|-
+|<pre>{{DropList
+|nodes = A, B, D, E, F, G, J, Z
+|boss = Z
+|Harusame: G/Easy
+|Hatsukaze: Z/Medium, E/asdf
+|Makigumo: Z/Easy, E
+|Taigei: G/Medium, E/
+|Agano: Z/Easy, E/?
+|Noshiro: Z/Easy
+|Unryuu: Z/Easy
+|Inazuma: D/Hard, Z/Hard, X, E
+}}</pre>
+{{DropList
+|nodes = A, B, D, E, F, G, J, Z
+|boss = Z
+|Harusame: G/Easy
+|Hatsukaze: Z/Medium, E/asdf
+|Makigumo: Z/Easy, E
+|Taigei: G/Medium, E/
+|Agano: Z/Easy, E/?
+|Noshiro: Z/Easy
+|Unryuu: Z/Easy
+|Inazuma: D/Hard, Z/Hard, X, E
+}}
+|} <ac_metadata title="Equipment stacks, sortable drop lists and event page revamp" notify_everyone="1445071500"> </ac_metadata>

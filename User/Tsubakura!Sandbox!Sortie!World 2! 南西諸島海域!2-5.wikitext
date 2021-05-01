@@ -1,0 +1,546 @@
+__NOTOC__
+=={{Anchor|2-5}}World 2-5 【Extra Operation】<br />沖ノ島沖 Okinoshima Sea==
+{{Sortieworld
+| map = {{World2-5}}
+| difficulty = ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆
+| item = {{Fuel}} {{Steel}}
+| exp = 250
+| code = 沖ノ島沖戦闘哨戒 (Okinoshima Combat Patrol)
+| text = 同方面に敵反攻の兆候が報告された｡巡洋艦を中心に哨戒部隊を編成､敵艦隊の動向を探れ！
+
+There are reports of an enemy counteroffensive.  Form a cruiser patrol group and track their movements!
+}}
+
+===Stage Guide===
+{{MapBranchingTable
+|title = 2-5 Branching Rules
+|id = 2-5
+|0 -> A/battle =
+* Fleet contains at least 3DD + (1DD '''OR'''1CL), AV ≦ 1 and there are no carriers
+* Amount of SS(V) ≧ 4
+* Two ships in the fleet are equipped with at least 1 drum
+* Random if none of the requirements are met
+|0 -> B/battle =
+* Fleet contains carriers
+* Amount of AV ≧ 2
+* Fleet contains (F)BB(V) while not meeting any requirements to go to A
+* Random if none of the requirements are met
+
+|A/battle -> C/empty =
+* Amount of SS(V) ≧ 3
+|A/battle -> D/battle =
+* Does not meet the requirements to go to C
+
+|B/battle -> E/battle =
+* Meet '''all''' of the following requirements:
+** Do not meet any requirements that forces you to node F.
+** Amount of DD ≧ 2
+** (F)BB(V) and CV(B) not allowed (CVL doesn't count)
+* Random between node E and F you do not meet any requirements
+|B/battle -> F/empty =
+* Going to node F is '''forced''' if '''any''' of the following requirement is met:
+** Amount of SS(V) ≧ 3
+** Amount of CV ≧ 3
+** Amount of FBB = 2 '''OR''' 3
+** Amount of '''Slow''' BB = 2 (BBV does not count)
+** Amount of BBV ≧ 2
+* Random between node E and F you do not meet any requirements
+
+|D/battle -> G/resource =
+*If the fleet does not contain an AV:
+** Fleet contains both BB and CLT
+** High chance if fleet contains BB
+|D/battle -> H/empty =
+* Going to node H is '''forced''' if the fleet contains an AV
+* If the fleet does not contain an AV:
+** High chance if amount of DD ≧ 3 and BB = 1
+** High chance if amount of SS(V) = 2 and BB = 1
+** Fleet contains no BB
+
+|E/battle -> H/empty =
+*'''IF''' fleet contains no (F)BB(V) or CV(B)
+** Amount of DD ≧ 4??
+** Amount of DD ≧ 2 and CA = 2
+** Amount of DD ≧ 2 and CAV = 2
+* Random if you do not meet any requirements
+|E/battle -> I/battle =
+* Fleet contains at least a (F)BB(V) or CV(B)
+* High chance if amount of DD ≦ 1
+* Random if you do not meet any requirements
+
+|H/empty -> J/battle =
+* Fail the LoS check with less than 31 in the F33 formula (C<sub>n</sub>=1)<!--exclusive-->
+* Random if you do not meet any requirements (Higher chance to J if it is closer to 31)
+|H/empty -> L/battle =
+* Pass the LoS check by reaching 33 or higher with the F33 formula (C<sub>n</sub>=1)
+* Random if you do not meet any requirements (Higher chance to L if it is closer to 33
+
+|I/battle -> H/empty = 
+* Random if you fail the LoS check
+* 6 CVL fleet have a chance to go here even with over 33 F33 LoS. <ref>[http://imgur.com/cxCjhYD screenshot of KC3Kai panel]</ref>
+|I/battle -> L/battle =
+* Pass the LoS check by reaching 33 or higher with the F33 formula (C<sub>n</sub>=1)
+* Otherwise, have a chance to reach L by reaching 31 or above with the F33 formula (C<sub>n</sub>=1), andhigher LoS mean higher chance to reach the boss.
+|I/battle -> K/resource =
+* Random if you fail the LoS check
+}}
+
+'''Tips'''
+* You are required to SINK the flagship at boss node 4 times to clear the map.
+* A certain amount of [[Line_of_Sight|eLoS]] is required to reach the boss node:
+** Below 31 (using the new [[Line_of_Sight#Formula_33|formula 33]]; 57.2 for [[Line_of_Sight#2-5_fall_formula_.E3.80.90current_de_facto_standard.E3.80.91|2-5 fall formula]]) will not go H to L
+** 33 or more (using [[Line_of_Sight#Formula_33|formula 33]]; at least 70.4 for [[Line_of_Sight#2-5_fall_formula_.E3.80.90current_de_facto_standard.E3.80.91|2-5 fall formula]]) guarantees H to L
+* There are 3 routes to the boss node:
+** North route, 3 battles (A-D-H-L)
+** South route I, 3 battles (B-E-H-L)
+** South route II, 4 battles (B-E-I-L)
+* North route, 3 battles (A-D-H-L):
+** Only two battles before the boss node. The second node is a night battle node
+** '''Recommended fleet composition''': 2CAV 3CA(V) 1CLT, 1CA 1CL 4DD
+*** No BB(V) or CV(L) are allowed for this quest composition
+*** Two ships need to be equipped with a [[Drum Canister]] in order to guarantee node A '''OR''' have at least 3DD + 1DD or 1CL; otherwise, you risk being diverted to B.
+*** It's possible to bring 0-2 CLT
+**** Useful for their opening strike for easier Node A but too many will make reaching the required eLoS difficult (more feasible at lower levels).
+*** North route (including boss node) doesn't have any enemy carriers, so it's possible to get AS+ with just seaplane bombers, enabling Artillery Spotting
+*** The monthly quest Bm7 forces you to go through this route. Order your fleet as DD-CA-CL-DD-DD-DD to maximize the efficiency of the firing order while also meeting the requirement for the quest.
+*** Double attack setups (both day and night) are recommended for consistency
+*** Consider bringing [[Star Shell]]s, [[Searchlight]]s and/or [[Type 98 Recon Seaplane (Night Scout)|Type 98 Recon Seaplanes (Night Scout)]] to make the night battle and boss node easier.
+* South Route I, 3 battles (B-E-H-L):
+** Only two battles before the boss node
+** '''Recommended fleet compositions''': 2CA/CAV 2DD 2CVL; [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://imgur.com/8S4LsAJ.png 3CVL 1CL 2DD]
+*** No BB(V) or CV allowed
+*** 2 DD are needed to secure this route
+*** Use either 2 CA or 2 CAV.  Mixing CA/CAV can lead to I instead of H.{{Cite}}
+*** This route has an enemy carrier on the first node and BBs, which can easily damage low-armor ships. You are advised to bring high-level ships.
+* South Route II, 4 battles (B-E-I-L):
+** Three battles before the boss node
+** '''Recommended fleet compositions''': 4FBB 2CV; 1(F)BB(V) 3CA(V) 2CV; 6CVL; 3 CA(V) 3 CVL
+*** Heavy fleets have a chance of off routing to node F, a dead end.
+*** This is recommended to players with ship levels below 50 as it can cause fewer retreat than other composition despite being more expensive.
+*** 6CVLs is a viable option due to its strong opening; however, it can also lead to node F. It may go through South Route I while evading node I: [https://www.youtube.com/watch?v=Yb91IbH-TsM 6 CVL]
+*'''Summary''':
+** North route, 3 battles (A-D-H-L):
+*** (+) low resource consumption
+*** (+) hardly any bauxite lost or none at all
+*** (-) usually has the most issues getting the required {{LOS}} value, depending on your fleet
+*** (-) night battle node, which will usually be the cause of your retreats
+*** (-) strong ships needed to deal with the boss node
+** South route I, 3 battles (B-E-H-L):
+*** (+) low resource consumption & repair costs
+*** (+) no night battle node
+*** (+) able to bring light carriers
+*** (-) you need strong planes and carriers for this to be reliable
+*** (-) weaker ships are vulnerable due to the enemy battleship
+** South route II, 4 battles (B-E-I-L):
+*** (+) a very strong fleet
+*** (+) no night battle node
+*** (-) has a high chance of dead-end
+*** (-) has a chance to encounter {{ShipLink|Standard Carrier Wo-Class Kai Flagship|text=BWS}}
+*** (-) high resource consumption & repair costs
+===Quest Guide===
+<tabber>Sortie Quests=
+These are the quests that are related to World 2-5. 
+
+Please note that if the quest's composition is similar, it will be sorted under the same tab and the most notable one will be featured. Such cases are as followed:
+*Under Bm1 : B34
+*Under Bm7 : B57, B59, B79
+*Under B85 : N/A
+*Under B100 : N/A
+*Under B102 : B114
+
+The following quest is not listed as you can clear with basic setup.
+*[[Quests#C15|C15]]
+|-|Bm1=
+'''Common Composition''': 3-4 CA and 2-3 Wildcards<br/>
+'''Possible Route''': North and South <br/><br/>
+'''<u>[[Quests#Bm1|Bm1]]</u>''' - North Route <br/> 
+*'''Required''': 3 CA - {{ShipLink|Myoukou/Kai Ni}}, {{ShipLink|Haguro/Kai Ni}} , {{ShipLink|Nachi/Kai Ni}}  + 3 Wildcards
+*'''Suggested - North''': {{ShipLink|Myoukou/Kai Ni}}, {{ShipLink|Haguro/Kai Ni}} , {{ShipLink|Nachi/Kai Ni}} + 2 CAV + 1 CA/CLT
+**Equipping 2 [[Drum Canister (Transport Use)|Drum Canisters]], one on each CAV.
+**Equip [[Zuiun]] on CAV for easy air superiority)
+**Add another CLT gives you an opening strike but makes it harder to reach eLoS at node H; adding another CA has vice versa effect of CLT.<br/>
+*'''Suggested - South II''': {{ShipLink|Myoukou/Kai Ni}}, {{ShipLink|Haguro/Kai Ni}} , {{ShipLink|Nachi/Kai Ni}} + 3 CVL
+**There is another additional battle and having a chance to derail to dead end, F node; however, the opening strike of the CVLs and air superiority provide enough support to make up for its cons. 
+'''<u>[[Quests#B34|B34]]</u>'''- North Route <br/>
+*'''Required''': 4 CA - {{ShipLink|Furutaka}}, {{ShipLink|Aoba}} , {{ShipLink|Kako}}, {{ShipLink|Kinugasa}} + 2 Wildcards
+*'''Suggested - North''': {{ShipLink|Furutaka}}, {{ShipLink|Aoba}} , {{ShipLink|Kako}}, {{ShipLink|Kinugasa}} + 2 CAV
+**Additionally, similar suggestion can be given by using 2 CVL instead of 2 CAV and go South route II.
+|-|Bm7=
+'''Common Composition''': 3+ DD and 3 Wildcards<br/>
+'''Possible Routes''': North and South <br/><br/>
+'''<u>[[Quests#Bm7|Bm7]]</u>'''- North Route '''only''' <br/>
+*'''Required''': 4DD (DD as flagship) + 1CL + 1CA (Not CAV)
+** Due to 4 DD and no composition leeway, this composition will be forced to go north no matter what. In addition, there is a line of sight requirements from node H to boss node making this quest one of the more challenging one:
+***All destroyers will need radars and is unlikely to equip any night battle equipment. Try balancing between ships that can provide high firepower and ships that has good base LoS (or both):
+****{{ShipLink|Kasumi/Kai Ni B}} is useful as she is currently the only DD that can equip Large radar (e.g.[[Type 32 Surface Radar]]), allowing you some space to equip other equipment (e.g. [[Searchlight]]). 
+****{{ShipLink|Akatsuki/Kai Ni}} is great due to her high base LoS and decent firepower.
+****Some other candidates are {{ShipLink|Asashio/Kai Ni}} (not D), {{ShipLink|Ooshio/Kai Ni}}, {{ShipLink|Fubuki/Kai Ni}}, {{ShipLink|Ayanami/Kai Ni}},{{ShipLink|Kawakaze/Kai Ni}}, and {{ShipLink|Yuudachi/Kai Ni}}.
+***CA will probably need 1-2 seaplanes to gain enough LoS. 
+**** {{ShipLink|Choukai/Kai Ni}} is currently the best CA to use with her ridiculously all-high stats (except luck) compared to all other CAs. In addition, her high FP and base LoS (losing LoS only to the Tone-class Kai) makes her the ideal ship for this quest.
+***** Otherwise, {{ShipLink|Myoukou/Kai Ni}}, {{ShipLink|Haguro/Kai Ni}} , {{ShipLink|Nachi/Kai Ni}} , {{ShipLink|Ashigara/Kai Ni}} are also viable selection.
+****Having {{ShipLink|Zara/Kai}} or {{ShipLink|Pola/Kai}} will allow you to bring seaplane bombers (e.g. [[Zuiun]]) despite using a CA, allowing you to achieve Air Superiority
+***CL might need to have 1-2 seaplanes equipped to bring the fleet up to the required LoS. 
+****Four-slot CLs such as {{ShipLink|Ooyodo/Kai}} are especially useful for this as you do not sacrifice double attacks at night; her Base LoS is the highest among the CLs and one of the highest in the game.{{ShipLink|Yuubari/Kai}}, another 4-slot CL, can also carry seaplane despite her 0 slot; however, she has the lowest base LoS of all the CL-kai.
+**** It is possible to use {{ShipLink|Abukuma/Kai Ni}} for her opening torpedo, but you need to distribute your LoS carefully.
+**** Stat-wise, {{ShipLink|Kuma/Kai}} and {{ShipLink|Nagara/Kai}} are strong CL due to their ridiculously high stat despite being a Kai-ship, but having no unique gimmick like those previously mentioned. Sendai-class Kai ni are also viable with a bit more base LoS; Kuma and Nagara do cost less in terms of ammo than the Sendai-class Kai ni. 
+<br/>
+'''<u>[[Quests#B57|B57]]</u>''' - North and South Route <br/>
+*'''Required - North''': {{ShipLink|Kasumi}} as Flagship, {{ShipLink|Asashimo}}, {{ShipLink|Kiyoshimo }}, {{ShipLink|Ooyodo}}, {{ShipLink|Ashigara}} + 1 Wildcard
+**Since 1 Wildcard is allowed, another CA is highly recommended since it gives you decent firepower while lessening your load on LoS as you can bring additional seaplanes. Other options (CLT or Abukuma opening torpedo) are possible.
+*'''Alternative - South''': On the other hand, you can use 1 CVL (avoid dead end and possibly node I) and go South Route I instead. LoS became a lot less problematic when you have carriers.
+<br/>
+'''<u>[[Quests#B59|B59]]</u>''' - North and South Route <br/>
+*'''Required''': {{ShipLink|Kasumi/Kai Ni}} as Flagship + 2 DD + 3 Wildcard
+**Even better, a lot more wiggling room. Follow suggestions as above, but remember that now, you can equip up to 2-3 CA for easy LoS along with possibly 0-1 CLT.
+*'''Alternative - South''': With even more flexibility, you can even do 3 CVL and go, mostly, South Route I (still can derail to I).
+<br/>
+'''<u>[[Quests#B79|B79]]</u>''' - North and South Route <br/>
+*'''Required''': {{ShipLink|Ayanami}}, {{ShipLink|Shikinami}}, {{ShipLink|Uranami}}, {{ShipLink|Isonami}} + 2 Wildcard
+*'''Only A-rank is needed'''
+**As above, but with 1 less wildcard. But a bit more difficult due to the 4 DD restriction. This forces you to plan your fleet carefully since you are not bringing any unique stat ships with you other than Ayanami. Depending on your preference, you can choose what your 2 wildcards will be. However, you must consider the fact that the base LoS stat from will be lower than if you sortie, let's say, [[Akatsuki]].
+*'''Alternative - South''': As above but with 2 CVL instead. Bringing CVL will help deal with LoS requirement but traded with going through a node with BB. 
+|-|B85=
+'''<u>[[Quests#B85|B85]]</u>''' - North or South Route <br/>
+*'''Required''':   {{ShipLink|Kinu/Kai Ni}} as flagship + 5 of the following 6 members: {{ShipLink|Aoba/Kai}}, {{ShipLink|Kuma/Kai}}, {{ShipLink|Kitakami/Kai Ni}} , {{ShipLink|Ooi/Kai Ni}} , {{ShipLink|Shikinami/Kai}}  and/or {{ShipLink|Uranami/Kai}}
+**Since you can only bring 2 DD at max, this allows you to pick between a definite North route (i.e. put [[Drum Canister (Transport Use)|Drums]]) or a random South I Route (no drums)
+**There is a small wiggling room for this quest. As you only need 5/6 of the ships, the only ship that you must pick no matter what is {{ShipLink|Kinu/Kai Ni}}. 
+*** Due to the LoS requirement, night battle equipment may not be possible to bring and your fleet's fire power might be low. Consider this fact when you want to bring drums for definite A node too.
+****'''DD''' - {{ShipLink|Uranami/Kai}} and/or {{ShipLink|Shikinami/Kai}} is recommended to be outfitted with only surface radars (e.g. [[Type 33 Surface Radar]]) to give other ships more firepower. Although, giving them 2 Guns + 1 Radar is viable but other ships will suffer.
+**** '''CL''' - {{ShipLink|Kinu/Kai Ni}} and/or {{ShipLink|Kuma/Kai}} will also need radars and/or seaplanes.
+**** '''CA''' - {{ShipLink|Aoba/Kai}} is recommended to have two seaplanes + 2 main guns.
+**** '''CLT''' - {{ShipLink|Kitakami/Kai Ni}} and/or {{ShipLink|Ooi/Kai Ni}}  is recommended to have their normal configuration of 2 Guns and [[Kouhyouteki]].
+|-|B100=
+'''<u>[[Quests#B100|B100]]</u>''' - North or South Route <br/>
+*'''Required''':   1 Light Cruiser, 2 Destroyers or Coastal Defense Ships, 1 Aviation Cruiser or Light Carrier, up to 2 additional ships
+*The reason that this quest is separated from the rest is because of its freedom to go either north or south despite leaning toward the north:
+**'''North''': This will bring you back to the Bm7 composition-like, but your composition will be 3 DD 1 CL 1 CA(V) and two wildcards.
+***This gives you more relaxation on your LoS because of CAV's higher Base LoS and your freedom to bring two other ships. Everything else, just look at Bm7's tab.
+**'''South''': South is plausible with the composition:
+***1 CL 2 DD 2 CA(V) and 1 CVL
+****A carrier will force you south. Use the advantage of forcing you to bring 2 DD to go the B-E-H-L (2 battles) route by adding an additional 2 CA(V) to your fleet. The CVL will help you deal with Air Denial if you happened to meet the carrier at node B, and give you Air superiority and Air-strike power. Make sure you bring at least one fighter to reach AS. 
+***1 CL 2 DD 3 CVL
+****Similar to above but with stronger Opening Strike.
+|-|B102=
+'''<u>[[Quests#B102|B102]] and [[Quests#B114|B114]]</u>''' - North Route <br/>
+*'''Required''':   {{ShipLink|Ise/Kai}} and {{ShipLink|Hyuuga/Kai}} ('''both above level 50''') as flagship and 2nd ship with 1 Light Cruiser, 2 Destroyers and 1 additional ship.
+**For [[Quests#B114|B114]], {{ShipLink|Ise/Kai}} and {{ShipLink|Hyuuga/Kai}} do not need to be at specified position. Positioning is flexible; everything else is the same.
+*This is a peculiar quest. Not only is there a minimum level, but it also forced you North with 2 BB. This will most likely be your fleet's composition that provides certain routing:
+**{{ShipLink|Ise/Kai}}, {{ShipLink|Hyuuga/Kai}}, 2 DD, 1 CL + 1 DD/AV/CA
+***Due to the presence of both Ise and Hyuuga, you are not allowed to go South route as it will always lead you to Node F, a dead-end. Therefore, the only other option left is to go north. 
+****DD/AV is suggested if you wish to satisfy the routing requirement without/with drums. 
+****CA is considered because of their efficiency at both day battle and night battle node compared to BB(V)/DD. Equip two of your DD/CL with at least 1 drum if you wish to bring a CA. However, there's a chance to get off routed to Node G due to random routing.
+*Node D (night battle) will be the usual; just survive it.
+</tabber>
+
+===Nodes and Enemy Encounters===
+
+<div class="mw-customtoggle-2-5-enemy wikia-menu-button">Show/Hide Nodes and Enemy Encounters</div>
+
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-2-5-enemy"
+! colspan="8" style="text-align:center;" |Nodes and Enemy Encounters
+|-
+| style="text-align:center;" |'''Area'''
+| style="text-align:center;" |'''HQ LV.'''
+| style="text-align:center;" |'''#'''
+| style="width:500px;text-align:center;" |'''Encountered vessels'''
+| style="text-align:center;" |'''Form'''
+| style="text-align:center;" |'''Air'''
+|-
+| colspan="1" rowspan="6" style="text-align:center;" |A<br />敵水雷戦隊<br /><span style="color:gold">Day Battle</span>
+| rowspan="2" style="text-align:center;" |100 and above
+| style="text-align:center;" |1
+| style="text-align:center;" |[[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ro Class3.png|Destroyer Ro-Class Flagship|link=Destroyer Ro-Class]][[File:DD Ro Class3.png|Destroyer Ro-Class Flagship|link=Destroyer Ro-Class]][[File:CT Chi Class2.png|Torpedo Cruiser Chi-Class Elite|link=Torpedo Cruiser Chi-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| rowspan="6" style="text-align:center;" |{{LineAhead}}
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |2
+| style="text-align:center;" |[[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:CT Chi Class3.png|Torpedo Cruiser Chi-Class Flagship|link=Torpedo Cruiser Chi-Class]][[File:CT Chi Class3.png|Torpedo Cruiser Chi-Class Flagship|link=Torpedo Cruiser Chi-Class]][[File:DD Ro Class3.png|Destroyer Ro-Class Flagship|link=Destroyer Ro-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" | -
+|-
+| rowspan="2" style="text-align:center;" |70<br />to<br />99
+| style="text-align:center;" |3
+| style="text-align:center;" |[[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ro Class3.png|Destroyer Ro-Class Flagship|link=Destroyer Ro-Class]][[File:CT Chi Class2.png|Torpedo Cruiser Chi-Class Elite|link=Torpedo Cruiser Chi-Class]][[File:CL_Ho_Class2.png|Light Cruiser Ho-Class Elite|link=Light Cruiser Ho-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |4
+| style="text-align:center;" |[[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:CT Chi Class3.png|Torpedo Cruiser Chi-Class Flagship|link=Torpedo Cruiser Chi-Class]][[File:CT Chi Class2.png|Torpedo Cruiser Chi-Class Elite|link=Torpedo Cruiser Chi-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" | -
+|-
+| rowspan="2" style="text-align:center;" |69 and below
+| style="text-align:center;" |5
+| style="text-align:center;" |[[File:CL_Ho_Class3.png|Light Cruiser Ho-Class Flagship|link=Light Cruiser Ho-Class]][[File:CT Chi Class2.png|Torpedo Cruiser Chi-Class Elite|link=Torpedo Cruiser Chi-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |6
+| style="text-align:center;" |[[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:CT Chi Class2.png|Torpedo Cruiser Chi-Class Elite|link=Torpedo Cruiser Chi-Class]][[File:CT Chi Class2.png|Torpedo Cruiser Chi-Class Elite|link=Torpedo Cruiser Chi-Class]][[File:CL_Ho_Class2.png|Light Cruiser Ho-Class Elite|link=Light Cruiser Ho-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" | -
+|-
+| rowspan="9" style="text-align:center;" |B<br />敵前衛艦隊<br /><span style="color:gold">Day Battle</span>
+| rowspan="3" style="text-align:center;" |90 and above
+| style="text-align:center;" |1
+| style="text-align:center;" |[[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:DD Ha Class3.png|Destroyer Ha-Class Flagship|link=Destroyer Ha-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]]
+| style="text-align:center;" |{{LineAhead}}
+| style="text-align:center;" | -
+|-
+| rowspan="2" style="text-align:center;" |2
+| rowspan="2" style="text-align:center;" |[[File:CVL Nu Class3.png|Light Carrier Nu-Class Flagship|link=Light Carrier Nu-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| rowspan="2" style="text-align:center;" |{{Diamond}}
+| style="text-align:center;" |'''AS+''' 69
+|-
+| style="text-align:center;" |'''AS''' 35
+|-
+| rowspan="3" style="text-align:center;" |60<br />to<br />89
+| style="text-align:center;" |3
+| style="text-align:center;" |[[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" |{{LineAhead}}
+| style="text-align:center;" | -
+|-
+| rowspan="2" style="text-align:center;" |4
+| rowspan="2" style="text-align:center;" |[[File:CVL Nu Class3.png|Light Carrier Nu-Class Flagship|link=Light Carrier Nu-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL_Ho_Class3.png|Light Cruiser Ho-Class Flagship|link=Light Cruiser Ho-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]]
+| rowspan="2" style="text-align:center;" |{{Diamond}}
+| style="text-align:center;" |'''AS+''' 69
+|-
+| style="text-align:center;" |'''AS''' 35
+|-
+| rowspan="3" style="text-align:center;" |59 and below
+| style="text-align:center;" |5
+| style="text-align:center;" |[[File:CL_Ho_Class3.png|Light Cruiser Ho-Class Flagship|link=Light Cruiser Ho-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]]
+| style="text-align:center;" |{{LineAhead}}
+| style="text-align:center;" | -
+|-
+| rowspan="2" style="text-align:center;" |6
+| rowspan="2" style="text-align:center;" |[[File:CVL Nu Class3.png|Light Carrier Nu-Class Flagship|link=Light Carrier Nu-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| rowspan="2" style="text-align:center;" |{{Diamond}}
+| style="text-align:center;" |'''AS+''' 69
+|-
+| style="text-align:center;" |'''AS''' 35
+|-
+| style="text-align:center;" |C
+| colspan="5" style="text-align:center;" |"Must be my imagination" (battle avoided)
+|-
+| rowspan="4" style="text-align:center;" |D<br />敵巡洋艦隊<br /><span style="color:Blue">Night Battle</span>
+| rowspan="2" style="text-align:center;" |90 and above
+| style="text-align:center;" |1
+| style="text-align:center;" |[[File:CA Ri Class4.png|Heavy Cruisers Ri Class Kai|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]]
+| rowspan="4" style="text-align:center;" |{{LineAhead}}
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |2
+| style="text-align:center;" |[[File:CA Ri Class3.png|Heavy Cruisers Ri Class Flagship|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |60<br />to<br />89
+| style="text-align:center;" |3
+| style="text-align:center;" |[[File:CA Ri Class3.png|Heavy Cruisers Ri Class Flagship|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL He Class2.png|Light Cruiser He Class Elite|link=Light Cruiser He-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |59 and below
+| style="text-align:center;" |4
+| style="text-align:center;" |[[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL_Ho_Class2.png|Light Cruiser Ho-Class Elite|link=Light Cruiser Ho-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]]
+| style="text-align:center;" | -
+|-
+| rowspan="3" style="text-align:center;" |E<br />敵水上打撃部隊<br /><span style="color:gold">Day Battle</span>
+| style="text-align:center;" |80 and above
+| style="text-align:center;" |1
+| style="text-align:center;" |[[File:BB Ru Class3.png|Battleship Ru Class Flagship|link=Battleship Ru-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CT Chi Class3.png|Torpedo Cruiser Chi-Class Flagship|link=Torpedo Cruiser Chi-Class]][[File:CT Chi Class3.png|Torpedo Cruiser Chi-Class Flagship|link=Torpedo Cruiser Chi-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| rowspan="3" style="text-align:center;" |{{LineAhead}}{{DoubleLine}}
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |60<br />to<br />79
+| style="text-align:center;" |2
+| style="text-align:center;" |[[File:BB Ru Class3.png|Battleship Ru Class Flagship|link=Battleship Ru-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |59 and below
+| style="text-align:center;" |3
+| style="text-align:center;" |[[File:BB Ru Class3.png|Battleship Ru Class Flagship|link=Battleship Ru-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |F
+| colspan="5" style="text-align:center;" |"Must be my imagination" (battle avoided)
+|-
+| style="text-align:center;" |G
+| colspan="5" style="text-align:center;" |{{Fuel}} + (number of drum canisters * 10) + 50 up to a max of 150
+|-
+| style="text-align:center;" |H
+| colspan="5" style="text-align:center;" |"Must be my imagination" (battle avoided)
+|-
+| rowspan="8" style="text-align:center;" |I<br />敵機動艦隊<br /><span style="color:gold">Day Battle</span>
+| rowspan="2" style="text-align:center;" |100 and above
+| rowspan="2" style="text-align:center;" |1
+| rowspan="2" style="text-align:center;" |[[File:CV Wo Class4.png|Standard Carrier Wo-Class Remodel Flagship|link=Standard Carrier Wo-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:CL He Class2.png|Light Cruiser He Class Elite|link=Light Cruiser He-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| rowspan="8" style="text-align:center;" |{{Diamond}}
+| style="text-align:center;" |'''AS+''' 306
+|-
+| style="text-align:center;" |'''AS''' 153
+|-
+| rowspan="2" style="text-align:center;" |70 and above
+| rowspan="2" style="text-align:center;" |2
+| rowspan="2" style="text-align:center;" |[[File:CV O Class3.jpg|Standard Carrier Wo-Class Flagship|link=Standard Carrier Wo-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:CL He Class2.png|Light Cruiser He Class Elite|link=Light Cruiser He-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| style="text-align:center;" |'''AS+''' 84
+|-
+| style="text-align:center;" |'''AS''' 42
+|-
+| rowspan="2" style="text-align:center;" |50<br />to<br />99
+| rowspan="2" style="text-align:center;" |3
+| rowspan="2" style="text-align:center;" |[[File:CV O Class3.jpg|Standard Carrier Wo-Class Flagship|link=Standard Carrier Wo-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]]
+| style="text-align:center;" |'''AS+''' 84
+|-
+| style="text-align:center;" |'''AS''' 42
+|-
+| rowspan="2" style="text-align:center;" |69 and below
+| rowspan="2" style="text-align:center;" |4
+| rowspan="2" style="text-align:center;" |[[File:CV O Class3.jpg|Standard Carrier Wo-Class Flagship|link=Standard Carrier Wo-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:CL_Ho_Class2.png|Light Cruiser Ho-Class Elite|link=Light Cruiser Ho-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" |'''AS+''' 84
+|-
+| style="text-align:center;" |'''AS''' 42
+|-
+| rowspan="3" style="text-align:center;" |J<br />敵侵攻部隊<br /><span style="color:gold">Day Battle</span>
+| style="text-align:center;" |80 and above
+| style="text-align:center;" |1
+| style="text-align:center;" |[[File:Wa flagship card.png|Transport Ship Wa-Class Flagship|link=Transport Ship Wa-Class]][[File:CA Ri Class3.png|Heavy Cruisers Ri Class Flagship|link=Heavy Cruiser Ri-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]]
+| rowspan="3" style="text-align:center;" |{{DoubleLine}}
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |50<br />to<br />79
+| style="text-align:center;" |2
+| style="text-align:center;" |[[File:Wa flagship card.png|Transport Ship Wa-Class Flagship|link=Transport Ship Wa-Class]][[File:CA Ri Class3.png|Heavy Cruisers Ri Class Flagship|link=Heavy Cruiser Ri-Class]][[File:CL_Ho_Class2.png|Light Cruiser Ho-Class Elite|link=Light Cruiser Ho-Class]][[File:DD Ha Class2.png|Destroyer Ha-Class Elite|link=Destroyer Ha-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |49 and below
+| style="text-align:center;" |3
+| style="text-align:center;" |[[File:AP_Wa_Class2.png|Transport Ship Wa-Class Elite|link=Transport Ship Wa-Class]][[File:CA Ri Class3.png|Heavy Cruisers Ri Class Flagship|link=Heavy Cruiser Ri-Class]][[File:CL_Ho_Class2.png|Light Cruiser Ho-Class Elite|link=Light Cruiser Ho-Class]][[File:DD Ro Class2.png|Destroyer Ro-Class Elite|link=Destroyer Ro-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]][[File:DD I Class2.png|Destroyer I-Class Elite|link=Destroyer I-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |K
+| colspan="5" style="text-align:center;" |{{Steel}} + ?
+|-
+| rowspan="6" style="text-align:center;" |'''<span style="color:red">L<br />敵主力艦隊</span><br /><span style="color:gold">Day Battle</span>'''
+| rowspan="2" style="text-align:center;" |100 and above
+| style="text-align:center;" |I
+| style="text-align:center;" |[[File:BB Ta Class3.png|Battleship Ta Class Flagship|link=Battleship Ta-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| rowspan="6" style="text-align:center;" |{{LineAhead}}
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |F
+| style="text-align:center;" |[[File:BB Ta Class3.png|Battleship Ta Class Flagship|link=Battleship Ta-Class]][[File:BB Ru Class3.png|Battleship Ru Class Flagship|link=Battleship Ru-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:CA Ri Class2.png|Heavy Cruisers Ri Class Elite|link=Heavy Cruiser Ri-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| style="text-align:center;" | -
+|-
+| rowspan="2" style="text-align:center;" |70<br />to<br />99
+| style="text-align:center;" |I
+| style="text-align:center;" |[[File:BB Ta Class2.png|Battleship Ta Class Elite|link=Battleship Ta-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |F
+| style="text-align:center;" |[[File:BB Ta Class3.png|Battleship Ta Class Flagship|link=Battleship Ta-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:CL He Class3.png|Light Cruiser He-Class Flagship|link=Light Cruiser He-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| style="text-align:center;" | -
+|-
+| rowspan="2" style="text-align:center;" |69 and below
+| style="text-align:center;" |I
+| style="text-align:center;" |[[File:BB Ta Class2.png|Battleship Ta Class Elite|link=Battleship Ta-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |F
+| style="text-align:center;" |[[File:BB Ta Class3.png|Battleship Ta Class Flagship|link=Battleship Ta-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:BB Ru Class2.png|Battleship Ru Class Elite|link=Battleship Ru-Class]][[File:CL To Class2.png|Light Cruiser To Class Elite|link=Light Cruiser To-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]][[File:DD Ni Class2.png|Destroyer Ni Class Elite|link=Destroyer Ni-Class]]
+| style="text-align:center;" | -
+|}
+
+===Drops===
+
+<div class="mw-customtoggle-2-5-drop wikia-menu-button">Show/Hide Drops</div>
+
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-2-5-drop"
+! colspan="9" style="text-align:center;" |Drops
+|-
+!Node
+!Destroyers
+!Light Cruisers
+!Heavy Cruisers
+!Seaplane Tender
+!Aircraft Carrier
+!Battleship
+!Submarine
+!Other
+|-
+|A
+|[[Ooshio]], [[Hatsuyuki]], [[Ushio]], [[Miyuki]], [[Mutsuki]], [[Kisaragi]]. [[Akebono|Akebono,]] [[Suzukaze]], [[Asashio]].
+|[[Tenryuu]], [[Tatsuta]], [[Sendai]], [[Jintsuu]], [[Naka]], [[Kuma]], [[Nagara]], [[Isuzu]], [[Yura]], [[Natori]], [[Kiso]]
+|[[Nachi]], [[Ashigara]], [[Haguro]], [[Furutaka]], [[Kako]], [[Aoba]], [[Choukai]], [[Maya]], [[Mogami]] 
+|[[Chitose]], [[Chiyoda]]
+|[[Junyou]], [[Shouhou]], [[Ryuujou]], [[Hiyou]]
+|
+|
+|
+|-
+|B
+|[[Shirayuki]], [[Suzukaze]], [[Samidare]], [[Ayanami]], [[Isonami]], [[Shikinami]], [[Asashio]], [[Ooshio]], [[Kisaragi]], [[Hatsuyuki]], [[Ushio]], [[Akebono]], [[Satsuki]],
+|[[Kuma]], [[Naka]], [[Tama]], [[Tatsuta]], [[Tenryuu]], [[Nagara]], [[Isuzu]], [[Yura]], [[Kiso]]
+|[[Furutaka]], [[Kako]], [[Aoba]], [[Haguro]], [[Choukai]], [[Maya]], [[Mogami]]
+|[[Chitose]], [[Chiyoda]]
+|
+[[Ryuujou]], [[Hiyou]], [[Jun'you]], [[Shouhou]]
+|
+|
+|
+|-
+|D
+|[[Shikinami]], [[Hatsuyuki]], [[Hamakaze|'''<span style="color:red">Hamakaze</span>''']], [[Isonami]], 
+|[[Isuzu]], [[Ooi]], [[Nagara]]
+|[[Aoba]], [[Kako]], [[Furutaka]], [[Mogami]]
+|[[Chitose]], [[Chiyoda]]
+|
+|[[Ise]]
+|
+|
+|-
+|E
+|[[Ayanami]], [[Satsuki]], [[Kisaragi]], [[Shikinami]], [[Shirayuki]], [[Mutsuki]], [[Hamakaze|'''<span style="color:red">Hamakaze</span>''']]
+|[[Isuzu]], [[Tenryuu]], [[Tatsuta]], [[Natori]], [[Jintsuu]], [[Ooi]], [[Naka|Naka, ]][[Tama]], [[Yura]], [[Sendai]], Kuma
+|[[Furutaka]], [[Kako]], [[Aoba]], [[Kinugasa|'''<span style="color:red">Kinugasa</span>''']], [[Myoukou]], [[Haguro]], [[Ashigara]], [[Maya]], [[Chokai]], [[Tone]], [[Chikuma]], [[Mogami]]
+|[[Chitose]], [[Chiyoda]]
+|
+[[Ryuujou]], [[Shouhou]], [[Hiyou]], [[Jun'you]]
+|
+[[Fusou]], [[Yamashiro]], [[Ise]], [[Hyuuga]],
+|
+|
+|-
+|I
+|[[Ayanami]], [[Shikinami]], [[Mutsuki]], [[Kisaragi]], [[Asashio]], [[Hatsuyuki]], [[Satsuki]] , [[Hamakaze|'''<span style="color:red">Hamakaze</span>''']]
+|[[Tenryuu]], [[Tatsuta]], [[Isuzu]], [[Yura]], [[Naka]], [[Sendai]], [[Ooi]], [[Kuma]], [[Tama]]
+|
+[[Furutaka]], [[Kako]], [[Aoba]], [[Kinugasa|'''<span style="color:red">Kinugasa</span>''']], [[Takao]], [[Atago]], [[Choukai]], [[Tone]], [[Chikuma]], [[Myoukou]], [[Mogami]]
+|[[Chitose]], [[Chiyoda]]
+|
+[[Ryuujou]], [[Shouhou]], [[Jun'you]], [[Hiyou]]
+|[[Yamashiro]], [[Ise]]
+|
+|
+|-
+|J
+|[[Ayanami]], [[Satsuki]], [[Hamakaze|'''<span style="color:red">Hamakaze</span>''']]
+|[[Kuma]], [[Tatsuta]], [[Jintsu]], [[Isuzu]], [[Sendai]], [[Ooi]], 
+[[Naka]]
+|[[Aoba]], [[Mogami]], [[Choukai]], [[Kako]], [[Tone]]
+|[[Chitose]]
+|[[Ryuujou]], [[Hiyou]]
+|[[Yamashiro|Yamashiro, ]]
+[[Fusou]], [[Ise]]
+|
+|
+|-
+| style="color:red; text-align:center;" |'''L'''
+|[[Fubuki]], [[Uzuki|'''<span style="color:red">Uzuki</span>''']], [[Yayoi|'''<span style="color:red">Yayoi</span>''']], [[Shimakaze|'''<span style="color:red">Shimakaze</span>''']], [[Hamakaze|'''<span style="color:red">Hamakaze</span>''']], [[Urakaze|'''<span style="color:red">Urakaze</span>''']], [[Yuugumo|'''<span style="color:red">Yuugumo</span>''']], [[Makigumo|'''<span style="color:red">Makigumo</span>''']], [[Kawakaze|'''<span style="color:red">Kawakaze</span>''']]
+|[[Kuma]], [[Kitakami]], [[Nagara]], [[Kinu]], [[Sendai]], [[Abukuma|'''<span style="color:red">Abukuma</span>''']]
+|[[Takao]], [[Atago]], [[Tone]], [[Chikuma]], [[Suzuya|'''Suzuya''']], [[Kumano|'''Kumano''']], [[Mogami]]
+|
+|[[Kaga]], [[Shouhou]], [[Zuihou]], [[Souryuu]], [[Hiryuu|'''Hiryuu''']], [[Ryuujou]]
+|[[Kongou]], [[Hiei]], [[Haruna]], [[Kirishima]], [[Fusou]], [[Yamashiro]], [[Ise]], [[Hyuuga]]
+|[[I-58|'''I-58''']], [[I-168|'''<span style="color:red">I-168</span>''']], [[I-19|'''<span style="color:red">I-19</span>''']]
+|[[Taigei|'''<span style="color:red">Taigei</span>''']]<br />[[Akashi|'''<span style="color:red">Akashi***</span>''']]
+|}
+
+===Note===
+[[Akashi]] will drop with a small chance in 2-5 only for Admirals who do not '''currently''' own her. So, if you already have had her but sunk/scrapped/used her in modernization, she will drop in this map again.
+===Trivia===
+*The LoS value required to have 100% chance of going to the boss was 38 in F33 or 70.4 in 2-5 Fall formula before Bm7's implementation in December 2014, but is reduced to 33 in F33 after the implementation.

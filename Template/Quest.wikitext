@@ -1,0 +1,67 @@
+<includeonly>{{#vardefine:type|{{{Type|{{#sub:{{{Use_ID|{{{ID|}}}}}}|0|1}}}}}}}|- id="{{{ID|}}}" class="q{{#var:type}}"
+|rowspan="2"|'''{{{ID|}}}'''{{#if:{{{Alias_1|}}}|<br><i id="{{{Alias_1}}}">{{{Alias_1}}}</i>}}{{#if:{{{Alias_2|}}}|<br><i id="{{{Alias_2}}}">{{{Alias_2}}}</i>}}{{#if:{{{Alias_3|}}}|<br><i id="{{{Alias_3}}}">{{{Alias_3}}}</i>}}
+|colspan="11"|'''<span lang="ja">{{{Title_JP|}}}</span>'''<br>{{#if:{{{Title_EN|}}}|''{{{Title_EN}}}''}}
+|- class="qd{{#var:type}}"
+|{{{Requirements|}}}
+|
+|{{{Rewards_RSC|}}}
+|
+|{{#if:{{{Rewards_Items|}}}|''{{{Rewards_Items}}}''}}
+|
+|{{{Note|}}}</includeonly><noinclude>
+==Usage==
+<pre>
+{{Quests|
+{{Quest
+|ID = A1
+|Title_JP = はじめての「編成」！
+|Title_EN = The First Organization
+|Requirements = Have 2 ships in your main fleet.
+|Rewards_RSC = 20 / 20 / 0 / 0
+|Rewards_Items = {{ShipLink|Shirayuki}}
+|Note = Unlocks: [[#A2|A2]]
+}}
+{{Quest
+|ID = A2
+|Title_JP = 「駆逐隊」を編成せよ！
+|Title_EN = Organize a Destroyer Division
+|Requirements = Have 4 [[Ship Class#Destroyer .28DD.29|Destroyers]] in your fleet
+|Rewards_RSC = 30 / 30 / 30 / 0
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]]×1
+|Note = Requires: [[#A1|A1]] <br />Unlocks: [[#A3|A3]]
+}}
+}}
+</pre>
+Gives:
+{{Quests|
+{{Quest
+|ID = A1
+|Title_JP = はじめての「編成」！
+|Title_EN = The First Organization
+|Requirements = Have 2 ships in your main fleet.
+|Rewards_RSC = 20 / 20 / 0 / 0
+|Rewards_Items = {{ShipLink|Shirayuki}}
+|Note = Unlocks: [[#A2|A2]]
+}}
+{{Quest
+|ID = A2
+|Title_JP = 「駆逐隊」を編成せよ！
+|Title_EN = Organize a Destroyer Division
+|Requirements = Have 4 [[Ship Class#Destroyer .28DD.29|Destroyers]] in your fleet
+|Rewards_RSC = 30 / 30 / 30 / 0
+|Rewards_Items = [[File:Instant construction 2.png|30px|link=Construction]]×1
+|Note = Requires: [[#A1|A1]] <br />Unlocks: [[#A3|A3]]
+}}
+}}
+==Tests==
+{{Quests|
+{{Quest
+|ID = Foo
+|Type = B
+}}
+{{Quest
+|ID = Foo
+|Use_ID = B1
+}}
+}}
+</noinclude>

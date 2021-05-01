@@ -1,0 +1,554 @@
+__NOTOC__{{EnableTalkButton}}
+<div style="text-align:center">{{Event/DetailToggle}}</div>
+
+==Information==
+
+<div class="mw-collapsible mw-expanded">
+
+
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;">
+;COMMUNITY AREAS
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/za1XBzofbwHeMPzD3 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1HXswAHk3ukAkLiLgU4kq707UihLCeiBmUSOW7mBAqFc/edit#gid=1035239931 here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:461451|here]].
+</div>
+{{Event/MapInfo
+|en = The Second Naval Battle of Malaya
+|jp = 第二次マレー沖海戦
+|romaji = Dainiji marê oki kaisen
+|hp_easy = 3000|hp_normal = 3600|hp_hard = 4200
+|tag = Combined Fleet
+|mechanics = Combined Fleet@Events/Mechanics#Combined_Fleet@background:yellow, Ship Locking@Events/Mechanics#Ship_Locking@background:yellow, Boss Debilitation@Events/Mechanics#Map-specific_Mechanics
+|Allreward = [[File:Naval_District_Summertime_Window_Card.png{{!}}50px{{!}}link=Furniture/Window#Naval_District_Summertime_Window]]
+
+|Easyitem1 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft|size=50px}}|Easyqty1 = 1
+|Easyitem2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Easyqty2 = 1
+
+|Normitem1 = {{EquipmentCardKai|QF 2-pounder Octuple Pom-pom Gun Mount|size=50px}}|Normqty1 = 1
+|Normitem2 = [[File:Skilled Crew Member 070 useitem.png{{!}}50px{{!}}link=Aircraft_Conversion]]|Normqty2 = 1
+|Normitem3 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft|size=50px}}|Normqty3 = 1
+|Normitem4 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Normqty4 = 1
+|Harditem1 = {{EquipmentCardKai|QF 2-pounder Octuple Pom-pom Gun Mount|size=50px}}|Hardqty1 = 1
+|Harditem2 = [[File:Skilled Crew Member 070 useitem.png{{!}}50px{{!}}link=Aircraft_Conversion]]|Hardqty2 = 1
+|Harditem3 = {{EquipmentCardKai|Ginga|size=50px}}|Hardqty3 = 1
+|Harditem4 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Hardqty4 = 1
+}}
+<div>
+
+===Branching rules===
+{| class="article-table"
+!Node
+!Next
+!Condition
+|-
+|rowspan="2"|B
+|A
+|1 or more slow ships in STF setup even if Kongou + Haruna present.
+|-
+|C
+|Having at least 7 of the mentioned ships in Tips section (Ignoring Slow Ship statement)<br />Carrier Task Force(CTF) setup always goes to C
+|-
+|rowspan="3"|C
+|D
+|Doesn't meet both E & G requirement always go D
+|-
+|E
+|Having both Kongou - Haruna in Main Fleet AND ≥3 historic ships in either the main fleet or escort fleet.
+|-
+|G
+|Having at least 7 of the mentioned ships in Tips section always go G regardless your fleet's setup
+|-
+|rowspan="2"|G
+|H
+|Pass the LOS check
+|-
+|I
+|Fail the LOS check
+|-
+|rowspan="2"|D
+|G
+|Have Hayasui in Main or Escort<br />Else if not meeting F requirements
+|-
+|F
+|
+Having 4 CV(B)<br />Having specific BB in the fleet
+* Both Yamato and Musashi in Main
+* Bismarck as escort
+|}
+
+===Fleet compositions===
+*'''Historical Fleet (STF):  B - C - G - H - J '''
+**'''Main''': [ 2 CVL OR 1 CV(B) 1 (F)BB(V) ] ''Kongou, Haruna, Mogami, Mikuma''
+**'''Escort''': ''Choukai, Kumano (Or Suzuya), Fubuki'' 1 FBB 1 DD 1 CL
+*'''Non-Historical Fleet (CTF): Route B - C - D - G - H - J'''
+**Goes through an air battle node in exchange for a more powerful opening airstrike, fire power and armor.
+*** CTF, without Hayasui.
+****'''Main''': 1 CVL 3 CV(B) 2 (F)BB(V)* ('''Except both Yamato-class together, it is ok to use either 1 of them here''')
+****'''Escort''': 1CL 2 DD 1~2 CA(V) 1~2 FBB* ('''Except Bismarck''')
+*** CTF, with Akitsumaru and Maya by exchanging BBs for stronger AACI and opening airstrike.<ref>http://kancolle.wikia.com/wiki/Talk:Summer_2016_Event/@comment-IElements-20160818053122</ref>
+**** '''Main''': 1 Maya 1 CVL 3 CV(B) 1 Akitsumaru
+**** '''Escort''': 1 CL 2 DD 1 CA(V) 2 FBB* ('''Except Bismarck''')
+*'''Debuff route B - A - C - D'''
+** Need less than 4 Historical ships, STF, and 1 slow ship to proceed full debuff route in 1 pass
+** [https://gyazo.com/f5162e6c23c0bbb991617226c92c64d8 Example composition]
+** [https://gyazo.com/b3fbe42a8ad7cfe2028b5e68af4400a6 Activated debuff run confirmed by quest sound after return to base]
+
+===Tips===
+*Using '''three in each fleet and seven total '''of the following ships leads to '''B - C - G - H - J''' routing:
+**Kongou, Haruna
+**Suzuya, Kumano, Mogami, Mikuma
+**Choukai
+**Fubuki, Shirayuki, Hatsuyuki
+**Kinu, Yura
+*Land-based bombers and dive bombers have an increased damage modifiers against the installations at the boss.  It's not rare for concentrated airstrikes to destroy most or all of the boss's escorts.<ref>https://www.twitch.tv/jenxiii/v/85776525?t=8m55s</ref>
+*To take down the boss in nightbattle, use [http://kancolle.wikia.com/wiki/Type_3_Shell Type 3 Shell] on high firepower FBB and CA(V), [http://kancolle.wikia.com/wiki/WG42_(Wurfger%C3%A4t_42) WG42 (Wurfgerät 42)](s) and [http://kancolle.wikia.com/wiki/Special_Type_2_Amphibious_Tank Special Type 2 Amphibious Tank] on CL and DD for boosted damage.
+*The most difficult of this map is reaching the boss node, rather than defeating the boss once there.
+**Node support shelling expedition is recommended
+**Consider bringing 1-2 OASW-enabled ships, especially on Hard(甲) difficulty
+**Sparkling ships to >52 morale will increase their evasion
+*Consider sending LBAS to that pre-boss nodes with all the best bombers in case there are too many retreats.
+**Beating this map unlocks the third airbase. It might be easier to farm by first beating the map and then using the third airbase on the preboss nodes to increase the chances of passing them.
+*Alternatively, [[Emergency Repair Personnel|equipping damecons]] (via reinforcement expansions) and focusing LBAS entirely on the boss can allow passage through the pre-boss node with relatively low risk of actually consuming repair items.
+
+* For those whose low on 7 historical ship (not enough or very low level) or just want to play big with any wildcards on hand, may consider using CTF and going B-C-D-G-H-J with highest Airpower and strongest ships available to force through H node.[http://kancolle.wikia.com/wiki/Talk:Summer_2016_Event/@comment-Lici_Ui-20160816091754].
+* [[Special Type 2 Amphibious Tank|Type 2 Tank]] + [[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|T89 Tank]] + [[WG42 (Wurfgerät 42)|WG42]] setup on any DD can hit [[Supply Depot Princess]] for 300-400 damage in daytime. [http://i.imgur.com/iUfzj8l.png 349 dmg], [http://i.imgur.com/ErBHkpq.png 395 dmg]
+
+===Tips on Ships and their setups ===
+
+===='''Battleship (FBB/BB/BBV)'''====
+*For the First Main Fleet's Battleships, you may opt to use AP Shell instead of Type 3 Shell instead as it has the potential to help you in node H more. They are also effective against [[Artillery Imp]]s. However be warned that in this case although they will do some damage to the Boss, AP shell does not give any bonus damage against the Supply Depot Princess.  
+
+====Aircraft Carrier/Light Aircraft Carrier (CV/CVL)====
+*Equipping any Dive Bomber into a CV(L) will disable it from attacking Installation-type enemies. Even if you have both Dive and Torpedo Bombers equipped together. It is not recommended to use Dive Bomber on your CV(L).  
+*Although the Sample has Shiden Kai 2 and Reppuu, if you lack any of them, you may still use Type 0 Model 21 Fighter or Type 0 Model 52 Fighter as alternative, as long as you reach the recommended amount of Air Superiority. 
+
+====Heavy Cruiser (CA)====
+*2 Main Guns + Recon Plane + Type 3 Shell is a mandatory setup for all CAs when facing against Installation enemies. No exceptions excluding [[Maya Kai Ni]] . Please do not try to use any other equipment instead of Type 3 Shell as an "alternative" because that won't work against the Boss as she is an Installation.
+
+====Aviation Cruiser (CAV)====
+*If you happen to have any WG42 due to obtaining U-511 in a past event, in the case of using a CAV in the 2nd fleet, you may opt to use both WG42 and Type 3 Shell together for bonus damage output. However the CAV will have to abandon the use of Artillery Spotting (Double Attack during day battle).
+*If you have any Seaplane Fighter, you may use them instead of Zuiun for extra Fighter power. However this will disable the CAV equipped with it from using Artillery Spotting without a regular Seaplane/Seaplane Bomber being equipped together, which obviously can't be used together in E-3 since you need the space for Type 3 Shell and 2 Main Guns.
+
+====Torpedo Cruiser (CLT)====
+*Torpedo cruisers can be a valid alternative to other escort fleet wildcards. With an opening ASW + preemptive torpedo setup they have significant preemptive offensive power at all of the pre-boss nodes.
+
+====Light Cruiser (CL)====
+* If you are lacking in WG42 and any Akizuki-class Destroyer, you may opt to use [[Isuzu Kai Ni]] with Anti-Air Cut-In (AACI) setup (High Angle Gun + Anti-Air Machine Gun + Air Radar). However although you will gain access to a good AACI ship, Isuzu will be unable to do Double Attack during Night Battle. (She will still be useless against Installation due to lack of [[WG42]] regardless though)
+*If you happen to have 2x [[WG42]] available, it is highly recommended that you use Ooyodo or Yuubari with 2 Guns with 2x [[WG42]] for very high damage output against the Boss.
+
+====Destroyer (DD)====
+*Destroyers who can use Daihatsu Landing Craft can be somewhat helpful in E-3 Boss. However it is only effective against Artillery Imp and Supply Depot Princess and not the Boss herself? But various contributors had claim landing craft could kill boss with high damage. <ref>http://kancolle.wikia.com/wiki/Talk:Summer_2016_Event/@comment-189.173.15.16-20160823053156/@comment-Arucart123-20160823061305</ref> If you happen to have any DD who can equip Daihatsu, you may choose to use it for extra support. 
+</div>{{Hard Anti-installation Weapons}}
+
+<div style="width:90%; border:2px solid darkblue; background:lightblue; text-align:left; margin:15px auto 20px;padding:5px;">
+{|
+!DEBUFF MECHANISM
+(This is pending further confirmation. Use at your own discretion)
+|-
+|
+A debuff mechanism that will debuff the Battleship Summer Princesses in node H has been discovered<ref>http://kancolle.doorblog.jp/archives/49309370.html</ref><ref>https://www.ptt.cc/bbs/KanColle/M.1471217923.A.3EE.html</ref>. Battleship Summer Princess receives -23 armor as a result of the debuff.<ref>http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:718</ref> This debuff also helps in reducing enemy air raid damage.{{Citation needed}}
+
+'''Requirements'''
+*Achieve S rank on Node A and D. 
+*Receive zero damage when Enemy Air Raid occurs against your Land-Base.
+
+
+
+When returning to your base, the "Quest Completion" Sound Clip ({{Audio|file=Sound_se_30.ogg}}) will occur after the completion similar to E-4 debuff.
+
+Debuff runs can be made over multiple sorties, and do not have to be completed in a single sortie.
+|}
+</div>
+</div>
+
+===Sample Fleet & Equipment Setup for Beginners===
+<div class="mw-collapsible mw-expanded">This section shows sample fleet and equipment setups that most players would be able to follow to an extent. 
+
+If you are having trouble with E-3 and think your fleet setup and equipment setup is the issue, please try following a sample setup. 
+
+Please know that you don't have to use the exact same ships listed on the samples unless you are trying to use the Historical Fleet setup with the 7 required members. Equipment setup however you should follow exactly how it is listed on the samples as much as possible. 
+
+These sample setups do not include [[WG42]] as majority of beginners don't actually have it. If you do have it however, please equip it on your best participating CL, DD and/or CAV. 
+
+'''[[Type 3 Shell]] is an essential equipment''' that participating Heavy Cruisers and Battleships should have equipped.  For the main fleet, armor-piercing ammo are more effective for battleships because they only participate in day battle (''i.e.'' Type 3 is more effective than AP at night).
+
+Please '''DO NOT''' use any Torpedoes on CL and DDs as an alternative equipment because they do not work against Installation Enemies. (Torpedo Bombers via CV(L)s work however).  
+
+Regardless, DDs and CL will not be effective against the boss installations without [[WG42]]. 
+
+Please also know that you must have Fighters on your CV(L) to reach the Fighter Power required to gain AS or AS+ for the entire map. 
+
+You require around 200+ Fighter Power to gain AS and 330+ to gain AS+ in Easy mode.
+====Fleet Type #1: Historical Fleet (Surface Task Force)====
+*'''Fleet''': Kongou Haruna Mogami Suzuya 2 CVL + Yura Fubuki Choukai 1 DD 1 CA 1 FBB
+*'''Route''': ''' B - C - G - H - J '''
+
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View Fleet #1 (Main Fleet)
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|‎Kongou/Kai Ni}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|{{RedAmmo}}[[Type 91 AP Shell]]
+|-
+|{{ShipBattleCardKai|Haruna/Kai Ni}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount (Dazzle Camouflage)]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount (Dazzle Camouflage)]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|{{RedAmmo}}[[Type 91 AP Shell]]
+|-
+|{{ShipBattleCardKai|Mogami/Kai}}
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{GreenAmmo}}[[Type 3 Shell]]
+|{{Seaplane}}[[Zuiun]]
+|-
+|{{ShipBattleCardKai|Suzuya/Kai}}
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{GreenAmmo}}[[Type 3 Shell]]
+|{{Seaplane}}[[Zuiun]]
+|-
+|{{ShipBattleCardKai|Hiyou/Kai}}
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{GreenPlane}}[[Reppuu]]
+|{{GreenPlane}}[[Reppuu]]
+|-
+|{{ShipBattleCardKai|Junyou/Kai}}
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{GreenPlane}}[[Reppuu]]
+|{{GreenPlane}}[[Reppuu]]
+|}
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View Fleet #2 (Escort Fleet)
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|‎Yura/Kai}}
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{Seaplane}}[[Type 98 Reconnaissance Seaplane (Night Recon)]]
+|
+|-
+|{{ShipBattleCardKai|Shigure/Kai Ni}}
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount]]
+|{{Searchlight}}[[Searchlight]]
+|
+|-
+|{{ShipBattleCardKai|Fubuki/Kai Ni}}
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount]]
+|{{AntiAircraftFireDirector}}[[Type 94 Anti-Aircraft Fire Director]]
+|
+|-
+|{{ShipBattleCardKai|Choukai/Kai Ni}}
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{GreenAmmo}}[[Type 3 Shell]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|-
+|{{ShipBattleCardKai|Kinugasa/Kai Ni}}
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{GreenAmmo}}[[Type 3 Shell]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|-
+|{{ShipBattleCardKai|Kirishima/Kai Ni}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{GreenAmmo}}[[Type 3 Shell]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|}
+
+====Fleet Type #2: Non-Historical Fleet (Carrier Task Force)====
+*'''Fleet''': 2 (F)BB 3 CV 1 CVL + 1 CL 2 DD 2 CA 1 FBB
+*'''Route''': ''' B - C - D - G - H - J'''
+
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View Fleet #1 (Main Fleet)
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|‎Nagato/Kai}}
+|{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|{{RedAmmo}}[[Type 91 AP Shell]]
+|-
+|{{ShipBattleCardKai|‎Kongou/Kai Ni}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|{{RedAmmo}}[[Type 91 AP Shell]]
+|-
+|{{ShipBattleCardKai|Shoukaku/Kai}}
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{GreenPlane}}[[Shiden Kai 2]]
+|{{GreenPlane}}[[Reppuu]]
+|-
+|{{ShipBattleCardKai|Akagi/Kai}}
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{GreenPlane}}[[Reppuu]]
+|{{GreenPlane}}[[Shiden Kai 2]]
+|-
+|{{ShipBattleCardKai|Kaga/Kai}}
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{GreenPlane}}[[Reppuu]]
+|{{GreenPlane}}[[Shiden Kai 2]]
+|-
+|{{ShipBattleCardKai|Shouhou/Kai}}
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{BluePlane}}[[Ryuusei Kai]]
+|{{GreenPlane}}[[Reppuu]]
+|{{YellowPlane}}[[Saiun]]
+|}
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View Fleet #2 (Escort Fleet)
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|‎Naka/Kai Ni}}
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{Seaplane}}[[Type 98 Reconnaissance Seaplane (Night Recon)]]
+|
+|-
+|{{ShipBattleCardKai|Ushio/Kai Ni}}
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount]]
+|{{Searchlight}}[[Searchlight]]
+|
+|-
+|{{ShipBattleCardKai|Fubuki/Kai Ni}}
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount]]
+|{{GreenGunDP}}[[10cm Twin High-angle Gun Mount]]
+|{{AntiAircraftFireDirector}}[[Type 94 Anti-Aircraft Fire Director]]
+|
+|-
+|{{ShipBattleCardKai|Choukai/Kai Ni}}
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{GreenAmmo}}[[Type 3 Shell]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|-
+|{{ShipBattleCardKai|Haguro/Kai Ni}}
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{RedGunMedium}}[[20.3cm Twin Gun Mount]]
+|{{GreenAmmo}}[[Type 3 Shell]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|-
+|{{ShipBattleCardKai|Haruna/Kai Ni}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount (Dazzle Camouflage)]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount (Dazzle Camouflage)]]
+|{{Seaplane}}[[Type 0 Reconnaissance Seaplane]]
+|{{GreenAmmo}}[[Type 3 Shell]]
+|}
+
+====Sample Land-Base Aerial Support (LBAS) Setup for Beginners====
+These are sample setups that most beginners will be able to follow to an extent.
+
+<u>'''You must use Aircraft that have 5 or higher Range to reach the boss node'''</u>. Using anything below Range of 5 will disable you from sending your LBAS to node J (Boss). 
+
+Recommended Carrier-based Aircraft for Beginners to use in LBAS for E-3 are
+
+*[[Tenzan]] (Range 5)
+*[[Ryuusei]] /[[Ryuusei Kai ]] (Range 6)
+*[[Suisei Model 12A]] (Range 5)
+*[[Type 0 Fighter Model 21]] (Range 7)
+*[[Type 0 Fighter Model 52]] (Range 6)
+*[[Reppuu]] (Range 5). 
+
+Beginners who cleared E-1 should have one Land-based Attack Aircraft with them no matter what difficulty you have cleared on. Please add that into your LBAS.
+
+====LBAS Setup #1: All LBAS sent to Boss Node====
+This is a setup where you send your entire available LBAS to the Boss Node so that you will have an easier time defeating it. You require aircraft range of 5 or higher to send them to the Boss Node. 
+
+{| style="width:500px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="3" |
+LBAS #1 (First & Second Attack Wave)
+|-
+! style="text-align: center;"|'''Aircraft'''
+! style="text-align: center;"|'''Aircraft Name/Type'''
+! style="text-align: center;"|'''Range'''
+|-
+|{{EquipmentCardKai|Type 0 Fighter Model 21 (Skilled)‎|size=30px}}
+|{{GreenPlane}}[[Type 0 Fighter Model 21 (Skilled)]]
+| style="text-align: center;"|7
+|-
+|{{EquipmentCardKai|Reppuu‎|size=30px}}
+|{{GreenPlane}}[[Reppuu]]
+| style="text-align: center;"|5
+|-
+|{{EquipmentCardKai|Suisei Model 12A|size=30px}}
+|{{RedPlane}}[[Suisei Model 12A]]
+| style="text-align: center;"|5
+|-
+|{{EquipmentCardKai|Suisei Model 12A|size=30px}}
+|{{RedPlane}}[[Suisei Model 12A]]
+| style="text-align: center;"|5
+|-
+| colspan="3" style="text-align: center;"|'''LBAS Range: 5'''
+|}
+
+{| style="width:500px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="3" |
+LBAS #2 (Third and Fourth Attack Wave)
+|-
+! style="text-align: center;"|'''Aircraft'''
+! style="text-align: center;"|'''Aircraft Name/Type'''
+! style="text-align: center;"|'''Range'''
+|-
+|{{EquipmentCardKai|Reppuu‎|size=30px}}
+|{{GreenPlane}}[[Reppuu]]
+| style="text-align: center;"|5
+|-
+|{{EquipmentCardKai|Type 96 Land-based Attack Aircraft|size=30px}}
+|[[File:Land-based Attack Aircraft Icon.png]][[Type 96 Land-based Attack Aircraft]]
+| style="text-align: center;"|8
+|-
+|{{EquipmentCardKai|Suisei Model 12A|size=30px}}
+|{{RedPlane}}[[Suisei Model 12A]]
+| style="text-align: center;"|5
+|-
+|{{EquipmentCardKai|Suisei Model 12A|size=30px}}
+|{{RedPlane}}[[Suisei Model 12A]]
+| style="text-align: center;"|5
+|-
+| colspan="3" style="text-align: center;"|'''LBAS Range: 5'''
+|}
+
+====LBAS Setup #2: 1st LBAS to node H & 2nd LBAS to node J (Boss)====
+This is a setup where you send one of your available LBAS to attack node H with all Bombers to increase your survivability against the two [[Battleship Summer Princess]]. However using this method will decrease the offensive power against the Boss node. 
+{| style="width:500px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="3" |
+LBAS #1 Sent to node H
+|-
+! style="text-align: center;"|'''Aircraft'''
+! style="text-align: center;"|'''Aircraft Name/Type'''
+! style="text-align: center;"|'''Range'''
+|-
+|{{EquipmentCardKai|Tenzan|size=30px}}
+|{{BluePlane}}[[Tenzan]]
+| style="text-align: center;"|5
+|-
+|{{EquipmentCardKai|Ryuusei‎|size=30px}}
+|{{BluePlane}}[[Ryuusei]]
+| style="text-align: center;"|6
+|-
+|{{EquipmentCardKai|Ryuusei‎ Kai|size=30px}}
+|{{BluePlane}}[[Ryuusei Kai]]
+| style="text-align: center;"|6
+|-
+|{{EquipmentCardKai|Ryuusei‎ Kai|size=30px}}
+|{{BluePlane}}[[Ryuusei Kai]]
+| style="text-align: center;"|6
+|-
+| colspan="3" style="text-align: center;"|'''LBAS Range: 5'''
+|}
+
+{| style="width:500px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="3" |
+LBAS #2 Sent to node J (Boss Node)
+|-
+! style="text-align: center;"|'''Aircraft'''
+! style="text-align: center;"|'''Aircraft Name/Type'''
+! style="text-align: center;"|'''Range'''
+|-
+|{{EquipmentCardKai|Reppuu‎|size=30px}}
+|{{GreenPlane}}[[Reppuu]]
+| style="text-align: center;"|5
+|-
+|{{EquipmentCardKai|Type 96 Land-based Attack Aircraft|size=30px}}
+|[[File:Land-based Attack Aircraft Icon.png]][[Type 96 Land-based Attack Aircraft]]
+| style="text-align: center;"|8
+|-
+|{{EquipmentCardKai|Suisei Model 12A|size=30px}}
+|{{RedPlane}}[[Suisei Model 12A]]
+| style="text-align: center;"|5
+|-
+|{{EquipmentCardKai|Suisei Model 12A|size=30px}}
+|{{RedPlane}}[[Suisei Model 12A]]
+| style="text-align: center;"|5
+|-
+| colspan="3" style="text-align: center;"|'''LBAS Range: 5'''
+|}
+</div>
+===References===
+<references />
+
+{{clear}}
+{{:Summer 2016 Event/E-3/Enemy patterns}}
+{{clear}}
+
+==Drop list==
+
+<div class="mw-collapsible mw-expanded">
+
+
+
+
+<!-- Refer to http://kancolle.wikia.com/wiki/Template:DropList/doc -->
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = C, G, H, J
+|boss = J
+|Aquila: J/Easy
+|Okinami: H/Easy
+|I-26: J/Easy
+|Hatsukaze: J/Easy
+|Hayasui: J/Easy
+|Akashi: J/Easy
+|Arashi: J/Easy
+|Hagikaze: J/Easy
+|Maikaze: J/Easy
+|Takanami: G/Hard, H/Easy
+|Kazagumo: H/Easy
+|Agano: H/Easy
+|Noshiro: H/Easy
+|Sakawa: H/Medium {Excluding formation with I-Class Destroyers on Medium}
+|Yahagi: H/Easy
+|Kinugasa: H/Easy, J/Easy
+|Taigei: H/Easy
+|Shoukaku: J/Easy
+|Asashimo: G/Hard, H/Easy}}
+</div>
+
+{{clear}}

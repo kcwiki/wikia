@@ -1,0 +1,77 @@
+Template for [[:Category:Ship gallery pages|ship gallery pages]], e.g., [[U-511/Gallery]]. Generates:
+* Regular CG for base and remodel forms (if any), based on [[:Category:Player ship modules|ship data modules]].
+* [[Seasonal]] CG and season links, based on <code>seasonals</code> array in [[:Category:Player ship modules|ship data modules]] (or legacy <code>_seasonal = true</code> forms).
+* Regular and seasonal card CG in tooltips.
+* [[Template:ShiplistCG|Ship gallery infobox]].
+* [[:Category:Ship gallery pages]].
+
+==Parameters==
+* '''ship''': base ship name to use, defaults to <code><nowiki>{{BASEPAGENAME}}</nowiki></code>, e.g., <code>U-511</code> on <code>[[U-511/Gallery]]</code>. Thus, optional.
+
+==Usage==
+<pre>{{Ship/Gallery}}</pre>
+
+==TODO==
+1. Update [[:Category:Player ship modules|ship data modules]] to use <code>seasonals</code> array:
+<pre>
+  seasonals = {
+    {
+      _name = "<optional, if it's different from base name>",
+      _suffix = "<required>",
+      _season = "<required, for season links>",
+      _season_suffix = "optional, for ===<season> (<season_suffix>)==="
+    },
+    ...
+    ["Alias"] = "/Suffix",
+    ...
+  },
+</pre>
+in base modules. See, e.g., [[Module:Shiratsuyu]]. [[Template:ShipDataDocumentation/EditIntro|The usual]] fields are also supported, e.g., <code>_cg_damaged = false</code> if there is no damaged CG. <code>seasonals</code> array is also required for [[Template:ShipPageFooter]] (tabber galleries), as it provides ordering. Multiple seasons can be specified:
+<pre>
+_season = { "Season", "Another one", { "Some season", "Custom name" }, ... },
+</pre>
+
+2. Convert [[:Category:Old ship gallery pages|old pages]] to use this template.
+
+==Tests==
+Using [[Module:Collection/ShipsBase]] ship list.
+* [[Internals/Gallery Tabber]] for tabber galleries. On the page in JS console:
+<pre>
+// number of ships (in Module:Collection/ShipsBase)
+$('.ship-page-gallery').length
+
+// number of broken links
+$('.new').length
+
+// number of ships with broken links
+$('.new').closest('.ship-page-gallery').length
+
+// scroll to nth ship with broken links
+$('.new').closest('.ship-page-gallery').get(n - 1).scrollIntoView()
+
+// copy a list of all <name>/<suffix> forms with broken links
+copy(Array.from(
+  new Set(
+    $('.new').map((_, e) =>
+      `${$(e).closest('.ship-page-gallery').data('name')}/${
+        $(e).closest('.ship-page-gallery-tab').closest('.tabbertab').attr('title')
+      }`
+    ).toArray()
+  )
+).join('\n'))
+
+// copy a list of all files (cards, battle cards, full CG, regular and seasonal)
+copy(
+  JSON.stringify(
+    $('a.image img').map((_, e) => `File:${$(e).data('image-name')}`).toArray(),
+    null, 2
+  )
+)
+</pre>
+* [[Internals/Gallery]] for gallery pages.
+
+==How To Add New CG==
+# Update [[:Category:Player ship modules|ship data module]], that is, [[#TODO|<code>seasonals</code> array]]: set <code>_suffix</code> and <code>_season</code>, e.g., <code>Yukata</code> and <code>Fall 2017</code>, only set <code>_name</code> if it's different from base name, e.g., <code>Ro-500</code> in <code>[[Module:U-511]]</code>. Set <code>_season_suffix</code>, <code>_cg_damaged</code>, etc., if needed.
+# Upload new CG: <code><name> <suffix> Full.png</code>, <code><name> <suffix> Full Damaged.png</code>, <code><name> <suffix> Card.jpg</code>, <code><name> <suffix> Card Damaged.jpg</code> (should be renamed on name/suffix changes).
+# If needed, [[Help:Purge|purge]] ship page and gallery page to update galleries (also on name/suffix changes).
+# As usual, [[Template:ShipGraphicKai]]/[[Template:SeasonalGallery]]/etc. can be used, e.g., <code><nowiki>{{ShipGraphicKai|<name>/<suffix>}}</nowiki></code> (fix on name/suffix changes).

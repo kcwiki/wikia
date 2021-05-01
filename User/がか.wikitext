@@ -1,0 +1,68 @@
+<!--
+{{:User:がか/Info}}
+==Wikia Stuff==
+{|class="mw-collapsible mw-collapsed wikitable typography-xl-optout" style="width:100%;"
+!colspan="2"|Stuff
+|-
+|CSS/JS issues/things
+|
+*Blockquote font size on Desktop XL
+*[[Quests]] page coloring CSS
+*[[Quests]] page tooltips on Monobook skin
+*Better countdowns, [[User:がか/Countdown|Countdown.js]] fork
+*Toggle all thingy, [[Template:ToggleAll]]
+|-
+|Maintaining
+|
+*[[Seasonal]], format and audio, when retrieving tools aren't derp
+**[[Template:SeasonalGallery]] (internal: [[Template:SeasonalGalleryShip]])
+**[[Template:SeasonalTOC]] (internal:  [[Module:Seasonal]])
+*Other audio (friendly ships only)
+**[[User:がか/Voice Lines]] (not updated to new namings yet), [[Template:ExternalAudio]]
+*[[Quests]], partially
+**[[Module:Quest]]
+**[[Template:ShipLink]] / [[Template:LinkImageTooltip]], [[User:がか/DisableAdvancedTooltips.js]]
+*[[List of ships required by quests and expeditions]], [[:Category:Ships required for Improvements]]
+*[[Template:DropList]] (internal: [[Module:DropList]], [[MediaWiki:DetailToggle.js]])
+*[[Experience_and_Rank#Past_Monthly_Ranking_Points|Ranking tables]]
+*[[Template:ImprovementTable]] ([[Template:Table]], [[Template:ImprovementTable/Row]], [[Template:ImprovementTable/Heading]], internal: [[Template:ImprovementTable/DayCell]], [[Module:ImprovementTable]]), TODO: finish Lua part (need equipment icons/tooltips, support for multi-product equipment and exception tables), add more tables (available improvements by day, consumption/production tables) ([http://wikiwiki.jp/kancolle/?%B2%FE%BD%A4%B9%A9%BE%B3])
+*[[:Category:Twitter Avatars]]
+|-
+|Other pages<br>(delete/keep)
+|
+*[[Template:SpanJa]]
+*[[Template:MapLink]]
+*[[Template:TestCG]]
+*[[Furniture/All]]
+*Some Lua, [[Module:Utils]], [[Module:Stat]], [[Template:Tooltip]]
+*[[Sandbox/Enemy Vessel/Overview]] and [[Template:EnemyShipInfoMini]] (internal: [[Module:EnemyShipOverview]], [[Module:EnemyShipInfoMini]])
+*[[User:がか/Sandbox]] (random wikitext/visual editor tests)
+|-
+|Semi-active projects
+|
+*Voice
+**[[Template:Shiphourly]] doesn't require audio arguments anymore, new pages will use that, existent pages can be edited accordingly (may require file renamings)
+**Change/redo [[Template:Shipquoteseasonal]] as [[Template:ShipQuoteSeasonal]] (internal: [[Template:ShipQuoteSeasonal/Row]]), improve naming, don't require audio arguments (may require file renamings)
+**More [[Seasonal]] stuff
+***Use something like [[Template:SeasonalTable]] ([[Template:SeasonalLine]])
+***Find a way to sync. seasonal lines between [[Seasonal]] and ship pages (use external tool or decide on Lua granularity, i.e. many modules vs few/one module)
+**Redo [[Template:Shipquote]] as [[Template:ShipQuotes]] (internal: [[Module:Quotes]]), better naming, some additional features, no audio parameters. Used on [[Iowa]] page, need documentation, can be used on new pages, existing pages can be converted (may require file renamings)
+**Section on audio files in [[Help:Media]]
+*Mechanics
+**Mechanic calculations (mainly combat related) in Lua, to use in a generic table-generating templates like [[Template:Combat]] (internal: [[Module:Combat]], [[Module:Combat/Table]], [[Module:Combat/Tests]])
+**[[Expedition/Support Expedition]], add aerial support info, use [[Template:Combat]] for tables.
+**[[Sandbox/List of ships by combat performance]], use [[Template:Combat]] for tables, add a section on luck mod. priorities (raw difference between DA and CI damage and/or OHKO rates, explain armor dependency for gun cut-ins, add some examples, e.g. such ship with such equipment setup will have such damage ranges and OHKO rates vs. such enemy ship, etc., for different ships).
+|-
+|Temporarily dropped / possible projects
+|
+*Poi/KCDB/etc. based tables on drops, construction, development ([[Sandbox/Drop List]], [[Sandbox/Construction Recipes]], development tables, drops, construction, development tables on ship pages, etc.)
+*Poi to event [[Template:DropList]] converter, API to event [[Template:NodeInfo]] converter (there are JSON parsers for Scribunto)
+*Update [[Exercises (PvP)]] page
+|-
+|Random stuff
+|
+*[[User:がか/Expeditions]], 50% experience doubling verification (more logs to come)
+*[[User:がか/Quest Trees]], some screws counting, TODO: add some on [[Akashi%27s_Improvement_Arsenal|AIA]] page (missing quests, present boxes and such, some quest graph) ([http://kancolle.doorblog.jp/archives/42923296.html])
+*[[User blog:がか/Sound Ripping Note]] (outdated)
+|}
+-->

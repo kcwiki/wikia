@@ -1,0 +1,56 @@
+This template uses equipment data modules to construct an improvement table for a piece of equipment, or a list of improvements for multiple equipment.
+
+==Example==
+
+ <nowiki>{{ImprovementTableKai|Type 94 Anti-Aircraft Fire Director}}
+ {{ImprovementTableKai
+ |Type 93 Passive Sonar
+ |Type 3 Active Sonar
+ |Type 4 Passive Sonar
+ }}</nowiki>
+
+<div class="mw-collapsible mw-collapsed">
+becomes
+
+<div class="mw-collapsible-content">{{ImprovementTableKai|Type 94 Anti-Aircraft Fire Director}}
+{{ImprovementTableKai
+|Type 93 Passive Sonar
+|Type 3 Active Sonar
+|Type 4 Passive Sonar
+}}</div>
+</div>
+
+==Parameters==
+
+The following sections describe the parameters that can be passed to this template.
+
+===Equipment===
+
+The list of equipment to be included in the table should be passed in as unnamed parameters, like in the example.
+If only one equipment is passed the template will form a standalone table rather than a one item list table.
+Pass a hash (#) to insert a header row.
+Pass an exclamation mark (!) followed by a string key to specify a [[#Custom Rows|custom row]].
+
+===Notes===
+
+You can specify custom notes in the notes column for each ship by passing the parameter ''equipmentname''_notes.
+
+===Custom Rows===
+
+You can specify custom rows by passing in an exclamation mark followed by a string key as described in [[#Equipment]].
+
+You can then set the properties of that custom row using the following parameters:
+
+====custom_row_''key''_content====
+
+Pass this parameter to set the content of the custom row. You can use wikitext. Be careful with = and |, for they may interfere with template parsing.
+
+====custom_row_''key''_text_align====
+
+Pass this parameter to set the text_align of the custom row. Defaults to "start".
+
+====custom_row_''key''_bg_color====
+
+Pass this parameter to set the background-color of the custom row. Defaults to "transparent".
+
+<includeonly>[[Category:Templates that use equipment data modules|{{PAGENAME}}]][[Category:Templates that use ship data modules|{{PAGENAME}}]]</includeonly><noinclude>[[Category:Template documentation|{{PAGENAME}}]]</noinclude>

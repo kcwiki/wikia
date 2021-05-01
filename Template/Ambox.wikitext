@@ -1,0 +1,52 @@
+<includeonly><div {{#if:{{{style|}}}|style="{{{style}}}"}} class="plainlinks ambox {{#if:{{{type|}}}|ambox-type-{{{type}}}}}" {{#if:{{{style|}}}|style="{{{style}}}"}}>
+<div class="ambox-image">
+{{#switch:{{{type|}}}
+|stub = [[File:AMBox_construction.png|40px|link=]]
+|construction = [[File:AMBox_construction.png|40px|link=]]
+|translation = [[File:AMBox_translation.png|40px|link=]]
+|delete = [[File:AMBox_warning.png|40px|link=]]
+|cleanup = [[File:AMBox_cleanup.png|40px|link=]]
+|outdated = [[File:AMBox outdated.svg|40px|link=]]
+|notice = [[File:AMBox_information.png|40px|link=]]
+|disclaimer = [[File:AMBox_warning.png|40px|link=]]
+|move = [[File:AMBox_move.png|40px|link=]]
+|protection = [[File:AMBox_protection.png|40px|link=]]
+|renovate = [[File:AMBox_construction.png|40px|link=]]
+|[[File:Wiki.png|40px|link=]]
+}}
+</div>
+<div class="ambox-content">
+<div class="ambox-title" {{#if:{{{message|}}}||style="margin-top:{{#if:{{{users|}}}|10|20}}px"}}>
+{{#if:{{{title|}}}|{{{title}}}|{{#switch:{{{type|}}}
+|stub = This article is a [[:Category:Stubs|stub]]
+|construction = This article is [[:Category:Under Construction Articles|under construction]]
+|translation = This article needs translation
+|delete = This article is currently marked for [[:Category:Candidates for deletion|deletion]]
+|cleanup = This article needs cleanup
+|outdated = This article is [[:Category:Outdated Articles|outdated]] and needs updating.
+|notice = Notice
+|disclaimer = Disclaimer
+|move = This article is suggested to be moved or merged
+|protection = This article's protection level should be discussed
+|renovate = This article is being renovated in a sandbox page
+}}}}{{#ifeq:{{FULLPAGENAME}}|Template:Ambox||{{#ifeq:{{FULLPAGENAME}}|Template:Ambox/doc||{{#switch:{{{type|}}}
+|stub = [[Category:Stubs]]
+|construction = [[Category:Under Construction Articles]]
+|delete = [[Category:Candidates for deletion]]
+|outdated = [[Category:Outdated Articles]]
+}}}}}}
+</div>{{#if:{{{message|}}}|<div class="ambox-description">{{{message}}}</div>}}{{#if:{{{users|}}}|<div class="ambox-promoter">
+{{#if:{{{user_act|}}}|{{{user_act}}}|{{#switch:{{{type|}}}
+|stub = {{#if:{{{users|}}}|Started by:}}
+|construction = {{#if:{{{users|}}}|Adopted by:}}
+|translation = {{#if:{{{users|}}}|Requested by:}}
+|delete = {{#if:{{{users|}}}|Marked by:}}
+|cleanup = {{#if:{{{users|}}}|Requested by:}}
+|outdated= {{#if:{{{users|}}}|Requested by:}}
+|notice = {{#if:{{{users|}}}|Posted by:}}
+|disclaimer = {{#if:{{{users|}}}|Posted by:}}
+|move = {{#if:{{{users|}}}|Marked by:}}
+|protection = {{#if:{{{users|}}}|Posted by:}}
+|renovate = {{#if:{{{users|}}}|Adopted by:}}
+|{{#if:{{{users|}}}|By:}}
+}}}} {{{users}}}</div>}}</div><div class="ambox-clear"></div></div></includeonly><noinclude>{{documentation}}</noinclude>

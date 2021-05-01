@@ -1,0 +1,165 @@
+==Advanced Game Mechanics==
+This blogpost attempts to cover some of the parts of the game that are not well covered in the [[Tutorial: FAQ|base FAQs.]]
+===Damage Processing===
+*While the full detail is on the [[Combat]] page, what is particularly important to note is post-cap processing - the earlier equipment setups optimise your pre-cap damage levels while ensuring you can use the post-cap bonuses at their full strength. Post-cap, day DA, day CI, day APCI, Airplane Contact, and Critical damage are the main effects - and all of these occur BEFORE armour reduction.
+*Carriers have additional critical damage multipliers which scale up with [[Aircraft Proficiency]]. >> rank bomber squadrons will trigger +20% in the first slot and +10% for all other aircraft slots.
+*The highest damage a carrier may perform on a critical hit with 4 >> bomber squadrons equipped is 150%(Crit)*150%(Proficiency)*150 damage = 337 damage before armour reduction.
+*The highest damage a battleship may perform on a critical hit is 110%(AP)*130%(Cut-in)*150%(Crit)*150 damage = 321 damage with an AP shell cut-in, or 110%(AP)*120%(DA)*150%(Crit)*150 damage = 297 damage, twice, before armour reduction.
+*The only other attack type that routinely hits daytime cap is a CLT's torpedo strike, which does 150%(Crit)*150 damage = 225 damage before armour reduction.
+*Night battle post-cap damage is only contributed by critical hits, so the largest damage value possible is 150%(Crit)*300 damage = 450 damage, twice, before armour reduction.
+*The base armour stat of an attack's target is multiplied against a RNG value that varies between 0.7 of the armour to 1.3 of the armor value - 0.6, rounded up. This value is deducted off the damage values from earlier.
+*The damage from here is then multiplied by the ammo modifier as detailed later.
+*Should the damage be zero but a hit is inflicted, the target will have its health reduced by ~6-14% of its '''current value.''' This is also known as scratch damage, and is the reason why battleships may take more damage from abyssal destroyers than destroyer shipgirls do.
+*Should the damage by greater than the target's full health, but the target is a friendly ship which has more than red-face morale, the damage taken will be rolled as a minimum of 50% current HP, and will not exceed 80% current HP.
+===Damage Processing - Example===
+'''Combining all these factors into a concrete example, let us consider the Summer 2015 'Kitanda' Air Defense Princess's {{ShipBattleCardKai|Air Defense Princess}} scenario, assuming the 'armor debuffing/critical buffing' mechanism was NOT used:'''
+*{{ShipBattleCardKai|Air Defense Princess}} is faced at a 2 ammo tick situation, and possesses 333 armor at maximum. She always has 255 HP.
+*The largest damage she may take is when her armor roll is 234.
+*Therefore, an aircraft carrier with maximum damage will deal 115 damage, which will be reduced to 46 damage in the day per turn.
+*The largest damage a battleship may do to her is 75 twice, which is reduced to a total of 60 damage in the day per turn.
+*A double scratch attack will deal approximately 19% of her current HP, which is 48 damage from full health.
+*A CLT's torpedo strike would have dealt no more than 2 damage under optimal conditions.
+*In night battle, the maximum damage that can be dealt at damage cap if it crits twice with minimum armour roll is 228, reduced by ammo to 91 damage, twice.
+*So if the special mechanism was not used, in order to sink {{ShipBattleCardKai|Air Defense Princess}} at Hard level if she entered Night Battle with full health, she would need to be hit by up to 3 perfect attacks in order to be sunk.
+*As the main fleet of a Combined Fleet is incapable of entering Night Battle, the greatest pre-cap damage it may deal in general is approximately 160 (with a firepower value of 250 before cap reduction). Since the Type 3 Shell's damage bonus is pre-cap, against most installation targets with high armour, equipping it has no effect as the attacks will not pierce the armor. Against some specific installation targets with low armour, equipping the Type 3 Shell will raise a CA's attack value to a value similar to the average armour roll, which makes it likely the damage dealt will be single digit or low two digit damage values as it only barely crosses the armour roll. Given installations have high HP values, this is generally a '''reduction''' in damage. In other words, since Type 3 shells tend to either reduce the damage dealt or have no effect when used in this way, '''TYPE 3 SHELLS SHOULD NEVER BE EQUIPPED ON THE MAIN FLEET OF A COMBINED FLEET'''.
+===Fit Bonus and Overweight Penalty Mechanics===
+We start with the definitions of these two. A Fit Bonus is something that adds a statistic ABOVE what is displayed. An Overweight Penalty is something that reduces a statistic BELOW what is displayed. While they are related, this definition difference separates the two. These systems are intended to soft-limit the range of useable equipment setups to players, while whether you can even equip something in the first place is a hard limit.
+
+Overweight penalties and fit bonuses are active effects rather than passive stat modifications, and thus DO NOT AFFECT SUPPORT EXPEDITIONS.<ref>Support shelling overweight: https://docs.google.com/spreadsheets/d/1UmFm33JfsBwc2JUtPybmbTDQ0ZFK0T0LUr-9jDjm4zo/edit#gid=666720600</ref>
+====Fit Bonus - CL Medium Guns====
+CLs gain accuracy and possibly other advantages (unconfirmed exactly what they are) when equipping guns with a fit bonus, where multiple smaller-calibre medium guns give a higher boost over their visible stats.<ref>CL Fit Bonus https://twitter.com/kancolle_staff/status/600208207454146561</ref> Wikiwiki claims that 15.2 and below calibres also gain firepower.<ref>CL FP Fit Bonus: http://wikiwiki.jp/kancolle/?%C0%EF%C6%AE%A4%CB%A4%C4%A4%A4%A4%C6#clfitarms</ref> While exactly which calibre types provide fit bonuses to which CLs is unknown, it is commonly thought that 15.2cm guns possess the bonus on all light cruisers and 20.3cm guns possess the bonus on none of them. The nature of fit bonuses on 15.5cm guns is controversial and has not yet been substantiated.
+====Fit Bonus - CA Medium Guns====
+CAs gain accuracy in yasen ONLY from 20.3 calibres ONLY.<ref>CA Fit Bonus: https://twitter.com/kancolle_staff/status/380238803090145280</ref> For this cause CAs should never use any guns that are not of the 20.3cm calibre. There exist unconfirmed reports that the [[20.3cm (No.2) Twin Gun Mount]] and [[SKC34 20.3cm Twin Gun Mount]] may not possess the boost as they were added to the game after the fit gun patch was applied, but the statistics these suspicions are based on have very small sample sizes and are thus not conclusive. If this is a concern, consider upgrading only [[20.3cm (No.3) Twin Gun Mount]] as they likely possess the fit bonus. Studies are in progress regarding this effect.<ref>CA Test 1: User_blog:Hayashi_H/Yasen_CA_Medium_Gun_Test</ref><ref>CA Test 2: http://ux.getuploader.com/kanokiba/download/123/3gox2_2gox2YasenRengeki.xlsx</ref>
+
+In particular, [[Zara]] and [[Pola]] may receive substantial accuracy bonuses from the [[203mm/53 Twin Gun Mount]] in both day and night combat, which override the intrinsic accuracy penalty.{{cite}}
+====Overweight Penalty - Battleship Guns====
+The following weight sub-class names are unofficial terms I came up with, but serve for explanatory purposes. The data for this section is subject to change as tests are still ongoing, but this represents an overall framework whereby one can think of the mechanic.<ref>Overweight: https://docs.google.com/spreadsheets/d/1uV4MVs0uz5CicCdO6vunu5JFI8oZO7V38TCMO2BHSMY/htmlview#</ref><ref>Iowa Overweight: https://docs.google.com/spreadsheets/d/14q3M_N9HXVC0g2Jp9gA42qkEChq0EeHKeWHn7Hrt1L8/edit?pref=2&pli=1#gid=961378818</ref>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|Class
+! scope="col"|Ship List
+! scope="col"|Gun Types
+! scope="col"|Remarks
+|-
+| rowspan="2"|Colossal
+|{{ShipBattleCardKai|Yamato/Kai}}
+| rowspan="2"|{{EquipmentCardKai|46cm Triple Gun Mount|size=80px}}{{EquipmentCardKai|Prototype 46cm Twin Gun Mount|size=80px}}
+| rowspan="2"|{{EquipmentCardKai|46cm Triple Gun Mount|size=40px}}{{EquipmentCardKai|Prototype 46cm Twin Gun Mount|size=40px}} have neither fit bonuses nor overweight penalties on Yamato-classes.
+|-
+|{{ShipBattleCardKai|Musashi/Kai}}
+|-
+| rowspan="6"|Massive
+|{{ShipBattleCardKai|Fusou/Kai Ni}}
+| rowspan="6"|{{EquipmentCardKai|41cm Twin Gun Mount|size=80px}}{{EquipmentCardKai|Prototype 41cm Triple Gun Mount|size=80px}}{{EquipmentCardKai|381mm/50 Triple Gun Mount|size=80px}}{{EquipmentCardKai|381mm/50 Triple Gun Mount Kai|size=80px}}{{EquipmentCardKai|Prototype 51cm Twin Gun Mount|size=80px}}{{EquipmentCardKai|16inch Triple Gun Mount Mk.7|size=80px}}
+| rowspan="6"|The Iowa gun is considered to have Colossal overweight penalties on Iowa specifically.
+|-
+|{{ShipBattleCardKai|Yamashiro/Kai Ni}}
+|-
+|{{ShipBattleCardKai|Ise/Kai}}
+|-
+|{{ShipBattleCardKai|Hyuuga/Kai}}
+|-
+|{{ShipBattleCardKai|Nagato/Kai}}
+|-
+|{{ShipBattleCardKai|Mutsu/Kai}}
+|-
+| rowspan="8"|Heavy
+|{{ShipBattleCardKai|Haruna/Kai Ni}}
+| rowspan="8"|{{EquipmentCardKai|35.6cm Twin Gun Mount|size=80px}}{{EquipmentCardKai|35.6cm Twin Gun Mount (Dazzle Camouflage)|size=80px}}{{EquipmentCardKai|Prototype 35.6cm Triple Gun Mount|size=80px}}{{EquipmentCardKai|38cm Twin Gun Mount|size=80px}}{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=80px}}
+| rowspan="8"|{{EquipmentCardKai|381mm/50 Triple Gun Mount|size=40px}}{{EquipmentCardKai|381mm/50 Triple Gun Mount Kai|size=40px}} do not apply overweight penalties to Vittorio Veneto-classes even though they're technically one weight class higher.
+|-
+|{{ShipBattleCardKai|Kongou/Kai Ni}}
+|-
+|{{ShipBattleCardKai|Hiei/Kai Ni}}
+|-
+|{{ShipBattleCardKai|Kirishima/Kai Ni}}
+|-
+|{{ShipBattleCardKai|Bismarck/drei}}
+|-
+|{{ShipBattleCardKai|Littorio/Kai}}
+|-
+|{{ShipBattleCardKai|Roma/Kai}}
+|-
+|{{ShipBattleCardKai|Iowa/Kai}}
+|}
+Any ship attempting to use a gun from a weight class heavier than designated above will be penalised with an invisible accuracy reduction. Going two tiers above leads to an even stricter penalty. Using more than one overweight gun multiplies these penalties. As accuracy values above the soft cap value lead to diminishing returns to the point of insignificance, there may be no significant reduction in overall accuracy if a single gun above the designated weight value is equipped in a non-combined fleet setting. Multiple guns will compound the accuracy reduction effect and thus equipping more than one gun above the designated weight value is not recommended. As Combined Fleet already reduces accuracy across the board, it is not recommended to use any overweight guns at all in that setting.
+
+This is a general framework; for more specific details, viewing the data this is based on is recommended.
+===Formations===
+*Line Ahead: Use for all normal surface combat. Leads to the greatest amount of standard damage and highest torpedo accuracy but lowest ASW damage. A 4-slot Pure ASW CL is capable of one-shotting any Elite submarine or lower as well. If the submarine isn't even an elite, a night DA + ASW hybrid build is already capable of killing it in this formation.
+*Double Line: Use for cases where your 4-slot Pure ASW CL is incapable of killing a submarine in the boss node in Line Ahead. Normally this submarine tends to be a flagship rank or higher. Also used in the event you sortie multiple ships with 188 day firepower (Yamato-classes and aircraft carriers), as they will still be at firepower cap nonethless. Higher shelling accuracy than Line ahead but lower torpedo accuracy.
+*Diamond: Use for aerial nodes, as air strikes ignore all formation bonuses and engagement form bonuses, but fleet Anti-Air bonuses and AACI trigger rates are highest in this form. Also used for flagship protection if you're sortieing a weak flagship required for branching. Also used if your 4-slot Pure ASW CL that's supposed to kill a flagship submarine is in chuuha state. Lower damage is dealt at a lower accuracy for both torpedo and shelling attacks.
+*Echelon: Highest evasion in yasen nodes, and lowest enemy cut-in rate in yasen nodes. Shelling accuracy is similar to line ahead in yasen nodes, but lower in normal nodes. Used primarily as the default option in yasen nodes as one-hitting ships is still easily possible, but this reduces the chances your fleet girls are critically damaged by Abyssals.
+*Line Abreast: Used for pure ASW cases. Highest evasion in normal nodes<ref>Shelling Eva: [[User_blog:Nanamin/Fleet_Formation_Affects_Evasion_-_Taken_from_a_Japanese_Blog_Post]]</ref><ref>Torpedo Eva: http://blog.gamelogbook.com/2014/04/jinkei-kaihi.html?m=1</ref> (in the case your ships are unlikely to kill the largest threats, particularly 3-2 BB node), but horrendous shelling damage and very poor torpedo accuracy. Shelling accuracy is similar to line ahead.
+*Antisub Formation 1: Combined Fleet only. Used for pure submarine nodes.
+*Forward Formation 2: Combined Fleet only. Used for mixed surface-submarine nodes.
+*Ring Formation 3: Combined Fleet only. Used for aerial nodes.
+*Battle Formation 4: Combined Fleet only. Used for pure surface nodes.
+*Note that all of the above have no effect on the damage dealt or accuracy of carriers' initial airstrikes.
+===Nodes===
+*Resource (green) nodes give you extra resources, the amount of which can be affected by the equipment your ships are carrying.
+*Maelstrom (purple) nodes take away resources from your ships of the same type. If one Radar of any type is equipped on any ship in the fleet, all ships will have 30% of their supply (either ammo or fuel) removed. If not, the amount removed is 40%. Greater numbers of radars reduce the resource removal with diminishing returns.
+*Battle (red) nodes use up 20% of both ammo and fuel (except for submarine nodes in Combined Fleet maps, which use up only fuel).
+*Choice nodes allow you to pick branching at will.
+*LOS-check nodes allow you to use a branching path if your Fleet eLOS exceeds a certain value. Otherwise, you will be sent to another node. In between guaranteed minima and maxima, your fleet has a chance of going to either node depending on eLOS.
+*Boss (horned) nodes are similar to battle nodes, but are always at the end of one of the possible paths on the map, is usually one of the hardest battles, and defeating the node is required for completion of quests and such.
+*Proceeding to night battle from day battle reduces your ammo ticks by 1, for a total of 2 fuel and 3 ammo ticks used in the battle node.
+===Statistics and Special Attacks===
+*The main function of fleet LOS, in addition to deciding branching of the compass, is to increase Artillery Spotting rates.<ref>LoS AS: https://twitter.com/KanColle_STAFF/status/458858784283058178</ref> Artillery Spotting rates are also increased by having Air Supremacy instead of mere Air Superiority. The flagship also has higher Artillery Spotting rates than any other ship. While higher Aircraft Proficiency levels has been suspected to increase these rates as well, this is not yet confirmed. Surface radars specifically are suspected to apply an additional trigger rate bonus.
+*The trigger rate of Anti-Air Cut-ins is dependent only on the AACI API identity, the ship's own AA statistic and the fleet formation modifier. Fleet AA has no effect on this. Also, the AACI API number which is the largest will take priority, even though in some cases the larger API number leads to a weaker AACI type. The strength of AACI when it triggers is dependent ONLY on the API identity. They shoot a fixed number of bombers from all bomber squadrons.
+*Luck increases accuracy by approximately 1% every 10 points in addition to its effects on Night Battle Cut-in attacks. This may be a reason to buff Luck on ships you use a lot after all the important night cut-in ships have already been maxed on Luck.
+*Sortieing one or more Slow ships reduces the entire fleet's speed to Slow, which reduces the evasion values of all ships (or all Fast ships, it is not entirely clear which) by an unknown, small amount. Where possible, avoid using Slow ships completely in normal fleets, and if you must use one for some branching-related reason, use more than one, since there's no further loss, and Slow ships generally have either lower resource consumption or higher battle potential than Fast ones. Slow ships are also very suitable for support expeditions where the speed of the fleet has no effect. In combined fleets where both sides have their accuracy values drastically reduced, this effect is less of a consideration. Specifically, slow Battleships are banned from the escort fleet in a combined fleet context, though slow ships of any other type may still be used.
+*The first round of attacks proceeds in descending order of attack range on both your fleet and the enemy's, and the attack range of a ship is determined by either the ship's intrinsic range or the longest ranged weapon it equips, whichever is longer. However, attacks will always alternate between the two fleets. Therefore using a Long ranged equipment piece (like {{EquipmentCardKai|Skilled Carrier-based Aircraft Maintenance Personnel|size=40px}}) does not mean you get to launch more attacks before the enemy fleet does. It only means you have altered the turn order on your end. The main cases where understanding this mechanic is useful are firstly the use of {{EquipmentCardKai|Skilled Carrier-based Aircraft Maintenance Personnel|size=40px}} to allow a high-damage carrier to launch early rather than risk being chuuhaed/taihaed and disabled by an enemy attack, and secondly the use of exactly one medium-range gun on {{ShipBattleCardKai|Isuzu/Kai Ni}} when sparkling her in World 1-1 to ensure she fires before a lvl 1 escort destroyer does (and thus eliminate the chance of MVP being stolen by a critical hit on node 1).
+===Ship Status and Performance===
+*Shouha damage reduces Artillery Spotting rates and increases night cut-in rates by 5%, but does not affect damage. It also prevents destroyers from being able to be used as escorts in the {{EquipmentCardKai|Fleet Command Facility|size=40px}} mechanic. 
+
+*Chuuha damage reduces pre-cap outgoing damage to 70%, reduces Artillery Spotting rates, increases night cut-in rates by 20%, and prevents CV(L)s from launching in shelling phase; only {{ShipBattleCardKai|Shoukaku/Kai Ni A}}{{ShipBattleCardKai|Zuikaku/Kai Ni A}}{{ShipBattleCardKai|Taihou/Kai}} may launch at this damage level. Closing torpedo attacks also cannot be made at this damage level, even though initial torpedo strikes from {{EquipmentCardKai|Kouhyouteki|size=40px}} may still proceed. Thus, one of the advantages of cut-in setups is that even though the damage potential drops, the cut-in rate increases, allowing the ship to still be a threat in yasen, whereas double attack setups are mostly effective only when the ship has taken shouha levels of damage or less. Finally Akashi is not capable of repairing ships at chuuha or taiha.
+*Taiha reduces outgoing damage further to 40%, prevents yasen participation and if the Admiral proceeds to the next node, the ship will now be able to sink if it is not protected by a Damage Control (Damecon) item like the {{EquipmentCardKai|Emergency Repair Personnel|size=40px}}{{EquipmentCardKai|Emergency Repair Goddess|size=40px}}, where the {{EquipmentCardKai|Emergency Repair Personnel|size=40px}} repairs to 20% HP and the {{EquipmentCardKai|Emergency Repair Goddess|size=40px}} to full HP ({{EquipmentCardKai|Emergency Repair Goddess|size=40px}} also restores fuel and ammo to full).
+*Sparkling increases accuracy and evasion above morale values of 53, and increases Great Success rates in expeditions by 16% per ship, but has no known effect on critical hits or Artillery Spotting rates.
+*Orange-face and worse fatigue levels progressively reduce accuracy and evasion, and the damage-reduction mechanism is disabled at red-face levels.
+*Repairing a ship resets its morale to 40 immediately if its morale is less than 40, even if the repair was done with a bucket.
+*Ships carry fuel and ammo with them which are depleted by different map nodes as elaborated above. The final damage dealt by your ships is multiplied by the number of remaining ticks out of 5 (so 180 damage on a 20% ammo situation causes 72 damage); 5 ticks and above deal full damage. Fuel affects the evasion of ships to an unknown level, but in general the lower the fuel, the lower your ships' evasion will be. For this reason always sortie with full resources unless you're using the {{ShipBattleCardKai|Hayasui/Kai}} resupply mechanic, which is detailed separately on her page.
+===Ship Positioning===
+*The BB-triggered second shelling phase of the main fleet and the yasen battle order is dependent on the ship order in the fleet.
+*While carriers should normally be placed later in the fleet order if yasen is expected as they cannot fire in yasen, in Combined Fleet settings they should be placed earlier instead so they have higher chances of launching before receiving critical damage, since the main fleet in a Combined Fleet setting never enters yasen anyway.
+*Flagships have 12.5% greater night cut-in rate, a greater Artillery spotting rate, gain 50% more xp than any other ships, and are shielded by other ships at a given rate dependent on the formation chosen. The flagship of the main fleet in a Combined Fleet setting is also the only ship that may trigger the {{EquipmentCardKai|Fleet Command Facility|size=40px}} mechanic, and is the only ship which will lead to the sortie ending by default if taihaed. The flagship of the escort fleet in a Combined Fleet setting has been unsinkable for the past few events (but cannot be guaranteed to be unsinkable for future events), and is the only ship that cannot escort taiha ships away (if the flagship is a DD). The flagship of the first fleet is also the Secretary ship, and affects the results of some Construction attempts and all Development attempts. {{ShipBattleCardKai|Akashi/Kai}} must be the flagship of a fleet in order to use her Repair function, and must be the Secretary ship to use [[Akashi's Improvement Arsenal]].
+*From the earlier damage processing example on {{ShipBattleCardKai|Air Defense Princess}}, it is advisable to order the ships in a fleet in ASCENDING order of yasen damage potential (with the exception of the {{EquipmentCardKai|Searchlight|size=40px}}-carrying flagship, so that even if the lower-damage attacks fail, they will still be likely to deal double scratch damage - and reserve the higher-damage attacks for finishing off a high-armour target.
+===Fleet Composition Quirks===
+*The presence of at least one BB or equivalent (some hime, oni etc) on either your fleet or the enemy's fleet will trigger a second shelling phase, where the attack order is determined by fleet order.  If enemy ships on a map are mostly a threat because of their closing torpedo attacks it is advisable to bring at least one battleship to sink them before the closing torpedo phase can happen, BUT if pre-boss enemy ships are mostly a threat because of their shelling phase attacks (this applies mostly to carriers, ESPECIALLY {{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship IV}}), it is advisable to ensure you bring NO BATTLESHIPS at all so they don't get to take double turns. 5-4 is one particular case of this where a zero-battleship setup receives far less damage in the zero-oni configuration of node 2 in the north path, and E7 Summer is a particular case where a CA-CV type composition is more likely to reach the boss node than any node that contains battleships.
+===Timing and API calls===
+*RNG Branching is decided by RNG rolls at the start of a sortie when the map loads. There are tools that at the very least used to be able to read these through an unknown method, though it may be arguable that this would be an exploit-level function and thus using them would be inadvisable. At the time of writing, no API call is capable of reading this.
+*After the formation is selected, upon loading api call Battle, the outcome of the battle is decided, damage taken by all your ships is deducted off their HP pools, and planes will be deducted off their slots (leading to bauxite and/or Aircraft Proficiency rank losses). Any enemy ship kills that count for quests are deducted off the quest list. If you lose connection at this point, you lose HP and planes, but do not gain anything in return except quest list reductions for kill-type quests. This is the worst possible time to catbomb.
+**Battle contains information on all enemies and their stats, formations and damage dealt. This API call is the one used to update enemy fleet formations during events and such.
+*When the experience screen appears upon loading api call Battleresult, morale is added and/or deducted from ships, experience gained is accrued to ships, and fuel/ammo costs are deducted from the ships' supply stores. Quests that involve beating a particular boss node will have credit given at this point. Finally, any resource nodes where resources were gained since the previous battle will now add their resources to your HQ and any ship drops will be added to your fleet. Losing connection at this point will lead to the same effects as retreating at this node - even if a catbomb occurs or a lightning strike obliterates your computer, any drops have already been logged within Battleresult itself. The only difference is that you have no ability to proceed if the catbomb occurs.
+*Between one battle node and the next, branching is decided by Next, and ship_deck holds the statuses of the ships that may have changed since the previous battle (fuel, ammo, morale, HP). Reading this call allows you to see retroactively if a ship is heavily damaged even after you already clicked advance, for instance. 
+*Upon return to the HQ, 15 morale is deducted for returning from a sortie upon loading api call Port. Port also loads the data for every single ship and other stuff - reading this can tell you useful information like ship morale across the whole fleet.
+===Special mechanics===
+====Fleet Command Facility====
+The {{EquipmentCardKai|Fleet Command Facility|size=40px}} is a special piece of equipment that comes stock with {{ShipBattleCardKai|Ooyodo/Kai}}. Equipping it on the flagship of the First Fleet of a Combined Fleet allows for a healthy (shouha and greater damage disables the DD's ability to do this) DD in the Second Fleet to escort exactly one taiha ship out of battle per activation. It may activate only once per battle at the very end, so if 2 ships are taiha for instance, the other ship will be prone to sink if the Admiral proceeds and she is not protected by {{EquipmentCardKai|Emergency Repair Personnel|size=40px}}{{EquipmentCardKai|Emergency Repair Goddess|size=40px}}. This allows you to proceed on a sortie where a taiha occurs at the preboss node instead of starting over, but at the cost of both reducing Fuel of both ships to zero AND reducing Morale of both ships to 15. For a fast recovery of morale, one might then bucket-repair the taiha 15 morale ship and dock-repair the escorting DD - or if the escorting DD is at full health, to intentionally sortie it to World 1-2 to force it to take 1 or 2 points of damage at node 1, before proceeding to dock-repair the HP just lost to recover morale instantly. If you've understood everything up to the end, you should realise exactly why the {{EquipmentCardKai|Fleet Command Facility|size=40px}} should only ever be equipped in a 3-plane slot on an aircraft carrier, or the 1-plane slots of {{ShipBattleCardKai|Akitsushima/Kai}} or {{ShipBattleCardKai|Hayasui/Kai}}, and having that ship set as Combined Fleet Flagship.
+====Armour-Piercing Shells====
+According to the official tweet,<ref>AP Shell bonus: https://twitter.com/KanColle_STAFF/status/520463025254322177</ref> Armour-Piercing shells deal additional damage during Day Combat to heavily armoured targets and installations when equipped together with at least one large-calibre gun. The specific damage increase values are listed in [[Combat]], and are post-cap buffs. There is no statistical (or dev tweet) proof yet of the AP shell additional effects applying to Support Expeditions or Night Battle, in spite of common belief, though their base stats do apply.
+==Further Reading==
+Information from the following sources (and some others) was used to create this guide, but you can read the articles for more detailed information on each of the mechanics and whatnot.
+*[[Akashi's_Improvement_Arsenal]]
+*[[Combat]]
+*[[User blog:Homuhomu123/Trigger Rates & Effectiveness of Anti-Air Cut-In (AACI)|User_blog:Homuhomu123/Trigger_Rates_&amp;_Effectiveness_of_Anti-Air_Cut-In_(AACI)]]
+*[[User_blog:Homuhomu123/Trigger_Rates_of_Night_Battle_Cut-In]]
+*[[User_blog:Homuhomu123/Trigger_Rates_of_Artillery_Spotting]]
+*[[User_blog:Homuhomu123/Shelling_Accuracy_Test_Results]]
+*[[User blog:Shinhwalee/Major_Event_Preparation_Guide_for_Admirals_(OUTDATED)]]
+*[[User_blog:Nanamin/Fleet_Formation_Affects_Evasion_-_Taken_from_a_Japanese_Blog_Post]]
+===Other Guides===
+*[[User_blog:Hayashi_H/Advanced_Equipment_Guide|What equipment should each ship mount?]]
+*[[User blog:Hayashi H/Abyssal OHKO Chart|How much firepower is TRULY enough?]]
+*[[User blog:Hayashi H/Anti-BWS Fleets|How to survive attacks by firepower-capped targets like the BWS]]
+*[[User blog:Hayashi H/Grinding DDs and CLs on 3-2A|Levelling your CLs and DDs quickly and cheaply]]
+*[[User_blog:Hayashi_H/Max-efficiency_Map-clear_Formations|Efficient formations used in repeated quests and EOs]]
+*[[User_blog:Hayashi_H/Max_efficiency_expedition_setups|Recovering resources at maximum rates]]
+==Credits==
+*[[User:Nanamin|Nanamin]] for linking the source on Overweight Penalty tests.
+*[[User:McDohlJr|McDohlJr]] and [[User:Fujihita|Fujihita]] for some of the earlier devtweets.
+*[[User:天津の風|天津の風]], [[User:KowaretaGuze|KowaretaGuze]] and 42.115.137.155 for linking the source on Iowa's overweight penalties.
+*[[User:526759|526759]] for indicating the Line Abreast section was misleading - a holdout from the previous time when Echelon was believed to have higher antitorp evasion.
+==References==
+<references/>
+[[Category:Blog posts]]

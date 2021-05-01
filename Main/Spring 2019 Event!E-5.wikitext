@@ -1,0 +1,307 @@
+<!--{{Warning|Please be advised the information below are still under investigation and are subject to further revisions and changes upon verification. Please use the information at your own discretion.}}-->
+
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en =  Toward a Further Side of the Surging Sea――
+|jp = 波濤の先に――
+|tag = E6
+|romaji = Hatō no saki ni――
+|hp_casual = 2400 HP + 4500
+|hp_easy = 2400 HP + 4500
+|hp_medium = 2800 HP + 4650
+|hp_hard = 3200 HP + 4800
+|show_kills = true
+|kills_all = 4 + 5
+|reward_all = {{ShipBattleCardKai|Colorado}}
+|reward_casual_1 = {{ItemStack|item = [[File:Jervaited.png{{!}}50px{{!}}link=]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Reppuu Kai Ni Model E|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Reppuu Kai Ni Model E|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = [[File:Screw.png|50px|link=Improvement Material]]
+|reward_medium_2_x = 8
+|reward_medium_3 = {{EquipmentCardKai|152mm/55 Triple Rapid Fire Gun Mount Kai|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Reppuu Kai Ni Model E (CarDiv 1/Skilled)|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_hard_2_x = 2
+|reward_hard_3 = [[File:Screw.png|50px|link=Improvement Material]]
+|reward_hard_3_x = 10
+|reward_hard_4 = {{EquipmentCardKai|152mm/55 Triple Rapid Fire Gun Mount Kai|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|First Class Medal|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-5 Branching Rules
+|id = 44-5
+
+|0 -> A = * Carrier Task Force, but the requirements to go to C is not met.
+|0 -> B = * Surface Task Force '''OR''' Transport Combined Fleet, but the requirements to go to C is not met.
+|0 -> C = 
+* Meet '''ALL''' of the following requirements:
+** Carrier Task Force
+** Amount of CV(B) ≤ 3
+** Amount of CV(L/B) ≤ 4
+|0 -> D/empty = 
+* Meet '''ALL''' of the following requirements:
+** Surface Task Force '''OR''' Transport Combined Fleet
+** Unlock shortcut to node D.
+
+|C -> F = * Do not meet the requirements to go to either G or H.
+|C -> G = * Fleet contains AV
+|C -> H = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+** Amount of CV(B) ≤ 2
+** No AV
+
+|D/empty -> E, H = * Active branching
+
+|F -> H, I = 
+* If amount of (F)BB(V)+CV(L/B) ≤ 3, go to H.
+* Else, random routing between H and I.
+
+|G -> I = * ???
+|G -> J2/empty = * ???
+
+|H -> J/empty = * Fixed route
+
+|I -> J/empty,K = 
+* If fleet contains AO, go to J.
+* If amount of (F)BB(V)+CV(L/B) ≥ 5 and fleet has no AO, go to K.
+* Else, random routing
+
+|J/empty -> K, L = * Active branching
+
+|J2/empty -> K, M = * Active branching
+
+|J3/empty -> J/empty, N = * Active branching
+
+|K -> M = * Pass the LoS check.
+|K -> Q = * Fail the LoS check.
+
+|L -> N = * Do not meet the requirements to go to Q.
+|L -> Q = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Fleet contains AV or AO.
+** Amount of (F)BB(V)+CV(L/B) ≤ ?
+'''Note''': Requirements might change, depending on the phase you're in.
+
+|M -> O/empty = * Nodes R and W not unlocked yet?
+|M -> R = * Amount of CV(B) ≥ 4
+|M -> W = * Amount of CV(B) ≤ 3
+
+|N -> P/empty = * Do not meet the requirement to go to S.
+|N -> S = * Node S is unlocked?
+
+|S -> T/empty = * Do not meet the requirements to go to V.
+|S -> V = * Transport Combined Fleet
+
+|T/empty -> U/ambush = * Do not meet the requirements to go to X.
+|T/empty -> X = * Amount of ships with '''Surface''' radars ≥ 1?/2/4/6 on Casual/Easy/Medium/Hard
+
+|V -> Z = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+Amount of ships with '''Surface''' radars ≥ 4/5 on Medium/Hard
+|V -> Z1/empty = * Do not meet the requirements to go to Z.
+
+|W -> X = * Amount of ships with '''Surface''' radars ≥ 1?/2/4/6 on Casual/Easy/Medium/Hard
+|W -> Y/ambush = * Do not meet the requirements to go to X.
+
+|X -> Z = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships with '''Surface''' radars ≥ 4/5 on Medium/Hard
+|X -> Z2/empty = * Do not meet the requirements to go to Z.
+}}
+==Map Guide==
+*This is a '''combined fleet''' map.
+*Three [[Land Base Aerial Support]] squadrons are available for sortie.
+*This map is divided in 2 phases that consist of depleting the respective gauges of the following bosses :
+** {{ShipLink|Abyssal Jellyfish Princess}}'s HP gauge at node {{Event/Route|Q|Red}}.
+** {{ShipLink|Abyssal Pacific Princess}}'s HP gauge at node {{Event/Route|Z|Red}}.
+*After clearing the map, the map becomes free to sortie regardless of existing ship tags. (It will still tag the ship with the E5 lock if it wasn't locked prior.)
+
+{{clear}}
+*The following ships have damage bonuses at the boss nodes:
+**At node {{Event/Route|Q|Red}}
+***{{ShipLink|Samuel B. Roberts}} - 1.3x
+***{{ShipLink|Iowa}}, {{ShipLink|Johnston}}, {{ShipLink|Saratoga}}, {{ShipLink|Intrepid}}, {{ShipLink|Akagi}} - 1.25x
+***{{ShipLink|Kaga}} - 1.2x
+***{{ShipLink|Kirishima}}, {{ShipLink|Hiei}}, {{ShipLink|Shoukaku}}, {{ShipLink|Abukuma}}, {{ShipLink|Kasumi}}, {{ShipLink|Kagerou}}, {{ShipLink|Shiranui}}, {{ShipLink|Isokaze}}, {{ShipLink|Hamakaze}}, {{ShipLink|Tanikaze}} - 1.1x
+**At node {{Event/Route|Z|Red}} '''(only after unlocking the shortcuts)'''
+***{{ShipLink|Samuel B. Roberts}}, {{ShipLink|Johnston}}, {{ShipLink|Fletcher}} - 1.75x
+***{{ShipLink|Urakaze}}, {{ShipLink|Hamakaze}}, {{ShipLink|Tanikaze}}, {{ShipLink|Kasumi}}, {{ShipLink|Arare}}, {{ShipLink|Isokaze}}, {{ShipLink|Kagerou}}, {{ShipLink|Shiranui}} - 1.43x
+***{{ShipLink|Iowa}}, {{ShipLink|Colorado}} - 1.38x
+***{{ShipLink|Saratoga}}, {{ShipLink|Intrepid}} - 1.35x
+***{{ShipLink|Abukuma}} - 1.32x
+***{{ShipLink|Kaga}}, {{ShipLink|Akagi}} - 1.3x
+***Other DDs- 1.3x(?)
+***Other CL(T)s - 1.2x
+***{{ShipLink|Kirishima}}, {{ShipLink|Hiei}},{{ShipLink|Tone}}, {{ShipLink|Chikuma}}, {{ShipLink|Shoukaku}}, {{ShipLink|Zuikaku}}, {{ShipLink|Souryuu}}, {{ShipLink|Hiryuu}} - 1.155x
+***Other (F)BB(V)/CA(V)/CV(L/B) - 1.05x
+
+===Equipment treated as a "Surface Radar"===
+*Despite the name "Surface Radar", certain Air Radars are also treated as a Surface Radar under the Branching Rules due to their {{LOS}} LOS Stat.
+**The Radar must have at least 5+ {{LOS}} LOS Stats to fall under the category.
+
+{{:Winter 2019 Event/Info/Surface Radar}}
+
+===Map progression===
+{{#tag:gallery|
+Spring19_E5_p1.png{{!}}Map during the first HP phase at node Q
+Spring19_E5_p2.png{{!}}Map during the second HP phase at node Z (but nodes J2 and J3 not unlocked)
+Spring_2019_Event_E-5_Map.png{{!}}Full map after unlocking the hidden nodes
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+===Phase 1: HP gauge at node Q===
+*The first boss of this map is {{ShipLink|Abyssal Jellyfish Princess}} in an [[Combat/Abyssal Combined Fleet| abyssal combined fleet]].
+*Route:{{Event/Route|B|red|D|blue|H|red|J|blue|L|red|Q|red}}
+**'''Surface Task Force (STF)''': 4BB(V) 1CV(B) 1CA(V) + 1CL 2DD 3XX
+**There is no speed limitation.
+**AACI setup is highly recommended to help mitigating airstrike damage from nodes en route and boss node.
+**Both shelling support fleets is recommended for Hard difficulty.
+**Use of as many historical ships as possible is recommended to have an easier time at the boss node.
+***{{ShipLink|Samuel B. Roberts Kai}}, {{ShipLink|Fletcher Kai}} and {{ShipLink|Johnston Kai}} can be especially useful as they possess in built OASW that can help against the submarine in the boss escort fleet (note that the damage will still be weak without any ASW gear equipped).
+***Use of {{ShipLink|Nagato Kai Ni}}/{{ShipLink|Mutsu Kai Ni}}/{{ShipLink|Nelson}}'s special Cut-Ins is highly recommended at the boss node to make the fight much easier (look at the corresponding ship's pages for more details).
+***If using Saratoga, Akagi or Intrepid, utilizing CVCI by equipping the appropriate bombers is preferable.  If air power is an issue, consider using CA(V) or BB(V) equipment slots for fighters.
+***'''LBAS''': Sending 2 or 3 land bases to attack the boss is recommended.  For higher difficulties, using one base with ASW planes at nodes B (or C for CTF) can help increase chance of arrival at the boss.
+****The boss node requires a range of 6+.
+
+===Phase 1.5: Unlock the shortcuts and debuff the boss node===
+*To no one's surprise, there is something to unlock in here as well. As usual, admirals will have to visit certain nodes to fulfill all the required conditions.
+
+*Achieve Air Superiority (AS) at air defense node {{Event/Route|E|orange}}<br />''(Casual mode only needs Air Parity (AP) or higher)''
+**Route:{{Event/Route|B|red|D|blue|E|orange}}
+***'''STF''': 4XX(V) 1CV(B) 1CA(V) + 1CL 2DD 0-3XX
+****This can be done right after finishing with the first phase, at the selectio node {{Event/Route|D|blue}} choose {{Event/Route|E|orange}}.
+****Set your main fleet with as many fighters and seaplane fighters as possible, you can bring 2CVLs instead of 1CV(B) to make it easier. LBAS support can be considered.
+
+*Achieve Air Superiority (AS) at air defense node {{Event/Route|G|orange}} '''(MEDIUM+ ONLY)'''
+**Route:{{Event/Route|C|red|G|orange}}
+***'''Carrier Task Force (CTF)''': 3CV(B) 2CA(V) 1AV + 1CL 2DD 0-3XX
+****You need an [[List of Seaplane Tenders by upgraded maximum stats|AV]] to route to node {{Event/Route|G|orange}}.
+****Set your main fleet with as many fighters and seaplane fighters as possible. LBAS support can be considered.
+
+*Achieve Air Superiority (AS) at air defense node {{Event/Route|F|orange}} '''(HARD ONLY)'''
+**Route:{{Event/Route|C|red|F|orange}}
+***'''CTF''': 3CV(B) 2CA(V) 1XX(not AV) + 1CL 2DD 0-3XX
+****Same fleet as before but without AV.
+****Set your main fleet with as many fighters and seaplane fighters as possible. LBAS support can be considered.
+
+*Reach air defense node {{Event/Route|S|orange}} and survive it '''(CASUAL ONLY)'''
+**Route:{{Event/Route|B|red|D|blue|H|red|J|blue|L|red|N|red|S|orange}}
+***'''STF''': 4BB(V) 1CV(B) 1CA(V) + 1CL 2DD 1AV 2XX
+***You will not have to do this if you already did it while going for node {{Event/Route|X|red}} using a STF (see below).
+
+*Achieve S rank at node {{Event/Route|X|red}}
+**You can reach this node by using either a STF or a CTF, both with an AV.
+**'''NOTE:''' '''CASUAL MODE''' players are recommended to use STF in order to pass through {{Event/Route|S|orange}} for another requirement!
+**Route:{{Event/Route|C|red|G|orange|I|red|K|red|M|red|W|orange|X|red}}
+***'''CTF''': 3CV(B) 3CA(V) + 1CL 1CLT 1CA(V) 2DD 1AV
+**Route:{{Event/Route|B|red|D|blue|H|red|J|blue|L|red|N|red|S|orange|T|blue|X|red}}
+***'''STF''': 4BB(V) 1CV(B) 1CA(V) + 1CL 2DD 1AV 2XX
+**Node support is recommended to help getting through the nodes easily.
+**There is a radar check at node {{Event/Route|W|orange}} and at node {{Event/Route|S|orange}}.
+***You need 1/2/4/6 surface radars on casual/easy/medium/hard in order to safely pass.
+****Failure to meet the requirements will route the fleet to ambush nodes {{Event/Route|Y|red}} or {{Event/Route|U|red}}.
+****Node {{Event/Route|X|red}} features {{ShipLink|Battleship Re-Class|Battleship Re-Class Elite|text=Battleship Re-Class}}, plan accordingly.
+*Achieve B+ rank at node {{Event/Route|V|red}} '''(EASY+ ONLY)'''
+**Route:{{Event/Route|B|red|D|blue|H|red|J|blue|L|red|N|red|S|orange|V|red}}
+***'''Transport Escort (TCF)''': 4DD 1AV 1XX + 1CL 3DD 2XX
+****Having an AV in the fleet guarantees node N.
+****Node support is recommended to help getting through the nodes easily.
+****AACI is recommended to mitigate airstrike damage from the en route nodes.
+****To route to node {{Event/Route|N|red}} instead of boss node {{Event/Route|Q|red}}, you may choose to '''fail the LoS check''' instead of bringing an AV.
+*****Bring the least amount of LoS gear possible.
+<!--
+*****Each fleet LoS less than 20 Formula 33 Cn=1?
+-->
+****Node {{Event/Route|V|red}} features {{ShipLink|Battleship Re-Class|Battleship Re-Class Elite|text=Battleship Re-Class}}, however unlike node {{Event/Route|X|red}} you only need to achieve B rank which makes things much easier.
+
+*Achieve Air Superiority (AS) during an enemy air raid against your LBAS.
+**Set your LBAS squadrons to defense mode with your best interceptors to counter the incoming abyssal airstrikes and achieve AS. There is a random chance for an incoming abyssal airstrike to occur after the first node during a sortie.
+
+===Phase 2: HP gauge at node Z===
+*Now that the shortcuts are unlocked and the boss node is debuffed, it is time to deal with {{ShipLink|Abyssal Pacific Princess}} at boss node {{Event/Route|Z|red}}
+**'''STF Route''':{{Event/Route|D|blue|E|orange|J3|blue|N|red|S|orange|T|blue|X|red|Z|red}}
+***'''STF '''(any speed): 4BB(V) 1CV(B) 1CA(V) + 1CL 2DD 3XX
+**Alternate Route: {{Event/Route|C|red|G|orange|J2|blue|M|red|W|orange|X|red|Z|red}}
+***'''Fast CTF''': 2BB 3CV(B) 1AV + 1CL 2DD 2BB 1CLT
+**AACI setup on at least a ship ({{ShipLink|Maya Kai Ni}} especially) is recommended.
+***For the final kill on hard, dropping AACI for more firepower at the boss is beneficial
+**There is a radar check at node {{Event/Route|T|blue}}.
+***You need 1/2/4/6 surface radars on casual/easy/medium/hard respectively in order to safely pass.
+****Failure to meet the requirements will route the fleet to ambush node {{Event/Route|U|red}}.
+****Ships with 5 slots ({{ShipLink|Akagi Kai Ni}}, {{ShipLink|Musashi Kai Ni}}, {{ShipLink|Ise Kai Ni}}, {{ShipLink|Hyuuga Kai Ni}}) are recommended for this purpose.
+****Retreating ships with {{EquipmentLink|Fleet Command Facility}} risks of lowering your radar count so keep that in mind before using it.
+**Node support is highly recommended especially to deal with node {{Event/Route|X|red}} where {{ShipLink|Battleship Re-Class|Battleship Re-Class Elite|text=Battleship Re-Class}} awaits.
+**Make use of as many historical ships as possible especially for this phase as the bonus is greater and the boss node is very heavy.
+**The boss has very high armor values, [[Combat/Equipment Guide|Torpedo cut-in]] setups on your escort ships are recommended.
+***Due to their high post-cap modifiers, USN DDs Johnston, Fletcher and Samuel B. Roberts can inflict the most damage at night. They're followed in damage by Abukuma, high power DDs, and CLTs.
+***To help tank damage at X, increase night battle survival at the boss and boost cut-in chance, utilizing a high armor fast battleship (Iowa, Bismarck) with night battle equipment (star shell, searchlight) is an option.
+**Once again, there is a submarine at the boss node. Equip a ship in your escort with OASW to deal with it, or put a Toukai in the last base to bomb the boss.
+**'''LBAS''': Sending all the bases with 1 fighter/interceptor and 3 bombers to boss node {{Event/Route|Z|red}} is recommended, sending a base to node {{Event/Route|X|red}} before '''LAST DANCE''' can also be an option.
+***Boss node requires a range of 7+.
+
+
+*'''STF fleet considerations''' (mainly for hard mode)
+**{{ShipLink|Nagato Kai Ni}}+{{ShipLink|Mutsu Kai Ni}} or {{ShipLink|Nelson}} flagship?
+***Nelson Touch can utilize Iowa's historical bonus, but only one hit of the special attack will receive it.
+***Nagato/Mutsu's special attack receives bonuses from equipping radar, AP shells and secondary guns. By combining these bonuses, overall high damage modifiers can be achieved
+****Since the map routing requires radars, equipping Nagato and/or Mutsu with them is a good way to utilize the radar equip slots.
+****The first two hits of the attack are done by the flagship, while the second ship will perform normal shelling/artillery spotting twice. As a result, equipping the flagship for full bonus while equipping the second ship for AP cut-in is common.
+***Overall Nagato Kai Ni + Mutsu Kai Ni with bonus modifier equipment is slightly stronger than Nelson Kai + Iowa Kai + Musashi Kai Ni, with the tradeoff of the flagship not being able to perform artillery spotting during the route and at the boss.
+**Which carrier?
+***{{ShipLink|Akagi Kai Ni}}, {{ShipLink|Saratoga Mk.II Mod.2}}, and {{ShipLink|Intrepid Kai}} are the most viable carriers due to historical bonuses and plane capacity.
+***Saratoga Mk.II Mod.2 is useful as an armored carrier she is still able to shell at chuuha at the boss, and carriers will frequently take heavy damage before they are able to shell twice. However, her plane slots are generally smaller than Intrepid's.
+***Intrepid has two large plane slots, making her bombers unlikely to be completely deranked. She also has larger small slots compared to Saratoga.
+***Akagi Kai Ni's main advantage is having an extra slot that can be used for equipping a radar, freeing up an equipment slot elsewhere in the fleet. Her smaller slots are comparable to Intrepid/Saratoga, but her larger (bomber) slots are the smallest of the three.
+****Akagi in particular blocks an otherwise easy to build around Friend Fleet (Akagi, Kaga, Kongou, etc.), so extra care must be taken in respect to other friend fleet blocking ships if using her.
+**Who to bring for air power?
+***CAVs can contribute a fair amount of air power, however due to CAV bonuses against certain installations, they may be better spent on other event maps.
+***{{ShipLink|Commandant Teste Kai}} or {{ShipLink|Nisshin A}} are viable options, having high capacity. But, similar to CAVs they may be better spent on installation maps.
+***{{ShipLink|Zara Due}} has low capacity, but high armor and is less useful on other maps where she will shell early due to her innate long range.
+***{{ShipLink|Ise Kai Ni}} or {{ShipLink|Hyuuga Kai Ni}} can be used for more air power at the sacrifice of shelling firepower (compared to Iowa Kai)
+***{{ShipLink|Musashi Kai Ni}}'s 5th slot is probably better spent equipping a radar rather than a seaplane, because she can benefit from the accuracy.
+**Light Cruiser?
+***{{ShipLink|Abukuma Kai Ni}}
+**Destroyers? And how many?
+***Two to three TCI setup destroyers with high historical bonus is desirable. Even with 2 torpedo setups, USN DDs will still outdamage generically strong destroyers like Yuudachi Kai Ni that can hit damage cap with two torpedoes.
+**Remaining second fleet slots?
+***Luck modded {{ShipLink|Kitakami Kai Ni}} is a standard option due to torpedo power in the day and ability to reach near-cap damage at night at chuuha
+***Fast battleships with high armor, i.e. {{ShipLink|Iowa Kai}} or {{ShipLink|Bismarck Drei}}, can be used to help tank Re Elite torpedoes at X node, and carry various night battle equipment. In particular, they can equip [[Type 96 150cm Searchlight]] which dramatically lowers the chances for other ships to be targeted at night.
+***{{ShipLink|Ooi Kai Ni}}, either luck modded with TCI or with DA setup
+***{{ShipLink|Maya Kai Ni}} with AACI and TCI setup is good for reaching the boss, but less helpful at dealing damage at the boss node. Other CAs are generally not recommended due to lower CA bonuses compared to DDs/CLTs.
+
+
+
+{{clear}}
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+{{Fleets|friend=Spring 2019 Event|map=E-5}}
+
+===LBAS flight range===
+[[File:Spring19_E5_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

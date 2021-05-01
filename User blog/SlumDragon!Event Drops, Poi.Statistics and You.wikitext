@@ -1,0 +1,151 @@
+'''Event Drops, Poi.Statistics and You'''
+
+The Chinese site poi.statistics at http://db.kcwiki.moe/drop/ is a database containing sortie and ship drop information. I'm making this guide to help non-Chinese admirals become familiar with that information so that better farming and strategic planning can occur early in the event.
+
+First, it's important to specify the limitation of poi.stats. At best, the database gives an approximation of the real drop rates as that's all sampling can do. A poi-reported rate of 2% for a given ship drop doesn't mean that's the actual drop rate. The real value could be higher and lower and the poi numbers often do oscillate up and down during an event.
+
+Second, poi.stats' strongest benefit isn't in what it tells us, but in what it does not tell us. This point will become clear by the end of this guide.
+
+Let's start. I'll be using content from the '''2016 Winter Event Map E3 Easy Mode''' as illustrative examples.
+
+'''1) Basics'''
+
+If we want useful information, we need to use the right settings. For example, if we want a sense of what the drop rate for Graf Zeppelin is on Easy, we'll set the following perimeters:
+
+Select: Node L, S-Rank (no other victory condition will drop Graf), Easy (NOTE icon position).
+
+We get the following numbers on the right side.
+
+[[File:Poi_2BV.png|thumb|left|400px]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+0.773% - This tells us the overall drop rate.
+
+1.089% - Drop Rate for this formation.
+
+1.022% - Drop Rate for this formation.
+
+Why is the overall drop rate so much lower? How did I know one of them was the final dance formation? We'll get to them later.
+
+'''2) Does Libeccio drop from 2016 Winter E3 Node L Easy?'''
+
+Let's put what we know to work. For a while, there was confusion over which difficulty Libeccio can drop from as the ship was listed as a drop for Easy+ for Node L on wikia. The discerning admiral can check if that's actually the case.
+[[File:Poi_33.png|thumb|left|400px]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+'''3) Locking E3 Easy to Final Dance for Graf Farming'''
+
+Ok, all good and fine. The above info is helpful, but hardly groundbreaking. So why bother?
+
+"Locking a map on Easy to Final Dance for optimal farming" is why. Highly desireable drops like Prinz Eugen and Graf Zeppelin can often be dropped in all three difficulties, but there is a catch. On Easy, not all possible formations may drop the desired reward. This effectively lowers the farming success rate... unless a workaround can be found.
+
+Let's go back to the earlier image of Graf Zeppelin's drop rate in E3 on Easy.
+
+[[File:Poi_222222.png|thumb|left|400px]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Overall => 0.773%
+
+(Formation 1 = 0%) <= Unreported/hidden
+
+Formation 3 = 1.089% <= Final Dance Formation
+
+Formation 2 = 1.022%
+
+We can theorize that another (unreported on poi.stats) formation exist that has 0% drop rate for Graf that's lowering the overall drop rate. This is exactly what's happening if we check kancolle wikia which lists three possible formations for Node L on E3 Easy.
+
+If we are farming for Graf Zeppelin, we want to make sure to not meet this No Drop formation. By taking advantage of an Event mechanic, we can do just that. On the last kill of an event map, the boss node and all pre-boss nodes switch to a (slightly) harder formation setup. On Node L Easy, this happens to be Formation 3, which drops Graf at around 1%-1.1%.
+
+'''The Tricky Part'''
+
+I said Formation 3 is the Final Dance formation, which is all well and good. But how would you know if someone doesn't tell you that? For that matter, how do we (assuming we don't read Chinese) know?
+
+[[File:Poi_555.png|thumb|left|400px]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+Using the picture above, we can see that the Final Dance formation we're encountering in the actual game is the third formation listed on the kancolle wikia page (we'll call this Formation 3 = Final Dance Formation). If we click the individual abyssal ships on the kancolle map page containing these formations, we get to their wiki page which has their English name AND a number, the ship ID. The ships of the Final Dance thus are the following:
+
+Ru-class Flagship(#529), Ru-class Elite(#524), 2x Transport Ship Wa-Class Elite(#526), 2x I-Class Late Model(#575)
+
+Look at the poi.stats formations. Notice the numbers after the Chinese characters? Those are the very same abyssal vessel ID. Let's put it all together.
+
+[[File:Poi_66666.png|thumb|left|400px]]
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+That's that. I hope this guide will help you in your future events.
+
+Good luck and Happy Hunting!
+
+[http://kancolle.wikia.com/wiki/User_blog:DynamitMC/What_the_Drop_Rates_Actually_Mean What the Drop Rates Actually Mean by DynamitMC] - If you want to know the practical effects of having a 1.1% drop rate versus a 0.8% drop rate
+[[Category:Blog posts]]

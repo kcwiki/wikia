@@ -1,0 +1,742 @@
+{{Map/Header}}
+{{Map/Info
+|en = Okinoshima Sea
+|jp = 沖ノ島沖
+|romaji =Okinoshima oki
+
+|mechanics = LoS Check@Line of Sight
+
+|show_kills = true
+|kills = 4
+
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 100
+|strategy_name = Okinoshima Combat Patrol
+|strategy_name_ja = 沖ノ島沖戦闘哨戒
+|strategy_info = There are reports of an enemy counteroffensive. Form a cruiser patrol group and track their movements!
+|strategy_info_ja = 同方面に敵反攻の兆候が報告された｡巡洋艦を中心に哨戒部隊を編成､敵艦隊の動向を探れ！
+|exp_ship = 250
+|exp_hq = 100
+|exp_hq_boss = 1200
+}}
+{{MapBranchingTable
+|id = 2-5
+|0 -> A/battle =
+* Meet '''ANY''' of the following requirements when fleet doesn't contain carriers '''AND''' amount of AV ≦ 1:
+** Fleet contains at least 3 DD + (1 DD '''OR''' 1 CL)
+** Amount of SS(V) ≧ 4
+** Two ships in the fleet are equipped with at least 1 drum
+* 70% chance if none of the requirements are met
+|0 -> B/battle =
+* Meet '''ANY''' of the following requirements:
+** Fleet contains carriers (this will overwrite routing to A)
+** Amount of AV ≧ 2
+** Fleet contains (F)BB(V) while not meeting any requirements to go to A
+<!--
+Some samples in TsunDB still route to A for some reason?
+CLT DD DD CA BBV BB -> A
+CL CA CA DD DD FBB -> A
+BBV DD DD DD CT CT -> A
+-->
+* 30% chance if none of the requirements are met
+
+|A/battle -> C/empty =
+* Amount of SS(V) ≧ 3
+|A/battle -> D/battle =
+* Does not meet the requirements to go to C
+
+|B/battle -> E/battle =
+* Meet '''all''' of the following requirements:
+** Do not meet any requirements that forces you to node F.
+** Amount of DD ≧ 2
+** Amount of FBB + BB + BBV ≦ 1
+<!--
+Might be <= 1 FBB AND <= 1 BB AND <= 1 BBV, but low sample size
+Confirmed CV + CVB <= 1 not CV <= 1 AND CVB <= 1
+-->
+** Amount of CV + CVB ≦ 1
+* 75% chance if you do not meet any requirements
+|B/battle -> F/empty =
+* Going to node F is '''forced''' if '''any''' of the following requirement is met:
+** Amount of SS(V) ≧ 3
+** Amount of CV(B) ≧ 3
+** Amount of CV(B) ≧ 2 '''AND''' CVL ≧ 1
+** Amount of FBB = 2 '''OR''' 3 (Gangut counts as FBB)
+** Amount of BB = 2 (FBB/BBV does not count, Gangut counts as FBB)
+** Amount of BBV ≧ 2
+* 25% chance if you do not meet any requirements
+
+|D/battle -> G/resource =
+* 50%? if fleet does not meet '''ANY''' of the requirements to go to H
+|D/battle -> H/empty =
+* Meet '''ANY''' of the requirements:
+** Fleet contains AV
+** Fleet contains 3 DD + (1 DD '''OR''' 1 CL)
+** Fleet contains no (F)BB(V)
+* 50%? if requirements aren't met
+<!--
+Very low D->G samples in TsunDB:
+CLT DD DD CA BBV BB -> G
+BBV BBV CL DD CAV CAV -> G
+BBV BBV CL DD DD CAV -> G
+BBV BBV CL DD DD CA -> G
+BBV BBV CL CA DD DD -> G
+CL CA CA DD DD FBB -> G
+CL DD BBV BBV CAV CAV -> G
+CA CA CA CAV BBV CAV -> G
+-->
+
+|E/battle -> H/empty =
+*'''IF''' fleet contains no (F)BB(V) or CV(B), meet any of the following requirements:
+** Amount of DD ≧ 2 and CL = 1
+** Amount of DD ≧ 2 and CA = 2
+** Amount of DD ≧ 2 and CAV = 2
+* 40% chance if you do not meet any requirements
+|E/battle -> I/battle =
+* Fleet contains at least a (F)BB(V) or CV(B)
+* 60% chance if you do not meet any requirements
+
+|H/empty -> J/battle =
+* Fail the LoS check with less than 31 in the F33 formula (C<sub>n</sub>=1)<!--exclusive-->
+* Random if you do not meet any requirements (Higher chance to J if it is closer to 31)
+|H/empty -> L/battle =
+* Pass the LoS check by reaching 33 or higher with the F33 formula (C<sub>n</sub>=1)
+* Random if you do not meet any requirements (Higher chance to L if it is closer to 33)
+
+|I/battle -> H/empty = 
+* Fail the LoS check
+|I/battle -> L/battle =
+* Pass the LoS check by reaching 46 or higher with the F33 formula (C<sub>n</sub>=1)
+* Otherwise, have a chance to reach L by reaching 37 or above with the F33 formula (C<sub>n</sub>=1), and higher LoS mean higher chance to reach the boss.
+* Note: You will most likely off-route to H, but this is another LoS check but with a lower requirement that can still route you to boss.
+|I/battle -> K/resource =
+* Fail the LoS check
+* Routing unknown
+}}
+===Tips===
+* You are required to SINK the flagship at boss node 4 times to clear the map.
+* A certain amount of [[Line_of_Sight|eLoS]] is required to reach the boss node:
+** Below 31 - using [[Line_of_Sight#Formula_33|formula 33]] - will not go H to L
+** With the same formula, 33 or more guarantees H to L. In between 31 and 33 will resulted in random routing.
+* There are 3 routes to the boss node:
+** North route, 3 battles (A-D-H-L)
+** South route I, 3 battles (B-E-H-L)
+** South route II, 4 battles (B-E-I-L)
+* North route, 3 battles (A-D-H-L):
+** Only two battles before the boss node. The second node is a night battle node
+** '''Recommended fleet composition''': 2CAV 3CA(V) 1CLT, 1CA 1CL 4DD
+*** No BB(V) or CV(L) are allowed for this quest composition
+*** Two ships need to be equipped with a [[Drum Canister]] in order to guarantee node A '''OR''' have at least 3DD + 1DD or 1CL; otherwise, you risk being diverted to B.
+*** It's possible to bring 0-2 CLT
+**** Useful for their opening strike for easier Node A but too many will make reaching the required eLoS difficult (more feasible at lower levels).
+*** North route (including boss node) doesn't have any enemy carriers, so it's possible to get AS+ with just seaplane bombers, enabling Artillery Spotting
+*** The monthly quest Bm7 forces you to go through this route. Order your fleet as DD-CA-CL-DD-DD-DD to maximize the efficiency of the firing order while also meeting the requirement for the quest.
+*** Double attack setups (both day and night) are recommended for consistency
+*** Consider bringing [[Star Shell]]s, [[Searchlight]]s and/or [[Type 98 Recon Seaplane (Night Scout)|Type 98 Recon Seaplanes (Night Scout)]] to make the night battle and boss node easier.
+* South Route I, 3 battles (B-E-H-L):
+** Only two battles before the boss node
+** '''Recommended fleet compositions''': 2CA/CAV 2DD 2CVL; [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://imgur.com/8S4LsAJ.png 3CVL 1CL 2DD]
+*** No BB(V) or CV allowed
+*** 2 DD are needed to secure this route
+*** Use either 2 CA or 2 CAV. Mixing CA/CAV can lead to I instead of H.{{Cite}}
+*** This route has an enemy carrier on the first node and BBs, which can easily damage low-armor ships. You are advised to bring high-level ships.
+*** You can bring [[Saiun]] for higher eLOS. Only need 69 to reach air supremacy, bring more torpedo bomber and dive bomber for stronger opening.
+* South Route II, 4 battles (B-E-I-L):
+** Three battles before the boss node
+** '''Recommended fleet compositions''': 4FBB 2CV; 1(F)BB(V) 3CA(V) 2CV; 6CVL; 3 CA(V) 3 CVL
+*** Heavy fleets have a chance of off routing to node F, a dead end.
+*** This is recommended to players with ship levels below 50 as it can cause fewer retreat than other composition despite being more expensive.
+*** 6CVLs is a viable option due to its strong opening; however, it can also lead to node F. It may go through South Route I while evading node I: [https://www.youtube.com/watch?v=Yb91IbH-TsM 6 CVL]
+*'''Summary''':
+** North route, 3 battles (A-D-H-L):
+*** (+) low resource consumption
+*** (+) hardly any bauxite lost or none at all
+*** (-) usually has the most issues getting the required {{LOS}} value, depending on your fleet
+*** (-) night battle node, which will usually be the cause of your retreats
+*** (-) strong ships needed to deal with the boss node
+** South route I, 3 battles (B-E-H-L):
+*** (+) low resource consumption & repair costs
+*** (+) no night battle node
+*** (+) able to bring light carriers
+*** (-) you need strong planes and carriers for this to be reliable
+*** (-) weaker ships are vulnerable due to the enemy battleship
+** South route II, 4 battles (B-E-I-L):
+*** (+) a very strong fleet
+*** (+) no night battle node
+*** (-) has a high chance of dead-end
+*** (-) has a chance to encounter {{ShipLink|Standard Carrier Wo-Class Kai Flagship|text=BWS}}
+*** (-) high resource consumption & repair costs
+
+===Quest Guide===
+<tabber>Sortie Quests=
+These are the quests that are related to World 2-5. 
+
+Please note that if the quest's composition is similar, it will be sorted under the same tab and the most notable one will be featured. Such cases are as followed:
+*Under Bm1 : B34
+*Under Bm7 : B57, B59, B79
+*Under B85 : N/A
+*Under B100 : N/A
+*Under B102 : B114
+
+The following quest is not listed as you can clear with basic setup.
+*[[Quests#C14|C14]]
+
+'''NOTE'''
+*For Quest Composition, ships in non-base form (e.g. Kai, Kai-ni) means that it requires that form. If base form, it means that any form is acceptable. This does not apply to suggested ships (e.g. Bm7)
+|-|Bm1=
+'''Common Composition''': 3-4 CA and 2-3 Wildcards<br/>
+'''Possible Route''': North and South <br/><br/>
+'''<u>[[Quests#Bm1|Bm1]]</u>''' - North Route <br/> 
+*'''Required''': 3 CA - {{ShipLink|Myoukou}}, {{ShipLink|Haguro}} , {{ShipLink|Nachi}}  + 3 Wildcards
+*'''Suggested - North''': {{ShipLink|Myoukou}}, {{ShipLink|Haguro}} , {{ShipLink|Nachi}} + 2 CAV + 1 CA/CLT
+**Equipping 2 [[Drum Canister (Transport Use)|Drum Canisters]], one on each CAV.
+**Equip [[Zuiun]] on CAV for easy air superiority)
+**Add another CLT gives you an opening strike but makes it harder to reach eLoS at node H; adding another CA has vice versa effect of CLT.<br/>
+*'''Suggested - South II''': {{ShipLink|Myoukou}}, {{ShipLink|Haguro}} , {{ShipLink|Nachi}} + 3 CVL
+**There is another additional battle and having a chance to derail to dead end, F node; however, the opening strike of the CVLs and air superiority provide enough support to make up for its cons. 
+'''<u>[[Quests#B34|B34]]</u>'''- North Route <br/>
+*'''Required''': 4 CA - {{ShipLink|Furutaka}}, {{ShipLink|Aoba}} , {{ShipLink|Kako}}, {{ShipLink|Kinugasa}} + 2 Wildcards
+*'''Suggested - North''': {{ShipLink|Furutaka}}, {{ShipLink|Aoba}} , {{ShipLink|Kako}}, {{ShipLink|Kinugasa}} + 2 CAV
+**Additionally, similar suggestion can be given by using 2 CVL instead of 2 CAV and go South route II.
+|-|Bm7=
+'''Common Composition''': 3+ DD and 0-3 Wildcards<br/>
+'''Possible Routes''': North and South <br/><br/>
+'''<u>[[Quests#Bm7|Bm7]]</u>'''- North Route '''only''' <br/>
+*'''Required''': 4DD (DD as flagship) + 1CL + 1CA (Not CAV)
+** Due to 4 DD and no composition leeway, this composition will be forced to go north no matter what. In addition, there is a line of sight requirements from node H to boss node making this quest one of the more challenging ones:
+**'''Note:''' Ship's base LoS effect is square-rooted for every ship. Its priority is definitely lower than equipment's LoS but it might give you that slight edge you need
+***All destroyers will need radars and is unlikely to equip any night battle equipment. Try balancing between ships that can provide high firepower and ships that have good base LoS (or both):
+****{{ShipLink|Kasumi/Kai Ni B}} is useful as she is currently the only DD that can equip Large radar (e.g.[[Type 32 Surface Radar]]), allowing you some space to equip other equipment (e.g. [[Searchlight]]). 
+****{{ShipLink|Akatsuki/Kai Ni}} is great due to her high base LoS and decent firepower.
+****Some other candidates are {{ShipLink|Ayanami/Kai Ni}},{{ShipLink|Kawakaze/Kai Ni}}, {{ShipLink|Asashio/Kai Ni}}, {{ShipLink|Michishio/Kai Ni}} and {{ShipLink|Yuudachi/Kai Ni}}. Other unmentioned ones require either Action Report, Blueprint, both or neither; most of the Kai-ni DDs are decent.
+***CA will probably need 1-2 seaplanes to gain enough LoS. 
+**** {{ShipLink|Choukai/Kai Ni}} is currently the best CA (stat-wise) to use due to her ridiculously all-high stats (except luck) compared to all other CAs. In addition, her high FP and base LoS (losing LoS only to the Tone-class Kai) makes her the ideal ship for this quest.
+***** Otherwise, {{ShipLink|Myoukou/Kai Ni}}, {{ShipLink|Haguro/Kai Ni}} , {{ShipLink|Nachi/Kai Ni}} , {{ShipLink|Ashigara/Kai Ni}} are also viable selection.
+****Having {{ShipLink|Zara/Kai}} or {{ShipLink|Pola/Kai}} will allow you to bring seaplane bombers (e.g. [[Zuiun]]) despite using a CA, allowing you to achieve Air Superiority
+***CL might need to have 1-2 seaplanes equipped to bring the fleet up to the required LoS. 
+****Four-slot CLs such as {{ShipLink|Ooyodo/Kai}} are especially useful for this as you do not sacrifice double attacks at night; her Base LoS is the highest among the CLs and one of the highest in the game.{{ShipLink|Yuubari/Kai}}, another 4-slot CL, can also carry seaplane despite her 0 slot; however, she has the lowest base LoS of all the CL-kai.
+**** It is possible to use {{ShipLink|Abukuma/Kai Ni}} for her opening torpedo, but you need to distribute your LoS carefully. 
+****Additionally, {{ShipLink|Yura/Kai Ni}} is in a peculiar state where she can equip {{EquipmentLink|Kouhyouteki}} for the opening torpedo, seaplane fighters/bombers for air Superiority (if you don't have Zara/Pola, and can equip {{EquipmentLink|8cm High-angle Gun}} on her expansion slot. This makes her one of the most versatile ships in the game, allowing her to cover multiple weaknesses at once.
+**** Stat-wise, {{ShipLink|Kuma/Kai}} and {{ShipLink|Nagara/Kai}} are strong CL due to their ridiculously high stat despite being a Kai-ship, but having no unique gimmick like those previously mentioned. Sendai-class Kai ni is also viable with a bit more base LoS; Kuma and Nagara do cost less in terms of ammo than the Sendai-class Kai ni (but the cost isn't something you should worry about for this). They're optional if you don't have any of the previously mentioned ships.
+<br/>
+'''<u>[[Quests#B57|B57]]</u>''' - North and South Route <br/>
+*'''Required - North''': {{ShipLink|Kasumi}} as Flagship, {{ShipLink|Asashimo}}, {{ShipLink|Kiyoshimo }}, {{ShipLink|Ooyodo}}, {{ShipLink|Ashigara}} + 1 Wildcard
+**Since 1 Wildcard is allowed, another CA is highly recommended since it gives you decent firepower while lessening your load on LoS as you can bring additional seaplanes. Other options (CLT or Abukuma opening torpedo; (F)BB(V)) are also possible.
+*'''Alternative - South''': On the other hand, you can use 1 CVL (avoid dead end and possibly node I) and go South Route I instead. LoS becomes a lot less problematic when you have carriers.
+<br/>
+'''<u>[[Quests#B59|B59]]</u>''' - North and South Route <br/>
+*'''Required''': {{ShipLink|Kasumi/Kai Ni}} as Flagship + 2 DD + 3 Wildcard
+**Even better, a lot more wiggling room. Follow suggestions as above, but remember that now, you can equip up to 2-3 CA for easy LoS along with possibly 0-1 CLT.
+*'''Alternative - South''': With even more flexibility, you can even do 3 CVL and go, mostly, South Route I (still can derail to I).
+<br/>
+'''<u>[[Quests#B79|B79]]</u>''' - North and South Route <br/>
+*'''Required''': {{ShipLink|Ayanami}}, {{ShipLink|Shikinami}}, {{ShipLink|Uranami}}, {{ShipLink|Isonami}} + 2 Wildcard
+*'''Only A-rank is needed'''
+**As above, but with 1 less wildcard. But a bit more difficult due to the 4 DD restriction. This forces you to plan your fleet carefully since you are not bringing any unique stat ships with you other than Ayanami. Depending on your preference, you can choose what your 2 wildcards will be. However, you must consider the fact that the base LoS stat from will be lower than if you sortie, let's say, [[Akatsuki]].
+***With 4 DDs (of which 3 don't have a Kai Ni) bringing 1 BBV will highly increase your chance to avoid torpedo closing attacks at the first node, thus increasing the chance to advance to the night battle node. It also helps with getting the required LoS for reaching the boss node.
+*'''Alternative - South''': As above but with 2 CVL instead. Bringing CVL will help deal with LoS requirement but traded with going through a node with BB. 
+|-|B85=
+'''<u>[[Quests#B85|B85]]</u>''' - North or South Route <br/>
+*'''Required''':   {{ShipLink|Kinu/Kai Ni}} as flagship + 5 of the following 6 members: {{ShipLink|Aoba/Kai}}, {{ShipLink|Kuma/Kai}}, {{ShipLink|Kitakami/Kai Ni}} , {{ShipLink|Ooi/Kai Ni}} , {{ShipLink|Shikinami/Kai}}  and/or {{ShipLink|Uranami/Kai}}
+**Since you can only bring 2 DD at max, this allows you to pick between a definite North route (i.e. put [[Drum Canister (Transport Use)|Drums]]) or a random South I Route (no drums)
+**There is a small wiggling room for this quest. As you only need 5/6 of the ships, the only ship that you must pick no matter what is {{ShipLink|Kinu/Kai Ni}}. 
+*** Due to the LoS requirement, night battle equipment may not be possible to bring and your fleet's fire power might be low. Consider this fact when you want to bring drums for definite A node too.
+****'''DD''' - {{ShipLink|Uranami/Kai}} and/or {{ShipLink|Shikinami/Kai}} is recommended to be outfitted with only surface radars (e.g. [[Type 33 Surface Radar]]) to give other ships more firepower. Although, giving them 2 Guns + 1 Radar is viable but other ships will suffer.
+**** '''CL''' - {{ShipLink|Kinu/Kai Ni}} and/or {{ShipLink|Kuma/Kai}} will also need radars and/or seaplanes.
+**** '''CA''' - {{ShipLink|Aoba/Kai}} is recommended to have two seaplanes + 2 main guns.
+**** '''CLT''' - {{ShipLink|Kitakami/Kai Ni}} and/or {{ShipLink|Ooi/Kai Ni}}  is recommended to have their normal configuration of 2 Guns and [[Kouhyouteki]].
+|-|B100=
+'''<u>[[Quests#B100|B100]]</u>''' - North or South Route <br/>
+*'''Required''':   1 Light Cruiser, 2 Destroyers or Coastal Defense Ships, 1 Aviation Cruiser or Light Carrier, up to 2 additional ships
+*The reason that this quest is separated from the rest is because of its freedom to go either north or south despite leaning toward the north:
+**'''North''': This will bring you back to the Bm7 composition-like, but your composition will be 3 DD 1 CL 1 CA(V) and one wildcard.
+***This gives you more relaxation on your LoS because of CAV's higher Base LoS and your freedom to bring one other ship. Everything else, just look at Bm7's tab.
+**'''Alternative - North''': You are also able to bring 1 CL 2 DD 1 CAV and 2 Wildcards, giving even more freedom for building your fleet. In exchange for that extra freedom you will have to bring 2 ships with 1 drum each.
+***Option 1: Recommended Wildcards are 0-1 CLT and 1-2 CA(V). Bringing a CLT will make your opening strike stronger and bringing CA(V)s makes it easier to meet the LoS requirement while allocating the drums that are needed for routing.
+***Option 2: Wildcards are 1 (F)BB(V) and 1 AV. This composition allows to bring a battleship while meeting the routing requirements. With that it reduces the chance to recieve heavy damage through closing torpedoes at the first node through a 2nd shelling phase.
+**'''South''': South is plausible with the composition:
+***1 CL 2 DD 2 CA(V) and 1 CVL
+****A carrier will force you south. Use the advantage of forcing you to bring 2 DD to go the B-E-H-L (2 battles) route by adding an additional 2 CA(V) to your fleet. The CVL will help you deal with Air Denial if you happened to meet the carrier at node B, and give you Air superiority and Air-strike power. Make sure you bring at least one fighter to reach AS. 
+***1 CL 2 DD 3 CVL
+****Similar to above but with stronger Opening Strike.
+|-|B102=
+'''<u>[[Quests#B102|B102]] and [[Quests#B114|B114]]</u>''' - North Route <br/>
+*'''Requirements for [[Quests#B102|B102]]''':   {{ShipLink|Ise/Kai}} and {{ShipLink|Hyuuga/Kai}} ('''both above level 50''') as flagship and 2nd ship with 1 Light Cruiser, 2 Destroyers and 1 additional ship.
+*'''Requirements for [[Quests#B114|B114]]''':   {{ShipLink|Ise/Kai}}, {{ShipLink|Hyuuga/Kai}}, {{ShipLink|Ooyodo/Kai}}, along with 1 Destroyers and 2 additional ship. At least A-rank(?)
+**{{ShipLink|Ise/Kai}} and {{ShipLink|Hyuuga/Kai}} do not need to be at the specified position. Positioning is flexible. Despite the inclusion of Ooyodo, you do have more freedom to choose.
+*This is a peculiar quest. Not only is there a minimum level, but it also forced you North with 2 BB. This will most likely be your fleet's composition that provides certain routing:
+**{{ShipLink|Ise/Kai}}, {{ShipLink|Hyuuga/Kai}}, 2 DD, 1 CL + 1 DD/AV/CA
+***Due to the presence of both Ise and Hyuuga, you are not allowed to go South route as it will always lead you to Node F, a dead-end. Therefore, the only other option left is to go north. 
+****DD/AV is suggested if you wish to satisfy the routing requirement without/with drums. 
+****CA is considered because of their efficiency at both day battle and night battle node compared to BB(V)/DD. Equip two of your DD/CL with at least 1 drum if you wish to bring a CA. However, there's a chance to get off routed to Node G due to random routing.
+*Node D (night battle) will be the usual; just survive it.
+</tabber>
+
+===Note===
+[[Akashi]] will drop with a small chance in 2-5 only for Admirals who do not '''currently''' own her. So, if you already have had her but sunk/scrapped/used her in modernization, she will drop in this map again.
+===Trivia===
+*The LoS value required to have 100% chance of going to the boss was 38 in F33 or 70.4 in 2-5 Fall formula before Bm7's implementation in December 2014, but is reduced to 33 in F33 after the implementation.
+===References===
+<references/>
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=228|y=134}}
+{{Map/ImageNode|B|x=240|y=299}}
+{{Map/ImageNode|C|x=163|y=84}}
+{{Map/ImageNode|F|x=360|y=311}}
+{{Map/ImageNode|D|x=360|y=136}}
+{{Map/ImageNode|E|x=356|y=221}}
+{{Map/ImageNode|G|x=462|y=99}}
+{{Map/ImageNode|H|x=472|y=183}}
+{{Map/ImageNode|I|x=473|y=272}}
+{{Map/ImageNode|J|x=536|y=115}}
+{{Map/ImageNode|K|x=522|y=291}}
+{{Map/ImageNode|L|x=583|y=196}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵水雷戦隊
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>100 - 120
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>100 - 120
+|Light Cruiser He-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>70- 99
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>70 - 99
+|Light Cruiser He-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 69
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 69
+|Light Cruiser He-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{Map/Nodes|name=敵前衛艦隊
+|B
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>90 - 120
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ha-Class/Flagship
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|B
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>90 - 120
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>60 - 89
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|B
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>60 - 89
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 59
+|Light Cruiser Ho-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|B
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 59
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{NodeInfo
+|C
+|Empty
+}}
+{{Map/Nodes|name=敵巡洋艦隊
+|D
+|Night
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>90 - 120
+|Heavy Cruiser Ri-Class/Kai Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|D
+|Night
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>90 - 120
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|D
+|Night
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>60 - 89
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser He-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|D
+|Night
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 59
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{Map/Nodes|name=敵水上打撃部隊
+|E
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Double Line}}<br>HQ Lvl<br>80 - 120
+|Battleship Ru-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|E
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Double Line}}<br>HQ Lvl<br>60 - 79
+|Battleship Ru-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|E
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Double Line}}<br>HQ Lvl<br>1 - 59
+|Battleship Ru-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{NodeInfo
+|F
+|Empty
+}}
+{{NodeInfo
+|G
+|Resource
+|Fuel
+|50 +(number of drum canisters * 10) up to a max of 150
+}}
+{{NodeInfo
+|H
+|Empty
+}}
+{{Map/Nodes|name=敵機動艦隊
+|I
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>100 - 120
+|Standard Carrier Wo-Class/Kai Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser He-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|I
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>70 - 120
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser He-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|I
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>50 - 99
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|I
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 69
+|Standard Carrier Wo-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{Map/Nodes|name=敵侵攻部隊
+|J
+|Normal
+|{{Formation|Double Line}}<br>HQ Lvl<br>80 - 120
+|Transport Ship Wa-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|J
+|Normal
+|{{Formation|Double Line}}<br>HQ Lvl<br>50 - 79
+|Transport Ship Wa-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+|-
+|J
+|Normal
+|{{Formation|Double Line}}<br>HQ Lvl<br>1 - 49
+|Transport Ship Wa-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{NodeInfo
+|K
+|Resource
+|Steel
+|?
+}}
+{{Map/Nodes|name=敵主力艦隊
+|L
+|Boss
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>100 - 120
+|Battleship Ta-Class/Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|L
+|Boss/Final
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>100 - 120
+|Battleship Ta-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|L
+|Boss
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>70 - 99
+|Battleship Ta-Class/Elite
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|L
+|Boss/Final
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>70 - 99
+|Battleship Ta-Class/Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|L
+|Boss
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 69
+|Battleship Ta-Class/Elite
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|L
+|Boss/Final
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 69
+|Battleship Ta-Class/Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, D, E, I, J, L
+|boss = L
+|Abukuma: L
+|Akashi: L
+|Akebono: A, B
+|Aoba: A, B, D, E, I, J
+|Asashio: A, B, I
+|Ashigara: A, E
+|Atago: I, L
+|Ayanami: B, E, I, J
+|Chikuma: E, I, L
+|Chitose: A, B, D, E, I, J
+|Chiyoda: A, B, D, E, I
+|Choukai: A, B, E, I, J
+|Fubuki: L
+|Furutaka: A, B, D, E, I
+|Fusou: E, J, L
+|Haguro: A, B, E
+|Hamakaze: D, E, I, J, L
+|Haruna: L
+|Hatsuyuki: A, B, D, I
+|Hiei: L
+|Hiryuu: L
+|Hiyou: A, B, E, I, J
+|Hyuuga: E, L
+|I-168: L
+|I-19: L
+|I-58: L
+|Ise: D, E, I, J, L
+|Isonami: B, D
+|Isuzu: A, B, D, E, I, J
+|Jintsuu: A, E, J
+|Junyou: A, B, E, I
+|Kaga: L
+|Kako: A, B, D, E, I, J
+|Kawakaze: L
+|Kinu: L
+|Kinugasa: E, I
+|Kirishima: L
+|Kisaragi: A, B, E, I
+|Kiso: A, B
+|Kitakami: L
+|Kongou: L
+|Kuma: A, B, E, I, J, L
+|Kumano: L
+|Makigumo: L
+|Maya: A, B, E
+|Miyuki: A
+|Mogami: A, B, D, E, I, J, L
+|Mutsuki: A, E, I
+|Myoukou: E, I
+|Nachi: A
+|Nagara: A, B, D, L
+|Naka: A, B, E, I, J
+|Natori: A, E
+|Ooi: D, E, I, J
+|Ooshio: A, B
+|Ryuujou: A, B, E, I, J, L
+|Samidare: B
+|Satsuki: B, E, I, J
+|Sendai: A, E, I, J, L
+|Shikinami: B, D, E, I
+|Shimakaze: L
+|Shirayuki: B, E
+|Shouhou: A, B, E, I, L
+|Souryuu: L
+|Suzukaze: A, B
+|Suzuya: L
+|Taigei: L
+|Takao: I, L
+|Tama: B, E, I
+|Tatsuta: A, B, E, I, J
+|Tenryuu: A, B, E, I
+|Tone: E, I, J, L
+|Urakaze: L
+|Ushio: A, B
+|Uzuki: L
+|Yamashiro: E, I, J, L
+|Yayoi: L
+|Yura: A, B, E, I
+|Yuugumo: L
+|Zuihou: L
+}}
+{{SectionEnd}}

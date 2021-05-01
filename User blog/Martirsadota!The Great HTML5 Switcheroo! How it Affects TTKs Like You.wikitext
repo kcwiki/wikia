@@ -1,0 +1,107 @@
+<table style="background:#CFC;border:3px solid #AFA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width=50px">[[File:Ryuusei Kai 052 Full.png|55px|link=]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="font-weight:bold;color:#006cb0;">TL;DR:</span> '''The migration of Kancolle to HTML5 should have ''no effect on anyone's gameplay experience'' except for a different UI, since behind the scenes, it still works the same.'''<br/><small>I am ''not'' ruling out the possibility of a complete overhaul; I just see it as highly unlikely. Even then, impact should be limited to the first few weeks after migration as the viewers are being adapted to new code.</small></td></tr>
+</table>
+
+So as we all know, Kancolle is about to [[Thread:599340|abandon Flash in favor of HTML5]], and I have seen this cause some panic within the community; in particular, there has been some recent fears that the upcoming migration to HTML5 would force players to play without their viewers as these would break when the migration is completed.
+
+Hopefully this post would alleviate those fears. But first, as I always do in my blog posts, a little history:
+
+=Why the Sudden Switcheroo?=
+
+We would continue to be happily playing Kancolle if not for a sudden announcement from the mother of Flash, '''Adobe'''. Adobe recently announced that they will be [https://blogs.adobe.com/conversations/2017/07/adobe-flash-update.html declaring Flash as end-of-life by 2020], encouraging developers and content creators to migrate to modern web technologies like HTML5's [[wikipedia:Canvas_element|canvas]] and [[wikipedia:HTML5_video|video]]. The company cited Flash's inherent security flaws and the resources required to maintain Flash as reasons for abandoning it.
+
+Whatever the reason, by 2020, Flash would be at its end of life. This means that browsers will stop supporting Flash by that time<ref>See the posts by [https://blogs.windows.com/msedgedev/2017/07/25/flash-on-windows-timeline/ Microsoft],[https://www.blog.google/products/chrome/saying-goodbye-flash-chrome/ Google], [https://blog.mozilla.org/futurereleases/2017/07/25/firefox-roadmap-flash-end-life/ Mozilla], and [https://webkit.org/blog/7839/adobe-announces-flash-distribution-and-updates-to-end/ Apple].</ref>, and you won't be able to run Flash-based content (like Kancolle as it is right now) in the browser.
+
+With roughly three years left before the inevitable, Kancolle made the switch to HTML5.<ref>This of course assumes that Kancolle will still be Kancolle by 2020; let's keep our hopes up! [[File:Amagi.png|48px|link=]]</ref>
+
+=What is HTML5?=
+
+<table style="background:#CDF;border:3px solid #ACF;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<tr><th></th><th>'''Warning! Technical Stuff Ahead!'''<!--br/><small>(you can always [[#guide|skip]].)</small--></th></tr>
+</table>
+
+[[wikipedia:HTML5|HTML5]] is the latest version of HTML, a language for creating web pages. If that sounded like nerd talk to you, think of it this way: HTML can make you cake, while HTML5 can make those fancy cakes with a photograph printed directly on the icing; it's still cake, just more multimedia.<ref>Both are also lies. [[File:Kappa.png|48px|link=]]</ref>
+
+HTML5 adds multimedia features like video and audio playback without the need for plugins, as well as a canvas element that allows for programmatic rendering of 2D elements (basically 2D animation).
+
+Canvas is of particular interest, because this is ''the'' element that could, by any stretch of the imagination, be capable of creating the user interface for an HTML5-based Kancolle client. And if you want proof, look no further than [https://kc3kai.github.io/kancolle-replay/battleplayer.html KC3's replayer].
+
+="Sure, that's sweet tech and all, but how about me?"=
+Okay, I put my opinion as what the devs may use to migrate Kancolle to HTML5. But the important question is:  '''"Would this affect my gameplay?"''' Here is where I place the thesis of my case:
+
+<table style="background:#FCD;border:3px solid #FAC;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:center;" width="100px">[[File:NPC compass4a.png|100px]]</td>
+<td style="vertical-align:middle;text-align:center;" >'''The migration of Kancolle to HTML5 should have ''no effect on anyone's gameplay experience'' except for a different UI, since behind the scenes, it still works the same.'''</td>
+</table>
+
+And why so? It's because '''only the front-end has been changed'''; the back-end would most likely remain the same. This one's rather hard to explain in prose, so let me pull up a few visual aids:
+
+[[File:Kc-html5-fig1.png|700px|center]]
+
+This is how Kancolle looks like when played straight on the browser (i.e., without any viewers or whatever). You can think of the browser as the ''client'' which runs the Flash files required by Kancolle; this is what I'm referring to as the '''front-end''', because this is what you see as Kancolle. The client then communicates with the servers so that you may be able to play the game.
+
+The green boxes in the middle denote ''methods'' by which the client (your browser running Flash) communicates with the Kancolle servers; this is the '''back-end''', as these work behind the scenes, invisible to you.<ref>Unless you're following some of [[User_blog:Martirsadota/A_Guide_on_Helping_Out_the_Wiki_Using_API_Data|my tutorials]]; if so, you're getting glimpses of the back-end.</ref> A critical point here is that '''gameplay would not be reasonably affected if these methods were not changed.'''
+
+And I don't have reason to believe that these would be changed in any big way.
+
+==A Case of Easing Migration==
+
+The main reason for this is to ease migration; in this case, if you're moving the Kancolle client from Flash to HTML5, it makes perfect sense to have the new client communicate in the same way as the old one, rather than making a new client and adapting the server code so that it can communicate with that new client. It's like buying a new phone; you'd want it to be able to output the music you play to those wired headphones you already own, rather than buying a new phone ''and'' new earbuds just because that new phone cannot communicate to your wired headphones without an expensive adapter.
+
+With that in mind, look at how easy it is to migrate to HTML5 if the new client communicated in the same way as the old one:
+
+[[File:Kc-html5-fig2.png|700px|center]]
+
+Bam! Only the client needs to be swapped; everything else is unchanged.
+
+==Playing with Viewers==
+
+How about the now-common case of playing with a viewer (KC3Kai, poi, KCV, EO)? This is how it looks like:
+
+[[File:Kc-html5-fig3.png|700px|center|Note that a viewer only ''reads'' data from the server; if it ''sends'' data to the server as well, stop using that viewer as it may get you in trouble.]]
+
+Another critical point shows: '''the viewer is independent of the client.''' You can change one without affecting the other. You can switch from KCV to KC3Kai (and vice versa) without affecting the game itself, right? Well, it works the other way around, too:
+
+[[File:Kc-html5-fig4.png|700px|center]]
+
+So as you can see, nothing drastic should happen even when Kancolle decides to switch to HTML5. '''''Should''''', that is.
+
+=The Worst-case Scenario=
+
+I am ''not'' ruling out the possibility of a complete overhaul; I just see it as ''highly'' unlikely. In any case, let's see what happens when a complete overhaul ''does'' happen:
+
+# Tanaka et.al. migrates to HTML5. The entire back-end is overhauled as a result.
+# People start hammering support channels of popular viewers, complaining that their viewer has stopped working.
+# Developers of viewers start examining the new communication methods in the back-end.
+# They start making code to read these new communications for their viewers.
+# They release the new versions.
+# Everybody is playing happily again.
+
+See? It's not all that bad. When push comes to shove, it ''will'' break, but sure as day follows night<ref>I wanna hang myself for using this metaphor.</ref>, it will be fixed.
+
+At least for viewers with active maintainers. [[File:Amagi.png|48px|link=]]
+
+===Side Note: Shipgirl CGs===
+
+This is the territory of the uncertain. Currently, shipgirl CGs are distributed in Flash files with all forms (normal, damaged, banners, etc.) packaged inside. This makes it difficult for a normal player to get the CGs themselves.<ref>It's [[User_blog:Martirsadota/A_Rapid-fire_Tutorial_on_Flash_Decompiling_(JPEXS-focused)|not impossible]], though.</ref>
+
+Once KC moves away from Flash, how are they going to distribute them? I am certain they want to maintain the difficulty of getting at the CGs high. Some possible scenarios:<ref>I originally mentioned them [[Thread:599340#147|here]].</ref>
+
+* '''.png files with "encrypted" filenames.''' Just like how sound files are distributed now, this should make guessing filenames harder, but not impossible.<ref>The staff here at Wiki can get any voice line with the KC master data (which is loaded by the game when it starts up) and around three lines of JavaScript code.</ref>
+* '''As encrypted assets.''' This is what we fear the most. Then again, deobfuscating the decryption code or getting the decryption keys ''might'' prove to be a trivial task.<ref>One game's asset encryption was defeated with five lines of code.</ref>
+
+Do note that this is mainly of interest to Wiki staff or anyone who has an interest in datamining the game; normal players need not worry as this has no impact on gameplay whatsoever.
+
+=Final Thoughts=
+
+Remember when YouTube used to be in Flash? Now that it's in HTML5, did anything change? Nope, everything it still there.<ref>Except for that game of Snake you can invoke to pass the time while your video is buffering, or that Nyan Cat progress bar.</ref> It functioned the same way as it did back then—heck, it was even improved along the way.
+
+Same thing will happen to Kancolle. The migration to HTML5 should get you hyped, not worried. It's alright, nothing would break; and if something ''does'' break, there's someone on the Internet who would fix it.
+
+Now, I wonder what would they do with the Android app...
+
+=Notes and References=
+<references/>
+[[Category:Blog posts]]

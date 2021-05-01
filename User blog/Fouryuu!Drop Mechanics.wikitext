@@ -1,0 +1,7436 @@
+Thanks to data mining, we now know the exact mechanics behind drops for the Vita version. Here we will see if they apply also to the browser version.
+
+<span style="background-color:black;color:black">tl;dr: they probably do</span>
+
+== KanColle Kai Drop Mechanics ==
+
+KanColle Kai stores drop data in drop tables of exactly 100 rows each. Each map gets two tables, one for normal nodes and one for boss node. This means that there are 100 possible results shared by all normal nodes in a map, and 100 possible results for the boss node.
+
+Rows may be empty. Rows may have duplicate ships.
+
+Example drop table:
+
+{| class="mw-collapsible mw-collapsed wikitable" width="250px"
+|+KanColle Kai 1-1 Boss
+|-
+! scope="col"|Number
+! scope="col"|Ship
+|-
+|0
+|{{ShipBattleCard|Agano}}
+|-
+|1
+|{{ShipBattleCard|Abukuma}}
+|-
+|2
+|{{ShipBattleCard|Tenryuu}}
+|-
+|3
+|{{ShipBattleCard|Tatsuta}}
+|-
+|4
+|{{ShipBattleCard|Fubuki}}
+|-
+|5
+|{{ShipBattleCard|Ayanami}}
+|-
+|6
+|{{ShipBattleCard|Tenryuu}}
+|-
+|7
+|{{ShipBattleCard|Tatsuta}}
+|-
+|8
+|{{ShipBattleCard|Fubuki}}
+|-
+|9
+|{{ShipBattleCard|Ayanami}}
+|-
+|10
+|{{ShipBattleCard|Murakumo}}
+|-
+|11
+|{{ShipBattleCard|Murakumo}}
+|-
+|12
+|{{ShipBattleCard|Fubuki}}
+|-
+|13
+|{{ShipBattleCard|Ayanami}}
+|-
+|14
+|{{ShipBattleCard|Murakumo}}
+|-
+|15
+|{{ShipBattleCard|Hatsuyuki}}
+|-
+|16
+|{{ShipBattleCard|Mutsuki}}
+|-
+|17
+|{{ShipBattleCard|Kisaragi}}
+|-
+|18
+|{{ShipBattleCard|Satsuki}}
+|-
+|19
+|{{ShipBattleCard|Fumizuki}}
+|-
+|20
+|{{ShipBattleCard|Nagatsuki}}
+|-
+|21
+|{{ShipBattleCard|Kikuzuki}}
+|-
+|22
+|{{ShipBattleCard|Mikazuki}}
+|-
+|23
+|{{ShipBattleCard|Mochizuki}}
+|-
+|24
+|{{ShipBattleCard|Oboro}}
+|-
+|25
+|{{ShipBattleCard|Akebono}}
+|-
+|26
+|{{ShipBattleCard|Sazanami}}
+|-
+|27
+|{{ShipBattleCard|Ushio}}
+|-
+|28
+|{{ShipBattleCard|Shirayuki}}
+|-
+|29
+|{{ShipBattleCard|Hatsuyuki}}
+|-
+|30
+|{{ShipBattleCard|Miyuki}}
+|-
+|31
+|{{ShipBattleCard|Isonami}}
+|-
+|32
+|{{ShipBattleCard|Shikinami}}
+|-
+|33
+|{{ShipBattleCard|Mutsuki}}
+|-
+|34
+|{{ShipBattleCard|Kisaragi}}
+|-
+|35
+|{{ShipBattleCard|Satsuki}}
+|-
+|36
+|{{ShipBattleCard|Fumizuki}}
+|-
+|37
+|{{ShipBattleCard|Nagatsuki}}
+|-
+|38
+|{{ShipBattleCard|Kikuzuki}}
+|-
+|39
+|{{ShipBattleCard|Mikazuki}}
+|-
+|40
+|{{ShipBattleCard|Mochizuki}}
+|-
+|41
+|{{ShipBattleCard|Oboro}}
+|-
+|42
+|{{ShipBattleCard|Akebono}}
+|-
+|43
+|{{ShipBattleCard|Sazanami}}
+|-
+|44
+|{{ShipBattleCard|Ushio}}
+|-
+|45
+|{{ShipBattleCard|Shirayuki}}
+|-
+|46
+|{{ShipBattleCard|Hatsuyuki}}
+|-
+|47
+|{{ShipBattleCard|Miyuki}}
+|-
+|48
+|{{ShipBattleCard|Isonami}}
+|-
+|49
+|{{ShipBattleCard|Shikinami}}
+|-
+|50
+|
+|-
+|51
+|
+|-
+|52
+|
+|-
+|53
+|
+|-
+|54
+|
+|-
+|55
+|
+|-
+|56
+|
+|-
+|57
+|
+|-
+|58
+|
+|-
+|59
+|
+|-
+|60
+|
+|-
+|61
+|
+|-
+|62
+|
+|-
+|63
+|
+|-
+|64
+|
+|-
+|65
+|
+|-
+|66
+|
+|-
+|67
+|
+|-
+|68
+|
+|-
+|69
+|
+|-
+|70
+|
+|-
+|71
+|
+|-
+|72
+|
+|-
+|73
+|
+|-
+|74
+|
+|-
+|75
+|
+|-
+|76
+|
+|-
+|77
+|
+|-
+|78
+|
+|-
+|79
+|
+|-
+|80
+|
+|-
+|81
+|
+|-
+|82
+|
+|-
+|83
+|
+|-
+|84
+|
+|-
+|85
+|
+|-
+|86
+|
+|-
+|87
+|
+|-
+|88
+|
+|-
+|89
+|
+|-
+|90
+|
+|-
+|91
+|
+|-
+|92
+|
+|-
+|93
+|
+|-
+|94
+|
+|-
+|95
+|
+|-
+|96
+|
+|-
+|97
+|
+|-
+|98
+|
+|-
+|99
+|
+|}
+
+
+=====To determine a drop:=====
+
+1. See if you get a chance at any drop at all.
+*Normal Node:
+**S: 70%
+**A: 60%
+**B: 70%
+*Boss Node:
+**100% all ranks
+
+2. Get a RANGE. RANGE determines a subset of the table to draw from.
+*RANGE is determined by RANK, [[KanColle_Kai#Difficulty_Selection|DIFFICULTY]], and [[KanColle_Kai#Turn_System|TURN NUMBER]].
+{| border="0" cellpadding="1" cellspacing="1" class="wikitable" style="width: 500px;"
+|-
+! scope="row" colspan="2"|
+! scope="col"|S
+! scope="col"|A
+! scope="col"|B
+|-
+! scope="row"|Historical
+! scope="row"|All Turns:
+|0 - 49
+|20 - 69
+|50 - 99
+|-
+! scope="row"|Kou
+! scope="row"|All Turns:
+|0 - 49
+|20 - 69
+|50 - 99
+|-
+! scope="row" rowspan="3"|Otsu
+! scope="row"|Turn 1-50:
+|0 - 44
+|15 - 59
+|50 - 94
+|-
+! scope="row"|Turn 51-100:
+|0 - 49
+|15 - 64
+|50 - 99
+|-
+! scope="row"|Turn 101+:
+|0 - 49
+|20 - 69
+|50 - 99
+|-
+! scope="row" rowspan="3"|Hei
+! scope="row"|Turn 1-50:
+|0 - 39
+|15 - 54
+|50 - 89
+|-
+! scope="row"|Turn 51-100:
+|0 - 44
+|15 - 59
+|50 - 94
+|-
+! scope="row"|Turn 101+:
+|0 - 44
+|20 - 64
+|50 - 94
+|-
+! scope="row" rowspan="3"|Tei
+! scope="row"|Turn 1-100:
+|0 - 34
+|15 - 49
+|50 - 84
+|-
+! scope="row"|Turn 101-200:
+|0 - 39
+|15 - 54
+|50 - 89
+|-
+! scope="row"|Turn 201+:
+|0 - 44
+|15 - 59
+|50 - 94
+|}
+
+3. Get an OFFSET. OFFSET determines where the RANGE starts.
+*Every ENEMY COMPOSITION has its own OFFSET value. As rarer ships tend to be closer to the top of the table, harder compositions tend to have lower OFFSET.
+**This is how different normal nodes may have different drops.
+**This is how different enemy compositions in a single node may have exclusive drops (think Prinz in Fall 2015 E4-M).
+4. Get the result.
+*Roll a random number n from RANGE, inclusive.
+*Add OFFSET to n.
+*The ship you get is the nth row of the drop table.
+
+
+=====Example:=====
+
+On Kou difficulty, you score an S rank on 1-1's boss node, against the Ho-class/I-class/I-class composition, which has OFFSET=3.
+
+RANGE = 0 - 49
+
+OFFSET = 3
+
+EFFECTIVE RANGE = 3 - 52
+
+Using the drop table above, you can get anything from 3:Tatsuta to 52:Blank.
+
+
+
+== Applying Mechanics to Browser ==
+To show evidence that browser uses the same rules, we will need to produce:
+*A 100 row drop table
+*RANGE values for each battle rank (turn count and difficulty are Kai only mechanics)
+*OFFSET values for each enemy composition for each node, and no contradictions by recorded drops with the drop table
+
+Using data from [https://db.kcwiki.moe poi-statistics], we may try to reverse-engineer a drop table.
+
+Starting with 2-3 because it has plenty of records for all ranks and a good number of nodes to compare.
+
+=== 2-3 Boss ===
+
+[https://db.kcwiki.moe/drop/map/23/G-S.html Data S] [https://db.kcwiki.moe/drop/map/23/G-A.html Data A] [https://db.kcwiki.moe/drop/map/23/G-B.html Data B]
+
+The undetailed rates aren't useful. Instead we will focus on per-composition drop rates (by clicking the +). You will quickly see that most values are about the same (~1.75%), or a multiple of that amount. We can count each ~1.75% as one row on the table, and each ~3.5% as two distinct rows, etc. We can ignore the "(no drop)" rates because those are caused by full ship slots (it's already known empirically that boss nodes always drop on S and A). In fact, adjusting for no drop, ~1.75% becomes ~2%. Then we must rearrange the rows such that there are no breaks in between for each rank+composition combo, and not go over 100 rows.
+
+Note that some row placements are arbitrary, but key ones which are thresholds that drop in one composition but not another are significant.
+
+{| class="mw-collapsible wikitable" width="250px"
+|+2-3 Boss Drop Table
+|-
+! scope="col" rowspan="3"|Number
+! scope="col" rowspan="3"|Ship
+! scope="col" colspan="9"|Node G
+|-
+! scope="col" colspan="3"|S
+! scope="col" colspan="3"|A
+! scope="col" colspan="3"|B
+|-
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+|-
+|0
+|{{ShipBattleCard|Akagi}}
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+|1
+|{{ShipBattleCard|Ise}}
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+|2
+|{{ShipBattleCard|Hyuuga}}
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+|3
+|{{ShipBattleCard|Kaga}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|-
+|4
+|{{ShipBattleCard|Hiryuu}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|-
+|5
+|{{ShipBattleCard|Souryuu}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|-
+|6
+|{{ShipBattleCard|Makigumo}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|7
+|{{ShipBattleCard|Makigumo}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|8
+|{{ShipBattleCard|I-168}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|9
+|{{ShipBattleCard|I-168}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|10
+|{{ShipBattleCard|Ise}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|11
+|{{ShipBattleCard|Hyuuga}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|12
+|{{ShipBattleCard|Fusou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|13
+|{{ShipBattleCard|Fusou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|14
+|{{ShipBattleCard|Yamashiro}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|15
+|{{ShipBattleCard|Yamashiro}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|16
+|{{ShipBattleCard|Kongou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|17
+|{{ShipBattleCard|Hiei}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|18
+|{{ShipBattleCard|Haruna}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|19
+|{{ShipBattleCard|Kirishima}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|20
+|{{ShipBattleCard|Kongou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|-
+|21
+|{{ShipBattleCard|Chitose}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|-
+|22
+|{{ShipBattleCard|Chiyoda}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|-
+|23
+|{{ShipBattleCard|Hiei}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|-
+|24
+|{{ShipBattleCard|Takao}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|-
+|25
+|{{ShipBattleCard|Atago}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|-
+|26
+|{{ShipBattleCard|Fusou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|27
+|{{ShipBattleCard|Yamashiro}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|28
+|{{ShipBattleCard|Shouhou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|29
+|{{ShipBattleCard|Hiyou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|30
+|{{ShipBattleCard|Junyou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|31
+|{{ShipBattleCard|Ryuujou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|32
+|{{ShipBattleCard|Natori}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|33
+|{{ShipBattleCard|Ooi}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|34
+|{{ShipBattleCard|Tone}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|35
+|{{ShipBattleCard|Tone}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|36
+|{{ShipBattleCard|Chikuma}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|37
+|{{ShipBattleCard|Chikuma}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|38
+|{{ShipBattleCard|Myoukou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|39
+|{{ShipBattleCard|Myoukou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|40
+|{{ShipBattleCard|Nachi}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|41
+|{{ShipBattleCard|Nachi}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|42
+|{{ShipBattleCard|Ashigara}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|43
+|{{ShipBattleCard|Ashigara}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|44
+|{{ShipBattleCard|Haguro}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|45
+|{{ShipBattleCard|Haguro}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|46
+|{{ShipBattleCard|Takao}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|47
+|{{ShipBattleCard|Atago}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|48
+|{{ShipBattleCard|Maya}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|49
+|{{ShipBattleCard|Choukai}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|50
+|{{ShipBattleCard|Takao}}
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|-
+|51
+|{{ShipBattleCard|Atago}}
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|-
+|52
+|{{ShipBattleCard|Maya}}
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|-
+|53
+|{{ShipBattleCard|Choukai}}
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|-
+|54
+|{{ShipBattleCard|Tone}}
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|-
+|55
+|{{ShipBattleCard|Chikuma}}
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|-
+|56
+|{{ShipBattleCard|Fusou}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|57
+|{{ShipBattleCard|Yamashiro}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|58
+|{{ShipBattleCard|Shouhou}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|59
+|{{ShipBattleCard|Hiyou}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|60
+|{{ShipBattleCard|Junyou}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|61
+|{{ShipBattleCard|Ryuujou}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|62
+|{{ShipBattleCard|Mogami}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|63
+|{{ShipBattleCard|Nachi}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|64
+|{{ShipBattleCard|Nachi}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|65
+|{{ShipBattleCard|Ashigara}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|66
+|{{ShipBattleCard|Ashigara}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|67
+|{{ShipBattleCard|Haguro}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|68
+|{{ShipBattleCard|Haguro}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|69
+|{{ShipBattleCard|Maya}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|70
+|{{ShipBattleCard|Choukai}}
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|71
+|{{ShipBattleCard|Furutaka}}
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|72
+|{{ShipBattleCard|Kako}}
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|73
+|{{ShipBattleCard|Aoba}}
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|74
+|{{ShipBattleCard|Tenryuu}}
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|75
+|{{ShipBattleCard|Kitakami}}
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|76
+|{{ShipBattleCard|Tatsuta}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|77
+|{{ShipBattleCard|Sendai}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|78
+|{{ShipBattleCard|Jintsuu}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|79
+|{{ShipBattleCard|Jintsuu}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|80
+|{{ShipBattleCard|Naka}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|81
+|{{ShipBattleCard|Naka}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|82
+|{{ShipBattleCard|Nagara}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|83
+|{{ShipBattleCard|Isuzu}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|84
+|{{ShipBattleCard|Isuzu}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|85
+|{{ShipBattleCard|Natori}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|86
+|{{ShipBattleCard|Natori}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|87
+|{{ShipBattleCard|Yura}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|88
+|{{ShipBattleCard|Yura}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|89
+|{{ShipBattleCard|Kuma}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|90
+|{{ShipBattleCard|Tama}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|91
+|{{ShipBattleCard|Tama}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|92
+|{{ShipBattleCard|Kiso}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|93
+|{{ShipBattleCard|Kiso}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|94
+|{{ShipBattleCard|Ooshio}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|95
+|{{ShipBattleCard|Michishio}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|96
+|{{ShipBattleCard|Arashio}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|97
+|{{ShipBattleCard|Arare}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|98
+|{{ShipBattleCard|Kasumi}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|99
+|{{ShipBattleCard|Shikinami}}
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|}
+
+{| class="wikitable"
+|+2-3 Boss Offsets
+|-
+! scope="col"|Node
+! scope="col"|Number
+! scope="col" width="480px"|Enemies
+! scope="col"|Offset
+|-
+! rowspan="3"|G
+|1
+|{{ShipBattleCard|Battleship Ru-Class Elite}}{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Standard Carrier Wo-Class}}{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Light Cruiser He-Class}}{{ShipBattleCard|Light Cruiser He-Class}}
+|0
+|-
+|2
+|{{ShipBattleCard|Standard Carrier Wo-Class Elite}}{{ShipBattleCard|Standard Carrier Wo-Class}}{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Destroyer Ni-Class}}
+|3
+|-
+|3
+|{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Heavy Cruiser Ri-Class Elite}}{{ShipBattleCard|Standard Carrier Wo-Class}}{{ShipBattleCard|Torpedo Cruiser Chi-Class}}{{ShipBattleCard|Torpedo Cruiser Chi-Class}}{{ShipBattleCard|Light Cruiser To-Class}}
+|6
+|}
+
+{| class="wikitable" width="250px"
+|+Ranges
+|-
+! scope="col"|Rank
+! scope="col"|Range
+|-
+|S
+|0 - 49
+|-
+|A
+|20 - 79
+|-
+|B
+|50 - 99
+|}
+
+
+=== 2-3 Normal ===
+{| class="mw-collapsible wikitable" width="250px"
+|+2-3 Normal Drop Table
+|-
+! scope="col" rowspan="3"|Number
+! scope="col" rowspan="3"|Ship
+! scope="col" colspan="9"|Node B
+! scope="col" colspan="9"|Node C
+! scope="col" colspan="9"|Node F
+! scope="col" colspan="9"|Node H
+! scope="col" colspan="9"|Node K
+|-
+! scope="col" colspan="3"|S
+! scope="col" colspan="3"|A
+! scope="col" colspan="3"|B
+! scope="col" colspan="3"|S
+! scope="col" colspan="3"|A
+! scope="col" colspan="3"|B
+! scope="col" colspan="3"|S
+! scope="col" colspan="3"|A
+! scope="col" colspan="3"|B
+! scope="col" colspan="3"|S
+! scope="col" colspan="3"|A
+! scope="col" colspan="3"|B
+! scope="col" colspan="3"|S
+! scope="col" colspan="3"|A
+! scope="col" colspan="3"|B
+|-
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+! scope="col"|1
+! scope="col"|2
+! scope="col"|3
+|-
+|0
+|{{ShipBattleCard|Fusou}}
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+|1
+|{{ShipBattleCard|Yamashiro}}
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+|2
+|{{ShipBattleCard|Shouhou}}
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+|-
+|3
+|{{ShipBattleCard|Takao}}
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|-
+|4
+|{{ShipBattleCard|Atago}}
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|-
+|5
+|{{ShipBattleCard|Sendai}}
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+|-
+|6
+|{{ShipBattleCard|Tenryuu}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|7
+|{{ShipBattleCard|Tone}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|8
+|{{ShipBattleCard|Chikuma}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|9
+|{{ShipBattleCard|Mogami}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|10
+|{{ShipBattleCard|Takao}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|11
+|{{ShipBattleCard|Atago}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|12
+|{{ShipBattleCard|Maya}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|13
+|{{ShipBattleCard|Choukai}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|14
+|{{ShipBattleCard|Myoukou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|15
+|{{ShipBattleCard|Nachi}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|16
+|{{ShipBattleCard|Nachi}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|17
+|{{ShipBattleCard|Ashigara}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|18
+|{{ShipBattleCard|Ashigara}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|19
+|{{ShipBattleCard|Haguro}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+|-
+|20
+|{{ShipBattleCard|Haguro}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|-
+|21
+|{{ShipBattleCard|Maya}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|-
+|22
+|{{ShipBattleCard|Choukai}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|-
+|23
+|{{ShipBattleCard|Shouhou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|-
+|24
+|{{ShipBattleCard|Hiyou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|-
+|25
+|{{ShipBattleCard|Junyou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|-
+|26
+|{{ShipBattleCard|Ryuujou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|27
+|{{ShipBattleCard|Mutsuki}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|28
+|{{ShipBattleCard|Shiranui}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|29
+|{{ShipBattleCard|Jintsuu}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|30
+|{{ShipBattleCard|Naka}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|31
+|{{ShipBattleCard|Tama}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|32
+|{{ShipBattleCard|Kiso}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|33
+|{{ShipBattleCard|Isuzu}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|34
+|{{ShipBattleCard|Natori}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|35
+|{{ShipBattleCard|Yura}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|36
+|{{ShipBattleCard|Ayanami}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|37
+|{{ShipBattleCard|Hatsuharu}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|38
+|{{ShipBattleCard|Kagerou}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|39
+|{{ShipBattleCard|Suzukaze}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|40
+|{{ShipBattleCard|Mutsuki}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|41
+|{{ShipBattleCard|Shiranui}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|42
+|{{ShipBattleCard|Kuroshio}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|43
+|{{ShipBattleCard|Kuroshio}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|44
+|{{ShipBattleCard|Ooshio}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|45
+|{{ShipBattleCard|Michishio}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|46
+|{{ShipBattleCard|Arashio}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|47
+|{{ShipBattleCard|Arare}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|48
+|{{ShipBattleCard|Arare}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|49
+|{{ShipBattleCard|Kasumi}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|-
+|50
+|{{ShipBattleCard|Kasumi}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|-
+|51
+|{{ShipBattleCard|Shigure}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|-
+|52
+|{{ShipBattleCard|Murasame}}
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|-
+|53
+|{{ShipBattleCard|Yuudachi}}
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|-
+|54
+|{{ShipBattleCard|Samidare}}
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|-
+|55
+|{{ShipBattleCard|Nenohi}}
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|-
+|56
+|{{ShipBattleCard|Wakaba}}
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|57
+|{{ShipBattleCard|Hatsushimo}}
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|58
+|{{ShipBattleCard|Hibiki}}
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|59
+|{{ShipBattleCard|Ikazuchi}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|60
+|{{ShipBattleCard|Inazuma}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|61
+|{{ShipBattleCard|Shirayuki}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|62
+|{{ShipBattleCard|Hatsuyuki}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|63
+|{{ShipBattleCard|Murakumo}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|64
+|{{ShipBattleCard|Miyuki}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|65
+|{{ShipBattleCard|Isonami}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|66
+|{{ShipBattleCard|Shikinami}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|67
+|{{ShipBattleCard|Kisaragi}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|68
+|{{ShipBattleCard|Satsuki}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|69
+|{{ShipBattleCard|Fumizuki}}
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|70
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|71
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|72
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|73
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|74
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|75
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|76
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|77
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|78
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|79
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|80
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|81
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|82
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|83
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|84
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|85
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|86
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|87
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|88
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|89
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|90
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|91
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|92
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|93
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|94
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|95
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|96
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|97
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|98
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|-
+|99
+|
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|
+|
+|
+|
+|
+|
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+! style="background-color: #7df83a;" |O
+|}
+
+{| class="wikitable"
+|+2-3 Normal Offsets
+|-
+! scope="col"|Node
+! scope="col"|Number
+! scope="col" width="480px"|Enemies
+! scope="col"|Offset
+|-
+! rowspan="3"|B
+|1
+|{{ShipBattleCard|Heavy Cruiser Ri-Class Elite}}{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Light Cruiser To-Class}}{{ShipBattleCard|Light Cruiser He-Class}}{{ShipBattleCard|Destroyer Ha-Class}}{{ShipBattleCard|Destroyer Ha-Class}}
+|3
+|-
+|2
+|{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Torpedo Cruiser Chi-Class}}{{ShipBattleCard|Light Cruiser To-Class Elite}}{{ShipBattleCard|Light Cruiser He-Class}}{{ShipBattleCard|Destroyer Ro-Class}}{{ShipBattleCard|Destroyer Ro-Class}}
+|6
+|-
+|3
+|{{ShipBattleCard|Torpedo Cruiser Chi-Class Elite}}{{ShipBattleCard|Light Cruiser To-Class}}{{ShipBattleCard|Light Cruiser Ho-Class}}{{ShipBattleCard|Light Cruiser Ho-Class}}{{ShipBattleCard|Destroyer I-Class}}{{ShipBattleCard|Destroyer I-Class}}
+|9
+|-
+! rowspan="3"|C
+|1
+|{{ShipBattleCard|Heavy Cruiser Ri-Class Elite}}{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Light Cruiser To-Class}}{{ShipBattleCard|Light Cruiser He-Class}}{{ShipBattleCard|Destroyer Ha-Class}}{{ShipBattleCard|Destroyer Ha-Class}}
+|3
+|-
+|2
+|{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Torpedo Cruiser Chi-Class}}{{ShipBattleCard|Light Cruiser To-Class Elite}}{{ShipBattleCard|Light Cruiser He-Class}}{{ShipBattleCard|Destroyer Ro-Class}}{{ShipBattleCard|Destroyer Ro-Class}}
+|6
+|-
+|3
+|{{ShipBattleCard|Torpedo Cruiser Chi-Class Elite}}{{ShipBattleCard|Light Cruiser To-Class}}{{ShipBattleCard|Light Cruiser Ho-Class}}{{ShipBattleCard|Light Cruiser Ho-Class}}{{ShipBattleCard|Destroyer I-Class}}{{ShipBattleCard|Destroyer I-Class}}
+|9
+|-
+! rowspan="3"|F
+|1
+|{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Heavy Cruiser Ri-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|0
+|-
+|2
+|{{ShipBattleCard|Standard Carrier Wo-Class}}{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|3
+|-
+|3
+|{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Cruiser He-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|6
+|-
+! rowspan="3"|H
+|1
+|{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Heavy Cruiser Ri-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|0
+|-
+|2
+|{{ShipBattleCard|Standard Carrier Wo-Class}}{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|3
+|-
+|3
+|{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Cruiser He-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|6
+|-
+! rowspan="3"|K
+|1
+|{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Heavy Cruiser Ri-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|0
+|-
+|2
+|{{ShipBattleCard|Standard Carrier Wo-Class}}{{ShipBattleCard|Battleship Ru-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|3
+|-
+|3
+|{{ShipBattleCard|Heavy Cruiser Ri-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Carrier Nu-Class}}{{ShipBattleCard|Light Cruiser He-Class}}[[File:AP Wa Class.png]][[File:AP Wa Class.png]]
+|6
+|}
+
+{| class="wikitable" width="250px"
+|+Ranges
+|-
+! scope="col"|Rank
+! scope="col"|Range
+|-
+|S
+|0 - 49
+|-
+|A
+|20 - 79
+|-
+|B
+|50 - 99
+|}
+
+
+=== Other Evidence ===
+*The rank ranges match up with Vita's Historical and Kou ranges.
+*The numbers are "nice". As these mechanics are human-designed, we can reasonably expect patterns and clean numbers.
+**Range values are clean: 0-49, 20-69, 50-99
+**Offsets per enemy composition are all in intervals of 3.
+**Sister ships/classes tend to be adjacent to each other (across thresholds, see 2-3 Boss 52 and 53).
+**70 ships in normal table
+*Offsets correspond roughly with composition difficulty.
+*The 30%/40%/30% chance of nothing for S/A/B on non-boss seem consistent
+
+
+=== More Drop Tables (Raw Notes) ===
+[https://pastebin.com/mh8yQT1N 1-1 Boss]
+
+[https://pastebin.com/r2Gj9NeR 5-4 Normal]
+
+[https://pastebin.com/p6JhFzqa 5-4 Boss]
+
+
+== Conditional Drops ==
+2-3 was a standard map. However, we know there are some non-standard drops such as Akashi in 2-5, who drops only if you don't have her. Unfortunately, such a mechanic does not exist in Vita version.
+
+However, 2-3's reverse engineered drop table seems solid, and hopefully may serve as a foundation to figure out these other mechanics.
+
+
+==== Observation ====
+Some maps have a few ships with abnormal drop rates, while every other ship has expectable drop rate (multiple of ~2% on boss, ~1.4%/~1.2% on non-boss).
+This pattern is found on [https://db.kcwiki.moe/drop/map/373/3/U-A.html E3-U] with abnormal I-13, whom we already know to be a conditional drop.
+This pattern is also found on [https://db.kcwiki.moe/drop/map/373/3/L-S.html E3-L] with other rare ships such as Teruzuki, Akitsushima, Kazagumo, plus some common ships including Kumano, Naka.
+
+
+==== Explanation ====
+Under some circumstances, certain drop table rows will have their usual ship swapped out for a different ship.
+So, that row would have a DEFAULT DROP, if some condition is met, and a REPLACEMENT DROP, it the condition is not met.
+
+
+
+==== Evidence ====
+By pairing up every abnormal drop rate on a map, we can produce multiples of ~2% or ~1.4% from their sums, with none left over.
+This suggests that each pair is actually a single row on the drop table.
+On [https://db.kcwiki.moe/drop/map/373/3/L-S.html E3-L S-rank], the abnormal drops are: Akitsushima, Teruzuki, Urakaze, Kazagumo, Naka, Yura, Suzuya, Kumano
+
+Cn denotes enemy composition, in this case C1 = the line ahead comp, C2 = double line comp, C3 = diamond comp.
+Teruzuki + Suzuya:
+*HARD:
+**C1: 0.490 + 2.358 = '''2.848'''
+**C2: 0.469 + 2.423 = '''2.892'''
+**C3: 0.458 + 2.353 = '''2.811'''
+*NORMAL:
+**C1: 0.569 + 2.213 = '''2.782'''
+**C2: 0.557 + 2.163 = '''2.720'''
+**C3: 0.612 + 2.334 = '''2.946'''
+*EASY:
+**C1: 0.687 + 2.076 = '''2.763'''
+**C2: 0.000 + 1.344 = '''1.344'''
+**C3: 0.000 + 1.420 = '''1.420'''
+Akitsushima + Kumano:
+*HARD:
+**C1: 0.365 + 2.449 = '''2.814'''
+**C2: 0.377 + 2.502 = '''2.879'''
+**C3: 0.364 + 2.397 = '''2.761'''
+*NORMAL:
+**C1: 0.454 + 2.428 = '''2.882'''
+**C2: 0.499 + 2.343 = '''2.842'''
+**C3: 0.432 + 2.439 = '''2.871'''
+*EASY:
+**C1: 0.555 + 2.251 = '''2.806'''
+**C2: 0.519 + 2.200 = '''2.719'''
+**C3: 0.000 + 1.380 = '''1.380'''
+Urakaze+Yura L:
+*HARD:
+**C1: 0.701 + 2.212 = '''2.913'''
+**C2: 0.728 + 2.023 = '''2.751'''
+**C3: 0.682 + 2.168 = '''2.85'''
+*NORMAL:
+**C1: 0.627 + 2.042 = '''2.669'''
+**C2: 0.675 + 1.978 = '''2.653'''
+**C3: 0.638 + 2.097 = '''2.735'''
+*EASY:
+**C1: 0.699 + 2.143 = '''2.842'''
+**C2: 0.733 + 2.093 = '''2.826'''
+**C3: 0.681 + 2.093 = '''2.774'''
+Kazagumo + Naka:
+*HARD:
+**C1: 0.700 + 1.977 = '''2.677'''
+**C2: 0.777 + 2.074 = '''2.851'''
+**C3: 0.796 + 2.098 = '''2.894'''
+*NORMAL:
+**C1: 0.778 + 2.067 = '''2.845'''
+**C2: 0.700 + 1.932 = '''2.632'''
+**C3: 0.733 + 2.141 = '''2.874'''
+*EASY:
+**C1: 0.868 + 1.920 = '''2.788'''
+**C2: 0.882 + 2.025 = '''2.907'''
+**C3: 0.893 + 2.059 = '''2.952'''
+
+
+
+*All sums are close to a multiple of ~1.4%, the expected unit rate on S-rank non-boss.
+*Take particular notice of Teruzuki+Suzuya EASY and Akitsushima+Kumano EASY:
+**Teruzuki '''drops only on C1''', and Suzuya's drop rate '''is higher only on C1'''.
+**Akitsushima '''drops only on C1 and C2''', and Kumano '''has higher rates on C1 and C2'''.
+*Vita version uses a similar replacement mechanic for conditional construction, e.g. requiring a German flagship to construct Bismarck
+
+With this, we can reverse engineer a drop table (using the same techniques as before).
+*[https://db.kcwiki.moe/drop/map/373/3/W-S.html Node W]
+*[https://db.kcwiki.moe/drop/map/373/3/L-S.html Node L]
+*[https://db.kcwiki.moe/drop/map/373/3/J-S.html Node J]
+
+{| class="mw-collapsible wikitable"
+|+Winter 2017 E3 Non-Boss Drop Table
+|-
+! scope="col" |Number
+! scope="col" |Default Ship
+! scope="col" |Replacement Ship
+! scope="col" |Notes
+|-
+|0
+|{{ShipBattleCard|Teruzuki}}
+|{{ShipBattleCard|Suzuya}}
+|From J, low data
+|-
+|1
+|{{ShipBattleCard|Akitsushima}}
+|{{ShipBattleCard|Kumano}}
+|From J, low data
+|-
+|2
+|{{ShipBattleCard|Sakawa}}
+|
+|From J, low data
+|-
+|3
+|{{ShipBattleCard|Asashimo}}
+|
+|From J, low data
+|-
+|4
+|{{ShipBattleCard|Yahagi}}
+|
+|
+|-
+|5
+|{{ShipBattleCard|Teruzuki}}
+|{{ShipBattleCard|Suzuya}}
+|
+|-
+|6
+|{{ShipBattleCard|Akitsushima}}
+|{{ShipBattleCard|Kumano}}
+|
+|-
+|7
+|{{ShipBattleCard|Urakaze}}
+|{{ShipBattleCard|Yura}}
+|
+|-
+|8
+|{{ShipBattleCard|Kazagumo}}
+|{{ShipBattleCard|Naka}}
+|
+|-
+|9
+|{{ShipBattleCard|Takanami}}
+|
+|
+|-
+|10
+|{{ShipBattleCard|Amatsukaze}}
+|
+|
+|-
+|11
+|{{ShipBattleCard|Tokitsukaze}}
+|
+|
+|-
+|12
+|{{ShipBattleCard|Agano}}
+|
+|
+|-
+|13
+|{{ShipBattleCard|Noshiro}}
+|
+|
+|-
+|14
+|{{ShipBattleCard|Suzuya}}
+|
+|
+|-
+|15
+|{{ShipBattleCard|Kumano}}
+|
+|
+|-
+|16
+|{{ShipBattleCard|Tone}}
+|
+|
+|-
+|17
+|{{ShipBattleCard|Chikuma}}
+|
+|
+|-
+|18
+|{{ShipBattleCard|Takao}}
+|
+|
+|-
+|19
+|{{ShipBattleCard|Atago}}
+|
+|
+|-
+|20
+|{{ShipBattleCard|Myoukou}}
+|
+|
+|-
+|21
+|{{ShipBattleCard|Nachi}}
+|
+|
+|-
+|22
+|{{ShipBattleCard|Ashigara}}
+|
+|
+|-
+|23
+|{{ShipBattleCard|Haguro}}
+|
+|
+|-
+|24
+|{{ShipBattleCard|Maya}}
+|
+|
+|-
+|25
+|{{ShipBattleCard|Choukai}}
+|
+|
+|-
+|26
+|{{ShipBattleCard|Tama}}
+|
+|
+|-
+|27
+|{{ShipBattleCard|Kiso}}
+|
+|
+|-
+|28
+|{{ShipBattleCard|Isuzu}}
+|
+|
+|-
+|29
+|{{ShipBattleCard|Natori}}
+|
+|
+|-
+|30
+|{{ShipBattleCard|Yura}}
+|
+|
+|-
+|31
+|{{ShipBattleCard|Jintsuu}}
+|
+|
+|-
+|32
+|{{ShipBattleCard|Naka}}
+|
+|
+|-
+|33
+|{{ShipBattleCard|Asashio}}
+|
+|
+|-
+|34
+|{{ShipBattleCard|Ooshio}}
+|
+|
+|-
+|35
+|{{ShipBattleCard|Michishio}}
+|
+|
+|-
+|36
+|{{ShipBattleCard|Arashio}}
+|
+|
+|-
+|37
+|{{ShipBattleCard|Arare}}
+|
+|
+|-
+|38
+|{{ShipBattleCard|Kasumi}}
+|
+|
+|-
+|39
+|{{ShipBattleCard|Shiratsuyu}}
+|
+|
+|-
+|40
+|{{ShipBattleCard|Shigure}}
+|
+|
+|-
+|41
+|{{ShipBattleCard|Murasame}}
+|
+|
+|-
+|42
+|{{ShipBattleCard|Yuudachi}}
+|
+|
+|-
+|43
+|{{ShipBattleCard|Akatsuki}}
+|
+|
+|-
+|44
+|{{ShipBattleCard|Hibiki}}
+|
+|
+|-
+|45
+|{{ShipBattleCard|Ikazuchi}}
+|
+|
+|-
+|46
+|{{ShipBattleCard|Inazuma}}
+|
+|
+|-
+|47
+|{{ShipBattleCard|Oboro}}
+|
+|
+|-
+|48
+|{{ShipBattleCard|Sazanami}}
+|
+|
+|-
+|49
+|{{ShipBattleCard|Akebono}}
+|
+|
+|-
+|50
+|{{ShipBattleCard|Ushio}}
+|
+|J-HARD: C3 only
+|-
+|51
+|
+|
+|
+|-
+|52
+|
+|
+|
+|-
+|53
+|
+|
+|
+|-
+|54
+|
+|
+|
+|-
+|55
+|
+|
+|
+|-
+|56
+|
+|
+|
+|-
+|57
+|
+|
+|
+|-
+|58
+|
+|
+|
+|-
+|59
+|
+|
+|
+|-
+|60
+|
+|
+|
+|-
+|61
+|
+|
+|
+|-
+|62
+|
+|
+|
+|-
+|63
+|
+|
+|
+|-
+|64
+|
+|
+|
+|-
+|65
+|
+|
+|
+|-
+|66
+|
+|
+|
+|-
+|67
+|
+|
+|
+|-
+|68
+|
+|
+|
+|-
+|69
+|
+|
+|
+|-
+|70
+|
+|
+|
+|-
+|71
+|
+|
+|
+|-
+|72
+|
+|
+|
+|-
+|73
+|
+|
+|
+|-
+|74
+|
+|
+|
+|-
+|75
+|
+|
+|
+|-
+|76
+|
+|
+|
+|-
+|77
+|
+|
+|
+|-
+|78
+|
+|
+|
+|-
+|79
+|
+|
+|
+|-
+|80
+|
+|
+|
+|-
+|81
+|
+|
+|
+|-
+|82
+|
+|
+|
+|-
+|83
+|
+|
+|
+|-
+|84
+|
+|
+|
+|-
+|85
+|
+|
+|
+|-
+|86
+|
+|
+|
+|-
+|87
+|
+|
+|
+|-
+|88
+|
+|
+|
+|-
+|89
+|
+|
+|
+|-
+|90
+|
+|
+|
+|-
+|91
+|
+|
+|
+|-
+|92
+|
+|
+|
+|-
+|93
+|
+|
+|
+|-
+|94
+|
+|
+|
+|-
+|95
+|
+|
+|
+|-
+|96
+|
+|
+|
+|-
+|97
+|
+|
+|
+|-
+|98
+|
+|
+|
+|-
+|99
+|
+|
+|
+|}
+
+{| class="mw-collapsible wikitable"
+|+Winter 2017 E3 Non-Boss Offsets
+|-
+! scope="col"|Node
+! scope="col"|Difficulty
+! scope="col"|Composition
+! scope="col" width="480px"|Enemies
+! scope="col"|Offset
+|-
+! rowspan="9"|W
+! rowspan="3"|HARD
+|C1
+|Wo-Kai, Wo-Kai, Nu-Flag, Tsu-Elite, Ha-Late, Ha-Late (diamond)
+|'''20'''
+|-
+|C2
+|Wo-Kai, Nu-Flag, Nu-Flag, Tsu-Elite, Ha-Late, Ha-Late (diamond)
+|'''21'''
+|-
+|C3
+|Wo-Kai, Wo-Kai, He-Flag, Tsu-Elite, Ro-Late, Ro-Late (diamond)
+|'''22'''
+|-
+! rowspan="3"|NORMAL
+|C1
+|Wo-Kai, Wo-Kai, Nu-Flag, Tsu-Elite, Ro-Late, Ro-Late (diamond)
+|'''23'''
+|-
+|C2
+|Wo-Kai, Nu-Flag, Nu-Flag, Tsu-Elite, Ro-Late, Ro-Late (diamond)
+|'''24'''
+|-
+|C3
+|Wo-Kai, Wo-Kai, He-Flag, Tsu-Elite, I-Late, I-Late (diamond)
+|'''25'''
+|-
+! rowspan="3"|EASY
+|C1
+|Wo-Kai, Nu-Flag, Nu-Flag, Tsu, I-Late, I-Late (diamond)
+|'''26'''
+|-
+|C2
+|Wo-Kai, Nu-Flag, Tsu, I-Late, I, I (diamond)
+|'''27'''
+|-
+|C3
+|Nu-Flag, Nu-Flag, Tsu, I-Late, I, I (diamond)
+|'''28'''
+|-
+! rowspan="9"|L
+! rowspan="3"|HARD
+|C1
+|Wo-Kai, Wo-Kai, Ne-Elite, Tsu-Elite, Ha-Late-Elite, Ha-Late-Elite (line ahead)
+|'''4'''
+|-
+|C2
+|Wo-Kai, Wo-Kai, Ne-Elite, Tsu-Elite, Ha-Late-Elite, Ha-Late-Elite (double line)
+|'''4'''
+|-
+|C3
+|Wo-Kai, Wo-Kai, Ne-Elite, Tsu-Elite, Ha-Late-Elite, Ha-Late-Elite (diamond)
+|'''4'''
+|-
+! rowspan="3"|NORMAL
+|C1
+|Wo-Kai, Wo-Flag, Ne-Elite, Tsu, Ha-Late, Ha-Late (line ahead)
+|'''5'''
+|-
+|C2
+|Wo-Kai, Wo-Flag, Ne-Elite, Tsu, Ha-Late, Ha-Late (double line)
+|'''5'''
+|-
+|C3
+|Wo-Kai, Wo-Flag, Ne-Elite, Tsu, Ha-Late, Ha-Late (diamond)
+|'''5'''
+|-
+! rowspan="3"|EASY
+|C1
+|Wo-Flag, Wo-Flag, Tsu, Ro-Late, Ro-Late, Ro-Late (line ahead)
+|'''5'''
+|-
+|C2
+|Wo-Flag, Wo-Flag, Tsu, Ro-Late, Ro-Late, Ro-Late (double line)
+|'''6'''
+|-
+|C3
+|Wo-Flag, Wo-Flag, Tsu, Ro-Late, Ro-Late, Ro-Late (diamond)
+|'''7'''
+|-
+! rowspan="9"|J
+! rowspan="3"|HARD
+|C1
+|Iso-Demon, Imp, Imp, Wa-Elite, I-Late-Elite, I-Late-Elite + He-Flag, Chi-Flag, Chi-Flag, Tsu-Elite, I-Late-Elite, I-Late-Elite
+|'''0'''
+|-
+|C2
+|Iso-Demon, Imp, Imp, Imp, Wa-Elite, Wa-Elite + He-Flag, Tsu-Elite, Wa-Elite, Wa-Elite, I-Late-Elite, I-Late-Elite
+|'''0'''
+|-
+|C3
+|Iso-Demon, Imp, Imp, Wa-Elite, Wa-Elite, Wa-Elite + He-Flag, Tsu-Elite, Wa-Elite, Wa-Elite, I-Late-Elite, I-Late-Elite
+|'''1'''
+|-
+! rowspan="3"|NORMAL
+|C1
+|Iso-Demon, Imp, Imp, Wa-Elite, I-Late, I-Late + He-Flag, Wa-Elite, Wa-Elite, Tsu, I-Late, I-Late
+|'''1''' (?)
+|-
+|C2
+|Iso-Demon, Imp, Imp, Imp, Wa, Wa + He-Flag, Wa, Wa, Tsu, I-Late, I-Late
+|'''1''' (?)
+|-
+|C3
+|Iso-Demon, Imp, Imp, Wa, Wa, Wa + He-Flag, Wa, Wa, Tsu, I-Late, I-Late
+|'''2''' (?)
+|-
+! rowspan="3"|EASY
+|C1
+|Iso-Demon, Imp, Wa, Wa, I-Late, I-Late + Ho-Elite, Wa, Wa, Tsu, I-Late, I-Late
+|'''2'''
+|-
+|C2
+|Iso-Demon, Imp, Imp, Wa, Wa, Wa + Ho-Elite, Wa, Wa, Tsu, I-Late, I-Late
+|'''3'''
+|-
+|C3
+|Iso-Demon, Imp, Wa, Wa, Wa, Wa + Ho-Elite, Wa, Wa, Tsu, I-Late, I-Late
+|'''4'''
+|}
+
+{| class="wikitable" width="250px"
+|+Winter 2017 E3 Non-Boss Ranges
+|-
+! scope="col"|Rank
+! scope="col"|Range
+|-
+|S
+|0 - 49
+|-
+|A
+|20 - 79
+|-
+|B
+|50 - 99
+|}
+
+== Other Unknowns ==
+HQ level is also not a mechanic in Vita version. Possible affects by HQ level are unknown.
+[[Category:Blog posts]]

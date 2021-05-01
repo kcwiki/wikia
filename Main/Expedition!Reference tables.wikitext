@@ -1,0 +1,2157 @@
+{{Notice|{{for|the introduction to expedition mechanics|Expedition/Introduction}}<br />See [[Expedition/Reference tables#top|this page]] if expedition table fails to load here}}This is the reference page for expeditions, listed below are the minimum requirements to achieve normal success. To make full use of this reference page, please read [[Expedition/Introduction#Success conditions|the introduction page]] first.
+==Legends==
+{| class="wikitable mw-collapsible mw-collapsed" width="100%"
+! colspan="2" style="font-size:120%"| About Total Yield
+|-
+! width="20%" | HQ
+|Admiral exp gain from expedition
+|-
+!Ship
+|Ship exp gain from expedition
+|-
+![[File:Fuel.png|30px|link=]][[File:Ammunition.png|30px|link=]][[File:Steel.png|30px|link=]][[File:Bauxite.png|30px|link=]]
+|Base resources gain from expedition (at 100% ratio).
+For ''hourly rate'', there are colored markers denoting <span style="color:blue;font-weight: bold;"> above average</span> and <span style="color:red;font-weight: bold;">outstanding</span> rate.
+|-
+!Rewards
+|The item on the right side is always given upon great success. The one on the left has 50% chance to be rewarded. The quantities in the table '''denote only the maximum''', it's possible to get fewer.
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed" width="100%"
+! colspan="2" style="font-size:120%"| About Hourly Yield
+|-
+! width="20%" | HQ
+|Admiral exp gain per hour from expedition
+|-
+!Ship
+|Ship exp gain per hour from expedition
+|-
+![[File:Fuel.png|30px|link=]][[File:Ammunition.png|30px|link=]][[File:Steel.png|30px|link=]][[File:Bauxite.png|30px|link=]]
+|Base resources gain per hour from expedition (at 100% ratio).
+There are colored markers denoting <span style="color:blue;font-weight: bold;"> above average</span> and <span style="color:red;font-weight: bold;">outstanding</span> rate.
+|-
+!Rewards
+|The item on the right side is always given upon great success. The one on the left has 50% chance to be rewarded. The quantities in the table denote only the maximum, it's possible to get fewer. This is in total yield.
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed" width="100%"
+! colspan="2" style="font-size:120%"| About Requirements
+|-
+! width="20%" |Σ(Lv)
+|Minimum total level of fleet
+|-
+![[File:Flagship icon.png|link=]]
+|Minimum level of flagship
+|-
+!Minimum Fleet Size
+|Required number of ships per type. XX denotes the minimum number of wild cards (any ship) necessary in addition to the specified ship types to reach minimum number of ships in fleet. Ship classes in '''bold''' denotes the flagship must be of that class. For expeditions requiring less than 6 ships, extras may be added (e.g. to hit fleet level requirements)(There are no restriction on ship type of extra ships). See [[Glossary]] for more ship type abbreviations.
+|-
+![[File:Drum.png|30px|link=]]
+|Minimum number of drums <span style="cursor:help" title="to see the minimum number of drum carrying ships required">(Hovers over the asterisk *)</span>
+|-
+![[File:Ammunition.png|30px|link=]][[File:Fuel.png|30px|link=]]
+|Max. Ammo and fuel consumption per ship given in supply bars. Each ship has 10 bars when fully resupplied. The value for each bar varies from one ship class to another.
+|}
+
+
+
+==World 1==
+{{todo|
+A3:
+*Check more comps, e.g., 1CL 3DD/DE 1XX in wikiwiki
+A5:
+*Check more comps + min. requirements, finalize rewards, unlock requirements
+A6:
+*Check more comps + min. requirements, finalize rewards, unlock requirements
+}}
+<tabber>Total yield=
+{{Expeditions|
+world = 1
+|{{Expedition
+|world = 1
+|odd = true
+|id = 1
+|name = {{tooltip|練習航海|鎮守府近海を航海し、艦隊の練度を高めよう！}}
+|time = 00:15
+|hq = 10
+|ship = 10
+|ammo = {{color|blue|'''30'''}}
+}}
+{{Expedition
+|world = 1
+|id = 2
+|name = {{tooltip|長距離練習航海|外海まで足を延ばし、艦隊の練度を高めよう！}}
+|time = 00:30
+|hq = 20
+|ship = 15
+|ammo = {{color|red|'''100'''}}
+|steel = 30
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = 3
+|name = {{tooltip|警備任務|鎮守府担当海域をパトロールして領海の安全を守ろう！}}
+|time = 00:20
+|hq = 30
+|ship = {{color|blue|'''30'''}}
+|fuel = 30
+|ammo = 30
+|steel = {{color|red|'''40'''}}
+}}
+{{Expedition
+|world = 1
+|id = 4
+|name = {{tooltip|対潜警戒任務|水雷戦隊を編成、領海内を索敵、対潜水警戒任務に就こう！}}
+|time = 00:50
+|hq = 30
+|ship = 40
+|ammo = 70 
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = 5
+|name = {{tooltip|海上護衛任務|輸送船団の安全を図るために、船団に同行し、これを護衛しよう！}}
+|time = 01:30
+|hq = 40
+|ship = 40
+|fuel = {{color|blue|'''200'''}}
+|ammo = {{color|blue|'''200'''}}
+|steel = 20
+|bauxite = 20
+}}
+{{Expedition
+|world = 1
+|id = 6
+|name = {{tooltip|防空射撃演習|敵艦載機襲来に備えて、対空射撃や回避運動の訓練をしよう！}}
+|time = 00:40
+|hq = 30
+|ship = 50
+|bauxite = {{color|red|'''80'''}} 
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = 7
+|name = {{tooltip|観艦式予行|海の一大ページェント「観艦式」の予行航海を実施しよう！}}
+|time = 01:00
+|hq = 60
+|ship = {{color|red|'''120'''}}
+|steel = 50
+|bauxite = 30
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Construction Material.png{{!}}35px{{!}}link=Construction{{!}}Instant Construction]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|id = 8
+|name = {{tooltip|観艦式|今こそ日頃の訓練の成果を見せるとき！「観艦式」を挙行しよう！}}
+|time = 03:00
+|hq = 120
+|ship = 140
+|fuel = 50
+|ammo = 100
+|steel = 50
+|bauxite = 50
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Construction Material.png{{!}}35px{{!}}link=Construction{{!}}Instant Construction]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|hq = 15
+|ship = 10
+|fuel = {{color|blue|'''45'''}}
+|ammo = {{color|blue|'''45'''}}
+}}
+{{Expedition
+|world = 1
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|hq = 40
+|ship = 45
+|fuel = 70
+|ammo = 40
+|bauxite = 10
+|item1 = {{ItemStack | item=[[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text=x1}}
+|item2 = {{ItemStack | item=[[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text=x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|hq = 55
+|ship = 70
+|fuel = 120
+|steel = 60
+|bauxite = 60
+|item1 = {{ItemStack|item=[[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]]|text=x2}}
+}}
+{{ExpeditionS
+|id = A4
+|A4 hq = 45
+|A4 ship = 55
+|A4 fuel = 80
+|A4 ammo = 120
+|A4 bauxite = 100
+}}
+{{ExpeditionS
+|odd = true
+|id = A5
+|A5 hq = 55
+|A5 ship = ?
+|A5 ammo = 300
+|A5 bauxite = 100
+}}
+{{ExpeditionS
+|id = A6
+|A6 hq = 90
+|A6 ship = ?
+|A6 fuel = 100
+|A6 ammo = 500
+|A6 steel = 100
+|A6 bauxite = 200
+}}
+}}
+|-|Hourly yield=
+{{Expeditions|
+world = 1
+|{{Expedition
+|world = 1
+|odd = true
+|id = 1
+|name = {{tooltip|練習航海|鎮守府近海を航海し、艦隊の練度を高めよう！}}
+|time = 00:15
+|hq = 40
+|ship = 40
+|ammo = {{color|blue|'''120'''}}
+}}
+{{Expedition
+|world = 1
+|id = 2
+|name = {{tooltip|長距離練習航海|外海まで足を延ばし、艦隊の練度を高めよう！}}
+|time = 00:30
+|hq = 40
+|ship = 30
+|ammo = {{color|red|'''200'''}}
+|steel = 60
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}} 
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = 3
+|name = {{tooltip|警備任務|鎮守府担当海域をパトロールして領海の安全を守ろう！}}
+|time = 00:20
+|hq = {{color|red|'''90'''}}
+|ship = {{color|blue|'''90'''}}
+|fuel = 90
+|ammo = 90
+|steel = {{color|red|'''120'''}}
+}}
+{{Expedition
+|world = 1
+|id = 4
+|name = {{tooltip|対潜警戒任務|水雷戦隊を編成、領海内を索敵、対潜水警戒任務に就こう！}}
+|time = 00:50
+|hq = 36
+|ship = 48
+|ammo = 84 
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = 5
+|name = {{tooltip|海上護衛任務|輸送船団の安全を図るために、船団に同行し、これを護衛しよう！}}
+|time = 01:30
+|hq = 26
+|ship = 26
+|fuel = {{color|blue|'''133'''}}
+|ammo = {{color|blue|'''133'''}}
+|steel = 13
+|bauxite = 13
+}}
+{{Expedition
+|world = 1
+|id = 6
+|name = {{tooltip|防空射撃演習|敵艦載機襲来に備えて、対空射撃や回避運動の訓練をしよう！}}
+|time = 00:40
+|hq = 45
+|ship = {{color|blue|'''75'''}}
+|bauxite = {{color|red|'''120'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = 7
+|name = {{tooltip|観艦式予行|海の一大ページェント「観艦式」の予行航海を実施しよう！}}
+|time = 01:00
+|hq = {{color|blue|'''60'''}}
+|ship = {{color|red|'''120'''}}
+|steel = 50
+|bauxite = 30
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Construction Material.png{{!}}35px{{!}}link=Construction{{!}}Instant Construction]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|id = 8
+|name = {{tooltip|観艦式|今こそ日頃の訓練の成果を見せるとき！「観艦式」を挙行しよう！}}
+|time = 03:00
+|hq = 40
+|ship = 46
+|fuel = 16
+|ammo = 33
+|steel = 16
+|bauxite = 16
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Construction Material.png{{!}}35px{{!}}link=Construction{{!}}Instant Construction]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|hq = 36
+|ship = 24
+|fuel = {{color|blue|'''108'''}}
+|ammo = {{color|blue|'''108'''}}
+}}
+{{Expedition
+|world = 1
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|hq = 44
+|ship = 49
+|fuel = 76
+|ammo = 44
+|bauxite = 11
+|item1 = {{ItemStack|item=[[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]]|text=x1}}
+}}
+{{Expedition
+|world = 1
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|hq = 24
+|ship = 31
+|fuel = 53
+|steel = 27
+|bauxite = 27
+|item1 = {{ItemStack|item=[[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]]|text=x2}}
+}}
+{{ExpeditionS
+|hourly = true
+|id = A4
+|A4 hq = 45
+|A4 ship = 55
+|A4 fuel = 80
+|A4 ammo = 120
+|A4 bauxite = 100
+}}
+{{ExpeditionS
+|hourly = true
+|odd = true
+|id = A5
+|A5 hq = 55
+|A5 ship = ?
+|A5 ammo = 300
+|A5 bauxite = 100
+}}
+{{ExpeditionS
+|hourly = true
+|id = A6
+|A6 hq = 90
+|A6 ship = ?
+|A6 fuel = 100
+|A6 ammo = 500
+|A6 steel = 100
+|A6 bauxite = 200
+}}
+}}
+|-|Requirements=
+{{Expeditions|
+world = 1
+| req = true
+|{{Expedition2
+|world = 1
+|odd = true
+|id = 1
+|name = {{tooltip|練習航海|鎮守府近海を航海し、艦隊の練度を高めよう！}}
+|time = 00:15
+|level = 1
+|fleet = 2XX
+|fuel = 3
+}}
+{{Expedition2
+|world = 1
+|id = 2
+|name = {{tooltip|長距離練習航海|外海まで足を延ばし、艦隊の練度を高めよう！}}
+|time = 00:30
+|level = 2
+|fleet = 4XX
+|fuel = 5
+}}
+{{Expedition2
+|world = 1
+|odd = true
+|id = 3
+|name = {{tooltip|警備任務|鎮守府担当海域をパトロールして領海の安全を守ろう！}}
+|time = 00:20
+|level = 3
+|fleet = 3XX
+|fuel = 3
+|ammo = 2
+}}
+{{Expedition2
+|world = 1
+|id = 4
+|name = {{tooltip|対潜警戒任務|水雷戦隊を編成、領海内を索敵、対潜水警戒任務に就こう！}}
+|time = 00:50
+|level = 3
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 2<span style="cursor:help;" title="DE can be substitutes for DD but note that only either 2DD or 2DE can fulfill the requirements, using 1DD+1DE will result in failure.">DD*<ref name="DD" /></span> <br>'''or'''<br>1DD 3DE
+|fuel = 5
+}}
+{{Expedition2
+|world = 1
+|odd = true
+|id = 5
+|name = {{tooltip|海上護衛任務|輸送船団の安全を図るために、船団に同行し、これを護衛しよう！}}
+|time = 01:30
+|level = 3
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 2<span style="cursor:help;" title="DE can be substitutes for DD but note that only either 2DD or 2DE can fulfill the requirements, using 1DD+1DE will result in failure.">DD*<ref name="DD" /></span> 1XX <br>'''or'''<br> 1DD 3DE
+|fuel = 5
+}}
+{{Expedition2
+|world = 1
+|id = 6
+|name = {{tooltip|防空射撃演習|敵艦載機襲来に備えて、対空射撃や回避運動の訓練をしよう！}}
+|time = 00:40
+|level = 4
+|fleet = 4XX
+|fuel = 3
+|ammo = 2
+}}
+{{Expedition2
+|world = 1
+|odd = true
+|id = 7
+|name = {{tooltip|観艦式予行|海の一大ページェント「観艦式」の予行航海を実施しよう！}}
+|time = 01:00
+|level = 5
+|fleet = 6XX
+|fuel = 5
+}}
+{{Expedition2
+|world = 1
+|id = 8
+|name = {{tooltip|観艦式|今こそ日頃の訓練の成果を見せるとき！「観艦式」を挙行しよう！}}
+|time = 03:00
+|level = 6
+|fleet = 6XX
+|fuel = 5
+|ammo = 2
+}}
+{{Expedition2
+|world = 1
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|sum = 10
+|level = 5
+|fleet = 3DD/DE 1XX
+|drums = 
+|fuel = 3.5
+}}
+{{Expedition2
+|world = 1
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|level = 20
+|fleet = 4DD/DE<br>'''with'''<br>{{ASW}} {{tooltip|180+|Summary ASW including ship stats, equipment stats and some ASW improvement bonuses}}<br>{{AA}} {{tooltip|70+|Summary AA including ship and equipment stats}}<br>{{LOS}} {{tooltip|73+|Summary LoS including ship and equipment stats}}
+|drums = 
+|fuel = 5
+|ammo = 2
+}}
+{{Expedition2
+|world = 1
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|sum = 185
+|level = 35
+|fleet = 1CL 4DD/DE<br>'''or'''<br>1-2 DD 4-3 DE<br>'''with'''<br>{{ASW}} {{tooltip|280+|Summary ASW including ship and equipment stats}}
+|drums = 
+|fuel = 6.5
+|ammo = 3.5
+}}
+{{ExpeditionS
+|requirements = true
+|id = A4
+|A4 sum = 250
+|A4 level = 40
+|A4 fleet = 1 CVE/CL 4DD/DE<br>'''with'''<br>{{Firepower}} {{tooltip|300+|Summary Firepower including ship stats, equipment stats and some Firepower improvement bonuses}}<br>{{ASW}} {{tooltip|200+|Summary ASW including ship and equipment stats}}
+|A4 drums = 
+}}
+{{ExpeditionS
+|requirements = true
+|odd = true
+|id = A5
+|A5 sum = 260
+|A5 level = 45
+|A5 fleet = 1 CL 3DD 1XX<br>'''with'''<br>{{Firepower}} {{tooltip|280+|Summary Firepower including ship stats, equipment stats and some Firepower improvement bonuses}}<br>{{AA}} {{tooltip|274+(?)|Summary AA including ship and equipment stats}}<br>{{ASW}} {{tooltip|240+|Summary ASW including ship and equipment stats}}<br>{{LoS}} {{tooltip|150+|Summary LoS including ship and equipment stats}}
+|A5 drums = 
+}}
+{{ExpeditionS
+|requirements = true
+|id = A6
+|A6 sum = 353
+|A6 level = 55
+|A6 fleet = 1 CL 3DD 2XX<br>'''with'''<br>{{Firepower}} {{tooltip|330+|Summary Firepower including ship stats, equipment stats and some Firepower improvement bonuses}}<br>{{AA}} {{tooltip|314+(?)|Summary AA including ship and equipment stats}}<br>{{ASW}} {{tooltip|270+|Summary ASW including ship and equipment stats}}<br>{{LoS}} {{tooltip|180+|Summary LoS including ship and equipment stats}}
+|A6 drums = 
+}}
+}}
+<references>
+<ref name="CL">Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="DD">DE can be substitutes for DD but note that only either 2DD or 2DE can fulfill the requirements, using 1DD+1DE will result in failure.</ref>
+</references>
+</tabber>
+*A2, A3, and A4 stat requirements may be affected by improvements, but since it is hard to test, it is advised to ignore them and use displayed stat values only.
+*A2, A3, and A4 can give [[Great Success]] without sparkling or [[Drum Canister]]s.
+
+<references />
+
+==World 2==
+{{todo|
+B2:
+*Recheck sum. levels 289 and 290
+*Recheck FS levels 44 and 45
+*Check SS, DE, etc. for 1CA 1CL 3DD 1XX
+}}
+<tabber>Total yield=
+{{Expeditions|
+world = 2
+|{{Expedition
+|world = 2
+|odd = true
+|id = 9
+|name = {{tooltip|タンカー護衛任務|油田地帯から燃料を満載して戻るタンカー船団を護衛しよう！}}
+|time = 04:00
+|hq = 60
+|ship = 60 
+|fuel = {{color|blue|'''350'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x2}}
+}}
+{{Expedition
+|world = 2
+|id = 10
+|name = {{tooltip|強行偵察任務|水上偵察機搭載艦などを活用し、敵艦隊の動向を探れ！}}
+|time = 01:30
+|hq = 40
+|ship = 50
+|ammo = 50
+|bauxite = 40 
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Construction Material.png{{!}}35px{{!}}link=Construction{{!}}Instant Construction]] | text= x1}}
+}}
+{{Expedition
+|world = 2
+|odd = true
+|id = 11
+|name = {{tooltip|ボーキサイト輸送任務|ボーキサイト輸送任務}}
+|time = 05:00
+|hq = 40
+|ship = 40
+|bauxite = {{color|blue|'''250'''}} 
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{Expedition
+|world = 2
+|id = 12
+|name = {{tooltip|資源輸送任務|資源国からの輸送部隊を護衛し、母港への輸送を無事完遂しよう！}}
+|time = 08:00
+|hq = 60
+|ship = 50
+|fuel = 50
+|ammo = 250
+|steel = 200
+|bauxite = 50
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Medium).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Medium Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 2
+|odd = true
+|id = 13
+|name = {{tooltip|鼠輸送作戦|鼠輸送作戦}}
+|time = 04:00
+|hq = 70
+|ship = 60
+|fuel = 240
+|ammo = 300
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{ExpeditionS|
+|id = 14
+|14 hq = 90
+|14 ship = 100
+|14 fuel = 
+|14 ammo = 280
+|14 steel = 200
+|14 bauxite = 30
+}}
+{{Expedition
+|world = 2
+|odd = true
+|id = 15
+|name = {{tooltip|囮機動部隊支援作戦|敵機動部隊を誘引する空母を含む囮部隊で主力艦隊を支援しよう！}}
+|time = 12:00
+|hq = 100
+|ship = 160
+|steel = 300
+|bauxite = 400
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Large).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Large Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 2
+|id = 16
+|name = {{tooltip|艦隊決戦援護作戦|有力な艦隊を編成し、敵背後側面を奇襲、艦隊決戦を援護しよう！}}
+|time = 15:00
+|hq = 120
+|ship = 200
+|fuel = 500
+|ammo = 500
+|steel = 200
+|bauxite = 200
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Construction Material.png{{!}}35px{{!}}link=Construction{{!}}Instant Construction]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x2}}
+}}
+{{Expedition
+|world = 2
+|odd = true
+|id = B1
+|name = {{tooltip|南西方面航空偵察作戦|索敵力の高い水上機母艦及び軽巡、を伴う艦隊で敵情勢を偵察せよ！}}
+|time = 00:35
+|hq = '''{{color|blue|35}}'''
+|ship = 40
+|steel = 20
+|bauxite = '''{{color|blue|30}}'''
+|item1 = {{ItemStack|item=[[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]]|text=x1}}
+}}
+{{Expedition
+|world = 2
+|id = B2
+|name = {{tooltip|敵泊地強襲反撃作戦(M)|重巡1軽巡1と精強駆逐隊による<br>最精鋭艦隊で敵泊地を強襲せよ！}}
+|time = 08:40
+|hq = 70
+|ship = 130
+|fuel = 300
+|ammo = 200
+|steel = 100
+|item1 = {{ItemStack|item=[[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]]|text=x2}}
+|item2 = {{ItemStack|item=[[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]]|text= x2}}
+}}
+{{ExpeditionS|odd = true
+|id = B3
+|B3 hq = 50
+|B3 ship = 70
+|B3 ammo = 100
+|B3 steel = 100
+|B3 bauxite = 180
+}}
+{{ExpeditionS
+|id = B4
+|B4 hq = 60
+|B4 ship = 100
+|B4 fuel = 
+|B4 ammo = 
+|B4 steel = 1200
+|B4 bauxite = 650
+}}
+{{ExpeditionS|odd = true
+|id = B5
+|B5 hq = 100
+|B5 ship = 130
+|B5 fuel = 500
+|B5 ammo = 500
+|B5 steel = 1000
+|B5 bauxite = 750
+}}
+}}
+|-|Hourly yield=
+{{Expeditions|
+world = 2
+|{{Expedition
+|world = 2
+|odd = true
+|id = 9
+|name = {{tooltip|タンカー護衛任務|油田地帯から燃料を満載して戻るタンカー船団を護衛しよう！}}
+|time = 04:00
+|hq = 15
+|ship = 15
+|fuel = {{color|blue|'''87'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x2}}
+}}
+{{Expedition
+|world = 2
+|id = 10
+|name = {{tooltip|強行偵察任務|水上偵察機搭載艦などを活用し、敵艦隊の動向を探れ！}}
+|time = 01:30
+|hq = 26
+|ship = 33
+|ammo = 33
+|bauxite = 26
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Construction Material.png{{!}}35px{{!}}link=Construction{{!}}Instant Construction]] | text= x1}}
+}}
+{{Expedition
+|world = 2
+|odd = true
+|id = 11
+|name = {{tooltip|ボーキサイト輸送任務|資源集積地から、母港にボーキサイトを輸送しよう！}}
+|time = 05:00
+|hq = 8
+|ship = 8 
+|bauxite = {{color|blue|'''50'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{Expedition
+|world = 2
+|id = 12
+|name = {{tooltip|資源輸送任務|資源国からの輸送部隊を護衛し、母港への輸送を無事完遂しよう！}}
+|time = 08:00
+|hq = 7
+|ship = 6
+|fuel = 6
+|ammo = 31
+|steel = 25
+|bauxite = 6
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Medium).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Medium Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 2
+|odd = true
+|id = 13
+|name = {{tooltip|鼠輸送作戦|快速の水雷戦隊を集中運用して、激戦の諸島へ物資を輸送しよう！}}
+|time = 04:00
+|hq = 17
+|ship = 15
+|fuel = 60
+|ammo = 75 
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{ExpeditionS|
+|hourly = true
+|id = 14
+|14 hq = 90
+|14 ship = 100
+|14 fuel = 
+|14 ammo = 280
+|14 steel = 200
+|14 bauxite = 30
+}}
+{{Expedition
+|world = 2
+|odd = true
+|id = 15
+|name = {{tooltip|囮機動部隊支援作戦|敵機動部隊を誘引する空母を含む囮部隊で主力艦隊を支援しよう！}}
+|time = 12:00
+|hq = 8
+|ship =13 
+|steel = 25
+|bauxite = 33
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Large).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Large Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 2
+|id = 16
+|name = {{tooltip|艦隊決戦援護作戦|有力な艦隊を編成し、敵背後側面を奇襲、艦隊決戦を援護しよう！}}
+|time = 15:00
+|hq = 8
+|ship = 13 
+|fuel = 33
+|ammo = 33
+|steel = 13
+|bauxite = 13
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Construction Material.png{{!}}35px{{!}}link=Construction{{!}}Instant Construction]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x2}}
+}}
+{{Expedition
+|world = 2
+|odd = true
+|id = B1
+|name = {{tooltip|南西方面航空偵察作戦|索敵力の高い水上機母艦及び軽巡、を伴う艦隊で敵情勢を偵察せよ！}}
+|time = 00:35
+|hq = '''{{color|blue|60}}'''
+|ship = 69
+|steel = 34
+|bauxite = '''{{color|blue|51}}'''
+|item1 = {{ItemStack|item=[[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]]|text=x1}}
+}}
+{{Expedition
+|world = 2
+|id = B2
+|name = {{tooltip|敵泊地強襲反撃作戦(M)|重巡1軽巡1と精強駆逐隊による<br>最精鋭艦隊で敵泊地を強襲せよ！}}
+|time = 08:40
+|hq = 8
+|ship = 15
+|fuel = 35
+|ammo = 23
+|steel = 12
+|item1 = {{ItemStack|item=[[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]]|text=x2}}
+|item2 = {{ItemStack|item=[[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]]|text= x2}}
+}}
+{{ExpeditionS|odd = true
+|hourly = true
+|id = B3
+|B3 hq = 50
+|B3 ship = 70
+|B3 ammo = 100
+|B3 steel = 100
+|B3 bauxite = 180
+}}
+{{ExpeditionS
+|hourly = true
+|id = B4
+|B4 hq = 60
+|B4 ship = 100
+|B4 fuel = 
+|B4 ammo = 
+|B4 steel = 1200
+|B4 bauxite = 650
+}}
+{{ExpeditionS|odd = true
+|hourly = true
+|id = B5
+|B5 hq = 100
+|B5 ship = 130
+|B5 fuel = 500
+|B5 ammo = 500
+|B5 steel = 1000
+|B5 bauxite = 750
+}}
+}}
+|-|Requirements=
+{{Expeditions|
+world = 2
+| req = true
+|{{Expedition2
+|world = 2
+|odd = true
+|id = 9
+|name = {{tooltip|タンカー護衛任務|油田地帯から燃料を満載して戻るタンカー船団を護衛しよう！}}
+|time = 04:00
+|sum = 
+|level = 3
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 2<span style="cursor:help;" title="DE can be substitutes for DD but note that only either 2DD or 2DE can fulfill the requirements, using 1DD+1DE will result in failure.">DD*<ref name="DD" /></span> 1XX <br>'''or'''<br> 1DD 3DE
+|drums = 
+|fuel = 5
+|ammo = 
+}}
+{{Expedition2
+|world = 2
+|id = 10
+|name = {{tooltip|強行偵察任務|水上偵察機搭載艦などを活用し、敵艦隊の動向を探れ！}}
+|time = 01:30
+|sum = 
+|level = 3
+|fleet = 2<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 1XX
+|drums = 
+|fuel = 3
+|ammo = 
+}}
+{{Expedition2
+|world = 2
+|odd = true
+|id = 11
+|name = {{tooltip|ボーキサイト輸送任務|資源集積地から、母港にボーキサイトを輸送しよう！}}
+|time = 05:00
+|sum = 
+|level = 6
+|fleet = 2DD 2XX
+|drums = 
+|fuel = 5
+|ammo = 
+}}
+{{Expedition2
+|world = 2
+|id = 12
+|name = {{tooltip|資源輸送任務|資源国からの輸送部隊を護衛し、母港への輸送を無事完遂しよう！}}
+|time = 08:00
+|sum = 
+|level = 4
+|fleet = 2DD 2XX
+|drums = 
+|fuel = 5
+|ammo = 
+}}
+{{Expedition2
+|world = 2
+|odd = true
+|id = 13
+|name = {{tooltip|鼠輸送作戦|快速の水雷戦隊を集中運用して、激戦の諸島へ物資を輸送しよう！}}
+|time = 04:00
+|sum = 
+|level = 5
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 4DD 1XX
+|drums = 
+|fuel = 5
+|ammo = 4
+}}
+{{ExpeditionS|
+|requirements = true
+|id = 14
+|14 sum = 0
+|14 level = 6
+|14 fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 3DD 2XX
+|14 drums = 0
+}}
+{{Expedition2
+|world = 2
+|odd = true
+|id = 15
+|name = {{tooltip|囮機動部隊支援作戦|敵機動部隊を誘引する空母を含む囮部隊で主力艦隊を支援しよう！}}
+|time = 12:00
+|sum = 
+|level = 9
+|fleet = 2<span style="cursor:help" title="CVL or AV can be substituted for any CV.">CV*<ref name="CV" /></span> 2DD 2XX
+|drums = 
+|fuel = 5
+|ammo = 4
+}}
+{{Expedition2
+|world = 2
+|id = 16
+|name = {{tooltip|艦隊決戦援護作戦|有力な艦隊を編成し、敵背後側面を奇襲、艦隊決戦を援護しよう！}}
+|time = 15:00
+|sum = 
+|level = 10
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 2DD 3XX
+|drums = 
+|fuel = 5
+|ammo = 4
+}}
+{{Expedition2
+|world = 2
+|odd = true
+|id = B1
+|name = {{tooltip|南西方面航空偵察作戦|索敵力の高い水上機母艦及び軽巡、を伴う艦隊で敵情勢を偵察せよ！}}
+|time = 00:35
+|sum = 150
+|level = 40
+|fleet = 1AV 1CL 2DD/DE 2XX<br>'''with'''<br>{{ASW}} {{tooltip|200+|Summary ASW including ship and equipment (excluding Seaplanes) stats}}<br>{{AA}} {{tooltip|200+|Summary AA including ship and equipment stats}}<br>{{LOS}} {{tooltip|140+|Summary LoS including ship and equipment stats}}
+|drums = 
+|fuel = 4.5
+|ammo = 1.5
+}}
+{{Expedition2
+|world = 2
+|id = B2
+|name = {{tooltip|敵泊地強襲反撃作戦(M)|重巡1軽巡1と精強駆逐隊による<br>最精鋭艦隊で敵泊地を強襲せよ！}}
+|time = 08:40
+|sum = 290
+|level = 45
+|fleet = 1CA 1CL 3DD {{tooltip|1XX|Tested with DE/DD/CL/CLT/SS/SSV/AV}}<br>'''with'''<br>{{Firepower}} {{tooltip|360+|Summary Firepower including ship stats, equipment stats and some Firepower improvement bonuses}}
+|fuel = 8
+|ammo = 6.5
+}}
+{{ExpeditionS|odd = true
+|requirements = true
+|id = B3
+|B3 sum = 350
+|B3 level = 50
+|B3 fleet = 1AV 1CL 2DD/DE 2DD<br>'''with'''<br> 
+{{Firepower}} {{tooltip|400+|Summary Firepower including ship stats, equipment stats and some Firepower improvement bonuses}}<br>{{ASW}} {{tooltip|220+|Summary ASW including ship and equipment stats}}
+|B3 drums = 
+}}
+{{ExpeditionS
+|requirements = true
+|id = B4
+|B4 sum = 
+|B4 level = 55
+|B4 fleet = 2CA 1CL 2DD 1SS(V)<br>'''with'''<br>{{Firepower}} {{tooltip|500+|Summary Firepower including ship stats, equipment stats and some Firepower improvement bonuses}}<br>{{ASW}} {{tooltip|280+|Summary ASW including ship and equipment stats}}
+|B4 drums = 
+}}
+{{ExpeditionS|odd = true
+|requirements = true
+|id = B5
+|B5 sum = 
+|B5 level = 60
+|B5 fleet = 1AV 1CL 2DD 2XX <br> '''with'''<br>{{Firepower}} {{tooltip|510+|Summary Firepower including ship stats, equipment stats and some Firepower improvement bonuses}}<br>{{AA}} {{tooltip|400+|Summary AA including ship and equipment stats}}<br>{{ASW}}{{tooltip|285+|Summary ASW including ship and equipment stats}}<br>{{LOS}}{{tooltip|385+|Summary LoS including ship and equipment stats}}
+|B5 drums = 
+}}
+}}
+<references>
+<ref name="CL">Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.
+</ref>
+<ref name="DD">DE can be substitutes for DD but note that only either 2DD or 2DE can fulfill the requirements, using 1DD+1DE will result in failure.
+</ref>
+<ref name="CV">''CV''*: CVL and AV can be substituted for CV.</ref>
+</references>
+</tabber>
+* Expeditions B1, B2, B3, B4, and B5 stat requirements may be affected by improvements, but since it is hard to test, it is advised to ignore them and use displayed stat values only.
+
+==World 3==
+<tabber>Total yield=
+{{Expeditions|
+world = 3
+|{{Expedition
+|world = 3
+|odd = true
+|id = 17
+|name = {{tooltip|敵地偵察作戦|精鋭水雷戦隊を投入し、北方海域の敵情勢を強行偵察せよ！}}
+|time = 00:45
+|hq = 30
+|ship = 40
+|fuel = 70
+|ammo = 90
+|steel = 50
+}}
+{{Expedition
+|world = 3
+|id = 18
+|name = {{tooltip|航空機輸送作戦|「航空母艦」を多数配備した輸送部隊で前線に航空機を輸送せよ！}}
+|time = 05:00
+|hq = 60
+|ship = 60
+|steel = 300
+|bauxite = 150
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{Expedition
+|world = 3
+|odd = true
+|id = 19
+|name = {{tooltip|北号作戦|高練度「航空戦艦」複数を基幹とする強行輸送船団を出航させよ！}}
+|time = 06:00
+|hq = 60
+|ship = 70
+|fuel = 400
+|ammo = 50
+|steel = 50
+|bauxite = 30
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 3
+|id = 20
+|name = {{tooltip|潜水艦哨戒任務|潜水艦と同支援艦艇による艦隊で北方海域の哨戒任務にあたれ！}}
+|time = 02:00
+|hq = 40
+|ship = 50
+|steel = {{color|blue|'''150'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 3
+|odd = true
+|id = 21
+|name = {{tooltip|北方鼠輸送作戦|水雷戦隊にドラム缶を積載、北方方面の友軍への糧食補給を図れ！}}
+|time = 02:20
+|hq = 45
+|ship = 55
+|fuel = {{color|blue|'''320'''}}
+|ammo = {{color|blue|'''270'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 3
+|id = 22
+|name = {{tooltip|艦隊演習|練度向上のため艦隊演習を実施！(資源獲得の遠征ではありません)}}
+|time = 03:00
+|hq = 45
+|ship = {{color|red|'''400'''}} 
+|ammo = 10
+}}
+{{Expedition
+|world = 3
+|odd = true
+|id = 23
+|name = {{tooltip|航空戦艦運用演習|高練度「航空戦艦」戦隊を基幹とした艦隊の総合演習を実施せよ！}}
+|time = 04:00
+|hq = 70
+|ship = {{color|blue|'''420'''}}
+|ammo = 50
+|bauxite = 130 
+}}
+{{Expedition
+|world = 3
+|id = 24
+|name = {{tooltip|北方航路海上護衛|高練度軽巡が率いる精鋭護衛艦隊で北方航路海上護衛を実施せよ！}}
+|time = 08:20
+|hq = 65
+|ship = 80
+|fuel = 500
+|bauxite = 150
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+}}
+|-|Hourly yield=
+{{Expeditions|
+world = 3
+|{{Expedition
+|world = 3
+|odd = true
+|id = 17
+|name = {{tooltip|敵地偵察作戦|精鋭水雷戦隊を投入し、北方海域の敵情勢を強行偵察せよ！}}
+|time = 00:45
+|hq = 40
+|ship = 53
+|fuel = 120
+|ammo = 93
+|steel = 67
+}}
+{{Expedition
+|world = 3
+|id = 18
+|name = {{tooltip|航空機輸送作戦|「航空母艦」を多数配備した輸送部隊で前線に航空機を輸送せよ！}}
+|time = 05:00
+|hq = 12
+|ship = 12
+|steel = 60
+|bauxite = 30
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{Expedition
+|world = 3
+|odd = true
+|id = 19
+|name = {{tooltip|北号作戦|高練度「航空戦艦」複数を基幹とする強行輸送船団を出航させよ！}}
+|time = 06:00
+|hq = 10
+|ship = 11
+|fuel = 67
+|ammo = 8
+|steel = 8
+|bauxite = 5 
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 3
+|id = 20
+|name = {{tooltip|潜水艦哨戒任務|潜水艦と同支援艦艇による艦隊で北方海域の哨戒任務にあたれ！}}
+|time = 02:00
+|hq = 20
+|ship = 25
+|steel = {{color|blue|'''75'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 3
+|odd = true
+|id = 21
+|name = {{tooltip|北方鼠輸送作戦|水雷戦隊にドラム缶を積載、北方方面の友軍への糧食補給を図れ！}}
+|time = 02:20
+|hq = 19
+|ship = 23
+|fuel = {{color|blue|'''137'''}}
+|ammo = {{color|blue|'''116'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 3
+|id = 22
+|name = {{tooltip|艦隊演習|練度向上のため艦隊演習を実施！(資源獲得の遠征ではありません)}}
+|time = 03:00
+|hq = 15
+|ship = {{color|red|'''133'''}}
+|ammo = 3
+}}
+{{Expedition
+|world = 3
+|odd = true
+|id = 23
+|name = {{tooltip|航空戦艦運用演習|高練度「航空戦艦」戦隊を基幹とした艦隊の総合演習を実施せよ！}}
+|time = 04:00
+|hq = 17
+|ship = {{color|blue|'''105'''}}
+|ammo = 12
+|bauxite = 32
+}}
+{{Expedition
+|world = 3
+|id = 24
+|name = {{tooltip|北方航路海上護衛|高練度軽巡が率いる精鋭護衛艦隊で北方航路海上護衛を実施せよ！}}
+|time = 08:20
+|ship = {{color|red|}}
+|fuel = 60
+|bauxite = 18
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+}}
+|-|Requirements=
+{{Expeditions|
+world = 3
+| req = true
+|{{Expedition2
+|world = 3
+|odd = true
+|id = 17
+|name = {{tooltip|敵地偵察作戦|精鋭水雷戦隊を投入し、北方海域の敵情勢を強行偵察せよ！}}
+|time = 00:45
+|level = 20
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 3DD 2XX
+|fuel = 3
+|ammo = 4
+}}
+{{Expedition2
+|world = 3
+|id = 18
+|name = {{tooltip|航空機輸送作戦|「航空母艦」を多数配備した輸送部隊で前線に航空機を輸送せよ！}}
+|time = 05:00
+|level = 15
+|fleet = 3<span style="cursor:help" title="CVL or AV can be substituted for any CV.">CV*<ref name="CV" /></span> 2DD 1XX
+|fuel = 5
+|ammo = 2
+}}
+{{Expedition2
+|world = 3
+|odd = true
+|id = 19
+|name = {{tooltip|北号作戦|高練度「航空戦艦」複数を基幹とする強行輸送船団を出航させよ！}}
+|time = 06:00
+|level = 20
+|fleet = 2<span style="cursor:help;" title="Battleships [BB] and Fast battleships [FBB] cannot be used as substitutes for Aviation battleships [BBV]">BBV*<ref name="BBV" /></span> 2DD 2XX
+|fuel = 5
+|ammo = 4
+}}
+{{Expedition2
+|world = 3
+|id = 20
+|name = {{tooltip|潜水艦哨戒任務|潜水艦と同支援艦艇による艦隊で北方海域の哨戒任務にあたれ！}}
+|time = 02:00
+|level = 1
+|fleet = 1<span style="cursor:help;" title="Aviation submarines [SSV] can be used as substitutes for Submarines [SS]">SS*<ref name="SS" /></span> 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span>
+|fuel = 5
+|ammo = 4
+}}
+{{Expedition2
+|world = 3
+|odd = true
+|id = 21
+|name = {{tooltip|北方鼠輸送作戦|水雷戦隊にドラム缶を積載、北方方面の友軍への糧食補給を図れ！}}
+|time = 02:20
+|sum = 30
+|level = 15
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 4DD
+|drums = 3<span style="cursor:help;" title="At least 3 drum carrying ships are required">(3*)<ref name="drum3" /></span>
+|fuel = 8
+|ammo = 7
+}}
+{{Expedition2
+|world = 3
+|id = 22
+|name = {{tooltip|艦隊演習|練度向上のため艦隊演習を実施！(資源獲得の遠征ではありません)}}
+|time = 03:00
+|sum = 45
+|level = 30
+|fleet = 1<span style="cursor:help;" title="Aviation cruisers [CAV] and Heavy cruisers [CA] are not interchangeable.">CA*<ref name="CA" /></span> 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 2DD 2XX
+|fuel = 8
+|ammo = 7
+}}
+{{Expedition2
+|world = 3
+|odd = true
+|id = 23
+|name = {{tooltip|航空戦艦運用演習|高練度「航空戦艦」戦隊を基幹とした艦隊の総合演習を実施せよ！}}
+|time = 04:00
+|sum = 200
+|level = 50
+|fleet = 2<span style="cursor:help;" title="Battleships [BB] and Fast battleships [FBB] cannot be used as substitutes for Aviation battleships [BBV]">BBV*<ref name="BBV" /></span> 2DD 2XX
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition2
+|world = 3
+|id = 24
+|name = {{tooltip|北方航路海上護衛|高練度軽巡が率いる精鋭護衛艦隊で北方航路海上護衛を実施せよ！}}
+|time = 08:20
+|sum = 200
+|level = 50
+|fleet = <span style="cursor:help" title="A CL must be the flagship">'''1CL*'''</span><ref name="CL24" />  4DD 1XX
+|drums = [[Great Success|△]]
+|fuel = 9
+|ammo = 6
+}}
+}}
+<references>
+<ref name="drum3">''3''* : Minimum of 3 ships carrying drum <br/></ref>
+<ref name="SS">Aviation submarines [SSV] can be used as substitutes for Submarines [SS]</ref>
+<ref name="CV">''CV''*: CVL or AV can be substituted for any CV. <br/></ref>
+<ref name="CL">Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="CA">Aviation cruisers [CAV] and Heavy cruisers [CA] are '''not''' interchangeable.</ref>
+<ref name="CL24">''CL*'': For expedition 24, the flagship '''must''' be a CL. Also Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="BBV">Battleships [BB] and Fast battleships [FBB] '''cannot''' be used as substitutes for Aviation battleships [BBV]</ref>
+</references>
+</tabber>
+
+==World 7==
+{{ExpeditionS
+
+|world = 7
+
+|41 hq = 30
+|41 ship = 50
+|41 fuel = 100
+|41 bauxite = 20
+|41 sum = 115
+|41 level = 30
+|41 fleet = 3 DD/DE<br>'''with'''<br> {{ASW}} {{tooltip|210+|Summary ASW including ship and equipment stats}}<br>{{AA}} {{tooltip|80+|Summary AA including ship and equipment stats}} 
+|41 drums = 
+
+|42 hq = 60
+|42 ship = 65
+|42 fuel = 800
+|42 bauxite = 200
+|42 sum = 200
+|42 level = 45
+|42 fleet = 1 CVE/CL/CT 3 DD/DE
+|42 drums =
+
+|43 hq = 75
+|43 ship = 90
+|43 fuel = 2000
+|43 ammo = 
+|43 steel = 
+|43 bauxite = 400
+|43 sum = 300
+|43 level = 55
+|43 fleet = CVL/CL/4DD<br>'''or'''<br><span style="cursor:help" title="A CVE must be the flagship">'''1CVE*'''</span><ref name="CVE43" />  2DD/DE 3XX<br>'''with'''<br>{{Firepower}} {{tooltip|500+|Summary FP including ship and equpment stats and some Firepower improvement bonuses}}<br>{{ASW}} {{tooltip|280+|Summary ASW including ship and equipment stats}}
+|43 drums = 
+
+fleet = 1CL 4DD/DE<br>'''or'''<br>1-2 DD 4-3 DE<br>'''with'''<br>{{ASW}} {{tooltip|280+|Summary ASW including ship and equipment stats}}
+
+|44 hq = 45
+|44 ship = 55
+|44 ammo = 200
+|44 bauxite = 800
+|44 sum = 
+|44 level = 45
+|44 fleet = 2CVL 1AV 1CL 2XX<br>'''with'''<br>{{ASW}} {{tooltip|200+|Summary ASW including ship and equipment stats}}<br>6 drums on 3 ships
+|44 drums = 6
+
+|45 hq = 35
+|45 ship = 40
+|45 fuel = 40
+|45 ammo = 
+|45 bauxite = 220
+|45 sum = 240
+|45 level = 50
+|45 fleet = <span style="cursor:help" title="A CVL/CVE must be the flagship">'''1CVL/CVE*'''</span><ref name="CVE43" />  4DD/DE <br>'''with'''<br>{{AA}} {{tooltip|240+|Summary AA including ship and equipment stats}}<br>{{ASW}} {{tooltip|300+|Summary ASW including ship and equipment stats}}<br>{{LOS}} {{tooltip|180+|Summary LOS including ship and equipment stats}}
+}}
+<references>
+<ref name="CVE43">''CVE*'': The flagship '''must''' be a CVE. CVEs include {{ShipLink|Taiyou}}, {{ShipLink|Shinyou}}, {{ShipLink|Zuihou Kai Ni B}}, and {{ShipLink|Gambier Bay}}. </references>
+*Expedition 41 can achieve great success without sparkling or special equipment.
+
+
+==World 4==
+<tabber>Total yield=
+{{Expeditions|
+world = 4
+|{{Expedition
+|world = 4
+|odd = true
+|id = 25
+|name = {{tooltip|通商破壊作戦|快速かつ打撃力のある重巡戦隊を投入、敵後方補給線を遮断せよ！}}
+|time = 40:00
+|hq = 80
+|ship = 180
+|fuel = 900
+|steel = 500
+}}
+{{Expedition
+|world = 4
+|id = 26
+|name = {{tooltip|敵母港空襲作戦|敵潜水艦の哨戒線を長躯突破し、有力な機動艦隊で敵母港を叩け！}}
+|time = 80:00
+|hq = 150
+|ship = 200
+|bauxite = 900
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x3}}
+}}
+{{Expedition
+|world = 4
+|odd = true
+|id = 27
+|name = {{tooltip|潜水艦通商破壊作戦|潜水艦2隻以上を伴う艦隊で、敵後方へ進出、通商破壊作戦実施！}}
+|time = 20:00
+|hq = 80
+|ship = 60
+|steel = 800
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x2}}
+}}
+{{Expedition
+|world = 4
+|id = 28
+|name = {{tooltip|西方海域封鎖作戦|潜水艦3隻以上の艦隊で、西方海域の敵水上艦の活動を封鎖せよ！}}
+|time = 25:00
+|hq = 100
+|ship = 140
+|steel = 900
+|bauxite = 350
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Medium).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Medium Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 4
+|odd = true
+|id = 29
+|name = {{tooltip|潜水艦派遣演習|潜水艦3隻以上の艦隊を編成し、長距離派遣の演習を実施せよ！}}
+|time = 24:00
+|hq = 100
+|ship = 100
+|ammo = 50
+|bauxite = 100
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 4
+|id = 30
+|name = {{tooltip|潜水艦派遣作戦|潜水艦4隻以上の艦隊を編成し、遠方友軍勢力との連絡を試みよ！}}
+|time = 48:00
+|hq = 100
+|ship = 150
+|ammo = 50
+|bauxite = 100
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x3}}
+}}
+{{Expedition
+|world = 4
+|odd = true
+|id = 31
+|name = {{tooltip|海外艦との接触|潜水艦4隻以上の艦隊を派遣し、海外艦との邂逅を試みよ！}}
+|time = 02:00
+|hq = 50
+|ship = 50
+|ammo = 30 
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 4
+|id = 32
+|name = [[Expedition 32|{{tooltip|遠洋練習航海|練習巡洋艦を旗艦で遠洋練習航海を実施、基礎練度向上に努めよ！}}]]
+|time = 24:00
+|hq = 300
+|ship = [[Thread:193171#24|<span style="cursor:help;" title="Varies due to several factors, including (but no limited to) flagship level and each individual ship's levels"><span style="color:red;">Var<sup>?</sup></span></span>]]
+|fuel = 50
+|ammo = 50
+|steel = 50
+|bauxite = 50
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Large).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Large Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x3}}
+}}
+{{ExpeditionS|odd = true
+|id = D1
+|D1 hq = 35
+|D1 ship = 45
+|D1 fuel = 
+|D1 ammo = 20
+|D1 steel = 20
+|D1 bauxite = 100
+}}
+{{ExpeditionS
+|id = D2
+|D2 hq = 70
+|D2 ship = 90
+|D2 fuel = 
+|D2 ammo = 
+|D2 steel = 400
+|D2 bauxite = 800
+}}
+}}
+''<span style="color:red;">Var''<sup><span style="color:red;">?</span></sup></span>: Varies due to several factors, including (but no limited to) flagship level and each individual ship's level. Refer to [[Expedition 32]] page for more information.
+|-|Hourly yield=
+{{Expeditions|
+world = 4
+|{{Expedition
+|world = 4
+|odd = true
+|id = 25
+|name = {{tooltip|通商破壊作戦|快速かつ打撃力のある重巡戦隊を投入、敵後方補給線を遮断せよ！}}
+|time = 40:00
+|hq = 2
+|ship = 4 
+|fuel = 23
+|steel = 13
+}}
+{{Expedition
+|world = 4
+|id = 26
+|name = {{tooltip|敵母港空襲作戦|敵潜水艦の哨戒線を長躯突破し、有力な機動艦隊で敵母港を叩け！}}
+|time = 80:00
+|hq = 1.87
+|ship = 2.5
+|bauxite = 11.25
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x3}}
+}}
+{{Expedition
+|world = 4
+|odd = true
+|id = 27
+|name = {{tooltip|潜水艦通商破壊作戦|潜水艦2隻以上を伴う艦隊で、敵後方へ進出、通商破壊作戦実施！}}
+|time = 20:00
+|hq = 4
+|ship = 3
+|steel = 40
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x2}}
+}}
+{{Expedition
+|world = 4
+|id = 28
+|name = {{tooltip|西方海域封鎖作戦|潜水艦3隻以上の艦隊で、西方海域の敵水上艦の活動を封鎖せよ！}}
+|time = 25:00
+|hq = 4
+|ship = 5
+|steel = 36
+|bauxite = 14
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Medium).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Medium Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 4
+|odd = true
+|id = 29
+|name = {{tooltip|潜水艦派遣演習|潜水艦3隻以上の艦隊を編成し、長距離派遣の演習を実施せよ！}}
+|time = 24:00
+|hq = 4
+|ship = 4
+|ammo = 2
+|bauxite = 4
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 4
+|id = 30
+|name = {{tooltip|潜水艦派遣作戦|潜水艦4隻以上の艦隊を編成し、遠方友軍勢力との連絡を試みよ！}}
+|time = 48:00
+|hq = 2
+|ship = 3
+|ammo = 1
+|bauxite = 2
+|item1 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x3}}
+}}
+{{Expedition
+|world = 4
+|odd = true
+|id = 31
+|name = {{tooltip|海外艦との接触|潜水艦4隻以上の艦隊を派遣し、海外艦との邂逅を試みよ！}}
+|time = 02:00
+|hq = 25
+|ship = 25
+|ammo = 15 
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 4
+|id = 32
+|name = [[Expedition 32|{{tooltip|遠洋練習航海|練習巡洋艦を旗艦で遠洋練習航海を実施、基礎練度向上に努めよ！}}]]
+|time = 24:00
+|hq = 12.5
+|ship = [[Thread:193171#24|<span style="cursor:help;" title="Varies due to several factors, including (but no limited to) flagship level and each individual ship's levels"><span style="color:red;">Var<sup>?</sup></span></span>]]
+|fuel = 2
+|ammo = 2
+|steel = 2
+|bauxite = 2
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Large).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Large Furniture Coin Box]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x3}}
+}}
+{{ExpeditionS|odd = true
+|hourly = true
+|id = D1
+|D1 hq = 35
+|D1 ship = 45
+|D1 ammo = 20
+|D1 steel = 20
+|D1 bauxite = 100
+}}
+{{ExpeditionS
+|hourly = true
+|id = D2
+|D2 hq = 70
+|D2 ship = 90
+|D2 fuel = 
+|D2 ammo = 
+|D2 steel = 400
+|D2 bauxite = 800
+}}
+}}
+''<span style="color:red;">Var''<sup><span style="color:red;">?</span></sup></span>: Varies due to several factors, including (but no limited to) flagship level and each individual ship's level. Refer to [[Expedition 32]] page for more information.
+|-|Requirements=
+{{Expeditions|
+world = 4
+| req = true
+|{{Expedition2
+|world = 4
+|odd = true
+|id = 25
+|name = {{tooltip|通商破壊作戦|快速かつ打撃力のある重巡戦隊を投入、敵後方補給線を遮断せよ！}}
+|time = 40:00
+|level = 25
+|fleet = 2<span style="cursor:help;" title="Aviation cruisers [CAV] and Heavy cruisers [CA] are not interchangeable.">CA*<ref name="CA" /></span> 2DD
+|fuel = 5
+|ammo = 8
+}}
+{{Expedition2
+|world = 4
+|id = 26
+|name = {{tooltip|敵母港空襲作戦|敵潜水艦の哨戒線を長躯突破し、有力な機動艦隊で敵母港を叩け！}}
+|time = 80:00
+|level = 30
+|fleet = 1<span style="cursor:help" title="CVL or AV can be substituted for any CV.">CV*<ref name="CV" /></span> 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL<ref name="CL" /></span> 2DD
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition2
+|world = 4
+|odd = true
+|id = 27
+|name = {{tooltip|潜水艦通商破壊作戦|潜水艦2隻以上を伴う艦隊で、敵後方へ進出、通商破壊作戦実施！}}
+|time = 20:00
+|level = 1
+|fleet = 2<span style="cursor:help;" title="Aviation submarines [SSV] can be used as substitutes for Submarines [SS]">SS*<ref name="SS" /></span>
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition2
+|world = 4
+|id = 28
+|name = {{tooltip|西方海域封鎖作戦|潜水艦3隻以上の艦隊で、西方海域の敵水上艦の活動を封鎖せよ！}}
+|time = 25:00
+|level = 30
+|fleet = 3<span style="cursor:help;" title="Aviation submarines [SSV] can be used as substitutes for Submarines [SS]">SS*<ref name="SS" /></span>
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition2
+|world = 4
+|odd = true
+|id = 29
+|name = {{tooltip|潜水艦派遣演習|潜水艦3隻以上の艦隊を編成し、長距離派遣の演習を実施せよ！}}
+|time = 24:00
+|level = 50
+|fleet = 3<span style="cursor:help;" title="Aviation submarines [SSV] can be used as substitutes for Submarines [SS]">SS*<ref name="SS" /></span>
+|fuel = 9
+|ammo = 4
+}}
+{{Expedition2
+|world = 4
+|id = 30
+|name = {{tooltip|潜水艦派遣作戦|潜水艦4隻以上の艦隊を編成し、遠方友軍勢力との連絡を試みよ！}}
+|time = 48:00
+|level = 55
+|fleet = 4<span style="cursor:help;" title="Aviation submarines [SSV] can be used as substitutes for Submarines [SS]">SS*<ref name="SS" /></span>
+|fuel = 9
+|ammo = 7
+}}
+{{Expedition2
+|world = 4
+|odd = true
+|id = 31
+|name = {{tooltip|海外艦との接触|潜水艦4隻以上の艦隊を派遣し、海外艦との邂逅を試みよ！}}
+|time = 02:00
+|sum = 200
+|level = 60
+|fleet = 4<span style="cursor:help;" title="Aviation submarines [SSV] can be used as substitutes for Submarines [SS]">SS*<ref name="SS" /></span>
+|fuel = 5
+}}
+{{Expedition2
+|world = 4
+|id = 32
+|name = [[Expedition 32|{{tooltip|遠洋練習航海|練習巡洋艦を旗艦で遠洋練習航海を実施、基礎練度向上に努めよ！}}]]
+|time = 24:00
+|level = 5
+|fleet = <span style="cursor:help" title="Katori or Kashima (CT) must be the flagship">'''CT<ref name="CT" />*'''</span> 2DD 3XX
+|fuel = 9
+|ammo = 3
+}}
+{{ExpeditionS|odd = true
+|requirements = true
+|id = D1
+|D1 sum = 240
+|D1 level = 50
+|D1 fleet = <span style="cursor:help" title="An AV must be the flagship">'''1AV*'''</span><ref name="AV" /> 4DD <br>'''with'''<br>{{AA}} {{tooltip|250+|Summary AA including ship and equipment stats}}<br>{{ASW}} {{tooltip|240+|Summary ASW including ship and equipment stats}}<br>{{LOS}} {{tooltip|300+|Summary LOS including ship and equipment stats}}
+}}
+{{ExpeditionS
+|requirements = true
+|id = D2
+|D2 sum = ??
+|D2 level = 55
+|D2 fleet = <span style="cursor:help" title="An AS must be the flagship">'''1AS'''</span> 3SS(V) 1XX<br>'''with'''<br>{{Torpedo}} {{tooltip|390?+|Summary Torpedo including ship and equipment stats}}<br>{{AA}} {{tooltip|110?+|Summary AA including ship and equipment stats}}<br>{{ASW}} {{tooltip|55+|Summary ASW including ship and equipment stats}}<br>{{LOS}} {{tooltip|260+|Summary LOS including ship and equipment stats}}
+}}
+}}
+<references>
+<ref name="CV">''CV''*: CVL and AV can be substituted for CV. <br/></ref>
+<ref name="CL">Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="CA">Aviation cruisers [CAV] and Heavy cruisers [CA] are '''not''' interchangeable.</ref>
+<ref name="SS">Aviation submarines [SSV] can be used as substitutes for Submarines [SS]</ref>
+<ref name="CT">''CT''*: {{ShipLink|Katori}} or {{ShipLink|Kashima}} (CT, or CLp) must be the flagship. You cannot succeed in this expedition if you don't have one of these ships!''<br/></ref>
+<ref name="AV">"Seaplane Tenders [AV] '''cannot''' be substituted for Light Aircraft Carriers [CVL] or Aircraft Carriers [CV]</ref>
+
+</references>
+</tabber>
+*Expedition D1 can achieve great success without sparkling or special equipment.
+
+==World 5==
+<tabber>Total yield=
+{{Expeditions|
+world = 5
+|{{ExpeditionS
+|odd = true
+|support = true
+|id = 33
+|33 desc = '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+}}
+{{ExpeditionS
+|support = true
+|id = 34
+|34 time = 00:30
+|34 desc =  '''Sortie [[Support Expedition]] (boss)'''<ref name="suppexpd" />
+}}
+{{Expedition
+|world = 5
+|odd = true
+|id = 35
+|name = {{tooltip|MO作戦|空母2隻を含むMO機動部隊を投入し、南方海域制海権を確保せよ！}}
+|time = 07:00
+|hq = 100
+|ship = 100
+|steel = 240
+|bauxite = {{color|blue|'''280'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|id = 36
+|name = {{tooltip|水上機基地建設|水上機母艦2隻を南方に展開し、哨戒用の水上機基地を建設せよ！}}
+|time = 09:00
+|hq = 100
+|ship = 100
+|fuel = 480
+|steel = 200
+|bauxite = 200
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Medium).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Medium Furniture Coin Box]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|odd = true
+|id = 37
+|name = {{tooltip|東京急行|水雷戦隊に輸送ドラム缶を満載、南方への鼠輸送作戦を遂行せよ！}}
+|time = 02:45
+|hq = 50
+|ship = 65
+|ammo = {{color|blue|'''380'''}}
+|steel = {{color|blue|'''270'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|id = 38
+|name = {{tooltip|東京急行(弐)|可能な限り輸送ドラム缶を満載、南方への鼠輸送作戦を続行せよ！}}
+|time = 02:55
+|hq = 50
+|ship = 70
+|fuel = {{color|red|'''420'''}}
+|steel = 200
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|odd = true
+|id = 39
+|name = {{tooltip|遠洋潜水艦作戦|潜水母艦と潜水艦群による遠洋作戦を実施、敵勢力漸減に努めよ！}}
+|time = 30:00
+|hq = 130
+|ship = 320
+|ammo = 30
+|steel = 300
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Medium).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Medium Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|id = 40
+|name = {{tooltip|水上機前線輸送|軽巡旗艦と複数の水上機母艦で、水上機の前線輸送を実施せよ！}}
+|time = 06:50
+|hq = 60
+|ship = 70
+|fuel = 300
+|ammo = 300
+|bauxite = 100
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x3}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{ExpeditionS|odd = true
+|id = E1
+|E1 hq = 100
+|E1 ship = 
+|E1 fuel = 0
+|E1 ammo = 600
+|E1 steel = 600
+|E1 bauxite = 1000
+}}
+}}
+<references>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+</references>
+|-|Hourly yield=
+{{Expeditions|
+world = 5
+|{{ExpeditionS
+|odd = true
+|support = true
+|id = 33
+|33 desc = '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+}}
+{{ExpeditionS
+|support = true
+|id = 34
+|34 time = 00:30
+|34 desc =  '''Sortie [[Support Expedition]] (boss)'''<ref name="suppexpd" />
+}}
+{{Expedition
+|world = 5
+|odd = true
+|id = 35
+|name = {{tooltip|MO作戦|空母2隻を含むMO機動部隊を投入し、南方海域制海権を確保せよ！}}
+|time = 07:00
+|hq = 14
+|ship = 14
+|steel = 34
+|bauxite = {{color|blue|'''40'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Development Material.png{{!}}35px{{!}}link=Construction{{!}}Development Material]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|id = 36
+|name = {{tooltip|水上機基地建設|水上機母艦2隻を南方に展開し、哨戒用の水上機基地を建設せよ！}}
+|time = 09:00
+|hq = 11
+|ship = 11
+|fuel = 53
+|steel = 22
+|bauxite = 22
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Medium).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Medium Furniture Coin Box]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|odd = true
+|id = 37
+|name = {{tooltip|東京急行|水雷戦隊に輸送ドラム缶を満載、南方への鼠輸送作戦を遂行せよ！}}
+|time = 02:45
+|hq = 18
+|ship = 23
+|ammo = {{color|blue|'''138'''}}
+|steel = {{color|blue|'''98'''}}
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|id = 38
+|name = {{tooltip|東京急行(弐)|可能な限り輸送ドラム缶を満載、南方への鼠輸送作戦を続行せよ！}}
+|time = 02:55
+|hq = 17
+|ship = 24
+|fuel = {{color|red|'''144'''}}
+|steel = 69
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|odd = true
+|id = 39
+|name = {{tooltip|遠洋潜水艦作戦|潜水母艦と潜水艦群による遠洋作戦を実施、敵勢力漸減に努めよ！}}
+|time = 30:00
+|hq = 4
+|ship = 11
+|ammo = 1
+|steel = 10
+|item1 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Item Icon Furniture Box (Medium).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Medium Furniture Coin Box]] | text= x1}}
+}}
+{{Expedition
+|world = 5
+|id = 40
+|name = {{tooltip|水上機前線輸送|軽巡旗艦と複数の水上機母艦で、水上機の前線輸送を実施せよ！}}
+|time = 06:50
+|hq = 8
+|ship = 10
+|fuel = 43
+|ammo = 43
+|bauxite = 14
+|item1 = {{ItemStack | item= [[File:Item Icon Furniture Box (Small).png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}Small Furniture Coin Box]] | text= x3}}
+|item2 = {{ItemStack | item= [[File:Item Icon Instant Repair Material.png{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}Instant Repair]] | text= x1}}
+}}
+{{ExpeditionS|odd = true
+|hourly = true
+|id = E1
+|E1 hq = 100
+|E1 ship = 
+|E1 fuel = 0
+|E1 ammo = 600
+|E1 steel = 600
+|E1 bauxite = 1000
+}}
+}}
+<references>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+</references>
+|-|Requirements=
+{{Expeditions|
+world = 5
+|req = true
+|{{ExpeditionS
+|odd = true
+|support = true
+|id = 33
+|33 desc = '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+}}
+{{ExpeditionS
+|support = true
+|id = 34
+|34 time = 00:30
+|34 desc =  '''Sortie [[Support Expedition]] (boss)'''<ref name="suppexpd" />
+}}
+{{Expedition2
+|world = 5
+|odd = true
+|id = 35
+|name = {{tooltip|MO作戦|空母2隻を含むMO機動部隊を投入し、南方海域制海権を確保せよ！}}
+|time = 07:00
+|sum = 
+|level = 40
+|fleet = 2<span style="cursor:help" title="Light Aircraft Carrier [CVL] or Seaplane Tender [AV] can be substituted for any Aircraft Carrier [CV].">CV<ref name="CV" /></span> 1<span style="cursor:help;" title="Aviation cruisers [CAV] and Heavy cruisers [CA] are not interchangeable.">CA<ref name="CA" /></span> 1DD 2XX
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition2
+|world = 5
+|id = 36
+|name = {{tooltip|水上機基地建設|水上機母艦2隻を南方に展開し、哨戒用の水上機基地を建設せよ！}}
+|time = 09:00
+|sum = 
+|level = 30
+|fleet = 2<span style="cursor:help;" title="Seaplane Tenders [AV] cannot be substituted for Light Aircraft Carriers [CVL] or Aircraft Carriers [CV]">AV<ref name="AV" /></span> 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL<ref name="CL" /></span> 1DD 2XX
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition2
+|world = 5
+|odd = true
+|id = 37
+|name = {{tooltip|東京急行|水雷戦隊に輸送ドラム缶を満載、南方への鼠輸送作戦を遂行せよ！}}
+|time = 02:45
+|sum = 200
+|level = 50
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL<ref name="CL" /></span> 5DD
+|drums = 4<span style="cursor:help;" title="At least 3 drum carrying ships are required">(3*)<ref name="drum3" /></span>
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition2
+|world = 5
+|id = 38
+|name = {{tooltip|東京急行(弐)|可能な限り輸送ドラム缶を満載、南方への鼠輸送作戦を続行せよ！}}
+|time = 02:55
+|sum = 240
+|level = 65
+|fleet = 5DD 1XX
+|drums = 8<span style="cursor:help;" title="At least 4 drum carrying ships are required">(4*)<ref name="drum4" /></span>
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition2
+|world = 5
+|odd = true
+|id = 39
+|name = {{tooltip|遠洋潜水艦作戦|潜水母艦と潜水艦群による遠洋作戦を実施、敵勢力漸減に努めよ！}}
+|time = 30:00
+|sum = 180
+|level = 3
+|fleet = 1AS 4SS
+|fuel = 9
+|ammo = 9
+}}
+{{Expedition2
+|world = 5
+|id = 40
+|name = {{tooltip|水上機前線輸送|軽巡旗艦と複数の水上機母艦で、水上機の前線輸送を実施せよ！}}
+|time = 06:50
+|sum = 150
+|level = 25
+|fleet = <span style="cursor:help" title="A CL must be the flagship">'''CL*'''<ref name="CL40" /></span> 2<span style="cursor:help;" title="Seaplane Tenders [AV] cannot be substituted for Light Aircraft Carriers [CVL] or Aircraft Carriers [CV]">AV<ref name="AV" /></span> 2DD 1XX
+|drums = [[Great Success|△]]
+|fuel = 8
+|ammo = 7
+}}
+{{ExpeditionS|odd = true
+|requirements = true
+|id = E1
+|E1 sum = 
+|E1 level = 55
+|E1 fleet = 1<span style="cursor:help" title="A CA must be the flagship">'''CA*'''<ref name="CAE1" /></span> 1CL <br> 3DD 1XX <br> '''with'''<br>{{Firepower}} {{tooltip|450+|Summary Firepower including ship stats, equipment stats and some Firepower improvement bonuses}}<br>{{AA}} {{tooltip|350+|Summary AA including ship and equipment stats}}<br>{{ASW}}{{tooltip|330+|Summary ASW including ship and equipment stats}}<br>{{LOS}}{{tooltip|250+|Summary LoS including ship and equipment stats}}
+|E1 drums = 
+}}
+}}
+<references>
+<ref name="drum3">''3*'' : Minimum of 3 ships carrying drum(s) <br/></ref>
+<ref name="drum4">''4*'' : Minimum of 4 ships carrying drum(s) <br/></ref>
+<ref name="CV">''CV*'': CVL and AV can be substituted for CV. <br/></ref>
+<ref name="CL">Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="CA">Aviation cruisers [CAV] and Heavy cruisers [CA] are '''not''' interchangeable.</ref>
+<ref name="CL40">''CL*'': For expedition 40, the flagship '''must''' be a CL. Also Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="CAE1">''CA*'': For expedition E1, the flagship '''must''' be a CA. Aviation cruisers [CAV] are '''not''' interchangable.</ref>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+<ref name="AV">"Seaplane Tenders [AV] '''cannot''' be substituted for Light Aircraft Carriers [CVL] or Aircraft Carriers [CV]</ref>
+</references>
+</tabber>
+* Light carriers [CVL] and Seaplane tenders [AV] can be used as substitutes for Fleet carriers [CV]
+* Aviation submarines [SSV] can be used as substitutes for Submarines [SS]
+* Aviation cruisers [CAV] and Heavy cruisers [CA] are '''not''' interchangeable.
+* Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable
+* Battleships [BB] and Fast battleships [FBB] '''cannot''' be used as substitutes for Aviation battleships [BBV]
+* Light carriers [CVL] and Fleet carriers [CV] '''cannot''' be used as substitutes for Seaplane tenders [AV]
+* [AS] refers to Submarine Tender, with {{ShipLink|Taigei}} and {{ShipLink|Jingei}} being the '''only''' ships currently in this game of this type.
+* For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.
+
+==Event World==
+<tabber>Total yield=
+{{Expedition/Reference tables/Header|world=E}}
+<div style="position:relative;border:solid 1px lightgray;width:95%;border-radius:10px;padding:10px;margin:10px;margin-top:0px;">
+{| style="radius:10px;cellpadding:10px;width:100%;" align="center" height="35px" cellspacing=0
+! style="cellpadding:10px;width:4%;" |#
+! style="cellpadding:10px;width:24%;" |Name
+! style="cellpadding:10px;" |Time
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:7%;" |HQ
+! style="cellpadding:10px;width:7%;" |Ship
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:7%;" |[[File:Fuel.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Ammunition.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Steel.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Bauxite.png|30px|link=]]
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:20%;" colspan="2" |Rewards
+|-
+| style="background:gray;" colspan="14" |
+|-
+| align="center" height="35px" style="background:lightsalmon;color:#000"|Var
+| align="center" height="35px" style="background:lightsalmon;color:#000"|前衛支援任務
+| align="center" height="35px" style="background:lightsalmon;color:#000"|00:15
+| style="background:#9999cc;" rowspan="8" |
+| align="center" style="background:lightblue;color:#000" colspan="10" | '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+|-
+| align="center" height="35px" |Var
+| align="center" height="35px" |艦隊決戦支援任務
+| align="center" height="35px" |00:30
+| align="center" style="background:lightblue;color:#000" colspan="10" | '''Sortie [[Support Expedition]] (boss)''' <ref name="suppexpd" />
+|}</div>
+<references>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+</references>
+|-|Requirements=
+{{Expedition/Reference tables/Header|world=E}}
+<div style="position:relative;border:solid 1px lightgray;width:95%;border-radius:10px;padding:10px;margin:10px;margin-top:0px;">
+{| style="radius:10px;cellpadding:10px;width:100%;" align="center" height="35px" cellspacing=0
+! style="cellpadding:10px;width:4%" |#
+! style="cellpadding:10px;width:24%;" |Name
+! style="cellpadding:10px;" |Time
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:7%;" |Σ(Lv)
+! style="cellpadding:10px;width:7%;" |[[File:Flagship icon.png|link=]]
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:21%;" |Minimum Fleet Size
+! style="cellpadding:10px;width:7%;" |[[File:Drum.png|30px|link=]]
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:10%;" |[[File:Fuel.png|30px|link=]]
+! style="cellpadding:10px;width:10%;" |[[File:Ammunition.png|30px|link=]]
+|-
+| style="background:gray;" colspan="13" |
+|-
+| align="center" height="35px" style="background:lightsalmon;color:#000"|Var
+| align="center" height="35px" style="background:lightsalmon;color:#000"|前衛支援任務
+| align="center" height="35px" style="background:lightsalmon;color:#000"|00:15
+| style="background:#9999cc;" rowspan="10" |
+| align="center" colspan="9" style="background:lightblue;color:#000"| '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+|-
+| align="center" height="35px" |Var
+| align="center" height="35px" |艦隊決戦支援任務
+| align="center" height="35px" |00:30
+| align="center" colspan="9" style="background:lightblue;color:#000"| '''Sortie [[Support Expedition]] (boss)''' <ref name="suppexpd" />
+|-
+|}
+</div>
+<references>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+</references>
+</tabber>
+
+==FAQS==
+Some basic examples are shown here for 3 main situations of expedition composition:
+*'''Situation 1: Using Non-Specified Class as Flagship to Satisfy the level requirements'''
+** Example Expedition - Expedition 29 and/or 30
+*** ''Example 1'' - A lvl 95 BB as Flagship accompanying 3 lvl 15 SS
+*** ''Example'' ''2 ''- A lvl 95 SSV as Flagship and 3 additional SS
+****Yes, you '''CAN''' use a ship of '''ANY''' other classes that isn't SS (or if you want to use SS then you can too) as the flagship to satisfy the level requirement. For example...BB, CA, CV, CL, DD and all of its derivatives. The question is "do you want to save resources?"
+*'''Situation 2: Using Non-Specified Class in Composition to Satisfy the composition requirements'''
+** Example Expedition - '''ANY''' Composition requirements with "XX" in it
+*** ''Example 1'' - (Expedition 5) 1 CL, 2 DD and another 1 DD
+****Adding more ships is '''allowed'''. You don't need to have just 4. More is fine! Less than 4 isn't!
+****Under normal circumstances using exactly the minimum amount would be more resource-efficient... but you may want to use 6 ships even if only 4 ships are required if all 6 ships are sparkling, in order to guarantee Great Success.
+*** ''Example 2'' - (Expedition 2) 4 DD
+**** Add whatever you want. But think, will you want to use your BB for expedition if they waste a lot of resources?
+**Example Expedition #2 - Expedition 35 and 36
+*** ''Example 1'' - A lvl 45 CA, 1 DD and another 2 DD with 2 CVL
+*** ''Example 2'' - A lvl 45 CL, 1 DD and another 2 DD with 2 AV
+*'''Situation 2.1: Using Specified Class in Composition as Flagship to Satisfy the composition'''
+**Please note that some expedition requires a specific ship class as the flagship. Make sure to double-check to avoid additional runs.
+** Example Expedition - Expedition 24 - Requires '''CL''' as Flagship.
+*'''Situation 3: Expedition that requires [[Drum Canister]]'''
+** Example Expedition - Expedition 38 - 8(4*)
+*** ''Example'' - 1 lvl 90 CL as Flagship (carry 2 drums), 3 DD (each carrying 2 drums) and 2 DD (do not require drum, but can add if desired)
+****There are 4 ships carrying at least 1 drum each [The 4*]. Since each of them carry average 2 drums;in total, they carry 8 drums (2 + 2 + 2 + 2 = 8) or (1 + 1 + 3 + 3 = 8) or ( 1 + 1 + 1 + 2 + 1 + 2 = 8)

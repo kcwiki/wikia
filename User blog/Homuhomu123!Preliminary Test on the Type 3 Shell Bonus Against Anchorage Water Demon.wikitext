@@ -1,0 +1,146 @@
+==Motivation==
+Someone asked about detailed info on the Sanshiki (or Type 3 shell) bonus against installation type enemies. As I did some research on the subject, from the few tests I found, they somehow lacked clarity on explanation (at least for me), or just used the wrong formula.
+
+To be brief, the questions came in my mind were:
+*In night battles, Sanshiki bonus is pre-cap or post-cap ?
+*Does the bonus also apply in day battle (assume pre-cap) ?
+[[File:Sanshiki_dmg_test_intro.jpg|thumb|350px]]
+
+
+So that's about the motivation. On the otherhand, this also could be an excitement for the boring E-5 grinding process, :v
+
+Since preliminary study, some upgraded equipment (<span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:12.960000038147px;line-height:16.8479995727539px;">★</span>) were utilized. For those bonus on firepower are pretty minor, they are not considered in damage calculation. Nevertheless, when the experimental values are higher than expected, this factor will be taken into account.
+
+'''Latest Update:  May 18, 11:30 a.m. '''''(UTC +9:00)''
+
+
+
+====<u>Test Condition:</u>====
+*Morale >= 40  ''(aka. When the Mamiya icon stops flashing) ''
+*Only damage dealt to the Anchorage Water Demon (armor 220) will be collected.
+*AS always secured at boss node.
+*Saiun to prevent red T.
+*'''No night scout equipped'''.
+====<u>Test Ship:</u>====
+*Littorio ''('''T91/AP'''<span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:12.960000038147px;line-height:16.8479995727539px;">★</span> + 381mm_Kai<span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:12.960000038147px;line-height:16.8479995727539px;">★1,</span> ''381mm_Kai<span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:12.960000038147px;line-height:16.8479995727539px;">★1, </span>''Obsv.S)''
+*Nagato'' ('''Sanshiki''' + proto_41cm, 41cm, Obsv.S)''
+*Yamashiro'' ('''Sanshiki''' + proto_41cm, 41cm<span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:12.960000038147px;line-height:16.8479995727539px;">★7</span>, ZuiunM12)''
+*Choukai ''('''Sanshiki''' + SKC 20.3cm, 20.3cm(2)<span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:12.960000038147px;line-height:16.8479995727539px;">★6</span>, Obsv.S)''
+*Ryuujou
+*(SS)
+
+
+==Results (Speadsheet)==
+
+Here's the file. You are recommended to download it for better viewing.
+
+https://drive.google.com/file/d/0B1XBO3Wuk21LaUxwdk1BTFR6N2c/view
+
+*Data from day & night battles are recorded on 2 separate spreadsheets.
+*The columns on the left are experimental values, while those on the right are about theoretical damage calculation.
+
+Total of 50+ runs, while 30+ made it to the boss. A bit small on the samples but I've run out the last bit of steel. (I didn't know Littorio was such a glutten...)   :v
+
+
+==Findings & Brief Analysis:==
+===About the Enemy===
+Because the map (E-5) was cleared in hard mode, the boss encountered should be [http://kancolle.wikia.com/wiki/Anchorage_Water_Demon no.610] . ''(For 2015 spring event, boss form returns to normal after clearing it)''
+{| border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse;width:150pt" width="199"
+|- height="20" style="height:15.0pt"
+| class="xl69" colspan="2" height="20" style="height:15.0pt;mso-ignore: colspan;border-right:.5ptsolidblack;width:150pt" width="199"|'''<u>[http://kancolle.wikia.com/wiki/Anchorage_Water_Demon Anchorage Water Demon]</u>'''
+|- height="20" style="height:15.0pt"
+| class="xl63" height="20" style="height:15.0pt"|'''Armor High'''
+| align="right" class="xl68" style="border-left:none"|'''293.3'''
+|- height="20" style="height:15.0pt"
+| class="xl64" height="20" style="height:15.0pt;border-top:none"|Armor
+| align="right" class="xl65" style="border-top:none;border-left:none"|220
+|- height="20" style="height:15.0pt"
+| class="xl64" height="20" style="height:15.0pt;border-top:none"|'''Armor Low'''
+| class="xl67" style="border-top-style:none;border-left-style:none;text-align:right;"|'''146.7'''
+|}
+The following analysis are based on these assumption:
+*The damage calculation formula on the combat page is accurate.
+*Scratch damage deals 1% ~ 14% or targets current HP as damage (rounded down).
+*Damage equals or greater than a certain value (40+) will always be displayed as critical damage.
+
+
+===Day Battle===
+Very low experimental damage with an average of 30+. Mostly scratching, even if double attack or green T. In addition, '''scratch damage ranges from 0 to 46''' for Anchorage Water Demon (HP full = 330).
+
+Some "real damage" (non-scratch damage) can also fall into this interval, thus not very valuable for research.
+
+Perhaps it's better to record the target's current health, too. For example, when Anchorage Water Demon's health is 100, there is no way you can hit a scratch damage of 16.
+
+As for critical message, there were two damages of 42 '''NOT''' displayed in golden digits. However, all damage equal or greater than 43 gave critical message.
+
+Some values smaller than 43 were also displayed as "critical", in this case they should be true criticals, but not necessarily true damage, since even with critical modifier ''(x1.5 post-cap)'', their attack powers cannot exceed Anchorage Water Demon's high armor roll (293.3).
+
+What's worthy mentioning is Littorio did a couple of AP cut-ins on the boss, the highest damage was 162 (Green T) even when she was moderately damaged. Even if we consider the firepower bonus from those improvement (<span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:11.6640005111694px;line-height:normal;">1.5×√☆ </span>for 381mm, <span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:11.6640005111694px;line-height:normal;">√☆ </span>for AP shell, source [http://wikiwiki.jp/kncl/?%B2%FE%BD%A4%B9%A9%BE%B3 wikiwiki] ), the highest theoretical damage should be 152. A probable reason is I haven't considered the bonus from '''AP shell''' on installation type enemies, 
+
+
+====Does Sanshiki bonus apply in the Day?====
+Given the data we have, it is rather hard to make a conclusion on that but here are the analysis.
+
+1)  What happens if Sanshiki bonus (x2.5) is '''post-cap''' in day battle?
+
+*Even single attacks from head-on engagement, Nagato & Yamashiro can achieve post-cap attack power of 290, which results in '''scratch ~> 70 ~> 143''' damage. Thus not possible.
+2)  What happens if Sanshiki bonus (x2.5) is '''pre-cap '''in day battle?
+*The most powerful single attacks are from Nagato & Yamashiro's ''(Attack power (post-cap) = 161.8 / 164.4 / 166.8, for Head-on, Parallel & Green T respectively)'', What's worthy mentioning is that even Choukai can achieve an attack power of 157 / 160 / 162.
+*The resulting damages are scratch ~> 20, not differentiable.
+*DA boosts the attack powers to 192+, which causes '''scratch ~> 45+ damage''', not differentiable either.
+*Similar analysis can be done for critical damage. The highly volatile rolling on the armor values, however, makes all data obtained explainable.
+3)  What happens if Sanshiki bonus does not exist in day battle?
+*Similar to pre-cap assumption, but all non-critical attacks become scratch-like damage (46 or lower).
+*One of the extreme case was found from Choukai, DA & Green T, which inflicted a '''critical''' damage of 80. This value is a little bit higher than our best estimation.
+In general, it is rather safe to say that the 2.5x modifier cannot be post-cap, However, according to limited sample size, it is inconclusive that whether Sanshiki applies in the day as pre-cap modifier or not. On the otherhand, it does not really make a difference since day cap is too low for any miracle to happen, unless post-cap.
+
+
+===Night Battle===
+Because we assume engagement form in the day will not affect night battles, while all the attacks recorded are DA, the analysis would be much simpler. The high damage cap (300) also makes critical damages pretty distinguishable from normal ones.
+
+Littorio with type 91 AP shell was pretty harmless. The average damage dealt was 20+, mostly scratch damage. Only 5 / 48 attacks were critical, while the highest damage being 108.
+
+Yamashiro, Nagato & Choukai received drastically increased attack power, dealing an average of 100 damage if not missed ''(for double attacks, miss = scratch damage)''. When critical & with a not-so-high armor roll, the digit can hit 200+. The higest damage (284) was from Choukai when auto-sparkled.
+
+Attacks from BBs under chuuha are not so different than those in full health. Choukai seems to suffer much more from that.
+
+
+====Does Sanshiki bonus apply at Night?====
+It surely does. The thing is we want to know if it is pre-cap or post-cap.
+
+1)  What happens if Sanshiki bonus (x2.5) is '''post-cap''' in night battle?
+*For Yamashiro & Nagato, theoretical damage would range from '''129 ~ 203 ~ 276. '''However, we have seen multiple values between 54 & 127, thus not possible.
+2)  What happens if Sanshiki bonus (x2.5) is '''pre-cap''' in night battle?
+*Check the table of "<u>Theoretical Damage Output</u>" to see the calculation. It seems that every data on the list fall into those intervals.
+
+
+
+
+==More About the Experiment:==
+===Anti-Submarine Attack from Anchorage Water Demon===
+Various reports saying the boss in its normal form cannot sink your sub, even at 1HP. During the first 30+ runs, it seemed to be true for me as well.
+
+As a by-product, I did a daring experiment to see if her ASWs were really that awkward.
+
+====<u>Test Condition:</u>====
+[[File:Anchorage_Water_Demon_-_Anti-sub.jpg|thumb|480px]]
+
+*Same as above, but a Lv.3 Maruyu was brought to tank the damage.
+*Advanced her to the boss with 1HP.
+*Engagement form was Parallel
+
+====<u>Results:</u>====
+*In the 1st shelling phase, she "dodged" all the attacks from enemy planes.
+*During the 2nd shelling phase, she received 1 damage from Anchorage Water Demon. >> Sunk
+*I guess I shouldn't have trolled with the mighty Demon sama  :v
+
+
+
+
+
+
+
+===Illustration on the Data Collection===
+
+[[File:Sanshiki_dmg_test.jpg|left]][[File:Sanshiki_dmg_test_-_2.jpg|left]]
+[[Category:Blog posts]]

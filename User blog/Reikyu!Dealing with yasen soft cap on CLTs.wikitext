@@ -1,0 +1,87 @@
+AKA why I'm thinking of giving up on cutinkami.
+
+This will look at comparing DA and torpedo cut-in setups for CLTs.
+
+
+From the [[combat]] thread for reference:
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table"
+! rowspan="3" scope="col" style="text-align:center;"|'''Damage ='''
+! scope="col"|'''[http://kancolle.wikia.com/wiki/Combat#Basic_Attack_Power Basic Attack Power]'''
+x
+[http://kancolle.wikia.com/wiki/Combat#Pre-Cap_Modifiers Pre-Cap Modifiers]
+! scope="col"|x
+! scope="col"|'''[http://kancolle.wikia.com/wiki/Combat#Post-Cap_Modifiers Post-Cap Modifiers]'''
+! scope="col"| -
+! scope="col"|'''Enemy Armor'''
+! scope="col"|x
+! scope="col"|'''Random Number<br />(between 2/3 ~ 4/3)'''
+|-
+! colspan="7" rowspan="1" scope="col" style="text-align:center;"|x
+|-
+! colspan="7" rowspan="1" scope="col" style="text-align:center;"|'''[http://kancolle.wikia.com/wiki/Combat#Remaining_Ammo_Modifier Remaining Ammo Modifier]'''
+|}
+Night Battle Basic Attack Power = Firepower + Torpedo
+
+Attack Power After Caps = x + sqrt(pre caps attack power - x), Where x represents the attack power cap.
+
+Attack Power Soft Cap = 300 for Night Battle
+
+Pre-Cap Modifiers in play: Night Battle Special Attacks
+
+
+
+For night battles, specifically CLT, you have primarily two ways to equip your ship.
+
+Double Attack: 2 guns + ko-hyoteki = 120% damage modifier x 2 hits
+
+Cut-in: 2 torpedos + ko-hyoteki = 150% damage modifier x 2 hits
+
+
+
+The advantage of double attack is that it procs very reliably. The advantage of torpedo cut-in is that it has a higher damage modifier. Both layouts are pretty popular for CLT depending on a variety of factors like admiral playing style, ship luck, ship fleet position, and enemy strength. Let's take a closer look at what goes on when the damage calculations are made.
+
+
+
+Base FP on Kitakami/Ooi Kai Ni: 63
+
+Base Torpedo on Kitakami/Ooi Kai Ni: 139
+
+
+
+Double Attack
+
+Your standard double attack setup for a CLT is 2 x 15.5 yellows + ko-hyoteki
+
+FP(77) + Torpedo(151) = 228 yasen power x 120% double attack damage modifer = '''273.6 damage''' pre armor/ammo
+
+
+
+Torpedo Cut-in
+
+Your standard torpedo cut-in setup for a CLT is 2 x quints + ko-hyoteki
+
+FP(63) + Torpedo(175) = 238 yasen power x 150% cut-in damage modifier = 357 damage pre softcap/armor/ammo
+
+As 357 is over the 300 softcap for night battle, we take the square root of the excess and add it to 300 to get '''307.55 damage''' pre armor/ammo
+
+
+
+As you can see, a CLT loses a lot of potential night battle power by going over the softcap.  A DD doesn't have this problem as their base stats are a lot lower than a CLT.  Right now we are looking at a 34 attack point difference which is pretty significant, but is it worth the chance of a failed cut-in?  A successful cut-in will be worth 34 x 2 damage over the double attack (pre ammo).  A failed cut-in will be worth... something horrible more often than not.
+
+If you didn't notice, I'm using basic equipment for this example.  While you can +4 or +6 your quints for extra attack damage for your opening/closing torpedo strikes, it will have barely any effect at all on your night battle power due to the softcaps.  A double attack setup doesn't have this problem, and upgraded guns can allow you to get close the gap somewhat.
+
+
+
+Double Attack with Prinz guns + ko-hyoteki
+
+FP(83) + Torpedo(151) = 234 yasen power x 120% double attack damage modifier =''' 280.8 damage''' pre armor/ammo
+
+Double Attack with +4 20.3(3)s + ko-hyoteki
+
+FP(87) + Torpedo(151) = 238 yasen power x 120% double attack damage modifier = '''285.6 damage''' pre armor/ammo
+
+
+
+And who knows what the future might hold.  Upgradable prinz guns? Upgradable ko-hyotekis?  Unless they uncap that 300 the CLT torpedo cut-in has nowhere to go.
+[[Category:Blog posts]]

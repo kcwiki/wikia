@@ -1,0 +1,867 @@
+{{Map/Header}}
+{{Map/Info
+|en = Okinoshima Island
+|jp = 沖ノ島海域
+|romaji = Okinoshima-kaiiki
+|strategy_name = [[wikipedia:Battle_of_the_Philippine_Sea|Operation A-Go: The Fleet's Decisive Battle]]
+|strategy_name_ja = あ号艦隊決戦
+|strategy_info = A powerful enemy battlegroup is invading the waters around Okinoshima Island. Sail out in full force and annihilate them!
+|strategy_info_ja = 沖ノ島海域に襲来した、有力な敵機動部隊を迎撃、全力出撃で、これを撃滅せよ！
+|exp_ship = 300
+|exp_hq = 100
+|exp_hq_boss = 1200
+}}
+{{MapBranchingTable
+|id = 2-4
+|A -> B/resource = * 20% if the fleet contains CVL; 40% without CVL
+|A -> F = * 20%
+|A -> K/resource = * 60% if the fleet contains a CVL; 40% without CVL
+
+|D/battle -> E/resource = * 70% if the fleet contains a CL; 40% without CL
+|D/battle -> G = * 30% if the fleet contains a CL; 60% without CL
+
+|G/empty -> H = * 90% if the fleet contains CV; 40% without CV
+|G/empty -> I = * 10% if the fleet contains CV; 60% without CV
+
+|L -> M/resource = * 70% if the fleet contains a DD; 40% without DD
+|L -> O = * 30% if the fleet contains a DD; 60% without DD
+
+|O/battle -> J = * Random 40% chance
+|O/battle -> P = * Random 60% chance
+}}
+<!-- 
+TsunDB 2018-09-06
+
+A->?
+CVL: has ->B: 19% (1968)
+CVL: has ->F: 20% (2061)
+CVL: has ->K: 61% (6225)
+CVL: doesnt ->B: 41% (2535)
+CVL: doesnt ->F: 19% (1190)
+CVL: doesnt ->K: 40% (2496)
+
+D->?
+CL: has ->E: 69% (1378)
+CL: has ->G: 31% (609)
+CL: doesnt ->E: 40% (300)
+CL: doesnt ->G: 60% (443)
+
+G->?
+CV: has ->H: 90% (2337)
+CV: has ->I: 10% (271)
+CV: doesnt ->H: 43% (462)
+CV: doesnt ->I: 57% (610)
+
+L->?
+DD: has ->M: 70% (2243)
+DD: has ->O: 30% (971)
+DD: doesnt ->M: 40% (2030)
+DD: doesnt ->O: 60% (3108)
+
+O->? thought to be affected with CV
+CV: has ->J: 40% (1052)
+CV: has ->P: 60% (1566)
+CV: doesnt ->J: 37% (460)
+CV: doesnt ->P: 63% (769)
+ -->
+===Tips===
+* A fleet with CVL is recommended as that may give you (upwards of 60%) a chance take on the south route (A → K). A fleet without CVL gives you a lesser chance with the same south route.<sup class="plainlinks">[http://kancolle.wikia.com/wiki/File:World_2-4_branching_rule_tests.png citation]</sup>
+* If you are aiming for the boss node to clear the map and failed to take the A-F route, it is recommended to just end the sortie, unless you have an AO ([[Hayasui]] or [[Kamoi|Kamoi normal/Kai Bo]]) in the fleet, with at least one can of [[Underway Replenishment]] equipped.
+** A-F route will guarantee you a boss fight and take only 3 fight before boss node because node G will always be avoid battle node if your fleet comes from node F.
+** On the other hand, A-B-C-D-G route is impossible for boss clear without resupplying on the way. Approaching G node from D node will result in enemy encounter (red node) and you will run out of fuel and ammo (5 battles) by the time you get to boss node, causing you to do only scratch damage. If you still wish to continue, for highest EXP gain, end the sortie around the G-H/-I node.
+***Of course, having a fleet oiler in the fleet would be a different story. Reaching the boss node will prompt the activation dialog for Underway Replenishment(s) to be triggered, meaning that regardless of which approach the player's fleet used to reach the boss, their ships will always have the fuel and ammo necessary to fight. Obviously, it goes without saying that the AO has to be equipped with at least one Underway Replenishment for this method to work. Also, the fragility of the ship has to be taken into consideration. Putting her at the flagship position, bringing [[Aerial Combat#Anti-Air Cut In|AACI ships]] to deal with enemy planes in the bombing phase (more often than not they'll successfully hit the flagship, to great effect), or in the most extreme of cases, give her a [[Emergency Repair Personnel]], are the several possible solutions to keep her safe during the sortie.
+** The A-K route is an alternative route that can also lead to the boss. The chance of reaching the boss this way however, is lower due to the potential offroutes L-M and O-P.
+* A most conventional way to finish 2-4 is using 「BBx4 CVx2」or「BBx3 CVx3」. (BBs are stronger; Modernizing/Leveling them is highly recommended). 「BBx2 CVx4」 may be slightly cheaper for high-level fleets with strong fighters and bombers.
+** It is strongly recommended to make use of the [[Combat#.C2.A0Artillery_Spotting_.28Post-Cap_Modifier.29|Artillery spotting]] and [[Combat#Night_Combat|Night Combat]] mechanics to deal higher damage.
+* Subs can be a cheap way to clear the map, but will require a lot of patience. This generally involves trying over and over so you can avoid the highly dangerous line abreast formations and get to the boss node. It is possible to clear 2-4 with a single moderately leveled, maxed armor sub. Consider farming 1-5 if you are in need of subs.
+
+===Sample Fleet and Equipment Setup===
+
+Beginners are recommended to try to follow these exact setups as much as possible.
+*'''Note to Beginners''': You do not need to gain S-Rank Victory on the Boss node to clear this map. Just obtain rank B or higher victory and you will be able to clear the map.
+*The ships do not have to be the exactly the same ship as listed in the sample.
+**Ex. {{ShipLink|Kongou Kai}} who is in the sample can be {{ShipLink|Kirishima Kai}} instead, or {{ShipLink|Nagato Kai}}, or even {{ShipLink|Hyuuga Kai}}, depending on the Battleship you have in your fleet.
+
+*You are recommended to follow the equipment setup, but exceptions may occur where you might need to equip more fighters or more seaplane bombers for the extra fighter power.
+** You need at least 123/246 fighter power to get AS/AS+ respectively assuming you have to go through node H.
+
+'''Fleet''': 4 Battleships (BB/BBV/FBB) and 2 Standard Aircraft Carriers (CV)
+
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View 4 BB 2 CV Sample Fleet
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|‎Kongou/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Recon]]
+|{{RedAmmo}}[[List of Shells by stats|AP Shell]] ''(Recommended)''<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+{{Radar}}[[List of Radars by stats|Radar]]
+|-
+|{{ShipBattleCardKai|Kirishima/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Recon]]
+|{{RedAmmo}}[[List of Shells by stats|AP Shell]] ''(Recommended)''<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+{{Radar}}[[List of Radars by stats|Radar]]
+|-
+|{{ShipBattleCardKai|Hyuuga/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+{{RedAmmo}}[[List of Shells by stats|AP Shell]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Fusou/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+{{RedAmmo}}[[List of Shells by stats|AP Shell]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Kaga/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{GreenPlane}}[[Type 0 Fighter Model 52]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Akagi/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{GreenPlane}}[[Type 0 Fighter Model 52]] [[File:Aircraft Proficiency Gold Chevron.png]]
+|}
+
+'''Fleet''': 3 Battleships (BB/BBV/FBB) and 3 Standard Aircraft Carriers (CV)
+
+*1 CV can be substituted by a remodeled (kai) CVL.
+
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View 3 BB 3 CV Sample Fleet
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|‎Hiei/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Recon]]
+|{{RedAmmo}}[[List of Shells by stats|AP Shell]] ''(Recommended)''<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+{{Radar}}[[List of Radars by stats|Radar]]
+|-
+|{{ShipBattleCardKai|Ise/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+{{RedAmmo}}[[List of Shells by stats|AP Shell]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Fusou/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+{{RedAmmo}}[[List of Shells by stats|AP Shell]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Souryuu/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{GreenPlane}}[[Type 0 Fighter Model 52]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Kaga/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Akagi/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{GreenPlane}}[[Type 0 Fighter Model 52]] [[File:Aircraft Proficiency Gold Chevron.png]]
+|}
+
+'''Fleet''': 2 Battleships (BB/BBV/FBB) and 4 Standard Aircraft Carriers (CV)
+*1 to 2 CV can be substituted by 1 to 2 remodeled (kai) CVLs.
+
+{| style="width:700px;" class="wikitable mw-collapsible mw-collapsed"
+|-
+! colspan="5" |
+View 2 BB 4 CV Sample Fleet
+|-
+! scope="col"|Ship
+! scope="col"|Equipment #1
+! scope="col"|Equipment #2
+! scope="col"|Equipment #3
+! scope="col"|Equipment #4
+|-
+|{{ShipBattleCardKai|Haruna/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Recon]]
+|{{RedAmmo}}[[List of Shells by stats|AP Shell]] ''(Recommended)''<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+{{Radar}}[[List of Radars by stats|Radar]]
+|-
+|{{ShipBattleCardKai|Yamashiro/Kai}}
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{RedGunHeavy}}[[35.6cm Twin Gun Mount]]<br />
+'''OR'''<br />
+{{RedGunHeavy}}[[41cm Twin Gun Mount]]
+|{{Seaplane}}[[List of Seaplanes by stats|Recon]]<br />
+'''OR'''<br />
+{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]<br />
+{{RedAmmo}}[[List of Shells by stats|AP Shell]]
+|{{Seaplane}}[[List of Seaplanes by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Souryuu/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{GreenPlane}}[[Type 0 Fighter Model 52]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Kaga/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Akagi/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{GreenPlane}}[[Type 0 Fighter Model 52]] [[File:Aircraft Proficiency Gold Chevron.png]]
+|-
+|{{ShipBattleCardKai|Hiyou/Kai}}
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|{{BluePlane}}[[List of Torpedo Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]] ''(Recommended)''<br />
+'''OR'''<br />
+{{RedPlane}}[[List of Dive Bombers by stats|Bomber]][[File:Aircraft Proficiency Gold Chevron.png]]
+|}
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=207|y=234}}
+{{Map/ImageNode|K|x=340|y=217}}
+{{Map/ImageNode|F|x=261|y=152}}
+{{Map/ImageNode|B|x=131|y=190}}
+{{Map/ImageNode|C|x=152|y=132}}
+{{Map/ImageNode|D|x=295|y=98}}
+{{Map/ImageNode|E|x=164|y=77}}
+{{Map/ImageNode|L|x=375|y=294}}
+{{Map/ImageNode|M|x=283|y=293}}
+{{Map/ImageNode|N|x=198|y=287}}
+{{Map/ImageNode|G|x=380|y=128}}
+{{Map/ImageNode|I|x=469|y=204}}
+{{Map/ImageNode|H|x=489|y=84}}
+{{Map/ImageNode|O|x=481|y=281}}
+{{Map/ImageNode|P|x=645|y=284}}
+{{Map/ImageNode|J|x=604|y=225}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵巡洋艦隊
+|A
+|Normal
+|{{Formation|Line Abreast}}
+|Heavy Cruiser Ri-Class
+|Torpedo Cruiser Chi-Class
+|Torpedo Cruiser Chi-Class
+|Light Cruiser To-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class
+|Torpedo Cruiser Chi-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|A
+|Normal
+|{{Formation|Line Abreast}}
+|Heavy Cruiser Ri-Class
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Light Cruiser To-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|A
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+}}
+{{NodeInfo
+|B
+|Resource
+|Ammo
+|20-25-30-35-40-50-55-60
+}}
+{{Map/Nodes|name=敵水上打撃艦隊
+|C
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Echelon}}
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser To-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Line Abreast}}
+|Battleship Ru-Class
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|D
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Elite
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{NodeInfo
+|E
+|Resource
+|Bucket
+|1
+}}
+{{Map/Nodes|name=敵水上打撃艦隊
+|F
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|F
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|F
+|Normal
+|{{Formation|Echelon}}
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser To-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|G
+|Empty
+|-
+|G
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|G
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Elite
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|H
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|H
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|H
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Elite
+}}
+{{Map/Nodes|name=敵精鋭水雷戦隊
+|I
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|-
+|I
+|Normal
+|{{Formation|Line Abreast}}
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+}}
+{{Map/Nodes|name=敵侵攻中核艦隊
+|J
+|Boss
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|J
+|Boss
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|J
+|Boss
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|J
+|Boss
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|J
+|Boss
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+}}
+{{NodeInfo
+|K
+|Resource
+|Fuel
+|20-25-30-35-40-50-55-60
+}}
+{{Map/Nodes|name=敵水上打撃艦隊
+|L
+|Normal
+|{{Formation|Line Abreast}}
+|Battleship Ru-Class
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|L
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|L
+|Normal
+|{{Formation|Echelon}}
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser To-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{NodeInfo
+|M
+|Resource
+|Devmat
+|1
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|N
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|N
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Elite
+|-
+|N
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+}}
+{{Map/Nodes|name=敵精鋭水雷戦隊
+|O
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|-
+|O
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+|-
+|O
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ni-Class
+|Destroyer Ni-Class
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|P
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|P
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|P
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class
+|Standard Carrier Wo-Class
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Elite
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, C, D, F, G, H, I, J, L, N, O, P
+|boss = J
+|Akagi: J
+|Arare: A, C, D, H, I, N, O
+|Arashio: A, C, F, H, N
+|Asashio: A, C, F, H, J, L, N, P
+|Ashigara: A, C, D, F, G, H, J, L, O, P
+|Atago: A, C, D, F, H, J, L, N, O, P
+|Ayanami: A, C, F, L, N
+|Chikuma: A, C, D, F, I, J, L, N, O
+|Chitose: A, C, D, F, L, N, O, P
+|Chiyoda: A, C, D, H, I, L, N, O, P
+|Choukai: A, C, D, F, G, J, L, N, O
+|Fubuki: A, C, D, G, H, I, L, N, O, P
+|Fusou: A, C, D, F, G, H, I, J, L, N, O, P
+|Haguro: A, C, D, F, G, H, J, L, N, O
+|Hamakaze: J
+|Haruna: J
+|Hatsuyuki: A, D, F, I, N, O, P
+|Hiei: F, J
+|Hiyou: A, C, D, F, J, L, N, P
+|Hyuuga: A, C, D, F, G, H, I, J, L, N, O, P
+|Inazuma: D
+|Ise: A, C, D, F, G, H, I, J, L, N, O, P
+|Isonami: A, D, J, P
+|Isuzu: A, C, D, F, L
+|Jintsuu: A, C, D, G, H, I, J, L, N, O
+|Junyou: A, C, D, G, H, I, L, N, O, P
+|Kaga: J
+|Kagerou: A, C, D, F, H, I, J, L, N, O, P
+|Kako: A, D, G, H, N, P
+|Kasumi: A
+|Kinu: H, J
+|Kirishima: H, J
+|Kisaragi: D
+|Kiso: A, C, F, H, L, N
+|Kitakami: A, C, D, F, H, J, L, N, O, P
+|Kongou: J
+|Kuroshio: A, C, D, F, G, I, J, L, O, P
+|Makigumo: J
+|Maya: A, C, D, J, L, O, P
+|Michishio: A, C, D, F, L, N, O
+|Miyuki: A, C, D, G, N, P
+|Mogami: A, C, F, G, H, J, L, N, P
+|Murakumo: A, C, F, G, L
+|Mutsu: J
+|Myoukou: A, C, D, H, J, L, N, P
+|Nachi: A, C, D, F, H, J, L, N, O, P
+|Nagato: J
+|Naka: A, C, F, L, N, O, P
+|Natori: A, C, D, L, O, P
+|Nenohi: D, F
+|Ooi: A, C, D, F, G, H, I, J, L, N, O, P
+|Ooshio: A, D, J, L, O
+|Ryuujou: A, C, D, F, H, I, J, L, N, O, P
+|Sendai: A, C, D, F, G, I, L, N, O
+|Shigure: A
+|Shikinami: A, D, G, O
+|Shimakaze: A, C, D, F, G, H, I, J, L, N, O, P
+|Shiranui: A, D, F, H, I
+|Shirayuki: D
+|Shouhou: A, C, D, F, G, H, J, L, N, O, P
+|Souryuu: A, J
+|Taigei: J
+|Takao: A, C, D, F, H, I, J, L, N, P
+|Tama: A, C, I, L, N, O
+|Tatsuta: A, F, G, J, L
+|Tenryuu: A, C, D, F, I, J, L, N, O, P
+|Tone: A, C, F, I, J, L, N, O, P
+|Urakaze: J
+|Uranami: H, J, P
+|Ushio: H
+|Uzuki: J
+|Wakaba: D
+|Yamagumo: J
+|Yamashiro: A, C, D, F, H, J, L, N, O, P
+|Yayoi: J
+|Yukikaze: D, J
+|Yura: A, C, L, N, O, P
+|Yuubari: A
+}}
+{{SectionEnd}}

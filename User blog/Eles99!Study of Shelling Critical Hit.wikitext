@@ -1,0 +1,855 @@
+This research is carried out mainly to deepen our knowledge about [Critical hit] in Kancolle, and also to justify the validity of the unproven fact "''[[Type 91 Armor-Piercing (AP) Shell|Type 91 Armor-Piercing Shell]] increases critical hit chance''"
+
+
+
+<u>'''Currently understanding about Critical in Kancolle'''</u>
+
+Any damage that are above 39 will be shown as a critical hit. However, observations confirmed that the "real" critical hit occurs when your damage is 150% of your expected damage.
+
+For now, all we know about the "real" critical hit is that it occurs at random. There is no study about its occurance chance at the moment.
+
+==What affects shelling damage?==
+
+Shelling damage output is affected by
+*Firepower
+*Engagement form
+*#T-Cross (Advantage), AKA Green T : 120%
+*#Parallel : 100%
+*#Head-on : 80%
+*#T-Cross (Disadvantage), AKA Red T : 60%
+*"Real" critical hit : 150%
+*Enemy armor
+*Ammo bars left 
+'''Example:'''
+
+A destroyer(DD) with 53Firepower when attacking a low armor destroyer enemy in 1-1-A, will deal an average 53 shelling damage with parallel engagement (100%), 63 shelling damage with green T (120%) and etc...
+
+When a real critical hit happens, for example with parallel engagement, the shelling damage will be around 80, which is 150% of an average damage. 
+
+
+
+<u>''Study of [[Type 91 Armor-Piercing (AP) Shell|Type 91 Armor-Piercing Shell]]''</u>
+
+'''Effects :{{Template:Firepower}}+8, {{Template:Hit}}+1, Increases critical hit chance'''
+
+Assume that Type 91 AP shell really increases critical hit chance, then critical hit will probably be affected by one of its stat (Firepower/Accuracy), unless critical hit chance is a hidden stat. Critical hit is unlikely a hidden stat because as shown in Dragonjet's equipment data decode, all it does is increases firepower and <u>shelling</u> accuracy. 
+
+
+
+'''Hypothesis:'''
+
+<strike>Critical hit chance is affected by accuracy{{Template:Hit}}</strike>
+
+Critical hit chance is affected by Type 91 AP Shell{{Template:RedAmmo}}
+
+Critical hit chance is affected by firepower{{Template:Firepower}}
+
+'''Method:'''
+
+By having only 1 ship in fleet, equipped with and without equipments affecting accuracy, will be sent to sortie to record the following informations:
+*Engagement form
+*Damage dealt
+The occurance of critical hits will be noticed through its 150% of average damage. 
+
+=='''Result:'''==
+
+
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Test#1 Accuracy X Critical hit
+|-
+|
+The following tests were carried out in 1-1.
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Amatsukaze ACC+0
+|-
+| style="text-align: center; background-color: LightSkyBlue;"|'''Equipments'''
+|-
+|
+*[[12.7cm Twin Gun Mount]]
+*[[12.7cm Twin Gun Mount]]
+*[[New High Pressure-Temperature Steam Boiler]]
+
+<p style="text-align:center;">{{Template:Firepower}}53 {{Template:Luck}}17 {{Template:Hit}}+0</p>
+|-
+|
+*para=Parallel Engagement
+*headon=Head-on Engegement
+*GT=Green T
+*RT=Red T
+*'''Critical hit''' = '''*'''
+|-
+|
+#para 52<br />
+#headon 39<br />
+#GT 60<br />
+#headon 41<br />
+#para 50<br />
+#headon 40<br />
+#headon 41<br />
+#para 53<br />
+#para 50<br />
+#headon 40<br />
+#para 52<br />
+#para 53<br />
+#headon 38<br />
+#headon 42<br />
+#para 52<br />
+#para 50<br />
+#GT 63<br />
+#headon 40<br />
+#para 54<br />
+#para 52<br />
+#para 52<br />
+#headon 41<br />
+#para 52<br />
+#headon 39<br />
+#headon 37<br />
+#GT 63<br />
+#para 53<br />
+#headon 38<br />
+#para miss<br />
+#para miss ...?<br />
+#para 49<br />
+#para 52<br />
+#para 52<br />
+#'''headon 64*'''<br />
+#para 53<br />
+#para 49<br />
+#headon 38<br />
+#para 53<br />
+#GT 64<br />
+#headon 40<br />
+#para 53<br />
+#RT 28<br />
+#headon 40<br />
+#headon 38<br />
+#para 51<br />
+#'''para 82*'''<br />
+#para 52<br />
+#'''para 81*'''<br />
+#RT miss<br />
+#para 51<br />
+#para 53<br />
+#para 53<br />
+#para 50<br />
+#'''RT 45*'''<br />
+#para 54<br />
+#para 54<br />
+#headon 41<br />
+#para 51<br />
+#RT 26<br />
+#para 54<br />
+#headon 40<br />
+#'''para 79*'''<br />
+#para 51<br />
+#para 52<br />
+#para 53<br />
+#para 52<br />
+#'''GT 98*'''<br />
+#headon 38<br />
+#headon 41<br />
+#GT miss<br />
+#GT miss<br />
+#para 51<br />
+#para 54<br />
+#RT 28<br />
+#'''headon 64*'''<br />
+#headon 41<br />
+#headon 38<br />
+#GT 63<br />
+#GT 63<br />
+#'''para 80*'''<br />
+#para 52<br />
+#para 53<br />
+#para 53<br />
+#GT 62<br />
+#GT 64<br />
+#'''headon 62*'''<br />
+#headon 40<br />
+#headon 42<br />
+#para 50<br />
+#para 50<br />
+#GT 64<br />
+#RT 27<br />
+#para 53<br />
+#headon 40<br />
+#'''para 79*'''<br />
+#headon 40<br />
+#para 53<br />
+#'''para 82*'''<br />
+#para 52<br />
+#headon 40
+|}
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Amatsukaze ACC+7
+|-
+| style="text-align: center; background-color: LightSkyBlue;"|'''Equipments'''
+|-
+|
+*[[12.7cm Naval Gun]]
+*[[12.7cm Naval Gun]]
+*[[Type 33 Surface RADAR]]
+
+<p style="text-align:center;">{{Template:Firepower}}53 {{Template:Luck}}17 {{Template:Hit}}+7(Equipments)</p>
+|-
+|
+*para=Parallel Engagement
+*headon=Head-on Engegement
+*GT=Green T
+*RT=Red T
+*'''Critical hit''' = '''*'''
+|-
+|
+#'''para 78*'''
+#headon 40
+#headon 40
+#headon 40
+#GT 63
+#headon 40
+#para 53
+#headon 41
+#RT 28
+#para 52
+#headon 40
+#RT 26
+#para 52
+#RT 28
+#GT 62
+#'''headon 64*'''
+#'''RT 45*'''
+#'''headon 61*'''
+#para 51
+#para 53
+#headon 41
+#para 53
+#'''headon 64*'''
+#para 52
+#para 53
+#para 50
+#GT 62
+#headon 40
+#RT 27
+#GT 63
+#headon 38
+#'''RT 45*'''
+#headon 41
+#headon 40
+#para 51
+#headon 40
+#'''para 80*'''
+#GT 63
+#headon 40
+#para 53
+#headon 38
+#para 52
+#headon 40
+#para 52
+#para 52
+#headon 40
+#headon 37
+#headon 41
+#para 52
+#para 54
+#headon 39
+#'''GT 97*'''
+#para 53
+#para 54
+#para 50
+#para 54
+#'''headon 65*'''
+#'''para 81*'''
+#para 50
+#para 53
+#para 52
+#para 53
+#'''GT 97*'''
+#headon 41
+#'''headon 63*'''
+#RT 28
+#para 53
+#para 52
+#headon 40
+#para 53
+#para 50
+#'''para 81*'''
+#para 52
+#headon 40
+#'''para 81*'''
+#GT 64
+#para 54
+#GT 60
+#'''headon 64*'''
+#para 52
+#RT 29
+#'''para 82*'''
+#headon 41
+#para 53
+#headon 40
+#para 53
+#GT 64
+#GT 61
+#para 54
+#para 53
+#headon 41
+#para 49
+#headon 38
+#para 53
+#GT 63
+#headon 41
+#para 53
+#headon 41
+#para 51
+#para 51
+|}
+*Out of the 100 battles using Amatsukaze equipped with equipments with total ACC+7, 16 out of 100 were crits. (~15%)
+*Out of the 100 battles using the same Amatsukaze equipped with equipments without accuracy increase, 11 out of 100 were crits. (~10%)
+
+
+
+Although the results shown difference in the chance of occur of critical hits, it might be simply due to small sample size.
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Yuubari ACC+0
+|-
+| style="text-align: center; background-color: LightSkyBlue;"|'''Equipments'''
+|-
+|
+*[[New High Pressure-Temperature Steam Boiler]]
+*[[New High Pressure-Temperature Steam Boiler]]
+*[[Drum Canister]]
+*[[Drum Canister]]
+
+<p style="text-align:center;">{{Template:Firepower}}63 {{Template:Luck}}17 {{Template:Hit}}+0</p>
+|-
+|
+*para=Parallel Engagement
+*headon=Head-on Engegement
+*GT=Green T
+*RT=Red T
+*'''Critical hit''' = '''*'''
+|-
+|
+#'''headon 74*'''
+#headon 49
+#'''GT 113*'''
+#'''para 97*'''
+#para 62
+#GT 77
+#headon 47
+#para 61
+#GT 75
+#RT 31
+#RT 35
+#para 63
+#para 64
+#headon 47
+#RT 37
+#para 60
+#para 60
+#para 64
+#para 61
+#para 63
+#'''para 95*'''
+#para 62
+#para 63
+#RT 31
+#headon 49
+#GT 76
+#para 62
+#para 60
+#headon 46
+#RT 35
+#para 63
+#RT 33
+#'''para 98*'''
+#'''headon 75*'''
+#headon 46
+#para 62
+#'''headon 76*'''
+#para 60
+#GT 74
+#headon 47
+#headon 50
+#para 63
+#'''para 96*'''
+#para 62
+#para 62
+#headon 48
+#GT 76
+#para 63
+#para 61
+#RT 34
+|}
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Yuubari ACC+23
+|-
+| style="text-align: center; background-color: LightSkyBlue;"|'''Equipments'''
+|-
+|
+*[[Type 33 Surface RADAR]]
+*[[Type 33 Surface RADAR]]
+*[[Type 33 Surface RADAR]]
+*[[Type 32 Surface RADAR]]
+
+<p style="text-align:center;">{{Template:Firepower}}63 {{Template:Luck}}17 {{Template:Hit}}+23(Equipments)</p>
+|-
+|
+*para=Parallel Engagement
+*headon=Head-on Engegement
+*GT=Green T
+*RT=Red T
+*'''Critical hit '''= '''*'''
+|-
+|
+#RT 34
+#headon 49
+#RT 35
+#headon 49
+#headon 49
+#headon 47
+#para 62
+#RT 34
+#para 63
+#RT 33
+#para 62
+#headon 48
+#headon 50
+#para 61
+#para 62
+#para 61
+#GT 76
+#para 60
+#para 61
+#para 62
+#headon 49
+#para 63
+#para 63
+#para 59
+#'''RT 55*'''
+#para 60
+#GT 76
+#GT 73
+#RT 33
+#'''headon 75*'''
+#GT 75
+#'''headon 72*'''
+#headon 48
+#para 59
+#headon 49
+#headon 49
+#'''para 96*'''
+#headon 48
+#headon 46
+#para 63
+#para 61
+#'''headon 77*'''
+#para 60
+#para 64
+#RT 35
+#GT 76
+#para miss
+#para 59
+#headon 49
+#para 60
+|}
+
+
+
+With equipment Accuracy +23, Yuubari dealt 6 critical hits out of 50 attacks. (12%)
+With equipments without accuracy increase, Yuubari dealt 8 critical hits out of 50 attacks. (16%)
+
+Note: For both Yuubari tests, samples after 30th are sorties with morale <40
+
+Does this mean the hypothesis was wrong? or due to small sample size? Further sample collection ongoing.
+
+'''Yuubari Test 2'''
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Yuubari ACC+0
+|-
+| style="text-align: center; background-color: LightSkyBlue;"|'''Equipments'''
+|-
+|
+*[[New High Pressure-Temperature Steam Boiler]]
+*[[New High Pressure-Temperature Steam Boiler]]
+*[[Drum Canister]]
+*[[Drum Canister]]
+
+<p style="text-align:center;">{{Template:Firepower}}63 {{Template:Luck}}17 {{Template:Hit}}+0</p>
+|-
+|
+*para=Parallel Engagement
+*headon=Head-on Engegement
+*GT=Green T
+*RT=Red T
+*'''Critical hit''' = '''*'''
+|-
+|
+#RT 33
+#para 63
+#para 64
+#GT 76
+#'''para 93*'''
+#'''headon 73*'''
+#headon 47
+#para 60
+#para 60
+#headon 48
+#GT 77
+#'''headon 74*'''
+#para miss
+#headon miss
+#headon 49
+#headon 49
+#RT 33
+#headon 46
+#'''headon 77*'''
+#RT 32
+#RT 33
+#headon 49
+#headon 47
+#RT 34
+#'''headon 73*'''
+#para 63
+#GT 74
+#para 63
+#'''para 96*'''
+#headon 46
+#para 63
+#headon 47
+#headon 45
+#RT 35
+#RT 34
+#headon 46
+#'''para 96*'''
+#headon 49
+#'''RT 52*'''
+#RT 33
+#para miss
+#para 63
+#RT 35
+#headon 46
+#para 60
+#para 63
+#para 64
+#headon 49
+#RT 35
+#para 61
+#para 64
+#headon 49
+#GT 75
+#'''para 95*'''
+#para 63
+#'''para 96*'''
+#headon 50
+#para 61
+#para 62
+#para miss
+#'''para 93*'''
+#'''para 97*'''
+#para 61
+#para miss
+#GT 73
+#para 62
+#para 64
+#para 63
+#para 59
+#GT 75
+#para miss
+#headon 46
+#para 62
+#'''GT 115*'''
+#'''headon 75*'''
+#para 60
+#RT 35
+#para 61
+#headon 50
+#para 63
+#RT 32
+#GT 75
+#para 63
+#para 64
+#GT 76
+#para 64
+#headon 46
+#para 62
+#para 61
+#'''headon 75*'''
+#para 62
+#RT 34
+#para 63
+#RT 34
+#headon 49
+#RT 35
+#GT 73
+#para 62
+#headon 49
+#para 63
+|}
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Yuubari ACC+23
+|-
+| style="text-align: center; background-color: LightSkyBlue;"|'''Equipments'''
+|-
+|
+*[[Type 33 Surface RADAR]]
+*[[Type 33 Surface RADAR]]
+*[[Type 33 Surface RADAR]]
+*[[Type 32 Surface RADAR]]
+
+<p style="text-align:center;">{{Template:Firepower}}63 {{Template:Luck}}17 {{Template:Hit}}+23(Equipments)</p>
+|-
+|
+*para=Parallel Engagement
+*headon=Head-on Engegement
+*GT=Green T
+*RT=Red T
+*'''Critical hit '''= '''*'''
+|-
+|
+#GT 73
+#para 60
+#GT 74
+#'''para 96*'''
+#GT 75
+#GT 75
+#para miss
+#headon 48
+#headon 48
+#para 64
+#para 63
+#headon 48
+#RT miss
+#GT 76
+#headon 49
+#'''RT 55*'''
+#'''para 97*'''
+#GT 75
+#para 60
+#headon 49
+#headon 48
+#para 62
+#para 63
+#headon 48
+#para 64
+#GT 75
+#RT 36
+#para 64
+#para 62
+#headon 50
+#RT 34
+#para 64
+#headon 49
+#headon 49
+#GT 77
+#para 61
+#headon 49
+#'''RT 52*'''
+#headon 50
+#headon 47
+#'''RT 54*'''
+#headon 46
+#RT 34
+#headon 48
+#GT 75
+#headon 46
+#para 64
+#'''GT 113*'''
+#headon 47
+#para 61
+#GT 75
+#para 62
+#para miss
+#GT 73
+#headon 49
+#para 63
+#para 60
+#GT 75
+#headon 46
+#headon 49
+#para 63
+#headon 50
+#para 63
+#para 63
+#RT 35
+#'''para 97*'''
+#'''RT 54*'''
+#para 64
+#para 62
+#RT 34
+#'''para 97*'''
+#RT 33
+#GT 48
+#'''para 96*'''
+#headon 47
+#headon 46
+#GT 74
+#headon 47
+#'''RT 54*'''
+#para 62
+#RT 33
+#headon 48
+#headon 46
+#headon 49
+#para 63
+#GT 76
+#GT 77
+#headon 49
+#RT 34
+#para 61
+#para 63
+#headon 47
+#GT 73
+#para 61
+#headon 48
+#'''RT 55*'''
+#'''headon 75*'''
+#'''headon 75*'''
+#RT 34
+#headon 45
+|}
+
+
+
+Note: Morale 70~85.
+
+With equipments with accuracy increase, Yuubari dealt
+*critical hits 15 out of 100 attacks (~15%).
+*3 misses (3%, 97% hit).
+
+
+
+Wthout equipment with accuracy increase, Yuubari dealt
+*critical hits 14 out of 100 attacks (~15%).
+*6 misses (6%, 94% hit)
+
+
+
+With +23 accuracy, hit chance seems to be slightly higher. (its effect seems not much...)
+With this, we can conclude that accuracy{{Template:Hit}} has nothing to do with critical hit chance. 
+|}
+
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Test#2 Effect of AP shell test
+|-
+|
+Test carried out in 1-1.
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan="3" style="text-align:center;"| Mutsu /w Type91 AP
+|-
+| style="text-align: center; background-color: LightSkyBlue;"|'''Equipments'''
+|-
+|
+*[[20.3cm Twin Gun Mount]]
+*[[20.3cm Twin Gun Mount]]
+*[[Type 0 Observation Seaplane]]
+*[[Type 91 Armor-Piercing (AP) Shell]]
+
+<p style="text-align:center;">{{Template:Firepower}}121 {{Template:Luck}}8</p>
+|-
+|
+*para=Parallel Engagement
+*headon=Head-on Engegement
+*GT=Green T
+*RT=Red T
+*'''Critical hit '''= '''*'''
+*samples shown by (1st hit, 2nd hit)
+|-
+|
+#headon 96
+#headon 95
+#para 118
+#headon 94
+#para 119
+#RT 70
+#GT 147
+#para 118
+#'''RT 106*'''
+#headon 95
+#headon 95
+#para 121
+#RT 67
+#GT 145
+#para 120
+#GT 143
+#para 120
+#GT 146
+#'''para 183*'''
+#para 120
+#GT 145
+#RT 69
+#para 120
+#headon 92
+#para 117
+#headon 91
+#RT 70
+#para 120
+#RT 68
+#headon 93, 95
+#GT 144
+#para 118, 119
+#GT 145
+#headon 94, '''145*'''
+#'''headon 144*'''
+#para 120
+#headon miss, 95
+#'''GT 221*''', 146
+#para 120
+#GT 144
+#para 120
+#GT 145, 146
+#para 118
+#GT 146, 145
+#headon 95
+#para 121
+#para 120, 111(2nd hit on boss node CL)
+#para 118
+#'''para 184*''', 120
+#RT 68
+#headon miss, 86(both hits on CL)
+#GT 146
+#para 110(CL), 120
+#headon miss, 94
+#RT 68, '''104*'''
+#para 122
+#para 120, 122
+#headon 93
+#'''headon 145*'''
+#headon 95
+#para 121, 122
+#para 121
+#'''para 183*''', 111
+#GT 142
+#para 121, 118
+#RT 69
+#'''para 184*''', 120
+#headon 95
+#para 120, 119
+#GT 146
+#headon 94, 94
+#'''para 184*'''
+#GT 143, 132(CL)
+#'''headon 143*'''
+#para 120, 120
+#headon 94
+#GT 145, 144
+|}
+
+
+Out of 100 attacks, Mutsu dealt 
+*12 critical hits (12%)
+*3 misses (3%, 97% hit)
+
+
+
+Hit chance is the same as yuubari second test.
+No noticeable critical chance increase.
+No effect on crit chance when attacking low armor units?
+
+'''Furthur sample collection aborted'''
+
+Next test:
+AP shell vs higher armored units in 5-4-F (Flagship CA, CLT, CL, DD + Elite CLT, DD)
+|}
+Next test:
+
+Firepower vs critical rate
+[[Category:Blog posts]]

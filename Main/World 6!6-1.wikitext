@@ -1,0 +1,86 @@
+{{Map/Header}}
+{{Map/Info
+|en = Central Waters Patrol Line
+|jp = 中部海域哨戒線
+|romaji = Chūbu-kaiiki shōkai-sen
+|mechanics = LoS Check@Line of Sight
+|exp_hq = 180
+|exp_hq_boss = 2160
+|exp_ship = 380
+|strategy_name = Submarine Operation
+|strategy_name_ja = 潜水艦作戦
+|strategy_info = Organize a strong submarine fleet and advance to a patrol line of Central Waters. Locate enemy fleets and gradually destroy them!
+|strategy_info_ja = 有力な潜水艦隊を編成し、中部海域哨戒線に進出せよ。敵艦隊を発見、これを漸減撃滅せよ！
+}}
+{{MapBranchingTable
+|id = 6-1
+
+|0 -> A/empty, B/empty, C=
+*Meet '''ANY''' of the following to '''FORCE''' B
+**CA(V)+(F)BB(V)+CV(L/B) ≥ 3
+**(F)BB(V) ≥ 2
+*Meet '''ANY''' of the following to go to A
+**Fleet contains SS(V) only
+**Fleet contains AS '''and''' meets '''one''' of the following
+***SS(V) ≥ 3, no other ship types allowed
+***SS(V) = 3 and DD = 2
+***SS(V) = 4 and CL+DD = 1
+*Go to B if fleet contains no CL and DDs
+*Otherwise, C
+
+|A/empty -> D = * Fleet does not contains AS
+
+|A/empty -> F = * No AS in the fleet
+
+|G/empty -> H = 
+* Meet '''ALL''' of the following requirements:
+** Amount of SS(V) ≥ 3
+** Amount of BB(V) + CV(L/B) + CA(V) ≤ 1
+** Pass the LOS check of 16 using the F33(Cn=4) formula
+*** Routing becomes random if the LoS is between 12-15.9 using the F33(Cn=4) Formula
+
+|G/empty -> I =
+* Meet '''ANY''' of the following requirements:
+** Fail the LoS check
+** Amount of SS(V) ≤ 2
+** Amount of BB(V) + CV(L) + CA(V) ≥ 2
+* If the fleet does not contain AS:
+** 15% chance of off-routing to I regardless of LoS check result
+
+|H -> E/empty, J, K = 
+* Always node E if LOS is ≤ 20 using the F33(Cn=4) Formula
+* If the fleet contains AS:
+** Always node K if LOS is ≥ 25 using the F33(Cn=4) Formula
+** Random between E and K if LOS is between 20-24.9 using the F33(Cn=4) Formula
+* If the fleet does not contain AS:
+** Always node K if LOS is ≥ 36 using the F33(Cn=4) formula
+** Random between J and K if LOS is between 25-35.9 using the F33(Cn=4) Formula
+** Random between E, J and K if LOS is between 20-24.9 using the F33(Cn=4) Formula
+}}
+
+===Tips===
+*At least 3 SS(V) are required to reach the boss.
+* This map uses the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] formula, this means that '''LoS from equipments weights 4 times more''' than usual.
+*There are LoS checks G -> H and H -> K. They do not have high LoS requirements (SSVs with a couple recon planes will pass), but an all-sub fleet without recon planes will be sent to I.
+*LoS requirements to reach the boss node are lower if the fleet contains {{ShipLink|Taigei|Jingei|text=AS}}:
+** Required LoS value if the fleet contains {{ShipLink|Taigei|Jingei|text=AS}}: [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] ≧ 25
+** Required LoS value if the fleet does not contain {{ShipLink|Taigei|Jingei|text=AS}}: [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] ≧ 36
+* To trigger Night Scout at boss node, you need either Air Denial (28-56 FP), Air Superiority (126+ FP) or Air Supremacy. Night Scouts cannot be triggered if the day combat is done in Air Parity (with 57-125 FP when the boss battle starts).
+===Possible Fleet compositions===
+*{{Event/Route|C|red|F|red|G|blue|H|red|K|red}}
+**[https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/5O7tMsz.png 1CLT 1CL 1CV(L) 3SS(V)]
+***an effective fleet for taking out the boss but it will have to go through node C where there's a Ru-class BB. Note that this fleet can send you to dead end node I.
+*{{Event/Route|A|blue|D|red|F|red|G|blue|H|red|K|red}}
+**6SS(V)
+***An all-sub fleet will reach the boss with sufficient LoS, however, node D is pretty harsh on subs with late-model DDs and flagship CLs.
+***{{ShipLink|Taigei|Jingei|text=AS}} in a sub fleet avoids the battle in Node D by leading the fleet to node A -> F which can be very helpful. When she is equipped with recon seaplanes, she then allows all your subs to equip torpedoes while passing the LoS check.
+*{{Event/Route|A|blue|F|red|G|blue|H|red|K|red}}
+**[https://www.youtube.com/watch?v=sbr2qHNb_3o 1AS 1CL 4SS(V)]
+***another possible way to clear this map and also quest [[Quests#B91|B91]] with {{ShipLink|Taigei|Jingei|text=AS}} loaded with bulges and recons. CL recommended are {{ShipLink|Ooyodo Kai}} for extra slot or {{ShipLink|Abukuma Kai Ni}} for opening torpedo.
+*{{Event/Route|C|red|F|red|G|blue|I|red}} '''(for farming node I)'''
+** 1BB 3CLT 1CL 1CV
+** 1CL 3CLT 2CV
+***Pattern 1 on node I has a chance to drop {{ShipLink|I-401}}.
+***Both fleets guarantee the routing to node I and are good enough to get S Rank.
+
+{{Map/Footer}}

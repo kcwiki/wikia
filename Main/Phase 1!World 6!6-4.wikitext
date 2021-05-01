@@ -1,0 +1,710 @@
+{{Map/Header}}
+{{Map/Info
+|en = Central Northern Offshore Sea of Peacock Island
+|jp = 中部北海域ピーコック島沖
+|romaji =Chūbu-kita-kaiiki Pīkokku-tō oki
+
+|mechanics = Land Base Aerial Support@Land Base Aerial Support, Multiple Starting Points@Events/Mechanics#Node specific details 
+
+|show_kills = true
+|kills = 5
+|strategy_name = Remote island re-capture strategy
+|strategy_name_ja = 離島再攻略作戦
+|strategy_info = Commence the Island Takeover Operation on the Central Waters using either a fleet centered around a Torpedo Squadron or a taskforce with maximum of two carriers! Fleet, set forth!
+|strategy_info_ja = 水雷戦隊を基幹とした攻略部隊または空母最大二隻を擁する機動部隊による中部海域離島攻略作戦を発動！艦隊、出撃せよ！
+
+|exp_hq = 190
+|exp_hq_boss = 2880
+
+}}
+{{MapBranchingTable
+|id = 6-4
+
+|0 -> A = 
+* Fleet contains at least 2 DD
+* Do not meet the requirements to go to B
+|0 -> B = 
+* Meet one of the following requirements while using a '''Fast Fleet''':
+**CL as flagship + 3DD
+**4 DD
+|0 -> M = * Fleet contains {{ShipLink|Akitsu Maru}}, any CV(L), 2 BB(V) and/or 3 CAV
+
+|A -> D =
+* Do not meet the requirements to go to E
+* Fleet contains {{ShipLink|Akitsushima}} + 2 DD + 1 CA + 1 CAV + 1 BB(V)
+** CA(V) can be replaced with CL
+|A -> E =
+* Fleet contains 2 or less CL/DD
+* Fleet contains BB(V) and/or slow ships
+*Fleet contains more than 1 CAV
+
+|D -> C = * Fixed route
+
+|E -> D = * {{ShipLink|Akitsushima}} as flagship
+|E -> G = * Do not meet the requirements to go to D
+
+|K -> H = 
+* Do not meet the requirements to go to J
+* Fleet contains 3 CA(V)
+
+|J -> I = * Fleet contains 1 CL + 2DD + 0 - 2 BB(V)/CV(L)
+|J -> L = * Do not meet the requirements to go to either I or N
+|J -> N = * Fleet contains {{ShipLink|Akitsu Maru}} + 1 CL + 2 DD 
+
+|K -> J = 
+* Fleet contains 2 DD + 1 CL + 0 - 1 BB(V)
+* Fleet contains 2 DD + 0 BB(V)
+}}
+
+===Strategy===
+* Can use a maximum of 1 [[Land Base Aerial Support]] squadron. No abyssal air raid.
+* '''You need at least 5 range to reach the boss''' with your [[Land Base Aerial Support]].
+* The standard land base loadout is 3 land-based bombers + 1 fighter for maximum damage output on the boss node.
+*Requires sinking the flagship at the boss node '''5 TIMES''' to deplete the gauge and clear the map.
+*Maximum 2 [[BB]] and/or 2 [[CV]]/[[CVL]] allowed to sortie.
+*The boss node has 3-5 [[Installation Type|land based]] targets, [[Isolated Island Princess]] and [[Supply Depot Princess]], accompanied by 2-3 [[Artillery Imp]]s.
+**WG42, Type 3 Shells and AP shells will help increase damage on these enemies.
+*On the last kill boss and pre-boss nodes switches to stronger patterns as noted with <span style="color:red">'''(Final)'''</span> in the patterns table below.
+
+===Possible Fleet Compositions===
+*'''West Start'''
+**Node D and F are [[Events#Air_Raid_Battle_.28.E7.A9.BA.E8.A5.B2.E6.88.A6.29|Air Defense nodes]].
+**Node B, A and C are normal battle nodes.
+**{{Event/Route|B|red|D|orange|C|red|F|orange|N|red}} '''(must be fast fleet)'''
+***1CL'''(flagship)''' 1fBB(V) 3DD 1CAV 
+***1fBB(V) 4DD 1CL/CAV 
+**{{Event/Route|A|red|D|orange|C|red|F|orange|N|red}}
+***{{ShipLink|Akitsushima}} 1CA/CL 2DD 1CAV 1(F)BB(V)
+
+*'''East Start:
+**Node I is an air defense node and doesn't eat much resources as cost.
+**Having {{ShipLink|Akitsu Maru Kai}} will skip node I and go J-N.
+**{{Event/Route|M|red|K|red|J|red|I|orange|N|red}}
+***2CV(B) 1CA(V) 1CL 2DD
+***1CV(B) 1(F)BB(V) 1CA(V) 1CL 2DD
+**{{Event/Route|M|red|K|red|J|red|N|red}}
+***{{ShipLink|Akitsu Maru Kai}} 1(F)BB(V)/CV(B) 1CA(V) 1CL 2DD
+===LBAS Flight Range===
+[[File:6-4 LBAS flight range.png|500px|center]]
+====Node M Land-Based Aircraft Proficiency Leveling====
+*If you wish to rank up your Aircrafts' [[Aircraft Proficiency]] , you may utilize node M to do so.
+*'''Your Land-Base' Range must be 8 or higher''' (Range is counted from the West starting point even if you started from the East)
+**If you are trying to rank up Aircraft with lower range, you may be required to bring a [[Type 2 Large Flying Boat]] (3+ Range) or [[PBY-5A Catalina]] (2+ Range) to increase your Land-base's range. 
+**Due to the maximum range increase being 3+, you will be unable to use this method to rank up any aircrafts with 4 or lower range even if you bring a Large Flying Boat or PBY-51 Catalina. 
+*Sortie 1 Submarine with a variety of Aircrafts to rank up in your Land-Base. You will start from East.
+*Send your Land-Base Aircraft Support to attack node M only twice. 
+*This will result in a Rank D loss, but your Aircrafts will be ranked up from Blank to Double Chevron after around 12 runs.
+*You may ignore morale on both your submarine and Aircrafts all the way.
+*1 or 2 Aircrafts may be shot down sometimes which will only cost around 3 fuel to 5 bauxite per plane.
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=136|y=110}}
+{{Map/ImageNode|B|x=145|y=224}}
+{{Map/ImageNode|C|x=220|y=275}}
+{{Map/ImageNode|D|x=249|y=165}}
+{{Map/ImageNode|E|x=274|y=84}}
+{{Map/ImageNode|F|x=309|y=288}}
+{{Map/ImageNode|G|x=350|y=145}}
+{{Map/ImageNode|H|x=412|y=300}}
+{{Map/ImageNode|I|x=452|y=119}}
+{{Map/ImageNode|J|x=464|y=216}}
+{{Map/ImageNode|K|x=526|y=288}}
+{{Map/ImageNode|L|x=530|y=149}}
+{{Map/ImageNode|M|x=579|y=220}}
+{{Map/ImageNode|N|x=362|y=216}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=中部海域哨戒水雷戦隊 A群
+|A
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|130
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|160
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|A
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|160
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+{{Map/Nodes|name=中部海域哨戒水雷戦隊 B群
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}<br>{{Formation|Double Line}}
+|120
+|Light Cruiser Ho-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|B
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|160
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|B
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+}}
+{{Map/Nodes|name=離島防衛低速戦艦部隊
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}<br>{{Formation|Double Line}}
+|170
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Light Carrier Nu-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|190
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Light Carrier Nu-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Light Carrier Nu-Class/Elite
+|-
+|C
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|220
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Light Carrier Nu-Class/Elite
+|-
+|C
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|240
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|Light Carrier Nu-Class/Elite
+}}
+{{Map/Nodes|name=離島陸上航空隊
+|D
+|Defense/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|Isolated Island Princess
+|-
+|D
+|Defense/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|Isolated Island Princess/II
+}}
+{{Map/Nodes|name=中部海域哨戒遊撃部隊
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|160
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+}}
+{{Map/Nodes|name=離島陸上航空隊
+|F
+|Defense/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|Isolated Island Princess
+|-
+|F
+|Defense/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|Isolated Island Princess/IV
+|-
+|F
+|Defense/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|Isolated Island Princess/II
+}}
+{{Map/Nodes|name=離島陸上航空隊
+|G
+|Defense/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|Isolated Island Princess
+|-
+|G
+|Defense/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|Isolated Island Princess/II
+}}
+{{Map/Nodes|name=離島防衛低速戦艦部隊
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|180
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Light Carrier Nu-Class/Elite
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|200
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Light Carrier Nu-Class/Elite
+|-
+|H
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|210
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Light Carrier Nu-Class/Flagship
+|-
+|H
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|230
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Light Carrier Nu-Class/Flagship
+|-
+|H
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|260
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|Light Carrier Nu-Class/Flagship
+}}
+{{Map/Nodes|name=離島混成航空隊
+|I
+|Defense/BaseXP
+|{{Formation|Diamond}}
+|160
+|Isolated Island Princess/IV
+|Light Carrier Nu-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I
+|Defense/BaseXP
+|{{Formation|Diamond}}
+|170
+|Isolated Island Princess/II
+|Light Carrier Nu-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=任務部隊 I群
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|?
+|Standard Carrier Wo-Class/Kai Flagship II
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|270
+|Standard Carrier Wo-Class/Kai Flagship II
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|280
+|Standard Carrier Wo-Class/Kai Flagship III
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|J
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|290
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|J
+|Normal/Final/BaseXP
+|{{Formation|Diamond}}
+|330
+|Aircraft Carrier Princess/II
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|J
+|Normal/Final/BaseXP
+|{{Formation|Diamond}}
+|350
+|Aircraft Carrier Princess/II
+|Battleship Ru-Class/Kai Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{Map/Nodes|name=任務部隊 II群
+|K
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|200
+|Standard Carrier Wo-Class/Flagship III
+|Battleship Ta-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|K
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|220
+|Standard Carrier Wo-Class/Flagship IV
+|Battleship Ta-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|K
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|240
+|Standard Carrier Wo-Class/Kai Flagship II
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|K
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|250
+|Standard Carrier Wo-Class/Kai Flagship III
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+{{Map/Nodes|name=増援護衛空母部隊
+|L
+|Normal/BaseXP
+|{{Formation|Double Line}}<br>{{Formation|Diamond}}
+|140
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|L
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|160
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=中部海域潜水哨戒線
+|M
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|120
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+|-
+|M
+|Normal/BaseXP
+|{{Formation|Line Abreast}}<br>{{Formation|Echelon}}
+|140
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+|Submarine So-Class
+|-
+|M
+|Normal/BaseXP
+|{{Formation|Echelon}}<br>{{Formation|Line Abreast}}
+|160
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+}}
+{{Map/Nodes|name=離島守備隊
+|N
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|500
+|Isolated Island Princess/IV
+|Artillery Imp/II
+|Artillery Imp
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|N
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|540
+|Isolated Island Princess/V
+|Artillery Imp/II
+|Artillery Imp
+|Supply Depot Princess
+|Light Cruiser Ho-Class/Flagship
+|-
+|N
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|560
+|Isolated Island Princess/IV
+|Artillery Imp/III
+|Artillery Imp/II
+|Artillery Imp
+|Supply Depot Princess
+|Transport Ship Wa-Class/Flagship
+|-
+|N
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|580
+|Isolated Island Princess/V
+|Artillery Imp/III
+|Artillery Imp/II
+|Artillery Imp
+|Supply Depot Princess/Damaged
+|Light Cruiser Ho-Class/Flagship
+|-
+|N
+|Boss/Final/BaseXP
+|{{Formation|Line Ahead}}
+|600
+|Isolated Island Princess/V
+|Artillery Imp/III
+|Artillery Imp/II
+|Artillery Imp
+|Supply Depot Princess/Damaged
+|Light Cruiser He-Class/Flagship
+|-
+|N
+|Boss/Final/BaseXP
+|{{Formation|Line Ahead}}
+|600
+|Isolated Island Princess/V
+|Artillery Imp/III
+|Artillery Imp/II
+|Artillery Imp
+|Supply Depot Princess/Damaged
+|Transport Ship Wa-Class/Flagship
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, C, E, H, J, K, L, M, N
+|boss = N
+|Akitsushima: C, L
+|Aoba: N
+|Asagumo: N
+|Chikuma: C
+|Fumizuki: C
+|Furutaka: N
+|Fusou: N
+|Hatsuyuki: N
+|Hayasui: N
+|Hiryuu: C, J, L
+|Hyuuga: N
+|Ise: N
+|Kako: C
+|Kikuzuki: C
+|Kiso: N
+|Kuma: N
+|Maya: N
+|Mikazuki: C
+|Mogami: N
+|Mutsu: N
+|Mutsuki: C
+|Nagara: N
+|Naka: N
+|Natori: N
+|Satsuki: C
+|Sendai: N
+|Shigure: C
+|Shirayuki: N
+|Souryuu: C, J, L, N
+|Suzukaze: C
+|Takao: N
+|Tama: N
+|Tanikaze: C, J, L, N
+|Tenryuu: N
+|Tokitsukaze: N
+|Urakaze: C, N
+|Yamagumo: N
+|Yamashiro: N
+|Yayoi: C, J, N
+|Yuubari: C, N
+|Yuugumo: N
+}}
+{{SectionEnd}}

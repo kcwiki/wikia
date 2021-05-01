@@ -1,0 +1,13 @@
+<includeonly>{{#if:{{{1|}}}|{{Notice|class={{#if:{{{show|}}}||todo}}|style={{#if:{{{show|}}}||display:none}}|align=left|'''{{{title|Todo}}}'''<br>{{{1}}}}}}}[[Category:Todo]]</includeonly><noinclude>
+==Usage==
+<pre>{{todo}}</pre>
+Can be used to add the page to [[:Category:Todo]].
+<pre>{{todo|...}}</pre>
+Will also add a hidden notice on the page:
+{{Notice|class=todo|align=left|'''Todo'''<br>...}}
+that can be displayed using
+<pre>.todo { display: inherit !important; }</pre>
+Use
+<pre>{{todo|show=true|...}}</pre>
+to show by default.
+</noinclude>

@@ -1,0 +1,818 @@
+TODO:
+* <s>Merge Expeditions/Expeditions2 and Expedition/Expedition2</s>
+* Delete all but Expeditions and Expedition in [http://kancolle.wikia.com/index.php?title=Special%3APrefixIndex&prefix=Expedition&namespace=10]
+** Cannot be done due to world 5 and Event world having their own unique tables. May probably need to merge Expedition/Expedition2 and add in special row for support expeditions.
+* Same for [http://kancolle.wikia.com/index.php?title=Special%3APrefixIndex&prefix=Quest&namespace=10]? All but Quests and Quest
+* Better icon for world = E
+* Better icons for [[Template:QuestHeader]] (also to be moved in [[Template:Quests]])?
+* Review HTML/CSS/wikitext/interface, add usage examples like in [[Template:Quest]] (have a link like on [[Template:Quests]])
+==[[Template:Expedition/Draft]]==
+==World 1==
+<tabber>Total yield=
+{{Expeditions|
+world = 1
+|{{Expedition/Draft
+|world = 1
+|odd = true
+|id = 1
+|name = {{tooltip|練習航海|鎮守府近海を航海し、艦隊の練度を高めよう！}}
+|time = 00:15
+|hq = 10
+|ship = 10
+|ammo = {{color|blue|'''30'''}}
+}}
+{{Expedition/Draft
+|world = 1
+|id = 2
+|name = {{tooltip|長距離練習航海|外海まで足を延ばし、艦隊の練度を高めよう！}}
+|time = 00:30
+|hq = 20
+|ship = 15
+|ammo = {{color|red|'''100'''}}
+|steel = 30
+|item1 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = 3
+|name = {{tooltip|警備任務|鎮守府担当海域をパトロールして領海の安全を守ろう！}}
+|time = 00:20
+|hq = 30
+|ship = {{color|blue|'''30'''}}
+|fuel = 30
+|ammo = 30
+|steel = {{color|red|'''40'''}}
+}}
+{{Expedition/Draft
+|world = 1
+|id = 4
+|name = {{tooltip|対潜警戒任務|水雷戦隊を編成、領海内を索敵、対潜水警戒任務に就こう！}}
+|time = 00:50
+|hq = 30
+|ship = 40
+|ammo = 60 
+|item1 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = 5
+|name = {{tooltip|海上護衛任務|輸送船団の安全を図るために、船団に同行し、これを護衛しよう！}}
+|time = 01:30
+|hq = 40
+|ship = 40
+|fuel = {{color|blue|'''200'''}}
+|ammo = {{color|blue|'''200'''}}
+|steel = 20
+|bauxite = 20
+}}
+{{Expedition/Draft
+|world = 1
+|id = 6
+|name = {{tooltip|防空射撃演習|敵艦載機襲来に備えて、対空射撃や回避運動の訓練をしよう！}}
+|time = 00:40
+|hq = 30
+|ship = 50
+|bauxite = 80 
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = 7
+|name = {{tooltip|観艦式予行|海の一大ページェント「観艦式」の予行航海を実施しよう！}}
+|time = 01:00
+|hq = 60
+|ship = {{color|red|'''120'''}}
+|steel = 50
+|bauxite = 30
+|item1 = {{ItemStack | item= [[File:Instant_construction.jpg{{!}}35px{{!}}link=Construction{{!}}"Instant construction"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|id = 8
+|name = {{tooltip|観艦式|今こそ日頃の訓練の成果を見せるとき！「観艦式」を挙行しよう！}}
+|time = 03:00
+|hq = 120
+|ship = 140
+|fuel = 50
+|ammo = 100
+|steel = 50
+|bauxite = 50
+|item1 = {{ItemStack | item= [[File:Instant_construction.jpg{{!}}35px{{!}}link=Construction{{!}}"Instant construction"]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|hq = 15
+|ship = 10
+|fuel = {{color|blue|'''45'''}}
+|ammo = {{color|blue|'''45'''}}
+}}
+{{Expedition/Draft
+|world = 1
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|hq = 40
+|ship = 45
+|fuel = 70
+|ammo = 40
+|bauxite = 10
+|item1 = {{ItemStack | item=[[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]] | text=x1}}
+|item2 = {{ItemStack | item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text=x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|hq = 55
+|ship = 70
+|fuel = 120
+|steel = 60
+|bauxite = 60
+|item1 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]]|text=x2}}
+}}
+}}
+|-|Hourly yield=
+{{Expeditions|
+world = 1
+|{{Expedition/Draft
+|world = 1
+|odd = true
+|id = 1
+|name = {{tooltip|練習航海|鎮守府近海を航海し、艦隊の練度を高めよう！}}
+|time = 00:15
+|hq = 40
+|ship = 40
+|ammo = {{color|blue|'''120'''}}
+}}
+{{Expedition/Draft
+|world = 1
+|id = 2
+|name = {{tooltip|長距離練習航海|外海まで足を延ばし、艦隊の練度を高めよう！}}
+|time = 00:30
+|hq = 40
+|ship = 30
+|ammo = {{color|red|'''200'''}}
+|steel = 60
+|item1 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x1}} 
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = 3
+|name = {{tooltip|警備任務|鎮守府担当海域をパトロールして領海の安全を守ろう！}}
+|time = 00:20
+|hq = {{color|red|'''90'''}}
+|ship = {{color|blue|'''90'''}}
+|fuel = 90
+|ammo = 90
+|steel = {{color|red|'''120'''}}
+}}
+{{Expedition/Draft
+|world = 1
+|id = 4
+|name = {{tooltip|対潜警戒任務|水雷戦隊を編成、領海内を索敵、対潜水警戒任務に就こう！}}
+|time = 00:50
+|hq = 36
+|ship = 48
+|ammo = 72 
+|item1 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x1}}
+|item2 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = 5
+|name = {{tooltip|海上護衛任務|輸送船団の安全を図るために、船団に同行し、これを護衛しよう！}}
+|time = 01:30
+|hq = 26
+|ship = 26
+|fuel = {{color|blue|'''133'''}}
+|ammo = {{color|blue|'''133'''}}
+|steel = 13
+|bauxite = 13
+}}
+{{Expedition/Draft
+|world = 1
+|id = 6
+|name = {{tooltip|防空射撃演習|敵艦載機襲来に備えて、対空射撃や回避運動の訓練をしよう！}}
+|time = 00:40
+|hq = 45
+|ship = {{color|blue|'''75'''}}
+|bauxite = {{color|red|'''120'''}}
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = 7
+|name = {{tooltip|観艦式予行|海の一大ページェント「観艦式」の予行航海を実施しよう！}}
+|time = 01:00
+|hq = {{color|blue|'''60'''}}
+|ship = {{color|red|'''120'''}}
+|steel = 50
+|bauxite = 30
+|item1 = {{ItemStack | item= [[File:Instant_construction.jpg{{!}}35px{{!}}link=Construction{{!}}"Instant construction"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|id = 8
+|name = {{tooltip|観艦式|今こそ日頃の訓練の成果を見せるとき！「観艦式」を挙行しよう！}}
+|time = 03:00
+|hq = 40
+|ship = 46
+|fuel = 16
+|ammo = 33
+|steel = 16
+|bauxite = 16
+|item1 = {{ItemStack | item= [[File:Instant_construction.jpg{{!}}35px{{!}}link=Construction{{!}}"Instant construction"]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|hq = 36
+|ship = 24
+|fuel = {{color|blue|'''108'''}}
+|ammo = {{color|blue|'''108'''}}
+}}
+{{Expedition/Draft
+|world = 1
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|hq = 44
+|ship = 49
+|fuel = 76
+|ammo = 44
+|bauxite = 11
+|item1 = {{ItemStack|item=[[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+}}
+{{Expedition/Draft
+|world = 1
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|hq = 24
+|ship = 31
+|fuel = 53
+|steel = 27
+|bauxite = 27
+|item1 = {{ItemStack|item=[[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]]|text=x1}}
+|item2 = {{ItemStack|item=[[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]]|text=x2}}
+}}
+}}
+|-|Requirements=
+{{Expeditions|
+world = 1
+| req = true
+|{{Expedition/Draft
+|require = true
+|world = 1
+|odd = true
+|id = 1
+|name = {{tooltip|練習航海|鎮守府近海を航海し、艦隊の練度を高めよう！}}
+|time = 00:15
+|level = 1
+|fleet = 2XX
+|fuel = 3
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|id = 2
+|name = {{tooltip|長距離練習航海|外海まで足を延ばし、艦隊の練度を高めよう！}}
+|time = 00:30
+|level = 2
+|fleet = 4XX
+|fuel = 5
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|odd = true
+|id = 3
+|name = {{tooltip|警備任務|鎮守府担当海域をパトロールして領海の安全を守ろう！}}
+|time = 00:20
+|level = 3
+|fleet = 3XX
+|fuel = 3
+|ammo = 2
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|id = 4
+|name = {{tooltip|対潜警戒任務|水雷戦隊を編成、領海内を索敵、対潜水警戒任務に就こう！}}
+|time = 00:50
+|level = 3
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 2<span style="cursor:help;" title="DE can be substitutes for DD but note that only either 2DD or 2DE can fulfill the requirements, using 1DD+1DE will result in failure.">DD*<ref name="DD" /></span> <br>'''or'''<br>1DD 3DE
+|fuel = 5
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|odd = true
+|id = 5
+|name = {{tooltip|海上護衛任務|輸送船団の安全を図るために、船団に同行し、これを護衛しよう！}}
+|time = 01:30
+|level = 3
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL*<ref name="CL" /></span> 2<span style="cursor:help;" title="DE can be substitutes for DD but note that only either 2DD or 2DE can fulfill the requirements, using 1DD+1DE will result in failure.">DD*<ref name="DD" /></span> 1XX <br>'''or'''<br> 1DD 3DE
+|fuel = 5
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|id = 6
+|name = {{tooltip|防空射撃演習|敵艦載機襲来に備えて、対空射撃や回避運動の訓練をしよう！}}
+|time = 00:40
+|level = 4
+|fleet = 4XX
+|fuel = 3
+|ammo = 2
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|odd = true
+|id = 7
+|name = {{tooltip|観艦式予行|海の一大ページェント「観艦式」の予行航海を実施しよう！}}
+|time = 01:00
+|level = 5
+|fleet = 6XX
+|fuel = 5
+}}
+{{Expedition/Draft
+|world = 1
+|id = 8
+|name = {{tooltip|観艦式|今こそ日頃の訓練の成果を見せるとき！「観艦式」を挙行しよう！}}
+|time = 03:00
+|level = 6
+|fleet = 6XX
+|fuel = 5
+|ammo = 2
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|odd = true
+|id = A1
+|name = {{tooltip|兵站強化任務|港湾施設強化と兵站備蓄施設拡充。に協力し、補給体制を強化せよ！}}
+|time = 00:25
+|sum = 10
+|level = 5
+|fleet = 3DD/DE 1XX
+|drums = 
+|fuel = 3.5
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|id = A2
+|name = {{tooltip|海峡警備行動|海防艦や駆逐艦による、沿岸警備。部隊で、海峡警備を実施しよう！}}
+|time = 00:55
+|level = 20
+|fleet = 4DD/DE<br>'''with'''<br>{{ASW}} {{tooltip|180+|Summary ASW including ship stats, equipment stats and some ASW improvement bonuses}}<br>{{AA}} {{tooltip|70+|Summary AA including ship and equipment stats}}<br>{{tooltip|???|Additional unknown requirements}}
+|drums = 
+|fuel = 5
+|ammo = 2
+}}
+{{Expedition/Draft
+|require = true
+|world = 1
+|odd = true
+|id = A3
+|name = {{tooltip|長時間対潜警戒|高練度の対潜部隊を展開、敵潜を。制圧し、航路の安全を確保せよ！}}
+|time = 02:15
+|sum = 185
+|level = 35
+|fleet = 1CL 4DD/DE<br>'''or'''<br>1-2 DD 4-3 DE<br>'''with'''<br>{{ASW}} {{tooltip|280+|Summary ASW including ship and equipment stats}}
+|drums = 
+|fuel = 6.5
+|ammo = 3.5
+}}
+}}
+<references>
+<ref name="CL">Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="DD">DE can be substitutes for DD but note that only either 2DD or 2DE can fulfill the requirements, using 1DD+1DE will result in failure.</ref>
+</references>
+</tabber>
+*Expeditions A2 and A3 can give Great Success without sparkling or special equipment.
+*A2 and A3 stat requirements may be affected by improvements, but since it is hard to test, it is advised to ignore them and use displayed stat values only.
+
+==World 5==
+<tabber>Total yield=
+{{Expeditions|
+world = 5
+|{{Expedition/Draft
+|world = 5
+|regsup = true
+|odd = true
+|id = 33
+|name = {{tooltip|前衛支援任務|南方海域へ支援艦隊を出撃させ、主力艦隊の進撃を援護せよ！}}
+|time = 00:15
+}}
+{{Expedition/Draft
+|world = 5
+|bossup = true
+|id = 34
+|name = {{tooltip|艦隊決戦支援任務|南方海域へ決戦支援を行う別働隊を展開し、主力艦隊を援護せよ！}}
+|time = 00:30
+}}
+{{Expedition/Draft
+|world = 5
+|odd = true
+|id = 35
+|name = {{tooltip|MO作戦|空母2隻を含むMO機動部隊を投入し、南方海域制海権を確保せよ！}}
+|time = 07:00
+|hq = 100
+|ship = 100
+|steel = 240
+|bauxite = {{color|blue|'''280'''}}
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|id = 36
+|name = {{tooltip|水上機基地建設|水上機母艦2隻を南方に展開し、哨戒用の水上機基地を建設せよ！}}
+|time = 09:00
+|hq = 100
+|ship = 100
+|fuel = 480
+|steel = 200
+|bauxite = 200
+|item1 = {{ItemStack | item= [[File:Furniture_box_medium.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Medium furniture coin box"]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|odd = true
+|id = 37
+|name = {{tooltip|東京急行|水雷戦隊に輸送ドラム缶を満載、南方への鼠輸送作戦を遂行せよ！}}
+|time = 02:45
+|hq = 50
+|ship = 65
+|ammo = {{color|blue|'''380'''}}
+|steel = {{color|blue|'''270'''}}
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|id = 38
+|name = {{tooltip|東京急行(弐)|可能な限り輸送ドラム缶を満載、南方への鼠輸送作戦を続行せよ！}}
+|time = 02:55
+|hq = 100
+|ship = 70
+|fuel = {{color|red|'''420'''}}
+|steel = 200
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|odd = true
+|id = 39
+|name = {{tooltip|遠洋潜水艦作戦|潜水母艦と潜水艦群による遠洋作戦を実施、敵勢力漸減に努めよ！}}
+|time = 30:00
+|hq = 130
+|ship = 320
+|steel = 300
+|item1 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Furniture_box_medium.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Medium furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|id = 40
+|name = {{tooltip|水上機前線輸送|軽巡旗艦と複数の水上機母艦で、水上機の前線輸送を実施せよ！}}
+|time = 06:50
+|hq = 60
+|ship = 70
+|fuel = 300
+|ammo = 300
+|bauxite = 100
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x3}}
+|item2 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x1}}
+}}
+}}
+<references>
+<ref name{{=}}"suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+</references>
+|-|Hourly yield=
+{{Expedition/Draft/Reference tables/Header|world=5}}
+<div style="position:relative;border:solid 1px lightgray;width:95%;border-radius:10px;padding:10px;margin:10px;margin-top:0px;">
+{| style="radius:10px;cellpadding:10px;width:100%;" align="center" height="35px" cellspacing=0
+! style="cellpadding:10px;width:4%;" |#
+! style="cellpadding:10px;width:24%;" |Name
+! style="cellpadding:10px;" |Time
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:7%;" |HQ
+! style="cellpadding:10px;width:7%;" |Ship
+! style="cellpadding:10px;width:1px;" rowspan="100" |
+! style="cellpadding:10px;width:7%;" |[[File:Fuel.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Ammunition.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Steel.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Bauxite.png|30px|link=]]
+! style="cellpadding:10px;width:1px;" rowspan="100" |
+! style="cellpadding:10px;width:20%;" colspan="2" |Rewards
+|-
+| style="background:gray;" colspan="14" |
+|-
+| align="center" height="35px" style="background:#D3D3EB;color:#000;"|33
+| align="center" height="35px" style="background:#D3D3EB;color:#000;"|{{tooltip|前衛支援任務|南方海域へ支援艦隊を出撃させ、主力艦隊の進撃を援護せよ！}}
+| align="center" height="35px" style="background:#D3D3EB;color:#000;"|00:15
+| style="background:#9999cc;" rowspan="8" |
+| align="center" style="background:lightblue;color:#000" colspan="10" | '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+|-
+| align="center" height="35px" |34
+| align="center" height="35px" |{{tooltip|艦隊決戦支援任務|南方海域へ決戦支援を行う別働隊を展開し、主力艦隊を援護せよ！}}
+| align="center" height="35px" |00:30
+| align="center" style="background:lightblue;color:#000" colspan="10" | '''Sortie [[Support Expedition]] (boss)''' <ref name="suppexpd" />
+{{Expedition/Draft
+|world = 5
+|odd = true
+|id = 35
+|name = {{tooltip|MO作戦|空母2隻を含むMO機動部隊を投入し、南方海域制海権を確保せよ！}}
+|time = 07:00
+|hq = 14
+|ship = 14
+|steel = 34
+|bauxite = {{color|blue|'''40'''}}
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Development_material.jpg{{!}}35px{{!}}link=Construction{{!}}"Development material"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|id = 36
+|name = {{tooltip|水上機基地建設|水上機母艦2隻を南方に展開し、哨戒用の水上機基地を建設せよ！}}
+|time = 09:00
+|hq = 11
+|ship = 11
+|fuel = 53
+|steel = 22
+|bauxite = 22
+|item1 = {{ItemStack | item= [[File:Furniture_box_medium.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Medium furniture coin box"]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|odd = true
+|id = 37
+|name = {{tooltip|東京急行|水雷戦隊に輸送ドラム缶を満載、南方への鼠輸送作戦を遂行せよ！}}
+|time = 02:45
+|hq = 18
+|ship = 23
+|ammo = {{color|blue|'''138'''}}
+|steel = {{color|blue|'''98'''}}
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|id = 38
+|name = {{tooltip|東京急行(弐)|可能な限り輸送ドラム缶を満載、南方への鼠輸送作戦を続行せよ！}}
+|time = 02:55
+|hq = 34
+|ship = 24
+|fuel = {{color|red|'''144'''}}
+|steel = 69
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|odd = true
+|id = 39
+|name = {{tooltip|遠洋潜水艦作戦|潜水母艦と潜水艦群による遠洋作戦を実施、敵勢力漸減に努めよ！}}
+|time = 30:00
+|hq = 4
+|ship = 11
+|steel = 10
+|item1 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x2}}
+|item2 = {{ItemStack | item= [[File:Furniture_box_medium.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Medium furniture coin box"]] | text= x1}}
+}}
+{{Expedition/Draft
+|world = 5
+|id = 40
+|name = {{tooltip|水上機前線輸送|軽巡旗艦と複数の水上機母艦で、水上機の前線輸送を実施せよ！}}
+|time = 06:50
+|hq = 
+|ship = 
+|fuel = 43.9
+|ammo = 43.9
+|bauxite = 14.6
+|item1 = {{ItemStack | item= [[File:Furniture_box_small.png{{!}}35px{{!}}link=Furniture/Guide#Furniture_coin{{!}}"Small furniture coin box"]] | text= x3}}
+|item2 = {{ItemStack | item= [[File:Instant_repair.jpg{{!}}35px{{!}}link=Tutorial:_FAQ#What_are_buckets.3F{{!}}"Instant repair"]] | text= x1}}
+}}
+|}</div>
+<references>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+</references>
+|-|Requirements=
+{{Expedition/Draft/Reference tables/Header|world=5}}
+<div style="position:relative;border:solid 1px lightgray;width:95%;border-radius:10px;padding:10px;margin:10px;margin-top:0px;">
+{| style="radius:10px;cellpadding:10px;width:100%;" align="center" height="35px" cellspacing=0
+! style="cellpadding:10px;width:4%" |#
+! style="cellpadding:10px;width:24%;" |Name
+! style="cellpadding:10px;" |Time
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:7%;" |Σ(Lv)
+! style="cellpadding:10px;width:7%;" |[[File:Flagship icon.png|link=]]
+! style="cellpadding:10px;width:1px;" rowspan="100" |
+! style="cellpadding:10px;width:21%;" |Minimum Fleet Size
+! style="cellpadding:10px;width:7%;" |[[File:Drum.png|30px|link=]]
+! style="cellpadding:10px;width:1px;" rowspan="100" |
+! style="cellpadding:10px;width:10%;" |[[File:Fuel.png|30px|link=]]
+! style="cellpadding:10px;width:10%;" |[[File:Ammunition.png|30px|link=]]
+|-
+| style="background:gray;" colspan="13" |
+|-
+| align="center" height="35px" style="background:#D3D3EB;color:#000;"|33
+| align="center" height="35px" style="background:#D3D3EB;color:#000;"|{{tooltip|前衛支援任務|南方海域へ支援艦隊を出撃させ、主力艦隊の進撃を援護せよ！}}
+| align="center" height="35px" style="background:#D3D3EB;color:#000;"|00:15
+| style="background:#9999cc;" rowspan="8" |
+| align="center" style="background:lightblue;color:#000" colspan="10" | '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+|-
+| align="center" height="35px" |34
+| align="center" height="35px" |{{tooltip|艦隊決戦支援任務|南方海域へ決戦支援を行う別働隊を展開し、主力艦隊を援護せよ！}}
+| align="center" height="35px" |00:30
+| align="center" style="background:lightblue;color:#000" colspan="10" | '''Sortie [[Support Expedition]] (boss)''' <ref name="suppexpd" />
+{{Expedition/Draft2
+|world = 5
+|odd = true
+|id = 35
+|name = {{tooltip|MO作戦|空母2隻を含むMO機動部隊を投入し、南方海域制海権を確保せよ！}}
+|time = 07:00
+|sum = 
+|level = 40
+|fleet = 2<span style="cursor:help" title="Light Aircraft Carrier [CVL] or Seaplane Tender [AV] can be substituted for any Aircraft Carrier [CV].">CV<ref name="CV" /></span> 1<span style="cursor:help;" title="Aviation cruisers [CAV] and Heavy cruisers [CA] are not interchangeable.">CA<ref name="CA" /></span> 1DD 2XX
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition/Draft2
+|world = 5
+|id = 36
+|name = {{tooltip|水上機基地建設|水上機母艦2隻を南方に展開し、哨戒用の水上機基地を建設せよ！}}
+|time = 09:00
+|sum = 
+|level = 30
+|fleet = 2<span style="cursor:help;" title="Seaplane Tenders [AV] cannot be substituted for Light Aircraft Carriers [CVL] or Aircraft Carriers [CV]">AV<ref name="AV" /></span> 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL<ref name="CL" /></span> 1DD 2XX
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition/Draft2
+|world = 5
+|odd = true
+|id = 37
+|name = {{tooltip|東京急行|水雷戦隊に輸送ドラム缶を満載、南方への鼠輸送作戦を遂行せよ！}}
+|time = 02:45
+|sum = 200
+|level = 50
+|fleet = 1<span style="cursor:help;" title="Torpedo cruisers [CLT] and Light cruisers [CL] are not interchangeable.">CL<ref name="CL" /></span> 5DD
+|drums = 4<span style="cursor:help;" title="At least 3 drum carrying ships are required">(3*)<ref name="drum3" /></span>
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition/Draft2
+|world = 5
+|id = 38
+|name = {{tooltip|東京急行(弐)|可能な限り輸送ドラム缶を満載、南方への鼠輸送作戦を続行せよ！}}
+|time = 02:55
+|sum = 240
+|level = 65
+|fleet = 5DD 1XX
+|drums = 8<span style="cursor:help;" title="At least 4 drum carrying ships are required">(4*)<ref name="drum4" /></span>
+|fuel = 8
+|ammo = 8
+}}
+{{Expedition/Draft2
+|world = 5
+|odd = true
+|id = 39
+|name = {{tooltip|遠洋潜水艦作戦|潜水母艦と潜水艦群による遠洋作戦を実施、敵勢力漸減に努めよ！}}
+|time = 30:00
+|sum = 180
+|level = 3
+|fleet = 1AS 4SS
+|fuel = 9
+|ammo = 9
+}}
+{{Expedition/Draft2
+|world = 5
+|id = 40
+|name = {{tooltip|水上機前線輸送|軽巡旗艦と複数の水上機母艦で、水上機の前線輸送を実施せよ！}}
+|time = 06:50
+|sum = 150
+|level = 25
+|fleet = <span style="cursor:help" title="A CL must be the flagship">'''CL*'''<ref name="CL40" /></span> 2<span style="cursor:help;" title="Seaplane Tenders [AV] cannot be substituted for Light Aircraft Carriers [CVL] or Aircraft Carriers [CV]">AV<ref name="AV" /></span> 2DD 1XX
+|drums = [[Great Success|△]]
+|fuel = 8
+|ammo = 7
+}}
+|}
+</div>
+<references>
+<ref name="drum3">''3*'' : Minimum of 3 ships carrying drum(s) <br/></ref>
+<ref name="drum4">''4*'' : Minimum of 4 ships carrying drum(s) <br/></ref>
+<ref name="CV">''CV*'': CVL and AV can be substituted for CV. <br/></ref>
+<ref name="CL">Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="CA">Aviation cruisers [CAV] and Heavy cruisers [CA] are '''not''' interchangeable.</ref>
+<ref name="CL40">''CL*'': For expedition 40, the flagship '''must''' be a CL. Also Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable.</ref>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+<ref name="AV">"Seaplane Tenders [AV] '''cannot''' be substituted for Light Aircraft Carriers [CVL] or Aircraft Carriers [CV]</ref>
+</references>
+</tabber>
+* Light carriers [CVL] and Seaplane tenders [AV] can be used as substitutes for Fleet carriers [CV]
+* Aviation submarines [SSV] can be used as substitutes for Submarines [SS]
+* Aviation cruisers [CAV] and Heavy cruisers [CA] are '''not''' interchangeable.
+* Torpedo cruisers [CLT] and Light cruisers [CL] are '''not''' interchangeable
+* Battleships [BB] and Fast battleships [FBB] '''cannot''' be used as substitutes for Aviation battleships [BBV]
+* Light carriers [CVL] and Fleet carriers [CV] '''cannot''' be used as substitutes for Seaplane tenders [AV]
+* [AS] refers to Submarine Tender, with {{ShipLink|Taigei}} being the '''only''' ship currently in this game of this type.
+* For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.
+
+==Event World==
+<tabber>Total yield=
+{{Expedition/Draft/Reference tables/Header|world=E}}
+<div style="position:relative;border:solid 1px lightgray;width:95%;border-radius:10px;padding:10px;margin:10px;margin-top:0px;">
+{| style="radius:10px;cellpadding:10px;width:100%;" align="center" height="35px" cellspacing=0
+! style="cellpadding:10px;width:4%;" |#
+! style="cellpadding:10px;width:24%;" |Name
+! style="cellpadding:10px;" |Time
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:7%;" |HQ
+! style="cellpadding:10px;width:7%;" |Ship
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:7%;" |[[File:Fuel.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Ammunition.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Steel.png|30px|link=]]
+! style="cellpadding:10px;width:7%;" |[[File:Bauxite.png|30px|link=]]
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:20%;" colspan="2" |Rewards
+|-
+| style="background:gray;" colspan="14" |
+|-
+| align="center" height="35px" style="background:lightsalmon;color:#000"|Var
+| align="center" height="35px" style="background:lightsalmon;color:#000"|前衛支援任務
+| align="center" height="35px" style="background:lightsalmon;color:#000"|00:15
+| style="background:#9999cc;" rowspan="8" |
+| align="center" style="background:lightblue;color:#000" colspan="10" | '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+|-
+| align="center" height="35px" |Var
+| align="center" height="35px" |艦隊決戦支援任務
+| align="center" height="35px" |00:30
+| align="center" style="background:lightblue;color:#000" colspan="10" | '''Sortie [[Support Expedition]] (boss)''' <ref name="suppexpd" />
+|}</div>
+<references>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+</references>
+|-|Requirements=
+{{Expedition/Draft/Reference tables/Header|world=E}}
+<div style="position:relative;border:solid 1px lightgray;width:95%;border-radius:10px;padding:10px;margin:10px;margin-top:0px;">
+{| style="radius:10px;cellpadding:10px;width:100%;" align="center" height="35px" cellspacing=0
+! style="cellpadding:10px;width:4%" |#
+! style="cellpadding:10px;width:24%;" |Name
+! style="cellpadding:10px;" |Time
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:7%;" |Σ(Lv)
+! style="cellpadding:10px;width:7%;" |[[File:Flagship icon.png|link=]]
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:21%;" |Minimum Fleet Size
+! style="cellpadding:10px;width:7%;" |[[File:Drum.png|30px|link=]]
+! style="cellpadding:10px;width:1px;" |
+! style="cellpadding:10px;width:10%;" |[[File:Fuel.png|30px|link=]]
+! style="cellpadding:10px;width:10%;" |[[File:Ammunition.png|30px|link=]]
+|-
+| style="background:gray;" colspan="13" |
+|-
+| align="center" height="35px" style="background:lightsalmon;color:#000"|Var
+| align="center" height="35px" style="background:lightsalmon;color:#000"|前衛支援任務
+| align="center" height="35px" style="background:lightsalmon;color:#000"|00:15
+| style="background:#9999cc;" rowspan="10" |
+| align="center" colspan="9" style="background:lightblue;color:#000"| '''Sortie [[Support Expedition]] (normal)''' <ref name="suppexpd" />
+|-
+| align="center" height="35px" |Var
+| align="center" height="35px" |艦隊決戦支援任務
+| align="center" height="35px" |00:30
+| align="center" colspan="9" style="background:lightblue;color:#000"| '''Sortie [[Support Expedition]] (boss)''' <ref name="suppexpd" />
+|-
+|}
+</div>
+<references>
+<ref name="suppexpd">For expedition 33 and 34, read [[Support_Expedition|'''here''']] and if your browser does not direct you to the right section try searching for the words '''Support Expedition''' on the page.</ref>
+</references>
+</tabber>
+[[Category:Relevant sandboxes]]

@@ -1,0 +1,49 @@
+<gallery type="slideshow">
+2017-11-19 01-59-52 33.jpg|Click the NEXT arrow to see the 7th ship
+2017-11-19 01-59-54 19.jpg|Click the NEXT arrow to see the 1st and 2nd ship
+</gallery>
+Implemented in [[Fall 2017 Event]], A striking force under certain conditions, allows the admiral to 
+use the '''3rd Fleet''',to sortie a '''7-Ships Fleet''' 
+<br />
+==Requirements==
+These are the following Requirements when using a striking force fleet
+*'''Striking Force can only be accessed from the 3rd fleet'''
+*When it is available, it will be indicated as '''第三部隊''' on top of the "3rd fleet" icon.
+*Admirals Pre-set cannot register the 7th ship and will only register the first 6.
+*'''The 1st fleet will be vacant while admirals sortied the 3rd fleet, unable to do anything.'''
+**There is no safety measure to prevent admirals from accidentally sorting the 1st fleet (unless map conditions are unfavourable for sortie ); therefore, be careful.
+***You may however place a Ship currently under repair in the Repair Dock into the 1st Fleet so that the fleet cannot sortie out, as you cannot sortie to any maps while the fleet has any ship that is currently under repair.
+*In Addition, '''Striking Force is a great set-up to use [[Morale/Fatigue|Mamiya and Irako]]''' as it actually affects ALL 7 SHIPS instead of 6.
+
+==Formation UI changes==
+The combat mechanics of the Striking Force '''works the same as the normal 6-Ships Fleet''' except the inclusion of one extra ship.
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|
+! scope="col"|Formation name
+|-
+|[[File:SFLineAhead.png|100px]]
+|Line Ahead
+|-
+|[[File:SFLineAbreast.png|100px]]
+|Line Abreast
+|-
+|[[File:SFDiamond.png|100px]]
+|Diamond
+|-
+|[[File:SFEchelon.png|100px]]
+|Echelon
+|-
+|[[File:SFDoubleLine.png|100px]]
+|Double Line
+|-
+|[[File:SFVanguardformation.png|100px]]
+|Vanguard 
+|}
+
+==Implementation==
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|[[Fall 2017 Event]]
+|Only accessible when the admiral has cleared map E-1.
+|}

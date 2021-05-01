@@ -1,0 +1,1269 @@
+{{Warning
+|title = This article is a backup!
+|message = The main [[Combat]] page is being revamped, that an easily accessible code backup might be required. Once the new article has been finalized, this can be deleted.
+}}
+
+==Combat Stages==
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width:900px;"
+|-
+! scope="col" style="width:200px; text-align:center;" |Stage
+! scope="col" style="width:700px; text-align:center;" |Notes
+|-
+|Detection
+|
+Requires planes or high detection stat.<br />Success increases accuracy and evasion.<br />Failure prevents participation of allied planes in the aerial combat phase.
+|-
+|Aerial Combat
+|
+Requires any type of offensive plane equipped as equipment on either side.<br />Allows [[Combat#Artillery_Spotting_.28Post-Cap_Modifier.29|Artillery Spotting]].
+|-
+|Supporting Fire
+|Sortie support expedition.
+|-
+|Opening Torpedo Salvo
+|Requires torpedo cruisers, seaplane tenders or submarines equipped with midget subs ({{Template:TorpedoWeapon}}甲標的 甲 Type A ''Kou-hyouteki'').<br />Submarines with level 10 or higher can shoot the opening torpedo by themselves without having to equip a midget submarine.
+|-
+|Shelling, 1st Round<br />(Range Order)<ref name="Shell0">Shelling firing order is determined at the start of each shelling phase. The order alternates between allied and enemy ships, and ships normally unable to attack in shelling (submarines, sunken ships, etc.) are skipped over to the next.</ref>
+|Any carrier using bombers to attack during this phase must not have taken more than light damage in order to participate in the phase, with the exception of Armored Carriers (''e.g.'' Taihou) who must not have taken more than medium damage.
+|-
+|Shelling, 2nd Round<br />(Lineup Order)<ref name="Shell2">See above.</ref>
+|Only occurs when either side has a battleship or if the enemy contains one of the special ship classes: 鬼 (''Oni''/Ogress), 姫 (''Hime/''Princess), 戦鬼 (''Senki/''Battle Ogress), or 戦姫 (''Senki/''Battle Princess).
+|-
+|Torpedo Salvo
+|Must not have taken more than light damage to participate.
+|-
+|Night Combat
+|Attacks occur in lineup order from top to bottom, alternating between sides. Must not have taken more than moderate damage to participate.
+|}
+
+==Effects of Ship Damage==
+Amount of damage on a ship will affect its performance.
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 800px; height: 100px;"
+|No damage
+|No effect on performance.
+|-
+|Minor damage (小破)
+|No effect on performance.<br />+10% cut-in chance in night battle.
+|-
+|Moderate damage (中破)
+|
+Attack power -30%.<br />CV/CVL unable to participate in shelling phase (Taihou excluded).<br />Ships unable to participate in torpedo salvo phase.<br />+20% cut-in chance in night battle.
+|-
+|Heavy damage (大破)
+|
+Attack power -60%.<br />CV/CVL unable to participate in shelling phase.<br />Ships unable to participate in torpedo salvo phase and night battle.<br />Unable to activate searchlight in night battle when ship HP is lower than 2.
+|}
+
+==Aerial Combat==
+<span style="font-size:17px;font-weight:bold;">Aerial Combat Stages</span>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width:800px;"
+|-
+! scope="col" style="text-align:center;" |Stage
+! scope="col" style="text-align:center;" |Notes
+|-
+|Fighter Combat
+|Battle for air supremacy. Determines if Artillery Spotting and/or Contact are possible.
+|-
+|Anti-bomber Combat
+|Number of bombers shot down by fighters is affected by the result of the previous phase
+|-
+|Fleet Anti-air Defense
+|Fleet defends against enemy bombers
+|-
+|Bombing
+|See ''Damage Calculation'' for details
+|}
+
+===Fighter Combat===
+
+<center><math>\text {Fighter Power} = \sum^\text{All slots} \text{Floor(} \sqrt{\text{Number fighters in slot}} \times \text {Plane anti-air bonus} \text{)}</math><ref name="FPEx">Example on how to calculate a ship's fighter power using the formula.
+Akagi Kai's fighter power (with Reppus in slot 1 and 2, Reppu Kai in slot 3, M62 in slot 4)
+
+<span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13px;line-height:normal;">= </span><span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13.333333015441895px;line-height:normal;">Floor[ √(Slot 1) x Reppu's AA] + </span><span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13px;line-height:normal;">Floor[ √(Slot 2) x Reppu's AA] + Floor[ √(Slot 3) x ReppuKai's AA] + Floor[ √(Slot 4) x M62's AA]</span>
+
+<span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13px;line-height:normal;">= </span><span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13.333333015441895px;line-height:normal;">Floor[ √(20) x 10] + </span><span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13px;line-height:normal;">Floor[ √(20) x 10] + Floor[ √(32) x 12] + Floor[ √(10) x 4]</span>
+
+<span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13px;line-height:normal;">= 44 +</span><span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13px;line-height:normal;"> 44 + 67 + 11</span>
+
+<span style="color:rgb(0,0,0);font-family:verdana,geneva,lucida,'lucidagrande',arial,helvetica,sans-serif;font-size:13px;line-height:normal;">= 166</span>
+</ref></center>
+
+Fighter planes, fighter-bombers (bombers with +AA stat), and seaplane bombers participate in Fighter Combat. Regardless of type, all participant planes will contribute to Fighter Power so long that it has AA stat.
+
+The allied fleet and enemy fleet's Fighter Powers are compared to determine the result of Fighter Combat:
+{| class="article-table" style="width:710px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="width:190px; text-align:center;" |Fighter Power
+! scope="col" style="width:100px; text-align:center;" |Result
+! scope="col" style="width:165px; text-align:center;" |Text Display
+! scope="col" style="width:110px; text-align:center;" | % Shot Down
+! scope="col" style="width:100px; text-align:center;" |Contact
+|-
+|FP ≥ 3*EFP
+|Air Supremacy
+|<span style="color:green">'''制空権確保!'''</span><br />''Seikuuken Kakuho!''
+| style="text-align:center;" |0~90%
+|Allied only
+|-
+|3*EFP > FP ≥ 1.5*EFP
+|Air Superiority
+|<span style="color:green">'''航空優勢! '''</span><br />''Koukuu Yuusei!''
+| style="text-align:center;" |0~80%
+|Both sides
+|-
+|1.5*EFP > FP ≥ 2/3*EFP
+|Air Parity
+|No text displayed
+| style="text-align:center;" |0~60%
+|Both sides
+|-
+|2/3*EFP > FP ≥ 1/3*EFP
+|Air Incapability
+|No text displayed
+| style="text-align:center;" |0~40%
+|Both sides
+|-
+|FP ≤ 1/3*EFP
+|Air Denial
+|<span style="color:red">'''制空権喪失! '''</span><br />''Seikuuken Soushitsu!''
+| style="text-align:center;" |0~10%
+|Enemy only
+|}
+*EFP: Enemy Fighter Power, FP: Fighter Power. Abbreviated to save space.
+*This calculation does not take into account any anti-air weaponry equipped on ships. Carrier anti-air stat is also not considered.
+*The percentage of planes shot down applies for both sides' respective outcomes, and is calculated per slot.
+**For example, securing Air Superiority means allied planes shoot down up to 80% of enemy planes, and the enemy under Air Incapability will shoot down up to 40%.
+*[[Combat#Contact (Post-Cap Modifier)|Contact]] can be triggered by having at least 1 carrier scout plane, seaplane scout, and/or torpedo bomber equipped. It increases damage during the bombing phase depending on the accuracy bonus of the squad performing Contact.
+*Even if allied planes secure air supremacy, planes can still be lost (up to 10%), and the subsequent anti-air defense stage can eliminate bombers regardless.
+*If enemy fleet launches no fighters, while the allied fleet launches any planes, the result defaults to Air Supremacy. If both sides launch no planes, then the rest of the battle is treated the same as if Air Parity was achieved.
+====Enemy Ship Fighter Power====
+{| class="article-table" style="width:700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center; width:280px;" |Enemy Ship Type
+! scope="col" style="text-align:center;" |Fighter Power
+! scope="col" style="text-align:center; width:300px;" |Enemy Ship Type
+! scope="col" style="text-align:center;" |Fighter Power
+|-
+|[[Light Carrier Nu-Class]]
+| style="text-align:center;" |8
+|Armored Carrier Demon
+| style="text-align:center;" |44
+|-
+|[[Light Carrier Nu-Class]] Elite
+| style="text-align:center;" |24
+|Armored Carrier Princess
+| style="text-align:center;" |48
+|-
+|[[Light Carrier Nu-Class]] Flagship
+| style="text-align:center;" |23
+|Floating Fortress
+| style="text-align:center;" |27
+|-
+|[[Standard Carrier Wo-Class]]
+| style="text-align:center;" |10
+|Southern War Demon
+| style="text-align:center;" |41
+|-
+|[[Standard Carrier Wo-Class]] Elite
+| style="text-align:center;" |27
+|Southern War Princess
+| style="text-align:center;" |47
+|-
+|[[Standard Carrier Wo-Class]] Flagship
+| style="text-align:center;" |28
+|[[Standard Carrier Wo-Class]] Flagship Kai
+| style="text-align:center;" |102
+|-
+|[[Battleship Re-Class]]
+| style="text-align:center;" |94
+| style="text-align:center;" |
+| style="text-align:center;" |
+|-
+|[[Battleship Re-Class]] Elite
+| style="text-align:center;" |107
+| style="text-align:center;" |
+| style="text-align:center;" |
+|}
+
+===Fleet Anti-air Defense===
+Each enemy bomber slot is assigned at random to a defending ship. Those ships then, for each assigned enemy slot, have an approximately 50% chance to shoot down enemy planes. The number of planes shot down is given by the equations below:
+
+<center>
+<math>\text{Shot Down} = \text{Floor((Ship AA } + \text{Floor(Fleet Anti-air} \times \text{Formation Modifier))} \times 0.2125\text{)}</math> <math>\text{Fleet Anti-air} = \text{Floor(} \sum^\text{All slots}\text{Equipment AA Bonus} \times \text{Equipment Modifier)}</math>
+</center>
+The "Fleet Anti-Air" bonus is the sum of every equipment slot of every ship in the fleet (including the defending ship).
+====Formation Modifiers====
+{| class="article-table" style="width:350px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Formation
+! scope="col" style="text-align:center;" |Modifier
+|-
+|Line Ahead, Line Abreast, Echelon
+| style="text-align:center;" |1.0
+|-
+|Double Line
+| style="text-align:center;" |1.2
+|-
+|Diamond
+| style="text-align:center;" |1.6
+|}
+====Equipment Modifiers====
+{| class="article-table" style="width:350px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |Equipment Type
+! scope="col" style="text-align:center;" |Modifier
+|-
+|46cm Triple Gun Mount
+| style="text-align:center;" |0.25
+|-
+|High-angle Mounts
+| style="text-align:center;" |0.35
+|-
+|AA Radars
+| style="text-align:center;" |0.40
+|-
+|Type 3 Shell
+| style="text-align:center;" |0.60
+|-
+|All other equipment
+| style="text-align:center;" |0.20
+|}
+
+*Any equipment that gives an anti-air bonus will contribute to shooting down enemy bombers.
+*The ship chosen to defend against bombers is not necessarily the ship targeted by that slot.
+*The ship selected to defend is not necessarily the target of the bomber. Any allied ship, including submarines, may be chosen to defend against bombers.
+*The forward sliding and machine gun animations seem to have no correlation with the calculations.
+*These calculations only apply for the allied fleet's anti-air defense; enemy fleets seem to use a different formula.
+
+==Damage Calculation==
+<span style="font-size:17px;font-weight:bold;">Main Formula</span>
+{| class="article-table" style="width: 800px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! rowspan="3" scope="col" style="text-align:center;" |'''Damage ='''
+! scope="col" |<center>'''Basic Attack Power<br />x<br />Pre-Cap Modifiers'''</center>
+! scope="col" |x
+! scope="col" |<center>'''Post-Cap Modifiers'''</center>
+! scope="col" | -
+! scope="col" |<center>'''Enemy Armor'''</center>
+! scope="col" |x
+! scope="col" |<center>'''Random Number<br />(between 2/3 ~ 4/3)'''</center>
+|-
+! colspan="7" rowspan="1" scope="col" style="text-align:center;" |x
+|-
+! colspan="7" rowspan="1" scope="col" style="text-align:center;" |<center>'''Remaining Ammo Modifier'''</center>
+|-
+| colspan="8" |Notes:
+
+
+*''If the result is less than 1, it becomes scratch damage, which does 6-14% of current target HP, rounded down (can be rounded to 0).''
+*''If [Basic attack power x Pre-cap modifiers] exceeds a certain cap, it will be modifed -- [[Combat#Attack_power_cap_.28applies_after_pre-cap_modifiers.29|see below]]''
+*''This formula is under constant review and updated accordingly if there any inconsistencies or mistakes happens.''
+|}
+
+
+<span style="font-size:15px;font-weight:bold;">Basic Attack Power</span>
+{| class="article-table article-table-selected" style="width:1000px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center; width:210px;" |Type
+! scope="col" style="text-align:center; width:530px;" |Basic Attack Power
+! scope="col" style="text-align:center; width:260px;" |Notes
+|-
+|Aerial Combat
+|Attack Type Modifier ''(see below)'' × [(Aircraft's divebomb or torp stat) × √(number of planes) + 25]
+|Number of planes is post anti-bomber combat and fleet anti-air defense
+|-
+|Shelling (except Carriers)
+|Firepower + 5
+|
+|-
+|Shelling (Carrier only)
+|(Firepower + Torpedo) × 1.5 + Dive Bomber Stat × 2 + 55
+|
+|-
+|Torpedo/Preemptive Torpedo
+|Torpedo + 5
+|
+|-
+|Anti-sub warfare
+|(Original ASW <ref name="ASW0">Refers to ASW stat without any equipment.</ref> / 5, rounded down) + Equipment ASW <ref name="ASWE">Refers to the total of ASW stats that the equipment added to the ship's stats.</ref> × 2 + 10 or 25
+|25 for DD/CL, 10 for others
+|-
+|Night Battle
+|Firepower + Torpedo
+|
+|}
+
+====Attack Type Modifier (Plane Scaling)====
+{| class="article-table" style="width:600px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="width:250px; text-align:center;" |Type
+! scope="col" style="width:100px; text-align:center;" |Attack Type Modifier
+! scope="col" style="width:550px; text-align:center;" |Notes
+|-
+|Dive Bombers, Seaplane Bombers
+|1
+|This value is fixed, regardless the situation.
+|-
+|Torpedo Fighters
+|0.8 or 1.5
+|About 50% chance of either modifier.
+|}
+
+===Formation Modifier (Pre-Cap Modifier)===
+{| class="article-table" style="width: 860px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center; width:240px;" |Formation
+! scope="col" style="text-align:center; width:80px;" |Formation Icon
+! scope="col" style="text-align:center; width:80px;" |Surface Damage Modifier
+! scope="col" style="text-align:center; width:80px;" |Anti-sub Modifier
+! scope="col" style="text-align:center; width:80px;" |Anti-air Modifier
+! scope="col" style="text-align:center; width:100px;" |Shelling Hit Rate
+! scope="col" style="text-align:center; width:100px;" |Torpedo Hit Rate
+! scope="col" style="text-align:center; width:100px;" |Flagship Protection Rate
+|-
+| Line Ahead<br />{{Nihongo|単縦陣|''Tanjuu-jin''|}}
+| <center>{{LineAhead}}</center>
+| style="text-align:center;" |100%
+| style="text-align:center;" |45%
+| style="text-align:center;" |100%
+| style="text-align:center;" |<span style="text-align:start;">Medium</span>
+| style="text-align:center;" |High
+| style="text-align:center;" |Low
+|-
+| Double Line<br />{{Nihongo|複縦陣|''Fukujuu-jin''|}}
+| <center>{{DoubleLine}}</center>
+| style="text-align:center;" |80%
+| style="text-align:center;" |60%
+| style="text-align:center;" |120%
+| style="text-align:center;" |High
+| style="text-align:center;" |Medium
+| style="text-align:center;" |Medium
+|-
+| Diamond<br />{{Nihongo|輪形陣|''Rinkei-jin''|}}
+| <center>{{Diamond}}</center>
+| style="text-align:center;" |70%
+| style="text-align:center;" |90%
+| style="text-align:center;" |160%
+| style="text-align:center;" |<span style="text-align:start;">Medium</span>
+| style="text-align:center;" |Very Low
+| style="text-align:center;" |High
+|-
+| Echelon<br />{{Nihongo|梯形陣|''Teikei-jin''|}}
+| <center>{{Echelon}}</center>
+| style="text-align:center;" |60%
+| style="text-align:center;" |75%
+| style="text-align:center;" |100%
+| style="text-align:center;" |Medium
+| style="text-align:center;" |Low
+| style="text-align:center;" |Medium
+|-
+| Line Abreast<br />{{Nihongo|単横陣|''Tan'ou-jin''|}}
+| <center>{{LineAbreast}}</center>
+| style="text-align:center;" |60%
+| style="text-align:center;" |100%
+| style="text-align:center;" |100%
+| style="text-align:center;" |High
+| style="text-align:center;" |Very Low
+| style="text-align:center;" |Medium
+|}
+*The surface damage modifier does not affect Aerial Combat or Anti-Submarine attacks.
+*The surface damage modifier applies to both shelling and torpedo attacks.
+*You need at least 4 ships in your fleet to select a formation. Diamond is only selectable as a formation with 5+ ships.
+*'''Flagship protection''' is the situation where a non-flagship ship protects the flagship from being damaged by receiving the attack instead.
+*Line Ahead has the highest offensive power for surface combat. It is the default choice for encounters after the 3rd battle node to preserve firepower because of low ammo penalty.
+*Double Line is generally a good formation for heavy BB/CV fleets. There is a significant accuracy increase that benefits the typically lower accuracy carriers, while BB often still have enough firepower.
+*Line Abreast is the best formation for anti-sub purposes.
+*Echelon has not been tested extensively, but it is hypothesized to be a defensive formation for night combat.
+
+===Engagement Form Modifier (Pre-Cap Modifier)===
+{| class="article-table" style="width: 400px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center; width:200px;" |Form
+! scope="col" style="text-align:center; width:100px;" |Damage Modifier
+! scope="col" style="text-align:center; width:100px;" |Chance (Without Saiun)
+! scope="col" style="text-align:center; width:100px;" |Chance with [[Saiun]] equipped
+|-
+|Parallel Engagement<br />{{Nihongo|同航戦|''Doukousen''|}}
+| style="text-align:center;" |100%
+| style="text-align:center;" |45%
+| style="text-align:center;" |45%
+|-
+|Head-on Engagement<br />{{Nihongo|反航戦|''Hankousen''|}}
+| style="text-align:center;" |80%
+| style="text-align:center;" |30%
+| style="text-align:center;" |40%
+|-
+|Crossing the T ('''<span style="color:green">Advantage</span>''')<br />{{Nihongo|T字戦有利|''T Ji-sen Yuuri''|}}
+| style="text-align:center;" |120%
+| style="text-align:center;" |15%
+| style="text-align:center;" |15%
+|-
+| style="white-space: nowrap;" |Crossing the T ('''<span style="color:red">Disadvantage</span>''')<br />{{Nihongo|T字戦不利|''T Ji-sen Furi''|}}
+| style="text-align:center;" |60%
+| style="text-align:center;" |10%
+| style="text-align:center;" |0%
+|}
+*Please note that all engagement forms '''affect both sides equally''', including crossing the T (<span style="color:green">Advantage </span>or<span style="color:green"> </span><span style="color:red">Disadvantage</span>).
+* Night battle and aerial combat are not affected by engagement forms.
+*Crossing the T (Disadvantage) can be avoided by equipping a {{Template:YellowPlane}}{{Nihongo|彩雲|''Saiun''|}} (Carrier-based recon plane).
+**Using Saiun effectively makes what would have been Crossing the T (Disadvantage) become Head-on Engagement.
+<span style="font-size:15px;font-weight:bold;">Engagement Forms</span>
+
+'''Parallel Engagement'''
+
+The course of the player's fleet and the enemy fleet are the same.
+{| class="article-table" style="width: 300px;" border="0" cellpadding="1" cellspacing="1"
+|Fleet A
+|→
+|→
+|→
+|→
+|→
+|→
+|-
+|Fleet B
+|→
+|→
+|→
+|→
+|→
+|→
+|}
+'''Head-on Engagement'''
+
+The course of the player's fleet and the enemy fleet are opposite each other.
+{| class="article-table" style="width: 300px;" border="0" cellpadding="1" cellspacing="1"
+| style="text-align:center;" |Fleet A
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+|-
+| style="text-align:center;" |Fleet B
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+|}
+'''Crossing the T'''
+
+The course of the player's fleet and the enemy fleet are perpendicular to each other (that's 90 degrees, which results in a T figure). A fleet is in disadvantage if it is coming from「｜」direction, and is in advantage it is is coming from「―」direction.
+
+(Historically, the point of this was for the「―」fleet to bring as many guns to bear on the enemy while limiting the firepower of the enemy that can only use guns mounted forward.)
+
+{| class="article-table article-table-selected" style="width: 300px;" border="0" cellpadding="1" cellspacing="1"
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| style="text-align:center;" |→
+| colspan="2" rowspan="7" style="text-align:center;" |<center>'''OR'''</center>
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+| style="text-align:center;" |←
+|-
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+|-
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+|-
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+|-
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+|-
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+|-
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+| colspan="7" rowspan="1" style="text-align:center;" |↑
+|}
+
+===Night Combat===
+[[File:3.png|thumb|An example of a cut-in]]
+*Night battle damage depends on both the Firepower and Torpedo stats for attack power. Consequently, DDs, CLs, CLTs and CAs have drastically increased strength at night.
+*Heavily damaged vessels cannot attack in night battle.
+*[[List of Main Guns by stats|List of Main Guns]]
+*[[List of Secondary Guns by stats|List of Secondary Guns]]
+*Auxiliary equipment (e.g radar, sonar/depth charge, searchlight, turbine, special ammunition, pure AA equipment(green), and midget-sub) will not affect the combination.
+*If night combat nodes are anticipated, it can be very helpful to utilize specialized night battle equipment such as [[Star Shell]]s and [[Searchlight]]. [[Type 98 Recon Seaplane (Night Scout)]] is also an option.
+*Formation bonuses and penalties apply in night battles, but Engagement Forms do not. (Exception: In Nodes that begin with a Night Battle, an Engagement Form is rolled invisibly, the multiplier for which is applied to Anti-Submarine damage only.)
+<span style="font-size:15px;font-weight:bold;">Night Battle Attack Types</span>
+
+{| class="article-table article-table-selected" style="width: 700px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Type
+! scope="col" style="text-align:center;" |Main
+! scope="col" style="text-align:center;" |Secondary
+! scope="col" style="text-align:center;" |Torpedo
+! scope="col" style="text-align:center;" |Notes
+|-
+| rowspan="4" |Cut-In
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |2+
+|Torpedo Attack
+|-
+| style="text-align:center;" |3+
+| style="text-align:center;" |
+| style="text-align:center;" |
+| rowspan="2" |Shelling
+|-
+| style="text-align:center;" |2
+| style="text-align:center;" |1+
+| style="text-align:center;" |
+|-
+| style="text-align:center;" |1-2
+| style="text-align:center;" |
+| style="text-align:center;" |1
+|Combined Attack
+|-
+| rowspan="3" |Double Attack
+| style="text-align:center;" |2
+| style="text-align:center;" |0
+| style="text-align:center;" |0
+|
+|-
+| style="text-align:center;" |1
+| style="text-align:center;" |1+
+| style="text-align:center;" |0
+|
+|-
+| style="text-align:center;" |0
+| style="text-align:center;" |2+
+| style="text-align:center;" |0-1
+|Secondary Gun Double-Attack, Torpedo doesn't fire
+|-
+|Single Attack
+| colspan="4" |Results from failing to meet equipment requirements, or other attacks random chance at failing. Fires with gun or torpedo in highest equipment slot.
+|-
+|Anti-Submarine
+| colspan="4" rowspan="1" |
+Any enemy submarines will force Destroyers and Light Cruisers to target them. Cut-In and Double Attacks are ignored. In normal Night Battles, ASW damage is scratch damage only. In battles starting at night, Formation Modifiers apply.
+|}
+=====<span style="font-size:12px;font-weight:bold;">Cut-in Equipment Setups</span>=====
+
+NOTE: These are only a few examples. See the above table.
+
+NOTE: Midget subs don't count as torpedoes for this.
+{| class="wikitable" style="width: 800px;"
+| colspan="1" rowspan="2" style="text-align: center;" |{{RedGunMedium}}{{RedGunMedium}}{{RedGunMedium}}3 main guns
+| rowspan="5" |
+| colspan="1" rowspan="2" style="text-align: center;" |{{RedGunMedium}}{{RedGunMedium}} 2 main guns
+| rowspan="5" |
+| colspan="1" rowspan="2" style="text-align: center;" |{{RedGunMedium}} 1 main gun
+| rowspan="5" |
+|-
+| style="text-align: center;" |{{TorpedoWeapon}}{{TorpedoWeapon}} Just 2 torpedos
+|-
+| colspan="1" style="text-align: center;" |
+| colspan="1" style="text-align: center;" |'''+'''
+| colspan="1" style="text-align: center;" |'''+'''
+| colspan="1" style="text-align: center;" |
+|-
+| colspan="1" rowspan="2" style="text-align: center;" |No {{YellowGun}} or {{TorpedoWeapon}} equipped
+| colspan="1" rowspan="2" style="text-align: center;" |{{YellowGun}} 1 sub gun
+| colspan="1" rowspan="2" style="text-align: center;" |{{TorpedoWeapon}} 1 torpedo
+| colspan="1" rowspan="2" style="text-align: center;" |One {{YellowGun}} also equippable
+|}
+
+=====Double Attack Equipment Setups=====
+NOTE: These are only a few examples. See the above table.
+
+{| class="wikitable" style="width: 600px;"
+| colspan="1" rowspan="1" style="text-align: center;" |{{RedGunMedium}} 1 main gun
+| colspan="1" rowspan="5" style="text-align: center;" |
+| colspan="1" rowspan="3" style="text-align: center;" |{{RedGunMedium}}{{RedGunMedium}} 2 main guns
+| colspan="1" rowspan="5" style="text-align: center;" |
+| colspan="1" rowspan="3" style="text-align: center;" |{{YellowGun}}{{YellowGun}} 2 or more sub guns
+|-
+| style="text-align: center;" |'''+'''
+|-
+| style="text-align: center;" |{{YellowGun}}1 or more sub guns
+|-
+| style="text-align: center;" |
+| style="text-align: center;" |
+|-
+| style="text-align: center;" |No {{TorpedoWeapon}} equipped
+| colspan="1" rowspan="2" style="text-align: center;" |No {{YellowGun}} or {{TorpedoWeapon}} equipped
+| colspan="1" rowspan="2" style="text-align: center;" |One {{TorpedoWeapon}} also equippable
+|}
+=====Full List=====
+{| class="wikitable" id="mw-customcollapsible-nightcombat" "
+|-
+! colspan="4" style="text-align:center;" |Equipment
+! style="text-align:center;" |Type
+|-
+|{{RedGunMedium}}
+|
+|
+|
+|Single Attack
+|-
+|{{TorpedoWeapon}}
+|
+|
+|
+|Single Attack
+|-
+|{{YellowGun}}
+|
+|
+|
+|Single Attack
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|
+|
+|Double Attack
+|-
+|{{RedGunMedium}}
+|{{YellowGun}}
+|
+|
+|Double Attack
+|-
+|{{RedGunMedium}}
+|{{TorpedoWeapon}}
+|
+|
+|Cut-in (Mixed)
+|-
+|{{YellowGun}}
+|{{YellowGun}}
+|
+|
+|Double Attack
+|-
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|
+|
+|Single Attack
+|-
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|
+|
+|Cut-in (Torpedo)
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|
+|Cut-in (Gun)
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{YellowGun}}
+|
+|Cut-in (Gun)
+|-
+|{{RedGunMedium}}
+|{{YellowGun}}
+|{{YellowGun}}
+|
+|Double Attack
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{TorpedoWeapon}}
+|
+|Cut-in (Mixed)
+|-
+|{{RedGunMedium}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|
+|Cut-in (Torpedo)
+|-
+|{{RedGunMedium}}
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|
+|Cut-in (Mixed)
+|-
+|{{YellowGun}}
+|{{YellowGun}}
+|{{YellowGun}}
+|
+|Double Attack
+|-
+|{{YellowGun}}
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|
+|Double Attack
+|-
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|
+|Cut-in (Torpedo)
+|-
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|
+|Cut-in (Torpedo)
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|Cut-in (Gun)
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{YellowGun}}
+|Cut-in (Gun)
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{YellowGun}}
+|{{YellowGun}}
+|Cut-in (Gun)
+|-
+|{{RedGunMedium}}
+|{{YellowGun}}
+|{{YellowGun}}
+|{{YellowGun}}
+|Double Attack
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{TorpedoWeapon}}
+|Cut-in (Gun)
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|Cut-in (Torpedo)
+|-
+|{{RedGunMedium}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|Cut-in (Torpedo)
+|-
+|{{RedGunMedium}}
+|{{RedGunMedium}}
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|Cut-in (Gun)
+|-
+|{{RedGunMedium}}
+|{{YellowGun}}
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|Cut-in (Mixed)
+|-
+|{{RedGunMedium}}
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|Cut-in (Torpedo)
+|-
+|{{YellowGun}}
+|{{YellowGun}}
+|{{YellowGun}}
+|{{YellowGun}}
+|Double Attack
+|-
+|{{YellowGun}}
+|{{YellowGun}}
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|Double Attack
+|-
+|{{YellowGun}}
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|Cut-in (Torpedo)
+|-
+|{{YellowGun}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|Cut-in (Torpedo)
+|-
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|{{TorpedoWeapon}}
+|Cut-in (Torpedo)
+|}
+
+====Night Battle Special Attack Modifier (Pre-Cap Modifier)====
+=====<span style="font-size:12px;font-weight:bold;">Cut-in Attack</span>=====
+{| class="article-table" style="height: 100px; width: 500px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Equipped Weapons
+! scope="col" style="text-align:center;" |Modifier
+|-
+|2+ torpedoes
+|2 simultaneous attacks at 150%
+|-
+|1-2 main guns, 1 torpedo
+|2 consecutive attacks at 130%
+|-
+|3+ main guns
+|200%
+|-
+|2 main guns, 1 secondary gun
+|175%
+|}
+Note: If two attacks (simultaneous or consecutive) are made, the total damage is displayed together but the Damage Cap (and enemy Armor) is applied separately to each attack.
+
+'''Cut-in chance:''' (0.85 * Luck + Placement Modifier + Health Modifier + Searchlight Modifier) [%]
+
+{| class="article-table" style="width: 400px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Modifier
+!
+! scope="col" style="text-align:center;" |Value
+|- valign="top"
+| rowspan="2" |Placement
+|Flagship
+| style="text-align:right;" | +30
+|-
+|Other
+| style="text-align:right;" | +15
+|- valign="top"
+| rowspan="3" |Health
+|Little or no damage
+| style="text-align:right;" |0
+|-
+|Minor damage (小破 Syouha)
+| style="text-align:right;" | +10
+|-
+|Moderate damage (中破 Chuuha)
+| style="text-align:right;" | +20
+|- valign="top"
+| rowspan="2" |Searchlight
+|Allied
+| style="text-align:right;" | +5
+|-
+|Enemy
+| style="text-align:right;" | -10
+|- valign="top"
+| rowspan="2" |Star Shell
+|Allied
+| style="text-align:right;" | +5
+|-
+|Enemy
+| style="text-align:right;" | -10
+|}
+
+=====Double Attack=====
+Two consecutive attacks at 120%. Very high base activation chance, compared to cut-in's luck stat reliant chance.
+
+===Ship's Health Modifier (Pre-Cap Modifier)===
+
+{| class="article-table" style="width: 400px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Damage
+! scope="col" style="text-align:center;" |Modifier
+|-
+| Minor damage (小破 Syouha) or less
+| style="text-align:center;" |100%
+|-
+| Moderate damage (中破 Chuuha)
+| style="text-align:center;" |70%
+|-
+| Heavy damage (大破 Taiha)
+| style="text-align:center;" |40%
+|}
+This modifier does not affect Aerial Combat.
+
+
+===Attack Power Cap (Applies After All Pre-Cap Modifiers)===
+Conditions for the attack power cap to activate: [Basic attack power x Pre-cap modifiers] exceeds '''150 for day''' battle, '''300 for night''' battle, and '''100 for anti-sub''' attacks.<br />This is the attack power cap, and it's represented below by <math>x</math>:
+
+<math>\text {Attack Power After Caps} = x + \sqrt {\text {Pre Caps Attack Power} - x}</math>
+
+Daytime Attack Cap often makes it important to utilize [[Combat#Artillery_Spotting_.28Post-Cap_Modifier.29|Artillery Spotting]] when possible to increase damage. [[Combat#Night Combat|Night Combat]] can be very dangerous and/or rewarding due to having a very high cap and the inclusion of torpedo to firepower for attack power calculation.
+
+===Critical Modifier (Post-Cap Modifier)===
+{| class="article-table" style="height: 100px; width: 200px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Attack Type
+! scope="col" style="text-align:center;" |Modifier
+|-
+| Normal Attack
+| style="text-align:center;" |100%
+|-
+| Critical Hit
+| style="text-align:center;" |150%
+|}
+It should be noted that the '''critical message always appears when damage dealt is greater than or equal to 40,''' regardless of whether the 150% modifier was applied or not. On the other hand, the critical message will never appear when damage dealt is less than or equal to 14, even if the 150% modifier was applied.
+
+===Contact (Post-Cap Modifier)===
+*Contact takes place during the Aerial Combat phase. It increases bombing damage for all allied bombers.
+*When successful, a image of the squadron performing contact is shown in the opposing fleet's formation indicator, with the text "<span style="color:rgb(0,0,0);font-family:verdana,arial,helvetica,sans-serif;font-size:11.818181991577148px;line-height:15.600001335144043px;">触接中".</span>
+*Trigger conditions:
+**More air control than Air Denial
+**At least one carrier scout plane, seaplane scout, or torpedo bomber equipped.
+***Seaplane bombers, Type 3 Spotter, and Ka-type Autogyros cannot perform contact.
+**It's thought that each carrier scout plane, seaplane scout, and/or torpedo bomber slot equipped is given a chance to trigger contact. Once successful, the bonus applied is chosen at random with weighting from all elegible equipped planes.
+*Different types of planes have different trigger rates. They are roughly estimated as (if only one is equipped):
+{| class="article-table" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Type
+! scope="col" style="text-align:center;" |Contact Rate
+|-
+| Torpedo Bomber
+| style="text-align:center;" |~2%
+|-
+| Seaplane Scout
+| style="text-align:center;" |~20%
+|-
+| Carrier Scout
+| style="text-align:center;" |~50%
+|}
+'''Damage Modifiers'''
+*The damage increase depends on the +accuracy bonus {{Template:Hit}} of the squadron performing contact.
+{| class="article-table" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Accuracy<br />Bonus
+! scope="col" style="text-align:center;" |Damage<br />Modifier
+|-
+| style="text-align:center;" | +0
+| style="text-align:center;" |112%
+|-
+| style="text-align:center;" | +1
+| style="text-align:center;" |112%
+|-
+| style="text-align:center;" | +2
+| style="text-align:center;" |117%
+|-
+| style="text-align:center;" | +3
+| style="text-align:center;" |120%
+|}
+'''Notes'''
+*Type 2 Recon Aircraft is useful in the case that the bombing damage bonus is desired while not removing the chance for T-disadvantage, due to its high trigger rate.
+*With contact, the maximum attack power of bombing (before defense, critical and ammo) is around 180. With some luck, it's possible to sink even Ru-class Flagships (Armor = 99) in one strike without a critical.
+
+===Artillery Spotting (Post-Cap Modifier)===
+'''Artillery spotting''' allows your ships with seaplanes to double attack and cut-in during day battle.
+*When the following conditions are all met for a ship, artillery spotting may occur.
+**Proper equipment (see below)
+**'''Air superiority or greater achieved in aerial combat phase'''
+***Thus, if aerial combat is not triggered, artillery spotting cannot occur.
+**Not in heavily damaged (大破) state
+**Ship is carrying at least 1 [[List_of_Seaplanes_by_stats|seaplane]] {{Template:Seaplane}} (i.e. slots are not all at 0 remaining).
+
+*Factors affecting trigger chance
+**Increases with combined fleet LOS (very roughly +0.08% per LOS)
+**Flagships bonus of around +15%
+**Air supremacy adds about +10% more than air superiority
+*<span style="color:rgb(41,47,51);font-family:Arial,sans-serif;line-height:18px;white-space:pre-wrap;">Seaplane bombers can be used in artillery spotting. ([https://twitter.com/KanColle_STAFF/statuses/459604731564802048 25/4/2014] )</span>
+*Ka-type Observation Autogyro does not work for artillery spotting.
+
+'''Attack types:'''
+
+<u>Single Attack</u>
+*A ship will only do a single attack if
+**only 1 main gun is equipped (e.g.{{Template:RedGunMedium}}{{Template:TorpedoWeapon}}{{Template:Radar}}).
+**no main guns are equipped (e.g. {{Template:YellowGun}}{{Template:YellowGun}}).
+**a double attack/cut-in was not triggered by chance.
+*Damage: 100%
+<u>Double Attack</u>
+*A ship can do a double attack if
+** 2 or more''' main guns''' equipped (e.g. {{Template:RedGunHeavy}}{{Template:RedGunHeavy}}).
+*Damage: 120 % x 2
+*Trigger chance: '''~50%'''
+<u>Cut-in Attack</u>
+
+[[File:KanColle-140425-17422431.png|thumb|Cut-in Type Observed Fire using 1Main 1Sec & Type 91 AP shell]]
+*A ship can do a cut-in attack if
+*#equipped with '''1 main gun and 1-2 secondary guns (without AP shell/Radar)''' (e.g. {{Template:RedGunHeavy}}{{Template:YellowGun}}).
+*#*Damage: 110 %
+*#equipped with '''1 main gun, 1 secondary gun and 1 radar '''(e.g. {{Template:RedGunHeavy}}{{Template:YellowGun}}{{Template:Radar}}).
+*#*Damage: 120%
+*#equipped with '''1 main gun, 1 secondary gun and 1 [[Type 91 Armor-Piercing (AP) Shell]]'''.
+*#*Damage: 130 %
+*Cut-in attacks receive an accuracy bonus.
+*Trigger chance: '''~50%'''
+<u>Mixed Attack</u>
+[[File:KanColle-140425-16133343.png|thumb|Cut-in Type Mixed Attack Observed Fire with 2 Main & Type 91 AP Shell.]]
+*A ship will have a chance to do either double attack '''or''' cut-in attack if
+*#equipped with '''2 main guns + 1 secondary gun '''(e.g. {{Template:RedGunHeavy}}{{Template:RedGunHeavy}}{{Template:YellowGun}}).
+*#*Cut-in damage: 130 %
+*#*Double attack damage: 120 % x 2
+*#equipped with '''2 main guns + 1 [[Type 91 Armor-Piercing (AP) Shell]]'''.
+*#*Cut-in damage: 150 %
+*#*Double attack damage: 120 % x 2
+*Trigger chance: '''Equally distributed, ~30% each '''(double attack and cut-in attack), with the remainder going towards single attack.
+
+
+Notes:
+*Luck {{Template:Luck}} and sparkling do not affect the trigger chance of artillery spotting.
+*Artillery spotting cut-in attacks cannot miss, but they will inflict scratch damage instead.
+*[[Type 3 Shell]] {{Template:GreenAmmo}}, [[List of Torpedoes by stats|torpedoes]] {{Template:TorpedoWeapon}} and [[List of Anti-Air Guns by stats|machine guns]] {{Template:GreenGunMG}} do not count toward triggering artillery spotting.
+*Tables of [[List_of_Main_Guns_by_stats|main guns]] and [[List_of_Secondary_Guns_by_stats|secondary guns]]
+
+
+====='''Full List'''=====
+{| class="wikitable" id="mw-customcollapsible-nightcombat" "
+|-
+! colspan="4" |Equipment
+!Day Battle
+!Modifier
+!Night battle
+!Modifier
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+|-
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+|-
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+|-
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |Cut-in
+| style="text-align:center;" |110%
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Random
+| style="text-align:center;" |150%
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:Radar}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Cut-in
+| style="text-align:center;" |120%
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Cut-in
+| style="text-align:center;" |130%
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+| style="text-align:center;" |Cut-in
+| style="text-align:center;" |200%
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Random
+| style="text-align:center;" |130%
+| style="text-align:center;" |Cut-in
+| style="text-align:center;" |175%
+|-
+| style="text-align:center;" |{{RedGunMedium}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Cut-in
+| style="text-align:center;" |110%
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{YellowGun}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Double Attack
+| style="text-align:center;" |120% x 2
+|-
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:RedAmmo}}
+| style="text-align:center;" |{{Template:Seaplane}}
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+| style="text-align:center;" |Single Attack
+| style="text-align:center;" |100%
+|}
+<br />
+
+===Remaining Ammo Modifier===
+{| class="article-table" style="height: 100px; width: 320px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" style="text-align:center;" |Remaining Ammunition
+! scope="col" style="text-align:center;" |Modifier
+|-
+| 5 to 10 {{Ammo}} bars
+| style="text-align:center;" |100%
+|-
+| 4 {{Ammo}} bars
+| style="text-align:center;" |80%
+|-
+| 3 {{Ammo}} bars
+| style="text-align:center;" |60%
+|-
+| 2 {{Ammo}} bars
+| style="text-align:center;" |40%
+|-
+| 1 {{Ammo}} bar
+| style="text-align:center;" |20%
+|-
+| 0 {{Ammo}} bars
+| style="text-align:center;" |Scratch Damage
+|}
+*In general, two bars of {{Ammo}} will be used in Day Battle for all ships, regardless of whether they attack or not.
+*The Remaining Ammo Modifier affects the opening Aerial Combat Phase.
+*When entering night battle, the Remaining Ammo Modifier on a vessel remains same as the previous day battle. One bar of {{Ammo}} is used for all ships in Night Battle, regardless of whether they attack or not.
+*Because most battles will consume 2 bars of ammunition each, try to engage the boss before the 5th battle, or else achieving victory becomes unlikely (but not impossible).
+*When attempting to defeat boss nodes, avoid night battles and whirlpools on the way.
+**While early maps' whirpools decrease your resources directly, later maps will decrease either {{Fuel}} or {{Ammo}} bars of your sorted fleet, which can be disadvantageous in long sorties.
+*Submarine-only nodes on limited-time event maps do not consume ammo in Day or Night Battle.
+
+==Victory Conditions==
+;Perfect S
+*All enemy ships sunk and no damage taken.
+;S (Victory)
+*All enemy ships sunk and no allied ships sunk.
+;A (Victory)
+*Required number of enemy ships sunk (see below) and no allied ships sunk.
+;B (Tactical Victory)
+*Enemy flagship sunk and no allied ships sunk.
+* Sinking the enemy flagship guarantees at least a B as long as no allied ships are sunk.
+*Enemy flagship sunk, friendly ship sunk and number of friendly ships sunk < number of enemy ships sunk.
+*Damage gauge at least 2.5 times higher enemy damage gauge.
+;C (Tactical Defeat)
+*Didn't clear any of the conditions for A or B, but enemy took over a certain amount of damage.
+*Damage gauge higher than enemy gauge, but not reaching 2.5 times as much.
+*Friendly ship sunk, damage gauge higher than enemy, but not 2.5 times as much.
+*Friendly ship sunk, enemy flagship sunk and number of friendly ships sunk ≥ number of enemy ships sunk. It is possible to clear maps with boss gauges (eg. 4-4, 5-3, event maps) with a C if the enemy flagship is sunk.
+;D (Defeat)
+*Enemy took less than a certain amount of damage.
+**Both sides taking 0 damage is also D.
+**If your fleet consist only 1 ship and it is reaching Heavy Damage without meeting any winning requirements, it will instantly judged as D as well.
+*Damage gauge lower than enemy gauge.
+*Friendly ship sunk, not all enemy ships sunk, and gauge lower than enemy gauge.
+;E (Defeat)
+*Over a certain number of friendly ships sunk. (see below)
+*Friendly ship sunk while not meeting any victory conditions.
+*No damage done to enemy, while taking over a certain amount (Never happens in a fleet of 1).
+
+'''Notes'''
+*The Minimum Sunk Requirement:
+** 4 ships out of a fleet of 6
+** 3 ships out of a fleet of 5
+** 2 ships out of a fleet of 4
+** 2 ships out of a fleet of 3
+** 1 ship out of a fleet of 2
+*Victory status affects the chance of getting drops and rare drops on the specified node.
+**B rank and above are necessary to obtain drops.
+**A rank and above appear to be necessary for obtaining rare drops.
+**S rank appears to have a higher chance of obtaining rare drops than A rank.
+***There appears to be a correlation between enemy fleet formations and drops, but this information is still under verification and beyond player control.<ref name="Source">http://wikiwiki.jp/kancolle/?%BD%D0%B7%E2%A5%C9%A5%ED%A5%C3%A5%D7</ref>
+
+==Additional Explanation/Details==
+{{reflist}}

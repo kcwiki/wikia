@@ -1,0 +1,875 @@
+This part will study the <u>probabilities of surviving</u> some certain enemy attacks with some certain ships.
+
+First, I'd like to catch your interest (since this will be a long post >.<). According to these studies, against an attack of Ta-Class Flagship which is in line ahead, Hatsushimo K2 has higher chance to survive than Fusou K2 if Ta-flag manages to land a hit.(When you consider the extra evasion of DDs, Hatsushimo has even higher chance to survive.) I'm sure some of you are thinking now, like "how can a DD survive that kind of an attack better than a BB?". If so, good. At least I got you a little bit interested in.
+===What is This and How Does It Work?===
+
+I'll talk about the '''health states''' of our beloved ships. Here, I'll use [[Houshou|Houshou Kai]]'s stats to make some numbers look simpler.
+*Our ships have 4 health states. They are;
+(x : current health of the ship)
+
+: Green : Healthy state. Your kanmusume has more than 75% of her HP left. 100%>= x >75%
+
+: Yellow : Shouha(minor damage). 75%>= x >50%
+
+: Orange : Chuuha(moderate damage). 50%>= x >25%
+
+: Red : Taiha. 25%>= x >1 HP
+
+
+
+Imagine Houshou Kai now. She has 40 HP. If she receives 10 damage, she will be <u>shouha</u>(minor damage). If she receives 20 damage, she will be <u>chuuha</u>(moderate damage) and won't be able to launch any planes. If she takes 30 damage, she will be <u>taiha</u>(heavy damage) and you will have to retreat unless you are in a boss node. If she receives 40 dmg or more, then you will be at RNG's mercy. However, this is not a very bad thing. In this situation, she will lose 50%-79% of her max HP. Which means '''1/6 chance of taiha and 5/6 chance of chuuha(around 83% chance of survival).''' Whichever happens, you can say goodbye to her shelling, however she DOES have a chance to survive a dangerous hit, thanks to what we call "'''Player Ship Protection Mechanism'''".
+
+Okay, but how can we make use of this? Let's take a look at this image now:
+
+[[File:Study434.jpg|left]]
+
+This image represents the <u>damage</u> that Houshou kai will receive on a successful hit.
+
+What we want to get is anything but taiha (heavy damage).
+
+According to the damage formula in the [[Combat|combat]] page:
+
+
+
+If received damage is less than 1, it will be considered scratch damage, meaning houshou kai will take 2-5 damage.
+
+If received damage is 1-9, she will still be healthy. If it is 10-19, she will be shouha. If it is 20-29, she will be chuuha.
+
+Here is <u>the problem</u>: If the damage that she receives is 30-39, this means '''a direct taiha '''which means''' an absolute retreat'''. However, if she receives 40 dmg or more, you have around '''83.33% chance to survive''' with moderate damage.
+
+*So in essence, if the attack that you'll receive lands on the red area, your girl will be heavily damaged, meaning that your chance of survival will be '''0%'''. However, if the same attack lands on the grey area, then your survival rate will increase to '''83%'''. A tremendous difference.
+
+So I thought : "What if I could remove the red area?","Can I remove it?". Then I ran a test, and saw that I could <u>use that grey area</u> to increase my chance to survive.
+
+But the damage depends on many factors. According to the formula, those are: Enemy firepower, formation, engagement, power cap, artillery spotting, critical hits, contact, your ship's hp and armor. It would be devastatingly overwhelming to work on all those factors and calculating their possibilities. However, we can easily eliminate most of them.
+
+
+
+Let's select a map. I choose [[World 4|4-3]] A node. That [[Battleship Ta-Class|Ta flag]] is in line ahead. They have no air power. Which means that we have eliminated enemy firepower, formation, artillery spotting and contact unknowns from the formula. Now we know them.What is left is engagement, critical hits and our ship. (Note: to prevent enemies from triggering contact on you, gain air supremacy).
+
+Since we chose Houshou, we have 8 possibilities to consider about enemy's attack. green T with critical hit, green T with no crit, and the same for parallel, head-on and red T engagements. We will use [[Saiun|saiun]] to prevent red T to make things even more easier. (Both in formula and in the battle. Because houshou has more risk to get taiha'd in red-T in these conditions. You will see after a while)
+
+: Our formula is [(Basic attack power * Pre-cap modifiers) * post-cap modifiers - armor * RNG ]* remaining ammo
+
+: Opening it a little bit : {[(FP+5)*Formation*Engagement*Health]*Artillery spotting*contact*critical - armor * RNG} * ammo
+
+: Houshou has 40 hp and 49 armor. Ta-flag has 125 Firepower.
+
+: Adding these and deleting the ones that have no effect : (130*1*Engagement)*critical - 49 * RNG
+
+: See it looks less scary now. Also note that (130*1*Engagement) will be modified if it exceeds the day power cap.
+
+: (RNG : a number between 2/3 and 4/3) [Or it used to be. The new formula is updated on the excel file.]
+
+I'll calculate and type all the results in these 6 possibilities.
+
+
+{| border="0" cellpadding="0" cellspacing="0" width="318"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:79pt" width="105"|
+| style="width:65pt" width="86"|Min dmg
+| style="width:95pt" width="127"|Max dmg
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Green T critical
+| align="right"|163
+| align="right"|196
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Green T normal
+| align="right"|87
+| align="right"|119
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Parallel critical
+| align="right"|129
+| align="right"|162
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Parallel normal
+| align="right"|64
+| align="right"|97
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Head-on critical
+| align="right"|90
+| align="right"|123
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Head-on normal
+| align="right"|'''38'''
+| align="right"|71
+|}
+
+(reminder : houshou has '''40 HP''')
+
+As you see here, all the possibilities except a normal hit on head-on formation '''will force the game to roll between 50%-79%'''.Because the attack of that Ta-flag is too much for Houshou kai. Even in head-on normal damage, the risk is very unlikely. Because if she takes any damage except 38 and 39, it will give you 5/6 chance (around 83%) to survive the attack.
+
+Let's say that you are paranoid. You don't even want that 38 or 39 dmg. In that case you can use [[Ryuuhou]] (not kai version). She has 39 HP and 38 armor. Even less than houshou, which means that she will '''always''' force the game to roll between 50%-79%. And thus <u>you actually decreased the risk of retreat,</u> by eliminating a direct taiha risk. (No need to post damages, since all of them are bigger than her HP)
+
+I'd like to now give another example. [[Ryuujou]] Kai Ni ('''50HP''' 62armor)
+{| border="0" cellpadding="0" cellspacing="0" width="318"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:79pt" width="105"|
+| style="width:65pt" width="86"|Min dmg
+| style="width:95pt" width="127"|Max dmg
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Green T critical
+| align="right"|146
+| align="right"|187
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Green T normal
+| align="right"|69
+| align="right"|111
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Parallel critical
+| align="right"|112
+| align="right"|153
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Parallel normal
+| align="right"|'''47'''
+| align="right"|88
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Head-on critical
+| align="right"|73
+| align="right"|114
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Head-on normal
+| align="right"|<u>21 </u>
+| align="right"|<u>62 </u>
+|}
+As you can see, most of them will force RNG roll again(dmgs are greater than 50). Except parallel normal which will hit 47 and its a direct taiha, however, the chance is very slim again (only 47,48 and 49 will send you back home). But in head-on normal, she will receive 21-62 dmg which is '''risky'''. She does have a chance to survive with little damage, however the risk of her getting taiha is big.
+
+So if you compare, Ryuuhou has more chance to survive the attack of a line-ahead flagship Ta-class in 4-3 A node than Ryuujou Kai Ni. So as you see, <u>having more HP and armor doesn't necessarily give you more chance to survive.</u>
+
+
+
+*If your enemy has high firepower, using a weak ship may force '''RNG roll''' instead of receiving a '''direct taiha'''. Against the same Ta again, Akatsuki K2 has ''a little bit more'' chance to survive than Kinugasa K2 even though she has higher survivability(!). Having more survivability is usually good, however by using those ships against tougher enemies, you might be reducing your chance by turning a "RNG roll" into a "direct taiha".
+
+If it is still unclear, I'll try to make it as clear as possible this time : If you increase your armor, you decrease the enemy's damage. But sometimes you may want to increase the enemy's damage to force that RNG roll which will grant you <u>83% chance of survival instead of 0%.</u>
+
+
+
+Why I said that sentence at the beginning of the study was because of this. (Remember it? Hatsushimo and Fusou example). Hatsuhimo will '''always''' turn Ta's attacks into RNG rolls due to her low hp and armor, while Fusou will sometimes absorb them thanks to her high armor, sometimes receive a taiha, and sometimes will receive a RNG roll. Shimakaze has a little bit higher risk to get taiha(23.8%). Sendai has even higher risk to get taiha(29.8%). However, as you go heavier than that, this value decreases because of the survivability of heavy ships (there are some heavy cruiser exceptions). Myoukou has 27.1%, Hiei has 7.7% and Musashi has 0.05% risk to receive a taiha. And also don't forget that evasive ships will make this risk even smaller since they will make the enemy miss more often) [ I've used only non-crit rates in this paragraph, critical hit taiha values are different, they affect BBs badly. Check these examples below to understand  ]
+
+Here are some more possibilities to receive a taiha from that Ta-flag which is in line ahead on a successful hit:
+{| border="0" cellpadding="0" cellspacing="0" width="324"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:89pt" width="119"|
+| class="xl65" style="width: 65pt; text-align: center;"|<u>normal </u>
+| class="xl65" style="width: 89pt; text-align: center;"|<u>critical</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Hatsushimo K2
+| class="xl67" style="text-align: center;"|16.6%
+| class="xl67" style="text-align: center;"|16.6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Shimakaze K
+| class="xl67" style="text-align: center;"|23.8%
+| class="xl67" style="text-align: center;"|16.6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Agano K
+| class="xl67" style="text-align: center;"|27.1%
+| class="xl66" style="text-align: center;"|16.6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Yuubari K
+| class="xl67" style="text-align: center;"|16.6%
+| class="xl66" style="text-align: center;"|16.6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Naka K2
+| class="xl67" style="text-align: center;"|29.4%
+| class="xl66" style="text-align: center;"|16.6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Kinugasa K2
+| class="xl67" style="text-align: center;"|29.8%
+| class="xl67" style="text-align: center;"|16.6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Choukai K2
+| class="xl67" style="text-align: center;"|26.8%
+| class="xl67" style="text-align: center;"|19.8%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Prinz K
+| class="xl67" style="text-align: center;"|21.6%
+| class="xl66" style="text-align: center;"|25.9%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Fusou K2
+| class="xl66" style="text-align: center;"|14.5%
+| class="xl66" style="text-align: center;"|26%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Haruna K2
+| class="xl67" style="text-align: center;"|10.4%
+| class="xl67" style="text-align: center;"|30.3%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Bismark Drei
+| class="xl66" style="text-align: center;"|4%
+| class="xl66" style="text-align: center;"|36.1%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Yamato K
+| class="xl67" style="text-align: center;"|0.2%
+| class="xl66" style="text-align: center;"|24.2%
+|}
+
+16.6% values come from the RNG roll which occurs when the dmg is higher than a ship's HP. As you see, the risk gets higher as you go from DDs to CAs with Kinugasa having the highest risk in normal hits. Then it gets lower as you go from CAs to BBs. The reason why Yuubari has less risk is because of that her low defense makes all the attacks come as RNG rolls.
+
+However, when a critical hit lands, your CAs and weaker ships may survive with moderate damage, while your BBs may receive a direct taiha instead.
+
+
+
+Let's check another example.  Against a [[Ru]] class flag BB in different formations, some of our ships' taiha risks are :
+
+(Note that these formations belong to the <u>enemy</u>)
+{| border="0" cellpadding="0" cellspacing="0" width="764"
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt;width:84pt" width="112"|
+| class="xl64" colspan="2" style="width: 132pt; text-align: center;"|'''Diamond'''
+| style="width: 48pt; text-align: center;"|
+| class="xl64" colspan="2" style="width: 132pt; text-align: center;"|'''Double Line'''
+| class="xl63" style="width: 48pt; text-align: center;"|
+| class="xl64" colspan="2" style="width: 130pt; text-align: center;"|'''Line Ahead'''
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl63" style="text-align: center;"|<u>normal</u>
+| class="xl63" style="text-align: center;"|<u>critical</u>
+| style="text-align: center;"|
+| class="xl63" style="text-align: center;"|<u>normal</u>
+| class="xl63" style="text-align: center;"|<u>critical</u>
+| style="text-align: center;"|
+| class="xl63" style="text-align: center;"|<u>normal</u>
+| class="xl63" style="text-align: center;"|<u>critical</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Fubuki K2
+| class="xl64" style="text-align: center;"|25,4%
+| class="xl64" style="text-align: center;"|16,6%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|23,2%
+| class="xl64" style="text-align: center;"|16,6%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|16,6%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Hibiki K2
+| class="xl64" style="text-align: center;"|27%
+| class="xl64" style="text-align: center;"|16,6%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|26,4%
+| class="xl64" style="text-align: center;"|16,6%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|21%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Akitsushima K
+| class="xl64" style="text-align: center;"|25,2%
+| class="xl64" style="text-align: center;"|16,6%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|23,6%
+| class="xl64" style="text-align: center;"|16,6%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|16,6%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Ooyodo K
+| class="xl64" style="text-align: center;"|16,7%
+| class="xl64" style="text-align: center;"|23,2%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|24%
+| class="xl64" style="text-align: center;"|23%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|25%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Jintsuu K2
+| class="xl64" style="text-align: center;"|15%
+| class="xl64" style="text-align: center;"|24%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|22%
+| class="xl64" style="text-align: center;"|25,5%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|28,1%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|KTKM K2
+| class="xl64" style="text-align: center;"|19,1%
+| class="xl64" style="text-align: center;"|24,5%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|28,2%
+| class="xl64" style="text-align: center;"|16,6%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|23,7%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Furutaka K2
+| class="xl64" style="text-align: center;"|10,5%
+| class="xl64" style="text-align: center;"|28,7%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|18,9%
+| class="xl64" style="text-align: center;"|24,8%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|32%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Myoukou K2
+| class="xl64" style="text-align: center;"|4,3%
+| class="xl64" style="text-align: center;"|30,5%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|17%
+| class="xl64" style="text-align: center;"|23,3%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|30,6%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Ise K
+| class="xl64" style="text-align: center;"|0%
+| class="xl64" style="text-align: center;"|30,4%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|2,5%
+| class="xl64" style="text-align: center;"|27,1%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|16,3%
+| class="xl64" style="text-align: center;"|25%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Kirishima
+| class="xl64" style="text-align: center;"|0%
+| class="xl64" style="text-align: center;"|19,5%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|1,5%
+| class="xl64" style="text-align: center;"|26%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|13,7%
+| class="xl64" style="text-align: center;"|27%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Yamato
+| class="xl64" style="text-align: center;"|0%
+| class="xl64" style="text-align: center;"|3,6%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|0%
+| class="xl64" style="text-align: center;"|11,4%
+| style="text-align: center;"|
+| class="xl64" style="text-align: center;"|0,4%
+| class="xl64" style="text-align: center;"|28,1%
+|}
+
+Let's start from Yamato. She has a huge armor advantage, and because of that, she almost won't get taiha against Ru in diamond, can rarely do on a crit in double line, and more often on a crit in line ahead.
+
+<u>People normally think that line ahead enemies are more dangerous than the other formations. This is not necessarily true</u>, as you see in the table (also valid for engagements). Check Akitsushima, she has the highest risk in diamond, and the safest in line ahead.
+
+What we understand from this table is that, when a flag Ru is in <u>line ahead</u>, she threatens mostly our <u>heavy ships</u>. And when she is in <u>diamond</u>, our <u>weaker ships</u>.
+
+
+
+
+
+I usually prefer light ships instead of heavy ones. The most important reason behind that is that they are inexpensive. They are also more evasive (and cuter .d). And this mechanism somewhat favors them. And you won't believe this next one:
+
+Remember that [[Aircraft Carrier Princess|CV Hime]] in the last spring event's final map's preboss node? I've had my BBs getting rekt there many times. I have calculated the chances and found out that she had 34.3% chance to wreck Kirishima, and 18.3% chance to wreck Haguro. So, Kirishima had '''about 2x risk''' than Haguro against CV Hime in that node. In this situation, it is better to use either CA or a heavy BB (Musashi has 8.1%, and Yamato has 10.2% taiha risk in this case) depending on the branching rules and your preferences.
+
+
+
+For more examples like this, please check the final section.
+
+
+===How to Do These Tests by Yourselves===
+An excel file was created in collaboration with the user [[User:Hayashi H|Hayashi H]] so that you can see any kind of damage possibility with any ship against any enemy in any situation.
+
+---   [https://drive.google.com/folderview?id=0BwekGxODioxfSlNlbFV5T3JZbnc&usp=sharing Download from here]
+
+
+
+
+All you need to do is to pick your kanmusu's <u>name</u> (her HP and armor values will be called to the screen), then your <u>enemy's name</u> and finally the <u>enemy formation</u>. You will be able to see the damage that your kanmusu will receive in each engagement together with critical hit values as well. There is also a more detailed report at the right side of the excel file, which will show you all the possibilities in all the engagements.
+
+
+
+*Go ahead, try your favourite kanmusu and see how she will do against an enemy.
+
+
+Since we are not mahou shoujos, we cannot predict the future. We won't know whether we will get parallel engagement or whether enemy Ru will crit, and even sometimes enemies' formation may change as well. So what we can do after getting the results is, <u>looking at them and selecting</u> the most propriate one (most probably the one with the least taiha risk).
+
+If the results are too random, you may choose to focus on Parallel and Head-on engagements' results, since the other formations have low chances to occur. (Green T 15%, Red T 10% or 0%)
+
+
+
+If you happen to find some interesting results while doing these tests, please share them.
+
+
+
+Okay now, let's be honest. There is no way to calculate all the ships' damage possibilities against all the situations. We have like 150 ships (even more if you add remodels), about 100 enemies, 4 engagements, 4 formations, critical hits, contact blah blaah. However, I made some tests for you and prepared a little report which gives general ideas about our some certain ships' chances to survive against some certain enemy ships. Let's look at it together:
+
+
+===The Report of General Situations ( Very General )===
+: Now I'll create 3 classes for us and 4 classes for the enemy. DD,CA,BB for us, and DD,CA,BB,and a boss for the enemy. I'll write each of them and compare them in different situations during the shelling phase. While doing this, I'll give ''average'' numbers from our kanmusus' hp and armor, and enemies' firepower. <u>Please note that</u> if you use powerful or weak ships of one of the types, <u>the results MAY change</u> or rather, will most likely change (such as sortieing with Prinz Eugen who has higher defense than other heavy cruisers). [Red-T is not taken into consideration here]. So;
+
+'''Our Destroyers''' : They are in good terms against enemy DDs. Only late models will cause direct taiha possibilities. However, they are <u>very weak against enemy CAs</u>. Enemy CAs have good chances to score a direct taiha against our DDs. Against enemy BBs, surprisingly, they are safer than many of us have thought. Only a non-crit hit in head-on has possibility to cause a direct taiha. Otherwise, they will depend on the RNG roll. And against bosses such as BB Hime, they will always force a RNG roll. CL Oni is something between CAs and BBs.
+
+'''Our Heavy Cruisers''' : They have almost no risk of getting direct taiha by enemy DDs. Maybe if you use a very weak CA and get a crit in green T or maybe when your CA is already chuuha. Against enemy CAs, it is kind of risky. Expect danger especially on a <u>critical hit</u>. And their weakest point is that, they are <u>extremely </u><u>vulnurable against enemy BBs</u>. They have direct taiha risk in almost any situation! I'd rather not use many CAs against many BBs. And against the bosses, they will force RNG roll against the ones like BB Hime.
+
+'''Our Battleships''' : Totally safe against enemy DDs. They are also safe against CAs most of the time. Beware against tougher CAs such as Ne-class and Black Ri Shooter. Fusou and Ise class have higher risk then others in this case. And against enemy BBs, -as you expected- it is quite dangerous. Against them, BBVs are the weakest, then FBBs, then slow BBs, and then heavy BBs which have the lowest risk against BBs. Note that Yamato class has more danger against very very powerful enemies' critical hits, however, this doesn't change the fact that they are overall better than other BBs against the majority of the enemies.
+
+
+==='''To Bring Saiun, or Not to Bring Saiun ? '''===
+As you know, saiun eliminates the possibility of red T, which helps us kill the enemies faster. Putting "wouldn't it be better to use high power to kill the enemies before they attack us?" logic aside, (since this is not the discussion of this topic. We are just discussing about the chance to survive in case that the enemy happened to stay alive and attacked us) I've heard some things like not bringing saiun in maps which have dangerous enemies. Well, depending on those enemies, you may be actually reducing their damage from RNG roll to direct taiha.
+
+
+
+*For instance, Kongou K2, against a line ahead BB Hime's non-crit hit in <u>head-on</u> will force a RNG roll, since it is too much for Kongou. However, the same attack will have a good chance to cause a direct taiha in <u>red T</u>. So, you see that not bringing saiun actually didn't help us in this case.
+
+Destroyers are somewhat safe against enemy BBs because they will force their high attacks to turn into RNG rolls. However, if you cause a red T by not bringing any saiun, you may create a chance for that enemy BB to cause a direct taiha on your DD. This logic is valid in most of the situations that favor weak ships against very powerful ones.
+
+
+Some of my latest results showed that sometimes saiun can either increase or decrease taiha chance but with a small amount, and it has different effects on different type of ships. I believe that it's advantage/disadvantage can be negligible for this part. So I believe that not bringing saiun is not a good idea, unless you are challenging weak or mid-power enemies. It also prevents your damage to get very low so that you can finish off your enemies quicker. And especially in harder maps, having no saiun in bosses may result in unpleasant outcomes.
+
+
+===A Trick for Submarines and Some Unremodeled Destroyers===
+A RNG roll makes a ship lose 50-79% of her max hp. And they get taiha when their hp is less than 75% of their max hp. So when the RNG roll is 75-79%, your ship will get taiha. But what about the ships which '''don't have 75-79% of their max hp'''? Let's take a look at Maruyu (6 HP). If she receives a hit which will make her cry, RNG roll will make her lose 3-4 HP. As you see, she '''cannot''' lose 5 hp. And she '''cannot be taiha''' unless she has 1 hp left.
+
+The same thing happens with some other ships. Maruyu,maruyu kai, Imuya, Imuya kai,Hachi (Hachi loses this ability when she remodels) and some destroyers with 15 HP. The HP values that pass this test are 6,7,10,11 and 15. Against enemies with <u>high ASW power</u>, these subs have '''absolutely no risk to get taiha at all '''(in the first attack)'''. '''RNG will always give them''' moderate damage '''(and sometimes light damage. see U-chan's test below to understand why) In this case, what we need to be afraid of is not RNG roll, but the enemies which have <u>mid-ASW power</u>.
+
+Why? if you ask, the result is simple. Imagine imuya kai ('''15 HP'''). Those mid-ASW enemies can hit her '''exactly 14 dmg. '''
+
+This is risky against enemies which are weak enough to hit around 75-99% of our girl's hp.
+
+Note that the other ships have both "direct taiha risk" and "RNG roll's taiha risk", while these special ships only have "direct taiha risk" which can only occur against weak-mid power-enemies.
+
+
+===Sample Test with U-chan===
+I've made some tests with [[U-511|U-chan]] and noted the enemies which can create a problem for her. ('''13 HP''') You can check the list of the enemies from excel file. (These ASW values represent Basic Attack Power and come from the table in the excel file) [And please don't forget that these formations belong to the <u>enemies</u>]
+
+
+*Against 74 ASW (I and Ro class Late model DDs), she will most of the time depend on RNG rolls.
+
+*Against 61 ASW (Ho class CL flagship), she will force RNG rolls in Line abreast, Echelon and in Diamond. Taiha risk is 19% in Double line, 28.5% in Line ahead.
+-after this point, as the enemy ASW gets lower, the risk will shift from Line ahead towards Line Abreast-
+
+*Against 56 ASW (Tsu class CL), she is in great risk. Taiha risk is 26% in Line ahead, 24% in Double Line, and 16,6% in the rest. 
+
+*Against 38 ASW (Ro and Ha class flagship DDs), she is in great risk again. Taiha risk is 3.6% in Line ahead, 18.1% in Double Line, 26,2% in Echelon, 23.6% in Diamond, 18.9% in Line abreast.
+
+*Against 20 ASW (Nu flagship CVL), almost no risk in Line ahead, Double line and Echelon. 4.9% in Diamond, and 12.2% in Line abreast.
+*Against 10-12 ASW (normal and elite DDs) she is almost invincible. Only critical hits in Line abreast have a very slight chance to taiha her.
+
+[The percentages here only include non-crits for this test.  If you want to see critical hit damages, you can use the excel file. However critical values are considered when making comments such as saying "risky" or "safe".]
+
+
+
+Note that she <u>can</u> survive mid-asw enemies' hits with her armor, however direct taiha risk is higher than high-asw enemies'.
+
+And high-asw enemies will most of the time damage her moderately (70%), sometimes heavily (17%), and rarily (13%) lightly. [ The last one is because 50-53% of her hp is 6.5 which will be rounded down to 6, which is shouha for U-chan.]
+
+
+===The Most Unpredictable Situation : Enemy Aircraft Carriers===
+First, I'd like to explain what these 2 sentences mean :
+
+'''1) Opening air strike depends on the planes and slots : '''A [[Ryuusei Kai]] will <u>deal the same damage</u> with Shoukaku class kai, taihou kai, ryuujou kai, junyou kai ni, and chitose sisters' carrier forms as long as it is used in the 24-plane-slot. So, don't expect a carrier to hit more than the other in the opening air strike just because they have higher stats. (SCAMP will not increase the opening bombing damage either because it only adds stats)'''<br />2) Shelling depends on the carrier's stats : '''You can check the shelling damage formula for carriers. All it has are stats. Mainly, a <u>carrier's firepower</u>, and then <u>extras</u> which are added by planes,weapons,and scamp. As long as you have '''high''' shelling firepower, "which plane you are using" and "in which slot you are using it" AND "the number of remaining planes in that slot" <u>doesn't matter at all</u>. (The last one thanks to Reikyu http://kancolle.wikia.com/wiki/User_blog:Reikyu/Carrier_shelling_and_size_0_plane_slots ) But you have to have at least 1 plane to attack the enemies. [So you might consider sortieing with 0 planes on some slots to still have the same shelling damage as long as you have 1 slot which has planes. But this will affect your opening air strike badly. It could be an idea to save some bauxite maybe]
+
+About Hiryuu, Souryuu and Taihou : These girls already have very high shelling firepower. Stacking many bombing planes on them will not have a big effect. Let's compare :
+
+
+
+*Hiryuu K2 with 3 Ryuusei will have 151+ (3*10)*1.5 = 196 shelling FP. after the cap, it will be 156. (see how 3 planes only increased her dmg by 5? ) And her opening torpedo firepower will be (53 or 101), (68 or 127), (57 or 107). [ Torpedo bombers can either hit 0.8*dmg or 1.5*dmg ] (Assuming no bombers lost)
+
+
+*Akagi K with 3 Ryuusei will have 128+ (3*40)*1.5=173 shelling FP. after the cap, it will be 154. See? It's almost the same. Because the carriers are already very close to the day battle cap. And her opening bomber firepower will be (55 or 104), (55 or 104), (65 or 122). Again, pretty much the same because opening air strike depends on the planes and the slots.
+
+So what matters between these 2 carriers are "Engagements" and "their the exact number of their plane slots". In a head-on engagement, Hiryuu with some planes will still be at the day cap, while Akagi may be struggling a little bit, and light carriers will not reach it at all. And the most important thing is <u>their plane slots</u>. Since we have many carriers with many different plane slots, according to our equipments, we can choose the most appropriate ones against our enemies. And our compositions may vary. [ You can use this website, it is very useful especially on events : http://aircalc.net/ ) Also don't forget that small slots have a higher risk to get wiped out.
+:
+
+So, after understanding all of these, you won't have any problems in the next part. And also don't confuse <u>FP</u> with the <u>actual dmg</u> in the next part. Remember that we learned to ''somewhat'' predict the enemies' damages by looking at their shelling firepower (remember the general situations report). Also, engagement and formation modifiers will not affect opening air strike damage in any way. You can assume both as 1 in the formula. ( But I don't know if they affect accuracy )
+
+
+
+Enemy carriers will have different chances to attack you. First one is the opening air strike in which they will use their '''bombers that survive''' after the fighter combat phase. This is the main tricky part. Their damage will be reduced depending on how many bombers they have lost. When you gain <u>air supremacy</u>, their damage will be reduced significantly. An <u>AACI</u> will also eliminate many of the enemy bombers. Depending on which of these 2 you can do, your enemy's damage will be <u>lower than expected</u>. Remember what can happen when you decrease a powerful enemy's damage? (They may trigger a direct taiha on weaker ships which would normally have triggered a RNG roll)
+
+Okay. Let's look at some possibilities we have here:
+
+
+
+'''1)''' When the enemy is Nu or Wo , anything but flagship :
+: I'll give Nu elite as an example now. In the shelling phase, it will have 67 FP (about a CL or CA). And it will keep hitting with that firepower "throughout the whole battle" until you destroy '''all''' of it's bombers. Note that reducing the number of enemy bombers will <u>not</u> reduce their firepower in the shelling phase.
+
+: In the opening air strike; it has 39 FP on its dive bomber, and either 35 or 66 FP on its torpedo bomber (again, not a big threat).
+
+: Now, there are 2 possibilities : That dive bomber and torpedo bomber can hit different targets, or the same target. If they hit different targets, since the damage is low already, it won't be much of a problem against our ships except our DDs. If they hit the same target, the damage will be calculated separately ( you can imagine it as a 2 weak attacks coming separately ) but still, it is unlikey to happen. Against these enemies, there isn't much of a threat.
+
+'''2)''' When the enemy is Nu or Wo flagship :
+
+: I'll give Wo flagship as an example (not very different than Nu flag, really). Her shelling FP is 113,5. Her dive bomber's is 58, and her torpedo bomber's is either 47 or 88.
+: Her opening bomber hits can occasionaly become a problem against weak ships (critical hits can put even CAs in danger). As if it is not enough, she has almost the FP of a battleship. Which means that in shelling, she will pose danger against CAs most of the time. (You can imagine DDs and CLs, right? DDs will mostly cause a RNG roll while CLs are somewhat random between DDs and CAs)
+
+: The problem is her opening bomber strike. Those firepower values will actually be lower because some of her planes will be shot down. The more you shoot, the less she will hit. And this may become dangerous against our DDs. However, our CAs will be most likely saved from her threat. So, pick your posion, eh?
+
+'''3) '''When the enemy is Black Wock Shooter or Wo flagship II
+
+: These enemies have 3 slots of bombers with high dmg and facing them is really dangerous. Our famous BWS has 160 shelling FP which puts her in a very powerful enemy category (She can even 1 hit KO Yamato). One of the problems about facing her is that her slots are big, meaning that you most probably won't be able to cancel her shelling by trying to eliminate all of her bombers. [ However there is a small chance. I am not sure how often this happens, after considering the reports coming from the players in the summer event, it looks like some people managed to do that with AACI, although rarely ]
+
+: She has 1 dive bomber and 2 torpedo bombers which have 61, (72 or 136), (72 or 136) FP respectively, which is similar to 1 CL and 2CA-2BB attack overall ( Those 3 attacks in the opening phase...). '''The "range" of ships that she can taiha is quite large''' (DDs,CLs,CAs, and BBs). Theoretically, she can taiha 5 ships in a battle (6 if you count the night battle). So my advice in a battle against her is to bring an AACI ship (most preffered ones are Maya and Akizuki), choosing diamond formation may also help (though I really don't know how much), and getting air supremacy ('''AS+''') as it will make a great impact on her bombers especially if it is <u>combined with an AACI</u> (It may not be possible to shoot down all of her bombers easily, but this is the most guaranteed way to avoid her high opening air strike damage)
+
+'''4) '''Just close your eyes and pray : Aircraft Carrier Princess
+
+: Sadly, no matter what we do, it looks like we cannot prevent her insane damage with her great accuracy. With 363,5 shelling firepower (even red T cannot stop her omg), and with 2 bombers which have 104FP (dive bomber) and either 97 or 183FP(torpedo bomber) respectively, she is the ultimate troll.
+
+: Since her slots are quite large, just as stopping her shelling is almost impossible, reducing her dmg in the opening air strike is also very hard. (Note that you can actually stop her shelling if you either kill her or hit her until her face becomes orange) [ And I heard that someone actually managed to shut her up. But that chance must be very very low ] There was a post though, which said that "the higher the number of a slot, the more planes will be lost" ( http://kancolle.wikia.com/wiki/User_blog:Ninthsense/Correlation_between_Bauxite_Losses_and_Slot_sizes ). If it is, CV Hime already loses more planes than we do since her slots are quite huge (52,56). But still, I think that reducing her dmg so much that she will not be able to pose a danger in the opening air strike is unlikely. Assume that this won't happen. Pray that she hits weaker ships which auto trigger a RNG roll.
+
+
+
+Against enemy carriers, I'd suggest going heavy, since weak ships may not always force a RNG roll <u>due to the random loss</u> of the enemies' planes (talking about the opening air strike only, remember that shot-down planes have no impact on shelling damage). And it will be easier to shoot them down. The most unlucky situation can occur when facing against BWS or when 2 of a flagship carrier's bombers hit the same target. And your best bet against them is to use AACI with air superiority/supremacy.
+
+
+
+About the bosses, I won't make a separate section, since we face them at the end nodes for most of the time. But you can check the possibilities by using the excel file.
+
+
+===Possible Faults in the System===
+I have tried to work as correct as possible. Even so, there might be some things that I've overlooked or mistaken. However, I believe that this test is mostly correct. The problems (if there is any) can be caused by :
+
+: '''1)''' Incorrect Assumptions such as;
+::: The assumption that the enemies are using the same damage formula as ours. They might have different soft caps or modifiers. --- So far, none of the results that I've got proves this.
+::: The assumption that RNG roll's taiha risk is 1/6. Assumed this from the numbers. However even if it isn't 1/6, it definitely doesn't change the fact that it gives us an advantage.
+
+: '''2) '''These tests are calculated by using FULL HP ships. In battles, you may get damaged (especially stratch damage) and thus some results may change depending on that. As I've said, we are not mahou shoujos so there is not much we can do about this. However, if a ship has a risk to get taiha, her damaged state will still have that risk, and it will be even higher.
+
+: '''3)''' If enemies get chuuha or taiha, their damages will be reduced, so it may trigger something unpleasant on weaker ships. This is also something unpredictable beforehand.
+
+: '''4)''' The final survival values that I've written on this page are non-crit hit percentages. Since we don't know the enemy critical hit rate, we can't end up with one absolute probability. So we have to look at both possibilities. ( To examine it more deeply, you can use the excel file.)
+
+
+===Some Tactics in Using This Mechanism===
+
+*As flagships are hit less often, you can put your ship with '''the highest taiha risk''' into your flagship position. "Not the ship which has lowest armor and hp." But don't do this in combined fleet maps when you have a [[Fleet Command Facility]]. ( In combined fleets, your 1st fleet's flagship should have the least direct taiha risk )
+
+*In maps with branching options, try not to face BWS as she threathens most of our ships. (If you are confident in AACI, you can go too, however it is not easy to eliminate all her bombers)
+
+*If you need to use an AACI; in the battles which have many CAs, use Maya as an AACI ship, and in the battles which have many BBs, use Akizuki or another DD as an AACI ship. ( Because CAs are bad against BBs and DDs are bad against CAs).  [ If the enemy has many of both, the choice is up to you ]
+
+*Do not try to overuse this RNG roll. It reduces your taiha chance to only 16.6% per attack approximately. Also, using many weak ships may end up in a failure since you'll give enemies more chances to attack you.
+
+
+
+
+===A Few More Examples===
+Let's do a test run on 3-5 south route, with 1CL and 5 DDs. CL will have the highest HP and armor values, and DD's will vary from the weakest to toughest.
+
+In B node, we have Ri elite, He flag, Chi elite, Ro and I Late models all in Line ahead. (Ro & I LM DDs have the same FP values so they are grouped together) [Also, this calculation is based on '''all''' of the engagement types including red T, since we won't be able to bring saiun with this composition]
+
+
+
+
+{| border="0" cellpadding="0" cellspacing="0" width="724"
+|- height="20" style="height:15.0pt"
+| colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan;   width:111pt" width="148"|Shelling Phase
+| class="xl66" style="width: 48pt; text-align: center;" width="64"|
+| class="xl66" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''Ri elite '''(FP:74)
+| class="xl66" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''He flag '''(FP:56)
+| class="xl66" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''Chi elite '''(FP:43)
+| class="xl66" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''Ro & I LM '''(FP:45)
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>HP </u>
+| class="xl66" style="text-align: center;"|<u>armor</u>
+| class="xl65" style="text-align: center;"|<u>normal</u>
+| class="xl65" style="text-align: center;"|<u>critical</u>
+| class="xl65" style="text-align: center;"|<u>normal</u>
+| class="xl65" style="text-align: center;"|<u>critical</u>
+| class="xl65" style="text-align: center;"|<u>normal</u>
+| class="xl65" style="text-align: center;"|<u>critical</u>
+| class="xl65" style="text-align: center;"|<u>normal</u>
+| class="xl65" style="text-align: center;"|<u>critical</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Jintsuu K2
+| class="xl66" style="text-align: center;"|50
+| class="xl66" style="text-align: center;"|69
+| class="xl66" style="text-align: center;"|1,5%
+| class="xl66" style="text-align: center;"|22,4%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|4,7%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|0%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Shimakaze K
+| class="xl66" style="text-align: center;"|36
+| class="xl66" style="text-align: center;"|59
+| class="xl66" style="text-align: center;"|12,3%
+| class="xl66" style="text-align: center;"|22,2%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|16,8%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|3,6%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|4,9%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Ushio K2
+| class="xl66" style="text-align: center;"|33
+| class="xl66" style="text-align: center;"|55
+| class="xl66" style="text-align: center;"|15,3%
+| class="xl66" style="text-align: center;"|20,3%
+| class="xl66" style="text-align: center;"|2,1%
+| class="xl66" style="text-align: center;"|21,5%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|6,7%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|10,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Yuudachi K2
+| class="xl66" style="text-align: center;"|31
+| class="xl66" style="text-align: center;"|52
+| class="xl66" style="text-align: center;"|17,1%
+| class="xl66" style="text-align: center;"|22,1%
+| class="xl66" style="text-align: center;"|3,5%
+| class="xl66" style="text-align: center;"|23,1%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|11,8%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|15%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Ikazuchi K
+| class="xl66" style="text-align: center;"|30
+| class="xl66" style="text-align: center;"|49
+| class="xl66" style="text-align: center;"|20,9%
+| class="xl66" style="text-align: center;"|22,6%
+| class="xl66" style="text-align: center;"|4,4%
+| class="xl66" style="text-align: center;"|24,6%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|15,6%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|16,1%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Yayoi K
+| class="xl66" style="text-align: center;"|24
+| class="xl66" style="text-align: center;"|39
+| class="xl66" style="text-align: center;"|21,3%
+| class="xl66" style="text-align: center;"|18,3%
+| class="xl66" style="text-align: center;"|27%
+| class="xl66" style="text-align: center;"|22,4%
+| class="xl66" style="text-align: center;"|3,7%
+| class="xl66" style="text-align: center;"|24%
+| class="xl66" style="text-align: center;"|5,5%
+| class="xl66" style="text-align: center;"|25,1%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+| class="xl66" style="text-align: center;"|
+|- height="20" style="height:15.0pt"
+| colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan"|Closing Torpedo Salvo
+| class="xl66" style="text-align: center;"|
+| class="xl66" colspan="2" style="text-align: center;"|'''Ri elite '''(TP:47)
+| class="xl66" colspan="2" style="text-align: center;"|'''He flag '''(TP:85)
+| class="xl66" colspan="2" style="text-align: center;"|'''Chi elite '''(TP:87)
+| class="xl66" colspan="2" style="text-align: center;"|'''Ro & I LM '''(TP:65)
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl66" style="text-align: center;"|<u>HP </u>
+| class="xl66" style="text-align: center;"|<u>armor</u>
+| class="xl65" style="text-align: center;"|<u>normal</u>
+| class="xl65" style="text-align: center;"|<u>critical</u>
+| class="xl65" style="text-align: center;"|<u>normal</u>
+| class="xl65" style="text-align: center;"|<u>critical</u>
+| class="xl65" style="text-align: center;"|<u>normal</u>
+| class="xl65" style="text-align: center;"|<u>critical</u>
+| class="xl65" style="text-align: center;"|<u>normal</u>
+| class="xl65" style="text-align: center;"|<u>critical</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Jintsuu K2
+| class="xl66" style="text-align: center;"|50
+| class="xl66" style="text-align: center;"|69
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|0,2%
+| class="xl66" style="text-align: center;"|5,8%
+| class="xl66" style="text-align: center;"|28,3%
+| class="xl66" style="text-align: center;"|7,8%
+| class="xl66" style="text-align: center;"|28,5%
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|17,5%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Shimakaze K
+| class="xl66" style="text-align: center;"|36
+| class="xl66" style="text-align: center;"|59
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|8,4%
+| class="xl66" style="text-align: center;"|17,8%
+| class="xl66" style="text-align: center;"|22,5%
+| class="xl66" style="text-align: center;"|19,8%
+| class="xl66" style="text-align: center;"|22,7%
+| class="xl66" style="text-align: center;"|3,7%
+| class="xl66" style="text-align: center;"|23,9%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Ushio K2
+| class="xl66" style="text-align: center;"|33
+| class="xl66" style="text-align: center;"|55
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|14,9%
+| class="xl66" style="text-align: center;"|22,2%
+| class="xl66" style="text-align: center;"|20,9%
+| class="xl66" style="text-align: center;"|22,5%
+| class="xl66" style="text-align: center;"|18,9%
+| class="xl66" style="text-align: center;"|7,8%
+| class="xl66" style="text-align: center;"|25,9%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Yuudachi K2
+| class="xl66" style="text-align: center;"|31
+| class="xl66" style="text-align: center;"|52
+| class="xl66" style="text-align: center;"|0%
+| class="xl66" style="text-align: center;"|15,7%
+| class="xl66" style="text-align: center;"|23,4%
+| class="xl66" style="text-align: center;"|17,3%
+| class="xl66" style="text-align: center;"|24%
+| class="xl66" style="text-align: center;"|17,7%
+| class="xl66" style="text-align: center;"|12,8%
+| class="xl66" style="text-align: center;"|21,5%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Ikazuchi K
+| class="xl66" style="text-align: center;"|30
+| class="xl66" style="text-align: center;"|49
+| class="xl66" style="text-align: center;"|0,2%
+| class="xl66" style="text-align: center;"|17,6%
+| class="xl66" style="text-align: center;"|25%
+| class="xl66" style="text-align: center;"|18%
+| class="xl66" style="text-align: center;"|25,8%
+| class="xl66" style="text-align: center;"|18%
+| class="xl66" style="text-align: center;"|15,4%
+| class="xl66" style="text-align: center;"|19,7%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Yayoi K
+| class="xl66" style="text-align: center;"|24
+| class="xl66" style="text-align: center;"|39
+| class="xl66" style="text-align: center;"|9%
+| class="xl66" style="text-align: center;"|26,3%
+| class="xl66" style="text-align: center;"|22,5%
+| class="xl66" style="text-align: center;"|16,6%
+| class="xl66" style="text-align: center;"|22,8%
+| class="xl66" style="text-align: center;"|16,6%
+| class="xl66" style="text-align: center;"|24,2%
+| class="xl66" style="text-align: center;"|17,8%
+|}
+
+
+
+During shelling, those DDs and chi class most probably won't cause you trouble. He flag has a chance, but only on crits which does not occur often (Think that that 20% will be reduced because of crit chance, then will be reduced again because of the chance to evade the attack). The main danger here is Ri class. As we discussed in the early sections, enemy CAs have advantage against our DDs.
+
+When it comes to the closing torpedo phase, Ri class is almost useless. So you don't need to force your ships to be able to kill it during shelling. (No need to put 3 guns on DDs for that. Focus on radars/boilers) You can leave that Ri alive. However you need to at least damage those He and Chi classes to medium before they fire their torpedos. And the late model DDs will probably be dead, even if they won't, they probably won't pose a great danger.
+
+So, it looks like in 3-5 south, the ones who have the highest survival chance are the toughest ships, with CL having the highest chance to survive.
+
+If you want, you can try and see how AVs and CAVs do, then decide a composition for yourself.
+
+
+
+
+
+And now, a test for the heavy ships.
+
+
+{| border="0" cellpadding="0" cellspacing="0" width="724"
+|- height="20" style="height:15.0pt"
+| colspan="2" height="20" style="height:15.0pt;mso-ignore:colspan;   width:111pt" width="148"|Shelling Phase
+| class="xl64" style="width:48pt" width="64"|
+| class="xl64" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''Ta flag '''(FP:130)
+| class="xl64" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''Ru flag '''(FP:135)
+| class="xl64" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''Ru Kai '''(FP:155)
+| class="xl64" colspan="2" style="width: 96pt; text-align: center;" width="128"|'''CV Hime '''(FP:363,5)
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|
+| class="xl64" style="text-align: center;"|<u>HP </u>
+| class="xl64" style="text-align: center;"|<u>armor</u>
+| class="xl63" style="text-align: center;"|<u>normal</u>
+| class="xl63" style="text-align: center;"|<u>critical</u>
+| class="xl63" style="text-align: center;"|<u>normal</u>
+| class="xl63" style="text-align: center;"|<u>critical</u>
+| class="xl63" style="text-align: center;"|<u>normal</u>
+| class="xl63" style="text-align: center;"|<u>critical</u>
+| class="xl63" style="text-align: center;"|<u>normal</u>
+| class="xl63" style="text-align: center;"|<u>critical</u>
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Musashi K
+| class="xl64" style="text-align: center;"|97
+| class="xl64" style="text-align: center;"|119
+| class="xl64" style="text-align: center;"|0,05%
+| class="xl64" style="text-align: center;"|23,3%
+| class="xl64" style="text-align: center;"|0,2%
+| class="xl64" style="text-align: center;"|26,8%
+| class="xl64" style="text-align: center;"|0,6%
+| class="xl64" style="text-align: center;"|37,3%
+| class="xl64" style="text-align: center;"|14,1%
+| class="xl64" style="text-align: center;"|27,2%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Nagato K
+| class="xl64" style="text-align: center;"|90
+| class="xl64" style="text-align: center;"|98
+| class="xl64" style="text-align: center;"|4,4%
+| class="xl64" style="text-align: center;"|36,1%
+| class="xl64" style="text-align: center;"|5,6%
+| class="xl64" style="text-align: center;"|35%
+| class="xl64" style="text-align: center;"|17,8%
+| class="xl64" style="text-align: center;"|26,8%
+| class="xl64" style="text-align: center;"|36,1%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Bismark Drei
+| class="xl64" style="text-align: center;"|96
+| class="xl64" style="text-align: center;"|95
+| class="xl64" style="text-align: center;"|4%
+| class="xl64" style="text-align: center;"|36,1%
+| class="xl64" style="text-align: center;"|4,1%
+| class="xl64" style="text-align: center;"|37,5%
+| class="xl64" style="text-align: center;"|16%
+| class="xl64" style="text-align: center;"|27,8%
+| class="xl64" style="text-align: center;"|38,6%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Italia
+| class="xl64" style="text-align: center;"|92
+| class="xl64" style="text-align: center;"|92
+| class="xl64" style="text-align: center;"|5,2%
+| class="xl64" style="text-align: center;"|37,3%
+| class="xl64" style="text-align: center;"|8,5%
+| class="xl64" style="text-align: center;"|33,5%
+| class="xl64" style="text-align: center;"|21%
+| class="xl64" style="text-align: center;"|28,4%
+| class="xl64" style="text-align: center;"|39,8%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|Kirishima K2
+| class="xl64" style="text-align: center;"|82
+| class="xl64" style="text-align: center;"|92
+| class="xl64" style="text-align: center;"|10%
+| class="xl64" style="text-align: center;"|30,7%
+| class="xl64" style="text-align: center;"|13,7%
+| class="xl64" style="text-align: center;"|28%
+| class="xl64" style="text-align: center;"|21,8%
+| class="xl64" style="text-align: center;"|26,9%
+| class="xl64" style="text-align: center;"|38,5%
+| class="xl64" style="text-align: center;"|16,6%
+|- height="20" style="height:15.0pt"
+| height="20" style="height:15.0pt"|YamashiroK2
+| class="xl64" style="text-align: center;"|77
+| class="xl64" style="text-align: center;"|91
+| class="xl64" style="text-align: center;"|13,5%
+| class="xl64" style="text-align: center;"|26,9%
+| class="xl64" style="text-align: center;"|17,2%
+| class="xl64" style="text-align: center;"|15,1%
+| class="xl64" style="text-align: center;"|24,6%
+| class="xl64" style="text-align: center;"|23,7%
+| class="xl64" style="text-align: center;"|38,5%
+| class="xl64" style="text-align: center;"|16,6%
+|}
+
+So it is obvious that Yamato class's armor is the hardest to penetrate, with the exception of critical hits of very powerful enemies. Those enemies' crits will be turned into a RNG roll by all the other ships, but Yamato class BBs may take some of them as direct taihas as a result of having very high armor. However they are still the best we can use.
+
+If you don't have Yamato class BBs or don't want to use them due to their high resource costs, the 2nd best option is either Nagato class or Bismark Drei. Kongou class is slightly more dangerous to use, and Fusou class is the most unlucky class in this case.
+
+
+
+Note that in a BB vs BB battle, critical hits have a high risk to taiha a ship or cause a chuuha. This is inevitable and you should accept chuuha as normal when fighting against BBs.
+[[Category:Blog posts]]

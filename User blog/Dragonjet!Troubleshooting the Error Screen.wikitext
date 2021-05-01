@@ -1,0 +1,75 @@
+{{Warning|title=Content Moved|message=The content of this blog post has been promoted to the wikia article: [[Tutorial: Troubleshooting]]. Please visit that page, which is the one updated and moderated, instead of this.}}
+
+Over time, I've seen alot of reports of getting cat error screens when attempting to open the game, even though they weren't doing anything wrong, or the computer environment didnt change much, or even if they have done all traditional process in getting API link, or even just playing on DMM but still get this screen:
+
+[[File:Error_.png|400px|center]]
+{{clear}}
+
+==Things to Double check==
+* Have you cleared your cache? ''Try doing everything again in Incognito''
+* Have you tried logging in again on DMM to play there or get a new API link?
+* Have you tried checking other sites that maybe its your internet connection?
+* Were you using viewers? Try logging in normally on browser.
+* Were you banned? ''Login on DMM and see a black error message''
+** Banned accounts see the cat error on API link, and black message on DMM
+* Have you tried switching to JP time? or check if you have correct local time
+** Many of the recent error screen reports relate to '''wrong computer clock'''
+
+
+==Checking for problems==
+
+===Getting the Error Message===
+# Clear your browser cache
+# When you start loading the game, open up your browser's devtools, usually F12
+# On devtools, you can see a tab '''Network''', click that
+# Wait for the game to load, then eventually you get the cat error screen
+# On cat screen, look at the '''Network''' panel again and find "'''api_start2'''"
+# Click on that entry and a panel to the right will show up (see screenshots below)
+# Click on "'''Response'''" on the new panel on the right
+# Copy the text. ''Looks like this:'' <code>svdata={"api_result":201,"api_result_msg":"</code>....
+# Paste it on this site: [http://json.parser.online.fr JSON Parser]
+# Remove <code>svdata=</code> (should now start with a curly brace '''{'''), and it will show you an interpretation to the right
+# Usually will say "申し訳ありませんがブラウザを再起動し再ログインしてください。". '''But if you got a different one''', please follow its instructions and comment on this blog so we can all investigate on your problem.
+
+
+{|
+|-
+|'''Network panel for Chrome'''
+|style="width:30px"|&nbsp;
+|'''Network panel for Firefox'''
+|-
+|[[File:Network_chrome.jpg|157px]]
+|
+|[[File:Network_firefox.jpg|234px]]
+|}
+
+
+-----
+===Check your Ping to KanColle Servers===
+'''Pings via speedtest or other means is different and useless at this point'''. We want to check your reachability to the KanColle Servers, and '''NOT''' some nearest server or some randomly chosen third-party ping checkers. Please do these steps.
+
+# Know your API Link (an old, expired API link is fine)
+# Get your server's IP address
+## For '''<code>http://203.104.209.39/kcs/mainD2.swf</code>''', its '''203.104.209.39''')
+# Open your command prompt (cmd)
+# <code>ping -t <youeserverIP></code>
+## <code>ping -t 203.104.209.39</code>
+## Ctrl+C to stop ping
+
+You should see something like this:
+[[File:Cmd_ping.jpg|thumb|left]]
+{{clear}}
+
+If you've got request timeouts, or couldn't reach errors, then it is your internet connection which has a problem.
+
+Fixing your connection is a different story, though step 1 would be to try a different DNS but would most likely be unhelpful since we're accessing the game via IP, not domain name.
+
+You can try posting a comment here, though no guarantees that I can help you.
+
+
+==What you should know==
+
+"Game Start" requires a stable connection.
+
+The API call at the '''game start button''' screen requires a '''stable connection''' for it will download '''nearly 1mb of text''' and a '''small connection interference''' will give you '''cat error screen'''.
+[[Category:Blog posts]]

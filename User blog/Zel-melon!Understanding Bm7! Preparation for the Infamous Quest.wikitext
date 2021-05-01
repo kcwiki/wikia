@@ -1,0 +1,163 @@
+''This will be an expansion to [[User_blog:Admiral_Mikado/Extra_Operations_for_Dummies:_2-5|Mikado's Dumbshit Guide to 2-5]] as I believe the guide is a bit out-dated. Therefore, this blog will covered most of the stuffs you need to know for Bm7 along with the current tools you can use to tackle this monster. A summarized version of this is already in the World 2 page under "Sortie Quest"''
+
+----
+'''Disclaimer:''' This blog will not give you a sure-fire composition to clear Bm7. Let's get this out of the way first, Bm7 is one of the nightmare quest and there is no way to ignore that. This quest tests your ability to manage your fleet down to the bare minimum. Now that we got that out of the way.
+==Background Information==
+
+<center>{{World2-5}}</center>
+World 2-5 is the 2nd Extra Operation you will face after you cleared 2-4. The difficulty of this map varies depending on your HQ level and fleet's strength. You will face (if you proceed here first) your first Ta-class battleship, a scantily clad lady that is equivalent to your fBB. This is the first map that will teaches you about the importance of [[Line of Sight]], which will be essential for your future admiral career.
+
+===Line of Sight (WARNING! THERE'S MATH)===
+
+Line of sight (LoS) is pretty much how far your fleet sees (no shit). And for many maps after this, it will be required that you obtain a specific amount of LoS to proceed to the next node or to reach the boss.
+For this map, certain amount of [http://kancolle.wikia.com/wiki/Line_of_Sight eLoS] is required to reach the boss node:
+*Below 31 (using the new [http://kancolle.wikia.com/wiki/Line_of_Sight#Formula_33 formula 33]; 57.2 for [http://kancolle.wikia.com/wiki/Line_of_Sight#2-5_fall_formula_.E3.80.90current_de_facto_standard.E3.80.91 2-5 fall formula]) will not go H to L
+*33 or more (using [http://kancolle.wikia.com/wiki/Line_of_Sight#Formula_33 formula 33]; at least 70.4 for [http://kancolle.wikia.com/wiki/Line_of_Sight#2-5_fall_formula_.E3.80.90current_de_facto_standard.E3.80.91 2-5 fall formula]) guarantees H to L
+
+This will be your most crucial information needed to tackle what this guide will be about, Bm7. For this blog, I will be using the F33 Formula and will only talk based on that:
+
+<math>
+\begin{align}
+\phi &= \sum_{s \in \text{Ships}} \sqrt{L_s} + C_{n} \sum_{l \in \text{Slots}}C_{l} ( S_{l} + S_l^{\star} ) - \lceil 0.4 H \rceil + 2M \\
+S_l^{\star} &= C_l^{\star} \cdot \sqrt{\bigstar_l}
+\end{align}
+</math>
+<br />
+Big Mathy thing is under here:
+
+<div class="mw-collapsible mw-collapsed">
+*<math>L_s</math> is the ship's base LoS
+*<math>C_{n}</math> is the node factor, it represents the weighting of the formula that is '''known to vary''' across different maps and nodes. For example, in 6-2, the node factor of C<sub>n</sub> = 3 means that equipment is 3 times as important compared to the original formula (as tested in 6-2-F/H). See following section for more details.
+*<math>C_{l}</math> is the equipment multiplier:
+**Carrier-Based Fighter: 0.6
+**Carrier-Based Dive Bomber: 0.6
+**Carrier-Based Torpedo Bomber: 0.8
+**Carrier-Based Reconnaissance Aircraft: 1
+**Reconnaissance Seaplane: 1.2
+**Seaplane Bomber: 1.1
+**Small Radar: 0.6
+**Large Radar: 0.6
+**ASW Patrol Aircraft: 0.6
+**Searchlight (Small and Large): 0.6
+**Fleet Command Facility: 0.6
+**SCAMP: 0.6
+**Skilled Lookouts: 0.6
+**Sonar: 0.6
+**Large Flying Boat: 0.6
+**Seaplane Fighter: 0.6
+*<math>S_{l}</math> is the displayed LoS value of the equipment
+*<math>S_l^{\star}</math> is the equipment's improvement bonus to eLoS
+**This is calculated by multiplying <math>C_l^{\star}</math>, the improvement multiplier of that equipment, with the square root of the equipment's improvement level.
+***The improvement multiplier of Small Radars is 1.25, Large Radars is 1.4, Reconnaissance Seaplanes is 1.2, and Searchlight is 0 (that is, it receives no eLoS bonus when improved)
+*<math>H</math> is the HQ level. The ceil operation means that the value is rounded up every 2.5 HQ levels.
+*<math>M</math> is an additional variable representing the number of empty ship slots in your fleet. For instance, if your fleet contains only 2 ships, <math>M</math> would be 4 and thus <math>2M</math> would yield 8.
+**It is unknown whether this value increases mid-sortie if a ship disappears from your fleet (e.g. sinking).
+</div>
+Scary scary....
+
+What I want to focus is that <math>L_s</math> is the ship's base LoS and is a factor of its own that doesn't mingle with other "letters" that much except the square root. Radar and Planes are your go-to when it usually comes to LoS, but we will play around with ship's base LoS to give you an edge. Planes usually gives more LoS than Radar and should be prioritize. However, radar gives you more Accuracy for punching.
+
+==Tackling Bm7==
+<br />
+[[Quest#Bm7|Bm7]] is a monthly quest you'll face later on in the game that is notorious for its difficulty. The quest required that you sortie 4DD (DD as flagship) + 1CL + 1CA (Not CAV). Due to 4 DD and no composition leeway, this composition will be forced to go north no matter what. In addition, there is a line of sight requirements from node H to boss node making this quest one of the more challenging one. Therefore, this is one of the quest that will require you to understand the concept of ship LoS more than any other quest.
+
+Ship LoS is often neglected when forming a fleet. However, for this quest, depending on what ship you take, it can give you that small edge can allow you to increase your odd of clearing this quest. We will go through many of the "recommended" ship for this case. This will include 3 factors: Base LoS, Combat capability, and Unique Mechanics.
+
+*Note: If a ship has more than two of the three factors (e.g. good Base LoS and Combat Capability), only one of them will be highlighted but its secondaries will be mentioned.
+
+
+<center>
+===Destroyers (DD)===
+</center>
+All destroyers will need radars and is unlikely to equip any night battle equipment. Try balancing between ships that can provide high firepower and ships that has good base LoS (or both). You can choose 4 DDs so play around with them.
+====Base LoS====
+{{ShipBattleCardKai|Akatsuki/Kai Ni}} {{ShipLink|Akatsuki/Kai Ni}}<br />Didn't expect "Lady" to be the "first", eh? {{ShipLink|Akatsuki/Kai Ni}} currently holds the highest base LoS among the DD of 60 at lvl 99. Additionally, her combat power is also good with high firepower that transit into night battle. She is definitely a good asset to the team.
+
+====Combat Capability====
+Combat capability ships are those with high combat power (including night battle (NB), torpedo, and firepower) and specialize in "punching" the enemy to desu. It will sound like a broken record if I go through all of them so I'll go through only the few essential one and mention the rest:<br /><br />
+{{ShipBattleCardKai|Yuudachi/Kai Ni}} {{ShipLink|Yuudachi/Kai Ni}}:<br />You all know her, the Nightmare of Solomon, the Poi of Phantasm, the Solomon Merry Go Round. Yuudachi is your Hulk DD with the highest NB albeit low base LoS at 49 and Luck at 20. Therefore, if you're planning on going Torpedo Cut-in on her....that won't be recommend.<br /><br />
+{{ShipBattleCardKai|Ayanami/Kai Ni}} {{ShipLink|Ayanami/Kai Ni}}:<br />The 2nd beast (that I prefer). Ayanami also has a strong NB power (currently, the 3rd) but to top it off she has 40 luck. This means you can risk using her for Torpedo Cut-in set up although it is recommend that you increase her luck to 50+ first (by using [[Maruyu]]) to reduce hiccups. The same as Yuudachi, she doesn't have that high Base LoS at 49.<br /><br />
+====Hybrid====
+The next four will be lumped together
+{{ShipBattleCardKai|Asashio/Kai Ni}} {{ShipLink|Asashio/Kai Ni}} (not D)<br />
+{{ShipBattleCardKai|Kasumi/Kai Ni}} {{ShipLink|Kasumi/Kai Ni}} (not B)<br />
+{{ShipBattleCardKai|Ooshio/Kai Ni}} {{ShipLink|Ooshio/Kai Ni}} (requires [[Blueprint]])<br />
+{{ShipBattleCardKai|Kawakaze/Kai Ni}} {{ShipLink|Kawakaze/Kai Ni}}<br />
+These four have good combat power along with decent Base LoS at around 53-56. Basically, a hybrid between the two factors. They can definitely be used as a mix between Yuudachi's punching and Akatsuki high Base LoS.<br /><br />
+{{ShipBattleCardKai|Fubuki/Kai Ni}} {{ShipLink|Fubuki/Kai Ni}}<br />Fubuki Kai Ni is definitely sub-par compared to all that was mentioned before but well...she's still usable if you're Fubuki fanboy.<br />
+
+====Unique Mechanics====
+{{ShipBattleCardKai|Kasumi/Kai Ni B}} {{ShipLink|Kasumi/Kai Ni B}}<br />{{ShipLink|Kasumi/Kai Ni B}} (must be Kai ni B), although lower combat power than her normal form, possess a useful mechanic. She is currently the '''only''' DD that can equip Large radar (e.g.[[Type 32 Surface Radar]]), allowing you some space to equip other equipment (e.g. [[Searchlight]]). That is no joke. However, her Kai ni B level is at 88, which is pretty high.<br /><br />
+
+<center>
+===Light Cruisers (CL)===
+</center>
+CL might need to have 1-2 seaplanes equipped to bring the fleet up to the required LoS. They are your tag-along and can be chosen as a far-seer, a puncher or a special ability just like above. You can only pick one CL so make it count.
+
+====Base LoS====
+{{ShipBattleCardKai|Ooyodo/Kai}}<br />
+When talking about LoS, hands down, it's {{ShipLink|Ooyodo/Kai}} as her Base LoS is the highest among the CLs and one of the highest in the game (go Megane girl!). Her combat power is sub-par but it is made up by her base LoS and her 4-slots. This means that you have an additional slot to equip plane, which can allow you to equip Ooyodo with 2 Guns to avoid sacrificing her night battle potential.
+
+Alternatives are listed below:
+
+{{ShipBattleCardKai|Kinu/Kai Ni}} {{ShipLink|Kinu/Kai}}<br />
+{{ShipBattleCardKai|Agano/Kai}} {{ShipLink|Agano/Kai}}<br />
+{{ShipBattleCardKai|Yahagi/Kai}} {{ShipLink|Yahagi/Kai}}<br />
+{{ShipBattleCardKai|Noshiro/Kai}} {{ShipLink|Noshiro/Kai}}<br />
+{{ShipBattleCardKai|Sakawa/Kai}} {{ShipLink|Sakawa/Kai}}<br />
+If despearate, Kinu Kai ni and the Agano-class ships have higher base LoS others at 59-60. However, their combat power is pretty low.
+====Combat Capability====
+{{ShipBattleCardKai|Jintsuu/Kai Ni}} {{ShipLink|Jintsuu/Kai Ni}}<br />
+{{ShipLink|Jintsuu/Kai Ni}} is what you get when you combined Mother Maria, Hulk and a Canadian into one. A tough nut and kind ship that will probably say "sorry" every time she punches your corpse to oblivion. She has the highest NB power among the CL (her 50 hp might also give you that little edge to avoid taiha [red hp]) and can punch them well if you can give her two guns. However, it is possible that she might end up with 2 planes instead. She has Base LoS of 54.
+
+<br />
+The next three will be piled together as the "No Kai-ni group":
+{{ShipBattleCardKai|Kuma/Kai}} {{ShipLink|Kuma/Kai}}<br />
+{{ShipBattleCardKai|Nagara/Kai}} {{ShipLink|Nagara/Kai}}<br />
+{{ShipBattleCardKai|Natori/Kai}} {{ShipLink|Natori/Kai}}<br />
+Stat-wise, {{ShipLink|Kuma/Kai}} and {{ShipLink|Nagara/Kai}} are strong CL due to their ridiculously high stat despite being a Kai-ship. Natori is the weaker version of Nagara with 10 less armor than her. They have 49 base LoS, which is the lowest among all the CL mentioned except one.<br />
+{{ShipBattleCardKai|Sendai/Kai Ni}} {{ShipLink|Sendai/Kai Ni}}<br />
+{{ShipBattleCardKai|Naka/Kai Ni}} {{ShipLink|Naka/Kai Ni}}<br />
+Sendai-class Kai ni are also viable with a bit more base LoS at 54-55; Kuma and Nagara do cost less in terms of ammo than the Sendai-class Kai ni.
+====Unique Mechanics====
+{{ShipBattleCardKai|Abukuma/Kai Ni}} {{ShipLink|Abukuma/Kai Ni}} (requires [[Blueprint]])<br />
+It is possible to use {{ShipLink|Abukuma/Kai Ni}} for her opening torpedo, but you need to distribute your LoS carefully. Her Base LoS of 60 might not help much as you'll probably be using her for her opening torpedo than as a plane carrier. Despite that, her combat power is pretty high so you can use her without the opening torpedo too. You might need to mute your game due to her voice.<br />
+{{ShipBattleCardKai|Yuubari/Kai}} {{ShipLink|Yuubari/Kai}}<br />
+{{ShipLink|Yuubari/Kai}} is another 4-slot CL that can also carry seaplane despite her 0 slot; however, she has the lowest base LoS of all the CL-kai. Her combat power is also one of the worst among those mentioned. She is pretty much a poor-man Ooyodo with poor Base Los but 4 slots.
+<br />
+
+<center>
+===Heavy Cruisers (CA)===
+</center>
+Lastly, the heavy cruisers. They're your punching punch punch ship. Works the same as others but with more punching power. You will almost end up with at least one Recon Plane on your CA. You can only choose one so make it count.
+====Choukai Kai Ni====
+{{ShipBattleCardKai|Choukai/Kai Ni}} {{ShipLink|Choukai/Kai Ni}} (requires [[Blueprint]])<br />
+Before we start anything there's one ship that we definitely need to mention,{{ShipLink|Choukai/Kai Ni}}. She is currently, in my opinion, the best CA to use with her ridiculously all-high stats (except luck) compared to all other CAs. Currently, she has the highest NB power among all the CA. In addition, her base LoS is also the 3rd highest at 62 losing only to the Tone-class Kai. This makes her the ideal ship for this quest with only one limitation, [[Blueprint]]. She is one of the ship you should consider as your first few ships to use your blueprint on. Although she cost the most ammo (along with {{ShipLink|Maya/Kai Ni}}) out of all the CA....but fuck that, this ain't some quest for you to cut cost.
+====Base LoS====
+As mentioned above about Choukai, this will end up as an alternative instead. The Myoukou sisters are also good candidate but I am putting them under "Combat Capability" instead.
+{{ShipBattleCardKai|Tone/Kai}} {{ShipLink|Tone/Kai}}<br />
+{{ShipBattleCardKai|Chikuma/Kai}} {{ShipLink|Chikuma/Kai}}<br />
+It sounds stupid but it works. Tone-class Kai has base LoS of 79 while still being considered a CA (Kai Ni transformed them into CAV, rendering them unusable). Their combat power ain't that bad too, losing only to Myoukou Kai Ni class but on par with Furutaka- and Aoba-class Kai ni. They're optional alternative if you....errr.....feel like it.
+====Combat Capability====
+I'll split this into two groups: The luck group and the Punching group.<br /><br />In the cases where you really want to use torpedo cut-in, there are three ships that are near that are plausible but not optimal (unless you raise their luck, which cost less than others).
+{{ShipBattleCardKai|Prinz Eugen/Kai}} {{ShipLink|Prinz Eugen/Kai}}<br />
+{{ShipLink|Prinz Eugen/Kai}} has the highest at 40 luck but with combat power around Furutaka-class and base LoS of 50. However, she has the highest Hp and Armor (probably from the booty)<br />
+{{ShipBattleCardKai|Myoukou/Kai Ni}} {{ShipLink|Myoukou/Kai Ni}}<br />
+{{ShipLink|Myoukou/Kai}} has the 2nd highest at 32 luck but with the 2nd highest NB combat power and base LoS of 59.<br />
+{{ShipBattleCardKai|Aoba/Kai}} {{ShipLink|Aoba/Kai}}<br />
+{{ShipLink|Aoba/Kai}} has the 3nd highest at 30 luck but with the lowest NB combat power from those CA mentioned and base LoS of 49. You shouldn't bother with her that much but well....if you wanted to hope for Aoba Kai Ni maybe she'll get buffed up.<br /><br />
+For punching, they're the three other Myoukou sisters.
+{{ShipBattleCardKai|Haguro/Kai Ni}} {{ShipLink|Haguro/Kai Ni}}<br />
+{{ShipBattleCardKai|Nachi/Kai Ni}} {{ShipLink|Nachi/Kai Ni}}<br />
+{{ShipBattleCardKai|Ashigara/Kai Ni}} {{ShipLink|Ashigara/Kai Ni}}<br />
+Haguro will be specifically mentioned due to her higher combat power than her sisters but overall, their Base LoS will be around 57-59 and combat power as expected of a Myoukou-class Kai ni.
+====Unique Mechanics====
+Unique ships for CA are a bit special as they are currently unobtainable outside of event. Therefore, it is possible that you will not have them, but they are useful.<br />{{ShipBattleCardKai|Zara/Kai}}{{ShipLink|Zara/Kai}}<br />
+{{ShipBattleCardKai|Pola/Kai}}{{ShipLink|Pola/Kai}}<br />
+These two will allow you to bring seaplane bombers (e.g. [[Zuiun]]) despite using a CA, allowing you to achieve Air Superiority. To put it simple, more punching power.
+==Set-up Example==
+
+Current Example of Bm7: https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/g1tdoey.png
+
+Will take picture some other time when I come back to doing Bm7....next month.
+[[Category:Blog posts]]

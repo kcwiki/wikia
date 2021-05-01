@@ -1,0 +1,20 @@
+<includeonly>{{#if:{{{link|}}}|<div id="mw-customcollapsible-{{{TweetID|tweet}}}" class="kcMultiTweet-Post mw-collapsible mw-collapsed"  data-expandtext="Japanese" data-collapsetext="Japanese" style="background-color:#fff; border-radius:8px; margin:0px 0px 5px 0px;">
+	<div class="kcMultiTweet-EN" style="float:left; padding:0px 5px;">
+		<div class="mw-customtoggle-{{{TweetID|tweet}}}" style="text-align:center; font-size:12px; font-weight:bold; float:right; cursor:pointer; width:20px; height:20px; line-height:20px; border-radius:10px; background:#ace; margin:2px 2px 5px 5px;">JP</div>
+		<p style="margin:0px; padding:0px;">{{{EN|}}}</p>
+	</div>
+	<div class="kcMultiTweet-JP mw-collapsible-content" style="float:left; background:#ffc; color:#000; margin:5px 10px; padding:2px 5px; border-radius:7px;">
+		<p style="margin:0px; padding:0px;">{{{JP|}}}</p>
+	</div>
+	<div class="kcMultiTweet-Link" style="float:left; width:60%; font-size:11px;">
+		<div style="padding:0px 5px;">
+			<p style="margin:0px; padding:0px;">[{{{link}}} {{{link}}}]</p>
+		</div>
+	</div>
+	<div class="kcMultiTweet-Translator" style="float:left; width:40%; font-size:11px; text-align:right;">
+		<div style="padding:0px 5px;">
+			<p style="margin:0px; padding:0px;">{{{tl|}}}</p>
+		</div>
+	</div>
+	<div style="clear:both;"></div>
+</div>|}}</includeonly>

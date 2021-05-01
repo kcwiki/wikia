@@ -1,0 +1,1819 @@
+
+{{Ambox
+|type = construction
+|title = This page is a prototype.
+|message = <br>Any content within this page are placeholders.
+|users = [[User:McDerp|McDerp]]
+}}
+
+{{Spring 2016 Event Nav}}
+
+==Information==
+{| cellspacing="5" style="width:100%; text-align:center; font-weight:bold;"
+|-
+| style="background:#afa; border:1px solid #369;" |[[Thread:EDITME|Fleet Composition Reporting]]
+| style="background:#faa; border:1px solid #369;" |[[Thread:EDITME|Enemy Encounter Reporting]]
+|}
+{{Infobox
+|title = Friendly anchorage Recapturing Strategy [[File:Spring 2016 Event Ship Tag Task Force.png|link=]]
+|english = Friendly anchorage Recapturing Strategy
+|kanji = 友軍泊地奪還作戦
+|romaji = Yūgun hakuchi Dakkan sakusen
+|image = Spring_2016_E6_Banner.png
+|image2 = Spring_2016_E6_Map.png
+|label1 = Mechanics
+|value1 = [[Events/Mechanics#Combined_Fleet|Combined Fleet]]<br/>[[Events/Mechanics#Node_specific_details|Selection node]]<br/>[[Events/Mechanics#Ship_Locking|<span style="background-color:yellow;color:black">Ship Locking</span>]]
+|label2 = Boss
+|value2 = [[File:BB_Central_Princess_684_Battle.jpg|Central Princess|link=Central Princess]]
+|label3 = [[Spring_2016_Event/Mechanics#map-hp|Boss gauge <sup>?</sup>]]
+|value3 = '''Easy''': 2800<br/>'''Normal''': 4800<br/>'''Hard''': 5400
+|label4 = Kills required
+|value4 = '''Easy:''' 5 kills<br/>'''Normal:''' 6 kills<br/>'''Hard:''' 6 kills
+}}
+{{Event/DetailToggle}}
+__TOC__
+
+<!--Pinned information-->
+[PINNED INFORMATION goes here]  <br/> (Or anything else that is of utmost importance, hence a lot of white space) <br/>
+For example:
+*This map is a [[Combined_Fleet| Combined Fleet]] map.
+**You may only use a Carrier-Task Force (CTF) on this map.
+
+<div style="width:50%; border:2px solid darkred; background:pink; text-align:left; auto 20px;padding:5px;">
+{| class="mw-collapsible mw-collapsed"
+!To KC3K users
+|-
+|
+In KC3 prior to Version 30.1.0, node L is displayed as N. Players who experiences this are recommended to '''perform a data backup''' before upgrading KC3 to latest version.
+|}
+</div>
+
+<div style="width:50%; border:2px solid darkblue; background:lightblue; text-align:left; auto 20px;padding:5px;">
+{| class="mw-collapsible mw-collapsed"
+!NOTICE IN REGARD TO BOSS WEAKENING MECHANICS
+|-
+|
+According to the devs tweet, clearing any two of the following nodes once at S Rank can result in an increase of Aerial Attack Capability against Central Princess: I, A, G, L.
+
+Clearing all four nodes can result in a further increase in Aerial Attack ability against Central Princess, and doing so would also change her initial appearance voice line. If debuffed correctly the boss will say "Masaka..." at the end of her line (but currently not on the subtitle).
+
+<span style="color:red">There is NO visual change in the boss.</span>
+
+;Note
+*The debuff does not reset at 0000/0500 JST<ref>https://twitter.com/Kensho_KanColle/status/728976768548245504</ref>
+*Some were not be able to hear the debuff voiceline even if they did all the steps above. Try clearing cache and etc., but some report that they still can't get the alternative voiceline in this way. Possible action for those admirals would be a.) wait for May 13 fix, or b.) proceed anyway as the core part of the debuff effect is not linked to the voiceline
+|}
+</div>
+
+<!--Pinned information-->
+
+{{clear}}
+{| class="wikitable" style="width:100%;"
+|-
+! colspan="3" style="font-size:16px; color:#00f;" |Rewards
+|-
+!Easy (丙)
+!Medium (乙)
+!Hard (甲)
+|-
+| style="width:33%;" valign="top" |
+* {{ItemStack|item = [[File:PBY-5A_Catalina_178_Card.png{{!}}50px{{!}}link=PBY-5A Catalina]] |text = 1}} [[PBY-5A Catalina]]
+* {{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |text = 1}} [[Medal]]
+| style="width:33%;" valign="top" |
+* {{ItemStack|item = [[File:PBY-5A_Catalina_178_Card.png{{!}}50px{{!}}link=PBY-5A Catalina]] |text = 1}} [[PBY-5A Catalina]]
+* {{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |text = 1}} [[Medal]]
+* {{ItemStack|item = [[File:Improvement_Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]] |text = 7}} [[Akashi's Improvement Arsenal |Screws]]
+| style="width:34%;" valign="top" |
+* {{ItemStack|item = [[File:PBY-5A_Catalina_178_Card.png{{!}}50px{{!}}link=PBY-5A Catalina]] |text = 1}} [[PBY-5A Catalina]]
+* {{ItemStack|item = [[File:Type_1_Land-based_Attack_Aircraft_%28Nonaka_Squadron%29_170_Card.png{{!}}50px{{!}}link=Type_1_Land-based_Attack_Aircraft_(Nonaka_Squadron)]] |text = 1}} [[Type_1_Land-based_Attack_Aircraft_(Nonaka_Squadron)|T-1 LBAA (Nonaka)]]
+* {{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |text = 1}} [[Medal]]
+*{{ItemStack|item = [[File:Improvement_Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]] |text = 8}} [[Akashi's Improvement Arsenal |Screws]]
+|}
+
+
+<div class="mw-collapsible mw-collapsed" >
+
+==[[File:AMBox_move.png|16px]] Branching rules==
+<div class="mw-collapsible-content">
+
+[[File:Spring_2016_E6_Map.png|thumb|right|400px]]
+
+'''Only Carrier-Task Force (CTF) can be used in this map.'''
+
+*Start nodes are decided by the number of carriers in the fleet. Light Carriers and Armored Carriers are also considered as carriers for this purpose, while [[Akitsu Maru]] and [[Hayasui]] are not.
+**4CV fleets start at point 1
+**2CV fleets start at point 2 (D → G → F → H normally occurs)
+**3CV fleets start at point 3 (E → I → K → M normally occurs)
+*Fast fleet will route A → C. Slow fleet routes A → B → C.
+*C → F → H is guaranteed routing.
+*Having only two carriers in your fleet can guarantee M → N routing.<ref>http://bbs.ngacn.cc/read.php?tid=9298906</ref> To achieve the condition of having only two carriers in your fleet while still starting at point 3, you can send a carrier back home via FCF escort before the node.<ref>Sinking a carrier also work but that is highly not recommended, see http://bbs.ngacn.cc/read.php?tid=9301277 </ref>
+*There might be a higher chance to go <span style="font-weight:normal;">M → N if there is 1CVL+2CV/CVB rather than 3CV/CVB (</span>'''Requires Confirmation'''). M → L → J → N is more likely to occur otherwise.
+*Presence of Fast Battleships in escort fleet will increase the chance the fleet will route in a partial circle.
+**H → N is more likely to occur when there is no Fast Battleship in Escort fleet. H → K → M → N is more likely to occur otherwise.
+**M → L is more likely to occur when there is Fast Battleship in Escort fleet.
+*LOS check? G → F, upon failing G → O.
+*Offroute condition
+**K → P unknown.
+**J → O unknown.
+====Fleet compositions====
+*1LHA, 2BBV, 2CVB, 1CA + 2DD, 1CLT, 1CL, 2CA - 100% routing  [https://www.youtube.com/watch?v=fdgoFOXoHdg D->G->F->H->N]
+*2CAV, 2BBV, 2CV + 2DD, 1CLT, 1CL, 2CA has a fairly good chance to reach the boss node from <span style="font-weight:normal;">H → N</span>
+
+
+</div>
+</div>
+
+
+<div class="mw-collapsible mw-collapsed" >
+
+==[[File:Shipgirl_icon.png|16px]] Drop list==
+<div class="mw-collapsible-content">
+<!-- Refer to http://kancolle.wikia.com/wiki/Template:DropList/doc -->
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = F, G, I, L, N
+|boss = N
+|Akagi: L/Easy, N/Easy
+|Akizuki: N/Easy
+|Graf Zeppelin: N/Hard
+|Hiryuu: L/Easy, N/Easy
+|Kumano: F/Hard, G/Easy, I/Easy, L/Easy, N/Easy
+|Maikaze: L/Easy
+|Mikuma: F/Hard, G/Easy, I/Easy, L/Easy, N/Easy
+|Mutsu: N/Easy
+|Nagato: N/Easy
+|Nowaki: L/Hard
+|Ooyodo: N/Easy
+|Oyashio: L/Easy
+|Shoukaku: G/Easy, L/Easy, N/Easy
+|Suzuya: F/Hard, G/Easy, I/Easy, L/Easy, N/Easy
+|Yuubari: N/Easy
+|Zuihou: L/Easy, N/Easy
+|Zuikaku: L/Easy, N/Easy
+}}
+As of the update on 13 May 2016, the Easy patterns for node L now drop Oyashio.
+</div>
+</div>
+
+
+<div class="mw-collapsible mw-collapsed" >
+==E-6 enemy patterns==
+<div class="mw-collapsible-content">
+
+
+<tabber>Easy=
+
+<div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;">[[File:Spring_2016_E6_Map.png|700px|link=]]
+{{Node|x-axis=157|y-axis=158|type=normal|link=#E-6 A (Easy)}}{{clear}}
+{{Node|x-axis=225|y-axis=215|type=air defense|link=#E-6 B (Easy)}}{{clear}}
+{{Node|x-axis=247|y-axis=157|type=normal|link=#E-6 C (Easy)}}{{clear}}
+{{Node|x-axis=266|y-axis=285|type=normal|link=#E-6 D (Easy)}}{{clear}}
+{{Node|x-axis=316|y-axis=90|type=normal|link=#E-6 E (Easy)}}{{clear}}
+{{Node|x-axis=325|y-axis=193|type=normal|link=#E-6 F (Easy)}}{{clear}}
+{{Node|x-axis=371|y-axis=239|type=normal|link=#E-6 G (Easy)}}{{clear}}
+{{Node|x-axis=386|y-axis=152|type=air defense|link=#E-6 H (Easy)}}{{clear}}
+{{Node|x-axis=415|y-axis=104|type=normal|link=#E-6 I (Easy)}}{{clear}}
+{{Node|x-axis=458|y-axis=282|type=air defense|link=#E-6 J (Easy)}}{{clear}}
+{{Node|x-axis=513|y-axis=117|type=normal|link=#E-6 K (Easy)}}{{clear}}
+{{Node|x-axis=547|y-axis=252|type=normal|link=#E-6 L (Easy)}}{{clear}}
+{{Node|x-axis=565|y-axis=174|type=maelstrom|link=#E-6 M (Easy)}}{{clear}}
+{{Node|x-axis=458|y-axis=212|type=boss|link=#E-6 N (Easy)}}{{clear}}
+{{Node|x-axis=402|y-axis=289|type=empty|link=#E-6 O (Easy)}}{{clear}}
+{{Node|x-axis=573|y-axis=90|type=empty|link=#E-6 P (Easy)}}{{clear}}
+</div>
+
+<div style="width:800px;height:400px;overflow:auto;">
+
+<div id = "E-6 A (Easy)"></div>
+<center>E-6 A Node name: 深海中枢泊地所属潜水艦隊 I群</center>
+{{NodeInfo
+|A<ref name=E6AEasyPoi group=e />
+|Normal
+|Echelon
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+|-
+|A<ref name=E6AEasyPoi group=e />
+|Normal
+|Echelon
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+|Submarine So-Class
+|-
+|A<ref name=E6AEasyPoi group=e />
+|Normal
+|Echelon
+|Submarine So-Class/Flagship
+|Submarine So-Class
+|Submarine So-Class
+|-
+|A<ref name=E6AEasyPoi group=e />
+|Normal
+|Echelon
+|Submarine So-Class/Flagship
+|Submarine So-Class
+|Submarine So-Class
+|Submarine So-Class
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 B (Easy)"></div>
+<center>E-6 B Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|B<ref name=E6BEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|-
+|B<ref name=E6BEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VII
+|-
+|B<ref name=E6BEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 C (Easy)"></div>
+<center>E-6 C Node name: 空母任務部隊 A群</center>
+{{NodeInfo
+|C<ref name=E6CEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|C<ref name=E6CEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|C<ref name=E6CEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C<ref name=E6CEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Standard Carrier Wo-Class/Flagship III
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 D (Easy)"></div>
+<center>E-6 D Node name: 空母任務部隊 D群</center>
+{{NodeInfo
+|D<ref name=E6DEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|D<ref name=E6DEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|D<ref name=E6DEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|D<ref name=E6DEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 E (Easy)"></div>
+<center>E-6 E Node name: 空母任務部隊 C群</center>
+{{NodeInfo
+|E<ref name=E6EEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ne-Class
+|Light Cruiser He-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|E<ref name=E6EEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ne-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|E<ref name=E6EEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ne-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|E<ref name=E6EEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 F (Easy)"></div>
+<center>E-6 F Node name: 空母任務部隊 B群</center>
+{{NodeInfo
+|F<ref name=E6FEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F<ref name=E6FEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F<ref name=E6FEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F<ref name=E6FEasyPoi group=e />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 G (Easy)"></div>
+<center>E-6 G Node name: 北太平洋深海兵站護衛船団</center>
+{{NodeInfo
+|G<ref name=E6GEasyPoi group=e />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Elite
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|G<ref name=E6GEasyPoi group=e />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|G<ref name=E6GEasyPoi group=e />
+|Normal
+|Double<br/>Diamond
+|Light Carrier Nu-Class/Flagship
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 H (Easy)"></div>
+<center>E-6 H Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|H<ref name=E6HEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|H<ref name=E6HEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|-
+|H<ref name=E6HEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|Airfield Princess/V
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 I (Easy)"></div>
+<center>E-6 I Node name: 護衛空母集団</center>
+{{NodeInfo
+|I<ref name=E6IEasyPoi group=e />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|I<ref name=E6IEasyPoi group=e />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I<ref name=E6IEasyPoi group=e />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I<ref name=E6IEasyPoi group=e />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 J (Easy)"></div>
+<center>E-6 J Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|J<ref name=E6JEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|J<ref name=E6JEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|-
+|J<ref name=E6JEasyPoi group=e />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|Airfield Princess/V
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 K (Easy)"></div>
+<center>E-6 K Node name: 深海中枢泊地所属潜水艦隊 II群</center>
+{{NodeInfo
+|K<ref name=E6KEasyPoi group=e />
+|Normal
+|Echelon
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+|-
+|K<ref name=E6KEasyPoi group=e />
+|Normal
+|Echelon
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class
+|-
+|K<ref name=E6KEasyPoi group=e />
+|Normal
+|L.Abreast
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 L (Easy)"></div>
+<center>E-6 L Node name: 深海太平洋艦隊主力任務部隊</center>
+{{NodeInfo
+|L<ref name=E6LEasyPoi group=e />
+|Normal
+|Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class
+|Destroyer Water Demon/IV
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|L<ref name=E6LEasyPoi group=e />
+|Normal
+|Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class/Elite
+|Destroyer Water Demon/IV
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 N (Easy)"></div>
+<center>E-6 N Node name: 北太平洋深海中枢泊地</center>
+{{NodeInfo
+|N<ref name=E6NEasyPoi group=e />
+|Boss
+|L.Ahead
+|Central Princess
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class/Elite
+|Supply Depot Princess
+|Artillery Imp
+|Artillery Imp
+|-
+|N<ref name=E6NEasyPoi group=e />
+|Boss
+|L.Ahead
+|Central Princess
+|Battleship Ru-Class/Elite
+|Airfield Princess/V
+|Supply Depot Princess
+|Artillery Imp
+|Artillery Imp
+|-
+|N<ref name=E6NEasyPoi group=e />
+|Boss/Final
+|L.Ahead
+|Central Princess/II
+|Battleship Ru-Class/Flagship
+|Airfield Princess/V
+|Supply Depot Princess/Damaged
+|Artillery Imp
+|Artillery Imp
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id="E-6 O (Easy)"></div>
+{{NodeInfo|O|Empty}}
+<div style="text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id="E-6 P (Easy)"></div>
+{{NodeInfo|P|Empty}}
+<div style="text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+</div>
+
+----
+
+===References===
+<div class="mw-collapsible mw-collapsed">
+<references group=e>
+<ref name=E6AEasyPoi>http://db.kcwiki.moe/drop/map/346/1/A-SAB.html</ref>
+<ref name=E6BEasyPoi>http://db.kcwiki.moe/drop/map/346/1/B-SAB.html</ref>
+<ref name=E6CEasyPoi>http://db.kcwiki.moe/drop/map/346/1/C-SAB.html</ref>
+<ref name=E6DEasyPoi>http://db.kcwiki.moe/drop/map/346/1/D-SAB.html</ref>
+<ref name=E6EEasyPoi>http://db.kcwiki.moe/drop/map/346/1/E-SAB.html</ref>
+<ref name=E6FEasyPoi>http://db.kcwiki.moe/drop/map/346/1/F-SAB.html</ref>
+<ref name=E6GEasyPoi>http://db.kcwiki.moe/drop/map/346/1/G-SAB.html</ref>
+<ref name=E6HEasyPoi>http://db.kcwiki.moe/drop/map/346/1/H-SAB.html</ref>
+<ref name=E6IEasyPoi>http://db.kcwiki.moe/drop/map/346/1/I-SAB.html</ref>
+<ref name=E6JEasyPoi>http://db.kcwiki.moe/drop/map/346/1/J-SAB.html</ref>
+<ref name=E6KEasyPoi>http://db.kcwiki.moe/drop/map/346/1/K-SAB.html</ref>
+<ref name=E6LEasyPoi>http://db.kcwiki.moe/drop/map/346/1/L-SAB.html</ref>
+<ref name=E6NEasyPoi>http://db.kcwiki.moe/drop/map/346/1/N-SAB.html</ref>
+</references>
+</div>
+
+
+
+|-|Normal=
+<div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;width:700px">[[File:Spring_2016_E6_Map.png|700px|link=]]
+{{Node|x-axis=157|y-axis=158|type=normal|link=#E-6 A (Normal)}}{{clear}}
+{{Node|x-axis=225|y-axis=215|type=air defense|link=#E-6 B (Normal)}}{{clear}}
+{{Node|x-axis=247|y-axis=157|type=normal|link=#E-6 C (Normal)}}{{clear}}
+{{Node|x-axis=266|y-axis=285|type=normal|link=#E-6 D (Normal)}}{{clear}}
+{{Node|x-axis=316|y-axis=90|type=normal|link=#E-6 E (Normal)}}{{clear}}
+{{Node|x-axis=325|y-axis=193|type=normal|link=#E-6 F (Normal)}}{{clear}}
+{{Node|x-axis=371|y-axis=239|type=normal|link=#E-6 G (Normal)}}{{clear}}
+{{Node|x-axis=386|y-axis=152|type=air defense|link=#E-6 H (Normal)}}{{clear}}
+{{Node|x-axis=415|y-axis=104|type=normal|link=#E-6 I (Normal)}}{{clear}}
+{{Node|x-axis=458|y-axis=282|type=air defense|link=#E-6 J (Normal)}}{{clear}}
+{{Node|x-axis=513|y-axis=117|type=normal|link=#E-6 K (Normal)}}{{clear}}
+{{Node|x-axis=547|y-axis=252|type=normal|link=#E-6 L (Normal)}}{{clear}}
+{{Node|x-axis=565|y-axis=174|type=maelstrom|link=#E-6 M (Normal)}}{{clear}}
+{{Node|x-axis=458|y-axis=212|type=boss|link=#E-6 N (Normal)}}{{clear}}
+{{Node|x-axis=402|y-axis=289|type=empty|link=#E-6 O (Normal)}}{{clear}}
+{{Node|x-axis=573|y-axis=90|type=empty|link=#E-6 P (Normal)}}{{clear}}
+</div>
+
+<div style="width:800px;height:400px;overflow:auto">
+<div id = "E-6 A (Normal)"></div>
+<center>E-6 A Node name: 深海中枢泊地所属潜水艦隊 I群</center>
+{{NodeInfo
+|A<ref name=E6ANormPoi group=n />
+|Normal
+|Echelon
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+|Submarine So-Class
+|-
+|A<ref name=E6ANormPoi group=n />
+|Normal
+|Echelon<br/>L.Abreast
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+|-
+|A<ref name=E6ANormPoi group=n />
+|Normal
+|L.Abreast
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class
+|-
+|A<ref name=E6ANormPoi group=n />
+|Normal
+|Echelon
+|Submarine So-Class/Flagship
+|Submarine So-Class
+|Submarine So-Class
+|-
+|A<ref name=E6ANormPoi group=n />
+|Normal
+|Echelon
+|Submarine So-Class/Flagship
+|Submarine So-Class
+|Submarine So-Class
+|Submarine So-Class
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 B (Normal)"></div>
+<center>E-6 B Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|B<ref name=E6BNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|-
+|B<ref name=E6BNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VII
+|-
+|B<ref name=E6BNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|B<ref name=E6BNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|-
+|B<ref name=E6BNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VII
+|Airfield Princess/V
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 C (Normal)"></div>
+<center>E-6 C Node name: 空母任務部隊 A群</center>
+{{NodeInfo
+|C<ref name=E6CNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C<ref name=E6CNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Standard Carrier Wo-Class/Flagship III
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C<ref name=E6CNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship IV
+|Standard Carrier Wo-Class/Flagship IV
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C<ref name=E6CNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Standard Carrier Wo-Class/Kai Flagship II
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C<ref name=E6CNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Standard Carrier Wo-Class/Kai Flagship II
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 D (Normal)"></div>
+<center>E-6 D Node name: 空母任務部隊 D群</center>
+{{NodeInfo
+|D<ref name=E6DNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|D<ref name=E6DNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|D<ref name=E6DNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship IV
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D<ref name=E6DNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 E (Normal)"></div>
+<center>E-6 E Node name: 空母任務部隊 C群</center>
+{{NodeInfo
+|E<ref name=E6ENormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ne-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|E<ref name=E6ENormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|E<ref name=E6ENormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship IV
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|E<ref name=E6ENormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 F (Normal)"></div>
+<center>E-6 F Node name: 空母任務部隊 B群</center>
+{{NodeInfo
+|F<ref name=E6FNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F<ref name=E6FNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship III
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|F<ref name=E6FNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Flagship IV
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F<ref name=E6FNormPoi group=n />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 G (Normal)"></div>
+<center>E-6 G Node name: 北太平洋深海兵站護衛船団</center>
+{{NodeInfo
+|G<ref name=E6GNormPoi group=n />
+|Normal
+|Double<br/>Diamond
+|Light Carrier Nu-Class/Flagship
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|G<ref name=E6GNormPoi group=n />
+|Normal
+|Double<br/>Diamond
+|Light Carrier Nu-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 H (Normal)"></div>
+<center>E-6 H Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|H<ref name=E6HNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|H<ref name=E6HNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|-
+|H<ref name=E6HNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|H<ref name=E6HNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|H<ref name=E6HNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/VI
+|Airfield Princess/V
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 I (Normal)"></div>
+<center>E-6 I Node name: 護衛空母集団</center>
+{{NodeInfo
+|I<ref name=E6INormPoi group=n />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I<ref name=E6INormPoi group=n />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I<ref name=E6INormPoi group=n />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I<ref name=E6INormPoi group=n />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 J (Normal)"></div>
+<center>E-6 J Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|J<ref name=E6JNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|J<ref name=E6JNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|-
+|J<ref name=E6JNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/V
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|J<ref name=E6JNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|J<ref name=E6JNormPoi group=n />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/VI
+|Airfield Princess/V
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 K (Normal)"></div>
+<center>E-6 K Node name: 深海中枢泊地所属潜水艦隊 II群</center>
+{{NodeInfo
+|K<ref name=E6KNormPoi group=n />
+|Normal
+|Echelon
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class
+|-
+|K<ref name=E6KNormPoi group=n />
+|Normal
+|Echelon<br/>L.Abreast
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|-
+|K<ref name=E6KNormPoi group=n />
+|Normal
+|Echelon<br/>L.Abreast
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 L (Normal)"></div>
+<center>E-6 L Node name: 深海太平洋艦隊主力任務部隊</center>
+{{NodeInfo
+|L<ref name=E6LNormPoi group=n />
+|Normal
+|Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class
+|Destroyer Water Demon/IV
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|L<ref name=E6LNormPoi group=n />
+|Normal
+|Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class/Elite
+|Destroyer Water Demon/IV
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|L<ref name=E6LNormPoi group=n />
+|Normal
+|Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class/Elite
+|Battleship Ta-Class/Elite
+|Destroyer Water Demon/V
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|L<ref name=E6LNormPoi group=n />
+|Normal
+|L.Ahead<br/>Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Destroyer Water Demon/V
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 N (Normal)"></div>
+<center>E-6 N Node name: 北太平洋深海中枢泊地</center>
+{{NodeInfo
+|N<ref name=E6NNormPoi group=n />
+|Boss
+|L.Ahead
+|Central Princess/II
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Supply Depot Princess/II
+|Artillery Imp
+|Artillery Imp
+|-
+|N<ref name=E6NNormPoi group=n />
+|Boss
+|L.Ahead
+|Central Princess/II
+|Battleship Ru-Class/Flagship
+|Airfield Princess/V
+|Supply Depot Princess/II
+|Artillery Imp
+|Artillery Imp
+|-
+|N<ref name=E6NNormPoi group=n />
+|Boss/Final
+|L.Ahead
+|Central Princess/III
+|Battleship Princess
+|Airfield Princess/VI
+|Supply Depot Princess/Damaged II
+|Artillery Imp/II
+|Artillery Imp/II
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id="E-6 O (Normal)"></div>
+{{NodeInfo|O|Empty}}
+<div style="text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id="E-6 P (Normal)"></div>
+{{NodeInfo|P|Empty}}
+<div style="text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+</div>
+
+----
+
+===References===
+<div class="mw-collapsible mw-collapsed">
+<references group=n>
+<ref name=E6ANormPoi>http://db.kcwiki.moe/drop/map/346/2/A-SAB.html</ref>
+<ref name=E6BNormPoi>http://db.kcwiki.moe/drop/map/346/2/B-SAB.html</ref>
+<ref name=E6CNormPoi>http://db.kcwiki.moe/drop/map/346/2/C-SAB.html</ref>
+<ref name=E6DNormPoi>http://db.kcwiki.moe/drop/map/346/2/D-SAB.html</ref>
+<ref name=E6ENormPoi>http://db.kcwiki.moe/drop/map/346/2/E-SAB.html</ref>
+<ref name=E6FNormPoi>http://db.kcwiki.moe/drop/map/346/2/F-SAB.html</ref>
+<ref name=E6GNormPoi>http://db.kcwiki.moe/drop/map/346/2/G-SAB.html</ref>
+<ref name=E6HNormPoi>http://db.kcwiki.moe/drop/map/346/2/H-SAB.html</ref>
+<ref name=E6INormPoi>http://db.kcwiki.moe/drop/map/346/2/I-SAB.html</ref>
+<ref name=E6JNormPoi>http://db.kcwiki.moe/drop/map/346/2/J-SAB.html</ref>
+<ref name=E6KNormPoi>http://db.kcwiki.moe/drop/map/346/2/K-SAB.html</ref>
+<ref name=E6LNormPoi>http://db.kcwiki.moe/drop/map/346/2/L-SAB.html</ref>
+<ref name=E6NNormPoi>http://db.kcwiki.moe/drop/map/346/2/N-SAB.html</ref>
+</references>
+</div>
+
+
+
+|-|Hard=
+<div style="text-align:center;color:red">'''Click on the nodes to see pattern info'''</div>
+<div style="position:relative;width:700px">[[File:Spring_2016_E6_Map.png|700px|link=]]
+{{Node|x-axis=157|y-axis=158|type=normal|link=#E-6 A (Hard)}}{{clear}}
+{{Node|x-axis=225|y-axis=215|type=air defense|link=#E-6 B (Hard)}}{{clear}}
+{{Node|x-axis=247|y-axis=157|type=normal|link=#E-6 C (Hard)}}{{clear}}
+{{Node|x-axis=266|y-axis=285|type=normal|link=#E-6 D (Hard)}}{{clear}}
+{{Node|x-axis=316|y-axis=90|type=normal|link=#E-6 E (Hard)}}{{clear}}
+{{Node|x-axis=325|y-axis=193|type=normal|link=#E-6 F (Hard)}}{{clear}}
+{{Node|x-axis=371|y-axis=239|type=normal|link=#E-6 G (Hard)}}{{clear}}
+{{Node|x-axis=386|y-axis=152|type=air defense|link=#E-6 H (Hard)}}{{clear}}
+{{Node|x-axis=415|y-axis=104|type=normal|link=#E-6 I (Hard)}}{{clear}}
+{{Node|x-axis=458|y-axis=282|type=air defense|link=#E-6 J (Hard)}}{{clear}}
+{{Node|x-axis=513|y-axis=117|type=normal|link=#E-6 K (Hard)}}{{clear}}
+{{Node|x-axis=547|y-axis=252|type=normal|link=#E-6 L (Hard)}}{{clear}}
+{{Node|x-axis=565|y-axis=174|type=maelstrom|link=#E-6 M (Hard)}}{{clear}}
+{{Node|x-axis=458|y-axis=212|type=boss|link=#E-6 N (Hard)}}{{clear}}
+{{Node|x-axis=402|y-axis=289|type=empty|link=#E-6 O (Hard)}}{{clear}}
+{{Node|x-axis=573|y-axis=90|type=empty|link=#E-6 P (Hard)}}{{clear}}
+</div>
+
+<div style="width:800px;height:400px;overflow:auto">
+<div id = "E-6 A (Hard)"></div>
+<center>E-6 A Node name: 深海中枢泊地所属潜水艦隊 I群</center>
+{{NodeInfo
+|A<ref name=E6AHardPoi group=h />
+|Normal
+|Echelon<br/>L.Abreast
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+|-
+|A<ref name=E6AHardPoi group=h />
+|Normal
+|L.Abreast
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class
+|-
+|A<ref name=E6AHardPoi group=h />
+|Normal
+|Echelon<br/>L.Abreast
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class
+|Submarine So-Class
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 B (Hard)"></div>
+<center>E-6 B Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|B<ref name=E6BHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|-
+|B<ref name=E6BHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VII
+|Airfield Princess/V
+|-
+|B<ref name=E6BHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VII
+|Airfield Princess/V
+|Airfield Princess/V
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 C (Hard)"></div>
+<center>E-6 C Node name: 空母任務部隊 A群</center>
+{{NodeInfo
+|C<ref name=E6CHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Standard Carrier Wo-Class/Kai Flagship II
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C<ref name=E6CHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Standard Carrier Wo-Class/Kai Flagship II
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C<ref name=E6CHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship III
+|Standard Carrier Wo-Class/Kai Flagship III
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|C<ref name=E6CHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 D (Hard)"></div>
+<center>E-6 D Node name: 空母任務部隊 D群</center>
+{{NodeInfo
+|D<ref name=E6DHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D<ref name=E6DHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D<ref name=E6DHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship III
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|D<ref name=E6DHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 E (Hard)"></div>
+<center>E-6 E Node name: 空母任務部隊 C群</center>
+{{NodeInfo
+|E<ref name=E6EHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|E<ref name=E6EHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|E<ref name=E6EHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship III
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|E<ref name=E6EHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 F (Hard)"></div>
+<center>E-6 F Node name: 空母任務部隊 B群</center>
+{{NodeInfo
+|F<ref name=E6FHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F<ref name=E6FHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship II
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F<ref name=E6FHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship III
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|F<ref name=E6FHardPoi group=h />
+|Normal
+|Diamond
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 G (Hard)"></div>
+<center>E-6 G Node name: 北太平洋深海兵站護衛船団</center>
+{{NodeInfo
+|G<ref name=E6GHardPoi group=h />
+|Normal
+|Double<br/>Diamond
+|Light Carrier Nu-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Destroyer Princess
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|G<ref name=E6GHardPoi group=h />
+|Normal
+|Double
+|Light Carrier Nu-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Destroyer Princess/II
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 H (Hard)"></div>
+<center>E-6 H Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|H<ref name=E6HHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|H<ref name=E6HHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/VI
+|Airfield Princess/V
+|-
+|H<ref name=E6HHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/VI
+|Airfield Princess/VI
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 I (Hard)"></div>
+<center>E-6 I Node name: 護衛空母集団</center>
+{{NodeInfo
+|I<ref name=E6IHardPoi group=h />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I<ref name=E6IHardPoi group=h />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|I<ref name=E6IHardPoi group=h />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|I<ref name=E6IHardPoi group=h />
+|Normal
+|Diamond
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 J (Hard)"></div>
+<center>E-6 J Node name: 深海中枢泊地航空隊</center>
+{{NodeInfo
+|J<ref name=E6JHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/V
+|Airfield Princess/V
+|-
+|J<ref name=E6JHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/VI
+|Airfield Princess/V
+|-
+|J<ref name=E6JHardPoi group=h />
+|Dogfight
+|Diamond
+|Central Princess/III
+|Airfield Princess/VI
+|Airfield Princess/VI
+|Airfield Princess/VI
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 K (Hard)"></div>
+<center>E-6 K Node name: 深海中枢泊地所属潜水艦隊 II群</center>
+{{NodeInfo
+|K<ref name=E6KHardPoi group=h />
+|Normal
+|Echelon<br/>L.Abreast
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|-
+|K<ref name=E6KHardPoi group=h />
+|Normal
+|Echelon
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class
+|-
+|K<ref name=E6KHardPoi group=h />
+|Normal
+|Echelon<br/>L.Abreast
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 L (Hard)"></div>
+<center>E-6 L Node name: 深海太平洋艦隊主力任務部隊</center>
+{{NodeInfo
+|L<ref name=E6LHardPoi group=h />
+|Normal
+|L.Ahead<br/>Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Destroyer Water Demon/V
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|L<ref name=E6LHardPoi group=h />
+|Normal
+|L.Ahead<br/>Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Destroyer Water Demon/VI
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|L<ref name=E6LHardPoi group=h />
+|Normal
+|L.Ahead<br/>Diamond
+|Aircraft Carrier Princess
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Destroyer Water Demon/VI
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id = "E-6 N (Hard)"></div>
+<center>E-6 N Node name: 北太平洋深海中枢泊地</center>
+{{NodeInfo
+|N<ref name=E6NHardPoi group=h />
+|Boss
+|L.Ahead
+|Central Princess/III
+|Battleship Princess
+|Battleship Princess
+|Supply Depot Princess/III
+|Artillery Imp/II
+|Artillery Imp/II
+|-
+|N<ref name=E6NHardPoi group=h />
+|Boss
+|L.Ahead
+|Central Princess/III
+|Battleship Princess
+|Airfield Princess/VI
+|Supply Depot Princess/III
+|Artillery Imp/II
+|Artillery Imp/II
+|-
+|N<ref name=E6NHardPoi group=h />
+|Boss/Final
+|L.Ahead
+|Central Princess/III
+|Battleship Princess
+|Airfield Princess/VII
+|Supply Depot Princess/Damaged III
+|Artillery Imp/III
+|Artillery Imp/III
+}}
+<div style = "text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id="E-6 O (Hard)"></div>
+{{NodeInfo|O|Empty}}
+<div style="text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+
+<div id="E-6 P (Hard)"></div>
+{{NodeInfo|P|Empty}}
+<div style="text-align:right">[[#E-6 enemy patterns|back to map]]</div>
+</div>
+
+----
+
+===References===
+<div class="mw-collapsible mw-collapsed">
+<references group=h >
+<ref name=E6AHardPoi>http://db.kcwiki.moe/drop/map/346/3/A-SAB.html</ref>
+<ref name=E6BHardPoi>http://db.kcwiki.moe/drop/map/346/3/B-SAB.html</ref>
+<ref name=E6CHardPoi>http://db.kcwiki.moe/drop/map/346/3/C-SAB.html</ref>
+<ref name=E6DHardPoi>http://db.kcwiki.moe/drop/map/346/3/D-SAB.html</ref>
+<ref name=E6EHardPoi>http://db.kcwiki.moe/drop/map/346/3/E-SAB.html</ref>
+<ref name=E6FHardPoi>http://db.kcwiki.moe/drop/map/346/3/F-SAB.html</ref>
+<ref name=E6GHardPoi>http://db.kcwiki.moe/drop/map/346/3/G-SAB.html</ref>
+<ref name=E6HHardPoi>http://db.kcwiki.moe/drop/map/346/3/H-SAB.html</ref>
+<ref name=E6IHardPoi>http://db.kcwiki.moe/drop/map/346/3/I-SAB.html</ref>
+<ref name=E6JHardPoi>http://db.kcwiki.moe/drop/map/346/3/J-SAB.html</ref>
+<ref name=E6KHardPoi>http://db.kcwiki.moe/drop/map/346/3/K-SAB.html</ref>
+<ref name=E6LHardPoi>http://db.kcwiki.moe/drop/map/346/3/L-SAB.html</ref>
+<ref name=E6NHardPoi>http://db.kcwiki.moe/drop/map/346/3/N-SAB.html</ref>
+</references>
+</div>
+
+
+
+</tabber>
+
+
+</div>
+</div>
+
+<div class="mw-collapsible mw-collapsed" >
+
+==[[File:AMBox_information.png|16px]] Tips==
+<div class="mw-collapsible-content">
+
+*Players intending to farm Oyashio on Medium and higher difficulties may find the northern routing efficient regardless of the random factor; should the compass direct the player to the boss, attempt to clear the boss. Otherwise if offrouted to L, S-rank node L for Oyashio drop chance, retreat, and repeat
+* At least 234 Fighter Power required for AS, 468 FP for AS+ at boss node for Hard Last dance.
+<div style="width:90%; border:2px solid darkblue; background:lightblue; text-align:left; margin:15px auto 20px;padding:5px;">
+;Airstrike Buff
+After May 5 patch update, it is possible to significantly damage or outright sink the [[Central Princess]] with '''dive bombers''' (including Zuiun) in E6. Some claim that they ''feel'' armor debuff could increase the chance of successfully getting a critical off the Opening Air Strike.
+
+"Zuiun nuke" is confirmed to be result of debuff mechanism which affects all dive bombing attacks. There's no reason to use Zuiun because carrier based dive bombers outclass Zuiun. This effect also applies to [[Expedition/Support Expedition|Aerial support expedition]]
+</div>
+*As the fleet will have to rely on initial airstrike to sink the Central Princess, it is of paramount importance that the fleet makes it to the boss node with bombers reasonably intact (≥60% of starting bombers).
+**Achieving AS/AS+ in Air combat can help a lot in making sure these bombers survive.
+*Aerial Support engages the enemy carriers in a second Aerial Combat phase. It is recommended to give support fleet at least some fighter planes.
+* <s>Some might also load Zuiun onto AVs.</s> 
+*Preboss support is optional.
+
+</div>
+</div>
+
+
+<div class="mw-collapsible mw-collapsed" >
+
+==References==
+<div class="mw-collapsible-content">
+<references />
+</div>
+</div>
+
+
+{{clear}}

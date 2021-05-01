@@ -1,0 +1,524 @@
+{{!}} width="{{{boxwidth|75px}}}" align="center" style="background:{{#switch: {{{InterpretClass|}}}
+
+<!-- ######################################################################################################## -->
+<!-- Destroyer Class -->
+<!-- ######################################################################################################## -->
+| Destroyer = 
+{{#switch: {{{InterpretStats|no data}}} 
+| HP = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- HP to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+37                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+35                                      | yellow | &#35;EDEDED }} }}
+| Firepower = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Firepower to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+70                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+50                                      | yellow | &#35;EDEDED }} }}
+| Armor = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Armor to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+59                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+51                                      | yellow | &#35;EDEDED }} }}
+| Torpedo = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Torpedo to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+93                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+84                                      | yellow | &#35;EDEDED }} }}
+| Evasion = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Evasion to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+99                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+93                                      | yellow | &#35;EDEDED }} }}
+| AA = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Anti-air to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+74                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+68                                      | yellow | &#35;EDEDED }} }}
+| Aircraft = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- Aircraft to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| ASW = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- ASW to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+72                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+63                                      | yellow | &#35;EDEDED }} }}
+| Speed = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Speed to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifeq: {{{StatsValue|0}}} | 
+999                                      | yellow | &#35;EDEDED }} }}
+| LOS = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- LOS to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+48                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+43                                      | yellow | &#35;EDEDED }} }}
+| Range = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Range to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| Luck = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >= 
+<!-- Based Luck to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+50                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >=  
+20                                      | yellow | &#35;EDEDED }} }}
+| red 
+}}
+<!-- End setting for Destroyer Class -->
+
+
+<!-- ######################################################################################################## -->
+<!-- Light Cruiser Class (Also Torpedo Cruiser and Training Cruiser since they share same comparison table)  -->
+<!-- ######################################################################################################## -->
+| Light Cruiser | Torpedo Cruiser | Training Cruiser = 
+{{#switch: {{{InterpretStats|no data}}} 
+| HP = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- HP to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+50                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+45                                      | yellow | &#35;EDEDED }} }}
+| Firepower = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Firepower to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+69                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+67                                      | yellow | &#35;EDEDED }} }}
+| Armor = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Armor to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+68                                      | yellow | &#35;EDEDED }} }}
+| Torpedo = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Torpedo to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+98                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+88                                      | yellow | &#35;EDEDED }} }}
+| Evasion = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Evasion to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+84                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+82                                      | yellow | &#35;EDEDED }} }}
+| AA = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Anti-air to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+84                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+70                                      | yellow | &#35;EDEDED }} }}
+| Aircraft = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- Aircraft to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+12                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+8                                      | yellow | &#35;EDEDED }} }}
+| ASW = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- ASW to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+94                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+82                                      | yellow | &#35;EDEDED }} }}
+| Speed = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Speed to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| LOS = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- LOS to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+84                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+59                                      | yellow | &#35;EDEDED }} }}
+| Range = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Range to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| Luck = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >= 
+<!-- Based Luck to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+30                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >=  
+15                                      | yellow | &#35;EDEDED }} }}
+| red 
+}}
+<!-- End setting for Light Cruiser Class -->
+
+
+<!-- ######################################################################################################## -->
+<!-- Heavy Cruiser & Aviation Cruiser -->
+<!-- ######################################################################################################## -->
+| Heavy Cruiser | Aviation Cruiser = 
+{{#switch: {{{InterpretStats|no data}}} 
+| HP = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- HP to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+63                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+57                                      | yellow | &#35;EDEDED }} }}
+| Firepower = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Firepower to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+82                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+77                                      | yellow | &#35;EDEDED }} }}
+| Armor = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Armor to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+79                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+77                                      | yellow | &#35;EDEDED }} }}
+| Torpedo = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Torpedo to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+83                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+74                                      | yellow | &#35;EDEDED }} }}
+| Evasion = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Evasion to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+84                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+83                                      | yellow | &#35;EDEDED }} }}
+| AA = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Anti-air to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+89                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+79                                      | yellow | &#35;EDEDED }} }}
+| Aircraft = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- Aircraft to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+18                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+12                                      | yellow | &#35;EDEDED }} }}
+| ASW = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- ASW to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Speed = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Speed to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| LOS = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- LOS to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+79                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+57                                      | yellow | &#35;EDEDED }} }}
+| Range = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Range to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| Luck = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >= 
+<!-- Based Luck to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+30                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >=  
+19                                      | yellow | &#35;EDEDED }} }}
+| red
+}}
+<!-- End setting for Heavy Cruiser & Aviation Cruiser Class -->
+
+
+<!-- ######################################################################################################## -->
+<!-- Battleship & Aviation Battleship -->
+<!-- ######################################################################################################## -->
+| Battleship | Aviation Battleship = 
+{{#switch: {{{InterpretStats|no data}}} 
+| HP = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- HP to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+96                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+90                                      | yellow | &#35;EDEDED }} }}
+| Firepower = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Firepower to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+139                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+97                                      | yellow | &#35;EDEDED }} }}
+| Armor = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Armor to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+118                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+94                                      | yellow | &#35;EDEDED }} }}
+| Torpedo = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Torpedo to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+36                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Evasion = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Evasion to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+74                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+72                                      | yellow | &#35;EDEDED }} }}
+| AA = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Anti-air to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+104                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+92                                      | yellow | &#35;EDEDED }} }}
+| Aircraft = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- Aircraft to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+28                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+16                                      | yellow | &#35;EDEDED }} }}
+| ASW = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- ASW to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Speed = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Speed to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+Fast                                    | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| LOS = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- LOS to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+59                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+52                                      | yellow | &#35;EDEDED }} }}
+| Range = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Range to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| Luck = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >= 
+<!-- Based Luck to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+30                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >=  
+20                                      | yellow | &#35;EDEDED }} }}
+| red
+}}
+<!-- End setting for Battleship & Aviation Battleship Class -->
+
+
+<!-- ######################################################################################################## -->
+<!-- Light Carrier Class (Also Seaplane Tender and Submarine Tender since they share same comparison table)  -->
+<!-- ######################################################################################################## -->
+| Light Carrier | Seaplane Tender | Submarine Tender =
+{{#switch: {{{InterpretStats|no data}}} 
+| HP = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- HP to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+58                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+55                                      | yellow | &#35;EDEDED }} }}
+| Firepower = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Firepower to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+40                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+34                                      | yellow | &#35;EDEDED }} }}
+| Armor = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Armor to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+65                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+62                                      | yellow | &#35;EDEDED }} }}
+| Torpedo = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Torpedo to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+72                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Evasion = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Evasion to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+84                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| AA = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Anti-air to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+72                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+69                                      | yellow | &#35;EDEDED }} }}
+| Aircraft = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- Aircraft to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+66                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+55                                      | yellow | &#35;EDEDED }} }}
+| ASW = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- ASW to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Speed = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Speed to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+Fast                                    | yellow | &#35;EDEDED }} }}
+| LOS = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- LOS to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Range = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Range to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| Luck = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >= 
+<!-- Based Luck to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+30                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >=  
+20                                      | yellow | &#35;EDEDED }} }}
+| red
+}}
+<!-- End setting for Light Carrier Class -->
+
+
+<!-- ######################################################################################################## -->
+<!-- Standard Carrier Class -->
+<!-- ######################################################################################################## -->
+| Standard Carrier =
+{{#switch: {{{InterpretStats|no data}}} 
+| HP = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- HP to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+79                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+75                                      | yellow | &#35;EDEDED }} }}
+| Firepower = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Firepower to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+64                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+57                                      | yellow | &#35;EDEDED }} }}
+| Armor = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Armor to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+84                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+57                                      | yellow | &#35;EDEDED }} }}
+| Torpedo = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Torpedo to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Evasion = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Evasion to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+82                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+79                                      | yellow | &#35;EDEDED }} }}
+| AA = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Anti-air to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+82                                      | yellow | &#35;EDEDED }} }}
+| Aircraft = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- Aircraft to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+98                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+82                                      | yellow | &#35;EDEDED }} }}
+| ASW = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- ASW to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Speed = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Speed to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| LOS = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- LOS to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Range = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Range to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| Luck = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >= 
+<!-- Based Luck to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+40                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| red
+}}
+<!-- End setting for Standard Carrier Class -->
+
+
+<!-- ######################################################################################################## -->
+<!-- Submarine & Aircraft Carrying Submarine -->
+<!-- ######################################################################################################## -->
+| Submarine | Aircraft Carrying Submarine = 
+{{#switch: {{{InterpretStats|no data}}} 
+| HP = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- HP to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+24                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+19                                      | yellow | &#35;EDEDED }} }}
+| Firepower = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Firepower to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+19                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+14                                      | yellow | &#35;EDEDED }} }}
+| Armor = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Armor to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+24                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+20                                      | yellow | &#35;EDEDED }} }}
+| Torpedo = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Torpedo to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+89                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+84                                      | yellow | &#35;EDEDED }} }}
+| Evasion = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Evasion to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+68                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+59                                      | yellow | &#35;EDEDED }} }}
+| AA = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Anti-air to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Aircraft = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- Aircraft to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+6                                      | yellow | &#35;EDEDED }} }}
+| ASW = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- ASW to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                     | yellow | &#35;EDEDED }} }}
+| Speed = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Speed to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| LOS = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- LOS to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+45                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Range = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Range to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                     | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                     | yellow | &#35;EDEDED }} }}
+| Luck = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >= 
+<!-- Based Luck to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+44                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >=  
+20                                      | yellow | &#35;EDEDED }} }}
+| red
+}}
+<!-- End setting for Submarine & Aircraft Carrying Submarine Class -->
+
+
+<!-- ######################################################################################################## -->
+<!-- Class that Not yet comparable -->
+<!-- ######################################################################################################## -->
+| Repair Ship | Amphibious Assault Ship =
+{{#switch: {{{InterpretStats|no data}}} 
+| HP = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- HP to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Firepower = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Firepower to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Armor = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Armor to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Torpedo = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Torpedo to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Evasion = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Evasion to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| AA = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- Anti-air to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Aircraft = {{#ifexpr: {{{StatsValue|0}}} >= 
+<!-- Aircraft to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{{StatsValue|0}}} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| ASW = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- ASW to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Speed = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Speed to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                      | yellow | &#35;EDEDED }} }}
+| LOS = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >= 
+<!-- LOS to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |1}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| Range = {{#ifeq: {{{StatsValue|0}}} | 
+<!-- Range to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifeq: {{{StatsValue|0}}} |  
+999                                      | yellow | &#35;EDEDED }} }}
+| Luck = {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >= 
+<!-- Based Luck to trigger auto-highlight (Upper row:lime, Lower row: Yellow) -->
+999                                      | lime | {{#ifexpr: {{#expr: trunc {{#explode: {{{StatsValue|0 0}}}| |0}} }} >=  
+999                                      | yellow | &#35;EDEDED }} }}
+| red
+}}
+<!-- End setting for Class that Not yet comparable -->
+| &#35;FFB2A1 <!-- Will show #FFB2A1 if InterpretClass is missing or wrong -->
+}}" {{!}} '''{{{StatsValue|0}}}'''
+<noinclude>
+==Testing==
+*Interpret to highlight stats for each class, built in order to use with [[Template:Sandbox/ViarhetShipinfoFlat]].
+*You can adjust parameter to trigger hightlight for each class here
+*If stats has min & max value like 0 (80) and you don't add both info, seperated by space bar, It's will result it white background (like example below)
+<pre>
+{{#tag: tabber|
+Statistic=
+{{{!}} style="padding:0px; margin:auto; border:0px; width:170px; background:#FFFFFF;" cellspacing="2px"
+{{!}} width="95px" {{!}} [[File:Icon_HP.png]] HP
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Destroyer|InterpretStats=HP|StatsValue=37}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_HP.png]] HP
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Destroyer|InterpretStats=HP|StatsValue=35}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_HP.png]] HP
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Destroyer|InterpretStats=HP|StatsValue=31}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_Torpedo.png]] Torpedo
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Torpedo Cruiser|InterpretStats=Torpedo|StatsValue=0 (98)}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_Torpedo.png]] Torpedo
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Torpedo Cruiser|InterpretStats=Torpedo|StatsValue=0 (88)}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_Torpedo.png]] Torpedo
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Torpedo Cruiser|InterpretStats=Torpedo|StatsValue=0 (80)}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_Torpedo.png]] Torpedo
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Torpedo Cruiser|InterpretStats=Torpedo|StatsValue=80}}
+{{!}}}
+}}
+</pre>
+{{#tag: tabber|
+Statistic=
+{{{!}} style="padding:0px; margin:auto; border:0px; width:170px; background:#FFFFFF;" cellspacing="2px"
+{{!}} width="95px" {{!}} [[File:Icon_HP.png]] HP
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Destroyer|InterpretStats=HP|StatsValue=37}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_HP.png]] HP
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Destroyer|InterpretStats=HP|StatsValue=35}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_HP.png]] HP
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Destroyer|InterpretStats=HP|StatsValue=31}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_Torpedo.png]] Torpedo
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Torpedo Cruiser|InterpretStats=Torpedo|StatsValue=0 (98)}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_Torpedo.png]] Torpedo
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Torpedo Cruiser|InterpretStats=Torpedo|StatsValue=0 (88)}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_Torpedo.png]] Torpedo
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Torpedo Cruiser|InterpretStats=Torpedo|StatsValue=0 (80)}}
+{{!}}-
+{{!}} width="95px" {{!}} [[File:Icon_Torpedo.png]] Torpedo
+{{Sandbox/ViarhetShipStatsHighlight|InterpretClass=Torpedo Cruiser|InterpretStats=Torpedo|StatsValue=80}}
+{{!}}}
+}}
+</noinclude>

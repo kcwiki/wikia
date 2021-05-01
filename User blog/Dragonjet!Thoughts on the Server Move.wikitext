@@ -1,0 +1,137 @@
+{{Ambox
+|type = construction
+|message = Please do not read first. I am not done writing this. I'm just afraid any wrong click will discard all this typing I did.
+|users = [[User:Dragonjet|dragonjet]]
+}}
+
+I haven't posted my own reply to the server move thread at the Suggestion page, I've only answered people's concerns. Here on my own blog I will state my own concerns and considerations. I decided to make this separate since I don't know how long it will be, and I'll probably need some sections and sub-sections provided by articles.
+
+Right now we do have a [https://docs.google.com/document/d/1clGeOI_EP1CHy3avA0GpO6wBNiHP74bBLrr8oaT7990 '''Google Doc of Concerns'''] on the Server Move. It was supposed to be a '''Proposal to the Community''', but when the first people started writing at the same time, it became more of an F.A.Q. Check it out yourself, it might help in someways on your decision.
+
+Note that I did write a considerable number of the concerns there (and also probably [[User:Kevadu|Kev]] - I didn't know who exactly were there, they were ''anonymous nyancats'' while writing). [[User:Gensui_Hime|Gensui]] and [[User:SmokeyTheButt|Smokes]] were mostly the ones answering
+
+==Network==
+===Do we have Failover servers or the like?===
+The ideal setup for modern back-ends are load-balancing multiple clone servers on the cloud.
+* '''What does that mean?''' There will not only be one server. Content is cloned or copied onto multiple servers so that when any one of them fails or goes down, there are still other copy servers and the site will continue to function.
+* '''Load-balancing?''' Of course, there is always one entry point or gateway, i.e. <code style="color:#369">en.kancollewiki.net</code>. But what happens behind that? It should go to a "load-balancing" service which determines which of all those servers are less trafficked and send you to it. It "balances" the "load" for all those copy servers.
+
+{| class="wikitable" style="width:660px; margin:0px auto;"
+|-
+! style="width:330px; color:#0a0;" |As Support of New Wiki
+! style="width:330px; color:#a00;" |As Opposition to New Wiki
+|-
+| valign="top" |'''Do we need it for static content?''' Usually this applies to modern dynamic web applications. However, our wikia is mostly static content. Unless you edit, everything is served as-is taken from database. No need to do multiple servers.
+| valign="top" |'''Yes, we still need it'''. Even if we serve static, the concept of, if it fails we do not have backup and site will go down, no no.
+|-
+| valign="top" |'''We will be using nginx'''. Webserver Nginx has advantage over apache in terms of serving static content to thoundands of concurrent users.
+| valign="top" |'''Ok''', good. But as I said, if the single server fails, because of God knows how and why, will the site do down?
+|-
+| valign="top" |What are you talking about? '''We're using linode'''.
+| valign="top" |Yes, I'm talking about '''[https://www.linode.com/nodebalancers/ NodeBalancer]'''.
+|-
+| valign="top" |'''Do other separatist wikis do this?''' Touhou wiki, and other wikis who left wikia work just fine without them.
+| valign="top" |''Remains an open question''
+|}
+
+
+===Are we going to use a CDN?===
+On Wikia, we have [[w:c:c:User_blog:Nmonterroso/Introducing_Vignette,_Wikia%27s_New_Thumbnailer|vignette]], which they call "thumbnailer", but it's probably because they don't want to confuse laymen, but it's technically a CDN. 
+* These CDN, as the name implies, delivers and distributes your content (usualy assets such as images) to a spread-out network of servers so that when you access the file, you load it from the server nearest you.
+* Sometimes, that concept is not directly applied and they are just being used so that a page can load assets from different servers to not overload one.
+* To sample this on your daily wikia usage, if you've ever seem an image link similar to <code style="color:#369">img1.wikia.nocookie.net</code>, then that's a CDN. Change that to img2, img3 and img4, it will work because it's copied onto separate servers for the purposes mentioned above.
+{| class="wikitable" style="width:660px; margin:0px auto;"
+|-
+! style="width:330px; color:#0a0;" |As Support of New Wiki
+! style="width:330px; color:#a00;" |As Opposition to New Wiki
+|-
+| valign="top" |
+| valign="top" |
+|-
+| valign="top" |
+| valign="top" |
+|}
+
+
+==Administration==
+===Costs===
+text
+*
+*
+{| class="wikitable" style="width:660px; margin:0px auto;"
+|-
+! style="width:330px; color:#0a0;" |As Support of New Wiki
+! style="width:330px; color:#a00;" |As Opposition to New Wiki
+|-
+| valign="top" |
+| valign="top" |
+|-
+| valign="top" |
+| valign="top" |
+|}
+
+
+===Server Access (SSH)===
+*
+*
+{| class="wikitable" style="width:660px; margin:0px auto;"
+|-
+! style="width:330px; color:#0a0;" |As Support of New Wiki
+! style="width:330px; color:#a00;" |As Opposition to New Wiki
+|-
+| valign="top" |
+| valign="top" |
+|-
+| valign="top" |
+| valign="top" |
+|}
+
+
+==Features==
+*
+*
+{| class="wikitable" style="width:660px; margin:0px auto;"
+|-
+! style="width:330px; color:#0a0;" |As Support of New Wiki
+! style="width:330px; color:#a00;" |As Opposition to New Wiki
+|-
+| valign="top" |
+| valign="top" |
+|-
+| valign="top" |
+| valign="top" |
+|}
+
+
+==Community==
+===The Move===
+*
+*
+{| class="wikitable" style="width:660px; margin:0px auto;"
+|-
+! style="width:330px; color:#0a0;" |As Support of New Wiki
+! style="width:330px; color:#a00;" |As Opposition to New Wiki
+|-
+| valign="top" |
+| valign="top" |
+|-
+| valign="top" |
+| valign="top" |
+|}
+
+
+===Wikia===
+*
+*
+{| class="wikitable" style="width:660px; margin:0px auto;"
+|-
+! style="width:330px; color:#0a0;" |As Support of New Wiki
+! style="width:330px; color:#a00;" |As Opposition to New Wiki
+|-
+| valign="top" |
+| valign="top" |
+|-
+| valign="top" |
+| valign="top" |
+|}
+[[Category:Blog posts]]

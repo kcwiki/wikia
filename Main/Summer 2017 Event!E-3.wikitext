@@ -1,0 +1,148 @@
+{{Event/MapPageHeader
+|form = syhw9feQuPpos6Nv2
+|spreadsheet = 1FSwzH3xLLA0bP9keKwhrx-m-FuxMpAepl1_h-b8IB4g
+|thread = 
+}}
+{{Event/MapInfo
+|en = Beyond the Stebian Sea
+|jp = ステビア海の先へ
+|romaji = Stebia-kai no saki e
+|tag = E3
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet,LoS  Check@Events/Mechanics#LoS_Check, Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Ship Locking@Events/Mechanics#Ship_Locking
+|no_hp = true
+|hp_all = 
+|hp_easy = 360 TP, 1560 HP
+|hp_medium = 390 TP, 1720 HP
+|hp_hard = 480 TP, 1960 HP
+|show_kills = true
+|kills_all = 4
+|reward_all = 
+|reward_easy_1 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_easy_1_x = 2
+|reward_easy_2 = {{EquipmentCardKai|Skua|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Swordfish|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Skua|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Swordfish|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_hard_1_x = 1
+|reward_hard_2 = [[File:New Model Aerial Armament Materials Icon.png{{!}}50px{{!}}link=New Model Aerial Armament Materials]]
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_3_x = 3
+|reward_hard_4 = {{EquipmentCardKai|Skua|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Swordfish Mk.II (Skilled)|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules
+|order = 0, E, F, I, H, M ,N
+
+|0 -> A/empty = 
+* Transport Escort Fleet
+* Fleet contains Hiryuu and Souryuu (doesn't work during TP Phase)
+* Meet all of the following requirements:
+** Boss Phase
+** Fleet contains a Kongou-class
+** Fast Fleet
+** ???
+|0 -> B = 
+* Do not meet the requirements to go to A.
+* Meeting any of the following requirements forces you to B no matter what:
+** Surface Task Force/Carrier Task Force during TP Phase
+** Amount of (F)BB(V) + CV(B) ≧ 4
+** Amount of (F)BB(V) ≧ 3
+** Amount of CV(B) ≧ 3
+** Amount of CLT ≧ 2
+
+|E/empty -> F, H = * Active branching
+
+|F -> G = * Slow Fleet
+|F -> I = 
+* Fast Fleet
+* Transport Escort Fleet (speed irrelevant)
+
+|I -> J = 
+* Do not meet the requirements to go to K.
+|I -> K/resource = 
+* Meet all of the following requirements:
+** No slow BB(V) allowed
+** Amount of FBB + CV(L/B) ≦ 2
+** Fleet passed through node F '''OR''' Transport Escort Fleet + Fast Fleet.
+
+|H -> I = * Transport Escort Fleet
+|H -> M, N = * Random?
+
+|M -> N = 
+* Pass the LoS check, but do not meet the requirements to go to Q.
+** Any extra (F)BB(V) or CV(L/B) will increase the chance that you will offroute to N.
+|M -> O/empty = * Fail the LoS check
+|M -> Q = 
+* Meet all of the following requirements:
+** Pass the LoS check
+** Amount of historical ships ≧ 6 '''OR''' Amount of(F)BB(V) + CV(L/B) ≦ 2
+** Amount of(F)BB(V) + CV(L/B) ≦ 3
+*** Failure to meet the above requirements will cause random routing instead.
+
+|N -> P/empty = * Fail the LoS check
+|N -> Q = * Pass the LoS check
+}}
+===Historical Fleet: Battle of Ceylon===
+The historical ships are the participants in Battle of Ceylon (now Sri Lanka):
+* DD: {{ShipLink|Arare}}, {{ShipLink|Fubuki/Kai Ni|text=Fubuki}}, {{ShipLink|Hagikaze}}, {{ShipLink|Hamakaze}}, {{ShipLink|Hatsuyuki}}, {{ShipLink|Isokaze}}, {{ShipLink|Isonami}}, {{ShipLink|Kagerou}}, {{ShipLink|Kasumi/Kai Ni|text=Kasumi}}, {{ShipLink|Maikaze}}, {{ShipLink|Shiranui}}, {{ShipLink|Shirayuki}}, {{ShipLink|Tanikaze}}, {{ShipLink|Urakaze}}
+* CL: {{ShipLink|Abukuma/Kai Ni|text=Abukuma}}, {{ShipLink|Sendai/Kai Ni|text=Sendai}}, {{ShipLink|Yura/Kai Ni|text=Yura}}
+* CA(V): {{ShipLink|Chikuma/Kai Ni|text=Chikuma}}, {{ShipLink|Choukai/Kai Ni|text=Choukai}}, {{ShipLink|Kumano/Kai Ni|text=Kumano}}, {{ShipLink|Mikuma/Kai|text=Mikuma}}, {{ShipLink|Mogami/Kai|text=Mogami}}, {{ShipLink|Suzuya/Kai Ni|text=Suzuya}}, {{ShipLink|Tone/Kai Ni|text=Tone}}
+* CVL: {{ShipLink|Ryuujou/Kai Ni|text=Ryuujou}}
+* CV: {{ShipLink|Akagi}}, {{ShipLink|Hiryuu/Kai Ni|text=Hiryuu}}, {{ShipLink|Shoukaku/Kai Ni|text=Shoukaku}}, {{ShipLink|Souryuu/Kai Ni|text=Souryuu}}, {{ShipLink|Zuikaku/Kai Ni|text=Zuikaku}}
+* FBB: {{ShipLink|Kongou/Kai Ni|text=Kongou}}, {{ShipLink|Hiei/Kai Ni|text=Hiei}}, {{ShipLink|Kirishima/Kai Ni|text=Kirishima}}, {{ShipLink|Haruna/Kai Ni|text=Haruna}}
+
+==Map Guide==
+*This is a Combined Fleet map.
+* Node B and Node J are submarine nodes.
+===Transport Phase===
+*The first part of this map is to reach the Boss node to empty the TP Bar.
+**Please note that you are required to obtain A- or S-Rank Victory to deplete the TP Bar.
+**Bring as many {{EquipmentLink|Daihatsu Landing Craft}} and {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canister}} on your ships to deplete the Bar faster.
+**Note that E-6 also has a TP Phase that is much longer compared to E-3. It is recommended to hold your Daihatsu carrying DDs for E-6 if you're planning to clear both maps on Normal or Hard.
+*Transport Combined Fleet: 
+**Recommended Fleet is 2 CAV 4 DD + 1 CL 2 CA 3 DD.
+***Routing: {{Event/Route|A|blue|C|orange|D|red|E|blue|F|orange|I|red|K|green|L|red}}
+***Going from Node E to H pre-HP phase is possible, but since going through node F doesn't require a Fast Fleet and allows you to skip Node J, you are recommended to go through node F during the TP Phase.
+*It is possible to use [[Combat/Combined Fleet|Surface Task Force]] or [[Combat/Combined Fleet|Carrier Task Force]] instead.
+**However, in this case, you are always forced to start at node B, which is a Submarine node. You cannot start at A with either [[Combat/Combined Fleet|Surface Task Force]] or [[Combat/Combined Fleet|Carrier Task Force]] during the TP Phase.
+**If you don't actually meet the requirements to route from I to K, it is actually favorable to use a Slow fleet instead and go through the north route. The resulting enemies you will be fighting is much easier to deal with, allowing more consistency at reaching the boss.
+*All of the nodes other than the Boss node have enemy carriers. It is recommended that you bring a Ship proficient in [[Combat/Aerial Combat|Anti-Air Cut-In]].
+**Please note that due to the high Air Power requirement, it is recommended that you have multiple Seaplane Fighters to gain Air Parity at least. (For Hard mode, the Air Power requirement is very high to the point just having multiple Seaplane Fighters may still not be enough)
+**{{ShipLink|Taiyou/Kai|Taiyou/Kai Ni|text=Taiyou Kai or Kai Ni}} can be used for transport fleet for E-3.
+***Same applies if you want to use {{ShipLink|Commandant Teste}} or {{ShipLink|Mizuho}} as a [[List of Seaplanes by stats|Seaplane Fighters]] carrier.
+*Boss node contains multiple {{ShipLink|Battleship Ru-Class/Flagship}} variant.
+**Hard mode contains 1 Flagship Kai and 3 Flagship variants.
+**You may opt to use Boss node Support Shelling Expeditions for a better chance to gain A- or S-Rank victory if you think your fleet isn't working out very well against them.
+*Clearing the TP Bar Phase will open up a new route to Node Q, where the final Boss of the map {{ShipLink|Heavy Cruiser Summer Princess}} appears.
+**After Node Q opened, if you wish to go to node L using [[Combat/Combined Fleet|Surface Task Force]] or [[Combat/Combined Fleet|Carrier Task Force]], you need to select Node F from Node E, as H will likely direct you towards Q instead.
+
+===Boss Kill Phase===
+*The second part of this map is to reach node Q to face {{ShipLink|Heavy Cruiser Summer Princess}} to deplete and completely destroy the Boss HP Bar.
+**<span style="color:red;">WARNING:</span> Please note that resetting the Map will result in you being forced to start from the TP Bar phase all over again.
+====Recommended Fleets====
+*Carrier Task Force
+**Route: {{Event/Route|A|blue|C|orange|D|red|E|blue|H|orange}} [ {{Event/Route|M|red}} / {{Event/Route|N|red}} ] {{Event/Route|Q|red}}
+***1 FBB 3 CA(V) 2 CV + 1 CL 2 DD 1 CLT 2 CA(V)
+*Surface Task Force
+**Route: {{Event/Route|B|red|C|orange|D|red|E|blue|H|orange}} [ {{Event/Route|M|red|N|red}} / {{Event/Route|N|red}} ] {{Event/Route|Q|red}}
+***2 FBB 2 CA(V) 2 CVL + 1 CL 2 DD 1 CLT 2 CA(V)
+***WARNING: Going to M or N after H appears to be random.  However, if you go M without certain ships in your fleet you can end up going M->N->Q and fighting an extra battle.
+
+====Special Damage Multiplier====
+<span style="color:red;">'''WARNING:'''</span>: This is just a speculation. There is no legit test of this claim yet.
+*{{ShipLink|Hiryuu}} & {{ShipLink|Souryuu}} have been observed to have a slight damage bonus multiplier against the Boss in node Q.
+
+{{Event/MapPageFooter}}

@@ -1,0 +1,142 @@
+<includeonly>{{#vardefine:number|{{#switch:{{{1|}}}|Line Ahead = 1|Double Line = 2|Diamond = 3|Echelon = 4|Line Abreast = 5|Vanguard = 6|Cruising Formation 1 = 11|Cruising Formation 2 = 12|Cruising Formation 3 = 13|Cruising Formation 4 = 14}}}}{{#vardefine:file|{{#replace:{{{1|}}}| }}}}{{#switch:{{{2|}}}|SF = [[File:SF{{#var:file}}.png|{{#if:{{{size|}}}|{{{size|}}}|50}}px|{{#if:{{{caption|}}}|{{{caption|}}}|Strike Force Formation {{#var:number}}: {{{1|}}}}}]]|smallSF = [[File:SF{{#var:file}}S.png|{{#if:{{{size|}}}|{{{size|}}}|40}}px|{{#if:{{{caption|}}}|{{{caption|}}}|Strike Force Formation {{#var:number}}: {{{1|}}}}}]]|big = [[File:{{#var:file}}2.png|{{#if:{{{size|}}}|{{{size|}}}|50}}px|{{#if:{{{caption|}}}|{{{caption|}}}|Formation {{#var:number}}: {{{1|}}}}}]]|[[File:{{#var:file}}.png|{{#if:{{{size|}}}|{{{size|}}}|40}}px|{{#if:{{{caption|}}}|{{{caption|}}}|Formation {{#var:number}}: {{{1|}}}}}]]}}</includeonly><noinclude>
+{{todo|show=true|
+* Support Combined Fleet formations.
+}}
+==Parameters==
+* '''[1]''': formation name (see [[#Usage|usage]]).
+* '''[2]''': image type, <code>SF</code> for big Strike Force images, <code>smallSF</code> for small Strike Force images, <code>big</code> for big normal images, <code>small</code> for small normal images by default.
+* '''caption''': image caption, <code>[Strike Force ]Formation <formation number>: <formation name></code> by default.
+* '''size''': image size, 50 for <code>SF</code> and <code>big</code>, 40 for <code>small</code> and <code>smallSF</code> (in pixels).
+==Usage==
+<pre>
+{{Formation|Line Ahead}}
+{{Formation|Double Line}}
+{{Formation|Diamond}}
+{{Formation|Echelon}}
+{{Formation|Line Abreast}}
+{{Formation|Vanguard}}
+
+{{Formation|Line Ahead|SF}}
+{{Formation|Double Line|SF}}
+{{Formation|Diamond|SF}}
+{{Formation|Echelon|SF}}
+{{Formation|Line Abreast|SF}}
+{{Formation|Vanguard|SF}}
+
+{{Formation|Line Ahead|smallSF}}
+{{Formation|Double Line|smallSF}}
+{{Formation|Diamond|smallSF}}
+{{Formation|Echelon|smallSF}}
+{{Formation|Line Abreast|smallSF}}
+{{Formation|Vanguard|smallSF}}
+
+{{Formation|Line Ahead|big}}
+{{Formation|Double Line|big}}
+{{Formation|Diamond|big}}
+{{Formation|Echelon|big}}
+{{Formation|Line Abreast|big}}
+{{Formation|Vanguard|big}}
+
+{{Formation|Cruising Formation 1}}
+{{Formation|Cruising Formation 2}}
+{{Formation|Cruising Formation 3}}
+{{Formation|Cruising Formation 4}}
+</pre>
+{{Formation|Line Ahead}}
+{{Formation|Double Line}}
+{{Formation|Diamond}}
+{{Formation|Echelon}}
+{{Formation|Line Abreast}}
+{{Formation|Vanguard}}
+
+{{Formation|Line Ahead|SF}}
+{{Formation|Double Line|SF}}
+{{Formation|Diamond|SF}}
+{{Formation|Echelon|SF}}
+{{Formation|Line Abreast|SF}}
+{{Formation|Vanguard|SF}}
+
+{{Formation|Line Ahead|smallSF}}
+{{Formation|Double Line|smallSF}}
+{{Formation|Diamond|smallSF}}
+{{Formation|Echelon|smallSF}}
+{{Formation|Line Abreast|smallSF}}
+{{Formation|Vanguard|smallSF}}
+
+{{Formation|Line Ahead|big}}
+{{Formation|Double Line|big}}
+{{Formation|Diamond|big}}
+{{Formation|Echelon|big}}
+{{Formation|Line Abreast|big}}
+{{Formation|Vanguard|big}}
+
+{{Formation|Cruising Formation 1}}
+{{Formation|Cruising Formation 2}}
+{{Formation|Cruising Formation 3}}
+{{Formation|Cruising Formation 4}}
+===Specializations===
+<pre>
+{{Line Ahead|SF|caption=...|size=60}}
+
+{{Line Ahead}}
+{{Line Ahead|SF}}
+{{Line Ahead|smallSF}}
+{{Line Ahead|big}}
+
+{{Double Line}}
+{{Double Line|SF}}
+{{Double Line|smallSF}}
+{{Double Line|big}}
+
+{{Diamond}}
+{{Diamond|SF}}
+{{Diamond|smallSF}}
+{{Diamond|big}}
+
+{{Echelon}}
+{{Echelon|SF}}
+{{Echelon|smallSF}}
+{{Echelon|big}}
+
+{{Line Abreast}}
+{{Line Abreast|SF}}
+{{Line Abreast|smallSF}}
+{{Line Abreast|big}}
+
+{{Vanguard}}
+{{Vanguard|SF}}
+{{Vanguard|smallSF}}
+{{Vanguard|big}}
+</pre>
+{{Line Ahead|SF|caption=...|size=60}}
+
+{{Line Ahead}}
+{{Line Ahead|SF}}
+{{Line Ahead|smallSF}}
+{{Line Ahead|big}}
+
+{{Double Line}}
+{{Double Line|SF}}
+{{Double Line|smallSF}}
+{{Double Line|big}}
+
+{{Diamond}}
+{{Diamond|SF}}
+{{Diamond|smallSF}}
+{{Diamond|big}}
+
+{{Echelon}}
+{{Echelon|SF}}
+{{Echelon|smallSF}}
+{{Echelon|big}}
+
+{{Line Abreast}}
+{{Line Abreast|SF}}
+{{Line Abreast|smallSF}}
+{{Line Abreast|big}}
+
+{{Vanguard}}
+{{Vanguard|SF}}
+{{Vanguard|smallSF}}
+{{Vanguard|big}}
+</noinclude>

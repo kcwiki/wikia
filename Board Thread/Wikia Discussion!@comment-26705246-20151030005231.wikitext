@@ -1,0 +1,6 @@
+
+I think I've found a bug with the [[Template:Progress|Progress]] template. Namely, when used, it grabs any and all other content below it, and nests it within itself. This does not appear to be expected behaviour, as the purpose of the template (as far as I am aware from non existant documentation on its page) is to just display a progress bar.
+
+{{Progress|100}}
+
+If this isn't what it is supposed to do, and if no one objects, I'd like to attempt to correct this so it just displays the progress bar and doesn't alter the formatting of the rest of the article/page/post like it has done here. Otherwise I'll ignore it.<ac_metadata title="Progress Template bug?"> </ac_metadata>

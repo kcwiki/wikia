@@ -1,0 +1,92 @@
+__NOTOC__
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;">
+{| width="100%"
+|'''Report threads'''
+|-
+|
+*Report your fleet composition [[Thread:391516|here]]
+*Report enemy pattern [[Thread:391515|here]]
+|}
+</div>
+
+==Information==
+{{Infobox
+|title = 'Operation Rei-Go' Preparation
+|kanji = {{SpanJa|「礼号作戦」準備}}
+|romaji = Rei-Go Sakusen Jyunbi!
+|image = Winter_2016_E1_Banner.png
+|label1 = Mechanics
+|value1 = [[Events#Manual_Node_Selection|Manual Node Selection]]<br>[[Aerial_Combat|Aerial Combat Nodes]]<br/>[[Events#LoS_Check|LoS Check]]
+|label2 = Boss gauge [[Winter_2016_Event/Mechanics#Map_HP_dependent_on_HQ_level|<sup>?</sup>]]
+|value2 = '''Easy''': 550 HP<br>'''Normal''': 650 HP<br>'''Hard''': 800 HP
+|label3 = Kills required
+|value3 ='''Easy:''' 5 kills<br/>'''Normal:''' 6 kills<br/>'''Hard:''' 6 kills
+|label4 = Reward
+|value4 ='''All:'''<br>{{ItemStack|item = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]] |text = 1}}{{ItemStack|item = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]] |text = 1}}<br/>
+'''Easy:'''<br>{{ItemStack|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]] |text = 1}}<br/>
+'''Normal:'''<br>{{ItemStack|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]] |text = 2}}{{ItemStack|item = [[File:Repair goddess.png{{!}}50px{{!}}link=]] |text = 1}}<br/>
+'''Hard:'''<br>{{ItemStack|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]] |text = 2}}{{ItemStack|item = [[File:Repair goddess.png{{!}}50px{{!}}link=]] |text = 1}}{{ItemStack|item = {{EquipmentCardKai|16inch Triple Gun Mount Mk.7|size=50px}} |text = 1}}
+}}
+
+===Branching rules===
+'''Prohibited Ships''': (F)BB, CV(B) (''A fleet with any of these ships won't be able to enter the map'')
+
+'''Allowed Ships in the Map''': DD, CL, CLT, CT, CA(V), BBV, CVL, AV, SS(V), Aux. Ships.
+
+* '''Starting Point ⟶ A / B'''
+** Node A if [[Kasumi]] is the flagship, otherwise Node B
+
+* '''E ⟶ F / G'''
+** Manual Selection
+
+* '''D ⟶ C / J'''
+** Node J if LOS check is successful, Node C if it fails
+** Node C if fleet contains at least 3 CVL
+
+===Tips===
+*This map's boss is the Sub Hime from last event's E-4. Prepare accordingly.
+**Unlike last event E-4, it is a '''regular fleet map''' which means '''you can only do [[Damage_Calculation|scratch damage]] to the Submarine Hime at night and will be unable to sink her.'''
+*This map is mostly enemy CLs, DDs, and SS. Recommended to bring BB(V) to enable 2nd round shelling.
+*'''THERE IS NO SHIP LOCKING FOR THIS MAP.'''
+*RECOMMENDED COMPOSITION: 1 BBV for second shelling ([[Ise]]/[[Hyuuga]]), 1 CVL with [[Saiun]] to avoid Red-T at boss and 4DD/CL/CT (4 Slot cruisers are desired and picking those with High ASW base stat can help a little). 1 BBV & 5 DD/CL/CT will give more ASW for Hard Final clear; while this removes Saiun functionality, it is unlikely to sink the Submarine Princess Head-on and thus somewhat inapplicable.
+* [[Akizuki]] is a Node I S-Rank drop on Hard mode ONLY (~0.1-1% per S-Rank, only known to drop from Line Ahead enemy pattern).<ref name=E1Aki />
+{{clear}}
+
+===Armor of Submarine Princess===
+*Players reported that killing Seaplane Tender Princess and/or Transports could debuff the armor value of Submarine Princess. However, after further data collection, the effect was found to exist for players who entered node I. The current hypothesis is that at some time during the data collection process, the developers performed a silent update for the Submarine Princess which universally add additional 22.1 damage for SS Hime with 110/130 armor and 16 damage for the 160 armor version.<ref name=Debuff /><ref name=ar970626>http://ch.nicovideo.jp/umya/blomaga/ar970626#-</ref>
+
+==Drop list==
+<!-- Refer to http://kancolle.wikia.com/wiki/Template:DropList/doc -->
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = D, F, I, J
+|boss = J
+<!-- Rare ships -->
+|Akizuki: I/Hard{under 1% per S}<!--poi, low sample size-->
+|Asashimo: J/Easy
+|Harusame: J/Easy
+|Kawakaze: J/Easy{Hard: ~1% per S; Medium: ~1.5% per S; Easy: ~0.5% per S}<!--poi-->, F/Medium{unconfirmed}<!--not in poi, questioned in wikiwiki-->
+|Kiyoshimo: D/Easy, F/Easy, I/Easy, J/Easy
+|Umikaze: J/Medium{Hard: ~2% per S; Medium: ~0.8% per S}<!--poi-->
+|Uzuki: D/Easy, F/Easy, I/Easy
+|Ooyodo: D/Easy, F/Easy, I/Hard, J/Easy
+|Sakawa: J/Hard{~0.8% per S}<!--poi-->
+|Yahagi: J/Medium{Hard: ~2% per S; Medium: ~1% per S}<!--poi-->
+|Mizuho: D/Medium, F/Medium, I/Medium
+<!-- Other non-ignored ships -->
+|Yayoi: D/Medium, F/Easy
+|Ooi: D/Easy, J/Easy, F/Easy
+|I-8: J/Medium
+|I-58: J/Easy
+|I-19: J/Easy
+<!-- Inclusion of ignored ships has no effect! -->
+}}
+
+===References===
+<references>
+<ref name=Debuff>http://nga.178.com/read.php?tid=8995993</ref>
+<ref name=E1Aki>http://db.kcwiki.moe/drop/map/331/3/I-S.html</ref>
+</references>
+
+{{:Winter 2016 Event/E-1/Enemy patterns}}

@@ -1,0 +1,288 @@
+''"Testing for Kai Ni Record Table'''
+
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan=4 style="text-align:center;" |Kai Ni Record
+|-
+! style="text-align:center;" |K2 Class
+! colspan=1 style="text-align:center;" |Ship
+! colspan=1 style="text-align:center;" |Status
+|-
+| rowspan=10 style="text-align:center" |Destroyers (DD)
+| style="text-align:center;" |[[Fubuki]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Верный]] (Veriny)
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ayanami]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ushio]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Hatsuharu]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Hatsushimo]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Yuudachi]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Shigure]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Z1]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Z3]]
+| style="text-align:center;" |✗
+|-
+| rowspan=7 style="text-align:center;" |Light Cruisers (CL)
+| style="text-align:center;" |[[Sendai]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Jintsuu]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Naka]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Isuzu]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Kitakami]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ooi]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Kiso]]
+| style="text-align:center;" |✓
+|-
+| rowspan=10 style="text-align:center;" |Heavy Cruiser (CA)
+| style="text-align:center;" |[[Furutaka]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Kinugasa]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Myoukou]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Nachi]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ashigara]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Haguro]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Maya]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Choukai]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Tone]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Chikuma]]
+| style="text-align:center;" |✓
+|-
+| rowspan=7 style="text-align:center;" |Battleship (BB)
+| style="text-align:center;" |[[Kongou]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Hiei]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Haruna]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Kirishima]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Fusou]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Yamashiro]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Bismarck]]
+| style="text-align:center;" |✗
+|-
+| rowspan=5 style="text-align:center;" |Light Carrier (CVL)
+| style="text-align:center;" |[[Ryuujou]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Jun'you]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Chitose]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Chiyoda]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ryuuhou]]
+| style="text-align:center;" |✗
+|-
+| rowspan=2 style="text-align:center;" |Carrier (CV)
+| style="text-align:center;" |[[Hiryuu]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Souryuu]]
+| style="text-align:center;" |✗
+|-
+! style="text-align:center;" |'''TOTAL'''
+| style="text-align:center;" | 32/41
+| style="text-align:center;" |78%
+|}
+
+'''Code'''
+
+<pre>
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan=4 style="text-align:center;" |Kai Ni Record
+|-
+! style="text-align:center;" |K2 Class
+! colspan=1 style="text-align:center;" |Ship
+! colspan=1 style="text-align:center;" |Status
+|-
+| rowspan=10 style="text-align:center" |Destroyers (DD)
+| style="text-align:center;" |[[Fubuki]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Верный]] (Veriny)
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ayanami]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ushio]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Hatsuharu]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Hatsushimo]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Yuudachi]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Shigure]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Z1]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Z3]]
+| style="text-align:center;" |✗
+|-
+| rowspan=7 style="text-align:center;" |Light Cruisers (CL)
+| style="text-align:center;" |[[Sendai]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Jintsuu]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Naka]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Isuzu]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Kitakami]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ooi]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Kiso]]
+| style="text-align:center;" |✓
+|-
+| rowspan=10 style="text-align:center;" |Heavy Cruiser (CA)
+| style="text-align:center;" |[[Furutaka]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Kinugasa]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Myoukou]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Nachi]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ashigara]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Haguro]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Maya]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Choukai]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Tone]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Chikuma]]
+| style="text-align:center;" |✓
+|-
+| rowspan=7 style="text-align:center;" |Battleship (BB)
+| style="text-align:center;" |[[Kongou]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Hiei]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Haruna]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Kirishima]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Fusou]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Yamashiro]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Bismarck]]
+| style="text-align:center;" |✗
+|-
+| rowspan=5 style="text-align:center;" |Light Carrier (CVL)
+| style="text-align:center;" |[[Ryuujou]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Jun'you]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Chitose]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Chiyoda]]
+| style="text-align:center;" |✓
+|-
+| style="text-align:center;" |[[Ryuuhou]]
+| style="text-align:center;" |✗
+|-
+| rowspan=2 style="text-align:center;" |Carrier (CV)
+| style="text-align:center;" |[[Hiryuu]]
+| style="text-align:center;" |✗
+|-
+| style="text-align:center;" |[[Souryuu]]
+| style="text-align:center;" |✗
+|-
+! style="text-align:center;" |'''TOTAL'''
+| style="text-align:center;" | 32/41
+| style="text-align:center;" |78%
+|}
+</pre>
+[[Category:Blog posts]]

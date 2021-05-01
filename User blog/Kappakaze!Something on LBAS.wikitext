@@ -1,0 +1,48 @@
+Land Based Aerial Support (LBAS) is a mechanic currently limited to World 6 and Event Maps.
+LBAS, when set up to do so, helps on Combat Nodes with extra Aerial Combat phases, 
+lowering Enemy Fighterpower and potentially sinking some Abyssal Ships.
+
+Someting to pay attention to is that when attacking Enemy Nodes their Recon Planes join in the LBAS Aerial Combat phase.
+This can mean multiple things. 
+Depending on the achieved Air State (AS+ only) this means that Enemy Recon Planes can be entirely depleted, 
+preventing Artillery Spotting Attacks.
+It also means that the Enemy Fighterpower is higher against your LBAS than it would be against your fleet. 
+Enemy Recon Fighterpower is calculated with the same formula as any other plane.
+<center>
+<math>F_{Power} = \sum^\text{All Slots} \left \lfloor \sqrt{N_{slot}} \left ( A_{p}\right ) \right \rfloor</math>
+</center>
+Accordingly a CA Ri-class Flagship with a 1 AA Seaplane in a 4 slot contributes with 2 Fighterpower.
+While seemingly small, it can in edge cases be the difference between Air States, 
+which means losing more own planes, raising the cost of resupply, and lower shotdown numbers. 
+This can be devastating in maps were one relies on LBAS to lower the enemy Fighterpowerto achieve the desired Air State.
+<br>As an Example in [[World_6/6-5|6-5]] the listed AP value is 209 Fighterpower, but for LBAS that number is raised to 213.
+This is due to 1 AA Recon Planes in 3, 2, 4 and 4 slots causing the Enemy Fighterpower to be raised by 6.
+To reach AP one needs at least 2/3 of the Enemy Fighterpower, accordingly the AP requirement for LBAS is raised by 4.
+
+In some Maps (including 6-5) the enemy can attack your Land Base (Base Raid).
+A Base Raid consists of one wave of Enemy planes. There is the option to have one Base defending, 
+but in almost every case where it is possible it is more efficient to set the Base to attack.
+<br>If a Base takes more than 50 damage it loses up to 4 planes from its first slot.
+Slots cannot be fully depleted by Base Raids, one plane will remain per slot.
+In the case of a slot losing more planes than it can, the planes will be subtracted from the next slot of the same base instead.
+<br>The lost planes affect both remaining Fighterpower and Bombing Damage due to both being based on slot size.
+Assuming a previously full slot with a 10AA plane, this leads to a loss of 
+<math>\left \lfloor \sqrt{18} ( 10 ) \right \rfloor - \left \lfloor \sqrt{14} ( 10 )  \right \rfloor = 5</math>.
+Simplified it can be said that in a worst case scenario one loses a factor 
+<math>\sqrt{18} - \sqrt{14}</math> (about 0.5) of the planes Effective AA Stat.
+
+[[File:IEatAss.png|thumb|200px|full ASW LBAS Formula]]
+To qualify for ASW LBAS bombing a plane needs at least 7 ASW stat. Recon Seaplanes can also qualify for this.
+Like regular bombing, ASW LBAS damage is based on the raw damaging stat and slot size.
+Additionally the damage depends on the ASW stat in a new way: 
+*high ASW planes have doubled base damage in comparison to low ASW planes
+*low ASW planes have a relatively large damage range
+Because of the way this formula is built, Seaplane Recons which are limited to a 4 slot, struggle with sinking even the weakest submarines 
+while Land Based Bombers are by far the most efficient.
+
+==Notes:==
+*this isnt meant to explain all bascs around LBAS
+*for the full, not simplified Fighterpower formula visit [[Aerial_Combat#Stage_1|Aerial Combat]]
+*Effective AA Stat refers to the [[LBAS#Mechanics|Land Based Fighter Fighterpower Formula]]
+*the ASW LBAS damage formula is the latest version I am aware of. 9 ASW Aircraft do exist now but it is unclear which modifiers they use
+[[Category:Blog posts]]

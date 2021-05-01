@@ -1,0 +1,270 @@
+Hi Hi!
+
+This time I'll try to introduce the [http://kancollecalc.web.fc2.com/air_supremacy.html Air Power Calculator] to TTKs who can't read Japanese. Hopefully this article will help you find what you need quicker and make the process not as intimidating as before. :)
+
+
+==Introduction==
+The [http://kancollecalc.web.fc2.com/air_supremacy.html Air Power Calculator] (aka Air Supremacy Calculator) is a convenient online tool that calculates fleet air power without a viewer (or the game itself). It has been around for a long time, but a lot of TTKs are still missing out due to language barrier - the site is written in Japanese!
+
+Don't worry though, you don't need to learn Japaneses to use this tool. This article will cover the basics and allow you to learn where/what things are and, with some practice, you can go about business as usual just like how a lot of you navigates the game despite not being able to read a thing at the beginning.
+
+
+==Abbreviations==
+First thing's first: as usual, I like to list the abbreviations used throughout the article to avoid confusions.
+
+*The Calculator: Refers to [http://kancollecalc.web.fc2.com/air_supremacy.html the tool itself]
+*FP: Fighter/Air Power
+*Size: Slot Size
+
+
+==Main Screen==
+The Air Power Calculator can be access by visiting http://kancollecalc.web.fc2.com/air_supremacy.html
+
+You are greeted by this screen upon arrival:
+[[File:AS-Calculator_Main1_2018-03-26.png|centre|480px|Calculator Main Screen]]
+MOONRUNES!!!
+
+...well don't panic, here's an overview of what those buttons are:
+[[File:AS-Calculator_Main_2018-03-26.png|centre|480px|Calculator Main Screen]]
+
+Not so bad now is it? It may seem a little complicated at first, but it'll click once you play around for a bit.
+
+
+==Your Fleet==
+First let's take a look at your fleet.
+
+
+===Ship Selection===
+Here you can specify the kanmusu/LBAS by selecting from the dropdown menu. It displays 4 ships by default, but you can click the "6 Ships" button for more.
+[[File:AS-Calculator_Main-Ships.png|centre|480px]]
+
+It's ok if you need less than 4 ships, just leave other slots as "'''なし'''" (means "none" "nothing" etc).
+
+Click the expand button below for a translated version of the ships dropdown list. Note that ships are arranged by types (so is equipments) and re-model state, so even if new ships are added in the future they're not so hard to find. Also note that the highest re-models are listed first (for ease of use perhaps).
+
+Alternating colours were used for ease of reading.
+
+<div class="mw-collapsible mw-collapsed" style="width:100%">'''Translated Ship List (as of 2017-Oct-07)'''
+<div class="mw-collapsible-content">
+[[File:AS-Calculator_Ships-1.png|frame|left|p1]]
+[[File:AS-Calculator_Ships-2.png|frame|left|p2]]
+[[File:AS-Calculator_Ships-3.png|frame|left|p3]]
+[[File:AS-Calculator_Ships-4.png|frame|left|p4]]
+[[File:AS-Calculator_Ships-5.png|frame|left|p5]]
+[[File:AS-Calculator_Ships-6.png|frame|left|p6]]
+</div>
+</div>
+
+{{Clr}}
+
+
+===Equipment Selection===
+Here you can specify the equipment loadout of the ship. Once you select a kanmusu, the slot size will be automatically populated so you don't have to manually enter them. The slot size can be tweaked manually to simulate plane losses if you so wish.
+[[File:AS-Calculator_Main-Planes.png|centre|480px|Loadouts]]
+
+Pay special attention to which sector corresponds to which ship (a lot of people get caught by this kek).
+
+Click the expand button below for a translated version of the planes list. Once again the planes are also arranged by types, so that they're easier to find even if new ones are introduced.
+
+Note that alternating colours were used to ease of reading and does NOT necessarily represent aircraft type.
+
+<div class="mw-collapsible mw-collapsed" style="width:100%">'''Translated Planes List (as of 2017-Oct-07)'''
+<div class="mw-collapsible-content">
+[[File:AS-Calculator_Planes-1.png|frame|left|p1]]
+[[File:AS-Calculator_Planes-2.png|frame|left|p2]]
+[[File:AS-Calculator_Planes-3.png|frame|left|p3]]
+[[File:AS-Calculator_Planes-4.png|frame|left|p4]]
+[[File:AS-Calculator_Planes-5.png|frame|left|p5]]
+</div>
+</div>
+
+{{Clr}}
+
+You may be wondering why some planes are left untranslated. Well...
+
+This article aims to give you a starting point for learning how to fish (in this case, "read" Japanese by comparing), which will be covered in later chapters. You can imagine how tedious it'll be if I have to take new screenshots and post translations everytime a new plane makes it into the game (and sure as hell I'm not gonna do that) =.=
+
+
+===Enemy Fleet Info===
+Pre-defined enemy formation can be loaded by selecting Maps & Nodes from the drop list. It should be trivial for most cases, but pay special attention to those with formation changes; eg 4-5 Boss node has different FP requirement for Pre-LD, LD and post-clear.
+
+Formation change happens most often on boss node ('''ボス'''). Look for these suffix:
+*'''削り''' (kezuri): chipping, pre-LD
+*'''最終''' (saishuu): final, LD
+*'''クリア後''' (kuria go): post-clear, hey that's English!
+
+If there're multiple formations available, it'll use the highest FP requirement for that node.
+
+The enemy formation can be edited manually too, but most of the time you wanna leave that alone. I'm not gonna translate the enemy list heh
+
+Your fleet FP vs the enemy's are also listed in this section.
+
+
+===Air Control State and The Rest===
+[[File:AS-Calculator_Main-Misc.png|centre|480px]]
+The Air Control State is displayed as a bar: <span style="color:Red">'''AI''' shown in Red</span>, '''AD'''/'''AP''' in Black and <span style="color:Green">'''AS'''/'''AS+''' in Green</span>.
+
+The advanced (internal) proficiency settings should be left untouched unless you know what you're doing.
+
+The Disclaimer states that the FP requirements are taken from [http://wikiwiki.jp/kancolle wikiwiki] and if you see something different from wikia (which is based on Poi iirc), that could be the reason why. In any case, take it with a grain of salt and use your best judgement.
+
+
+===Shotdown Prediction Function===
+This is a new function, added around Mar 2018. It provides estimation of '''enemy fighter power loss''' due to friendly LBAS passes.
+
+[[File:Shotdown_Prediction_01.png]]
+
+Once the checkbox is ticked, the list is expanded and the user can manually specify the Air Control State of each pass. The FP prediction is displayed below the list (Normal - Top 5% - Top 1% values).
+
+[[File:Shotdown_Prediction_dropdown.png]]
+
+The predicted "Normal" value is then fed into Current Calculation for Air Control State prediction. This saves the trouble of doing manual calculations (or guestimations for some people), probably the best new feature for this particular update.
+
+Practical examples will be provided in the next section. Those interested in the equations used for shotdown prediction, expand the box below.
+
+{{Expansible
+|id=shotdown
+|header=Shotdown Prediction Equations
+|content=
+This is actually explained in the disclaimer section (click on the +).  Don't ask me how it works, I'm just translating it kek...
+
+Each enemy plane slot is processed through the following equation:
+
+Enemy Plane Loss = Floor { (Current Plane Count) x [0.65 x (Random Number A) + 0.35 x (Random Number B)] / 10 }
+
+where Random Number A&B are bound by 0~n.  The value of n changes according to Air Control State:
+*n=10 for AS+
+*n=8 for AS
+*n=6 for AP
+*n=4 for AD
+*n=1 for AI
+}}
+
+
+==Examples==
+Alright, example speaks a thousand word so let's do a few. Try reproducing the results in these example and you'll see that it's actually quite easy to use.
+
+
+===4-5 Pre-LD===
+Say if we're gonna do 4-5 middle route with 2BB 3CA 1CV. Old school I know, but it's a good single CV example.
+[[File:AS-Calculator_Example_4-5.png|centre|480px|4-5 pre-LD single CV example]]
+
+Here we have Ark Royal with T0M21S *max and Reppuu in her bottom 2 slots. Note that once the planes are selected, the Proficiency and Improvement values can also be manually specified. Feel free to play around with these.
+
+On the right hand side, Map is 4-5, Boss Node (ボス) pre-LD formation (削り). There it shows Wanko (pre-LD) + 2x escort fortress giving 138 FP, vs your fleet's 120 FP.
+
+At the bottom, the Air Control State shows AP in a black bar. (Recall [[Combat/Aerial Combat]] section: AP requires you achieving 2/3 of enemy's FP, which is 138*2/3=92)
+
+I hear you say "wait a sec... 4-5 AP with that fleet? what were you thinking" and you're absolutely right. Now as an exercise, try to improve the air control state to AS (hopefully you'll agree that Ark Royal wasn't the best for this job).
+
+Well that's not so hard is it? Let's try another one.
+
+
+===6-5 LBAS===
+Say if you're wondering how to get AP for LBAS strikes at 6-5 boss node:
+[[File:AS-Calculator_Example_6-5.png|centre|480px|6-5 LBAS example]]
+
+Ship#1 is set to 基地航空隊(出撃), ie LBAS (Sortie). The loadout is 3x 烈風 (Reppuu) + 一式陸攻 二二型甲([http://kancolle.wikia.com/wiki/Type_1_Land-based_Attack_Aircraft_Model_22A T1M22A bomber]). Map=6-5, Node=ボス(Boss) and we have 216 vs 318 FP this time. The Air Control State shows AP (216 > 318*2/3=212).
+
+You may have noticed that the table looks a bit different (and you're absolutely right). When calculating LBAS FP, make sure you select the correct mode (Sortie vs Defense) so that the calculator reports the correct FP value.
+
+Also note that you can only populate 1 LBAS. That's intentional, because in Sortie mode only 1 base can fight during each pass (for more information see [http://kancolle.wikia.com/wiki/User_blog:TenkouKuugen/LBAS_-_Take_Care_of_Your_Fairies my other blog]). Why does it allow only 1 base for Defense mode then? Well beats me, probably because it's easier to code but we know how to add :3
+
+===6-5 LBAS Example 2===
+Let's look at another 6-5 example. Say if you managed to obtain some high performance planes and wanna try to go 2-fighters-2-bombers in base 1:
+
+[[File:6-5_LBAS1.png|480px|centre]]
+
+Hayabusa 64th/54th + 2x T1M34, barely achieves AP (213FP > 318*2/3). Note that I deliberately "noobified" my bombers (0 proficiency), so that I don't get caught by over-optimistic estimates. This is especially important for those who don't like to re-rank their bombers.
+
+Since we predicted AP for the 1st wave, let's try the new Showdown Prediction Function while populating LBAS#2:
+
+[[File:6-5_LBAS2.png|480px|centre]]
+
+Here I've specified AP for LBAS#1 Pass 1&2. The calculator estimates that 227 enemy FP remains after both waves (251 or 260 FP if you're 5% or top 1% unlucky =.=).
+
+LBAS#2's got Hayabusa IIIA★max +T0M52C★max +2x T1M22A. Notice now that the calculator is pitting our 178 FP against the predicted enemy's remaining 227 FP. 99.77% chance of achieving AP with current setup, 0.23% of salt (lel).
+
+Also note that I've saved the calculations as I go along, so that I can recall them as needed in the future (also saves me the trouble of tagging the screenshots heh). The above 2 calculations can be viewed here:
+
+*[http://kancollecalc.web.fc2.com/air_supremacy.html?c=ff_12Kwayiyi_______9tv______________wsLCwv______11114b5BwYm4R0LilL__399____w LBAS#1]
+*[http://kancollecalc.web.fc2.com/air_supremacy.html?c=ff_1yK0Fwiwi_______9tv______0dH_______wsLCwv______11114b5BwYm4R0LilL__399__csv_ LBAS#2]
+
+Now as an exercise, why not try and see how much fleet FP you'll need if the LBAS carries out the tasks according to the plan?
+
+Well that should be enough to get you started I hope. Feel free to play around with it and familiarise with how it works :)
+
+
+==Kanji Matters==
+Back to the million dollar question: what if I need to find a plane but I dunno any Janapese?
+
+Just imagine for a sec: what if the internet disappeared overnight, but you're still able to play KC and use the calculator for some odd reason. You are on your own and no help is available. How do you find that damned plane?
+
+Look at this plane list for example, notice any pattern?
+[[File:AS-Calculator_Planes-1.png|left|p1]]
+
+There're a whole bunch of 零戦xx型 with (moonrunes). If 零戦21型(熟練) is T0M21 Skilled, then what is 零戦32型?
+
+You got it, 零戦32型 is [http://kancolle.wikia.com/wiki/Type_0_Fighter_Model_32 T0M32]. It's a good thing that the original names are preserved on wikia, you can look up the original name of an equipment/kanmusu by performing simple search (for easier way to search, see [http://kancolle.wikia.com/wiki/User_blog:TenkouKuugen/Small_Tips_For_Making_Search_Easy this blog]).
+
+T0M32's original name is 零式艦戦32型. The calculator abbreviates sometimes and 零戦 (zero-sen, the Zero Fighters) is a commonly-used shorthand. 型 (gata) mean "type" or "model" and with these info, it's very easy to guess the rest.
+
+I've translated most unique equipment that has unique names, so try the above technique if your plane isn't translated in this blog.
+
+Well that about covers everything, good luck with your next planning session :)
+
+If you need a quick reference for LBAS planes, feel free to use [http://kancolle.wikia.com/wiki/User_blog:TenkouKuugen/LBAS_-_Take_Care_of_Your_Fairies#Quick_Reference_Tables these tables] (kanji included).
+
+
+===Want more?===
+For the curious ones, let's look at more kanji.
+
+艦隊これくしょん (Kantai Collection). Title of the game.
+*艦隊=Fleet
+*艦=Ship
+*改=Kai
+
+自艦隊=Our Fleet.
+*自=self
+*敵=enemy
+*敵艦隊=Enemy Fleet
+
+基地航空隊 (LBAS)
+*基地=Base
+*航空隊=Air Squadron
+*航空=Aviation/Flight
+*隊 is basically a group of people
+*出撃=Sortie
+*防空=Air Defense
+
+艦上戦闘機 (Carrier-based Fighters)
+*艦上=Aboard Ship. Means "ship-borne" in KC sense.
+*戦闘機=Fighter Plane
+
+水上戦闘機 (Seaplane Fighters)
+*水上=On water, or "surface" as we call it. In this context it is used to distinguish from carrier-borne planes.
+
+艦上爆撃機 (Carrier-based Dive Bombers)
+*爆撃=Bombing
+*爆撃機=Dive Bombers
+
+噴式戦闘爆撃機 (Jet-Powered Fighter Bomber)
+*噴式=Jet Power Models
+*You already seen 戦闘機 and 爆撃機. What's 戦闘爆撃機? :3
+
+水上爆撃機 (Seaplane Bombers)
+*Again, 水上 + 爆撃機 = ?
+
+艦上攻撃機 (Carrier-based Torpedo Bombers)
+*攻撃=Attack
+*攻撃機=Attack Aircraft literally. "Torpedo Bombers" in this context.
+
+艦上偵察機 (Carrier-based Scout Planes)
+*偵察機=Scout Planes
+
+水上偵察機 (Seaplane Scouts)
+*水上 + 偵察機 = ?
+
+Well that was fun :)
+[[File:Commandant_Teste_Haruna_japanese_lesson_english_12792010.png|thumb|left|480px|Daijoubu desu]]
+[[Category:Blog posts]]

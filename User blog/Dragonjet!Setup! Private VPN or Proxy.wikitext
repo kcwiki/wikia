@@ -1,0 +1,111 @@
+{{Warning|title=Guide incomplete|message=The guide is far from complete, and I have no time to continue, nor do I have the interest on the topic. Consider this void.}}
+
+==FAQ==
+
+===Is it free?===
+* Yes, for the first 12 months.
+* You will need to input your credit card (secured). No charges.
+
+===Who needs this===
+* Those who are not satisfied with the speed of existing VPN or Proxies
+* Who wants an IP address of their own, no other kancolle player goes thru this IP
+
+===Is this a contributing factor to being banned?===
+* In community terms, No. Everyone in the foreign community has been using VPNs and Proxies ever since, and it was never a suspect for ban
+* As of common knowledge, being a foreign player does not warrant a ban, you just can't get support from dev team if you get game problems
+* Literally, we cannot tell since only the devs know the criteria for bans
+
+
+==Step 1: Setting up the server==
+For this tutorial we will be using Amazon Web Services (referred to as AWS hereon out). One of the best cloud-hosting package out there, complete with VPS, domain routing, cloud storage, content-delivery network, etc. Do not let the terminologies discourage you, we will not be using those, I'm just describing AWS as a whole.
+
+===Get an Amazon account===
+* 
+* 
+* 
+
+===Launch an instance===
+* 
+* 
+* 
+
+
+==Step 2: Access Options==
+You may choose one of the following options on how you want to implement your new gateway to access the game.
+
+<span style="font-size:17px; font-weight:bold;">Option: Access via VPN</span><br />
+VPNs or Virtual Private Networks are...
+{| class="mw-collapsible mw-collapsed wikitable"
+!style="text-align:left;"|Show instructions
+|-
+|
+By: [[User:Istram]]
+* Go to your instance details
+** Click on the i-something link you have on the screen after launching it
+** If you've managed to somehow go somewhere else, click on the upper bar "Services" dropdown, select "EC2". Click running instances or just "instances" on left. Select the only instance in list by choosing it.
+* Lower part of screen should pop-up and display instance details - note the "Public IP"
+* ssh -i path/to/your/aws_key.pem ec2-user@Public_IP
+* run commands:
+  sudo su -
+  yum -y update
+  yum -y install openvpn
+  chkconfig openvpn on
+  openvpn --genkey --secret /etc/openvpn/proxy.key
+  iptables -t nat -o POSTROUTING -j MASQUERADE
+  /etc/init.d/iptables save
+  sysctl -w net.ipv4.ip_forward=1
+  sed -i 's/net.ipv4.ip_forward = 0/net.ipv4.ip_forward = 1/' /etc/sysctl.conf
+
+* insert this configuration to /etc/openvpn/proxy.conf (for example by vim)
+
+  dev tun
+  port 1194
+  ifconfig 192.0.2.1 192.0.2.2
+  
+  keepalive 10 120
+  secret /etc/openvpn/proxy.key
+  comp-lzo
+  user nobody
+  group nobody
+  persist-key
+  persist-tun
+
+* start it up!
+  /etc/init.d/openvpn start
+
+* copy the contents of the "secret.key" into your computer
+* Configure OpenVPN client connection
+  client
+  dev tun
+  remote PublicIP udp
+  route 203.209.0.0 255.255.0.0 vpn_gateway
+  route-nopull
+  secret path/to/secret.key
+  comp-lzo
+  pull
+|}
+
+
+<span style="font-size:17px; font-weight:bold;">Option: Access via Proxy IP address</span><br />
+Proxy servers are...
+{| class="mw-collapsible mw-collapsed wikitable"
+!style="text-align:left;"|Show instructions
+|-
+|
+*
+*
+*
+|}
+
+
+<span style="font-size:17px; font-weight:bold;">Option: Access via SSH tunnel</span><br />
+Tunnelling via SSH means...
+{| class="mw-collapsible mw-collapsed wikitable"
+!style="text-align:left;"|Show instructions
+|-
+|
+*
+*
+*
+|}
+[[Category:Blog posts]]

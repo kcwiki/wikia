@@ -1,0 +1,220 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Brest Defense Operation
+|jp = ブレスト防衛作戦
+|tag = E1
+|romaji = Buresto bōē-sakusen
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 2310
+|hp_easy = 2310
+|hp_medium = 3080
+|hp_hard = 3850
+|show_kills = true
+|kills_casual = 3
+|kills_easy = 3
+|kills_medium = 4
+|kills_hard = 5
+|reward_casual_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Emergency Repair Material|size=50px}}
+|reward_casual_2_x = 3
+|reward_casual_3 = {{EquipmentCardKai|Prototype Shuusui|size=50px}}
+|reward_casual_3_x = 1
+|reward_easy_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_easy_1_x = 1
+|reward_easy_2 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Emergency Repair Material|size=50px}}
+|reward_easy_3_x = 3
+|reward_easy_4 = {{EquipmentCardKai|Type 2 12cm Mortar Kai|size=50px}}
+|reward_easy_4_x = 1
+|reward_easy_5 = {{EquipmentCardKai|Prototype Shuusui|size=50px}}
+|reward_easy_5_x = 1
+|reward_medium_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_medium_1_x = 1
+|reward_medium_2 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Emergency Repair Material|size=50px}}
+|reward_medium_3_x = 4
+|reward_medium_4 = {{EquipmentCardKai|Type 2 12cm Mortar Kai|size=50px}}
+|reward_medium_4_x = 2
+|reward_medium_5 = {{EquipmentCardKai|Prototype Shuusui|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_hard_1_x = 1
+|reward_hard_2 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Mamiya]]
+|reward_hard_2_x = 3
+|reward_hard_3 = {{EquipmentCardKai|Emergency Repair Material|size=50px}}
+|reward_hard_3_x = 6
+|reward_hard_4 = {{EquipmentCardKai|Type 2 12cm Mortar Kai|size=50px}}
+|reward_hard_4_x = 2
+|reward_hard_5 = {{EquipmentCardKai|Shipborne Model Type 4 20cm Anti-ground Rocket Launcher|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Prototype Shuusui|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|expand = true
+|id = 45-1
+|order = C,E,F,G,H,M
+
+|C -> E/empty = * Amount of DE+DD ≥ 2
+|C -> F/empty = * Do not meet the requirement to go to E.
+
+|E/empty -> F/empty, H = * Active branching
+
+|F/empty -> B, G = * Active branching
+
+|G -> I/empty = * Do not meet the requirements to go to either K or M.
+|G -> K = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships equipped with '''Surface''' Radars ≥ 2 (Hard)
+** Do not meet the requirements to go to M.
+|G -> M = 
+* Meet '''ALL''' of the following requirements:
+** Node M is unlocked.
+** Amount of DE+DD ≥ 2
+** Amount of ships equipped with '''Surface''' Radars ≥ 2 (Hard)
+** Pass the LoS check.
+
+|H -> D = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL+DD+DE ≥ 5
+** Amount of CVL+CL ≤ 1
+** No CA(V)
+** No (F)BB(V)
+** Amount of ships equipped with '''Surface''' Radars ≥ 2 (Hard)
+|H -> J/empty = * Do not meet the requirements to go to either D or L.
+|H -> L = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships equipped with '''Surface''' Radars ≥ 2 (Hard)
+** Amount of (F)BB(V)+CVL+CA(V) ≤ 3
+** Do not meet the requirements to go to D.
+|H -> M = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships equipped with '''Surface''' Radars ≥ 2 (Hard)
+** Do not meet the requirements to go to D or L.
+
+|M -> L = * Do not meet the requirements to go to N.
+|M -> N = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL ≥ 1
+** Amount of DE+DD ≥ 3
+** If Slow fleet, no (F)BB(V) or CVL allowed.
+}}
+{{clear}}
+
+==Before Starting the Event==
+*If you wish to challenge any difficulty above Easy this event, it is highly advised for players to read up the [[Spring_2019_Event/Info|Info tab]] first to understand about difficulty selection and ship-locking.
+
+==Map Guide==
+*This is a '''single fleet''' map.
+*'''Standard and Armored Carriers (CV/B) cannot enter this Map.'''
+**CVLs however are allowed to be used.
+*The boss node {{Event/Route|N|Red}} must be unlocked before the HP gauge can be depleted.
+*One [[Land Base Aerial Support]] squadron is available for sortie (see range below).
+*<span style="color:red">'''IMPORTANT:'''</span> It has been confirmed that certain European ships that have a damage bonus against the boss also recieve historical bonuses in E-2 and E-3. Furthermore {{ShipLink|Commandant Teste}} can be a very useful asset against the installation type enemies in E-3. Therefore you should think carefully which girls to commit to E-1 if you plan to do later event maps in '''medium''' or '''hard''' difficulty.
+
+
+===Map progression===
+{{#tag:gallery|
+Summer19_E1_p1.png{{!}}Map before unlocking the boss node N
+Summer_2019_Event_E-1_Map.png{{!}}Full map after unlocking the boss node N
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+===Ship Bonuses===
+Mapwide
+*Italian - 1.1x
+*German, British - 1.15x
+*Gotland - 1.2x
+*French - 1.25x
+Node {{Event/Route|H|red|L|red}}
+*French - 1.37x
+Node {{Event/Route|N|red}} (Boss)
+*French - 1.5x (2x vs boss)
+*'''NOTE: '''{{ShipLink|Richelieu|Commandant Teste|text=French ships}} (Richelieu and Teste) have an incredibly high bonus in E-1. It is safe to lock {{ShipLink|Richelieu}} here if you have her.
+
+===Part 1: Unlocking the boss node N===
+*'''NOTE:'''Those requirements '''are still in testing'''. Difficulties lower than '''HARD MODE''' might not need to do all the steps listed in order to unlock the boss node.
+*To unlock the boss node, admirals are required to achieve (S-rank?) victories at nodes {{Event/Route|A|Red}}, {{Event/Route|D|Red}}, {{Event/Route|K|Red}} and {{Event/Route|L|Red}}.
+*On '''<span style="color:blue">Casual</span>''' only '''Node K '''and '''Node L '''are necessary.
+*On '''<span style="color:#5a5;">Easy </span>Node K '''and '''Node L '''and A Rank for one of '''Node A '''or '''Node D '''is sufficient.
+**'''Node A'''
+***Route:{{Event/Route|C|Red|F|Blue|B|Red|A|Red}} or {{Event/Route|C|Red|E|Blue|F|Blue|B|Red|A|Red}}
+***You're free to use any fleet, both {{Event/Route|E|Blue}} and {{Event/Route|F|Blue}} are choice nodes and node {{Event/Route|A|Red}} is a submarine node. However, bring sufficient ASW to deal with enemy submarines.
+****1CL 5DD
+****1(F)BB(V) 5DD
+****1(F)BB(V) 1CL 4DD
+**'''Node D'''
+***Route:{{Event/Route|C|Red|E|Blue|H|Red|D|Red}}
+***Routing requires to have 2 or more ships with Surface/LoS Radars equipped. Node {{Event/Route|D|Red}} is a submarine node.
+**** 1CL 5DD
+**** 1CVL 5DD
+**** 6DD
+**'''Node K'''
+***Route:{{Event/Route|C|Red|F|Blue|G|Red|K|Red}} or {{Event/Route|C|Red|E|Blue|F|Blue|G|Red|K|Red}}
+***Routing requires to have 2 or more Surface/LoS Radars equipped '''and''' to pass a LoS check. Aside from radar and LoS requirements, you are free to use any fleet you want.
+****1CA(V) 1CL 4DD
+****1(F)BB(V) 1CL 4DD
+****1(F)BB(V) 1CVL 1CL 3DD
+****1(F)BB(V) 2CVL 1CL 2DD
+**'''Node L'''
+***Route:{{Event/Route|C|Red|E|Blue|H|Red|L|Red}}
+***Routing requires to have 2 or more Surface/LoS Radars equipped '''and''' to pass a LoS check.
+****1CA(V) 1CL 4DD
+****1(F)BB(V) 1CL 4DD
+****1(F)BB(V) 1CVL 1CL 3DD
+****1(F)BB(V) 2CVL 1CL 2DD
+***At least 2 DD are required to get routed to {{Event/Route|E|Blue}}.
+
+===Part 2: Beat the boss===
+After Defeating the enemy fleets at the nodes the boss node {{Event/Route|N|Red}} will be unlocked
+
+Route: {{Event/Route|C|Red|E|Blue|F|Blue|G|Red|M|Red|N|Red}}
+*1(F)BB(V) 1CA(V) 1CL 3DD
+*Routing requires to have 2 or more DDs in the fleet '''and''' 2 or more Surface/LoS Radars equipped
+*There is a LoS check at {{Event/Route|G|Red}}
+<br />
+Route: {{Event/Route|C|Red|E|Blue|H|Red|L|Red|N|Red}}
+* 1(F)BB(V) 1CVL 1CL 3DD
+* 1(F)BB(V) 2CVL 1CL 2DD
+* 1(F)BB(V) 1CVL 1CA(V) 1CL 2DD
+* 1(F)BB(V) 2CVL 1CLT 2DD
+* 1(F)BB(V) 2CVL 1SS(V) 2DD
+*Routing requires to have 2 or more Surface/LoS Radars equipped
+**Submarine radars with 5 LoS or higher will count for this requirement
+*There is a LoS check at {{Event/Route|H|Red}}
+<br />
+*The boss node is a surface fleet with {{ShipLink|French Battleship Princess Vacation Mode|text=French Battleship Princess}} as the flagship
+**Using [[Richelieu]] is highly recommended due to her high damage to the boss with AP cut-in setup
+***Recommended fleet placement is either flagship (for less chance of being targeted) or last (for greatest chance of finishing French Battleship Princess off)
+**All ships at the boss node will attack submarines during day shelling phases
+**Using [[Expedition/Support Expedition|boss support expedition]] is recommended if having difficulties clearing the enemies at the boss
+'''LBAS'''
+*Sending the LBAS (1 fighter 3 bombers with range 5+) to the boss node helps with clearing out the fodder
+*If using a submarine composition, splitting LBAS with 3 or 4 bombers and 0 or 1 land-based scouts between L and H will help reduce the risk of taking heavy damage before reaching the boss
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+{{Fleets|friend=Summer 2019 Event|map=E-1}}
+
+===LBAS Flight Range===
+[[File:Summer19_E1_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

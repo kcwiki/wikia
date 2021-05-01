@@ -1,0 +1,104 @@
+<table style="background:#FCC;border:3px solid #FAA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''This is a work in progress!''' ''It's not completely done yet!'' Please be ''very'' careful in utilizing the information contained herein!</td>
+</tr>
+</table>
+
+<table style="background:#FCC;border:3px solid #FAA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''This post is for educational purposes only!''' I neither promote/encourage nor condone practices of this sort. By utilizing the information in this guide, you understand that '''you are utilizing this information out of your own accord,''' and you agree that '''you will ''NOT'' hold me liable for any and all damages that may directly or indirectly arise from such usage!'''</td>
+</tr>
+</table>
+
+<table style="background:#FFC;border:3px solid #FF8;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:NPC04a.png|48px]]</td>
+<td style="vertical-align:middle;text-align:center;">'''Do Note:'''<br/>'''This method only works on IE and KCV (which uses IE's cache);''' users on Chrome and Firefox may try [http://kancolle.wikia.com/wiki/User_blog_comment:Martirsadota/Fix_Yer_Woes:_Selective_Cache_Clearing/@comment-Ar-cen-ciel-20160115043726?permalink=385775#comm-385775 a different method] (more on this later).</td>
+</table>
+
+=Intro=
+
+Ever met a ghost ship? You know, the one that just shows up as a blank piece of nothing, no sprite appearing at all, takes several seconds to do an attack, stays like a ghost everytime you meet her, stuff like that?
+
+[[File:KanColle-151012-16392332.png|thumb|350px|center|Moderately-damaged ghost ship.]]
+
+Or have you experienced one of your kanmusu's lines getting cut off way before it's supposed to finish, and ''staying'' that way?
+
+This one's for you.
+
+=Why Ghost Ships?=
+
+<table style="background:#CDF;border:3px solid #ACF;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<tr><th></th><th>'''Warning! Technical Stuff Ahead!'''</th></tr>
+</table>
+
+To understand why Ghost Ships (and other maladies) exist, one must understand the existence of the ''cache''. If you already do (and I'm sure you do), you may skip the next paragraphs.
+
+The ''cache'' is like a temporary holding ground for files grabbed from the Internet so that your browser/KCV can quickly grab it again whenever it is needed. For instance, if your browser grabbed the image files of [[Destroyer I-Class|I-kyuu]] every time you do your 1-1 sparkle runs, it would:
+* introduce slight to massive delays before the battle starts as the browser grabs the file(s);
+* push you closer to your data cap (for those who are in one; remember, small things eventually add up);
+* hammer the Kancolle server with redundant traffic;
+* get you banned (maybe).
+
+So instead of grabbing it off the Internet whenever it is needed, the browser would only grab it once, store it in your computer, and consult ''that'' copy whenever that particular file is needed.
+
+And where is that copy stored? You guessed it—the ''cache''.
+
+Now the problem here is that the browser trusts the contents of the cache. There are particular instances (quite common to people in <s>Third World</s>developing countries with derpy Internets) where the file gets horribly mangled (''corrupted'' in slightly more techy parlance) due to connection errors yet the browser would still treat it as a good copy.
+
+Hence the rise of the Ghost Ships.
+
+To fix this, we have to force the browser to get clean copies the files in question. To do this, we ''clear the cache''. With the (mangled) local copy vaporized, the browser is now forced to grab the files again, which is what we want.
+
+...well, not exactly. Clearing the cache nukes ''everything'' in the cache; the after-effects of such an action are familiar to anybody after a game update: the five-minute or so stare at the loading screen, tons of blank kanmusu images in the Formation/Resupply/etc screens, delays in opening the Formation/Resupply/etc screens, and other delays as the browser grabs a ton of files, in addition to the one that was causing our woes in the first place, anew.
+
+Wouldn't it be nice if we could just nuke the offending file, and leave everything else intact?
+
+Enter ''Selective cache clearing''.
+
+=Selective ''What''?=
+
+That's the idea here: Nuke what needs to be nuked in the cache, and leave everything else intact. I'm pretty sure that there are tools for this, but in the following paragraphs there will be a short walk-through of the rough-and-ready technique, which requires no tools save Windows Explorer (yes, Windows-only tutorial; sorry, 'nix guys).
+
+=Now, Nuke It!=
+
+Let's give it a go, shall we?
+
+==Step 1: Open the Cache==
+
+To nuke the target in the cache, we need to know ''where'' is the cache. How can you kill the boss if you can't get to it? [[File:Amagi.png|48px|link=]]
+
+'''Navigate to the cache'''. Windows 7 users can try <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">C:\Users\''<Your user name>''\AppData\Local\Microsoft\Windows\Temporary Internet Files</code>; peeps on Windows 8.x or 10 can have a peek at <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">C:\Users\''<Your user name>''\AppData\Local\Microsoft\Windows\INetCache</code>. Alternatively, you may:
+
+[[File:Clip_(2015-12-14_at_05.03.22).png|400px|thumb|right]]
+
+# Open the '''Start Menu'''. Search for <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">internet</code>. Click '''Internet Options''' in the results that appear.
+# On the '''Internet Options''' dialog, under the '''General''' tab > '''Browsing history''', click the '''Settings''' button.
+# On the '''Website Data Settings''' dialog that appears, under the '''Temporary Internet Files''' tab, click the '''View Files''' button.
+{{Clear}}
+Anyway, if you did it right, you should be staring at a window that looks like this:
+
+[[File:Clip_(2015-12-14_at_05.09.33).png|450px|center]]
+
+You got to the boss; now let's nuke the flagship.
+
+==Step 2: Locate (and Nuke) Your Target==
+
+This is the tough part. In the absence of tools that automate this process, you're left to your own brainstorming ability, Google, and a few other resources.
+
+===If Your Target is a Shipgirl...===
+
+...you can try [https://github.com/gakada/KCTools/blob/master/CSV/Ships.csv this,] which is a (semi-) frequently updated database of mind-numbing geeky info about your shipgirls. Don't let this faze you; using it is simple:
+
+[[File:Clip_(2015-12-14_at_10.18.39).png|thumb|400px|right]]
+
+# Search for the shipgirl in question. (Hint: <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">Ctrl+F</code> helps.)
+# Look under the '''api_filename''' column: you should see what appears to be a random string of letters. Copy that...
+# ...and paste in into the ''search'' box of the '''Temporary Internet Files''' window.
+# Click at the result, and send it to oblivion by '''right-clicking''' > '''Delete''' (or just hitting the <code style="background-color:#FFC;border:3px solid #FFC;border-radius:4px;">Delete</code> key).
+{{Clear}}
+===If Your Target is an Enemy Ship(girl)...===
+
+...you can try [https://github.com/gakada/KCTools/blob/master/CSV/Enemy.csv this,] which like the above, but for enemy ships. Usage is the same.
+[[Category:Blog posts]]

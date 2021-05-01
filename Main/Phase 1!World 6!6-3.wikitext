@@ -1,0 +1,533 @@
+{{Map/Header}}
+{{Map/Info
+|en = Guano Atoll Sea
+|jp = グアノ環礁沖海域
+|romaji =Guano-kanshō oki kaiiki
+
+|mechanics = LoS Check@Line of Sight, Manual Node Selection@Events/Mechanics#Node specific details 
+
+|show_kills = true
+|kills = 4
+|strategy_name = [[wikipedia:Operation K|Operation K]]
+|strategy_name_ja = K作戦 
+|strategy_info = Deploy a fleet consisting of seaplane tenders equipped with flying boats or recon planes, light cruisers and destroyers, and carry out the aerial scout mission "Operation K"!
+|strategy_info_ja = 飛行艇または水上偵察機を装備した水上機母艦・軽巡・駆逐艦による艦隊を同方面へ進出、航空偵察「K作戦」を実施せよ！
+
+|exp_hq = 160
+|exp_hq_boss = 2620
+
+}}
+{{MapBranchingTable
+|id = 6-3
+
+|A/empty -> B,C = * Choice node
+
+|E -> F = 
+* Amount of CL = 3
+* Amount of AV + CL ≧ 4
+** Random if amount of CL ≧ 2 
+** Random if amount of AV ≧ 2 
+** [[:Category:Katori_Class|Katori Class]] does not count as CL
+|E -> G/resource =
+* 1 AV + 1 CL + 4 DD
+
+|G/resource -> x/resource =
+* AV's Seaplane/Flying Boat will obtain a random amount of resource (Ammo, Bauxite or Development Materials)
+* Having a [[Type_2_Large_Flying_Boat|Type 2 Large Flying Boat]] has a higher potential in gaining resources
+|G/resource -> H/resource = * Fixed route
+
+|H/resource -> x/resource = 
+* AV's Seaplane/Flying Boat will obtain a random amount of resource (Ammo, Bauxite or Development Materials)
+* Having a [[Type_2_Large_Flying_Boat|Type 2 Large Flying Boat]] has a higher potential in gaining resources
+|H/resource ->  I/empty =
+* Fail the LoS check
+** Routing becomes random if the LoS is between 36 - 38 [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula
+|H/resource -> J = * Pass the LoS check of 38 or higher using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula
+}}
+*You '''CANNOT''' bring BB(V), CA(V), CLT, CV(L), SS, DE or Auxiliary Ships.
+*[[Katori]]/[[Kashima]] can be brought to this map.
+*At least 1 AV, 1 CL/CT and 1 DD must be in the fleet to be able to sortie to the map.
+**It is not possible however to bring more than 3 [CL+CT] or more than 2 AV.
+*There is a LoS check from H->J. The LoS requirement is 38 for guaranteed routing is [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] according to tests (data yet to be published [http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:887])
+*Node G and H are a new type of "Aviation Detection" node
+**Resources obtained in these nodes can only be received if you have obtained Rank B or higher at the Boss Node. **Otherwise, the resources obtained are nullified. The mechanism was first introduced into this map and then subsequently used in future events.
+**It's possible to fail gathering resources at the node itself if fleet LoS is too low.  Bringing RADAR, seaplane scouts/bombers/large flying boats can increase success chance.
+*Node B and C are '''Submarine nodes with no warning'''. So watch out.
+**You may also opt to farm either nodes to complete Quests [[Quests#Bd8|Bd8]] and [[Quests#Bw5|Bw5]].
+*Going to Node B route is '''not recommended''' as you will increase the amount of battles before reaching the Boss.
+*[[Battleship Ta-Class|Battleship Ta-Class Flagship]] is the Flagship of node J before the 4th Final Kill
+*'''[[Destroyer Princess]]''' becomes the Flagship at the 4th Final Kill.
+
+====Compositions====
+*'''A-C-E-G-H-J ''': 1 AV + 1 CL + 4 DD or 1 AV + 1 CT + 1 CL + 3 DD '''(3 Battles Total)'''
+**Guarantees node G, letting you avoid node F which has [[Heavy Cruiser Ne-Class|Heavy Cruiser Ne-Class Elite]]. This route also lets you go through only 2 battles before the Boss Node (J).
+**Great fleet to use for consistent routing to Boss. However, your DDs may be heavily damaged during Day Battle.
+*'''A-C-E-F/G-H-J ''': 1 AV + 2 CL + 3 DD '''(3~4 Battles Total)'''
+**Sacrifices 100% routing to node G by introducing a chance to be sent to node F.
+**Higher combat capability compared to the previous fleet composition due to the 2 CLs with double attack potential via Artillery Spotting.
+**This is the recommended composition for completing Bq4.
+**With 1 AV + 2 CL + CT + 2 DD, there's a chance that you could go either way. Source: [http://www.nicovideo.jp/watch/sm26581839 Nicovideo]
+*'''A-C-E-F-H-J ''': 1 AV + 3 CL + 2 DD OR 2 AV + 3 CL + 1 DD '''(4 Battles Total)'''
+**This option completely gives up the routing to node G and will go down to node F all the time which permanently increases battles to 4 total.
+**Prioritizes Firepower by using more AV or CL.
+*Recommended ships:
+**'''CL''': [[Ooyodo Kai]] with 3 main guns + seaplane scout for maximum day firepower. [[Jintsuu Kai Ni]] with 2 main guns + seaplane has lower day firepower than Ooyodo but performs double attacks at night. [[Abukuma Kai Ni]] for 2 CL fleets with midget submarine, 2 torpedoes.
+**'''AV''': [[Mizuho Kai]] with midget submarine + 2 seaplane bombers. [[Commandant Teste]] with 4 seaplane bombers or 2 seaplane bombers + 2 main guns
+**'''DD''': [[Naganami Kai Ni]], Kagerou-class Kai Nis with 2 main guns + RADAR + anti-torpedo bulge. High firepower and higher than average survivability compared to other DDs. Other high combat capability DDs for damage output.
+**'''OASW DD''': [[Arare Kai Ni]], [[Urakaze D Kai]], [[Asashio Kai Ni D]] (assuming high enough base ASW stat for single SONAR OASW).
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=186|y=174}}
+{{Map/ImageNode|B|x=213|y=110}}
+{{Map/ImageNode|C|x=249|y=249}}
+{{Map/ImageNode|D|x=292|y=94}}
+{{Map/ImageNode|E|x=337|y=168}}
+{{Map/ImageNode|F|x=426|y=268}}
+{{Map/ImageNode|G|x=442|y=147}}
+{{Map/ImageNode|H|x=535|y=218}}
+{{Map/ImageNode|I|x=574|y=284}}
+{{Map/ImageNode|J|x=588|y=139}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{NodeInfo
+|A
+|Select
+}}
+{{Map/Nodes|name=泊地哨戒線
+|B
+|Normal/BaseXP
+|{{Formation|Line Abreast}}<br>{{Formation|Echelon}}
+|90
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Abreast}}<br>{{Formation|Echelon}}
+|100
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+{{Map/Nodes|name=深海潜水艦隊
+|C
+|Normal/BaseXP
+|{{Formation|Line Abreast}}
+|90
+|Submarine Yo-Class/Elite
+|Submarine Yo-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Abreast}}<br>{{Formation|Echelon}}
+|100
+|Submarine Yo-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+|Submarine Ka-Class
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Line Abreast}}<br>{{Formation|Echelon}}
+|110
+|Submarine So-Class/Elite
+|Submarine Yo-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class
+|Submarine Ka-Class
+}}
+{{Map/Nodes|name=深海ピケット艦隊
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|100
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|120
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|140
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+{{Map/Nodes|name=深海哨戒水雷戦隊
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}<br>{{Formation|Double Line}}
+|200
+|Light Cruiser He-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}<br>{{Formation|Double Line}}
+|210
+|Light Cruiser He-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Line Ahead}}<br>{{Formation|Double Line}}
+|220
+|Light Cruiser Tsu-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=深海中部水上打撃群
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|200
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|210
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|220
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|230
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|240
+|Heavy Cruiser Ne-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|250
+|Heavy Cruiser Ne-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{NodeInfo
+|G
+|Resource
+|Ammo
+|100-200 with  {{Flying Boat}}
+|-
+|G
+|Resource
+|Ammo
+|100-150 with  {{Seaplane}}
+|-
+|G
+|Resource
+|Bauxite
+|100-150 with {{Flying Boat}}
+|-
+|G
+|Resource
+|Bauxite
+|30-40-80-100 with {{Seaplane}}
+|-
+|G
+|Resource
+|Devmat
+|2-4 with {{Flying Boat}}
+|-
+|G
+|Resource
+|Devmat
+|2-3-4 with {{Seaplane}}
+}}
+{{NodeInfo
+|H
+|Resource
+|Ammo
+|100-200 with  {{Flying Boat}}
+|-
+|H
+|Resource
+|Ammo
+|80-150 with  {{Seaplane}}
+|-
+|H
+|Resource
+|Bauxite
+|100-150 with {{Flying Boat}}
+|-
+|H
+|Resource
+|Bauxite
+|30-40 with {{Seaplane}}
+|-
+|H
+|Resource
+|Devmat
+|2-4 with {{Flying Boat}}
+|-
+|H
+|Resource
+|Devmat
+|1-2-3 with {{Seaplane}}
+}}
+{{NodeInfo
+|I
+|Empty
+}}
+{{Map/Nodes|name=留守泊地旗艦艦隊
+|J
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Princess
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Princess
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Princess
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Princess
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|-
+|J
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Princess
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|-
+|J
+|Boss/Final/BaseXP
+|{{Formation|Line Ahead}}
+|400
+|Destroyer Princess
+|Battleship Ta-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = B, C, D, E, F, J
+|boss = J
+|Abukuma: J
+|Akebono: D, E, F
+|Aoba: E, F, J
+|Arashio: J
+|Ashigara: E, F, J
+|Atago: E, F, J
+|Chikuma: E, J
+|Choukai: D, E, F
+|Fumizuki: C, D, E, F
+|Furutaka: E, F, J
+|Haguro: E, F, J
+|Haruna: E, F, J
+|Harusame: J
+|Hiei: E, F, J
+|Hiyou: J
+|Hyuuga: E, F, J
+|I-168: J
+|I-19: E, F, J
+|I-58: J
+|Ise: E, F, J
+|Isuzu: D, E, F
+|Jintsuu: D, E, F
+|Junyou: J
+|Kagerou: J
+|Kako: E, F, J
+|Kasumi: J
+|Katori: E, F, J
+|Kikuzuki: C, D, E, F
+|Kinugasa: E, F, J
+|Kirishima: E, F, J
+|Kisaragi: D, E, F
+|Kiso: E, F
+|Kitakami: E, J
+|Kongou: E, J
+|Kuma: E, F, J
+|Kumano: J
+|Kuroshio: J
+|Maya: D, E, F
+|Michishio: J
+|Mikazuki: B, D, E, F
+|Mochizuki: D, E, F
+|Mogami: E, F, J
+|Murasame: J
+|Mutsuki: B, D, E, F, J
+|Myoukou: E, J
+|Nachi: E, F, J
+|Nagara: D, E, F, J
+|Nagatsuki: D, E, F
+|Naka: D, E, F
+|Natori: D, F
+|Nenohi: J
+|Noshiro: J
+|Oboro: B, D, E, F, J
+|Ooi: E, F
+|Ryuujou: J
+|Satsuki: D, E, F, J
+|Sazanami: C, D, E, F
+|Sendai: D, E, F, J
+|Shigure: J
+|Shiranui: J
+|Shiratsuyu: J
+|Shouhou: J
+|Shoukaku: J
+|Suzuya: J
+|Takao: E, J
+|Tama: E, F, J
+|Tatsuta: D, E, F
+|Tenryuu: D, E, F
+|Tone: E, F, J
+|Unryuu: J
+|Ushio: B, D, E, F, J
+|Wakaba: J
+|Yura: D, E, F
+|Yuubari: J
+|Yuudachi: J
+|Zuihou: J
+|Zuikaku: J
+}}
+{{SectionEnd}}

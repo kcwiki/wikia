@@ -1,0 +1,44 @@
+<includeonly><span class="external_audio_button">[{{{file}}} {{#if:{{{title|}}}|{{{title}}}|Play}}]</span></includeonly><noinclude>
+Like [[Template:Audio]], but for external links.
+__TOC__ 
+
+
+===Tests===
+
+<pre>
+{{ExternalAudio|file=http://125.6.189.135/kcs/sound/kcuffgxggsrtti/2.mp3}}
+
+{{ExternalAudio|file=http://125.6.189.135/kcs/sound/kcuffgxggsrtti/2.mp3|title=Shimakaze Oh!}}
+
+[http://125.6.189.135/kcs/sound/kcuffgxggsrtti/2.mp3 Link]
+</pre>
+
+
+===Results===
+
+{{ExternalAudio|file=http://125.6.189.135/kcs/sound/kcuffgxggsrtti/2.mp3}}
+
+{{ExternalAudio|file=http://125.6.189.135/kcs/sound/kcuffgxggsrtti/2.mp3|title=Shimakaze Oh!}}
+
+[http://125.6.189.135/kcs/sound/kcuffgxggsrtti/2.mp3 Link]
+
+
+===Requirements===
+
+The following JS code should be executed
+
+<pre>
+// ==UserScript==
+// @name         Wikia
+// @match        http://kancolle.wikia.com/*
+// ==/UserScript==
+
+$(function() {
+    $("span.external_audio_button a.external").each(function(_, e) {
+        $(this).attr("class", "sm2_button");
+        $(this).attr("title", e.text);
+    });
+});
+</pre>
+
+(use an extension like Tampermonkey if Wikia's user JS doesn't work for you, the UserScript part is for Tampermonkey)

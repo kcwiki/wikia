@@ -1,0 +1,130 @@
+<includeonly>|-
+! colspan="7" | {{#if: {{{name|}}} | <h3>{{{name}}}</h3> | }}
+|-
+! colspan="3" rowspan="1" scope="col" style="text-align:center; background:LightGray;"|{{{rname1}}}
+! style="background:gray;" rowspan="7"|
+! colspan="3" rowspan="1" scope="col" style="text-align:center; background:LightGray;"|{{{rname2}}}
+|-
+{{#if: {{{1|}}} | {{{1}}} | {{Fslot}} }}
+{{#if: {{{7|}}} | {{{7}}} | {{Fslot}} }}
+|-
+{{#if: {{{2|}}} | {{{2}}} | {{Fslot}} }}
+{{#if: {{{8|}}} | {{{8}}} | {{Fslot}} }}
+|-
+{{#if: {{{3|}}} | {{{3}}} | {{Fslot}} }}
+{{#if: {{{9|}}} | {{{9}}} | {{Fslot}} }}
+|-
+{{#if: {{{4|}}} | {{{4}}} | {{Fslot}} }}
+{{#if: {{{10|}}} | {{{10}}} | {{Fslot}} }}
+|-
+{{#if: {{{5|}}} | {{{5}}} | {{Fslot}} }}
+{{#if: {{{11|}}} | {{{11}}} | {{Fslot}} }}
+|-
+{{#if: {{{6|}}} | {{{6}}} | {{Fslot}} }}
+{{#if: {{{12|}}} | {{{12}}} | {{Fslot}} }}
+</includeonly><noinclude>
+<center><h3>-How to use-</h3>
+<h3>(This template is under construction)<br />
+This is an extension template from [[Template:ShipBattleCardKai]]</h3>
+</center>
+<center><h3>Example : 2 Fleet size</h3></center>
+<pre>
+{| width= 100%
+{{FujiFleet |
+| name= My Fleets
+| rname1= BB
+| 1=  {{FslotJA |Yamato   |Kai    |126 }}
+| 2=  {{FslotJA |Nagato   |Kai    |96  }}
+| 3=  {{FslotJA |Mutsu    |Kai    |92  }}
+| rname2= CV
+| 7=  {{FslotJA |Kaga     |Kai    |98  }}
+| 8=  {{FslotJA |Akagi    |Kai    |96  }}
+| 9=  {{FslotJA |Hiryuu   |Kai Ni |95  }}
+| 10= {{FslotJA |Shoukaku |Kai Ni |95  }}
+| 11= {{FslotJA |Zuikaku  |Kai Ni |92  }}
+| 12= {{FslotJA |Souryuu  |Kai Ni |91  }}
+}}
+|}
+</pre>
+<center><h3>Result</h3></center>
+{| width= 100%
+{{FujiFleet |
+| name= My Fleets
+| rname1= BB
+| 1=  {{FslotJA |Yamato   |Kai    |126 }}
+| 2=  {{FslotJA |Nagato   |Kai    |96  }}
+| 3=  {{FslotJA |Mutsu    |Kai    |92  }}
+| rname2= CV
+| 7=  {{FslotJA |Kaga     |Kai    |98  }}
+| 8=  {{FslotJA |Akagi    |Kai    |96  }}
+| 9=  {{FslotJA |Hiryuu   |Kai Ni |95  }}
+| 10= {{FslotJA |Shoukaku |Kai Ni |95  }}
+| 11= {{FslotJA |Zuikaku  |Kai Ni |92  }}
+| 12= {{FslotJA |Souryuu  |Kai Ni |91  }}
+}}
+|}
+<center><h3> Example : 4 Fleet Size (Multiplier by 2 is possible) </h3></center>
+<pre>
+{| width = 100%
+{{FujiFleet |
+| name= My Fleets
+| rname1= BB
+| 1=  {{FslotJA |Yamato   |Kai    |126 }}
+| 2=  {{FslotJA |Nagato   |Kai    |96  }}
+| 3=  {{FslotJA |Mutsu    |Kai    |92  }}
+| rname2= CV
+| 7=  {{FslotJA |Kaga     |Kai    |98  }}
+| 8=  {{FslotJA |Akagi    |Kai    |96  }}
+| 9=  {{FslotJA |Hiryuu   |Kai Ni |95  }}
+| 10= {{FslotJA |Shoukaku |Kai Ni |95  }}
+| 11= {{FslotJA |Zuikaku  |Kai Ni |92  }}
+| 12= {{FslotJA |Souryuu  |Kai Ni |91  }}
+}}
+{{FujiFleet |
+| rname1= BBV
+| 2=  {{FslotJA |Yamashiro |Kai Ni |92 }}
+| 1=  {{FslotJA |Fusou     |Kai Ni |90 }}
+| 3=  {{FslotJA |Ise       |Kai    |89 }}
+| 4=  {{FslotJA |Hyuuga    |Kai    |86 }}
+| rname2= FBB
+| 7=  {{FslotJA |Haruna    |Kai Ni |99 }}
+| 8=  {{FslotJA |Italia    |       |97 }}
+| 9=  {{FslotJA |Kongou    |Kai Ni |90 }}
+| 10= {{FslotJA |Kirishima |Kai Ni |90 }}
+| 11= {{FslotJA |Roma      |       |90 }}
+| 12= {{FslotJA |Hiei      |Kai Ni |88 }}
+}}
+|}
+</pre>
+<center><h3>Result</h3></center>
+{| width = 100%
+{{FujiFleet |
+| name= My Fleets
+| rname1= BB
+| 1=  {{FslotJA |Yamato   |Kai    |126 }}
+| 2=  {{FslotJA |Nagato   |Kai    |96  }}
+| 3=  {{FslotJA |Mutsu    |Kai    |92  }}
+| rname2= CV
+| 7=  {{FslotJA |Kaga     |Kai    |98  }}
+| 8=  {{FslotJA |Akagi    |Kai    |96  }}
+| 9=  {{FslotJA |Hiryuu   |Kai Ni |95  }}
+| 10= {{FslotJA |Shoukaku |Kai Ni |95  }}
+| 11= {{FslotJA |Zuikaku  |Kai Ni |92  }}
+| 12= {{FslotJA |Souryuu  |Kai Ni |91  }}
+}}
+{{FujiFleet |
+| rname1= BBV
+| 2=  {{FslotJA |Yamashiro |Kai Ni |92 }}
+| 1=  {{FslotJA |Fusou     |Kai Ni |90 }}
+| 3=  {{FslotJA |Ise       |Kai    |89 }}
+| 4=  {{FslotJA |Hyuuga    |Kai    |86 }}
+| rname2= FBB
+| 7=  {{FslotJA |Haruna    |Kai Ni |99 }}
+| 8=  {{FslotJA |Italia    |       |97 }}
+| 9=  {{FslotJA |Kongou    |Kai Ni |90 }}
+| 10= {{FslotJA |Kirishima |Kai Ni |90 }}
+| 11= {{FslotJA |Roma      |       |90 }}
+| 12= {{FslotJA |Hiei      |Kai Ni |88 }}
+}}
+|}
+__NOTOC__</noinclude>

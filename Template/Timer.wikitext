@@ -1,0 +1,26 @@
+<noinclude><pre>
+{{Timer
+|time = January 1 2019 11:00:00 +0900
+|style = font-weight:bold;
+|endClass = countdownComplete1
+|endText = The time is now!
+}}
+</pre>
+{{Timer
+|time = January 1 2019 11:00:00 +0900 +0900
+|style = font-weight:bold;
+|endClass = countdownComplete2
+|endText = The time is now!
+}}
+</noinclude><div style="{{{style|text-align:center; font-size:18px; font-weight:bold; color:#f00; margin:0px 0px 10px 0px;}}}"> 
+	<span class="countdown"
+		data-options="no-leading-zeros"
+		data-end="toggle"
+		data-toggle=".{{{endClass|countdownComplete}}}"
+		style="display:none;">
+		<span class="countdowndate">{{{time|January 1 2019 11:00:00 +0900}}}</span>
+	</span> 
+	<span class="{{{endClass|countdownComplete}}}" style="display:none;">
+		{{{endText|Countdown complete!}}}
+	</span>
+</div>

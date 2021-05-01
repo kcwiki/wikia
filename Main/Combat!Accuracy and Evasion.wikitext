@@ -1,0 +1,370 @@
+==Accuracy and Evasion==
+During sorties, whether an attack connects or not is heavily dependent on the attacker's accuracy and the opponent's evasion:
+* {{Hit}} : The accuracy of a ship, which determines how accurate your shots are. Keep in mind that this stat is hidden and there is no in-game way to see how much accuracy your ship has.
+* {{Evasion}} : The evasion of a ship, which determines how high the chances are that you will evade an attack. Each attack calculates the evasion differently, but in all cases, evasion stat will suffer from diminishing returns past a certain point. Attacks that are evaded will be displayed as '''miss'''.
+
+'''The following formulas are subject to change as further research is published.'''
+
+==Hit Rate==
+The actual hit rate can be calculated as follows:
+
+First, the '''Base Hit Rate''' is calculated. This takes into account the attacker's Accuracy Value against the target's Evasion Value. Each type of attack (e.g. shelling, torpedo, airstrike) has its own formula for calculating its Accuracy Value.
+
+<math>\text{Base Hit Rate} = \text{Accuracy Value} - \text{Evasion Value}</math>
+
+Afterwards, the '''Base Hit Rate''' undergoes through two caps, which prevents it from exceeding or falling lower than certain thresholds. This is determined by:
+
+<math>\text{Capped Hit Rate} = \operatorname{cap_{2}} \Big ( \operatorname{cap_{1}} \left ( \text{Base Hit Rate} \right ) \cdot \text{Morale Modifier} \Big )</math>
+
+Observations:
+*The '''Morale Modifier''' is a value depending on the target's morale state:
+**<math>\text{Morale Modifier} = \begin{cases} 0.7, & \text{ if Morale} \geq 50 \\ 1.0, & \text{ if Morale} \geq 30 \text{ and} \leq 49 \\ 1.2, & \text{ if Morale} \geq 20 \text{ and} \leq 29 \\ 1.4, & \text{ if Morale} \leq 19 \end{cases}</math>
+*<math>\operatorname{cap_{1}} \left ( x \right ) = \begin{cases} 10, & \text{ if } x < 10 \\ x, & \text{ otherwise } \end{cases}</math>
+*<math>\operatorname{cap_{2}} \left ( x \right ) = \begin{cases} 96, & \text{ if } x > 96 \\ x, & \text{ otherwise } \end{cases}</math>
+
+Finally, the '''Final Hit Rate''' can be calculated, which is directly used to determine the likelihood of that attack hitting (with [[Combat/Damage_Calculation#Critical_Modifier|normal]] or [[#Critical Hit Rate|critical]] {{tooltip|hit|technically known as CL1 and CL2, respectively}}) or {{tooltip|missing|technically known as CL0}}:
+
+<math>\text{Final Hit Rate} = \Big ( \big \lfloor \text{Capped Hit Rate} \big \rfloor + \text{Proficiency Bonus} +
+ 1 \Big ) \%</math>
+
+The probability of a normal hit is then:
+
+<math>\text{Normal Hit Rate} = \left ( \text{Final Hit Rate} - \text{Critical Hit Rate} \right ) \%</math>
+
+While the probability of a miss is:
+
+<math>\text{Miss Rate} = \left ( 100 - \text{Final Hit Rate} \right ) \%</math>
+
+==Critical Hit Rate==
+Abbreviating '''Capped Hit Rate''' as <math>H</math>
+
+<math>\text{Critical Hit Rate}(\%) = \begin{cases} \big \lfloor 1.3\sqrt{H} \big \rfloor + \text{Proficiency Bonus} + 1, & \text{ for Shelling } \\ \big \lfloor 1.5\sqrt{H} \big \rfloor + 1, & \text{ for Torpedo } \\ \big \lfloor 0.2\sqrt{H} \big \rfloor + \text{Proficiency Bonus} + 1, & \text{ for Airstrike } \\ \big \lfloor (1.5 + \text{Night Contact})\sqrt{H} \big \rfloor + 1, & \text{ for Night Battle } \\ \big \lfloor 1.3\sqrt{H} \big \rfloor + 1, & \text{ for Shelling (Support) } \\ \big\lfloor 0.2\sqrt{H} \big \rfloor + 1, & \text{ for Airstrike (Support) } \end{cases}</math>
+
+Observations:
+*Always less than Final Hit Rate (''usually'' less than Normal Hit Rate).
+*'''Night Contact''' refers to the bonus provided by the Type 98 Reconnaissance Seaplane (Night Recon), if it successfully triggers during Night Battle. If Night Contact occurs, this takes a value of '''0.07'''; otherwise it is '''0'''.
+*Proficiency Bonus is predicted to be roughly '''10''' at max rank, however, little testing has been done to support this number. Ranks of all bombers are averaged to calculate the bonus, so additional bombers will not increase the crit rate, but will increase the crit damage.
+
+==Accuracy Value==
+
+===Shelling Attacks===
+The shelling formula determines the accuracy of shelling attacks. Note that this applies to both regular shelling and carrier shelling, but it does not apply to night battles.
+
+<math>\text{Accuracy Value} = \Big \lfloor \left ( \left ( A_{base} + 2\sqrt{N_{s}} + 1.5\sqrt{L_{s}} + E_{s} \right ) \cdot F C + W_{s} \right ) \cdot B_{1}B_{2} \Big \rfloor</math>
+
+Where:
+* <math>A_{base}</math> is the base accuracy value of the attack, determined by the type of fleet (i.e. Single Fleet, or Combined Fleet). It is described as follows:
+** <math>A_{base} = \begin{cases} 90, & \text{ for Single Fleet} \\ 78, & \text{ for CTF Main Fleet} \\ 70, & \text{ for STF Escort Fleet} \\ 51, & \text{ for TCF Main Fleet} \\ 46, & \text{ for STF Main Fleet and TCF Escort Fleet} \\ 43, & \text{ for CTF Escort Fleet} \end{cases}</math>
+** Additionally, this value is decreased by 10 if the ship is the Escort Fleet's flagship (e.g. <math>A_{base} - 10</math>)
+* <math>N_{s}</math> is the ship's level
+* <math>L_{s}</math> is the ship's luck
+* <math>E_{s} = \sum^{\text{All Slots}} E_{acc} + E_{m} \sqrt{\bigstar}</math>
+** <math>E_{s}</math> is the total accuracy provided by the ship's equipment
+** <math>E_{acc}</math> is the equipment's displayed accuracy stat
+** <math>E_{m}</math> is the equipment's [[Improvements|improvement]] modifier for '''shelling accuracy'''
+* <math>W_{s}</math> is the ship's fit bonus or overweight penalty
+** Check out {{TabLink|Overweight Penalty and Fit Gun Bonus|text=this}} page for more info.
+* <math>F</math> is the fleet's formation modifier for '''shelling attacks''':
+** <math>F (\text{Single}) = \begin{cases} 1.0, & \text{ for Line Ahead, Diamond} \\ 1.2, & \text{ for Double Line, Echelon, Line Abreast } \end{cases}</math>
+** <math>F (\text{Vanguard}) = \begin{cases} 0.8, & \text{ for the top half} \\ 1.2, & \text{ for the bottom half } \end{cases}</math>
+** <math>F (\text{CF}) = \begin{cases} 1.0, & \text{ for Cruising Formation 4} \end{cases}</math>
+** The exact values of the formation modifiers for Combined Fleet formations are still under investigation.
+* <math>C</math> is the ship's morale modifier:
+**<math>C = \begin{cases} 1.2, & \text{ if Morale} \geq 50 \\ 1.0, & \text{ if Morale} \geq 30 \text{ and} \leq 49 \\ 0.8, & \text{ if Morale} \geq 20 \text{ and} \leq 29 \\ 0.5, & \text{ if Morale} \leq 19 \end{cases}</math>
+* <math>B_{1}</math> is the Artillery Spotting accuracy modifier. Applies only when an Artillery Spotting attack is triggered.
+** <math>B_{1} = \begin{cases} 1.1, & \text{ for Double Attack } \\ 1.3, & \text{ for Secondary CI } \\ 1.5, & \text{ for Secondary CI (Radar) } \\ 1.2, & \text{ for AP CI } \\ 1.3, & \text{ for AP CI (Secondary) } \end{cases}</math>
+* <math>B_{2}</math> is the AP Shell accuracy modifier. Applies according to certain equipment combinations:
+** <math>B_{2} = \begin{cases} 1.1, & \text{ for AP + Main } \\ 1.25, & \text{ for AP + Main + Radar } \\ 1.2, & \text{ for AP + Main + Secondary } \\ 1.3, & \text{ for AP + Main + Secondary + Radar } \end{cases}</math>
+
+Additional notes:
+*''Incomplete: Combined Fleet formation modifiers for formations other than Cruising Formation 4''
+*''Incomplete: Abyssal Combined Fleet modifiers are missing.''
+*''Incomplete: Combined Fleet vs Combined Fleet modifiers are missing.''
+
+===Torpedo Attacks===
+The formula which determines the accuracy of all forms of torpedo attacks during the day. This formula does not apply during night battle.
+
+<math>\text{Accuracy Value} = \left \lfloor \left ( 85 + 2\sqrt{N_{s}} + 1.5\sqrt{L_{s}} + E_{s} + \left \lfloor \frac{P_{s}}{5} \right \rfloor + B_{s} \right ) \cdot F \cdot C \right \rfloor </math>
+
+Where:
+* <math>N_{s}</math>is the ship's level
+* <math>L_{s}</math>is the ship's luck
+* <math>E_{s} = \sum_{\text{All Slots}} ( E_{acc} + E_{m} \sqrt{\bigstar} )</math>
+
+** <math>E_{s}</math>is the total accuracy provided by the ship's equipment
+** <math>E_{acc}</math>is the equipment's displayed accuracy stat
+** <math>E_{m}</math>is the equipment's [[Improvements|improvement]] modifier for '''torpedo accuracy''' (<math>E_{m} = 2</math>)
+* <math>F</math>is the fleet's formation modifier for '''torpedo attacks''':
+** <math>F = \begin{cases} 1.0, & \text{ for Line Ahead } \\ 0.8, & \text{ for Double Line } \\ 0.4, & \text{ for Diamond } \\ 0.75, & \text{ for Echelon } \\ 0.3, & \text{ for Line Abreast } \end{cases}</math>
+** The exact values of the formation modifiers for Combined Fleet formations are still under investigation.
+* <math>C</math>is the ship's morale modifier:
+**<math>C = \begin{cases} 1.3, & \text{ if Morale} \geq 50 \\ 1.0, & \text{ if Morale} \geq 30 \text{ and} \leq 49 \\ 0.7, & \text{ if Morale} \geq 20 \text{ and} \leq 29 \\ 0.35, & \text{ if Morale} \leq 19 \end{cases}</math>
+* <math>P_{s}</math>is the ship's '''effective torpedo power''', or in other words, the ship's '''Basic Attack Power''' for torpedo attacks after the attack power cap and all pre-cap modifiers have been applied.
+** For more information, visit [[Combat/Damage Calculation|this]] page
+** Of note is that due to this, factors such as the ship's health state and the current battle's engagement form will have an effect on torpedo accuracy.
+* <math>B_{s}</math>is the ship's '''innate torpedo accuracy'''. All player ships have 0 innate torpedo accuracy, but certain enemy vessels may have values above 0.
+**For example, {{ShipLink|Submarine_So-Class|Submarine_So-Class/Elite|Submarine_So-Class/Flagship|text=Submarine So-Class|help=true}} has a<math>B_{s}</math> of 50, 60, and 70 for Base, Elite, and Flagship, respectively. These values are from Kancolle-Vita and therefore the values for the new ships are unknown.
+
+===Anti-Submarine Warfare===
+The formula which determines the accuracy of attacks performed against submarines. It can be a depth charge attack or an aerial attack, as long as the target is a submarine.
+
+<math>\text{Accuracy Value} = \left ( 80 + 2\sqrt{N_{s}} + 1.5\sqrt{L_{s}} + E_{s} + 2A_{sonar} \right ) \cdot F C</math>
+
+Where:
+* <math>N_{s}</math> is the ship's level
+* <math>L_{s}</math> is the ship's luck
+* <math>E_{s} = \sum^{\text{All Slots}} E_{acc} + E_{m} \sqrt{\bigstar}</math>
+** <math>E_{s}</math> is the total accuracy provided by the ship's equipment
+** <math>E_{acc}</math> is the equipment's displayed accuracy stat
+** <math>E_{m}</math> is the equipment's [[Improvements|improvement]] modifier for '''ASW accuracy'''
+* <math>F</math> and <math>C</math> (formation and morale modifiers) assume the same values as in the Shelling Attack formula.
+* <math>A_{sonar}</math> is the sum of the ASW stats of every Sonar that the ship is equipping. Improvements are not considered here.
+** In other words, this means that every Sonar offers a hidden, ASW-specific accuracy boost equal to double of its displayed ASW stat.
+
+===Opening Airstrike===
+The formula which determines the accuracy during the Opening Airstrike that is performed by bombers during the opening phase. Unlike other attacks, the accuracy of airstrikes is not affected by morale.
+
+<math>\text{Accuracy Value} = 95</math>
+
+===Land Base Aerial Support===
+The formula which determines the accuracy of the Land Base Aerial Support that is performed by land-based bombers during the opening phase.
+
+<math>\text{Accuracy Value} = ( 95 + 12 \sqrt{E_{acc}} ) \cdot C + P_{s}</math>
+
+Where:
+* <math>E_{acc}</math> is the plane's individual accuracy stat.
+* <math>C</math> is the morale modifier of the LBAS plane. Assumes a value of '''0.8''' if morale is red; is '''1''' otherwise.
+* <math>P_{s}</math> is the proficiency bonus of the LBAS plane. Assumes a value of '''12''' if plane proficiency is '''>>'''.
+
+===Support Expedition===
+The accuracy of support expedition is dependent on the type of support received (Shelling/Torpedo/Aerial).
+
+'''Shelling Support:'''<br />
+<math>\text{Accuracy Value} = \Big \lfloor \left ( A_{base} + 2\sqrt{N_{s}} + 1.5\sqrt{L_{s}} + E_{acc}  \right ) \cdot F C \Big \rfloor</math>
+
+'''Torpedo Support:'''<br />
+<math>\text{Accuracy Value} = \left \lfloor \left ( A_{base} + 2\sqrt{N_{s}} + 1.5\sqrt{L_{s}} + E_{acc} + \left \lfloor 0.35P_{s} \right \rfloor \right ) \cdot F C_{2} \right \rfloor </math>
+
+'''Aerial Support:'''<br />
+<math>\text{Accuracy Value} = 85</math>
+
+Where:
+* <math>A_{base}</math> is the base accuracy value of the attack, determined by the type of fleet (i.e. Single Fleet, or Combined Fleet). It is described as follows:
+** <math>A_{base} = \begin{cases} 64, & \text{ for Shelling Support} \\ 54, & \text{ for Torpedo Support} \end{cases}</math>
+* <math>N_{s}</math> is the ship's level
+* <math>L_{s}</math> is the ship's luck
+* <math>E_{acc}</math> is the equipment's displayed accuracy stat
+* <math>P_{s}</math>is the ship's '''effective torpedo power''', or in other words, the ship's '''Basic Attack Power''' for torpedo attacks after the attack power cap and all pre-cap modifiers have been applied.
+** For more information, visit [[Combat/Damage Calculation|this]] page
+* <math>F</math> is the sortieing fleet's flagship formation modifier for '''shelling attacks''':
+** <math>F (\text{Single}) = \begin{cases} 1.0, & \text{ for Line Ahead, Diamond} \\ 1.2, & \text{ for Double Line, Echelon, Line Abreast } \end{cases}</math>
+** <math>F (\text{Vanguard}) = 0.8</math>
+** <math>F (\text{CF}) = \begin{cases} 1.0, & \text{ for Cruising Formation 4} \end{cases}</math>
+** The exact values of the formation modifiers for Combined Fleet formations are still under investigation.
+* <math>C</math> is the ship's morale modifier:
+**<math>C = \begin{cases} 1.2, & \text{ if Morale} \geq 50 \\ 1.0, & \text{ if Morale} \geq 30 \text{ and} \leq 49 \\ 0.8, & \text{ if Morale} \geq 20 \text{ and} \leq 29 \\ 0.5, & \text{ if Morale} \leq 19 \end{cases}</math>
+* <math>C_{{2}}</math> is the ship's morale modifier applied to Torpedo Support:
+**<math>C = \begin{cases} 1.3, & \text{ if Morale} \geq 50 \\ 1.0, & \text{ if Morale} \geq 30 \text{ and} \leq 49 \\ 0.7, & \text{ if Morale} \geq 20 \text{ and} \leq 29 \\ 0.35, & \text{ if Morale} \leq 19 \end{cases}</math>
+
+===Night Battle===
+The formula which determines the accuracy during a night battle. During a night battle, all attacks are treated the same, regardless of shelling or torpedo attacks.
+
+<math>\text{Accuracy Value} = \left ( N_{1} \left ( 69 + E_{a} \right ) + 2\sqrt{N_{s}} + 1.5\sqrt{L_{s}} + E_{s} \right ) \cdot F C M + E_{b} + N_{2} + W_{s}</math>
+
+Where:
+* <math>N_{s}</math> is the ship's level
+* <math>L_{s}</math> is the ship's luck
+* <math>E_{s} = \sum^{\text{All Slots}} E_{acc} + E_{m} \sqrt{\bigstar}</math>
+** <math>E_{s}</math> is the total accuracy provided by the ship's equipment
+** <math>E_{acc}</math> is the equipment's displayed accuracy stat
+** <math>E_{m}</math> is the equipment's [[Improvements|improvement]] modifier for '''night battle accuracy'''
+* <math>W_{s}</math> is the ship's fit bonus or overweight penalty. The values used here are those applying specifically to night battle.
+* <math>F</math> is the fleet's formation modifier for '''night battle''':
+**<math>F = \begin{cases} 1.0, & \text{ for Line Ahead } \\ 0.9, & \text{ for Double Line } \\ 0.7, & \text{ for Diamond } \\ 0.8, & \text{ for Echelon, Line Abreast } \end{cases}</math>
+** The exact values of the formation modifiers for Combined Fleet formations are still under investigation.
+* <math>C</math> assumes the same values as in the Shelling Attack formula.
+* <math>M</math> is the night battle special attack modifier.
+** <math>M = \begin{cases} 1.1, & \text{ for Double Attack } \\ 1.5, & \text{ for Mixed CI } \\ 1.5, & \text{ for Secondary CI } \\ 2.0, & \text{ for Triple Gun CI } \\ 1.65, & \text{ for Torpedo CI } \end{cases}</math>
+* <math>E_{a}</math> is the Star Shell bonus. Assumes a value of '''5''' if the Star Shell activates; is '''0''' otherwise.
+* <math>E_{b}</math> is the Searchlight bonus. Assumes a value of '''7''' if a Searchlight is active; is '''0''' otherwise.
+* <math>N_{1}</math> is the Nightscout modifier. Assumes a value of '''1.1''' if Night Contact has occurred; is '''1.0''' otherwise.
+* <math>N_{2}</math> is the Heavy Cruiser night battle bonus. For the 20.3, 20.3 (no.2) and 20.3 (no.3) Twin Gun Mounts, 
+**If equipped with a single gun: <math>N_{2} = 10</math>
+**If equipped with two of the same type or mixed of the above mentioned three: <math>N_{2} = 15</math>
+**The bonus for three equipped guns is unknown at the moment.
+
+==Evasion Value==
+
+<math>\text{Base Evasion Value} = \left \lfloor \left ( V_{s} + \sqrt{2L_{s}} \right ) \cdot F \right \rfloor</math>
+
+Where:
+* <math>V_{s}</math> is the ship's displayed evasion (including equipment)
+* <math>L_{s}</math> is the ship's luck
+* <math>F</math> is the fleet's formation modifier. Refer to [[Combat/Day Combat#Evasion|this]] table for a list of applicable formation modifiers according to the respective combat phases.
+
+Abbreviating '''Base Evasion Value''' as <math>E</math>;
+
+<math>\text{Capped Evasion Value} = \begin{cases} E, & \text{ if } E < 40 \\ \left \lfloor 40 + 3\sqrt{E - 40}\right \rfloor, & \text{ if } 40 \leq E < 65 \\ \left \lfloor 55 + 2\sqrt{E - 65} \right \rfloor, & \text{ if } E \geq 65 \end{cases}</math>
+
+<math>\text{Evasion Value} = \Big \lfloor S \cdot \left ( \text{Capped Evasion Value} + I + C - \text{Fuel Penalty} \right ) \Big \rfloor</math>
+
+Where:
+* <math>I</math> is the [[sonar]] [[improvements|improvement]] evasion bonus, applying only against opening and closing torpedo attacks. Assume '''0''' otherwise.
+** <math>I = \left \lfloor \sum^{\text{All Sonars}} 1.5 \sqrt{\bigstar} \right \rfloor</math>
+* <math>S</math> is the Searchlight evasion penalty. Becomes '''0.2''' if it is night battle and the ship is equipping a Searchlight (disregarding whether it is active or not); otherwise assume '''1.0'''.
+* <math>C</math> is the Heavy Cruiser / Aviation Cruiser evasion bonus. Applies only during night battle and if the ship is a CA(V), in which case it becomes '''5'''. Assume '''0''' otherwise.
+* <math>\text{Fuel Penalty} = \begin{cases} 75 - R, & \text{ if } R < 75 \\ 0, & \text{ otherwise } \end{cases}</math>
+** <math>R</math> is the ship's remaining fuel percentage, expressed as an integer (e.g. 60% fuel remaining equals 60)
+
+==List of Factors affecting Accuracy or Evasion==
+This list displays factors that have an effect on accuracy and evasion of your ships in general. Due to the complexity of accuracy and its factors, it will be using the following format to list them:
+* '''Factor:''' The factor which influences the accuracy or evasion in some way.
+* '''Affected Type:''' Here, it is noted, which form of attack is affected:
+** '''Shelling:''' Shelling attacks during the day, including carrier shelling.
+** '''Torpedo:''' All forms of torpedo attacks during the day.
+** '''ASW:''' Anti-Submarine Warfare attacks during the day.
+** '''Airstrike:''' Opening Airstrike attacks performed by bombers during the opening phase.
+** '''Night:''' All forms of attacks that take place during the night.
+** '''ALL:''' The factor affects all forms of attack.
+** '''?:''' In case it is still unknown which attack that the factor affects, or if there is a suspicion that it affects phases other than what is currently displayed, a question mark will be used.
+* '''Description:''' A brief explanation as to how the factor affects the accuracy or evasion.
+
+The evasion list will only contain the '''Factor''' and '''Description''' headers in its table, due to it being less complex than the accuracy formula.
+
+The list is only a summary of factors with a brief explanation of their effects, it will not contain any in-depth explanations regarding their application in the actual formulas. In case that is what you're looking for, you are recommended to check out the formulas above instead.
+
+'''Note: ''' Keep in mind that the list might not be complete, this will be updated in due time if more is known about the factors.
+
+==Factors affecting Accuracy==
+{| class="wikitable"
+|-
+!Factor
+!Affected Type
+!Description
+|-
+|Ship Level
+|
+Shelling<br />
+Torpedo<br />
+ASW<br />
+?
+|Accuracy increases as you level up, but with diminishing returns.
+|-
+|Luck {{Luck}}
+|
+Shelling<br />
+Torpedo<br />
+?
+|A tiny amount of accuracy can be obtained via Luck {{Luck}} , albeit with very heavily diminishing returns.
+|-
+|Critical Hit
+|'''ALL'''
+|A critical hit will '''never''' miss regardless of the hit rate.
+|-
+|[[Morale/Fatigue]]
+|
+Shelling<br />
+Torpedo<br />
+ASW<br />
+Night
+|Ships with 32 or less morale will suffer an accuracy penalty, while ships with 19 or less morale will suffer heavier penalties. On the other hand, increasing your morale above 52 will give you an accuracy bonus.
+|-
+|Engagement Modifier
+|Torpedo
+|The engagement modifier affects the accuracy of torpedo attacks.
+|-
+|[[Akashi's Improvement Arsenal|Equipment Improvement]]
+|
+Shelling<br />
+Torpedo<br />
+?
+|Certain equipment has been shown to increase accuracy proportional to the square root of its improvement level, with different equipment giving accuracy bonuses to different attacks.
+|-
+|[[Overweight Penalty and Fit Gun Bonus|BB Fit/Overweight Gun]]
+|
+Shelling<br />
+Night
+|Equipping battleships with fit guns gives them an accuracy bonus. Likewise, equipping battleships with overweight guns gives them an accuracy penalty instead. The fit and overweight guns are different for each battleship class and model.
+|-
+|AP Shell
+|Shelling
+|Using AP Shells together with large-caliber main guns increases accuracy against heavily armored enemy ships and installations.<ref>https://twitter.com/KanColle_STAFF/status/520461746943696896</ref><br />
+|-
+|[[Overweight Penalty and Fit Gun Bonus|CA Fit Gun]]
+|Night
+|Heavy/Aviation Cruisers get increased Night Battle accuracy when equipped with certain 20.3cm model guns.
+|-
+|[[Overweight Penalty and Fit Gun Bonus|CL Fit Gun]]
+|
+Shelling<br />
+?
+|Using certain "Fit Guns" (''i.e.'' 14cm and 15.2cm mains) on Light Cruisers will improve their accuracy.<ref>https://twitter.com/KanColle_STAFF/status/600208207454146561</ref>
+|-
+|[[Combat/Main#Formation Selection|Formation]]
+|'''ALL'''
+|Each formation has its own modifier that affects each attack differently.
+|-
+|[[Artillery Spotting]]
+|Shelling
+|There is a high accuracy increase observed for Cut-ins, even with low Morale.<br />The increase is lower for Double Attacks.
+|-
+|[[Combat/Night Battle#Night_Battle_Special_Attacks|Night Special Attacks]]
+|Night
+|Just like Artillery Spotting during the day, a high accuracy increase has been observed for night Cut-in attacks.<br />Likewise, the increase is observed to be lower for Double Attacks.
+|-
+|Night Battle Equipment
+|Night
+|{{EquipmentLink|Star Shell}}s <ref>https://twitter.com/KanColle_STAFF/status/479862934768582656</ref> and {{EquipmentLink|Searchlight}}s<ref>https://twitter.com/KanColle_STAFF/status/438562857513254913</ref> increases the accuracy of the whole fleet when activated.
+|-
+|ASW Equipment
+|ASW
+|{{ASW}} stat on a {{Sonar}} increases the accuracy against submarines.<ref>https://twitter.com/KanColle_STAFF/status/438574201809543168</ref>
+|-
+|[[Combat/Combined Fleet|Combined Fleet]]
+|
+Shelling<br />
+?
+|Surface Task Force: accuracy -0.40 for the main fleet and about -0.15 for the escort fleet in Cruising Formations 2 and 4.<br />Carrier Task Force: normal accuracy for the main fleet and about -0.35 accuracy for the escort fleet in Cruising Formation 4.<ref>http://kankoregouchin.blog.fc2.com/blog-entry-60.html</ref>
+|-
+|Ship Class
+|
+Shelling<br />
+?
+|Light Cruisers have about 2% lower accuracy than other ship classes.<ref>https://twitter.com/Xe_UCH/status/819905394864570370</ref>
+|}
+
+==Factors affecting evasion==
+{| class="wikitable"
+|-
+!Factor
+!Notes
+|-
+|Luck {{Luck}}
+|A tiny amount of evasion can be obtained via Luck {{Luck}} , albeit with very heavily diminishing returns.
+|-
+|Evasion stat
+|Ship's evasion stat, which includes the evasion you receive from using the equipment. Evasion has diminishing returns past a certain amount.
+|-
+|[[Combat/Main#Formation Selection|Formation]]
+|Each formation has its own modifier that affects each attack differently.
+|-
+|[[Morale/Fatigue]]
+|Ships with 32 or less morale will suffer an evasion penalty, while ships with 19 or less morale will suffer heavier penalties. On the other hand, increasing your morale above 52 will give you an evasion bonus.
+|-
+|Sonar Improvements
+|Improving sonars will increase your evasion against torpedoes. Keep in mind that this only applies to torpedo evasion during the day.
+|-
+|Fuel modifier
+|Any ship with a fuel percentage that is lower than 75% will start suffering evasion penalties.
+|}
+
+==Notes==
+The above formulas are based on the reverse engineered [[KanColle Kai|Vita]] formulas<ref>https://docs.google.com/document/d/1tqYyqzdc1RT_fYDKFMcUId0kOZHCdGpVsObm6yt-Yco</ref><ref>https://twitter.com/Nishisonic/status/890202416112480256</ref>, which are believed to work for the browser version well enough. However, not all details were fully tested for the browser, differences may exist as well<ref>https://docs.google.com/spreadsheets/d/1hEyic8JurL04jdhiTCfitCtf8pBCkoENKwsyO3KZzDQ</ref><ref>https://docs.google.com/spreadsheets/d/1_JSx84fkL4z89jwe-mol5AHFhldDdLwSuMqSrjsWwrQ</ref><ref>http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:450#69</ref>. For the previous formulas based on data verification, see<ref>[http://wikiwiki.jp/kancolle/?%CC%BF%C3%E6%A4%C8%B2%F3%C8%F2%A4%CB%A4%C4%A4%A4%A4%C6 WikiWiki page on Accuracy and Evasion]</ref><ref>http://bs-arekore.at.webry.info/201502/article_4.html</ref>.
+
+==References==
+<references />
+[[Category:Calculation]]
+[[Category:Example]]
+[[Category:Help]]
+[[Category:Game System]]
+[[Category:Game Mechanics]]

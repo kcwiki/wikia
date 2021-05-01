@@ -1,0 +1,13 @@
+{|class="wikitable" style="text-align:center"
+!Time until maintenance starts:!!Time until maintenance ends:
+|-
+|{{#if:{{{maintenance_start|}}}|{{Timer|time = {{{maintenance_start}}} +0900|style = font-weight:bold|endClass = maintenance_start|endText = '''{{#if:{{{maintenance_start_text|}}}|{{{maintenance_start_text}}}<br>}}Maintenance has begun.'''}}}}
+|{{#if:{{{maintenance_end|}}}|{{Timer|time = {{{maintenance_end}}} +0900|style = font-weight:bold|endClass = maintenance_end|endText = '''{{#if:{{{maintenance_end_text|}}}|{{{maintenance_end_text}}}<br>}}Maintenance has ended.'''}}}}
+|-
+!Maintenance start date and time:||{{{maintenance_start|}}}
+{{#if:{{{maintenance_end_expected|}}}|{{!}}-
+!Expected maintenance end date and time:{{!}}{{!}}{{{maintenance_end_expected|}}}
+{{!}}-
+!Actual maintenance end date and time:{{!}}{{!}}{{{maintenance_end|}}}|{{!}}-
+!Maintenance end date and time:{{!}}{{!}}{{{maintenance_end|}}}}}
+|}

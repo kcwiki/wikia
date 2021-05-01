@@ -1,0 +1,94 @@
+{{Map/Header}}
+{{Map/Info
+|en = Throughout the Northern Sea
+|jp = 北方海域全域
+|romaji = Hoppō-kaiiki zen'iki
+|exp_hq = 160
+|exp_hq_boss = 3320
+|strategy_name = Northern Sea Fleet Decisive Battle
+|strategy_name_ja = 北方海域艦隊決戦
+|strategy_info = A large enemy anchorage has been discovered deep in the Northern waters. Sail out in an all-out attack, and  destroy it completely!
+|strategy_info_ja = 北方海域奥地に敵艦隊の大規模泊地を発見！我が艦隊の総力を 挙げてこれを撃滅せよ！
+}}
+{{MapBranchingTable
+|title = 3-4 Branching Rules
+|expand = true
+|id = 3-4
+|0 -> A, B, D/storm = *Meet '''ANY''' of the following requirements to go to A
+**(F)BB(V)+CV(L/B) ≥ 3
+**Fleet contains no CLs and DDs
+*Meet '''ANY''' of the following requirements to go to B
+**(F)BB(V)+CV(L/B) = 1
+**Fleet contains no CV(B/L)
+*Meet '''ALL''' of the following requirements to '''FORCE''' D
+**No (F)BB(V)
+**No CV(L/B)
+**No SS(V)
+**DD ≥ 3
+*Otherwise
+**If fleet contains no (F)BB(V) and CV(B/L), random routing between B and D
+**If fleet contains (F)BB(V) or CV(B/L), random routing between A and B
+
+|B -> H = * Fixed Route
+
+|C -> B, E/resource, F/storm = *Meet '''ANY''' of the following requirements to '''FORCE''' B
+**CV(B) ≥ 3
+**Fleet contains no CLs and DDs
+**(F)BB(V)+CV(B/L) ≥ 5
+*Go to F if (F)BB(V)+CV(L/B) = 2 (''Exactly 2, no more no less'')
+*Meet '''ALL''' of the following requirements to go to E
+**Fleet contains AO or AV
+**CL+DD+DE ≥ 1
+*Random between E and F if fleet contains SS(V)
+*Otherwise, F
+
+|F/storm -> G, I/empty, J/empty, M =
+*Meet '''ALL''' of the following to go to J
+**'''Fast+''' Fleet
+**Fleet contains CL
+**DD ≥ 2
+**(F)BB(V)+CV(B) ≤ 2 (CVL doesn't count)
+*Go to G if (F)BB(V)+CV(L/B)+CA(V) ≥ 5
+*Otherwise, random routing
+
+|G -> J/empty = * Fixed route
+
+|H -> G, L/empty = *Meet '''ANY''' of the following requirements to '''FORCE''' G
+**Fleet contains (F)BB(V) or CV(B)
+**DD ≤ 2
+**CL+DD ≤ 3
+**CVL ≥ 2
+*Go to L if CL+DD ≥ 5
+*Otherwise, random routing between G and L
+
+|J/empty -> P = * Fixed route
+
+|L/empty -> J/empty = *Do not meet the conditions to go to N or O
+|L/empty -> N = *Fleet contains CVL, CLT, AV, LHA, (F)BB(V) or SS(V)
+|L/empty -> O/resource = *Fleets that meet the requirement to go to N have a very small chance of going to O
+
+|M -> K/resource, P=
+*Go to P if fleet contains CL '''and''' at least 1 DD
+*Otherwise, random routing
+}}
+
+==Tips==
+*The heavier the fleet, the longer the route. This map will require you to bring some DD/CL if you wish for a short and viable path.
+*Maelstrom node {{Event/Route|F|purple}} can either wipe all of your ship's remaining fuel or 2 bars of remaining fuel. Bringing [[List of Radars by stats|Radars]] will help reduce fuel loss here.
+==Compositions==
+*{{Event/Route|D|purple|H|red|L|blue|J|blue|P|red}}
+** 3-5 DD 0-1 CA(V) 1-3 CL
+***Having more than 1 CA(V) is possible but can randomly route you to {{Event/Route|G|red}} instead of {{Event/Route|L|blue}}
+***With only 1 battle prior to boss, this is the shortest yet risky route to boss. Unless you have {{EquipmentLink|Type 2 Seaplane Fighter Kai|text=Seaplane Fighters}} on your CAV, you will be facing boss under AI. You will almost likely rely on night battle to at least B-rank the map so plan accordingly with {{EquipmentLink|Searchlight|Star Shell|text=night battle equipment}}.
+*{{Event/Route|A|red|C|red|E|green|G|red|J|blue|P|red}}
+**2 CV(B) 2 CVL 1 CL 1 AV
+***Fixed routing, requires CL and AV to go to node E which gives you bauxite.
+***Standard composition for anyone who dislike light comps or don't have enough boiler to form a '''Fast+''' fleet
+**3 (F)BB(V) 1 CV(B) 1CL 1AV
+***It's possible to exchange only 1 (F)BB(V) for 1 CV(B)
+*{{Event/Route|A|red|C|red|F|purple|J|blue|P|red}}
+** 1 CVL 2 CV(B) 1 CL 2 DD ('''All Fast+''')
+***Fixed routing, but all ships must have '''Fast+ (高速+)''' as their Speed.
+***As you only engage two battles preboss, you will have no ammo penalty at the boss node.
+
+{{Map/Footer}}

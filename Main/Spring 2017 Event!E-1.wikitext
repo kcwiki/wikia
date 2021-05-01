@@ -1,0 +1,102 @@
+{{Event/MapPageHeader
+|form = GW4nGNc7JUO4lsDA2
+|spreadsheet = 1LwIJcZjoIpeQv7BGkN8Ma4V2jPA2pxtQy2TAeUAt7Ag
+|thread = 547885
+}}
+{{Event/MapInfo
+|en = Sortie! Ōminato Guard District
+|jp = 出撃! 大湊警備府
+|romaji =Syutsugeki! Ōminato Kēbifu
+|tag =E1
+|mechanics = Ship Locking@Events/Mechanics#Ship_Locking<!--
+|transport = true
+-->
+|transport = 
+|hp_all = 
+|hp_easy = 330
+|hp_medium = 440
+|hp_hard = 520
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|show_kills = 
+|kills_all = 
+|kills_easy = 
+|kills_medium = 
+|kills_hard = 
+
+|reward_all = [[File:4th Anniversary Wall Scroll Card.png{{!}}50px{{!}}link=Furniture/Object#.224th_Anniversary.22_Wall_Scroll]]
+
+|reward_easy_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_easy_1_x = 1
+|reward_easy_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_easy_2_x = 1
+
+|reward_medium_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_medium_1_x = 1
+|reward_medium_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_medium_3_x = 1
+
+|reward_hard_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_hard_1_x = 1
+|reward_hard_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model II|size=50px}}
+|reward_hard_4_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|order = E, A
+
+|E/empty -> B = * Do not meet the requirements to go to F.
+|E/empty -> F = 
+* Meet '''all''' of the following requirements:
+** Amount of DD ≧ 2
+** Amount of CL ≧ 1
+
+|A -> C/empty = * Fail the LoS check
+|A -> D = * Pass the LoS check of +34 on Hard using the F33 Cn3 Formula.
+
+|F -> G/empty = * Fail the requirements to go to H.
+|F -> H = 
+* Pass the LoS check of +13 on Medium/Hard using the F33 Cn3 Formula.
+* Easy has no LoS check.
+
+|H/empty -> I,J = * Active Branching
+
+|J -> K = * Do not meet the requirements to go to L.
+|J -> L = * Amount of DD+CL ≧ 4
+
+|K -> L = * Fail the LoS check
+|K -> M = * Pass the LoS check
+
+|L -> M = * Pass the LoS check
+|L -> N = * Fail the LoS check
+}}
+
+==Map Guide==
+*You cannot bring carrier of any kind to this map.
+*Node F and L are Submarine nodes.
+*Node I, J, and K consists of Surface Ships (DD/CL(T)/CA).
+*The Boss is {{ShipLink|Submarine Princess}}. It is recommended that you bring OASW capable DD/CLs, especially {{ShipLink|Isuzu Kai Ni}} for Beginners.
+**If you lack OASW capable ships, please bring as many DD/CLs as possible, equipped with [[List of Anti-Submarine Equipment by stats|SONARs and Depth Charge]], and bringing a BB(V) will be considered mandatory in this case to gain the 2nd Shelling Phase.
+**As you're using a single fleet, the ASW damage will be capped to 1 when entering night battles which effectively turns every ASW attack into scratch damage. Remember that you '''cannot''' sink a ship with scratch damage, effectively making any enemy submarines invincible during a night battle.
+*Please bring some [[List of Seaplanes by stats|Seaplanes]] and [[List of Radars by stats|Radars]] as you require them for eLoS check.
+
+==Player Submitted Fleets==
+*{{Event/Route|F|red|H|blue|I|red|K|red|M|red}}   or   {{Event/Route|F|red|H|blue|J|red|L|red|M|red}}
+**1 CL 4 DD 1 BB(V)
+**2 CL 3 DD 1 BB(V)
+**3 CL/CT 2 DD 1 BB(V)
+**2 CL 1 CA(V) 2 DD 1 BB(V)
+
+
+{{Event/MapPageFooter}}

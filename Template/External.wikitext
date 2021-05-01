@@ -1,0 +1,15 @@
+<includeonly><span class="external-image" {{#if:{{{width|}}}|data-width="{{{width}}}"}} {{#if:{{{height|}}}|data-height="{{{height}}}"}}>{{{protocol|https}}}://{{{1}}}</span></includeonly><noinclude>
+This template can be used to show external images on pages. Allowed sources are configured in [[KanColle Wiki:Config/External]].
+==Usage==
+<pre>
+{{external|cdn.discordapp.com/icons/447766493753507850/8a6fc0b332bc07bc810403dad71ed2b2|width=100}}
+
+{{external|pbs.twimg.com/media/DudgtnVU8AEDNkc.png|height=250}}
+</pre>
+
+result:
+
+{{external|cdn.discordapp.com/icons/447766493753507850/8a6fc0b332bc07bc810403dad71ed2b2|width=100}}
+
+{{external|pbs.twimg.com/media/DudgtnVU8AEDNkc.png|height=250}}
+</noinclude>

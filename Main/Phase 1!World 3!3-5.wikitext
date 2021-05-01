@@ -1,0 +1,561 @@
+{{Map/Header}}
+{{Map/Info
+|en = Northern AL Waters
+|jp = 北方AL海域
+|romaji = Hoppō AL-kaiiki
+
+|mechanics = LoS Check@Line of Sight
+
+|show_kills = true
+|kills = 4
+
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 150
+|strategy_name = Northern Water Combat Patrols
+|strategy_name_ja = 北方海域戦闘哨戒
+|strategy_info = There is a movement of enemy reinforcements to the northern sea. Dispatch a medium size fleet, intercept the enemy reinforcements and destroy it!
+|strategy_info_ja = 北方海域に敵増援の動きがある。中規模の水上打撃部隊を派遣し、敵増援を捕捉、これを撃破せよ！
+|exp_ship = 400
+|exp_hq = 150
+|exp_hq_boss = 2300
+}}
+{{MapBranchingTable
+|id = 3-5
+|0 -> A = 
+*Guaranteed if one of the following requirements are met:
+**Amount of SS(V) ≧ 3
+**Amount of (F)BB(V) ≧ 2
+**Amount of (F)BB(V) + CA(V) ≧ 3
+**Fleet contains CV(L)
+**Fleet contains [[CLT]]
+* 25% chance of A when amount of DD = 4
+* 50% chance of A when amount of DD ≦ 3
+|0 -> B = 
+* Does '''not''' meet the requirements to go to A
+* Guaranteed if the amount of DD ≧ 5
+* 75% chance of B when amount of DD = 4
+* 50% chance of B when amount of DD ≦ 3
+
+|A -> C = 
+* Meet '''ANY''' of the following requirements:
+** Amount of CLT ≧ 2
+** Amount of CV(L) ≧ 2
+** Amount of (F)BB(V) ≧ 3
+** Amount of CA(V) ≧ 2 and use one or neither of DD / CL
+|A -> D/empty = *Does not meet the requirements to go to the other nodes
+|A -> E = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DD ≧ 2
+** Amount of CL = 1
+** Fleet contains no CV(L/B)
+|A -> H/empty = 
+* Meet '''ANY''' of the following requirements:
+** Amount of SS(V) ≧ 4
+** Amount of CV(L/B) ≧ 4
+** Amount of CV(L/B) + (F)BB(V) ≧ 5
+
+|B -> E = 
+*Guaranteed if one of the following requirements are met:
+**Fleet contains CV(L/B), (F)BB(V) or [[LHA]]
+<!-- **Amount of CA(V) ≧ 2 -->
+* 25% chance of E if none of the requirements are met
+|B -> G = 
+*Guaranteed if '''ALL''' of the following requirements are met:
+**Amount of CL ≦ 2
+<!-- **Amount of DD + CL + AV + SS + CT + AO ≧ 5 -->
+**Fleet contains no LHA, CA(V), (F)BB(V) or CV(L/B)
+* 75% chance of G if none of the requirements are met
+
+|E -> F = *Fixed route
+
+|F -> I/resource = 
+*Meet '''ANY''' of the following requirements (LoS check pass is ignored):
+**Amount of (F)BB(V) + CV(B/L) ≧ 2 '''AND''' Fleet contains {{ShipLink|Akitsu Maru}}
+<!-- no LHA samples; unverified -->
+**Amount of (F)BB(V) + CV(B/L) ≧ 4
+*Fail the LoS check
+|F -> K = 
+*Pass the LoS check (~40? Cn4) '''AND''' do not meet the requirements to go to node I
+
+|G -> J/empty = 
+*Fail the LoS check with a [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] LoS value of < 23
+*Random routing if the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] LoS value is between 23 and 28
+|G -> K =  
+*Pass the LoS check with a [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] LoS value of > 28
+*Random routing if the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] LoS value is between 23 and 28
+}}
+* To clear 3-5, you need to sink the boss flagship 4 times.
+* [[LoS]] requirement is 28 in [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] for G->K.
+** C<sub>n</sub>=4 indicates that the LoS you receive from equipment weights 4x more than usual.
+* Clearing this map rewards a [[Medal]] and 150 [[Experience_and_Rank#Monthly_Ranking|ranking points]].
+
+===Tips===
+* The central routes (A-E-F-K or B-E-F-K) are not recommended as there is an enemy submarine on E node, which diverts attacks from DD & CL while stronger enemy ships deal heavy damage.
+* Some recommended fleet compositions:
+====North Route (A-C-F-K)====
+*[https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/nllP6mz.png 3 CV + 2 CLT + 1 SS] / [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://imgur.com/OdjEZDb.png 3 CLT + 3 CV]
+**Opening torpedo and air attack can clear out the enemy easily, but it's not effective against {{ShipLink|Northern Princess III|text=Hoppou}}.
+**{{ShipLink|Northern Princess III|text=Hoppou}} is always forced to attack submarines and her {{ASW}} is weak, but other light enemy ships are a threat to your submarine.
+*3 CV(B) + 3 CA(V)
+**CA(V) can bring {{GreenAmmo}}[[Type 3 Shell]] to disable/destroy {{ShipLink|Northern Princess III|text=Hoppou}}. This is completely unnecessary if you wish to only reach the boss.
+====South Route (B-G-K)====
+*1 CL + 5 DD
+**Guaranteed to reach the boss via B-G-K if you can pass the LOS check.
+**Bring more surface RADAR if you cannot meet the LoS requirement with a seaplane only.
+**You should bring your best DD, players without enough good DD should consider an alternative option.
+==== South Route (B-G-K) with CAV ====
+* [https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://imgur.com/miMhomL.png 1 CAV + 1 CL + 4 DD]
+**Good for Final Form and makes node G a lot easier as CAV can bring 2 [[Aircraft Proficiency|Rank-7]] Zuiuns to deny enemy's Air Supremacy there, force Air Parity on both sides => Neither side can perform Artillery Spotting.
+**However, you have 2 chances of getting offrouted if you're using a CA(V) in your fleet, so this is generally not recommended.
+**Moreover, this composition is now useless with the new routing since you'll pretty much be going though A-E-F(?)-... Needless to say, node E is a death sentence to your light ships (unless they're lucky enough to dodge shelling from two BBs and merciless Hoppou).
+
+==== South Route (B-G-K) with AV ====
+* 1 AV + 1 CL + 4 DD
+**This setup utilizes an AV for opening attacks and also to establish your own air superiority. This effectively prevents your fleet from having to fight node G under Air Incapability, making this a more reliable choice. However, this comes with the risk of having a small chance to offroute to node A, in which you are recommended to just retreat. Unlike using a CA(V), routing from node B to G is always guaranteed.
+==== South Route (B-G-K) OR (A-D-B-G-K) with 2 CL ====
+*[http://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/qyUiWiP.png 2 AV + 2 CL + 2 DD] / 4 AV + 2 CL
+**This setup gives you 2 CL to utilize and 2 AV for opening attacks while also preventing Air Incapability. You are allowed to freely interchange DDs with AVs if you want, you can even go for 4 AV + 2 CL. The downside of this setup, is that the risk of offrouting to A at the beginning is much higher as well, compared to using only 1 AV + 1 CL + 4 DD. But in case you do offroute to node A at the beginning with this setup, you will have a higher chance to survive the A node compared to other fleets, allowing you to continue down the A-D-B-G-K route with no real penalty. Just like 1 AV + 1 CL + 4 DD, routing from B to G is always guaranteed.
+==== South Route (A-D-B-G-K) with {{ShipLink|Hayasui Kai}} and 2 AVs ====
+* {{ShipLink|Hayasui Kai}} + {{ShipLink|Abukuma Kai Ni}} + 1 CLT + 1CL + 2 AV
+** This setup takes the longer route but allows for stronger openings compared to the fleets presented above. A total of 3 opening torpedoes, 2 Torpedo Bombers and at least 2-3 Seaplane Bombers can be brought, making this fleet very useful for taking out a high number of ships before the shelling phase. The main issue of this fleet are the inflated costs if {{ShipLink|Hayasui Kai}} gets damaged and the first battle at node A. Otherwise, it should not pose serious threats on nodes B and G for the reasons mentioned above. You are recommended to put {{ShipLink|Hayasui Kai}} as flagship for her extreme frailty to reduce the chances of being targeted by any enemy ship. She is best used with 2 {{BluePlane}} and a {{EquipmentLink|Skilled Carrier-based Aircraft Maintenance Personnel|text=SCAMP}} to increase her shelling power significantly. Do note however, that her very small slots are subject to rank losses against the {{ShipLink|Light Cruiser Tsu-Class}} at the Boss node.
+
+*'''NOTE:''' Enemy patterns below with (Final) will always be encountered when the boss gauge is 1/4 or if you've already completed this map.<br />
+** Although there is no visual difference, players at HQ 84 and below will face a weaker version of the {{ShipLink|Northern Princess III|text=Northern Princess}} at node F.
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=200|y=137}}
+{{Map/ImageNode|H|x=104|y=148}}
+{{Map/ImageNode|D|x=287|y=247}}
+{{Map/ImageNode|C|x=337|y=84}}
+{{Map/ImageNode|E|x=365|y=184}}
+{{Map/ImageNode|B|x=391|y=280}}
+{{Map/ImageNode|G|x=477|y=213}}
+{{Map/ImageNode|F|x=492|y=106}}
+{{Map/ImageNode|I|x=565|y=56}}
+{{Map/ImageNode|J|x=563|y=229}}
+{{Map/ImageNode|K|x=585|y=137}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=北方前衛警戒部隊
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>100 - 120
+|Light Cruiser Ho-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Battleship Ta-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 99
+|Light Cruiser Ho-Class/Flagship
+|Battleship Ta-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Double Line}}<br>HQ Lvl<br>1-120
+|Light Cruiser Ho-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Battleship Ta-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=北方増援部隊前衛A
+|B
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>85 - 120
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|B
+|Normal/Final
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>85 - 120
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 84
+|Light Cruiser Ho-Class/Flagship
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 120
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Torpedo Cruiser Chi-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=北方派遣任務部隊
+|C
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>90 - 120
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|C
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>90 - 120
+|Standard Carrier Wo-Class/Kai Flagship
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|C
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 89
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Light Cruiser Ho-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 89
+|Standard Carrier Wo-Class/Kai Flagship
+|Standard Carrier Wo-Class/Flagship II
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|C
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 120
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{NodeInfo
+|D
+|Empty
+}}
+{{Map/Nodes|name=北方遊撃部隊
+|E
+|Normal
+|{{Formation|Double Line}}<br>HQ Lvl<br>85 - 120
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|-
+|E
+|Normal/Final
+|{{Formation|Double Line}}<br>HQ Lvl<br>85 - 120
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Submarine Ka-Class/Flagship
+|-
+|E
+|Normal/Final
+|{{Formation|Double Line}}<br>HQ Lvl<br>1 - 84
+|Light Carrier Nu-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Submarine Ka-Class/Flagship
+|-
+|E
+|Normal
+|{{Formation|Double Line}}<br>HQ Lvl<br>1 - 120
+|Battleship Ru-Class/Flagship
+|Battleship Ru-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Submarine Ka-Class/Flagship
+}}
+{{Map/Nodes|name=北方AL泊地
+|F
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>85 - 120
+|Northern Princess/III
+|Escort Fortress
+|Escort Fortress/II
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|F
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>85 - 120
+|Northern Princess/III
+|Escort Fortress
+|Escort Fortress/II
+|Escort Fortress/III
+|Escort Fortress/II
+|Escort Fortress/III
+|-
+|F
+|Normal/Final
+|{{Formation|Diamond}}<br>HQ Lvl<br>85 - 120
+|Northern Princess/IV
+|Escort Fortress
+|Escort Fortress/II
+|Escort Fortress/III
+|Escort Fortress/II
+|Escort Fortress/III
+|-
+|F
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 84
+|Northern Princess/V
+|Escort Fortress
+|Escort Fortress/II
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|F
+|Normal
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 84
+|Northern Princess/V
+|Escort Fortress
+|Escort Fortress/II
+|Escort Fortress/III
+|Escort Fortress/II
+|Escort Fortress/III
+|-
+|F
+|Normal/Final
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 84
+|Northern Princess/VI
+|Escort Fortress
+|Escort Fortress/II
+|Escort Fortress/III
+|Escort Fortress/II
+|Escort Fortress/III
+}}
+{{Map/Nodes|name=北方増援部隊前衛B
+|G
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Double Line}}<br>HQ Lvl<br>100 - 120
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|G
+|Normal/Final
+|{{Formation|Diamond}}<br>HQ Lvl<br>100 - 120
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|G
+|Normal
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 99
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|G
+|Normal
+|{{Formation|Double Line}}<br>HQ Lvl<br>1 - 99
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|G
+|Normal/Final
+|{{Formation|Diamond}}<br>HQ Lvl<br>1 - 99
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{NodeInfo
+|H
+|Empty
+}}
+{{NodeInfo
+|I
+|Resource
+|Ammo
+|50 + (number of drum canisters * 10?) (Maximum still need to test)
+}}
+{{NodeInfo
+|J
+|Empty
+}}
+{{Map/Nodes|name=北方増援部隊主力
+|K
+|Boss
+|{{Formation|Double Line}}<br>HQ Lvl<br>90 - 120
+|Light Cruiser Tsu-Class
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Battleship Ru-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|K
+|Boss/Final
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>90 - 120
+|Light Cruiser Tsu-Class
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|-
+|K
+|Boss
+|{{Formation|Double Line}}<br>HQ Lvl<br>1 - 89
+|Light Cruiser Tsu-Class
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Battleship Ru-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|K
+|Boss/Final
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 89
+|Light Cruiser Tsu-Class
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Battleship Ta-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|K
+|Boss
+|{{Formation|Line Ahead}}<br>HQ Lvl<br>1 - 120
+|Light Cruiser Tsu-Class
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Battleship Ta-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, C, E, F, G, K
+|boss = K
+|Abukuma: B, C, F, G, K
+|Akashi: F, K
+|Akatsuki: A, C, F, K
+|Akebono: B, C, F
+|Akigumo: K
+|Amatsukaze: K
+|Atago: K
+|Chikuma: K
+|Fubuki: K
+|Fusou: K
+|Hamakaze: K
+|Haruna: K
+|Hatsuharu: C, F, G
+|Hatsushimo: A, C, G
+|Hibiki: B, C, F, G
+|Hiei: K
+|Hiyou: K
+|Houshou: K
+|Hyuuga: K
+|I-168: C, F, G, K
+|I-19: C, F, G, K
+|I-58: C, G, K
+|I-8: F, G, K
+|Ikazuchi: A, C, F, G
+|Inazuma: A, B, C, F
+|Ise: K
+|Junyou: A, B, F, K
+|Kaga: K
+|Kazagumo: K
+|Kinu: B, C, F, G, K
+|Kinugasa: K
+|Kirishima: K
+|Kiso: A, C, F, G
+|Kitakami: K
+|Kongou: K
+|Kuma: K
+|Kumano: K
+|Maruyu: F
+|Maya: A, B, C, F, G
+|Mochizuki: K
+|Mogami: K
+|Myoukou: K
+|Nachi: A, B, C, F, G
+|Naganami: K
+|Nagara: K
+|Nenohi: A, B, F, G
+|Ooi: K
+|Ryuujou: A, B, C, F, G, K
+|Sazanami: A, B, F
+|Sendai: K
+|Shimakaze: K
+|Shouhou: K
+|Suzuya: K
+|Takao: A, B, C, F, G, K
+|Tama: A, B, C, F, G
+|Tanikaze: F, G, K
+|Tenryuu: K
+|Tone: K
+|Ushio: A, B, C, F, G
+|Uzuki: C
+|Wakaba: A, B, C, F
+|Yamagumo: K
+|Yamashiro: K
+}}
+{{SectionEnd}}

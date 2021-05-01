@@ -1,0 +1,958 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Decisive Battle! The Battle of the Santa Cruz Islands
+|jp = 決戦！南太平洋海戦
+|tag = E7
+|tag2 = E8
+|tag3 = E9 <!--
+|transport = true
+-->
+|romaji = Kessen! Minami-taihēyō Kaisen
+|hp_easy = ?
+|hp_medium = ?
+|hp_hard = 4080 HP +5280 HP +6216
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Hornet}}
+|reward_casual_1 = {{ItemStack|item=[[File:Jervaited.png|50px|link=]]|text=Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_easy_2_x = 5
+|reward_medium_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_medium_2_x = 8
+|reward_medium_3 = {{EquipmentCardKai|TBF|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_1_x = 3
+|reward_hard_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_hard_2_x = 10
+|reward_hard_3 = {{EquipmentCardKai|TBF|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|XF5U|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|First Class Medal|icon=true|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-7 Branching Rules
+|id = 48-7
+|order = 0,2,A,D,F,H,I,K,M,N,O,Q,V1,V3,V4,R,V5,Z2,Z1,W4,W3
+
+|0 -> 1 = * Single Fleet
+|0 -> 3 = * Surface Task Force '''OR''' Transport Combined Fleet
+|0 -> 2 = 
+* Meet '''ALL''' of the following requirements:
+** Carrier Task Force
+** Do not meet the requirements to start at 4.
+|0 -> 4 = 
+* Meet '''ALL''' of the following requirements:
+** Starting point 4 is unlocked.
+** Carrier Task Force
+** Amount of CV(L/B) ≤ 3
+
+|3 -> B = * Do not meet the requirements to go to F.
+|3 -> F = 
+* Meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V) ≤ 3
+** If amount of CV(L/B) ≥ 2, fleet must be Fast.
+
+|A/empty -> B, C = * Active branching
+
+|D/empty -> F = * Do not meet the requirements to go to H.
+|D/empty -> H = 
+* Fast Fleet
+* Alternatively, meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+** Amount of DD ≥ 4
+
+|F -> G = 
+* Meet '''ALL''' of the following requirements:
+** Single Fleet
+** Amount of DD ≥ 2
+** No SS(V)
+|F -> H = * Do not meet the requirements to go to either G or I.
+|F -> I = 
+* Meet '''ANY''' of the following requirements:
+** Single Fleet, but do not meet the requirements to go to G.
+** Fast Surface Task Force
+** Surface Task Force '''AND''' amount of (F)BB(V)+CV(L/B) ≤ 4
+
+|H -> I = 
+* Meet '''ALL''' of the following requirements:
+** Surface Task Force
+** Pass the LoS check.
+|H -> J/empty = * Do not meet the requirements to go to either I or V.
+|H -> V = 
+* Meet '''ALL''' of the following requirements:
+** Route to node V is unlocked.
+** Carrier Task Force
+** Pass the LoS check.
+
+|I -> K/empty = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V) ≤ 2
+** No CV(L/B)
+* Alternatively, use a Single Fleet.
+|I -> M = * Do not meet the requirements to go to K.
+
+|K/empty -> L/night = * Do not meet the requirements to go to either N or O.
+|K/empty -> N = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** If Single Fleet, amount of ships with '''SURFACE''' radars ≥ 1
+** If Surface Task Force, meet '''ALL''' of the following requirements as well:
+*** Amount of ships with '''SURFACE''' radars ≥ 4
+*** Amount of DD ≥ 4
+|K/empty -> O =
+* Meet '''ALL''' of the following requirements:
+** Single Fleet
+** Fast Fleet
+** Amount of DD ≥ 2
+** Amount of ships with '''SURFACE''' radars ≥ 4
+
+|M -> Q = * Do not meet the requirements to go to R.
+|M -> R = 
+* Meet '''ALL''' of the following requirements:
+** If Phase 1, no CVL allowed.
+** Amount of CVL ≤ 2
+** If amount of CVL ≤ 1, fleet must be Fast.
+** No CV(B)
+** Amount of (F)BB(V) ≤ 4
+
+|N -> O = * Pass the LoS check.
+|N -> P/empty = * Fail the LoS check.
+
+|O -> S/empty = * Fleet contains {{ShipLink|Akitsushima Kai}} or {{ShipLink|Akashi Kai}}
+|O -> X = * Do not meet the requirements to go to S.
+
+|Q -> O = * Pass the LoS check, but do not meet the requirements to go to R.
+|Q -> R = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** You're not in Phase 1.
+** If Phase 2, meet '''ALL''' of the following requirements:
+*** Difficulty is not Medium or Hard
+*** Amount of CL ≤ 2
+*** Amount of CAV ≤ 2
+*** No CVL
+*** If (F)BB(V) ≥ 4, fleet must contain CV(B).
+** If Phase 3, meet '''ANY''' of the following requirements:
+*** Fleet contains CV(B)
+*** Amount of (F)BB(V)+CV(L) ≤ 3
+*** No CV(L/B)
+|Q -> T/empty = * Do not meet the requirements to go to either O or R.
+
+|V1 -> V2 = * Do not meet the requirements to go to V3.
+|V1 -> V3 = 
+* Meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V)+CV(L/B) ≤ 5
+** Amount of CV(B) ≤ 2
+** If Phase 2, meet '''ALL''' of the following requirements:
+*** Fast Fleet
+*** (F)BB(V) ≤ 2
+** If Phase 3, amount of CV(L/B) ≤ 3 '''OR''' Fast Fleet.
+
+|V3 -> R = * Do not meet the requirements to go to either W or V4.
+|V3 -> W = 
+* Meet '''ALL''' of the following requirements:
+** Route to node W is unlocked.
+** Fast Fleet
+** Amount of (F)BB(V) ≤ 2
+** Amount of CV(L/B) ≥ 3
+* Alternatively, use a fleet that contains AO after unlocking node W.
+|V3 -> V4 = 
+* Meet '''ALL''' of the following requirements:
+** Route to node W is not unlocked.
+** Fast Fleet
+** Amount of DD ≥ 4
+** Amount of CV(L/B) ≤ 2
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+
+|V4 -> W = * Carrier Task Force
+|V4 -> Y = * Surface Task Force
+
+|R -> U/empty = * Do not meet the requirements to go to either Y, V4 or V5.
+|R -> Y = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of (F)BB(V)+CVL ≤ 3
+** No CV(B)
+|R -> V4 = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+** Amount of CV(B) ≤ 2
+|R -> V5 = * Pass the LoS check, but do not meet the requirements to go to Y or V4.
+
+|V5 -> Y = * Pass the LoS check.
+|V5 -> V6/empty = * Fail the LoS check.
+
+|Z2 -> Z1 = * Do not meet the requirements to go to either W2 or Z3.
+|Z2 -> Z3 = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to W2.
+** Amount of CV(B) ≤ 2
+** If amount of (F)BB(V) ≥ 3 '''OR''' amount of CV(L/B) ≥ 3, amount of DD ≥ 4
+** If Slow Fleet, meet '''ALL''' of the following requirements:
+*** Amount of (F)BB(V) ≤ 2
+*** Amount of CV(L/B) ≤ 2
+|Z2 -> W2/empty = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V) ≤ 2
+** Amount of CV(L/B) ≤ 2
+* Alternatively, use a Fast+ Fleet.
+
+|Z1 -> W = * Do not meet the requirements to go to W2.
+|Z1-> W2/empty = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DD ≥ 3
+** If Slow Fleet, amount of DD ≥ 4
+** Amount of CV(B) ≤ 2
+
+|W4 -> Z = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of (F)BB(V) ≤ 2
+** Amount of CV(B) ≤ 2
+** Amount of CV(L/B) ≤ 3
+|W4 -> W3 = * Pass the LoS check, but do not meet the requirements to go to Z.
+|W4 -> W5 = * Fail the LoS check.
+
+|W3 -> Z = * Fast+ Fleet
+|W3 -> W1 = * Do not meet the requirements to go to Z.
+}}
+===Map Progression===
+{{#tag:gallery|
+Rainy2020E7HP1.png{{!}}Map during 1st HP phase at node X
+Rainy2020E7HP2.png{{!}}Map during 2nd HP phase without the route to node Y unlocked
+Rainy2020E7HP3.png{{!}}Map during 2nd HP phase after unlocking the route to node Y
+Rainy2020E7HP4.png{{!}}Map during 3rd HP phase without the route to node Z unlocked
+Rainy2020E7HP5.png{{!}}Map during 3rd HP phase after unlocking the route to node Z but no 4th starting point unlocked
+Rainy2020E7HP6.png{{!}}Full map after unlocking the 4th starting point
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200
+}}
+
+===Map Bonuses===
+<font color="red">'''DISCLAIMER:''' ''This information is based on user submitted data and is subject to revisions as more data is gathered. Any version of the ship receives the bonus regardless of remodel.''</font>
+{|class="wikitable" style="text-align: center; vertical-align: middle; width:660px; font-size:85%"
+!colspan="3"| Mapwide (Applicable to all ships listed below)
+|colspan="7"| 1.1x
+|-
+!colspan="10"| Advance Force (X)
+|-
+! rowspan="2" colspan="3"|Ship
+! rowspan="1" colspan="7"| Node
+|-
+! O
+! X
+! R
+! Y
+! W
+! Z
+|-
+!{{ShipBattleCard|Kongou/Kai Ni C}}
+!{{ShipBattleCard|Haruna/Kai Ni}}
+!{{ShipBattleCard|Junyou/Kai Ni}}
+| colspan="2" rowspan="5"|'''1.375x'''
+| colspan="2" rowspan="5"|1.265x
+| rowspan="5"|1.1x
+| rowspan="5"|1.21x
+|-
+!{{ShipBattleCard|Maya/Kai Ni}}
+!{{ShipBattleCard|Atago/Kai}}
+!{{ShipBattleCard|Takao/Kai}}
+|-
+!{{ShipBattleCard|Myoukou/Kai Ni}}
+!{{ShipBattleCard|Isuzu/Kai Ni}}
+!{{ShipBattleCard|Kuroshio/Kai Ni}}
+|-
+!{{ShipBattleCard|Kagerou/Kai Ni}}
+!{{ShipBattleCard|Kawakaze/Kai Ni}}
+!{{ShipBattleCard|Umikaze/Kai Ni}}
+|-
+!{{ShipBattleCard|Naganami/Kai Ni}}
+!
+!
+|-
+! colspan="10"| Vanguard Group (Y)
+|-
+!{{ShipBattleCard|Hiei/Kai Ni C}}
+!{{ShipBattleCard|Kirishima/Kai Ni}}
+!{{ShipBattleCard|Suzuya/Kai Ni}}
+| colspan="2" rowspan="4"|1.265x
+| colspan="2" rowspan="4"|'''1.375x'''
+| rowspan="4"|1.155x
+| rowspan="4"|1.265x
+|-
+!{{ShipBattleCard|Tone/Kai Ni}}
+!{{ShipBattleCard|Chikuma/Kai Ni}}
+!{{ShipBattleCard|Nagara/Kai}}
+|-
+!{{ShipBattleCard|Urakaze/D Kai}}
+!{{ShipBattleCard|Isokaze/B Kai}}
+!{{ShipBattleCard|Tanikaze/D Kai}}
+|-
+!{{ShipBattleCard|Yuugumo/Kai Ni}}
+!{{ShipBattleCard|Makigumo/Kai Ni}}
+!
+|-
+! colspan="10"| Carrier Force (Z)
+|-
+!{{ShipBattleCard|Shoukaku/Kai Ni}}
+!{{ShipBattleCard|Zuikaku/Kai Ni}}
+!{{ShipBattleCard|Zuihou/Kai Ni B}}
+| colspan="2" rowspan="3"|1.1x
+| colspan="2" rowspan="3"|1.21x
+| rowspan="3"|1.265x
+| rowspan="3"|'''1.375x'''
+|-
+!{{ShipBattleCard|Kumano/Kai Ni}}
+!{{ShipBattleCard|Amatsukaze/Kai}}
+!{{ShipBattleCard|Yukikaze/Kai}}
+|-
+!{{ShipBattleCard|Tokitsukaze/Kai}}
+!{{ShipBattleCard|Teruzuki/Kai}}
+!{{ShipBattleCard|Hamakaze/B Kai}}
+|-
+! colspan="10"| Miscellaneous (Y/Z)
+|-
+!{{ShipBattleCard|South Dakota/Kai}}
+!{{ShipBattleCard|Hornet/Kai}}
+!{{ShipBattleCard|Saratoga/Mk.II}}
+| colspan="2" rowspan="3"| 1.1x
+| colspan="2" rowspan="3"| '''1.32x'''
+| rowspan="3"| 1.1x
+| rowspan="3"| 1.265x
+|-
+!{{ShipBattleCard|Akagi/Kai Ni}}
+!{{ShipBattleCard|Kaga/Kai}}
+!{{ShipBattleCard|Hiryuu/Kai Ni}}
+|-
+!{{ShipBattleCard|Souryuu/Kai Ni}}
+!
+!
+|-
+! colspan="10"|Special Case
+|-
+! colspan="3"|{{ShipBattleCard|Kazagumo/Kai Ni}} {{ShipBattleCard|Akigumo/Kai}}
+| colspan="2" rowspan="2"|1.265x
+| colspan="2" rowspan="2"|1.375x
+| rowspan="2"|1.155x
+| rowspan="2"|'''1.518x'''
+|-
+| colspan="3"|'''Note:''' Kazagumo's bonus is expected to be a bug as<br />Makigumo/Akigumo were the ones who scuttled the Hornet.
+|}
+Additionally, the following equipment has additional multiplicative bonuses in specific nodes.
+<br />'''Note:''' Unlike E4, multiple Muratas equipped will '''not''' give a bigger bonus.
+{|class="wikitable" style="text-align: center; vertical-align: middle; width:660px"
+|-
+! Equipment Bonuses
+! {{Event/Route|R|Red}}
+! {{Event/Route|X|Red}}
+! {{Event/Route|Y|Red}}
+! {{Event/Route|Z|Red}}
+|-
+! {{BluePlane}} {{EquipmentLink|Type 97 Torpedo Bomber (Murata Squadron)|Tenzan Model 12 (Murata Squadron)|text=Murata Squadron}}
+| 1.17x
+! -
+| 1.22x
+| 1.3x
+|-
+! {{GreenAmmo}} {{EquipmentLink|Type 3 Shell|Type 3 Shell Kai|text=Type 3 Shells}}
+! -
+| 1.25x
+! -
+| 1.12x<br />1.15x '''({{ShipLink|Kumano/Kai Ni|text=Kumano}} Only)'''
+|-
+! {{RedAmmo}} {{EquipmentLink|Type 91 Armor Piercing Shell|Type 1 Armor Piercing Shell|Type 1 Armor Piercing Shell Kai|text=AP Shells}}
+! -
+| 1.1x
+! -
+| 1.17x
+|-
+!colspan="5"| Debuff Modifier (Multiplicative with above; Applies to All Ships)
+|-
+!Only when attacking<br />South Pacific Aircraft Carrier Princess
+|colspan="4"|1.1x
+|}
+
+===Hard Mode Ship Locks===
+E-7 has 3 unique locks for Hard Mode, with each lock applied depending on '''Fleet Type''':
+*[[File:Rainy-Summer 2020 Event Ship Tag E9.png|30px]]1st Lock: Combined Fleet '''(STF/TCF)'''
+*[[File:Rainy-Summer_2020_Event_Ship_Tag_E7.png|30px]]2nd Lock: Combined Fleet '''(CTF)'''
+*[[File:Rainy-Summer_2020_Event_Ship_Tag_E8.png|30px]]3rd Lock: Single Fleet
+Ships with different tags will not be able to sortie together.
+
+While tags will still be applied while doing lower difficulties below Hard, they will not be enforced and all ships are able to be used.
+
+=== Boss Gauge 1: Destroy [[Lycoris Princess]] ===
+*'''Surface Task Force: 2(F)BB(V) 0-2CA(V) 0-2AV 0-3DD 0-3CL + 1CL 2-4DD 0-2 CA(V) 0-2 CLT (Fast)'''
+**Route:{{Event/Route|F|Orange|I|Red|K|Blue|N|Orange|O|Red|X|Red}}
+**4 DD required
+**At least '''4 Radars with 5+ LoS required'''
+**I Node (at any stage) and O Node (except during final kill phases) may contain torpedo squadrons in Vanguard Formation
+***Enemy ships will have high evasion in vanguard, so some skew towards accuracy over firepower when selecting equipment is recommended
+**One full seaplane fighter carrier ship and at least one AACI ship recommended for increasing pass rate at the F and N air raids, as well as reducing damage taken at the boss
+***More seaplanes are required for achieving AS at the boss on higher difficulties, but artillery spotting is not highly important to achieve over bringing more anti-LB setups in the main fleet
+**The boss node has [[Lycoris Princess]], 3 [[Supply Depot Princess B]] and an [[Artillery Imp]] (on Medium+)
+***2-3 ships (AV, CL or DD) with synergy anti-installation setups recommended in main fleet
+****If combining highly upgraded [[Special Type 2 Amphibious Tank]] and [[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]] on a ship with map (historical) bonus, a Surface Radar can be used over anti-installation rockets/mortars to increase accuracy and fulfill routing requirements
+****For ships without historical bonus, or for setups lacking upgrades, extra damage from anti-installation rockets is recommended
+***Ships in the escort fleet will not fight installations until night battle, so double attack setups can be as effective as single attack anti-installation setups
+**For Last Dance (on Hard), the boss formation has '''3 Destroyer Na-Class Late Model II Elite which use opening torpedo attacks'''. LB Attack Aircraft will be shot down at a high rate, so boss support shelling is highly recommended.
+
+===Gimmick 1: Unlocking the 2nd Boss Node===
+Do the following after destroying the first boss gauge to unlock the 2nd boss node
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|E|Red}}
+! {{Event/Route|F|Red}}
+! {{Event/Route|H|Red}}
+! {{Event/Route|J|blue}}
+! {{Event/Route|R|Red}}
+! LB Defense
+|-
+! Hard
+| AS
+| AS
+| AS
+| Reach
+| S
+| AS x2
+|-
+! Medium
+| AS
+| AS
+! -
+! -
+| S
+| AS x1
+|-
+! Easy
+| AS
+! -
+! -
+! -
+| S
+| AS x1
+|-
+! Casual
+! -
+! -
+! -
+! -
+! -
+! -
+|}
+
+'''F, H, J'''
+*CTF: 2CV 1CVL + 1CL 2DD
+**AACI recommended
+**'''Slow required'''
+*Route: {{Event/Route|D|Blue|F|Orange|H|Orange|J|Blue}}
+*LB Defense can be done simultaneously
+'''E'''
+*Single fleet: 4+ SSV
+*Single fleet: 2CV 4DE
+**Unremodeled low level CV can be used if locks are an issue
+**OASW recommended for C node submarines
+*Route: {{Event/Route|A|Blue|C|Red|E|Orange}}
+*LB Defense can be done simultaneously, but is unlikely to trigger
+'''R'''
+*STF: 3+ BB, no CV(L/B) & Fast fleet 
+**Ex. 2BB 2CA 1CAV 1CL/AV + 1CL 4DD 1FBB
+*Route: {{Event/Route|F|Orange|I|Red|M|Red|R|Red}}
+*Toukai base to M + OASW recommended
+*LB Defense can be done simultaneously
+'''LB Defense'''
+*Single sub (low level recommended)
+*Route: {{Event/Route|A|Blue|C|Red|E|Orange|G|Red}}
+*May take multiple attempts to get the air raid to occur
+
+===Boss Gauge 2: Aircraft Carrier Summer Princess===
+====Depleting the Boss Gauge====
+'''Carrier Task Force: 2CV(L/B) or less, 2 (F)BB(V) or less, 4+ DD & Fast Fleet'''
+*Ex. 2CV 2FBB 0-2CAV 0-1 AV + 1 CL 4 DD 1 CA(V)
+*Ex. 2CV 0-2CAV 0-1AV 1DD + 2FBB 1CL 3DD
+*Route: {{Event/Route|D|Blue|H|Orange|V|Red|V1|Orange|V3|Red|V4|Orange|Y|Red}}
+*Node {{Event/Route|V|Red}} is a submarine node
+**OASW and 1 base of Toukais recommended for chipping runs
+*{{Event/Route|H|Orange|V1|Orange|V4|Orange}} are air raids
+**Atlanta Kai with full AACI setup recommended to reduce chance of damage as well as to reduce plane counts at the boss
+*{{Event/Route|V3|Red|}} is the only surface battle before the boss, but it does contain fairly dangerous ships like Nu-class Flagship Kai and Ru-class Flagship BB (on Hard)
+**Using Kongou-class BBs or South Dakota in the escort helps stabilze the route, and if using two Kongou-class BBs their special night battle attack is enabled for the boss
+**Alternatively, shelling support can be used to increase pass rate
+*The boss fleet at {{Event/Route|Y|Red}} is led by Aircraft Carrier Summer Princess (880 HP 239 Armor on hard)
+**There's also Battleship Summer Princess (530 HP 168 Armor on hard) and Ne Class Kai Summer Mode (470 HP 244 Armor on hard)
+*The boss on Hard also contains the formidable [[Destroyer Na-Class Late Model II Elite]] which has high anti-air capabilities and also performs opening torpedo strikes strong enough to chuuha/taiha carriers and battleships
+**During chipping LBAS and opening airstrikes can be used to some effect to reduce potential damage from them
+**If aiming for S ranks for drop farming purposes, boss shelling support can be cost-effective for dealing with the escort
+*Fleet Recommendations
+**'''CV(B)'''
+***To deal with the boss fleet's relatively high bulk, carriers with high bonus multipliers and high capacity are recommended (Akagi Kai Ni, Saratoga Mk.II mod.2 are the two most suited, Zuikaku Kai Ni/A is also an option) with 2-3 bomber setups
+****High plane capacity is needed due to the multiple preboss nodes which combined with the high AA of the boss may deplete smaller bomber slots at high rates
+*****It's recommended to use primarily bombers that have some kind of AA resist
+**'''Main Fleet CAV and/or AV'''
+***Used for air power, since high airpower is needed due to the various preboss air battles and boss having fairly high air power as well
+***Kumano-class Kai Ni CAVs as well as Nisshin are recommended due to capacity and Fast speed
+** '''FBB'''
+***Can be used as main fleet damage dealers or in the escort fleet to help stabilize escort performance
+***South Dakota is notable because of high multiplier, good stats (even before Kai) and not needing to be used for E6
+***Typically Kongou Kai Ni C is seen here, however disregarding E6 locks Hiei Kai Ni C and Kirishima Kai Ni have better damage output
+****If using Kongou Kai Ni C and Hiei Kai Ni C in the escort together, their high night battle damage can be very useful with their special attack
+***While they have some trouble dealing with Ne Kai and Aircraft Carrier Summer Princess, FBBs with historical bonus can clear the softer enemies at the boss relatively consistently
+**'''CL'''
+***Highly recommended to be Altanta due to the amount of air battles on the route and importance of anti-air at the boss
+**'''DD'''
+***At least 1 OASW ship is recommended (can double as a searchlight holder)
+***Remaining DDs should be historical ships outfitted for TCI
+**'''Escort CA(V)'''
+***Highly recommended to use Suzuya Kai Ni due to her high historical bonus
+***Can carry night recon with DA setup, allowing for good damage at the surface nodes and against the boss escorts in day battle
+*Land Base Setup
+**1 base toukais to {{Event/Route|V|Red}}
+**2 bases 1 LB Recon 2 LBAA 1 LB Fighter to {{Event/Route|Y|Red}} (Range 7)
+
+===='''Destroying the Boss Gauge (Last Dance)'''====
+*Ex. 2FBB 2CV 1-2CAV 0-1AV + 1CL 4DD 1CA(V)
+**Typical setup with 4 heavy hitters in main fleet
+*Ex. South Dakota 2CV 2-3CAV 0-1AV + Kongou/Hiei Kai Ni C 1CL 4DD
+**Utilizes Kongou-class Kai Ni C for day & night battle escort damage over a historical CA(V)
+*Ex. 1FBB 2CV Ise-class Kai Ni 1-2CAV 0-1AV + 1CL 4DD 1CA(V)
+**Sacrifices a historical battleship position for an Ise-class K2 BBV with more air power, potentially allowing for more bombers on the carriers
+*Ex. Nagato Kai Ni, South Dakota Kai, 2CV 1-2CAV 0-1AV + 1CL 4DD 1CA(V)
+**Can output high damage with Nagato's special attack but very reliant on good engagement forms (damage is quite mediocre in head-on or worse, and the combined fleet formation damage modifiers are lower affecting all attacks)
+**Nagato's special attack activation rate does depend on the 2nd ship's level
+*Route: Same as above (still Fast required)
+*Notable changes from chipping (on Hard) are the later two air raids are fixed to more difficult formations, and there's guaranteed 1 So Flagship in the V fleet
+*On hard, ASW aerial support is recommended to decrease threat at V node since using Toukais is not recommended
+**ASW support typically consists of 2 CVL (Junyou Kai Ni and Hiyou Kai are ideal) and 2 high capacity CVs (Intrepid Kai, Kaga Kai, Taihou Kai are good picks)
+**Carriers are fully equipped with high ASW stat planes
+***CVL can equip autogyros and Type 3 Liason which on top of high ASW stat have a bonus of not being shot down like carrier-based bombers
+***For bauxite conservation consider bringing one small slot of a fighter with ASW stat since there is a carrier at V3
+**Only planes deal damage in ASW aerial support so other equipments are not needed
+*The hard boss fleet gains a second bulky Aircraft Carrier Summer Princess and two more [[Destroyer Na-Class Late Model II Elite]], leading to a boss with frighteningly high air power and anti-air capabilities, as well as several tanky targets
+**It's not uncommon to see LBAS deal no damage even under Air Denial state
+**Please refer to the section in E-4 3rd Boss on Final Kill Plane Rank Conservation for those inclined
+*To help deal with the threat of the Na-Class Late Model II destroyers,''' strong and accurate''' boss shelling support is recommended.
+**The following firepower are needed to reach support shelling cap for BB/CV:
+***'''BB'''
+****'''Parallel''': 147, '''Head-on''': 185
+***'''CV'''
+****'''Parallel''': 52, '''Head-on''': 77 (For a single 10 Divebomber stat plane)
+****'''Parallel''': 39, '''Head-on''': 64 (For two 10 Divebomber stat planes)
+**Equipment accuracy, Ship Level, Ship Luck and sparkling state all affect accuracy
+**Recommended ships for shelling support
+***Musashi Kai Ni (Can reach head-on cap with 1 gun + 4 radars)
+***Akagi Kai Ni/Kai Ni E (Extra slot for another radar and high base firepower)
+***Nagato Kai Ni (High luck, high firepower.  Can reach head-on cap with 2 guns and 2 radar)
+***Warspite Kai (High luck, relatively high firepower)
+***Nelson Kai (High firepower, allowing for guns with more accuracy to be used.  Decent luck.)
+***Mutsu Kai Ni (Not good luck, but high firepower. Can reach head-on cap with 2 guns 2 radar)
+***Hiryuu Kai Ni  (High luck, high firepower.  Can reach head-on cap with 1 bomber 3 radars)
+*Land Base Setup
+**On hard 3 bases to boss recommended for reducing air power requirements, depleting enemy bombers, and increasing damage potential
+**3 bases 1 LB Recon 2 LBAA 1 LB Fighter
+**(more detailed setups TBD)
+
+===Gimmick 2: Unlocking the 3rd Boss Node===
+Do the following to unlock the 3rd boss node
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|X|Red}}
+! {{Event/Route|H|Red}}
+! {{Event/Route|V1|Red}}
+! {{Event/Route|V4|Red}}
+! LB Defense
+|-
+! Hard
+| A
+| AS
+| AS
+| AS
+| AS x2
+|-
+! Medium
+| A
+| ?
+| AS
+! -
+| AS x1
+|-
+! Easy
+| A
+| AS
+! -
+! -
+! -
+|-
+! Casual
+! -
+! -
+! -
+! -
+! -
+|}
+Note:
+* 3rd boss node unlocking requirements can be done during clearing the 2nd boss gauge
+'''H, V1 and V4'''
+*Same composition as for previous boss gauge, and likely already done during the previous boss gauge
+'''LB Defense'''
+*Single sub (low level recommended)
+*Route: {{Event/Route|A|Blue|C|Red|E|Orange|G|Red}}
+*May take multiple attempts for the air raid to occur
+'''X (First Boss)'''
+*Same composition as for first boss gauge
+*Possible but not particularly recommended to be combined with LB Defense
+
+===Gimmick 3: Unlocking the 4th Start Point===
+Do the following to unlock the 4th Starting Point after the 3rd boss node is unlocked
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|X|Red}}
+! {{Event/Route|Y|Red}}
+! {{Event/Route|V4|Red}}
+! {{Event/Route|W|Red}}
+! {{Event/Route|Z|Red}}
+|-
+! Hard
+| A x2
+| A x2
+| AS x2
+| S x2
+| A x3
+|-
+! Medium
+| A x1
+| A x1
+| AS x2
+| S x2
+| A x2
+|-
+! Easy
+| A x1
+| A x1
+! -
+! -
+| A x2
+|-
+! Casual
+| A x1
+| A x1
+! -
+! -
+| A x1
+|}
+'''X (First Boss)'''
+*Same composition as for first boss gauge
+'''Y (Second Boss)'''
+
+Can be done either with Carrier Task Force or Surface Task Force
+*'''Carrier Task Force'''
+**Ex. 2CV 1CVL 2(F)BB(V) 1AV/CAV + 1CL 4DD 1CA(V)
+***'''Slow required'''
+**Routes: {{Event/Route|D|Blue|H|Orange|V|Red|V1|Orange|V3|Red|R|Red|V5|Red|Y|Red}}
+**Composition can be similar to 2nd boss gauge final kill comp with 1 CAV/AV switched to slow CVL
+**780 air power recommended (Hard)
+*'''Surface Task Force'''
+**Ex. 2FBB 2CA 1CAV 1CVL + 1CL 4DD 1CA
+***Fast required
+**Routes: {{Event/Route|F|Orange|I|Red|M|Red|R|Red|Y|Red}}
+**Toukai base to {{Event/Route|M|Red}} recommended
+*LB Setup
+**Similar to 2nd gauge setup
+'''V4, W, and Z Combined'''
+*Carrier Task Force: 2CV(B) 2(F)BB(V) 1-2CAV 0-1AV + 1CL 4DD 1CA(V)
+**Fast required
+*Routes: {{Event/Route|D|Blue|H|Orange|V|Red|V1|Orange|V3|Red|V4|Orange|W|Red|W2|Blue|W4|Orange|Z|Red}}
+**Normal boss route + 1 extra air raid (V4)
+**1 OASW recommended w/ Toukai support (can double as SL holder)
+**Mainly for fulfilling the V4 requirement, with the possibility of advancing to Z for A ranks
+**780 air power recommended (Hard)
+* LB Setup
+**1 Toukai base to {{Event/Route|V|Red}}
+**2 bases to {{Event/Route|Z|Red}} (9 range): 1 Flying Boat 2 LBAA 1 LB Fighter per base
+**First base 112 air power required on Hard for AD
+'''W and Z'''
+*Carrier Task Force: 2CV(B) 1CVL 1FBB 1-2CAV 0-1AV + 1CL 4DD 1CA(V)
+**Fast required
+*Routes: {{Event/Route|D|Blue|H|Orange|V|Red|V1|Orange|V3|Red|W|Red|W2|Blue|W4|Orange|Z|Red}}
+**1 OASW recommended w/ Toukai support (can double as SL holder)
+**650 air power recommended (Hard)
+* LB Setup
+**1 Toukai base to {{Event/Route|V|Red}}
+**2 bases to {{Event/Route|Z|Red}} (9 range): 1 Flying Boat 2 LBAA 1 LB Fighter per base
+**First base 112 air power required on Hard for AD
+
+===Boss Gauge 3: [https://kancolle.fandom.com/wiki/South_Pacific_Aircraft_Carrier_Princess South Pacific Aircraft Carrier Princess] from 4th Start===
+There are a many approaches towards the boss route, with trade-offs between routing, power at boss, air power, escort strength, and main fleet strength.  Admirals are advised to find best the approach that fits their fleet and equipment situation.
+====Fleet Types====
+'''Slow CTF (Nagato K2 Special Attack), 4 DD Escort '''
+*Nagato Kai Ni, Mutsu Kai Ni, Shoukaku Kai Ni A, Zuikaku Kai Ni A, 1 CVL, 1 AV/CAV + 1CL 4DD 1CA(V)
+*Routes: {{Event/Route|Z2|Red|Z1|Red|W2|Blue|W4|Orange|Z|Red}}
+*Maximizes main fleet power at the boss, but at the expense of the escort fleet's survival rate
+'''Slow CTF (Nagato K2 Special Attack), 3 DD Escort '''
+*Nagato Kai Ni, Mutsu Kai Ni, Shoukaku Kai Ni A, Zuikaku Kai Ni A, 1 CVL, 1 DD + 1CL 3DD 2CA(V)
+*Routes: {{Event/Route|Z2|Red|Z1|Red|W2|Blue|W4|Orange|Z|Red}}
+*Sacrifices air power capacity in the main fleet by replacing a SPF carrier with a DD, but has a stronger/more durable escort with 2 (presumably) historical CA(V)
+**Main Fleet DD can be used to block undesired Friend Fleets (Fletcher/Johnston) since they will contribute very little in actual battle
+'''Slow CTF (Nagato K2 Special Attack), Not through submarine node '''
+*Nagato Kai Ni, Mutsu Kai Ni, Shoukaku Kai Ni A, Zuikaku Kai Ni A, 2(CAV or AV)+ 1CL 2 DD, 3CA(V)
+*Routes: {{Event/Route|Z2|Red|Z3|Red|W2|Blue|W4|Orange|Z|Red}}
+*There are two advantages of this route. For one, it is that you can counter both Z2 and Z3 with support shelling. For two, it is easy to defend our torp-cut in attack ships against boss-escort fleet. This composition has a stronger/more durable escort with 2 or 3 (presumably) historical CA(V) too.
+*Up to two seaplane fighter mules can include in your main fleet, thus it is easy to earn your Air Power. Atlanta is desirable as escort part CL.
+
+'''Fast CTF, Nagato K2 Special Attack'''
+*Nagato Kai Ni, South Dakota Kai, Shoukaku Kai Ni A , Zuikaku Kai Ni A, 1-2 CAV, 0-1 AV + 1CL 2-3DD 0-1 CLT 2CA(V) 
+*Routes: {{Event/Route|Z2|Red|W2|Blue|W4|Orange|Z|Red}}
+*Bypasses the submarine node, but at the cost of Nagato's special attack power
+'''Fast CTF, 2 Fast Battleships in Main'''
+*Shoukaku Kai Ni/Kai Ni A , Zuikaku Kai Ni/Kai Ni A, 2 FBB, 1-2 CAV, 0-1 AV + 1CL 2-3DD 0-1 CLT 2CA(V) 
+*Routes: {{Event/Route|Z2|Red|W2|Blue|W4|Orange|Z|Red}}
+*For those without access to Nagato-class K2. Concentrates power in main fleet
+'''Fast CTF, Kongou-class Kai Ni C Special Attack'''
+*Shoukaku Kai Ni/Kai Ni A , Zuikaku Kai Ni/Kai Ni A, 3-4 CA(V), 0-1 AV + Kongou Kai Ni C, Hiei Kai Ni C, 1 CL, 2 DD, 1 CA(V)
+*Routes: {{Event/Route|Z2|Red|W2|Blue|W4|Orange|Z|Red}}
+*For those without access to Nagato-class K2. Sacrifices main fleet firepower for a stronger escort
+
+===='''Fleet Setup Recommendations'''====
+*'''Nagato-class Kai Nis'''
+**1 Main Gun, AP Shell, T3 Shell, LOS 5+ Radar maximizes special attack damage
+**If doing a Fast speed configuration, either the radar or T3 shell may be replaced with a boiler
+***Keeping a radar favors special attack damage, and keeping a T3 shell boosts all attacks at the boss
+**2nd ship Mutsu Kai Ni may be replaced with South Dakota Kai, but is not recommended as the 2nd ship level matters for activation rate and the special attack will overall deal less damage
+*'''FBBs'''
+**In rough order of strength: Hiei Kai Ni C, Kirishima Kai Ni, South Dakota Kai, Kongou Kai Ni C, Haruna Kai Ni
+**In Main Fleet: standard APCI setups
+**In Escort Fleet: 2 Main Gun, 1 AP Shell, 1 T3 Shell setup recommended (see below if using Kongou-class Kai Ni C Special Attack)
+***2 shell setup maximizes night double attack damage
+**Please see the sections on [[Kongou#Kongou-class_Special_Night_Cut-In|Kongou-class Kai Ni C Special Attack]] if utilizing it for setup information.  Double Attack setup is not necessary on the Escort Flagship if using that approach
+*'''Shoukaku/Zuikaku Kai Ni A'''
+**Murata Torpedo Bomber
+**Jet Fighter Bomber
+***Kikka Kai has higher AA resist than Keiun Kai
+***Provides Long Range on top of extra opening airstrike damage (which is significant with all the special modifiers Shoukaku-class can stack in this map)
+**Dive Bomber (with AA resist)
+***Suisei (Egusa), Iwai Fighter Bomber, Suisei Model 12 (w/ Type 31 Photoelectric Fuze Bombs), <br />Suisei Model 12 (634 Air Group w/ Type 3 Cluster Bombs), Type 99 Dive Bomber (Egusa)
+**Fighter
+*'''Shoukaku/Zuikaku Kai Ni, and other CV(B)'''
+**Murata Torpedo Bomber
+**Torpedo Bomber (with AA resist)
+***Murata or Tomonaga Tenzans/Type 97 Torpedo Bombers
+**Dive Bomber (with AA resist)
+**Fighter
+**3 Torpedo Bomber 1 Dive Bomber is also a consideration which sacrifices CVCI chance/damage for more critical damage, opening airstrike damage, and has higher chance of losing the dive bomber before shelling at the boss
+*'''CVL'''
+**Junyou Kai Ni (for slow fleets only) or Zuihou Kai Ni (not Kai Ni B)
+***Junyou is more ammenable to Saiun loadout with higher air power potential in the top 3 slots compared to Zuihou
+***Zuihou has a stronger bonus multiplier
+**Murata Torpedo Bomber, Dive Bomber (with AA resist), Fighter, 2nd Fighter or Saiun
+*'''Main Fleet CAV & AVs'''
+**For Fast AV Nisshin is the most practical.  Slow fleets can consider using Commandant Teste instead
+**4 SPF is typical
+***If air power is already sufficient, using a Seaplane Scout (with high accuracy value) is also a consideration for increased contact chance
+**If using FBBs in 2nd fleet DA + 1 SPF is also a possible consideration
+**Pola or Zara are possible substitutes but not recommended due to competing with carriers for shelling order
+*'''CL'''
+**[[Atlanta Kai]]
+***Offers high rate of strong AACI.  Since the boss and 2 of her escorts are normal carriers, their attacks (in day) can be disabled by emptying their bomber slots through LBAS + Air Battle + Fleet AA + AACI at relatively high chance
+***Also helps at the preboss
+***Low damage potential in escort shelling or at night
+***[[GFCS Mk.37]] must be used if utilizing her special 3 equip AACI setup(s) (''i.e.'' don't equip SK or SK+SG Radars)
+**[[Gotland Kai]] or [[Gotland Andra|Andra]] (and other 4 slot CLs)
+***Used for OASW in compositions that cross the submarine node
+***Can carry night battle equipment, including Type 96 150cm Searchlight if using Gotland
+***Becomes a stronger option when using a DD in main fleet with AACI (Atlanta AACI is stronger and more consistent, though)
+**Historical CL
+***[[Nagara]] and [[Isuzu]] have some map bonuses, but generally will not deal high damage at night without unusual setups (TCI), and day damage is somewhat lacking
+***TCI + OASW or DA + OASW are potential options if crossing the sub node
+*'''Escort Fleet CA(V)'''
+**[[Kumano Kai Ni]] and (if a second heavy cruiser is needed) Suzuya Kai Ni are strongly recommended
+**Day/Night DA + Type 3 Shell setup recommended for high damage in day shelling while offering postcap night DA damage
+**TCI + Type 3 Shell historical setups are also possible, but considering the strengh of enemy ships in escort shelling phases they are not highly recommended 
+*'''Escort Fleet DDs'''
+**Historical DDs with TCI setups recommended
+***[[Yukikaze Kai]], [[Naganami Kai Ni]] or other luckmodded DDs capable of approaching night battle (300) cap
+***[[Makigumo]], [[Akigumo]], [[Hamakaze]] and [[Tanikaze]] are in the strongest Friend Fleets, so bringing them in the player fleet should be avoided if utilizing strong Friend Fleet support
+***If lacking high luck historical DDs, historical DDs, especially [[Kazagumo Kai Ni]], can be used with night battle cut-in setups regardless
+****TCI setup
+****[[Combat/Night_Battle#Destroyer_Cut_In_Properties|Gun-Torpedo-Radar plus Mixed CI setup]] is an option to increase cut-in rate but max damage is significantly lower than pure TCI (due to lower multipliers, lower number of hits, and lack of equipment power)
+**During chipping, 1+ OASW setups can be considered if crossing the sub node
+**Tashkent Kai with 2 slot OASW + Star Shell and Searchlight is an option if using Atlanta as the CL and going through the sub node
+*'''CLT'''
+**TCI setup
+**Potentially can disable Na-class before their torpedo damage (not animation) is calculated, but odds are fairly low if using Cruising Formation 2 (Nagato Special Attack)
+**Historical DDs can be stronger at day shelling, day closing torpedo, and night battle
+'''Land Base Setup'''
+*For chipping, 1 base of Toukais to {{Event/Route|Z1|Red}} (if using a composition going there)
+*All other bases: to boss {{Event/Route|Z|Red}} (9 range): 1 Flying Boat 2 LBAA 1 LB Fighter per base (maximizes LBAA damage)
+**First base AD requirement: 112 (hard pre-final) 145 (hard final)
+*Alternate base setup: 1st base AD, 2 bases AP for reducing air power needed by the main fleet for AS/AS+
+**1st base 1 Flying Boat, 2 Fighters, 1 LBAA
+**2nd base 1 Flying Boat, 3 Fighters
+**3rd base 1 Flying Boat, 2 Fighters, 1 LBAA 
+*It is highly recommended to utilize a 3rd party air battle simulator tool to determine base/fleet setup since air control states can affect the subsequent phases of battle significantly
+**https://noro6.github.io/kcTools is the most comprehensive tool, and can estimate chances of emptying boss & allied carrier bomber slots
+***https://aircalc.page.link/LXN7 Simple template for last dance fleet (Hard).  Note allied fleet AA values are missing
+**[http://kancollecalc.jp/air_supremacy.html? http://kancollecalc.jp/air_supremacy.html], built-in viewer tools, etc have some functionality
+*Like the 2nd boss, E6's second boss and E4's third boss before it, this boss node (at least on Hard) houses incredibly high anti-air potential (especially during the final kill phase) and even AA resist bombers will frequently be emptied from 18 to 0 in a single pass
+'''Support Fleets'''
+*See sections in "Boss Gauge 2: Aircraft Carrier Summer Princess" above for recommendations on ASW Support (if not using Toukai while crossing the sub node) as well as Boss Shelling Support
+
+====Final Kill Phase (Last Dance)====
+*There is a debuff gimmick that can be performed once the boss is in final kill range (see following section)
+*The most notable change is the boss has two Aircraft Carrier Summer Princesses, raising air power requirements significantly (on Easy+)
+*With the higher air power, land base setups become much more precise in air power requirements and loss of ranks may affect setup efficacy
+*High ranks on all carrier-based bombers is recommended, but there are significant chances of lower size slots being emptied
+*See section in E-4 3rd Boss on "Final Kill Plane Rank Conservation"
+
+===Gimmick 4 (Optional): Debuffing the 3rd Boss on Last Dance===
+Do the following to unlock the debuff after the boss gauge is in the final kill state (at or below 888 remaining).  There is no indication all requirements have been completed until revisiting the boss (Boss sprite will change slightly).
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="10" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|X|Red}}
+! {{Event/Route|Y|Red}}
+! {{Event/Route|Z2|Red}}
+! {{Event/Route|Z3|Red}}
+! {{Event/Route|W3|Red}}
+! {{Event/Route|N|Red}}
+! {{Event/Route|Q|Red}}
+! {{Event/Route|V1|Red}}
+! {{Event/Route|V4|Red}}
+|-
+! Hard
+| A x2
+| A x2
+| S
+| S x2
+| S
+| AS
+| AS
+| AS
+| AS
+|-
+! Medium
+| A x1
+| A x1
+| S
+| S x1 (?)
+! -
+! -
+| AS
+| AS
+| AS
+|-
+! Easy
+| A x1
+| A x1
+| ?
+| S x1 (?)
+! -
+! -
+! -
+| AS
+! -
+|-
+! Casual
+| A x1
+| A x1
+| ?
+| S x1 (?)
+! -
+! -
+! -
+! -
+! -
+|}
+'''Recommended for completion on Hard. ''' For other difficulties it is advised to gauge fleet strength before deciding to dedicate time/resources to completing the additional objectives.  This grants a post-cap modifier on attacks against South Pacific Aircraft Carrier Princess.
+
+'''Z2, Z3 and W3'''
+*CTF: 2(F)BB(V) 2CV(B) 1CVL 1CAV/AV + 1FBB 1CL 4DD
+**Fast Fleet
+*Routes {{Event/Route|Z2|Red|Z3|Red|W2|Blue|W4|Orange|W3|Red}}
+*It's not recommended to advance to the boss afterwards
+'''V1 and V4 (Combined)'''
+*CTF: 2CV(B) 2CVL 1-2CAV 1AV + 1CL 4DD 1CA(V)
+**'''Slow Fleet'''
+*Routes {{Event/Route|D|Blue|H|Orange|V|Red|V1|Orange|V2|Red|V3|Red|R|Red|V4|Orange}}
+*4 CV(L/B) required to start at left start point
+*Use Toukai and/or OASW against the sub node {{Event/Route|V|Red}}, remaining land bases can be used against {{Event/Route|R|Red}} node
+'''V1 (if not combined with V4)'''
+*CTF: 2(F)BB(V) 4CV(L/B) + 1CL 2DD 3XX
+**Fast Fleet
+*Routes {{Event/Route|D|Blue|H|Orange|V|Red|V1|Orange}}
+*4 CV(L/B) required to start at left start point
+*Use Toukai and/or OASW against the sub node V
+'''Y (2nd Boss, Surface Task Force)'''
+*Same STF setup as from the previous gimmick
+*STF: 2FBB 2CA 1CAV/AV 1CVL + 1CL 4DD 1CA
+**Fast Fleet
+*Routes {{Event/Route|F|Orange|I|Red|M|Red|R|Red|Y|Red}}
+*LBAS: 1 fighter 1 LB recon 2 LBAA to boss (Range 7), can use 1 base for ASW at {{Event/Route|M|Red}}
+*Technically possible to do with CTF but not at all recommended
+'''X (1st Boss)'''
+*Same setup as previous phases
+'''N'''
+*STF: 2FBB 2CA(V) 1CL 1DD + 1CL 3DD 2CA/CLT
+**4 5+ LOS radars required
+**Fast Fleet
+*Routes {{Event/Route|F|Orange|I|Red|K|Blue|N|Orange}}
+*LBAS: 3-4 Fighters 0-1 LB Scout to {{Event/Route|N|Orange}} (Range 5)
+'''Q'''
+*STF: 3 (F)BB(V) 2CA(V) 1CVL + 1CL 4DD 1CA/CLT
+**'''Slow Fleet'''
+*Routes {{Event/Route|F|Orange|I|Red|M|Red|Q|Orange}}
+**OASW recommended
+*LBAS: 3-4 Fighters 0-1 LB Scout to {{Event/Route|Q|Orange}} (Range 5)
+**Optionally 1 base of Toukai to M
+'''V4 (if not combined with V1)'''
+*STF: 3(F)BB(V) 2CA(V) 1CVL + 1CL 4DD 1CA/CLT
+**Fast Fleet
+*Routes {{Event/Route|F|Orange|I|Red|M|Red|R|Red|V4|Orange}}
+**OASW recommended
+*LBAS: 3-4 Fighters 0-1 LB Scout to {{Event/Route|V4|Orange}} (Range 6)
+**Optionally 1 base of Toukai to M
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+
+====E-7 Y====
+{{Fleets|friend=Rainy-Summer 2020 Event|node=E-7 Y}}
+
+====E-7 Z====
+{{Fleets|friend=Rainy-Summer 2020 Event|node=E-7 Z}}
+
+===LBAS Flight Range===
+[[File:Rainy2020E7LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

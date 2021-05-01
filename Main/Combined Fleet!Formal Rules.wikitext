@@ -1,0 +1,137 @@
+Formal [[Combined Fleet]] formation rules, based on scene.organize.util.OrganizeUtil (OrganizeMain.swf).
+
+===[[Template:Type|Ship Types]]===
+* 1 - DE
+* 2 - DD
+* 3 - CL
+* 4 - CLT
+* 5 - CA
+* 6 - CAV
+* 7 - CVL
+* 8 - FBB
+* 9 - BB
+* 10 - BBV
+* 11 - CV
+* 13 - SS
+* 14 - SSV
+* 16 - AV
+* 17 - LHA
+* 18 - CVB
+* 19 - AR
+* 20 - AS
+* 21 - CT
+* 22 - AO
+
+===[[Partials/Speed system|Speed Values]]===
+* 1 - Base (基地, api_soku = 0)
+* 2 - Slow (低速, api_soku = 5)
+* 3 - Fast (高速, api_soku = 10)
+* 4 - Fast+ (高速+, api_soku = 15)
+* 5 - Fastest (最速, api_soku = 20)
+
+===Ship Groups===
+* 1 - DD (KUCHIKU)
+* 2 - CL, CLT (KEIJUN)
+* 3 - CA, CAV (JUUJUN)
+* 4 - FBB, BB, BBV (SENKAN)
+* 5 - CVL, CV, CVB (KOUKUU)
+* 6 - AV (SUIJOU)
+* 7 - CV, CVB (SEIKIKUUBO)
+* 8 - CL, CLT, CA, CAV, FBB, BB, BBV (SUIJOUDAGEKI)
+* 9 - FBB, BB (SENKAN2)
+* 10 - DE, DD (SMALL)
+* 11 - SS, SSV (SENSUI)
+* 12 - BB, BBV with Fast or lower speed (SENKAN TEISOKU)
+* 13 - FBB, or BB, BBV with Fast+ or higher speed (SENKAN KOUSOKU)
+* 14 - CVL with ASW (TAISEN KEIKUUBO)
+
+===Fleet Types===
+
+* 0 - CTF
+* 1 - STF
+* 2 - TTF
+
+===Formation Rules===
+
+* Escort fleet rules
+** Should have ships and not be on an expedition (第2艦隊が空です。, 艦隊が遠征中です。)
+** CTF and STF
+*** 1 CL (type 3 < 1: 軽巡洋艦の配備が必要です。, type 3 > 1: 軽巡洋艦を２隻以上配備できません。)
+*** 2+ DD (group 1 < 2: 駆逐艦２隻以上の配備が必要です。)
+*** 2- CA/CAV (group 3 > 2: 重巡級を３隻以上配備できません。)
+*** 1- AV (group 6 > 1: 水上機母艦を２隻以上配備できません。)
+*** 0 slow BB/BBV, should be at least Fast+ (group 12 > 0: 低速戦艦は配備できません。)
+*** 2- FBB or Fast+/Fastest BB/BBV (group 13 > 2: 高速戦艦を３隻以上配備できません。)
+*** 0 CV/CVB (group 7 > 0: 正規空母は配備できません。)
+*** 1- CVL (type 7 > 1: 軽空母を２隻以上配備できません。)
+*** No SS/SSV flagship (flag type = 13 or 14: 連合艦隊旗艦は潜水艦不可です。)
+** TTF
+*** 3+ DE/DD (group 10 < 3: 警戒隊は3隻以上の駆逐級が必要です。)
+*** CL/CT flagship (flag type != 3 or 21: 警戒隊は軽巡/練巡の旗艦が必要です。)
+*** 0 CLT (type 4 > 0: 警戒隊に重雷装艦は配備できません。)
+*** 0 CVL/CV/CVB (group 5 > 0: 警戒隊に航空母艦は配備できません。)
+*** 0 FBB/BB/BBV (group 4 > 0: 警戒隊に戦艦は配備できません。)
+*** 0 SS/SSV (group 11 > 0: 警戒隊に潜水艦は配備できません。)
+*** 0 AV (type 16 > 0: 警戒隊に水上機母艦は配備できません。)
+*** 0 LHA (type 17 > 0: 警戒隊に揚陸艦は配備できません。)
+*** 0 AR (type 19 > 0: 警戒隊に工作艦は配備できません。)
+*** 0 AS (type 20 > 0: 警戒隊に潜水母艦は配備できません。)
+*** 0 AO (type 22 > 0: 警戒隊に補給艦は配備できません。)
+*** 2- CA/CAV (type 5 + type 6 > 2: 重巡/航巡を計３隻以上配備できません。)
+*** 2- CL/CT (type 3 + type 21 > 2: 警戒隊への軽巡級配備は最大２隻！)
+* Main fleet rules
+** CTF
+*** 2+ CVL/CV/CVB (group 5 < 2: 空母２隻以上の配備が必要です。)
+*** 4- CVL/CV/CVB (group 5 > 4: 空母５隻以上は配備できません。)
+*** 2- FBB/BB/BBV (group 4 > 2: 戦艦３隻以上は配備できません。)
+*** No SS/SSV flagship (flag type = 13 or 14: 連合艦隊旗艦は潜水艦不可です。)
+** STF
+*** 4- FBB/BB/BBV (group 4 > 4: 戦艦５隻以上は配備できません。)
+*** 4- CA/CAV (group 3 > 4: 重巡級５隻以上は配備できません。)
+*** 2+ CL/CLT/CA/CAV/FBB/BB/BBV (group 8 < 2: 複数の巡洋艦以上の艦艇が必要です。)
+*** 1- CV/CVB (group 7 > 1: 複数の正規空母は配備できません。)
+*** 0 CVL if 1 CV/CVB (group 7 = 1 and type 7 > 0: 正規空母を含む２隻以上の航空母艦を配備できません。)
+*** 2- CVL if 0 CV/CVB (group 7 = 0 and type 7 > 2: ３隻以上の航空母艦は配備できません。)
+*** No SS/SSV flagship (flag type = 13 or 14: 連合艦隊旗艦は潜水艦不可です。)
+** TTF
+*** 4+ DE/DD (group 10 < 4: 輸送本隊は駆逐級４隻以上が必要です。)
+*** 0 CLT (type 4 > 0: 輸送本隊に重雷装艦は配備できません。)
+*** 0 CA (type 5 > 0:  輸送本隊に重巡洋艦は配備できません。)
+*** 0 CV/CVB (group 7 > 0: 輸送本隊に航空母艦は配備できません。)
+*** 0 CVL without ASW (type 7 - group 14 > 0: 輸送本隊に航空母艦は配備できません。)
+*** 0 FBB/BB (group 9 > 0: 輸送本隊に戦艦は配備できません。)
+*** 0 SS/SSV (group 11 > 0: 輸送本隊に潜水艦は配備できません。)
+*** 0 AR (type 19 > 0: 輸送本隊に工作艦は配備できません。)
+*** 1- CVL with ASW (group 14 > 1: 輸送本隊への軽空母配備は最大１隻！)
+
+Can be simplified as
+
+* Escort fleet rules
+** CTF and STF
+*** 1 {{Type|CL}}
+*** 0-2 {{Type|DD}}
+*** 0-2 {{Type|CA}}/{{Type|CAV}}
+*** 0-2 {{Type|FBB}} or {{Type|BB}}/{{Type|BBV}} with Fast+ or higher speed
+*** 0-1 {{Type|CVL}}, 0 {{Type|CV}}/{{Type|CVB}}
+*** 0-1 {{Type|AV}}
+*** No {{Type|SS}}/{{Type|SSV}} flagship
+** TTF
+*** 1-2 {{Type|CL}}/{{Type|CT}}, one must be flagship
+*** 3+ {{Type|DE}}/{{Type|DD}}
+*** 0-2 {{Type|CA}}/{{Type|CAV}}
+*** No other ships allowed
+* Main fleet rules
+** CTF
+*** 0-2 {{Type|FBB}}/{{Type|BB}}/{{Type|BBV}}
+*** 2-4 {{Type|CVL}}/{{Type|CV}}/{{Type|CVB}}
+*** No {{Type|SS}}/{{Type|SSV}} flagship
+** STF
+*** 2+ {{Type|CL}}/{{Type|CLT}}/{{Type|CA}}/{{Type|CAV}}/{{Type|FBB}}/{{Type|BB}}/{{Type|BBV}}
+*** 0-1 {{Type|CV}}/{{Type|CVB}} or 0-2 {{Type|CVL}}
+*** 0-4 {{Type|FBB}}/{{Type|BB}}/{{Type|BBV}}
+*** 0-4 {{Type|CA}}/{{Type|CAV}}
+*** No {{Type|SS}}/{{Type|SSV}} flagship
+** TTF
+*** 4+ {{Type|DE}}/{{Type|DD}}
+*** 0-1 {{Type|CVL}} with ASW (e.g., [[Taiyou]])
+*** 0 {{Type|CLT}}/{{Type|CA}}/{{Type|FBB}}/{{Type|BB}}/{{Type|CVL}}/{{Type|CV}}/{{Type|CVB}}/{{Type|SS}}/{{Type|SSV}}/{{Type|AR}}, other ships can be used

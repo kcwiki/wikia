@@ -1,0 +1,75 @@
+{{Map/Header}}
+{{Map/Info
+|en = Jam Island
+|jp = ジャム島沖
+|romaji = Jamu-tō oki
+|exp_hq = 110
+|exp_hq_boss = 1520
+|strategy_name = [[wikipedia:Battle_of_the_Java_Sea|Jam Island Capture Tactics]]
+|strategy_name_ja = ジャム島攻略作戦
+|strategy_info = As the first phase of Western operation, you are going to deploy your fleet on the Jam Island. Conduct this operation!  (Lookout for enemy submarines strictly too.)
+|strategy_info_ja = 西方作戦の第一段階として艦隊をジャム島攻略に展開！作戦を実施せよ！　(対潜警戒も厳とせよ)
+}}
+{{MapBranchingTable
+|title = 4-1 Branching Rules
+|expand = true
+|id = 4-1
+
+|0 -> A, C = *Random routing
+
+|C -> E, F/empty = 
+* If (F)BB(V)+CV(L/B) ≥ 5, go to E.
+* If (F)BB(V)+CV(L/B) ≤ 2, go to F.
+* If (F)BB(V)+CV(L/B) = 4, 30% F, 70% E
+*Else, random routing (50/50)
+
+|D -> G, H = 
+*Random routing if fleet contains any SS(V)
+* If (F)BB(V)+CV(L/B) ≥ 5, go to H.
+*Otherwise
+**Meeting '''ANY''' of the following to '''FORCE''' G
+***DD+DE ≤ 1
+***Fleet contains any (F)BB(V) or CV(B/L) '''AND''' DD = 3
+***Fleet contains any (F)BB(V) or CV(B/L), CL = 0 '''AND''' DD ≤ 3
+***(F)BB(V)+CV(L/B) = 4
+**Meeting '''ANY''' of the following to go to H
+***Fleet contains no (F)BB(V) and CV(B/L)
+***DD ≥ 4
+***CA(V) ≥ 1 '''AND''' CL+CA(V) ≥ 3
+*Random routing if not meeting any of the above conditions
+
+|F/empty -> D = * Do not meet the requirements to go to H.
+|F/empty -> H = 
+* Meet '''ALL''' of the following requirements:
+** No (F)BB(V) or CV(L/B)
+**Meet '''one''' of the following 
+***Amount of DD ≥ 4 and CL ≥ 1
+***DD+DE = 6
+
+|H -> I/empty, J = 
+* Meeting '''ANY''' of the following '''FORCES''' you to I:
+** (F)BB(V)+CV(L/B) ≥ 5
+** Fleet contains SS(V)
+* Go to J if amount of (F)BB(V)+CV(L/B) ≤ 1 '''AND''' DD ≥ 2
+* Else, random routing.
+}}
+
+==Information==
+*The preboss fleets consist mostly of CA/CL/DD.
+**Node {{Event/Route|G|red}} has two Ta-class battleships.
+**Node {{Event/Route|D|red}} is mostly a mix of surface ships and submarines.
+*At least 36/72 air power is needed to achieve AS/AS+ at boss node. There are no carriers anywhere else in the map.
+
+==Compositions==
+*{{Event/Route|C|red|F|blue|H|red|J|red}} or {{Event/Route|A|red|B|green|D|red|H|red|J|red}}.
+**1 CA(V) 1 CL 4 DD
+***Cheapest composition, but requires high-level CL and DD as they need to dodge the closing torpedo if they didn't disable all of the enemies CA, CL and DD in advance
+*{{Event/Route|C|red|F|blue|D|red|H|red|J|red}} or {{Event/Route|A|red|B|green|D|red|H|red|J|red}}.
+**1 CL 2 DD 3 AV/CLT/CA(V)
+**1 CL 2 DD 2 CA(V) 1 (F)BB(V)/CV(L)
+***Will always fight 3 battles pre-boss, but allow stronger ships that helps withstand enemy shots compared to the light comp above
+*{{Event/Route|C|red|F|blue|D|red|G|red|J|red}} or {{Event/Route|A|red|B|green|D|red|G|red|J|red}}.
+**2 CV(L) 1 CLT 3 XX (XX is not another (F)BB(V) or CV(L/B))
+***Heaviest comp, but slightly harder pre-boss, as you will always go to node G where [[Battleship Ta-Class]] are awaiting, in exchange, you get to bring CV(L) for opening airstrike and more firepower on the way to the boss and at the boss node itself.
+
+{{Map/Footer}}

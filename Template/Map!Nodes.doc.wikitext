@@ -1,0 +1,477 @@
+<div id="toc1">{{tocright}}</div>
+==Basic==
+;Description
+:This template is used to insert an enemy pattern table into articles.
+;Skeleton
+<pre>{{NodeInfo
+| <Node>
+| <Tag = Battle nodes>
+| <Formation>
+| <Ship>/<Model>
+| <Ship>/<Model>
+| ...
+|-
+| <Node>
+| <Tag = Resource or Storm nodes>
+| <Resource>
+| <Amount>
+|-
+| <Node>
+| <Tag = Empty nodes>
+}}</pre>
+
+==Syntax==
+:NodeInfo table is divided into nodes separated by <code><nowiki>|-</nowiki></code>
+:Nodes has its own name and node type specified by the General fields and detailed information specified by further fields belong to its node type.
+
+===General fields===
+:Field <code><nowiki>Node</nowiki></code> contains an alphabet character A-Z. Nodes of the same name will be automatically merged.
+:Field <code><nowiki>Tag</nowiki></code> specified the node's type and hence this field must not be blank. It accepts multiple tags separated by a forward slash "/" (:i.e.: <code><nowiki>Boss/Final/Night</nowiki></code> denotes a night battle final form boss node)
+:The following table below for images are pulled from [[Template:Node]]. These images are for references only - labelling certain nodes as such does not automatically apply to the image used on any literal maps.
+:List of tags:
+:{| class="wikitable"
+! colspan="5" | Main tags (node types)
+|-
+! Tag
+! JP name
+! Description
+! Image
+! Notes
+|-
+| Normal 
+| align="center" | 昼戦
+| Normal battle nodes
+| align="center" | [[File:Red node.png]]
+| Stacking errors resolve into Normal
+|-
+| Boss 
+| align="center" | 
+| Boss battle nodes
+| align="center" | [[File:Boss node.png]]
+| Overrides all tags
+|-
+| Resource 
+| align="center" | 揚陸地点
+| Resource nodes
+| align="center" | [[File:Green node.png]]
+| Stacks only with Boss tag
+|-
+| Storm 
+| align="center" | うずしお
+| Maelstrom nodes
+| align="center" | [[File:Purple node 2.png]]
+| Does not stack with any other tags
+|-
+| Empty 
+| align="center" | 戦闘回避
+| Empty nodes
+| align="center" | [[File:Blue node.png]]
+| Does not stack with any other tags
+|-
+| Select 
+| align="center" | 能動分岐
+| Selection nodes
+| align="center" | [[File:Blue node.png]]
+| Does not stack with any other tags
+|-
+| Night
+| align="center" | 夜戦
+| Night battle nodes
+| align="center" | [[File:Red node.png]]
+| 
+|-
+| Aerial
+| align="center" | 航空戦
+| [[Aerial_Combat|Aerial battle]] nodes
+| align="center" | [[File:Aerial battle node.png]]
+| 
+|-
+| Defense
+| align="center" | 空襲戦
+| [[Events/Mechanics|Air raid]] (or air defense) battle nodes
+| align="center" | [[File:Air defense node.png]]
+| 
+|-
+| Raid
+| align="center" | 基地への空襲
+| Enemy air raids targeting [[LBAS|air bases]]
+| align="center" | N/A
+| 
+|-
+| -
+| align="center" | 
+| Night battle only node?
+| align="center" | [[File:Night_node.png]]
+| Appears in Phase II (HTML5) implementation
+|-
+| -
+| align="center" | 
+| Night to day battle only node?
+| align="center" | [[File:Night_to_Day_node.png]]
+| Appears in Phase II (HTML5) implementation
+|-
+! colspan="5" | Auxiliary tags (use in conjunction with main tags)
+|-
+! Tag
+! JP name
+! Description
+! Image
+! Notes
+|-
+| Final 
+| align="center" | 最終形態
+| Final form patterns
+| align="center" | N/A
+| 
+|-
+| Clear
+| align="center" |
+| Cleared form patterns
+| align="center" | N/A
+| Formation after clearing
+|}
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+===Battle nodes===
+{| class="wikitable floatright"
+! Formation
+! JP name
+! Image
+|-
+| Line Ahead
+| 単横
+| [[File:LineAhead.png|40px]]
+|- 
+| Double Line
+| 複縦
+| [[File:DoubleLine.png|40px]]
+|-
+| Diamond
+| 輪形
+| [[File:Diamond.png|40px]]
+|-
+| Line Abreast
+| 単縦
+| [[File:LineAbreast.png|40px]]
+|-
+| Echelon
+| 梯形
+| [[File:Echelon.png|40px]]
+|-
+| Vanguard
+| 警戒
+| [[File:Vanguard.png|40px]]
+|-
+| None
+| なし
+|
+|}
+:Field <code><nowiki>Formation</nowiki></code> accepts "Line Ahead", "Double Line", "Diamond", "Line Abreast" and "Echelon" as its value.
+:Field <code><nowiki>Ship/Model</nowiki></code> accepts values specified by '''Name List''' section. Any number of <code><nowiki>Ship/Model</nowiki></code> fields are acceptable before next the node.
+{{clear}}
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+===Storm and Resource nodes===
+{| class="wikitable floatright"
+! Key
+! Image
+|-
+| Fuel
+| align="center" | [[File:Fuel.png|20px]]
+|-
+| Ammunition
+| align="center" | [[File:Ammunition.png|20px]]
+|-
+| Bauxite
+| align="center" | [[File:Bauxite.png|20px]]
+|-
+| Steel
+| align="center" | [[File:Steel.png|20px]]
+|-
+| Coinbox1
+| align="center" | [[File:Coinbox1.png]]
+|-
+| Coinbox2
+| align="center" | [[File:Coinbox2.png]]
+|-
+| Coinbox3
+| align="center" | [[File:Coinbox3.png]]
+|-
+| Bucket
+| align="center" | [[File:Bucket.png]]
+|- 
+| Devmat
+| align="center" | [[File:Devmat.png|20px]]
+|-
+| Itorch
+| align="center" | [[File:Itorch.png|20px]]
+|}
+:Field <code><nowiki>Resource</nowiki></code> accepts every type of resource [[Sandbox/Help:KanColleMedia#Icons]] has without the image extension. Images are automatically resized to 22x22px to fit the table.
+:The more common <code><nowiki>Resource</nowiki></code> are: "Fuel", "Ammunition", "Bauxite", "Steel", "Coinbox1", "Coinbox2", "Coinbox3", "Bucket", Devmat, Itorch
+:Field <code><nowiki>Amount</nowiki></code> accepts numeric and units, as well as calculation (e.g. "50 + (Drums * 50)" or "1-2 bars").
+{{clear}}
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+===Empty nodes===
+:Only <code><nowiki>Node</nowiki></code> and <code><nowiki>Tag</nowiki></code> fields are processed.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+===Selection nodes===
+:Only <code><nowiki>Node</nowiki></code> and <code><nowiki>Tag</nowiki></code> fields are processed.
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+===Variables===
+:<code><nowiki>toggle_id=<ID></nowiki></code> may be passed in to have the NodeInfo table be collapsed with a button over it to unfold. <code><nowiki>ID</nowiki></code> should be specific to the table or it will unfold any others with the same ID.
+:<code><nowiki>button_display=<Text></nowiki></code> may be passed in to specify what the button has for text. If this is not provided, the default is "Show/Hide Formation Table".
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+==Example (with all possible effects)==
+<pre>{{NodeInfo
+|A
+|Boss
+|Echelon
+|Northern Princess
+|Northern Princess/Final
+|Northern Princess/EO
+|-
+|A
+|Boss/Final
+|Line Ahead
+|Northern Princess/EO Weak
+|Northern Princess/EO Final
+|Northern Princess/EO Final Weak
+|-
+|B
+|Normal
+|Line Abreast
+|Aircraft Carrier Demon
+|-
+|I
+|Final/Night
+|Line Ahead
+|Battleship Water Demon
+|Battleship Water Demon/Final
+|-
+|I
+|Clear
+|Line Ahead
+|Battleship Water Demon
+|Battleship Water Demon/Final
+|-
+|M
+|Aerial
+|Diamond
+|-
+|O
+|Dogfight
+|None
+|Airfield Princess/VII
+|Airfield Princess/VII
+|Airfield Princess/VII
+}}
+{{NodeInfo
+|D
+|Empty
+}}
+{{NodeInfo
+|E
+|Resource/Boss
+|Fuel
+|50
+|-
+|F
+|Resource
+|Ammunition
+|50 + (Drums * 50) to max of 150
+}}
+{{NodeInfo
+|J
+|Storm
+|Fuel
+|50
+|-
+|K
+|Storm
+|Ammunition
+|3-4 bars
+|-
+|L
+|Storm
+|Bucket
+|1
+}}
+{{NodeInfo
+|N
+|Select
+|Standard Carrier Wo-Class/Kai Flagship
+}}</pre>
+{{NodeInfo
+|A
+|Boss
+|Echelon
+|Northern Princess
+|Northern Princess/Final
+|Northern Princess/EO
+|-
+|A
+|Boss/Final
+|Line Ahead
+|Northern Princess/EO Weak
+|Northern Princess/EO Final
+|Northern Princess/EO Final Weak
+|-
+|B
+|Normal
+|Line Abreast
+|Aircraft Carrier Demon
+|-
+|I
+|Final/Night
+|Line Ahead
+|Battleship Water Demon
+|Battleship Water Demon/Final
+|-
+|I
+|Clear
+|Line Ahead
+|Battleship Water Demon
+|Battleship Water Demon/Final
+|-
+|M
+|Aerial
+|Diamond
+|-
+|O
+|Dogfight
+|None
+|Airfield Princess/VII
+|Airfield Princess/VII
+|Airfield Princess/VII
+}}
+{{NodeInfo
+|D
+|Empty
+}}
+{{NodeInfo
+|E
+|Resource/Boss
+|Fuel
+|50
+|-
+|F
+|Resource
+|Ammunition
+|50 + (Drums * 50) to max of 150
+}}
+{{NodeInfo
+|J
+|Storm
+|Fuel
+|50
+|-
+|K
+|Storm
+|Ammunition
+|3-4 bars
+|-
+|L
+|Storm
+|Bucket
+|1
+}}
+{{NodeInfo
+|N
+|Select
+|Standard Carrier Wo-Class/Kai Flagship
+}}
+<div style = "text-align:right">[[#toc1|back to Table of Contents]]</div>
+
+==Suggested order for enemy ships==
+The following rules are used for [[Event]] enemy patterns (stable sorting in order):
+* Node specific rules, like [[Fall 2017 Event]] E-4 ZZ3 ([[Entombed Anti-Air Guardian Princess]] last).
+* Map specific rules, like combined fleets first for [[Fall 2017 Event]] E-4.
+* Fleet length, longer fleets last.
+* Number of Damaged ships.
+* Number of Demon or Princess ships.
+* Number of (F)BB(V).
+* Number of CV(L).
+* Number of Flagship or Elite ships.
+* Number of CA.
+* Number of CL.
+* First ship ID, second ship ID, etc.
+
+==Generating enemy patterns automatically==
+There are at least the following sources that can be used for generation:
+* [https://github.com/poooi/poi-server poi-server] [https://github.com/poooi/poi/issues/1843 dumps].
+* [https://github.com/KC3Kai/KC3Kai KC3Kai] sortie history can be queried from [https://developers.google.com/web/tools/chrome-devtools/console/ JS console], e.g., to get Air Raids (LBAS Defense) compositions for a map:
+<pre>
+function airRaids(world, next) {
+  KC3Database.con.sortie.where('world').equals(world).toArray(sorties => {
+    const data = {}
+    for (const sortie of sorties) {
+      for (const node of sortie.nodes) {
+        if (node.airRaid) {
+          const key = `${sortie.world}-${sortie.mapnum} ${['Casual', 'Easy', 'Medium', 'Hard'][sortie.diff - 1]}`
+          const info = `${KC3Meta.formationText(node.airRaid.api_formation[1])}\n|${node.airRaid.api_ship_ke.map(id => `{{subst:ShipFrom|${id}}}`).join('\n|')}`
+          data[key] = data[key] || {}
+          data[key][info] = true
+        }
+      }
+    }
+    next(data)
+  })
+}
+
+// world_id = 41, Winter 2018 Event
+airRaids(41, data => {
+  let result = ''
+  for (const key of Object.keys(data).sort()) {
+    result += `===${key}===\n`
+    result += `{{NodeInfo\n|${Object.keys(data[key]).sort().map(info => `AB\n|Raid\n|${info}`).join('\n|-\n|')}\n}}\n`
+  }
+  // copy(result)
+  // console.log(result)
+  // x = result
+})
+// ...
+// copy(x)
+// console.log(x)
+</pre>
+will copy/log something like the following (<code>subst</code> will expand [[Template:ShipFrom]] calls on saving the page, <code><nowiki>{{subst:ShipFrom|1618}}</nowiki></code> -> <code>Standard Carrier Wo-Class/Kai Flagship IV</code>, etc.) for each [[Fall 2017 Event]] map (note that the ordering is not always correct, it's better to order by air power afterwards)
+<pre>
+===40-3 Hard===
+{{NodeInfo
+|AB
+|Raid
+|Diamond
+|{{subst:ShipFrom|1618}}
+|{{subst:ShipFrom|1766}}
+|{{subst:ShipFrom|1762}}
+|{{subst:ShipFrom|1595}}
+|{{subst:ShipFrom|1576}}
+|{{subst:ShipFrom|1576}}
+|-
+|AB
+|Raid
+|Diamond
+|{{subst:ShipFrom|1618}}
+|{{subst:ShipFrom|1766}}
+|{{subst:ShipFrom|1762}}
+|{{subst:ShipFrom|1762}}
+|{{subst:ShipFrom|1595}}
+|{{subst:ShipFrom|1595}}
+|-
+|AB
+|Raid
+|Diamond
+|{{subst:ShipFrom|1618}}
+|{{subst:ShipFrom|1766}}
+|{{subst:ShipFrom|1763}}
+|{{subst:ShipFrom|1764}}
+|{{subst:ShipFrom|1595}}
+|{{subst:ShipFrom|1595}}
+}}
+</pre>
+
+==Enemy list==
+See [[Enemy Vessels/Full]].

@@ -1,0 +1,172 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|Thread = 
+}}
+{{Event/MapInfo
+|en = Operation 'Reclaim the Strait'
+|jp = 海峡奪還作戦
+|tag =  E2
+|romaji = Kaikyō dakkan sakusen
+|hp_casual = 200 TP + 2300
+|hp_easy = 200 TP + 2300
+|hp_medium = 210 TP + 2600
+|hp_hard = 300 TP + 3000
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_casual_1 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_casual_1_x =  1
+|reward_casual_2 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_casual_2_x = 1
+|reward_casual_3 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_casual_3_x = 2
+|reward_easy_1 = {{EquipmentCardKai|Type 0 Reconnaissance Seaplane Model 11B|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_easy_2_x = 2
+|reward_easy_3 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_easy_3_x = 2
+|reward_easy_4 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_easy_4_x = 2
+|reward_medium_1 = {{EquipmentCardKai|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_2_x = 2
+|reward_medium_3 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_medium_3_x = 2
+|reward_medium_4 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_medium_4_x = 2
+|reward_medium_5 = {{EquipmentCardKai|Prototype Flight Deck Catapult|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Type 0 Reconnaissance Seaplane Model 11B (Skilled)|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_2_x = 3
+|reward_hard_3 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_hard_3_x = 3
+|reward_hard_4 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_hard_4_x = 3
+|reward_hard_5 = {{EquipmentCardKai|Prototype Flight Deck Catapult|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|12.7cm Twin Gun Mount Model B Kai 4 (Wartime Modification) + Anti-Aircraft Fire Director|size=50px}}
+|reward_hard_6_x = 1
+|Mechanics = Unknown
+<!--
+|transport = true
+-->
+}}
+{{MapBranchingTable
+|id = 42-2
+
+|0 -> 1 = * Phase 1
+|0 -> 2 = * Phase 2
+
+|A/empty -> B = * Do not meet the requirements to go to C.
+|A/empty -> C = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DE+DD ≥ 2
+** Amount of FBB+CVL ≤ 2
+** No BB(V)
+** No CV(B)
+
+|D -> F/empty =
+* Node J is not unlocked yet.
+* Or meet '''ALL''' of the following requirements:
+** Amount of DD+CL ≥ 2
+** Amount of CV(B) ≤ 1
+** If fleet contains BBV, amount of CT+CLT+CA(V)+(F)BB(V)+CV(L/B) ≤ 3
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+|D -> J = * Do not meet the requirements to go to F.
+
+|F/empty -> E, G/resource = * Active branching
+
+|G -> H/empty = * Fail the LoS check.
+|G -> I = * Pass the LoS check.
+
+|K/empty -> M = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DD ≥ 2
+** Amount of (F)BB(V)+CV(B) ≤ 2
+** Amount of CLT?+CA+(F)BB(V)+CV(L/B) ≤ 3 (CAV does not count)
+|K/empty -> N = * Do not meet the requirements to go to M.
+
+|M -> L/empty = * Fail the LoS check.
+|M -> O = * Pass the LoS check.
+}}
+===Possible Warning===
+*The following display bonuses against E3 Phase 3 boss. It is recommended that you should keep some for E3. Furthermore, don't forget about European (French, British, German, Russian, Italian, Swedish) ships that you should use in E4/E5; American ships do not count:
+**'''E-3'''
+***'''Historical CA/BB''':
+****{{ShipLink|Kirishima/Kai Ni}}, {{ShipLink|Haruna/Kai Ni}}, {{ShipLink|Tone/Kai Ni}}, {{ShipLink|Chikuma/Kai Ni|Chikuma/Kai|text=both Chikuma Kai and Kai Ni}}, {{ShipLink|Atago/Kai}}
+***'''Historical CV''':
+****{{ShipLink|Akagi/Kai}}, {{ShipLink|Hiryuu/Kai Ni}}, {{ShipLink|Souryuu/Kai Ni}},{{ShipLink|Shoukaku/Kai Ni}} ,{{ShipLink|Zuikaku/Kai Ni}}
+
+===Map Guide===
+This is a '''single''' fleet map. This map is separated into two phase: TP and HP
+#Transport phase's (TP) gauge can be depleted by reaching the boss node and obtaining at least A-rank; you '''DO NOT''' need to sink the {{ShipLink|Heavy Cruiser Summer Princess|text=boss}}
+#*Bring {{EquipmentLink|Drum Canister (Transport Use)|text=drums}} and/or {{EquipmentLink|Daihatsu Landing Craft|text=daihatsu}} on ships that can carry them; for more info, see [[Events/Mechanics#Map-specific Mechanics|Mechanics]] under "Transport Load-Off".
+#**Despite this phase being more flexible in allowed ships, it is recommend that you go slow and steady for this phase. Fleet composition below and branching rules above can help in planning.
+#*1 [[LBAS]] can be used.
+#**There are no carriers presented in this phase. You can go full bomber on boss node.
+#*A submarine can escort the surface fleet at node {{Event/Route|D|red}}. An OASW ship or sending LBAS with ASW 7+ plane will disable the submarine. You will also meet it in HP phase.
+#*Do not worry about node {{Event/Route|J|red}}; it does not exist in this phase.
+#*There is a LOS check from G -> I
+#**Exact value unknown
+#**LOS = 13 (e33) passes the check
+#**LOS = 10.5 (e33) fails the check
+#Once you deplete the TP bar, the 2nd boss along with her route and gauge will be revealed. You will start from a new starting position.
+#*The {{ShipLink|Supply Depot Princess Vacation Mode|text= boss}} is an [[Combat/Installation_Type#Supply_Depot_Princess|installation type]]; along with {{ShipLink|Airfield Princess}}, {{EquipmentLink|Type 3 Shell}} (Sanshiki, T3-Shell) is needed in order to damage them effectively. It is recommended that you equip your CAs with it. If you bring BB, you can choose between T3 or {{EquipmentLink|Type 91 Armor Piercing Shell|Type 1 Armor Piercing Shell|text=AP Shells}}. AP shell will be effective against your new nightmare, {{ShipLink|Artillery Imp}}; it is also weak against {{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}}, {{EquipmentLink|Daihatsu Landing Craft|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|
+Special Type 2 Amphibious Tank|text=Daihatsu variants}} but sadly '''not''' {{EquipmentLink|Type 3 Shell}}. Luckily, it is not presented in casual difficulty.
+#*For CL/DDs, it is possible to equip them with {{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}}, which you should have one if you did E-1 at least on Easy; there is no way to craft it. Additionally, some of them can carry {{EquipmentLink|Daihatsu Landing Craft|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|
+Special Type 2 Amphibious Tank|text=Daihatsu variants}} too (see below). Fortunately, except {{EquipmentLink|Daihatsu Landing Craft}} and {{EquipmentLink|Type 91 Armor Piercing Shell|Type 1 Armor Piercing Shell|text=AP Shells}}, these equipment are also useful against the [[Partials/Anti-Installation_Weapons|boss]]
+#*You only need a range of 4 for your LBAS for the boss. [[List_of_Land-based_Attack_Aircraft_by_stats|Land-based Attack Aircraft]] (LBAA), will be effective against the [[Installation_Type#Supply_Depot_Princess|boss]] and {{ShipLink|Artillery Imp}}. {{EquipmentLink|Type 96 Land-based Attack Aircraft}} and {{EquipmentLink|Type 3 Shell}} are both [https://i.imgur.com/ZehPS8X.png craftable]. If you do not have any LBAA at all, [[List_of_Dive_Bombers_by_stats|dive bombers]] have bonus damage and are more effective against them than [[List_of_Torpedo_Bombers_by_stats|torpedo bombers]]; all of them have enough range to reach the boss. You can opt for 3 bombers 1 fighter to reduce some air power or full bombers.
+
+====DD/CL Daihatsu/Tank Carriers====
+'''NOTE''': {{ShipLink|Kuroshio/Kai Ni}} and {{ShipLink|Shiratsuyu/Kai Ni}} cannot carry {{EquipmentLink|Daihatsu Landing Craft}} nor {{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)}}, only {{EquipmentLink|Special Type 2 Amphibious Tank}}. See list below for DD/CL that can carry {{EquipmentLink|Daihatsu Landing Craft}}.
+
+{{Hard Anti-installation Weapons}}
+
+===Compositions===
+'''Note''': For both phases, ≥2 DD is required. Surprisingly, speed is irrelevant in both, '''but''' ship type is relevant (see TP phase)
+*TP Phase
+**{{Event/Route|A|blue|C|red|D|red|F|blue|G|green|I|red}}
+*** 2 CVL 1 CA(V) 1 CL 2 DD
+*** 0-1 CL 2-4 DD 2-3 CA(V)
+**** Having 3 CA(V) will be better for HP phase than 2 CA(V) + 1CL.
+*** 2 DD 1 CAV 1 CA(V) + 1 fBB or 1 CA(V) + 1 CVL or 1 CA(V)
+**** This composition is strong while ignoring node {{Event/Route|B|red}}. It '''must''' be fBB and CVL (see branching rules); speed is still irrelevant but fBB are mostly fast. If you have CAV, fBB, CVL...and/or CV(L/B) (see below) to spare, this composition is recommended.
+**** For the reason why BBV is not recommended, see the branching rules from {{Event/Route|D|red}} to {{Event/Route|F|blue}}
+*HP Phase
+**'''Note:'''Beware that a (f)BB(V) in fleet can make {{Event/Route|M|red}} more lethal.
+**{{Event/Route|D|red|F|blue|E|orange|K|blue|M|red|O|red}}
+*** 2 DD 1 CL 1 CVL 1-2 (f)BB(V) 0-1 CV
+**** For compositions using Kinu/Yura/Tama/Tatsuta
+*** 0-1 CL 2-4 DD 2-3 CA(V)
+****Same fleet from TP phase can be used
+*** 2-3 DD 2-3 CA(V) 1 CV(L)
+****A derive of above where a DD or CA is replaced with a CV(L) to provide air power.
+*** 2 DD 1 CAV + '''1 CV(L/B) or 1 CA(V)''' + '''1(f)BB or 1 CA(V)''' + '''1CV(L) or 1 CA(V)'''
+****Replacing all CV(L/B) and fBB is possible. If kept, the 1 CAV is specific as you cannot have more than 3 (CA + f(BB)v + CV(L/B)); CAV does not count in this. If you are also replacing 1CVL because they are attacking submarine at {{Event/Route|D|red}}, keep in mind that (F)BB(V)+CV(B) ≤ 2 if you wish to route to {{Event/Route|M|red}}. CL is allowed if you wanted.
+**** For the reason why BBV is not recommended, see the branching rules from {{Event/Route|D|red}} to {{Event/Route|F|blue}}
+*'''Addendum''':
+**Avoid using European ships, as they are useful in E-4 and E-5.
+**Also, avoid using historical ships needed for E-3 due to their potential bonus.
+<!--
+===Friend Fleets===
+{{Fleets|friend=Early Fall 2018 Event|map=E-2}}
+-->
+===Map progression===
+{{#tag:gallery|
+Early_Fall_2018_Event_E-2_Map_p1.png{{!}}Map during transport phase at node I.
+Early_Fall_2018_Event_E-2_Map_p2.png{{!}}Full map during HP phase at node O.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=350}}
+
+===LBAS Flight Range===
+[[File:Early_Fall_2018_Event_E-2_LBAS_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

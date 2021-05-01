@@ -1,0 +1,81 @@
+It has been noted a fleet with ''low'' enough Line of Sight can go the B-F-H-K in [[World 6#World 6-2: MS.E8.AB.B8.E5.B3.B6.E9.98.B2.E8.A1.9B.E6.88.A6 Defense of the MS Archipelago|World 6-2]].  But there have been a lot of varying reports about what the magic LoS number is and how different LoS factors contribute.  So I have been testing various combinations in a systematic way, and decided to write this post about it.
+
+First of all, the fleet:
+*Bismarck drei, level 98
+*Kitakami kai ni, level 96
+*Ooi kai ni, level 95
+*Ayanami kai ni, level 90
+*Shimakaze kai, level 90
+*Kaga kai, level 98
+For equipment, Bismarck has 2x 46cm cannons, an AP shell, and a seaplane (more on that later).  The plane is her only piece of equipment that contributes to LoS.  Kitakami and Ooi both have 2x15.5 cm secondary cannons and a midget sub.  None of their equipment contributes to LoS.  Ayanami and Shimakaze are both equipped with 2x 10cm HA dual-purpose cannons and a Type-33 radar which adds +7 to LoS.  Kaga is equipped with the 601 Reppu, a regular Reppu, Reppu kai, and a bomber of some sort (again, more on that later).
+
+Base LoS (no equipment) is:
+*Bismarck: 58
+*Kitakami: 41
+*Ooi: 41
+*Ayanami: 45
+*Shimakaze: 35
+*Kaga: 88
+In the normal effective LoS formula these values are all summed and then square-rooted.  The square-root of this sum is 17.55, which is rounded down to 17.  Because it's rounded down, the sum inside the square-root would have to reach 18^2 before it has ''any'' effect on effective LoS.  That requires ''16 points'' of LoS.  Obviously no LoS-affecting equipment which tend to have contributions in the couple of points range is going to have any effect on effective LoS ''if their contribution is inside that square root''.
+
+I am emphasizing this point because there are disagreements about how different types on equipment contribute to effective LoS.  The [[Line of Sight]] page claims that contributions from non-recon planes with an LoS bonus should be inside the square root.  If that were true than no non-recon planes would have any effect on effective LoS in this case because we're just too far from the next integer value.
+
+So effective LoS according to the LoS page should be 17 + 2x recon plane LoS + radar LoS.  Or just 31 + 2x recon plane LoS in my case as the only radars are two Type-33s that each give a +7.  Other sources can be neglected.
+
+But I will also calculate LoS as 31+ 2x recon plane LoS + non-recon plane contributions for reasons that should become obvious in the table below.
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|Bismarck's Seaplane
+! scope="col"|Kaga's Bomber
+! scope="col"|Effective LoS according to [[Line of Sight|Line of Sight page]]
+! scope="col"|Effective LoS including non-recon planes
+! scope="col"|Attemtps
+! scope="col"|Went to H
+! scope="col"|Went to I
+|-
+|Type 0 Obs.
+|601 Suisei
+|43
+|44
+|2
+|0
+|2
+|-
+|Ar196
+|Ju87
+|41
+|41
+|1
+|1
+|0
+|-
+|Ar196
+|601 Suisei
+|41
+|42
+|4
+|4
+|0
+|-
+|Type 0 Obs.
+|Ju87
+|43
+|43
+|2
+|2
+|0
+|-
+|Ar196
+|Egusa Suisei
+|41
+|45
+|1
+|0
+|1
+|}
+While I don't have a huge number of trials here and there could be random factors, so far it really looks like effective LoS according to the Line of Sight page is a terrible predictor of where this fleet will go.  The last line is possibly the most telling, as it is tied for the lowest value with fleets that went to H if you don't include the non-recon plane contribution, yet it went to I.
+
+On the other hand, when including the non-recon plane contribution this actually gives a 100% accurate prediction (with the data available thus far, anyway).  Every fleet with LoS of 43 or less went to H, and every fleet with LoS of 44 or more went to I.
+
+So in conclusion I really don't think you should be putting non-recon plane LoS contributions inside that square root.
+[[Category:Blog posts]]

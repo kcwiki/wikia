@@ -1,0 +1,350 @@
+<noinclude>
+{{Under Construction
+|Desc = pending review.
+|Page Adopted = がか
+}}
+{| class="wikitable typography-xl-optout mw-collapsible {{#if:{{{collapsed|}}}|mw-collapsed|}}" style="width:100%;text-align:center;"
+!colspan="11"|[[Partials/Anti-Installation Weapons|Anti-Installation Weapons]]
+|-
+|colspan="11" style="text-align:left"|
+[[Installation Type|Installations]], or Abyssal Land Bases, are speed 0 enemies. When attacking installations, the [[Damage Calculation|final attack power]] is calculated as follows (all bonuses are anti-installation bonuses: <span style="color:blue">pre-cap multiplicative bonuses</span>, <span style="color:green">pre-cap additive bonuses</span>, and <span style="color:red">post-cap multiplicative bonuses</span>, they are listed below; the usual modifiers are omitted, together with flooring functions):
+<div style="text-align:center;">
+final = cap((initial <span style="color:blue">× pre</span> <span style="color:green">+ pre</span>) × … + …) <span style="color:red">× post</span> × …
+</div>
+*When there is stacking, multiple values are listed (for 1, 2, etc. pieces of the equipment)
+*a~b denotes the bonus for unimproved (a) and max. improved (b) equipment
+*↑ means "same (multiplicative or additive, pre-cap or post-cap, depending on the color) bonus as above"
+For simplicity, the following background colors are used:
+*Green: <span style="background:#A5D6A7">Very Effective</span>, <span style="background:#C8E6C9">Effective</span>, <span style="background:#E8F5E9">Small Effect</span>
+*Red: <span style="background:#FFCDD2">No Effect</span>
+*Unknown otherwise
+|-
+!rowspan="2" style="width:160px;"|Target
+!rowspan="2"|Type
+!colspan="9"|Weaknesses
+|-
+!{{EquipmentCardKai|Type 3 Shell|size=40px}}
+!{{EquipmentCardKai|WG42 (Wurfgerät 42)|size=40px}}
+!{{EquipmentCardKai|Daihatsu Landing Craft|size=40px}}
+!{{EquipmentCardKai|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|size=40px}}
+!{{EquipmentCardKai|Special Type 2 Amphibious Landing Craft|size=40px}}
+!{{EquipmentCardKai|Type 1 Armor Piercing Shell|size=40px}}<br>{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=40px}}
+![[File:Seaplane.png]]
+![[File:RedPlane.png]]
+![[DD]]/[[CL]]
+|-
+|{{ShipBattleCardKai|Airfield Princess}}
+|rowspan="7"|Common<br>(BBV)
+|rowspan="12" style="color:blue;background:#A5D6A7;"|2.5
+|rowspan="7" style="color:green;background:#C8E6C9;"|75<br>110<br>140<br>160
+|rowspan="7" style="background:;"|
+|rowspan="7" style="background:;"|
+|rowspan="7" style="background:;"|
+|rowspan="13" style="color:red;background:#E8F5E9;"|{{Tooltip|1.08|1.1 with a Radar, 1.15 with a Secondary Gun; Day Battle only}}
+|rowspan="10" style="background:#FFCDD2;"|No
+|rowspan="10" style="background:#FFCDD2;"|No
+|rowspan="13" style="background:#FFCDD2;"|No
+|-
+|{{ShipBattleCardKai|Harbour Princess}}
+|-
+|{{ShipBattleCardKai|Isolated Island Demon}}
+|-
+|{{ShipBattleCardKai|Northern Princess}}
+|-
+|{{ShipBattleCardKai|Midway Princess}}
+|-
+|{{ShipBattleCardKai|Harbour Water Demon}}
+|-
+|{{ShipBattleCardKai|Anchorage Water Demon}}
+|-
+|{{ShipBattleCardKai|Supply Depot Princess}}
+|BBV
+|style="background:#A5D6A7;"|<span style="color:green">↑</span><br><span style="color:red">1.25</span><br><span style="color:red">1.625</span>
+|
+|style="color:red;background:#C8E6C9;"|1.3~1.56<br>2.08~2.496
+|style="color:red;background:#C8E6C9;"|1.7~2.2(6)<br>2.5-3.(3)
+|-
+|{{ShipBattleCardKai|Harbour Summer Princess}}
+|BBV
+|style="color:green;background:#C8E6C9;"|↑ (?)
+|
+|
+|
+|-
+|{{ShipBattleCardKai|Lycoris Princess}}
+|CV
+|style="color:green;background:#C8E6C9;"|↑ (?)
+|
+|
+|
+|-
+|{{ShipBattleCardKai|Central Princess}}
+|BB
+|style="color:green;background:#C8E6C9;"|↑ (?)
+|
+|
+|style="background:#A5D6A7;"|?
+|style="background:#C8E6C9;"|?
+|style="background:#C8E6C9;"|?
+|-
+|{{ShipBattleCardKai|Central Princess/Damaged}}
+|BB
+|style="background:#A5D6A7;"|<span style="color:green">↑ (?)</span><br>?
+|
+|
+|style="background:#A5D6A7;"|?
+|style="background:#C8E6C9;"|?
+|style="background:#C8E6C9;"|?
+|-
+|{{ShipBattleCardKai|Isolated Island Princess}}
+|CV<br>BBV<br>BB
+|style="color:blue;background:#C8E6C9;"|1.75
+|style="background:#A5D6A7;"|<span style="color:green">↑</span><br><span style="color:blue">1.4</span><br><span style="color:blue">2.1</span>
+|style="color:blue;background:#C8E6C9;"|{{Tooltip|?|[1.575,?]~?}}
+|style="color:blue;background:#C8E6C9;"|{{Tooltip|?|[1.72,?]~?}}
+|style="color:blue;background:#A5D6A7;"|{{Tooltip|?|[2.32,2.693]~?}}
+|style="background:#FFCDD2;"|No
+|style="background:#FFCDD2;"|No
+|-
+|{{ShipBattleCardKai|Artillery Imp}}
+|Pillbox<br>(BB)
+|style="background:#FFCDD2;"|No
+|style="background:#A5D6A7;"|<span style="color:green">↑</span><br><span style="color:blue">1.60</span><br><span style="color:blue">2.72</span>
+|style="color:blue;background:#C8E6C9;"|1.8~2.16
+|style="color:blue;background:#A5D6A7;"|2.15~2.56<br>3.0~3.6
+|style="color:blue;background:#A5D6A7;"|2.4~3.2<br>3.2~4.2(6)
+|style="background:#C8E6C9;"|<span style="color:red">↑</span><br><span style="color:blue">1.85</span>
+|style="color:blue;background:#C8E6C9;"|1.5
+|style="background:#FFCDD2;"|No
+|style="color:blue;background:#C8E6C9;"|1.4
+|-
+!colspan="11"|Notes
+|-
+|colspan="11" style="text-align:left"|
+*[[Harbour Summer Princess]] may have [[Installation_Type#Harbour_Summer_Princess_Damaged_Form|different modifiers]] in damaged form
+*[[File:Seaplane.png]] is [[Seaplane|Seaplane Bombers]] (also [[Seaplane|Seaplane Fighters]] for [[Artillery Imp]]s)
+*[[File:RedPlane.png]] is [[Dive Bombers]]
+*Again, post-cap AP shell bonus should only affect Day Battle
+|-
+!colspan="11"|Sources
+|-
+|colspan="11" style="text-align:left"|
+*[http://ja.kancolle.wikia.com/wiki/%E7%89%B9%E5%8A%B9 特効 @ ja.kancolle.wikia.com]
+|}
+{| class="wikitable typography-xl-optout mw-collapsible {{#if:{{{collapsed|}}}|mw-collapsed|}}" style="width:100%;text-align:center;"
+!colspan="11"|[[Partials/Anti-Installation Weapons|Anti-Installation Weapons]] (Combinations)
+|-
+!rowspan="2" style="width:160px;"|Target
+!colspan="9"|Combinations
+|-
+!colspan="9"|''Add combinations here''
+|-
+!Common
+|colspan="9" rowspan="4"|''Describe effects here (different conditions: day/night battle, health, engagement)''
+|-
+![[Supply Depot Princess]]
+|-
+![[Isolated Island Princess]]
+|-
+![[Artillery Imp]]
+|}
+</noinclude>
+{| class="wikitable typography-xl-optout mw-collapsible {{#if:{{{collapsed|}}}|mw-collapsed|}}" style="width:100%;text-align:center;"
+!colspan="11"|[[Partials/Anti-Installation Weapons|Anti-Installation Weapons]] (Simplified Chart)
+|-
+!rowspan="2" style="width:160px;"|Target
+!colspan="9"|Weaknesses
+|-
+!{{EquipmentCardKai|Type 3 Shell|size=60px}}
+!{{EquipmentCardKai|WG42 (Wurfgerät 42)|size=60px}}
+!{{EquipmentCardKai|Daihatsu Landing Craft|size=60px}}
+!{{EquipmentCardKai|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|size=60px}}{{EquipmentCardKai|Special Type 2 Amphibious Landing Craft|size=60px}}
+!{{EquipmentCardKai|Type 1 Armor Piercing Shell|size=60px}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=60px}}
+![[File:Seaplane.png]]
+![[DD]]/[[CL]]
+|-
+!Common
+|style="background:#A5D6A7;"|Very Effective
+|style="background:#C8E6C9;"|Effective
+|style="background:;"|?
+|style="background:;"|?
+|style="background:#E8F5E9;"|Small Effect
+|style="background:#FFCDD2;"|No Effect
+|style="background:#FFCDD2;"|No Effect
+|-
+![[Supply Depot Princess]]
+|style="background:#A5D6A7;"|Very Effective
+|style="background:#A5D6A7;"|Very Effective
+|style="background:;"|?
+|style="background:#C8E6C9;"|Effective
+|style="background:#E8F5E9;"|Small Effect
+|style="background:#FFCDD2;"|No Effect
+|style="background:#FFCDD2;"|No Effect
+|-
+![[Isolated Island Princess]]
+|style="background:#C8E6C9;"|Effective
+|style="background:#A5D6A7;"|Very Effective
+|style="background:#C8E6C9;"|Effective (?)
+|style="background:#A5D6A7;"|Very Effective (?)
+|style="background:#E8F5E9;"|Small Effect
+|style="background:#FFCDD2;"|No Effect
+|style="background:#FFCDD2;"|No Effect
+|-
+![[Artillery Imp]]
+|style="background:#FFCDD2;"|No Effect
+|style="background:#A5D6A7;"|Very Effective
+|style="background:#C8E6C9;"|Effective
+|style="background:#A5D6A7;"|Very Effective
+|style="background:#C8E6C9;"|Effective
+|style="background:#C8E6C9;"|Effective
+|style="background:#C8E6C9;"|Effective
+|}
+<noinclude>
+{| class="wikitable typography-xl-optout mw-collapsible {{#if:{{{collapsed|}}}|mw-collapsed|}}" style="width:100%; text-align:center; background: white;"
+!colspan="7"|[[Partials/Anti-Installation Weapons|Anti-Installation Weapons]] (Another Version)
+|-
+| rowspan="2" | 
+| colspan="3" | '''Pre-Cap'''
+| colspan="3" | '''Post-Cap'''
+|- 
+| Soft-Installations
+| Artillery Imps
+| Isolated Island Hime
+| Supply Depot
+| CA(V), (F)BB(V), CV(B)
+| PT Imps
+|-
+| style="background:#D9D9D9;" | Type 3 Shell
+<!--   Soft-Installations   -->| style="background:#A9D08E;" | x2.5
+<!--     Artillery Imps     -->| style="background:#F8CBAD;" | x1
+<!--  Isolated Island Hime  -->| style="background:#BDD6AC;" | x1.75
+<!--      Supply Depot      -->| style="background:#F8CBAD;" | x1
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#BDD6AC;" | x1.3
+|-
+| DD / CL
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1
+<!--     Artillery Imps     -->| style="background:#BDD6AC;" | x1.4
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1
+<!--      Supply Depot      -->| style="background:#F8CBAD;" | x1
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| style="background:#D9D9D9;" | Daihatsu
+<!--   Soft-Installations   -->| ?
+<!--     Artillery Imps     -->| style="background:#BDD6AC;" | x(1.8+0.0036 per ☆)
+<!--  Isolated Island Hime  -->| style="background:#BDD6AC;" | x(1.8+0.0036 per ☆)
+<!--      Supply Depot      -->| style="background:#F8CBAD;" | x1?
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| style="background:#D9D9D9;" | Landing Force
+<!--   Soft-Installations   -->| ?
+<!--     Artillery Imps     -->| style="background:#A9D08E;" | x(2.15+0.043 per ☆)
+<!--  Isolated Island Hime  -->| style="background:#A9D08E;" | x(2.15+0.043 per ☆)
+<!--      Supply Depot      -->| style="background:#BDD6AC;" | x(1.3+0.026 per ☆)
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| style="background:#D9D9D9;" | 2 Landing Forces
+<!--   Soft-Installations   -->| ?
+<!--     Artillery Imps     -->| style="background:#A9D08E;" | x(3+0.06 per ☆)
+<!--  Isolated Island Hime  -->| style="background:#A9D08E;" | x(3+0.06 per ☆)
+<!--      Supply Depot      -->| style="background:#BDD6AC;" | x(2.08+0.0416 per avg ☆)
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| Type 2 Tank
+<!--   Soft-Installations   -->| ?
+<!--     Artillery Imps     -->| style="background:#A9D08E;" | x(2.4+0.08 per ☆)
+<!--  Isolated Island Hime  -->| style="background:#A9D08E;" | x(2.4+0.08 per ☆)
+<!--      Supply Depot      -->| style="background:#BDD6AC;" | x(1.7+0.051 per ☆)
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| style="background:#D9D9D9;" | WG42
+<!--   Soft-Installations   -->| style="background:#BDD6AC;" | +75
+<!--     Artillery Imps     -->| style="background:#A9D08E;" | x1.6+75
+<!--  Isolated Island Hime  -->| style="background:#A9D08E;" | x1.4+75
+<!--      Supply Depot      -->| style="background:#BDD6AC;" | x1.25
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| style="background:#D9D9D9;" | 2 WG42
+<!--   Soft-Installations   -->| style="background:#BDD6AC;" | +110
+<!--     Artillery Imps     -->| style="background:#A9D08E;" | x2.72+110
+<!--  Isolated Island Hime  -->| style="background:#A9D08E;" | x2.1+110
+<!--      Supply Depot      -->| style="background:#BDD6AC;" | x1.625
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| AP Shell
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1 Post-Cap only
+<!--     Artillery Imps     -->| style="background:#BDD6AC;" | x1.85
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1 Post-Cap only
+<!--      Supply Depot      -->| style="background:#E2EFDA;" | x1.08 (as she's a BBV)
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#E2EFDA;" | x1.08
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1 
+|-
+| AP Shell + Radar
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1 Post-Cap only
+<!--     Artillery Imps     -->| style="background:#BDD6AC;" | x1.85
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1 Post-Cap only
+<!--      Supply Depot      -->| style="background:#E2EFDA;" | x1.1 (as she's a BBV)
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#E2EFDA;" | x1.1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1 
+|-
+| AP Shell + Secondary
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1 Post-Cap only
+<!--     Artillery Imps     -->| style="background:#BDD6AC;" | x1.85
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1 Post-Cap only
+<!--      Supply Depot      -->| style="background:#E2EFDA;" | x1.15 (as she's a BBV)
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#E2EFDA;" | x1.15
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| style="background:#D9D9D9;" | Seaplane Bomber
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1
+<!--     Artillery Imps     -->| style="background:#BDD6AC;" | x1.5 (Even if slot=0)
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1
+<!--      Supply Depot      -->| style="background:#F8CBAD;" | x1
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| style="background:#D9D9D9;" | Seaplane Fighter
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1
+<!--     Artillery Imps     -->| style="background:#BDD6AC;" | x1.5 (Even if slot=0)
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1
+<!--      Supply Depot      -->| style="background:#F8CBAD;" | x1
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#F8CBAD;" | x1
+|-
+| 2 Small Main Guns
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1
+<!--     Artillery Imps     -->| style="background:#F8CBAD;" | x1
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1
+<!--      Supply Depot      -->| style="background:#F8CBAD;" | x1
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#E2EFDA;" | x1.2
+|-
+| 2 AA Guns
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1
+<!--     Artillery Imps     -->| style="background:#F8CBAD;" | x1
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1
+<!--      Supply Depot      -->| style="background:#F8CBAD;" | x1
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#E2EFDA;" | x1.1
+|-
+| 2 Secondary Guns
+<!--   Soft-Installations   -->| style="background:#F8CBAD;" | x1
+<!--     Artillery Imps     -->| style="background:#F8CBAD;" | x1
+<!--  Isolated Island Hime  -->| style="background:#F8CBAD;" | x1
+<!--      Supply Depot      -->| style="background:#F8CBAD;" | x1
+<!-- CA(V), (F)BB(V), CV(B) -->| style="background:#F8CBAD;" | x1
+<!--         PT Imps        -->| style="background:#E2EFDA;" | x1.2
+|-
+| colspan="7" | Multiply highest applying pre-cap modifier from each category with modifiers from different categories, add WG42, then apply post-cap modifiers the same way.
+|-
+| colspan="5" style="text-align:left;" | Last updated: [https://cdn.discordapp.com/attachments/201372063150243840/228666401819328512/unknown.png 23 September 2016]
+| colspan="2" style="text-align:right;" | Created by [http://reddit.com/u/Sao-Link Sao-Link]
+|}
+</noinclude>

@@ -1,0 +1,253 @@
+TODO:
+* Add stars for products.
+* Fix red links.
+* Consider implementing abbreviating algorithm for ship names.
+* Consider implementing merging algorithm for multi-product equipment.
+* Consider switching to the following format (better for merging)
+{| class="wikitable typography-xl-optout" style="text-align:center;width:100%;"
+! colspan="4" width="25%" |Name and cost
+! rowspan="2" width="5%" |★
+! colspan="3" width="20%" |Consumes
+! colspan="7" width="15%" |Day
+! rowspan="2" width="15%" |Helper
+! rowspan="2" width="20%" |Upgrades to
+|-
+!{{Fuel}}
+!{{Ammo}}
+!{{Steel}}
+!{{Bauxite}}
+![[file:Development material.png|25px]]
+![[file:Improvement Materials.png|25px]]
+![[File:RedGunMedium.png|25px]]
+!S
+!M
+!T
+!W
+!T
+!F
+!S
+|-
+| style="background-color:rgb(169, 197, 168);" | 50
+| style="background-color:rgb(194, 184, 168);" | 30
+| style="background-color:rgb(191, 191, 191);" | 30
+| style="background-color:rgb(237, 206, 184);" | 10
+| 0
+| 1/2
+| 1/2
+| style="background:#fff9c4;" | <span class="advanced-tooltip">[[Drum Canister (Transport Use)|1]]<div class="tooltip-contents"><div style="word-wrap:break-word;width:150px;text-align:center;">Drum Canister (Transport Use)</div><div>[[File:Drum Canister (Transport Use) 075 Card.png|150px]]</div></div></span>
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | A<br />A<br />K<br />S
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | A<br />A<br />&nbsp;<br />S
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | &nbsp;<br />A<br />&nbsp;<br />S
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | &nbsp;<br />A<br />&nbsp;<br />S
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | &nbsp;<br />A<br />K<br />&nbsp;
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | A<br />A<br />K<br />&nbsp;
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | A<br />A<br />K<br />&nbsp;
+| rowspan="3" | <span class="advanced-tooltip">[[Abukuma Kai Ni]]<div class="tooltip-contents">[[File:Abukuma Kai Ni Battle.jpg]]</div></span><br /><span class="advanced-tooltip">[[Akitsu Maru]]<div class="tooltip-contents">[[File:Akitsu Maru Battle.jpg]]</div></span><br /><span class="advanced-tooltip">[[Kinu Kai Ni]]<div class="tooltip-contents">[[File:Kinu Kai Ni Battle.jpg]]</div></span><br /><span class="advanced-tooltip">[[Satsuki Kai Ni]]<div class="tooltip-contents">[[File:Satsuki Kai Ni Battle.jpg]]</div></span>
+| rowspan="3" | 
+|-
+| rowspan="8" colspan="4" | <span class="advanced-tooltip">[[Daihatsu Landing Craft]]<div class="tooltip-contents">[[File:Daihatsu Landing Craft 068 Card.png|150px]]</div></span>
+|6
+|4/4
+|2/3
+|style="background:#fff9c4;" | <span class="advanced-tooltip">[[7.7mm Machine Gun|1]]<div class="tooltip-contents"><div style="word-wrap:break-word;width:150px;text-align:center;">7.7mm Machine Gun</div><div>[[File:7.7mm Machine Gun 037 Card.png|150px]]</div></div></span>
+|-
+| 10
+| -/-
+| -/-
+| -
+|-
+| 0
+| -/-
+| -/-
+| style="background:transparent;" | -
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | A<br />A<br />S
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | A<br />A<br />S
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | &nbsp;<br />A<br />S
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | &nbsp;<br />A<br />S
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | &nbsp;<br />A<br />&nbsp;
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | A<br />A<br />&nbsp;
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | A<br />A<br />&nbsp;
+| rowspan="3" | <span class="advanced-tooltip">[[Abukuma Kai Ni]]<div class="tooltip-contents">[[File:Abukuma Kai Ni Battle.jpg]]</div></span><br /><span class="advanced-tooltip">[[Akitsu Maru]]<div class="tooltip-contents">[[File:Akitsu Maru Battle.jpg]]</div></span><br /><span class="advanced-tooltip">[[Satsuki Kai Ni]]<div class="tooltip-contents">[[File:Satsuki Kai Ni Battle.jpg]]</div></span>
+| rowspan="3" | <span class="advanced-tooltip">[[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]]<div class="tooltip-contents">[[File:Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force) 166 Card.png|150px]]</div></span>
+|-
+| 6
+| -/-
+| -/-
+| -
+|-
+| 10
+| 4/8
+| 3/7
+| style="background:#fff9c4;" | <span class="advanced-tooltip">[[12.7mm Single Machine Gun Mount|3]]<div class="tooltip-contents"><div style="word-wrap:break-word;width:150px;text-align:center;">12.7mm Single Machine Gun Mount</div><div>[[File:12.7mm Single Machine Gun Mount 038 Card.png|150px]]</div></div></span>
+|-
+| 0
+| -/-
+| -/-
+| -
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | K
+| style="background-color:rgb(255, 153, 153)" rowspan="3" | ✗
+| style="background-color:rgb(255, 153, 153)" rowspan="3" | ✗
+| style="background-color:rgb(255, 153, 153)" rowspan="3" | ✗
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | K
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | K
+| style="background-color:rgb(170, 235, 170)" rowspan="3" | K
+| rowspan="3" | <span class="advanced-tooltip">[[Kinu Kai Ni]]<div class="tooltip-contents">[[File:Kinu Kai Ni Battle.jpg]]</div></span>
+| rowspan="3" | <span class="advanced-tooltip">[[Toku Daihatsu Landing Craft]]<div class="tooltip-contents">[[File:Toku Daihatsu Landing Craft 193 Card.png|150px]]</div></span>
+|-
+| 6
+| -/-
+| -/-
+| -
+|-
+| 10
+| 8/16
+| 6/12
+| style="background:#ffcdd2;" | 4
+|-
+| style="background-color:rgb(169, 197, 168);" | 70
+| style="background-color:rgb(194, 184, 168);" | 80
+| style="background-color:rgb(191, 191, 191);" | 120
+| style="background-color:rgb(237, 206, 184);" | 30
+| colspan="13" | ...
+|-
+| rowspan="8" colspan="4" | [[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]]
+| colspan="13" | ...
+|}
+* Crosscheck with [[Akashi's Improvement Arsenal/Table]] and [[Akashi's Improvement Arsenal/Table (Detailed)]].
+* Test for bad input.
+
+{{Notice|class=show-in-tabview|This is a table of possible improvements, for an introduction to the improvement mechanic, an overview of the improvement effects, ways to get screws, or a more detailed version of the table, see the other tabs on this page.}}
+__TOC__
+Notes:
+* Equipment that can be improved depends on the day of the week (the improvement list changes at 0:00 '''JST''') and the ship in the second slot of the first fleet.
+* When the 2nd Ship varies by day, the ship's initial is used; ✓ denotes that any ship can be used.
+* Colors for consumed equipment: yellow/orange for buildable/unbuildable equipment that is different from equipment that is being improved (see tooltips), grey/red for buildable/unbuildable equipment that is same as improved equipment.
+{{ImprovementTable
+|!Small Caliber Main Guns
+|#
+|12.7cm Twin Gun Mount
+|12.7cm Twin Gun Mount Model B Kai 2
+|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director
+|!Medium Caliber Main Guns
+|#
+|14cm Single Gun Mount
+|14cm Twin Gun Mount
+|15.2cm Twin Gun Mount
+|15.2cm Twin Gun Mount Kai
+|15.5cm Triple Gun Mount
+|20.3cm Twin Gun Mount
+|20.3cm (No.2) Twin Gun Mount
+|20.3cm (No.3) Twin Gun Mount
+|203mm/53 Twin Gun Mount
+|!Large Caliber Main Guns
+|#
+|35.6cm Twin Gun Mount
+|Prototype 35.6cm Triple Gun Mount
+|35.6cm Twin Gun Mount (Dazzle Camouflage)
+|38cm Twin Gun Mount
+|38cm Twin Gun Mount Kai
+|38.1cm Mk.I Twin Gun Mount
+|38.1cm Mk.I/N Twin Gun Mount Kai
+|381mm/50 Triple Gun Mount
+|381mm/50 Triple Gun Mount Kai
+|16inch Triple Gun Mount Mk.7
+|16inch Triple Gun Mount Mk.7 + GFCS
+|41cm Twin Gun Mount
+|Prototype 41cm Triple Gun Mount
+|Prototype 46cm Twin Gun Mount
+|46cm Triple Gun Mount
+|Prototype 51cm Twin Gun Mount
+|!Secondary Guns
+|#
+|15.2cm Single Gun Mount
+|OTO 152mm Triple Rapid Fire Gun Mount
+|90mm Single High-angle Gun Mount
+|!Anti-Air Equipment
+|#
+|25mm Single Autocannon Mount
+|25mm Twin Autocannon Mount
+|25mm Triple Autocannon Mount
+|25mm Triple Autocannon Mount (Concentrated Deployment)
+|Type 91 Anti-Aircraft Fire Director
+|Type 94 Anti-Aircraft Fire Director
+|!Torpedoes
+|#
+|61cm Triple Torpedo Mount
+|61cm Triple (Oxygen) Torpedo Mount
+|61cm Quadruple Torpedo Mount
+|61cm Quadruple (Oxygen) Torpedo Mount
+|61cm Quintuple (Oxygen) Torpedo Mount
+|Prototype 61cm Sextuple (Oxygen) Torpedo Mount
+|!Carrier-based Fighter Aircraft
+|#
+|Type 96 Fighter
+|Type 0 Fighter Model 21
+|Type 0 Fighter Model 21 (Skilled)
+|Type 0 Fighter Model 32
+|Type 0 Fighter Model 32 (Skilled)
+|Type 0 Fighter Model 52
+|Type 0 Fighter Model 52 (Skilled)
+|Zero Fighter Model 52C (601 Air Group)
+|Zero Fighter Model 52C (w/ Iwai Flight)
+|Zero Fighter Model 52A (w/ Iwamoto Flight)
+|Type 0 Fighter Model 53 (Iwamoto Squadron)
+|F4F-3
+|F4F-4
+|F6F-3
+|!Carrier-based Dive Bombers
+|#
+|Type 0 Fighter Model 62 (Fighter-bomber)
+|Zero Fighter Model 62 (Fighter-bomber / Iwai Squadron)
+|!Carrier-based Reconnaissance Aircraft
+|#
+|Prototype Keiun (Carrier-based Reconnaissance Model)
+|!Seaplanes
+|#
+|Type 0 Reconnaissance Seaplane
+|Type 0 Observation Seaplane
+|Type 98 Reconnaissance Seaplane (Night Recon)
+|Ro.43 Reconnaissance Seaplane
+|!ASW Equipment
+|#
+|Type 93 Passive Sonar
+|Type 3 Active Sonar
+|Type 4 Passive Sonar
+|Type 94 Depth Charge Projector
+|Type 3 Depth Charge Projector
+|!Radars
+|#
+|Type 13 Air Radar
+|Type 13 Air Radar Kai
+|Type 21 Air Radar
+|Type 21 Air Radar Kai
+|Type 22 Surface Radar
+|Type 22 Surface Radar Kai 4
+|Type 32 Surface Radar
+|Type 32 Surface Radar Kai
+<!--|Submarine Radar & Waterproof Telescope-->
+|!Engines
+|#
+|Enhanced Kanhon Type Boiler
+|New Model High Temperature High Pressure Boiler
+|!Shells
+|#
+|Type 91 Armor Piercing Shell
+|Type 1 Armor Piercing Shell
+|!Bulges
+|#
+<!--|Anti-torpedo Bulge (Medium)-->
+<!--|New Kanhon Design Anti-torpedo Bulge (Medium)-->
+|Anti-torpedo Bulge (Large)
+|New Kanhon Design Anti-torpedo Bulge (Large)
+|!Landing Craft
+|#
+|Daihatsu Landing Craft
+|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)
+|Special Type 2 Amphibious Landing Craft
+|Toku Daihatsu Landing Craft
+|!Other Equipment
+|#
+|Searchlight
+|Type 96 150cm Searchlight
+}}
+[[Category:Relevant sandboxes]]

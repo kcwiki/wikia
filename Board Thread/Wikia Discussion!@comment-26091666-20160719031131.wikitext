@@ -1,0 +1,52 @@
+If you are getting a "Script error" with some of the ship/equipment pages, you may wish to try appending the words: 
+  ?action=purge
+To the end of the URL, for instance:
+  http://kancolle.wikia.com/wiki/Akizuki
+Becomes:
+  http://kancolle.wikia.com/wiki/Akizuki?action=purge
+You may also need to do this a few times to make the page show the images as well as the accompanying infobox that comes with the image.
+
+This is a known issue amongst [[Kancolle Wiki:Staff|KC wikia staffers]] as the following transcript has been provided below (between [[User:がか|がか]] and [[User:Ckwng|Ckwng]]):
+
+{{StylishQuote/Draft 
+|user = がか
+|quote = so i ran a purger, and it fixed stuff, but now script errors are back again (ran the purger again, fixed again)
+  Lua error: attempt to perform arithmetic on field '?' (a nil value).
+  Backtrace:
+  (tail call): ?
+  [C]: in function "error"
+  MWServer.lua:62: in function "error"
+  (tail call): ?
+  (tail call): ?
+  Module:StringOperations:9: ?
+  (tail call): ?
+  (tail call): ?
+  (tail call): ?
+  Module:ShipCardKai:30: in function "get"
+  Module:ShipInfoKai:224: in function "?"
+  Module:ShipInfoKai:512: in function "?"
+  (tail call): ?
+  (tail call): ?
+  (tail call): ?
+  mw.lua:425: ?
+  (tail call): ?
+  [C]: in function "xpcall"
+  MWServer.lua:73: in function "handleCall"
+  MWServer.lua:266: in function "dispatch"
+  MWServer.lua:33: in function "execute"
+  mw_main.lua:7: in main chunk
+  [C]: ?
+}}<br><br>
+{{StylishQuote/Draft 
+|user = Ckwng
+|quote = yeah, I have no idea why that happens<br>
+it's happening in Lua core<br>
+in the error() built-in<br>
+Hasn't happened before, so...<br>
+not sure what to make of this.<br>
+It's always the same place though<br>
+You can see MWServer.lua here: https://github.com/Wikia/app/blob/dev/extensions/Scribunto/engines/LuaStandalone/MWServer.lua<br>
+I've sent a bug report to Wikia staff
+}}
+
+'''20<sup>th</sup> July 2016 Update''': It appears the pages that depends on it are broken. Apparently a workaround is to edit the page (in visual editor mode) and it ''may'' work.<ac_metadata title="Script errors on the likes of ShipInfoKai template/module amongst other templates/Scribunto modules that depends on Lua" notify_everyone="1468897891"> </ac_metadata>

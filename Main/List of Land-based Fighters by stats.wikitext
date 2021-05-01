@@ -1,0 +1,68 @@
+{{todo|
+* Merge Notes table into the main table: hide Classes column and add two extra columns for Air Defense AA and Sortie AA.
+* Add good/outstanding values for those.
+* Make it sortable: instead of creating a subpage, add a toggle between grouped and sortable tables. Can be applied to other equipment and ship listing pages.
+* Equipment/ship listing page view component?
+}}
+*Green : Outstanding
+*Yellow : Above average
+
+{{EquipmentComparisonKai
+|iterator = equipmentByType|type = 48|sort = _icon
+|firepower_outstanding = 1
+|firepower_good = 0
+|aa_outstanding = 10
+|aa_good = 8
+|los_outstanding = 2
+|los_good = 0
+}}
+==Notes==
+Effective AA for LBAS Air defense (AA + 2 * AB + I) and LBAS sortie (AA + 1.5 * I):
+{| class="article-table"
+!Name!!Air Defense AA!!Sortie AA!!Range
+|-
+|Reppuu Kai 352||28||15.5||4
+|-
+|Reppuu Kai||24||13||4
+|-
+|Fw 190 D-9||21||16.5||3
+|-
+|Shuusui||21||3||1
+|-
+|Me 163B||20||2||1
+|-
+|Shiden 343||19||17||4
+|-
+|Hien 244th||19||15||4
+|-
+|Hayabusa 64th||18||18.5||7
+|-
+|Spitfire Mk.IX||18||16||4
+|-
+|Raiden||18||9||2
+|-
+|Prototype Shuusui||18||2||1
+|-
+|Spitfire Mk.V||17||12||5
+|-
+|Hien 1D||16||13.5||4
+|-
+|Shiden 21||14||13.5||4
+|-
+|Hayabusa 54th||13||12.5||7
+|-
+|Hien||13||12.5||3
+|-
+|Hayate||13||11.5||5
+|-
+|Hayabusa IIIA||12||11.5||6
+|-
+|Spitfire Mk.I||12||8.5||4
+|-
+|Shiden 11||11||9.5||3
+|-
+|Hayabusa II||8||9||6
+|}
+
+== See Also ==
+{{Equipmentlist}}

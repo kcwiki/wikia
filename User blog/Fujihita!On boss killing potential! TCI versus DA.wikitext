@@ -1,0 +1,131 @@
+This blog is a mathematical comparison between [[Kitakami]] / [[Ooi]]'s two possible equipment setups. In other words, to torpedo cut-in (TCI) or to double attack (DA), that is the question.
+
+There are three factors to consider:
+#'''Trigger rate''': 99% for DA. Luck-based for TCI, default is at 43% without yasen bonus for KTKM
+#'''Likelihood of non-scratch hits''': calculated based on boss's armor and ship's output.
+#'''Likelihood of moderate damage''': guessimate based on map analysis / sortie experiences
+
+But first, let's cover the root of TCI vs. DA argument.
+
+==Firepower cap==
+:To see how deep the rabbit hole goes, see [[Damage Calculation]].
+:But, who does that? It's MATH! Just read on for a simpler explanation.
+
+All attacks are capped by a certain value depending on the type of damage and phase of battle. But, for the most part, the only cap [[Kitakami]] and [[Ooi]] will have to worry about is yasen cap.
+
+:<span style="color:red">'''All night battle attacks are capped at 300 firepower'''</span>
+
+300 firepower cap is generous for pretty much everyone except those two CLTs and oh, the Abyssal. With some upgraded guns, [[Kitakami]] and [[Ooi]] can easily reach yasen cap using DA setup. This is pretty much the source of the entire argument.
+
+:If [[Kitakami]] and [[Ooi]] and reach yasen cap using DA setup, which has 99% trigger rate, why bother using TCI which has 60% trigger rate?
+
+==Health modifier==
+
+Firepower cap and high trigger rate is a fair enough assessment for DA, but it doesn't take into account of output if ship was moderately damaged (chuuha).
+
+Health modifier in damage calculation is a <span style="color:blue">pre-cap modifier</span>. This means excessive firepower in full health leaves a considerable safety margin in chuuha state.
+
+For some "special", wtf-armor bosses, a chuuha KTKM using TCI still has a chance to finish off boss while a chuuha KTKM using DA is as good as dead. In many cases, even if a chuuha KTKM can still kill boss using DA, she will find greater chance to do so under the same conditions using TCI. It comes down to the <span style="color:red">likelihood of non-scratch hits</span>.
+
+==Likelihood of non-scratch hits==
+
+===Scratch damage===
+
+In this game, when a ship girl lands a hit against an enemy, she will do damage as long as it's not a miss. If her attack power is pathetically weak versus heavily armored bosses, she will deal <span style="color:red">scratch damage</span> instead of <span style="color:blue">normal damage</span>. Scratch damage is great but it has one tiny little down side...
+
+:<span style="color:red">'''IT IS IMPOSSIBLE TO SCRATCH BOSSES TO DEATH.'''</span>
+
+When the boss HP gets too low, the scratch value will amount to 0 and will be displayed as a "miss"
+
+[[File:FUCK.gif|500px]]
+
+Kinda like that. GGWP [[Air Defense Princess|AD-hime]].
+
+
+===Armor roll===
+
+The next thing to know is that, boss's armor does not translate directly into defense power, which is the thing that's used in the actual damage calculation. The boss's displayed armor value can fluctuate by +/-30% when translated into defense power. This is random fluctuation is commonly known as <span style="color:red">armor roll</span>.
+
+;;For example
+*[[European Princess Damaged III]] with 289 armor
+*Her lowest defense power is 202
+*Her highest defense power is 375
+*Her average is 289, same as displayed armor value
+*Nobody cares about a few decimals off.
+
+As far as everything else is concerned, armor roll is the ONLY randomness factor in damage calculation.
+
+
+===Likelihood of non-scratch hits calculation===
+
+Non-scratch hits occur when the final firepower (after pre-cap bonuses, cap, and post-cap bonuses) exceeds the boss's final defense power (after armor roll).
+
+:'''Note''': Critical hit modifier is not taken into account as the proc rate is unknown and further randomness does not help the decision making process.
+
+The likelihood is calculated as followed:
+
+<div style="text-align:center"><math>P_{nonscratch} = \frac{firepower_{final} - defense_{min}}{defense_{max} - defense_{min}}</math></div>
+
+
+So if KTKM's final firepower is 280 and she hits [[European Princess Damaged III]], she will have 45% chance to deal a non-scratch hit. If she's at 300 firepower, she will have 56.64% chance to deal a non-scratch hit and so on...
+
+==Calculating overall odds==
+
+The overall odds are calculated when the following values have been determined:
+#Trigger rate <math>P_{trigger}</math>
+#Likelihood of non-scratch his for full health
+#Likelihood of non-scratch his for chuuha
+#Likelihood of moderate damage for a given map <math>P_{chuuha}</math>
+
+:'''Note''': The trigger rate for TCI in chuuha is ~15% higher than in normal health. Don't forget to take this into account.
+
+The likelihood of non-scratch hits for a given setup (assuming a failed TCI or DA will just do scratch damage) should be...
+
+<div style="text-align:center"><math>P_{setup} = P_{trigger} * P_{nonscratch}</math></div>
+
+
+The overall likelihood of non-scratch hits for a given setup after taking moderate damage probability into account should be...
+
+<div style="text-align:center"><math>P = (1-P_{chuuha}) * P_{setup}(normal) * P_{nonscratch}(normal)</math>
+<math>    + P_{chuuha} * P_{setup}(chuuha) * P_{nonscratch}(chuuha)</math></div>
+
+
+===Example===
+Consider the same scenario, KTKM vs. EU-hime (damaged III)
+*DA setup, full health: 280.8 damage per hit -> 45%
+*TCI setup, full health: 357 damage per hit but capped at 300 -> 56%
+*DA setup, chuuha: 196.56 damage per hit -> 0%
+*TCI setup, chuuha: 249.9 damage per hit -> 27%
+
+And giving the map a generous 50% chuuha rate. We have the following probabilities
+*DA setup = (100% - 50% chuuha rate) * 99% trigger rate * 45% non-scratch rate for normal DA + 50% chuuha rate * 99% trigger rate * 0% non-scratch rate for chuuha DA = '''22.27% overall chance to non-scratch boss'''
+*TCI setup = (100% - 50% chuuha rate) * 43% trigger rate * 56% non-scratch rate for normal TCI + 50% chuuha rate * 58% trigger rate * 27% non-scratch rate for chuuha TCI = '''19.87% overall chance to non-scratch boss'''
+
+Therefore, in this scenario, KTKM should choose '''DA setup'''.
+
+==Changing the odds==
+
+There is little room to improve the odds for DA but in general, by focusing on preventive measures and lowering chuuha rate, the overall odds for both DA setup and TCI setup will increase. Increasing chuuha rate leads to a rapid decrease in DA setup's odd and a slow decrease in TCI setup odd.
+
+Above a certain chuuha rate, TCI setup can become more favorable than DA setup
+*DA setup = (100% - 70% chuuha rate) * 99% trigger rate * 45% non-scratch rate for normal DA + 70% chuuha rate * 99% trigger rate * 0% non-scratch rate for chuuha DA = '''16.63% overall chance to non-scratch boss'''
+*TCI setup = (100% - 70% chuuha rate) * 43% trigger rate * 56% non-scratch rate for normal TCI + 70% chuuha rate * 58% trigger rate * 27% non-scratch rate for chuuha TCI = '''18.18% overall chance to non-scratch boss'''
+
+For TCI setup, there are more ways to improve the odds. Increasing trigger rate obviously increases the odds for TCI setup dramatically.
+
+When put in flagship position (+12% trigger rate):
+*TCI setup in flagship = (100% - 50% chuuha rate) * 55% trigger rate * 56% non-scratch rate for normal TCI + 50% chuuha rate * 70% trigger rate * 27% non-scratch rate for chuuha TCI = '''24.85% overall chance to non-scratch boss'''
+
+==Making the decision (math free)==
+Okay, nobody likes math, so when to use TCI and when to use DA setup for KTKM / Ooi?
+
+DA setup is the superior choice for the majority of cases. However, it is not the absolute truth. TCI setup should be used when:
+*Facing near-cap boss's armor
+*Facing abysmal chance to avoid chuuha before yasen
+*Using luck-modded KTKM / Ooi
+*Having ALL DA BONUSES
+
+;For ships that are not KTKM / Ooi, the formulas are above, please crunch the numbers and make the decision.
+
+
+[[Category:Blog posts]]

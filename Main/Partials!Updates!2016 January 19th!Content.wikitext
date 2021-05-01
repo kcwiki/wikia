@@ -1,0 +1,151 @@
+__NOTOC__
+== {{#if:{{{thread|}}}|[[Partials/Updates/2016_January_19th/Content|Content]]|[[Thread:385004|19th January]]}} ==
+{{#if:{{{thread|}}}||''For a full debriefing on the game update (including developer tweets), you may wish to refer to [[Partials/Updates/2016_January_19th|this link]].''}}
+
+====Summary====
+* Second remodel for {{ShipLink|Kasumi}}.<sup>''[See Related tweet]''</sup><ref name="relatedtweet" group="N" />
+:* Convertible remodel between Kai Ni (balanced type) and Kai Ni B (AA-Focus type)
+:* Kai Ni at 75, Kai Ni B at 88
+:* '''No Blueprint required.''' Does not require development materials to convert.
+:* She can equip [[Daihatsu Landing Craft]] in both Kai Ni and Kai Ni B forms
+:* She can equip [[Fleet Command Facility]] in her Kai Ni form but not in her Kai Ni B form.
+:* She can equip large radars (like [[Type 32 Surface Radar]] or [[FuMO25 Radar]]) and triggers a special AACI type in her Kai Ni B form.
+* Removal of [[Thread:382121|New Year]]:
+:* [[Seasonal/New_Year_2016#Art|Seasonal graphics]]
+:* [[Seasonal/New_Year_2016#Voices|Voice lines]]
+:* [[Seasonal/New_Year_2016#Quests|Quests]]
+:* Counter bar limited-time seasonal items.
+* Removal of remaining [[Decoration Material]]s.
+* [[Furniture]] update
+:* New seasonal furniture, and new furniture that require lots of coins
+:* ''Removal of New Year Furniture from furniture shop''<sup>[[Seasonal/New_Year_2016#Furniture|<nowiki>[</nowiki>1<nowiki>]</nowiki>]] [[Seasonal/End_of_Year_2015#Furniture|<nowiki>[</nowiki>2<nowiki>]</nowiki>]]
+:* The two hot spring furniture get a minor update
+:* Counter bar functionality returns to normal
+[[File:Special_furniture_purchasing_option.png|thumb|right]]
+:* Starting from this update, some furniture that require lots of furniture coins to purchase allow the optional use of a Furniture Fairy to lower the amount of furniture coins used. Refer to [[Furniture/Guide#Purchasing_Furniture|this page]] for more information.
+* Increased maximum expandable slot size by 10 kanmusu and 40 equipment to maximum 280 kanmusu and 1220 equipment.
+* UI Update
+[[File:Unboxing_furniture_coin_boxes_options_dialog.png|right]]
+:* You can now choose to open all, half, or 10 of the furniture boxes. Refer to [[Furniture/Guide#Overview_on_Furniture_coins|this page]] for more information.
+* Isuzu Kai Ni's AACI capability improved
+:* Increased effect for the original Isuzu AACI (AACI Type 14 now has an effect of +4 instead of +3), and she can also use Kasumi's AACI setup to activate AACI (With HA gun + machine gun, it can activate AACI type 15 to give an effect of +3).
+
+====[[Kasumi]] kai 2====
+{| class="wikitable"
+|-
+! [[Kasumi#Second_Upgrade|Kasumi Kai Ni at Level 75]]
+! [[Kasumi#Second_Upgrade|Kasumi Kai Ni B at Level 88]]
+|-
+| {{ShipGraphicKai|Kasumi/Kai Ni|size=300px}}
+| {{ShipGraphicKai|Kasumi/Kai Ni B|size=300px}}
+|-
+| {{ShipGraphicKai|Kasumi/Kai Ni|size=300px|damaged=true}}
+| {{ShipGraphicKai|Kasumi/Kai Ni B|size=300px|damaged=true}}
+|}
+
+====Seasonal stuff====
+:''See main page: [[Seasonal/Setsubun_2016]]''
+* New [[Seasonal/Setsubun_2016#Art|seasonal CG]] for {{ShipLink|Kiyoshimo}} and {{ShipLink|Mizuho}}.
+{| class="wikitable"
+|-
+! {{ShipLink|Kiyoshimo}}
+! {{ShipLink|Mizuho}}
+|-
+| {{ShipGraphicKai|Kiyoshimo/Setsubun|size=300px}}
+| {{ShipGraphicKai|Mizuho/Setsubun|size=300px}}
+|-
+| {{ShipGraphicKai|Kiyoshimo/Setsubun|size=300px|damaged=true}}
+| {{ShipGraphicKai|Mizuho|size=300px|damaged=true}}
+|}
+* New [[Seasonal/Setsubun_2016#Voices|seasonal voice lines]] for approximately 90 ships (including old seasonal voice lines).
+<gallery type="slideshow" widths="300" hideaddbutton="true">
+New Year wallpaper.png
+Mutsukis desk.png|New!
+Futon and pillow.png
+Adult's setsubun set.png
+Mutsukis window.png|New!
+Mt.Fuji tile painting.png
+Aircraft carrier stained glass.png|New!
+Aviation battleship stained glass.png|New!
+Setsubun Mamemaki set.png
+</gallery>
+* New [[Seasonal/Setsubun_2016#Furniture|furniture]]:
+:* <span style="font-weight:bold; color:#f00;"><sup>New!</sup></span> Mutsuki's desk
+:* <span style="font-weight:bold; color:#f00;"><sup>New!</sup></span> Mutsuki's window
+:* Setsubun bean throwing set
+:* Grown-up's setsubun set
+:* <span style="font-weight:bold; color:#f00;"><sup>New!</sup></span> CV stained glass
+:* <span style="font-weight:bold; color:#f00;"><sup>New!</sup></span> BBV stained glass
+{{clear}}
+
+====Kasumi kai 2 quests====
+:''See main page: [[Quests]]''
+{{QuestList|
+{{Quest
+|ID = B58
+|Title_JP = 旗艦「霞」北方海域を哨戒せよ！
+|Title_EN = Send Kasumi to Patrol the Northern Sea
+|Requirements = Sortie a fleet with {{ShipLink|Kasumi/Kai Ni|link=Kasumi}} Kai Ni as flagship, 3 DD and up to 2 additional ships to [[3-1|World 3-1]] and score a victory at the boss node.
+|Rewards_RSC = {{ItemStack
+|item = [[File:Fuel.png{{!}}30px{{!}}link=File:Fuel.png]]
+|text = 300
+}}{{ItemStack
+|item = [[File:Ammunition.png{{!}}30px{{!}}link=File:Ammunition.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Steel.png{{!}}30px{{!}}link=File:Steel.png]]
+|text = 300
+}}{{ItemStack
+|item = [[File:Bauxite.png{{!}}30px{{!}}link=File:Bauxite.png]]
+|text = 0
+}}
+|Rewards_Items = {{ItemStack
+|item = {{EquipmentCardKai|Type 13 Air Radar Kai|size=50px}}
+|text = 1
+}}{{ItemStack
+|item = [[File:Combat Provisions.png{{!}}50px{{!}}link=Combat Provisions]]
+|text = 1
+}}
+|Note = Requires: any daily quest(?)<br>Unlocks: [[Quests#B59|B59]]
+}}
+{{Quest
+|ID = B59
+|Title_JP = 旗艦「霞」出撃！敵艦隊を撃滅せよ！
+|Title_EN = Sortie Kasumi and Defeat the Enemy Fleet
+|Requirements = Sortie a fleet with {{ShipLink|Kasumi/Kai Ni|link=Kasumi}} Kai Ni as flagship, 2 DD and up to 3 additional ships to [[2-5|World 2-5]] and score an S rank victory at the boss node.
+|Rewards_RSC = {{ItemStack
+|item = [[File:Fuel.png{{!}}30px{{!}}link=File:Fuel.png]]
+|text = 500
+}}{{ItemStack
+|item = [[File:Ammunition.png{{!}}30px{{!}}link=File:Ammunition.png]]
+|text = 500
+}}{{ItemStack
+|item = [[File:Steel.png{{!}}30px{{!}}link=File:Steel.png]]
+|text = 0
+}}{{ItemStack
+|item = [[File:Bauxite.png{{!}}30px{{!}}link=File:Bauxite.png]]
+|text = 0
+}}
+|Rewards_Items = {{ItemStack
+|item = [[File:Improvement Materials.png{{!}}50px{{!}}link=Akashi's_Improvement_Arsenal{{!}}"Improvement Materials"]]
+|text = 3
+}}{{ItemStack
+|item = {{EquipmentCardKai|25mm Triple Autocannon Mount (Concentrated Deployment)|size=50px}}
+|text = 1
+}}
+|Note = Requires: [[Quests#B58|B58]] and more(?)
+}}
+}}
+
+==Related tweets==
+{{MultiTweet
+|MultiTweetID = related
+|color = #ace
+|title = Related tweets
+
+|link01 = https://twitter.com/KanColle_STAFF/status/676203635198443520
+|EN01 = <references group="N"><ref name="relatedtweet" group="N">‘Operation Rei-go’, carried out under the command of renowned Admiral Kimura, was practically the last victory by a IJN surface fleet. A certain Asashio-class Destroyer carried out the role of a flagship of the counter-attack surface fleet containing light and heavy cruisers. We are planning to make the certain Asashio-class destroyer that participated in Operation Rei-go and Northern Operations, and set sail for the last time with Yamato, the first ship girl to receive a remodel for this winter and next year.</ref></references>
+|JP01 = 名将木村提督指揮のもと、実質的に水上艦隊最後の勝利となった「礼号作戦」。重巡、軽巡を含む同水上反撃艦隊の旗艦を務めたある朝潮型駆逐艦。今冬、来年最初となる改二改装の実装は、礼号作戦、北方作戦に参加し、最後は大和と共に出撃したある朝潮型駆逐艦の一隻を予定しています。
+|TL01 = [[User:Rephira|Rephira]]
+}}<noinclude>
+[[Category:Game Updates]]</noinclude>

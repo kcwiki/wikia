@@ -1,0 +1,15 @@
+<!--{{#vardefine:type|{{{Type|{{#sub:{{{Use_ID|{{{ID|}}}}}}|0|1}}}}}}}-->{{!}}- style="border-top:2px solid #808080;" {{#if:{{{Bad|}}}|{{Detail|target=lesser}}}} align=center id="{{{ID|}}}" <!--class="q{{#var:type}}"-->
+!rowspan="{{#if:{{{Warning|}}}|{{#if:{{{Choice_2_reward_1|}}}|3|2}}|{{#if:{{{Choice_2_reward_1|}}}|2|1}}}}" align=center{{!}}[[Quests#{{{ID}}}|{{{ID}}}]]
+{{#if:{{{Warning|}}}|!align=center colspan=4{{!}}{{color|red|{{{Warning}}}}}
+{{!}}- {{#if:{{{Bad|}}}|{{Detail|target=lesser}}}} align=center|}}
+{{#if:{{{Choice_1_reward_1_color|}}}|{{!}}style="background:{{{Choice_1_reward_1_color}}}"}}{{!}}{{#if:{{{Choice_1_reward_1_x|}}}{{{Choice_1_reward_1_*|}}}|{{Sandbox/Chocolatecravinghobo/Quest/ItemStack|{{{Choice_1_reward_1|}}}|{{{Choice_1_reward_1_x|}}}|{{{Choice_1_reward_1_*|}}}}}|{{{Choice_1_reward_1|}}}}}
+{{#if:{{{Choice_1_reward_2_color|}}}|{{!}}style="background:{{{Choice_1_reward_2_color}}}"}}{{!}}{{#if:{{{Choice_1_reward_2_x|}}}{{{Choice_1_reward_2_*|}}}|{{Sandbox/Chocolatecravinghobo/Quest/ItemStack|{{{Choice_1_reward_2|}}}|{{{Choice_1_reward_2_x|}}}|{{{Choice_1_reward_2_*|}}}}}|{{{Choice_1_reward_2|}}}}}
+{{#if:{{{Choice_1_reward_3|}}}|{{#if:{{{Choice_1_reward_3_color|}}}|{{!}}style="background:{{{Choice_1_reward_3_color}}}"}}{{!}}{{#if:{{{Choice_1_reward_3_x|}}}{{{Choice_1_reward_3_*|}}}|{{Sandbox/Chocolatecravinghobo/Quest/ItemStack|{{{Choice_1_reward_3|}}}|{{{Choice_1_reward_3_x|}}}|{{{Choice_1_reward_3_*|}}}}}|{{{Choice_1_reward_3|}}}}}|}}
+{{!}}colspan="{{#if:{{{Choice_1_reward_3|}}}|1|2}}"{{!}}{{{Choice_1_comment|}}}
+{{#if:{{{Choice_2_reward_1|}}}|{{!}}-{{#if:{{{Bad|}}}|{{Detail|target=lesser}}}} align=center
+{{#if:{{{Choice_2_reward_1_color|}}}|{{!}}style="background:{{{Choice_2_reward_1_color}}}"}}{{!}}{{#if:{{{Choice_2_reward_1_x|}}}{{{Choice_2_reward_1_*|}}}|{{Sandbox/Chocolatecravinghobo/Quest/ItemStack|{{{Choice_2_reward_1|}}}|{{{Choice_2_reward_1_x|}}}|{{{Choice_2_reward_1_*|}}}}}|{{{Choice_2_reward_1|}}}}}
+{{#if:{{{Choice_2_reward_2_color|}}}|{{!}}style="background:{{{Choice_2_reward_2_color}}}"}}{{!}}{{#if:{{{Choice_2_reward_2_x|}}}{{{Choice_2_reward_2_*|}}}|{{Sandbox/Chocolatecravinghobo/Quest/ItemStack|{{{Choice_2_reward_2|}}}|{{{Choice_2_reward_2_x|}}}|{{{Choice_2_reward_2_*|}}}}}|{{{Choice_2_reward_2|}}}}}
+{{#if:{{{Choice_2_reward_3|}}}|{{#if:{{{Choice_2_reward_3_color|}}}|{{!}}style="background:{{{Choice_2_reward_3_color}}}"}}{{!}}{{#if:{{{Choice_2_reward_3_x|}}}{{{Choice_2_reward_3_*|}}}|{{Sandbox/Chocolatecravinghobo/Quest/ItemStack|{{{Choice_2_reward_3|}}}|{{{Choice_2_reward_3_x|}}}|{{{Choice_2_reward_3_*|}}}}}|{{{Choice_2_reward_3|}}}}}
+|}}
+{{!}}colspan="{{#if:{{{Choice_2_reward_3|}}}|1|2}}"{{!}}{{{Choice_2_comment|}}}
+}}

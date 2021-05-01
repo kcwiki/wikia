@@ -1,0 +1,492 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Southern Front - Interisland Transport Operation
+|jp = 南方戦線 島嶼海上輸送作戦
+|tag = E5
+|romaji = Nampō sensen Tōsho kaijyō-yusō sakusen
+|transport = true
+|hp_casual = 1740 HP + 480
+|hp_easy = 1740 HP + 480
+|hp_medium = 2040 HP + 720
+|hp_hard = 2280 HP + 960
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_casual_1 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_casual_2_x = 1
+|reward_casual_3 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft|size=50px}}
+|reward_casual_3_x = 1
+|reward_easy_1 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_easy_1_x = 3
+|reward_easy_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_easy_2_x = 2
+|reward_easy_3 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_easy_3_x = 1
+|reward_easy_4 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft|size=50px}}
+|reward_easy_4_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_medium_1_x = 4
+|reward_medium_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_2_x = 3
+|reward_medium_3 = {{EquipmentCardKai/Stars|6inch Triple Rapid Fire Gun Mount Mk.16|size=50px|2}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft (Skilled)|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Emergency Repair Material|icon=true|size=50px}}
+|reward_hard_1_x = 5
+|reward_hard_2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_2_x = 3
+|reward_hard_3 = {{EquipmentCardKai/Stars|6inch Triple Rapid Fire Gun Mount Mk.16|size=50px|7}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Action Report|icon=true|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai/Stars|Type 2 Land-based Reconnaissance Aircraft (Skilled)|size=50px|2}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-5 Branching Rules Part 1
+|expand = true
+|id = 48-5A
+|order = 0,C,E,G,F,H,J,P,T,I,L,M,Q
+
+|0 -> C/empty = 
+* Meet '''ALL''' of the following requirements:
+** Single Fleet
+** Fleet contains CAV/AV '''OR''' fleet contains only DD+DE
+** Amount of CL ≤ 2
+** No CLT, CA or CVL
+* Alternatively, use a fleet containing 1-2 SS(V) and nothing else. (Only 1 SS(V) allowed on Hard)
+|0 -> D/empty = * Do not meet any of the requirements to go to C.
+
+|C/empty -> A/empty = * Fail the LoS check.
+|C/empty -> B = * Pass the LoS check.
+
+|E/empty -> G/empty, H = * Active branching
+
+|G/empty -> F, I = * Active branching
+
+|F -> I = 
+* Meet '''ANY''' of the following requirements:
+** Surface/Carrier Task Force
+** Do not have the required LoS to go to either X1 or Y1.
+|F -> X1 = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check
+** Surface/Carrier Task Force not allowed.
+|F -> X3/empty = * Fail all LoS checks.
+|F -> Y1 = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Fast+ Fleet
+
+|H -> J = 
+* Meet '''ALL''' of the following requirements:
+** Surface/Carrier Task Force
+** Amount of CVL ≤ 2
+|H -> I, K = 
+* From top to bottom:
+** If Combined Fleet and you do not meet the requirements to go to J, go to I.
+** If fleet contains CA or CLT, go to I.
+** If amount of ships = 6 '''AND''' amount of CL ≥ 2, go to K.
+** If fleet contains CVL '''AND''' Slow fleet, go to K.
+** If amount of ships ≤ 5 '''AND''' Slow Fleet, go to K.
+** Go to I if you do not meet any of the above requirements.
+
+|J -> N/empty = * Do not meet the requirements to go to P.
+|J -> P = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of CVL ≤ 2
+
+|P -> R, T = 
+* From top to bottom:
+** If amount of DD ≥ 4, go to T.
+*** 5 or more can cause random offroutes to R.
+** If Slow Fleet and fleet contains either 2SS(V) or AO, go to R.
+** If Fast Fleet and amount of CA(V)+CL+CT ≥ 6, go to R.
+*** 7 or more can cause random offroutes to T.
+** If Slow Fleet, go to T if you do not meet any of the above.
+** Else, go to R.
+|P -> S = * ???
+
+|T -> S = * Surface Task Force
+|T -> W = * Carrier Task Force
+
+|I -> K = * Do not meet the requirements to go to either L or M.
+|I -> L =
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of CL ≥ 1
+** Amount of DD ≥ 4
+** Single Fleet '''OR''' Transport Combined Fleet
+** Do not meet the requirements to go to M.
+|I -> M = 
+* Use a Fast Fleet and meet '''ANY''' of the following requirements:
+** Fleet is 1CL 4DD.
+** Fleet is 1CL 5DD and came from node H.
+
+|L -> M = * Do not meet the requirements to go to O.
+|L -> O = * Fast+ Fleet
+
+|M -> O = * Do not meet the requirements to go to Q.
+|M -> Q = 
+* Meet '''ALL''' of the following requirements:
+** Single Fleet
+** Fast Fleet
+** Amount of CL ≥ 1
+** Amount of DD ≥ 4
+
+|Q -> U/empty = * Do not meet the requirements to go to either Y or Y2.
+|Q -> Y = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to Y2.
+** Carrier Task Force not allowed.
+** Pass the LoS check.
+|Q -> Y2/empty = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Fleet contains {{ShipLink|Akitsushima Kai}} or {{ShipLink|Akashi Kai}}
+}}
+
+{{MapBranchingTable
+|title = E-5 Branching Rules Part 2
+|expand = true
+|id = 48-5B
+|order = 0,C,B,Z4
+
+|0 -> C/empty = 
+* Meet '''ALL''' of the following requirements:
+** Single Fleet
+** Fleet contains CAV/AV '''OR''' fleet contains only DD+DE
+** Amount of CL ≤ 2
+** No CLT, CA or CVL
+* Alternatively, use a fleet containing 1-2 SS(V) and nothing else. (Only 1 SS(V) allowed on Hard)
+|0 -> D/empty = * Do not meet any of the requirements to go to C.
+
+|C/empty -> A/empty = * Fail the LoS check.
+|C/empty -> B = * Pass the LoS check, but fail to meet the requirements to go to either Z7 or Z8.
+|C/empty -> Z7 = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Fast Fleet
+** Amount of ships ≤ 4
+** Amount of DD ≥ 3
+** No CAV
+|C/empty -> Z8 = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships ≤ 5
+** If amount of ships = 5, fleet may only contain DD.
+** Amount of DD ≥ 2
+** No CAV
+
+|B -> Z1 = * Do not meet the requirements to go to Z6.
+|B -> Z6 = 
+* Meet '''ANY''' of the following requirements:
+** Fast Fleet '''AND''' amount of DD ≥ 4
+** Amount of ships ≤ 5
+
+|Z4/resource -> Z = * Pass the LoS check.
+|Z4/resource -> Z2/empty = * Fail the LoS check.
+}}
+===Map Progression===
+{{#tag:gallery|
+Rainy2020E5HP1.png{{!}}Map during HP phase but route to node Y not unlocked
+Rainy2020E5HP2.png{{!}}Map during HP phase at node Y with route unlocked
+Rainy2020E5TP1.png{{!}}Map during TP phase but route to node Z not unlocked
+Rainy2020E5TP2.png{{!}}Map during TP phase at node Z with route unlocked
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=250}}
+{{clear}}
+
+
+===Map Bonuses===
+<font color="red">'''DISCLAIMER:''' ''This information is based on user submitted data and is subject to revisions as more data is gathered. Any version of the ship receives the bonus regardless of remodel.''</font>
+
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="3" rowspan="2"|Ship
+!colspan="4"|Damage Bonus
+|-
+! Mapwide
+! {{Event/Route|V|Red|W|Red}}
+! {{Event/Route|Q|Red|Y|Red}}
+! {{Event/Route|Z|Red}}
+|-
+!{{ShipBattleCardKai|Suzuya/Kai Ni}}
+!{{ShipBattleCardKai|Kumano/Kai Ni}}
+!{{ShipBattleCardKai|Choukai/Kai Ni}}
+| rowspan="5"|1.2x
+| colspan="2" rowspan="5"|1.44x
+| rowspan="5"|1.5x
+|-
+!{{ShipBattleCardKai|Sendai/Kai Ni}}
+!{{ShipBattleCardKai|Yuubari/Kai Ni}}
+!{{ShipBattleCardKai|Shigure/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Kawakaze/Kai Ni}}
+!{{ShipBattleCardKai|Murasame/Kai Ni}}
+!{{ShipBattleCardKai|Kagerou/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Kuroshio/Kai Ni}}
+!{{ShipBattleCardKai|Tanikaze/D Kai}}
+!{{ShipBattleCardKai|Minegumo/Kai}}
+|-
+!{{ShipBattleCardKai|Mochizuki/Kai}}
+!
+!
+|-
+! colspan="7"|
+|-
+!{{ShipBattleCardKai|Jintsuu/Kai Ni}}
+!{{ShipBattleCardKai|Satsuki/Kai Ni}}
+!{{ShipBattleCardKai|Hamakaze/B Kai}}
+| rowspan="2"|1.35x
+| rowspan="2"|1.485x
+| rowspan="2"|1.89x
+| rowspan="2"|1.55x
+|-
+!{{ShipBattleCardKai|Yukikaze/Kai}}
+!{{ShipBattleCardKai|Minazuki/Kai}}
+!{{ShipBattleCardKai|Matsukaze/Kai}}
+|-
+! colspan="7"|
+|-
+!{{ShipBattleCardKai|Mikazuki/Kai}}
+!
+!
+|1.45x
+| colspan="2"|1.595x
+|1.885x
+|}
+
+==Map Guide==
+==='''Notes'''===
+* (f)BB(V) and CV(B) cannot be sortied to this map; CVL is allowed
+* You are given 3 Land-base, but only 2 can be sent out; last one is for defending only.
+
+Rather than being hard, this map is just tedious, especially the TP Phase. You will need at least:
+* 2 CVL - [Fast/Slow varies, See below in Phase 1]
+* 1 CL - Preferably {{ShipLink|Jintsuu}}
+* 4-5 DD - Preferably Historical ones and/or daihatsu carriers for TP Phase.
+* 1 CAV/AV - Fast preferred, or turbine/boiler needed. 
+* '''Auxiliaries'''
+** 0 or 2 SS(V) [See Phase 1]
+** 0-1 AO [See Phase 1]
+
+'''Don't forget about formations!'''
+* Line ahead, or Bottom-right formation in combined fleet - for damages
+* Line abreast, or Top-left formation in combined fleet - sinking submarines
+* Vanguard formation for single fleet - survivability
+** If you use Shelling Node Support, '''Vanguard is not recommended''', as your support is affected by the formation (Vanguard's lower shelling modifier is 50%) that applies '''to the whole fleet''', not just the bottom-half. In other words, your support will only do 50% of its intended damage.
+*** If you bring Shelling Node Support, use Line Ahead.
+
+==='''Medium+ Only: High-altitude Air Raid: LBAS Defense Check for Boss Unlock'''===
+For '''Medium+ ONLY'''. Similar to E-3 and E-4. If you can pass E-4 then this one is a lot lower: [https://i.imgur.com/8fgG60S.png LBAS Air Defense Values]
+*For 0.5x: (for 0 high-altitude interceptor)
+**'''Hard''': 390+ 
+**'''Medium''': 246+ 
+*For 0.65x: (for 3 bases with at least one Saiun in each)
+**'''Hard''': 300+ 
+**'''Medium''': 190+ 
+===Phase 1: Opening Boss Node Y===
+Do the following in any order '''(Be advised some below may not be required for lower difficulties)'''
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|P|Red}}
+! {{Event/Route|F|Red}}
+! {{Event/Route|Q|Red}}
+! {{Event/Route|V|Red}}
+! {{Event/Route|W|Red}}
+! LB Defense
+|-
+! Hard
+! -
+| S
+| S
+| S
+| S
+| AS x2
+|-
+! Medium
+! -
+| S
+| S
+| S
+| S
+| AS
+|-
+! Easy
+! -
+! -
+| S
+| S
+| S
+! -
+|-
+! Casual
+| S
+| A
+| S
+! -
+! -
+! -
+|}
+'''LBAS'''
+* If you still have the 0-1 Saiun 1-2 Fighter 2-3 Bombers setup on both of your bases from E-4, you can keep it as such for now. Node {{Event/Route|P|Orange}} and {{Event/Route|W|Orange}} have air power. Keep your 3rd Base in Defense because you still need to obtain two LBAS defense too. If you cannot achieve AS with 1 Base (see above), you will have to switch around your LBAS later. 
+'''Nodes P and V''': {{Event/Route|D|Blue|E|Blue|H|Red|J|Red|P|Red|R|Orange|V|Red}}
+*'''CTF''' - 2 CVL 1 CL 2 SS(V) 1 XX + 1 CL 3 DD 2 XX '''[Slow allowed]'''
+** XX '''must not be''' DD, or you will go to {{Event/Route|T|Orange}} from {{Event/Route|P|Red}}
+** 2 SS(V) can be replaced with AO.
+*'''CTF''' - 2 CVL 2 CA 2 CL + 2 CA(V) 1 CL 3 DD '''[Fast Required]'''
+**As long as the amount of CA(V)+CL+CT ≥ 6. However, 7 or more can cause random off-route to {{Event/Route|T|Orange}}.
+'''Nodes P and W''': {{Event/Route|D|Blue|E|Blue|H|Red|J|Red|P|Red|T|Orange|W|Red}}
+*'''CTF''' - 2 CVL 1 CL 2 SS(V) 1 XX + 1 CL 4 DD 1 XX '''[Slow allowed]'''
+** XX can be DD, but bringing more has more chance of routing to {{Event/Route|R|Orange}}. It is '''not recommended''' to bring more than 4.
+*'''CTF''' - 2 CVL 1-2 CA 1-2 CL + 1 CL 4-5 DD 0-1 CA(V) '''[Fast Required]'''
+**As long as the combination of of CA(V)+CL+CT = 6, as that will route you to {{Event/Route|R|Orange}}.
+'''Nodes Q''': 
+*'''Single Fleet''' - 1 CL 4 DD '''[Fast Required]''' - {{Event/Route|D|Blue|E|Blue|G|Blue|I|Red|M|Red|Q|Red}}
+**Node {{Event/Route|I|Red}} is a sub-node. Bring some OASW to get pass easier. If you don't have OASW, either bring some ASW to sink some after the opening strike or pick vanguard formation and pray.
+**Node {{Event/Route|Q|Red}}'s fleet can show up in vanguard formation.
+*'''Single Fleet''' - 1 CL 5 DD '''[Fast Required]''' - {{Event/Route|D|Blue|E|Blue|H|Red|I|Red|M|Red|Q|Red}}
+**Node {{Event/Route|H|Red}} and {{Event/Route|I|Red}} are a sub-node. Bring some OASW to get pass easier.
+**If you bring 1 CL 5 DD and go through {{Event/Route|D|Blue|E|Blue|G|Blue|I|Red}}, then it will route you to {{Event/Route|L|orange}}, an air-raid node.
+'''Nodes F''': {{Event/Route|D|Blue|E|Blue|G|Blue|F|Red}}
+*'''Single Fleet''' - 1 CL 5 DD '''[Fast Required]''' 
+**Node {{Event/Route|F|Red}} is a sub-node. Bring some OASW.
+
+===Phase 2: Sinking {{ShipLink|Light Cruiser Princess|text=Light Cruiser Princess}}===
+'''LBAS'''
+* You can now drop all the fighters and go full (4x) bombers for both bases. Either target both to the boss node {{Event/Route|Y|Red}} or spread it out to pre-boss nodes to increase survivability. This depends on your fleet so play around. Increase range by adding Saiun if needed (you need 7 for boss).
+*Prepare to lose some plane ranks and bauxites as both boss node {{Event/Route|Y|Red}} and has {{ShipLink|Light_Cruiser_Tsu-Class|text=Tsu-class}} in Easy+ and has {{ShipLink|Destroyer_Na-Class#Late_Model_II_Elite|text= New Elite Na-class}} in Hard (Medium in final kill only), both are notorious at destroying your planes.
+'''LoS'''
+*Required LoS to reach boss should be '''around >34 for Cn2''', although it might be even lower.
+'''Fleet'''
+*Vanguard for pre-boss nodes, line abreast for submarines, diamond for air-node, and line ahead formation for boss.
+*{{ShipLink|Jintsuu Kai Ni|text=Jintsuu}} can single-handedly deal with the boss due to her historical bonus.
+*'''Single Fleet #1''' - 1 CL 4 DD {{Event/Route|D|Blue|E|Blue|G|Blue|I|Red|M|Red|Q|Red|Y|Red}} '''[Fast Required]'''
+**Shortest route with no off-routing to {{Event/Route|L|Orange}} which is an air node.
+**Node {{Event/Route|I|Red}} is a sub-node. Bring some OASW to get pass easier.
+**Node {{Event/Route|Q|Red}}'s fleet can show up in vanguard formation which makes them a lot harder to sink. If you have trouble passing, send LBAS there to help.
+*'''Single Fleet #2''' - 1 CL 5 DD {{Event/Route|D|Blue|E|Blue|G|Blue|I|Red|L|Orange|M|Red|Q|Red|Y|Red}} '''[Fast Required]'''
+**Going through an additional air node at {{Event/Route|L|Orange}} but allows you to bring one more DD.
+**You will have to gear some ship to with high-angle guns and AACI setup to minimize the damages from this node.
+**In addition, don't forget that Node {{Event/Route|I|Red}} is a sub-node, and you are recommended to bring some OASW with you.
+*'''Single Fleet #3''' - 1 CL 5 DD {{Event/Route|D|Blue|E|Blue|H|Red|I|Red|M|Red|Q|Red|Y|Red}} '''[Fast Required]'''
+**Going through an additional sub node at {{Event/Route|H|Red}} but allows you to bring one more DD.
+**Since you are going through 2 sub nodes, you should bring a lot more OASW, preferably, bring 2-3. If 3, you can sink all the submarines on both nodes most of the time since 3 submarines usually show up (Node {{Event/Route|I|Red}} has a chance for 4).
+*'''Single Fleet #4''' - 2 CL 4 DD {{Event/Route|D|Blue|E|Blue|H|Red|K|Red|M|Red|Q|Red|Y|Red}} '''[Fast Required]'''
+**Similar to above, but this one goes through an additional surface node in exchange for an additional CL. You can use this if you somehow used 2 CLs prior to this.
+**Note that you will meet the boss with fuel/ammo debuff which means you're more prone to damage while damaging less too. This route is more for an unorthodox farming than clearing.
+*'''Surface Task Force''' {{Event/Route|D|Blue|E|Blue|G|Blue|I|Red|K|Red|M|Red|O|Orange|Q|Red|Y|Red}} 
+** 0-2 CVL 0-4 CA(V) 0-3 CL 0-2 AO/AV + 1 CL 2-5 DD 0-2 CLT 0-3 CA(V) '''[Slow Allowed]'''
+*** Ex. 2 CVL 2 CA 2 CL + 1 CL 4 DD 1 CA/CLT
+** As you may notice above, you can pretty much bring anything for STF and it will still go this route. You go through 1 submarine node, 1 air node, and 3 surface nodes before reaching the boss.
+***This means that you will heavily rely on overwhelming your enemy than anything else while benefiting from STF as the main fleet hits first. This allows you to make adjust your escorts to be more flexible, such as 3 OASW DD/DE 2 CLTs 1 CL, as an example.
+***Do note that this method also cost a lot, both resources and ships, and as such is not recommended for Medium+ without proper lock planning, but still viable if desired.
+
+===Phase 3: Opening Boss Node Z===
+Do the following in any order '''(Be advised some below may not be required for lower difficulties)'''
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|B|Red}}
+! {{Event/Route|X2|Red}}
+|-
+! Hard
+| S
+| S x2
+|-
+! Medium
+| A
+| A
+|-
+! Easy
+| A
+| A
+|-
+! Casual
+! -
+! -
+|}
+'''LBAS'''
+* Node {{Event/Route|X2|Red}} is a submarine (hime) node. If you cannot sink her to obtain S-rank, switch one of your base to equip Toukai is one of the option; however, try sinking without switching first in order to avoid wasting resources and time switching bases. Keep your 3rd Base in Defense because you still need to obtain two LBAS defense too.
+
+'''Nodes X2''': {{Event/Route|D|Blue|E|Blue|G|Blue|F|Red|X1|Red|X2|Red|X|Blue}}
+*'''LoS''': Required LoS to reach {{Event/Route|X1|Red}} should be '''around >30 for Cn2''', although it might be even lower.
+*'''Single Fleet'''
+**'''Suggested Fleet''' - 1 CL 5 DD (preferred, any capable of performing OASW)
+***Bring as many OASW as you can.
+<!--  **'''Optional Fleet''' - 1 (F)BB(V) 5 DD
+***Use any BB for 2nd shelling if needed; fodder BB (one that is irrelevant to you) can be used. -->
+**'''Restrictions''' - As long as you '''don't meet all''' of these, you can play around with the composition above
+***Fleet contains CAV/AV, OR fleet contains only DD+DE
+***Amount of CL ≤ 2
+***No CLT, CA or CVL
+
+'''Nodes B''': {{Event/Route|C|Blue|B|Red}}
+*'''LoS''': Required LoS to reach {{Event/Route|B|Red}} should be '''around >30 for Cn2''', although it might be even lower/higher.
+**'''Suggested Fleet 1''' - 5-6 DD
+***You just need to reach the required LoS. Only suggested if you have DDs to use from previous phases otherwise there is the below option.
+**'''Suggested Fleet 2''' - 1 CAV/AV 1 CL 4 DD
+***This one uses the fleet that you might use for the next phase while keeping your DD usage at minimum. You won't have much problem with LoS with this fleet.
+**'''Restrictions''' - As long as you '''meet all''' of these, you can play around with the composition above
+***Fleet contains CAV/AV, OR fleet contains only DD+DE
+***Amount of CL ≤ 2
+***No CLT, CA or CVL
+
+===Phase 4: Completing the Transport Phase===
+This phase can be summarized as long and tedious. If you have time, this will be the perfect phase to sit back and resupply. Otherwise, you will be depleting your buckets here if you need to rush. Note that compositions here are all based on Hard difficulties and easier difficulties may have different routing requirements. 
+
+'''LoS''':
+*Required LoS to pass {{Event/Route|C|Blue}} should be '''around >34 for Cn2''', although it might be even lower/higher. This still need testing. You should be able to pass {{Event/Route|Z4|Green}} LoS easily if you clear the previous one; however, there has been report of people routing to {{Event/Route|Z2|Blue}} with Cn2 LoS around 30, so too low might cause random routing.
+
+'''LBAS'''
+*At least 1 base of full (4x) bombers should target the boss node {{Event/Route|Z|Red}}. The second base should be either another full (4x) bombers to {{Event/Route|B|Red}} as vanguard formation can be troublesome, or full (4x) fighters to {{Event/Route|Z5|Orange}} if you find air node to be problematic especially in a "no fighter power" fleets like 6 DDs. This depends on your fleet and difficulty so play around. 
+*Similar to Phase 1 boss, prepare to lose some plane ranks and bauxites here as both boss node {{Event/Route|Z|Red}} and surface node {{Event/Route|B|Red}} have {{ShipLink|Light_Cruiser_Tsu-Class|text=Tsu-class}} in Easy+ and Hard has {{ShipLink|Destroyer_Na-Class#Late_Model_II_Elite|text= New Elite Na-class}}. 
+
+'''Formation''': 
+*Use Vanguard on pre-boss surface nodes. Use Diamond on air nodes; '''do not''' use vanguard on air nodes as you don't get the evasion bonus, your bottom-half just get targeted more. Depending on how you set up your fleet, either Vanguard or Line-ahead can be used here. For example, if you do not care about obtaining S-rank, survivability with vanguard can be better as long as you have the firepower to back it up (B-rank won't give you anything).
+
+'''Fleet'''
+
+You will face air, surface, and transport nodes along with way. As such, you will need a mixture of combat, AA(CI), Transport gears (Drums/Daihatsu), and good LoS (see above). As this is transport phase, you can also choose to only obtain A-rank as you '''do not''' need to sink the boss to clear this phase. You only need to deplete the TP bar.
+*'''Single Fleet''': 
+**'''1 CAV/AV 1 CL 4 DD''' - {{Event/Route|C|Blue|B|Red|Z6|Red|Z5|Orange|Z4|Green|Z|Red}} '''[Fast Required]'''
+***Using the same one from previous phase. You should bring at least 1 AACI ship to minimize damage on air nodes. Your CAV/AV can bring some seaplane fighters. DDs can bring either drum/daihatsu or surface gears depending on your situation. 1 full bomber LBAS can be sent to {{Event/Route|B|Red}} to help with possible vanguard fleet.
+*'''All DDs Strategy [Fast Required]'''
+** '''6 DDs''' - {{Event/Route|C|Blue|B|Red|Z6|Red|Z5|Orange|Z4|Green|Z|Red}} 
+*** Same as above but no air power. Thus, 1 LBAS can be used to help with air node {{Event/Route|Z5|Orange}} if you find yourself having a lot of problem with it, or send to surface node {{Event/Route|B|Red}} to help like above.
+** '''5 DDs''' - {{Event/Route|C|Blue|Z8|Orange|Z7|Red|Z5|Orange|Z4|Green|Z|Red}}
+*** This route takes you through 2 air nodes instead of one. AACI is even more crucial here and it is mostly less desirable than "6 DDs" because you have less option to deal with air node. This, however, can be more viable at lower difficulty where air node is less problematic while the vanguard fleet at {{Event/Route|B|red}} remains consistently troublesome.
+** '''4 DDs''' - {{Event/Route|C|Blue|Z7|Red|Z5|Orange|Z4|Green|Z|Red}}
+*** The definite shortest route but you'll definitely have problem reaching both LoS and depleting TP bar. 
+*'''AV Strategy''' - Avoiding Node {{Event/Route|B|Red}}
+**'''1 AV 3 DD''' - {{Event/Route|C|Blue|Z7|Red|Z5|Orange|Z4|Green|Z|Red}} '''[Fast Required]''' 
+***AV to provide more base TP and fighter power. However, you will lock a fast AV with this method so consider carefully. Have problem reaching LoS as above.
+**'''1 AV 1 CL 2 DD''' - {{Event/Route|C|Blue|Z8|Orange|Z7|Red|Z5|Orange|Z4|Green|Z|Red}} '''[Speed Irrelevant]''' 
+***Going through an additional air node but disregarding speed entirely, allowing you to bring a slow AV if desired. Less problem reaching LoS than above due to the presence of a CL.
+
+===LBAS Flight Range===
+[[File:Rainy2020E5LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

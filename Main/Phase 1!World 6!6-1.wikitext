@@ -1,0 +1,395 @@
+{{Map/Header}}
+{{Map/Info
+|en = Central Waters Patrol Line
+|jp = 中部海域哨戒線
+|romaji =Chūbu-kaiiki shōkai-sen
+
+|mechanics = LoS Check@Line of Sight
+|strategy_name = Submarine Operation
+|strategy_name_ja = 潜水艦作戦
+|strategy_info = Organize a strong submarine fleet and advance a patrol line into the Middle Sea region. Locate enemy fleets and gradually destroy them!
+|strategy_info_ja = 有力な潜水艦隊を編成し、中部海域哨戒線に進出せよ。敵艦隊を発見、これを漸減撃滅せよ！
+
+|exp_ship = 380
+|exp_hq = 170
+|exp_hq_boss = 2140
+}}
+{{MapBranchingTable
+|id = 6-1
+|0 -> A/empty = 
+* Amount of SS(V) ≧ 3 and fleet consists of only submarines.
+* If the fleet contains {{ShipLink|Taigei}}:
+** Amount of SS(V) ≧ 3
+** Amount of CL ≦ 1
+** Nothing else allowed, except DD
+|0 -> B = 
+* Go to B if you do not meet the requirements to go to either A or G
+|0 -> G/empty = 
+* Meet '''ANY''' of the following requirements:
+** Amount of SS(V) ≦ 2 
+*** And fleet only consists of SS(V) 
+*** OR if fleet contains AS {{ShipLink|Taigei}} and consists only of of SS(V), DD and CL
+** Amount of BB(V) ≧ 2
+** Amount of BB(V) + CV(L/B) + CA(V) ≧ 3
+** Fleet contains BB(V), CV(L/B), CA(V) or CLT and the fleet has no DD or CL
+
+|A/empty -> C = * Fleet does not contain {{ShipLink|Taigei}}
+|A/empty -> D = * {{ShipLink|Taigei}} is in the fleet
+
+|E/empty -> F = 
+* Meet '''all''' of the following requirements:
+** Amount of SS(V) ≧ 3
+** Amount of BB(V) + CV(L/B) + CA(V) ≦ 1
+** Pass the LoS check of 16 using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] formula
+*** Routing becomes random if the LoS is between 12-15.9 using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] Formula
+|E/empty -> H = 
+* Meet '''any''' of the following requirements:
+** Fail the LoS check
+** Amount of SS(V) ≦ 2
+** Amount of BB(V) + CV(L) + CA(V) ≧ 2
+* If the fleet does not contain {{ShipLink|Taigei}}:
+** 15% chance of off-routing to H regardless of LoS check result
+|F -> I/empty, J, K = 
+* Always node I if LoS is ≦ 20 using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] Formula
+* If the fleet contains {{ShipLink|Taigei}}:
+** Always node K if LoS is ≧ 25 using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] Formula
+** Random between I and K if LoS is between 20-24.9 using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] Formula
+* If the fleet does not contain {{ShipLink|Taigei}}:
+** Always node K if LoS is ≧ 36 using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] formula
+** Random between J and K if LoS is between 25-35.9 using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] Formula
+** Random between I, J and K if LoS is between 20-24.9 using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] Formula
+}}
+
+===Tips===
+*At least 3 SS(V) are required to reach the boss.
+* This map uses the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] formula, this means that '''LoS from equipments weights 4 times more''' than usual.
+*There are LoS checks E -> F and F -> K. They do not have high LoS requirements (SSVs with a couple recon planes will pass), but an all-sub fleet without recon planes will be sent to H.
+*LoS requirements to reach the boss node are lower if the fleet contains {{ShipLink|Taigei}}:
+** Required LoS value if the fleet contains {{ShipLink|Taigei}}: [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] ≧ 25
+** Required LoS value if the fleet does not contain {{ShipLink|Taigei}}: [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=4)]] ≧ 36
+* To trigger Night Scout at boss node, you need either Air Denial (28-56 FP), Air Superiority (126+ FP) or Air Supremacy. Night Scouts cannot be triggered if the day combat is done in Air Parity (with 57-125 FP when the boss battle starts).
+===Possible Fleet compositions===
+*{{Event/Route|B|red|D|red|E|blue|F|red|K|red}}
+**[https://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=http://i.imgur.com/5O7tMsz.png 1CLT 1CL 1CV(L) 3SS(V)]
+***an effective fleet for taking out the boss but it will have to go through node B where there's a Ru-class BB. Note that this fleet can send you to dead end node H.
+*{{Event/Route|A|blue|C|red|D|red|E|blue|F|red|K|red}}
+**6SS(V)
+***An all-sub fleet will reach the boss with sufficient LoS, however, node C is pretty harsh on subs with late-model DDs and flagship CLs.
+***{{ShipLink|Taigei}} in a sub fleet avoids the battle in Node C by leading the fleet to node A -> D which can be very helpful. When she is equipped with recon seaplanes, she then allows all your subs to equip torpedoes while passing the LoS check.
+*{{Event/Route|A|blue|D|red|E|blue|F|red|K|red}}
+**[https://www.youtube.com/watch?v=sbr2qHNb_3o Taigei 1CL 4SS(V)]
+***another possible way to clear this map and also quest [[Quests#B91|B91]] with {{ShipLink|Taigei}} loaded with bulges and recons. CL recommended are {{ShipLink|Ooyodo Kai}} for extra slot or {{ShipLink|Abukuma Kai Ni}} for opening torpedo.
+*{{Event/Route|B|red|D|red|E|blue|H|red}} '''(for farming node H)'''
+** 1BB 3CLT 1CL 1CV
+** 1CL 3CLT 2CV
+***Pattern 1 on node H has a chance to drop {{ShipLink|I-401}}.
+***Both fleets guarantee the routing to node H and are good enough to get S Rank.
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|G|x=216|y=273}}
+{{Map/ImageNode|A|x=207|y=136}}
+{{Map/ImageNode|B|x=264|y=194}}
+{{Map/ImageNode|C|x=306|y=79}}
+{{Map/ImageNode|D|x=346|y=149}}
+{{Map/ImageNode|E|x=389|y=222}}
+{{Map/ImageNode|H|x=449|y=96}}
+{{Map/ImageNode|F|x=433|y=292}}
+{{Map/ImageNode|I|x=317|y=264}}
+{{Map/ImageNode|J|x=583|y=294}}
+{{Map/ImageNode|K|x=592|y=202}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{NodeInfo
+|A
+|Empty
+}}
+{{Map/Nodes|name=中部海域　敵遊撃部隊
+|B
+|Normal
+|{{Formation|Double Line}}
+|Battleship Ru-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}{{Formation|Double Line}}
+|Battleship Ru-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+}}
+{{Map/Nodes|name=中部海域哨戒戦 A地点
+|C
+|Normal
+|{{Formation|Line Ahead}}<br>{{Formation|Diamond}}<br>{{Formation|Echelon}}
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes|name=中部海域哨戒戦 B地点
+|D
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser He-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Normal
+|{{Formation|Diamond}}
+|Light Cruiser He-Class/Flagship
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser He-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{NodeInfo
+|E
+|Empty
+}}
+{{Map/Nodes|name=中部海域哨戒戦 D地点
+|F
+|Normal
+|{{Formation|Echelon}}
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F
+|Normal
+|{{Formation|Diamond}}
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|F
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{NodeInfo
+|G
+|Empty
+}}
+{{Map/Nodes|name=敵機動部隊
+|H
+|Normal
+|{{Formation|Diamond}}
+|Aircraft Carrier Demon
+|Standard Carrier Wo-Class/Flagship II
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|H
+|Normal
+|{{Formation|Diamond}}
+|Aircraft Carrier Demon
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|H
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship II
+|Standard Carrier Wo-Class/Flagship II
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+{{NodeInfo
+|I
+|Empty
+}}
+{{Map/Nodes|name=中部海域 敵輸送船団
+|J
+|Normal
+|{{Formation|Line Ahead}}
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|J
+|Normal
+|{{Formation|Line Ahead}}
+|Transport Ship Wa-Class/Flagship
+|Transport Ship Wa-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{Map/Nodes|name=敵回航中空母
+|K
+|Boss
+|{{Formation|Diamond}}<br>{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship II
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|-
+|K
+|Boss
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship II
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|K
+|Boss
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship II
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser He-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = B, C, D, F, H, J, K
+|boss = K
+|Akebono: B, C, D, F, H
+|Aoba: C, D, F, H
+|Ashigara: B, C, D, F, H
+|Atago: D, F
+|Ayanami: B, C, D, F, H
+|Chikuma: D, F
+|Chiyoda: K
+|Choukai: B, C, D, F
+|Fumizuki: B, C, D, F, H
+|Furutaka: B, C, D, F
+|Haguro: B, C, D, F, H
+|Haruna: F, H, K
+|Hiei: F, H, K
+|Hiryuu: K
+|Hiyou: B, C, D, F, H, K
+|I-168: B, C, D, F, H, K
+|I-19: C, D, F, H, K
+|I-401: H
+|I-58: F, H, K
+|I-8: H, K
+|Ise: K
+|Isuzu: B, D, F, H
+|Jintsuu: B, C, D, F
+|Junyou: B, C, D, F
+|Kako: B, C, D, F, H
+|Kikuzuki: B, C, D, F, H
+|Kinu: B, K
+|Kinugasa: K
+|Kirishima: C, F, K
+|Kisaragi: B, C, D, F, H
+|Kiso: B, C, D, F, H
+|Kongou: D, F, H, K
+|Kumano: D, K
+|Makigumo: K
+|Maruyu: H, K
+|Maya: B, C, D, F, H
+|Mikazuki: B, C, D, F, H
+|Mochizuki: B, C, D, F, H
+|Mogami: D, F, H, K
+|Mutsu: K
+|Mutsuki: B, C, F
+|Myoukou: D, F, H
+|Nachi: C, D, F, H
+|Naganami: K
+|Nagara: B, C, D, F
+|Nagato: K
+|Nagatsuki: B, C, D, F, H
+|Naka: B, C, D, F, H
+|Natori: B, C, D, F
+|Oboro: B, C, D, F, H
+|Ooi: K
+|Ryuujou: C, D, F, K
+|Samidare: B, C, D, F, H
+|Satsuki: B, C, D, F
+|Sazanami: B, C, D, F, H
+|Sendai: D, F
+|Shikinami: B, C, D, F, H
+|Shouhou: C, D, F, H
+|Souryuu: K
+|Suzukaze: B, C, D, F
+|Suzuya: K
+|Taigei: K
+|Takao: D, F, K
+|Tone: F
+|Ushio: B, C, D, F, H
+|Yamashiro: K
+|Yukikaze: K
+|Yura: B, C, D, F, H
+|Yuubari: K
+|Zuihou: K
+}}
+{{SectionEnd}}

@@ -1,0 +1,25 @@
+This template uses ship data modules to generate categories for the requested enemy ship.
+
+==Example==
+ <nowiki>{{EnemyShipCategoriesKai|name=Standard Carrier Wo-Class|model=Kai Flagship III}}</nowiki>
+ <nowiki>{{EnemyShipCategoriesKai|Armored Carrier Princess}}</nowiki>
+ <nowiki>{{EnemyShipCategoriesKai|Destroyer I-Class/Late Model Elite}}</nowiki>
+
+==Parameters==
+The following are the parameters that can be passed.
+
+===[1]===
+
+The ''key'' of the ship, which consists of: The name of the ship, followed by a slash (/), optionally followed by the suffix of the ship.
+
+This method is included as a shortcut and for convenience. ''name'' and ''model'' will take precedence over this.
+
+===name===
+The name of the ship, without any suffixes.
+
+===model===
+The model of the ship, ie. the suffix. For example, Elite or Flagship.
+
+To specify the base model you can omit model or leave model empty.
+
+<includeonly>[[Category:Templates that use ship data modules|{{PAGENAME}}]][[Category:Templates that use equipment data modules|{{PAGENAME}}]]</includeonly><noinclude>[[Category:Template documentation|{{PAGENAME}}]]</noinclude>

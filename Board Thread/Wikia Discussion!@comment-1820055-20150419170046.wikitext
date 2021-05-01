@@ -1,0 +1,37 @@
+[[User_blog:Dragonjet/Decoding_the_Ships_Master_Record|Since Spring 2014]], filenames changed from IDs (<code style="color:#00f;">123.swf</code>) into some gibberish code like <code style="color:#00f;">rzgndzraoddu.swf</code>. With this we can't just do a quick guess and directly download a character CG after an update. We'll need to do a bit more dirty work.
+
+It starts with <code style="color:#00f;">api_start2</code>, the first API called when you open the game. We need to get the response body, usually via Browser DevTools on Network tab. My current script downloads this automatically by doing a "synthetic" / "fake" API call to the server using an alt account. Thus, no need to wait for DMM or API links to work. The moment the server goes up, the fake call can get its response.
+
+The response body is JSON-encoded that we can [http://json.parser.online.fr/ easily parse]. Make sure to remove <code style="color:#00f;">svdata=</code> at the beginning of the text. It is a large object containing <code style="color:#00f;">api_data</code>.
+
+Inside the api_data, contains most of the in-game data to be used by the flash client, including ship list, equipment list, map list, expedition list, etc etc...
+
+* The ship info is inside <code style="color:#00f;">api_data.api_ship</code>
+* and the SWF filenames are inside <code style="color:#00f;">api_data.api_shipgraph</code>
+Both of these are arrays of objects
+* <code>api_data.api_ship[]</code>
+* <code>api_data.api_shipgraph[]</code>
+
+
+On each element of the array (object), there's a field <code style="color:#00f;">api_id</code>
+* <code>api_data.api_ship[0].api_id</code>
+* <code>api_data.api_ship[1].api_id</code>
+* <code>api_data.api_ship[2].api_id</code>
+
+
+both <code>api_ship</code> and <code>api_shipgraph</code> have an ID and corresponds to each other which means
+* <code style="color:#00f;">api_ship[where api_id = 1]</code> (Mutsuki Info)
+* <code style="color:#00f;">api_shipgraph[where api_id = 1]</code> (Mutsuki CG)
+
+
+Inside the <code>api_shipgraph object</code>, there is a field <code style="color:#00f;">api_filename</code>. That should be the SWF filename.
+
+So Mutsuki's SWF filename is:
+* <code style="color:#00f;">api_data.api_shipgraph[where api_id = 1].api_filename</code>
+which should look like <code style="color:#00f;">snohitatusbk</code>
+
+Then just prepend any server's base URL:
+* <code style="color:#00f;"><nowiki>http://125.6.184.15/kcs/resources/swf/ships/<filename>.swf?VERSION=1</nowiki></code>
+
+which in the end becomes:
+* http://125.6.184.15/kcs/resources/swf/ships/snohitatusbk.swf?VERSION=1<ac_metadata title="Downloading SWF Files from server"> </ac_metadata>

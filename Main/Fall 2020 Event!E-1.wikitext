@@ -1,0 +1,228 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Commence! Operation MG1
+|jp = 発動！MG1作戦
+|romaji = Hatsudō MG1 sakusen
+|tag = E1
+|mechanics = 
+|transport = true
+|hp_casual = 2800 HP + 500
+|hp_easy = 2800 HP + 500
+|hp_medium = 3500 HP + 600
+|hp_hard = 3700 HP + 700
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = 
+|reward_casual_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|120mm/50 Twin Gun Mount mod.1936|size=50px}}
+|reward_casual_2_x = 1
+|reward_easy_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|120mm/50 Twin Gun Mount Kai A.mod.1937|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Food Supply Ship Irako|icon=true|size=50px|link=Irako}}
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_medium_3_x = 2
+|reward_medium_4 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|120mm/50 Twin Gun Mount Kai A.mod.1937|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Food Supply Ship Mamiya|icon=true|size=50px|link=Mamiya}}
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai|Food Supply Ship Irako|icon=true|size=50px|link=Irako}}
+|reward_hard_2_x = 2
+|reward_hard_3 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_hard_4_x = 2
+|reward_hard_5 = {{EquipmentCardKai/Stars|120mm/50 Twin Gun Mount mod.1936|size=50px|2}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai/Stars|120mm/50 Twin Gun Mount Kai A.mod.1937|size=50px|2}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|expand = true
+|id = 49-1
+|order = 0,B,C,F,H,G,K,N
+
+|0 -> A = * Do not meet the requirements to go to either B or C.
+|0 -> B = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to C.
+** Amount of CV ≤ 1
+** AMount of (F)BB(V)+CV(L/B) ≤ 2
+|0 -> C = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL+DD+DE ≥ 3 and CL ≥ 1 '''OR''' amount of CL+DD+DE ≥ 4
+** If Slow, amount of CL+DD+DE ≥ 4
+** Amount of CV(L/B) ≤ 1
+** Amount of (F)BB(V)+CV(L/B)+CAV+CL ≤ 3
+** No LHA, AV or BB
+* Alternatively, bring a '''Fast+''' Fleet
+
+|B -> C =
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet '''OR''' amount of DD+DE ≥ 3
+** No LHA
+|B -> D = 
+* Do not meet the requirements to go to C.
+
+|C -> E = 
+* If amount of ships ≥ 2, meet '''ANY''' of the following requirements:
+** Fleet is Slow '''AND''' contains AO or AV
+** No DD/DE in fleet
+|C -> F = 
+* Do not meet the requirements to go to E.
+
+|F/empty -> G, H/empty = * Active branching
+
+|H -> I = * Fail the LoS check.
+|H -> J = * Pass the LoS check.
+
+|G -> K = * Do not meet the requirements to go to N.
+|G -> N = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DD+DE ≥ 4
+** No SS(V)
+
+|K -> L = * ??? 
+|K -> N = * ???
+
+|N -> M = * Fail the LoS check.
+|N -> O = * Pass the LoS check.
+}}
+{{clear}}
+
+==Before Starting the Event==
+Players who are planning to challenge this event on any difficulty level above Easy are advised to carefully read the [[Fall 2020 Event/Info|Info Tab]] first in order to understand how difficulty selection and ship-locking work.
+
+===Map Progression===
+{{#tag:gallery|
+Fall2020E1p1.png{{!}}Map during HP phase at node J
+Fall_2020_Event_E-1_Map.png{{!}}Map during TP phase at node O
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+
+===Map Bonuses===
+<font color="red">'''DISCLAIMER:''' ''This information is based on user-submitted data and is subject to revisions as more samples are gathered. Any version of the ship receives the bonus regardless of remodel.''</font> Some ships may also be useful in other maps.
+{| class="wikitable" style="text-align:center; vertical-align:middle;"
+|- 
+! colspan="3"|Ships
+! Mapwide
+! Nodes H,J,O
+|-
+! {{ShipBattleCardKai|Richelieu/Kai|small=true}}
+! {{ShipBattleCardKai|Commandant Teste/Kai|small=true}}
+! {{ShipBattleCardKai|De Ruyter/Kai|small=true}}
+| 1.1x
+| 1.1x '''(1.21x)'''
+|-
+! colspan="5"|
+|-
+! {{ShipBattleCardKai|Nelson/Kai|small=true}}
+! {{ShipBattleCardKai|Janus/Kai|small=true}}
+!
+| rowspan="7"| 1.15x
+| 1.15x '''(1.32x)'''
+|-
+! {{ShipBattleCardKai|Roma/Kai|small=true}}
+! {{ShipBattleCardKai|Aquila/Kai|small=true}}
+! {{ShipBattleCardKai|Zara/Due|small=true}}
+| rowspan="3"| 1.18x '''(1.36x)'''
+|-
+! {{ShipBattleCardKai|Pola/Kai|small=true}}
+! {{ShipBattleCardKai|Duca degli Abruzzi/Kai|small=true}}
+! {{ShipBattleCardKai|Giuseppe Garibaldi/Kai|small=true}}
+|-
+! {{ShipBattleCardKai|Libeccio/Kai|small=true}}
+! {{ShipBattleCardKai|Maestrale/Kai|small=true}}
+!
+|-
+!colspan="3"|
+!
+|-
+! {{ShipBattleCardKai|Ark Royal/Kai|small=true}}
+! {{ShipBattleCardKai|Sheffield/Kai|small=true}}
+! {{ShipBattleCardKai|Jervis/Kai|small=true}}
+| 1.322x '''(1.52x)'''
+|-
+! {{ShipBattleCardKai|Italia|small=true}}
+! {{ShipBattleCardKai|Grecale/Kai|small=true}}
+! {{ShipBattleCardKai|Scirocco/Kai|small=true}}
+| 1.357x '''(1.56x)'''
+|-
+! colspan="5"| {{ShipLink|French Battleship Princess|text=French Battleship Princess}} Only Bonus Modifiers
+|-
+! colspan="3"| {{ShipBattleCardKai|Richelieu/Kai|small=true}}
+| colspan="2"| 1.17x
+|- 
+! colspan="3"| {{RedAmmo}} AP Shell
+| colspan="2"| 1.2x
+|- 
+! colspan="3"| {{Seaplane}}Seaplane Fighter/Bomber
+| colspan="2"| 1.1x
+|-
+! colspan="3"| {{Seaplane}}[[Laté 298B]]
+| colspan="2"| 1.3x
+|-
+! colspan="3"| {{RedPlane}}1 Dive Bomber
+| colspan="2"| 1.1x
+|-
+! colspan="3"| {{RedPlane}}2+ Dive Bombers
+| colspan="2"| 1.27x
+|-
+|}
+
+==Map Guide==
+*This is a '''single fleet''' map.
+*The map is split into 2.5 parts:
+**Phase 1 requires defeating the {{ShipLink|Abyssal Mediterranean Princess|text=Abyssal Mediterranean Princess}} at {{Event/Route|J|Red}}.
+**Phase 1.5 requires unlocking the TP Phase nodes.
+**Phase 2 requires carrying out a Transport Operation towards Node {{Event/Route|O|Red}}.
+*The time spent on Phase 2 heavily depends on how much Transport Load-Off Equipment you can bring to the boss node {{Event/Route|O|Red}}. The [[Events/Mechanics|Mechanics Tab]] has a list of TP Load-Off Equipment and how many points it deducts from the TP Gauge.
+
+===Phase 1: Defeat the Abyssal Mediterranean Princess===
+This phase is very straightforward. Defeat the princess and deplete the HP Gauge. Apart from her the only other noteworthy threat in the boss fleet is the Nu-Class Kai Flagship Light Carrier that can appear in some compositions. The Princess herself can be a tough opponent on Hard Mode because she has 740 HP and up to 228 Armour. One to three historical ships are recommended to deal with her.
+
+'''1FBB 1CA 1CL 1 CV(L) 2DD (Fast Fleet)'''
+*Route: {{Event/Route|C|red|F|blue|H|red|J|red}}
+*LBAS: Range 6, 101/225 Airpower required for AP/AS
+*Vanguard Formation recommended for pre-boss nodes.
+*Support Expeditions are not required.
+
+===Phase 1.5: Unlock the transport route===
+On Hard Mode you have to score at least an A-Rank at Node {{Event/Route|D|red}}, which is the home of up to three {{ShipLink|Supple Depot Princess|text=Supply Depot Princesses}}, one or two {{ShipLink|Artillery Imp|text=Artillery Imps}}, and two {{ShipLink|PT Imp Pack|text=PT Imp Packs}}. Refer to [[Combat/Installation|this page]] on how to deal with them. PT Imp Packs are weak against DDs with AA Guns + Skilled Lookouts.
+
+'''1FBB 1 CA 1CL 1 CVL 2DD (Slow Fleet)'''
+*Route: {{Event/Route|B|red|D|red}}
+*LBAS: Range 3, 136 Airpower required for AP
+*Support Expeditions are not required but can help you deal with the PT Imp Packs.
+
+===Phase 2: Deplete the TP Gauge===
+This phase's boss fleet consists of a {{ShipLink|French Battleship Princess|text=French Battleship Princess}}, a weaker version of the {{ShipLink|Abyssal Mediterranean Princess|text=Abyssal Mediterranean Princess}}, and a few Late Model destroyers
+
+'''1FBB 1CV(L) 4DD'''
+*Route: {{Event/Route|C|red|F|blue|G|red|N|green|O|red}} 
+*LBAS: Range 7, 101 Airpower required for AS (108 during LD)
+*Aiming for S-Ranks may not be viable without support expeditions due to boss's high Armour values.
+
+
+===LBAS Flight Range===
+[[File:Fall2020E1LBAS.png|500px|center]]
+{{clear}}
+{{Event/MapPageFooter}}

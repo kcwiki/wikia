@@ -1,0 +1,77 @@
+==Enemy patterns==
+{{Section}}
+
+{{Normal/Map
+|page = 1-1|
+{{Normal/MapNode|A|x=225|y=158}}
+{{Normal/MapNode|B|x=340|y=80}}
+{{Normal/MapNode|C|x=322|y=220}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{NodeInfo|name=敵偵察艦
+|A
+|Normal
+|Line Ahead
+|Destroyer I-Class
+|-
+|A
+|Normal
+|Line Ahead
+|Destroyer Ro-Class
+|-
+|A
+|Normal
+|Line Ahead
+|Destroyer Ha-Class
+}}
+{{NodeInfo|name=敵はぐれ艦隊
+|B
+|Normal
+|Line Ahead
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|B
+|Normal
+|Line Ahead
+|Destroyer Ro-Class
+|Destroyer I-Class
+|-
+|B
+|Normal
+|Line Ahead
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+}}
+{{NodeInfo|name=敵主力艦隊
+|C
+|Boss
+|Line Ahead
+|Light Cruiser Ho-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|C
+|Boss
+|Line Ahead
+|Light Cruiser Ho-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|C
+|Boss
+|Line Ahead
+|Light Cruiser Ho-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|C
+|Boss
+|Line Ahead
+|Light Cruiser Ho-Class
+|Destroyer Ha-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}

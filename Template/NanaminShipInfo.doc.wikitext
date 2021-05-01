@@ -1,0 +1,74 @@
+==Basic==
+;Description
+:This template is used to create a 2-column table of ships.
+;Skeleton
+<pre>{{NanaminShipInfo
+| <Ship>
+| <Model>
+| <Level>
+| <Level Goal>
+| <Notes>
+|-
+| <Ship>/<Model>/<Level>/<Level Goal>/<Notes>
+|-
+|all=true
+|class=Light Cruiser
+|remove_headers=true
+}}</pre>
+
+==Syntax==
+:Entries into the table must follow the order shown in the Skeleton. They may be grouped as liked, with each individual value separated by a / from the others.
+:In the case of an empty remodel, <Ship>/<Model> should be used.
+:A "|-" line is required after every full entry to trigger processing.
+
+===General fields===
+:Ship is the ship's name. For example, "Sendai".
+:Model is the ship's remodel. This may be "-", "Kai", "Kai Ni", "A", "Carrier", "Carrier Kai", "Carrier Kai Ni", "zwei" or "drei". The dash indicates a base remodel.
+:Level is the current level of the ship.
+:Level Goal is the level the ship will be leveled to.
+:Notes is all other information that the user wishes to include. This is outputted as-is. Break lines must be supplied as <br /> and not by pressing return.
+
+===Additional Variables===
+:You can have "all=true" to have all the ships processed into the same table. This also disables the headers.
+:You can have "class=???" where ??? is "Battleship", "Carrier", "Heavy Cruiser", "Light Cruiser", "Submarine" or "Others". It prevents the display of ships other than the class you chose. This does not disable headers automatically.
+:You can have "remove_headers=true" to disable headers.
+
+===Notes===
+:You cannot have two of the same ship on the same page with this module or there will be a processing conflict.
+
+==Example==
+<pre>{{NanaminShipInfo
+| Sendai/Kai Ni
+| 111
+| 150
+| Sendai is best.
+|-
+| Naka/Kai Ni
+| 72
+| 99
+| Idol OP.
+|-
+| Ro-500
+| -
+| 88
+| -
+| Ro 2 cute.
+|-
+}}</pre>
+{{NanaminShipInfo
+| Sendai/Kai Ni
+| 111
+| 150
+| Sendai is best.
+|-
+| Naka/Kai Ni
+| 72
+| 99
+| Idol OP.
+|-
+| Ro-500/
+| 88
+|-
+| Ro 2 cute.
+|-
+}}

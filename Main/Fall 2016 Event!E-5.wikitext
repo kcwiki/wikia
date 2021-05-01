@@ -1,0 +1,328 @@
+__NOTOC__
+<div style="text-align:center;margin-top:20px;">{{Event/DetailToggle}}</div>
+
+==Information==
+<div class="mw-collapsible mw-expanded">{{clear}}
+{{Notice|align=left|
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/0eoo0vqc53KAh5EE2 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1WJGiM9GcKxwVKTR-tiZ7CxNnEGV3HLbKDt4Mb6etS5w here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:494372|here]].
+}}
+{{Event/MapInfo
+|en = Beyond the Shore
+|jp = 渚を越えて
+|romaji = Nagisa o koete
+|tag = Decisive Fleet (Hard only)
+|hp_easy = 3400
+|hp_normal = 4200
+|hp_hard =4800 
+|mechanics = Unlockable Starting Point@Events/Mechanics#Unlockable Starting Point, Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Ship Locking(甲 only)@Events/Mechanics#Ship_Locking, Boss Debilitation@Events/Mechanics#Map-specific_Mechanics
+|Allreward = {{ShipBattleCardKai|Saratoga/}}
+
+|Easyitem1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Easyqty1 = 1
+
+|Normitem1 = {{EquipmentCardKai|F4F-3|size=50px}} |Normqty1 = 1
+|Normitem2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]|Normqty2 = 8
+|Normitem3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Normqty3 = 2
+
+|Harditem1 = {{EquipmentCardKai|F4F-4|size=50px}} |Hardqty1 = 1
+|Harditem2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]] |Hardqty2 = 10
+|Harditem3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |Hardqty3 = 2
+|Harditem4 = [[File:First-class_Medal_061_useitem.png{{!}}50px{{!}}link=Medal]] |Hardqty4 = 
+}}
+{{MapBranchingTable|title = Branching Rules for the First Part
+|C -> E =
+* Slow Fleet
+* (F)BB(V) + CV(B) ≧ 5
+|C -> G = * Does not meet the requirements to go to E
+|I/empty -> H = * Choice
+|I/empty -> J = * Choice
+|H -> D = * Does not meet the requirements to go to F
+|H -> F =
+* (F)BB(V) + CV(B) ≧ 5
+|D -> A = * Pass the LoS check
+|D -> Q/empty = * Fail the LoS check
+|J -> L/storm = ???
+|J -> K = ???
+|L/storm -> K = * Pass the LoS check
+|L/storm -> R/empty = * Fail the LoS check
+}}
+{{MapBranchingTable|title = Branching Rules for the Second Part
+|width = default
+|2 -> K =
+* Carrier Task Force
+* None of the below
+|2 -> M =
+* Transport Escort Combined Fleet
+* STF and (F)BB+CV ≦ 1 in main fleet
+|2 -> U =
+* Surface Task Force with the following requirements:
+** (F)BB+CV ≧ 4
+|K -> M = 
+* Does not meet the requirement to go to N
+* Slow fleet
+* CLT ≧ 2
+* DD ≧ 4
+|K -> N =
+* (F)BB+CV ≦ 5 '''AND''' CLT = 1 in the '''ESCORT''' fleet
+|M -> N = 
+* Slow Fleet
+* CLT ≧ 2
+* DD ≧ 4
+* (F)BB+CV ≧ 6
+|N -> O = * Fixed route
+|M -> O = * Does not meet the requirement to go to N
+|P -> T = * Pass the LoS check
+|P -> S/empty = * Fail the LoS check
+}}
+
+===Warning on Difficulty Change from Hard mode===
+<strike>Players are to be advised that changing your difficulty from Hard(甲) mode to Easy(丙) or Normal(乙) difficulty after applying any debuffs/special mechanics will reset all of them upon the difficulty switch, forcing you to start from scratch.</strike>
+
+Changing your difficulty from Hard<span style="font-weight:normal;">(甲)</span> to Normal<span style="font-weight:normal;">(乙)</span> does ''not'' reset any debuffs and special mechanics.
+
+Changing your difficulty from Easy(丙) to Normal(乙) does ''not'' reset any debuffs and special mechanics.
+
+However changing from Easy(丙) or Normal(乙) to Hard(甲) <strike>or vice versa</strike> will cause all your debuffs and special mechanics to reset. 
+*Easy(丙) => Hard(甲) = Reset
+*Easy(丙) <=> Normal(乙) = No Reset
+*Normal(乙) => Hard(甲) = Reset
+*Hard(甲) => Normal(乙) = No Reset
+
+===Tips===
+*'''E-5 Hard(甲)''' has its own unique ship lock (orange tag), the 4th ship lock. In other words, E-5 Normal(乙) and Easy(丙) will give you '''NO''' tagging color and you are allowed to use any ships in the previous maps, while Hard(甲) applies the same ship locking rules.
+
+*[[Nagato]], [[Prinz Eugen]], [[Sakawa]] and [[Saratoga]] (not in bombing phase) are able to gain access to extremely high damage output (2.5x post-cap modifier<ref>http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:718#14</ref>) to all enemy ships on the E-5 boss node regardless.<ref>https://clips.twitch.tv/daxyn/PoisedBisonCorgiDerp</ref>
+**However bringing Nagato will result in going through an extra node due to her being slow speed. You may opt to just bring Prinz and Sakawa while exempting Nagato out of the fleet if you prefer a shorter route.
+*Three land bases are available in this map. Only up to two land bases may be sortied out in this map. However, the third base may be used for air defense.
+
+*LBAS range requirements (these remain the same after 2nd start point unlock)
+**A: 5 range
+**O: 9 range
+**T (Boss): 11 range
+**[[:File:Fall 2016 E-5 LBAS Range Map.jpeg|Full map]]
+
+===Fleet compositions===
+
+If you have Nagato, Prinz Eugen, and/or Sakawa, depending on which option you choose, please bring them, duplicate Prinz Eugen & Sakawa included.
+==== '''Carrier Task Force (CTF)'''====
+
+Most recommended setup to go with for E-5. Please note as per written on the Branching Rules, bringing any Slow ships or a second CLT will result in being taken K to M. However depending on player preferences, this can be turned into an advantage by bringing a more powerful fleet compared to the all Fast fleet which has limited options compared to the Slow fleet, where the trade off is going through an extra submarine node. 
+
+===== '''Unlocking the 2nd start point''' =====
+{| {{FancyTable}}
+|-
+! colspan="1" |View Carrier Task Force (CTF) Fleet Compositions
+|-
+! scope="col" style="text-align:center;"|Option #1: Fast Fleet Shortest Route (B-C-G-I-H-D-A)
+|-
+|
+*1FBB 3CV(B) 2CA(V)  + 1CL 2CLT 1CA 2DD
+*1FBB 3CV(B) 1CA(V) 1CVL + 1CL 3CLT 2DD
+|}
+
+===== '''Boss run''' =====
+{| {{FancyTable}}
+|-
+! colspan="1" |View Carrier Task Force (CTF) Fleet Compositions
+|-
+! scope="col" style="text-align:center;"|Option #1: Slow Fleet (K-M-N-O-P-T)
+|-
+|
+*2 BB(V) 4 CV(B) + 1 CL 2 CLT 1 CA(V) 2 DD
+*2 BB(V) 4 CV(B) + 1 CL 1 CLT 2 CA(V) 2 DD
+*2 BB(V) 3 CV(B) 1 CVL + 1 CL 2 CLT 1 CA(V) 2 DD
+*2 BB(V) 3 CV(B) 1 CVL + 1 CL 1 CLT 2 CA(V) 2 DD
+*1 BB(V) 4 CV(B) 1 CA(V) + 1 CL 2 CLT 1 CA(V) 2 DD 
+*1 BB(V) 4 CV(B) 1 CA(V) + 1 CL 1 CLT 1 CA(V) 2 DD
+|-
+! scope="col" style="text-align:center;"|Option #2: All-Fast Fleet (K-N-O-P-T)
+|-
+|
+* 1 FBB 4 CV(B) 1 CA(V) + 1 CL 1 CLT 2 CA(V) 2 DD
+* 2 FBB 3 CV(B) 1 CVL + 1 CL 1 CLT 2 CA(V) 2 DD
+* 2 FBB 2 CV(B) 2 CVL + 1 CL 1 CLT 2 CA(V) 2 DD
+* 1 FBB 1 CA(V) 2 CV(B) 2 CVL + 1 CL 1 CLT 1 FBB 1 CA(V) 2 DD
+* 2 CA(V) 4 CV(B) + 1 CL 1 CLT 1 FBB 1 CA(V) 2 DD
+|-
+! scope="col" style="text-align:center;"|Option #3: Duplicate Prinz & Sakawa Fleet (K-N-O-P-T)
+|-
+|
+* Prinz, Sakawa 4 CV(B) + Prinz, Sakawa 1 CLT 1 FBB 2 DD 
+|}
+
+==== '''Surface Task Force (STF)''' ====
+
+'''WARNING''': Not recommended overall due to low Air Power, which is very critical especially for higher difficulties, but is an option in Easy mode if STF is preferred over CTF for the player. 
+
+Using this composition makes achieving air superiority (AS) difficult against nodes N, O, P and T. Without air superiority artillery spotting is not possible and plane losses will be high.
+
+Alternatively you may attempt to achieve Air Superiority (AS) with 2 CVLs loaded with fighters and an additional fighter-bomber to let them be able to participate in shelling, as well as CAVs with seaplane fighters to help with that.
+
+However if you choose to go with this option, please make sure to calculate your Air Power accordingly.
+
+{| {{FancyTable}}
+|-
+! colspan="1" |View Surface Task Force (STF) Fleet Compositions
+|-
+! scope="col" style="text-align:center;"|Option #1: Slow Fleet (K-M-N-O-P-T)
+|-
+|
+* 2 BB(V) 3 CA(V) 1 CV(B) + 1 CL 2 CLT 1 CA(V) 2 DD
+* 2 BB(V) 2 CA(V) 2 CVL + 1 CL 2 CLT 1 CA(V) 2 DD
+|-
+! scope="col" style="text-align:center;"|Option #2: All-Fast Fleet (K-N-O-P-T)
+|-
+|
+* 2 FBB 3 CA(V) 1 CV(B) + 1 CL 1 CLT 2 CA(V) 2 DD
+* 2 FBB 2 CA(V) 2 CVL(Fast) + 1 CL 1 CLT 2 CA(V) 2 DD
+|-
+! scope="col" style="text-align:center;"|Option #3: All-Fast Light Fleet (M-O-P-T)
+|-
+|
+* 1 FBB 3 CA(V) 2 CVL(Fast) + 1 CL 1 CLT 2 CA(V) 2 DD
+* 1 CV 4 CA(V) 1 CL + 1 CL 1 CLT 1 CA 3 DD
+|}
+
+===How to Open up the Secret Node===
+
+<gallery type="slideshow" widths="300">
+vlcsnap-2016-11-25-09h04m23s999.png|Air Supremacy from LBAS Defense
+vlcsnap-2016-11-25-09h04m32s531.png|Attack miss from a Dying Enemy Aircraft
+vlcsnap-2016-11-25-09h11m00s559.png|White Text showing Landbase Defense results
+</gallery>
+
+[[File:Fall 2016 Event E-5 Opening up the Secret Node|thumb|right|300 px]]
+
+E-5 has an additional starting location<ref>https://clips.twitch.tv/daxyn/CloudyPoultryBloodTrail</ref> (2nd starting point and node U) that can be unlocked by doing the following in any order and can be done in separate runs:
+
+*Achieve two (2) '''Air Supremacy''' plus no damage taken Land-Base defenses from Enemy Air Raids against your land bases, receiving a '''white confirmation text after''' the base is attacked. <ref name=ww5>http://wikiwiki.jp/kancolle/?%C8%AF%CE%E1%A1%AA%A1%D6%B4%CF%C2%E2%BA%EE%C0%EF%C2%E8%BB%B0%CB%A1%A1%D7#Tactics5</ref>
+**'''Hard Mode''': Same as above
+**If this is the final requirement you fulfill, you must complete the node you have landed on when the Air Raid against your base had occurred.
+**Setting all three LBAS into Air Defense mode with Interceptors/Fighters + 0~1 [[Saiun]] will give a high chance of success.
+***Saiun is only optimal if there is not a fourth fighter/interceptor plane with roughly equal stats available instead.
+**If your LBAS happens to get an Air Raid against three Wo-class however, gaining air supremacy will be very difficult (impossible on hard). The composition your LBAS gets attacked by is random.
+**It is recommended to use all available Interceptors with Double Chevron Aircraft Proficiency and Fighters with minimum of 8+ AA stats. Please refrain from using any aircraft with low AA such as [[Type 0 Fighter Model 52]] or [[Type 0 Fighter Model 21]] as it will likely result in failing to obtain air supremacy and/or damage taken.
+**The enemy air raid compositions have the following air power requirements for air supremacy:
+***Hard(甲) 2 Wo: 798, 3 Wo: 1191
+***Normal(乙) 2 Wo: 762, 3 Wo: 1137
+***Easy(丙) 2 Wo: 651, 3 Wo: 975
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width:700px;"
+! colspan="6" style="text-align: center;"|How to know whether you succeeded in getting a valid LBAS defense
+|-
+! scope="col" style="text-align: center;"|Air supremacy?<br>(<span style="color:green">'''制空権確保!'''</span>)
+! scope="col" style="text-align: center;"|Attack miss/no damage?
+! scope="col" style="text-align: center;"|White text appeared after?
+! scope="col" style="text-align: center;"|Does it count as a successful defense?
+|-
+| style="text-align: center;"|Yes
+| style="text-align: center;"|Yes
+| style="text-align: center;"|Yes
+| style="text-align: center;"|'''<span style="color:green">SUCCESS</span>'''
+|-
+| style="text-align: center;"|No
+| style="text-align: center;"|Yes
+| style="text-align: center;"|Yes
+| style="text-align: center;"|'''<span style="color:red">FAIL</span>'''
+|-
+| style="text-align: center;"|No
+| style="text-align: center;"|Yes
+| style="text-align: center;"|No
+| style="text-align: center;"|'''<span style="color:red">FAIL</span>'''
+|}
+
+*Achieve S-Rank Victories in node A.<ref name=ww5></ref>
+**'''Easy Mode''': You must obtain one (1) S-Rank Victory in node A.
+**'''Medium Mode''': You must obtain two (2) S-Rank Victory in node A.
+**'''Hard Mode''': You must obtain three (3) S-Rank Victory in node A. 
+
+
+After completing the requirements above, a cutscene will occur where the secret node will reveal itself after the end of the next node. 
+
+<b><div data-rte-washtml="1" data-rte-style="color:red;" style="color:red;" data-rte-attribs=" style=color:red;">The exact conditions to unlock the 2nd starting point still needs further confirmation for exact numbers.</div></b>
+
+===Boss Debuff Mechanism ===
+<gallery type="slideshow" widths="300">
+Debuffed Jellyfish Hime.jpg|Debuffed Boss
+Non-debuffed Jellyfish Hime.png|Non-Debuffed Boss (Standard)
+</gallery>After unlocking the secret node, there exists a secondary debuff mechanism which will trigger when certain conditions are met. When triggered, you will hear a quest clear sound for confirmation after you come back to your main screen, and the Boss Dialogue Sound, Text and CG will change, reflecting her debuffed state. <ref>[[https://www.youtube.com/watch?v=SwqFGKWxnXQ]]</ref>
+====Debuff Effects====
+*Lower boss armor<ref name=ww5></ref>
+**Armor is lower and most ships will be able to deal much more heavier damage against the Boss, although not as strong as Prinz Eugen, Sakawa or Nagato's damage output.
+
+====How to Debuff the Boss====
+1. S rank node F three (3) times for Hard(甲), <span style="font-weight:normal;"> two</span><span style="font-weight:normal;"> (2) times for Normal(乙), or one</span><span style="font-weight:normal;"> (1) times for Easy(丙).</span><ref name=ww5></ref>
+*Reaching node F requires a Surface Task Force containing 4 [F]BB(V) + 1 CV in total (Ex. 3 BB(V) + 1 CV & 1 FBB in 2nd fleet).
+*S ranks from before the 2nd start point unlock will count.
+2. S rank two (2) times in node P<ref name=ww5></ref>
+*Using [[Type 0 Fighter Model 21 (Skilled)]] x3 + [[Type 2 Large-sized Flying Boat]] to reduce enemy aircraft in node P can help with achieving S rank.
+*In the case obtaining S rank in node P is your final requirement, the Boss will be debuffed on the same run after you obtain the 2nd S rank.
+*S ranks from before the 2nd start point unlock will count.
+3. Four (4) air supremacy plus white text  LBAS defense from Land Base air raids<ref name=ww5></ref>
+*Does not include the ones from the opening of the secret node. You must get 4 new fresh.
+*Setup 3x LBAS in Air Defense mode with Interceptors/Fighters + Saiun.
+
+After triggering the debuff, the "Quest Completion Sound Effect" ({{Audio|file=Sound_se_30.ogg}}) will play when returning from sortie.
+
+===Sample Videos===
+{| {{FancyTable}}
+|-
+! colspan="3" |View Sample E-5 Runs
+|-
+! scope="col" style="text-align:center;"|E-5 Hard mode (Boss Non-Debuffed)
+! scope="col" style="text-align:center;"|E-5 Hard mode (Boss Debuffed)
+! scope="col" style="text-align:center;"|
+|-
+|[[File:Fall 2016 Event E-5 Hard Non-debuffed|center|200 px]]
+|[[File:Fall 2016 Event E-5 Hard Boss Debuffed|center|200 px]]
+|
+|-
+! style="text-align:center;"|E-5 Easy mode Clear
+! style="text-align:center;"|E-5 Medium mode Clear
+! style="text-align:center;"|E-5 Hard mode Clear
+|-
+|[[File:Fall 2016 Event E-5 Easy mode Clear|center|200 px]]
+|N/A
+|[[File:Fall 2016 Event E-5 Hard FINAL KILL|center|200 px]]
+|}
+
+===References===
+<references />
+
+</div>{{clear}} <!-- Information collapsible -->
+
+{{:Fall 2016 Event/E-5/Enemy patterns}}
+
+==Drop list==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = A, O, T
+|boss = T
+|Agano: T/Easy
+|Akigumo: T/Easy
+|Akitsu Maru: T/Easy
+|Asakaze: A/Easy, O/Easy, T/Easy
+|Hatsukaze: T/Easy
+|Hayasui: A/Easy, O/Easy
+|Kaga: T/Easy
+|Maikaze: T/Easy
+|Maruyu: T/Easy
+|Mutsu: O/Easy, T/Easy
+|Naganami: T/Easy
+|Nagato: O/Easy, A/Easy, T/Easy
+|Noshiro: T/Easy
+|Oyashio: T/Easy
+|Pola: T/Easy
+|Prinz Eugen: T/Easy
+|Sakawa: A/Easy, O/Easy, T/Easy
+|Shimakaze: T/Easy
+|Shoukaku: T/Easy
+|Zuikaku: T/Easy
+
+}}
+
+</div> <!-- Drop list collapsible -->

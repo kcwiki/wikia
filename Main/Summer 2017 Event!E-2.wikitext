@@ -1,0 +1,111 @@
+{{Event/MapPageHeader
+|form = RccmmN0kYuGvGJ3a2
+|spreadsheet = 1Vyh8t8U4frYnxSquCN7AyCyE_orsdi04gafRYDxVEpY
+|thread = 
+}}
+{{Event/MapInfo
+|en = The Crossing of Ri Lanka
+|jp = リランカを越えて
+|romaji = Ri Lanka o koete
+|tag = E2
+|mechanics = Ship Locking@Events/Mechanics#Ship_Locking, Abyssal Combined Fleet@Abyssal Combined Fleet
+|hp_all = 1440
+|show_kills = true
+|kills_all = 7
+|kills_easy =
+|kills_medium =
+|kills_hard =
+|reward_all = {{ShipBattleCardKai|Hatakaze}}
+|reward_easy_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Type 95 Depth Charge|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 2 Depth Charge|size=50px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Type 2 Depth Charge|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Spitfire Mk.I|size=50px}}
+|reward_hard_4_x = 1
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules
+
+|0 -> A/empty = 
+* Meet all of the following requirements:
+** Amount of DD + CL ≧ 2
+** Fleet must contain DD
+** Amount of (F)BB(V) ≦ 1 (Medium/Hard)
+** No SS(V) allowed
+** Amount of CV(L/B) ≦ 2
+|0 -> B = 
+* Do not meet the requirements to go to either A or D.
+|0 -> D = 
+* Meet all of the following requirements:
+** Amount of DD + CL ≧ 2
+** Fleet must contain DD
+** Amount of CV(L/B) ≧ 3 '''OR''' Fleet contains SS(V)
+
+|F -> J = * Do not meet the requirements to go to P.
+|F -> P = 
+* Meet all of the following requirements:
+** Amount of DD ≧ 3
+** Amout of (F)BB(V) + CV(L/B) ≦ 1
+** Fast Fleet
+** Fleet must contain AV (Hard)
+
+|G/empty -> H,I = * Active Branching
+
+|J -> L = 
+* Meet all of the following requirements:
+** Pass the LoS check
+** Amount of (F)BB(V) + CV(L/B) ≦ 3
+|J -> M/empty = * Do not meet the requirements to go to L.
+
+|L -> K = * Do not meet the requirements to go to O, but pass the LoS check.
+|L -> N/empty = * Fail the LoS check.
+|L -> O = 
+* Meet all of the following requirements:
+** Pass the LoS check
+** Amount of CV(B) ≦ 1
+** Amount of (F)BB(V) ≦ 1
+** No Slow BB(V) or CV(L) allowed (Hard)
+** No CA(V) allowed
+** No CLT allowed
+}}
+
+===Map Guide===
+*This is a Single-Fleet Map.
+*Node B, C and K are submarine nodes.
+*The Boss is a {{ShipLink|Heavy Cruiser Ne-Class/Flagship}} variant in an [[Combat/Abyssal Combined Fleet|Abyssal Combined Fleet]], utilizing Formation 4 (Line Ahead equivalent).
+*There are many {{ShipLink|Light Carrier Nu-Class/Kai Elite|Light Carrier Nu-Class/Kai Flagship|text=Light Carriers Nu-Class Kai Elite and Flagship}} throughout the Map. Please have approximately 250~270 Air Power from the Start Point to have enough Fighter Power by the time you reach the Boss node. 
+**The Aerial Node has a formation that requires at least 310 Air Power, but its effect on your fleet is less than the drawback of adding in too many fighters.
+
+====Unlocking Shortcut L to O====
+* To unlock nodes P, Q and the shortcut L -> O, you need to at least obtain A-Rank victory on node I.
+** A fleet of the following will be able to route north towards Node I:
+***'''3 CV(L/B)''' + 0-1 CA(V) + 0-1 (F)BB +  0-1 CL + '''1-2 DD''' + 0-1 SS(V)
+****'''Note:''' You need at least 3 CV(L/B) and at least 1 DD + 1 CL/DD. SS(V) can override this but do note that those surface nodes can cause you a retreat more often than success.
+**Node I has {{ShipLink|Harbour Summer Princess}} and {{ShipLink|Artillery Imp}}. Please bring your {{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|text=Daihatsu Tanks}} and {{EquipmentLink|WG42 (Wurfgerät 42)}}.
+*<u>Regarding the Shortcut from L--> O</u>
+**Using any Slow Ships, or having 3 or more FBB+CA(V)+CV(B) combined will direct you to L to K regardless of the shortcut being opened.
+
+====Player-submitted Fleet====
+*{{Event/Route|A|blue|C|red|F|red|J|orange|L|red|O|red}} (shortcut utilized)
+**1 FBB 1 CV 1 CVL 1 CL 2 DD
+* {{Event/Route|A|blue|C|red|F|red|J|orange|L|red|K|red|O|red}}
+**1 FBB 1 CV 1 CVL 1 CA 1 CL 1 DD
+*{{Event/Route|D|red|E|red|G|blue|I|red}} (for unlocking shortcut)
+**3 CV(L/B) 1 (F)BB 2 DD
+
+
+
+
+{{Event/MapPageFooter}}

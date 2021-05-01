@@ -1,0 +1,138 @@
+Did you get a catbomb recently? If so, that's probably because your API Link has already expired. Yes, you read that right, as of the [[Thread:338546|9th October 2015 update]], API Links now expire some time after acquiring it.
+
+<blockquote class="styled">''When in doubt, refresh your API Link''</blockquote>
+<blockquote class="styled">''Keep calm, and refresh your API Link''</blockquote>
+
+===Terminologies===
+First we need to differentiate states of the API Link. (''The wordings represent their nature to front-end users, and does not signify actual back-end processes.'')
+<div style="padding:0px 0px 0px 20px;">
+* '''Working API Link''' - a newly refreshed API Link that can open the game and do in-game actions
+* '''Locked API Link''' - an API Link that will work in playing, but will not let your re-enter the game (F5)
+* '''Expired API Link''' - an API Link that will catbomb regardless of what you do
+</div>
+
+We also need to differentiate the two "refresh" terms
+<div style="padding:0px 0px 0px 20px;">
+* '''Refreshing API Link''' - the process of visiting DMM to extract a new Working API Link
+* '''Refresh (F5)''' - the act of refreshing the BROWSER or viewer (in this blog post, it will always come with the (F5) suffix)
+</div>
+
+
+==Old API Link Lifecycle==
+Before the update, API Links do not expire. They can be used for '''YEARS''' and still work and be used for playing. One of the main reasons for refreshing API Links though, is to get monthly resets and new content. But for those not interested in those, then yes, API Links previously did not expire and could be used indefinitely.
+
+So previously, you could just wake up one day, and re-use your old API Link without going to the DMM website, and loading all their slow website assets. One-click play as it is. Unfortunately, this has all changed.
+
+
+==New API Link Lifecycles==
+
+===In the act of Refresh (F5)===
+In contrast to popular belief, '''Refresh (F5)''' still works, BUT ONLY during the '''early minutes of the game'''. This has caused people to believe that only certain viewers are affected - due to the unfortunate situation people have tested it in, but in reality, '''VIEWERS ARE IRRELEVANT''' (to be further discussed in the '''Viewers''' section).
+{| style="width:680px;"
+|-
+| style="width:370px;" valign="top" |
+# A player refreshes to a '''Working API Link'''
+# He can use this to enter the game
+# You can '''Refresh (F5)''' the game and it will still work
+# ''(Play time elapses: ~20min-2hrs)''
+# The API Link becomes '''Locked'''
+# '''Refresh (F5)''' at this point will catbomb, remember definition of '''Locked API Link''' mentioned in the '''Terminologies''' section.
+#* Doing a '''Refresh (F5)''' on a '''Locked''' API Link will also make it '''Expired'''
+# The Player will need to refresh API Link again via DMM Website
+| style="width:10px;"|
+| style="width:300px;" valign="top" |[[File:Api_links_oct_2015_1.jpg|300px]]
+|}
+
+
+===In the act of idling out===
+<span style="color:#f00; font-weight:bold;">This section "*In the act of idling out*" might not apply in recent times. We do not get idle catbombs anymore and might have been misinterpretation by the reporters. OR the devs might have reverted this a few days after it was implemented that's why it happened before, but did not continue until today.</span>
+
+There are conflicting reports of the effects of being idle in-game. Some have lasted hours of idle time without getting catbombed<ref>[https://www.facebook.com/dragonjetmkii/posts/10153356120362730?comment_id=10153356168032730&offset=0&total_comments=5&comment_tracking=%7B%22tn%22%3A%22R2%22%7D Ah Rip Ee Xuan's report]</ref>, however, it was not stated if they had been using an API Link from before or after the update. There might also be environment differences, but it is generally accepted at this point that idle time does expire your API Link.
+
+{| style="width:680px;"
+|-
+| style="width:370px;" valign="top" |
+# A player refreshes to a '''Working API Link'''
+# He can use this to enter the game
+# You can '''Refresh (F5)''' the game and it will still work
+# ''Play Time''
+# ''Suddenly start idling in-game''
+# ''(Idle time elapses: ~20-30min-?)''
+# API Link will turn '''Expired''' (''not locked'').
+# Player returns to the game, gets catbombed even without refreshing
+# The Player will need to refresh API Link again via DMM Website
+| style="width:10px;"|
+| style="width:300px;" valign="top" |[[File:Api_links_oct_2015_2.jpg|300px]]
+|}
+
+
+==Viewers==
+Let's get this straight first, '''VIEWERS ARE IRRELEVANT'''.
+* Viewers listen to '''your interactions with the game''' and show you hidden data
+* API Link is a way to '''access the game''' and start playing
+'''Before anyone posts claims of viewers that caused this, know your shit first.'''
+
+Now, there might be some viewers that might HELP work around this, which I am not aware of so far, but as I see it there's no 100% solution (except for api_start2 caching on locked, but not expired APIs, but we'll see).
+
+But right now, '''all viewers are affected in terms of API Links!'''
+
+Viewers that encourage DMM Gameplay is fortunate since as everyone knows, DMM gameplay is the OTHER way to access the game aside from API Link, and is unaffected.
+
+Here are the possible effects of this change to the known viewers:
+
+===[https://chrome.google.com/webstore/detail/kancolle-command-center-%E6%94%B9/hkgmldnainaglpjngpajnnjfhpdjkohh KC3改]===
+<div style="padding:0px 0px 0px 30px;">
+'''To those playing via API Link'''
+* We now merged Play and Refresh API Link buttons, so everything remains automatic.
+
+'''To those playing via DMM website'''
+* No change in process
+</div>
+
+===[https://github.com/Grabacr07/KanColleViewer KCV]===
+<div style="padding:0px 0px 0px 30px;">
+'''To those playing via API Link'''
+* You will need to re-extract your API Link everytime it expires, as explained in the article above. You might want to use KC3改 just for easy extraction and copy-paste the API Link onto your KCV address bar up top. 
+'''To those playing via DMM website (default)'''
+* This is when you use KCV cookies and login to DMM within the KCV viewport
+* No change in process
+</div>
+
+===[https://github.com/andanteyk/ElectronicObserver EO]===
+<div style="padding:0px 0px 0px 30px;">
+'''To those playing via API Link'''
+* You will need to re-extract your API Link everytime it expires, as explained in the article above. You might want to use KC3改 just for easy extraction and copy-paste the API Link onto the EO settings.
+'''To those playing via DMM website (default)'''
+* This is when you use EO cookies and login to DMM within the EO viewport
+* No change in process
+</div>
+
+===[https://github.com/poooi/poi Poi]===
+<div style="padding:0px 0px 0px 30px;">
+'''To those playing via API Link'''
+* Please manual extract api each time after expire if you want to do so<ref>[http://kancolle.wikia.com/wiki/User_blog_comment:Dragonjet/API_Links:_October_2015/@comment-Qunow-20151010083614?permalink=341835#comm-341835 Qunow's comment]</ref>
+'''To those playing via DMM website'''
+* To play via dmm, you can either enter its console to insert cookie hack codes or simply use vpn/proxy just as usual.<ref>[http://kancolle.wikia.com/wiki/User_blog_comment:Dragonjet/API_Links:_October_2015/@comment-Qunow-20151010083614?permalink=341835#comm-341835 Qunow's comment]</ref>
+* No change in process
+</div>
+
+===[https://chrome.google.com/webstore/detail/kancolle-information-cent/cmgnconifcfminmeikodmnlcpickfhfk KCIC]===
+<div style="padding:0px 0px 0px 30px;">
+KCIC's Launcher is fueled by DMM mechanisms and might be unaffected. This means each gameplay is naturally a new API Link so there will be no change to process. (This is unconfirmed as of its latest version)
+</div>
+
+===[https://kancolletool.github.io/ KcTV]===
+<div style="padding:0px 0px 0px 30px;">
+Unfortunately, KcTV only works with API Links, and no Direct DMM gameplay option. You will need to refresh the API Link each time you play, as all other viewers do.
+</div>
+
+
+==Things to look out for==
+Since API Link users would now be eager to avoid catbombs (since a catbomb will require them to refresh the API Link again -_-), here are a few things to watch out for:
+* "''Switching to the fleet screen while dismantling a ship''" will certainly trigger a catbomb, "''Until then, avoid clicking on the Fleet screen until a ship is FULLY dismantled to prevent one source of catbombs.''".<ref>[https://www.facebook.com/dragonjetmkii/posts/10153356029262730?comment_id=10153356304872730&offset=0&total_comments=22&comment_tracking=%7B%22tn%22%3A%22R4%22%7D Ryuu Shun Hayashi's report]</ref>
+** This has been fixed as of the [[Thread:342565|11th October Update]]
+
+
+==References==
+<references></references>
+[[Category:Blog posts]]

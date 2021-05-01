@@ -1,0 +1,144 @@
+==About==
+As of preparing the maintenance and further KC3Kai update which consists of the Ledger feature that requested by one of the wikia user.
+
+Resource Ledger is the one that collects more data about changes along your base. It reflects every possible change from battle, expedition, quests and such. Although there's one thing that troubles me along until now, which is Akashi. It's result '''won't be accurate''' as per Akashi's repair cost does '''not''' match the delta repair along the time.
+
+So basically let's start from the basics of this ledger.
+
+As you see, ratings that were available on the ledger itself reflects how good you were on collecting resources (yet, i'll use resources instead materials, even on the source code itself have some inconsistency). Starting from 5, which is the center that won't affect the other rating as it usually represents void, although it's possible to have a five-rating equivalent like combining -16 fuel, -16 ammo and +40 bauxite. On this page i'll explain carefully how does these thing works.
+
+==Ruleset==
+First of all, each resources have it's own quota, common materials will have lower weight over rarer ones. Those numbers came from the best/worst possible of a single resources within a day.
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="margin: 0px auto; width: 600px;"
+|+Resources Quota
+|-
+! scope="col"|Material Kind
+! scope="col"|Material Quota
+! scope="col"|Consumes Kind
+! scope="col"|Consumes Quota
+|-
+|Fuel
+| style="text-align:right;"|20,000
+|Instant Build
+| style="text-align:right;"|50
+|-
+|Bullet/Ammo
+| style="text-align:right;"|20,000
+|Instant Repair
+| style="text-align:right;"|30
+|-
+|Steel
+| style="text-align:right;"|20,000
+|Development Material
+| style="text-align:right;"|20
+|-
+|Bauxite
+| style="text-align:right;"|10,000
+|Improvement Material
+| style="text-align:right;"|10
+|}
+Next one, each category given different weight according to possible outcome within a day.
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="margin: 0px auto; width: 600px;"
+|+Data Source Coefficient
+|-
+! scope="col"|External Source
+! scope="col"|Coefficient
+! scope="col"|Internal Source
+! scope="col"|Coefficient
+|-
+|Sortie
+| style="text-align:right;"|1.0
+|Construction
+| style="text-align:right;"|1.0
+|-
+|Practice
+| style="text-align:right;"|4.0
+|Development
+| style="text-align:right;"|2.0
+|-
+|Expedition
+| style="text-align:right;"|2.5
+|Dismantlement
+| style="text-align:right;"|4.0
+|-
+|Mission
+| style="text-align:right;"|2.0
+|Disassemble
+| style="text-align:right;"|4.0
+|-
+|<abbr title=明石>Akashi</abbr>
+| style="text-align:right;"|2.5
+|<abbr title=改装>Remodel</abbr>
+| style="text-align:right;"|4.0
+|-
+|Regenerate
+| style="text-align:right;"|25.0
+|Slot Item <abbr title=改装>Kaisou</abbr>
+| style="text-align:right;"|2.0
+|-
+|Inventory Use
+| style="text-align:right;"|3.0
+|
+|
+|}
+For any data gathered within more than one day, it's quota will be multiplied with <math>DC(d) = {(1+\log_{7} d)^2}, d \ge 1</math>.
+
+===Basic Formulas===
+Base rule of the ledger rating itself is ''Any value that attempts to reach about 20% of it's quota, it'll give about 50% base weight value. Anything that surpasses it's quota, will be able to affect onwards the value up to 200% it's base weight value''. Based on that, it can be concluded the formula that looks like this,
+<p style="text-align:center;"><math>SRR = \min(\left\vert {RV \over RQ} \right\vert ^ {\log_{0.2} 0.5},2) * \sgn(RV)</math></p>
+
+
+*SRR : Singular Resource Rating
+*RV : Resource Value, note that this value already multiplied with given coefficient.
+*RQ : Resource Quota
+
+<p style="text-align:center;"><math>MR_{base} = {\sum_{i=0}^8 SRR_i \over 8}</math><br /><math>MRA(x) = {\min(\left\vert x \right\vert,1) * \sgn(x) * 1.25 * 5 + 5}</math></p>
+
+
+*MR : Material Rating
+*MRA : Material Rating Actual/Accumulated (''to note that this one will be used as a formula passed for calculating sum of materials that will be used later on'')
+
+That's it for the base calculation and here we go for the real one.
+
+==Actual Calculation==
+The ledger that passed along will gather every possible data within specified hour, with that it'll collect data and store it into a buffer that can be used for several operation such as hiding some unused properties like '''Regeneration''' for Admirals who always kept their material over 30k or 6 digits runner like myself. There will be two kind of calculation that will be used on this ledger which is '''Subtotal Material''' and '''Averaged Material'''.
+
+Both of them have variety weight depending on the time length of the data gathered itself. Although the averaged one will mostly prevent the long-duration one to breach out the quota by having it's averaged rating '''always towards to 5''', so it can prevents for people who loves to spam small things that affects not so much towards the ledger '''either way''' to break out the quota.
+
+<p style="text-align:center;"><math>\overline{DB} = {\sum_{i=0}^n {MR_{base}} \over n}</math></p>
+
+
+* DB : Data Buffer (''i'll treat this as vector-ish or array on this page''. Be mind that i don't use actual maths lol)
+* MR : Material Rating that gathered from every data buffer that were collection
+
+<p style="text-align:center;"><math>DSC(d) = {\begin{cases} DC(d)^{-0.2}, & d > 1 \\ 1, & \text{otherwise} \end{cases}}</math></p>
+
+
+* DSC : Data Subtotal Coefficient, it'll start to affect out for any d that larger than 1.
+* DC : Day Coefficient.
+
+<p style="text-align:center;"><math>DCA(d) = {(\overline{DB} * (1 - DSC(d))) + ({\sum{DB}_{base} * DSC(d)})}</math></p>
+
+
+* <math>\overline{DB}</math> : '''Average Rating''' of Data Buffer
+* <math>\sum{DB}</math> : '''Subtotal Material''' of Data Buffer, assumed that every material coefficient along with day coefficient is already calculated before.
+
+<p style="text-align:center;"><math>
+\begin{array}{lcl}
+DCD = \begin{cases}
+  s_{DB_{base}}, & \lVert DB \rVert > 0 \\
+  0, & \text{otherwise}
+\end{cases} \\
+DCP = \max(0,1 - \left\vert DCA \right\vert)^{1.5} \\
+DRT = \operatorname{MRA},(DCA + DCD * DCP)
+\end{array}
+</math></p>
+
+
+* DCA : Data Coefficient Average, total average obtained from weighted calculation of subtotal and average. (Ignoring '''d''' parameter, assuming for any valid d)
+* DCD : Data Coefficient Deviation, rating deviation based on collected data individual ratings. (Done with '''Standard Deviation Sample''')
+* DCP : Data Coefficient Pivot, coefficient that determines how much the DCD will push off the DCA from rating 5, based on "available space before trespasses".
+* DRT : Final Rating that will be shown onto the Ledger page itself, it's calculation were based subtotal, average and standard deviation (sample).
+
+So basically that's all that i can explain off for anyone who wonders what things that were done behind the Resources Ledger page. Thanks for using KC3Kai.
+[[Category:Blog posts]]

@@ -1,0 +1,47 @@
+
+{| cellspacing="5" cellpadding="0" style="width:600px; margin:0px; background:#396; text-align:center;"
+|-
+!colspan="5"| <font size=3 color=#e6e600> <u>Resource Status</u>
+|-
+!colspan="5"| <font size=2 color=#ffff1a>Before
+|-
+|[[File:Fuel.png|25x25px]]
+|[[File:Ammunition.png|25x25px]]
+|[[File:Steel.png|25x25px]]
+|[[File:Bauxite.png|25x25px]]
+|[[File:Bucket.png|25x25px]]
+|-
+|<font size=2 color=#66ff8c>{{{fuel1|1}}}
+|<font size=2 color=#66ff8c>{{{ammo1|33}}}
+|<font size=2 color=#66ff8c>{{{steel1|24}}}
+|<font size=2 color=#66ff8c>{{{baux1|123}}}
+|<font size=2 color=#66ff8c>{{{bucket1|25}}}
+|-
+!colspan="5"|<font size=2 color=#ffff1a> After
+|-
+|[[File:Fuel.png|25x25px]]
+|[[File:Ammunition.png|25x25px]]
+|[[File:Steel.png|25x25px]]
+|[[File:Bauxite.png|25x25px]]
+|[[File:Bucket.png|25x25px]]
+|-
+|<font size=2 color=#66ff8c>{{{fuel2|2}}}
+|<font size=2 color=#66ff8c>{{{ammo2|}}}
+|<font size=2 color=#66ff8c>{{{steel2|}}}
+|<font size=2 color=#66ff8c>{{{baux2|}}}
+|<font size=2 color=#66ff8c>{{{bucket2|}}}
+|-
+|colspan="5"|<font size=2 color=#ffff1a> Overall
+|-
+|[[File:Fuel.png|25x25px]]
+|[[File:Ammunition.png|25x25px]]
+|[[File:Steel.png|25x25px]]
+|[[File:Bauxite.png|25x25px]]
+|[[File:Bucket.png|25x25px]]
+|-
+|<font size=2 color=#ccffd9>{{#expr: {{{fuel1|}}}-{{{fuel2|}}}}}
+|<font size=2 color=#ccffd9>{{#expr: {{{ammo1|}}}-{{{ammo2|}}}}}
+|<font size=2 color=#ccffd9>{{#expr: {{{steel2|}}}-{{{steel2|}}}}}
+|<font size=2 color=#ccffd9>{{#expr: {{{baux1|}}}-{{{baux2|}}}}}
+|<font size=2 color=#ccffd9>{{#expr: {{{bucket1|}}}-{{{bucket2|}}}}}
+|}

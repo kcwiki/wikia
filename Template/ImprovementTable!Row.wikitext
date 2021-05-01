@@ -1,0 +1,32 @@
+<includeonly>|-
+{{#if:{{{1|}}}|{{!}} style="text-align:left;" rowspan="{{#if:{{{span2|}}}|8|4}}" {{!}} [[{{trim|{{{1}}}}}]]|}}
+| 0
+| nowrap | {{{devmats0|-}}}
+| nowrap | {{{impmats0|-}}}
+| nowrap | {{{equips0|-}}}
+| style="background-color:rgb(169, 197, 168);" rowspan="2" | {{{fuel|0}}}
+| style="background-color:rgb(191, 191, 191);" rowspan="2" | {{{steel|0}}}
+{{ImprovementTable/DayCell|{{{sun}}}}}
+{{ImprovementTable/DayCell|{{{mon}}}}}
+{{ImprovementTable/DayCell|{{{tue}}}}}
+{{ImprovementTable/DayCell|{{{wed}}}}}
+{{ImprovementTable/DayCell|{{{thu}}}}}
+{{ImprovementTable/DayCell|{{{fri}}}}}
+{{ImprovementTable/DayCell|{{{sat}}}}}
+| rowspan="4" | {{#if:{{{ships|}}}|{{#replace:{{{ships}}}|/|<br />}}|Any}}
+| rowspan="4" | {{#if:{{{upgrades|}}}|[[{{{upgrades}}}]]|None}} {{#if:{{{stars|}}}|★+{{{stars}}}|}}
+|-
+| rowspan="2" |6
+| nowrap rowspan="2" | {{{devmats6|-}}}
+| nowrap rowspan="2" | {{{impmats6|-}}}
+| nowrap rowspan="2" | {{{equips6|-}}}
+|-
+| style="background-color:rgb(194, 184, 168);" rowspan="2" | {{{ammo|0}}}
+| style="background-color:rgb(237, 206, 184);" rowspan="2" | {{{bauxite|0}}}
+|-
+| 10
+| nowrap | {{{devmats10|-}}}
+| nowrap | {{{impmats10|-}}}
+| nowrap | {{{equips10|-}}}</includeonly><noinclude>
+See [[Template:ImprovementTable]]
+</noinclude>

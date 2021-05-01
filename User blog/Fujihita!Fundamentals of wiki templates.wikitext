@@ -1,0 +1,168 @@
+==Forewords==
+
+Whenever you encounter a fancy element in an article, a comment, or another user's personal page, chances are, that fancy element is the result of a template. Templates are the most used, most powerful and also most sophisticated tools in a wiki. They reduce the amount of copy-pasting editors have to do. They make things simple and allow new editors to produce strongly visual elements whose back-end code would burn anyone's eyeballs out.
+
+But, even the simplified version of the back-end code can be too much at times. And to make matters worse, many templates don't come with a user manual or they do come with one but it's incomplete and incomprehensible to the end-users. In this blog, I'll show you how to find the (missing) user manual and how to learn any template without a manual.
+
+
+==Definition of templates==
+
+So what are templates?
+
+In absolute beginner and Kantai Collection fan's terms, templates are...construction, crafting, improvement screens. You input a certain amount of resources and you get ships as output. Different templates have different inputs and outputs. Akashi's arsenal screen takes screws and stock equipment in addition to resources; and naturally, the outputs aren't ships.
+
+
+==Overview==
+
+These are the steps from seeing to mastering any template.
+
+#Edit the article in source editor.
+#Locate the template and learn its name.
+#Locate the template page in <code><nowiki>[[Template:<TemplateName>]]</nowiki></code> namespace.
+#Learn the parameters and structure of the template.
+#Reproduce the template and customize it to suit your need.
+
+::'''Note 1''': ''Source editor is a must when it comes to working with templates. See [[Help:Editing#Choosing_an_editor]] to learn how to make the switch.''
+
+
+==The structure of a template==
+
+Knowing the structure of a template makes it easy to locate any template in an article's source code.
+
+The simplest template structure starts with a pair of curly brackets (or braces), followed by the template name, and ends with a pair of closing braces.
+
+<div style="width:80%; border:2px solid #99f; background:#def; text-align:left; margin:15px auto 20px;padding:5px;"><code><nowiki>
+{{
+TemplateName }}
+</nowiki></code>
+</div>
+
+But in reality, you will most likely encounter templates that require some inputs (aka parameters). These parameters fall between TemplateName and the closing braces. The parameters are separated by a pipe character "|".
+
+<div style="width:80%; border:2px solid #99f; background:#def; text-align:left; margin:15px auto 20px;padding:5px;">
+<code><nowiki>
+{{
+TemplateName | parameter| parameter}}
+</nowiki></code>
+</div>
+
+::'''Note 2''': ''To type the pipe character, press <span style="border: solid 1px black;border-radius:4px;padding:3px">Shift</span> + <span style="border: solid 1px black;border-radius:4px;padding:3px;">\</span> combination''
+
+There are two types of parameters: named and unnamed parameters.
+*Named parameters are longer but can be assigned in any order
+*Unnamed parameters are more concise but must be assigned in a set order
+
+<div style="width:80%; border:2px solid #99f; background:#def; text-align:left; margin:15px auto 20px;padding:5px;">
+<code><nowiki>{{
+TemplateName</nowiki><br><nowiki>
+| unnamed parameter value 1</nowiki><br><nowiki>
+| unnamed parameter value 2</nowiki><br><nowiki></nowiki>
+<span style="color:red">| named parameter = value</span><br><nowiki>
+| unnamed parameter value  3</nowiki><br><nowiki>
+}}
+</nowiki></code>
+</div>
+
+::'''Note 3''': ''For better readability, long templates that have lots of parameters usually feature each parameter on a separate line while short templates tend to be presented on a single line.''
+
+The above example also illustrates an important characteristic of unnamed parameters assignment: they ignore named parameters.
+
+A template can also be used as a parameter of another template, this is called "nesting".
+
+<div style="width:80%; border:2px solid #99f; background:#def; text-align:left; margin:15px auto 20px;padding:5px;">
+<code><nowiki>
+{{
+TemplateName | parameter = {{AnotherTemplate}}| parameter}}
+</nowiki></code>
+</div>
+
+::'''Note 4''': ''Heavily nested templates are difficult to read when flattened in a single-line cluster. Apply the tip from Note 3 to improve the readability.''
+
+::'''Note 5''': ''The pipe "|" and equal sign "=" are special characters and they cannot be assigned to parameters directly. Use <code><nowiki>{{!}}</nowiki></code> and <code><nowiki>{{=}}</nowiki></code> instead. Yes, they are templates too, see [[Template:!]] and [[Template:=]]''
+
+
+==Locating a template page==
+
+Say, I would like to learn how to use that countdown timer (which turned into the big red "Maintenance has begun..." message when the timer expired) on top of [[Fall 2016 Event]] article.
+
+The first step I'll need to do is locating the template page containing its source code. I'll need to find the exact TemplateName of the timer from the article. It isn't hard to find out the TemplateName is "Timer" because it is the first thing after double curly braces in the template's structure.
+
+::'''Note 6''': ''Okay, how do I know if I got the right template? Well, I did a text search and this particular template structure contains "Maintenance has begun. Good Work Admirals." as "endText" parameter. When it doubt, look for adjacent elements. In this case, the timer is right under the "TIME REMAINING UNTIL THE EVENT ENDS:" text and above [[:File:Maintenancetimepeople.jpg]] image.''
+
+Now, I'll plug that TemplateName into the placeholder in the below address
+
+<div style="width:80%; border:2px solid #99f; background:#def; text-align:left; margin:15px auto 20px;padding:5px;">
+<code><nowiki>http://kancolle.wikia.com/wiki/Template:<TemplateName></nowiki></code>
+</div>
+
+and pay that address a visit.
+
+Voila! I have located [[Template:Timer|the page containing the template's source code]].
+
+
+==Learning how to use a template==
+
+===Find the document===
+Many templates include a documentation page at <code><nowiki>[[Template:<TemplateName>/doc]]</nowiki></code>.
+
+::'''Note 7''': ''If you cannot see the doc page right away from the template page, you're unlikely to find anything at /doc address either.''
+
+::'''Note 8''': ''In some cases, the templates can be imported from other wiki sites. The most common sources of template are https://en.wikipedia.org, http://dev.wikia.com/ and https://www.mediawiki.org/wiki/MediaWiki, searching these three sites can yield a more comprehensive user manual than the one provided at /doc.''
+
+To take it a step further, try google  and see if you can find any discussions or documentations of the template.
+
+<div style="width:80%; border:2px solid #99f; background:#def; text-align:left; margin:15px auto 20px;padding:5px;">
+<code><nowiki>"Template:<TemplateName> wiki"</nowiki></code>
+</div>
+
+===Read the source code===
+While it is possible for beginners to read the source code and identify parameters from their definition, it is not an easy task as many templates are written in a mix bag of HTML, wikitext, javascript and Lua and can span across multiple files. Complex ones (Lua templates) might even have the parameters defined and processed elsewhere.
+
+::'''Note 9''': ''Here's a time-saving tip for new editors. If you see a template that starts with <code><nowiki>#invoke</nowiki></code>, give up reading and try a different approach.''
+
+Parameters are defined in the template's source code between triple braces. A default value in case the parameter is not inputted can also be defined after the parameter's name, following a pipe character.
+
+<div style="width:80%; border:2px solid #99f; background:#def; text-align:left; margin:15px auto 20px;padding:5px;">
+<code><nowiki>{{{ parameter's name | default value }}}</nowiki></code>
+</div>
+
+Unnamed parameters are defined with numbers as the parameter's name
+
+<div style="width:80%; border:2px solid #99f; background:#def; text-align:left; margin:15px auto 20px;padding:5px;">
+<code><nowiki>{{{ 1 | default value }}}</nowiki></code>
+</div>
+
+===Make sense of the template from examples===
+The next best bet is to learn from examples.
+
+For this, you'll want a lot of examples. Luckily, there's a tool that will help you acquire examples on any template; it's called "WhatLinksHere"
+
+;WhatLinksHere
+
+::''For more information, see https://en.wikipedia.org/wiki/Help:What_links_here
+
+:WhatLinksHere is a wiki tool which lists the pages that link to (or redirect to, or transclude) the current page.
+
+:''In the new Wikia design there is a toolbar along the bottom of the screen, which contains the headings "Share," "Follow," "My Tools" (a pop-up menu,) and "Customize." If you click "Customize," it will give you the option to put any of a number of specialised wiki functions into your "My Tools" menu, including "What links here." Once you've done that, you can use the pop-up "My Tools" menu to access "What links here" and your other tools of choice on whatever wiki page you're on at that moment.''
+:'''-- Rob T Firefly 07:37, March 13, 2011 (UTC)'''
+
+:Alternatively, you can access the tool directly from [[Special:WhatLinksHere]] address.
+
+By inspecting the structures of the same templates in various contexts, you can quickly assemble a list of available parameters (including optional ones) and acceptable values. You will also get a sense of how the template changes in response to different inputs. Unfortunately, this won't help if the template was meant to be [https://en.wikipedia.org/wiki/Help:Substitution substituted]. If you suspect an element was substituted from a template, go to the next option and seek help.
+
+===Seek help===
+As last resort, you can talk to the author of the template. You can find out who wrote the template from the template page's [[Help:Page_history|edit history]]. There will obviously be a wait before the user can reply to your message so I highly recommend the above self-help approaches first.
+
+In case the author is inactive (which can be determined based on his or her last contribution timestamp), please contact one of our staff, or the person who added the template to article pages.
+
+::'''Note 10''': ''If you choose to contact our staff members, please consult [[User_blog:Fujihita/The_admins_of_KanColle_English_Wikia#List_of_admins_by_generation|the list of admins from my previous blog]] and contact only the admins with "Developer" role and "Active" status.''
+
+
+==See also==
+*https://meta.wikimedia.org/wiki/Help:Template
+*https://www.mediawiki.org/wiki/Help:Extension:ParserFunctions
+*[[Special:Templates|List of all templates on this wiki]]
+*[[Special:MostLinkedTemplates|List of most linked-to templates]]
+[[Category:Blog posts]]
+
+[[Category:Blog posts]]

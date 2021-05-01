@@ -1,0 +1,51 @@
+<infobox>
+  <title source="title1">
+    <default>{{PAGENAME}}</default>
+  </title>
+  <image source="image1">
+    <caption source="caption1"/>
+  </image>
+  <group>
+    <header>HQ</header>
+    <data source="id">
+      <label>IGN</label>
+    </data>
+    <data source="level">
+      <label>Level</label>
+    </data>
+    <data source="server">
+      <label>Server</label>
+    </data>
+    <data source="starting_date">
+      <label>Starting Date</label>
+    </data>
+    <data source="heartlocked_ships">
+      <label>Heartlocked ships</label>
+    </data>
+    <data source="married_ships">
+      <label>Numbers of ringed ships</label>
+    </data>
+    <data source="ranking_status">
+      <label>Ranking status</label>
+    </data>
+    <data source="status">
+      <label>Status</label>
+    </data>
+  </group>
+</infobox>
+<noinclude>
+Example usage:<pre>
+{{KahoInfoTemplate
+|title1=Name
+|image1=KahoGuide-DA.gif
+|caption1=Example
+|id=Example
+|level=Example
+|server=Example
+|startingDate=Example
+|married_ships=Example
+|ranking_status=Example
+|status=Example
+}}
+</pre>
+</noinclude>

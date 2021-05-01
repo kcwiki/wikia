@@ -1,0 +1,163 @@
+==Preface==
+Prior to my adoption of the [https://chrome.google.com/webstore/detail/kancolle-command-center/hkgmldnainaglpjngpajnnjfhpdjkohh Kancolle Command Center Kai] by [http://kancolle.wikia.com/wiki/User_blog:Dragonjet/KC3%E6%94%B9 Dragonjet]. I had taken an interest of Kancolle's Viewer's ability to predict the newly constructed ships which might be helpful in identifying the identity of my new, heavily invested LSC ships, and concluded that the game itself might be giving the ship's identity away to an otherwise a reputably legible interaction software. Then I begun tapping into my own lines to the game when the the Spring 2015 Event came, partly to predict which ship I would be getting from the sortie drops. This is when I discovered the mechanism behind the retrieval of the game assets, and how it affects the presence of the character sprites in their introduction.
+
+Attempts to test the link prefetching were underway immediately after the Spring Event maps were patched out of the game itself, but it is not until a few days after that I could put it into practical effect. The guide has been underway for nearly a month when I decided to post it here, and even then it is still far from completion. Nevertheless, it is my goal to ensure this guide to reach its by the Summer 2015 Event, for I wanted to have the option to be able to see their Kanmusus to be there to greet them.
+
+==About the Kanmusu CG Files==
+
+The Kanmusu CG files I'm talking here are the files that contains the character images and sprites for the personification of warships (mainly from IJN, as this is a browser game from Japan). Most of these CG files are fairly large, typically at around 300-500KB (kilobytes) per character/file. This is because these files contains a set of character sprites instead of one, so the servers doesn't have to download the images mid-battle and ended up with missing sprites due to slow Internet connection.
+
+Whenever you meet a Kanmusu, either from sortie drops, construction, or from viewing other player's ship girls, the game will request their character CG files. In the context of browser requests, the browser cache will be searched to fulfill the request first. If it's unavailable from the browser cache, then the browser will forward the request to the Kancolle Server. This means that the game will request the character CG files when you saw them '''for the first time since the last cache clearing'''.
+
+After the file is downloaded once, the CG files are stored into the browser cache like the rest of the game's assets and will be referenced to the browser cache whenever the file is requested again, bypassing the time window of missing character sprites and images altogether (until the cache itself expires, of course). This gives the player a smoother gameplay experience and significantly lower bandwidth cost for both sides from the game. To put it in perspective, an average player would accumulate approximately ~200-300MB's worth of downloaded/cached data throughout the normal caching cycle just for Kantai Collection alone, which contributes to a significant portion of Kancolle server's bandwidth usage (and your data plan's quota too, if you're in one). This is the main reason why constant cache wipes or otherwise non-persistent browser caches are frowned upon by Kancolle's developers.
+
+==Introduction and Reasoning for Prefetching==
+
+The prefetching I'm mentioning here is the pre-emptive retrieval of sprite files. In most cases this is part of cache rebuilding. Due to various reasons the Kancolle players (also known as Teitoku, which means "Admiral" in Japanese language) has to rebuild their cache throughout their career, either due to cache wipe or corruption (happens on unexpected shutdowns), or the recent update broke the old cache.
+
+Apart from these, there are also newly introduced Kanmusus that you're likely to obtain in the near future. The event reward ships are the staple example of this. They're guaranteed drops by clearing certain maps and are unavailable anywhere else at the time they're introduced. What this means is that, unless if you're lucky enough to get a glimpse of one of the Admirals in your PvP showing off their newfangled trophy shipgirls in their main fleet, whether you'll get the character sprites in their introduction screen the moment you've acquired them depends '''entirely on your Internet connection's effective bandwidth to the Kancolle server'''.
+
+If you're playing the game on Internet connection with an '''effective bandwidth of approximately 2Mbps (=250KB/s) or above''', the game would download the character sprite within the timeframe before the get screen is shown, so prefetching would be unnecessary. In fact, it would be better off for the players with good Internet connectivity to keep these sprite files remain unloaded so that the player may know (from the roughly 3-second delay before the card is drawn) when they've acquired a ship they've never seen before.
+
+However, for players with slower Internet bandwidth, the game wouldn't download the sprite in time to display it in the "get" screen, resulting in the "missing sprite" problem exhibited on newly acquired Kanmusus like this:
+
+[[File:Licto.png|thumb|left|300px|Clearly not the best outlook for commemoration photo for your best moments]]
+{{clear}}
+If you're one of those Admirals who likes to screenshot every moments of triumphs like I do, the absence of the event reward shipgirls to greet you during their introduction would be quite a letdown or a downright disappointment when you wanted to show it off to other Admirals.<br>
+If you are interested to get the memorable screenshots, then read on...
+
+==Prefetching the Kanmusu Sprite Files==
+
+===Card Library (aka KantaiDex)===
+The easiest way to prefetch the character sprites is, of course, opening the Kanmusu's library from the top menu, which lists (almost) all the Kanmusus you have acquired throughout your gameplay in their card form, and is the fastest way to rebuilt your cache from scratch, though you have to be mindful of the significant data bandwidth (over 100MB) incurred by downloading these files if you're on a bandwidth quota.
+
+However, there are a few things that isn't loaded as simply as scrutinizing through the compendium, such as:
+*All the Kanmusus that you never had and thus were unregistered, which is obviously the case for the newly introduced Kanmusus such as reward ships from the events.
+*Secondly, the sprites (and voices) for Kai version of the shipgirls have separate links from their unremodelled version, so they won't be loaded unless if they have their own dedicated card entry (such as Kitakami Kai Ni card entry at No. 115).
+*And finally, the Abyssal ship sprites will only be loaded right before you encounter them in battle and contain fewer sprites as they have fewer screentime than the Kanmusus in the game.
+
+In general, card entries that has different sprites pre and post remodels (such as Shiratsuyu, Murasame, Harusame, Uzuki and Amatsukaze) would show the card entries for both forms, but those that shares the same sprites wouldn't have the Kai version of the cards to be displayable. The card library would still show the alternative sprites if they have them however (such as Kisaragi and Shigure Kai Ni's Valentine sprites).
+
+If you did happen to be able to install KancolleCacher in Kancolle Viewer, there is an option which allows you to display all the kanmusus that has been registered in the library, Visiting the card library with this option on is a simple and effective way to rebuild the cache, though that doesn't extend to former seasonal CGs in the library.
+
+===Manual Link Prefetching===
+For this method, I'll explaining how to extract the cached character sprite's URL.
+<br />Here's the Kanmusu's character URL link format:
+<pre>http://<kc-server-ip>/kcs/resources/swf/ships/<api_filename>.swf?VERSION=<api_version></pre>
+
+For the Kancolle Server IP addresses, you should choose the server where you're located:
+{| class="mw-collapsible mw-collapsed wikitable"
+! colspan=2 |Server list
+|-
+|Yokosuka Naval District
+|203.104.209.71
+|-
+|Kure Naval District
+|125.6.184.15
+|-
+|Sasebo Naval District
+|125.6.184.16
+|-
+|Maizuru Naval District
+|125.6.187.205
+|-
+|Ominato Guard District
+|125.6.187.229
+|-
+|Truk Anchorage
+|125.6.187.253
+|-
+|Lingga Anchorage
+|125.6.188.25
+|-
+|Rabaul Naval Base
+|203.104.248.135
+|-
+|Shortland Anchorage
+|125.6.189.7
+|-
+|Buin Naval Base
+|125.6.189.39
+|-
+|Tawi-Tawi Anchorage
+|125.6.189.71
+|-
+|Palau Anchorage
+|125.6.189.103
+|-
+|Brunei Anchorage
+|125.6.189.135
+|-
+|Hitokappu Bay Anchorage
+|125.6.189.167
+|-
+|Paramushir Anchorage
+|125.6.189.215
+|-
+|Sukumo Bay Anchorage
+|125.6.189.247
+|-
+|Kanoya Airfield
+|203.104.209.23
+|-
+|Iwagawa Airfield
+|203.104.209.39
+|-
+|Saiki Bay Anchorage
+|203.104.209.55
+|-
+|Hashirajima Anchorage
+|203.104.209.102
+|}
+
+The remaining two variables has to be obtained from the api_start2, which entails intercepting the api_start2 call and retrieve it from there. In modern browsers such as Firefox and Google Chrome, it would be listed in the Network tab when you open the devtools before you start the game and keep it until the game is loaded.
+
+I also have my own shipgraph data [https://github.com/LostLogia4/KancolleLoader/blob/update-prep/data/shipgraph.js here] as a reference point.<br>
+Note that it may not be updated immediately after maintenance.
+
+Here is Yamato's (partial) entry from api_mst_ship. Take note of the api_id's value as it'll be needed to locate her object name in api_mst_shipgraph.
+<pre>
+"api_mst_ship":[{
+      "api_id": 131,
+      "api_sortno": 131,
+      "api_name": "大和",
+      "api_yomi": "やまと",
+      "api_stype": 9,
+      "api_afterlv": 60,
+      "api_aftershipid": "136",
+      "api_getmes": "大和型戦艦、一番艦、大和。<br>推して参ります！",
+}]
+</pre>
+
+With the api_id acquired, you can then locate the api_filename and api_version
+<pre>
+"api_mst_shipgraph":[{
+      "api_id": 131,
+      "api_sortno": 131,
+      "api_filename": "liqjxscjkogx",
+      "api_version": "2",
+}]
+</pre>
+
+And here's the complete link for Yamato at Kure Naval District server (where she was constructed):<pre>http://125.6.184.15/kcs/resources/swf/ships/liqjxscjkogx.swf?VERSION=2</pre>
+With all the details filled, all that is left is to paste this to the address bar in an alternate tab and press Enter.
+
+If you got a white page and a Flash player option menu when you right-click the page, it means you have successfully prefetched the sprite file. At this point you may save the page as a SWF file to extract/verify the file's contents if you'd like. Assuming you have Yamato in one of your construction dock, she'll appear in her intro screen like this:
+[[File:KanColle-150611-19201707.png|thumb|left|300px|Here comes the sakura holo battleship in all of her glory.]]
+{{clear}}
+Take note that you '''must''' include the version number in the link for the game to be able to access the character sprite file from the local cache.
+
+Take note that the link's version number may change between patches whenever the Kanmusu's sprite is updated.
+
+===Kc3Kai Library===
+(currently pestering DJ to add the library fetching functionality)
+
+===KancolleLoader===
+And last but not least, I already have developed a Web page to prefetch everything in one go, depending on the inputted variables from data directory. Link will be provided here later when I managed to add the categorized download options.
+
+Currently this application will download all the game assets in one go in an uninteresting loading screen, and would take as much as 200-300MB for caching. Make sure that the browser caching is enabled, as do all other methods.
+
+==Trivia==
+On 9 September 2015 update (a.k.a. = saury fish update), the API version number is no longer included as part of the link for the whole duration of the mini-event. It had since been reintroduced on 30th September 2015.
+{{clear}}
+[[Category:Blog posts]]

@@ -1,0 +1,94 @@
+==Intro==
+This study was done a while ago (jk a long time ago) before Aircraft Proficiency mechanic was introduced in Summer 2015. The purpose of this study is to determine if the Luk stat has any effect on accuracy. The current proposed accuracy formula to this date is:
+
+<p style="margin-top:1em;margin-bottom:1em;margin-left:48px;">'''''<span style="color:rgb(238,0,0);line-height:16.8999996185303px;">.. Accuracy Term  = 1  +  ( sqrt( Attacker's Lv )  - 1 ) / 45  +  Equipment_Bonus / 100  +  Luck / 1000</span>'''''</p>
+
+<p style="color:rgb(0,0,0);margin-left:48px;">'''''<span style="line-height:16.8999996185303px;color:rgb(0,0,204);">.. Evasion Term  = Evasion / 75                           .... for </span><span style="color:rgb(0,0,204);line-height:16.8999996185303px;">Evasion ≦ 37.5：</span>'''''</p>
+
+<p style="color:rgb(0,0,0);margin-left:48px;">'''''<span style="line-height:16.8999996185303px;color:rgb(0,0,204);">                            = Evasion / (Evasion + 37.5)      .... for </span><span style="color:rgb(0,0,204);line-height:16.8999996185303px;">Evasion ＞37.5：</span>'''''</p>
+
+
+
+::<span style="color:rgb(0,0,0);">>> Shelling Accuracy = </span><span style="line-height:16.8999996185303px;color:rgb(238,0,0);">Accuray Term</span><span style="color:rgb(0,0,0);"> - </span><span style="line-height:16.8999996185303px;color:rgb(0,0,204);">Evasion Term</span>
+::>> Dodge Rate = 100% - Shelling Accuracy
+
+<ref>[[User blog:Homuhomu123/Shelling Accuracy Test Results]]</ref>
+
+This study will confirm whether if Luk affects accuracy. If it does then by how much.
+
+Study started May 28, 2015<br />
+Force terminated August 10, 2015 due to mechanics change
+
+==Experiment==
+===Ships===
+Zuikaku Kai<br />
+Level 99<br />
+Max stats<br />
+Luk 42
+
+Shoukaku Kai<br />
+Level 99<br />
+Max stats<br />
+Luk 12
+
+===Equipment===
+Same for both
+*[[Reppuu (601 Air Group)]] +1
+*[[Reppuu (601 Air Group)]] +1
+*[[Suisei (Egusa Squadron)]] +4
+*[[Reppuu]] +0
+Total equipment accuracy +6
+===Map and Enemies===
+5-4 north route<br />
+Nodes A-E-H-M-O
+{{Sortieworld
+| map = {{World5-4}}
+| difficulty = ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆ ☆
+| item = {{fuel}}
+| exp =  420
+| code = 東京急行 ([[wikipedia:Tokyo_Express|Tokyo Express]])
+| text = 南方海域に有力な艦隊を投入し鼠輸送作戦を敢行、可能であれば同方面の敵艦隊も撃滅せよ！ <br> Deploy a powerful fleet and perform a vital "rat transport" operation.  If possible, also destroy the enemy fleet in the area!
+}}
+<ref>[[World 5: 南方海域]]</ref>
+
+
+===Controlled Variables===
+Level: 99<br />
+Equipment Accuracy: +6<br />
+Morale: 40-51<br />
+Ally Formation: Line Ahead<br />
+Enemy Formation: Mostly Diamond w/ rarely Line Ahead<br />
+Detection: Success<br />
+Total Fleet LoS: 458 ± 60<br />
+Fleet Placement: Non-Flagship<br />
+Saiun: enabled
+
+===Uncontrolled Variables===
+Air Control: AS or AS+<br />
+Contact<br />
+Ally Damage State<br />
+Enemy Damage State<br />
+Remaining Supply<br />
+Remaining Plane Count<br />
+AACI
+
+===Observation Data===
+====Notes====
+Scratch may be low damage Hit<br />
+Miss may be Scratch rounded to 0
+====Data Table====
+[[File:Luk_Acc_CV.png|800px]]
+
+====Pie Chart====
+[[File:Luk_Acc_CV_pi.png|800px]]
+<br />Total Data: includes all recorded data<br />
+Evasion XX: attacks against enemy with in that evasion range
+(No Scratch): where scratch data is omitted
+
+Link to excel: [http://1drv.ms/1MdNuGe]
+
+==Conclusion==
+Although this study was interrupted before I gathered enough samples, there's still enough data to make some speculations. It seems that Luck does indeed increase accuracy. Zuikaku is 3% more accurate than Shoukaku overall, but Zuikaku's targeted enemies' mean evasion is slightly lower than Shoukaku's. Also enemies with 10 evasion will be hit 97% of the time, so no conclusion can be drawn from this data. Shoukaku out performed Zuikaku against enemies with evasion 30-39 by 5%. However, low sample size marks this result as invalid. The most interesting finding is against the enemies of evasion 40-55, where Zuikaku is 8% more accurate than Shoukaku. There's approx. 300 samples for this section so it is very likely that Zuikaku is more accurate than Shoukaku. It's hard to say by how much, but there does seem to be a difference.
+==References==
+{{reflist}}
+[[Category:Blog posts]]

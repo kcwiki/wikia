@@ -1,0 +1,50 @@
+{| style="border: 1px solid darkgray; border-top-left-radius:20px;max-width:870px;width:100%;" cellpadding="0px"
+|-
+| style="min-width:250px" rowspan="5" valign="top"| <div style="overflow: hidden; width:250px; border-top-left-radius:20px; border: solid 3px #{{#switch: {{{type|}}}| wall = cc9966| floor = cc9999 | desk = 9999cc | window = 99cccc | object = 66cc99 | chest = cccc99| d3d3d3}};"><div style="overflow:hidden;width:265px;border-top-left-radius:20px;"><div style="position:relative;{{{position|{{#if: {{{image|}}}|{{#switch: {{{type|}}}| floor = right:100%;| chest = left:10%;bottom:80px;|}}|}} }}}">[[File:{{{image|Empty equipment card slot.png}}}{{!}}center{{#if:{{{name|}}}|{{!}}{{{name|}}}|}}{{#if: {{{size|}}}|{{!}}{{{size|}}} | {{#if: {{{image|}}}|{{!}}{{#switch: {{{type|}}}| wall = 600px| window = 300px| desk = 265px| chest=220px| }} |}} }}]]</div></div></div>
+| style="border: solid 0px;background-color:#{{#switch: {{{type|}}}| wall = cc9966| floor = cc9999 | desk = 9999cc | window = 99cccc | object = 66cc99 | chest = cccc99 | d3d3d3}};" width="100%" align="center" colspan="3"| '''{{{name|Unknown furniture}}}'''
+<div style="font-size:18px;text-align:center">
+{{#switch: {{{rarity|}}}|1 = <span style="color:black">★</span><span style="color:white">★★★★★★</span>|2 = <span style="color:black">★★</span><span style="color:white">★★★★★</span>|3 = <span style="color:black">★★★</span><span style="color:white">★★★★</span>|4 = <span style="color:black">★★★★</span><span style="color:white">★★★</span>|5 = <span style="color:black">★★★★★</span><span style="color:white">★★</span>|6 = <span style="color:black">★★★★★★</span><span style="color:white">★</span>|7 = <span style="color:black">★★★★★★★</span>| 0 = <span style="color:white">★★★★★★★</span>}}</div>
+<div style="cursor:help;" title="{{{kana|かぐふめい/かなのかぐなまえがありません}}}">{{SpanJa|{{{japanesename|家具不明}}}}}</div>
+|-
+<!--Price header-->
+!colspan="2" style="background-color:#{{#switch: {{{type|}}}| wall = cc9966| floor = cc9999 | desk = 9999cc | window = 99cccc | object = 66cc99 | chest = cccc99 | d3d3d3}};" width="100px" align="center"| Price
+<!--Description header-->
+! style="background-color:#{{#switch: {{{type|}}}| wall = cc9966| floor = cc9999 | desk = 9999cc | window = 99cccc | object = 66cc99 | chest = cccc99 | d3d3d3}};" align="center"| Description
+|-
+<!--Price content-->
+| valign="top" align="center" style="min-width:55px"|
+{{ItemStack |item = [[File:Furniture_coin.png{{!}}50px{{!}}link=Furniture/Guide#Furniture_coin]]|text = {{{coin|0}}} }}
+| valign="top" align="center" style="min-width:55px"|
+{{#ifexpr: {{{coin|0}}} >= 2000 and {{{coin|0}}} < 20000 |{{ItemStack |item = [[File:Furniture_fairy.png{{!}}50px{{!}}link=Furniture/Guide#Furniture_fairy]]|text = 1 }} |}}
+<!--Description content-->
+| valign="top" style="border: solid 2px #{{#switch: {{{type|}}}| wall = cc9966| floor = cc9999 | desk = 9999cc | window = 99cccc | object = 66cc99 | chest = cccc99 | d3d3d3}};" width="100%"| {{#tag:tabber|English=
+{{{en-description|No Data...}}}
+{{!}}-{{!}}
+Kanji=
+{{SpanJa|{{{jp-description|データは無し。。。}}}}}
+{{!}}-{{!}}
+Kana=
+{{SpanJa|{{{kana-description|データはなし。。。}}}}}
+}}
+|-
+<!--Release notes header-->
+! colspan="3" style="background-color:#{{#switch: {{{type|}}}| wall = cc9966| floor = cc9999 | desk = 9999cc | window = 99cccc | object = 66cc99 | chest = cccc99 | d3d3d3}};" align="center"| Release notes
+|-
+| valign="top" colspan="3" style="border: solid 2px #{{#switch: {{{type|}}}| wall = cc9966| floor = cc9999 | desk = 9999cc | window = 99cccc | object = 66cc99 | chest = cccc99 | d3d3d3}}; padding:10px;" width="80%"|
+<!--Release notes content-->
+{{#if:{{{releasenote|}}}|''{{{releasenote|Available from 3/14/2015}}}''<br/><br/>|}}{{#if:{{{feature|}}}|Special: {{{feature|}}}<br/><br/>|}}
+{{#ifexpr:{{{coin|0}}} > 100000|'''Dynamic Furniture:''' Can be purchased for {{#expr: floor(({{{coin|0}}} - 100000) / 10)}} Furniture coins at the expense of sacrificing one furniture fairy.<br/>|}}
+{{#if:{{{BGM|}}}|BGM: {{{BGM|}}}|}}
+|-
+|colspan="4"|{{#if:{{{gallery|}}}
+| <div class="toccolours mw-collapsible mw-collapsed"><div style="background-color:#{{#switch: {{{type|}}}| wall = cc9966| floor = cc9999 | desk = 9999cc | window = 99cccc | object = 66cc99 | chest = cccc99 | d3d3d3}};text-align:center">'''Gallery'''</div>
+<div class="mw-collapsible-content">{{#tag:gallery|
+{{{gallery|}}}
+|hideaddbutton="true"
+|crop="true"
+|widths="{{#switch: {{{type|}}}| floor = 600px| object = 250px| wall = 600px| window = 430px| desk = 365px| chest=220px|200px}}"
+}}</div></div>
+|}}
+|}
+<noinclude>
+{{Documentation}}</noinclude>

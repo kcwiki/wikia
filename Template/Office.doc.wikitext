@@ -1,0 +1,71 @@
+;Description
+:Generate a scalable office screen from wikitext template, see [[Furniture]] for furniture images.
+
+;Syntax
+:Fill in the form with image names
+:<code><nowiki>{{Office</nowiki></code>
+:<code><nowiki>|floor=Carrier flight deck.png</nowiki></code>
+:<code><nowiki>|wall=Battleship-style dark grey wall.png</nowiki></code>
+:<code><nowiki>|window=Winter stained glass.png</nowiki></code>
+:<code><nowiki>|chest=Kimono chest and fog ship model.png </nowiki></code>
+:<code><nowiki>|desk=Liquor and wine shelf.png</nowiki></code>
+:<code><nowiki>|background=</nowiki></code>
+:<code><nowiki>|ship={{ShipGraphicKai|I-8|damaged=true|link=false}}</nowiki></code>
+:<code><nowiki>}}</nowiki></code>
+
+;Extra
+:Field <code><nowiki>background</nowiki></code> set the background visible outside the windows. Take note that windows have different sizes so the correct background size should be used. For the list of available backgrounds, see [[Sandbox/Help:KanColleMedia#Window backgrounds]].
+
+:Field <code><nowiki>scale</nowiki></code> set the scaling value of the image
+:*Default scale value: 0.8
+:*Width: 800px * scale
+:*Height: 480px * scale
+
+:Fields <code><nowiki>desk-pos</nowiki></code>, <code><nowiki>background-pos</nowiki></code>, <code><nowiki>object-pos</nowiki></code> and <code><nowiki>chest-pos</nowiki></code> set the position of the associated furniture/element in the office. This arises from the fact that certain furniture needs to be moved around a bit manually.
+:Default values for them are
+:*<code><nowiki>object-pos=left:0px</nowiki></code>
+:*<code><nowiki>chest-pos=right:0px</nowiki></code>
+:*<code><nowiki>desk-pos=top:130px</nowiki></code>
+:*<code><nowiki>background-pos=left:180px</nowiki></code>
+:Use semicolon ";" to separate the values for example: <code><nowiki>object-pos=left:0px;top:120px</nowiki></code>
+
+:Field <code><nowiki>align</nowiki></code> set the "left" (default), "center", "right" alignment of the image in an article.
+
+;Template
+<pre>{{Office
+|floor=
+|wall=
+|window=
+|object=
+|chest=
+|desk=
+|ship={{ShipGraphicKai|}}
+|scale=0.6
+|background=
+|align=center
+}}</pre>
+
+;Sample input
+<pre>{{Office
+|floor=Carrier flight deck.png
+|wall=Battleship-style dark grey wall.png
+|window=Winter stained glass.png
+|chest=Kimono chest and fog ship model.png
+|desk=Liquor and wine shelf.png
+|ship={{ShipGraphicKai|I-8|damaged=true|link=false}}
+|scale=0.6
+|background=Furniture windowBG4_2.png
+|align=center
+}}</pre>
+
+{{Office
+|floor=Carrier flight deck.png
+|wall=Battleship-style dark grey wall.png
+|window=Winter stained glass.png
+|chest=Kimono chest and fog ship model.png
+|desk=Liquor and wine shelf.png
+|ship={{ShipGraphicKai|I-8|damaged=true|link=false}}
+|scale=0.6
+|background=Furniture windowBG4_2.png
+|align=center
+}}

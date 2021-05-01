@@ -1,0 +1,331 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|Thread = 
+}}
+{{Event/MapInfo
+|en = The Wind of Genova
+|jp = ジェノヴァの風
+|tag =  E4
+|romaji = Jenova no kaze
+|hp_all =  
+|hp_casual = 220 TP + 3500
+|hp_easy = 220 TP + 3500
+|hp_medium = 280 TP + 3500
+|hp_hard = 400 TP + 3500
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Maestrale}}
+|reward_casual_1 = {{ItemStack|item = [[File:MegaRotaited.png{{!}}50px]]|text = Nothing}}
+|reward_easy_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_medium_2_x = 2
+|reward_medium_3 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|S9 Osprey|size=50px}}
+|reward_medium_4_x = 5⋆
+|reward_hard_1 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_2_x = 3
+|reward_hard_3 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|S9 Osprey|size=50px}}
+|reward_hard_4_x = 5⋆
+|reward_hard_5 = {{EquipmentCardKai|Bofors 15.2cm Twin Gun Mount Model 1930|size=50px}}
+|reward_hard_5_x = 5⋆
+|Mechanics = Unknown
+<!--
+|transport = true
+-->
+}}
+{{MapBranchingTable
+|title = Branching Rules Part 1
+|id = 42-4A
+
+|1 -> A, B, D = 
+* Meeting '''ANY''' of the following '''FORCES''' you to A:
+** Carrier Task Force
+** Surface Task Force
+* Meet '''ANY''' of the following requirements to go to B:
+** Amount of CA(V) in '''ESCORT''' ≥ 2
+** Fleet contains CLT, (F)BB(V), CV(B) or SS(V)
+* Meet '''ALL''' of the following requirements to go to D:
+** Do not meet any of the requirements to go to either A or B.
+** Transport Escort
+** '''MAIN''' fleet contains CL.
+** Amount of in '''MAIN''' DD ≥ 4
+** Amount of in '''MAIN''' CAV+CVL ≤ 1
+* Go to D if Single Fleet and fleet only contains DDs.
+* Otherwise, random routing between B and D.
+
+|B -> C = 
+* Meet '''ANY''' of the following requirements:
+** Amount of CVL ≥ 2
+** Fleet contains CV(B)
+** Amount of (F)BB(V) ≥ 4
+** Fleet contains SS(V)
+|B -> D = * Do not meet the requirements to go to C.
+
+|D -> E/storm , F/empty, H/empty = 
+* Meet '''ANY''' of the following requirements to go to E:
+** Surface Task Force
+** Single fleet '''AND''' amount of DD ≤ 1
+* Go to F if Single Fleet '''AND''' amount of DD ≥ 2
+* Go to H if Transport Escort.
+
+|F/empty -> G, H/empty = * Active branching
+
+|H/empty -> I, J = * Active branching
+
+|K/resource -> L = * Pass the LoS check.
+|K/resource -> M/empty = * Fail the LoS check.
+}}
+{{MapBranchingTable
+|title = Branching Rules Part 2
+|id = 42-4B
+|order = 0,Q,P
+
+|0 -> 1 = * Combined Fleet
+|0 -> 2 = * Single Fleet
+
+|Q -> P, R = 
+* Meet '''ANY''' of the following requirements to go to P:
+** Combined Fleet
+** Amount of DD+DE ≥ 2
+** Fleet contains SS(V)
+* Otherwise, go to R.
+* '''Note:''' Keep in mind that the above branching rules changes once node V and W are unlocked. Refer to part 3 after that.
+
+|P -> N,O = 
+* Meeting '''ANY''' of the following '''FORCES''' you to N:
+** Fleet contains SS(V)
+** Carrier Task Force
+** Surface Task Force
+* Go to O if amount of DD ≥ 3
+* Otherwise, random routing.
+* '''Note:''' Keep in mind that the above branching rules changes once node V and W are unlocked. Refer to part 3 after that.
+}}
+{{MapBranchingTable
+|title = Branching Rules Part 3
+|id = 42-4C
+|order = 0,Q,P
+
+|0 -> 1 = * Combined Fleet
+|0 -> 2 = * Single Fleet
+
+|Q -> P, R, T, W = 
+* Meet '''ALL''' of the following requirements to go to W:
+** Amount of DD ≥ 2
+** Amount of Italian ships ≥ 2 '''OR''' Fast Fleet
+** Amount of CV(B) ≤ 1
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+** No SS(V)
+* Meet '''ALL''' of the following requirements to go to R instead:
+** Amount of Italian ships ≥ 2 '''OR''' Fast Fleet
+** No CL
+** Do not meet the requirement to go to W.
+* Alternatively, meet '''ALL''' of the following requirements to go to T:
+** Amount of DD ≥ 2
+** Fleet contains CL
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+** No SS(V)
+* Otherwise, go to P.
+
+|P -> N, O, T = 
+* Amount of (F)BB(V)+CV(L/B) ≥ 4 '''FORCES''' you to T.
+* If fleet contains SS(V), the amount of ships with both {{EquipmentLink|Special Type 2 Amphibious Tank|text=Ka-Mi}} and {{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}} equipped affects your routing:
+** 2 ships: Go to T
+** 3+ ships: Go to N
+** Anything else: Random routing between N and T.
+*** '''Note''': You cannot route to T if node W is not unlocked yet, even if you meet all the requirements!
+* Otherwise, random routing between N and O.
+}}
+*'''NOTE'''
+**Part 3 is based on having the alternate route (see below) unlocked. Those who did not unlock it may divert from the mentioned routing below.
+
+===Historical Fleet: Armistice of Cassibile===
+The Italian Navy during the 2nd World War. 
+
+* CV: {{ShipLink|Aquila}}
+* FBB: {{ShipLink|Littorio|text=Littorio/Italia}}, {{ShipLink|Roma}}
+* CA: {{ShipLink|Pola}}, {{ShipLink|Zara due|text=Zara}}
+* DD: {{ShipLink|Libeccio}}, {{ShipLink|Maestrale}}
+
+Members of the historical fleet will enjoy a damage bonus of around 1.2 ~ 1.3x at {{Event/Route|V|red|L|red|O|red|S|red|T|red|U|red}}. In addition, it has been confirmed that there is '''no historical routing'''
+
+====For HARD MODE: E-5 ship lock====
+
+E-5 routing depends on European ships (all foreign ships excluding US ships) which includes {{ShipLink|Aquila|Littorio|Roma|Pola|Zara due|Libeccio|Maestrale|Luigi Torelli|text=Italians}}. On hard mode, you will need 6 '''and''' a combination of at least 4 French + German ship for best routing at 2nd phase of E-5; check your requirement on E-5 tab for other difficulty. You can have an additional 6 for Phase 1 but this is not necessary. {{ShipLink|Pola}}, {{ShipLink|Zara due|text=Zara}}, and {{ShipLink|Prinz Eugen}} are the only 3 historical CA available and can provide a lot of flexibility in ship composition.
+
+===Map Guide===
+'''NOTE:''' Not all these steps may apply to lower difficulties. 
+*It has been confirmed that there is '''no historical routing''', but '''all Italian ships have bonus damage''' (see above) in this map.  
+*'''LBAS''': 3 are available, but only 2 for attacking; the other one is for defending. An air raid will happen in this map.
+*'''Phase 1''': Assault the TP gauge with [[Combined Fleet|Transport Combined Fleet]] (TCF)
+**As experienced in E-2, you should already know how TP phase works. However, to assert assumption for assured victory is less likely as {{ShipLink|Battleship Summer Princess|text=Battleship summer princess}} is presented as boss. As such, it is recommended to aim for A-rank victory (sinking at least 8 of 12 enemy ships) instead of S-rank. There are two ways to tackle this phase: TCF and Single fleet
+**'''LBAS''': Boss node requires a range of 6. 1 fighter 3 bombers or 4 bombers if you do not have the range; try to obtain at least AD if you went for 1 fighter.
+**<div class="toccolours mw-collapsible mw-collapsed">It should be noted that TCF has a noticeable lower accuracy than both STF/CTF, consider using node support if you are really struggling against {{Event/Route|D|red}}. Unlike E-2, this phase has carriers. For '''TCF''', there are three methods in handling this:<div class="mw-collapsible-content">
+***'''Fight under AS or lower'''. Equipping CAV and/or BBV with [[Seaplane_Fighters#Seaplane_Bombers|seaplane bombers]] or [[Seaplane_Fighters#Seaplane_Fighters|fighters]]. The former gives barely any air power and can be easily wiped by {{ShipLink|Light Cruiser Tsu-Class/Elite}} at {{Event/Route|I|red}} while the latter is un-craftable, and - unless obtained from their relative quests/improvements - is most reasonably obtainable at this moment from {{ShipLink|Pola/Kai}} that drops in E-2; {{ShipLink|Zara/Due}} also has it but she needs [[blueprint]]. To contest AS, you will need at least 2-3 seaplane fighters for Medium+ but it is possible with just 1 at some composition in Easy (and even Medium). 
+****Additionally, bringing a BBV will route you to an additional battle at {{Event/Route|B|red}}
+***'''Fight under AS or lower'''. Using Transport Escort CVL, which are those with ASW stats. There are currently 4 ships that fit that criteria: {{ShipLink|Zuihou/Kai Ni B}} requires at least level 80, {{ShipLink|Taiyou}} (needs level 30) drops in E-3, {{ShipLink|Gambier Bay}} is still lost, and {{ShipLink|Shinyou}} is handed to you from E-3 with ASW stat since level 1. 
+***'''Fight under AP/AD/AI'''. AS is not everything. Only your BBV/CAV benefits from [[Combat#/Day_Combat#Day_Battle_Special_Attacks_.28Artillery_Spotting.29|artillery spotting]] and you won't get much out of [[Combat#/Aerial#Contact|contact]] bonus unless you bring CVL. AP will negate the two aforementioned bonuses from both side. If you cannot obtain AD, don't bother bringing {{ShipLink|Type 98 Reconnaissance Seaplane (Night Recon)|text=Night Recon}} as it [[Combat#/Night_Battle#Night_Buffs|will not trigger]].  For a summary, refer to [http://en.kancollewiki.net/wiki/Aerial_Combat#Fighter_Combat this table] from en.kancolle.wiki.</div></div>
+**'''Single fleet''' - Bring some AA guns to deal with PT Imps. Always go vanguard formation till boss.
+**'''STF''' - an option for Easy and Casual players
+***This option less viable to Medium/Hard players due to ship-locking and higher air power. Otherwise, this option allows Easy players to utilize STF
+***You can now bring specifically 1 CVL. Your main fleet will attack first making PT Imps more likely to be targeted by your escort fleet. The obvious downside is the two additional nodes in which one is a submarine node, and the slower TP depletion rate. Remember that this is TP Phase, consider bringing CL/DD on your main fleet to carry drums.
+*'''Unlocking Phase 2''' - Using Single fleet to start from Starting Point 2.
+**A+ rank {{Event/Route|Q|red|O|red|R|red}} - See compositions below
+*'''Unlocking Phase 2's alternate route''' - Using combined fleet
+**A+ rank {{Event/Route|S|red}} and {{Event/Route|G|red}} (?)
+*'''Phase 2''': Dock the {{ShipLink|Dock Princess}} with your ...
+**The boss is accompanied by {{ShipLink|Supply Depot Princess Vacation Mode - Damaged|text=the same Depot Princess from E-2 that is delighted to see you again}}. The same method that you used against her prior can be used here. In LD, a {{ShipLink|/Light_Carrier_Nu-Class_Kai_Flagship_IV|text=CVL}} will appear. Your carrier might need to carry all fighter planes (fighter mule) in order to reach AS.
+**'''LBAS''': 2 Attack, 1 Defense OR 2 Attack 1 Retreat - All bombers
+***Alternatively, you can add fighters into your LBAS and send them to boss however there is no fighter with 8 range meaning that at least 1 slot is needed for a [[LBAS#Distance_Calculations|scout plane]] (see link). This is not recommended and having all bombers will be more beneficial against sinking the boss escorts (especially {{ShipLink|PT Imp Pack|text=PT Imp}}). 
+***Setting your third base to 'defense' can be a double-edge sword. Defending may protect your other bases but, depending on difficulty, you may lose a lot of resource as you will fight the air raid under AP due to its high fighter power. Letting your land bases get bombed without defending will cost you less resource if you are forced to retreat before reaching boss.
+**For Hard mode, both side are equally hideous. Node {{Event/Route|T|red}} has {{ShipLink|
+Aircraft Carrier Summer Princess|text=CV Hime}} and two {{ShipLink|Battleship Ta-Class Flagship|text=Ta-class}} that can send you home easily especially in double line. The other side ({{Event/Route|V|red}}) is {{ShipLink|Battleship Re-Class Elite|text=elite Re-class}}. The silver lining is the possible echelon formation that makes {{Event/Route|V|red}} more tolerable. You are more likely to survive this node using Vanguard than the former. For Easy and below (also somewhat Medium), Re will be in her normal form which does not perform opening torpedo strike
+
+====Bonus against {{ShipLink|Dock Princess}}====
+The boss herself is not a pushover. However, it has been observed that the following equipment have post-cap modifier damage against {{ShipLink|Dock Princess}}. This make decision like bringing {{EquipmentLink|Type 3 Shell|text=T3 shell}} a better option than {{EquipmentLink|Type 91 Armor Piercing Shell|text=AP shell}} in this phase:
+*{{EquipmentLink|Type 3 Shell|text=T3 shell}}: ~1.428
+*{{EquipmentLink|Special Type 2 Amphibious Tank|text=Ka-mi}}: 1.31 ~ 1.51
+**{{EquipmentLink|Special Type 2 Amphibious Tank|text=Ka-mi}} (+max): 1.7 ~ 2.16
+*{{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|text=T89}}: 1.37 ~ 2.18
+**{{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|text=T89}} (+max): 1.25 ~ 2.02
+*{{EquipmentLink|Daihatsu Landing Craft|text=Daihatsu}}: (+6): 1.22 ~ 2.11
+**'''NOTE''': {{EquipmentLink|Daihatsu Landing Craft|text=The regular daihatsu}} IS NOT EFFECTIVE against {{ShipLink|Supply Depot Princess Vacation Mode - Damaged|text=Depot Princess}}; only the {{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|Special Type 2 Amphibious Tank|text=tank variants}} work.
+*{{EquipmentLink|Toku Daihatsu Landing Craft + 11th Tank Regiment|text=11th Tank Regiment}}: 1.64 ~ 1.86
+*{{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}}: 1.46 ~ 1.47
+**{{EquipmentLink|Toku Daihatsu Landing Craft + 11th Tank Regiment|text=11th Tank Regiment}} + {{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}}+ {{EquipmentLink|Special Type 2 Amphibious Tank|text=Ka-mi}}: 2.24 ~ 2.30
+**{{EquipmentLink|Toku Daihatsu Landing Craft + 11th Tank Regiment|text=11th Tank Regiment}} + {{EquipmentLink|WG42 (Wurfgerät 42)|text=WG42}} + {{EquipmentLink|Special Type 2 Amphibious Tank|text=Ka-mi}} (+max): 2.94 ~ 3.17
+
+===Composition===
+As mentioned in Map Guide. Please remember that these are early compositions that works. It is not in anyway optimal.
+
+====Phase 1====
+The focus of the first phase is the clearing of the TP gauge. The boss is located on node L. LoS requirement is around 10 for a combined fleet (possibly lower).
+
+{{Event/Route|1|black|D|red|H|blue|I|red|K|green|L|red}}
+
+This is the shortest route possible to the first boss.
+* 1CAV or 1AV or 1 '''Escort carrier''', 1CL 4DD + 1-2CL 1CA(V) 3-4DD
+**'''Escort Carrier''' (see definition in Map guide):
+***{{ShipLink|Zuihou/Kai Ni B}}
+***{{ShipLink|Taiyou}}
+***{{ShipLink|Gambier Bay}}
+***{{ShipLink|Shinyou}}
+* 1-6DD (Single Fleet)
+ 
+{{Event/Route|1|black|D|red|H|blue|I|red|K|green|L|red}} or {{Event/Route|1|black|B|red|D|red|H|blue|I|red|K|green|L|red}}
+
+Not using a CL in the main fleet will cause random routing between B and D.
+* 2CAV 4DD + 1-2CL 1CA(V) 3-4DD
+* 1CVE 1CAV 4DD + 1-2CL 1CA(V) 3-4DD
+
+{{Event/Route|1|black|B|red|D|red|H|blue|I|red|K|green|L|red}}
+
+Completely disregards the possibility of the shortest route, allowing you bring a stronger fleet.
+* 1CVE 1BBV 4DD + 1CL 2CA(V) 3DD
+* 2BBV 4DD + 1CL 2CA(V) 3DD
+
+{{Event/Route|1|black|A|red|B|red|D|red|E|purple|F|blue|H|blue|I|red|K|green|L}}
+
+Disregarding TCF entirely and bring STF. More viable for Easy and Casual players who don't have to deal with ship-lock.
+*1 CVL 5 XX + 1 CL 2 DD 3 XX
+**XX cannot be CV(L/B) nor SS(V)
+**XX cannot have (F)BB(V) ≥ 4 
+**You can bring all your CLTs here if you wish.
+**The more drum carrier the faster, but now you can bring stronger force.
+**(+)Your escort fleet also attack after main fleet, making it possible to add DD in your main fleet to deal with PT Imps.
+**(-)You will be facing two additional nodes; one of the node is a submarine node with {{ShipLink|Submarine Summer Princess}}. Some OASW ship is recommended or Toukai if possible.
+
+====Phase 2====
+In the second phase, the focus is the unlocking of the 2nd boss.
+
+{{Event/Route|2|black|J|red|Q|red|P|red|O|red}}
+
+A+ rank node O.
+*2(F)BB 1CV 3DD
+*1(F)BB 1CVL 1CV 3DD
+*1(F)BB 1CV 1CA 3DD
+
+{{Event/Route|2|black|J|red|Q|red|R|red}}
+
+A+ rank node R.
+*0-1DD 0DE 0SS(V) 5-6XX
+** XX may not be DD, DE and SS(V)
+*2 BB 2 CV 2 DD
+** Will no longer route here after boss node is unlocked.
+
+====Phase 3====
+The focus of the third and final phase is the destruction of the 2nd boss. Remember that while there is no historical routing, bringing Italian ships will be beneficial at the boss. There are two options: unlock the alternate route or do not unlock. Other than the first three compositions below, every other compositions only works if and only if you have the alternate route unlocked.
+
+'''Not using the alternate route:'''
+
+{{Event/Route|2|black|J|red|Q|red|T|red|U|red}}
+
+Fleets used to defeat the 2nd boss. Keep in mind that the use of Italian ships is recommended for bonus damage against the boss.
+* 2(F)BB(V) 1CV 1CL 2DD
+
+'''Using the alternate route:'''
+
+''1. Unlock nodes W and V through A+ rank nodes G and S:''
+
+{{Event/Route|1|black|A|red|B|red|D|red|E|purple|F|blue|G|red|S|red}}
+
+Avoids node C, but has restrictions to the number of carriers you can use. Surface Task Force.
+* 1CVL 5XX + 6XX
+** XX may not be CVL, CV(B) or SS(V).
+** Cannot bring more than 4(F)BB(V).
+
+{{Event/Route|1|black|A|red|B|red|C|red|E|purple|F|blue|G|red|S|red}}
+
+This option completely disregards the branching rules and allows you complete freedom as to how many carriers you want to bring.
+* 6XX + 6XX
+** Transport Escort does '''not''' work. You must use Carrier/Surface Task Force.
+
+''2.  Defeat the boss at node U''
+
+{{Event/Route|2|black|J|red|Q|red|W|red|V|red|U|red}}
+
+A small detour with an extra aerial node, but it does allow a CA over CL. If you have Zara or Pola, this is where you can use one of them (keep another for Phase 2 E-5); or use neither.
+* 1CA 2(F)BB(V) 1CV 2DD
+
+''Considerations for this route:''
+*(-) Additional aerial node 
+*(-) Re class at node V vs CV Hime at node T
+*(+) Additional CA vs CL for composition
+
+{{Event/Route|2|black|J|red|Q|red|P|red|T|red|U|red}}
+
+Submarine composition for chipping at the boss gauge. Unlikely to sink the boss.
+* 6 SSV
+**'''Exactly two''' submarines '''must''' be equipped with both [[WG42 (Wurfgerät 42)]] and [[Special Type 2 Amphibious Tank| Special Type 2 Amphibious Tanks (Ka-mi)]]  or routing will differ
+***This route can only be done '''IF AND ONLY IF''' you have the alternate route unlocked. Not having the alternate route unlocked will route you to O.
+
+===Friend Fleets===
+{{Fleets|friend=Early Fall 2018 Event|map=E-4}}
+
+===Map Progression===
+{{#tag:gallery|
+Early Fall 2018 Event E-4 Map p1.png{{!}}Map during TP phase at boss node L.
+Early Fall 2018 Event E-4 Map p2.png{{!}}Map after depleting the TP bar but without the second boss node U unlocked.
+Early Fall 2018 Event E-4 Map p3.png{{!}}Map during HP phase at node U but no alternative route unlocked.
+Early Fall 2018 Event E-4 Map p4.png{{!}}Full map after unlocking the alternative route.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+
+===LBAS Flight Range===
+[[File:Early_Fall_2018_Event_E-4_LBAS_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

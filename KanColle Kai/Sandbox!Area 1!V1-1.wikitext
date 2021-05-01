@@ -1,0 +1,739 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:70%;" | V1-1: 鎮守府正面海域
+| rowspan="3" style="text-align:center;width:30%;" | [[File:Vita Map Banner 1-1.png|400px]]
+|-
+! Items
+| None
+|-
+! Restrictions
+| None
+|-
+! Strategy Info
+|鎮守府警備
+|艦隊を編成し、鎮守府正面近海の警備を実施せよ!
+|}
+<center>[[File:Vita Map Image 1-1.png|600px]]</center>
+==Map guide==
+{{MapBranchingTable
+|id = V1-1
+|A -> B,C = *Go to C if Fleet flagship is CL and DD ≧ 3
+*Else, random:
+** 35% chance for B.
+** 65% chance for C.
+}}
+
+===Before you start===
+*'''Please take the time to read the [[KanColle Kai#Gameplay|Kancolle Kai]] page first for a general rundown of the game mechanics as well as the differences between this Vita port and the browser version!'''
+
+===Introduction===
+*This is the very first available map for sortie. The objective of sorties is to lead your fleet to the Boss node {{Event/Route|C|red}} and achieve a victory, doing so will clear the map and unlock the following one.
+**Achieving a victory means scoring a B rank or higher at the end of the battle.
+{| class="article-table mw-collapsible mw-collapsed" style="text-align:center; style="width:100%; font-size:12px"
+|-
+! colspan="3" style="text-align:center;width:100%;" | Victory conditions (details)
+|-
+! rowspan ="4" |<span style="color:green;">Victory ranks</span>
+|Perfect S (完全勝利, Total Victory)
+|
+*All enemy ships sunk and no damage taken.
+|-
+|S (勝利, Victory)
+|
+*All enemy ships sunk and no allied ships sunk.
+|-
+|A (勝利, Victory)
+|
+*Required number of enemy ships sunk and no allied ships sunk. The required number is defined by enemy ships sunk >= 60% of enemy ships rounded: at least 1 out of 2, 2 out of 3, 2 out of 4, 3 out of 5, and 4 out of 6.
+|-
+| B (戦術的勝利, Tactical Victory)
+|
+* The allied damage gauge is higher than 250% of the enemy damage gauge: allied damage gauge > 2.5 * enemy damage gauge.
+** The '''damage gauge''' is defined as an integer percentage: floor(100 * total damage dealt / initial opponent HP) or floor(100 * (initial opponent HP - final opponent HP) / initial opponent HP).
+* Otherwise, if no allied ships sunk:
+** Enemy flagship sunk.
+* Or if one or more allied ships sunk:
+** All enemy ships sunk.
+** Or enemy flagship sunk and number of allied ships sunk < number of enemy ships sunk.
+|-
+! rowspan ="3" |<span style="color:red;">Defeat ranks</span>
+| C (戦術的敗北, Tactical Defeat)
+|
+* The allied damage gauge is higher than 90% of the enemy damage gauge: allied damage gauge > 0.9 * enemy damage gauge.
+* Or, if one or more allied ships sunk, enemy flagship sunk and number of allied ships sunk lower than number of enemy ships sunk. ''(incomplete)''
+|-
+|E (敗北, Defeat)
+| 
+*All allied ships sunk except the flagship in a fleet of 2 or more ships. (incomplete)
+|-
+|D (敗北, Defeat)
+| 
+*Otherwise.
+|}
+
+===Recommended fleet composition===
+*{{Event/Route|A|red|C|red}}
+**1[[CL]](as flagship) 3[[DD]] 0~2XX
+***The flagship of the fleet is the first ship.
+***XX means any type of ship.
+***It is recommended to construct some new Destroyers/Light Cruisers via the 30 {{Fuel}} / 30 {{Ammo}} / 30 {{Steel}} / 30 {{Bauxite}} recipe if you do not have enough for this fleet.
+*The enemies in the map are only light cruisers and destroyers which are easily beatable with very low level fleets.
+*'''Note: any fleet composition outside of the above mentioned one can still reach the boss node but could potentially route to node''' {{Event/Route|B|red}} '''instead which will not allow you to clear the map!'''
+*It is recommended to use the {{Formation|Line Ahead}} Line Ahead formation for every node.
+*When selecting [[KanColle Kai#Sortie|Battle Commands]] (assuming only 3 assignable commands for flagship lvl 34 or lower), it is recommended to use [[File:Combat command (2).png|40px]][[File:Combat command (2).png|40px]][[File:Combat command (3).png|40px]] which allowes your fleet to perform shelling and a closing torpedo strike.
+<!--
+===Combat mechanics===
+*Before the start of each battle, you will have to select a combat formation. Line Ahead is the most offensive focused formation against surface ships so it is recommended for almost every kinda of battle node.
+{| class="article-table mw-collapsible mw-collapsed" style="text-align:center; style="width:100%; font-size:12px"
+|-
+! colspan="11" style="text-align:center;" | Formations (details)
+|-
+! scope="col" style="text-align:center;" rowspan="2" |Formation
+! scope="col" style="text-align:center;" rowspan="2" |Icon
+! scope="col" style="text-align:center;" colspan="4" |Damage Modifier
+! scope="col" style="text-align:center;" colspan="4" |Accuracy Modifier
+! scope="col" style="text-align:center;" rowspan="2" |<abbr title="Flagship Protection Rate">FS Prot</abbr>
+|-
+! scope="col" style="text-align:center;" |<abbr title="Day Shelling/Bombing">Shelling</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Anti-Submarine">ASW</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Night Battle">Night</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Anti-Air">AA</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Day Shelling/Bombing">Shelling</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Anti-Submarine">ASW</abbr>
+! scope="col" style="text-align:center;" |<abbr title="Day Torpedo">Torp</abbr>
+! scope="col" style="text-align:center;" |Night
+|-
+| style="text-align:left;" | Line Ahead<br /><span style="cursor:help;" title="Tanjuu-jin">単縦陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{LineAhead}}
+| style="color:red;" |'''100%'''
+|60%
+|100%
+|100%
+|100%
+|100%
+| style="color:red;" |'''100%'''
+| style="color:red;" |'''100%'''
+|45%
+|-
+| style="text-align:left;" | Double Line<br /><span style="cursor:help;" title="Fukujuu-jin">複縦陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{DoubleLine}}
+|80%
+|80%
+|100%
+|120%
+| style="color:red;" |'''120%'''
+| style="color:red;" |'''120%'''
+|80%
+|90%
+|60%
+|-
+| style="text-align:left;" | Diamond<br /><span style="cursor:help;" title="Rinkei-jin">輪形陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{Diamond}}
+|70%
+|120%
+|100%
+| style="color:red;" |'''160%'''
+|100%
+|100%
+|40%
+|70%
+| style="color:red;" |'''75%'''
+|-
+| style="text-align:left;" | Echelon<br /><span style="cursor:help;" title="Teikei-jin">梯形陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{Echelon}}
+|60%
+|100%
+|100%
+|100%
+| style="color:red;" |'''120%'''
+| style="color:red;" |'''120%'''
+|60%
+|80%
+|60%
+|-
+| style="text-align:left;" | Line Abreast<br /><span style="cursor:help;" title="Tan'ou-jin">単横陣</span><sup>[http://kancolle.wikia.com/wiki/Help:Japanese ?]</sup>
+| {{LineAbreast}}
+|60%
+| style="color:red;" |'''130%'''
+|100%
+|100%
+| style="color:red;" |'''120%'''
+| style="color:red;" |'''120%'''
+|30%
+|80%
+|60%
+|}
+*After the formation has been selected, your fleet will try to detect the enemy fleet. The success rate of detection depends on the Line of Sight [[File:Old LoS.png]] stat of your fleet. Failing the detection phase will forbid aircraft carrying ships to send out planes.
+*Finished the detection, you will have to select [[KanColle Kai#Sortie|Battle Commands]] which will affect how your ships will perform in battle.
+**The number of commands that can be assigned is 3/4/5 for fleets with a flagship lvl 1+/35+/70+ respectively.
+**For this map (assuming only 3 assignable commands) it is recommended to use [[File:Combat command (2).png|40px]][[File:Combat command (2).png|40px]][[File:Combat command (3).png|40px]].
+*At the end of the day battle, if there are still enemy ships alive, you will have the choice to either pursue the enemies into night battle (right choice: 夜戦突入) or stop the pursuit (left choice: 追撃せず).
+**Night battles are automatic, every ship (except [[CVL]]/[[CV]]/[[CVB]] and heavily damaged ships 大破) starting from the top will perform a night battle attack.
+**Pursuing into night battle will consume 10% extra {{Ammo}} at the end of the battle.
+*If the battle was not a dead end on the map, you will be given the option to advance (left choice: 進撃), or retreat to end the sortie (right choice: 撤退).
+*Each battle node will consume 20% {{Fuel}} and 20% (30% if there was a pursuit to night battle) {{Ammo}} of each member of your fleet's supplies regardless of whether they attacked or not.
+*When the {{Ammo}} supply is lower than 50%, your fleet will incur an increasing damage penality so it is recommended to avoid night pursuits in non boss nodes and take the routes with the least amount of battles when available.
+**Ships with no {{Ammo}} left will always deal scratch damage. Scratch damage '''CANNOT''' sink an enemy ship in any given situation!
+{| class="article-table mw-collapsible mw-collapsed" style=" width: 320px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! colspan="11" scope="col" style="text-align:center;" |Ammo damage modifiers (details)
+|-
+! scope="col" style="text-align:center;" |Remaining Ammunition
+! scope="col" style="text-align:center;" |Modifier
+|-
+| 5 to 10 {{Ammo}} bars
+| style="text-align:center;" |100%
+|-
+| 4 {{Ammo}} bars
+| style="text-align:center;" |80%
+|-
+| 3 {{Ammo}} bars
+| style="text-align:center;" |60%
+|-
+| 2 {{Ammo}} bars
+| style="text-align:center;" |40%
+|-
+| 1 {{Ammo}} bar
+| style="text-align:center;" |20%
+|-
+| 0 {{Ammo}} bars
+| style="text-align:center;" |Scratch Damage
+|}
+-->
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵偵察艦
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|576
+|575
+|575
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|40
+|575
+|502
+|502
+|-
+}}
+{{Map/Nodes|name=敵はぐれ艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|576
+|576
+|575
+|575
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|45
+|575
+|575
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=敵主力艦隊
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|60
+|554
+|575
+|575
+|575
+|575
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|60
+|554
+|575
+|575
+|502
+|502
+|-
+}}
+</div> <!-- overflow -->
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵偵察艦
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|40
+|575
+|501
+|501
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|35
+|503
+|502
+|501
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|35
+|502
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=敵はぐれ艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|40
+|575
+|501
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|35
+|503
+|502
+|501
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|35
+|503
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=敵主力艦隊
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|55
+|554
+|575
+|503
+|502
+|502
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|55
+|554
+|575
+|502
+|502
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|55
+|554
+|503
+|502
+|502
+|-
+}}
+</div> <!-- overflow -->
+|-|乙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵偵察艦
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|501
+|501
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|40
+|503
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|35
+|502
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|501
+|-
+}}
+{{Map/Nodes|name=敵はぐれ艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|503
+|502
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|502
+|502
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|502
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=敵主力艦隊
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|55
+|518
+|503
+|502
+|502
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|505
+|503
+|502
+|502
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|505
+|502
+|502
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|505
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丙=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵偵察艦
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|40
+|503
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|35
+|502
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|501
+|-
+}}
+{{Map/Nodes|name=敵はぐれ艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|503
+|502
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|502
+|502
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|502
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=敵主力艦隊
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|505
+|503
+|502
+|502
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|505
+|502
+|502
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|505
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+|-|丁=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵偵察艦
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|35
+|502
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|501
+|-
+}}
+{{Map/Nodes|name=敵はぐれ艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|502
+|501
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|30
+|501
+|501
+|-
+}}
+{{Map/Nodes|name=敵主力艦隊
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|505
+|502
+|502
+|-
+|C
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|50
+|505
+|501
+|501
+|-
+}}
+</div> <!-- overflow -->
+</tabber>
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, B, C
+|boss = C
+|{{ShipFrom|1}} : B, C
+|{{ShipFrom|2}} : B, C
+|{{ShipFrom|28}} : B, C
+|{{ShipFrom|29}} : B, C
+|{{ShipFrom|6}} : A, B, C
+|{{ShipFrom|30}} : A, B, C
+|{{ShipFrom|7}} : A, B, C
+|{{ShipFrom|31}} : A, B, C
+|{{ShipFrom|93}} : A, B, C
+|{{ShipFrom|15}} : A, B, C
+|{{ShipFrom|94}} : A, B, C
+|{{ShipFrom|16}} : A, B, C
+|{{ShipFrom|10}} : A, B, C
+|{{ShipFrom|32}} : A, B, C
+|{{ShipFrom|11}} : A, B, C
+|{{ShipFrom|12}} : A, B, C
+|{{ShipFrom|14}} : A, B, C
+|{{ShipFrom|137}} : C
+|{{ShipFrom|114}} : C
+|{{ShipFrom|51}} : C
+|{{ShipFrom|52}} : C
+|{{ShipFrom|9}} : C
+|{{ShipFrom|13}} : C
+|{{ShipFrom|33}} : C
+}}
+|-|甲=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, B, C
+|boss = C
+|{{ShipFrom|1}} : B, C
+|{{ShipFrom|2}} : B, C
+|{{ShipFrom|28}} : B, C
+|{{ShipFrom|29}} : A, B, C
+|{{ShipFrom|6}} : A, B, C
+|{{ShipFrom|30}} : A, B, C
+|{{ShipFrom|7}} : A, B, C
+|{{ShipFrom|31}} : A, B, C
+|{{ShipFrom|93}} : A, B, C
+|{{ShipFrom|15}} : A, B, C
+|{{ShipFrom|94}} : A, B, C
+|{{ShipFrom|16}} : A, B, C
+|{{ShipFrom|10}} : A, B, C
+|{{ShipFrom|32}} : A, B, C
+|{{ShipFrom|11}} : A, B, C
+|{{ShipFrom|12}} : A, B, C
+|{{ShipFrom|14}} : A, B, C
+|{{ShipFrom|137}} : C
+|{{ShipFrom|114}} : C
+|{{ShipFrom|51}} : C
+|{{ShipFrom|52}} : C
+|{{ShipFrom|9}} : C
+|{{ShipFrom|13}} : C
+|{{ShipFrom|33}} : C
+}}
+|-|乙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, B, C
+|boss = C
+|{{ShipFrom|1}} : A, B, C
+|{{ShipFrom|2}} : A, B, C
+|{{ShipFrom|28}} : A, B, C
+|{{ShipFrom|29}} : A, B, C
+|{{ShipFrom|6}} : A, B, C
+|{{ShipFrom|30}} : A, B, C
+|{{ShipFrom|7}} : A, B, C
+|{{ShipFrom|31}} : A, B, C
+|{{ShipFrom|93}} : A, B, C
+|{{ShipFrom|15}} : A, B, C
+|{{ShipFrom|94}} : A, B, C
+|{{ShipFrom|16}} : A, B, C
+|{{ShipFrom|10}} : A, B, C
+|{{ShipFrom|32}} : A, B, C
+|{{ShipFrom|11}} : A, B, C
+|{{ShipFrom|12}} : A, B, C
+|{{ShipFrom|14}} : A, B, C
+|{{ShipFrom|114}} : C
+|{{ShipFrom|51}} : C
+|{{ShipFrom|52}} : C
+|{{ShipFrom|9}} : C
+|{{ShipFrom|13}} : C
+|{{ShipFrom|33}} : C
+}}
+|-|丙=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, B, C
+|boss = C
+|{{ShipFrom|1}} : A, B, C
+|{{ShipFrom|2}} : A, B, C
+|{{ShipFrom|28}} : A, B, C
+|{{ShipFrom|29}} : A, B, C
+|{{ShipFrom|6}} : A, B, C
+|{{ShipFrom|30}} : A, B, C
+|{{ShipFrom|7}} : A, B, C
+|{{ShipFrom|31}} : A, B, C
+|{{ShipFrom|93}} : A, B, C
+|{{ShipFrom|15}} : A, B, C
+|{{ShipFrom|94}} : A, B, C
+|{{ShipFrom|16}} : A, B, C
+|{{ShipFrom|10}} : A, B, C
+|{{ShipFrom|32}} : A, B, C
+|{{ShipFrom|11}} : A, B, C
+|{{ShipFrom|12}} : A, B, C
+|{{ShipFrom|14}} : A, B, C
+|{{ShipFrom|51}} : C
+|{{ShipFrom|52}} : C
+|{{ShipFrom|9}} : C
+|{{ShipFrom|13}} : C
+|{{ShipFrom|33}} : C
+}}
+|-|丁=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, B, C
+|boss = C
+|{{ShipFrom|1}} : A, B, C
+|{{ShipFrom|2}} : A, B, C
+|{{ShipFrom|28}} : A, B, C
+|{{ShipFrom|29}} : A, B, C
+|{{ShipFrom|6}} : A, B, C
+|{{ShipFrom|30}} : A, B, C
+|{{ShipFrom|7}} : A, B, C
+|{{ShipFrom|31}} : A, B, C
+|{{ShipFrom|93}} : A, B, C
+|{{ShipFrom|15}} : A, B, C
+|{{ShipFrom|94}} : A, B, C
+|{{ShipFrom|16}} : A, B, C
+|{{ShipFrom|10}} : A, B, C
+|{{ShipFrom|32}} : A, B, C
+|{{ShipFrom|11}} : A, B, C
+|{{ShipFrom|12}} : A, B, C
+|{{ShipFrom|14}} : A, B, C
+|{{ShipFrom|52}} : C
+|{{ShipFrom|9}} : C
+|{{ShipFrom|13}} : C
+|{{ShipFrom|33}} : C
+}}
+</tabber>
+__NOTOC__

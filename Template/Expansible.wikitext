@@ -1,0 +1,8 @@
+<includeonly>{{#vardefine:id|{{#replace:{{#replace:{{#replace:{{#replace:{{#replace:{{#replace:{{#replace:{{#replace:{{{id|{{{header|{{REVISIONTIMESTAMP}}}}}}}}|<nowiki> </nowiki>|_}}|!|}}|?|}}|,|}}|.|}}|/|}}|'|}}|"|}}}}<div class="mw-customtoggle-{{#var:id}}">
+<div style="background:#def;cursor:pointer;padding:5px">
+{{#if:{{{header|}}}|<{{{header-level|h3}}}>{{{header}}}</{{{header-level|h3}}}>}}
+</div>
+</div>
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-{{#var:id}}">
+{{{content|}}}
+</div></includeonly><noinclude>{{Documentation}}</noinclude>

@@ -1,0 +1,124 @@
+==Preface==
+
+In here, I'll document the effects of '''shelling''' accuracy and evasion to the best of my abilities. These only are estimations and observations based on test data from various players and sources, and as such, I will abstain from drawing any conclusions.
+
+To obtain the success rate in percentages of the following equations, multiply the result by 100.
+
+==Accuracy Term==
+
+<math>\text{Accuracy Term} = 0.03 + W + \left ( 0.9 + \frac{\sqrt{A - 1}}{50} + L + \sum^\text{All Slots}\frac{E_{\text{Acc}} + E_{\bigstar}}{100} \right ) \cdot \ F \ \cdot \ C</math>
+
+Where:
+* <math>A</math> is the ship's Level
+* <math>L</math> is the adjusted luck bonus
+* <math>W</math> is the fit / overweight modifier
+* <math>E_{\text{Acc}}</math> is the equipment's displayed accuracy bonus
+* <math>E_{\bigstar}</math> is the equipment's improvement accuracy bonus
+* <math>F</math> is the formation modifier
+* <math>C</math> is the morale modifier
+
+
+===Adjusted Luck===
+
+The value of <math>L</math> has two currently proposed models, with the newest one being:
+
+<math>L = 1.5 \cdot \frac{\sqrt{\text{Luck Value}}}{100}</math>
+
+The standard model suggests a linear increase, instead:
+
+<math>L = 1.5 \cdot \frac{\text{Luck Value}}{1000}</math>
+
+
+===Fit Bonus and Overweight Penalty (Battleships)===
+
+Pending reevaluation based on newer test data [http://himeuta.org/showthread.php?7686-Translation-of-A-New-Analysis-on-Overweight-Penalty-and-Fit-Gun-Bonus]
+
+
+===Improvement Accuracy===
+
+Recent tests ([http://i.imgur.com/hpe79yS.png]) suggest that the impact of improvements on accuracy simply is:
+
+<math>E_{\bigstar} = \sqrt{\bigstar}</math>
+
+For Surface Radars, however, a multiplier of 2 is applied:
+
+<math>E_{\bigstar} = 2\sqrt{\bigstar}</math>
+
+
+===Formation Modifier===
+* Line Ahead and Diamond have a modifier of <math>F = 1</math>
+* Double Line, Line Abreast, and Echelon have a roughly-estimated modifier of <math>F = 1.2</math>
+* The accuracy modifier of the aforementioned formations are cancelled (<math>F = 1</math>) if:
+** Double Line is cancelled by opposing fleet's Line Abreast
+** Line Abreast is cancelled by opposing fleet's Echelon
+** Echelon is cancelled by opposing fleet's Line Ahead
+
+
+===Morale Modifier===
+
+The cases for sparkling (Morale above 52) and orange fatigue (Morale between 32 and 20) are unverified.
+
+<math>\text{C} = \begin{cases} 1.2, & \text{if Morale} \ge 53 \\ 1.0, & \text{if } 53 > \text{Morale} > 32 \\ 0.75 \sim 0.8(?), & \text{if } 32 \ge \text{Morale} > 19 \\ 0.5, & \text{if Morale} \le 19 \end{cases}</math>
+
+
+==Evasion Term==
+
+<math>\text{Evasion Term} = f \left ( ( S_{\text{Eva}} + 0.15 \cdot S_{\text{Luck}} ) \cdot \frac{7}{600} \cdot F \cdot C \cdot R \right )</math>
+
+Where the function <math>f(x)</math> represents the soft cap of the Evasion Term at 0.5 (50%):
+
+<math>f(x) = \begin{cases} \text{x},  & \text{if x} \le 0.5 \\
+\text{x} \div (\text{x} + 0.5), & \text{otherwise}
+\end{cases}</math>
+
+Additionally:
+* <math>S_{\text{Eva}}</math> is the ship's total Evasion value
+* <math>S_{\text{Luck}}</math> is the ship's luck
+* <math>F</math> is the formation modifier
+* <math>C</math> is the morale modifier
+* <math>R</math> is the remaining fuel modifier
+
+
+===Formation Modifier===
+* Line Ahead and Double Line have a modifier of <math>F = 1</math>
+* For Diamond, <math>F = 1.15</math>
+* For Line Abreast, <math>F = 1.25</math>
+** Against opposing fleet's Line Abreast or Echelon, <math>F = 1.45</math>
+* For Echelon, <math>F = 1.25(?)</math>
+** Against opposing fleet's Echelon or Double Line, <math>F = 1.45(?)</math> (Unverified)
+
+
+===Morale Modifier===
+
+<math>\text{C} = \begin{cases} 1.8, & \text{if Morale} \ge 53 \\ 1.0, & \text{if } 53 > \text{Morale} > 32 \\ 0.75 \sim 0.8(?), & \text{if } 32 \ge \text{Morale} > 19 \\ 0.5, & \text{if Morale} \le 19 \end{cases}</math>
+
+
+===Remaining Fuel Modifier===
+
+There are penalties to the Evasion Term when the ship's remaining fuel is less than 60%. The exact penalties are unknown.
+
+
+==Hit Rate and Critical Hits==
+
+There exists a hard cap on effective accuracy (Hit Rate, as described below) of approximately 97%. In other words, a ship will always have a ~3% miss rate, regardless of her own accuracy or her target's evasion value.
+
+<math>\text{Hit Rate} = \min ( \text{Accuracy Term} - \text{Evasion Term} , \text{Accuracy Cap} )</math>
+
+<math>\text{Accuracy Cap} \approx 0.97 </math>
+
+
+===Critical Hits===
+
+It is currently unknown if Critical Hits override the Evasion Term, or if they are calculated after the Hit Rate roll.
+
+<math>\text{Critical Hit Rate} = 0.125 \cdot \sqrt{\text{Hit Rate}}</math>
+
+
+==Sources==
+
+*http://s.webry.info/sp/bs-arekore.at.webry.info/201504/article_2.html
+*http://s.webry.info/sp/bs-arekore.at.webry.info/201505/article_3.html
+*http://s.webry.info/sp/bs-arekore.at.webry.info/201502/article_4.html
+*http://i.imgur.com/WSF91JT.png
+*http://i.imgur.com/hpe79yS.png
+[[Category:Blog posts]]

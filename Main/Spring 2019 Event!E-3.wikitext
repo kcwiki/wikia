@@ -1,0 +1,244 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Contain the Enemy Forces! The Second Operation AL
+|jp = 敵戦力牽制! 第二次AL作戦
+|tag = E3
+|romaji = Teki senryoku kensē! Dai-niji AL sakusen
+|mechanics = <!--
+|transport = true
+-->
+|hp_casual = 1400 HP + 3950
+|hp_easy = 1400 HP + 3950
+|hp_medium = 1400 HP + 3950
+|hp_hard = 1960 HP + 3950
+|show_kills = true
+|kills_all = 4 + 5
+
+|reward_all = {{ShipBattleCardKai|Giuseppe Garibaldi}}
+|reward_casual_1 = {{ItemStack|item = [[File:Jebaited flip.png{{!}}50px{{!}}link=]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Reppuu Kai (Prototype Carrier-based Model)|size=50px}}
+|reward_easy_2_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Reppuu Kai (Prototype Carrier-based Model)|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_medium_3_x = 2
+|reward_medium_4 = [[File:Screw.png|50px|link=Improvement Material]]
+|reward_medium_4_x = 7
+|reward_hard_1 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_hard_1_x = 2
+|reward_hard_2 = {{EquipmentCardKai|Reppuu Kai (Prototype Carrier-based Model)|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = [[File:Screw.png|50px|link=Improvement Material]]
+|reward_hard_4_x = 8
+|reward_hard_5 = {{EquipmentCardKai|Reppuu Kai Ni|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules
+|id = 44-3
+|order = 0,1,B,D,E,F,H,J,L,P,O
+
+|0 -> 1 = 
+* Do not meet the requirements to start at 2.
+|0 -> 2 = 
+* Meet '''ANY''' of the following requirements:
+** If Carrier Task Force, fleet must contain AO.
+** If Surface Task Force, fleet may not contain CV(B) or SS(V)
+** Transport Escort Fleets always start at 2.
+
+|1 -> A = * Carrier Task Force
+|1 -> B = * Surface Task Force
+
+|B -> C = * Do not meet the requirements to go to F.
+|B -> F/empty = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V) ≤ 2
+
+|D -> E = * Do not meet the requirements to go to H.
+|D -> H/empty = 
+* Meet '''ALL''' of the following requirements:
+** Fast Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 2
+
+|E -> G, H =
+* Meet '''ALL''' of the following requirements to go to H:
+** Fast Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+* For every requirement that is not met, increase the chance of offrouting to G.
+
+|F/empty -> I, K = * Active branching
+
+|H/empty -> I, J = * Active branching
+
+|I -> K, L = 
+* Meet '''ALL''' of the following requirements to go to L:
+** Fast Fleet
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+** If fleet started from 1, amount of CV(L/B) ≤ 2
+* For every requirement that is not met, increase the chance of offrouting to K.
+
+|J -> L = * Do not meet the requirements to go to either O or P.
+|J -> O = 
+* Meet '''ALL''' of the following requirements:
+** Node is unlocked
+** Carrier Task Force
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+|J -> P = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to O.
+** Node is unlocked.
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+
+|L -> M/empty = * Fail the LoS check.
+|L -> N = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Surface Task Force.
+|L -> P = 
+* Meet '''ALL''' of the following requirements:
+** Node P is unlocked.
+** Pass the LoS check.
+** Carrier Task Force '''OR''' Surface Task Force containing AV or AO.
+
+|P -> O = * Do not meet the requirements to go to R.
+|P -> R = 
+* Meet '''ALL''' of the following requirements:
+** Carrier Task Force
+** Fast Fleet
+** Fleet contains AO (Medium+)
+** Amount of (F)BB(V)+CV(L/B) ≤ 4
+* Alternatively, use a Transport Combined Fleet to go directly to R.
+
+|O -> Q/empty = * Fail the LoS check.
+|O -> R = * Pass the LoS check.
+}}
+==Map Guide==
+*This is a '''combined fleet''' map.
+*Two [[Land Base Aerial Support]] squadrons are available for sortie.
+**A third base is also available but exclusively for defense.
+*This map is divided in 2 phases that consist of depleting the respective gauges of the following bosses :
+** {{ShipLink|Heavy Cruiser Princess}}'s HP gauge at node {{Event/Route|N|Red}}.
+** {{ShipLink|Northern Little Sister}}'s HP gauge at node {{Event/Route|R|Red}}.
+*The following icons will be used in this guide to refer to specific gear:
+**{{WG42}}{{EquipmentLink|WG42 (Wurfgerät 42)}}.
+**{{LandingCraft}} {{EquipmentLink|Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)|Toku Daihatsu Landing Craft + 11th Tank Regiment|text = Medium tanks}}.
+**{{SpecialAmphibiousTank}} {{EquipmentLink|Special Type 2 Amphibious Tank}}.
+**{{RedAmmo}}{{EquipmentLink|Type 91 Armor Piercing Shell|Type 1 Armor Piercing Shell|text=Armor piercing shells}}.
+**{{GreenAmmo}}{{EquipmentLink|Type 3 Shell|Type 3 Shell Kai|text=Type 3 shells}}.
+**{{DiveBomb icon}}[[List of Dive Bombers by stats|Dive bombers]].
+*Aircraft carriers '''CANNOT''' attack installations if they have a {{DiveBomb icon}} equipped '''UNLESS''' it's one of the bombers from the following list:
+**{{EquipmentLink|Prototype Nanzan}}
+**{{EquipmentLink|F4U-1D}}
+**{{EquipmentLink|FM-2}}
+**{{EquipmentLink|Ju 87C Kai}}
+**{{EquipmentLink|Ju 87C Kai Ni (w/ KMX)}}
+**{{EquipmentLink|Ju 87C Kai Ni (w/ KMX/Skilled)}}
+**{{EquipmentLink|Suisei Model 12 (634 Air Group w/ Type 3 Cluster Bombs)}}
+
+
+
+{{clear}}
+The following are ships with noticeable bonuses throughout the map:
+* {{ShipLink|Gangut}}, {{ShipLink|Tashkent}}, {{ShipLink|Verniy}} - 1.15x
+* {{ShipLink|Nachi}}, {{ShipLink|Ashigara}}, {{ShipLink|Tama}}, {{ShipLink|Kiso}}, {{ShipLink|Abukuma}}, {{ShipLink|Kasumi}} - 1.1x
+
+===Map progression===
+{{#tag:gallery|
+Spring19_E3_p1.png{{!}}Map during the first phase at node N
+Spring19_E3_p2.png{{!}}Map during the second phase at node R but no 2nd starting point nor P->R shortcut.
+Spring_2019_Event_E-3_Map.png{{!}}Full map after unlocking the starting point and the shortcut
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+===Phase 1: HP gauge at node N===
+*The first boss of this map is {{ShipLink|Heavy Cruiser Princess}} in an [[Combat/Abyssal Combined Fleet| abyssal combined fleet]].
+**To be able to fight the main fleet, a large majority of the escort must be sunk (see page above for more info). Otherwise, the escort will be fought instead.
+**'''HARD MODE''': the boss will be in its new forms (VII and VIII) exclusively for this difficulty, which gives her an extremely high armor boost. Consider bringing [[Combat/Equipment Guide|Torpedo Cut-in]] setups if you are having difficulty sinking the boss during '''LAST DANCE'''.
+*Route:{{Event/Route|B|red|F|blue|I|orange|L|red|N|red}}
+**'''Surface task force (STF)''': 1fBB 2CVL 3CA(V) + 1CL 3DD 1CA(V) 1CLT
+***must be '''fast fleet''' to avoid routing through extra nodes.
+***460~ airpower is recommended for easier time at preboss nodes.
+***AACI setup is also recommended to mitigate airstrike damage.
+*'''LBAS''':It is recommended to send two squadrons filled with 3 [[List of Land-based Attack Aircraft by stats|Land-based bombers]] and 1 Fighter/Interceptor to the boss node {{Event/Route|N|Red}}.
+**The boss requires planes with range 7+. Scout planes can be used to increase the squadrons' range if necessary.
+
+===Phase 1.5: Unlocking the second starting point===
+*It is required to visit certain nodes in order to unlock a second starting point which makes reaching the phase 2 boss node {{Event/Route|R|red}} much easier. This must be done after you defeated the first boss. The following steps can be done in any order:
+*Achieve S rank at node {{Event/Route|O|red}}
+**Route:{{Event/Route|A|red|D|red|E|Orange|H|blue|J|red|O|red}}
+***'''Carrier task force (CTF)''': 3CV(L/B) 1XX 2CA(V) + 1CL 3DD 1CA(V) 1CLT
+****must be '''fast fleet''' and cannot have more than 3 (F)BB(V)+CV(L/B) combined.
+****A CV(L/B) can be changed for a (F)BB(V) to skip E node.
+*Visit the air defense node {{Event/Route|I|orange}} and achieve Air Superiority (AS) or above. '''(NOT REQUIRED ON CASUAL/EASY)'''
+**Route:{{Event/Route|B|red|F|blue|I|orange}}
+***'''STF''': 1fBB 2CVL 3CA(V) + 1CL 3DD 1CA(V) 1CLT
+****this step uses the same fleet required to clear phase 1, bring enough fighters to achieve AS at node {{Event/Route|I|orange}}.
+****'''NOTE''': Having achieved AS at this node already during phase 1 does not count for the unlock!
+*Visit the air defense node {{Event/Route|E|orange}} and achieve '''AS+''' for Hard. '''(NOT REQUIRED ON CASUAL/EASY/MEDIUM)'''
+**Route:{{Event/Route|A|red|D|red|E|Orange}}
+***'''CTF''': 3CV(L/B) 1XX 2CA(V) + 1CL 3DD 1CA(V) 1CLT
+****Same fleet as the last step, send LBAS to help achieving '''AS+''' (air power 834 in HARD).
+***'''NOTE''': this step and S rank at node O can be done at the same time!
+
+===Phase 2: HP phase at node R===
+*The second boss of this map is an [[Combat/Installation Type|Installation type]] enemy in an abyssal combined fleet.
+*As usual, bringing a ship capable of AACI is highly recommended especially during this phase because of node {{Event/Route|J|Red}}.
+*There are currently two ways to tackle this phase using either a CTF or a STF. The CTF guarantees the best routing to the boss by skipping node {{Event/Route|O|red}} but requires a '''fast fleet''' and an [[List of auxiliary ships by upgraded maximum stats|AO]] in the fleet, while STF has no such limitations but goes through node {{Event/Route|O|Red}} before the boss node.
+*Route:{{Event/Route|2|black|S|red|H|blue|J|red|P|orange|O|red|R|red}}
+**'''STF''': 1(F)BB(V) 2CVL 3XX + 1CL 2DD 2CA(V) 1XX
+***cannot contain a CV(B) or it will start from the first starting point.
+***cannot contain more than 4 (F)BB(V) + CV(L) or it will offroute to node L
+***There is an LOS check to go from {{Event/Route|O|red}} to boss node {{Event/Route|R|red}}.
+*Route:{{Event/Route|2|black|S|red|H|blue|J|red|P|orange|R|red}}
+**'''CTF''': 1AO 4CV(L/B) 1CA(V) + 1CL 3DD 2CA(V) '''(MUST BE FAST FLEET)'''
+***can swap a carrier for a (F)BB(V).
+***can remove a carrier in main fleet to have a FBB in escort.
+*It is highly recommended (or mandatory if higher difficulty) to use as many historical ships as you can for this phase, {{ShipLink|Gangut|Gangut Dva|text=Gangut}} as a FBB in escort works especially well (beware of her speed if using CTF!).
+*Bring your best anti-installation gear available. Please visit the [[Combat/Installation Type|related page]] and the [[Combat/Equipment Guide|equipment guide page]] for more details.
+**The use of a {{WG42}} + {{LandingCraft}} + {{SpecialAmphibiousTank}} combo on a CL/AV/DD/AO in your main fleet can deal enough damage to sink {{ShipLink|Supply Depot Princess}} in one hit.
+**{{ShipLink|Artillery Imp}} are vulnerable to all anti-installation gear except {{GreenAmmo}}.
+**Main fleet BBs might consider equipping a {{RedAmmo}} instead of {{GreenAmmo}} to help deal with the preboss nodes and be able to damage {{ShipLink|Artillery Imp}}.
+**For the ships in the escort fleet, CAs and FBB should have a {{GreenAmmo}} equipped, for CAVs a {{GreenAmmo}} + {{WG42}} setup can be considered if available.
+**Aircraft carriers '''CANNOT''' attack installations if they have a {{DiveBomb icon}} equipped '''UNLESS''' it's one of the bombers from the following list:
+***{{EquipmentLink|Prototype Nanzan}}
+***{{EquipmentLink|F4U-1D}}
+***{{EquipmentLink|FM-2}}
+***{{EquipmentLink|Ju 87C Kai}}
+***{{EquipmentLink|Ju 87C Kai Ni (w/ KMX)}}
+***{{EquipmentLink|Ju 87C Kai Ni (w/ KMX/Skilled)}}
+***{{EquipmentLink|Suisei Model 12 (634 Air Group w/ Type 3 Cluster Bombs)}}
+**Aircraft carriers will not be able to perform [[Combat/Day Combat|CVCI]] against the installations.
+*Refer to the following list for the ships able to equip {{LandingCraft}} and/or {{SpecialAmphibiousTank}}:
+
+{{Hard Anti-installation Weapons}}
+*'''LBAS''': It is recommended to send two squadrons filled with 3 [[List of Land-based Attack Aircraft by stats|Land-based bombers]] and 1 Fighter/Interceptor to the boss node {{Event/Route|R|Red}}, sending a base to {{Event/Route|J|Red}} during pre last dance runs can also be considered.
+**The boss requires planes with range 6+.
+**[[List of Land-based Attack Aircraft by stats|Land-based bombers]] deal extremely high damage to {{ShipLink|Artillery Imp}} and {{ShipLink|Supply Depot Princess}}!
+
+{{clear}}
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers; however, the definition of "stronger fleet" is still unknown.
+====N====
+{{Fleets|friend=Spring 2019 Event|node=E-3 N}}
+====R====
+{{Fleets|friend=Spring 2019 Event|node=E-3 R}}
+
+===LBAS flight range===
+[[File:Spring19_E3_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

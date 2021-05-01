@@ -1,0 +1,281 @@
+{{Warning|Please be advised some of the information below are still under investigation and are subject to further revisions and changes upon verification. Please use the information at your own discretion.}}
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Operation 603
+|jp = 六〇三作戦
+|romaji = Roku-maru-san sakusen
+|tag = E2
+|tag2 = E3
+|mechanics = 
+<!--
+|transport = true
+-->
+|hp_all = 1400 HP + 840
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = 
+
+|reward_casual_1 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Type 22 Surface Radar|size=50px}}
+|reward_casual_2_x = 1
+|reward_casual_3 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft|size=50px}}
+|reward_casual_3_x = 1
+
+|reward_easy_1 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_easy_1_x = 2
+|reward_easy_2 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft|size=50px}}
+|reward_easy_3_x = 1
+|reward_easy_4 = {{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai|size=50px}}
+|reward_easy_4_x = 1
+
+|reward_medium_1 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_medium_1_x = 2
+|reward_medium_2 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft (Skilled)|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|GFCS Mk.37|size=50px}}
+|reward_medium_5_x = 1
+
+|reward_hard_1 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_hard_1_x = 2
+|reward_hard_2 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Medal|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Type 2 Land-based Reconnaissance Aircraft (Skilled)|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|GFCS Mk.37|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|5inch Single Gun Mount Mk.30 Kai + GFCS Mk.37|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules
+|id = 43-2
+|order = 0,1,D,F,A,B,G,J,2,R,U,V,M,N
+
+|0 -> 1 = * Single Fleet
+|0 -> 2 = * Combined Fleet
+
+|1 -> A = * Do not meet the requirements to go to D.
+|1 -> D = 
+* Meet '''ALL''' of the following requirements:
+** Amount of DD ≤ 3
+** No (F)BB(V)
+** No CVL
+* Alternatively, fleet contains SS(V).
+
+|D -> C/ambush = * Do not meet the requirements to go to F.
+|D -> F = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships with '''Surface Radars''' equipped ≥ ?/?/3/4 on Casual/Easy/Medium/Hard
+** Flagship has a '''Surface Radar''' equipped.
+** Amount of DD ≥ 2
+** No SS(V)
+
+|F -> E = * Do not meet the requirements to go to G.
+|F -> G = 
+* Meet '''ALL''' of the following requirements:
+** Amount of (F)BB(V)+CVL ≤ 3
+** Amount of CVL ≤ 2
+** Amount of DD ≥ 2
+
+|A -> B = * Do not meet the requirements to go to F.
+|A -> F = * No (F)BB(V) or CV(L/B)
+
+|B -> E/storm = * Meet '''ALL''' of the following requirements:
+** Amount of ships ≤ 5
+** ???
+|B -> F = * Do not meet the requirements to go to E.
+
+|G/empty -> I, J = * Active branching
+
+|J -> H/empty = * Do not meet the requirements to go to K.
+|J -> K = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships with '''Surface Radars''' equipped ≥ 4 on Hard.
+
+|2 -> Q = 
+* Meet '''ALL''' of the following requirements:
+** No CVL
+** No BBV
+** Amount of (F)BB ≤ 2
+|2 -> R = * Do not meet the requirements to go to Q.
+
+|R -> S/ambush = * Do not meet the requirements to go to either T or U.
+|R -> T = 
+* Fleet contains CVL.
+|R -> U = 
+* Meet '''ALL''' of the following requirements:
+** Amount of ships with '''Surface Radars''' equipped ≥ 2?/?/6/8 on Casual/Easy/Medium/Hard
+** Flagship has a '''Surface Radar''' equipped. (Medium+)
+** Do not meet the requirements to go to T.
+
+|U -> L = * Do not meet the requirements to go to M or V.
+|U -> M = * ???
+|U -> V = 
+* Meet '''ALL''' of the following requirements:
+** Carrier Task Force
+** ???
+** ???
+** ???
+
+|V -> W = * Pass the LoS check
+|V -> X = * Fail the LoS check
+
+|M -> N = * Do not meet the requirements to go to P.
+|M -> P = * Meet '''ALL''' of the following requirements:
+** Combined fleet
+** Amount of ships with '''Surface Radars''' equipped ≥ 6 on Hard.
+
+|N -> O/empty = * Do not meet the requirements to go to P.
+|N -> P = 
+* Meet '''ALL''' of the following requirements:
+** Pass the LoS check.
+** Amount of ships with '''Surface Radars''' equipped ≥ 7 on Medium+.
+* Alternatively, use a Single Fleet.
+}}
+<!--
+map information content here
+-->
+
+{{:Winter 2019 Event/E-2/Historical Ship Bonus}}
+
+===Map Guide===
+*This is a 2 phases map with 2 ship-locks:
+** <span style="color:green;">'''GREEN'''</span> for ships starting from the '''first''' starting point.
+** <span style="color:blue;">'''BLUE'''</span> for ships starting from the '''second''' starting point.
+**<span style="color:red;">'''WARNING:'''</span> For '''Medium/Hard''' Difficulty, you cannot mix ships of the two tags.
+*You are given two [[Land Base Aerial Support]].
+*'''Standard and Armored Carriers (CV/B) cannot enter this Map.'''
+**CVLs however are allowed to be used.
+
+{{clear}}
+
+===Part 1 : Defeating {{ShipLink|Heavy Cruiser Princess|text=Node K Boss}}===
+*<span style="color:red;">'''Mandatory:'''</span> : You must meet all of the requirements to go down to the Boss:
+**Amount of ships with {{EquipmentLink|Type 22 Surface Radar|Type 33 Surface Radar|Type 22 Surface Radar Kai 4|text=Surface Radars}} equipped ≥ ?/?/3/4 on Casual/Easy/Medium/Hard
+**At least 2 Destroyers in the Fleet.
+*It is recommended that you utilize the Vanguard Formation as much as possible to pass the Pre-Boss nodes smoothly.
+*Air raids against your Land Base can occur (starting even at Casual difficulty).
+
+{{:Winter 2019 Event/Info/Surface Radar}}
+
+You may choose to take one of two following routes:
+====North Route====
+*Route: {{Event/Route|D|red|F|red|G|lightblue|J|red|K|red}}
+**Fleet: 2 CA 1 CAV 1 CL 2 DD
+***This route is the shortest route towards the Boss Node {{Event/Route|K|red}}.
+***Due to lack of a BB however, you may have some trouble finishing off the Boss.
+
+====South Route====
+*Route: {{Event/Route|A|red|B|red|F|red|G|lightblue|J|red|K|red}}
+**Fleet: 2 BB 1 CVL 2 DD 1 CA(V)/CL
+***This Route takes a slightly longer route in contrast to the Northern Route, however it will reach the boss node without any ammo penality.
+***It is highly recommended to bring AACI for node {{Event/Route|A|red}}.
+
+===Part 2 : Opening the #2 Start Point===
+[[File:【KanColle】 Winter 2019 Event E-2 Unlock Start Point 2|right|250 px]]
+*To open up the hidden 2nd Start Point, you must do the following (in any order, and can be done separately):
+**Obtain Air Superiority (<span style="color:green">'''航空優勢! '''</span>) or Higher on Air Raid Nodes:
+***HARD - {{Event/Route|A|red|L|red|N|red}}
+***MEDIUM - {{Event/Route|A|red|L|red}}
+***EASY/CASUAL - {{Event/Route|A|red}}
+***<span style="color:red;">'''WARNING'''</span> : Please be advised that you '''must''' send [[Land Base Aerial Support]] to the Nodes even if you can already obtain Air Superiority without them, otherwise it will not count!
+***The Air Superiority (<span style="color:green">'''航空優勢! '''</span>) requirement at Node {{Event/Route|A|red}}  must be done '''after''' you defeated the Node K Boss.
+****You are advised to send your LBAS equipped with the appropriate {{Fighter}} Carrier-Based Fighters or {{Interceptor Fighter 2}} Land-Based Fighters down to the Nodes (Please see below for the LBAS Range Map).
+**Obtain Air Superiority (<span style="color:green">'''航空優勢! '''</span>) or Higher from against an Enemy Air Raid on your LBAS via (防空) <span style="color:Orange">'''Air Defense mode'''</span>. '''(Not Required for Casual Difficulty)'''
+*Once you finish the requirement above, the 2nd Start Point will open up along with the Route to the 2nd Boss.
+
+====Recommendations on reaching Node {{Event/Route|N|red}}====
+*If using a regular fleet, you are recommended to use 2 BB 1 CVL 1 CA(V) 2 DD and take the South Route.
+**Use of Vanguard Formation is very important to survive Nodes {{Event/Route|I|red}} and {{Event/Route|M|red}}
+**Another option is to just go Line Ahead in both nodes {{Event/Route|I|red}} and {{Event/Route|M|red}}, bring Pre-Boss Support Expedition, and if necessary, use 1 LBAS (2 waves) filled with {{Land-based Attack Aircraft}} {{EquipmentLink|Type 1 Land-based Attack Aircraft|text=Land-based Attack Aircrafts}} to attack Node {{Event/Route|M|red}}.
+*Another option is to use a Submarine Fleet filled with {{ShipLink|I-58|I-19|I-8|I-401|I-400|I-26|text=SSVs}}, bring {{Seaplane Fighter}} Seaplane Fighters as much as possible, and send both LBAS down with your Best Fighters to Node {{Event/Route|N|red}}.
+**Please note this method is not valid for anyone with low number of Seaplane Fighters.
+
+===Part 3: Defeating the Node P Final Boss===
+*The Recommended Route is : {{Event/Route|Q|red|I|red|L|red|M|red|N|red|P|red}}
+**Fleet: 2 (F)BB 4 CA(V) + 1 CL 2 DD 3 XX (from CLT/CA(V)/DD)
+**You must also meet all of the following requirements:
+***Amount of ships with Surface Radars equipped ≥ ?/?/7 on Casual/Easy/Medium+
+***'''NO CVL'''
+**The Boss is an outdated Enemy Boss Ship {{ShipLink|Southern Demon}}, who has relatively low stats.
+***However her Escort Ships can be troublesome, where use of [[Land Base Aerial Support]] against the Node and Support Expedition is highly recommended.
+
+
+====Recommendations====
+*Because you cannot bring any CVL in this route, it is important that you bring approximately 5 or more {{Seaplane Fighter}} {{EquipmentLink|Type 2 Seaplane Fighter Kai|text=Seaplane Fighter}} in order to gain Air Superiority at the Boss Node '''(Only as long as you bring Fighters into the Boss node via LBAS)'''.
+**<span style="color:red;">'''NOTE'''</span> : Seaplane Bombers such as [[Zuiun]] '''IS NOT''' a Seaplane Fighter! Please do not confuse the two.
+**If you think you cannot survive this route due to lack of CVL, you are by all means free to use 2 CVL in Surface Task Force, at the cost of going into a much harsher route {{Event/Route|R|red|T|red|U|red|L|red|M|red|N|red|P|red}}.
+***Please be aware that Node {{Event/Route|R|red}} and {{Event/Route|T|red}} have very heavy Enemy Carrier presence, with very high Air Power requirement as well '''(Not really for Casual/Easy difficulties)'''
+***Please be aware that Node {{Event/Route|U|red}} has {{ShipLink|Battleship Re-Class|Battleship Re-Class Elite||text=Battleship Re-Class}} waiting for you.
+****However, up to Medium-scale, the Re-class is only a Standard version and isn't really much of a huge threat overall.
+*Use of {{ShipLink|Nagato/Kai Ni}} and a 2nd BB for the utilization of her Special Attack either on Node {{Event/Route|M|red}} which has two {{ShipLink|Battleship Princess}}, or on the Boss Node itself is highly recommended.
+**If you have obtained {{ShipLink|Nelson}} during the [[Early Fall 2018 Event]], use of Nelson Touch is also an option as well.
+
+===Optional : Opening Shortcuts===
+*Although optional, you are eligible to open up shortcuts from Nodes {{Event/Route|U|red}} to {{Event/Route|M|red}}, and {{Event/Route|M|red}} to {{Event/Route|P|red}}.
+
+====Opening U to M Shortcut====
+*Please do the following in any order, and can all be done separately:
+**Obtain Air Supremacy ( <span style="color:green">'''制空権確保! '''</span>) in the Air Raid Nodes {{Event/Route|R|red|V|red}}.
+***<span style="color:red;">'''WARNING'''</span> : Please be advised that you must send down [[Land Base Aerial Support]] down to the Nodes to gain Air Superiority. Otherwise it will not count!
+**Obtain No Damage (Perfect LBAS Defense) from against an Enemy Air Raid.
+***'''HARD MODE ONLY:''' obtain Air Supremacy ( <span style="color:green">'''制空権確保! '''</span>) as well during the perfect defense.
+**Obtain S-Rank Victory in {{Event/Route|W|red}} Two '''(2)''' Times.
+
+====Opening M to P Shortcut====
+<span style="color:red;">'''NOTE'''</span> : You must have had opened U to M shortcut first!
+*Please do the following requirements to open the M to P shortcut:
+**Obtain Air Supremacy  (<span style="color:green">''' 制空権確保! '''</span>) from against an Enemy Air Raid on your LBAS by defending it with LBAS Air Defense.
+**Obtain Air Supremacy (<span style="color:green">''' 制空権確保! '''</span>) in the Air Raid Nodes{{Event/Route|A|red|L|red|R|red}}.
+**Obtain Air Superiority (<span style="color:green">''' 航空優勢! '''</span>) in the Air Raid Node {{Event/Route|N|red}}.
+***<span style="color:red;">'''WARNING'''</span> : Please be advised that you must send down [[Land Base Aerial Support]] down to the Nodes to gain Air Superiority/Supremacy. Otherwise it will not count!
+**Obtain S-Rank Victory in {{Event/Route|K|red}} One '''(1)''' Time.
+
+{{clear}}
+
+===[[Friend Fleet]]s===
+{{Fleets|friend=Winter 2019 Event|map=E-2}}
+
+===Phases===
+{| class="wikitable"
+|-
+! Phase 1
+! Phase 2
+|-
+| [[File:Winter_2019_Event_E-2_Map_A.png|325px]]
+| [[File:Winter_2019_Event_E-2_Map_B.png|325px]]
+|-
+! Phase 3
+! Phase 4
+|-
+| [[File:Winter_2019_Event_E-2_Map_C.png|325px]]
+| [[File:Winter_2019_Event_E-2_Map_D.png|325px]]
+|-
+! Phase 5
+|-
+| [[File:Winter_2019_Event_E-2_Map.png|325px]]
+|}
+
+=== LBAS Flight Range ===
+[[File:Winter_2019_Event_E-2_LBAS_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

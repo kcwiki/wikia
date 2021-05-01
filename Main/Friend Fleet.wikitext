@@ -1,0 +1,394 @@
+Implemented in the [[Winter 2018 Event]], a Friend Fleet is a NPC support fleet that appears during the night battle phase of a boss battle in certain event maps to support player fleets. Currently, all fleets implemented are specified by the game developers, but the system is said to be a trial version of a future system which will involve other player's fleets.
+
+==Information==
+*In certain event map boss nodes, at the start of the night battle phase a Friend Fleet will appear to exchange fire with the boss fleet before the player fleet.
+**When you are fighting a boss in a [[Combat/Abyssal Combined Fleet|Combined Fleet]], unlike normal Night Battles with Combined Fleet vs Combined Fleet, the Friend Fleet can attack any of the surviving enemies within both the main and escort fleet of the enemy Combined Fleet.
+**The determination of whether the enemy main or escort fleet engages the player escort fleet takes place after the Friend Fleet leaves. Thus, in the case of battling an enemy combined fleet, Friend Fleets can impact which fleet the player will face at night.
+*Any combat-capable enemy fleet members can attack the Friend Fleet (No damaged animation will appear for any Friend Fleet members).
+*The Friend Fleets can be one of multiple fleets with preset ships and equipment setups.
+*The ships appearing in the Friend Fleet are '''not fully modernized''', and sometimes appear at minor or moderate damage.
+
+==How To Use==
+[[File:Friend Fleet Usage.png|600px|center]]
+*As of the [[Spring 2019 Event]], an event-exclusive interface has been added to the game which allows players to control how they receive Friend Fleets, including whether they appear at eligible maps to begin with and if the game should attempt to select fleets from the weak or strong presets.
+*Friend Fleet can be requested on eligible maps by moving the first slider to the left, or disabled by moving the same slider to the right.
+**Note that '''Friend Fleets are disabled by default''', so be sure to enable them prior to sortieing if assistance is desired.
+*Turning on Friend Fleets but leaving the bottom slider at the right option ("Request Regular Support") will result in Friend Fleets being selected from the options labelled <b>{{color|green|Weak}}</b> in the preset compositions. These fleets are generally less effective against enemies, but cost the player nothing to use.
+*Turning on Friend Fleets and moving the slider to the left option ("Request Powerful Support") will result in Friend Fleets being selected from the options labelled <b>{{color|red|Strong}}</b> in the preset compositions. These fleets are more powerful, but come with some caveats:
+**Whenever a <b>{{color|red|Strong}}</b> Friend Fleet appears, 6 [[File:Instant construction 2.png|30px|link=Construction]] will be consumed.
+**'''There is a chance that the <b>{{color|red|Strong}}</b> Friend Fleet will fail to appear, and instead one of the <b>{{color|green|Weak}}</b> Friend Fleets will appear instead.''' Note that if this does happen, no [[File:Instant construction 2.png|30px|link=Construction]] will be consumed.
+*<s>It is possible to prevent one or more undesired NPC fleets from appearing by using a ship contained in the friend fleet in the player main and/or escort fleets (support expeditions do not count). However, it is always possible for the 19th Destroyer Division fleet to appear regardless of fleet composition (perhaps to make at least one NPC fleet always available).</s> Only applies to [[Winter 2018 Event]]? {{cite}}
+
+==Friend Fleet Preset Compositions==
+Please note that the compositions which can appear depend on the specific boss node.
+
+<tabview>
+Friend Fleet/Fall 2020 Event|Fall 2020 Event (Current)
+Friend Fleet/Rainy-Summer 2020 Event|Rainy-Summer 2020 Event
+Friend Fleet/Fall 2019|Fall 2019 Event
+Friend Fleet/Summer 2019|Summer 2019 Event
+Friend Fleet/Winter 2018|Winter 2018 Event
+Friend Fleet/Early Fall 2018|Early Fall 2018 Event
+Friend Fleet/Winter 2019|Winter 2019 Event
+Friend Fleet/Spring 2019|Spring 2019 Event
+</tabview>
+
+<!--
+* Under KC3 Kai strategy room, dump the results of api_friendly_info into var api,
+* Copy the entire contents into the console tab of developer tools when KC3 Kai strategy room is inspected.
+* Paste the contents (from clipboard) into the respective page and name the expanded fleet (in table) accordingly.
+
+var api = {
+            {"api_production_type":1,
+            "api_ship_id":[306,229,543,324,325,419],
+            "api_ship_lv":[70,75,76,55,54,77],
+            "api_nowhps":[41,34,32,29,28,32],
+            "api_maxhps":[45,36,33,32,32,32],
+            "api_Slot":[[139,139,101,-1,-1],[267,58,88,-1,-1],[267,15,88,-1,-1],[267,15,88,-1,-1],[267,15,88,-1,-1],[15,15,15,-1,-1]],
+            "api_Param":[[51,56,50,42],[28,64,30,28],[34,49,48,39],[21,52,32,22],[21,51,24,30],[26,64,64,26]],
+            "api_voice_id":[141,141,141,141,141,141],
+            "api_voice_p_no":[1,0,0,0,0,0]
+        };
+ 
+var fleet = `{| class="wikitable mw-collapsible" style="text-align:center"
+|-
+!colspan="10"|Press [Expand] to View the xxx Fleet (variant ${api.api_production_type})
+|-
+!Ship
+!Lv.
+!Equipment #1
+!Equipment #2
+!Equipment #3
+!Equipment #4
+!{{Firepower}}
+!{{Torpedo}}
+!{{AA}}
+!{{Armor}}
+`;
+for(let i = 0; i < api.api_ship_id.length; i++) {
+    let ship = `|-
+|{{ShipBattleCardKai|${KC3Meta.shipName(KC3Master.ship(api.api_ship_id[i]).api_name).replace(' ', '/')}}}
+| ${api.api_ship_lv[i]}`;
+    for(let j = 0; j < 4; j++) {
+        if(api.api_Slot[i][j] > 0)
+            ship += `
+| {{EquipmentCardKai|${KC3Meta.gearName(KC3Master.slotitem(api.api_Slot[i][j]).api_name)}|size=75px}}`;
+        else
+            ship += `
+|style="background:grey"|`
+    }
+    for(let j = 0; j < 4; j++)
+        ship += `
+| ${api.api_Param[i][j]}`;
+    fleet += ship + "\n";
+}
+copy(fleet + "|}");
+-->
+
+==Voice Lines==
+Special voice lines can play upon Friend Fleet arrival. Regular Battle Start lines can play as well.
+
+<tabber>Winter 2018 Event=
+===[[Winter 2018 Event]]===
+{|{{FancyTable|expand=true}}
+|-
+!Ship
+!Japanese
+!English
+!Notes
+|-
+|{{Audio|click_parent=true|file=Ayanami-Friend Fleet.ogg}} [[Ayanami]]
+|第十九駆逐隊、戦場に到着！これより突撃する！
+|Destroyer Division 19 has arrived on the battlefield! We're charging in now!	
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Ayanami-Friend Fleet 2.ogg}} ''Second Line''
+|綾波、了解！い、行きますよおぉー！
+|Roger that! H-here I gooooooo~!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Chikuma-Friend Fleet.ogg}} [[Chikuma]]
+|水偵のみんな、着弾観測お願いね。利根型重巡、筑摩、参ります。
+|I'm counting on you to spot the shell splashes, my recon seaplanes. Tone-class CA, Chikuma, heading out.
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Choukai-Friend Fleet.ogg}} [[Choukai]]
+|第四戦隊、全艦戦場に到着。摩耶、いい？撃ちまくるわよ。撃ち方、始め！
+|CruDiv 4, all ships have arrived on the battlefield. Ready, Maya? We'll blast them out of the water. Open fire!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Gangut-Friend Fleet.ogg}} [[Gangut]]
+|そうか、いよいよ艦隊決戦だな。よし、この私に任せておけ！キサマ、ともに行くぞ！遅れるな！
+|I see, it's finally time for the desicive battle. Alright, leave this to me! Come with me, you all! Don't fall behind!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Haruna-Friend Fleet.ogg}} [[Haruna]]
+|これから夜戦ですか？榛名にどうぞお任せください。
+|We're entering a night battle now? Please leave it to me.
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Hiei-Friend Fleet.ogg}} [[Hiei]]
+|第十一戦隊、旗艦比叡！戦場海域に到達せり。これより、友軍を援護する。霧島、行くよ！
+|BatDiv 11, flagship Hiei! We've reached the battlefield. We'll now support the allied fleet. Let's go, Kirishima!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Hiei-Friend Fleet 2.ogg}} ''Second Line''
+|お姉さま、比叡助けに来ました！気合、入れて、撃ちます！
+|I've come to help, onee-sama! Firing with all my might!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Iowa-Friend Fleet.ogg}} [[Iowa]]
+|Admiral、本気ね。
+|You sure are serious, Admiral.	
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Kirishima-Friend Fleet.ogg}} [[Kirishima]]
+|霧島、了解！主砲、打ち方始め、てーっ！
+|Roger! Main cannons, begin firing, fire!
+|'''Rough translation'''
+|-
+|{{Audio|click_parent=true|file=Kirishima-Friend Fleet 2.ogg}} ''Second Line''
+|第十一戦隊、戦艦霧島、戦場に突入せり！これより突撃を敢行！第一遊撃部隊を援護する！てー！
+|BatDiv 11, battleship Kirishima, has reached the battlefield! We'll now carry out the attack! Support the 1st Striking Force! Fire!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Kongou-Friend Fleet.ogg}} [[Kongou]]
+|第三戦隊、榛名、準備はいい？提督のハートは掴むのは、私たちデース！
+|BatDiv 3, Haruna, are you ready? We'll be the one to capture the Admiral's heart!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Maya-Friend Fleet.ogg}} [[Maya]]
+|あぁ、鳥海、行くぜ。あたしらの力を叩きつけるさ！姉貴たちもいいか？遅れるなよ！
+|Ah, let's go, Choukai. We'll show them our strength! Aneki, are you all ready too? Don't fall behind!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Nagato-Friend Fleet.ogg}} [[Nagato]]
+|よし！全主砲、行くぞ！一斉射、てーっ！
+|Alright! All guns ready! Full broadside, FIRE!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Noshiro-Friend Fleet.ogg}} [[Noshiro]]
+|二水戦、突撃します。各艦隊、艦隊陣形確認。よろしくどうぞ。
+|DesRon 2 is attacking. All fleets, check your formation. Please and thanks.
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Noshiro-Friend Fleet 2.ogg}} ''Second Line''
+|矢矧、悪いわね。先に行くわ。
+|I'm sorry,Yahagi. We're going on ahead.
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Richelieu-Friend Fleet.ogg}} [[Richelieu]]
+|Richelieuよ。来てあげたわ。援護してあげます。さぁ、撃ちなさい。
+|I'm Richelieu. I've arrived now. I'll support you. Now, open fire.
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Richelieu-Friend Fleet 2.ogg}} ''Second Line''
+|仕方ないわね、Amiral. 助けてあげるわ。Feu!
+|It can't be helped then, Admiral. I'll save you. Fire!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Shigure-Friend Fleet.ogg}} [[Shigure]]
+|よし、西村艦隊、スリガオを抜けて、レイテ湾に進撃中。あれは…？あれは栗田艦隊！？僕たちもぼろぼろだけど、今なら栗田艦隊を援護できる。突入しよう！
+|Alright, the Nishimura Fleet has broken through Surigao and is advancing through Leyte Gulf. That's...? That's the Kurita Fleet!? We're beaten up too, but we can support the Kurita Fleet now. Let's charge!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Shigure-Friend Fleet 2.ogg}} ''Second Line''
+|西村艦隊、これより主力部隊を援護するよ。みんな、いいかい？突撃！
+|The Nishimura Fleet will now support the main forces. Ready, everyone? Attack!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Shikinami-Friend Fleet.ogg}} [[Shikinami]]
+|敷波、了解。十九駆、第一小隊突撃。第二小隊続いて！突撃！
+|This is Shikinami, roger. DesDiv 19, 1st Platoon will charge in. 2nd Platoon, stay close behind. Charge!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Shikinami-Friend Fleet 2.ogg}} ''Second Line''
+|十九駆、見参。綾波さ、準備はいい？よし、味方艦隊を援護する。突撃開始！
+|DesDiv 19 is here. Are you ready, Ayanami? Alright, let's support the allied fleet. Begin the assault!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Takao-Friend Fleet.ogg}} [[Takao]]
+|摩耶ったら、生意気ね。第四戦隊、推参！てーっ！
+|You're being cheeky, Maya. CruDiv 4, arriving on station! Fire!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Tashkent-Friend Fleet.ogg}} [[Tashkent]]
+|よーし、いいね。北方連合艦隊、これより援護する！同志諸君、準備はいいかい？よし！Ура！！
+|Alright now. The Northern Combined Fleet will be supporting you! Are you ready, comrades? Alright! Hurrah!!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Yahagi-Friend Fleet.ogg}} [[Yahagi]]
+|了解、第一遊撃部隊、第二部隊、十戦隊、旗艦矢矧、推参。さぁ、突撃する。かかれ！
+|Roger, 1st Striking Force, 2nd Section, DesRon 10, flagship Yahagi, has arrived. Now, let's attack. Get them!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Yamato-Friend Fleet.ogg}} [[Yamato]]
+|主砲、諸元修正急いで下さい。戦艦大和、全主砲、全力射撃、行きます。てーっ！
+|Main guns, please hurry up with a firing solution. Battleship Yamato, opening fire with all guns. FIRE!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Warspite-Friend Fleet.ogg}} [[Warspite]]
+|European Combined Grand Fleet、旗艦Warspite、戦場海域に到着。これよりfriend fleetを援護します！全艦、突撃！
+|The European Combined Grand Fleet, flagship Warspite, has arrived at the battlefield. Now we'll support the friend fleet. All ships, charge!
+|Source: [http://en.kancollewiki.net/wiki/Winter_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|}
+|-|Early Fall 2018 Event=
+===[[Early Fall 2018 Event]]===
+{|{{FancyTable|expand=true}}
+|-
+!Ship
+!Japanese
+!English
+!Notes
+|-
+|{{Audio|click_parent=true|file=ArkRoyalKai-Friend Fleet 1.ogg}} [[Ark Royal#Upgrade|Ark Royal Kai]]
+|本国艦隊到着だ！さあ、見せてやろう！行くぞ！Nelson、付いて来い！
+|The Home Fleet has arrived! Come, I'll show you! Let's go! Follow me, Nelson!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=ArkRoyalKai-Friend Fleet 2.ogg}} [[Ark Royal#Upgrade|Ark Royal Kai]] ''Second Line''
+|了解だ！Swordfish squadron発艦初め！
+|Roger! Swordfish squadrons, begin takeoff!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=AsakazeKai-Friend Fleet 1.ogg}} [[Asakaze#Upgrade|Asakaze Kai]]
+|神風型駆逐艦、二番館、朝風、突っ込むわ！
+|2nd ship of the Kamikaze-class destroyers, Asakaze, charging in!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=CommandantTesteKai-Friend Fleet 1.ogg}} [[Commandant Teste#Upgrade|Commandant Teste Kai]]
+|私も微力ながら、援護いたします。Feu!
+|I'll support you even though I'm not that capable. Fire!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=CommandantTesteKai-Friend Fleet 2.ogg}} [[Commandant Teste#Upgrade|Commandant Teste Kai]] ''Second Line''
+|Merci。私も、戦場海域に到着できました。攻撃開始。
+|Thank you. Even I have managed to make it to the battlefield. Begin the attack.
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=GambierBayKai-Friend Fleet 1.ogg}} [[Gambier Bay#Upgrade|Gambier Bay Kai]]
+|Task Force 77、戦場海域に到達。これより友軍を援護します！
+|Task Force 77 has arrived on the battlefield. We'll now back up the friendly fleet!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Gotland-Friend Fleet 1.ogg}} [[Gotland]]
+|航空巡洋艦、Gotland.これよりあなたたちを援護します！
+|Aviation cruiser Gotland. We'll be backing you up now!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Gotland-Friend Fleet 2.ogg}} [[Gotland]] ''Second Line''
+|歐州方面連合艦隊旗艦代理、Gotland、戦場海域に到達！これより友軍艦隊を援護します。艦隊増速。突入！
+|European Combined Fleet representative flagship, Gotland, has arrived at the operation area! We'll now back up the friendly fleet. All ships, increase speed. Attack!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=IntrepidKai-Friend Fleet 1.ogg}} [[Intrepid#Upgrade|Intrepid Kai]]
+|全力出撃で行きましょうか？
+|Shall we sally forth at full force?
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=KishinamiKai-Friend Fleet 1.ogg}} [[Kishinami#Upgrade|Kishinami Kai]]
+|岸波、了解！三十一駆、突入！
+|Kishinami, Roger that! DesDiv31, attack!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=KishinamiKai-Friend Fleet 2.ogg}} [[Kishinami#Upgrade|Kishinami Kai]] ''Second Line''
+|第三十一駆逐隊、戦場海域に到達！これより友軍艦隊を援護します。オキ姉、ナガ姉、アサちゃん…突入です！
+|The 31st Destroyer Division has arrived on the battlefield! We'll now back up the friendly fleet. Oki-nee, Naga-nee, Asa-chan... Let's attack!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=KishinamiKai-Friend Fleet 3.ogg}} [[Kishinami#Upgrade|Kishinami Kai]] ''Third Line''
+|第三十一駆逐隊、戦場海域に到達！これより友軍艦隊を援護します。
+|The 31st Destroyer Division has arrived on the battlefield! We'll now back up the friendly fleet.
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=LibeccioKai-Friend Fleet 1.ogg}} [[Libeccio#Upgrade|Libeccio Kai]]
+|Ciao, ciao! Libe, 了解！
+|Hello, hello! Roger!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=LibeccioKai-Friend Fleet 2.ogg}} [[Libeccio#Upgrade|Libeccio Kai]] ''Second Line''
+|Ciao!Libe来たよ！みんな、元気している？援護しちゃうぞ！がおがお～！
+|Hello, hello! I'm here! Are you all doing well? I'm here to back you up!  Raaaawr!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=MaestraleKai-Friend Fleet 1.ogg}} [[Maestrale#Upgrade|Maestrale Kai]]
+|発：伊第十駆逐隊、Maestrale。宛：特務艦隊。我、友軍艦隊をこれより援護する。突入！
+|From: 10th Destroyer Division, Maestrale. To: Special Operations Fleet. We will now proceed to back you up. Attack!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=MaestraleKai-Friend Fleet 2.ogg}} [[Maestrale#Upgrade|Maestrale Kai]] ''Second Line''
+|駆逐隊、Maestrale、了解！Libe、いい？付いてきて！
+|Maestrale Division, roger! Got it, Libe? Follow me!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=MatsukazeKai-Friend Fleet 1.ogg}} [[Matsukaze#Upgrade|Matsukaze Kai]]
+|あはぁ、好きだよ、こういうの。
+|Aha, I like this.
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=NaganamiKai2-Friend Fleet 1.ogg}} [[Naganami#Second Upgrade| Naganami Kai Ni]]
+|よーし、ここが長波様の見せ場だな。突撃する！
+|Alriiight, this is my time to shine. I'm charging in!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=NelsonKai-Friend Fleet 1.ogg}} [[Nelson#Upgrade|Nelson Kai]]
+|戦艦Nelson、了解だ。見せてやろう。我が複縦陣による突撃を！敵の中央を分断する。行くぞ！
+|Battleship Nelson, roger. I'll show you what I can do. We'll attack in double line! Split the enemy down the middle. Let's go!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=NelsonKai-Friend Fleet 2.ogg}} [[Nelson#Upgrade|Nelson Kai]] ''Second Line''
+|待たせだな。本国艦隊旗艦、Nelson、見参！行くぞ！各々その責務を果たせ！突撃！
+|I've kept you waiting. Home Fleet flagship, Nelson, has arrived! Let's go! Each should do their duty! Charge!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Nelson-Touch.ogg}} [[Nelson#Upgrade|Nelson Kai]] ''Nelson's Touch''
+|Nelson Touch。主砲、一番、二番、もう一撃だ！
+|Nelson Touch. Main guns 1 and 2, one more shot!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=OkinamiKai-Friend Fleet 1.ogg}} [[Okinami#Upgrade|Okinami Kai]]
+|第三十一駆逐隊、戦場海域に到達しました。キシちゃん。アサちゃん、いいですか？突入します！
+|The 31st Destroyer Division has arrived on the battlefield. Kishi-chan, Asa-chan; are you ready? Let's attack!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=OkinamiKai-Friend Fleet 2.ogg}} [[Okinami#Upgrade|Okinami Kai]] ''Second Line''
+|沖波、了解しました！これより突入します！アサちゃんも、好きなだけやっちゃって！
+|Roger that! We'll begin the attack! Feel free to go all out, Asa-chan!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=RichelieuKai-Friend Fleet 1.ogg}} [[Richelieu#Upgrade|Richelieu Kai]]
+|Richelieuよ。来てあげたわ。援護してあげます。さあ、打ちなさい！
+|I'm Richelieu. I've come. I'll back you up. Now, open fire!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=SamuelB.RobertsKai-Friend Fleet 1.ogg}} [[Samuel B. Roberts#Upgrade|Samuel B. Roberts Kai]]
+|突っ込め！Fire!
+|Attack! Fire!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=Tashkent-Friend Fleet 1.ogg}} [[Tashkent]]
+|よーし、いいね。同志諸君、準備はいいかい？Ура！
+|Alright good. Are you ready, Comrades? Hurrah!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=WarspiteKai-Friend Fleet 1.ogg}} [[Warspite#Upgrade|Warspite Kai]]
+|Warspite、了解しました！突入、開始します！
+|Roger that! Begin the attack!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=WarspiteKai-Friend Fleet 2.ogg}} [[Warspite#Upgrade|Warspite Kai]] ''Second Line''
+|お待たせしました！戦艦Warspite、戦場海域に到着しました！これより皆さんを援護します。Nelson,準備はいい？行きましょう！
+|Sorry to keep you waiting! Battleship Warspite, has arrived on the battlefield! We'll now back you up. Are you ready, Nelson? Let's go!
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|-
+|{{Audio|click_parent=true|file=WarspiteKai-Friend Fleet 3.ogg}} [[Warspite#Upgrade|Warspite Kai]] ''Third Line''
+|お待たせしました！戦艦Warspite、戦場海域に到着しました！これより皆さんを援護します。
+|Sorry to keep you waiting! Battleship Warspite, has arrived on the battlefield! We'll now back you up.
+|Source: [http://en.kancollewiki.net/wiki/Early_Fall_2018_Event#Friend_Fleet_Voice_Lines EN Kancolle wiki]
+|}
+</tabber>
+
+==See Also==
+* [https://youtu.be/rGXH9GBvyV8 <nowiki>【艦これ】友軍艦隊ボイス集【3月2日実装分まで収録】 - 【KanColle】 Friend Fleet voice collection 【Up till March 2nd implementation compilation】</nowiki>]
+* [https://youtu.be/qIW4g1RpLbM <nowiki>【艦これ】友軍艦隊「戦域現着」ボイス集【初秋イベント2018】 - 【KanColle】 Friend Fleet 「Arriving towards battlefield」 voice collection 【Early Fall 2018】</nowiki>]
+[[Category:Game Mechanics]]

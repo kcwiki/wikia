@@ -1,0 +1,184 @@
+{{Event/MapPageHeader
+|form = sna6c6L0zEFIbGZD3
+|spreadsheet = 1VWAGUDk61IV6ceNl0bzQy7_72_MNyErz-miqybDwUH4
+|thread = 547886
+}}
+{{Event/MapInfo
+|en = Fleet, Assemble! To the Hitokappu Bay Anchorage
+|jp = 艦隊集結! 単冠湾泊地へ
+|romaji = Kantai syūketsu Hitokappu wan-hakuchi e
+|tag = E2
+|mechanics = Land Base Aerial Support@Land Base Aerial Support, LoS Check@Events/Mechanics#LoS_Check, Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Ship Locking@Events/Mechanics#Ship_Locking
+|transport = true
+|hp_all = 
+|hp_easy = 120
+|hp_medium = 240
+|hp_hard = 300
+|show_kills = true
+|kills_all = 
+|kills_easy = 3
+|kills_medium = 3
+|kills_hard = 3
+|reward_all = 
+
+|reward_easy_1 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model II|size=50px}}
+|reward_easy_3_x = 1
+|reward_easy_4 = 
+|reward_easy_4_x = 
+
+|reward_medium_1 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_medium_1_x = 2
+|reward_medium_2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_medium_2_x = 2
+|reward_medium_3 = {{EquipmentCardKai|Type 2 Depth Charge|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model II|size=50px}}
+|reward_medium_4_x = 1
+
+|reward_hard_1 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_hard_1_x = 2
+|reward_hard_2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]
+|reward_hard_2_x = 3
+|reward_hard_3 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Type 2 Depth Charge|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Type 1 Fighter Hayabusa Model III A|size=50px}}
+|reward_hard_5_x = 1
+
+
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules
+
+|0 -> A = * Do not meet the requirements to go to F.
+|0 -> F/empty = 
+* If the fleet contains SS(V):
+** Fleet will always go to F, anything else is irrelevant.
+* If the fleet does not contain SS(V):
+** Meet '''all''' of the following requirements:
+*** No AV allowed
+*** Amount of CV(L/B) ≦ 2
+*** Amount of DD ≧ 1
+
+
+|B -> C = 
+* Do not meet the requirements to go to D.
+|B -> D = 
+* Meet '''all''' of the following requirements:
+** Fast Fleet
+** Amount of CV(L) ≦ 2
+
+|G -> H = * Do not meet the requirements to go to I.
+|G -> I = 
+* Meet '''all''' of the following requirements:
+** Fast Fleet
+** Amount of FBB+CV(L/B) ≦ 2
+** Amount of DD ≧ 2
+
+|I/empty -> K, M = * Active Branching
+
+|K -> O = 
+* Meet '''all''' of the following requirements:
+** Fast Fleet
+** Amount of FBB+CV(L/B) ≦ 3
+** Amount of DD ≧ 2
+|K -> Q = * Do not meet the requirements to go to O.
+
+|Q -> O = * You will be redirected through this route if node T is not unlocked yet.
+|Q -> S/empty = * Fail the LoS check
+|Q -> T = * Pass the LoS check
+
+|P/empty -> N = 
+* Do not meet the requirements to go to either R or T.
+|P/empty -> R = 
+* Node R cannot be accessed during the HP Phase.
+* If you're in the TP Phase, meet '''all''' of the following requirements:
+** Amount of historical ships ≧ 3 on Easy and Medium / 4 on Hard
+** Pass the LoS check
+* If the map is cleared:
+** Amount of historical ships ≧ 3 on Easy and Medium / 4 on Hard
+** Random routing between node R and T if you pass the LoS check, but fail to meet the historical requirement.
+|P/empty -> T = 
+* Node T cannot be accessed during the TP Phase.
+* If you're in the HP Phase:
+** Pass the Los check
+* If the map is cleared:
+** Random routing between node R and T if you pass the LoS check, but fail to meet the historical requirement.
+
+
+|N -> J/empty = * Fail the LoS check
+|N -> R = * Pass the LoS check
+}}
+===Fighter Power Values===
+The following are the fighter power required for node O and Boss node to achieve AP/AS/AS+, respectively:
+*'''Easy''': 65/146/291 
+*'''Medium''': 130/291/582 
+*'''Hard''': 150/336/672
+Please note that this is before LBAS reduction; LBAS with fighters can be used to help reduce the minimum required value even further by providing air control.
+*'''Reminder:''' You are given one LBAS to use 
+===Historical Fleet: The 5th Fleet===
+The historical ships are the members of the 5th Fleet after the reorganization on April 1st 1944:
+* CA: {{ShipLink|Nachi|Nachi/Kai Ni}}, {{ShipLink|Ashigara|Ashigara/Kai Ni}}
+* CLT: {{ShipLink|Kiso|Kiso/Kai Ni}}
+* CL: {{ShipLink|Abukuma|Abukuma/Kai Ni}}, {{ShipLink|Tama}}
+* DD: {{ShipLink|Akebono}}, {{ShipLink|Ushio|Ushio/Kai Ni}}, {{ShipLink|Kasumi|Kasumi/Kai Ni}}, {{ShipLink|Shiranui}}
+<!--reference: https://twitter.com/Lambda39/status/859596958175944705-->
+
+==User Submitted Fleet Compositions==
+*All Slow Ships will result in off-routing. Please only bring Fast-Ships.
+*Having more than 2 CV(L) or FBB combined will result in being taken to node H and further off-routes. Node H contains Enemy Submarines who can appear in Line Ahead formation.
+*Bringing some of the historical ships mentioned above will bypass Node N.
+
+===Transport Phase (TP Bar)===
+*'''Route''': F-G-I-K-O-L-P-N-R
+**2 DD 2 CA(V) 2 CV(L)
+*'''Historical Route''': F-G-I-K-O-L-P-R
+
+===Boss Kill Phase (HP Bar)===
+*'''Route:''': F-G-I-K-O-L-P-T
+**2 CA(V) 2 DD 2 CV(L)
+**1 FBB 2 CA(V) 2 DD 1 CV(L)
+**1 FBB 1 CLT 1 CA(V) 2 DD 1 CV(L)
+
+*'''Historical Route''': F-G-I-K-O-L-P-T
+
+===Node B & D Farming===
+*'''Route:''': A-B-D-E
+**2 CL(T) 2 CA(V) 2 CV(L)
+
+==Recommendations & Map Guide==
+
+===Phase 1: Transport Operation===
+*The Map starts out as a Transport Operation where you must reach node R and clear the TP Bar until it is completely depleted.
+**Please note you must obtain A-Rank or higher Victory to have the TP Bar depleted. Obtaining B-Rank Victory will result in a failure.
+*If using a CAV, please try to equip 1 Drum Canister on each, and bring [[Drum Canister (Transport Use)|Drums]] and [[Daihatsu Landing Craft]] on applicable Destroyers.
+*Your [[Land Base Aerial Support]] Must be Range of '''5''' or higher to reach node R.
+**If you lack [[List of Land-based Attack Aircraft by stats|Land-Based Attack Aircrafts]], please note that [[Type 96 Land-based Attack Aircraft]] is buildable via Development.
+**As there are no carriers at boss node, it is possible to load your LBAS with full bombers as a support for the boss.
+*By clearing the TP Bar, node T and a route to there will open.
+
+===Phase 2: Boss Kill===
+*It is recommended that you take I to K route as node M and Q consists of the new [[Light Carrier Nu-Class|Light Carrier Nu-class Kai Elite and Flagships]].
+**The new enemy [[Light Carrier Nu-Class|Light Carrier Nu-class Kai Elite and Flagships]]. have more HP, Firepower, Armor, Medium attack range, and higher Air Power. Please beware they are capable of heavily damaging any of your ships with ease.
+*The Boss is a [[Heavy Cruiser Princess]]. She will change to her damaged form on Final Kill.
+*For the use of [[Land Base Aerial Support]], you only require Range of '''5''' to reach node T.
+**It is recommended that you use two [[List of Land-based Attack Aircraft by stats|Land-Based Attack Aircrafts]] and two Fighters with at least range of 5 or above ([[Reppuu]] can reach the Node T in this map).
+**Boss Node Support Expedition is recommended for the Final Kill especially.
+*A possible composition is 1 FBB 1 CA(V) 1 CLT 2 DD 1 CV, as the 1 FBB gives you access to 2nd Shelling Phase with an additional high firepower ship while CLT gives you additional torpedo strike to help in eliminating the boss' escort ships.
+
+===Node B & D Farming===
+*Node B drops Maruyu and Node D drops Amagi.
+*There are no enemy carrier presence in this route. You may bring all Bombers on your CV(L) and LBAS if you wish to use it for supporting in farming (please beware of the extra resource expenses though)
+*Node A has potential to have enemy Submarines in Line Ahead for Medium/Hard mode. If farming in Medium/Hard, it is recommended that you bring 2x OASW capable CL/CLT
+*Please note your fleet must be Fast-Only, otherwise you will be taken to node C.
+
+===LBAS Flight Range===
+
+[[File:Spring_17_E2_LBAS_Flight_Range.jpg|400px|center]]
+
+{{Event/MapPageFooter}}

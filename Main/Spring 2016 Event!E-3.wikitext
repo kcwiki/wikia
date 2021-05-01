@@ -1,0 +1,85 @@
+__NOTOC__
+<!--{{Ambox
+|type = protection
+|title = Editing this article is limited to wikia users for a week of the event.
+|message = This is to prevent trolling, vandalizing, conflicting or unwarranted edits.
+|users = [[User:McDerp|McDerp]]
+}}-->
+{{Notice
+|style = text-align:left
+|'''Report threads'''
+*Report your fleet composition [[Thread:418734|here]]
+*Report enemy pattern [[Thread:418707|here]]
+}}
+{{Spring 2016 Event Nav}}
+==Information==
+{{Infobox
+|title = Construct a Front-line Air Base! [[File:Spring_2016_Event_Ship_Tag_Construction_Fleet.png]]
+|kanji = 前線飛行場を設営せよ！
+|romaji = Zensen hikōjō o setsuei seyo!
+|image = Spring_2016_E3_Banner.png
+|label1 = Mechanics
+|value1 =  [[Events/Mechanics#Combined_Fleet|Combined Fleet]]<br/>[[Events/Mechanics#Node_specific_details|Selection node]]<br/>[[Events/Mechanics#Ship_Locking|<p style="background-color:green;color:white">Ship Locking</p>]]
+|label2 = [[Spring_2016_Event/Mechanics#map-hp|Boss gauge <sup>?</sup>]]
+|value2 = '''Easy''': 310 TP<br/>'''Normal''': 420 TP<br/>'''Hard''': 550 TP
+|label3 = Reward
+|value3 = '''All:''' <br/>
+{{ShipBattleCardKai|Kamikaze}} '''Easy: Nothing [[File:Catbomb.png|100px]]''' <br/>'''Normal:'''<br> {{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |text = 1}}{{ItemStack|item = [[File:Improvement_Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]] |text = 5}}
+<br/>'''Hard:'''<br>{{ItemStack|item = [[File:Bofors_40mm_Quadruple_Autocannon_Mount_173_Card.png{{!}}50px{{!}}link=Bofors_40mm_Quadruple_Autocannon_Mount]] |text = 1}}{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]] |text = 1}}{{ItemStack|item = [[File:Improvement_Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]] |text = 6}}
+}} 
+
+===Branching rules===
+*This map is a [[Combined_Fleet|Combined Transport Fleet]] map.
+
+All fleets start at node B.
+*Fast fleet will route B → D directly.
+*Slow fleet will route B → A → C.
+**Two BBV will route C → E → D.
+**Otherwise C → D.
+***D → F → G is guaranteed.
+***Slow fleet will route G → I → J → K.
+***Fast fleet with large number of [[Daihatsu Landing Craft]] and [[Drum Canister (Transport Use)]] has higher chance to route G → H → J → K.
+***Otherwise G → J → K.
+***Offroute conditions for H → L and J → M unknown.
+
+===Suggested compositions===
+*2 CAV + 4 DD | CL + 3 DD + 2 CA/V will route B → D → F → G → H → J → K or B → D → F → G → J → K.  
+
+===Tips===
+*'''Note:''' [[Ka Mi]] / [[Special Type 2 Amphibious Landing Craft]] and [[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]] will not be recognized as a Daihatsu, so it will not be counted and displayed when you reach the TP node (e.g., if you carry 4 Daihatsu and 1 T89 then it'll only display 4 Daihatsu). '''However''', they will still affect the TP bar (check the [[Events/Mechanics#Map-specific_Mechanics|Mechanics]] to see how much).
+*Equip some Daihatsu or Drum to drain TP faster. 
+*Node and boss shelling support is highly recommended.
+
+===Note===
+*Clearing E-3 unlocks the [[Land Base Aerial Support]].
+*This map only consists of a TP gauge. By depleting the TP gauge, you can clear the map; final kill is not needed.
+*An A rank is required to deplete TP, however A rank will only deplete TP by 70% of an S rank.
+*While there was a bug between May 4th and May 6th when U-511 (or I-401) did not drop for Admirals who already possessed 2 or more U-511/Ro-500 (or I-401), this bug has been fixed [https://twitter.com/KanColle_STAFF/status/728386089006682112][http://kcvdb.jp/verification/2016/05/17/koshian001/]. However, the drop rate is still dependent on how many U-511/Ro-500 (or I-401) are in possession, e.g., on Hard (for nodes D and F) it is 2-3% with no U-511/Ro-500 in possession, 1% with one, and 0.5% with two or more (1.5%, 0.5%, and 0.25% for Easy).
+
+{{Hard Anti-installation Weapons}}<!--Included as this is daihatsu bearer list relevant for TP as well-->
+{{clear}}
+
+==Drop list==
+<!-- Refer to http://kancolle.wikia.com/wiki/Template:DropList/doc -->
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = D, F, H, K
+|boss = K
+|I-19: D/Easy, F/Easy
+|I-58: D/Easy, F/Easy
+|I-401: D/Easy, F/Easy, H/Easy
+|Kumano: K/Easy
+|Makigumo: K/Easy
+|Maruyu: K/Medium{Hard: 2% per S}
+|Mikuma: K/Easy
+|Shoukaku: K/Easy
+|Suzuya: K/Easy
+|U-511: D/Easy, F/Easy, H/Easy
+|Umikaze: K/Easy
+|Yahagi: K/Easy
+|Yuugumo: K/Easy
+|Zuikaku: K/Easy
+}}
+
+{{:Spring 2016 Event/E-3/Enemy patterns}}

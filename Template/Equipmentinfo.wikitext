@@ -1,0 +1,111 @@
+{|style="border: 1px solid darkgray; width: 400px;"
+|-
+| colspan="2" style="text-align: center; background-color: LightSkyBlue;"|<p style="font-size:25px">'''{{{name|Name?}}}'''</p>
+<p style="font-size:20px">'''{{#if:{{{id|}}}|No.{{{id}}}}} {{{japanesename|}}}'''</p>
+|-
+| colspan="2" style="text-align: center; background-color: {{{color|}}};"|<p>'''{{{icon|}}} {{{type|}}}'''</p>
+<p>'''{{#if:{{{effect|}}}|Effects :{{{effect}}}}}'''</p>
+<p>'''{{#if:{{{scrap|}}}|Scrap value :{{{scrap}}}}}'''</p>
+|- {{#if: {{{image|}}} | | style="display: none;" }}
+| colspan="2" style="text-align: center;" |{{{image|}}}
+|-
+| colspan="2" style="text-align: center; background-color: LightSkyBlue;"|'''Refittable Class'''
+|-
+| style="width: 200px; text-align: center; background-color: {{{DD|}}};"|Destroyer
+| style="width: 200px; text-align: center; background-color: {{{LC|}}};"|Amphibious Assault Ship
+|-
+| style="text-align: center; background-color: {{{CL|}}};"|Light Cruiser
+| style="text-align: center; background-color: {{{CLT|}}};"|Torpedo Cruiser
+|-
+| style="text-align: center; background-color: {{{CA|}}};"|Heavy Cruiser
+| style="text-align: center; background-color: {{{CAV|}}};"|Aviation Cruiser
+|-
+| style="text-align: center; background-color: {{{BB|}}};"|Battleship
+| style="text-align: center; background-color: {{{BBV|}}};"|Aviation Battleship
+|-
+| style="text-align: center; background-color: {{{FASTBB|}}};"|Fast Battleship
+| style="text-align: center; background-color: {{{AV|}}};"|Seaplane Tender
+|-
+| style="text-align: center; background-color: {{{CVL|}}};"|Light Carrier
+| style="text-align: center; background-color: {{{CV|}}};"|Standard Carrier
+|-
+| style="text-align: center; background-color: {{{SS|}}};"|Submarine
+| style="text-align: center; background-color: {{{SSV|}}};"|Submarine Carrier
+|-
+| style="text-align: center; background-color: {{{AS|}}};"|Submarine Tender
+| style="text-align: center; background-color: {{{AR|}}};"|Repair Ship
+|}
+<noinclude>
+* Parameters need not follow the order shown below, however it is highly recommended for easier editing
+* For ship class use color lime (e.g. '''| DD=lime''' )
+* Fast battleship : Kongou Class
+* In '''| image= ''' column, it can be a single image or gallery (see demo below)
+*temp note : "LC" Amphibious Assault Ship, placeholder for Akitsu Maru, change it if you find a better alternative. "color" has no use for now, leave it empty
+*temp note 2 : We use this page [[46cm Triple Gun Mount]] to finalize the standard layout for this template. If you don't know how to make equipment pages please read it source code [http://kancolle.wikia.com/wiki/46cm_Triple_Gun_Mount?action=edit] first.
+<pre>
+{{equipmentinfo
+| name=46cm Triple Gun Mount
+| japanesename=46cm三連装砲 
+| id=9
+| color=
+| type=Main Cannon, Heavy
+| icon={{Template:RedGunHeavy}}
+| effect={{Firepower}}+26, {{AA}}+5
+| image=<gallery type="slideshow" widths="360px" position="center" hideaddbutton="true">
+kcimgc (46).png
+kcimgc (47).png
+kcimgc (48).png
+kcimgc (49).png
+</gallery>
+| scrap={{ammo}} ?,{{steel}}?
+| DD=
+| LC=
+| CL=
+| CLT=
+| CA=
+| CAV=
+| BB=lime
+| BBV=lime
+| FASTBB=lime
+| AV=
+| CVL=
+| CV=
+| SS=
+| SSV=
+| AS=
+| AR=
+}}
+</pre>
+{{equipmentinfo
+| name=46cm Triple Gun Mount
+| japanesename=46cm三連装砲 
+| id=9
+| color=
+| type=Main Cannon, Heavy
+| icon={{Template:RedGunHeavy}}
+| effect={{Firepower}}+26, {{AA}}+5
+| image=<gallery type="slideshow" widths="360px" position="center" hideaddbutton="true">
+kcimgc (46).png
+kcimgc (47).png
+kcimgc (48).png
+kcimgc (49).png
+</gallery>
+| scrap={{ammo}} ?,{{steel}}?
+| DD=
+| LC=
+| CL=
+| CLT=
+| CA=
+| CAV=
+| BB=lime
+| BBV=lime
+| FASTBB=lime
+| AV=
+| CVL=
+| CV=
+| SS=
+| SSV=
+| AS=
+| AR=
+}}
+</noinclude>

@@ -1,0 +1,245 @@
+<div style="padding:5px; background:{{{bg_color|#def}}}; border:1px solid {{{border_color|#ace}}};">
+{| border="0" width="100%" class="mw-collapsible {{#ifeq: {{{expanded|}}}|true| |mw-collapsed}}"
+|-
+| style=" width:60px; background:#ffc;" |
+| style=" width:60px; font-size:20px; font-weight:bold; color:#00f; text-align:center; background:#fff;" |{{{map|E-X}}}
+|<div style="font-size:16px; color:#00f; padding:0px 0px 0px 10px; font-weight:bold;">{{{name|No map name provided}}}</div><div style="font-size:12px; color:#369; padding:0px 0px 0px 10px;">{{{japanese|No map name provided}}}</div>
+| style="width:80px;" |
+|-
+| colspan="4" |
+{| cellspacing="5" style="width:100%; text-align:center; font-weight:bold;"
+|-
+| style="background:#afa; border:1px solid #369;" |[[{{{report_fleet|Thread:EDITME}}}|Fleet Composition Reporting]]
+| style="background:#faa; border:1px solid #369;" |[[{{{report_enemy|Thread:EDITME}}}|Enemy Encounter Reporting]]
+|}
+|-
+| colspan="4" |
+{| style="width:100%;"
+|-
+| rowspan="2" valign="top" |
+{{{info|
+* ''No information provided yet''
+}}}
+| style="width:320px;" |[[File:{{{map_banner|Map_placeholder.png}}}|320px]]
+|-
+|[[File:{{{map_image|Map_placeholder_branch.png}}}|320px]]
+|}
+|-
+| style="padding:0px 0px 0px 0px;" colspan="4" |
+{| class="wikitable" style="width:100%; text-align:center;"
+|-
+! colspan="4" style="font-size:16px; color:#00f;" |Boss
+|-
+!Difficulty
+!Gauge
+!Normal Form
+!Final Form
+|-
+|Easy (丙)
+| style="font-size:16px; font-weight:bold;" |{{{boss_easy_kills|''Unknown''}}} kills worth
+| style="width:130px;" |{{{boss_easy_basic|''Unknown''}}}
+| style="width:130px;" |{{{boss_easy_final|''Unknown''}}}
+|-
+|Medium (乙)
+| style="font-size:16px; font-weight:bold;" |{{{boss_medium_kills|''Unknown''}}} kills worth
+|{{{boss_medium_basic|''Unknown''}}}
+|{{{boss_medium_final|''Unknown''}}}
+|-
+|Hard (甲)
+| style="font-size:16px; font-weight:bold;" |{{{boss_hard_kills|''Unknown''}}} kills worth
+|{{{boss_hard_basic|''Unknown''}}}
+|{{{boss_hard_final|''Unknown''}}}
+|}
+
+{| class="wikitable" style="width:100%;"
+|-
+! colspan="3" style="font-size:16px; color:#00f;" |Rewards
+|-
+!Easy (丙)
+!Medium (乙)
+!Hard (甲)
+|-
+| style="width:33%;" valign="top" |
+{{{rewards_easy|
+* ''Unknown''
+}}}
+| style="width:33%;" valign="top" |
+{{{rewards_medium|
+* ''Unknown''
+}}}
+| style="width:34%;" valign="top" |
+{{{rewards_hard|
+* ''Unknown''
+}}}
+|}
+
+{| style="width:100%; " class="mw-collapsible mw-expanded wikitable"
+|-
+! style="font-size:16px; color:#00f;" |Branching Rules
+! style="width:80px; font-size:12px;"|
+|-
+| colspan="2" |
+{{{branching|
+* ''No known branching rules yet''
+}}}
+|}
+
+{| style="width:100%; " class="mw-collapsible mw-expanded wikitable"
+|-
+! style="font-size:16px; color:#00f;" |Tips
+! style="width:80px; font-size:12px;"|
+|-
+| colspan="2" |
+{{{tips|
+* ''No tips provided yet''
+}}}
+|}
+
+{| style="width:100%; " class="mw-collapsible mw-collapsed wikitable"
+|-
+! style="font-size:16px; color:#00f;" colspan="2" |Drops
+! style="width:80px; font-size:12px;"|
+{{EventMap3/droprow
+|A
+|{{{boss_node|}}}
+|{{{drop_A|
+* '''[[EliteDD|<span style="cursor:help;" title="Destroyers. Click to see a list of destroyers.">DD<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+* '''[[EliteCL|<span style="cursor:help;" title="Light Cruisers. Click to see a list of light cruisers.">CL<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+* '''[[EliteCA|<span style="cursor:help;" title="Heavy Cruisers. Click to see a list of heavy cruisers.">CA<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+* '''[[EliteAV|<span style="cursor:help;" title="Seaplane Tenders. Click to see a list of seaplane tenders.">AV<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+* '''[[EliteCVL|<span style="cursor:help;" title="Light Aircraft Carriers. Click to see a list of light aircraft carriers.">CVL<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+* '''[[EliteCV|<span style="cursor:help;" title="Standard Aircraft Carriers. Click to see a list of standard aircraft carriers.">CV<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+* '''[[EliteBB|<span style="cursor:help;" title="Battleships. Click to see a list of battleships.">BB<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+* '''[[EliteSS|<span style="cursor:help;" title="Submarines. Click to see a list of submarines.">SS<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+* '''[[Auxiliary_Ships|<span style="cursor:help;" title="Click to see a list of auxiliary ships.">DD<span style="color:red"><sup><small>''?''</small></sup></span></span>]]''': ''None listed''
+}}}
+}}
+{{EventMap3/droprow
+|B
+|{{{boss_node|}}}
+|{{{drop_B|}}}
+}}
+{{EventMap3/droprow
+|C
+|{{{boss_node|}}}
+|{{{drop_C|}}}
+}}
+{{EventMap3/droprow
+|D
+|{{{boss_node|}}}
+|{{{drop_D|}}}
+}}
+{{EventMap3/droprow
+|E
+|{{{boss_node|}}}
+|{{{drop_E|}}}
+}}
+{{EventMap3/droprow
+|F
+|{{{boss_node|}}}
+|{{{drop_F|}}}
+}}
+{{EventMap3/droprow
+|G
+|{{{boss_node|}}}
+|{{{drop_G|}}}
+}}
+{{EventMap3/droprow
+|H
+|{{{boss_node|}}}
+|{{{drop_H|}}}
+}}
+{{EventMap3/droprow
+|I
+|{{{boss_node|}}}
+|{{{drop_I|}}}
+}}
+{{EventMap3/droprow
+|J
+|{{{boss_node|}}}
+|{{{drop_J|}}}
+}}
+{{EventMap3/droprow
+|K
+|{{{boss_node|}}}
+|{{{drop_K|}}}
+}}
+{{EventMap3/droprow
+|L
+|{{{boss_node|}}}
+|{{{drop_L|}}}
+}}
+{{EventMap3/droprow
+|M
+|{{{boss_node|}}}
+|{{{drop_M|}}}
+}}
+{{EventMap3/droprow
+|N
+|{{{boss_node|}}}
+|{{{drop_N|}}}
+}}
+{{EventMap3/droprow
+|O
+|{{{boss_node|}}}
+|{{{drop_O|}}}
+}}
+{{EventMap3/droprow
+|P
+|{{{boss_node|}}}
+|{{{drop_P|}}}
+}}
+{{EventMap3/droprow
+|Q
+|{{{boss_node|}}}
+|{{{drop_Q|}}}
+}}
+{{EventMap3/droprow
+|R
+|{{{boss_node|}}}
+|{{{drop_R|}}}
+}}
+{{EventMap3/droprow
+|S
+|{{{boss_node|}}}
+|{{{drop_S|}}}
+}}
+{{EventMap3/droprow
+|T
+|{{{boss_node|}}}
+|{{{drop_T|}}}
+}}
+{{EventMap3/droprow
+|U
+|{{{boss_node|}}}
+|{{{drop_U|}}}
+}}
+{{EventMap3/droprow
+|V
+|{{{boss_node|}}}
+|{{{drop_V|}}}
+}}
+{{EventMap3/droprow
+|W
+|{{{boss_node|}}}
+|{{{drop_W|}}}
+}}
+{{EventMap3/droprow
+|X
+|{{{boss_node|}}}
+|{{{drop_X|}}}
+}}
+{{EventMap3/droprow
+|Y
+|{{{boss_node|}}}
+|{{{drop_Y|}}}
+}}
+{{EventMap3/droprow
+|Z
+|{{{boss_node|}}}
+|{{{drop_Z|}}}
+}}
+|}
+
+|}
+</div>

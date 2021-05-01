@@ -1,0 +1,382 @@
+==Notes==
+* For tweets, use <code>tweet</code> parameters (see examples below) OR <code>/Tweets</code> subpage. Parameters will be ignored if the subpage exists.
+==Examples==
+<tabber>New equipment=
+<pre>
+{{Update/RankingRewards
+
+|new_equipment = Toku Daihatsu Landing Craft
+
+|top5_1 = Toku Daihatsu Landing Craft
+|top5_1_x = 2
+|top5_2 = Type 3 Fighter Hien (244th Air Combat Group)
+|top5_2_x = 1
+|top5_3 = Shiun
+|top5_3_x = 1
+
+|top20_1 = Toku Daihatsu Landing Craft
+|top20_1_x = 1
+|top20_2 = Type 3 Fighter Hien (244th Air Combat Group)
+|top20_2_x = 1
+|top20_3 = Shiun
+|top20_3_x = 1
+
+|top100_1 = Toku Daihatsu Landing Craft
+|top100_1_x = 1
+|top100_2 = Type 3 Fighter Hien Model 1D
+|top100_2_x = 1
+|top100_3 = Shiun
+|top100_3_x = 1
+
+|top500_1 = Toku Daihatsu Landing Craft
+|top500_1_x = 1
+|top500_2 = Shiun
+|top500_2_x = 1
+
+|tweet1 = https://twitter.com/KanColle_STAFF/status/791071209102319616
+|tweet1_jp = 本日【10/26(水)】夜以降に、ゲーム画面下【情報】において月次作戦【九月作戦】の結果情報をお知らせする予定です。また、同トップランカー提督に贈る武勲褒賞も、本日夜以降より該当提督へ順次配信してまいります。展開中の【十月作戦】も、引き続きどうぞよろしくお願い致します！
+
+|tweet2 = http://twitter.com/KanColle_STAFF/status/791203413153370112
+|tweet2_jp = 月次作戦【九月作戦】のトップランカー提督に贈る武勲褒賞を、本日【18:30】以降より順次配信開始します。該当提督の皆さんは同配信後の「艦これ」ゲーム開始時に月次作戦褒賞を入手可能です。※同詳細情報は、公式コミュニティ「運営鎮守府からのお知らせ」をご参照ください。
+
+}}
+</pre>
+Result:
+----
+{{Update/RankingRewards
+
+|new_equipment = Toku Daihatsu Landing Craft
+
+|top5_1 = Toku Daihatsu Landing Craft
+|top5_1_x = 2
+|top5_2 = Type 3 Fighter Hien (244th Air Combat Group)
+|top5_2_x = 1
+|top5_3 = Shiun
+|top5_3_x = 1
+
+|top20_1 = Toku Daihatsu Landing Craft
+|top20_1_x = 1
+|top20_2 = Type 3 Fighter Hien (244th Air Combat Group)
+|top20_2_x = 1
+|top20_3 = Shiun
+|top20_3_x = 1
+
+|top100_1 = Toku Daihatsu Landing Craft
+|top100_1_x = 1
+|top100_2 = Type 3 Fighter Hien Model 1D
+|top100_2_x = 1
+|top100_3 = Shiun
+|top100_3_x = 1
+
+|top500_1 = Toku Daihatsu Landing Craft
+|top500_1_x = 1
+|top500_2 = Shiun
+|top500_2_x = 1
+
+|tweet1 = https://twitter.com/KanColle_STAFF/status/791071209102319616
+|tweet1_jp = 本日【10/26(水)】夜以降に、ゲーム画面下【情報】において月次作戦【九月作戦】の結果情報をお知らせする予定です。また、同トップランカー提督に贈る武勲褒賞も、本日夜以降より該当提督へ順次配信してまいります。展開中の【十月作戦】も、引き続きどうぞよろしくお願い致します！
+
+|tweet2 = http://twitter.com/KanColle_STAFF/status/791203413153370112
+|tweet2_jp = 月次作戦【九月作戦】のトップランカー提督に贈る武勲褒賞を、本日【18:30】以降より順次配信開始します。該当提督の皆さんは同配信後の「艦これ」ゲーム開始時に月次作戦褒賞を入手可能です。※同詳細情報は、公式コミュニティ「運営鎮守府からのお知らせ」をご参照ください。
+
+}}
+|-|No new equipment=
+<pre>
+{{Update/RankingRewards
+
+|top5_1 = Prototype Keiun (Carrier-based Reconnaissance Model)
+|top5_1_x = 1
+|top5_2 = Reppuu Model 11
+|top5_2_x = 1
+|top5_3 = Ginga
+|top5_3_x = 1
+|top5_4 = 15m Duplex Rangefinder + Type 21 Air Radar Kai Ni
+|top5_4_x = 1
+
+|top20_1 = Prototype Keiun (Carrier-based Reconnaissance Model)
+|top20_1_x = 1
+|top20_2 = Reppuu Model 11
+|top20_2_x = 1
+|top20_3 = Ginga
+|top20_3_x = 1
+
+|top100_1 = Prototype Keiun (Carrier-based Reconnaissance Model)
+|top100_1_x = 1
+|top100_2 = Reppuu Model 11
+|top100_2_x = 1
+|top100_3 = Type 1 Land-based Attack Aircraft Model 22A
+|top100_3_x = 1
+
+|top500_1 = Prototype Keiun (Carrier-based Reconnaissance Model)
+|top500_1_x = 1
+|top500_2 = Reppuu Model 11
+|top500_2_x = 1
+
+|tweet1 = https://twitter.com/KanColle_STAFF/status/802686650581032960
+|tweet2 = https://twitter.com/KanColle_STAFF/status/803034269597601792
+|tweet3 = https://twitter.com/KanColle_STAFF/status/803174776801923072
+
+}}
+</pre>
+Result:
+----
+{{Update/RankingRewards
+
+|top5_1 = Prototype Keiun (Carrier-based Reconnaissance Model)
+|top5_1_x = 1
+|top5_2 = Reppuu Model 11
+|top5_2_x = 1
+|top5_3 = Ginga
+|top5_3_x = 1
+|top5_4 = 15m Duplex Rangefinder + Type 21 Radar Kai Ni
+|top5_4_x = 1
+
+|top20_1 = Prototype Keiun (Carrier-based Reconnaissance Model)
+|top20_1_x = 1
+|top20_2 = Reppuu Model 11
+|top20_2_x = 1
+|top20_3 = Ginga
+|top20_3_x = 1
+
+|top100_1 = Prototype Keiun (Carrier-based Reconnaissance Model)
+|top100_1_x = 1
+|top100_2 = Reppuu Model 11
+|top100_2_x = 1
+|top100_3 = Type 1 Land-based Attack Aircraft Model 22A
+|top100_3_x = 1
+
+|top500_1 = Prototype Keiun (Carrier-based Reconnaissance Model)
+|top500_1_x = 1
+|top500_2 = Reppuu Model 11
+|top500_2_x = 1
+
+|tweet1 = https://twitter.com/KanColle_STAFF/status/802686650581032960
+|tweet2 = https://twitter.com/KanColle_STAFF/status/803034269597601792
+|tweet3 = https://twitter.com/KanColle_STAFF/status/803174776801923072
+
+}}
+----
+|-|Equipment with improvement=
+<pre>
+{{Update/RankingRewards
+
+|top5_1 = 10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|top5_1_x = 1
+|top5_2 = 5inch Single Gun Mount Mk.30
+|top5_2_x = 1
+|top5_2_stars = 4
+|top5_3 = Zuiun Model 12 (634 Air Group)
+|top5_3_x = 1
+|top5_3_stars = 4
+|top5_4 = Ginga
+|top5_4_x = 1
+
+|top20_1 = 10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|top20_1_x = 1
+|top20_2 = 5inch Single Gun Mount Mk.30
+|top20_2_x = 1
+|top20_2_stars = 4
+|top20_3 = Zuiun Model 12 (634 Air Group)
+|top20_3_x = 1
+|top20_3_stars = 4
+
+|top100_1 = 10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|top100_1_x = 1
+|top100_2 = 5inch Single Gun Mount Mk.30
+|top100_2_x = 1
+|top100_2_stars = 4
+|top100_3 = Zuiun Model 12 (634 Air Group)
+|top100_3_x = 1
+
+|top500_1 = 10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|top500_1_x = 1
+|top500_2 = 5inch Single Gun Mount Mk.30
+|top500_2_x = 1
+|top500_2_stars = 4
+
+|notes = 
+
+|tweet1 = https://twitter.com/KanColle_STAFF/status/978793780382871552
+|tweet1_jp = 本日【3/28(水)】夜以降に、月次作戦【二月作戦】結果情報を「艦これ」ゲーム画面下【情報】でお知らせする予定です。また、同発表以降に月次作戦トップランカー提督に贈るささやかな武勲褒賞も順次配信開始してまいります。現在展開中の「三月作戦」も、引続きどうぞよろしくお願い致します！
+|tweet1_en = 
+|tweet1_tl = 
+
+}}
+</pre>
+{{Update/RankingRewards
+
+|top5_1 = 10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|top5_1_x = 1
+|top5_2 = 5inch Single Gun Mount Mk.30
+|top5_2_x = 1
+|top5_2_stars = 4
+|top5_3 = Zuiun Model 12 (634 Air Group)
+|top5_3_x = 1
+|top5_3_stars = 4
+|top5_4 = Ginga
+|top5_4_x = 1
+
+|top20_1 = 10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|top20_1_x = 1
+|top20_2 = 5inch Single Gun Mount Mk.30
+|top20_2_x = 1
+|top20_2_stars = 4
+|top20_3 = Zuiun Model 12 (634 Air Group)
+|top20_3_x = 1
+|top20_3_stars = 4
+
+|top100_1 = 10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|top100_1_x = 1
+|top100_2 = 5inch Single Gun Mount Mk.30
+|top100_2_x = 1
+|top100_2_stars = 4
+|top100_3 = Zuiun Model 12 (634 Air Group)
+|top100_3_x = 1
+
+|top500_1 = 10cm Twin High-angle Gun Mount Kai + Additional Machine Guns
+|top500_1_x = 1
+|top500_2 = 5inch Single Gun Mount Mk.30
+|top500_2_x = 1
+|top500_2_stars = 4
+
+|notes = 
+
+|tweet1 = https://twitter.com/KanColle_STAFF/status/978793780382871552
+|tweet1_jp = 本日【3/28(水)】夜以降に、月次作戦【二月作戦】結果情報を「艦これ」ゲーム画面下【情報】でお知らせする予定です。また、同発表以降に月次作戦トップランカー提督に贈るささやかな武勲褒賞も順次配信開始してまいります。現在展開中の「三月作戦」も、引続きどうぞよろしくお願い致します！
+|tweet1_en = 
+|tweet1_tl = 
+
+}}
+----
+|-|Template=
+<pre>
+{{Update/RankingRewards
+
+|new_equipment = 
+
+|top5_1 = 
+|top5_1_x = 
+|top5_1_stars =
+|top5_2 = 
+|top5_2_x = 
+|top5_2_stars =
+|top5_3 = 
+|top5_3_x = 
+|top5_3_stars =
+|top5_4 = 
+|top5_4_x = 
+|top5_4_stars =
+
+|top20_1 = 
+|top20_1_x = 
+|top20_1_stars =
+|top20_2 = 
+|top20_2_x = 
+|top20_2_stars =
+|top20_3 = 
+|top20_3_x = 
+|top20_3_stars =
+|top20_4 = 
+|top20_4_x = 
+|top20_1_stars =
+
+|top100_1 = 
+|top100_1_x = 
+|top100_1_stars =
+|top100_2 = 
+|top100_2_x = 
+|top100_2_stars =
+|top100_3 = 
+|top100_3_x = 
+|top100_3_stars =
+|top100_4 = 
+|top100_4_x = 
+|top100_4_stars =
+
+|top500_1 = 
+|top500_1_x = 
+|top500_1_stars =
+|top500_2 = 
+|top500_2_x = 
+|top500_2_stars =
+|top500_3 = 
+|top500_3_x = 
+|top500_3_stars =
+|top500_4 = 
+|top500_4_x = 
+|top500_4_stars =
+
+|tweet1 = 
+|tweet1_jp = 
+|tweet1_en = 
+|tweet1_tl = 
+
+}}
+</pre>
+Result:
+----
+{{Update/RankingRewards
+
+|new_equipment = 
+
+|top5_1 = 
+|top5_1_x = 
+|top5_1_stars =
+|top5_2 = 
+|top5_2_x = 
+|top5_2_stars =
+|top5_3 = 
+|top5_3_x = 
+|top5_3_stars =
+|top5_4 = 
+|top5_4_x = 
+|top5_4_stars =
+
+|top20_1 = 
+|top20_1_x = 
+|top20_1_stars =
+|top20_2 = 
+|top20_2_x = 
+|top20_2_stars =
+|top20_3 = 
+|top20_3_x = 
+|top20_3_stars =
+|top20_4 = 
+|top20_4_x = 
+|top20_1_stars =
+
+|top100_1 = 
+|top100_1_x = 
+|top100_1_stars =
+|top100_2 = 
+|top100_2_x = 
+|top100_2_stars =
+|top100_3 = 
+|top100_3_x = 
+|top100_3_stars =
+|top100_4 = 
+|top100_4_x = 
+|top100_4_stars =
+
+|top500_1 = 
+|top500_1_x = 
+|top500_1_stars =
+|top500_2 = 
+|top500_2_x = 
+|top500_2_stars =
+|top500_3 = 
+|top500_3_x = 
+|top500_3_stars =
+|top500_4 = 
+|top500_4_x = 
+|top500_4_stars =
+
+|tweet1 = 
+|tweet1_jp = 
+|tweet1_en = 
+|tweet1_tl = 
+
+}}
+----
+</tabber>
+__NOTOC__

@@ -1,0 +1,122 @@
+{{Map/Header}}
+{{Map/Info
+|en = Sav Island
+|jp = サブ島沖海域
+|romaji = Sabu-tō oki kaiiki
+|exp_hq = 190
+|exp_hq_boss = 2680
+|show_kills = true
+|kills = 5
+|strategy_name = [[wikipedia:Battle_of_Savo_Island|First Battle of the Salmon Sea]]
+|strategy_name_ja = 第一次サーモン沖海戦
+|strategy_info = Break into the Ironbottom Sound. Toward an enemy anchorage, Carry out a night assault by a surface task force and attack transport ships at enemy rear part!
+|strategy_info_ja = 鉄底海峡に突入、敵泊地に我が水上打撃部隊による夜戦突撃を敢行、敵後方の輸送艦を叩け！
+}}
+{{MapBranchingTable
+|0 -> C, D/empty = 
+*Go to D if '''Fast+''' fleet
+*Meet '''ANY''' of the following to go to C
+**(F)BB(V)+CV(L/B) ≥ 3
+**(F)BB(V)+CV(L/B) ≥ 2 '''AND''' Slow Fleet
+*Random between C and D if fleet contains SS(V)
+*Otherwise, D
+
+|B/empty -> A/empty, F/resource =
+*Random (65% A)
+
+|E/empty -> B/empty, Q = 
+*'''FORCE''' random routing if meeting '''ANY''' of the following
+**Fleet contains SS(V)
+**Fleet contains (F)BB(V) '''and''' DD ≤ 1
+*Meet '''ANY''' of the following to go to Q:
+** Fleet contains CL and DD ≥ 2
+** CA(V) ≥ 4 '''and''' CL+CA+DD = 6
+** DD ≥ 4
+*Otherwise, random routing
+
+|G/empty -> I/night = * Do not meet the requirement to go to J
+|G/empty -> J/night = 
+* Fleet contains BBV, CV(B) or SS(V)
+* Amount of slow BB ≥ 2
+* Fleet contains '''exactly''' 1 CVL
+
+|I/night -> J/night, O/empty = 
+*'''FORCE''' node J if fleet contains CVL or (F)BB(V) ≥ 3
+*Meet '''ANY''' of the following to go to O
+**DD ≥ 3
+**(F)BB(V) ≤ 1 '''and''' DD ≥ 2
+**Fleet contains CL '''and''' DD ≥ 2
+**Fleet contains CL, CA(V) ≥ 4 '''and''' CA+CL+DD = 6
+*Go to J if (F)BB(V) = 2 '''AND''' you do not meet any of the above rules.
+*Otherwise, random routing
+
+|J/night -> L/storm, M, N/night = 
+*Meet '''ANY''' of the following to '''FORCE''' M
+**Fleet contains CV(B)
+**(F)BB(V) ≥ 3
+**CVL ≥ 2
+* Random between L, M and N if fleet contains SS(V)
+* Random between L and N if fleet contains BBV
+*Meet '''ALL''' of the following to go to L
+**CVL = 1
+**FBB ≤ 2
+**CL+DD ≥ 3
+**DD ≥ 2
+**No BB(V)
+* Otherwise, random between L and N (The more DD you have in the fleet, the higher chance you will go to L)
+
+|K/night -> E/empty, H/resource =
+* Meet '''ANY''' of the following to go to H:
+** DD ≥ 4
+** CL = 1 '''AND''' DD ≥ 3
+** '''Fast+''' fleet '''AND''' DD ≥ 2
+** BBV = 1 '''AND''' DD ≥ 2
+**DD ≥ 2 '''AND''' 2 ships carrying 2 [[Drum Canister (Transport Use)]] or 2 [[Daihatsu Landing Craft]] total in the fleet
+* Otherwise go to E
+
+|O/empty -> K/night, P/night = * Active Branching
+}}
+
+===Tips===
+*You need to sink the flagship at the boss node 5 times to clear the map.
+**The Boss of this map is [[Southern War Princess]] who has pretty tough armor and firepower that can potentially wreck any of your ships.
+**There is a little chance that 2 [[Light Carrier Nu-Class]] Flagship will show up at boss as well, AACI can be brought here to shoot down enemy bombers and protect your light ships.
+**CAV can carry [[List of Seaplanes by stats|Seaplane Fighters]] in order to obtain AS at the boss node ('''71+ air''' for the comp with [[Southern War Princess]] alone), or at least force AP for the comp with dual [[Light Carrier Nu-Class]] Flagship.
+**It's unlikely that you will finish the boss off at day so do expect the battle to last till night.
+* After the 17 November 2017 update, the use of '''[[Expedition/Support Expedition|Support Expeditions]]''' is '''highly recommended''' for both '''pre-boss''' and '''boss''' fights.
+** With normal support expedition help, you can minimize the risk of your ships getting heavily damaged and subsequently increase the chances of your fleet arriving to the boss node in good conditions.
+** The use of Support Shelling is '''highly recommended''', as Aerial Support will not trigger on pre-boss nodes, while Long Range Torpedo Attacks may activate but will cause negligible amounts of damage.
+*Taking advantage of night battle equipment ([[Star Shell]] and [[Type 98 Recon Seaplane (Night Scout)]]) is recommended and [[Morale/Fatigue#Effects|Sparkling]] your ships should be considered as well.
+**Usage of the [[Searchlight]], however, is ''highly'' discouraged due to the drastic evasion reduction the equipping ship suffers in night battle.
+
+===Compositions===
+*{{Event/Route|D|blue|G|blue|I|purple|O|blue|K|purple|H|green|E|blue|Q|red}}
+**'''[https://i.imgur.com/7mHnzxV.jpg 2CAV 1CL 3DD]'''
+***Standard composition for 5-3 that balance between firepower and evasion.
+***CAVs can trigger [[Artillery Spotting]] as long as you have AS at boss, which can make taking out enemy escorts easier.
+*{{Event/Route|D|blue|G|blue|I|purple|O|blue|K|purple|E|blue|Q|red}}
+**'''1FBB 2CA(V) 1CL 2DD'''
+**'''3CA(V) 1CL 2DD''' (Quest '''Bq7''')
+**'''5CA(V) CL''' (Quest '''Bq7''')
+
+== Node P Power Leveling ==
+<gallery type="slideshow" widths="250" crop="true">
+World 5-3 Node P leveling Example.png|World 5-3 Node P Maximum EXP Gain
+</gallery>
+*Post the [[Thread:694017|November 16th Update]], the Base EXP of Node {{Event/Route|P|purple}} has increased drastically, where you are now capable of obtaining from 700 to 750 '''Base EXP''' (2,250 to 2,700 EXP at S-Rank Victory for Flagship MVP).
+**This method will allow you to level up pretty much any ships (except Aircraft Carriers), as long as you meet the following requirements:
+***'''No CV(L/B), BBV in Fleet'''
+***The Fleet must have at least 2 Destroyers
+***You are able to pass Node {{Event/Route|I|purple}} with no Heavy Damaged Ships
+****During Event times, the Vanguard Formation will become available: consider using it.
+*Please be advised this method can consume a lot of {{Bucket}} Buckets in the long run due to the nature of Night Battle Nodes most likely going to cause some ships go into Medium/Heavy Damage from Enemy attacks.
+**You will most likely see more damage being done to your Fleet from the {{ShipLink|Heavy Cruiser Ri-Class/Flagship|text=Ri-Class}} in Node {{Event/Route|I|purple}} than Node {{Event/Route|P|purple}}, which is mostly composed of {{ShipLink|Transport Ship Wa-Class}} who are practically harmless (Flagship variants however can damage your ships with their Cut-in if unlucky).
+*You are also recommended to prepare at least 3 Different Fleets to Rotate, as the Morale of your Escort Ships will drop quite quickly.
+*Best way to utilize this method is to bring 1 Ship you wish to level up, and 5 Destroyers as Escorts.
+**You are highly recommended for at least one Ship to have a {{StarShell}} {{EquipmentLink|Star Shell}}.
+***If you are leveling a CL/CA(V)/BB (Fast), you may wish to bring {{EquipmentLink|Type 98 Reconnaissance Seaplane (Night Recon)|text=Night Recon}} as well.
+**'''DO NOT''' use a {{Searchlight}} Searchlight.
+*When Leveling CL/CA(V), you won't have too much trouble obtaining MVP from Both Nodes.
+*Once you clear the Enemies in Node {{Event/Route|P|purple}}, retreat your fleet, then go back in, and repeat until you are satisfied.
+
+{{Map/Footer}}

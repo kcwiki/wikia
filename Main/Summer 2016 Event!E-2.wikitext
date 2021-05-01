@@ -1,0 +1,196 @@
+__NOTOC__{{EnableTalkButton}}
+<div style="text-align:center">{{Event/DetailToggle}}</div>
+
+==Information==
+
+<div class="mw-collapsible mw-expanded">
+
+
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;">
+;COMMUNITY AREAS
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/za1XBzofbwHeMPzD3 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1HXswAHk3ukAkLiLgU4kq707UihLCeiBmUSOW7mBAqFc/edit#gid=1035239931 here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:461450|here]].
+</div>
+{{Event/MapInfo
+|en = The Second  Battle of Endau
+|jp = 第二次エンドウ沖海戦
+|romaji = Dainiji Endô oki Kaisen
+
+|tag = Transport Fleet
+|mechanics = LoS Check@Events/Mechanics#LoS_Check@background:yellow, Ship Locking@Events/Mechanics#Ship_Locking@background:yellow
+|transport = true
+|hp_easy = 280|hp_normal = 340|hp_hard = 400
+
+|Allreward = {{ShipBattleCardKai|Minazuki}}
+|Easyitem1 =[[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]|Easyqty1 = 1
+|Normitem1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]|Normqty1 = 1
+|Normitem2 =[[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]|Normqty2 = 1
+|Normitem3 = {{EquipmentCardKai|Type 3 Fighter Hien|size=50px}}|Normqty3 = 1
+|Harditem1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]|Hardqty1 = 2
+|Harditem2 =[[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]|Hardqty2 = 1
+|Harditem3 =[[File:Medal.png{{!}}50px{{!}}link=Medal]]|Hardqty3 = 1
+|Harditem4 = {{EquipmentCardKai|Type 3 Fighter Hien Model 1D‎|size=50px}}|Hardqty4 = 1
+}}
+
+<div>
+
+===Branching rules===
+{| class="article-table"
+!Node
+!Next
+!Condition
+|-
+|rowspan="2"|Start
+|C
+|Any fleet that does not fit all the conditions below may go to C
+
+'''OR'''
+
+Fleet contains any number of (F)BB(V) or CV(L/B)
+|-
+|F
+|
+
+'''All of these conditions are met'''<br />Must have more than 3DDs<br />CAV and CLT cannot be in the same fleet<br />A fleet with CAV must also include an AV or Sendai + a historical Fubuki-class DD[[http://kancolle.wikia.com/wiki/Thread:461450#6]]<br /># of DDs+2*# of CL is greater or equal to 4<br /># of CLT+# of CL is less than 3<br /># of AV+# of CL is less than 3<br /># of AV is less than 2
+|-
+|rowspan="2"|C
+|A
+|Choose
+|-
+|D
+|Choose
+|-
+|rowspan="2"|I
+|J
+|Pass LoS Check
+|-
+|L
+|Fail LoS Check
+|-
+|rowspan="2"|J
+|K
+|Fail LoS Check
+|-
+|M
+|Pass LoS Check
+|}
+
+===Fleet compositions===
+*1CL, 1CLT, 4DD
+*1CL, 1CLT, 1AV, 3DD
+*1CL, 1CAV, 1AV, 3DD
+*Route:
+
+<div style="padding:0px 0px 0px 50px;">{{Route
+|F|#FF0000;
+|G|#FF0000;
+|H|#FF0000;
+|I|#FF0000;
+|J|#33aa00;
+|M|#FF0000;
+}}</div>
+
+{{Clear}}
+
+==Tips==
+*This map is not a difficult map, since it is a transport map and does not require you to kill the boss to complete it. Admirals are recommended to bring Drum Canister (Transport Use) and Daihatsu Landing Craft to maximize your TP depletion. The list of ships who can carry Daihatsu is below. All DD/CL can carry drum canisters. Using support expeditions are highly recommended due to the limited combat capabilities of your ships due to the TP-depletion equipment.
+{{Hard Anti-installation Weapons}}
+
+*For TP values of ship classes and equipment see the [[Summer_2016_Event/Mechanics#Transport_Load-Off|mechanics]] page (some values were changed for this event).
+
+*You should take your time with E-2 in this case and not rush it. Carry a small around of drums/daihatsu for the TP-depletion bonus but do not go overboard. Your goal is to reach the boss and get at least an A-rank (kill at least 4/6 of the enemy ships at boss node) and thus you need your girls to be decently equipped to reach it. You might lose more resources due to more runs but it will save you more trouble in the long run.
+
+*The northern route is the shortest route, but may prove challenging, since you will be encountering torpedoes from submarines and two nodes with carriers, one being an air node and the other being a typical combat node.
+
+*Node I should be taken into attention, since it has two Elite Light Carriers and one Heavy Cruiser that can potentially send you packing. Consider using Land-Base Air Attack support on this node to reduce the chances of such from happening. Set up your squadron with bombers to take out the enemy vessels or thin their numbers before the first surface combat phases take place.
+
+*To reach the boss node from node I, you will need at least '''21 eLOS to go to node J''', otherwise you will be sent off course to node L. The boss node itself consists of a Battleship Summer Princess and 4 Destroyers on Hard, which are relatively easy to dispatch compared to the actual boss itself. One shot or a closing torpedo can eliminate these enemy destroyers.
+===Raising Aircraft Proficiency in E-2===
+E-2 is the only location where you are able to raise up Aircraft Proficiency of your LBAS-exclusive Aircraft in the cheapest methods. It is recommended that you start raising the Aircraft Proficiency of your LBAS-exclusive Aircraft after you clear E-2 and go into E-3 as you will gain access to two LBAS after you get into E-3.
+====Method #1====
+
+*You may consider bringing 5DD with ASW equipment to node F while focusing all bases to node F, retreating immediately after, and repeat. Take caution because your destroyers might get damaged once in red fatigue, or will have trouble attacking the Submarines properly while in low morale. Don't forget to set bases to Rest after training to recover morale faster.
+====Method #2====
+
+*Another method of raising LBAS aircrafts' Aircraft Proficiency is to send 1~3 Submarines to E-2 and make them go to node C, with your LBAS being sent to attack node C twice as well. If you have access to two LBAS due to clearing E-2, you may choose to use only one for raising your Aircrafts' Aircraft Proficiency while the second LBAS is setup with 4 Fighters and/or Interceptors then set into Air Defense mode. This is a very cheap way to raise up LBAS Aircrafts' Proficiency with Submarines most of the time never getting hit due to LBAS getting rid of the enemy before the Shelling Phase. 
+
+==Recommended Fleet setups==
+*1 CLT 1 CL 4 DD.
+**1 CLT with 2 radars + [[Type A Ko-hyoteki]]
+**1 DD AACI setup
+**1 CL if Abukuma with [[Type A Ko-hyoteki]]
+**3 DDs loaded with Daihatsu and drums and one more Radar if more LoS is needed.
+*[https://www.youtube.com/watch?v=oubSTKJInqo 1 CAV 1 CL 1 AV 3 DD] (Click to see sample run)
+**CAV - 2 main guns + 1 Zuiun-based Seaplane Bomber + 1 Drum Canister
+**1 CL - Abukuma with Ko-Hyoteki recommended. Recommended to use her for holding 1~2 Daihatsu Landing Craft(s)
+**1 AV [2 Seaplane Bomber + Daihatsu] or [1 Seaplane Fighter + 1 Seaplane Bomber + Daihatsu] or [1 Seaplane Bomber/Fighter + Ko-Hyoteki + Daihatsu] 
+**3 DDs - Have them equipped with at least 2 guns + Daihatsu/Drum Canister. If their luck is high, you may use 2x Torpedo + Daihatsu/Drum Canister. Using one with 1 gun + 1 to 2 Daihatsu/Drum canister is an option as well. 
+
+==Farming [[Prinz Eugen]] on node M (Boss)==
+[[Prinz Eugen]], one of the most desired Heavy Cruiser in the game, is currently available as a Drop in the Boss node M. 
+===Facts about Prinz Eugen in node M===
+*Duplicate copies of Prinz Eugen are now available to obtain without limit, making multiple [[FuMO25 Radar]] Farming now possible.
+*S-Rank Drop Only. Available on all difficulties.
+===EASY('''丙)'''<span style="font-weight:bold;"> Mode Farming: Prinz is not available from the Destroyer I-Class Pattern</span>===
+On Easy (丙)  Mode, Prinz Eugen is unfortunately '''NOT AVAILABLE''' to Drop if you face a Boss pattern which includes 2 [[Destroyer I-Class]].<ref>http://db.kcwiki.moe/drop/map/352/1/M-SAB.html</ref>
+
+Prinz Eugen is only available as a Drop on Easy mode if you meet the Boss pattern which includes the '''[[Destroyer Ro-Class|Destroyer Ro-class]]'''.
+
+{| class="wikitable" style="width:100%;"
+|-
+!align=center|Node M Fleet Patterns in EASY (丙) Mode
+! style="text-align:center;width:150px;"|Does Prinz Eugen Drop from this pattern?
+|-
+|align=left|{{ShipBattleCardKai|‎Battleship Summer Princess}}{{ShipBattleCardKai|‎Destroyer I-Class}}{{ShipBattleCardKai|‎Destroyer I-Class}}
+|align=center|'''<span style="color:red">NO</span>'''
+|-
+|align=left|{{ShipBattleCardKai|‎Battleship Summer Princess}}{{ShipBattleCardKai|‎Destroyer Ro-Class}}{{ShipBattleCardKai|‎Destroyer Ro-Class}}
+|align=center|'''<span style="color:green">Yes</span>'''
+|-
+|align=left|{{ShipBattleCardKai|‎Battleship Summer Princess}}{{ShipBattleCardKai|Destroyer Ro-Class/Late Model}}{{ShipBattleCardKai|Destroyer Ro-Class}}{{ShipBattleCardKai|Destroyer Ro-Class}}
+|align=center|'''<span style="color:green">Yes</span>'''
+|}
+
+Please note this only applies to Easy mode and '''doesn't apply to Medium and Hard mode'''. For Medium and Hard mode, Prinz Eugen is available to drop from '''ALL''' enemy patterns in node M.
+
+===References===
+
+{{clear}}
+{{:Summer 2016 Event/E-2/Enemy patterns}}
+{{clear}}
+
+==Drop list==
+
+<div class="mw-collapsible mw-expanded">
+
+
+
+
+
+<!-- Refer to http://kancolle.wikia.com/wiki/Template:DropList/doc -->
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = D, G, I, M
+|boss = M
+|Amatsukaze: D/Easy
+|Urakaze: D/Easy,G/Hard,I/Easy,M/Easy
+|Tanikaze: D/Easy, I/Medium, M/Easy
+|Hamakaze: D/Easy, M/Easy
+|Isokaze: D/Easy, I/Hard, M/Easy
+|Kashima: M/Easy
+|Mutsu: M/Easy
+|Nagato: M/Easy
+|Haruna: M/Easy
+|Yamashiro: M/Medium
+|Prinz Eugen: M/Easy {Excluding formation with 2x Destroyer I-Class on Easy}
+|Tokitsukaze: M/Easy
+|Ooyodo: D/Easy
+|Abukuma: M/Easy
+|Yuubari: M/Easy
+|Uzuki: D/Easy, G/Hard, I/Easy, M/Easy
+}}
+</div>
+
+{{clear}}

@@ -1,0 +1,21 @@
+A speculative table for maximal [[Modernization#de|HP modernization]] based on API (<code>api_start2</code>). For each ship form, <code>hp = api_taik[0]</code> is initial HP, which is unmarried unmodded HP, <code>hp_max = api_taik[1]</code> is an upper bound for unmarried or married and unmodded or modded HP. Unmodded married HP <code>hp_married</code> is given by a function in [[Module:ShipData]] (<code>min(hp_max, hp + [4, 4, 4, 5, 6, 7, 7, 8, 8, 9][floor(hp / 10)])</code>), <code>hp < hp_married <= hp_max</code>. Thus, maximal unmarried HP bonus is <code>min(2, hp_max - hp)</code>, which is currently always 2, while maximal married HP mod bonus is <code>min(2, hp_max - hp_married)</code>, which can be 0, 1, or 2 (mostly 2):
+*0 for <onlyinclude>{{#if:{{{hp|}}}||{{ShipLink|I-168/Kai}}, {{ShipLink|I-400}}, {{ShipLink|I-401}}, {{ShipLink|I-8}}, {{ShipLink|Maruyu}}, {{ShipLink|Hayasui/Kai}} (modded unmarried HP = maximal married HP), {{ShipLink|Bismarck}} (all forms), {{ShipLink|Italia}}/{{ShipLink|Littorio}}, {{ShipLink|Musashi}}, {{ShipLink|Mutsu/Kai}}/{{ShipLink|Mutsu/Kai Ni|text=Kai Ni}}, {{ShipLink|Nagato/Kai}}/{{ShipLink|Nagato/Kai Ni|text=Kai Ni}}, {{ShipLink|Richelieu}}, {{ShipLink|Roma}}/{{ShipLink|Roma/Kai|text=Kai}}, {{ShipLink|Yamato}}, {{ShipLink|Nelson/Kai}}, {{ShipLink|Colorado/Kai}}}}</onlyinclude>.
+*1 for <onlyinclude>{{#if:{{{no_hp|}}}||{{ShipLink|I-13}}, {{ShipLink|I-14}}, {{ShipLink|I-19}}, {{ShipLink|I-26}}, {{ShipLink|I-58}}, {{ShipLink|U-511/Kai}}, {{ShipLink|Hayasui}}}}</onlyinclude>.
+The following table is generated with [[Template:Calc]] using [[:Category:Player ship modules]], it can also be generated using the following JS and <code>api_start2</code> response
+<pre>
+const ships = require("./api_start2.json").api_data.api_mst_ship
+for (const ship of ships) {
+  if (ship.api_taik) {
+    const hp = ship.api_taik[0]
+    const hp_max = ship.api_taik[1]
+    const hp_married = Math.min(hp_max, hp + [4, 4, 4, 5, 6, 7, 7, 8, 8, 9][Math.floor(hp / 10)])
+    const hp_mod = Math.min(2, hp_max - hp)
+    const hp_mod_married = Math.min(2, hp_max - hp_married)
+    console.log(`${ship.api_id},${ship.api_name},${hp},${hp_max},${hp_married},${hp_mod},${hp + hp_mod},${hp_mod_married},${hp_married + hp_mod_married}`)
+  }
+}
+</pre>
+{|class="wikitable sortable"
+!Ship!!API Id!!Unmarried HP!!HP Upper Bound!!Married HP!!Max. Unmarried HP Mod!!Max. Married HP Mod
+{{Calc|format=table|@all_names|#|!@|?link|?api_id|?hp|?hp_max|?hp_married|?hp_mod|?hp_mod_married}}
+|}

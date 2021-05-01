@@ -1,0 +1,130 @@
+<table style="background:#FCC;border:3px solid #FAA;width:85%;margin:3px auto 3px auto;padding:0;">
+<tr>
+<td style="vertical-align:middle;text-align:left;" width="64px">[[File:Catdive-emoticon.png|60px]]</td>
+<td style="vertical-align:middle;text-align:center;" ><span style="height:30px;line-height:30px;color:#F00;font-size:20px;">'''WARNING!'''</span><br/>'''This post is for educational purposes only!''' I neither promote/encourage nor condone practices of this sort. By utilizing the information in this guide, you understand that '''you are utilizing this information out of your own accord,''' and you agree that '''you will ''NOT'' hold me liable for any and all damages that may directly or indirectly arise from such usage!'''</td>
+</tr>
+</table>
+
+=Intro=
+
+If you have experienced a catbomb and asked for help over at the [[Tutorial: Proxy Connection|Connection]] page, you may have at one point been asked to perform a [[wikipedia:Layer four traceroute|Layer Four Traceroute]] (LFT). It may have been followed by a scene wherein you're struck dumb by a hard slap of a geeky phrase right across your frontal lobes. Hopefully this guide can help avoid that scene.
+
+This guide is designed for Windows users; those on 'nix are smarter than I and know what the heck I'm talking about here. [[File:Amagi.png|48px|link=]]
+
+=First, a Little Background=
+
+<table style="background:#CDF;border:3px solid #ACF;width:85%;margin-left:auto;margin-right:auto;padding:0;">
+<tr><th></th><th>'''Warning! Technical Stuff Ahead!'''<br/><small>(you can always [[#guide|skip]].)</small></th></tr>
+</table>
+
+A Layer Four Traceroute (hereafter referred to as an '''<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">LFT</code>''') is a modification of the <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">traceroute</code> / <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracert</code> program used to discover the path your connection takes from your computer to the servers you're connecting to (in this case, the Kancolle servers).
+
+===Traceroute?===
+
+Yes, <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">traceroute</code> (<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracert</code> on Windows). Both traceroute and LFT work on similar principles.
+
+===So, What's the Difference?===
+
+Good, old <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">traceroute</code> / <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracert</code>, sadly, doesn't work on Kancolle. Here's the rub: '''traceroute and LFT use different methods, and the Kancolle servers ''reject'' traceroute's methods'''<ref>''Very'' technical note: traceroute/tracert uses [[wikipedia:Internet Control Message Protocol|ICMP]], which works on a low level and is rejected by the Kancolle servers. LFT, on the other hand, uses [[wikipedia:Transmission Control Protocol|TCP]], which works on a higher level and is the same method your browser uses to connect to the servers when playing, and hence is accepted by the servers.</ref>. To illustrate, here's output of a <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracert</code> to a Kancolle server:
+
+<pre>
+Tracing route to 125.6.189.71 over a maximum of 15 hops
+
+  1    <1 ms     1 ms     1 ms  192.168.254.254
+  2    75 ms    58 ms    77 ms  10.188.44.219
+  3    41 ms    26 ms    63 ms  10.188.45.170
+  4    25 ms    34 ms    39 ms  112.198.191.61
+  5    73 ms    84 ms    77 ms  120.28.4.210
+  6   195 ms   127 ms   128 ms  2519.tyo.equinix.com [203.190.230.19]
+  7   105 ms    84 ms     *     ae0.transit2.nihonbashi.vectant.ne.jp [163.139.1
+28.118]
+  8   117 ms    74 ms    75 ms  163-139-226-114.rv.vectant.ne.jp [163.139.226.11
+4]
+  9    77 ms    75 ms    75 ms  203.174.66.158
+ 10     *        *        *     Request timed out.
+ 11     *        *        *     Request timed out.
+ 12     *        *        *     Request timed out.
+ 13     *        *        *     Request timed out.
+ 14     *        *        *     Request timed out.
+ 15     *        *        *     Request timed out.
+
+Trace complete.
+</pre>
+
+And compare that with an LFT trace (done with <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracetcp</code> on Windows):
+
+<pre>
+Tracing route to 125.6.189.71 on port 80
+Over a maximum of 15 hops.
+1       2 ms    9 ms    1 ms    192.168.254.254
+2       25 ms   26 ms   67 ms   10.188.44.219
+3       *       *       67 ms   10.188.45.170
+4       *       *       *       Request timed out.
+5       76 ms   75 ms   80 ms   120.28.10.182
+6       80 ms   128 ms  118 ms  203.190.230.19  [2519.tyo.equinix.com]
+7       110 ms  99 ms   88 ms   163.139.128.118 [ae0.transit2.nihonbashi.vectant.ne.jp]
+8       134 ms  81 ms   135 ms  163.139.226.114 [163-139-226-114.rv.vectant.ne.jp]
+9       *       74 ms   109 ms  203.174.66.158
+10      Destination Reached in 71 ms. Connection established to 125.6.189.71
+Trace Complete.
+</pre>
+
+You can't tell if you've reached the Kancolle server using <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracert</code>; line 10 could've been a broken router between you and the Kancolle server, or it could've been the Kancolle server, but <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracert</code> won't know because the server blocks the program's probings. Contrast that with the LFT trace, where you'll instantly know you're connected to the server (except the broken node in #4, which is "interesting").
+
+Now you're convinced that you need LFT for helping you solve your catbomb woes. How are you going to use it? Before that, how are you going to ''get'' it? (Windows doesn't come with LFT by default.)
+
+=The Solution: <code>tracetcp</code>=
+<span id="guide"></span>
+<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">'''tracetcp'''</code> is a neat little tool that does just that: an LFT. Now, whenever you're asked to perform an LFT, you can just fire it up and submit the output to whoever asked you to perform it.
+
+"So how do I fire it up?" you ask. Good question.
+
+=Using <code>tracetcp</code>=
+
+<code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracetcp</code> requires a bit of setup. It also requires that you're logged in to the computer as an Administrator.
+
+===#1: Install Pre-requisite(s)===
+
+For <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracetcp</code> to work you'll need WinPcap, which is what <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracetcp</code> uses to do its magic. If you've been following my [[User blog:Martirsadota/Utilizing Wireshark for Kancolle Asset Grabbing|tutorial on asset grabbing]], Wireshark already installed WinPcap for you. If you haven't, get the installer [http://www.winpcap.org/install/default.htm here,] install and proceed.
+
+===#2: Get <code>tracetcp</code>===
+Grab the latest version from their [https://github.com/simulatedsimian/tracetcp/releases GitHub.] Download the zip, extract it to a folder in a convenient place, and you're done. That's all there is for setup.
+
+===#3: Fire It Up!===
+Go to the folder where you extracted <code style="background-color:#DEF;border:3px solid #DEF;border-radius:4px;">tracetcp</code>. Right-click an empty area of the folder's window while holding down the <code>Shift</code> key. If you did it right, you should see an '''Open command window here''' option. Click that.
+
+[[File:Clip_(2016-01-14_at_08.56.49).png|center]]
+
+???
+
+[[File:Ss_(2016-01-14_at_09.07.46).jpg|350px|center]]
+
+Aaaaaaand what's this? It's geek haven, the command line. It's time for the moment of truth. Type this in:
+
+<pre>tracetcp [your Kancolle server's IP address]</pre>
+
+(You can look up your server's IP address [[Servers|here]].)
+
+and hit <code>Enter</code>. Whew! If everything's set up correctly you should see output like the one below:
+
+<pre>
+Tracing route to 125.6.189.71 on port 80
+Over a maximum of 15 hops.
+1       2 ms    9 ms    1 ms    192.168.254.254
+2       25 ms   26 ms   67 ms   10.188.44.219
+3       *       *       67 ms   10.188.45.170
+4       *       *       *       Request timed out.
+5       76 ms   75 ms   80 ms   120.28.10.182
+6       80 ms   128 ms  118 ms  203.190.230.19  [2519.tyo.equinix.com]
+7       110 ms  99 ms   88 ms   163.139.128.118 [ae0.transit2.nihonbashi.vectant.ne.jp]
+8       134 ms  81 ms   135 ms  163.139.226.114 [163-139-226-114.rv.vectant.ne.jp]
+9       *       74 ms   109 ms  203.174.66.158
+10      Destination Reached in 71 ms. Connection established to 125.6.189.71
+Trace Complete.
+</pre>
+
+which you can now copypasta (hint: '''Right-click > Mark''') to whoever you need (or want) to send the output to.
+
+=Footnotes and References=
+<references/>
+[[Category:Blog posts]]

@@ -1,0 +1,278 @@
+{{Event/MapPageHeader}}
+{{Event/MapInfo
+|en = Battle of Batavia
+|jp = バタビア沖海戦
+|tag = E-4
+|romaji = Batavia-oki kaisen
+|mechanics = <!--
+|transport = true
+-->
+|hp_easy = 300TP + 4140
+|hp_medium = 350TP + 4140
+|hp_hard = 400TP + 4740
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = {{ShipBattleCardKai|Shinshuu Maru}}
+|reward_casual_1 = {{ItemStack|item = [[File:Rotaited.png{{!}}50px{{!}}link=]]|text = Nothing}}
+|reward_easy_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_easy_2_x = 4
+|reward_medium_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_medium_2_x = 6
+|reward_medium_3 = {{ItemStack|item={{EquipmentCardKai|8inch Triple Gun Mount Mk.9|size=50px}}|text=★+2|text-position=right:4px;bottom:12px}}
+|reward_medium_3_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Improvement Material|icon=true|size=50px}}
+|reward_hard_2_x = 8
+|reward_hard_3 = {{ItemStack|item={{EquipmentCardKai|8inch Triple Gun Mount Mk.9|size=50px}}|text=★+4|text-position=right:4px;bottom:12px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{ItemStack|item={{EquipmentCardKai|8inch Triple Gun Mount Mk.9 mod.2|size=50px}}|text=★+4|text-position=right:4px;bottom:12px}}
+|reward_hard_4_x = 1
+}}
+{{MapBranchingTable
+|title = E-4 Branching Rules
+|expand = true
+|id = 46-4
+
+|0 -> 2 = 
+* Transport Combined Fleet
+* Surface Task Force
+|0 -> 1 = 
+* Single Fleet
+* Carrier Task Force
+
+|2 -> F = * Surface Task Force
+|2 -> K = * Transport Combined Fleet
+
+|A/empty -> B = * Do not meet the requirements to go to either C or Q.
+|A/empty -> C = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet the requirements to go to Q.
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+|A/empty -> Q = 
+* Meet '''ALL''' of the following requirements:
+** Node Q is unlocked
+** Single Fleet
+
+|B -> C = * ???
+|B -> D = * ???
+
+|C -> E = * Carrier Task Force
+|C -> G = * Single Fleet
+
+|E -> G = * Fleet contains either {{ShipLink|Akashi Kai}} or {{ShipLink|Akitsushima Kai}}
+|E -> H/empty = * Do not meet the requirement to go to G.
+
+|G -> I/empty = 
+* Meet '''ALL''' of the following requirements:
+** Fleet contains either {{ShipLink|Akashi Kai}} or {{ShipLink|Akitsushima Kai}}.
+** Amount of (F)BB(V) ≤ 1
+** Amount of CVL+LHA ≤ 2
+|G -> J/empty = 
+* Use a Single Fleet.
+* Alternatively, meet '''ALL''' of the following requirements:
+** No (F)BB(V)
+** Amount of CVL+LHA ≤ 1
+|G -> K = * Do not meet any of the requirements to go to either I, J or L.
+|G -> L = 
+* Meet '''ALL''' of the following requirements:
+** Do not meet any of the requirements to go to either I or J.
+** Amount of (F)BB(V) ≤ 2
+
+|N/resource -> O/empty = * Fail the LoS check.
+|N/resource -> P = * Pass the LoS check, but do not meet the requirements to go to R.
+|N/resource -> R = 
+* Meet '''ALL''' of the following requirements:
+** Phase 2 is unlocked
+** Pass the LoS check.
+** Fleet is '''NOT''' a Transport Combined Fleet.
+}}
+==Map Guide==
+*This is both a '''Single Fleet''' and '''Combined Fleet''' map.
+*This map has 2 starting points. '''Single Fleet''' or '''Carrier Task Force''' starts at point 1, while '''Transport Combined Fleet''' and '''Surface Task Force''' starts at point 2.
+*The map has 1 TP bar and 1 HP bar that must be depleted in order to complete the map.
+**'''Phase 1''': Deplete the TP bar against {{ShipLink|Heavy Cruiser Ne-Class Kai}} and her escorts by securing multiple A or S ranks at Node {{Event/Route|P|Red}}.
+**'''Phase 2''': Deplete the HP bar by damaging (then sinking) the {{ShipLink|Batavia Princess}} at Node {{Event/Route|S|Red}}.
+*2 LBAS is available for you to sortie in E-4.
+*A Debuff is available in '''Phase 2''' on '''Last Dance.'''
+===Map Progression===
+{{#tag:gallery|
+Fall19_E4_p1.png{{!}}Map during the TP phase at node P
+Fall_2019_Event_E-4_Map.png{{!}}Map during the HP phase at node S
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200}}
+===Map Bonuses===
+{|class="wikitable" style="text-align: center; vertical-align: middle;"
+|-
+!colspan="3"|Ship
+!colspan="2"|Damage Bonus
+|-
+!colspan="3"| Landings on Java Island
+!colspan="2"| Mapwide
+|-
+!{{ShipBattleCardKai|Mogami/Kai}}
+!{{ShipBattleCardKai|Mikuma/Kai}}
+!
+|colspan="2" rowspan="2"|1.2x
+|-
+!{{ShipBattleCardKai|Fubuki/Kai Ni}}
+!{{ShipBattleCardKai|Shikinami/Kai}}
+!
+|-
+! colspan="5"|
+|-
+!{{ShipBattleCardKai|Akitsumaru/Kai}}
+!{{ShipBattleCardKai|Yura/Kai Ni}}
+!{{ShipBattleCardKai|Natori/Kai}}
+|colspan="2" rowspan="5"|1.1x
+|-
+!{{ShipBattleCardKai|Nagatsuki/Kai}}
+!{{ShipBattleCardKai|Minazuki/Kai}}
+!{{ShipBattleCardKai|Fumizuki/Kai Ni}}
+|-
+!{{ShipBattleCardKai|Satsuki/Kai Ni}}
+!{{ShipBattleCardKai|Shirayuki/Kai}}
+!{{ShipBattleCardKai|Hatsuyuki/Kai}}
+|-
+!{{ShipBattleCardKai|Murakumo/Kai Ni}}
+!{{ShipBattleCardKai|Akatsuki/Kai Ni}}
+!{{ShipBattleCardKai|Verniy}}
+|-
+!{{ShipBattleCardKai|Asakaze/Kai}}
+!{{ShipBattleCardKai|Harukaze/Kai}}
+!{{ShipBattleCardKai|Hatakaze/Kai}}
+|-
+!colspan="5"|After clearing Phase 1 (Multiplicative with above)
+|-
+!colspan="3"| {{ShipLink|Natori/Kai|text=Natori}}
+|colspan="2"| 1.1x
+|-
+!colspan="3"| {{ShipLink|Yura/Kai Ni|text=Yura}}
+|colspan="2"| 1.15x
+|-
+!colspan="3"| Everyone else above
+|colspan="2"| 1.2x
+|-
+!colspan="5"|
+|-
+!{{ShipBattleCardKai|Kongou/Kai Ni C}}
+!{{ShipBattleCardKai|Haruna/Kai Ni}}
+!{{ShipBattleCardKai|Ryuujou/Kai Ni}}
+|colspan="2" rowspan="2"|1.25x
+|-
+!{{ShipBattleCardKai|Atago/Kai}}
+!{{ShipBattleCardKai|Takao/Kai}}
+!
+|-
+!colspan="5"|{{Event/Route|S|Red}}  Last Dance Debuff
+|-
+!colspan="3"|Against Batavia Princess only
+|colspan="2"|1.15x
+|}
+*Last Dance Debuff applies to all ships.
+*{{ShipLink|Verniy|text=Hibiki}} has a historical bonus in E5
+*{{ShipLink|Akatsuki/Kai Ni|text=Akatsuki}} has a larger bonus in E6.
+
+===Phase 1: Transport Operation===
+*As this is a Transport Operation, you are recommended to bring as many as possible {{Drum}} {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canisters}} and/or {{LandingCraft}} {{EquipmentLink|Daihatsu Landing Craft}}.
+*Surface Task Force<sup>[https://bbs.nga.cn/read.php?tid=19427682&rand=726]</sup>
+**Route: {{Event/Route|F|Red}}{{Event/Route|G|Red}}{{Event/Route|I|Blue}}{{Event/Route|J|Blue}}{{Event/Route|M|Red}}{{Event/Route|N|Green}}{{Event/Route|P|Red}}
+**Formation: 1FBB 2CVL 3CA(V) + 1 Akashi 1CL 4DD
+**This Formation no longer routes to P after Phase 1, and will Route to R instead
+**LBAS: 1 Base of ASW bombers to Node  {{Event/Route|F|Red}} , another base of all bombers to Boss Node {{Event/Route|P|Red}}
+*Transport Combined Fleet
+**Route: {{Event/Route|K|Red|L|Red|M|Red|N|Green|P|Red}}
+**Formation: 1 CAV 1 CL 4 DD + 1 CL 3 DD 1 CA 1 CAV
+** Or 2 CAV 4 DD + 1 CL 3 DD 2 CA(V)
+** Or 1 CAV 5 DD + 1 CL 4 DD 1 CAV
+**Your escort fleet should contain combat load-outs for dealing damage to enemies on the preboss and boss nodes.
+**Bringing at least 1 OASW unit to deal with the submarines at Node {{Event/Route|K|Red}} is advised.
+**{{EquipmentLink|Fleet Command Facility}} can be used to retreat heavily damaged ships before the boss if necessary.
+**LBAS: 2 Bases of all bombers (Range of 5+) to Boss Node {{Event/Route|P|Red}}. If necessary, send some bombers to assist on route.
+
+===Phase 2: Defeating the {{ShipLink|Batavia Princess|text=Batavia Princess!}}===
+*CV(B) cannot sortie to this map, so you'll have to use CVL instead to provide aerial cover. Take any available historical units with you!
+*Surface Task Force: Standard Composition
+**Route: {{Event/Route|F|Red|G|Red|J|Blue|M|Red|N|Green|R|Orange|S|Red}}
+**1 CVL 1 CAV 2 CA 2 CL + 1 CL 3 DD 1CAV 1 CAV/CLT
+** Or 1 CVL 4 CA 1 CL + 1 CL 3 DD 1 CAV 1 CAV/CLT
+** Or 1CVL 1CAV 3CA 1CL + 1CL 2DD 2CLT 1CAV
+** Or 2 CAV 1 CA 1 CL 2 DD + 1 CL 3 DD 1 CAV 1 CAV/CLT
+**TCI and AACI are recommended. For chipping, consider bringing 1-2 OASW for dealing with Node {{Event/Route|F|Red}}.
+*Surface Task Force: Akitsukashi Composition
+**Route: {{Event/Route|F|Red|G|Red|I|Blue|J|Blue|M|Red|N|Green|R|Orange|S|Red}}
+**{{ShipLink|Akashi/Kai}} OR {{ShipLink|Akitsushima/Kai}} 1 (F)BB(V) 2 CVL 2 CA(V) + 1 CL 2DD 3 (CA(V) + CLT)
+**This composition takes advantage of Emergency Repair node routing to allow for a heavier composition to take the shortest possible route.
+**Advice from the Standard Composition still applies here, this is just a heavier variant of it.
+*LBAS: Assist on route if needed, otherwise send whatever waves you can to the Boss at Node {{Event/Route|S|Red}} (Range 7). Make sure to obtain the necessary air state with LBAS for your actual fleet to achieve AS or better.
+
+===Phase 3: Debuff Batavia Princess! (Last Dance)===
+{{Ambox/Disclaimer| This is the current information available to unlock the debuff for each respective difficulty, and is subject to revisions as more data is gathered. All information about the Debuffs reflect on User Submitted Reports.}}
+*In order to Debuff the Batavia Princess, you must meet the following requirements:
+{|class="wikitable" style="width:100%; text-align: center; vertical-align: middle;"
+|-
+! style="width: 100%;" colspan="8" | Unlock Requirements
+|-
+! style="width: 25%;" | Difficulty
+! {{Event/Route|P|Red}}
+! {{Event/Route|E|Red}}
+! LBAS Defense
+|-
+! Hard
+| A+ x2
+| S
+| AS
+|-
+! Medium
+| A+
+| A+
+| AS
+|-
+! Easy
+| A+
+! -
+! -
+|-
+! Casual
+| A+
+! -
+! -
+|}
+**You must be on Last Dance against Batavia Princess in order for the Debuff to take effect. All listed requirements below must be done '''DURING''' Last Dance, not before.
+**'''Hard Mode'''
+** S-Rank Node {{Event/Route|E|Red}} Once.
+** A+ rank Node {{Event/Route|P|Red}} Twice.
+**Obtain AS during Air Defense.
+**'''Normal Mode'''
+** A+ Rank Node {{Event/Route|E|Red}} Once, or A+ Rank Node {{Event/Route|P|Red}} Once.
+*** Current Information about which node to A+ Rank on Normal mode is conflicting, which requires more testing to confirm which nodes you need to complete.
+**Obtain AS during Air Defense.
+**'''Easy Mode'''
+** A+ Rank Node {{Event/Route|P|Red}} Once.
+**'''Casual Mode'''
+** A+ Rank Node {{Event/Route|P|Red}} Once.
+*Carrier Task Force
+**Route: {{Event/Route|A|Blue|C|Red|E|Red|H|Blue}}
+**Formation: 2 CVL 4 (CAV + CA + CL) + CL 3 DD 2 (CAV + CA + CLT)
+*LBAS: 2 Bases to Node {{Event/Route|E|Red}} (Range: 4), Or Node {{Event/Route|C|Red}} (Range: 3). You may also set both bases to Air Defense to obtain AS during Air Defense. If you decide to do this, fill your land bases with the best fighters and interceptors.
+
+===[[Friend Fleet]]s===
+[[File:Friend Fleet Usage.png|thumb]]
+
+'''NOTE:''' friend fleets are disabled by default! Please toggle it on before proceeding!
+
+Friend fleet must be manually toggled from the Home port (see the image) in order for it to appear at the boss node. You can request for a stronger friend fleet at the price of 6 flamethrowers.
+{{Fleets|friend=Fall 2019 Event|node=E-4 S}}
+
+===LBAS Flight Range===
+[[File:Fall19_E4_LBAS.png|500px|center]]
+
+{{Event/MapPageFooter}}

@@ -1,0 +1,405 @@
+Equipment improvement levels are displayed beside equipment names, starting from ★+1 and up to ★+10 (★+max), they can be gained for [[Akashi's Improvement Arsenal/Table|certain]] equipment through [[Akashi's Improvement Arsenal/Introduction|Akashi's Improvement Arsenal]], and give hidden stat bonuses to a user ship, depending on the equipment and their levels.
+
+==Effects==
+*There are no visible stat differences between non-improved and improved equipment.
+*Improvements have been shown (or officially announced) to give additive bonuses to the following stats: day battle firepower (shelling) and torpedo (salvos), night battle power (firepower + torpedo), ASW, [[Aerial Combat|AA]], [[Line of Sight|eLoS]], accuracy and torpedo evasion.
+*Generally, the bonus is proportional to the square root of the improvement level,<math>k \sqrt{\bigstar}</math>, with multiplier coefficient<math>k</math> varying depending on a stat and equipment. This also means that upgrading a higher level equipment would give relatively lower gain per star than upgrading a lower level equipment.
+*More precisely, for a given equipment setup and a set of stats, bonuses to stats are assumed to follow the following formula:<div style="text-align:center;"><math>bonus_{stat} = \sum_{eq} k_{stat,eq} \sqrt{\bigstar_{eq}}</math></div>.
+**For example, if<math>stat = fp</math> (day battle firepower) and a heavy gun and an AP shell are equipped, then the formula should be interpreted as<math>bonus_{fp} = k_{fp,gun} \sqrt{\bigstar_{gun}} + k_{fp,ap} \sqrt{\bigstar_{ap}}</math> or, using the table below,<math>1.5 \sqrt{\bigstar_{gun}} + \sqrt{\bigstar_{ap}}</math>, with [[Damage_Calculation#Basic_Attack_Power|basic attack power]] for day battle shelling being<math>fp + bonus_{fp} + bonus_{fleet}</math> (fleet bonus is 5 for normal fleet). Note that there is no intermediate flooring under summation, that is, for example, if both equipment are at ★+8, then the bonus is<math>1.5 \sqrt{8} + \sqrt{8} \approx 7.071</math>, not<math>\lfloor 1.5 \sqrt{8} \rfloor + \lfloor \sqrt{8} \rfloor = 6</math> nor<math>\left\lfloor 1.5 \sqrt{8} + \sqrt{8} \right\rfloor = 7</math>. Fractional values can matter when pre-cap modifiers are taken into account, because there is no floor before the pre-cap modifiers are applied. The effect this has is dependent on the value of<math>fp \pmod 5</math>.
+**The following table shows multipliers for different stats and equipment:<ref>http://kiritr.blogspot.jp/2015/10/blog-post_30.html</ref>
+{| class="mw-expanded mw-collapsible wikitable typography-xl-optout" width="100%" style="text-align:center;"
+!
+!colspan="7"|k Value
+|-
+!rowspan=2|Equipment
+!colspan=2|Day Battle
+!rowspan=2|[[Damage_Calculation#Basic_Attack_Power|ASW]]
+!rowspan=2|Night<br />Battle<br />Power
+!rowspan=2|AA ([[Aerial_Combat#System_Mechanics|Adj.]])
+!rowspan=2|Support<br />Shelling
+!rowspan=2|[[Line_of_Sight#Formula_33|F33 eLoS]]
+|-
+!Firepower
+!Torpedo
+|-
+![[List_of_Main_Guns_by_stats#Light_Guns|Light Guns]]
+|1
+|0
+|
+|1
+|0
+|0
+|0
+|-
+![[List_of_Main_Guns_by_stats#Medium_Guns|Medium Guns]]
+|1
+|0
+|
+|1
+|0
+|0
+|0
+|-
+![[List_of_Main_Guns_by_stats#Heavy_Guns|Heavy Guns]]
+|1.5
+|0
+|
+|1
+|0
+|0
+|0
+|-
+![[List_of_Secondary_Guns_by_stats|Secondary Guns]]
+|1
+|0
+|
+|1
+|0
+|0
+|0
+|-
+!High-Angle Mounts
+|1
+|0
+|
+|1
+|0.7 (2.8)?
+|0
+|0
+|-
+![[List_of_Torpedoes_by_stats|Torpedoes]]
+|0
+|1.2<ref>https://twitter.com/her_nnsn/status/615314800386555904</ref><ref>https://twitter.com/her_nnsn/status/618099890036457472</ref>
+|
+|1<ref>https://twitter.com/itasan_jp/status/618093521493340160</ref>
+|0
+|?
+|0
+|-
+![[List_of_Anti-Submarine_Equipment_by_stats#Sonars|Sonars]]
+|0.75
+|0
+|1
+|0
+|0
+|?
+|0
+|-
+![[List_of_Anti-Submarine_Equipment_by_stats#Depth_Charges|Depth Charges]]
+|0.75
+|0
+|1
+|0
+|?
+|?
+|0
+|-
+![[List_of_Shells_by_stats#Armor_Piercing_Shells|AP Shells]]
+|1
+|0
+|
+|1
+|0
+|?
+|0
+|-
+![[List_of_Radars_by_stats|Anti-Air Radars]]
+|0
+|0
+|
+|0
+|0.7 (2.1)?
+|?
+|1.25<ref name="google_spreadsheets_radar">https://docs.google.com/spreadsheets/d/1wNYJ_HA5O3Pm_d7yPnRUdqrebl2EWwznUEoMS9I3Dxg/edit?usp=sharing</ref>
+|-
+![[List_of_Radars_by_stats|Surface Radars]]
+|0<ref>https://twitter.com/nicolai_2501/status/705452974043066368</ref>
+|0<ref>https://twitter.com/nicolai_2501/status/705459585750925312</ref>
+|
+|0<ref>https://twitter.com/nicolai_2501/status/705465565700198400</ref>
+|?
+|?
+|1.25<ref name="google_spreadsheets_radar" />
+|-
+!Machine Guns<ref>http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1400461230/896</ref>
+|1
+|1.2
+|
+|0
+|0.7 (4.2)?
+|?
+|0
+|-
+![[List_of_Anti-Aircraft_Fire_Directors_by_stats|AA FD]]
+<ref name="shitaraba_1">http://jbbs.shitaraba.net/bbs/read.cgi/netgame/13745/1439793270/57</ref>
+|1
+|0
+|
+|1
+|0.7 (2.8)?
+|?
+|0
+|-
+!Searchlights
+|1
+|0
+|
+|1
+|?
+|?
+|0
+|-
+![[List_of_Seaplanes_by_stats|Seaplane Reconns]]
+|0
+|
+|
+|
+|
+|
+|1.2<ref name="shitaraba_1" />
+|-
+!<small>Carrier-Based</small> Fighters
+|
+|
+|
+|
+|
+|
+|0<ref name="ja_kancolle_wikia_thread_951">http://ja.kancolle.wikia.com/wiki/スレッド:951</ref>
+|-
+!Landing Crafts
+|1<ref name="ja_kancolle_wikia_thread_951">http://ja.kancolle.wikia.com/wiki/スレッド:951</ref>
+|0
+|0
+|1
+|?
+|?
+|?
+|-
+![[:Category:Special Amphibious Tanks|Amphibious Tank]]
+|1<ref name="ja_kancolle_wikia_thread_951">http://ja.kancolle.wikia.com/wiki/スレッド:951</ref>
+|0
+|0
+|1
+|?
+|?
+|?
+|}
+*'''Accuracy''' multiplier for various equipment like guns, AP shells, and AA Radar is currently believed to be 1.<ref>改修工廠スレ20#596 and スレ21#816</ref>
+**Effects on low morale seem to be lower (that is, the [[Accuracy_and_Evasion|morale modifier]] is applied).
+**Overall accuracy bonus might have an upper limit of 10%, or a limit that depends on type or number of equipment.{{cite}}
+**Radar improvements should give accuracy bonus.<ref>https://twitter.com/KanColle_STAFF/status/609260720107057153</ref>
+**For Seaplane Reconn, no effects are detected so far.<ref>https://twitter.com/noratako5/status/705760296397213701</ref>
+**Accuracy multiplier for torpedo is 2
+*In the following table, ○ mean improving the equipment is verified to give extra accuracy in that stage, × mean no change in accuracy have been observed, ？ mean it is still not sure and empty cells mean no test have been done on that yet.<ref>https://docs.google.com/document/d/1yRl-9IM72ybpKufM796QtOU37JF6VpVunfO-p6gggns/edit?pref=2&pli=1#</ref>
+{| class="mw-expanded mw-collapsible wikitable" style="text-align:center;"
+!rowspan="2"|Equipment
+!colspan="4"|Accuracy<ref>https://docs.google.com/document/d/1yRl-9IM72ybpKufM796QtOU37JF6VpVunfO-p6gggns/edit?pref=2&pli=1#</ref>
+|-
+!Shelling
+!Torpedo<br /><small>(Opening + Closing)</small>
+!ASW
+!Night Battle
+|-
+![[List_of_Main_Guns_by_stats#Light_Guns|Light Guns]]
+|○||||||
+|-
+![[List_of_Main_Guns_by_stats#Medium_Guns|Medium Guns]]
+|○||||||
+|-
+![[List_of_Main_Guns_by_stats#Heavy_Guns|Heavy Guns]]
+|○||||||
+|-
+![[List_of_Secondary_Guns_by_stats|Secondary Guns]]
+|||||||
+|-
+!High-Angle Mounts
+|||||||
+|-
+![[List_of_Torpedoes_by_stats|Torpedoes]]
+|×||○||||
+|-
+![[List_of_Anti-Submarine_Equipment_by_stats#Sonars|Sonars]]
+|○||||||
+|-
+![[List_of_Anti-Submarine_Equipment_by_stats#Depth_Charges|Depth Charges]]
+|||||||
+|-
+![[List_of_Shells_by_stats#Armor_Piercing_Shells|AP Shells]]
+|○||||||
+|-
+![[List_of_Radars_by_stats|Anti-Air Radars]]
+|○||||||
+|-
+![[List_of_Radars_by_stats|Surface Radars]]
+|○||||||
+|-
+!Machine Guns
+|×||○||||
+|-
+![[List_of_Anti-Aircraft_Fire_Directors_by_stats|AA FD]]
+|○||||||
+|-
+!Searchlights
+|||||||
+|-
+![[List_of_Seaplanes_by_stats|Seaplane Reconns]]
+|×||||||
+|-
+!Landing Crafts
+|？||||||
+|-
+![[:Category:Special Amphibious Tanks|Amphibious Tank]]
+|||||||
+|-
+!<small>Carrier-Based</small> Fighters
+|||||||
+|}
+*Sonar improvements increase '''evasion against enemy torpedo attacks'''.<ref>https://twitter.com/KanColle_STAFF/status/614349261107412992</ref><ref>http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:676</ref>
+**Since they also give firepower they could potentially be useful for torpedo squadron maps where dodging closing torpedo salvos often determines whether a run is successful.
+*Seaplane Reconn improvements increase '''Contact Selection Rate''', but not Initial Rate.<ref>http://bbs.ngacn.cc/read.php?tid=8652088&page=3</ref>
+*[[:Category:Landing_Craft|Landing Craft]] and [[:Category:Special Amphibious Tanks|Special Amphibious Tanks]] improvements give a linear increase to '''[[Expedition/Introduction#Landing_Craft|expedition incomes]]''' and '''[[Installation Type|Anti-Pillbox Damage Bonus]]''' in addition to their original bonus. (Refer to linked pages for details)
+*As shown in the table, so far there are no known effects on [[Expedition/Support_Expedition#Support_Shelling|support shelling]] (firepower bonus is known to be zero).
+*'''Carrier-based Fighter''' improvement is currently believed to give additional ''linear'' ~0.2★ AA in '''Fighter Power equation''' per improvement, and '''Carrier-based Bomber (Fighter-Bomber)''' is currently believed to give additional ''linear'' ~0.25★ AA.
+
+==Reference Tables==
+Bonus for one equipment, different multipliers:
+{|class="wikitable mw-collapsed mw-collapsible typography-xl-optout" width="100%" style="text-align:center;"
+!
+!★+2
+!★+3
+!★+4
+!★+5
+!★+6
+!★+7
+!★+8
+!★+9
+!★+max
+|-
+|0.75
+|1.06
+|1.3
+|1.5
+|1.68
+|1.84
+|1.98
+|style="color:orange"|2.12
+|style="color:orange"|2.25
+|style="color:orange"|2.37
+|-
+|1
+|1.41
+|1.73
+|style="color:orange;"|2
+|style="color:orange;"|2.24
+|style="color:orange;"|2.45
+|style="color:orange;"|2.65
+|style="color:orange;"|2.83
+|style="color:magenta"|3
+|style="color:magenta"|3.16
+|-
+|1.2
+|1.7
+|style="color:orange;"|2.08
+|style="color:orange;"|2.4
+|style="color:orange;"|2.68
+|style="color:orange;"|2.94
+|style="color:magenta"|3.17
+|style="color:magenta"|3.39
+|style="color:magenta"|3.6
+|style="color:magenta"|3.79
+|-
+|1.5
+|style="color:orange"|2.12
+|style="color:orange"|2.6
+|style="color:magenta;"|3
+|style="color:magenta;"|3.35
+|style="color:magenta;"|3.67
+|style="color:magenta;"|3.97
+|style="color:red;"|4.24
+|style="color:red;"|4.5
+|style="color:red;"|4.74
+|}
+Bonus for two equipment, both multipliers = 1, e.g. two light/medium on a DD/CA:
+{|class="wikitable mw-collapsed mw-collapsible typography-xl-optout" width="100%" style="text-align:center;"
+!
+!colspan="5"|Firepower Increase (second gun ★ value)
+|-
+!First gun ★ value||FP+2||FP+3||FP+4||FP+5||FP+6
+|-
+!★+1
+|style="color:red;"|★+1||style="color:red;"|★+4||★+9||||
+|-
+!★+2
+|★+1||style="color:red;"|★+3||★+7||||
+|-
+!★+3
+|★+1||style="color:red;"|★+2||★+6||||
+|-
+!★+4
+|||style="color:red;"|★+1||style="color:red;"|★+4||★+9||
+|-
+!★+5
+|||★+1||★+4||★+8||
+|-
+!★+6
+|||★+1||★+3||style="color:red;"|★+7||
+|-
+!★+7
+|||★+1||★+2||style="color:red;"|★+6||
+|-
+!★+8
+|||★+1||★+2||★+5||★+max (5.99)
+|-
+!★+9
+|||||★+1||★+5||style="color:red;"|★+9
+|}
+Bonus for three equipment, two with multiplier = 1.5, one with multiplier = 1, e.g. two heavy guns and an AP shell on a BB in day battle (one extra FP can be added for [[Type 1 Armor Piercing Shell|T1]] when comparing with [[Type 91 Armor Piercing Shell|T91]]):
+{|class="wikitable mw-collapsed mw-collapsible typography-xl-optout" width="100%" style="text-align:center;"
+|-
+!
+!colspan="9"|Firepower Increase (first gun ★ value / second gun ★ value)
+|-
+!AP Shell ★ value||FP+4||FP+5||FP+6||FP+7||FP+8||FP+9||FP+10||FP+11||FP+12
+|-
+!★+1
+|style="color:red;"|★+1/★+1||★+1/★+3<br />(5.098)||★+3/★+3<br />(6.196)||style="color:red;"|★+4/★+4||★+5/★+6<br />(8.028)||★+6/★+9<br />(9.174)||★+9/★+9||||
+|-
+!★+2
+|★+1/★+1<br />(4.414)||★+1/★+2<br />(5.035)||★+2/★+3<br />(6.133)||★+3/★+4<br />(7.012)||★+4/★+6<br />(8.088)||★+6/★+7<br />(9.057)||★+8/★+9<br />(10.156)||||
+|-
+!★+3
+|★+1/★+1<br />(4.732)||★+1/★+2<br />(5.353)||★+1/★+4<br />(6.232)||★+3/★+4<br />(7.330)||★+3/★+6<br />(8.004)||style="color:red;"|★+6/★+6<br />(9.080)||★+8/★+8<br />(10.217)||★+max/★+max<br />(11.218)||
+|-
+!★+4
+|||★+1/★+1||★+1/★+3<br />(6.098)||★+3/★+3<br />(7.196)||★+4/★+4||★+5/★+6<br />(9.028)||★+6/★+9<br />(10.174)||★+9/★+9||
+|-
+!★+5
+|||★+1/★+1<br />(5.236)||★+1/★+3<br />(6.334)||★+1/★+5<br />(7.090)||★+2/★+6<br />(8.031)||★+5/★+6<br />(9.264)||★+6/★+8<br />(10.152)||★+9/★+9<br />(11.236)||
+|-
+!★+6
+|||★+1/★+1<br />(5.449)||★+1/★+2<br />(6.070)||★+2/★+3<br />(7.168)||★+3/★+4<br />(8.047)||★+4/★+6<br />(9.123)||★+6/★+7<br />(10.092)||★+8/★+9<br />(11.192)||
+|-
+!★+7
+|||★+1/★+1<br />(5.645)||★+1/★+2<br />(6.267)||★+1/★+4<br />(7.145)||★+2/★+5<br />(8.121)||★+4/★+6<br />(9.319)||★+6/★+7<br />(10.288)||★+7/★+9<br />(11.114)||★+max/★+max<br />(12.132)
+|-
+!★+8
+|||★+1/★+1<br />(5.828)||★+1/★+2<br />(6.499)||★+2/★+2<br />(7.071)||★+3/★+3<br />(8.024)||★+3/★+6<br />(9.100)||★+6/★+6<br />(10.176)||★+6/★+9<br />(11.002)||★+9/★+max<br />(12.071)
+|-
+!★+9
+|||||★+1/★+1||★+1/★+3<br />(7.098)||★+2/★+4<br />(8.121)||★+4/★+4||★+5/★+6<br />(10.028)||★+6/★+9<br />(11.174)||style="color:red;"|★+9/★+9
+|-
+!★+max
+|||||★+1/★+1<br />(6.162)||★+1/★+3<br />(7.260)||★+1/★+5<br />(8.016)||★+3/★+5<br />(9.114)||★+5/★+6<br />(10.190)||★+6/★+8<br />(11.079)||★+9/★+9<br />(12.162)
+|}
+
+==References==
+Some standard overviews:
+*http://wikiwiki.jp/kancolle/?%B2%FE%BD%A4%B9%A9%BE%B3#aresult
+*http://kancollecalc.web.fc2.com/damage_formula.html
+*http://ja.kancolle.wikia.com/wiki/改修効果
+Official statements and various tests:
+{{Reflist}}
+
+==See also==
+* [https://www.reddit.com/r/kancolle/wiki/advanced#wiki_improvement_breakpoints_.28firepower.29 Improvement breakpoints - Reddit advanced player's guide]

@@ -1,0 +1,141 @@
+{{Event/MapPageHeader
+|form = 
+|spreadsheet = 
+|thread = 
+}}
+{{Event/MapInfo
+|en = Battle of the Barents Sea
+|jp = バレンツ海海戦
+|romaji = Barentsu-kai kaisen
+|tag = E2
+|mechanics = 
+<!--
+|transport = true
+-->
+|hp_casual = 400 TP + 2000
+|hp_easy = 400 TP + 2000
+|hp_medium = 480 TP + 2340
+|hp_hard = 600 TP + 3240
+<!--
+|show_kills = true
+|kills_all = 
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+-->
+|reward_all = 
+|reward_casual_1 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Furniture Fairy|icon=true|size=50px}}
+|reward_casual_2_x = 1
+|reward_casual_3 = {{EquipmentCardKai|Arctic Gear & Deck Personnel|size=50px}}
+|reward_casual_3_x = 2
+|reward_easy_1 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Furniture Fairy|icon=true|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Emergency Repair Material|size=50px}}
+|reward_easy_3_x = 2
+|reward_easy_4 = {{EquipmentCardKai|Arctic Gear & Deck Personnel|size=50px}}
+|reward_easy_4_x = 2
+|reward_medium_1 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|Furniture Fairy|icon=true|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Emergency Repair Material|size=50px}}
+|reward_medium_3_x = 3
+|reward_medium_4 = {{EquipmentCardKai|Arctic Gear & Deck Personnel|size=50px}}
+|reward_medium_4_x = 3
+|reward_medium_5 = {{EquipmentCardKai|533mm Triple Torpedo Mount (Model 53-39)|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Medal|icon=true|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|Reinforcement Expansion|icon=true|size=50px}}
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Furniture Fairy|icon=true|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Emergency Repair Material|size=50px}}
+|reward_hard_4_x = 3
+|reward_hard_5 = {{EquipmentCardKai|Arctic Gear & Deck Personnel|size=50px}}
+|reward_hard_5_x = 3
+|reward_hard_6 = {{EquipmentCardKai/Stars|533mm Triple Torpedo Mount (Model 53-39)|size=50px|2}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-2 Branching Rules
+|expand = true
+|id = 49-2
+|order = 1,B,A,C,E,F,G,I,J,K,L,O
+
+|1 -> B/empty = * Combined Fleet
+|1 -> D = * Single Fleet
+
+|B/empty -> A, C = * Choose your own adventure!
+
+|A -> C = * Do not meet the requirements to go to E.
+|A -> E = 
+* Meet '''ANY''' of the following requirements:
+** Surface Task Force
+** Fast Transport Combined Fleet
+
+|C -> E, F, G =
+* If Surface Task Force, go to E.
+* From top to bottom, if Transport Combined Fleet:
+** If Fast Fleet, go to F.
+** If map in Phase 1, go to F.
+** If shortcuts aren't unlocked yet, go to G.
+** Otherwise, go to F.
+
+|E -> G = * Do not meet the requirements to go to O.
+|E -> O = 
+* Meet '''ALL''' of the following requirements:
+** Route to node O is unlocked.
+** Fast Fleet
+** Surface Task Force
+** Amount of CL ≥ 3
+** Amount of (F)BB(V) ≤ 2
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+
+|F -> G = * Do not meet the requirements to go to H.
+|F -> H = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL+DD ≥ 3
+** Amount of CA(V) ≤ 2
+** Amount of (F)BB(V)+CV(L/B) ≤ 2
+** If Transport Combined Fleet, no BBV allowed.
+
+|G -> H = * Do not meet the requirements to go to either I or O.
+|G -> I = * ???
+|G -> O = 
+* Meet '''ALL''' of the following requirements:
+** Route to node O is unlocked.
+** Surface Task Force
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+
+|I -> J/empty = * Meet '''ANY''' of the following requirements:
+** Single Fleet or Transport Combined Fleet
+** If Surface Task Force, amount of CL ≥ 2
+|I -> O = * Do not meet the requirements to go to J.
+
+|J/empty -> K/resource, L = * Choose your own adventure!
+
+|K/resource -> M/empty = * Fail the LoS check.
+|K/resource -> N = * Passs the LoS check.
+
+|L -> O = * Fail the LoS check.
+|L -> Q = * Pass the LoS check.
+
+|O -> P/empty = * Fail the LoS check.
+|O -> Q = * Pass the LoS check.
+}}
+{{clear}}
+https://en.kancollewiki.net/Fall_2020_Event/Main_Operations#E-2
+{{clear}}
+===Map Progression===
+{{#tag:gallery|
+Fall2020E2p1.png{{!}}Map during TP phase at node N
+Fall2020E2p2.png{{!}}Map during HP phase at node Q but no E->O shortcut
+Fall_2020_Event_E-2_Map.png{{!}}Full map after unlocking the shortcut
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+{{Event/MapPageFooter}}

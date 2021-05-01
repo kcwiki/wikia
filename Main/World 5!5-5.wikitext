@@ -1,0 +1,154 @@
+{{Map/Header}}
+{{Map/Info
+|en = Northern Salmon Sea Area
+|jp = サーモン海域北方
+|romaji = Sāmon-kaiiki hoppō
+|mechanics = LoS Check@Line of Sight
+|exp_hq = 240
+|exp_hq_boss = 3480
+|show_kills = true
+|kills = 5
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 200
+|strategy_name = [[wikipedia:Battle_of_the_Eastern_Solomons|Second Battle of the Salmon Sea]]
+|strategy_name_ja = 第二次サーモン海戦
+|strategy_info = The approach of a powerful enemy task force has been confirmed in southern waters. Form a carrier task force and intercept it!
+|strategy_info_ja = 南方海域に敵の有力な機動部隊の接近が確認された。空母機動部隊を以て、これを迎撃せよ！
+}}
+{{MapBranchingTable
+|id = 5-5
+|0 -> A/empty, B =  
+* Meet '''ANY''' of the following requirements to go to A
+** DD ≥ 4
+** 4 ships carrying a [[Drum Canister]] each
+** 4 ships carrying a [[Daihatsu-class Landing Craft]] each (T89 Landing Force and T2 Kami Tank also count)
+* Otherwise, go to B
+
+|B -> F/empty, K =
+*'''FORCE''' node K if meeting one of the following:
+**CV(B) ≥ 3 (CVL doesn't count)
+**(F)BB(V) ≥ 4
+**CLT ≥ 2
+* Go to F if DD ≥ 2
+* Otherwise, go to K
+
+|E/resource -> G/night, H = 
+*Meet '''ANY''' of the following to go to H
+**'''Fast+''' fleet '''and''' DD ≥ 2
+**'''Fastest''' fleet
+* Otherwise, go to G
+
+|H -> L/storm, N, P = 
+*Go to N if the fleet is '''Fastest'''
+* Go to P if (F)BB(V)+CV(L/B) ≥ 4
+* Go to L if DD ≤ 1
+* Otherwise, go to N
+
+|I/empty -> L/storm, M/night = 
+* Go to L if (F)BB(V)+CV(B) = 3 and DD ≥ 2
+* Otherwise, go to M
+
+|L/storm -> N = *Fixed Route
+
+|M/night -> L/storm, O/empty = 
+*'''FORCE''' node O if node L or N was reached in the same sortie
+* Go to L if (F)BB(V)+CV(B) ≥ 4
+* Go to O if DD ≥ 2
+* Otherwise, go to L
+
+|N -> M/night, O/empty = 
+*'''FORCE''' node O if node M was reached in the same sortie
+* Meet '''ANY''' of the following requirements to go to O
+** '''Fast+''' fleet
+** Fleet contains AO
+* Meet '''ANY''' of the following requirements to go to M
+** (F)BB(V)+CVL ≥ 3
+** Fleet contains CV(B)
+* Otherwise, go to O
+
+|O/empty -> R/empty, S = 
+*Random routing if fleet contains SS(V) or fleet LoS is between '''63-67 F33 Cn2'''
+*Meet '''ANY''' of the following to go to S
+**Pass the LoS check ('''≥ 67 F33 Cn2''')
+**'''Fast+''' fleet ('''LoS check is ignored''')
+*Otherwise, go to R
+
+|P -> Q/empty, S = 
+*Meet '''ANY''' of the following to '''FORCE''' node S ('''LoS check is ignored''')
+**'''Fastest''' fleet
+**'''Fast+''' fleet '''and''' (F)BB(V)+CV(L/B) ≤ 5
+*Random between Q and S if fleet contains SS(V) or (F)BB(V)+CV(L/B) ≥ 5 (65% to S if fleet LoS '''≥ 84 F33 Cn2''')
+*Go to S if passing the LoS Check ('''≥ 81 F33 Cn2''')
+*Go to Q if LoS '''≤ 73 F33 Cn2'''
+*Otherwise, random routing
+}}
+
+===Tips===
+*You must sink the flagship at the Boss node '''5 times''' to clear the map.
+*Clearing this map rewards 1 [[Medal]] and 200 [[Experience_and_Rank#Monthly_Ranking|ranking points]]. The boss HP bar is reset at the beginning of each month, allowing the rewards to be obtained again.
+*As with all World 5 maps, [[Expedition#/Support_Expedition|support expeditions]] 33 and 34 are applicable on this map
+*Node B is a submarine node.
+*Nodes G and M are Night Battle nodes.
+*A certain LoS is required to reach the boss node:
+**'''81 LoS [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=2)]] is required to reach the boss node from P.'''
+**'''67 LoS [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=2)]] is required to reach the boss node from O.'''
+*The boss node formation appears to be randomly chosen from 4 different fleets, even during the last kill.
+**2 formations have the {{ShipLink|Southern War Princess}} as flagship escorted by 2 {{ShipLink|Battleship Re-Class/Elite}} in either '''line ahead''' or '''double line''' formations, and are considered to be the harder available formations.
+**The other 2 formations have a {{ShipLink|Standard Carrier Wo-Class/Kai Flagship|text=Wo-Class Kai}} as flagship, escorted by the {{ShipLink|Southern War Princess}} and up to 1 other {{ShipLink|Standard Carrier Wo-Class/Kai Flagship|text=Wo-Class Kai}}. These are generally considered to be the easier formations available.
+**Due to the large gap in difficulty between these two "classes" of available formations, rolling an easier enemy composition can be the difference between an easy kill and complete annihilation.
+**3 of these formations contain one {{ShipLink|Submarine Yo-Class}}. Keep in mind that the sub can be ignored, but must be killed if one wants their asw-capable ships to attack surface ships during night battle and/or if you wish to S-rank the boss node.
+***The submarine was originally in elite form, but it was nerfed after the January 22nd 2019 update.
+*The boss node formations become weaker after the map is cleared, which can make obtaining a S-rank for some 5-5 quests (particularly ones where [[DD|destroyers]] must be brought to the map) far easier.
+**{{ShipLink|Submarine Yo-Class/Elite}} is present in every postclear composition, so a dedicated OASW ship must be brought if one wishes to secure a S-rank.
+*Following the [[Winter 2019 Event]], {{ShipLink|Southern War Princess}} has become much stronger through an armor buff, making the boss node slightly harder to beat or S-rank while doing quests.
+*Regardless of which comp you are using, '''consider the use of the special attack (Touch mechanic) of {{ShipLink|Nelson Kai}}, {{ShipLink|Nagato Kai Ni}} and {{ShipLink|Mutsu Kai Ni}} if you want to make clear out enemies at the boss node easier'''
+
+===North Route===
+{{Event/Route|B|red|K|red|P|red|S|red}}
+*For fleets containing more than 4 (BB + CV) (''e.g.'' 3 BB 3 CV), there is a random chance to be off-routed to Node Q regardless of fleet LoS.
+*Node P can contain one {{ShipLink|Battleship Re-Class/Elite}} in Double Line or Line Ahead. She may also sometimes show up in normal form instead of the Elite variant.
+====Suggested Fleets====
+*'''6 (F)BB(V)/CV(B)'''
+**Strongest composition that allows you to brute force the map like with classic 5-5, but there is 35% off-route chance before the boss node.
+*'''4 (F)BB(V)/CV(B) 2 CA(V)'''
+**Assuming one passes the LoS check from Node P -> Node S, this comp has a 100% chance of routing to the boss.
+**Slow BBs such as {{ShipLink|Musashi Kai Ni}} can be considered to maintain enough power for the boss fight and have better armor to tank Re Elite's opening torpedo at Node P.
+**Alternatively, {{ShipLink|Saratoga Mk.II}} can also be brought for her Night CVCI (i.e {{EquipmentLink|TBM-3D}} + {{EquipmentLink|F6F-3N}}), allowing her to deal massive damage during night battle alongside your battleships.
+
+===Alternate North Route===
+{{Event/Route|B|red|F|lightblue|J|red|P|red|S|red}}
+*Requires 2 destroyers.
+*The second battle is an enemy carrier fleet filled with [[Standard Carrier Wo-Class|Wo Kai]], so AACI is recommended.
+*Node P can contain one {{ShipLink|Battleship Re-Class/Elite}} in Double Line or Line Ahead.
+*[[Expedition/Support Expedition|Support]] is recommended for an easier time in pre-boss nodes.
+====Suggested Fleets====
+*'''4 (F)BB(V)/CV(B) 2 DD'''
+**Allows sufficient air power for air superiority at all nodes and offers fairly high firepower at the boss node, but requires that you escort 2 destroyers through Node P and Re Elite's opening torpedo.
+
+===Middle Route===
+{{Event/Route|B|red|F|lightblue|D|pink|H|red|N|red|O|lightblue|S|red}}
+*Requires 2 DDs and maximum 2 (F)BB(V)+CVL.
+*An AO will allow you to bring 3 (F)BB(V)+CV(B/L).
+*Easier pre-boss, but will struggle against the double Re Elite boss node formations.
+*LOS≥ 67 F33 Cn2 is required to guarantee routing.
+*[[Expedition/Support Expedition|Support]] is recommended.
+====Suggested Fleets====
+*'''2 (F)BB(V) 0~2 CAV 0~1 CLT 2 DD'''
+*'''3 (F)BB(V)+CV(B) 1 AO 2 DD'''
+
+===South Route===
+{{Event/Route|A|lightblue|C|red|E|green|G|purple|I|lightblue|M|purple|O|lightblue|S|red}}
+*Requires 2 destroyers and 1 [[Drum Canister (Transport Use)]] on 4 different ships -OR- 4 destroyers.
+*The first battle is a relatively easy enemy torpedo squadron, but the next two battles are fairly dangerous night battles.
+**Pre-boss support shelling expeditions can help stabilize the night battles significantly.
+*Fleets that take this route will struggle significantly against the double Re Elite boss node formations.
+*Generally lower bauxite consumption when compared to other routes.
+====Suggested Fleets====
+*'''{{ShipLink|Saratoga/Mk.II}} 1 CV(B) 4 DD'''
+**Offers some night battle power with Saratoga's night launch capabilities, but struggles on the pre-boss route. High LoS from equipping carrier-based scouts can free up space for night battle equipment on destroyers.
+*'''2 (F)BB(V) 4 DD'''
+**Offers more stable pre-boss battles and high night battle firepower. With two 7 AA seaplane fighters in the largest slots of BBV or slow BB such as {{ShipLink|Musashi Kai Ni}}, Air Denial can be achieved against all boss compositions.
+*'''{{ShipLink|Saratoga/Mk.II}}, {{ShipLink|Ise Kai Ni}}, {{ShipLink|Tashkent/Kai}}, 2 CAV, 1 DD'''
+**Offers just enough air power potential to achieve air superiority at the boss, which CAVs and Ise can take advantage of with double attack setups. Having equipment space taken up by drums makes Tashkent Kai preferable to other DDs
+
+{{Map/Footer}}

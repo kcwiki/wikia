@@ -1,0 +1,994 @@
+==Introduction==
+Different expeditions have different efficiencies for different mixes of resources. This blogpost attempts to explore the efficiencies for any given resource desired. Katori's training expedition efficiency of experience will NOT be within the scope of this blogpost as the calculation for her awarded experience is slightly complicated. This is for RESOURCE efficiency only.
+
+Expeditions that are inefficient overall will not be included in the respective tables, even if they had slightly higher rates of a particular resource. Any expedition with an overall resource rate which does not exceed 200 resources per hour is not displayed in the hourly table and any expedition with an overall resource rate which does not exceed 1000 resources per activation is not displayed in the per-activation table to reduce clutter - and should never be undertaken for the sake of primary resource generation (though it may still be useful for quests and the like). See paragraph below for details as to how overall resource rate is calculated.
+==Mathematics and Assumptions==
+Sparkle costs are calculated as the cost of a full 1-1 sortie divided by 4 (assuming node 1 rank S, node 2 rank A, flagship and MVP in both: 14+13-15 = 12; expedition return drains 3 morale). The cost of a 1-1 sortie is 4 ticks of fuel and ammo each - since all resource costs are divisible by 5, no rounding up can occur, and thus the cost per sparkle is always exactly 1 fuel and 1 ammo tick (left in decimal form). The time for a 1-1 sparkling sortie is estimated at about 3 minutes, so since this will allow for 4 expeditions, the sparkling time requirement is approximately 45 seconds per ship per expedition. For hourly rates, these amounts are multiplied by the number of sorties per hour - so for instance, Abukuma Kai Ni's hourly sparkle cost when used on expedition 5 is 25/10*60/90 = 1.67 fuel, 35/10*60/90 = 2.33 ammo, 3/4*60/90 = 30 seconds.
+
+An additional overall resource column has also been added, where fuel, ammo, and steel are considered to have a weight of 1, while bauxite is considered to have a weight of 3. This ratio is based on the ratio of their natural regeneration rates. Secondary resources are not compiled in this aggregate resource sum, so account for them separately. The purpose of this column is to provide some (not 100% accurate) means of judging the relative value of expeditions that give different primary resources.
+
+The chance of Great Success is 1/6 per sparkling ship for all resource expeditions, but fulfilling the drum requirement as listed in the drum column will also add an additional base 1/3 Great Success rate. Thus, the resource gains indicated in the table take into account this 1/3 rate when calculating unsparkled net gain for drum expeditions, and the the number of ships needed to be sparkled will be reduced to 4 for the same expeditions. In the Setup column, ships that need to be sparkled are indicated with a *: so 1CL+1DD+4DD* means 1 light cruiser, 1 destroyer with normal morale and 4 sparkling destroyers.
+
+The following ship types (and remodel states) were used as a measure of the likely average consumption of each ship class. It is possible to reduce costs (and thus increase expedition resource return rates) by NOT remodelling the ships involved, and some cheaper alternatives also exist (for instance, Mutsuki-class destroyers have lower ammo costs), and the costs may also go up if more expensive alternatives are used. However, the differences between the expeditions are large enough that this will not change their relative efficiency.
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+!align=center scope="col"|Class
+!align=center scope="col"|Representative
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+|-
+|align=center|Destroyer (DD)
+|align=center|{{ShipBattleCardKai|Inazuma/Kai}}
+|align=center|15
+|align=center|20
+|-
+|align=center|Light Cruiser (CL)
+|align=center|{{ShipBattleCardKai|Tenryuu/Kai}}
+|align=center|25
+|align=center|25
+|-
+|align=center|Heavy Cruiser (CA)
+|align=center|{{ShipBattleCardKai|Aoba/Kai}}
+|align=center|35
+|align=center|55
+|-
+|align=center|Light Carrier (CVL)
+|align=center|{{ShipBattleCardKai|Shouhou/Kai}}
+|align=center|40
+|align=center|40
+|-
+|align=center|Seaplane Carrier (AV)
+|align=center|{{ShipBattleCardKai|Chitose/A}}
+|align=center|35
+|align=center|45
+|-
+|align=center|Submarine
+|align=center|{{ShipBattleCardKai|I-168/Kai}}
+|align=center|10
+|align=center|20
+|}
+As for the secondary resources items like [[File:Instant_repair.jpg|30px]][[File:Development_material.jpg|30px]][[File:Furniture coin.png|30px]][[File:Instant_construction.jpg|30px]], the award rate is 50% if in the first slot '''regardless of Great Success rate''' and 100% if in the second slot on '''Great Success only''' (0% otherwise). When multiple items can be awarded per slot, the chance of getting 1,2...n is equal, so the average amount gained is equal to (n+1)/2. So if you can get up to 2 buckets, the average you get is 1.5; if you can get up to 3 buckets, the average you get is 2. These are then multiplied with the 50% or 100% multiplier based on slot %, multiplied by the rate of GS, to get the final value. All furniture coin boxes will account for their raw coin value to give easier comparisons between boxes of different types.
+
+Wildcards were computed with DDs due to their greater availability to most Admirals. In cases where SS or AV are used, you'll have to do your own additional computations with the attached spreadsheet should a precise number be important, though the relative efficiency of expeditions will not change enough to affect the decision as to which expeditions to use.
+==Usage==
+When determining if sparkling is a good idea or not, in addition to comparing the net resource gain rates between the unsparkled and sparkled versions, also remember to add the required sparkling times. For instance, running sparkling expeditions 2 and 3 nonstop means spending 22m30s every hour on sparkling alone (though this is also a very bad idea for other reasons). Generally speaking, the longer an expedition is, the more likely you'll want to sparkle it. 
+
+While Admirals that have a shortage of a particular resource are advised to use a set of expeditions that cater specifically to that resource, maximum overall efficiency is gained by maximising the total overall resource gain for Admirals with no particular resource shortage type. I will not entertain requests to change the weightage due to the vastly different requirements of different Admirals; the [http://tinyurl.com/KCdmgCalcF spreadsheet these are based on has been uploaded]. If you have different priorities, download the spreadsheet and change the weights yourself to obtain the rankings more relevant to you.
+
+In the [[File:Drum canister.png|30px]] column, the first number refers to the total number of drums that must be present in the fleet. The second number refers to the total number of ships that must carry drums. For instance, 8/4 means a total of 8 drums must be carried on at least 4 drum-carrying ships. So 3-2-2-1 will work, 3-3-1-1 will work, 2-2-2-2 will work, 1-1-1-1-2-2 will work, 3-3-2 will NOT work (too few ships carrying drums), 1-1-1-1 will NOT work (too few drums in total).
+
+This is not a comprehensive list of expeditions or an exhaustive list of formations that can complete the expeditions. It is a recommendation for expeditions to undertake depending on an Admiral's resource requirements. For an exhaustive list, see [[Expedition/Reference tables|this page]] instead.
+
+Finally, in addition to the drum canisters that help with Great Success rates, [[Daihatsu Landing Craft]] available from Akitsumaru also increase resource generation by 5% per [[Daihatsu Landing Craft]], up to a total of 20% (even if you equip 6 of them on 2 AVs, no further gain past 20% can occur). After deciding on the specific combination appropriate for one's needs, it would be ideal to first equip as many [[Daihatsu Landing Craft]] as possible on the highest overall efficiency expedition in your set, followed by using the lowest resource usage ships of the respective classes to fill all remaining slots in descending order of the Cost Mod column, in order to maximise the net resource gain. {{ShipBattleCardKai|Abukuma/Kai Ni}} is particularly notable for being a CL capable of equipping [[Daihatsu Landing Craft]] while still fulfilling the expedition formation requirements.
+===Addendum - Akitsumaru LSC===
+The highest drop rate recipe known with a large sample size is 3600[[File:Fuel.png|20px]]2000[[File:Ammunition.png|20px]]5300[[File:Steel.png|20px]]5200[[File:Bauxite.png|20px]] for a total effective resource cost of 26500. If you use the Daihatsu from Akitsumaru in the most efficient expedition (expedition 5, eReso return 429.67 reso/hr), the amount of time it takes for you to recoup the cost of obtaining the Daihatsu from LSC is as follows:
+26500 (eReso cost LSC) / 0.074 (Akitsumaru probability LSC) / 429.67 (reso gain from exped 5 per hour) / 0.05 (percentage gain of a single Daihatsu) / 24 (hours per day) = 694.5 ~ 695 days.
+
+This is assuming you send expedition 5 around the clock with the Daihatsu equipped, you incur zero resource loss to swap to a ship that can carry Daihatsu and ignoring the cost and benefit of grinding Akitsumaru to Kai.
+==Target Resources For Events==
+While it goes without saying that a resource that is near zero is the immediate priority for normal gameplay, for events in particular, resources tend to be reduced at a specific ratio; when accumulating resources over the resource cap, it is advisable to stock excess resources in the same ratio they will be spent in the event, as the limiting factor for resources is '''the one which runs out first.'''
+
+The approximate ratios are as follows: if x is the amount of ammo required for an event, then the target levels are:
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|[[File:Steel.png|30px]]
+!align=center scope="col"|[[File:Bauxite.png|30px]]
+!align=center scope="col"|[[File:Instant_repair.jpg|30px]]
+|-
+|align=center|1.5 x
+|align=center|x
+|align=center|x
+|align=center|0.5 x
+|align=center|0.0025 x
+|}
+In other words, an Admiral likely to be able to accumulate 160,000 ammo should attempt to collect 240,000 fuel, 160,000 ammo, 160,000 steel, 80,000 bauxite and 400 buckets. Accumulating more buckets than the required amount will decrease the repair time threshold at which the bucket can be used instead of waiting out the repairs, and can be a good idea. However, having fewer buckets than the recommended ratio can be a bad idea if the event is particularly likely to inflict damage on your fleet girls due to the relative difficulty of acquiring buckets.
+
+While sortieing during the event, it is advisable to attempt to maintain this ratio of primary resources with active expeditions as well - while for the most part the ratio will preserve itself because it is, after all, the average ratio, event maps that use light fleets will tend to use more ammo, event maps that use heavy fleets will tend to use more steel, and carrier task force maps will tend to use more bauxite. Bauxite in particular is required in greater amounts during events than in the course of normal operations, since events feature Abyssals with exponentially higher Air Power requirements and intrinsic Anti-Air statistics.
+
+Unless preparing for an event, Admirals are also advised to maintain their resources below soft-cap, as the loss of intrinsic regeneration over the soft-cap limit represents a very large resource loss in the long term that could support more Large-Ship Construction of [[Maruyu]] for Luck-modernisation, [[Akitsu Maru]] for [[Ka-type Observation Autogyro|Autogyro]] and [[Daihatsu Landing Craft]], [[I-401]] for [[Prototype Seiran]], [[Bismarck]] for [[38cm Twin Gun Mount]] or [[Mikuma]] for [[20.3cm (No.3) Twin Gun Mount]]. Hard caps should not be used except immediately prior to an event, and Admirals who are pushing all resources to hard-cap may wish to run the 5-21-38 and 5-6-21 expedition sets in order to recover the resources that will depart from hardcap state the fastest at the most stable rate early on, before reverting to the above Event ratio when the amounts of ammo and steel drop below the required ratios.
+==Hourly Expedition List==
+These are meant for 'active' play, to be repeatedly sent off cooldown when you are able to stay logged in for protracted periods of time. They have much higher per-hour efficiencies, but their total resource generation per activation is relatively low compared to the longer expeditions.
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+|align=center colspan=25|'''Max Efficiency Per Hour'''
+|align=center colspan=4|'''Cost Mods'''
+|-
+|align=center colspan=5|'''Core Data'''
+|align=center colspan=8|'''Unsparkled Net Gain'''
+|align=center colspan=3|'''Sparkle Costs'''
+|align=center colspan=8|'''100% GS Net Gain'''
+|align=center rowspan=2|'''Sparkling Gain'''
+|align=center colspan=2|'''Non-sparkling'''
+|align=center colspan=2|'''Sparkling'''
+|-
+!align=center scope="col"|Expedition
+!align=center scope="col"|[[File:Flagship icon.png|30px]]
+!align=center scope="col"|Σ(Lv)
+!align=center scope="col"|[[File:Drum canister.png|30px]]
+!align=center scope="col"|Time
+!align=center scope="col"|Formation
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|[[File:Steel.png|30px]]
+!align=center scope="col"|[[File:Bauxite.png|30px]]
+!align=center scope="col"|Overall
+!align=center scope="col"|[[File:Instant_repair.jpg|30px]]
+!align=center scope="col"|[[File:Furniture coin.png|30px]]
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|Time
+!align=center scope="col"|Formation
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|[[File:Steel.png|30px]]
+!align=center scope="col"|[[File:Bauxite.png|30px]]
+!align=center scope="col"|Overall
+!align=center scope="col"|[[File:Instant_repair.jpg|30px]]
+!align=center scope="col"|[[File:Furniture coin.png|30px]]
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+|-
+|align=center|2
+|align=center|2
+|align=center|
+|align=center|
+|align=center|30min
+|align=center|4XX
+|align=center| -64
+|align=center|200
+|align=center|60
+|align=center|
+|align=center|196
+|align=center|1
+|align=center|
+|align=center|18
+|align=center|24
+|align=center|9min
+|align=center|6XX*
+|align=center| -114
+|align=center|276
+|align=center|90
+|align=center|
+|align=center|252
+|align=center|1
+|align=center|
+|align=center| +29%
+|align=center|10
+|align=center|
+|align=center|12
+|align=center|2
+|-
+|align=center|3
+|align=center|3
+|align=center|
+|align=center|
+|align=center|20min
+|align=center|3XX
+|align=center|45
+|align=center|54
+|align=center|120
+|align=center|
+|align=center|219
+|align=center|
+|align=center|
+|align=center|27
+|align=center|36
+|align=center|13min30s
+|align=center|6XX*
+|align=center|18
+|align=center|27
+|align=center|180
+|align=center|
+|align=center|225
+|align=center|
+|align=center|
+|align=center| +3%
+|align=center|9
+|align=center|6
+|align=center|12
+|align=center|9
+|-
+|align=center|5
+|align=center|3
+|align=center|
+|align=center|
+|align=center|1hr30min
+|align=center|1CL+2DD+1XX
+|align=center|108.67
+|align=center|133.33
+|align=center|13.33
+|align=center|13.33
+|align=center|295.33
+|align=center|
+|align=center|
+|align=center|6.67
+|align=center|8.33
+|align=center|3min
+|align=center|1CL*+2DD*+3XX*
+|align=center|158
+|align=center|191.67
+|align=center|20
+|align=center|20
+|align=center|429.67
+|align=center|
+|align=center|
+|align=center| +45%
+|align=center|3.33
+|align=center|
+|align=center|4
+|align=center|0.67
+|-
+|align=center|6
+|align=center|4
+|align=center|
+|align=center|
+|align=center|40min
+|align=center|4XX
+|align=center| -30
+|align=center| -24
+|align=center|
+|align=center|120
+|align=center|306
+|align=center|
+|align=center|150
+|align=center|13.5
+|align=center|18
+|align=center|6min45s
+|align=center|6XX*
+|align=center| -58.5
+|align=center| -54
+|align=center|
+|align=center|180
+|align=center|427.5
+|align=center|
+|align=center|150
+|align=center| +40%
+|align=center|4.5
+|align=center|3
+|align=center|6
+|align=center|4.5
+|-
+|align=center|11
+|align=center|6
+|align=center|
+|align=center|
+|align=center|5hr
+|align=center|2DD+2XX
+|align=center| -6.4
+|align=center|
+|align=center|
+|align=center|50
+|align=center|143.6
+|align=center|
+|align=center|20
+|align=center|1.8
+|align=center|2.4
+|align=center|54s
+|align=center|2DD*+4XX*
+|align=center| -11.4
+|align=center| -2.4
+|align=center|
+|align=center|75
+|align=center|211.2
+|align=center|0.2
+|align=center|20
+|align=center| +47%
+|align=center|1
+|align=center|
+|align=center|1.2
+|align=center|0.2
+|-
+|align=center|17
+|align=center|20
+|align=center|
+|align=center|
+|align=center|45min
+|align=center|1CL+3DD+2XX
+|align=center|49.33
+|align=center|26.67
+|align=center|66.67
+|align=center|
+|align=center|142.67
+|align=center|
+|align=center|
+|align=center|13.3
+|align=center|16.67
+|align=center|6min
+|align=center|1CL*+3DD*+2XX*
+|align=center|82.67
+|align=center|56.67
+|align=center|100
+|align=center|
+|align=center|239.33
+|align=center|
+|align=center|
+|align=center| +68%
+|align=center|4
+|align=center|5.33
+|align=center|5.33
+|align=center|6.67
+|-
+|align=center|21
+|align=center|15
+|align=center|30
+|align=center|3/3
+|align=center|2hr20min
+|align=center|1CL+4DD
+|align=center|130.86
+|align=center|103.29
+|align=center|
+|align=center|
+|align=center|234.14
+|align=center|
+|align=center|42.86
+|align=center|2.57
+|align=center|3.43
+|align=center|1min17s
+|align=center|1CL+4DD*
+|align=center|174
+|align=center|138.43
+|align=center|
+|align=center|
+|align=center|312.43
+|align=center|
+|align=center|42.86
+|align=center| +33%
+|align=center|3.43
+|align=center|3
+|align=center|3.86
+|align=center|3.43
+|-
+|align=center|37
+|align=center|50
+|align=center|200
+|align=center|4/3
+|align=center|2hr45min
+|align=center|1CL+5DD
+|align=center| -29.09
+|align=center|124.85
+|align=center|114.55
+|align=center|
+|align=center|210.3
+|align=center|
+|align=center|36.36
+|align=center|2.18
+|align=center|2.91
+|align=center|1min5s
+|align=center|1CL+1DD+4DD*
+|align=center| -31.27
+|align=center|168
+|align=center|147.27
+|align=center|
+|align=center|284
+|align=center|
+|align=center|36.36
+|align=center| +35%
+|align=center|2.91
+|align=center|2.91
+|align=center|3.27
+|align=center|3.27
+|-
+|align=center|38
+|align=center|65
+|align=center|240
+|align=center|8/4
+|align=center|2hr55min
+|align=center|5DD+1XX
+|align=center|143.31
+|align=center| -32.91
+|align=center|80
+|align=center|
+|align=center|190.4
+|align=center|
+|align=center|34.29
+|align=center|2.06
+|align=center|2.74
+|align=center|1min2s
+|align=center|2DD+3DD*+XX*
+|align=center|189.26
+|align=center| -35.66
+|align=center|102.86
+|align=center|
+|align=center|256.46
+|align=center|
+|align=center|34.29
+|align=center| +35%
+|align=center|2.74
+|align=center|2.74
+|align=center|3.09
+|align=center|3.09
+|-
+|align=center colspan=29|XX is a wildcard, any ship can be used. Calculations used DDs for this, but typically either AV are used for Daihatsu, or SS are used for lower consumption, when available. If AV-Daihatsu are used, sparkle the '''lowest remaining cost ship in the fleet for drum-can cases, NOT the AV.'''
+|}
+===Active Expedition Quick Guide===
+The table below may serve as a quick guide to useful expedition combinations for different resource foci. Other combinations also exist, but these optimise the various individual resources at the smallest loss of overall efficiency. Expedition 17 is more efficient overall than others like 3 or 11, but does not appear in any of the below combinations as it lacks any particular resource focus and is largely eclipsed by Expedition 5 for a more 'general' purpose. Should an admiral desire almost identical rates of resource output in order to inch resources semi-evenly towards a soft cap or hard cap number, using the fuel and balance foci at a 50% rate each will result in a rate of 278.38 fuel, 316.05 ammo, 101.43 steel, 110 bauxite, 1025.86 overall, 0.5 bucket and 113.57 furniture coin rate at an average of 7min32s sparkle time per hour, which should be representative of the most balanced output rate possible within these permutations.
+
+Admirals may wish to note that the hourly natural regeneration rate (when under the softcap limits) is 60 fuel, 60 ammo, 60 steel and 20 bauxite, for an overall resource count of 240 per hour. In comparison to natural regeneration, most of these combinations provide approximately 4 times the resource count, so actively sending expeditions and doing the necessary sparkling can raise resource regeneration rate to a total of more than 5 times that of natural regeneration alone, or an average of ~1.33x natural regeneration rate per fleet allocated to resource expeditions. This represents a large incentive for players to unlock all 4 fleets as early as possible, and use support fleets as sparingly as possible in order to be able to harness the regeneration potential of the expeditions.
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+!align=center scope="col"|Focus
+!align=center scope="col"|Expedition Combination
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|[[File:Steel.png|30px]]
+!align=center scope="col"|[[File:Bauxite.png|30px]]
+!align=center scope="col"|Overall
+!align=center scope="col"|[[File:Instant_repair.jpg|30px]]
+!align=center scope="col"|[[File:Furniture coin.png|30px]]
+!align=center scope="col"|Sparkling per hour
+|-
+|align=center|[[File:Fuel.png|30px]]
+|align=center|5-21-38
+|align=center|521.26
+|align=center|294.44
+|align=center|122.86
+|align=center|20
+|align=center|998.56
+|align=center|
+|align=center|77.15
+|align=center|5min19s
+|-
+|align=center|[[File:Ammunition.png|30px]]
+|align=center|2-5-37
+|align=center|62.73
+|align=center|559.67
+|align=center|227.27
+|align=center|20
+|align=center|909.67
+|align=center|1
+|align=center|36.36
+|align=center|4min5s
+|-
+|align=center|[[File:Steel.png|30px]]
+|align=center|3-37-38
+|align=center|202.99
+|align=center|186.34
+|align=center|370.13
+|align=center|
+|align=center|759.46
+|align=center|
+|align=center|70.65
+|align=center|2min7s
+|-
+|align=center|[[File:Bauxite.png|30px]]
+|align=center|5-6-11
+|align=center|88.1
+|align=center|135.27
+|align=center|20
+|align=center|275
+|align=center|1068.37
+|align=center|0.2
+|align=center|170
+|align=center|10min39s
+|-
+|align=center|Overall
+|align=center|5-6-21
+|align=center|273.5
+|align=center|276.1
+|align=center|20
+|align=center|200
+|align=center|1169.6
+|align=center|
+|align=center|192.86
+|align=center|11min2s
+|-
+|align=center|[[File:Instant_repair.jpg|30px]]
+|align=center|2-5-11
+|align=center|82.6
+|align=center|389.27
+|align=center|80
+|align=center|95
+|align=center|836.87
+|align=center|1.2
+|align=center|20
+|align=center|3min54s
+|-
+|align=center|[[File:Furniture coin.png|30px]]
+|align=center|6-21-37
+|align=center|84.23
+|align=center|252.43
+|align=center|147.27
+|align=center|180
+|align=center|1023.93
+|align=center|
+|align=center|229.22
+|align=center|9min7s
+|-
+|align=center|Balance
+|align=center|2-5-6
+|align=center|35.5
+|align=center|337.67
+|align=center|80
+|align=center|200
+|align=center|1053.17
+|align=center|1
+|align=center|150
+|align=center|9min45s
+|-
+|align=center colspan=10|Numbers in the table are the sparkled expeditions for all expeditions '''except 2 and 3''' for higher efficiency.
+|}
+Admirals in the early game who do not have access yet to expeditions 37 or 38 may find themselves running out of steel quite easily, and may wish to concentrate on unlocking expeditions as well as all four fleet slots as soon as possible to shorten this phase - while reducing their steel consumption by constructing smaller ships and developing non steel-dependent equipment early on, such as aircraft. Steel shortages are generally not a problem in the later game, where shortages tend to develop more due to misallocation of expeditions than due to usage patterns.
+==Offline Expedition List==
+These expeditions have much longer required times, but accordingly also give larger total amounts of resources. However, their per-hour efficiencies are much lower than that of the hourly expedition list, and are thus ill-suited to active play. Activate these expeditions when you are unlikely to be able to stay logged in for a protracted period of time - for instance, expeditions 11, 24, 35, 36 and 40 are particularly suited to be sent before going to work or going to sleep for an 8-10 hour cycle. The even longer expeditions may be suitable for cases where real life engagements make it highly unlikely you can log in for a full day or longer. No quick guide has been created for this as the primary factor which should influence what expedition you choose should be the time you spend offline, not the resource type you want.
+
+For the specific scenario of overnight expeditions, the highest efficiency combination is 24-35-36. As this is virtually guaranteed to undersupply ammo, one possibility is to run ammo-focused active hourlies and this overnight combination, as the ammo-focus hourly combination supplies relatively low amounts of steel and bauxite, which this overnight combination tends to supply large amounts of.
+
+Admirals with resources below hard-cap may wish to note that the most efficient method when sending expeditions for a protracted period of time is to look for the highest overall net gain values that is allowed within the time period they will be away, NOT to fit the timing as closely to the window as possible. For instance, while expedition 25 is a 40 hour expedition, it is eclipsed in efficiency by the 15 hour expedition 16, and so 16 should be used even if the Admiral will be away for exactly 40 hours (specifically, combination 15-16-28). All the entries have still been included for completion's sake as there may be Admirals who have essentially hardcapped some of the resources and thus can make better use of some of the expeditions with lower overall efficiency.
+{| border="1" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+|align=center colspan=29|'''Max Efficiency Per Activation'''
+|align=center colspan=4|'''Cost Mods'''
+|-
+|align=center colspan=5|'''Core Data'''
+|align=center colspan=10|'''Unsparkled Net Gain'''
+|align=center colspan=3|'''Sparkle Costs'''
+|align=center colspan=10|'''100% GS Net Gain'''
+|align=center rowspan=2|'''Sparkling Gain'''
+|align=center colspan=2|'''Non-sparkling'''
+|align=center colspan=2|'''Sparkling'''
+|-
+!align=center scope="col"|Expedition
+!align=center scope="col"|[[File:Flagship icon.png|30px]]
+!align=center scope="col"|Σ(Lv)
+!align=center scope="col"|[[File:Drum canister.png|30px]]
+!align=center scope="col"|Time
+!align=center scope="col"|Formation
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|[[File:Steel.png|30px]]
+!align=center scope="col"|[[File:Bauxite.png|30px]]
+!align=center scope="col"|Overall
+!align=center scope="col"|[[File:Instant_repair.jpg|30px]]
+!align=center scope="col"|[[File:Development_material.jpg|30px]]
+!align=center scope="col"|[[File:Furniture coin.png|30px]]
+!align=center scope="col"|[[File:Instant_construction.jpg|30px]]
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|Time
+!align=center scope="col"|Formation
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|[[File:Steel.png|30px]]
+!align=center scope="col"|[[File:Bauxite.png|30px]]
+!align=center scope="col"|Overall
+!align=center scope="col"|[[File:Instant_repair.jpg|30px]]
+!align=center scope="col"|[[File:Development_material.jpg|30px]]
+!align=center scope="col"|[[File:Furniture coin.png|30px]]
+!align=center scope="col"|[[File:Instant_construction.jpg|30px]]
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+!align=center scope="col"|[[File:Fuel.png|30px]]
+!align=center scope="col"|[[File:Ammunition.png|30px]]
+|-
+|align=center|11
+|align=center|6
+|align=center|
+|align=center|
+|align=center|5hr
+|align=center|2DD+2XX
+|align=center| -32
+|align=center|
+|align=center|
+|align=center|250
+|align=center|718
+|align=center|
+|align=center|
+|align=center|100
+|align=center|
+|align=center|9
+|align=center|12
+|align=center rowspan=3|4min30s
+|align=center|2DD*+4XX*
+|align=center| -57
+|align=center| -12
+|align=center|
+|align=center|375
+|align=center|1056
+|align=center|1
+|align=center|
+|align=center|100
+|align=center|
+|align=center| +47%
+|align=center|5
+|align=center|
+|align=center|6
+|align=center|1
+|-
+|align=center|15
+|align=center|8
+|align=center|
+|align=center|
+|align=center|12hr
+|align=center|2CVL+2DD+2XX
+|align=center| -72
+|align=center| -64
+|align=center|300
+|align=center|400
+|align=center|1364
+|align=center|
+|align=center|
+|align=center|350
+|align=center|
+|align=center|14
+|align=center|16
+|align=center|2CVL*+2DD*+2XX*
+|align=center| -86
+|align=center| -80
+|align=center|450
+|align=center|600
+|align=center|2084
+|align=center|
+|align=center|1
+|align=center|350
+|align=center|
+|align=center| +53%
+|align=center|5
+|align=center|4
+|align=center|6
+|align=center|5
+|-
+|align=center|16
+|align=center|10
+|align=center|
+|align=center|
+|align=center|15hr
+|align=center|1CL+2DD+3XX
+|align=center|447
+|align=center|450
+|align=center|200
+|align=center|200
+|align=center|1697
+|align=center|
+|align=center|
+|align=center|
+|align=center|0.75
+|align=center|10
+|align=center|12.5
+|align=center|1CL*+2DD*+3XX*
+|align=center|687
+|align=center|687.5
+|align=center|300
+|align=center|300
+|align=center|2574.5
+|align=center|
+|align=center|1.5
+|align=center|
+|align=center|0.75
+|align=center| +52%
+|align=center|5
+|align=center|4
+|align=center|6
+|align=center|5
+|-
+|align=center|24
+|align=center|50
+|align=center|200
+|align=center|4/3
+|align=center|8hr20min
+|align=center|'''1CL[FS]'''+4DD+1XX
+|align=center|503.33
+|align=center| -75
+|align=center|
+|align=center|175
+|align=center|953.33
+|align=center|0.33
+|align=center|0.75
+|align=center|
+|align=center|
+|align=center|6
+|align=center|8
+|align=center|3min
+|align=center|1CL[FS]+1DD+3DD*+1XX*
+|align=center|664
+|align=center| -83
+|align=center|
+|align=center|225
+|align=center|1256
+|align=center|1
+|align=center|0.75
+|align=center|
+|align=center|
+|align=center| +32%
+|align=center|8
+|align=center|6
+|align=center|9
+|align=center|7
+|-
+|align=center|25
+|align=center|25
+|align=center|
+|align=center|
+|align=center|40hr
+|align=center|2CA+2DD
+|align=center|848
+|align=center| -120
+|align=center|500
+|align=center|
+|align=center|1228
+|align=center|
+|align=center|
+|align=center|
+|align=center|
+|align=center|13
+|align=center|19
+|align=center rowspan=6|4min30s
+|align=center|2CA*+2DD*+2XX*
+|align=center|1269
+|align=center| -171
+|align=center|750
+|align=center|
+|align=center|1848
+|align=center|
+|align=center|
+|align=center|
+|align=center|
+|align=center| +50%
+|align=center|5
+|align=center|8
+|align=center|6
+|align=center|9
+|-
+|align=center|26
+|align=center|30
+|align=center|
+|align=center|
+|align=center|80hr
+|align=center|1CVL+1CL+2DD
+|align=center| -76
+|align=center| -84
+|align=center|
+|align=center|900
+|align=center|2540
+|align=center|1
+|align=center|
+|align=center|
+|align=center|
+|align=center|12.5
+|align=center|14.5
+|align=center|1CVL*+1CL*+2DD*+2XX*
+|align=center| -112.5
+|align=center| -130.5
+|align=center|
+|align=center|1350
+|align=center|3807
+|align=center|1
+|align=center|
+|align=center|
+|align=center|
+|align=center| +50%
+|align=center|8
+|align=center|8
+|align=center|9
+|align=center|9
+|-
+|align=center|27
+|align=center|1
+|align=center|
+|align=center|
+|align=center|20hr
+|align=center|2SS
+|align=center| -16
+|align=center| -32
+|align=center|800
+|align=center|
+|align=center|752
+|align=center|
+|align=center|0.5
+|align=center|
+|align=center|
+|align=center|8
+|align=center|12
+|align=center|2SS*+4XX*
+|align=center| -72
+|align=center| -108
+|align=center|1200
+|align=center|
+|align=center|1020
+|align=center|
+|align=center|0.5
+|align=center|300
+|align=center|
+|align=center| +36%
+|align=center|8
+|align=center|8
+|align=center|9
+|align=center|9
+|-
+|align=center|28
+|align=center|30
+|align=center|
+|align=center|
+|align=center|25hr
+|align=center|3SS
+|align=center| -24
+|align=center| -48
+|align=center|900
+|align=center|350
+|align=center|1878
+|align=center|
+|align=center|0.75
+|align=center|
+|align=center|
+|align=center|7.5
+|align=center|12
+|align=center|3SS*+3XX*
+|align=center| -67.5
+|align=center| -108
+|align=center|1350
+|align=center|525
+|align=center|2749.5
+|align=center|
+|align=center|0.75
+|align=center|600
+|align=center|
+|align=center| +46%
+|align=center|8
+|align=center|8
+|align=center|9
+|align=center|9
+|-
+|align=center|35
+|align=center|40
+|align=center|
+|align=center|
+|align=center|7hr
+|align=center|2CVL+1CA+1DD+2XX
+|align=center| -128
+|align=center| -156
+|align=center|240
+|align=center|280
+|align=center|796
+|align=center|
+|align=center|
+|align=center|150
+|align=center|
+|align=center|16
+|align=center|19.5
+|align=center|2CVL*+1CA*+1DD*+2XX*
+|align=center| -144
+|align=center| -175.5
+|align=center|360
+|align=center|420
+|align=center|1300.5
+|align=center|
+|align=center|1
+|align=center|150
+|align=center|
+|align=center| +63%
+|align=center|8
+|align=center|8
+|align=center|9
+|align=center|9
+|-
+|align=center|36
+|align=center|30
+|align=center|
+|align=center|
+|align=center|9hr
+|align=center|2AV+1CL+1DD+2XX
+|align=center|368
+|align=center| -140
+|align=center|200
+|align=center|200
+|align=center|1028
+|align=center|
+|align=center|
+|align=center|300
+|align=center|
+|align=center|14
+|align=center|17.5
+|align=center|2AV*+1CL*+1DD*+2XX*
+|align=center|594
+|align=center| -157.5
+|align=center|300
+|align=center|300
+|align=center|1636.5
+|align=center|1
+|align=center|
+|align=center|300
+|align=center|
+|align=center| +59%
+|align=center|8
+|align=center|8
+|align=center|9
+|align=center|9
+|-
+|align=center|40
+|align=center|25
+|align=center|150
+|align=center|4/3
+|align=center|6hr50min
+|align=center|'''1CL[FS]'''+2AV+2DD+1XX
+|align=center|238
+|align=center|226
+|align=center|
+|align=center|116.67
+|align=center|814
+|align=center|0.33
+|align=center|
+|align=center|200
+|align=center|
+|align=center|7
+|align=center|8.5
+|align=center|3min
+|align=center|1CL[FS]*+2AV+2DD*+1XX*
+|align=center|331
+|align=center|317.5
+|align=center|
+|align=center|150
+|align=center|1098.5
+|align=center|1
+|align=center|
+|align=center|200
+|align=center|
+|align=center| +35%
+|align=center|8
+|align=center|7
+|align=center|9
+|align=center|8
+|-
+|align=center colspan=33|Expeditions 24 and 40 will '''fail if the flagship is not the Light Cruiser.'''<br />AV or CV can be used where CVL is written, '''but not the other way around or the expedition will fail.'''<br />XX is a wildcard, any ship can be used. Calculations used DDs for this, but typically either AV are used for Daihatsu, or SS are used for lower consumption, when available. If AV-Daihatsu are used, sparkle the '''lowest remaining cost ship in the fleet for drum-can cases, NOT the AV.'''
+|}
+==Usage Example==
+Since just giving descriptions without a concrete usage case may be difficult to understand, this section details how one might use this.
+For instance, let us consider the case of an Admiral who is short of buckets, ammo and bauxite for an upcoming event, who has 4 fleets and access to every expedition.
+
+The Admiral sleeps for about 9 hours a day, works for 10 and has access to KanColle for the remaining time in the day.
+
+The Admiral has one of every ship in their highest remodelled form, Chitose A, Chiyoda A, Taigei and '''no other ships'''. This is not an 'ideal' scenario as lower remodels have lower resource costs - the idea is just to show what is the best the Admiral can do in hir situation.
+
+Since ships with lower consumptions are used than the class 'Representatives' used to compute the above tables and Daihatsu are used, this Admiral will achieve higher resource numbers than what is in the charts. What is important however is the process of maximising the resource gains, not the specific numbers.
+===Overnight Expeditions===
+The ideal expedition set for the 9 hour sleep cycle and 10 hour work cycle is the 24-35-36 set. The ships used for this purpose are 2 CL, 2 AV, 2 CVL, 5 SS and 6 DD.
+
+As Maruyu Kai is difficult to sparkle without taking too much damage, the submarines used are I-168 Kai, Ro-500, I-8 Kai, I-19 Kai and I-58 Kai. Since the Cost Mods for 35 and 36 are higher (but Exp 35 is shorter), I-168 Kai and Ro-500 are assigned to Exp 35. The remaining SSV are split among 24 and 36.
+
+The 6 DD used for this purpose are all Mutsuki-classes, due to their lower ammo requirements.
+
+The 2 CVL used are Ryuuhou Kai and Houshou Kai, as they have the lowest resource requirements.
+
+The 2 CL used are Tenryuu Kai and Tatsuta Kai, as they have the lowest resource requirements.
+
+The 2 AV used are Chitose A and Chiyoda A. The two Daihatsu the Admiral acquired from Abukuma Kai Ni and Akitsumaru are assigned to either one of them.
+
+The reason for not assigning the Daihatsu to Abukuma Kai Ni instead is that expedition 36 has a higher overall resource efficiency than Expedition 24, but Tenryuu Kai has a lower resource consumption than Abukuma Kai Ni.
+
+Only the CL and one of the Mutsuki-classes assigned to expedition 24 are not sparkled, as that expedition has a 100% GS rate with 4 sparkling ships alone. All other ships are sparkled to guarantee Great Success.
+===Active Expeditions===
+After coming back from work, the Admiral now sorties the expedition set 2-5-6, as ze needs buckets, ammo and bauxite specifically.
+
+In this expedition set, 2 is not sparkled due to the relatively low return on investment on sparkling time and the need to add 2 ships to guarantee the great success. 5 and 6 are '''fully''' sparkled since neither can be assisted with Drum Canisters.
+
+The ships used for these expeditions are 15 DD and 1 CL; as the Admiral is using the non-Maruyu submarines to clear World 2 daily quests in 2-3 Oriole, and Maruyu as a tank for 3-2A levelling, they are unavailable for use as wildcards here.
+
+The CL used is a sparkled Abukuma Kai Ni, as she is the only one capable of carrying the twin Daihatsu to boost Expedition 5's resource return.
+
+Expeditions 5 and 6 have the highest cost modifiers per hour for ammo, so all ten Mutsuki classes are used for these expeditions in sparkled form - 4 for Exp 5 and 6 for Exp 6, since Exp 6 has a higher ammo mod per hour. An additional 15 fuel 20 ammo consumption DD is sparkled and added to Expedition 5 to make up the required number.
+
+Finally, four 15 fuel 20 ammo consumption DDs are repeatedly cycled through Expedition 2 without sparkling. As the ammo mod is zero, they are effectively already the lowest cost available.
+==TL;dr Usage Checklist==
+If in doubt, follow the below order when using the guide. Doing the steps in the wrong order will reduce efficiency.
+#Decide on which resources you need the most, and select an expedition combination available to you that maximises these resources. If selecting expeditions to run when you are unable to access KanColle, select those with the highest overall resource efficiency which have a required timer '''shorter''' than the time you will be away.
+#Assign Daihatsu, if available, to the expeditions with AV or CL in your mix in '''decreasing''' order of overall efficiency.
+#Assign all remaining available ships in descending order of resource usage based on the Resource Mod values on the right end of the tables, based on the type of resource they save more (assign lower fuel users to expeditions with higher Fuel Mod, assign lower ammo users to expeditions with higher Ammo Mod). Make sure your ships have the sufficient total level to succeed in the expedition if the expedition has a total level requirement in the Σ(Lv) column, or else '''the expedition will fail.'''
+#If you have so many Daihatsu you can support multiple expeditions, replace wildcard ships (usually destroyers or submarines) with Daihatsu-carrying AV in decreasing order of overall efficiency. Remember that Daihatsus' bonus for any one expedition cannot exceed 20%. When making the switch, ensure the additional resource return you get of Rounddown[base resource return * sparkling bonus (if applicable) * daihatsu resource gain] is greater than the increased resource cost of Roundup[(AV rescost - replaced ship's rescost)*cost mod/10], or else you may wind up spending more in costs than you gain in Daihatsu-return.
+#Select your flagships for the expeditions. '''For expeditions 24 and 40 it is compulsory to have a CL flagship.''' For everything else the flagship can be any ship in the expedition fleet with a level greater than the requirement in the [[File:Flagship icon.png|30px]] column - if it is lower, '''the expedition will fail.''' The flagship of each expedition will gain 50% more experience than ships in any of the other slots; you may wish to assign the ship you want to level to this slot '''as long as it meets the required minimum flagship level for the expedition.'''
+==Further Reading==
+*[[Expedition/Introduction|Main article on how Expeditions work]]
+*[[Expedition/Reference tables|Hourly reference tables for the rest of the expeditions (does not account for costs)]]
+*[[Expedition/Reference tables|Total reference tables for the rest of the expeditions (does not account for costs)]]
+*[http://tinyurl.com/KCdmgCalcF The calculations behind these tables. The relevant file here is Expedition Calc.xlsx]
+===Other Guides===
+*[[User_blog:Hayashi_H/Advanced_Mechanics_Guide|Advanced game mechanics, like overweight mechanisms and more]]
+*[[User_blog:Hayashi_H/Advanced_Equipment_Guide|What equipment should each ship mount?]]
+*[[User blog:Hayashi H/Abyssal OHKO Chart|How much firepower is TRULY enough?]]
+*[[User blog:Hayashi H/Anti-BWS Fleets|How to survive attacks by firepower-capped targets like the BWS]]
+*[[User blog:Hayashi H/Grinding DDs and CLs on 3-2A|Levelling your CLs and DDs quickly and cheaply]]
+*[[User_blog:Hayashi_H/Max-efficiency_Map-clear_Formations|Efficient formations used in repeated quests and EOs]]
+==Credits==
+[[User:Fujihita|Fujihita]] for suggesting the addition of information on flagships gaining more experience.
+[[Category:Blog posts]]

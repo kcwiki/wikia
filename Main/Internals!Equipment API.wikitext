@@ -1,0 +1,40 @@
+For [[Template:EquipmentDataDocumentation/EquipmentData]].
+
+==Equipment Data Format==
+{{todo|show=true|Missing keys, required keys, optional keys, unused keys, order, <code>false</code> for <code>0</code>?}}
+
+This [[:Category:Equipment_modules|equipment]] [[:Category:Data_modules|data module]] should return a table with key-value pairs describing the equipment:
+<pre>
+-- [[Category:Equipment modules]]
+
+return {
+  ... follow key order used in the table below ...
+}
+</pre>
+Optional keys can be omitted. Non-optional keys should be present. <code>nil</code> should be used for unknown values. <code>false</code> should be used instead of <code>0</code> for <code>Integer</code> values. See descriptions for special uses of <code>false</code>.
+
+API keys are referred from <code>api_mst_slotitem</code> in <code>api_start2</code> response<ref>[https://github.com/andanteyk/ElectronicObserver/blob/develop/ElectronicObserver/Other/Information/apilist.txt ElectronicObserver API documentation]</ref>. For keys with API keys values should always be equal to API values.
+{|class="wikitable typography-xl-optout" style="width:100%;"
+!Key!!API key!!Value<br>type!!Optional!!Description
+|-
+|<code>_name</code>||<code></code>||<code>String</code>||No||Standard [[Kancolle Wiki]] name of the equipment.
+|-
+|<code>_page</code>||<code></code>||<code>String</code>||Yes||[[Kancolle Wiki]] page for the equipment, if it is different from <code>_name</code>. Only used when <code>_name</code> contains characters that can't be used in a page name.
+|-
+|<code>_id</code>||<code>api_sortno<br>api_id</code>||<code>Integer</code>||No||ID of the equipment.
+|-
+|<code>_japanese_name</code>||<code>api_name</code>||<code>String</code>||No||In-game name of the equipment. Usually in Japanese, but can  be equal to <code>_name</code> for equipment with English names.
+|-
+|<code>_reading</code>||<code></code>||<code>String</code>||No||Reading for <code>_japanese_name</code>, in furigana for equipment with Japanese names. Can be set to <code>false</code> for equipment with English names.
+|}
+
+===Unused keys===
+The following keys are in API, but currently always <code>0</code>, so should not be used.
+{|class="wikitable typography-xl-optout" style="width:100%;"
+!Key!!API key!!Description
+|}
+
+===Module template===
+{{todo|show=true|Add full module template here, with <code>nil</code> and as JS template literal.}}
+
+<references/>

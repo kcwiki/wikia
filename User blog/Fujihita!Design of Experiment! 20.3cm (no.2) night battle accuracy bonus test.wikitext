@@ -1,0 +1,140 @@
+==Preface==
+This page contains the Design of Experiment outline for 20.3cm (no.2) gun night battle accuracy bonus test. The method described in this page is intended to be applicable for one-factor, multi-level, categorical data studies only. Please take great care to ensure the response (output) is categorical and not continuous as there are other methods for continuous data.
+
+This is a hypothesis testing only experiment. Even though the difference between the two equipment can be estimated with respect to the confidence intervals. I cannot guarantee the precision of such estimations without appropriate model buildings and subsequent experiments.
+
+==Sample size==
+For this study, I'll take the '''sample size of 384'''. This sample size corresponds to the industry-standard confidence level (alpha) of 95% the margin of error of 5% (or +-50) with the population size of a million [http://www.research-advisors.com/tools/SampleSize.htm]
+
+It means over 1 million shots, there is 5% chance that the result here will be off by +-50000 shots. This confidence interval is "good enough" for hypothesis testing but it's nowhere stringent enough for model building.
+
+:Strictly speaking, since we have over 3 millions players in Kantai Collection, a study that can ''precisely'' describe any fundamental mechanic would require a sample size corresponding to alpha 95%, population size 2.5 millions and margin of error much smaller, about 1% should do. And that still leaves 5% chance of up to 5000 players may experience errors.
+
+:That number is way more than the number of active editors we have on this wiki.
+
+:The number of samples required to build a 1% model that covers just one mechanic is a staggering 9567 samples. And take note that the real population of any combat mechanic is not ''players'' but ''shots''. With 3 millions players and ten of thousands of sorties for every player, 2-3 battles per sorties, 6-12 shots per battle and over a dozen of mechanics, this simple-looking moegame is a statistical nightmare.
+
+==Data collection==
+
+The goal of this experiment is to reject (or accept) the following null hypothesis:
+:Ho = "20.3cm gives the same night battle accuracy bonus as 14cm does"
+
+;For this experiment:
+:The measured response aka. data in this experiment is of categorical type: Miss or Hit.
+:The number of factors involved is 1 (Equipment) with 2 levels (14cm and 20.3cm no.2)
+
+Take note that the data type being collected is categorical, therefore, Chi-squared test statistic should be used instead of t-test. Chi-squared test requires a predefined "expected" mean for all responses.
+
+Unfortunately, we don't have a hypothetical value for the bonus. However, given the scope of this test is to prove (or disprove) the existence of a hidden bonus and not to measure the (unconfirmed) bonus, we'll use a control group with 14cm guns to set a baseline.
+
+Considering 20.3cm (no.2) has a visible +1 acc, the control group will be equipped with 14cm guns. This should negate the visible accuracy bonus as well as possible (unconfirmed) "no gun penalty". The 14cm gun is assumed to give no special bonuses whatsoever to CA although a simple Type 0 Recon Seaplane vs. 14cm experiment could be conducted to verify the assumption.
+
+Finally, we have the data collection sheet as follow:
+
+{| class="wikitable" width="50%" style="text-align:center" align="center"
+!colspan="4"| Data collection sheet
+|-
+!Ship
+!14cm?
+!no.2?
+!hit?
+|-
+|Maya
+|✓
+|
+|✓
+|-
+|Choukai
+|
+|✓
+|✓
+|-
+|Nachi
+|✓
+|
+|✓
+|-
+|Haguro
+|
+|✓
+|
+|}
+
+;Criteria
+:The ships used in this study must be level 1 unmodernized CA.
+:The sortie map must be World 5-3, node C
+:The formation must be Line Ahead
+:The target ship must be Ri-class flagship
+:Equipment must not have any upgrade
+
+Tabulate the data into a contingency table for analysis.
+{| class="wikitable" width="60%" align="center" style="text-align:center"
+!colspan="4"| Contingency table on both test groups. Sample size = N
+|-
+!
+!14cm
+!no.2
+|-
+!Observed hit o
+|xA
+|xB
+|-
+!Expected hit e
+|?
+|xA
+|}
+
+==Analysis==
+
+===Test of significance===
+
+Perform Chi-square analysis on 20.3cm data using 14cm's observed result as baseline.
+Hit and Miss are the new sample groups within 20.3cm no.2 test group.
+
+{| class="wikitable" width="60%" align="center" style="text-align:center"
+!colspan="4"| Chi-square test on no.2 data. Sample size = n
+|-
+!
+!Hit
+!Miss
+|-
+!Observed o
+|xB
+|n-xB
+|-
+!Expected e
+|xA*n/N
+|(n-xA)*n/N
+|-
+!Chi-square X^2
+|(o-e)^2/e
+|(o-e)^2/e
+|-
+!sum(X^2)
+|colspan="2"|X^2(Hit) + X^2(Miss)
+|-
+!df
+|colspan="2"|1
+|-
+!p-value(sum(X^2),df)
+|colspan="2"|
+|-
+!Prob(p>0.05)
+|colspan="2"|If p-value =< 0.05, Reject Ho
+|-
+|}
+
+:<code>Expected hit rate for no.2 test based on 14cm baseline = n/N*hit rate of 14cm
+:p-value of sum of Chi-squared is given by a Chi-square distribution table</code>
+
+===Confidence interval===
+
+The confidence interval formula for categorical data (of 14cm and no.2 respectively) is calculated as follow:
+
+:<code>hit rate: p = hit/n
+:z-crit of 95% confidence level = 1.96
+:p +- z-crit*sqrt(p(1-p)/n)</code>
+
+Computing the confidence interval of the two test groups and comparing them should give an estimation of the accuracy difference between the two guns. If the intervals overlap, we have an issue. A significant difference result on both tests should yield a more definitive conclusion.
+
+[[Category:Blog posts]]

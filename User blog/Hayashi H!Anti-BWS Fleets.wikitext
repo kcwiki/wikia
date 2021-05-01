@@ -1,0 +1,102 @@
+==Introduction==
+The purpose of this post is to attempt to create a fleet setup that would have the least possible chances of being taihaed by a BWS {{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship}} positioned in a pre-boss node. WARNING: HEAVY MATHS INVOLVEMENT
+==Assumptions==
+#>100% hp hit = 16.7% taiha on crit (20-50% HP, taiha value = 25%). This affects the chance of taiha after a ship is hit for more than its maximum HP.
+#Armour value rolls with equal chances of any value between 2/3 and 4/3 of the base armour stat. This affects the range of damage allowed, which affects all taiha chances calculated.
+#The crit chance is 10%. This affects the 'aggregate taiha rate' values only; the individual values of crit and non-crit are not affected.
+#Parallel engagement is assumed for all the following cases, even though the firepower difference from the calculated value will not exceed 3, so any change here should be relatively small. The player will be assumed to use a Saiun such that Red T never occurs.
+Everything else below this is based on the stats released through the UI/datamining of {{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship}}'s squadrons, and can be assumed to be correct by default. However, if any of the three assumptions above this are wrong, the conclusions will change respectively. All ship calculations are done with their final forms.
+==Calculations for various ships==
+{{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship}} Shelling Attack = 55 + 1.5(16+16+40) + 2.0(15) = 193 attack (156 attack in parallel, 154 attack in head on, 159 attack in Green T). The value of parallel will be used as it is the most common engagement form. This affects all values.
+===Musashi===
+Musashi roll 79-158 armor, 97 hp (64 EVA), taihas at 23 HP
+
+Noncrit
+156 attack
+<83 armor roll = 4.6% taiha from full HP
+Rest: Anything from scratch to chuuha
+
+Crit
+234 attack
+137+ armor roll = 97+ damage = 26.6% chance * 16.7% = 4.4% taiha
+<73 damage = >161 armor, so every roll type will result in taiha
+Taiha chance = 73.4% chance + 4.4% chance = 77.8%
+
+Aggregate taiha rate assuming 10% critrate = 11.9%, 64 EVA.
+===Hiei===
+Hiei roll 63-126 armor, 83 hp (72 EVA), taihas at 20 HP
+
+Noncrit
+156
+<73 armor roll = 15.9% chance * 16.7% = 2.7% taiha
+<93 armor roll = 31.7% chance taiha
+Minimum damage taken = 30 = shouha.
+Taiha chance = 2.7+31.7 = 34.4%
+
+Crit
+234 attack
+100% exceeds HP limit, taiha rate = 16.7%.
+
+Aggregate taiha rate assuming 10% critrate = 32.7%, 72 EVA.
+===Haguro (and most CAs, and everything lighter)===
+Haguro roll 48-97 armor, 57 hp (84 EVA), taihas at 14 HP
+
+Noncrit
+156 attack
+Maximum armor roll = takes 97 damage, so all rolls will deal >100% HP.
+Taiha rate = 16.7% regardless of crit or not, 84 EVA.
+
+Aggregate taiha rate = 16.7%, 84 EVA
+===Nagato===
+Nagato roll 65-130 armor, 90 hp (69 EVA), taihas at 22 HP
+
+Noncrit
+156
+<66 armor roll = 3% chance * 16.7% = 0.5%
+<88 armor roll = 33.8% chance
+Minimum damage taken = 26 = shouha.
+Taiha chance = 0.5%+33.8% = 34.3%
+
+Crit
+234 attack
+100% exceeds HP limit, taiha rate = 16.7%
+
+Aggregate taiha rate assuming 10% critrate = 32.6%, 69 EVA.
+===Fusou===
+Fusou roll 60-120 armor, 77 hp (69 EVA), taihas at 19 HP
+
+Noncrit 156
+<79 armor roll = 31.7% chance * 16.7% = 5.3%
+<98 armor roll = 31.7% chance
+Minimum damage taken = 36 = shouha.
+Taiha chance = 5.3%+31.7% = 37%
+
+Crit
+234 attack
+100% exceeds HP limit, taiha rate = 16.7%
+
+Aggregate taiha rate assuming 10% critrate = 35.0%, 69 EVA.
+==Final Comparison==
+Aggregate taiha rates:
+Musashi 11.9%, 64 EVA.
+Hiei 32.7%, 72 EVA.
+Haguro 16.7%, 84 EVA.
+Nagato 32.6%, 69 EVA.
+Fusou 35.0%, 69 EVA.
+==Suggested Conclusions (this part is opinion, not math, so reject at will)==
+#Don't sortie large numbers of non-Yamasushi battleships against {{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship}} as they will have a disproportionately large chance of taiha. If you must have 1 to create the double shelling phase at boss node, have ONE. If preboss nodes have no enemy BBs, have BWS and the final boss node has something that will already trigger a double shelling phase (like a BB, Hime or Oni), take zero battleships so the BWS gets to shell only once. Yamasushi may fare better against early-node BWS if all ships' evasion are at soft cap, while in late nodes where fuel reduces evasion further, it is highly likely the CAs' higher evasion will result in them not being hit by the BWS at all.
+#Sortie as few ships lighter than CAs as possible, as all of them have the same taiha chance - but the CAs have the highest chance of chuuha/sinking {{ShipBattleCardKai|Standard Carrier Wo-Class/Kai Flagship}} before it even launches.
+#Bring Maya, Akizuki or Teruzuki, and obtain Air Supremacy as far as possible. Denying BWS contact reduces the chance of it taiha-ing ships in initial airstrike, and Air Supremacy in addition to AACI has the potential of entirely eliminating its bombers so it never enters the shelling phase.
+#An ideal combined fleet against a BWS + Tsu-class preboss node in a carrier task force, with a final boss composition capable of triggering dual shelling phase without player input, is composed of four standard carriers in Air SUPREMACY mode ([[User_blog:Hayashi_H/30_October_Fighter_Quest-chain#T62_Fighter-Bomber_Usage|T62 may show up in the builds to achieve this]]), paired with {{ShipBattleCardKai|Maya/Kai Ni}} in AACI mode and {{ShipBattleCardKai|Choukai/Kai Ni}} in Artillery Spotting mode with the radar replaced by a [[Fleet Command Facility]] as flagship. The escort fleet will be comprised of as many initial-strike users as possible, the mandatory destroyers, and the rest of the slots will be filled by Heavy Cruisers in Artillery Spotting setups. If the boss requires cut-in attacks to sink, the destroyers will be the cut-in users. [[User blog:Hayashi H/Advanced Equipment Guide|See this for details on how to outfit the various ships accordingly.]] The first goal is to cut the number of fighters in the BWS squadron to either reduce its airstrike capability or eliminate its shelling entirely with Supremacy and AACI. The second goal is to bring the BWS to chuuha as early as possible to prevent it from entering a shelling phase. The third goal is to have enough evasion on your ships to entirely evade any airstrikes and shelling attacks. Only if the first three fail does the last goal apply of having the smallest possible chance of taiha if a ship is hit by a BWS shelling strike. Remember that shelling does not depend on slot size - so as long as the BWS does not have ZERO bombers and is not in chuuha or lower health, damage control becomes a major consideration.
+==Further Reading==
+Interestingly, after performing these calculations and discussing them in Chat, we discovered that this line of thought already has a predecessor. [[User_blog:DynamitMC/How_to_use_"Player_Ship_Protection_Mechanism"_in_our_advantage|DynamitMC had made a blog post]] on the same topic some time ago, and apparently we arrived at the exact same calculation method (though he didn't assume a value of critrate for the BWS like I did in interests of accuracy - while I assumed one in order to make direct single-number comparisons easier). He was kind enough to have already made an automatic calculator for this purpose containing the effective firepower information of every main enemy in KanColle as well as the above steps in an automated form, except his version also takes into account formation modifiers (whereas mine simply assumed a Line Ahead case to simplify the calculations, since I was doing it by hand). [http://tinyurl.com/KCdmgCalcF I've modified this calculator] with additional functions so that now, it automatically imports the HP, Armour, Firepower, Torpedo, ASW values from the tables he included, so now, you can do the calculation by simply selecting the ship class and name of your ship, the enemy ship, the formation type and the attack type you wish to analyse.
+===Other Guides===
+*[[User_blog:Hayashi_H/Advanced_Mechanics_Guide|Advanced game mechanics, like overweight mechanisms and more]]
+*[[User_blog:Hayashi_H/Advanced_Equipment_Guide|What equipment should each ship mount?]]
+*[[User blog:Hayashi H/Abyssal OHKO Chart|How much firepower is TRULY enough?]]
+*[[User blog:Hayashi H/Grinding DDs and CLs on 3-2A|Levelling your CLs and DDs quickly and cheaply]]
+*[[User_blog:Hayashi_H/Max-efficiency_Map-clear_Formations|Efficient formations used in repeated quests and EOs]]
+*[[User_blog:Hayashi_H/Max_efficiency_expedition_setups|Recovering resources at maximum rates]]
+==Credits==
+[[User:DynamitMC|DynamitMC, original creator of the taiha calculator.]]
+[[Category:Blog posts]]

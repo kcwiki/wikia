@@ -1,0 +1,400 @@
+<includeonly>{{#vardefine:pagename|{{#if:{{{pagename|}}}|{{{pagename}}}|{{PAGENAMEE}}}}}}{{#vardefine:stars|{{#expr:{{{top5_1_stars|0}}} + {{{top5_2_stars|0}}} + {{{top5_3_stars|0}}} + {{{top5_4_stars|0}}} + {{{top20_1_stars|0}}} + {{{top20_2_stars|0}}} + {{{top20_3_stars|0}}} + {{{top20_4_stars|0}}} + {{{top100_1_stars|0}}} + {{{top100_2_stars|0}}} + {{{top100_3_stars|0}}} + {{{top100_4_stars|0}}} + {{{top500_1_stars|0}}} + {{{top500_2_stars|0}}} + {{{top500_3_stars|0}}} + {{{top500_4_stars|0}}}}}}}{{#vardefine:has_stars|{{#ifexpr:{{#var:stars}} > 0|true}}}}{{#vardefine:table_colspan|{{#if:{{#var:has_stars}}|3|2}}}}{{#if:{{{banner|}}}|[[File:{{{banner}}}|600px|center|frameless|link=]]}}{{#if:{{{new_equipment|}}}|===New equipment===
+{{{!}} class="wikitable" style="width:100%;text-align:center"
+! colspan="4" {{!}} [[{{{new_equipment}}}]]
+{{!}}-
+{{!}} {{EquipmentCardKai|{{{new_equipment}}}|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment}}}|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment}}}|fairy=true|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment}}}|fairy=only|link=nil|size=150px}}
+{{#if:{{{new_equipment_2|}}}|{{!}}-
+! colspan="4" {{!}} [[{{{new_equipment_2}}}]]
+{{!}}-
+{{!}} {{EquipmentCardKai|{{{new_equipment_2}}}|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_2}}}|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_2}}}|fairy=true|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_2}}}|fairy=only|link=nil|size=150px}}
+{{#if:{{{new_equipment_3|}}}|{{!}}-
+! colspan="4" {{!}} [[{{{new_equipment_3}}}]]
+{{!}}-
+{{!}} {{EquipmentCardKai|{{{new_equipment_3}}}|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_3}}}|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_3}}}|fairy=true|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_3}}}|fairy=only|link=nil|size=150px}}
+{{#if:{{{new_equipment_4|}}}|{{!}}-
+! colspan="4" {{!}} [[{{{new_equipment_4}}}]]
+{{!}}-
+{{!}} {{EquipmentCardKai|{{{new_equipment_4}}}|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_4}}}|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_4}}}|fairy=true|link=nil|size=150px}}
+{{!}} {{EquipmentGraphicKai|{{{new_equipment_4}}}|fairy=only|link=nil|size=150px}}}}}}}}
+{{!}}}|}}
+===Equipment rewards===
+{{#tag:tabber|List=
+* '''Top 5''': 1st ~ 5th place (聯合艦隊基幹艦隊)
+** {{#if: {{{top5_1|}}}|{{EquipmentLink|{{{top5_1|?}}}}}{{#if:{{{top5_1_stars|}}}|&#32;{{color|blue|{{★|{{{top5_1_stars}}}}}}}}} × {{{top5_1_x|?}}}|?}}{{#if: {{{top5_2|}}}|
+** {{EquipmentLink|{{{top5_2|?}}}}}{{#if:{{{top5_2_stars|}}}|&#32;{{color|blue|{{★|{{{top5_2_stars}}}}}}}}} × {{{top5_2_x|?}}}|}}{{#if: {{{top5_3|}}}|
+** {{EquipmentLink|{{{top5_3|?}}}}}{{#if:{{{top5_3_stars|}}}|&#32;{{color|blue|{{★|{{{top5_3_stars}}}}}}}}} × {{{top5_3_x|?}}}|}}{{#if: {{{top5_4|}}}|
+** {{EquipmentLink|{{{top5_4|?}}}}}{{#if:{{{top5_4_stars|}}}|&#32;{{color|blue|{{★|{{{top5_4_stars}}}}}}}}} × {{{top5_4_x|?}}}|}}
+* '''Top 20''': 6th ~ 20th place (主力艦隊第一群)
+** {{#if: {{{top20_1|}}}|{{EquipmentLink|{{{top20_1|?}}}}}{{#if:{{{top20_1_stars|}}}|&#32;{{color|blue|{{★|{{{top20_1_stars}}}}}}}}} × {{{top20_1_x|?}}}|?}}{{#if: {{{top20_2|}}}|
+** {{EquipmentLink|{{{top20_2|?}}}}}{{#if:{{{top20_2_stars|}}}|&#32;{{color|blue|{{★|{{{top20_2_stars}}}}}}}}} × {{{top20_2_x|?}}}|}}{{#if: {{{top20_3|}}}|
+** {{EquipmentLink|{{{top20_3|?}}}}}{{#if:{{{top20_3_stars|}}}|&#32;{{color|blue|{{★|{{{top20_3_stars}}}}}}}}} × {{{top20_3_x|?}}}|}}{{#if: {{{top20_4|}}}|
+** {{EquipmentLink|{{{top20_4|?}}}}}{{#if:{{{top20_4_stars|}}}|&#32;{{color|blue|{{★|{{{top20_4_stars}}}}}}}}} × {{{top20_4_x|?}}}|}}
+* '''Top 100''': 21st ~ 100th place (主力艦隊第二群)
+** {{#if: {{{top100_1|}}}|{{EquipmentLink|{{{top100_1|?}}}}}{{#if:{{{top100_1_stars|}}}|&#32;{{color|blue|{{★|{{{top100_1_stars}}}}}}}}} × {{{top100_1_x|?}}}|?}}{{#if: {{{top100_2|}}}|
+** {{EquipmentLink|{{{top100_2|?}}}}}{{#if:{{{top100_2_stars|}}}|&#32;{{color|blue|{{★|{{{top100_2_stars}}}}}}}}} × {{{top100_2_x|?}}}|}}{{#if: {{{top100_3|}}}|
+** {{EquipmentLink|{{{top100_3|?}}}}}{{#if:{{{top100_3_stars|}}}|&#32;{{color|blue|{{★|{{{top100_3_stars}}}}}}}}} × {{{top100_3_x|?}}}|}}{{#if: {{{top100_4|}}}|
+** {{EquipmentLink|{{{top100_4|?}}}}}{{#if:{{{top100_4_stars|}}}|&#32;{{color|blue|{{★|{{{top100_4_stars}}}}}}}}} × {{{top100_4_x|?}}}|}}
+* '''Top 500''': 101st ~ 500th place (主力艦隊第三群)
+** {{#if: {{{top500_1|}}}|{{EquipmentLink|{{{top500_1|?}}}}}{{#if:{{{top500_1_stars|}}}|&#32;{{color|blue|{{★|{{{top500_1_stars}}}}}}}}} × {{{top500_1_x|?}}}|?}}{{#if: {{{top500_2|}}}|
+** {{EquipmentLink|{{{top500_2|?}}}}}{{#if:{{{top500_2_stars|}}}|&#32;{{color|blue|{{★|{{{top500_2_stars}}}}}}}}} × {{{top500_2_x|?}}}|}}{{#if: {{{top500_3|}}}|
+** {{EquipmentLink|{{{top500_3|?}}}}}{{#if:{{{top500_3_stars|}}}|&#32;{{color|blue|{{★|{{{top500_3_stars}}}}}}}}} × {{{top500_3_x|?}}}|}}{{#if: {{{top500_4|}}}|
+** {{EquipmentLink|{{{top500_4|?}}}}}{{#if:{{{top500_4_stars|}}}|&#32;{{color|blue|{{★|{{{top500_4_stars}}}}}}}}} × {{{top500_4_x|?}}}|}}
+{{!}}-{{!}}Table=
+{{{!}} class="wikitable typography-xl-optout" style="width:100%;"
+! style="width:80%" {{!}} Name{{#if:{{#var:has_stars}}|!! [[Improvements|Stars]]}}!! Quantity
+{{!}}-
+! colspan="{{#var:table_colspan}}" {{!}} Top 5: 1st ~ 5th place (聯合艦隊基幹艦隊)
+{{!}}-
+{{!}} {{#if: {{{top5_1|}}}|{{EquipmentLink|{{{top5_1|?}}}}}|?}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top5_1_stars|}}}|{{color|blue|{{★|{{{top5_1_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top5_1_x|}}}|{{{top5_1_x|?}}}|?}}
+{{#if: {{{top5_2|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top5_2}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top5_2_stars|}}}|{{color|blue|{{★|{{{top5_2_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top5_2_x|}}}|{{{top5_2_x|?}}}|?}}
+{{#if: {{{top5_3|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top5_3}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top5_3_stars|}}}|{{color|blue|{{★|{{{top5_3_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top5_3_x|}}}|{{{top5_3_x|?}}}|?}}
+{{#if: {{{top5_4|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top5_4}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top5_4_stars|}}}|{{color|blue|{{★|{{{top5_4_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top5_4_x|}}}|{{{top5_4_x|?}}}|?}}|}}|}}|}}
+{{!}}-
+! colspan="{{#var:table_colspan}}" {{!}} Top 20: 6th ~ 20th place (主力艦隊第一群)
+{{!}}-
+{{!}} {{#if: {{{top20_1|}}}|{{EquipmentLink|{{{top20_1|?}}}}}|?}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top20_1_stars|}}}|{{color|blue|{{★|{{{top20_1_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top20_1_x|}}}|{{{top20_1_x|?}}}|?}}
+{{#if: {{{top20_2|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top20_2}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top20_2_stars|}}}|{{color|blue|{{★|{{{top20_2_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top20_2_x|}}}|{{{top20_2_x|?}}}|?}}
+{{#if: {{{top20_3|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top20_3}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top20_3_stars|}}}|{{color|blue|{{★|{{{top20_3_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top20_3_x|}}}|{{{top20_3_x|?}}}|?}}
+{{#if: {{{top20_4|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top20_4}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top20_4_stars|}}}|{{color|blue|{{★|{{{top20_4_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top20_4_x|}}}|{{{top20_4_x|?}}}|?}}|}}|}}|}}
+{{!}}-
+! colspan="{{#var:table_colspan}}" {{!}} Top 100: 21st ~ 100th place (主力艦隊第二群)
+{{!}}-
+{{!}} {{#if: {{{top100_1|}}}|{{EquipmentLink|{{{top100_1|?}}}}}|?}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top100_1_stars|}}}|{{color|blue|{{★|{{{top100_1_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top100_1_x|}}}|{{{top100_1_x|?}}}|?}}
+{{#if: {{{top100_2|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top100_2}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top100_2_stars|}}}|{{color|blue|{{★|{{{top100_2_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top100_2_x|}}}|{{{top100_2_x|?}}}|?}}
+{{#if: {{{top100_3|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top100_3}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top100_3_stars|}}}|{{color|blue|{{★|{{{top100_3_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top100_3_x|}}}|{{{top100_3_x|?}}}|?}}
+{{#if: {{{top100_4|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top100_4}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top100_4_stars|}}}|{{color|blue|{{★|{{{top100_4_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top100_4_x|}}}|{{{top100_4_x|?}}}|?}}|}}|}}|}}
+{{!}}-
+! colspan="{{#var:table_colspan}}" {{!}} Top 500: 101st ~ 500th place (主力艦隊第三群)
+{{!}}-
+{{!}} {{#if: {{{top500_1|}}}|{{EquipmentLink|{{{top500_1|?}}}}}|?}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top500_1_stars|}}}|{{color|blue|{{★|{{{top500_1_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top500_1_x|}}}|{{{top500_1_x|?}}}|?}}
+{{#if: {{{top500_2|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top500_2}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top500_2_stars|}}}|{{color|blue|{{★|{{{top500_2_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top500_2_x|}}}|{{{top500_2_x|?}}}|?}}
+{{#if: {{{top500_3|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top500_3}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top500_3_stars|}}}|{{color|blue|{{★|{{{top500_3_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top500_3_x|}}}|{{{top500_3_x|?}}}|?}}
+{{#if: {{{top500_4|}}}|{{!}}-
+{{!}} {{EquipmentLink|{{{top500_4}}}}}{{#if:{{#var:has_stars}}|{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top500_4_stars|}}}|{{color|blue|{{★|{{{top500_4_stars}}}}}}}|-}}}}{{!}}{{!}} style="text-align:center;" {{!}} {{#if:{{{top500_4_x|}}}|{{{top500_4_x|?}}}|?}}|}}|}}|}}
+{{!}}}
+{{!}}-{{!}}Gallery=
+{{{!}} class="wikitable typography-xl-optout" style="text-align:center;"
+! style="background:gray;color:white;font-size:18px" colspan="4" {{!}} <span class="explain" title="Click to reveal the names of equipment"><div class="mw-customtoggle-top5">Top 5: 1st ~ 5th place (<span class="explain" title="Kangou Kantai Kikan Kantai">聯合艦隊基幹艦隊</span>)</div>
+{{!}}-
+<!-- First item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top5_1|}}}|{{EquipmentCardKai|{{{top5_1}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top5_1_x|}}}|×{{{top5_1_x}}}}}
+|text2 = {{#if:{{{top5_1_stars|}}}|{{★|{{{top5_1_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">{{#if:{{{top5_1|}}}|[[{{{top5_1}}}]]|&nbsp;}}</div>
+<!-- Second item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top5_2|}}}|{{EquipmentCardKai|{{{top5_2}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top5_2_x|}}}|×{{{top5_2_x}}}}}
+|text2 = {{#if:{{{top5_2_stars|}}}|{{★|{{{top5_2_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">{{#if:{{{top5_2|}}}|[[{{{top5_2}}}]]|&nbsp;}}</div>
+<!-- Third item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top5_3|}}}|{{EquipmentCardKai|{{{top5_3}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top5_3_x|}}}|×{{{top5_3_x}}}}}
+|text2 = {{#if:{{{top5_3_stars|}}}|{{★|{{{top5_3_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">{{#if:{{{top5_3|}}}|[[{{{top5_3}}}]]|&nbsp;}}</div>
+<!-- Last item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top5_4|}}}|{{EquipmentCardKai|{{{top5_4}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top5_4_x|}}}|×{{{top5_4_x}}}}}
+|text2 = {{#if:{{{top5_4_stars|}}}|{{★|{{{top5_4_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-top5">{{#if:{{{top5_4|}}}|[[{{{top5_4}}}]]|&nbsp;}}</div>
+<!-- End Top 5 -->
+{{!}}-
+! style="background:gray;color:white;font-size:18px" colspan="4" {{!}} <span class="explain" title="Click to reveal the names of equipment"><div class="mw-customtoggle-6to20">Top 20: 6th ~ 20th place (<span class="explain" title="Shuuryoku Kantai Dai Ichi Gun">主力艦隊第一群</span>)</div>
+{{!}}-
+<!-- First item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top20_1|}}}|{{EquipmentCardKai|{{{top20_1}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top20_1_x|}}}|×{{{top20_1_x}}}}}
+|text2 = {{#if:{{{top20_1_stars|}}}|{{★|{{{top20_1_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-6to20">{{#if:{{{top20_1|}}}|[[{{{top20_1}}}]]|&nbsp;}}</div>
+<!-- Second item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top20_2|}}}|{{EquipmentCardKai|{{{top20_2}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top20_2_x|}}}|×{{{top20_2_x}}}}}
+|text2 = {{#if:{{{top20_2_stars|}}}|{{★|{{{top20_2_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-6to20">{{#if:{{{top20_2|}}}|[[{{{top20_2}}}]]|&nbsp;}}</div>
+<!-- Third item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top20_3|}}}|{{EquipmentCardKai|{{{top20_3}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top20_3_x|}}}|×{{{top20_3_x}}}}}
+|text2 = {{#if:{{{top20_3_stars|}}}|{{★|{{{top20_3_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-6to20">{{#if:{{{top20_3|}}}|[[{{{top20_3}}}]]|&nbsp;}}</div>
+<!-- Last item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top20_4|}}}|{{EquipmentCardKai|{{{top20_4}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top20_4_x|}}}|×{{{top20_4_x}}}}}
+|text2 = {{#if:{{{top20_4_stars|}}}|{{★|{{{top20_4_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-6to20">{{#if:{{{top20_4|}}}|[[{{{top20_4}}}]]|&nbsp;}}</div>
+<!-- End rank 6 to 20 -->
+{{!}}-
+! style="background:gray;color:white;font-size:18px" colspan="4" {{!}} <span class="explain" title="Click to reveal the names of equipment in text"><div class="mw-customtoggle-21to100">Top 100: 21st ~ 100th place (<span class="explain" title="Shuuryoku Kantai Dai Ni Gun">主力艦隊第二群</span>)</div>
+{{!}}-
+<!-- First item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top100_1|}}}|{{EquipmentCardKai|{{{top100_1}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top100_1_x|}}}|×{{{top100_1_x}}}}}
+|text2 = {{#if:{{{top100_1_stars|}}}|{{★|{{{top100_1_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-21to100">{{#if:{{{top100_1|}}}|[[{{{top100_1}}}]]|&nbsp;}}</div>
+<!-- Second item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top100_2|}}}|{{EquipmentCardKai|{{{top100_2}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top100_2_x|}}}|×{{{top100_2_x}}}}}
+|text2 = {{#if:{{{top100_2_stars|}}}|{{★|{{{top100_2_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-21to100">{{#if:{{{top100_2|}}}|[[{{{top100_2}}}]]|&nbsp;}}</div>
+<!-- Third item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top100_3|}}}|{{EquipmentCardKai|{{{top100_3}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top100_3_x|}}}|×{{{top100_3_x}}}}}
+|text2 = {{#if:{{{top100_3_stars|}}}|{{★|{{{top100_3_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-21to100">{{#if:{{{top100_3|}}}|[[{{{top100_3}}}]]|&nbsp;}}</div>
+<!-- Last item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top100_4|}}}|{{EquipmentCardKai|{{{top100_4}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top100_4_x|}}}|×{{{top100_4_x}}}}}
+|text2 = {{#if:{{{top100_4_stars|}}}|{{★|{{{top100_4_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-21to100">{{#if:{{{top100_4|}}}|[[{{{top100_4}}}]]|&nbsp;}}</div>
+<!-- End Rank 21 to 100 -->
+{{!}}-
+! style="background:gray;color:white;font-size:18px" colspan="4" {{!}} <span class="explain" title="Click to reveal the names of equipment in text"><div class="mw-customtoggle-101to500">Top 500: 101st ~ 500th place (<span class="explain" title="Shuuryoku Kantai Dai San Gun">主力艦隊第三群</span>)</div>
+{{!}}-
+<!-- First item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top500_1|}}}|{{EquipmentCardKai|{{{top500_1}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top500_1_x|}}}|×{{{top500_1_x}}}}}
+|text2 = {{#if:{{{top500_1_stars|}}}|{{★|{{{top500_1_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-101to500">{{#if:{{{top500_1|}}}|[[{{{top500_1}}}]]|&nbsp;}}</div>
+<!-- Second item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top500_2|}}}|{{EquipmentCardKai|{{{top500_2}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top500_2_x|}}}|×{{{top500_2_x}}}}}
+|text2 = {{#if:{{{top500_2_stars|}}}|{{★|{{{top500_2_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-101to500">{{#if:{{{top500_2|}}}|[[{{{top500_2}}}]]|&nbsp;}}</div>
+<!-- Third item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top500_3|}}}|{{EquipmentCardKai|{{{top500_3}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top500_3_x|}}}|×{{{top500_3_x}}}}}
+|text2 = {{#if:{{{top500_3_stars|}}}|{{★|{{{top500_3_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-101top500">{{#if:{{{top500_3|}}}|[[{{{top500_3}}}]]|&nbsp;}}</div>
+<!-- Last item -->
+{{!}}{{ItemStack
+|item = {{#if:{{{top500_4|}}}|{{EquipmentCardKai|{{{top500_4}}}|size=120px}}|<div style="width:120px;height:120px;"></div>}}
+|text-position = bottom:-55px;right:0px;
+|text-position2 = bottom:50px;right:0px;
+|font-size = 18px
+|text = {{#if:{{{top500_4_x|}}}|×{{{top500_4_x}}}}}
+|text2 = {{#if:{{{top500_4_stars|}}}|{{★|{{{top500_4_stars}}}}}}}
+|glow-size = 15px
+|text-color = fff
+|glow-color = f00
+|glow-color2 = 00f
+}}
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-101top500">{{#if:{{{top500_4|}}}|[[{{{top500_4}}}]]|&nbsp;}}</div>
+<!-- End of fancy table -->
+{{!}}}
+}}
+{{#if:{{{notes|}}}|===Notes===
+{{{notes}}}}}
+{{#ifexist:{{#var:pagename}}/Tweets|<h2>Developer Tweets<div style="float:right;font-size:14px">{{Edit|{{#var:pagename}}/Tweets}}</div></h2>
+{{:{{#var:pagename}}/Tweets}}|{{#if:{{{tweet1|}}}|==Developer Tweets==
+{{MultiTweet
+|MultiTweetID = RelatedTweet
+|color = #ace
+
+|link01 = {{{tweet1|}}}
+|JP01 = {{{tweet1_jp|}}}
+|EN01 = {{{tweet1_en|}}}
+|TL01 = {{{tweet1_tl|}}}
+
+|link02 = {{{tweet2|}}}
+|JP02 = {{{tweet2_jp|}}}
+|EN02 = {{{tweet2_en|}}}
+|TL02 = {{{tweet2_tl|}}}
+
+|link03 = {{{tweet3|}}}
+|JP03 = {{{tweet3_jp|}}}
+|EN03 = {{{tweet3_en|}}}
+|TL03 = {{{tweet3_tl|}}}
+
+|link04 = {{{tweet4|}}}
+|JP04 = {{{tweet4_jp|}}}
+|EN04 = {{{tweet4_en|}}}
+|TL04 = {{{tweet4_tl|}}}
+
+|link05 = {{{tweet5|}}}
+|JP05 = {{{tweet5_jp|}}}
+|EN05 = {{{tweet5_en|}}}
+|TL05 = {{{tweet5_tl|}}}
+
+|link06 = {{{tweet6|}}}
+|JP06 = {{{tweet6_jp|}}}
+|EN06 = {{{tweet6_en|}}}
+|TL06 = {{{tweet6_tl|}}}
+
+|link07 = {{{tweet7|}}}
+|JP07 = {{{tweet7_jp|}}}
+|EN07 = {{{tweet7_en|}}}
+|TL07 = {{{tweet7_tl|}}}
+
+|link08 = {{{tweet8|}}}
+|JP08 = {{{tweet8_jp|}}}
+|EN08 = {{{tweet8_en|}}}
+|TL08 = {{{tweet8_tl|}}}
+
+|link09 = {{{tweet9|}}}
+|JP09 = {{{tweet9_jp|}}}
+|EN09 = {{{tweet9_en|}}}
+|TL09 = {{{tweet9_tl|}}}
+
+|link10 = {{{tweet10|}}}
+|JP10 = {{{tweet10_jp|}}}
+|EN10 = {{{tweet10_en|}}}
+|TL10 = {{{tweet10_tl|}}}
+
+}}}}}}__NOTOC__</includeonly><noinclude>
+{{Documentation}}
+</noinclude>

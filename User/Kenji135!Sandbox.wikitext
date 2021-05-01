@@ -1,0 +1,80 @@
+Shiplist modules: [[User:Kenji135/ShiplistModules]]
+
+Shiplinks by shipclass: [[User:Kenji135/ShipClassLink]]
+
+Shiplinks by nationality: [[User:Kenji135/ShipNationLink]]
+
+{{ShipLink|Verniy}}
+
+{{#switch: Akatsuki
+ |Kamikaze-class = {{ShipLink|Kamikaze|Asakaze|Harukaze|Matsukaze|Hatakaze|text=Kamikaze|link_category=Kamikaze Class}}
+ |Akatsuki
+ |Akatsuki-class = 
+  {{#if: latestRemodel
+   |{{ShipLink|Akatsuki/Kai Ni|Verniy|Ikazuchi|Inazuma|text={{#if:text|text|Akatsuki}}|link_category=Akatsuki Class}}
+   |{{#if: kaiNiOnly
+     |{{ShipLink|Akatsuki/Kai Ni|Verniy|text={{#if:text|text|Akatsuki}}|link_category=Akatsuki Class}}
+     |{{#if: allRemodel
+       |{{ShipLink|Akatsuki/Kai Ni|Verniy|text={{#if:text|text|Akatsuki}}|link_category=Akatsuki Class}}
+       |{{ShipLink|Akatsuki|Hibiki|Ikazuchi|Inazuma|text={{#if:text|text|Akatsuki}}|link_category=Akatsuki Class}}
+      }}
+    }}
+  }}
+}}
+
+{{#switch: Akatsuki
+ |Kamikaze-class = {{ShipLink|Kamikaze|Asakaze|Harukaze|Matsukaze|Hatakaze|text=Kamikaze|link_category=Kamikaze Class}}
+ |Akatsuki
+ |Akatsuki-class = 
+  {{#if:{{{latestRemodel|}}}<!--All ships, K2 where applicable-->
+   |{{ShipLink|Akatsuki/Kai Ni|Verniy|Ikazuchi|Inazuma
+     |text={{#if:{{{text|}}}|{{{text}}}|Akatsuki}}
+     |link_category={{#if:{{{link_category|}}}|{{{link_category}}}|Akatsuki Class
+    }}
+   |{{#if:{{{kaiNiOnly|}}}<!--All ships with K2 only (if multiple, take first Kai Ni only, not Kai Ni B)-->
+     |{{ShipLink|Akatsuki/Kai Ni|Verniy
+       |text={{#if:{{{text|}}}|{{{text}}}|Akatsuki}}
+       |link_category={{#if:{{{link_category|}}}|{{{link_category}}}|Akatsuki Class
+      }}
+     |{{#if:{{{allRemodel|}}}<!--All non-Kai remodels (e.g. A / Kai B / Kai Ni / Kai Ni B)-->
+       |{{ShipLink|Akatsuki/Kai Ni|Verniy
+         |text={{#if:{{{text|}}}|{{{text}}}|Akatsuki}}
+         |link_category={{#if:{{{link_category|}}}|{{{link_category}}}|Akatsuki Class
+        }}<!--All ships, base form-->
+       |{{ShipLink|Akatsuki|Hibiki|Ikazuchi|Inazuma
+         |text={{#if:{{{text|}}}|{{{text}}}|Akatsuki}}
+         |link_category={{#if:{{{link_category|}}}|{{{link_category}}}|Akatsuki Class
+        }}
+      }}
+    }}
+  }}
+}}
+
+Script to get ship class template from the ship's ship class table at wikipedia
+
+<pre>
+function copyToClipboard(text){
+    var dummy = document.createElement("textarea");
+    document.body.appendChild(dummy);
+    dummy.value = text;
+    dummy.select();
+    document.execCommand("copy");
+    document.body.removeChild(dummy);
+}
+
+var x = document.getElementsByClassName('navbox-list navbox-odd')[0]
+var y = x.getElementsByTagName('li')
+
+var re = new RegExp('title=\"(.*?)\".*<i>(.*)<\/i>')
+
+var text = ''
+
+for (var i = 0; i < y.length; i++) {
+	var match = re.exec(y[i].innerHTML)
+	text += '[[wikipedia:' + match[1] + '|' + match[2] + ']]' + '{{·}}'
+}
+
+text = text.slice(0, text.length-5)
+console.log(text)
+copyToClipboard(text)
+</pre>

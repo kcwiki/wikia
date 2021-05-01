@@ -1,0 +1,1 @@
+{{#iferror:<span class="advanced-tooltip">{{#if:{{{card|}}}|{{ShipBattleCardKai|{{{1}}}|link={{#if:{{{link|}}}|{{{link}}}|{{{1}}}}}}}|{{#if:{{{link|}}}|[[{{{link}}}]]|[[{{{1}}}]]}}}}<div class="tooltip-contents">{{#if:{{{2|}}}|[[File:{{{2}}}]]|{{#if:{{{small|}}}|{{ShipBattleCardKai|{{{1}}}}}|{{ShipCardKai|{{{1}}}}}}}}}</div></span>|{{#if:{{{link|}}}|[[{{{link}}}]]|[[{{{1}}}]]}}}}

@@ -1,0 +1,60 @@
+{{Map/Header}}
+{{Map/Info
+|en = Coastal Refinery Zone
+|jp = 製油所地帯沿岸
+|romaji = Sēyujo-chitai engan
+|strategy_name = Maritime Convoy Tactics
+|strategy_name_ja = 海上護衛作戦
+|strategy_info = Protect the supply lines from our coastal refineries!
+|strategy_info_ja = 製油所地帯沿岸部の<br>海上輸送ラインを防衛せよ！
+|exp_hq = 40
+|exp_hq_boss = 380
+}}
+{{MapBranchingTable
+|expand = true
+|id = 1-3
+|0 -> A/empty, C = 
+*Go to A if fleet contains AO or AV
+*Go to C if fleet contains CV(L)
+*Otherwise, random routing
+
+|A/empty -> D/resource, E = 
+*Meet '''ANY''' of the following to go to D
+**Fleet contains AO
+**DE ≥ 4
+*Go to E if fleet only contains SS(V)
+*80% to D if fleet contains AV and DD+DE ≥ 4
+*Otherwise, random routing
+
+|F -> H/storm, J = 
+*Go to H if fleet contains any CV(B), slow BBs (BBV doesn't count)
+*Meet '''ANY''' of the following to go to J
+**DD ≥ 4
+**Fleet contains CL and DD+DE ≥ 4
+*Otherwise, random routing (The more CV(L/B) you bring, the higher chance you will go to node H)
+
+|H/storm -> G/resource, I/empty, J = 
+*Go to G if fleet contains AO
+*Go to J if fleet contains CL and DD ≥ 2, or fleet contains AV
+*Otherwise
+**If DD ≥ 3, random routing (Very small chance for I)
+**If DD ≤ 2, random routing (Very small chance for G)
+}}
+
+===Synopsis===
+*This map marks the introduction of abyssal battleships, maelstrom nodes<s>, and the possibility of not reaching the boss node without a correct fleet composition.</s>
+*This map can be used to farm [[File:Fuel.png|30px]] fuel with the appropriate ships and equipment, see [[#Fuel Farming|Fuel Farming]].
+
+===Recommended Fleet===
+*A Light Torpedo Squadron Fleet (Ex. 1 CL 5 DD) will direct you to the Boss through {{Event/Route|F|red}} to {{Event/Route|J|red}} without off-routing regardless of where you started ({{Event/Route|A|blue}} or {{Event/Route|C|red}}). 
+
+
+===Fuel Farming===
+Node D contains a fuel node that rewards 10/15/20 fuel at random. This number can be increased by 2 for every Drum Canister equipped and by 3 for every Landing Craft/Amphibious Tank equipped. (The 11th Tank Regiment does not count). A fleet with 15 drums can earn between 40 ~ 50 fuel per run.
+
+Bringing an AV/AO guarantees A start and helps to ensure D routing. Hayasui is not recommended due to her high fuel cost. You do not gain the fuel if you refresh before completing the sortie, so you have to retreat from Node E after the end of the battle for the fuel to count.
+
+The recommended composition for fuel farming is 1AV 5DD with as many transport equipment equipped as possible. Since the enemies at node E are fairly light and achieving victory is not a requirement, no combat equipment is required. It is possible to swap a DD with a SS to tank the node, but doing so lowers your fuel gain unless you are using Luigi Torelli. Finally, it is worth noting that farming fuel with this method yields marginal fuel gains per run and can be rather tedious.
+
+
+{{Map/Footer}}

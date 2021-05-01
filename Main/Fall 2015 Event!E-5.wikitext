@@ -1,0 +1,163 @@
+__NOTOC__
+
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;">
+{| width="100%"
+|'''Report threads'''
+|-
+|
+*Report your fleet composition [[Thread:355321|here]]
+*Report enemy pattern [[Thread:355320|here]]
+|}
+</div>
+
+==Information==
+To enter the map, you need to have a CL flagship plus min. one DD, and at most CL + 4 DD + X. X can only be CA, CAV, CT, CLT, CL or DD.
+{{Infobox
+|title = Overcome! Nightbattle of Vanilla Gulf!
+|kanji = 乗り越えろ!バニラ湾夜戦!
+|romaji = Norikoero! Vanilla-wan yasen!
+|image = Fall_2015_E5_Banner.png
+|label1 = Mechanics
+|value1 = [[Event#Ship_Locking|Ship locking]] (orange/green)<br/>[[Events#Debuffing_Mechanism|Debuffing Mechanism]]<br/>[[Fall_2015_Event/Info#New_mechanic:_Transport_off-load_Gauge|Transport off-load Gauge]]<br/>[[Event#Manual_Node_Selection|Node Selection]]<br/>[[Event#LoS_Check|LoS Check]]<br/>[[PT Imp Pack]]<br/>[[Fall_2015_Event/Info#Map_HP_dependent_on_HQ_level|HQ dependent Map HP]]
+|label2 = Boss gauge
+|value2 = Easy: 120 TP / 720 HP<br>Medium: 240 TP / 1000 HP<br>Hard: 360 TP / 1060 HP<br>See also [[Fall_2015_Event/Info#Map_HP_dependent_on_HQ_level|this]] table
+|label3 = Kills required<br>(second gauge)
+|value3 =
+'''Easy:''' 3 kills (255 HP)<br>{{ShipBattleCardKai|Destroyer Water Demon/II}}<br/>
+'''Normal:''' 4 kills (255 HP)<br>{{ShipBattleCardKai|Destroyer Water Demon/II}}<br/>
+'''Hard:''' 5 kills (255 HP)<br>{{ShipBattleCardKai|Destroyer Water Demon/III}}
+|label4 = Reward
+|value4 =
+'''Easy:''' <br/>{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|text = x1}}<br/>
+'''Normal:''' <br/>{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|text = x2}}<br/>
+'''Hard:''' <br/>{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|text = x2}}[[File:First-Class Medal.png|50px|link=Medal#First_Class_Medal]]
+<br/>
+'''All:''' <br/>{{ShipBattleCardKai|Hagikaze}}
+}}
+
+===Branching rules===
+<span style="color:#f00;">If you see long colored boxes and not round nodes, clear your cache to see the updated styles.</span>
+* '''[[Sendai]], [[Kawakaze]], [[Shigure]], 1 CLT, 2 DD'''
+
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#777777;
+|C|#00CCFF;
+|G|#FF0000;
+|J|#FF0000;
+|K|#33aa00;
+|L|#FF0000;
+|N|#FF0000;
+}}</div>
+
+* Only '''[[Shigure]]'''
+
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#777777;
+|C|#00CCFF;
+|F|#FF0000;
+|G|#FF0000;
+|J|#FF0000;
+|K|#33aa00;
+|L|#FF0000;
+|N|#FF0000;
+}}</div>
+
+* Only '''[[Sendai]]''' and '''[[Shigure]] OR''' '''[[Shigure]] '''and''' [[Kawakaze]]'''
+
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#777777;
+|C|#00CCFF;
+|E|#00CCFF;
+|H|#FF0000;
+|J|#FF0000;
+|K|#33aa00;
+|L|#FF0000;
+|N|#FF0000;
+}}</div>
+
+* LoS check preboss when the gauge becomes red
+* 15 eLoS {{cite}} is enough to guarantee 100% boss routing for Hard mode. With lower values than the threshold, deadend node M routing is possible at rates dependent on eLoS.
+** wikiwiki give around 9
+
+===Tips===
+====AS Values====
+* Anything above zero will result in Air Supremacy.
+
+===='''Fleet composition'''====
+* For the branching at '''A C G J K L N''', the '''CLT''' can be replaced with '''CAV'''<ref name='onsFB'>[https://www.facebook.com/oniisamasasuga/posts/1672747176275650 @oniisamasasuga on Facebook]</ref>
+** Equip seaplane for LoS boost
+** Equip CA with 20.3(2) or similar strong variants
+
+==== '''Debuffing/Weakening '''====
+Defeating a certain amount of PT Imp Packs within the Map will weaken the Boss: Destroyer Water Demon.
+*[[#Gallery|The boss' voice and appearance changes after the weakening]]
+'''During Boss-HP Depletion Stage:'''
+* Sinking at least '''30''' [[PT Imp Pack]]s total within the Map in node H or L will weaken the Boss in TP-Bar phase{{cite}}
+** Other sources claim TP-Bar phase cannot be debuffed at all
+* Sinking at least '''15''' [[PT Imp Pack]]s total within the Map in node H or L will weaken the Boss in HP-Bar phase
+<!--Sources: Fujihita, Hayashi H. Wikiwiki claims it is 20, but given how frequently they have been completely wrong this event, we can ignore the Wikiwiki claim. Debuff KC3 screenshot: http://imgur.com/a/UhfA1; debuffed boss screenshots: http://i.imgur.com/R3KV2XG.png; http://i.imgur.com/SbQdUQI.png-->
+'''Other Notes to take on Debuffing''':
+* Node H is the fastest and the most recommended node to defeat several PT Imp Packs easily.
+* Recommended to use any two of the branching ships in the fleet to go '''A C E H''' and then retreat.
+* The Debuffs between the TP-Bar and Boss HP Bar are SEPARATE.{{cite}}
+* Always remember generally the Debuff will reset at 5:00 AM JST.
+* Unconfirmed report about no. of PT needed to debuff vary according to difficulty.
+
+==== TP Bar Depleting====
+* It is recommended to bring a CAV as they can equip Drum Canisters.
+** Although not required, you may try bringing at least 3 to 4 Drum Canisters to quickly deplete the TP Bar Gauge.
+* LoS requirement does not apply until the appearance of the boss gauge.{{cite}}
+* TP gauge does not reset
+
+==== '''Nodes'''====
+* '''I, J and L''' are Night Battle nodes
+* '''H '''and''' L''' have Enemy patterns that can include PT Imp Packs.
+
+==== '''General'''====
+*For those having trouble sinking [[PT Imp Pack]], you can use:
+** [[Type 3 Shell]] (for CAs or other ships that can carry it)<ref name='onsFB'/>{{cite}}
+** [[12cm 30-tube Rocket Launcher]] on DDs<ref name='onsFB'/>{{cite}}
+** Secondary guns (yellow) on your CL(T)s
+** [[Type 98 Reconnaissance Seaplane (Night Recon)]] for Night Battle nodes; it has no effect in any other nodes unless Air Superiority or higher is granted (with a CAV).
+* You may choose to use Support Expeditions for the Boss Node to get S Rank Victories more consistently.
+** Use of Aerial Support Expedition is viable for the Boss Node on lower difficulties as other than the Boss, the node doesn't have many heavy ships.
+*** A recommended airstrike support fleet is 4 CVLs + 2DDs
+*** Sparkling the flagship DD will virtually guarantee full trigger rate on boss. Sparkling carriers has little effect or no effect as morale has no effect on airstrikes. The DDs do not participate in airstrike support and thus any DD can be used.{{cite}}
+*** For more information about Aerial support damage calculation, see [http://wikiwiki.jp/kancolle/?%BB%D9%B1%E7%B4%CF%C2%E2 here] (Japanese).
+*** Airstrike support is not recommended on Hard Final due to the higher survivability of Late Model Elite DDs.
+** On Hard Final, shelling support with 2 CAs + 2 DDs + 2 CVLs will deal sufficient damage to sink the DDs; airstrike support may fail to get kills as the Contact mechanic is unavailable to airstrike support expeditions.
+
+==== '''Trivia'''====
+*This map is based on the [https://en.wikipedia.org/wiki/Battle_of_Vella_Gulf Battle of Vella Gulf]
+*[http://www.navweaps.com/index_oob/OOB_WWII_Pacific/OOB_WWII_Vella-Gulf.htm Order of Battle - Battle of Vella Gulf]
+{{clear}}
+
+==Gallery==
+<gallery widths="150" spacing="small" orientation="square">
+DD Destroyer Water Demon 647 Battle Damaged.jpg|Boss after debuff battle card
+DD Destroyer Water Demon 647 Full Damaged.png|Boss after debuff during introduction
+</gallery>
+
+==References==
+<references></references>
+
+==Drop list==
+{{DropList
+|nodes = B, D, F, G, H, I, J, L, N
+|boss = N
+|Agano: N/Easy
+|Arashi: N/Easy
+|Harusame: J/Easy, L/Easy 
+|Kawakaze: J/Easy, L/Easy, N/Easy
+|Maikaze: N/Easy
+|Maruyu: N/Easy
+|Mikuma: N/Easy
+|Noshiro: N/Easy
+|Nowaki: J/Easy, L/Easy, N/Easy
+|Sakawa: N/Easy
+|Tanikaze: N/Easy
+|Yahagi: N/Easy
+}}
+Kawakaze, Arashi, Nowaki, Maikaze, Tanikaze, Hamakaze drop in N node A Rank.
+{{:Fall 2015 Event/E-5/Enemy patterns}}
+[[Category:Events]]

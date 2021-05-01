@@ -1,0 +1,367 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Alfonsinos
+|jp = アルフォンシーノ方面
+|romaji =Arufonshīno hōmen
+|strategy_name = The Advance for Alfonsinos
+|strategy_name_ja = アルフォンシーノ方面進出
+|strategy_info = Form an Aviation fleet with at least two Carriers and search the Northern Sea for the enemy positions!
+|strategy_info_ja = 空母2隻以上を擁する空母機動部隊を持って北方海域へ進出。 敵情の強行偵察を敢行せよ！
+|exp_ship = 330
+|exp_hq = 130
+|exp_hq_boss = 2260
+}}
+{{MapBranchingTable
+|expand = true
+|id = 3-3
+|A -> B/storm = *Amount of any carriers ≦ 1
+|A -> E,H/storm = *Random 50%/50% chance if you do not meet the requirements to go to B
+
+|E -> F/storm,I = *Random 50%/50% chance
+
+|I -> G,J/resource,K/resource = *Random 33%/33%/33% chance
+}}
+<!--
+TsunDB 2018-06-09
+
+Start -> ?
+CVB+CV+CVL <= 1
+  ->B: 100% (23)
+else
+  ->E: 51% (2483)
+  ->H: 49% (2339)
+
+E->F: 49% (1186)
+E->I: 51% (1213)
+
+I->G: 33% (1000)
+I->J: 34% (1022)
+I->K: 33% (998)
+-->
+* Fleet composition requires 2 or more CV(L/B) to make it to the boss node. Otherwise, B.
+** Therefore, a fleet of 6 CV(L/B) works great as it focuses on an extremely powerful opening strike and equally strong shelling phase. Just like [[#World_3-4:_北方海域全域_Throughout_the_Northern_Sea|World 3-4]]
+===Tips===
+* One of the best ways to farm furniture coins (Node J gives medium box, node K gives large box)
+*Great place to farm {{ShipLink|Mutsu}} (and 41cm gun for improvement) due to her dropping on every node.
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=166|y=270}}
+{{Map/ImageNode|B|x=203|y=185}}
+{{Map/ImageNode|E|x=279|y=238}}
+{{Map/ImageNode|H|x=306|y=287}}
+{{Map/ImageNode|C|x=351|y=120}}
+{{Map/ImageNode|F|x=422|y=148}}
+{{Map/ImageNode|I|x=442|y=236}}
+{{Map/ImageNode|D|x=441|y=103}}
+{{Map/ImageNode|K|x=560|y=288}}
+{{Map/ImageNode|J|x=572|y=223}}
+{{Map/ImageNode|G|x=536|y=147}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=敵前衛艦隊
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class/Elite
+|Torpedo Cruiser Chi-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Double Line}}
+|Light Cruiser He-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Light Cruiser To-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer Ro-Class/Elite
+|-
+|A
+|Normal
+|{{Formation|Line Ahead}}
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Elite
+|Light Cruiser Ho-Class/Elite
+|Destroyer Ro-Class/Elite
+|Destroyer I-Class/Elite
+|Destroyer I-Class/Elite
+}}
+{{NodeInfo
+|B
+|Storm
+|Fuel
+|4 bars without radar
+|-
+|B
+|Storm
+|Fuel
+|2 bars with radar
+}}
+{{Map/Nodes|name=敵護衛空母群
+|C
+|Normal
+|{{Formation|Line Ahead}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Destroyer Ha-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Line Ahead}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|C
+|Normal
+|{{Formation|Echelon}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|D
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class/Elite
+|Destroyer Ha-Class/Flagship
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser To-Class/Elite
+|Destroyer Ha-Class/Flagship
+|-
+|D
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ni-Class/Elite
+}}
+{{Map/Nodes|name=敵護衛空母群
+|E
+|Normal
+|{{Formation|Line Ahead}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ro-Class/Flagship
+|Destroyer Ha-Class/Elite
+|-
+|E
+|Normal
+|{{Formation|Line Ahead}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Elite
+|Destroyer Ha-Class/Elite
+|-
+|E
+|Normal
+|{{Formation|Echelon}}
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+}}
+{{NodeInfo
+|F
+|Storm
+|Ammo
+|2 bars without radar
+|-
+|F
+|Storm
+|Ammo
+|1 bar with radar
+}}
+{{Map/Nodes|name=深海棲艦泊地艦隊
+|G
+|Boss
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|G
+|Boss
+|{{Formation|Line Ahead}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser To-Class/Elite
+|Destroyer Ni-Class/Elite
+|-
+|G
+|Boss
+|{{Formation|Line Ahead}}
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class/Elite
+|Battleship Ru-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ni-Class/Elite
+|Destroyer Ha-Class/Elite
+}}
+{{NodeInfo
+|H
+|Storm
+|Ammo
+|3 bars without radar
+|-
+|H
+|Storm
+|Ammo
+|2 bars with radar
+|-
+|H
+|Storm
+|Ammo
+|1 bar with 3 radars (1 for each ship)
+}}
+{{Map/Nodes|name=敵空母機動部隊
+|I
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Standard Carrier Wo-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Light Cruiser He-Class/Elite
+|Destroyer Ha-Class/Flagship
+|-
+|I
+|Normal
+|{{Formation|Double Line}}
+|Standard Carrier Wo-Class/Flagship
+|Light Carrier Nu-Class/Elite
+|Light Carrier Nu-Class/Elite
+|Battleship Ru-Class/Elite
+|Destroyer Ro-Class/Flagship
+|Destroyer Ni-Class/Elite
+}}
+{{NodeInfo
+|J
+|Resource
+|Coinbox2
+|1
+}}
+{{NodeInfo
+|K
+|Resource
+|Coinbox3
+|1
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, C, D, E, G, I
+|boss = G
+|Akagi: G
+|Arare: A, D, E
+|Arashio: A, E, I
+|Asashio: A, E, G, I
+|Ashigara: A, C, D, E, G, I
+|Atago: A, C, D, E, G, I
+|Chikuma: A, C, E, G
+|Chitose: A, C, D, E, G, I
+|Chiyoda: A, C, D, E, G
+|Choukai: A, C, D, E, G, I
+|Fusou: A, C, D, E, G, I
+|Haguro: A, C, D, E, G, I
+|Hamakaze: G
+|Haruna: A, C, G
+|Hatsuyuki: A, E, I
+|Hiei: G
+|Hiryuu: G
+|Hiyou: A, D, E, G, I
+|Hyuuga: A, C, E, G, I
+|I-168: A, C, D, E, G, I
+|I-58: G
+|Ise: A, D, E, G, I
+|Isonami: A, D, E, I
+|Isuzu: A, C, E, I
+|Jintsuu: A, I
+|Junyou: A, D, G, I
+|Kaga: G
+|Kagerou: A, D, E, G, I
+|Kasumi: A
+|Kinugasa: G
+|Kirishima: C, G
+|Kiso: A, C, E, I
+|Kitakami: A, C, E, I
+|Kongou: E, G, I
+|Kuma: A, E, I
+|Kuroshio: A, C, G, I
+|Maikaze: A, C, D, E, G, I
+|Maya: A, C, D, G, I
+|Michishio: A, D, I
+|Miyuki: A, C, E
+|Mogami: A, D, E, G, I
+|Murakumo: A, C, E, I
+|Mutsu: A, C, D, E, G, I
+|Myoukou: A, C, E, G, I
+|Nachi: A, C, D, E, G, I
+|Nagato: G
+|Naka: A, C, D, E, I
+|Natori: A, D, I
+|Ooi: A, C, D, E, I
+|Ooshio: A, C, E, G
+|Ryuujou: A, C, E, G, I
+|Sendai: A, E, G, I
+|Shikinami: A, C, I
+|Shimakaze: A, C, D, E, G, I
+|Shiranui: A
+|Shouhou: A, C, D, E, G, I
+|Souryuu: G
+|Takao: A, C, D, G, I
+|Tama: A, C, E
+|Tatsuta: A, C, D, E, I
+|Tenryuu: A, C, E, I
+|Tone: A, C, E, G, I
+|Yamagumo: G
+|Yamashiro: A, C, E, G, I
+|Yayoi: G
+|Yukikaze: G
+|Yura: A, C, D, I
+}}
+{{SectionEnd}}

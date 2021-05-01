@@ -1,0 +1,59 @@
+<div class="sanitybar" style="width:{{{width|75%}}}; {{#ifeq:{{{center|yes}}}|yes|margin:auto; text-align:center;}}"><div style="font-size:larger;">''' Sanity Bar'''</div>{{#ifeq: {{{header|yes}}}|yes|<div>'''{{#iferror: {{#expr: ({{{1|100}}}/{{{total|100}}})*100 round 1}}%|Bad sanity value!}}''' {{{text|remaining}}}</div>}}<div style="border:{{{border|1px solid gray}}}; padding:{{{padding|1px}}}; overflow:hidden;"><span style="
+
+width:{{#iferror:{{#ifexpr:{{{1|100}}}/{{{total|100}}}*100<0|0|{{#ifexpr:{{{1|100}}}/{{{total|100}}}*100>100|100|{{#expr:{{{1|100}}}/{{{total|100}}}*100}}}}}}%|0%}};
+
+height:{{{height|5}}}px; background:{{{color1|#5FDB00}}}; float:left;">&nbsp;</span><span style="
+
+width:{{#iferror:{{#ifexpr:100-{{{1|100}}}/{{{total|100}}}*100<0|0|{{#ifexpr:100-{{{1|100}}}/{{{total|100}}}*100>100|100|{{#expr:100-{{{1|100}}}/{{{total|100}}}*100}}}}}}%|100%}};
+
+height:{{{height|5}}}px; background:{{{color2|#ff0000}}}; float:left;">&nbsp;</span>
+</div>
+{{{2|}}}
+{{#ifeq:{{<includeonly>subst:</includeonly>REVISIONUSER}}|Martirsadota|<div style="font-size:xx-small; border-top:1px solid grey;">* If you check the page source, this template already display the bargraph in correct float value since {{#expr:({{#time: U}}-{{#time: U|2015-07-28T19:08:31}})/86400}} days ago. ;)</div>}}
+</div>
+<noinclude>
+Usage:
+
+<pre>
+{{Progress|Your sanity value, e.g. 42}}
+</pre>
+
+Result:
+
+{{Progress|42}}
+
+To put something under the bar:
+
+<pre>
+{{Progress|Your sanity value|Some text under}}
+</pre>
+
+Result:
+
+{{Progress|42|Some text under}}
+
+Only use numbers:
+
+<pre>
+{{Progress|text here}}
+
+{{Progress|42%}}
+</pre>
+
+{{Progress|text here}}
+
+{{Progress|42%}}
+
+And values from 0 to 100:
+
+<pre>
+{{Progress|-42}}
+
+{{Progress|9000}}
+</pre>
+
+{{Progress|-42}}
+
+{{Progress|9000}}
+
+</noinclude>

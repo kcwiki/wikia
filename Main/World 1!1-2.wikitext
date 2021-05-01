@@ -1,0 +1,43 @@
+{{Map/Header}}
+{{Map/Info
+|en = Sea around the Nansei Islands
+|jp = 南西諸島沖
+|romaji = Nansē-shotō oki
+|strategy_name = Nansei Islands Sea Defense
+|strategy_name_ja = 南西諸島沖警備
+|strategy_info = Intercept the enemy's vanguard fleet in the seas off the Nansei Islands!
+|strategy_info_ja = 南西諸島沖に接近する<br>敵前衛艦隊を捕捉、迎撃せよ！
+|exp_hq = 20
+|exp_hq_boss = 140
+}}
+{{MapBranchingTable
+|expand = true
+|id = 1-2
+|0 -> A, B/resource = 
+* Meet '''ALL''' of the following requirements to go to A:
+** Fleet contains ≤ 5 ships.
+** DD+DE = 4
+* Otherwise, random between A and B
+** 40% to A if fleet contains 6 ships
+** 50% to A if fleet contains 5 ships
+** 60% to A if fleet contains 4 ships
+** 70% to A if fleet contains ≤ 3 ships
+|A -> D,E =
+*Go to D if fleet contains slow ships '''and''' DD+DE ≤ 3
+*Meet '''ANY''' of the following to go to E
+**Fast Fleet
+**Fleet contains CL and DD ≥ 4
+**CL = 1 and DD+DE = 5
+*Otherwise, random routing
+}}
+
+===Synopsis===
+*This is the second map in the game that players are expected to clear. It is the first map to feature a resource node, abyssal torpedo cruisers, and multiple branching points.
+*This map is commonly used to test gun accuracy bonuses/penalties.
+
+===Recommended Fleet===
+{{Event/Route|A|red|E|red}}
+* 4 [[DD]] 1 XX, Fast fleet
+This is the shortest, easiest route to the boss.
+
+{{Map/Footer}}

@@ -1,0 +1,178 @@
+{{Event/MapPageHeader
+|form = CIWOPZ2qXvD3dTZ52
+|spreadsheet = 1qTqOqQOzUxJ__G65bidHZrV3_MwVlXHTZtJFKYz3x_I
+|thread = 
+}}
+{{Event/MapInfo
+|en =Battle of Malta Island 
+|jp =マルタ島沖海戦 
+|romaji =Maluta-tō oki kaisen 
+|tag = E6
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Transport Load-Off@Events/Mechanics#Map-specific_Mechanics, Ship Locking@Events/Mechanics#Ship_Locking, Land Base Aerial Support@Land Base Aerial Support, LoS Check@Events/Mechanics#LoS_Check
+|no_hp = true
+|hp_easy = 1350 TP, 2000 HP
+|hp_medium = 1500 TP, 2200 HP
+|hp_hard = 2000 TP, 2200 HP
+|show_kills = true
+|kills_all = 
+|kills_easy = 4.5
+|kills_medium = 5
+|kills_hard = 5
+|reward_all = 
+|reward_easy_1 = [[File:New Model Aerial Armament Materials Icon.png{{!}}50px{{!}}link=New Model Aerial Armament Materials]]
+|reward_easy_1_x = 1
+|reward_easy_2 = [[File:Prototype Flight Deck Catapult 065 useitem.png{{!}}50px{{!}}link=Prototype Flight Deck Catapult]]
+|reward_easy_2_x = 1
+|reward_medium_1 = [[File:New Model Aerial Armament Materials Icon.png{{!}}50px{{!}}link=New Model Aerial Armament Materials]]
+|reward_medium_1_x = 1
+|reward_medium_2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_medium_2_x = 6
+|reward_medium_3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_3_x = 1
+|reward_medium_4 = [[File:Prototype Flight Deck Catapult 065 useitem.png{{!}}50px{{!}}link=Prototype Flight Deck Catapult]]
+|reward_medium_4_x = 1
+|reward_hard_1 = [[File:New Model Aerial Armament Materials Icon.png{{!}}50px{{!}}link=New Model Aerial Armament Materials]]
+|reward_hard_1_x = 1
+|reward_hard_2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]
+|reward_hard_2_x = 7
+|reward_hard_3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Seafire Mk.III Kai|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = [[File:Prototype Flight Deck Catapult 065 useitem.png{{!}}50px{{!}}link=Prototype Flight Deck Catapult]]
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-6 Branching Rule Part 1
+
+|0 -> 1 = 
+* TP Phase
+* Transport Combined Fleet
+
+|A/empty -> B, C = * Active branching
+
+|C -> D = 
+* Amount of (F)BB(V) + CV(B) ≧ 4 in Main Fleet
+* ???
+|C -> E = * Do not meet the requirements to go to D.
+
+|D -> F/resource = 
+* Transport Escort Fleet
+* Meet all of the following requirements if you're not using a Transport Escort Fleet:
+** Amount of (F)BB(V) + CV(L/B) ≦ 2 in Main Fleet
+** Amount of CV(L) ≦ 3
+** Amount of DD ≧ 2 in Main Fleet
+|D -> G = 
+* Do not meet the requirements to go to F.
+
+
+|E -> G = * Do not meet the requirements to go to I.
+|E -> I/resource = 
+* Transport Escort Fleet
+* Fleet contains CV(B)
+
+|G -> F/resource = * Fixed route
+
+|I/resource -> G = * TP Phase
+|I/resource -> K = * HP Phase
+}}
+
+{{MapBranchingTable
+|title = E-6 Branching Rule Part 2
+
+|0 -> 2 =
+* Meet one of the following requirements after clearing the TP Phase:
+** Surface Task Force
+** Carrier Task Force
+
+|K -> J/storm = 
+* Escort Fleet contains FBB (Hard)
+* Amount of (F)BB(V) + CV(L/B) ≧ 4 '''AND''' Slow Fleet (Medium?/Hard)
+* Amount of (F)BB(V) + CV(L/B) = 5
+|K -> M = 
+* Do not meet the requirements to go to J.
+
+|M -> N = 
+* Slow Fleet
+* Amount of (F)BB(V) + CV(L/B) ≧ 4
+|M -> P = 
+* Do not meet the requirements to go to N.
+
+|N -> O = 
+* Amount of CLT ≧ 2
+* Amount of (F)BB(V) + CV(L/B) ≧ 4
+|N -> P = 
+* Do not meet the requirements to go to O.
+
+|P -> Q/empty = * Fail the LoS check
+|P -> S = 
+* Pass the LoS check
+** Requirement is estimated to be at least 45+ F33, but it could be lower.
+}}
+==Map Guide==
+*This is a combined fleet map.
+*Node E, M and R are submarine nodes.
+*'''Two [[Land Base Aerial Support|Land Base Aerial Supports]]''' are available for sortie.
+===Transport Phase===
+*The first part of the map is to reach the boss-node H and achieve at least an A rank in order to empty the TP bar.
+**The boss node is an abyssal combined fleet featuring {{ShipLink|Harbour Summer Princess}}.
+**To achieve A rank, it is required to sink 8 out of 12 ships on the enemy side.
+*Because of the large amount of TP necessary in order to deplete the TP bar even on easy mode, it is highly recommended to use as many [[List of Landing Crafts by stats|Daihatsu Landing Crafts]] and {{EquipmentLink|Drum Canister (Transport Use)|text=Drum Canisters}} as you can on your ships.
+*'''LBAS:'''A range of 3+ minimum is required to reach the boss node H.
+**While the LBAS can be sent to the boss node H to help achieving A+ rank, it can also be sent to preboss nodes G or D to help your fleet surviving them. Preboss nodes G and D feature Battleships in line ahead/double line that can easily cause retreats especially when using a Transport Combined Fleet.
+*Fully depleting the TP bar will unlock the second starting point and a new path to the second boss node S.
+===Boss Kill Phase===
+*The second part of the map is to reach the boss-node S and completely deplete the HP bar.
+*Note that every surface node has heavy air power so it is highly recommended to have enough fighters to at least achieve AS at every node.
+*Consider bringing 1-4 OASW-capable ships with ASW Equipment for node M.
+*The boss node S is an Abyssal Combined Fleet featuring {{ShipLink|Aircraft Carrier Summer Princess}} as the flagship.
+**During the last kill, {{ShipLink|Battleship Summer Princess}} will appear as an escort of the boss fleet on every difficulty.
+*'''LBAS:'''For the second part of the map, [[Land Base Aerial Support]] doesn't have any range limitation in order to reach the boss node S allowing the player more freedom in the selection of aircrafts to use (even jets can reach the boss node).
+*Once the Boss Debuff Mechanic is applied, the Boss fleet becomes extremely vulnerable and will be annihilated during Day Battle commonly.
+
+===Boss Debuff===
+====Trigger conditions====
+*After clearing the transport gauge, reach the transport boss node H again and obtain an A or S rank victory.
+**Previous victories from the transport phase do not count.
+**It is only possible to reach node H again using a Transport Combined Fleet.
+***'''Note:'''When at choice node A, DO NOT choose node C or else your fleet will route C-E-I-K and will not be able to reach node H.
+*Obtain a S rank at node O.
+*After triggering the debuff, the "Quest Completion Sound Effect" ({{Audio|file=Sound_se_30.ogg}}) will play when returning from sortie.
+
+====Debuff Effects====
+*All enemies at the boss node display lowered evasion and take increased damage.
+
+==Player Submitted Fleet Compositions==
+*'''Phase I'''
+**{{Event/Route|A|blue|B|red|D|red|F|green|H|red}} or {{Event/Route|A|blue|C|red|E|red|I|green|G|red|F|green|H|red}}
+***Transport Combined Fleet
+****2CAV 4DD + 1CL 2CA(V) 3DD
+****1BBV [[Taiyou]] 4DD + 1CL 2CA(V) 3DD
+****2BBV 4DD + 1CL 2CA(V) 3DD
+****1CAV 1AV 4DD + 1CL 2CA(V) 3DD
+***Carrier Task Force
+****2CV(B) 4DD + 1CL 1FBB 1CA 3DD
+***Surface Task Force
+****1BB(V) 1CA(V) 1CV(B) 1CL 2DD + 1CL 5DD
+****1BB(V) 1CA(V) 1CV(B) 1CL 2DD + 1CL 1AV 4DD
+****1BB(V) 1CA(V) 1CV(B) 1CL 2DD + 1CL 1AV 3DD 1 CA(V)
+****1(F)BB 2CA(V) 1CV(B) 2DD + 1CL 1AV 1CLT 3DD
+*'''Phase II'''
+**Debuff  {{Event/Route|K|red|J|purple|L|orange|O|red}}
+***Carrier Task Force
+****2CV(B) 2CA(V) 2(F)BB(V) + 1CL 1FBB 2DD 2XX
+***Surface Task Force
+****2(F)BB(V) 3CA(V) 1CV(B) + 1CL 1FBB 2DD 2XX
+**{{Event/Route|K|red|M|red|P|red|S|red}}
+***Carrier Task Force
+****3CV(B) 3CA(V) + 1CL 3CLT/CA 2DD
+***Surface Task Force
+****1FBB(fast) 3CA(V) 2CVL(fast) + 1CL 3CLT/CA 2DD
+****2FBB(fast) 3CA(V) 1CV + 1CL 3 CLT/CA 2DD
+
+
+{{clear}}
+
+===LBAS Flight Range===
+[[File:Summer 2017 Event E6 LBAS Range map .png|500px|center]]
+{{Event/MapPageFooter}}

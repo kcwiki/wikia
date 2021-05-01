@@ -1,0 +1,74 @@
+{{Map/Header}}
+{{Map/Info
+|en = Guano Atoll Sea
+|jp = グアノ環礁沖海域
+|romaji = Guano-kanshō oki kaiiki
+|mechanics = LoS Check@Line of Sight, Manual Node Selection@Events/Mechanics#Node specific details
+|exp_hq = 180
+|exp_hq_boss = 2760
+|show_kills = true
+|kills = 4
+|strategy_name = [[wikipedia:Operation K|Operation K]]
+|strategy_name_ja = K作戦
+|strategy_info = Advance a fleet consisting of seaplane tenders equipped with flying boats or reconnaissance planes, light cruisers and destroyers into direction of Guano atoll.
+And carry out the aerial scout "Operation K"!
+|strategy_info_ja = 飛行艇または水上偵察機を装備した水上機母艦・軽巡・駆逐艦による艦隊を同方面へ進出、航空偵察「K作戦」を実施せよ！
+}}
+{{MapBranchingTable
+|id = 6-3
+
+|A/empty -> B,C = * Choice node
+
+|E -> F, G/resource = 
+*Meet '''ANY''' of the following to go to F
+**Amount of AV+CL ≧ 4
+**Amount of AV ≧ 2 
+*Go to G if CL ≤ 1 '''and''' DD ≧ 3
+*Otherwise, random routing (More likely to go to F)
+
+|G/resource -> x/resource =
+* AV's Seaplane/Flying Boat will obtain a random amount of resource (Ammo, Bauxite or Development Materials)
+* Having a [[Type_2_Large_Flying_Boat|Type 2 Large Flying Boat]] has a higher potential in gaining resources
+|G/resource -> H/resource = * Fixed route
+
+|H/resource -> x/resource = 
+* AV's Seaplane/Flying Boat will obtain a random amount of resource (Ammo, Bauxite or Development Materials)
+* Having a [[Type_2_Large_Flying_Boat|Type 2 Large Flying Boat]] has a higher potential in gaining resources
+|H/resource ->  I/empty =
+* Fail the LoS check
+** Routing becomes random if the LoS is between 36 - 38 [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula
+|H/resource -> J = * Pass the LoS check of 38 or higher using the [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] formula
+}}
+*You '''CANNOT''' bring BB(V), CA(V), CLT, CV(L), SS, DE or Auxiliary Ships.
+*[[Katori]]/[[Kashima]] can be brought to this map.
+*At least 1 AV, 1 CL/CT and 1 DD must be in the fleet to be able to sortie to the map.
+**It is not possible however to bring more than 3 [CL+CT] or more than 2 AV.
+*There is a LoS check from H->J. The LoS requirement is 38 for guaranteed routing is [[Line_of_Sight#Equipment_LoS_weighting_modifier|F33(C<sub>n</sub>=3)]] according to tests (data yet to be published [http://ja.kancolle.wikia.com/wiki/%E3%82%B9%E3%83%AC%E3%83%83%E3%83%89:887])
+*Node G and H are a new type of "Aviation Detection" node
+**Resources obtained in these nodes can only be received if you have obtained Rank B or higher at the Boss Node.Otherwise, the resources obtained are nullified. The mechanism was first introduced into this map and then subsequently used in future events.
+**It's possible to fail gathering resources at the node itself if fleet LoS is too low.  Bringing RADAR, seaplane scouts/bombers/large flying boats can increase success chance.
+*Node B and C are '''Submarine nodes with no warning'''. So watch out.
+**You may also opt to farm either nodes to complete Quests [[Quests#Bd8|Bd8]] and [[Quests#Bw5|Bw5]].
+*Going to Node B route is '''not recommended''' as you will increase the amount of battles before reaching the Boss.
+*[[Battleship Ta-Class|Battleship Ta-Class Flagship]] is the Flagship of node J before the 4th Final Kill
+*'''[[Destroyer Princess]]''' becomes the Flagship at the 4th Final Kill.
+
+====Compositions====
+*{{Event/Route|A|Blue|C|Red|E|Red|G|Green|H|Green|J|Red}}: 1 AV + 1 CL + 4 DD or 1 AV + 1 CT + 1 CL + 3 DD '''(3 Battles Total)'''
+**Guarantees node G, letting you avoid node F which has [[Heavy Cruiser Ne-Class|Heavy Cruiser Ne-Class Elite]]. This route also lets you go through only 2 battles before the Boss Node (J).
+**Great fleet to use for consistent routing to Boss. However, your DDs may be heavily damaged during Day Battle.
+*{{Event/Route|A|Blue|C|Red|E|Red|G|Green|H|Green|J|Red}} or {{Event/Route|A|Blue|C|Red|E|Red|F|Red|H|Green|J|Red}}: 1 AV + 2 CL + 3 DD '''(3~4 Battles Total)'''
+**Sacrifices 100% routing to node G by introducing a chance to be sent to node F.
+**Higher combat capability compared to the previous fleet composition due to the 2 CLs with double attack potential via Artillery Spotting.
+**This is the recommended composition for completing Bq4.
+**With 1 AV + 2 CL + CT + 2 DD, there's a chance that you could go either way. Source: [http://www.nicovideo.jp/watch/sm26581839 Nicovideo]
+*{{Event/Route|A|Blue|C|Red|E|Red|F|Red|H|Green|J|Red}}: 1 AV + 3 CL + 2 DD OR 2 AV + 3 CL + 1 DD '''(4 Battles Total)'''
+**This option completely gives up the routing to node G and will go down to node F all the time which permanently increases battles to 4 total.
+**Prioritizes Firepower by using more AV or CL.
+*Recommended ships:
+**'''CL''': [[Ooyodo Kai]], [[Duca degli Abruzzi]], or [[Giuseppe Garibaldi]] with 3 main guns + seaplane scout for maximum day firepower. [[Jintsuu Kai Ni]] with 2 main guns + seaplane has lower day firepower than Ooyodo but performs double attacks at night. [[Abukuma Kai Ni]] or [[Yuubari Kai Ni Toku]] for 2 CL fleets with midget submarine, 2 torpedoes for Night TCI.
+**'''AV''': [[Mizuho Kai]] with midget submarine + 2 seaplane bombers. [[Commandant Teste]] with 4 seaplane bombers or 2 seaplane bombers + 2 mainguns. [[Nisshin A]] with 2 main guns + 1 seaplane bomber + midget submarine.
+**'''DD''': [[Naganami Kai Ni]], Kagerou-class Kai Nis with 2 main guns + RADAR + anti-torpedo bulge. High firepower and higher than average survivability compared to other DDs. Other high combat capability DDs for damage output.
+**'''OASW DD''': [[Jervis Kai]], [[Urakaze D Kai]], [[Asashio Kai Ni D]] (assuming high enough base ASW stat for single SONAR OASW).
+
+{{Map/Footer}}

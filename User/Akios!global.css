@@ -1,0 +1,435 @@
+ /* skins/oasis/css/oasis.scss */
+ <nowiki>#</nowiki>WikiaArticle p + p {
+ <nowiki> </nowiki>   margin: 1em 0 !important;
+ }
+ .WikiaActivityModule li em {
+ <nowiki> </nowiki>   font-size: 15px;
+ <nowiki> </nowiki>   line-height: 18px;
+ <nowiki> </nowiki>   width: auto;
+ }
+ .WikiaActivityModule .edited-by {
+ <nowiki> </nowiki>   font-size: 12px;
+ }
+ .WikiaArticle {
+ <nowiki> </nowiki>   font-size: 14px;
+ <nowiki> </nowiki>   line-height: 22px;
+ }
+ .WikiaArticle h2 {
+ <nowiki> </nowiki>   font-size: 20px;
+ }
+ .WikiaArticle h3 {
+ <nowiki> </nowiki>   font-size: 17px;
+ }
+ .WikiaArticle h4 {
+ <nowiki> </nowiki>   font-size: 15px;
+ }
+ .WikiaArticle li {
+ <nowiki> </nowiki>   line-height: 22px;
+ }
+ .WikiaArticle .editsection {
+ <nowiki> </nowiki>   font-size: 14px;
+ }
+ .WikiaArticle .editsection img {
+ <nowiki> </nowiki>   margin-right: 1px;
+ }
+ .WikiaArticle .thumbcaption {
+ <nowiki> </nowiki>   line-height: 20px;
+ }
+ .WikiaArticle .toc #toctitle h2 {
+ <nowiki> </nowiki>   font-size: 16px;
+ }
+ .WikiaArticle .toc #toctitle .toctoggle {
+ <nowiki> </nowiki>   font-size: 13px;
+ }
+ .WikiaArticle .toc ul li {
+ <nowiki> </nowiki>   line-height: 20px;
+ }
+ .WikiaPageHeader h1, .WikiaPageHeader .WikiaRail .module h2, .WikiaRail .module .WikiaPageHeader h2, .WikiaPageHeader .WikiaRail #RIGHT_SKYSCRAPER h2, .WikiaRail #RIGHT_SKYSCRAPER .WikiaPageHeader h2 {
+ <nowiki> </nowiki>   font-size: 28px;
+ <nowiki> </nowiki>   line-height: 28px;
+ }
+ .WikiaRail .module h1, .WikiaRail #RIGHT_SKYSCRAPER h1, .WikiaRail .module h2, .WikiaRail #RIGHT_SKYSCRAPER h2, .WikiaRail #RIGHT_SKYSCRAPER h1, .WikiaRail #RIGHT_SKYSCRAPER h2, .WikiaRail .module h2, .WikiaRail #RIGHT_SKYSCRAPER h2, .WikiaRail #RIGHT_SKYSCRAPER h2 {
+ <nowiki> </nowiki>   font-size: 20px;
+ <nowiki> </nowiki>   font-weight: normal;
+ <nowiki> </nowiki>   padding-left: 0;
+ }
+ .WikiaRail .module .more, .WikiaRail #RIGHT_SKYSCRAPER .more {
+ <nowiki> </nowiki>   font-size: 11px;
+ }
+ .tally {
+ <nowiki> </nowiki>   font-size: 9px;
+ <nowiki> </nowiki>   line-height: 1.5em;
+ }
+ .tally em {
+ <nowiki> </nowiki>   font-size: 28px;
+ <nowiki> </nowiki>   margin-right: 3px;
+ }
+ html {
+ <nowiki> </nowiki>   overflow-y: auto;
+ }
+ .skin-oasis {
+ <nowiki> </nowiki>   min-width: 768px;
+ }
+ .skin-oasis > .banner-notifications-wrapper, .WikiaHeader .page-width-container, .WikiaPage {
+ <nowiki> </nowiki>   max-width: 1600px;
+ }
+ .banner-notifications-wrapper, .WikiaHeader .page-width-container {
+ <nowiki> </nowiki>   box-sizing: border-box;
+ <nowiki> </nowiki>   width: 1030px;
+ }
+ .banner-notification {
+ <nowiki> </nowiki>   box-sizing: border-box;
+ }
+ .banner-notifications-wrapper.float {
+ <nowiki> </nowiki>   margin-left: -515px;
+ }
+ .WikiaArticle, .WikiaArticleFooter {
+ <nowiki>    padding: 0;
+ }
+ .WikiHeader .navbackground {
+  </nowiki>   width: 100%}
+ .WikiHeader .WikiNav {
+ <nowiki> </nowiki>   right: -4px;
+ <nowiki> </nowiki>   width: auto;
+ }
+ .WikiHeader .WikiNav .subnav-2 {
+ <nowiki> </nowiki>   width: auto;
+ }
+ .WikiHeaderSearch {
+ <nowiki> </nowiki>   display: none;
+ }
+ .WikiaHeader {
+ <nowiki> </nowiki>   min-width: 0;
+ }
+ .WikiaMainContent {
+ <nowiki> </nowiki>   margin-right: -320px;
+ <nowiki> </nowiki>   position: static;
+ <nowiki> </nowiki>   width: 100%}
+ .WikiaMainContentContainer {
+ <nowiki> </nowiki>   margin-right: 310px;
+ <nowiki> </nowiki>   padding: 0 10px;
+ }
+ .oasis-one-column .WikiaMainContent {
+ <nowiki> </nowiki>   margin-right: 0;
+ <nowiki> </nowiki>   width: 100%}
+ .oasis-one-column .WikiaMainContentContainer {
+ <nowiki> </nowiki>   margin-right: 0;
+ <nowiki> </nowiki>   position: relative;
+ }
+ .WikiaPage #WikiaArticleBottomAd {
+ <nowiki> </nowiki>   clear: both;
+ <nowiki>    margin: 0;
+ }
+ .WikiaPageHeader, .wikinav2 .WikiaPageHeader {
+  </nowiki>   margin: 0 0 10px;
+ <nowiki> </nowiki>   padding-bottom: 5px;
+ }
+ .WikiaPageHeader .wikia-menu-button, .WikiaPageHeader > .comments, .wikinav2 .WikiaPageHeader .wikia-menu-button, .wikinav2 .WikiaPageHeader > .comments {
+ <nowiki> </nowiki>   margin-top: 3px;
+ }
+ .WikiaRail {
+ <nowiki> </nowiki>   overflow: hidden;
+ <nowiki> </nowiki>   padding: 0 10px 10px 0;
+ }
+ @media screen and (max-width:768px) {
+ <nowiki> </nowiki>   .skin-oasis {
+ <nowiki> </nowiki>   overflow-x: auto;
+ }
+ }@media screen and (max-width:1023px) {
+ <nowiki> </nowiki>   .WikiaArticle {
+ <nowiki> </nowiki>   min-height: auto;
+ }
+ .WikiaMainContent {
+ <nowiki> </nowiki>   float: none;
+ <nowiki> </nowiki>   margin-right: 0;
+ }
+ .WikiaMainContentContainer {
+ <nowiki> </nowiki>   margin-right: 0;
+ }
+ .WikiaRail {
+ <nowiki> </nowiki>   float: none;
+ <nowiki>    margin: 0;
+  </nowiki>   padding: 13px 10px 0;
+ <nowiki> </nowiki>   width: auto;
+ }
+ .WikiaRail.loaded, .WikiaRail.AdminDashboardRail {
+ <nowiki> </nowiki>   -moz-column-count: 2;
+ <nowiki> </nowiki>   -webkit-column-count: 2;
+ <nowiki> </nowiki>   column-count: 2;
+ }
+ .WikiaRail .module, .WikiaRail #RIGHT_SKYSCRAPER, .WikiaRail .admin-dashboard-module {
+ <nowiki> </nowiki>   box-sizing: border-box;
+ <nowiki> </nowiki>   -moz-column-break-inside: avoid;
+ <nowiki> </nowiki>   -webkit-column-break-inside: avoid;
+ <nowiki> </nowiki>   column-break-inside: avoid;
+ <nowiki> </nowiki>   display: inline-block;
+ <nowiki> </nowiki>   position: static;
+ <nowiki> </nowiki>   width: 100%}
+ .WikiaHeader .start-a-wiki {
+ <nowiki> </nowiki>   display: none;
+ }
+ .WikiHeader {
+ <nowiki> </nowiki>   min-height: 154px;
+ }
+ .WikiHeader > nav {
+ <nowiki>    left: 0;
+     top: 85px;
+ }
+ .WikiHeader .buttons {
+     top: 87px;
+ }
+ .WikiNav li.nav-item:first-child {
+  </nowiki>   margin-left: 10px;
+ }
+ .WikiHeaderSearch {
+ <nowiki> </nowiki>   display: block;
+ <nowiki> </nowiki>   left: 280px;
+ <nowiki> </nowiki>   position: absolute;
+ <nowiki> </nowiki>   right: 10px;
+ <nowiki>    top: 12px;
+  </nowiki>   width: auto;
+ }
+ .WikiHeaderSearch input[type="text"] {
+ <nowiki> </nowiki>   box-sizing: border-box;
+ <nowiki> </nowiki>   font-size: 15pt;
+ <nowiki> </nowiki>   height: 40px !important;
+ <nowiki>    left: 0;
+  </nowiki>   margin-right: 0;
+ <nowiki> </nowiki>   position: absolute;
+ <nowiki> </nowiki>   right: 53px;
+ <nowiki> </nowiki>   width: auto;
+ <nowiki> </nowiki>   width: -webkit-calc(100% - 53px);
+ <nowiki> </nowiki>   width: calc(100% - 53px);
+ }
+ .WikiHeaderSearch .wikia-button {
+ <nowiki> </nowiki>   height: 40px !important;
+ <nowiki> </nowiki>   position: absolute;
+ <nowiki>    right: 0;
+ }
+ .wikinav2.oasis-one-column .WikiaPageHeader {
+  </nowiki>   padding-right: 0;
+ }
+ .wikinav2.oasis-one-column .WikiaPageHeader .tally {
+ <nowiki>    right: 0;
+ }
+ .WikiaSearchHeader .WikiaSearch, .WikiaRail .WikiaSearch, .WikiaRail .search-suggest, .WikiaPageHeader .WikiaSearch {
+  </nowiki>   display: none;
+ }
+ }@media screen and (max-width:1030px) {
+ <nowiki> </nowiki>   .WikiHeader .WikiNav {
+ <nowiki>    right: 0;
+ }
+ .WikiHeader .WikiNav .navbackground img {
+  </nowiki>   display: none;
+ }
+ .WikiaHeader .page-width-container {
+ <nowiki> </nowiki>   width: auto;
+ }
+ .banner-notifications-wrapper {
+ <nowiki> </nowiki>   width: 100%}
+ .banner-notifications-wrapper.float {
+ <nowiki>    left: 0;
+  </nowiki>   margin-left: 0;
+ }
+ .WikiaPage {
+ <nowiki>    border: 0;
+  </nowiki>   width: auto;
+ }
+ .WikiaTopAds {
+ <nowiki> </nowiki>   width: 100%}
+ }@media screen and (min-width:1370px) {
+ <nowiki> </nowiki>   .WikiaHeader .page-width-container, .WikiaPage {
+ <nowiki> </nowiki>   margin: 0 170px;
+ <nowiki> </nowiki>   width: auto;
+ }
+ }@media screen and (min-width:1940px) {
+ <nowiki> </nowiki>   .WikiaHeader .page-width-container, .WikiaPage {
+ <nowiki> </nowiki>   margin: 0 auto;
+ }
+ }.lcs-container {
+ <nowiki> </nowiki>   margin-right: 0px;
+ }
+ .ArticlePreviewInner[data-size="min"] .home-top-right-ads {
+ <nowiki> </nowiki>   display: none;
+ }
+ .ArticlePreviewInner[data-size="min"] .lcs-container {
+ <nowiki> </nowiki>   margin-right: 0;
+ }
+ .ArticlePreviewInner[data-size="min"] .main-page-tag-lcs {
+ <nowiki> </nowiki>   float: none;
+ <nowiki> </nowiki>   margin-right: 0;
+ }
+ .ArticlePreviewInner[data-size="min"] .main-page-tag-rcs {
+ <nowiki> </nowiki>   float: none;
+ <nowiki> </nowiki>   width: auto;
+ }
+ .ArticlePreviewInner[data-size="max"] .home-top-right-ads {
+ <nowiki> </nowiki>   display: block;
+ <nowiki> </nowiki>   float: right;
+ }
+ .ArticlePreviewInner[data-size="max"] .lcs-container {
+ <nowiki> </nowiki>   margin-right: 0px;
+ }
+ .ArticlePreviewInner[data-size="max"] .main-page-tag-lcs {
+ <nowiki> </nowiki>   margin-right: -320px;
+ <nowiki> </nowiki>   float: left;
+ <nowiki> </nowiki>   position: relative;
+ <nowiki> </nowiki>   width: 100%}
+ .ArticlePreviewInner[data-size="max"] .main-page-tag-rcs {
+ <nowiki> </nowiki>   clear: right;
+ <nowiki> </nowiki>   float: right;
+ <nowiki> </nowiki>   position: relative;
+ <nowiki> </nowiki>   width: 300px;
+ }
+ @media screen and (max-width:1023px) {
+ <nowiki> </nowiki>   .home-top-right-ads {
+ <nowiki> </nowiki>   display: none;
+ }
+ .lcs-container {
+ <nowiki> </nowiki>   margin-right: 0;
+ }
+ .main-page-tag-lcs {
+ <nowiki> </nowiki>   float: none;
+ <nowiki> </nowiki>   margin-right: 0;
+ }
+ .main-page-tag-rcs {
+ <nowiki> </nowiki>   float: none;
+ <nowiki> </nowiki>   width: auto;
+ }
+ }
+ <nowiki> 
+ /* extensions/wikia/GlobalNavigation/styles/GlobalNavigation.scss */
+ .global-navigation {
+  </nowiki>   background-color: white;
+ <nowiki> </nowiki>   box-shadow: 0 0 0 2px rgba(0, 0, 0, 0.3);
+ <nowiki> </nowiki>   box-sizing: border-box;
+ <nowiki> </nowiki>   color: #092140;
+ <nowiki> </nowiki>   height: 46px;
+ <nowiki> </nowiki>   margin-top: -47px;
+ <nowiki> </nowiki>   position: fixed;
+ <nowiki> </nowiki>   transition-duration: .5s;
+ <nowiki> </nowiki>   width: 100%;
+ <nowiki> </nowiki>   z-index: 5000101;
+ }
+ .global-navigation *, .global-navigation *::before, .global-navigation *::after {
+ <nowiki> </nowiki>   box-sizing: inherit;
+ }
+ .global-navigation.static {
+ <nowiki> </nowiki>   position: absolute;
+ }
+ .global-navigation .global-navigation-container {
+ <nowiki>    zoom: 1;
+  </nowiki>   display: table;
+ <nowiki> </nowiki>   white-space: nowrap;
+ <nowiki> </nowiki>   margin: 0 auto;
+ <nowiki> </nowiki>   width: 1064px;
+ }
+ .global-navigation .global-navigation-container:after {
+ <nowiki> </nowiki>   clear: both;
+ <nowiki> </nowiki>   content: " ";
+ <nowiki> </nowiki>   display: block;
+ <nowiki>    height: 0;
+  </nowiki>   overflow: hidden;
+ <nowiki> </nowiki>   visibility: hidden;
+ }
+ .global-navigation .table-cell {
+ <nowiki> </nowiki>   display: table-cell;
+ <nowiki> </nowiki>   vertical-align: middle;
+ }
+ .global-navigation .wikia-logo-container {
+ <nowiki> </nowiki>   padding-right: 15px;
+ }
+ .global-navigation .wikia-logo-container .wikia-logo img {
+ <nowiki> </nowiki>   background-position: right center;
+ <nowiki> </nowiki>   vertical-align: sub;
+ }
+ .global-navigation .start-wikia-container {
+ <nowiki> </nowiki>   padding-left: 10px;
+ }
+ .global-navigation .start-wikia-container .start-wikia span {
+ <nowiki> </nowiki>   display: inline-block;
+ <nowiki> </nowiki>   padding-top: 1px;
+ }
+ .WikiaSiteWrapper {
+ <nowiki> </nowiki>   padding-top: 47px;
+ }
+ .ve .global-navigation {
+ <nowiki> </nowiki>   position: absolute;
+ <nowiki> </nowiki>   z-index: 5000100;
+ }
+ .sso-login.hidden {
+ <nowiki> </nowiki>   display: none;
+ }
+ @media only screen and (max-width:767px) {
+ <nowiki> </nowiki>   .global-navigation {
+ <nowiki> </nowiki>   min-width: 767px;
+ <nowiki> </nowiki>   position: relative;
+ }
+ }@media screen and (max-width:1030px) {
+ <nowiki> </nowiki>   .global-navigation {
+ <nowiki> </nowiki>   min-width: 768px;
+ }
+ .global-navigation .start-wikia-container {
+ <nowiki> </nowiki>   padding-left: 21px;
+ }
+ .global-navigation .start-wikia-container .start-wikia {
+ <nowiki> </nowiki>   width: 30px;
+ <nowiki> </nowiki>   line-height: 28px;
+ }
+ .global-navigation .start-wikia-container .start-wikia:after {
+ <nowiki> </nowiki>   content: '+';
+ <nowiki> </nowiki>   display: block;
+ }
+ .global-navigation .start-wikia-container .start-wikia span {
+ <nowiki> </nowiki>   display: none;
+ }
+ .global-navigation .global-navigation-container {
+ <nowiki> </nowiki>   width: -webkit-calc(100% - 20px);
+ <nowiki> </nowiki>   width: calc(100% - 20px);
+ <nowiki> </nowiki>   margin: 0 10px;
+ }
+ }@media screen and (min-width:1370px) and (max-width:1939px) {
+ <nowiki> </nowiki>   .global-navigation .global-navigation-container {
+ <nowiki> </nowiki>   margin: 0 170px;
+ <nowiki> </nowiki>   width: auto;
+ }
+ }@media screen and (min-width:1940px) {
+ <nowiki> </nowiki>   .global-navigation .global-navigation-container {
+ <nowiki> </nowiki>   margin: 0 auto;
+ <nowiki> </nowiki>   width: 1600px;
+ }
+ }
+ <nowiki> 
+ @media only screen and (min-width:1576px) {
+  </nowiki>   .WikiaPage .WikiaArticle {
+ <nowiki> </nowiki>   font-size: 14px;
+ <nowiki> </nowiki>   line-height: 22px;
+ }
+ .WikiaPage .WikiaArticle .infobox {
+ <nowiki> </nowiki>   font-size: 14px;
+ <nowiki> </nowiki>   line-height: 22px;
+ }
+ .WikiaPage .WikiaArticle li {
+ <nowiki> </nowiki>   line-height: inherit;
+ }
+ .WikiaPage h1, .WikiaPage .WikiaRail .module h2, .WikiaRail .module .WikiaPage h2, .WikiaPage .WikiaRail #RIGHT_SKYSCRAPER h2, .WikiaRail #RIGHT_SKYSCRAPER .WikiaPage h2 {
+ <nowiki> </nowiki>   font-size: 28px;
+ <nowiki> </nowiki>   line-height: 28px;
+ }
+ .WikiaPage h2 {
+ <nowiki> </nowiki>   font-size: 20px;
+ <nowiki> </nowiki>   line-height: 22px;
+ }
+ .WikiaPage .wikia-page-header h2 {
+ <nowiki> </nowiki>   font-size: 14px;
+ <nowiki> </nowiki>   line-height: 22px;
+ }
+ .WikiaPage h3 {
+ <nowiki> </nowiki>   font-size: 17px;
+ <nowiki> </nowiki>   line-height: 22px;
+ }
+ .WikiaPage h4, .WikiaPage blockquote {
+ <nowiki> </nowiki>   font-size: 15px;
+ <nowiki> </nowiki>   line-height: 22px;
+ }
+ }

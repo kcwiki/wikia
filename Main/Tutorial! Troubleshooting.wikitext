@@ -1,0 +1,189 @@
+{{Tutorialportal}}
+
+'''If you are using any sort of kancolle viewer (whether it be KCV, KC3改, Poi, EO, etc) and you have troubles getting into the game, TRY not using the viewers first, meaning go to the DMM website directly in a normal browser (or if it's a browser extension, disable it first).'''
+__TOC__
+<gallery type="slideshow" widths="300" hideaddbutton="true">
+Error1.jpg|"A network error has occurred, please hit the refresh button in your browser."
+DMM_error_area.png|DMM error area, probably because you forgot to insert region cookies.
+maintainance.jpg|Game/site is on maintenance.
+KanColle Error.jpg|An error has occurred.
+Banned_from_Kancolle.jpg|This account ID is currently suspended from use. (i.e. banned)
+</gallery>
+<!--
+{{TwitterTimeline|profile=dmmolg_com|title=Official DMM Tweets|text=Tweets by dmmolg_com}}
+-->
+==READ HERE (troubleshooting for dummies)==
+If you cannot see the picture fully, '''click on the image''' to see the full size.
+[[File:KC_troubleshooting_for_dummies.png|700px]]
+==Checklist==
+===Have you tried making sure that you have either used the cookie or VPN method?===
+<gallery type="slideshow" widths="300" hideaddbutton="true">
+DMM_error_area.png|DMM error area, probably because you forgot to insert region cookies, or that it failed.
+DMM_cookie_success.jpg|Successful attempt when using region cookies but foreign IP address.
+DMM_cookie_success_highlight.jpg|You can still clearly see and click on the Kancolle game ignoring the other stuff.
+</gallery>
+One of the <u>main</u> reasons why people get error messages without ever being able to get into the game but still get redirected into a DMM error area is that they have neither tried the cookie method nor the VPN method as mentioned in [[Tutorial:_Proxy_Connection]]
+
+When you have successfully inserted the region cookie as specified in the [[Tutorial:_Proxy_Connection]], you will see the Kancolle game as accessible under the netgame section on DMM's website as shown on the second screenshot of the gallery and highlighted in a red rectangle within the last screenshot of the gallery. You can also safely ignore all the learn English stuff or the love story stuff that appears as a suggestion for foreigners.
+
+'''Note:''' With the use of a VPN connection to the game, '''especially''' with a Japanese VPN server, the latter two screenshots should not be relevant as DMM will identify you as Japanese via the IP address.
+{{clear}}
+
+===Is the game actually in maintenance?===
+* Check [https://twitter.com/KanColle_STAFF dev twitter] for announcements.
+{|class="wikitable" style="width:100%;text-align:center"
+!style="width:50%"|Time until maintenance starts
+!style="width:50%"|Time until maintenance ends
+|-
+|{{Maintenance|start|timer=true}}
+|{{Maintenance|end|timer=true}}
+|-
+!Maintenance start date and time
+|{{Maintenance|start|short=true}}
+|-
+!Expected maintenance end date and time
+|{{Maintenance|end1|short=true}}
+|}
+* The '''DMM Platform''' may rarely perform their own maintenance/downtimes which, at times, prompt game servers to close as well. You may check this on the [[Recent Updates]] page, developer's official twitter account, [https://www.twitter.com/dmmolg_com DMM's twitter account], or [http://www.dmm.com/help/-/information/ DMM's info page].
+** In some cases, the DMM platform might go down, but not the Kancolle servers. If this happens, players who aren't already in the game cannot log in, while players who are in the game beforehand can play as normal.
+
+===Is your computer clock set on the correct local time and timezone?===
+''This is one of the most common causes of CatBombs''
+* '''You do not need to be set on the JP timezone!''' As long as you are on your '''local timezone and have the correct local time''', you are fine.
+** Unless you are trying to register a new account, then a clock with Japanese timezone (UTC+9) will help.
+* If you did have a wrong computer clock, try refreshing after correcting it.
+
+===Internet connection problems===
+''This is also one of the most common causes of CatBombs''
+* Have you tried checking other sites since it could be your internet connection?
+* Some ISP network may cause API error regularly.
+* Have you tried synchronising your computer time with a network time server online? Or tried manually synchronising?
+* Proceed to section ''[[Tutorial:_Troubleshooting#Common Connectivity Solutions|Common Connectivity Solutions]]''.
+
+===Cache problems===
+''Sometimes corrupted cache causes infinite loading and other problems such as CatBombs whenever you visit a specific part or parts of the game.''
+* Try to clear your cache (''Cached images and files''). Upon successfully clearing your cache and thus the constant CatBomb, whenever you visit the same part of the game, you will notice that the game runs slower than before. This is '''normal''' because you have cleared your cache because the browser needs to download those game assets again.
+* Try doing the whole process again including logging in to DMM and Cookie method in ''Incognito'' or ''Private mode''.
+
+===Game Server Problems===
+''Sometimes, it's not your fault and the server you're in is really having problems of its own''
+* Check the [https://twitter.com/KanColle_STAFF Staff Twitter] if there are announcements
+* Ask [[:Category:Server|server-mates]] if they're also experiencing problems
+* If you encounter this situation, don't refresh too often to help reduce the server load.
+
+===Are you on Windows 8?===
+''There has been reports of CatBombs on Win8, which were fixed once they updated to 8.1''
+* Try updating to 8.1
+
+===Registration Catbomb===
+''Are you a new player trying to enter the game via the newest server?''
+* Just set your timezone to GMT+9 (Asia/Tokyo), refresh, then click on the server
+* Right after selecting the last server, you may change back to local timezone
+
+===Were you banned?===
+[[File:Banned_from_Kancolle.jpg|300px|right]]
+''Login on DMM and check''
+* Banned accounts will see the '''cat error on API link, and black message on DMM'''
+* '''The following will be presented within the game frame (where normally the game would be shown)''' 
+{{Nihongo |Hon akaunto ID wa, genzai teishi sochi sareteimasu.| 本アカウントIDは、現在停止措置されています。 | Furigana=ほんアカウントIDは、げんざいていしそちされています。 | }}
+'''Meaning''': This account ID is currently suspended from use.
+
+==Common Connectivity Solutions==
+* '''Restart your Router'''
+** If you're at home on your own internet connection, try to restart the router first and see if it helps.
+* '''Use a network cable to tether your computer to the router or the nearest connected network switch/hub/etc that is connected to your router.'''
+** Wireless networking does not necessarily mean your connection is always as stable as using wired connection.
+** Make sure that the network cable is in good working order - a poor or worn cable can potentially create more issues.
+* '''Stop using VPN'''
+** If you had been using VPN, try disconnecting a use [[Tutorial:_Proxy_Connection#Option_3:_Editing_DMM_Cookie.27s_Region_Flag|Cookie Method (Proxy Connection Option 3)]].
+** When using VPN all your network transfers go through another person or system - which is why you connect to it, to be seen as someone from their country. This is sometimes slow, unreliable and with alot of people connected, cannot handle everyone.
+* '''Use VPN'''
+** If you weren't using VPN, then try to [[Tutorial: Proxy Connection|connect to one]]. Sometimes the problem lies with the ISP's route to the game servers. A line between you and the game servers may be broken (can be tested via '''tracert'''). Thus, if you use VPN, you may avoid this broken line, because as mentioned VPNs re-routes you to another person or system.
+* '''Observe your router or the device that gives you internet access'''
+** Generally a blinking LED light on the front of the router roughly indicates indicate network activity. The more faster the LED light blinks and/or the shorter the interval the blinking rate (between each blink) may indicate significantly busier network and potentially your internet connectivity.
+* '''Check your computer for any malwares/viruses/etc'''
+** A common oversight is assuming your computer is free of malwares/viruses/etc. A bandwidth hogging malware for instance may hog your internet bandwidth and can easily be observed when using tools such as NetLimiter. However, a malware for instance is not necessarily restricted to hogging your internet bandwidth. Some could be designed potentially to create nuisances such as blocking your day to day internet surfing activities which may ultimately affect gaming.
+* '''Contact your ISP'''
+** Well there are times the ISP is really the one to be blamed.
+** Provided you have followed all of the steps above and still face issues, you can inform that to your ISP tech support which may accelerate your issue (in the queue) to getting fixed sooner.
+** You can also search online to see is there any optical fibre connecting to Japan from your location being damaged, and if that's the case you can't do much on that.
+
+==Other Issues==
+===Stuck on black screen with floating ship===
+* Clear your cache and reload the game
+* Proceed to section ''[[Tutorial:_Troubleshooting#Common Connectivity Solutions|Common Connectivity Solutions]]''.
+
+===DNS Error===
+[[File:GoogleDNS.jpg|thumb|right]]
+''[Fiddler] DNS Lookup for "www.dmm.com" failed. System.Net.Sockets.SocketException The requested name is valid, but no data of the requested type was found''
+* Temporarily change your DNS Servers to '''8.8.8.8''' alternative DNS Server '''8.8.4.4'''
+* Alternatively, register and use [https://www.opendns.com OpenDNS]
+{{clr}}
+
+===jquery.min.map 404 (Not Found)===
+This is a known error generated on the DMM website and does not affect the game. If you're getting this error, it is normal and is not the cause of cat bombs you may have.
+
+===net::ERR_BLOCKED_BY_CLIENT===
+This is your Ad-Block working at its finest.
+
+===net:: ERR_CACHE_MISS===
+This is a common error on Chrome, with its auto-blocking of web assets that has "ad". This does not affect the game and is not the cause of cat bombs you may have.
+
+===net::ERR_INCOMPLETE_CHUNKED_ENCODING===
+This is a common error on new versions of Chrome, with it misinterpretation on the .NET Response or long HTML file with many empty lines. As displayed Flash and CSS are chunked this will cause cat bombs. Try to login with Firefox.
+
+===net::ERR_EMPTY_RESPONSE===
+text here
+
+==="Message from webpage" Dialog Box===
+[[File:PageErrorDialog.png|thumb|right|''"As the result of an error that has occurred, this page will be refreshed."'']]
+
+This is caused by a connection error to the DMM servers, ''not'' to the Kancolle servers. Usually you can click '''Cancel''' in the dialog box and continue playing, though be warned that seeing this dialog box is generally an indication of an unstable Internet connection.
+{{clr}}
+
+==Cat bomb error code==
+In some software like Electric Observer and poi browser, it is possible to find out why you get a catbomb. They are indicated as error code, and here are some known error code:
+*201: Connection shut by server
+*502: Network error ?
+*100: Time unmatch or token expire ?
+
+==Other Notes==
+* <del style="color:#999;">"Game Start" requires a stable connection. The API call at the '''game start button''' screen requires a '''stable connection''' for it will download '''nearly ~700-800kb of text''' and a '''small connection interference''' will give you '''cat error screen'''. This is also true for the '''HomePort Screen''', which is now larger.</del> The Game start API call is now only around 130kb, and home port is dynamic in size based on your ship list but will not exceed 20kb. Unless you have a very slow connection, the tip above may be negligible.
+* You '''cannot''' ping the [[Servers|KC servers]], so the way to test if the server(s) is up or not is to visit http://www.downforeveryoneorjustme.com.
+* '''Networking''' is by no means a small topic and can be very difficult to diagnose - sometimes the issue is beyond one's reach. However, knowing even the basic concepts of networking doesn't hurt. A WIP (Work In Progress) [[:User_blog:Crazy_teitoku/Networking -_A_basic_perspective|blog entry]] may be worthy for reading.
+* '''If you are getting constant catbomb errors within a day, chances are you probably examined to see whether or not if you are a bot. For more information, you may wish to refer to [http://himeuta.org/showthread.php?6473-Tool-OOI-Free-to-Use-Kancolle-Web-Proxy&p=863044&viewfull=1#post863044 this link by LaForet on himeuta.org]'''. Alternatively, a copy of the information is available below should the site be inaccessible for whatever reason. '''Do note that the information may be slightly outdated but there are points that are worth noting.'''
+<div class="mw-collapsible mw-collapsed">
+I've been watching the ban situation for a while and I have summed up what we already know:<br><br>
+DMM
+* Will not IP-ban anybody, however a number of Tor / VPNGate exit nodes are barred from logging in (Error B-001)
+* If many users were seen egressing from the same IP address they may be asked to reset their passwords as a precaution, however there is zero evidence that this may lead to a ban.
+* The only way for an average user to get banned is to owe them money, e.g. file a charge back on a previous CC payment and your account will be banned in no time.
+* A banned DMM account will no longer be associated with your email address - hence it would appear to have disappeared entirely.
+* It is usually possible to get unbanned by contacting support - they will ask you to pay the amount due by a direct bank deposit in Japan, as long as this can be done your account will be reinstated and you won't lose any data and/or purchases.
+Kancolle
+* IP-ban is active for IP ranges containing known spam/DDoS hosts. The actual extent of ban is specific for each game server. One can easily check for this by typing the IP address into any browser - if successful you should be able to see a single line of text. ICMP pings have been disabled earlier this year.
+* No authentication apart from the API token, hence it is possible to move on and off VPN connections and still play fine.
+* During events they may temporarily IP-ban high traffic hosts, however there is no evidence of repercussions for end users apart from a temporary inability to play.
+* Will ban users for botting. Detection is done via at least two hidden functions in the flash client, as well as heuristics, e.g. sending 200+ expeditions per day.
+* Recently a number of users have been hit with repeated catbombs, analysis of network traffic shows that the errors are actually sent deliberately by the game server. The cause is unknown but it is suspected to be a bot detection mechanism. In any case it usually subsides after 2-3 days.
+* Banned users will see "Account Suspended" notification when accessing this game.
+* Contacting support usually won't get you a reply. That said, they do reinstate some banned accounts once in a blue moon.
+* Kancolle ban does not affect the status of your DMM account.
+</div>
+{{clear}}
+* As of 13th September 2016, more light has been shed on accounts that are to be suspended (i.e. literal ban from KC). If you are getting error code 201 and/or you receive API error (KC3 Kai) on your account, speculations note that your account is awaiting to be suspended. For more information you may wish to click on the Expand button for some insights.
+<div class="mw-collapsible mw-collapsed">
+[[File:KC3 Kai - API data error - Error 201.png]]
+[[File:Kancolle Subreddit Discord chat discussion on error 201 leading up to ban.png]]
+</div>
+{{clear}}
+
+{{CommentWarning
+|background = #DEF
+|border = #ACE
+|title = Commenting Reminders for NEW Threads
+|title_size = 16px
+|message = In order to assist others better and to potentially solve your issues faster, please provide as much detail as you can with your questions ideally if you can ask <span style="font-weight:bold;">[http://www.catb.org/esr/faqs/smart-questions.html smart questions]</span> it would make the process easier for helpers to understand. Remember, nobody else on the internet can see what issues you are facing, what sort of setup you may have in place, and amongst that there are other complex information that maybe missing. If you cannot paint a clear and distinctive picture for others to be able to help you solve your queries, your issues may remain unresolved.
+|message_size = 14px
+}}
+[[Category:Tutorial]]

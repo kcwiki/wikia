@@ -1,0 +1,783 @@
+{{Map/Header}}
+{{Map/Info
+|en = KW Atoll Sea
+|jp = KW環礁沖海域
+|romaji =KW-kanshō oki kaiiki
+
+|mechanics = LoS Check@Line of Sight, Land Base Aerial Support@Land Base Aerial Support, Abyssal Combined Fleet@Abyssal Combined Fleet, Multiple Starting Points@Events/Mechanics#Node specific details 
+
+|show_kills = true
+|kills = 6
+
+|reward_1 = [[File:Medal Reward.png{{!}}50px{{!}}link=Medal]]
+|ranking = 250
+|strategy_name = Carrier Task Force Intercept Battle
+|strategy_name_ja = 空母機動部隊迎撃戦
+|strategy_info =A powerful, hostile carrier task force has invaded the central sea's front line!<br>
+Join forces with the land-based air forces that are deployed in the area, intercept the enemy fleet and annihilate it!
+|strategy_info_ja = 中部海域最前線に有力な敵機動部隊が襲来した！同戦域に展開する基地航空隊と協同し、敵艦隊を迎撃、これを撃滅せよ！
+
+|exp_hq = 250
+|exp_hq_boss = 3500
+
+}}
+{{MapBranchingTable
+|id = 6-5
+
+|0 -> 1 = 
+*Meet '''ANY''' of the following requirements:
+** Fleet contains CV(L/B)
+** Fleet contains CLT
+** Amount of BB(V) in fleet ≧ 4
+** The fleet has no CL
+|0 -> 2 = 
+* Do not meet any of the requirements to start at 1
+
+|B -> C =
+*Meet '''ANY''' of the following requirements:
+** Amount of DD in fleet ≦ 1
+** Amount of BB(V) in Fleet ≧ 3
+|B -> F =
+* Do not meet any of the requirements to go to C
+
+|C -> D = * Amount of BB(V) + CV(L/B) in fleet ≦ 3 '''and''' DD in fleet ≧ 1
+* And do not meet the requirements to go to E
+|C -> E =
+*Meet '''ANY''' of the following requirements:
+** Amount of CLT in fleet is 2
+** Amount of BB(V) + CV(L/B) + CA(V) in fleet ≧ 5
+** Amount of BB(V) + CV(L/B) in fleet ≧ 4
+
+|E -> H =
+*Meet '''ALL''' of the following requirements:
+** Amount of DD ≧ 1
+** Amount of CL ≧ 1
+
+|E -> I =
+* Do not meet the requirements to go to H
+
+|G -> K/empty = * Fail the LoS check
+|G -> M = 
+* Pass the LoS check by reaching 50 or higher with the F33 formula (C<sub>n</sub>=3)
+
+|I -> H = * Fleet started at point 1
+|I -> J = * Fleet started at point 2
+
+|J -> L/empty = * Fail the LoS check
+|J -> M = * Pass the LoS check
+}}
+
+*Quest F43 [中部海域「基地航空隊」展開！] must be cleared to access this map.
+**Clearing this quest will give you your first Land-Base to use.
+*You must sink the boss {{ShipLink|Aircraft Carrier Princess}} '''6 times''' to clear the map.
+*Clearing this map rewards 1 [[Medal]] and 250 [[Experience_and_Rank#Monthly_Ranking|ranking points]]. The boss HP bar is reset at the beginning of each month, allowing the reward to be obtained again.
+*You can use a maximum of two [[Land Base Aerial Support]] squadron in Sortie mode in this map.
+**If you have a third land base, you may set it to Air Defense mode with interceptors and fighters and it will be able to participate in the map to defend your land base from enemy air raids.
+**The second and third land bases are obtainable either by purchasing the Construction Corp from the Cash Shop for 800 DMM points or by doing Quest B80 and/or B81 if you haven't done them yet.
+**If all three land bases are set to Sortie mode, then you can only choose two land bases to attack the designated node(s) and the third remaining land base will be unable to choose any nodes and will do nothing. 
+*For your land-based planes to reach the boss node, they require aircraft of 5+ combat radius (range). 
+*Enemy air raids occur in this map after sinking the boss Aircraft Carrier Princess twice in the same month. An air raid will occur only once per sortie.  Raids cease after clearing the map gauge.
+*The boss node contains an [[Abyssal Combined Fleet]].
+**If some of the enemies in the escort fleet survives, they may be attacked during the second shelling phase against the enemy's main fleet, hindering the chances to attack the Aircraft Carrier Princess. 
+**During night battle it is possible to engage against either the enemy Main Fleet or Escort Fleet depending on the status of the two enemy fleets. See [[Abyssal_Combined_Fleet#Night_Battle|here]] for the set of conditions to fulfill in order to engage against the Main Fleet.
+*Nodes G and H are [[Events/Mechanics|air raid battle]] nodes, nodes B and E are submarine nodes.
+*The enemy fleets in the entire map in both pre-boss and the boss node will change into tougher compositions depending on how many times you have sunk the Aircraft Carrier Princess. 
+*Take caution that bombers have the potential to lose their Aircraft Proficiency ranks quite frequently in this map due to the frequent appearance of {{ShipLink|Light Cruiser Tsu-Class Elite}} and enemy carriers. 
+*You may bring no more than 3 BB or CV combined. (Ex. 2 CV 1 BB / 2 BB 1 CV / 3 BB / 3 CV) 
+
+===Land-Based Attack Aircraft & Interceptor Aircraft Proficiency Leveling ===
+It is possible to level up your Land-based Attack Aircraft, Interceptor Fighters and any other Carrier-based Aircraft in World 6-5. There are two options available.
+====Node A Aircraft Leveling Method====
+*Send 1 or more submarines.
+*Send all of your LBAS to node A. Enemies will mostly die from opening strikes.
+*Sometimes your Aircraft may be slightly shot a bit (Only like 1~2 planes).
+*Morale can be ignored on both fleet & LBAS.
+*The Submarines may still be hit from enemy attacks if all of the enemies aren't sunk from opening strikes.
+*Repeat until all of the Aircraft you wish to level up are Double Chevron. 
+====Node B Aircraft Leveling Method====
+*Send a fleet of 1 or more CLs and DDs (Numbers don't matter, but bringing 4 for resource efficiency is recommended). At least 1 CL is required. 
+*All of your ships must be OASW capable (100+ ASW stats after equipping SONAR/Depth Charge)
+**Can still miss on rare occasions. 
+*Send all of your LBAS to node B. 
+*Sometimes your Aircraft may be slightly shot a bit (Only like 1 plane), on very rare occasions.
+*Morale can be completely ignored on both fleet & LBAS.
+*Repeat until all of the Aircraft you wish to level up are Double Chevron. 
+
+===Recommended Fleet===
+====North Route====
+*'''1 BB 1 CA(V) 2 CV(B) 1 DD 1 CLT'''
+**'''Route''': A - C - D - G - M
+**It is recommended to bring at least 1 {{ShipLink|Maya Kai Ni}} or an Akizuki-class Destroyer with Anti-Air Cut-in setup to defend against the enemy Carriers.
+**Node G is an Air Defense node.
+**The BB can be swapped for a 3rd CV(B).
+**The 2nd CV(B) can be swapped for a 2nd BB. 
+**The CA(V) can be swapped for a CL or DD. If so, {{ShipLink|Abukuma Kai Ni}} is recommended.
+
+====South Route====
+*'''2 BB(V) 1 CA(V) 1 CL 2 DD '''
+**'''Route: '''B - F - I - J - M 
+**Highly recommended to bring at least 1 AACI-major ship such as Maya Kai Ni or an Akizuki-class Destroyer
+**Node B is a Submarine node. 
+**You may be able to gain AS on pre-boss nodes such as I and J through the use Seaplane Bomber or Seaplane Fighter, but not in Boss node due to lack of CVs.
+**The enemies in this route are more light and easier to breakthrough except the Boss. 
+
+===LBAS Flight Range===
+[[File:6-5 LBAS flight range.png|500px|center]]
+
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|A|x=196|y=131}}
+{{Map/ImageNode|B|x=254|y=258}}
+{{Map/ImageNode|C|x=280|y=179}}
+{{Map/ImageNode|D|x=344|y=130}}
+{{Map/ImageNode|E|x=364|y=226}}
+{{Map/ImageNode|F|x=366|y=279}}
+{{Map/ImageNode|G|x=437|y=135}}
+{{Map/ImageNode|H|x=458|y=218}}
+{{Map/ImageNode|I|x=474|y=295}}
+{{Map/ImageNode|J|x=520|y=214}}
+{{Map/ImageNode|K|x=481|y=68}}
+{{Map/ImageNode|L|x=595|y=222}}
+{{Map/ImageNode|M|x=560|y=110}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=LBAS Air Raid Fleet
+|AB
+|Raid
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class/Flagship IV	
+|Standard Carrier Wo-Class/Flagship IV	
+|Light Cruiser Tsu-Class/Elite	
+|Destroyer Ha-Class/Late Model	
+|Destroyer Ha-Class/Late Model	
+|Destroyer Ha-Class/Late Model	
+|-
+|AB
+|Raid
+|{{Formation|Diamond}}
+|Aircraft Carrier Princess	
+|Standard Carrier Wo-Class/Flagship IV	
+|Light Cruiser Tsu-Class/Elite	
+|Destroyer Ha-Class/Late Model	
+|Destroyer Ha-Class/Late Model	
+|Destroyer Ha-Class/Late Model	
+|-
+|AB
+|Raid/Final
+|{{Formation|Diamond}}
+|Aircraft Carrier Princess	
+|Standard Carrier Wo-Class/Flagship IV	
+|Standard Carrier Wo-Class/Flagship IV	
+|Light Cruiser Tsu-Class/Elite	
+|Destroyer Ni-Class/Late Model	
+|Destroyer Ni-Class/Late Model	
+}}
+{{Map/Nodes|name=先遣任務部隊 前衛艦隊
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|100
+|Light Cruiser He-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|110
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|120
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|130
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|140
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|150
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|160
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|A
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|170
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|A
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}
+|180
+|Light Cruiser He-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{Map/Nodes|name=深海潜水艦隊 前方展開部隊
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|90
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}{{Formation|Line Abreast}}
+|100
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}{{Formation|Line Abreast}}
+|120
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|-
+|B
+|Normal/Final/BaseXP
+|{{Formation|Echelon}}{{Formation|Line Abreast}}
+|160
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Flagship
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+|Submarine Ka-Class/Elite
+}}
+{{Map/Nodes|name=先遣任務部隊
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|240
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Light Cruiser Tsu-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|240
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|240
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class
+|Heavy Cruiser Ne-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|270
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|270
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|270
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Heavy Cruiser Ne-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|C
+|Normal/Final/BaseXP
+|{{Formation|Diamond}}
+|300
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|C
+|Normal/Final/BaseXP
+|{{Formation|Diamond}}
+|300
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|C
+|Normal/Final/BaseXP
+|{{Formation|Diamond}}
+|300
+|Standard Carrier Wo-Class/Kai Flagship IV
+|Battleship Ta-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Heavy Cruiser Ne-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{Map/Nodes|name=深海護衛空母部隊 B群
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Diamond}}
+|200
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|D
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Diamond}}
+|240
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|D
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Diamond}}
+|270
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Heavy Cruiser Ne-Class/Elite
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{Map/Nodes|name=深海潜水艦隊 精鋭群狼部隊
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}{{Formation|Line Abreast}}
+|120
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}{{Formation|Line Abreast}}
+|180
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}{{Formation|Line Abreast}}
+|200
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|-
+|E
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|220
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|-
+|E
+|Normal/Final/BaseXP
+|{{Formation|Echelon}}{{Formation|Line Abreast}}
+|250
+|Submarine So-Class/Flagship
+|Submarine So-Class/Flagship
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+|Submarine So-Class/Elite
+}}
+{{Map/Nodes|name=深海巡洋艦戦
+|F
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Echelon}}
+|120
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Light Cruiser Ho-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|F
+|Normal/BaseXP
+|{{Formation|Double Line}}
+|140
+|Heavy Cruiser Ri-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|F
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Echelon}}
+|160
+|Heavy Cruiser Ri-Class/Kai Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Torpedo Cruiser Chi-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+{{Map/Nodes|name=深海任務部隊 艦載機群
+|G
+|Defense/BaseXP
+|{{Formation|Diamond}}
+|200
+|Aircraft Carrier Princess
+|Standard Carrier Wo-Class/Flagship IV
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|G
+|Defense/BaseXP
+|{{Formation|Diamond}}
+|250
+|Aircraft Carrier Princess
+|Standard Carrier Wo-Class/Flagship IV
+|Standard Carrier Wo-Class/Flagship IV
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|G
+|Defense/Final/BaseXP
+|{{Formation|Diamond}}
+|250
+|Aircraft Carrier Princess
+|Standard Carrier Wo-Class/Flagship IV
+|Standard Carrier Wo-Class/Flagship IV
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+}}
+{{Map/Nodes|name=深海任務部隊 艦載機群
+|H
+|Defense/BaseXP
+|{{Formation|Diamond}}
+|120
+|Standard Carrier Wo-Class/Flagship IV
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|-
+|H
+|Defense/BaseXP
+|{{Formation|Diamond}}
+|160
+|Standard Carrier Wo-Class/Flagship IV
+|Standard Carrier Wo-Class/Flagship IV
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|-
+|H
+|Defense/Final/BaseXP
+|{{Formation|Diamond}}
+|200
+|Aircraft Carrier Princess
+|Standard Carrier Wo-Class/Flagship IV
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+}}
+{{Map/Nodes|name=深海護衛空母部隊 A群
+|I
+|Normal/BaseXP
+|{{Formation|Double Line}}{{Formation|Diamond}}
+|200
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I
+|Normal/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Diamond}}
+|230
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|I
+|Normal/Final/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Diamond}}
+|260
+|Light Carrier Nu-Class/Flagship
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+}}
+{{Map/Nodes|name=深海護衛空母部隊 C群
+|J
+|Night/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Diamond}}
+|180
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|J
+|Night/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Diamond}}
+|190
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer I-Class/Late Model
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|J
+|Night/Final/BaseXP
+|{{Formation|Line Ahead}}{{Formation|Double Line}}{{Formation|Diamond}}
+|200
+|Light Carrier Nu-Class/Flagship
+|Light Cruiser He-Class/Flagship
+|Light Cruiser Tsu-Class
+|Destroyer Ro-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+}}
+{{Map/Nodes
+|K
+|Empty
+}}
+{{Map/Nodes
+|L
+|Empty
+}}
+{{Map/Nodes|name=任務部隊 主力群
+|M
+|Boss/BaseXP
+|{{Formation|Cruising Formation 3}}
+|500
+|Aircraft Carrier Princess
+|Standard Carrier Wo-Class/Flagship IV
+|Heavy Cruiser Ri-Class/Flagship
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|M
+|Boss/BaseXP
+|{{Formation|Cruising Formation 3}}
+|520
+|Aircraft Carrier Princess
+|Standard Carrier Wo-Class/Flagship IV
+|Standard Carrier Wo-Class/Flagship IV
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ha-Class/Late Model
+|Destroyer Ha-Class/Late Model
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer I-Class/Late Model
+|Destroyer I-Class/Late Model
+|-
+|M
+|Boss/Final/BaseXP
+|{{Formation|Cruising Formation 3}}
+|550
+|Aircraft Carrier Princess
+|Standard Carrier Wo-Class/Flagship IV
+|Standard Carrier Wo-Class/Flagship IV
+|Light Cruiser Tsu-Class/Elite
+|Destroyer Ni-Class/Late Model
+|Destroyer Ni-Class/Late Model
+|Light Cruiser He-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Heavy Cruiser Ri-Class/Flagship
+|Destroyer Ha-Class/Late Model
+|Destroyer Ro-Class/Late Model
+|Destroyer Ro-Class/Late Model
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = A, B, C, D, E, F, I, J, M
+|boss = M
+|Abukuma: D, J, M
+|Akagi: M
+|Akigumo: C, D, M
+|Asashimo: M
+|Atago: M
+|Furutaka: M
+|Haruna: M
+|Harusame: M
+|Hiei: M
+|Hiyou: C, D, I
+|I-19: J
+|Junyou: C, D
+|Kaga: M
+|Kashima: M
+|Kawakaze: M
+|Kinu: D, M
+|Kinugasa: M
+|Kirishima: M
+|Kitakami: D
+|Kongou: M
+|Kuma: C, D, J
+|Maikaze: M
+|Makigumo: M
+|Miyuki: M
+|Mutsu: M
+|Mutsuki: M
+|Myoukou: M
+|Naganami: M
+|Nagara: C, D, I
+|Nagato: M
+|Nowaki: M
+|Okinami: M
+|Ooi: D
+|Ryuujou: C, D, I
+|Sendai: C, D
+|Shouhou: D
+|Shoukaku: M
+|Suzuya: M
+|Takanami: M
+|Takao: M
+|Tatsuta: M
+|Umikaze: M
+|Yuubari: M
+|Yuugumo: M
+|Zuikaku: M
+}}
+{{SectionEnd}}

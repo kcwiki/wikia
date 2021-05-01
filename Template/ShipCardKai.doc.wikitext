@@ -1,0 +1,84 @@
+This template uses ship data modules to display the card image for the requested ship.
+
+==Example==
+ <nowiki>{{ShipCardKai|U-511}}</nowiki>
+ <nowiki>{{ShipCardKai|Akitsushima/|grayscale=true|layers=status_sunk}}</nowiki>
+ <nowiki>{{ShipCardKai|Shigure/Kai Ni Valentine|layers=ring ring_glow}}</nowiki>
+ <nowiki>{{ShipCardKai|name=Ooyodo|model=Kai}}</nowiki>
+ <nowiki>{{ShipCardKai|Taihou/Kai|damaged=true|layers=status_medium_damage}}</nowiki>
+ <nowiki>{{ShipCardKai|Taihou/Kai|hd=true}}</nowiki>
+ <nowiki>{{ShipCardKai|Taihou/Kai|damaged=true|hd=true}}</nowiki>
+
+becomes
+
+{{ShipCardKai|U-511}}
+{{ShipCardKai|Akitsushima/|grayscale=true|layers=status_sunk}}
+{{ShipCardKai|Shigure/Kai Ni Valentine|layers=ring ring_glow}}
+{{ShipCardKai|name=Ooyodo|model=Kai}}
+{{ShipCardKai|Taihou/Kai|damaged=true|layers=status_medium_damage}}
+
+{{ShipCardKai|Taihou/Kai|hd=true}}
+{{ShipCardKai|Taihou/Kai|damaged=true|hd=true}}
+
+==Parameters==
+The following are the parameters that can be passed.
+
+===[1]===
+
+The ''key'' of the ship, which consists of: The name of the ship, followed by a slash (/), optionally followed by the suffix of the ship.
+
+This method is included as a shortcut and for convenience. ''name'' and ''model'' will take precedence over this.
+
+===name===
+The name of the ship, without any suffixes.
+
+===model===
+The model of the ship, ie. the suffix. For example, Kai or Kai Ni.
+
+To specify the base model you can omit model or leave model empty.
+
+===damaged===
+
+Boolean. Set to <code>true</code> to show the damaged card. Defaults to <code>false</code>.
+
+===hd===
+
+Boolean. Set to <code>true</code> to use HD (HTML5) assets.
+
+===layers===
+
+A list of strings separated by spaces. Adds the specified layers on top of the card. 
+
+Available layers are:
+* <code>status_light_damage</code>
+* <code>status_medium_damage</code>
+* <code>status_heavy_damage</code>
+* <code>status_sunk</code>
+* <code>status_repair</code>
+* <code>status_expedition</code>
+* <code>ring</code>
+* <code>ring_glow</code>
+
+===link===
+
+String. If set, the image (and any layer images) becomes a link to the parameter's value. Set to <code>nil</code> to have images to link to themselves (like plain wikitext images). Set to <code>false</code> to force images to be unlinked.
+
+===caption===
+
+String. If set, hovering over the image will show the parameter's value as a tooltip. Will default to the link like normal wikitext image behaviour.
+
+===size===
+
+String. If set, the card is resized to the specified size. Not recommended for use with layers. The format of the string is the same as for normal wikitext images.
+
+===grayscale===
+
+Boolean. Set to <code>true</code> to grayscale the image. Only works in browsers that support the CSS grayscale filter, unprefixed or with <code>-webkit</code> prefix (no IE).
+
+===mode===
+
+String. Changes the mode of the template. The default mode returns a fully formatted image.
+
+Set to <code>source</code> to return the image's filename. All image formatting parameters are ignored in this mode. This mode is intended for use in conjunction with the <code>gallery</code> tag called via the <code>#tag</code> parser function.
+
+<includeonly>[[Category:Templates that use ship data modules|{{PAGENAME}}]]</includeonly><noinclude>[[Category:Template documentation|{{PAGENAME}}]]</noinclude>

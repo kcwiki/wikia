@@ -1,0 +1,48 @@
+==Preface==
+
+A model for an Artillery Spotting formula, which is based on data taken from KanColle Kai.
+
+==Formula==
+
+First, a fleetwide variable for LoS is calculated. This takes into account all ships in the fleet, not just the ship performing Artillery Spotting. Note that Seaplanes and Seaplane Bombers are the only pieces of equipment that are considered for this calculation, and the bonus is proportional to the square root of the slot size as well.
+
+<math>F_{los} = \sum^{\text{All Ships}} \left ( B_{s} + \sum^{\text{All Slots}} L_{sp} \left \lfloor \sqrt{N} \right \rfloor \right )</math>
+
+*<math>B_{s}</math> is the ship's unmodified LoS, without including equipment
+*<math>L_{sp}</math> is the LoS value of a given Seaplane or Seaplane Bomber
+*<math>N</math> is the slot size of a Seaplane (Bomber)-carrying slot
+
+
+<math>A_{los} = \left \lfloor \sqrt{F_{los}} + \frac{F_{los}}{10} \right \rfloor</math>
+
+
+Then, for any given ship fulfilling Artillery Spotting conditions, the following formulas are applied. The values of L_los and E_los are no longer fleetwide and are instead dependent on the ship performing Artillery Spotting.
+
+
+<math>L_{los} = \left \lfloor \sqrt{S_{luck}} + 10 \right \rfloor</math>
+
+*<math>S_{luck}</math> is the ship's luck
+
+
+<math>E_{los} = \sum^{\text{All Slots}} L_{eq}</math>
+
+*<math>L_{eq}</math> is the LoS value of a given equipment.
+
+
+<math>\text{Base Rate} = \begin{cases} L_{los} + 0.7 \left ( A_{los} + 1.6 E_{los} \right ) + 10, & \text{ if Air Supremacy (AS+)} \\ L_{los} + 0.6 \left ( 
+A_{los} + 1.2 E_{los} \right ), & \text{ if Air Superiority (AS)}  \end{cases}</math>
+
+
+Finally, the probability of Artillery Spotting occurring is calculated by dividing the Base Rate with a modifier (the "Type Factor") based on the type of Artillery Spotting. The result can be then multiplied by 100 and interpreted as a percentage.
+
+
+<math>\text{Spotting Chance} = \frac{\left \lfloor \text{Base Rate} \right \rfloor + F}{\text{Type Factor}}</math>
+
+*<math>F</math> is the flagship bonus; 15 if the ship is in the flagship position, 0 otherwise.
+
+
+<math>\text{Type Factor} = \begin{cases} 140, & \text{ for AP Cut-In (Main)} \\ 130, & \text{ for AP Cut-In (Secondary)} \\ 130, & \text{ for Secondary Cut-In (Radar)} \\ 120, & \text{ for Secondary Cut-In} \\ 150, & \text{ for Double Attack} \end{cases}</math>
+
+
+If the ship fulfills multiple Artillery Spotting conditions, the system will check (and "roll") the spotting chances of each applicable Artillery Spotting type, in descending order of priority according to the breakdown of Type Factors above. For example, a Battleship equipping two Main Guns, a Seaplane and an AP Shell will be checked for her probability of performing an AP Cut-In (Main) first, and then, if it fails, for a Double Attack.
+[[Category:Blog posts]]

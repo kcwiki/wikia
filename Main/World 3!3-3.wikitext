@@ -1,0 +1,82 @@
+{{Map/Header}}
+{{Map/Info
+|en = The Alfonsinos
+|jp = アルフォンシーノ方面
+|romaji = Arufonshīno hōmen
+|exp_hq = 140
+|exp_hq_boss = 2280
+|strategy_name = The Advance for Alfonsinos
+|strategy_name_ja = アルフォンシーノ方面進出
+|strategy_info = Use a strong fleet for example a carrier task force that two or more aircraft-carriers belong to or other fleet, advance into the Northern Waters with it. With the same forces, conduct a forced reconnaissance for enemy movements!
+|strategy_info_ja = 空母2隻以上を擁する空母機動部隊などの有力な艦隊をもって北方海域に進出。同戦力により敵情の強行偵察を敢行せよ！
+}}
+{{MapBranchingTable
+|title = 3-3 Branching Rules
+|expand = true
+|id = 3-3
+|A -> B = * Do not meet the requirement to go to C
+
+|A -> C/storm = 
+* Meeting '''ANY''' of the following requirements
+** Fleet contains CV(B)
+** Amount of CVL+(F)BB(V) ≥ 4
+** (F)BB(V)+CVL = 1, CL = 1 and DD = 4
+
+|B -> D/resource, F/storm = 
+* Random routing if fleet contains SS(V)
+* Meet '''ANY''' of the following requirements to go to F
+** Amount of (F)BB(V)+CV(B/L) ≤ 1
+** Amount of (F)BB(V)+CV(B/L) ≤ 2 and DD ≥ 2
+* Otherwise, random routing
+
+|C/storm -> E = * Do not meet the requirements to go to G.
+
+|C/storm -> G = 
+*Meet '''ANY''' of the following requirements
+**(F)BB(V)+CV(B/L) = 1, CL = 1 '''AND''' DD = 4
+**(F)BB(V)+CV(B/L) = 2, (F)BB(V) ≤ 1, CV(B) ≤ 1 '''AND''' DD+DE ≥ 2
+
+|F/storm -> G, H/resource, J/empty = 
+* Go to G if amount of DD ≤ 1
+* Meet '''ALL''' of the following requirements to go to J:
+** Fleet contains CL
+** Amount of DD ≥ 2
+* Otherwise, random routing between H and J if DD ≥ 2.
+* Otherwise, go to G
+
+|G -> I/empty, M = 
+* Meet '''ALL''' of the following requirements to go to M:
+** Amount of (F)BB(V)+CV(L/B) ≤ 3
+** No SS(V)
+* Otherwise, random routing.
+
+|J/empty -> K = * Do not meet the requirements to go to M.
+
+|J/empty -> M = 
+* Meet '''ALL''' of the following requirements:
+** Amount of CL ≤ 1
+** Amount of DD+CL ≥ 5
+** Amount of CA(V) ≤ 1
+
+|K -> L/empty, M = 
+*Go to M if (F)BB(V)+CVL ≤ 1
+*Otherwise, random routing
+}}
+
+==Compositions==
+*{{Event/Route|A|red|C|purple|G|red|M|red}}
+**1 (F)BB(V)/CVL 1 CV(B) 2 CA(V)/CLT/AV 2 DD
+*{{Event/Route|A|red|C|purple|E|red|G|red|M|red}}
+**3 CV(L/B) 3 CA(V)/CLT
+*{{Event/Route|A|red|B|red|F|purple|J|blue|M|red}}
+**1 CL 1 CLT/CA(V) 4 DD
+***Cheapest composition, going south route to avoid enemy BB CV pre-boss, but might have difficulty winning the boss fight
+*{{Event/Route|A|red|B|red|F|purple|J|blue|K|red|M|red}}
+**1 (F)BB(V)/CVL 2 CA(V)/CLT 1 CL 2 DD
+***Stronger composition for south route, but will cost more fuel and ammo along with possible buckets due to the number of encounters you'll face
+
+==Furniture Coin Box Collecting==
+It's possible to collect Furniture Coins in the south route with the fleet '''3 CVL 2 DD 1 CA(V)/CLT''' going either {{Event/Route|A|red|B|red|D|green}} or {{Event/Route|A|red|B|red|F|purple|H|green}}
+*However, there is a chance you'll avoid both nodes
+
+{{Map/Footer}}

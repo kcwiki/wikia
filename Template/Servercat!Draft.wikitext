@@ -1,0 +1,368 @@
+{{#vardefine:rows|{{#switch:|{{{oldIPaddress|}}} = 8| #default = 7}}}}
+__NOTOC__
+== <span style="float:right; font-size:70%;">{{Event/DetailToggle}} [[File:{{{server_banner|Unknown server banner.png}}}]]</span><br><br>About ==
+
+{{clear}}
+
+<div class="mw-collapsible mw-expanded" >
+
+{| class="wikitable"
+! style="text-align:left;" | '''[[wikipedia:Japanese_language|Japanese]] name:''' <span style="cursor:help;" title="{{{kana|}}}"></span>
+| colspan="3" |{{{jpname|Unspecified}}} 
+! rowspan="{{#var:rows}}" style="text-align:right;" |{{#switch:{{PAGENAME}}
+     | Servercat = {{#tag:gallery| 
+     Catbomb.png
+     |type="slideshow"|widths="360px"|position="right"|hideaddbutton="true"|mode="nolines packed-hover"}}
+     | #default = {{#tag:gallery| 
+     {{{galleries}}}
+     |type="slideshow"|widths="360px"|position="right"|hideaddbutton="true"|mode="nolines packed-hover"}}
+}}
+|-
+! style="text-align:left;" | '''Name in [[wikipedia:Romanization_of_Japanese|romaji]]:'''
+| {{{romaji|Unspecified}}}
+|-
+! style="text-align:left;"| '''English name:'''
+| {{{engname|Unspecified}}}
+|-
+! style="text-align:left;" | '''Physical location:'''
+| {{{location|Unspecified}}}
+|-
+! style="text-align:left;" | '''Nearby sea(s) to this location:'''
+| {{{seas|Unspecified}}}
+|-
+! style="text-align:left;" | '''Server's launch date:'''
+| {{{launchdate|Unknown}}}
+|-
+! style="text-align:left;" | '''Current server's [[wikipedia:IP_address|IP address]]<span class="mw-customtoggle-nerds" style="cursor:pointer;">:</span>'''
+| {{{IPaddr|Unknown}}}
+|-
+{{#if:{{{oldIPaddr|}}}|! '''Former server's [[wikipedia:IP_address|IP address]]:''' {{!}}{{!}}{{{oldIPaddr}}}|}}
+|}
+
+<div class="mw-collapsible mw-collapsed" id="mw-customcollapsible-nerds">
+{| class="wikitable"
+! colspan="2" |  <small>Extra information for nerds</small>
+|-
+! style="text-align:left" | '''[[wikipedia:Httpd|httpd]]:'''
+| {{{httpd|nginx}}}
+|-
+! style="text-align:left" | '''X-Powered-By:'''
+| {{{xpoweredby|PHP/5.3.3}}}
+|-
+! style="text-align:left" | '''Accepts ICMP probe:'''
+| {{{ICMP|No}}}
+|-
+! style="text-align:left" | '''Accepts TCP probe:'''
+| {{{TCP|Yes}}}
+|-
+! style="text-align:left" | '''inetnum:'''
+| {{{inetnum|Undefined}}}
+|-
+! style="text-align:left" | '''netname:'''
+| {{{netname|TECHORUS}}}
+|-
+! style="text-align:left" | '''descr:'''
+| {{{descr0|NHN Techorus Corp.}}}
+|-
+! style="text-align:left" | '''descr:'''
+| {{{descr1|DATAHOTEL Taskforce}}}
+|-
+! style="text-align:left" | '''country:'''
+| {{{country|JP}}}
+|-
+! style="text-align:left" | '''org:'''
+| {{{org|ORG-NTC2-AP}}}
+|-
+! style="text-align:left" | '''admin-c:'''
+| {{{admin-c|TN03-AP}}}
+|-
+! style="text-align:left" | '''tech-c:'''
+| {{{tech-c|TN03-AP}}}
+|-
+! style="text-align:left" | '''mnt-by:'''
+| {{{mnt-by|APNIC-HM}}}
+|-
+! style="text-align:left" | '''mnt-routes:'''
+| {{{mnt-routes|MAINT-JP-TECHORUS}}}
+|-
+! style="text-align:left" | '''mnt-lower:'''
+| {{{mnt-lower|MAINT-JP-TECHORUS}}}
+|-
+! style="text-align:left" | '''mnt-irt:'''
+| {{{mnt-irt|IRT-TECHORUS-JP}}}
+|-
+! style="text-align:left" | '''status:'''
+| {{{status|ALLOCATED PORTABLE}}}
+<!--
+! style="text-align:left" | '''remarks:'''
+| -+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+-->
+|-
+! style="text-align:left" | '''remarks:'''
+| --------------------------------------------------------
+|-
+! style="text-align:left" | '''remarks:'''
+| {{{remarks0|To report network abuse, please contact the IRT}}}
+|-
+! style="text-align:left" | '''remarks:'''
+| {{{remarks1|For troubleshooting, please contact tech-c and admin-c}}}
+|-
+! style="text-align:left" | '''remarks:'''
+| {{{remarks2|For assistance, please contact the APNIC Helpdesk}}}
+|-
+! style="text-align:left" | '''remarks:'''
+| --------------------------------------------------------
+|-
+<!--
+! style="text-align:left" | '''remarks:'''
+| -+-+-+-+-+-+-+-+-+-+-+-++-+-+-+-+-+-+-+-+-+-+-+-+-+-+-+
+-->
+<!--
+! style="text-align:left" | '''changed:'''
+| {{{changed0|hm-changed@apnic.net 20120423}}}
+|-
+! style="text-align:left" | '''changed:'''
+| {{{changed1|hm-changed@apnic.net 20141119}}}
+|-
+! style="text-align:left" | '''changed:'''
+| {{{changed2|hm-changed@apnic.net 20151029}}}
+|-
+-->
+! style="text-align:left" | '''last-modified:'''
+| {{{last-modified0|2017-08-30T07:21:04Z}}}
+|-
+! style="text-align:left" | '''source:'''
+| {{{source|APNIC}}}
+|-
+| &nbsp; 
+| &nbsp;
+|-
+| &nbsp; 
+| &nbsp;
+|-
+! style="text-align:left" | '''irt:'''
+| {{{mnt-irt|IRT-TECHORUS-JP}}} 
+|-
+! style="text-align:left" | '''address:'''
+| {{{address0|13F Shinjuku Eastside Square 6-27-30 Shinjuku, Shinjuku-ku, Tokyo}}}
+|-
+! style="text-align:left" | '''e-mail:'''
+| {{{email|ipaddress@data-hotel.net}}}
+|-
+! style="text-align:left" | '''abuse-mailbox:'''
+| {{{abuse|ipaddress@data-hotel.net}}}
+|-
+! style="text-align:left" | '''admin-c:'''
+| {{{admin-c|TNO3-AP}}}
+|-
+! style="text-align:left" | '''tech-c:'''
+| {{{tech-c|TNO3-AP}}}
+|-
+! style="text-align:left" | '''auth:'''
+| {{{auth|# Filtered}}}
+|-
+! style="text-align:left" | '''mnt-by:'''
+| {{{mnt-by|MAINT-JP-TECHORUS}}}
+<!-- 
+|-
+! style="text-align:left" | '''changed:''' 
+| {{{changeip1|ipaddress@data-hotel.net 20151030}}} 
+-->
+|-
+! style="text-align:left" | '''last-modified:'''
+| {{{last-modified1|2017-06-14T08:47:46Z}}}
+|-
+! style="text-align:left" | '''source:'''
+| {{{source|APNIC}}}
+|-
+| &nbsp; 
+| &nbsp;
+|-
+| &nbsp; 
+| &nbsp;
+|-
+! style="text-align:left" | '''organisation:'''
+| {{{organisation|ORG-NTC2-AP}}}
+|-
+! style="text-align:left" | '''org-name:'''
+| {{{org-name|NHN Techorus Corp.}}}
+|-
+! style="text-align:left" | '''country:'''
+| {{{country|JP}}}
+|-
+! style="text-align:left" | '''address:'''
+| {{{address0|13F Shinjuku Eastside Square 6-27-30 Shinjuku, Shinjuku-ku, Tokyo}}}
+|-
+! style="text-align:left" | '''address:'''
+| {{{address1|1-23-1 Toranomon}}}
+|-
+! style="text-align:left" | '''phone:'''
+| {{{phone|+81-3-5155-0111}}}
+|-
+! style="text-align:left" | '''fax-no:'''
+| {{{fax-no|+81-3-5155-2111}}}
+|-
+! style="text-align:left" | '''e-mail:'''
+| {{{email|ipaddress@data-hotel.net}}}
+|-
+! style="text-align:left" | '''mnt-ref:'''
+| {{{mnt-ref|APNIC-HM}}}
+|-
+! style="text-align:left" | '''mnt-by:'''
+|{{{mnt-by|APNIC-HM}}}
+|-
+! style="text-align:left" | '''last-modified:'''
+| {{{last-modified2|2017-08-17T12:59:03Z}}}
+|-
+! style="text-align:left" | '''source:'''
+| {{{source|APNIC}}}
+|-
+! style="text-align:left" | '''role:'''
+| {{{role|TECHORUS Network Operations}}}
+|-
+! style="text-align:left" | '''address:'''
+| {{{address0|13F Shinjuku Eastside Square 6-27-30 Shinjuku, Shinjuku-ku, Tokyo}}}
+|-
+! style="text-align:left" | '''country:'''
+| {{{country|JP}}}
+|-
+! style="text-align:left" | '''phone:'''
+| {{{phone|+81-3-5155-0111}}}
+|-
+! style="text-align:left" | '''e-mail:'''
+| {{{email|ipaddress@data-hotel.net}}}
+|-
+! style="text-align:left" | '''admin-c:'''
+| {{{admin-c|TNO3-AP}}}
+|-
+! style="text-align:left" | '''tech-c:'''
+| {{{tech-c|TNO3-AP}}}
+|-
+! style="text-align:left" | '''nic-hdl:'''
+| {{{nic-hd1|TNO3-AP}}}
+|-
+! style="text-align:left" | '''mnt-by:'''
+| {{{mnt-by|MAINT-JP-TECHORUS}}}
+|-
+! style="text-align:left" | '''abuse-mailbox:'''
+| {{{abuse|ipaddress@data-hotel.net}}}
+|-
+! style="text-align:left" | '''notify:'''
+| {{{notify|ipaddress@data-hotel.net}}}
+<!-- 
+|-
+! style="text-align:left" | '''changed:'''
+| {{{changedip2|ipaddress@data-hotel.net 20150818}}}
+-->
+|-
+! style="text-align:left" | '''last-modified:'''
+| {{{lastmodified3|2017-06-14T08:47:06Z}}}
+|-
+! style="text-align:left" | '''source:'''
+| {{{source|APNIC}}}
+|}
+</div>
+
+</div>
+
+{{clear}}
+
+== Note(s) == 
+
+<div class="mw-collapsible mw-expanded">
+
+* {{{Notes|''No note(s) included''}}}
+
+<!--Insert related server notices via developer tweets stuff here-->
+<noinclude>
+{{#ifeq: {{{relnotes|}}}|false
+|== Related server notices via developer tweets ==
+
+<div class="mw-collapsible mw-expanded">
+
+{{{relnotes}}}
+
+</div>
+{{clear}}
+
+|== Related server notices via developer tweets ==
+
+<div class="mw-collapsible mw-expanded">
+
+* ''Nothing to see here, move along...''
+
+</div>
+
+{{clear}}
+| |}}
+</noinclude>
+<!--Insert reference(s) stuff here-->
+<noinclude>
+{{#ifeq: {{{references|}}}|false| |
+== Reference(s) ==
+
+<div class="mw-collapsible mw-expanded">
+
+* ''No reference(s) made''
+
+</div>
+
+{{clear}}
+| |}}
+</noinclude>
+
+</div>
+
+{{clear}}
+
+== See also ==
+
+<div class="mw-collapsible mw-expanded">
+
+* {{{wikipediaref|''No wikipedia link included''}}}
+* [[Servers|List of servers]]
+* ''How do I add pages to category? [http://community.wikia.com/wiki/Help:Category Refer to here for more information (Wikia Community Central Help page)]''
+
+{| class="mw-collapsible mw-collapsed wikitable" align=center style="width:100%"
+|-
+!colspan=2 align=center width=100%|List of Kancolle Servers
+|-
+| 
+[[:Category:Gadget|''Gadget server'']]{{·}}
+[[:Category:Yokosuka|Yokosuka Naval District]]{{·}}
+[[:Category:Kure|Kure Naval District]]{{·}}
+[[:Category:Sasebo|Sasebo Naval District]]{{·}}
+[[:Category:Maizuru|Maizuru Naval District]]{{·}}
+[[:Category:Oominato|Ominato Guard District]]{{·}}
+[[:Category:Torakku|Truk Anchorage]]{{·}}
+[[:Category:Ringa|Lingga Anchorage]]{{·}}
+[[:Category:Rabauru|Rabaul Naval Base]]{{·}}
+[[:Category:Shootorando|Shortland Anchorage]]{{·}}
+[[:Category:Buin|Buin Naval Base]]{{·}}
+[[:Category:Tauitaui|Tawi-Tawi Anchorage]]{{·}}
+[[:Category:Parao|Palau Anchorage]]{{·}}
+[[:Category:Brunei|Brunei Anchorage]]{{·}}
+[[:Category:Hitokappu Bay|Hitokappu Bay Anchorage]]{{·}}
+[[:Category:Paramushiru|Paramushir Anchorage]]{{·}}
+[[:Category:Sukumo Bay|Sukumo Bay Anchorage]]{{·}}
+[[:Category:Kanoya|Kanoya Airfield]]{{·}}
+[[:Category:Iwagawa|Iwagawa Airfield]]{{·}}
+[[:Category:Saiki-wan|Saiki Bay Anchorage]]{{·}}
+[[:Category:Hashirajima|Hashirajima Anchorage]]
+|}
+
+</div>
+
+{{clear}}
+
+==  External links ==
+
+<div class="mw-collapsible mw-expanded">
+
+{{#if:{{{senka|}}}|* [https://www.senka.me/ Ranking site - Japanese only]|}}
+{{#if:{{{senka|}}}|* [https://www.senka.me/server/{{{senka}}} Server information on senka.me - Japanese only]|}}
+{{#if:{{{senka|}}}|* [https://www.senka.me/server/{{{senka}}}/ranking Ranking on senka.me - Japanese only]|}}
+
+</div>
+
+{{clear}}

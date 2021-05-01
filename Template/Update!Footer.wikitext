@@ -1,0 +1,18 @@
+<includeonly>{{#vardefine:pagename|{{#if:{{{pagename|}}}|{{{pagename}}}|{{PAGENAMEE}}}}}}{{#ifexist:{{#var:pagename}}/Tweets|<h2>Developer Tweets<div style="float:right;font-size:14px">{{Edit|{{#var:pagename}}/Tweets}}</div></h2>
+{{:{{#var:pagename}}/Tweets}}}}
+<h2>Twitter Avatars<div style="float:right;font-size:14px">{{Edit|{{#var:pagename}}}}</div></h2>
+{| class="wikitable"
+|style="width:120px"|{{#if:{{{teaser_1|}}}|[[File:{{{teaser_1}}}|120px]]}}
+|style="width:120px"|{{#if:{{{teaser_2|}}}|[[File:{{{teaser_2}}}|120px]]}}
+|style="width:120px"|{{#if:{{{teaser_3|}}}|[[File:{{{teaser_3}}}|120px]]}}
+|style="width:120px"|{{#if:{{{teaser_4|}}}|[[File:{{{teaser_4}}}|120px]]}}
+|style="width:120px"|{{#if:{{{teaser_5|}}}|[[File:{{{teaser_5}}}|120px]]}}
+{{#if:{{{teaser_6|}}}|{{!}}-
+{{!}}style="width:120px"{{!}}{{#if:{{{teaser_6|}}}|[[File:{{{teaser_6}}}|120px]]}}
+{{!}}style="width:120px"{{!}}{{#if:{{{teaser_7|}}}|[[File:{{{teaser_7}}}|120px]]}}
+{{!}}style="width:120px"{{!}}{{#if:{{{teaser_8|}}}|[[File:{{{teaser_8}}}|120px]]}}
+{{!}}style="width:120px"{{!}}{{#if:{{{teaser_9|}}}|[[File:{{{teaser_9}}}|120px]]}}
+{{!}}style="width:120px"{{!}}{{#if:{{{teaser_10|}}}|[[File:{{{teaser_10}}}|120px]]}}}}
+|}</includeonly><noinclude>
+See [[Template:Update]].
+</noinclude>

@@ -1,0 +1,53 @@
+/* EliteShipsKai detailed view toggle
+Added by: ckwng
+----------------------------------------------*/
+p.eliteshipskai-detailed-toggle + table th.eliteshipskai-detailed,
+p.eliteshipskai-detailed-toggle + div.table-wrapper table th.eliteshipskai-detailed,
+p.eliteshipskai-detailed-toggle + table td.eliteshipskai-detailed,
+p.eliteshipskai-detailed-toggle + div.table-wrapper table td.eliteshipskai-detailed,
+p.eliteshipskai-detailed-toggle + table span.eliteshipskai-detailed
+p.eliteshipskai-detailed-toggle + div.table-wrapper table span.eliteshipskai-detailed {
+    display: none;
+}
+
+p.eliteshipskai-detailed-toggle + table th.eliteshipskai-simple,
+p.eliteshipskai-detailed-toggle + div.table-wrapper table th.eliteshipskai-simple,
+p.eliteshipskai-detailed-toggle + table td.eliteshipskai-simple,
+p.eliteshipskai-detailed-toggle + div.table-wrapper table td.eliteshipskai-simple {
+    display: table-cell !important;
+}
+
+p.eliteshipskai-detailed-toggle:target + table th.eliteshipskai-detailed, 
+p.eliteshipskai-detailed-toggle:target + div.table-wrapper table th.eliteshipskai-detailed,
+p.eliteshipskai-detailed-toggle:target + table td.eliteshipskai-detailed, 
+p.eliteshipskai-detailed-toggle:target + div.table-wrapper table td.eliteshipskai-detailed {
+    display: table-cell;
+}
+
+p.eliteshipskai-detailed-toggle:target + table span.eliteshipskai-detailed,
+p.eliteshipskai-detailed-toggle:target + div.table-wrapper table span.eliteshipskai-detailed{
+    display: inline !important;
+}
+
+p.eliteshipskai-detailed-toggle:target + table th.eliteshipskai-simple, 
+p.eliteshipskai-detailed-toggle:target + div.table-wrapper table th.eliteshipskai-simple, 
+p.eliteshipskai-detailed-toggle:target + table td.eliteshipskai-simple, 
+p.eliteshipskai-detailed-toggle:target + div.table-wrapper table td.eliteshipskai-simple {
+    display: none !important;
+}
+
+p.eliteshipskai-detailed-toggle {
+    display: inline !important;
+}
+
+p.eliteshipskai-detailed-toggle:target > a:first-of-type {
+    display: none !important;
+}
+
+p.eliteshipskai-detailed-toggle > a:last-of-type {
+    display: none;
+}
+
+p.eliteshipskai-detailed-toggle:target > a:last-of-type {
+    display: inline;
+}

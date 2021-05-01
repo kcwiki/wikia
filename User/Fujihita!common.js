@@ -1,0 +1,1 @@
+importScriptPage('User:がか/DisableAdvancedTooltips.js', 'kancolle');

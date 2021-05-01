@@ -1,0 +1,131 @@
+__NOTOC__
+<div style="text-align:center;margin-top:20px;">{{Event/DetailToggle}}</div>
+
+==Information==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{Notice|align=left|
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/8KNuaFf0lxQUJoF13 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1jy5-D538mPR7a7LX1NB1w57GN_uriWUC7Y3GGWCBwKY here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:524321|here]].
+}}
+
+{{Event/MapInfo
+|en = Preparation for Operation Hikari
+|jp = 「光」作戦準備
+|romaji = 「Hikari 」Sakusen Jyunbi
+|tag = Operation Fleet
+|transport = true
+|hp_all = 100
+|mechanics = Ship Locking@Events/Mechanics#Ship_Locking
+|Allreward = [[File:Submarine Carrier Drawer Card.png{{!}}50px{{!}}link=Furniture/Chest#Submarine Carrier Drawer]]
+
+|Easyitem1 =[[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]] |Easyqty1 = 1
+|Easyitem2 =[[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] |Easyqty2 = 1
+
+|Normitem1 = {{EquipmentCardKai|Zuiun (631 Air Group)|size=50px}} |Normqty1 = 1
+|Normitem2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]|Normqty2 = 2
+|Normitem3 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]|Normqty3 = 1
+
+|Harditem1 = {{EquipmentCardKai|Zuiun (631 Air Group)|size=50px}}|Hardqty1 = 1
+|Harditem2 = [[File:Food supply ship mamiya.png{{!}}50px{{!}}link=Fatigue]]|Hardqty2 = 1
+|Harditem3 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]|Hardqty3 = 3
+|Harditem4 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]|Hardqty4 = 1
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|order = G, D, C
+|G/empty -> L = 
+* TP gauge is 0 and the gauge isn't destroyed yet 
+* The gauge is destroyed and you do not meet the requirements to go to D
+|G/empty -> D = 
+* TP gauge is ≧ 1
+* The TP gauge is destroyed and the fleet contains '''only''' SS(V)
+* If the TP gauge is destroyed, meet '''all''' of the following requirements
+** Amount of CL ≧ 1
+** Amount of DD ≧ 3
+** Fast Fleet
+** Fleet contains no CV(L/B)
+
+|D -> A =
+* Does not meet any requirements to go to C
+|D -> C/empty = 
+* If the fleet contains '''only''' SS(V)
+** Amount of SS(V) ≧ 1 on Easy/2 on Medium/3 on Hard
+* If the difficulty is Easy, meet '''all''' of the following requirements
+** Amount of DD ≧ 2
+** Amount of CV(L/B) ≦ 1
+* If the difficulty is Medium, meet '''all''' of the following requirements
+** Amount of DD ≧ 2
+** Amount of SS(V) ≧ 2
+** Amount of CV(L/B) ≦ 1
+* If the difficulty is Hard, meet '''all''' of the following requirements
+** Amount of DD ≧ 2
+** Amount of SS(V) ≧ 3
+
+|C/empty -> F/resource = 
+* Fleet contains a CL and no CV(L/B)
+|C/empty -> B = 
+* Does not meet the requirements to go to F
+}}
+
+==User Submitted Fleet compositions==
+'''Normal Run'''
+* {{Event/Route|G|blue|D|orange|C|blue|B|red|E|blue|H|blue|I|red|J|blue|K|black}}
+** 3-6 [[SS]]/[[SSV]]
+** [[CLT]], [[CL]], 2 [[DD]], [[LHA]], [[CVL]]
+* {{Event/Route|G|blue|D|orange|A|red|B|red|E|blue|H|blue|I|red|J|blue|K|black}}
+** 3 [[CL]]/[[CT]], 3 [[DD]]
+***On Easy difficulty, this composition will proceed to node C instead of A.
+'''Last Run''' (0 TP Gauge)
+* {{Event/Route|G|blue|L|orange|M|red|D|orange|C|blue|B|red|E|blue|H|blue|I|red|N|black}}
+** 3-6 [[SS]]/[[SSV]]
+** [[CLT]], [[CL]], 2 [[DD]], [[LHA]], [[CVL]]
+'''Post-Clear'''
+* {{Event/Route|G|blue|D|orange|A|red|B|red|E|blue|H|blue|I|red|N|black}}
+** 1 [[CL]], 3 [[DD]], 2 {{Tooltip|XX|Wildcards}} (No Slow ships, no carriers)
+
+==Notes==
+* {{Type|FBB}}/{{Type|BB}}/{{Type|BBV}} can't be used in this map.
+* The branching rules are heavily affected by the difficulty you select.
+* Node D is an air attack node.
+* Node A is a submarine node.
+* Node I has a {{ShipLink|Submarine Princess}}.
+* Nodes G, C, E, H and J do not have any combat encounters.
+* Node F is a fuel node.
+* On Last Run J, K node will disappear and L, M, N node will appear.
+* Map will stay the same after last run (But fleet will no longer go to L, M node).
+* One airbase for [[LBAS]] is available.
+** Post-clear, a second airbase can be unlocked, but only 1 air base can be used for node support.
+
+==Tips==
+* This map features a TP gauge. After depleting the TP gauge, doing 1 more successful run will clear the map. You can deplete the gauge by hitting the final node that looks like an anchor. The following calculation is used for the amount of TP (for Hard, see [https://twitter.com/Nishisonic/status/830849917715222528 here] for other difficulties):
+** Base value is 5
+** +4 for [[Ro-500]] '''or''' [[I-401]]/[[I-401 Kai]], +2 for both
+** +5 for [[Kinu Kai Ni]]
+** +7 for 2+ [[SSV]]
+** +8 for 3+ [[SS]]/[[SSV]], +3 otherwise for 2 [[SS]]/[[SSV]]
+** Equipment bonuses:
+*** [[Drum Canister (Transport Use)]]: 1
+*** [[Daihatsu Landing Craft]]: 2
+*** [[Toku Daihatsu Landing Craft]]: 3
+*** [[Daihatsu Landing Craft (Type 89 Medium Tank & Landing Force)]]: 2
+*** [[Zuiun]] variants: 2
+*** [[Prototype Seiran]]: 4
+*** No bonuses for [[Special Type 2 Amphibious Tank]] and [[Combat Ration]]
+** E.g., a fleet with 3+ submarines, 2+ [[SSV]], [[Ro-500]] '''or''' [[I-401]]/[[I-401 Kai]], and only one special equipment will give 25+ points, so that the map can be cleared in 4 runs (plus one final run). Same fleet with 3 [[Prototype Seiran]]s will be able to clear in 3 runs.
+** Note that using [[U-511]] and [[I-401]] in the same fleet will result in a +4 TP bonus, not +2.
+* The branching rules will change depending on the state of the TP gauge.
+* There is no boss at the final nodes, making it safe to advance with heavily-damaged ships after I node.
+* A submarine fleet consisting of 4 to 6 submarines has the lowest resource consumption when clearing the map, however their inability to kill the Submarine Princess at node I makes this composition unsuitable for ship farming.
+* Destroyers and light cruisers equipped for preemptive anti-submarine capability are recommended for farming runs at node I. 
+** Having at least 1 DD equipped for AACI can help in safely getting past the air attack node at node D.
+* Since enemy cruisers and destroyers equip Depth Charge Projector and Sonar, using LBAS to destroy them can be helpful for the submarine fleet.
+* When your TP gauge hits 0, you cannot prevent your fleet from going to L/M. Check the branching rules for more information.
+* If the fleet contain some slow speed ships like submarine, slow [[CVL]] (before the TP gauge is 0 or destroyed) or [[LHA]], equip them with at least one pair of [[Partials/Speed_system|turbine and boiler]] to make them fast. This can be helpful in avoiding the L/M nodes after you have cleared the map.
+* For farming purposes, it can be desirable to postpone depleting the TP gauge by not proceeding past node I, as the gauge is only reduced upon reaching the end node. This will prevent nodes L and M from appearing, preventing slow fleets or compositions with carriers from being off-routed.
+
+</div>{{clear}} <!-- Information collapsible -->
+
+{{Include|Enemy patterns}}
+{{Include|Drop list}}

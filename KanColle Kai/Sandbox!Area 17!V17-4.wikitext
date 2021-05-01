@@ -1,0 +1,492 @@
+{| class="article-table" style="width:100%;"
+|-
+! colspan="2" style="text-align:center;width:70%;" | V17-4: 深海棲艦最終艦隊
+| rowspan="3" style="text-align:center;width:30%;" | [[File:Vita Map Banner 17-4.png|400px]]
+|-
+! Items
+| None
+|-
+! Restrictions
+| '''史 difficulty''' only
+|-
+! Strategy Info
+| 暁の水平線に勝利を刻め!	
+|敵中枢泊地への殴り込みは成功した。敵泊地は瓦解していく。<br>
+崩れゆく泊地から展開した、深海棲艦最終艦隊群と対峙する。<br>
+全艦隊、突撃せよ！暁の水平線に勝利を刻め！<br>
+|}
+<center>[[File:Vita Map Image 17-4.png|600px]]</center>
+==Map guide==
+{{Map/Branching
+|id = V17-4
+|0 -> A = *Fixed route
+}}
+
+==Enemy patterns==
+<tabber>史=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=深海残存前衛突撃戦隊
+|A
+|Normal/BaseXP
+|{{Formation|Line Ahead}}
+|500
+|602
+|562
+|555
+|598
+|623
+|623
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|380
+|602
+|561
+|555
+|597
+|623
+|623
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|360
+|601
+|555
+|555
+|597
+|623
+|623
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|340
+|597
+|555
+|555
+|554
+|623
+|623
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|320
+|597
+|555
+|555
+|554
+|622
+|622
+|-
+}}
+{{Map/Nodes|name=深海棲艦残存潜水艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|500
+|572
+|572
+|572
+|623
+|623
+|558
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|480
+|572
+|572
+|571
+|623
+|623
+|558
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|460
+|572
+|571
+|571
+|623
+|623
+|558
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|440
+|572
+|571
+|533
+|623
+|623
+|558
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|420
+|572
+|533
+|533
+|623
+|623
+|558
+|-
+}}
+{{Map/Nodes|name=深海棲艦最終機動部隊
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|700
+|586
+|618
+|618
+|543
+|624
+|624
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|660
+|586
+|617
+|617
+|543
+|624
+|624
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|640
+|586
+|616
+|616
+|543
+|624
+|624
+|-
+}}
+{{Map/Nodes|name=深海棲艦残存最終艦隊
+|D
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|980
+|604
+|600
+|557
+|557
+|624
+|624
+|-
+|D
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|960
+|604
+|599
+|557
+|557
+|624
+|624
+|-
+|D
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|940
+|603
+|599
+|557
+|557
+|624
+|624
+|-
+}}
+</div> 
+</tabber>
+
+<!-- patterns for 甲 exist but cannot be accessed ingame?
+|-|甲=
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{Map/Nodes|name=深海残存前衛突撃戦隊
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|380
+|602
+|561
+|555
+|597
+|623
+|623
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|360
+|601
+|555
+|555
+|597
+|623
+|623
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|340
+|597
+|555
+|555
+|554
+|623
+|623
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|320
+|597
+|555
+|555
+|554
+|622
+|622
+|-
+|A
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|300
+|597
+|555
+|555
+|554
+|621
+|621
+|-
+}}
+{{Map/Nodes|name=深海棲艦残存潜水艦隊
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|480
+|572
+|572
+|571
+|623
+|623
+|558
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|460
+|572
+|571
+|571
+|623
+|623
+|558
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|440
+|572
+|571
+|533
+|623
+|623
+|558
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|420
+|572
+|533
+|533
+|623
+|623
+|558
+|-
+|B
+|Normal/BaseXP
+|{{Formation|Echelon}}
+|400
+|572
+|532
+|532
+|623
+|623
+|558
+|-
+}}
+{{Map/Nodes|name=深海棲艦最終機動部隊
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|660
+|586
+|617
+|617
+|543
+|624
+|624
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|640
+|586
+|616
+|616
+|543
+|624
+|624
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|620
+|586
+|616
+|616
+|543
+|623
+|623
+|-
+|C
+|Normal/BaseXP
+|{{Formation|Diamond}}
+|600
+|619
+|616
+|616
+|543
+|623
+|623
+|-
+}}
+{{Map/Nodes|name=深海棲艦残存最終艦隊
+|D
+|Boss/BaseXP
+|{{Formation|Line Ahead}}
+|960
+|604
+|599
+|557
+|557
+|624
+|624
+|-
+|D
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|940
+|603
+|599
+|557
+|557
+|624
+|624
+|-
+|D
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|920
+|603
+|599
+|557
+|557
+|623
+|623
+|-
+|D
+|Boss/BaseXP
+|{{Formation|Diamond}}
+|900
+|603
+|586
+|557
+|557
+|623
+|623
+|-
+}}
+</div>
+-->
+
+==Drops list==
+<tabber>史=
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes =  A, B, C, D
+|boss = D
+|{{ShipFrom|432}} : C, D
+|{{ShipFrom|460}} : C, D
+|{{ShipFrom|421}} : C, D
+|{{ShipFrom|422}} : C, D
+|{{ShipFrom|453}} : C, D
+|{{ShipFrom|425}} : B, C, D
+|{{ShipFrom|424}} : B, C, D
+|{{ShipFrom|132}} : B, C, D
+|{{ShipFrom|133}} : B, C, D
+|{{ShipFrom|134}} : B, C, D
+|{{ShipFrom|135}} : A, B, C, D
+|{{ShipFrom|80}} : A, B, C, D
+|{{ShipFrom|81}} : A, B, C, D
+|{{ShipFrom|78}} : A, B, C,
+|{{ShipFrom|86}} : A, B, C,
+|{{ShipFrom|79}} : A, B, C,
+|{{ShipFrom|85}} : A, B, C,
+|{{ShipFrom|167}} : A, B, C, D
+|{{ShipFrom|186}} : A, B, C, D
+|{{ShipFrom|181}} : A, B, C, D
+|{{ShipFrom|122}} : A, B, C, D
+|{{ShipFrom|415}} : A, B, C, D
+|{{ShipFrom|170}} : A, B, C, D
+|{{ShipFrom|169}} : A, B, C, D
+|{{ShipFrom|168}} : A, B, C, D
+|{{ShipFrom|17}} : A, B, C, D
+|{{ShipFrom|9}} : A, B, C, D
+|{{ShipFrom|13}} : A, B, C, D
+|{{ShipFrom|1}} : A, B, C, D
+|{{ShipFrom|34}} : A, B, C, D
+|{{ShipFrom|95}} : A, B, C, D
+|{{ShipFrom|38}} : A, B, C,
+|{{ShipFrom|42}} : A, B, C,
+|{{ShipFrom|131}} : D
+|{{ShipFrom|171}} : D
+|{{ShipFrom|163}} : D
+|{{ShipFrom|182}} : D
+|{{ShipFrom|183}} : D
+|{{ShipFrom|110}} : D
+|{{ShipFrom|111}} : D
+|{{ShipFrom|83}} : D
+|{{ShipFrom|84}} : D
+|{{ShipFrom|90}} : D
+|{{ShipFrom|91}} : D
+|{{ShipFrom|184}} : D
+|{{ShipFrom|413}} : D
+|{{ShipFrom|414}} : D
+|{{ShipFrom|409}} : D
+|{{ShipFrom|410}} : D
+|{{ShipFrom|20}} : D
+|{{ShipFrom|50}} : D
+|{{ShipFrom|18}} : D
+|{{ShipFrom|19}} : D
+|{{ShipFrom|190}} : D
+|{{ShipFrom|454}} : D
+|{{ShipFrom|455}} : D
+}}
+</tabber>

@@ -1,0 +1,9 @@
+I've created [[Kancolle Wiki:Lua]] so that normal progress doesn't need to be discussed in [[Suggestion]], and in an attempt to have a permanent place where progress on the Lua project is visible. 
+
+Right now I am working on a template for showing a table of equipment. I have plans for one more template (for [[Akashi's Improvement Arsenal]]).
+
+As for ease of editing, I think an "override" system, where the template can be called with parameters as a manual override, can allow for easy editing by new editors. A proof of concept can be seen at [[Sandbox/ShipInfoKai/Override]], implementing asw, los, and evasion overrides. Ro's infobox is shown with 3 different call methods: the first, with just the name and model; the second, with all available overrides explicitly set to the default, 'auto', for easy editing by new editors unfamiliar with the template; and the third, with Ro's evasion, asw, and los boosted to Iona levels. 
+
+This system does have a performance cost; depending on how many overrides I implement, the more the performance cost. Do we care about the performance cost more than having everything overrideable? Should we implement overrides only for things that we expect new editors to edit? If possible, I would like some feedback on this, as well as your opinions on the override system itself.
+
+As for the destroyer's data modules, I've left them uncreated so that decoders can test generating Lua; how long should I wait before I fill them in myself? Is there still action ongoing regarding them?  <ac_metadata title="Lua implementation" related_topics="Suggestion"> </ac_metadata>

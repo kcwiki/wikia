@@ -1,0 +1,366 @@
+<!-- https://twitter.com/iisan385/status/740112051326963714 -->
+<!--
+{{Warning
+|title = Notice
+|message = As of 19th of July 2018, it has been noted on [http://ponkotuy.hatenablog.jp/entry/2018/07/19/022409 ponkotuy's blog (Japanese only)] author of myfleet.moe's website has been officially decommissioned. The contents of this blog entry is kept for archival purposes.}}
+-->
+
+<tabber>Overview=
+
+[https://myfleet.moe ★MyFleetGirls] is a site where KanColle players can interact and show off each other's accounts (without handing over the keys that is).
+
+Although the site is largely obscured by foreign language it is however a nice way to present your overall progress on KanColle without having to necessarily deal with web programming language to showcase your progress.
+
+As well, ★MyFleetGirls also offers various statistics such as (but are not limited to):
+* [https://myfleet.moe/entire/statistics Construction and Development recipes (the ones mostly used)]
+* [https://myfleet.moe/entire/sta/from_ship Ships and items search (via drops and development respectively)]
+* [https://myfleet.moe/entire/sta/drop_stage Ships dropped according to node as well as chances of going from certain node to certain node]
+* [https://myfleet.moe/entire/sta/ranking/Ship Various rankings based on users who registered themselves]
+* [https://myfleet.moe/entire/sta/book Specific ship statistics including their drops from applicable maps-nodes as well as from construction]
+* [https://myfleet.moe/entire/sta/remodel_slot List of equipments that has had success rates from specified ships]
+* [https://myfleet.moe/entire/sta/search_snap Snapshot searcher]
+* [https://myfleet.moe/entire/sta/honor Established honour statistics - only based on those who have an account on MyFleetGirls]
+
+Again if you cannot read Japanese I suggest:
+* [https://chrome.google.com/webstore/detail/rikaikun/jipdnfibhldikgcjhfnomkfpcebammhp?hl=en  Rikaikun for Google Chrome/Chromium]
+* [https://addons.mozilla.org/En-us/firefox/addon/rikaichan/  Rikaichan for Mozilla Firefox]
+* [http://kanjitomo.net/  KanjiTomo (Java based - can be memory intensive)]
+
+|-|Preface=
+
+Although this site does somewhat put my profile page to shame as it could show off many more things than what my profile page is capable of doing with the only exception that it is only written in Japanese. I must maintain the fact that I '''will not''' openly condone the use of this third party site and/or its accompanying program. I am '''not''' the developer of that site nor do I know of any potential risks that one may face for using this site and the program that is required for interaction. You are therefore forewarned. What I will offer however is my limited support should you have issues trying to get the program to work.
+
+What I do know however is that it '''appears''' to be safe to use this, unlike how [[Thread:145740|ShimakazeGo]] is setup whereby interactions between your KanColle session and KC server is being obstructed by ShimakazeGo's server as the following rough network diagram depicts:
+[[File:ShimakazeGO.png]]
+
+ShimakazeGo server acts as a proxy server that communicates more or less on your behalf and with the KC server.
+
+However in the case with ★MyFleetGirls the interactions with you and KC server is captured locally and the data is then parsed off (locally - ★MyFleetGirls program) before being sent to ★MyFleetGirls server. The resulting network diagram would look something like this:
+[[File:MyFleetGirls-img.png|700px]]
+The differences here is evident, ShimakazeGo server is basically required to be tunnelled through and if there's any network issues from between your connection and ShimakazeGo's server - it will be blocked. Unlike ★MyFleetGirls which basically requires your computer to communicate with both the KC server and ★MyFleetGirls server which are two separate connections.
+
+Now in case if you were wondering, does all traffic go from your browser(s) and all go through ★MyFleetGirls server? the answer is no and will be no if you used the [[:wikipedia:Proxy_auto-config|PAC file]] provided by [https://myfleet.moe/assets/proxy.pac ★MyFleetGirls' website]. What this [[:wikipedia:Proxy_auto-config|PAC file]] essentially contains is a list of readable config for the browser to either redirect certain packets to certain destinations if the rule apples. Otherwise it is ignored and that the proxy is not used. What that means is for this case only the [[Servers|KC servers]] are listed within the [[:wikipedia:Proxy_auto-config|PAC file]] and for other servers as well as their respective sites such as Google, Yahoo, etc, does '''not''' go through the [[:wikipedia:Proxy_auto-config|custom PAC file]] as it is specified to not go through the proxy server as such - instead it uses direct connection.
+
+Besides, source codes for ★MyFleetGirls is also available on github as the author describes.
+
+|-|Installation and setting up=
+
+[https://myfleetweb.herokuapp.com/entire/about ''Roughly as the site states'']
+* '''1'''. Download and install Java Runtime Environment (JRE) at least version 8 or above. Windows users go [http://java.com/en/download/ here]. Linux users might want to seek your distribution repository such as [http://freshrpms.net FreshRPM] , [https://www.debian.org/distrib/packages Debian packages] , etc. <br>
+* '''2'''. Download the [https://myfleetweb.herokuapp.com/redirect/assets/zip/MyFleetGirls.zip ★MyFleetGirls program ZIP file] <br>
+* '''3'''. Extract the contents of the ZIP file into a directory/folder that you will know where to locate in the future.<br>
+* '''4'''. Go into the directory of the unzipped file and make a copy of the file named application.conf.sample . Rename the file into application.conf.txt and open it with your favourite text editor. (Ideally one that can support UTF-8, SHIFT-JIS and other Japanese character encoding would be handy). For windows users I suggest something like [https://notepad-plus-plus.org/ Notepad++]<br>
+* '''5'''. Go to the very last line and uncomment the hash tag '#' via deleting that character and changing the password to a password you can easily remember. Here is '''not''' how you do it:
+{{Talkquote|text=# pass:password}}
+'''Remember the hashtag (#) at even the beginning of the line makes that entire/whole line appear as a comment.'''<br>
+'''-or-'''
+{{Talkquote|text=pass:password}}
+This is no better than having no password set, if you do not want to customise your profile on myfleet.moe you may as well comment that line out as mentioned above.
+What should the last line should look like is something like:
+{{Talkquote|text=pass:mypasswordisthis}}<br>
+Do note however that your passwords '''must''' be stored in plaintext. The resulting config file should look something like this:<br>
+<pre style="background:white; border:0px;"><nowiki># 頭に#はコメントです
+
+# MyFleetGirls のデータ送信先サーバーアドレスです。
+# 通常変更する必要はありません
+url {
+    post: "https://myfleet.moe"
+
+    # 上記URLに接続する際のProxy設定です。一般的な環境では必要ないでしょう。
+    proxy {
+        # host: "localhost"
+        # port: 8888
+    }
+}
+
+proxy {
+    # MyFleetGirls Clientはこのポート番号で proxy として待ち受けます。
+    # 他の proxy ツールと併用する場合等重複しないようにしてください
+    port: 8080
+
+    # MyFleetGirls Clientへの接続をlocalhostに制限します。
+    # 制限したくない場合は""(空文字列)を指定してください。
+    # セキュリティ的な問題が発生するので、変更しないことを推奨します。
+    host: "localhost"
+}
+
+# 艦これサーバーに接続するときに使用する上位プロキシを指定します
+upstream_proxy {
+    # host: "localhost"
+    # port: 8888
+}
+
+auth {
+    # MyFleetGirls サーバーとの通信にパスワードを設定します
+    # 一度設定すると以降殆どの通信、及び Web でのログインに必要となります
+    # パスワードを忘れた場合の対処等は MyFleetGirls Web の FAQ を参照してください
+
+    pass: mypasswordisthis
+}
+</nowiki></pre>
+Also, do not uncomment (removing the hash tag '#') any other lines other than the "pass:" line as this will cause issues with your MyFleetGirls program should you uncomment inappropriate lines.
+* '''6'''. Save the changes, close the text editor and rename the file back into application.conf<br>
+* '''7'''. Open the browser that you normally use when playing KanColle and check under its settings to see if it can accept [[:wikipedia:Proxy_auto-config|PAC file]]. If it cannot and you're using Chrome/Chromium, you can try using [https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en SwitchyOmega extension]. Refer to the relevant help files/manuals if you are unsure.<br> If your browser/OS can accept [[:wikipedia:Proxy_auto-config|PAC file]] then make sure to grab the [https://myfleet.moe/assets/proxy.pac PAC file provided by ★MyFleetGirls].
+* '''8'''. Open up command prompt Windows users should be cmd.exe . Mac/Linux users should be Terminal.<br>
+* '''9'''. Navigate within the command prompt/terminal to the directory where you extracted your ★MyFleetGirls program. Again refer to relevant help files/manuals if you are unsure.<br>
+* '''10'''. For 
+
+* Windows users run: {{Talkquote|text=MyFleetGirls.bat}} You may also want to consider about setting your command prompt up for [http://stackoverflow.com/questions/388490/unicode-characters-in-windows-command-line-how UTF-8 support].
+
+* Linux users run: {{Talkquote|text=./MyFleetGirls.sh}} 
+
+* and Mac users run: {{Talkquote|text=MyFleetGirls.command}} 
+
+*   Once that program is running it will need to download a rather large Java JAR file which is about 43MB.<br>
+* '''11'''. Start your KanColle as you normally do.<br>
+* '''12'''. Once you have gotten into your main screen in KanColle, check back at your command prompt/terminal to see if you have got a link to your profile at ★MyFleetGirls, it should appear with the words something like this:
+<pre style="background:white; border:0px;"><nowiki>$ ./MyFleetGirls.sh
+myfleetgirls.keystoreに変更はありません
+LICENSEに変更はありません
+application.conf.sampleに変更はありません
+MyFleetGirls.jarに変更はありません
+
+---------------------------------------------
+  Welcome to MyFleetGirls Client Ver 1.4.8
+---------------------------------------------
+
+Ver1.4.8 通信できないbugのfix
+Ver1.4.7 proxy動作の変更
+
+Oct 20, 2015 7:40:28 PM com.twitter.finagle.Init$$anonfun$1 apply$mcV$sp
+INFO: Finagle version 6.25.0 (rev=78909170b7cc97044481274e297805d770465110) built at 20150423-135046
+/kcsapi/api_port/port
+所属： 幌筵泊地
+
+============================================
+パスワード認証に成功
+MyFleetGirlsサーバへの接続に成功しました
+URL: https://myfleet.moe/user/XXXXXXXX
+============================================
+
+所持艦娘数 -> 235
+</nowiki></pre>
+* '''13'''. Visit the link as mentioned in <code>URL:</code> and click on login from above.<br>
+* '''14'''. You may need to know which server you belong to, if you do not know which server you belong to you might want to check [[:Tutorial:_FAQ#How_do_I_see_which_server_do_I_belong_to.3F|this FAQ entry.]] On the left hand side of that ★MyFleetGirls should be the list of servers, it might also be a drop down list. Select the one that you belong to and then select the IGN name on the right column that is yours.<br>
+** Alternatively, <code><nowiki>https://myfleet.moe/user/XXXXXXXX</nowiki></code> with "XXXXXXXX" indicates your player ID (also visible in the likes of KC3 Kai as well for instance) is what you need to input in order to login along with your password as defined in <code>application.conf</code><br>
+* '''15'''. The password is whatever you set in the application.conf file.<br>
+* '''N.B.'''. Once you have your MyFleetGirls set up and your game set to route your KC data to MyFleetGirls, under no circumstances should you close the MyFleetGirls program. Instead once you have successfully set up your MyFleetGirls account that you:
+** Run the MyFleetGirls program ideally before you start your KC session, and
+** If the command prompt/terminal/console annoys you, you can just simply minimise it.
+
+|-|Some Q and A=
+{| style="width:85%;" cellpadding="10"
+|-
+|
+{| style="width:100%; background:#bce2e8; text-align:center;" class="mw-collapsible"
+|- 
+| <div id="top">'''Question and Answer contents'''</div>
+|- 
+| style="text-align:left"| '''1'''. [[#Q1|Can this get me banned?]]
+|-
+| style="text-align:left"| '''2'''. [[#Q2|Can this work with KCV/KC3 Kai?]]
+|-
+| style="text-align:left"| '''3'''. [[#Q3|Can I proxy chain this with logbook?]]
+|-
+| style="text-align:left"| '''4'''. [[#Q4|When I tried running ★MyFleetGirls I got something about the words "JAVA" and "README" and a whole bunch of jibberish text, what do?]]
+|-
+| style="text-align:left"| '''5'''. [[#Q5|When I tried editing the conf file as specified the contents of the file is all garbled! It is not the same as the output you have demonstrated here, what do?]]
+|-
+| style="text-align:left"| '''6'''. [[#Q6|Ok I have MyFleetGirls running in console/terminal. When I tried logging into ★MyFleetGirls it shows "401 Unauthorized", what gives?]]
+|-
+| style="text-align:left"| '''7'''. [[#Q7|I get catbombs! why is that?]]
+|-
+| style="text-align:left"| '''8'''. [[#Q8|Can ★MyFleetGirls support more than one KanColle account?]]
+|-
+| style="text-align:left"| '''9'''. [[#Q9|I still have issues with getting ★MyFleetGirls to work, where can I request for further help?]]
+|-
+| style="text-align:left"| '''10'''. [[#Q10|What are the benefits of setting up a password?]]
+|-
+| style="text-align:left"| '''11'''. [[#Q11|Can I choose to not use my browser to view the progress on my MyFleetGirls?]]
+|-
+| style="text-align:left"| '''12. [[#Q12|I get some errors whilst trying to run MyFleetGirls''']]
+|}
+|}
+<div id="Q1">'''1. Can this get me banned?'''<div>
+* No, but you didn't read my Preface did you?
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q2">'''2. Can this work with KCV/KC3 Kai?'''</div>
+* Yes it can. It has been tested to work with KC3 Kai but according to [[User:Qunow|Qunow]] it is possible to have it working with KCV.
+* For KC3 Kai users, you can also use [https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en SwitchyOmega extension] instead of configuring your Chrome settings to route certain data to MyFleetGirls. Refer to "Installation and Setting up" tab for information on how to set it up.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q3">'''3. Can I proxy chain this with logbook?'''</div>
+* Yes you just need to edit the application.conf and uncomment the upstream_port parameters from this:
+<pre style="background:white; border:0px;"><nowiki># 艦これサーバーに接続するときに使用する上位プロキシを指定します
+upstream_proxy {
+    # host: "localhost"
+    # port: 8888
+}</nowiki></pre>
+to this:
+<pre style="background:white; border:0px;"><nowiki># 艦これサーバーに接続するときに使用する上位プロキシを指定します
+upstream_proxy {
+    host: "localhost"
+    port: 8888
+}</nowiki></pre>
+Make sure to also restart ★MyFleetGirls program or otherwise changes will not take effect.
+As well it is possible to link to virtually as many other tools/viewers as you want. [http://wikiwiki.jp/kancolle wikiwiki.jp] has a [http://wikiwiki.jp/kancolletool/?interop (rough) guide in Japanese] on how to do so.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q4">'''4. When I tried running ★MyFleetGirls I got something about the words "JAVA" and "README" and a whole bunch of jibberish text, what do?'''</div>
+* ''This notably happens on mainly windows users.'' The only possible reason why may be that the JRE is not installed. For default Java installations, make sure that Java is actually installed in:
+{{Talkquote|text=X:\Program Files\Java\}}
+Where X indicates the drive letter of your windows installation (typically C:\). 
+** If you do not have Java installed then you will need to install it manually and I recommend grabbing the [http://java.com/en/download/manual.jsp offline install version of JRE]. If you're unsure which architecture (32bit or 64bit) you are on, grab both offline versions and try installing them both. Start with 32bit first. 
+** If you do have Java installed, make sure that you have [http://docs.oracle.com/cd/E19182-01/820-7851/inst_cli_jdk_javahome_t/ JAVA_HOME variable pointed towards the actual location of where your JRE is installed]. If it was already set then generally you will need to restart command prompt for the new changes to take effect, or a reboot. Alternatively (if you do not wish to reboot), you can [http://www.digitalcitizen.life/command-prompt-how-use-basic-commands try to use command prompt to navigate into the folder/directory where you stored MyFleetGirls and execute the batch]/script.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q5">'''5. When I tried editing the conf file as specified the contents of the file is all garbled! It is not the same as the output you have demonstrated here, what do?'''</div>
+* For windows users, you most likely don't have East Asian Language support. You will need to install that.
+** If you still get garbled outputs when using notepad/wordpad. I suggest you get [https://notepad-plus-plus.org/ Notepad++]
+* For linux users, you most likely need to grab appropriate locales. Consult with your distro manual/guide/etc.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q6">'''6. Ok I have MyFleetGirls running in console/terminal. When I tried logging into ★MyFleetGirls it shows "401 Unauthorized", what gives?'''</div>
+* ''This mainly affects windows users.'' You will need to make sure that the extension of the "application.conf" file (without quotes) is exactly that, not "application.conf.txt" or "application.conf.doc", etc. You will need to [http://windows.microsoft.com/en-us/windows/show-hide-file-name-extensions#show-hide-file-name-extensions=windows-7 unhide file name extensions]. Once you have set your windows to show file name extensions, rename the conf file back into "application.conf" (without quotes) and restart your KanColle session as appropriate. Starting from restarting ★MyFleetGirls program.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q7">'''7. I get catbombs! why is that?'''</div>
+* There are several potential causes as to why that happens. It could range from having poor connectivity between your computer and the network/internet to just having proxy connections poorly configured. 
+** First, disable the proxy and try running the game normally without ★MyFleetGirls program. If it works, then you will need to have a look at proxy settings to see what went wrong. Generally speaking once you have setup your computer to use the [[:wikipedia:Proxy_auto-config|PAC file]] as provided by ★MyFleetGirls website, '''whenever you run''' your KanColle game you will need to make sure that you are running the accompanying program or otherwise it will '''not''' work. So make sure that before you start your ★MyFleetGirls program before you go off playing KanColle game as you do normally. '''Running KanColle without proxy enabled to go through ★MyFleetGirls program and to its respective servers is essentially the same as running KanColle without ★MyFleetGirls at all.'''
+** Second, it could just be intermittent issue with communication to the KC server. If and when that happens, you will need to restart your KanColle session as you normally do. Failing that would also require restarting '''both''' ★MyFleetGirls program as well as your KanColle session, starting obviously with ★MyFleetGirls program.
+** Third, ★MyFleetGirls program might have buggered up. If you go into the console/terminal of ★MyFleetGirls and you see it spews out words like "FATAL" or "ERROR" then these are most likely the reasons as to why you get catbomb at start. Remember, this only applies if you get catbomb whenever you try to play the game normally and that the following two cases mentioned above '''does not''' apply to you. Also it is somewhat rare for ★MyFleetGirls to crash - but it can happen, nonetheless. Typically however words appearing "FATAL" and "ERROR" from console aren't always that bad but it just usually means there is something wrong with the code and that something else has happened.
+** If you are daisy-chaining logbook(-kai) ''before'' MyFleetGirls. In other words, from KC3 Kai/KCV → logbook(-kai) → MyFleetGirls → KC server. You may want to reverse the order so that the data from KC3 Kai/KCV goes first to MyFleetGirls ''then'' to logbook(-kai) before it goes straight to the KC server.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q8">'''8. Can ★MyFleetGirls support more than one KanColle account?'''</div>
+You can but it depends on your situation. 
+** If you do not play with more than one KanColle account simultaneously and you want to use a different password for each of your accounts on ★MyFleetGirls server, then you will need to have extra copies of application.conf with the exception of having the extensions different from what it was as well as different password (obviously) within the contents of each conf file.
+** If you play with more than one KanColle account simultaneously, you will need to ideally have more than one copy of the ★MyFleetGirls program preferably in a different directory/folder. It does not require putting ★MyFleetGirls into completely different directory/folder but just separate from your first copy of ★MyFleetGirls program. You will also need to adjust the [[:wikipedia:Proxy_auto-config|PAC file]] accordingly, by then you will most likely need to run a different browser and therefore would probably need to use something like [https://chrome.google.com/webstore/detail/proxy-switchyomega/padekgcemlokbadohgkifijomclgjgif?hl=en SwitchyOmega]. First, within the other browser, make sure that it runs on a custom [[:wikipedia:Proxy_auto-config|PAC file]] with the port number that is not the same as the first one. Towards the bottom of the [[:wikipedia:Proxy_auto-config|PAC file]] provided by ★MyFleetGirls website you will see a line looking like this:
+{{Talkquote|text=<pre style="background:#dfefff; border:0px;"><nowiki>function FindProxyForURL(url, host) {
+  if(isInNet(host, "203.104.209.71", "255.255.255.255") ||
+     isInNet(host, "125.6.184.15", "255.255.255.255") ||
+     isInNet(host, "125.6.184.16", "255.255.255.255") ||
+     isInNet(host, "125.6.187.205", "255.255.255.255") ||
+     isInNet(host, "125.6.187.229", "255.255.255.255") ||
+     isInNet(host, "125.6.187.253", "255.255.255.255") ||
+     isInNet(host, "125.6.188.25", "255.255.255.255") ||
+     isInNet(host, "203.104.248.135", "255.255.255.255") ||
+     isInNet(host, "125.6.189.7", "255.255.255.255") ||
+     isInNet(host, "125.6.189.39", "255.255.255.255") ||
+     isInNet(host, "125.6.189.71", "255.255.255.255") ||
+     isInNet(host, "125.6.189.103", "255.255.255.255") ||
+     isInNet(host, "125.6.189.135", "255.255.255.255") ||
+     isInNet(host, "125.6.189.167", "255.255.255.255") ||
+     isInNet(host, "125.6.189.215", "255.255.255.255") ||
+     isInNet(host, "125.6.189.247", "255.255.255.255") ||
+     isInNet(host, "203.104.209.23", "255.255.255.255") ||
+     isInNet(host, "203.104.209.39", "255.255.255.255") ||
+     isInNet(host, "203.104.209.55", "255.255.255.255") ||
+     isInNet(host, "203.104.209.102", "255.255.255.255")) {
+       return "PROXY 127.0.0.1:8080";
+    }
+  else {
+    return "DIRECT";
+  }
+}</nowiki></pre>
+}}
+For your second or subsequent browsers set up you will need to adjust that port number "8080" to something else. Here is an example.
+{{Talkquote|text=<pre style="background:#dfefff; border:0px;"><nowiki>function FindProxyForURL(url, host) {
+  if(isInNet(host, "203.104.209.71", "255.255.255.255") ||
+     isInNet(host, "125.6.184.15", "255.255.255.255") ||
+     isInNet(host, "125.6.184.16", "255.255.255.255") ||
+     isInNet(host, "125.6.187.205", "255.255.255.255") ||
+     isInNet(host, "125.6.187.229", "255.255.255.255") ||
+     isInNet(host, "125.6.187.253", "255.255.255.255") ||
+     isInNet(host, "125.6.188.25", "255.255.255.255") ||
+     isInNet(host, "203.104.248.135", "255.255.255.255") ||
+     isInNet(host, "125.6.189.7", "255.255.255.255") ||
+     isInNet(host, "125.6.189.39", "255.255.255.255") ||
+     isInNet(host, "125.6.189.71", "255.255.255.255") ||
+     isInNet(host, "125.6.189.103", "255.255.255.255") ||
+     isInNet(host, "125.6.189.135", "255.255.255.255") ||
+     isInNet(host, "125.6.189.167", "255.255.255.255") ||
+     isInNet(host, "125.6.189.215", "255.255.255.255") ||
+     isInNet(host, "125.6.189.247", "255.255.255.255") ||
+     isInNet(host, "203.104.209.23", "255.255.255.255") ||
+     isInNet(host, "203.104.209.39", "255.255.255.255") ||
+     isInNet(host, "203.104.209.55", "255.255.255.255") ||
+     isInNet(host, "203.104.209.102", "255.255.255.255")) {
+       return "PROXY 127.0.0.1:8081";
+    }
+  else {
+    return "DIRECT";
+  }
+}</nowiki></pre>
+}}
+Notice how the line with the words "return" has the port numbers incremented like so:
+{{Talkquote|text=return "PROXY 127.0.0.1:8081";}}
+'''Make sure that you have the entire contents of the [[:wikipedia:Proxy_auto-config|PAC file]] copied from the first configured browser to the subsequent browsers, not just the one line or it will not work.'''
+
+The same likewise within application.conf, change the listening port to be the same as whatever you have configured for your subsequent browsers. The following extract example is based on the examples above but for application.conf file and not for the [[:wikipedia:Proxy_auto-config|PAC file]].
+<pre style="background:white; border:0px;">
+proxy {
+    # MyFleetGirls Clientはこのポート番号で proxy として待ち受けます。
+    # 他の proxy ツールと併用する場合等重複しないようにしてください
+    port: 8080
+
+    # MyFleetGirls Clientへの接続をlocalhostに制限します。
+    # 制限したくない場合は""(空文字列)を指定してください。
+    # セキュリティ的な問題が発生するので、変更しないことを推奨します。
+    host: "localhost"
+}
+</pre>
+Becomes..
+<pre style="background:white; border:0px;">
+proxy {
+    # MyFleetGirls Clientはこのポート番号で proxy として待ち受けます。
+    # 他の proxy ツールと併用する場合等重複しないようにしてください
+    port: 8081
+
+    # MyFleetGirls Clientへの接続をlocalhostに制限します。
+    # 制限したくない場合は""(空文字列)を指定してください。
+    # セキュリティ的な問題が発生するので、変更しないことを推奨します。
+    host: "localhost"
+}
+</pre>
+Now if you have too many consoles/terminals open, you might want to look at using drop down console/terminal replacement such as: [http://conemu.github.io/ ConEmu], [http://www.iterm2.com/ iTerm2], etc.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q9">'''9. I still have issues with getting ★MyFleetGirls to work, where can I request for further help?'''</div>
+* I can provide limited support if you want to leave a message here on my blog. I am also on [[Special:Chat|chat]] if you want a live assistance to your case. What I '''will not''' do however is help you install and set up ★MyFleetGirls from scratch if you have never bothered to read my guide and/or your question was something that was already covered.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q10">'''10. What are the benefits of setting up a password?'''</div>
+* You might want to have a check in the next tab where I cover those information.
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q11">'''11. Can I choose to not use my browser to view the progress on my MyFleetGirls?</div>
+* This is strictly for windows users only. There is a third part program written to make the lives easier. Because I don't personally use windows and that it wasn't developed by the author of MyFleetGirls himself (@ponkotuy) I WILL not offer any assistance should you encounter issues. You are to try this program at your own expense, with that said and done the said program is here: https://github.com/aflyhorse/MFGwrapper
+<div style="text-align:right">[[#top|back to top]]</div>
+<div id="Q12">'''12. I get some errors whilst trying to run MyFleetGirls (see below)'''
+* If you get an error that resembles something like this:
+{{Talkquote|text=<pre style="background:black; color:white; border:0px;"><nowiki>Exception in thread "main" java.lang.UnsupportedClassVersionError: Main : Unsupported major.minor version 52.0
+	at java.lang.ClassLoader.defineClass1(Native Method)
+	at java.lang.ClassLoader.defineClass(Unknown Source)
+	at java.security.SecureClass.Loader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.defineClass(Unknown Source)
+	at java.net.URLClassLoader.access$100(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.net.URLClassLoader$1.run(Unknown Source)
+	at java.security.AccessController.doPriviledgedMethod(Native Method)
+	at java.net.URLClassLoader.findClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.misc.Launcher$AppClassLoader.loadClass(Unknown Source)
+	at java.lang.ClassLoader.loadClass(Unknown Source)
+	at sun.launcher.LauncherHelper.checkAndLoadMain(Unknown Source)
+Error: Unable to access jarfile MyFleetGirls.jar
+MyFleetGirls を終了します</nowiki></pre>
+}}
+You can try updating your [[#Q1|JRE (Java Runtime Environment)]] to see if that alleviates the issue. 
+<div style="text-align:right">[[#top|back to top]]</div>
+|-|Extra perks=
+Currently (as of writing) I have found two things that can be customisable once you have logged into your account. Do note however that in your case it may vary greatly from mine:
+[[File:称号設定.png|thumb|700px|称号設定: Honor/Title setting]]
+[[File:艦隊スナップショット.png|thumb|700px|艦隊スナップショット: Fleet snapshot]]
+{{clear}}
+
+|-|Credits=
+Often I have wondered how to get these to work when Chrome under Linux heavily relies on system configuration as well as the inability to be flexible with certain exceptions and it wasn't until I re-visit such topics again only to have discovered that there were ways to get around it. So in no order whatsoever:
+* [https://twitter.com/ttdoda ttdoda for maintaining this project and keeping it alive]. For more information, visit [http://ponkotuy.hatenablog.jp/entry/2018/07/19/022409 here]
+* [http://d.hatena.ne.jp/ponkotuy/20140330/1396184917 Ponkotuy for this blog entry and for creation of this program/project]
+* [https://kancolle.sanaechan.net/proxychrome.html sanae_chan/nekopanda for also mentioning the said tool but also for logviewer]
+* [https://github.com/FelisCatus/SwitchyOmega FelisCatus for the nice bit of extension that made it all possible]
+</tabber>
+[[Category:Blog posts]]
+[[Category:Guide]]

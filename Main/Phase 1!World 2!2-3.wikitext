@@ -1,0 +1,391 @@
+{{Map/Header}}
+{{Map/Info
+|en = Eastern Orel Bay
+|jp = 東部オリョール海
+|romaji = Tōbu Oryōru-kai
+|strategy_name = [[wikipedia:Operation_I-Go|Operation I-Go]]
+|strategy_name_ja = 01号作戦
+|strategy_info = Enter Orel Bay and destroy the enemy transport fleet while protecting our own supply lines!
+|strategy_info_ja = オリョール海に進出し、敵通商破壊艦隊を排除して、海上輸送ラインを防衛せよ！
+|exp_ship = 200
+|exp_hq = 80
+|exp_hq_boss = 960
+}}
+{{MapBranchingTable
+|id = 2-3
+|0 -> A/resource, C = * Random 50%/50% chance
+
+|C -> D/resource = 
+* 70% chance if the fleet contains at least a CV, CVL or AV ('''[[CVB]] does not count''')
+* 50% chance if the fleet contains no CV, CVL or AV
+|C -> H =
+* 30% chance if the fleet contains at least a CV, CVL or AV
+* 50% chance if the fleet contains no CV, CVL or AV
+
+|E/resource -> F = 
+* 30% chance if the fleet contains at least an AV
+* 50% chance if the fleet contains no AV
+|E/resource -> G = 
+* 70% chance if the fleet contains at least an AV
+* 50% chance if the fleet contains no AV
+
+|I/resource -> J/resource = 
+* 70% chance if the fleet contains at least a CL
+* 50% chance if the fleet contains no CL
+|I/resource -> K =
+* 30% chance if the fleet contains at least a CL
+* 50% chance if the fleet contains no CL
+}}
+* Conclusion for chance to go to boss node:
+** 37.5% chance if fleet doesn't contain CV(L) or AV
+** 42.5% chance if fleet contains CV(L)
+** 59.5% chance if fleet contains AV
+===Tips===
+After leveling submarines to about level 10 and modernizing them to 4-5 stars, you can use them to grind 2-3 for some Daily and Weekly quests while picking up resources. (A tactic most admirals call "Orel Cruising".)
+
+1. A fleet which contains at least 3 submarines is recommended. The more submarines you use, the easier the map will be.
+
+2. Submarines with high luck should be placed at the bottom of the fleet list to increase their chance of performing cut-in attacks on the stronger enemies during night battles. Doing this can help you achieve an A or S rank victory, especially if you have to fight the enemy fleet located at node G.
+
+3. Submarines should be fully modernized (at least fully upgraded torpedo attack and armor) and non-remodeled because non-remodeled submarines have shorter repair time and consume very few resources when resupply (especially ammo). Please note that compared to a non-remodeled submarine, '''a remodeled sub will take twice the amount of time to repair. [<u>SSV</u> requires twice amount of time to repair than <u>SS*</u>]'''
+
+<nowiki>*</nowiki>This does not include {{ShipLink|I-168}}, {{ShipLink|U-511|Ro-500|text=U-511/Ro-500}} or {{ShipLink|Luigi Torelli|UIT-25|I-504|text=Luigi Torelli/UIT-25/I-504}} as they do not remodel into SSVs. However, their increased health means a longer repair time should they take more damage.
+
+4. This method does not guarantee victory every time, especially if you hit the boss node and have an unlucky run.
+
+===Trivia===
+Quests B14 OR B19 AND B17 can be done at the same time. 1 boss for 2 quests. You can mix B20 with B17, however it is not recommended due to the lack of firepower.
+{{SectionEnd}}
+==Enemy patterns==
+{{Section}}
+{{Map/Image|
+{{Map/ImageNode|C|x=205|y=213}}
+{{Map/ImageNode|A|x=120|y=147}}
+{{Map/ImageNode|H|x=226|y=302}}
+{{Map/ImageNode|D|x=279|y=159}}
+{{Map/ImageNode|B|x=245|y=69}}
+{{Map/ImageNode|E|x=347|y=159}}
+{{Map/ImageNode|I|x=362|y=247}}
+{{Map/ImageNode|J|x=433|y=171}}
+{{Map/ImageNode|K|x=491|y=244}}
+{{Map/ImageNode|F|x=399|y=62}}
+{{Map/ImageNode|G|x=544|y=105}}
+}}
+<div class="scrollable" style="width:800px;max-height:400px;overflow:auto;">
+{{NodeInfo
+|A
+|Resource
+|Fuel
+|15-20-25-30-35-40-45
+}}
+{{Map/Nodes|name=敵巡洋艦隊
+|B
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class
+|Light Cruiser To-Class
+|Light Cruiser He-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+|-
+|B
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class/Elite
+|Light Cruiser To-Class
+|Light Cruiser Ho-Class
+|Light Cruiser Ho-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class
+|Torpedo Cruiser Chi-Class
+|Light Cruiser To-Class/Elite
+|Light Cruiser He-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|B
+|Normal
+|{{Formation|Line Ahead}}
+|Torpedo Cruiser Chi-Class/Elite
+|Light Cruiser To-Class
+|Light Cruiser Ho-Class
+|Light Cruiser Ho-Class
+|Destroyer I-Class
+|Destroyer I-Class
+}}
+{{Map/Nodes|name=敵巡洋艦隊
+|C
+|Normal
+|{{Formation|Line Ahead}}
+|Torpedo Cruiser Chi-Class/Elite
+|Light Cruiser To-Class
+|Light Cruiser Ho-Class
+|Light Cruiser Ho-Class
+|Destroyer I-Class
+|Destroyer I-Class
+|-
+|C
+|Normal
+|{{Formation|Line Ahead}}
+|Heavy Cruiser Ri-Class
+|Torpedo Cruiser Chi-Class
+|Light Cruiser To-Class/Elite
+|Light Cruiser He-Class
+|Destroyer Ro-Class
+|Destroyer Ro-Class
+|-
+|C
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class/Elite
+|Heavy Cruiser Ri-Class
+|Light Cruiser To-Class
+|Light Cruiser He-Class
+|Destroyer Ha-Class
+|Destroyer Ha-Class
+}}
+{{NodeInfo
+|D
+|Resource
+|Ammo
+|20-25-30-35-40-45
+}}
+{{NodeInfo
+|E
+|Resource
+|Fuel
+|15-20-25-30-35-40-45
+}}
+{{Map/Nodes|name=敵強襲揚陸艦隊
+|F
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class
+|Battleship Ru-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|F
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|F
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser He-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+}}
+{{Map/Nodes|name=敵主力打撃群
+|G
+|Boss
+|{{Formation|Double Line}}
+|Battleship Ru-Class/Elite
+|Battleship Ru-Class
+|Standard Carrier Wo-Class
+|Heavy Cruiser Ri-Class
+|Light Cruiser He-Class
+|Light Cruiser He-Class
+|-
+|G
+|Boss
+|{{Formation|Line Ahead}}
+|Standard Carrier Wo-Class/Elite
+|Standard Carrier Wo-Class
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class
+|Heavy Cruiser Ri-Class
+|Destroyer Ni-Class
+|-
+|G
+|Boss
+|{{Formation|Diamond}}
+|Battleship Ru-Class
+|Heavy Cruiser Ri-Class/Elite
+|Standard Carrier Wo-Class
+|Torpedo Cruiser Chi-Class
+|Torpedo Cruiser Chi-Class
+|Light Cruiser To-Class
+}}
+{{Map/Nodes|name=敵強襲揚陸艦隊
+|H
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class
+|Battleship Ru-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|H
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|H
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser He-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+}}
+{{NodeInfo
+|I
+|Resource
+|Fuel
+|15-20-30-45
+}}
+{{NodeInfo
+|J
+|Resource
+|Ammo
+|20-25-30-35-45
+}}
+{{Map/Nodes|name=敵強襲揚陸艦隊
+|K
+|Normal
+|{{Formation|Diamond}}
+|Standard Carrier Wo-Class
+|Battleship Ru-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|K
+|Normal
+|{{Formation|Line Ahead}}
+|Battleship Ru-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Heavy Cruiser Ri-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|-
+|K
+|Normal
+|{{Formation|Double Line}}
+|Heavy Cruiser Ri-Class
+|Light Carrier Nu-Class
+|Light Carrier Nu-Class
+|Light Cruiser He-Class
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+}}
+</div> <!-- overflow -->
+{{SectionEnd}}
+==Drop list==
+{{Section}}
+{{Map/Drops
+|regular = true
+|no_legend = true
+|filter_button = true
+|nodes = B, C, F, G, H, K
+|boss = G
+|Akagi: G
+|Aoba: G
+|Arare: B, C, F, G, H, K
+|Arashio: B, C, F, G, H, K
+|Ashigara: B, C, F, G, H, K
+|Atago: B, C, F, G, H, K
+|Ayanami: B, C, F, H, K
+|Chikuma: B, C, F, G, H, K
+|Chitose: G
+|Chiyoda: G
+|Choukai: B, C, F, G, H, K
+|Fumizuki: B, C, F, H, K
+|Furutaka: G
+|Fusou: B, C, F, G, H, K
+|Haguro: B, C, F, G, H, K
+|Haruna: G
+|Hatsuharu: B, C, F, H, K
+|Hatsushimo: B, C, F, H, K
+|Hatsuyuki: B, C, F, H, K
+|Hibiki: B, C, F, H, K
+|Hiei: G
+|Hiryuu: G
+|Hiyou: B, C, F, G, H, K
+|Hyuuga: G
+|I-168: G
+|Ikazuchi: B, C, F, H, K
+|Inazuma: B, C, F, H, K
+|Ise: C, G
+|Isonami: B, C, F, H, K
+|Isuzu: B, C, F, G, H, K
+|Jintsuu: B, C, F, G, H, K
+|Junyou: B, C, F, G, H, K
+|Kaga: G
+|Kagerou: B, C, F, H, K
+|Kako: G
+|Kasumi: B, C, F, G, H, K
+|Kirishima: G
+|Kisaragi: B, C, F, H, K
+|Kiso: B, C, F, G, H, K
+|Kitakami: G
+|Kongou: G
+|Kuma: G
+|Kuroshio: B, C, F, H, K
+|Makigumo: G
+|Maya: B, C, F, G, H, K
+|Michishio: B, C, F, G, H, K
+|Miyuki: B, C, F, H, K
+|Mogami: B, C, F, G, H, K
+|Murakumo: B, C, F, H, K
+|Murasame: B, C, F, H, K
+|Mutsuki: B, C, F, H, K
+|Myoukou: B, C, F, G, H, K
+|Nachi: B, C, F, G, H, K
+|Nagara: G
+|Naka: B, C, F, G, H, K
+|Natori: B, C, F, G, H, K
+|Nenohi: B, C, F, H, K
+|Ooi: G
+|Ooshio: B, C, F, G, H, K
+|Ryuujou: B, C, F, G, H, K
+|Samidare: B, C, F, H, K
+|Satsuki: B, C, F, H, K
+|Sendai: B, C, F, G, H, K
+|Shigure: B, C, F, H, K
+|Shikinami: B, C, F, G, H, K
+|Shiranui: B, C, F, H, K
+|Shirayuki: B, C, F, H, K
+|Shouhou: B, C, F, G, H, K
+|Souryuu: G
+|Suzukaze: B, C, F, H, K
+|Takao: B, C, F, G, H, K
+|Tama: B, C, F, G, H, K
+|Tatsuta: G
+|Tenryuu: B, C, F, G, H, K
+|Tone: B, C, F, G, H, K
+|Wakaba: B, C, F, H, K
+|Yamashiro: B, C, F, G, H, K
+|Yura: B, C, F, G, H, K
+|Yuudachi: B, C, F, H, K
+}}
+{{SectionEnd}}

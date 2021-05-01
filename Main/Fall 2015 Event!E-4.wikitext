@@ -1,0 +1,334 @@
+__NOTOC__
+
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;">
+{| width="100%"
+|'''Report threads'''
+|-
+|
+*Report your fleet composition [[Thread:355319|here]]
+*Report enemy pattern [[Thread:355318|here]]
+|}
+</div>
+
+==Information==
+{{Infobox
+|title = The Western line! Carrier task force deployment
+|kanji = 西方戦線!機動部隊派遣
+|romaji = Seihou sensen! Kidoubutai haken
+|image = Fall_2015_E4_Banner.png
+|label1 = Mechanics
+|value1 = [[Combined Fleet]]<br/>[[Event#Ship_Locking|Ship locking]] (orange)<br/>[[Events#Debuffing_Mechanism|Debuffing Mechanism]]<br/>[[Event#Manual_Node_Selection|Node Selection]]<br/>[[Fall_2015_Event/Info#Map_HP_dependent_on_HQ_level|HQ dependent Map HP]]
+|label2 = Boss gauge
+|value2 = Easy: 440<br>Medium: 570<br>Hard: 680<br>See also [[Fall_2015_Event/Info#Map_HP_dependent_on_HQ_level|this]] table
+|label3 = Kills required
+|value3 =
+'''Easy:''' 4 kills (110 pre-final / 130 final HP)<br>{{ShipBattleCardKai|Submarine Princess/II}}<br/>
+'''Normal:''' 5 kills (110 pre-final / 130 final HP)<br>{{ShipBattleCardKai|Submarine Princess/II}} <br/>
+'''Hard:''' 5 kills (130 pre-final / 160 final HP)<br>{{ShipBattleCardKai|Submarine Princess/III}}
+|label4 = Reward
+|value4 =
+'''Easy:''' <br/>{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|text = x1}}{{ItemStack|item = [[File:Skilled Crew Member Icon.png]]|text = x1}}<br/>
+'''Normal:''' <br/>{{ItemStack|item = {{EquipmentCardKai|Bf 109T Kai|size=50px}}|text = x1}}{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|text = x1}}{{ItemStack|item = [[File:Skilled Crew Member Icon.png]]|text = x1}}{{ItemStack|item = [[File:Improvement Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]]|text = x4}}{{ItemStack|item = [[File:Underway Replenishment.png{{!}}50px{{!}}link=Underway Replenishment]]|text = x1}}<br/>
+'''Hard:''' <br/>{{ItemStack|item = {{EquipmentCardKai|Fw 190T Kai|size=50px}}|text = x1}}{{ItemStack|item = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|text = x1}}{{ItemStack|item = [[File:Skilled Crew Member Icon.png]]|text = x2}}{{ItemStack|item = [[File:Improvement Materials.png{{!}}50px{{!}}link=Akashi's Improvement Arsenal]]|text = x8}}{{ItemStack|item = [[File:Underway Replenishment.png{{!}}50px{{!}}link=Underway Replenishment]]|text = x2}}
+}}
+
+===Branching rules===
+<span style="color:#f00;">If you see long colored boxes and not round nodes, clear your cache to see the updated styles.</span>
+====Surface Task Force====
+*If F is chosen, route 100%
+<div style="padding:0px 0px 0px 50px;">{{Route
+|D|#FF0000;
+|E|#00CCFF;
+|F|#FF0000;
+|I|#FF0000;
+|K|#00CCFF;
+}}</div> 
+
+*If G is chosen,
+:*Any Italian ship guarantees 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|D|#FF0000;
+|E|#00CCFF;
+|G|#FF0000;
+|H|#FF0000;
+|J|#FF0000;
+}}</div> 
+*Otherwise, random between
+<div style="padding:0px 0px 0px 50px;">{{Route
+|D|#FF0000;
+|E|#00CCFF;
+|G|#FF0000;
+|H|#FF0000;
+|J|#FF0000;
+}}</div> 
+::and
+<div style="padding:0px 0px 0px 50px;">{{Route
+|D|#FF0000;
+|E|#00CCFF;
+|G|#FF0000;
+|H|#FF0000;
+|I|#FF0000;
+}}</div> 
+====Carrier Task Force====
+*Carrier Task Force starts A.
+**Akitsushima guarantees  
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|B|#FF0000;
+|F|#FF0000;
+}}</div> 
+Otherwise, random between
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|B|#FF0000;
+|F|#FF0000;
+}}</div> 
+::and 
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|B|#FF0000;
+|C|#FF0000;
+}}</div> 
+*If routed to C, refer to Surface Task Force route above.
+*​1 CT and 1 Hayasui in CTF will guarantee
+<div style="padding:0px 0px 0px 50px;">{{Route
+|A|#00CCFF;
+|B|#FF0000;
+|F|#FF0000;
+}}</div> 
+:*reported for:
+::*Both in main fleet
+::*Hayasui in main and 1CT in escort
+*Routes rejoin at node K. Choice between M and N.
+**LoS check at node N. If failed, route to deadend node L. If passed, route to boss node O.
+***LoS numbers as low as 17.5 main fleet, -1.7 escort fleet have been reported to route to boss node. The exact LoS requirement is unknown, but so low that most Admirals will probably not need to care.
+
+====Recommended Fleet Composition:====
+*2 CL 2 BB 1 CA 1 CV + 1 CL 2 DD 3 CLT ('''DEFIKNO''')
+*3 CL 1 BB 1 CA 1 CV + 1 CL 2 DD 3 CLT ('''DEFIKNO''')
+**Hard mode final kill is possible without the armour debuff.  Maya Kai ni is recommended for your CA for the AACI.  All DD and CL should be loaded for ASW. The CV should have 3 fighters and 1 torpedo bomber equipped. This will overwhelm the boss with ASW during daytime. Consider using full ASW on the CLT or at the very least on Kiso as she has higher stats than DDs.
+*1 (F)BB 2CA 1CV(B) + 1 [[Abukuma]](CL) 2DD 3CLT ('''DEFIKNO''') for farming boss kills on easy.
+**It is recommended to have a DD with high AA stat be equipped with AACI in the event that Maya Kai Ni is unavailable.
+*1 [[Katori]]/[[Kashima]](CT) 1 [[Hayasui]] 4 CV(B/L) + 1CL 2DD 3CLT ('''ABFIKNO''') is easy and reliable for boss farming.
+**[[Abukuma]] equipped with a [http://kancolle.wikia.com/wiki/Type_A_Ko-hyoteki Type A Ko-hyoteki] is recommended for CL, but any CL with ASW will work fine.
+**Hayasui Kai with torpedo bombers is recommended for more efficient clearing pre-boss node.
+**1 fBB can be used to replace a CLT.
+**It is recommended to have a DD with high AA stat be equipped with an AACI set up.
+
+====Going to node J (For Armor Reduction Purposes)====
+*Having [[Roma]], [[Italia]] or [[Libeccio]] (the three known Italian ships) in your fleet seems to guarantee H to J (Still need further testing)
+*1 CA 3 (F)BB 2 CVL + 1 CL 2 DD 2 CA 1 FBB
+*4 (F)BB 1CV 1CA + 1 CL 2 DD 2 CA 1 FBB
+*It's possible to go to both debuff node in a single run via '''DEGHJKM'''
+
+====Going to node M (For Armor Reduction Purposes or farming [[Prinz Eugen]])====
+*2 (F)BB(V) 2 CA(V) 2 CVL + 1CL 1 CLT 2 CA 2 DD
+*3 (F)BB(V) 2 CA(V) 1 CV + 2 CA 2 DD 1 CL 1 CLT
+*2 (F)BB(V) 2 CA(V) 2 CVL + 2 CA 2 DD 1 CL 1 FBB
+*4 (F)BB(V) 1 CA(V) 1 CV + 2 CA 2 DD 1 CL 1 FBB
+*3 (F)BB(V) 1 CA(V) 1 CV 1 SS + 2 CA 2 DD 1 CL 1 SS
+*3 (F)BB(V) 2 CA(V) 1 CV + 2 CA 2 DD 1 CL 1 FBB
+*If you use Carrier Task Force, add an [[Akitsushima]] for fixed routing that avoid node C
+**Possible composition: [[Akitsushima]] 4 CV 1 BB + 1 FBB 1 CA 1 CL 1 CLT 2 DD
+*If you use CTF and lack Akitsushima, using Hayasui + CT can still avoid node C
+**Possible composition: 1 CT Hayasui 3 CV(B/L) 1 <span style="font-weight:normal;">(f)BB(V) </span>+ 1 CA 1 fBB 1 CL 1 CLT  2 DD
+
+===Debuffing (Weakening) Boss===
+*Defeating [[Anchorage Water Demon]] and [[Harbour Princess]] in Node M and J respectively at least once will weaken/debuff the Boss.
+**Defeating [[Harbour Princess]] in J alone will not have any effect.
+**Defeating [[Anchorage Water Demon]] in M alone will have partial weakening effect.
+**Defeating both [[Anchorage Water Demon]] '''AND''' [[Harbour Princess]] will have full weakening effect, noticeably increasing the damage to [[Submarine Princess]].
+**It is compulsory to pass the H node in order to reach J, which means facing 4 Ru-class battleships. Don't fear though as their accuracy is low and Surface Task Force should easily obliterate them with AP cut-ins without taking much damage.
+*The change in CG and Voice Line ([[Submarine Princess|see the Submarine Princess page]]) for when the Boss is debuffed only apply when you use Carrier Task Force to face the Boss. According to the collected data ([https://docs.google.com/spreadsheets/d/1rXGhXrR-DcDCPZxoBeJ0F99je6j0lqkWar4mj9an1qc/edit?pli=1#gid=661896279&vpid=A1], [https://docs.google.com/spreadsheets/d/18HC7ZEWjGtsgrActAmRbh-kHi36jg3kK0h8frVhD-XQ/edit?pli=1#gid=818120013&vpid=A1]<!-- summer ASW data? -->) Combined Fleet follows the usual ASW formula (both in Day and Night Battle), with weakening (deviations from the usual ASW formula) observed for both Carrier Task Force and Surface Task Force (even though there is no change in CG/Voice for the latter).
+*The debuff carries into Last Dance if you did it before.
+*The debuff will reset if you reset the difficulty. It is not possible to debuff in Easy and clear in Hard.
+*The debuff seems to reset if you cleared the map. Re-debuffing is possible after already clearing the map for farming the boss node.
+*There is report of defeating the boss without clearing the escort can still trigger the debuff, but need further confirmation.
+
+===Tips===
+====AS Values====
+Nodes I and O (Boss):
+*Easy: PA: 72, AS: 162, AS+: 324 (0 on final form)
+*Medium: PA: 84, AS: 189, AS+: 378 (0 on final form)
+*Hard: PA: 88, AS: 198, AS+: 396 (including final form)
+
+====Farming both Graf and Eugen====
+It is recommended to farm for Graf first, then Eugen. As defeating Node M debuffs the boss, by farming for Graf one would defeat M at least once per HP bar reset, allowing Graf to be farmed more efficiently while triggering Eugen procs. Should Eugen drop in the process of doing this, all that remains is to repeatedly sortie to the boss node, this time no longer debuffing with M per cycle. Should Eugen not drop, then Eugen can be farmed repeatedly after Graf has already been acquired. This is more efficient than farming for Eugen directly, then repeating boss kills for Graf with the debuff inactive.
+
+====Anti-Submarine Warfare====
+*To clear the map, your main goal is to defeat the Submarine Princess. Sinking all other ships is necessary for S-ranks if you want to farm for drops, but is '''not necessary''' if you only want to clear the map for the reward.
+*The Escort Fleet in the Combined Fleet system deals '''NORMAL ASW DAMAGE''' in Night Battle, unlike single fleets. You may proceed to Night Battle to take down the Submarine Princess if you couldn't do this in Day Battle. ([https://www.youtube.com/watch?v=XwX15Q0sjJo SOURCE])
+*Since the main fleet has two shelling phases but does not enter night battle, while the escort fleet has one shelling phase followed by night battle, both fleets get to use ASW attacks '''twice.'''
+*Submarines only perform torpedo attacks on the escort fleet '''after''' the escort fleet's shelling phase. If possible, use a Surface Task Force, fill the main fleet with anti-ship builds and the escort fleet with anti-submarine builds - so your main fleet will take out the surface ships first, leaving the ASW ships in better shape to deal with the boss and other submarines. If a carrier task force is used instead, fill the main fleet with the strongest two ASW ships together with the carriers, and load anti-ship builds in the escort fleet instead, so the ASW ships are kept in better shape. Do '''NOT''' load the bulk of your ASW ships in the first fleet to engage, or the [[Battleship Princess]] or [[Standard Carrier Wo-Class]] will shoot them with impunity while the ships cannot attack anything but the submarines.
+*If possible, using a Surface Task Force may deny the submarines from ever getting to launch their closing torpedoes.
+*Due to the nature of ASW calculations where base ASW is square-rooted before being doubled, while ASW equipment have their bonuses increased by 50%, 4-slot CLs and CTs are always stronger than 3-slot ships regardless of their base ASW values. Consider [[Isuzu Kai Ni]] only as a last resort if there are insufficient 4-slot ships for use. The main ships of note are <br/>{{ShipBattleCardKai|Ooyodo/Kai}}{{ShipBattleCardKai|Yuubari/Kai}}{{ShipBattleCardKai|Katori/Kai}}{{ShipBattleCardKai|Kashima/Kai}} . <br/> As the former two are both CLs, only one of the two may be used at any one time in the Escort fleet; as the latter two are CTs and are not restricted in numbers, you can sortie both in the Escort fleet together with one CL.
+*The SS-hime has exactly 73 (93) armor on Hard and 53 (73) on Easy and Medium (final kill in parenthesis). Your fleet must be ready to do heavy damage to both surface and undersea targets, so dedicate certain ships to certain roles.
+*Carrier Task Force seems to go Southern Route, and has a slight chance to detrack to node C meaning 0% fuel at the boss node, however it seems that CTF offers better accuracy.
+*STF goes west and has 2 sub nodes along the way. It seems easier arriving at boss node with 20% fuel but with 60% ammo left, 20% more than CTF south route (if it didn't detrack, otherwise a whole 40% more ammo, and no remain ammo firepower debuff, see [[Damage Calculation]])
+*It is recommended to bring Type 3 SONAR and Type 3 Depth Charge on all ASW capable ships. Consider upgrading each of them, at least to +1.
+*For final kill (Hard mode), the boss become very resistant toward ASW. In order to sink her, it is suspected that node J and M will weaken the Boss [http://kanmusu.blomaga.jp/articles/51934.html (Her lines and appearance changes)] . Or it is still possible to sink her if you get a Green T-cross. However, it is unsure whether this scenario applied to medium or easy mode.
+*When/If using Boss node support fleet, do not use all 6 Ships. 4 are sufficient (2DD+2CV), and do the job well. any additional ships just waste resources as they cannot hit Submarines.
+*If you had decided to clear E4 and farm on boss, it is recommended to do daily boss armor debuff so that you can focus on killing Wo and BBhime with more surface set up and may choose 2nd formation (double line) while boss is killable. Example in Easy, debuff boss armor when down to 20 [https://twitter.com/u_m_y_/status/668281887501119488 (u_m_y)] making boss killable without proper ASW.
+
+===Prinz Eugen Farming===
+*There have been no reports of anyone obtaining a a second Prinz Eugen with one already present in the fleet.
+*Therefore, it is possible that Eugen may only drop in E4 node M if no Eugen is present in the fleet, in the same way that Akashi is known to only drop from 2-5 boss if no Akashi is present in the fleet.
+*Admirals wishing to farm Eugen for [[FuMO25 Radar]] by scrapping and refarming run the risk of never getting her again in this event if they are unlucky with drops.
+*Currently there has been no record of Prinz Eugen drops for '''Diamond Formation Pattern at M node for E4 Easy'''. (with a sample size of 1000+ Prinz Eugen obtained in Easy, none of them come from diamond easy formation, according to data recorded in poi-statistics, plus some manual report)(It '''is not the case''' for medium (乙) or hard (甲), despite a pattern-based drop rate variation is still possible on these difficulty as pointed out by the data below). See the section below on how to use this information to farm for Eugen more effectively on Easy.
+
+==='''How to Farm [[Prinz Eugen]] in <span style="color:red"><u>EASY Mode</u></span>'''===
+<span style="color:red">'''ATTENTION''': The guidelines written on this section apply <u>'''ONLY TO EASY MODE'''</u>!!! </span>
+
+In Medium and Hard difficulty, Prinz Eugen drops from all possible enemy patterns in node M.
+
+*To farm Prinz Eugen in <span style="color:red"><u>EASY Mode</u></span>, the player is required to face the patterns at M node where the enemy fleets are in '''Line Ahead formation''' and obtain '''S-Rank''' Victory in <span style="color:red"><u>EASY Mode</u></span>.
+<p style="text-align: center;"><u>'''Only the following Enemy Formations in <span style="color:red">EASY Mode</span> will drop Prinz Eugen:'''</u></p>
+{{NodeInfo
+|M<br/>再建中秘匿泊地
+|Normal
+|Line Ahead
+|Anchorage Water Demon
+|Transport Ship Wa-Class
+|Transport Ship Wa-Class
+|Destroyer I-Class/Late Model
+|PT Imp Pack
+|PT Imp Pack
+|-
+|M<br/>再建中秘匿泊地
+|Normal/Final
+|Line Ahead
+|Anchorage Water Demon/III
+|Transport Ship Wa-Class/Elite
+|Transport Ship Wa-Class/Elite
+|Destroyer I-Class/Late Model
+|PT Imp Pack/II
+|PT Imp Pack/II
+}}
+*There is a way to force the second formation type to appear nonstop in <span style="color:red"><u>EASY Mode</u></span>. It is more difficult than the first formation, but doing this ensures that the Diamond formation pattern that doesn't drop Prinz Eugen to be eliminated.
+**To do this, sink the Boss Submarine Princess 3 times (S-Rank is not required. You just need to completely sink the Boss 3 times), or at least somewhere below 25% of the total HP Bar. This converts the Map to the '''Final Formation Stage'''.
+**'''<span style="color:red">DO NOT VISIT THE BOSS AGAIN UNTIL YOU ARE DONE FARMING NODE M FOR PRINZ EUGEN!</span>'''
+*Please note that node M is '''NOT A BOSS NODE'''. Due to the fact node M is a regular node, there is a chance that nothing will drop. Please be patient and keep on going with your efforts until you get Prinz Eugen.
+*Please note that since node M includes [[PT Imp Pack]], you are recommended to bring equipment that allows you to hit the PT Imp Packs such as [[List of Secondary Guns by stats|Secondary Guns]]. Since the [[Anchorage Water Demon]] is an installation boss, [[Type 3 Shell]] will deal more damage against it, while also allegedly increasing your accuracy against the [[PT Imp Pack]] at the same time.
+*'''<span style="color:red">If you have already cleared E-4, this Guide will unfortunately not apply to you</span>''', and there will be no way to guarantee yourself from avoiding the Diamond Formation Pattern in Node M. <span style="color:red">However this does not mean you can't farm Prinz at easy after cleared the map, just that your chance of getting Prinz would be further reduced.</span>
+*'''THIS APPLIES FOR <span style="color:red"><u>EASY MODE</u></span> ONLY. In higher difficulties, all compositions will drop Prinz Eugen, and fixing the node composition as the Final form simply makes it <u>HARDER</u> to S-rank the node.'''
+*'''<span style="color:red">Just in case you still haven't noticed, this applies for <u>Easy Mode ONLY.</u></span>'''
+* Even if you follow this guide, your chance to get Prinz Eugen in Easy would still be smaller than the chance of obtaining her from medium. So if you can handle E-4-M medium as much as E-4-M Easy, farming at medium would still be a better option.
+
+===Notice about farming Prinz Eugen in Medium and Hard Mode===
+*According to the data summarised in [[#Pattern-based drop rate for some ships]], it has been confirmed that Prinz Eugen drops in all enemy patterns when the map difficulty is medium or hard.
+** For '''medium mode''', diamond enemy formation still only has '''half the Prinz Eugen drop rate''' compared to line ahead formation. Thus, similar to the situation in easy mode, one might want to keep the boss in final stage to get some potential increase in drop rates. However, its influence would be smaller than that of Easy difficulty.
+*** According to data analyzed in the table, if you keep the compo in final kill formation, Prinz Eugen drop rate would '''up by ~30%''' from 2.0% to 2.6%, which is less extreme than the case in Easy.
+** For '''hard mode''', data is lacking and '''errors are too large''' to observe anything conclusive from it. To help contribute to the data, please farm the node in hard difficulty via KC3 Kai or Poi Browser and have the data report function enabled.
+*** However, due to the generally '''lower S-Rank obtain rate''' when one is doing the map at hard, and even more so if E4M is at final kill formation, thus it is generally not recommended to farm at Hard unless your fleet can obtain S-Rank in this node at least close to the S-Rank rate at medium mode.
+
+====={{clear}}=====
+
+==Drop list==
+{{DropList
+|nodes = B,C,D,F,G,H,I,J,M,N,O
+|boss = O
+|Akitsu Maru: J/Medium, M/Easy
+|Graf Zeppelin: O/Easy
+|Hayashimo: O/Easy
+|Kiyoshimo: O/Easy
+|Libeccio: J/Hard, M/Easy
+|Maruyu: O/Easy
+|Prinz Eugen: M/Easy
+|Roma: J/Hard, M/Easy, O/Hard
+|Tokitsukaze: O/Easy
+|U-511: O/Easy
+|Akigumo: O/Easy
+}}
+
+==Pattern-based drop rate for some ships==
+Prinz Eugen at node M:
+{| class="mw-collapsible wikitable typography-xl-optout" style="width:100%"
+|-
+!Difficulty
+!Anchorage No. / Formation
+!# of Prinz
+!S Rank
+!# of fights
+!Drop rate when S rank
+!Overall rate when the node is reached
+!Note
+|-
+|rowspan=3|Easy
+|611/Line Ahead
+|606
+|46626
+|62523
+|{{#invoke:Stat|rate|606|46626}}% ± {{#invoke:Stat|error|606|46626}}%
+|{{#invoke:Stat|rate|606|62523}}% ± {{#invoke:Stat|error|606|62523}}%
+|Final Kill Formation
+|-
+|609/Line Ahead
+|465
+|33358
+|38629
+|{{#invoke:Stat|rate|465|33358}}% ± {{#invoke:Stat|error|465|33358}}%
+|{{#invoke:Stat|rate|465|38629}}% ± {{#invoke:Stat|error|465|38629}}%
+|
+|-
+|609/Diamond
+|0
+|51084
+|58350
+|{{#invoke:Stat|rate|0|51084}}% ± {{#invoke:Stat|error|0|51084}}%
+|{{#invoke:Stat|rate|0|58350}}% ± {{#invoke:Stat|error|0|58350}}%
+|
+|-
+|rowspan=3|Medium
+|611/Line Ahead
+|363
+|14084
+|19659
+|{{#invoke:Stat|rate|363|14084}}% ± {{#invoke:Stat|error|363|14084}}%
+|{{#invoke:Stat|rate|363|19659}}% ± {{#invoke:Stat|error|363|19659}}%
+|Final Kill Formation
+|-
+|609/Line Ahead
+|422
+|16262
+|19133
+|{{#invoke:Stat|rate|422|16262}}% ± {{#invoke:Stat|error|422|16262}}%
+|{{#invoke:Stat|rate|422|19133}}% ± {{#invoke:Stat|error|422|19133}}%
+|
+|-
+|609/Diamond
+|349
+|25415
+|28914
+|{{#invoke:Stat|rate|349|25415}}% ± {{#invoke:Stat|error|349|25415}}%
+|{{#invoke:Stat|rate|349|28914}}% ± {{#invoke:Stat|error|349|28914}}%
+|
+|-
+|rowspan=3|Hard
+|612/Line Ahead
+|29
+|1923
+|4293
+|{{#invoke:Stat|rate|29|1923}}% ± {{#invoke:Stat|error|29|1923}}%
+|{{#invoke:Stat|rate|29|4293}}% ± {{#invoke:Stat|error|29|4293}}%
+|Final Kill Formation
+|-
+|610/Line Ahead
+|57
+|2114
+|2986
+|{{#invoke:Stat|rate|57|2114}}% ± {{#invoke:Stat|error|57|2114}}%
+|{{#invoke:Stat|rate|57|2986}}% ± {{#invoke:Stat|error|57|2986}}%
+|
+|-
+|610/Diamond
+|84
+|3565
+|4761
+|{{#invoke:Stat|rate|84|3565}}% ± {{#invoke:Stat|error|84|3565}}%
+|{{#invoke:Stat|rate|84|4761}}% ± {{#invoke:Stat|error|84|4761}}%
+|
+|-
+!colspan=8|Data summarised by http://nga.178.com/read.php?tid=8750148 with data from poi-statistics until Nov23 6:00 Beijing Time.
+|}
+{{:Fall 2015 Event/E-4/Enemy patterns}}
+[[Category:Events]]

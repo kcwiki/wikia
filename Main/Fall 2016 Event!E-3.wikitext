@@ -1,0 +1,191 @@
+__NOTOC__
+<div style="text-align:center;margin-top:20px;">{{Event/DetailToggle}}</div>
+
+==Information==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{Notice|align=left|
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/FPwZxiSkcQTIm51c2 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1d9qDLp9QpCNF-u7zOlvJZGYFg07IewKaP7OHfMd-etQ here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:494118|here]].
+}}
+
+{{Event/MapInfo
+|en = Proclamation! Fleet Strategy Plan #3
+|jp = 発令！艦隊作戦第三法
+|romaji = Hatsurei! Kantai Sakusen Dai San-hō
+|tag = Interception Fleet
+|hp_easy = {{Tooltip|1850|5 full kills (Seaplane Tender Water Princess)}}
+|hp_normal = {{Tooltip|1900|5 full kills (Seaplane Tender Water Princess II)}}
+|hp_hard = {{Tooltip|2340|6 full kills (Seaplane Tender Water Princess III)}}
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Ship Locking@Events/Mechanics#Ship_Locking, Boss Debilitation@Events/Mechanics#Map-specific_Mechanics
+
+|Allreward = {{ShipBattleCardKai|Commandant Teste}}
+|Easyitem1 = {{EquipmentCardKai|Underway Replenishment|size=50px}}|Easyqty1 = 1
+
+|Normitem1 = {{EquipmentCardKai|Underway Replenishment|size=50px}}|Normqty1 = 2
+|Normitem2 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]|Normqty2 = 4
+|Normitem3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Normqty3 = 1
+
+|Harditem1 = {{EquipmentCardKai|Laté 298B|size=50px}}|Hardqty1 = 1
+|Harditem2 = {{EquipmentCardKai|Underway Replenishment|size=50px}}|Hardqty2 = 4
+|Harditem3 = [[File:Screw.png{{!}}50px{{!}}link=Screw]]|Hardqty3 = 7
+|Harditem4 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]|Hardqty4 = 1
+}}
+{{MapBranchingTable
+|width = default
+|0 -> 1 = Carrier Task Force
+|0 -> 2 = Surface Task Force
+
+|A/battle -> B/battle = * Historical routing, requirement unknown
+|A/battle -> C/battle = * Pass the LoS check '''AND''' do not meet any requirements to go to M
+|A/battle -> M/empty =
+* Failed the LoS check
+* Amount of (F)BB(V)+CV ≧ 4 total in '''BOTH''' fleet
+
+|B/battle -> D/battle = 
+* Slow Fleet
+* Amount of CV(B) ≧ 3
+|B/battle -> E/battle = * Fast Fleet 
+
+|D/battle -> N/empty =
+* Amount of CV(B) ≧ 3
+* Amount of CVL ≦ 1 '''(UNCONFIRMED)'''
+* Fleet contains CAV'''(UNCONFIRMED)'''
+|D/battle -> F/battle =
+* Amount of DD ≧ 3 in '''ESCORT''' fleet
+* Amount of CLT ≧ 2 '''AND''' at least a (F)BB(V) is in the '''MAIN''' fleet
+* Historical routing, requirement unknown
+|D/battle -> E/battle = * Historical routing, requirement unknown
+
+|C/battle -> E/battle = * Does not meet the requirements to go to G
+|C/battle -> G/storm = * Fast Fleet '''AND''' Fleet contains NO CV '''AND''' Fleet contains NO FBB in the '''ESCORT''' fleet '''(UNCONFIRMED)'''
+
+|F/battle -> J/battle = * Does not meet the requirements to go to H
+|F/battle -> H/battle = * FBB is present in the '''ESCORT''' fleet
+
+|E/empty -> H/battle = * Choice
+|E/empty -> I/battle = * Choice
+
+|H/battle -> J/battle = * Fixed route
+
+|J/battle -> Q/battle = ???
+|J/battle -> O/empty = ???
+
+|I/battle -> H/battle = * Amount of (F)BB(V) + CV ≧ 4 in '''MAIN''' fleet
+|I/battle -> O/empty = * Does not meet any requirements to go to L or K
+|I/battle -> L/battle =
+* Amount of DD ≧ 3 in '''ESCORT''' fleet
+* Historical ships in fleet ≧ 6 '''(Overrides any other branching rules)'''
+|I/battle -> K/battle =
+* Amount of DD = 2 in fleet
+* Historical ships is present but amount is ≦ 5.
+
+|K/battle -> L/battle = ???
+|K/battle -> P/empty = ???
+}}
+
+===Fleet compositions===
+*'''Historical Ships''':
+**(F)BB(V):{{ShipLink|Ise}}, {{ShipLink|Hyuuga}}
+**CV(L): {{ShipLink|Souryuu}}, {{ShipLink|Hiryuu}}
+**CA: {{ShipLink|Atago}}, {{ShipLink|Maya}}, {{ShipLink|Choukai}}, {{ShipLink|Myoukou}}, {{ShipLink|Haguro}}, {{ShipLink|Nachi}}
+**CL(T) {{ShipLink|Jintsuu}}, {{ShipLink|Kiso}}
+**DD: {{ShipLink|Nowaki}}
+**AV:
+
+Note that this list will constantly be updated. You can assume the above ships are always correct.
+
+*'''Unconfirmed Ships''':
+**(F)BB(V):{{ShipLink|Fusou}}, {{ShipLink|Yamashiro}}
+**CA: {{ShipLink|Takao}}
+**CL(T) {{ShipLink|Tama}}
+**DD: {{ShipLink|Arashi}}, {{ShipLink|Arashio}}, {{ShipLink|Oyashio}}, {{ShipLink|Kuroshio}}, {{ShipLink|Ushio}}, {{ShipLink|Sazanami}}
+**AV:{{ShipLink|Mizuho}}
+
+The above ships are involved in the historical events, but are not confirmed as to whether they fit for the historic criteria.
+
+*'''Starting Point 1''': CTF Fleet (Starts at B)
+**An all-Fast fleet consisting of 1CA + 1FBB + 2CV + 2CVL for main fleet and 2CA + 3DD+ 1CL (no historical formations) starts at north and goes B - E - I - L - Q. The route consists of 1 sub node and 2 air raid nodes (easiest one) before reaching boss.
+***Having any slow ships in this composition will make the fleet detour to D node.
+*'''Starting Point 2''': STF Fleet (Starts at A)
+
+===Tips===
+*Recommend using same ships from E2 if you are aiming to do event at hard difficulty to avoid ship-locking in E4 and E5
+*Recommend 620+ air power for hard, 500+ air power for medium, and 260+ air power for easy difficulty, also bring an Akizuki DD to deal with the annoying air raid nodes and boss node.
+**More air power necessary on the Final Kill for Easy and Medium difficulty due to change in form.
+*The armor of boss is 210, pretty high so players should bring at least 2 Cut-in capable ships to deal with her.
+*Boss support shelling is also quite mandatory since the number of enemy at boss node is 12.
+*('''WIP''') For admirals who are not familiar with the [[Abyssal Combined Fleet]], you can only do night battle with the enemy main fleet if (conditions may still be inaccurate, please confirm...) you can wipe out 4 to 6 enemy escort ships, sink the flagship of escort fleet, and get A-rank by sinking 8 or above enemy ships.
+
+===Mechanics: Abyssal Combined Fleet===
+*CTF vs. Abyssal CTF observed shelling order :
+*# Air phase, airstrike will hit any ship in the enemy fleet.
+*# Support shelling, will hit any enemy.
+*# Opening torpedoes, will hit any ship in the opposing fleet.
+*# Main fleet 1st shelling, will hit enemy main fleet only.
+*# Escort fleet shelling, will hit enemy escort fleet only.
+*# Closing torpedoes, will hit any enemy ship except player main fleet.
+*# Main fleet 2nd shelling, will hit any enemy ship. (only happens if BB is present)
+*# Yasen, player escort fights enemy main or escort.
+* For more details see [[Abyssal Combined Fleet]].
+
+===E-3 Boss Debuff===
+According to the [http://wikiwiki.jp/kancolle/?%C8%AF%CE%E1%A1%AA%A1%D6%B4%CF%C2%E2%BA%EE%C0%EF%C2%E8%BB%B0%CB%A1%A1%D7%2FE3%20%A4%BD%A4%CE%C2%BE%BE%F0%CA%F3%C4%F3%B6%A11 Japanese wiki], it is possible to increase the damage dealt to [[Seaplane Tender Water Princess]] by doing the following steps:
+*'''NOTE:''' The precise requirements is still under investigation. Do note that something might be missing.[[File:DMG_E-3_Hime.png|300px|right|E3 Boss intro after debuff]]
+*In E-3: S-rank node C, D, H, J and A-rank (or higher) K.
+**Slow fleet CTF is suggested to reach D, H and J
+**Fast fleet STF is suggested to reach C and K
+*In E-2: achieve 3 '''air supremacy '''land base air defenses with no damage taken (receive '''"white text"''' after).
+** This can be achieved in Hard Mode by equipping the airfields with interceptors and fighters, and assign both of them to Air Defense. It is recommended that you improve their proficiency (plane rank) to max.
+** Defenses prior to clearing E-2 will still count; you do not have to go back to E-2 to get the perfect intercepts again if you already had done so before arriving at E-3.
+*In E-2: S-rank all air battle nodes (A, G, K and L).
+** You can send a fleet of submarines to secure perfect S at the air battle nodes without the enemy launching any planes. If you survive Node B without ''taiha'', just keep moving on until you reach K or L, then retreat. Node J is the other surface node along the route but they can't sink you.
+
+*The quest completion jingle will play when returning from sortie upon triggering the debuff. The boss intro dialogue line and CG will change.
+*The debuff reduces the boss [[Seaplane Tender Water Princess]]'s armor, making her easier to damage and sink.
+
+
+*<strike>'''NOTE:''' After completion, the debuff will''' not''' reset! This means that changing difficulty will not reset the debuff on the boss.</strike>
+*The E-3 boss debuff will reset upon changing the map difficulty to hard (甲).<ref>https://twitter.com/KanColle_STAFF/status/799631463071088640</ref> Note that E-2 progress towards the E-3 debuff will also reset upon changing E-3's difficulty.
+
+===References===
+<references />
+
+</div>{{clear}} <!-- Information collapsible -->
+
+{{:Fall 2016 Event/E-3/Enemy patterns}}
+
+==Drop list==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = C, D, H, J, K, Q, 
+|boss = Q
+|Akashi: C/Easy, J/Easy, H/Easy, K/Medium
+|Akigumo: Q/Easy
+|Akitsushima: Q/Easy
+|Amagi: Q/Easy
+|Amatsukaze: Q/Easy
+|Asagumo:Q/Easy, J/Medium
+|Hamakaze: Q/Easy
+|Hiryuu: Q/Easy
+|Kawakaze: Q/Easy, H/Hard, J/Medium
+|Mikuma: Q/Easy
+|Makigumo: D/Easy, H/Hard, J/Medium
+|Mizuho: Q/Easy
+|Okinami: J/Medium
+|Ooyodo: J/Easy
+|Takanami: J/Easy
+|Tanikaze: Q/Easy
+|Tokitsukaze: Q/Easy
+|Umikaze: Q/Easy
+|Urakaze: Q/Easy
+|Yamagumo: Q/Easy
+|Yamakaze: Q/Easy
+|Yuugumo: D/Easy
+}}
+
+</div> <!-- Drop list collapsible -->

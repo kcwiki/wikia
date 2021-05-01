@@ -1,0 +1,82 @@
+So the event will be here soon, and after reflecting on what trouble we had last time around, I would like to propose a convention for differentiating variations of enemy ships with the same name.
+
+==The conventions we currently have==
+
+The first convention is a numbered one, the one in use for Wo-Class. Each variation of every named form has a roman numeral added to the end to disambiguate. So we get Flagship, Flagship II, Flagship III, Flagship IV, then Kai Flagship, Kai Flagship II, etc. The variations are named in order of ''API ID''.
+
+The second convention we have is the contextual form, which we currently see in use mostly for bosses that were in the game before the Lua system. An example is Northern Princess: she has the basic form, Final, EO, EO Weak, EO Final, and EO Weak Final forms.
+
+The third convention we have is an alphabetic numbering (does that make sense?). This was used for recent bosses after the Lua system was implemented. An example is Air Defense Princess: she has A, B, and C forms.
+
+==The alphabetic convention==
+
+I heavily regret introducing the alphabetic convention. I did it as a necessary evil to get the forms with their api ids onto the wiki ASAP, and under the pressure I didn't recall the convention I could have followed in the Wo-Class and slapped on letters after the jp wikiwiki popped into my head. The good thing about this convention is that there is no dependency on context. There is no need to change suffixes after people find out what api id is used where.
+
+The problem with the alphabetic convention is that it implies a link with difficulty. In Japanese, the names of the event difficulties roughly correspond to A, B, and C, with A being hardest. People see A, B, and C on Air Defense Princess and assume A is hard difficulty when it is C which is hard difficulty. This also leads to mistaken edits to the wrong variation when people try to contribute stats from their sorties without looking at the packet data.
+
+==The contextual convention==
+
+The contextual convention is problematic. I am unable to assign any suffixes until we have reports from frontliners on at least two difficulties, and even then that may not be enough, and I am certainly unable to be available 24/7 until we get frontliner reports. Not to mention that Light Cruiser Demon's "final form" has been used as a common flagship of non-boss enemy compositions, making her "Final" suffix confusing. "Strong" is also potentially confusing given that we also have "Weak". And what to do when we get something stronger than "Strong"?
+
+==The roman numeral convention==
+
+Therefore I wish to convert everything to the roman numeral convention. People are already used to it given the popularity of Wo-Class with the devs. It provides a precedent that numerals are unique to different 'named' forms, like how Flagship and Kai Flagship both have II, III's, and IV's. This means we can treat all bosses as "Basic" and have variants be Basic II, II, etc. A numeric convention also means I can create data modules for new enemy ships ASAP without having to figure out context or stats.
+
+==Effects of this change==
+
+Old contextual and alphabetical suffixes can be kept as redirects to new roman suffixes. '''This means anything using the Lua system will keep working.''' Alphabetical suffixes would no longer be in enemy ship names, but contextual suffixes would be kept in enemy ship names through the use of the <code>_display_suffix</code> feature for the sake of not disorienting people who rely on it currently. So Northern Princess (EO Weak Final Form) becomes Northern Princess VI (EO Weak Final Form).
+
+Some enemy assets would be renamed for consistency. Galleries (using gallery tag) that reference the image by name will break, but I don't think any such galleries exist for the assets that will be renamed.
+
+The enemy ships that would be renamed are:
+* Floating Fortress/A -> Floating Fortress/
+* Floating Fortress/B -> Floating Fortress/II
+* Floating Fortress/C -> Floating Fortress/III
+* Escort Fortress/A -> Escort Fortress/
+* Escort Fortress/B -> Escort Fortress/II
+* Escort Fortress/C -> Escort Fortress/III
+* Airfield Princess/A -> Airfield Princess/II
+* Airfield Princess/B -> Airfield Princess/III
+* Airfield Princess/C -> Airfield Princess/IV
+* Harbour Princess/Final -> Harbour Princess/II
+* Isolated Island Demon/A -> Isolated Island Demon/II
+* Isolated Island Demon/B -> Isolated Island Demon/III
+* Isolated Island Demon/C -> Isolated Island Demon/IV
+* Northern Princess/Final -> Northern Princess/II
+* Northern Princess/EO -> Northern Princess/III
+* Northern Princess/EO Final -> Northern Princess/IV
+* Northern Princess/EO Weak -> Northern Princess/V
+* Northern Princess/EO Weak Final -> Northern Princess/VI
+* Aircraft Carrier Demon/Strong -> Aircraft Carrier Demon/II
+* Midway Princess/Final -> Midway Princess/II
+* Aircraft Carrier Princess/Strong -> Aircraft Carrier Princess/II
+* Destroyer Princess/Final -> Destroyer Princess/II
+* Aircraft Carrier Water Demon/Final -> Aircraft Carrier Water Demon/II
+* Light Cruiser Demon/Final -> Light Cruiser Demon/II
+* Battleship Water Demon/Final -> Battleship Water Demon/II
+* Harbour Water Demon/Strong -> Harbour Water Demon/II
+* Harbour Water Demon/Final -> Harbour Water Demon/III
+* Harbour Water Demon/Strong Final -> Harbour Water Demon/IV
+* Anchorage Water Demon/Strong -> Anchorage Water Demon/II
+* Anchorage Water Demon/Final -> Anchorage Water Demon/III
+* Anchorage Water Demon/Strong Final -> Anchorage Water Demon/IV
+* Seaplane Tender Princess/A -> Seaplane Tender Princess/
+* Seaplane Tender Princess/B -> Seaplane Tender Princess/II
+* Seaplane Tender Princess/C -> Seaplane Tender Princess/III
+* Air Defense Princess/A -> Air Defense Princess/
+* Air Defense Princess/B -> Air Defense Princess/II
+* Air Defense Princess/C -> Air Defense Princess/III
+
+/I will redirect to the basic form (/).
+
+What does everyone think? 
+
+Is the scope of renames too large? 
+
+Should only the alphabetical ones be renamed (in this case, roman numerals will be redirect to contextual suffixes, and new forms will be numbered leaving room for the contextually suffixed forms)?
+
+Is there anything I overlooked? Anything that might break that I didn't consider?
+
+Am I batshit insane?
+
+Thank you for reading and I look forward to everyone's feedback.<ac_metadata title="A standard convention for differentiating variations of enemy ships with the same name"> </ac_metadata>

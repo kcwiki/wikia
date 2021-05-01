@@ -1,0 +1,146 @@
+/* CSS placed here will be applied to all skins */
+
+/* From https://gbf.wiki/MediaWiki:Common.css */
+
+.mytooltip {
+  position: relative;
+  display: inline;
+  border-bottom: 1px dotted black;
+}
+
+.mytooltiptext {
+  visibility: hidden;
+  min-width: 250px;
+  padding: 12px 14px;
+  
+  position: absolute;
+  left: 50%;
+  bottom: calc(20px + 100%);
+  z-index: 99999;
+  
+  background: #fff;
+  box-shadow: 0 2px 0 0 rgba(0,0,0,0.15);
+  border: 1px solid #a2a9b1;
+  border-radius: 2px;
+  
+  white-space: normal;
+  font-weight: normal;
+  font-style: initial;
+  text-align: center;
+  font-size: 14px;
+  line-height: 1.6;
+}
+
+.mytooltiptext:after,
+.mytooltiptext:before {
+  content: '';
+  position: absolute;
+  left: 50%;
+  border-style: solid;
+}
+
+.mytooltiptext:after {
+  top: 100%;
+  bottom: auto;
+  width: 20px;
+  height: 20px;
+  background: #fff;
+  margin-top: -10px;
+  margin-left: -10px;
+  box-shadow: 1px 1px 0px #a2a9b1;
+  transform: rotate(45deg);
+  border-width: 0;
+}
+
+.mytooltiptext:before {
+  top: 100%;
+  bottom: auto;
+  border-width: 18px;
+  margin-left: -18px;
+  border-color: rgba(0,0,0,0.15) transparent transparent transparent;
+  pointer-events: none;
+}
+
+.mytooltip .mytooltip .mytooltiptext,
+.header-fixed-helper .mytooltip .mytooltiptext {
+  bottom: auto;
+  top: calc(20px + 100%);
+}
+
+.mytooltip .mytooltip .mytooltiptext:after,
+.header-fixed-helper .mytooltip .mytooltiptext:after {
+  top: auto;
+  bottom: 100%;
+  border-width: 15px;
+  margin-left: -15px;
+  border-color: transparent transparent white transparent;
+  width: 0;
+  height: 0;
+  box-shadow: none;
+  background: none;
+  transform: none;
+}
+
+.mytooltip .mytooltip .mytooltiptext:before,
+.header-fixed-helper .mytooltip .mytooltiptext:before {
+  top: auto;
+  bottom: 100%;
+  border-width: 16px;
+  margin-left: -16px;
+  border-color: transparent transparent #888 transparent;
+}
+
+.mytooltiptext span.hr {
+    display: block;
+    height: 1px;
+    background-color: #a2a9b1;
+}
+
+.mytooltiptext hr,
+.mytooltiptext span.hr {
+  margin: 10px 0 12px;
+  position: relative;
+  background: none;
+}
+
+.mytooltiptext hr:after,
+.mytooltiptext span.hr:after {
+  content: '';
+  display: block;
+  width: 100%;
+  height: 1px !important;
+  position: absolute;
+  left: -14px;
+  background: #a2a9b1;
+  padding: 0 14px;
+}
+
+.mytooltip:hover > .mytooltiptext,
+.mytooltip.hover > .mytooltiptext {
+  visibility: visible;
+}
+
+.mytooltiptext {
+  opacity: 0;
+  transition: opacity 200ms ease, visibility 0s ease 200ms, transform 200ms ease;
+  transform: translate(-50%, 8px);
+}
+
+.mytooltip .mytooltip .mytooltiptext,
+.header-fixed-helper .mytooltip .mytooltiptext {
+  transform: translate(-50%, -8px);
+}
+
+.mytooltip:hover > .mytooltiptext,
+.mytooltip.hover > .mytooltiptext {
+  opacity: 1;
+  transition-delay: 0s;
+  transform: translate(-50%, 0);
+}
+
+.mytooltiptext a { color: #0645ad; border-bottom: 0; }
+.mytooltiptext a:visited { color: #0b0080; }
+.mytooltiptext a:active { color: #faa700; }
+.mytooltiptext a:hover, a:focus { text-decoration: underline; }
+.mytooltiptext { color: #252525; }
+.mytooltiptext a.new { color: #ba0000; }

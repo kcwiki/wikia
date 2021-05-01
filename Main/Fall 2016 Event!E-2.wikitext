@@ -1,0 +1,151 @@
+__NOTOC__
+<div style="text-align:center;margin-top:20px;">{{Event/DetailToggle}}</div>
+
+==Information==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{Notice|align=left|
+:Report your fleet composition for branching rule determination [https://goo.gl/forms/hXLeH4deg4R4Q0V82 here]
+:To view the submitted fleet composition reports go [https://docs.google.com/spreadsheets/d/1gDS-QrTJrDpl1NAx1hx3rfKpdWaXO5q042grc8rg0iE here].
+:Discuss new mechanics, fleet & equipment setup, LBAS setup, farming strategies, etc [[Thread:494117|here]].
+}}
+
+{{Event/MapInfo
+|en = Mainland Air Defense Battle
+|jp = 本土防空戦
+|romaji = Hondo Bōkūsen
+|tag = Interception Fleet
+|hp_easy = {{Tooltip|480|5 full kills (Wo Flagship / Wo Kai Flagship II)}}
+|hp_normal = {{Tooltip|800|5 full kills (Wo Kai Flagship (II / III))}}
+|hp_hard = {{Tooltip|800|5 full kills (Wo Kai Flagship (III / IV))}}
+|mechanics = LoS Check@Events/Mechanics#LoS_Check, Selection Node@Events/Mechanics#Node_specific_details, Enemy Raid@Land Base_Aerial_Support#Enemy_Raid_2, Ship Locking@Events/Mechanics#Ship_Locking
+
+|Easyitem1 = {{EquipmentCardKai|Combat Ration|size=50px}}|Easyqty1 = 1
+|Easyitem2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]|Easyqty2 = 2
+|Easyitem3 = {{EquipmentCardKai|SBD|size=50px}}|Easyqty3 = 1
+
+|Normitem1 = {{EquipmentCardKai|Combat Ration|size=50px}}|Normqty1 = 1
+|Normitem2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]|Normqty2 = 3
+|Normitem3 = {{EquipmentCardKai|SBD|size=50px}}|Normqty3 = 1
+|Normitem4 = {{EquipmentCardKai|TBD|size=50px}}|Normqty4 = 1
+
+|Harditem1 = {{EquipmentCardKai|Combat Ration|size=50px}}|Hardqty1 = 2
+|Harditem2 = [[File:Food supply ship irako.png{{!}}50px{{!}}link=Fatigue]]|Hardqty2 = 3
+|Harditem3 = {{EquipmentCardKai|Daihatsu Landing Craft|size=50px}}|Hardqty3 = 1
+|Harditem4 = {{EquipmentCardKai|SBD|size=50px}}|Hardqty4 = 1
+|Harditem5 = {{EquipmentCardKai|TBD|size=50px}}|Hardqty5 = 1
+}}
+{{MapBranchingTable
+|width = default
+|0 -> 1 =
+* Meet all the following requirements:
+** Fleet contains [[Mizuho]] '''OR''' [[Shouhou]]
+** The fleet contains no CV(B) (CVL does not count)
+** Fast Fleet
+|0 -> 2 = * CLTs > 0 '''OR''' Does not meet the requirements to start either at 1 or 3.
+|0 -> 3 = * Amount of CV(B) = 2, amount of DD ≧ 2 (CVL does not count)
+
+|D -> E = * Fleet contains '''EXACTLY''' 3 of the following ships: [[Arashi]], [[Nowaki]], [[Atago]], [[Takao]], [[Maya]], [[Choukai]], [[Myoukou]], [[Haguro]], [[Mizuho]] and [[Shouhou]].([[Mizuho]] might count as 2('''UNCONFIRMED'''))
+|D -> F = * Does not meet the requirements to go to E.
+
+|C -> F = * Does not meet the requirements to go to G.
+|C -> G = * [[Hiryuu]] '''AND''' [[Souryuu]] are in the fleet.
+
+|F -> H = * Fleet started at point 1 and you do not meet the historic requirements to go I.
+|F -> I = 
+* Fleet started at point 1 ('''UNCONFIRMED''')
+* <s>Fleet contains at '''LEAST''' 3 of the following ships: [[Arashi]], [[Nowaki]], [[Atago]], [[Takao]], [[Maya]], [[Choukai]], [[Myoukou]], [[Haguro]], [[Mizuho]] and [[Shouhou]].([[Mizuho]] might count as 2('''UNCONFIRMED'''))</s> incorrect or missing other requirement
+|F -> G = * Does not meet the requirements to go to either H or I.
+
+|H/battle -> I/battle = * Fixed route
+|G/battle -> J/battle = * Fixed route
+
+|I/empty -> K/battle = * Choice
+|I/empty -> L/battle = * Choice
+
+|K/battle -> M/empty =
+* Fail the LoS check
+* Random chance to off route if you have a full sub fleet.
+|K/battle -> O/battle = * Pass the LoS check
+
+|L/battle -> O/battle = * Pass the LoS check
+|L/battle -> N/empty = * Fail the LoS check
+}}
+
+===Fleet compositions===
+*Starting Point 1
+**1 AV 1 CVL 2 CA 2 DD (D-F-I-K-O)
+**Having {{ShipLink|Mizuho}} and {{ShipLink|Shouhou}} will skip Node H
+*Starting Point 2
+**1 CV 1 CVL 2 CA(V) 2 DD
+*Starting Point 3
+** 2 CV 1-2 CA(V) 2-3 DD (C-F-G-J-I-K-O)
+**Having {{ShipLink|Hiryuu}} and {{ShipLink|Souryuu}} will skip Node F
+
+===Tips===
+
+*Nodes A, G, K, L are Air Raid Nodes
+*Node I choice between K,L. Node L has a much higher LoS requirement (around 85 eLos, or 50 Los formula 33).
+*There's Land Base Air Support provided for this map. You require at least 8 or higher Range for any Land Base Air Support to reach the Boss node.
+**There are 1-2 enemy air raids
+**You are not allowed to sortie more than 1 Land Base for bombing in this map. However, you can assign interceptors in the 2nd land base and set the base to air defense to avoid taking damage from raids against your base.
+**For your Land Base Air support to reach the Boss node, having at least 1 [[Type 2 Large-sized Flying Boat]] [+3 Range] or [[PBY-5A Catalina]] [2+ Range] is required if being sent along with Fighters such as [[Type 0 Fighter Model 52 (Skilled)]] [6 Range].
+**For Hard mode, it is recommended that you opt to bring 3 Type 0 Fighter Model 21 (Skilled) + 1 Type 2 Large-sized Flying Boat or 3 Type 0 Fighter Model 52 (Skilled) + PBY-5A Catalina if sent to the Boss node as the lack of slots to put in an appropriate amount of fighters and Land-based Attack Bombers may result in your Bombers getting shot down with ease and won't have enough Firepower to deal effective damage against the Boss. Bringing 3 Fighters + 1 Large Sized Flying Boat may help you to gain more Fighter power against the Boss which will lessen your Aircraft loss.   
+*Bringing a ship capable of Anti-Air Cut-In is highly recommended due to the several appearance of enemy Carriers. 
+*Sub-cheese (A-B-F-G-J-I-K-O)
+**There is a slim chance to clear this map using SS/SSV. However, it is required that you equip at least [[Type 0 Observation Seaplane]]s for a minimum of [http://imgur.com/gallery/DbL1z 13.62 LOS] New Formula (from K to O node on '''Hard'''). [http://imgur.com/a/q9e2x].
+**Low resource consumption, but high bucket consumption. Relatively good for chipping at the boss, consider using a boss support expedition to increase effectiveness, but at the cost of higher resource consumption.
+**This composition has a risk of being offrouted to a dead end node, even with guaranteed minimum LoS of 14 or exceeding until 34 LoS (using 4 Type 0 planes), which will require a lot of patience.
+
+===Sample Videos===
+{| {{FancyTable}}
+|-
+! colspan="3" |View Sample E-2 Runs
+|-
+! scope="col" style="text-align:center;"|1 AV 1 CVL 2 CA 2 DD
+! scope="col" style="text-align:center;"|1 CV 1 CVL 2 CA(V) 2 DD
+! scope="col" style="text-align:center;"|Souryuu + Hiryuu & 2 CAV + 2 DD
+|-
+|N/A
+|N/A
+|[[File:Fall 2016 Event E-2 Hard Souryuu Hiryuu 2 CAV 2 DD|center|200 px]]
+|-
+! style="text-align:center;"|1 AV 1 CVL 2 CA 2 DD (Final)
+! style="text-align:center;"|1 CV 1 CVL 2 CA(V) 2 DD (Final)
+! style="text-align:center;"|Souryuu + Hiryuu + 2 CAV + 2 DD (Final)
+|-
+|N/A
+|N/A
+|[[File:Fall 2016 Event E-2 Hard Souryuu Hiryuu 2 CAV 2 DD (Final)|center|200 px]]
+|}
+
+===References===
+<references />
+
+</div>{{clear}} <!-- Information collapsible -->
+
+{{:Fall 2016 Event/E-2/Enemy patterns}}
+
+==Drop list==
+<div class="mw-collapsible mw-expanded">{{clear}}
+
+{{DropList
+|no_legend = true
+|filter_button = true
+|nodes = C,D,J,O
+|boss = O
+|Amatsukaze : O/Easy
+|Harukaze : J/Easy, O/Easy
+|Harusame : J/Easy
+|Isokaze : J/Easy
+|Kamikaze : O/Easy
+|Kawakaze : O/Easy
+|Ooyodo : J/Easy
+|Tokitsukaze : O/Easy
+|Yamakaze : O/Easy
+|Suzuya : C/Hard, D/Hard, J/Easy, O/Easy
+|Kumano : C/Hard, J/Easy, O/Easy
+}}
+
+
+</div> <!-- Drop list collapsible -->

@@ -1,0 +1,243 @@
+Morale/Fatigue is a hidden statistic within the game. Each ship has their own morale value. It ranges from 0 to 100 and has various boosts and penalties associated with it.
+
+'''''Morale ↑''''' = '''''Fatigue ↓'''''
+
+Fatigue occurs at low morale. Ships with enough rest will have a morale value of 49. A value above 50 is commonly known as the "sparkle" effect.
+
+Morale regenerates at 3 points every 3 minutes (like fuel, steel and ammo) and this automatically regenerates until 49.  After the 4/23 update, morale now regenerates for the time spent during a sortie upon returning to base. Operates under the same conditions as normal regeneration.
+
+==Indications==
+[[File:Mamiya_blinking_icon.png|thumb|300px|Blinking button in the 'Organize' menu showing that Mamiya's food can be used, indicating that some ships have a Morale under 39.]]
+Below are the indications of your ship state. Specific effects will be explained below. Note that the icons do not directly match with the actual buff states!
+
+{| class="article-table" style="width:500px; text-align:center;"
+|-
+! scope="col" style="text-align:center;" |Morale value
+! scope="col" style="text-align:center;" |'''Indication'''
+! scope="col" style="text-align:center;" |Ship State
+|-
+|100~50
+|The image of ship generates sparkling effect.
+|High Morale
+|-
+|49~40
+|Ships are in their normal state.
+|Normal
+|-
+|39~30
+|Ship looks normal, but the "Mamiya Food Ship" button in Organize/編成 page is flashing.
+|Slightly Fatigued
+|-
+|29~20
+|An orange smiley face is shown on your ship's image in the Organize/編成 page.
+|Moderately Fatigued
+|-
+|19~0
+|A red smiley face is shown on your ship's image in the Organize/編成 page.
+|Seriously Fatigued
+|}
+
+==Effects==
+{| class="article-table" style="width:650px;"
+|-
+! scope="col" style="text-align:center;" |Morale value
+! scope="col" style="text-align:center;" |Effects
+|-
+| style="text-align:center;" |100~50<br />High Morale
+|
+*'''[Sortie]''' Higher evasion and accuracy during battle
+*'''[Expedition]''' Higher chance of great success in [[Expedition#Notes|expedition]]
+*'''[Expedition]''' Higher chance of triggering support [[Expedition#Support_Expeditions|expedition]]
+*'''[Expedition]''' Higher accuracy for support [[Expedition#Support_Expeditions|expedition]]
+|-
+| style="text-align:center;" |49~40<br />Normal
+|
+*Normal state - no effect on performance/special effect
+|-
+| style="text-align:center;" |39~30<br />Slightly Fatigued
+|
+*'''[Sortie]''' No effect on performance
+*'''[Expedition]''' Expedition will fail if your fleet returns in this state
+|-
+| style="text-align:center;" |29~20<br />Moderately Fatigued
+|
+*'''[Sortie]''' Decreased evasion and accuracy
+*'''[Expedition]''' Expedition will fail if your fleet returns in this state
+|-
+| style="text-align:center;" |19~0<br />Seriously Fatigued
+|
+*'''[Sortie]''' Severely decreases evasion and accuracy
+*'''[Expedition]''' Expedition will fail if your fleet returns in this state
+|}
+
+'''Warning:''' Most viewers only updates the morale using server responses, instead of accurately tracking your morale during a battle. This update happens after every battle and whenever the players goes to the home screen. This can result in confusion due to the viewer not taking into account of morale modifiers that can happen during a battle.
+===Examples===
+Scenario 1:
+* The flagship of a fleet enters a day battle (-3) with 49 morale. Once the battle starts, the morale of the ship is now 46.
+* The flagship (+3) achieved MVP (+10) and an A-rank (+3) clear on the first node. Her morale is now 62.
+* Upon entering the next day battle (-3) node, she now has 59 morale. An increased accuracy and evasion bonus is now in effect for the flagship. The node is cleared with an S-rank (+4) and the flagship (+3) now has 66 morale.
+* Sortie ends here and the fleet returns to the base (-15). The flagship now has 51 morale.
+
+Scenario 2:
+* A non-flagship enters a day battle (-3) with 32 morale. When the battle starts, she will have 29 morale, causing a moderate accuracy and evasion penalty to be in effect for this battle.
+* The battle transitions to a night battle (-2) and the battle is lost with a C-rank (+1). She now has 28 morale.
+* The ship enters another day battle node (-3) with a morale less than 30 (-6). Once the battle starts, she will have 19 morale and thus a severe accuracy and evasion penalty during this battle.
+* The battle is won with an S-rank (+4), which puts her morale to 23.
+* Sortie ends here and the fleet returns to the base. As the ship has a morale value below 30 when the sortie ended (-100), her morale will be reduced all the way to 0 upon returning to the base.
+
+==Morale modifiers==
+Below is a table of morale modifier in terms of morale value. Morale has a maximum value of 100 and it can never go below 0.
+{| class="article-table" style="text-align:center"
+!style="text-align:center"|Type
+!style="text-align:center"|Action
+!style="text-align:center"|Morale Modifier
+|-
+|rowspan="10"|Sortie/PVP
+|Entering a day battle
+|{{color|red|-3}}
+|-
+|Entering a day battle with morale less than 30
+|{{color|red|-6}}
+|-
+|Entering '''or''' transitioning to a night battle.
+|{{color|red|-2}}
+|-
+|Obtaining MVP in a battle
+|{{color|blue|+10}}
+|-
+|Ending battle as flagship with at least a C-rank.
+|{{color|blue|+3}}
+|-
+|Obtaining Battle Rank S/Perfect S
+|{{color|blue|+4}}
+|-
+|Obtaining Battle Rank A
+|{{color|blue|+3}}
+|-
+|Obtaining Battle Rank B
+|{{color|blue|+2}}
+|-
+|Obtaining Battle Rank C
+|{{color|blue|+1}}
+|-
+|Obtaining Battle Rank D/E
+|±0
+|-
+|rowspan="2"|Sortie
+|Returning from a sortie with at least 30 morale
+|{{color|red|-15}}
+|-
+|Returning from a sortie with morale less than 30
+|{{tooltip|{{color|red|-100}}|Morale is set to 0}}
+|-
+|rowspan="3"|Expedition
+|Returning from normal expedition
+|{{color|red|-3}}
+|-
+|Returning from Support Expedition #33
+|{{color|red|-1~5}} (random)
+|-
+|Returning from Support Expedition #34
+|{{color|red|-1~10}} (random)
+|-
+|rowspan="7"|Other
+|Newly constructed a ship
+|morale starts at 40
+|-
+|Ship obtained from sortie
+|morale starts at 40
+|-
+|Remodel a ship
+|morale resets to 40
+|-
+|Docking repair completed
+|reset to 40 '''only if''' morale is 0~39
+|-
+|Using '''Mamiya Food Ship '''case 1
+|reset to 40 '''if''' morale is 0~39
+|-
+|Using '''Mamiya Food Ship '''case 2
+|reset to 50 '''if''' morale is 40~49
+|-
+|Morale natural regen
+|{{color|blue|+3}} morale per 3 minutes, '''up to 49'''
+|}
+<p style="margin-top:1em;margin-bottom:1em;">It takes about 20 minutes to go from absolute zero to orange and another 10 to go from orange to normal.</p>
+
+=== Food Supply Ship "Irako" ===
+[[File:Irako.JPG|thumb|207x207px]]
+Irako is a purchasable item, but she can also be obtained from the following missions:
+* Bm2: rewards Food supply ship "Irako" x 1
+* Bm3: rewards Food supply ship "Irako" x 1
+* B65: rewards Food supply ship "Irako" x 2 (one-time only)
+* F16: rewards Food supply ship "Irako" x 4 (one-time only)
+
+==== Effects ====
+* Irako will raise morale of ships in the currently selected fleet.
+* Mamiya removes fatigue, whereas Irako will also raise a number of ships' morale to sparkle status.
+* Using Irako, by herself, has a chance of not healing certain ships. The probability of a successful morale increase is unknown. (E.g. you might have 3 or 4 ships healed by Irako rather than the whole fleet)
+* Irako's effect will always work on the flagship.
+* However, using Mamiya and Irako simultaneously will guarantee an increase in morale for everyone in the fleet, in addition to removing fatigue.
+* Irako's sparkling effect will work better on smaller ships. (Probably because they like sweets)
+* There are exceptions with certain large ships being affected more so than others.
+* The amount of morale increased by Irako is roughly 25 morale.
+
+==Gaining morale with maximum efficiency and minimum cost==
+You may want to sparkle ships before taking them on an expedition for great success or on a sortie for double evasion. Here is list of easier ways to keep morale up. You may have unwanted drops that aren't used before being scrapped or consumed; you can use them as a shield to assist in sparkling sorties and not resupply them, then change flagship to sparkle as required.
+
+===Grind 1-1===
+Grinding for morale at 1-1 is easy, almost all ship types can do this no matter their level. Compared to the tactic below (for 1-5), however, it takes time. 6 battles (3 runs) for maximum morale.
+
+In all cases, set the ship you want sparkled as the flagship, and after following the below steps, do a two-node run of 1-1.  Do NOT enter night battles, even if you only win with a B or A, the primary source of Morale is from MVP.  It will usually take ~3 runs to reach maximum or near-maximum morale.
+*'''Low Level DD (lv3~19)'''
+**Give your flagship your best gear (probably [[12.7cm Twin Gun Mount]] x 2)
+**Set 3~5 level 1 unused DDs you have lying around to the fleet.
+**Remove their gear (to prevent them from stealing MVP)
+**Use double line at 1st node to prevent any ships but the flagship from 1 hit killing.
+**If it's still too hard for flagship to get MVP, decrease the number of ships.  (Minimum of 4 to double line)
+*'''High Level DD (>>lv20), CL, CA, BB'''
+**Give your flagship your best gear 
+**Set 1~2 level 1 unused DD/SS(lv1~9)/AV/CLs.  Remove their gear.
+**If you want sparkle high level DDs, don't use CLs to fill your fleet as they will attack first because of their longer range and their higher chance to steal MVP.
+*'''CLT/SS/AV'''
+**Give your flagship your best gear.  Be sure they have [[Type A Ko-hyoteki]], add [[Zuiun]]s for AVs.
+**Set 1~2 level 1 unused DD/SS(lv1~9)/AV/CL/CV(L)/BB.  Remove their gear
+*'''CV(L)/CAV/BBV'''
+**Give your flagship torpedo bombers (CVs, CVLs) or [[Zuiun]]s (BBV, CAV)
+**Set 1~2 level 1 unused DD/SS(lv1~9)/AV/CL/CV(L)/BB.  Remove their gear.
+
+===Grind 1-5===
+Grinding 1-5 for morale is more advanced. You will probably need ASW gear, and some admirals dislike 1-5 because defeating the boss provides a large amount of Admiral experience, pushing your HQ level up uncontrollably.  1-5 Morale Grinding is faster than at 1-1, requiring only 4 battles (1-2 runs) to obtain near-maximum.
+
+It should be noted that this strategy can only be used to sparkle ships capable of attacking Subs.
+*'''Low Level HQ (under 40)'''
+**Set the ship to be sparkled as your flagship.  At this level it is possible to sparkle any of the classes capable of attacking subs (DD, CL, CLT, CAV, CVL, BBV).
+**Make sure your flagship has the highest ASW in the group.
+***CVL should equip [[Type 97 Torpedo Bomber]]s
+***BBVs should equip [[Zuiun]]s
+**Add 3 ships: DD, CL(T), CVL, BB(V).  Since only boss node has an opening torpedo attack, you can safely use your main ships to gain experience for them.
+**Use double line at 1st node to prevent a 1 hit kill by any ship but the flagship if your flagship is a DD (otherwise they will attack last due to their short range).  Otherwise, use line abreast
+**Return to base after the 3rd node.
+**If you want more morale per run, you can advance to the boss node (assuming your fleet meets the [[World_1:_鎮守府海域#1-5 |conditions]])
+***if your fleet didn't reach the boss, restart the program or refresh your browser. (Refreshing too much may result in a ban)
+*'''Medium Level HQ (40-80)'''
+**Set the ship to be sparkled as your flagship.  At this level, it is only possible with DDs, CLs, and CLTs.
+**Equip your flagship with your strongest ASW gear.
+** Add 3 (or more) unused ships (DDs, CLs or CVLs) and add 1 unused BB for a 2nd shelling phase.
+**Use line ahead or double line at the 1st node to prevent a 1 hit kill by ships other than the flagship, otherwise, use line abreast.
+**Pray to the RNG to not hit your flagship with the opening torpedo.
+**Return to base after the 3rd node.
+**If you want more morale per run, you can advance to the boss node (assuming your fleet meets the [[World_1:_鎮守府海域#1-5 |conditions]]).  Pray to the RNG that the boss doesn't hit you again as it has extremely high accuracy at this level.
+***if your fleet didn't reach the boss, restart the program or refresh your browser. (Refreshing too much might result in a ban)
+*'''High Level HQ (80+)'''
+**Only work on DDs, CLs, CLTs, and CTs that have high base ASW stat.
+**Set the ship to be sparkled as your flagship and equip her with strongest ASW gear. Total ASW must at least 100 to active Opening Anti-Submarine Attack.
+**Add 3 or more unuse DDs or CLs and equip them with weaker ASW gear.
+**It's okay to use line abreast at first node because flagship will perform Opening Anti-Submarine Attack anyway.
+**Return to base after the 3rd node.
+
+'''Day Battle S Victory in Exercises'''
+*By obtaining a battle rank S in PvP exercises without entering night battle, your flagship will receive a morale gain of +4, while your other ships will receive a morale gain of +1. The MVP of the battle will receive an additional +10.
+*If your ships are fully rested and have a morale of 49, by obtaining the +1 morale from battle rank S their morale will become 50, which produces the sparkle effect. This can be useful for giving the sparkle effect quickly to ships for one expedition.
+*Note that 50 morale, although visibly sparkling, provides no buff in sorties.  (Only the flagship (53 morale), and MVP ship (60 morale) will actually have the accuracy/evasion buff.)
+*If you enter night battle or only achieve an A rank, only the flagship and MVP will receive the morale boost.

@@ -1,0 +1,33 @@
+-- [[Category:Equipment modules]]
+
+return {
+  _name = "Fairey Seafox Kai",
+  _id = 371,
+  _japanese_name = "Fairey Seafox改",
+  _reading = nil,
+  _type = 10, -- 5,7,10,10,28
+  _icon = 10,
+  _rarity = 4,
+  _firepower = 2,
+  _bombing = false,
+  _torpedo = false,
+  _aa = 1,
+  _armor = false,
+  _asw = 3,
+  _shelling_accuracy = 2,
+  _torpedo_accuracy = false,
+  _evasion = 1,
+  _los = 6,
+  _speed = false,
+  _luck = false,
+  _range = false,
+  _flight_cost = 6,
+  _flight_range = 3,
+  _special = false,
+  _scrap_fuel = 1,
+  _scrap_ammo = 2,
+  _scrap_steel = false,
+  _scrap_bauxite = 4,
+  _buildable = false,
+  _info = "",
+}

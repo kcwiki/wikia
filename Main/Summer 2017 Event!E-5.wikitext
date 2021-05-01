@@ -1,0 +1,120 @@
+{{Event/MapPageHeader
+|form = FOxBtv8HjKWguvzf2
+|spreadsheet = 1RsX2LBK6cKRdvyDgXfVL84Xyss1dAMITmiqhJ8pDhi4
+|thread = 
+}}
+{{Event/MapInfo
+|en =Invitation to the Mediterranean Sea 
+|jp =地中海への誘い 
+|romaji =Chichūkai eno  izanai 
+|tag = E5
+|mechanics = Abyssal Combined Fleet@Abyssal Combined Fleet, Ship Locking@Events/Mechanics#Ship_Locking
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_easy = 1600
+|hp_medium = 1800
+|hp_hard = 2120
+|show_kills = true
+|kills_all = 4
+|reward_all = 
+|reward_easy_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Spitfire Mk.I|size=50px}}
+|reward_easy_3_x = 1
+|reward_medium_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_medium_1_x = 1
+|reward_medium_2 = [[File:New Model Aerial Armament Materials Icon.png{{!}}50px{{!}}link=New Model Aerial Armament Materials]]
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft Model 22A|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|Spitfire Mk.V|size=50px}}
+|reward_medium_4_x = 1
+|reward_hard_1 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]] 
+|reward_hard_1_x = 1
+|reward_hard_2 = [[File:New Model Aerial Armament Materials Icon.png{{!}}50px{{!}}link=New Model Aerial Armament Materials]]|reward_hard_2_x = 1
+|reward_hard_3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|Type 1 Land-based Attack Aircraft Model 34|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Spitfire Mk.IX (Skilled)|size=50px}}
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-5 Branching Rules
+
+|B/empty -> C, D = * Active branching
+
+|E -> F = 
+* Meet all of the following requirements:
+** Amount of European ships in fleet ≧ 1/2/3 on Easy/Medium/Hard '''OR''' Amount of (F)BB(V) + CV(B) ≦ 3
+** Amount of DD ≧ 2
+|E -> H = 
+* Do not meet the requirements to go to F.
+
+|F -> I = 
+* Amount of European ships in fleet ≧ 1/2/3 on Easy/Medium/Hard
+* Amount of (F)BB(V) + CV(B) ≦ 2???
+|F -> J = * ???
+|F -> G/storm = * ???
+
+|H -> F = * ???
+|H -> I = * ???
+
+|K -> L = * Fail the LoS check
+|K -> M = 
+* Pass the LoS check
+**at least 22.4 with 20.3 being too low; in-between unknown
+}}
+
+===Historical Fleet: European Ships===
+All the ships used in historical routing are from European countries:
+* CA(V): {{ShipLink|Pola}}, {{ShipLink|Prinz Eugen}}, {{ShipLink|Zara}}
+* (F)BB(V): {{ShipLink|Bismarck|Bismarck drei|text=Bismarck}}, {{ShipLink|Richelieu}}, {{ShipLink|Roma}}, {{ShipLink|Littorio|text=Littorio/Italia}}, {{ShipLink|Warspite}}
+* CV(L): {{ShipLink|Aquila}}, {{ShipLink|Ark Royal}}, {{ShipLink|Graf Zeppelin}}
+* AV: {{ShipLink|Commandant Teste}}
+* DD: {{ShipLink|Z1}}, {{ShipLink|Z3}}, {{ShipLink|Libeccio}}
+
+==Map Guide==
+*This is a single fleet map.
+*Node A is a submarine node.
+*One [[Land Base Aerial Support]] is available for sortie.
+*A minimum range of '''8''' is required to reach the boss (M) node. (See Map Below)
+**the Enemy Air Power and {{AA}} stat in the boss node are very weak (before Last dance, the enemy air power at the boss is 0 for all difficulties) so a possible strategy is to use 4 [[List of Land-based Attack Aircraft by stats|Land-based Attack Aircrafts]] on your Land-base, and send them all to the Boss node, as they almost all have 8+ range and don't require the use of {{EquipmentLink|Type 2 Large Flying Boat}} or {{EquipmentLink|PBY-5A Catalina}} to reach the boss node.
+**Sending 4 fighters or interceptors to node F (requires range '''4''' or greater) greatly lowers the chance of your ship being heavily damaged en route to the boss node, consider this for your pre-final run if you have difficulty reaching the boss.
+
+===Tips===
+====European Ship Special Routing====
+* Using an European Ship allows you to skip having to fight against {{ShipLink|Harbour Summer Princess}}
+** The historical requirement demands that you bring at least 1/2/3 European ships on Easy/Medium/Hard.
+
+====Node A LBAS Aircraft Proficiency Training====
+You may continuously go into node A back and forth while sending your LBAS there to train up your LBAS Aircrafts' [[Aircraft Proficiency]] at low cost (excluding the continuous cost of switching out your Aircrafts in and out of your LBAS). As it is a Submarine node, it is recommended to bring only submarines so that the enemy {{ShipLink|Submarine So-Class|Submarine So-Class/Elite|Submarine So-Class/Flagship|text=Submarine So-Class}} doesn't inflict any damage to your fleet.
+
+===Boss Debuff===
+*A Boss debuff exists for this map. The procedure is as followed:
+**A-rank (S-rank on Hard) C and D node once.
+**Node C contains {{ShipLink|Supply Depot Summer Princess}} and several {{ShipLink|PT Imp Pack}}.
+***{{ShipLink|Supply Depot Summer Princess}} is weak against: {{EquipmentLink|Type 3 Shell}}, {{EquipmentLink|WG42 (Wurfgerät 42)}}.
+***It is recommended to bring some Destroyers/Light Cruisers at least to have an easier time to deal with the {{ShipLink|PT Imp Pack}}.
+***For a better chance at getting rid of the entire enemy fleet, you may opt to use both [[Land Base Aerial Support|LBAS]] with 4 Bombers and [[Expedition/Support Expedition|Support Expedition]] if you are having trouble getting S-Rank in this node.
+**Node D has several {{ShipLink|PT Imp Pack}}. It is recommended to bring more DD/CL with Small Caliber guns (Ex. [[10cm Twin High-angle Gun Mount]]) and [[List of Secondary Guns by stats|Secondary Guns]] to have better accuracy against the PT Imps.
+***It is recommended to still bring at least a Battleship for a 2nd shelling phase.
+*After triggering the debuff, the "Quest Completion Sound Effect" ({{Audio|file=Sound_se_30.ogg}}) will play when returning from sortie.
+
+===Possible Fleet Composition===
+*{{Event/Route|A|red|B|blue|D|red|E|red|F|red|I|red|K|red|M|red}}:
+**European Ship Composition
+***2 FBB 2 DD 2 CV with European Ships (Easy (1) / Medium (2) / Hard (3))
+****{{ShipLink|Italia}}, {{ShipLink|Roma}}, {{ShipLink|Graf Zeppelin}} + 1 CV 2 DD
+***3 European Fast Battleships ({{ShipLink|Italia}}, {{ShipLink|Roma}}, {{ShipLink|Bismarck}}, or {{ShipLink|Richelieu}}) + 1 CV + 2 DD
+**Non-European Ships Composition
+***1 FBB 1CL 3 DD 1 CV(L)
+
+===LBAS Flight Range===
+[[File:Summer 2017 Event E5 LBAS Flight range.png|500px|center]]
+
+{{Event/MapPageFooter}}

@@ -1,0 +1,62 @@
+<includeonly>
+
+{{#ifexpr:{{{count|}}} round 0 > 0 and {{{count|}}} round 0 < 100|
+	{{#vardefine:size0|1}}
+	{{#vardefine:size1|99}}
+	{{#vardefine:left0|23}}
+	{{#vardefine:top0|-29}}
+	{{#vardefine:left1|-26}}
+	{{#vardefine:top1|1}}
+}}
+{{#ifexpr:{{{count|}}} round 0 > 100 and {{{count|}}} round 0 < 1000|
+	{{#vardefine:size0|100}}
+	{{#vardefine:size1|999}}
+	{{#vardefine:left0|15}}
+	{{#vardefine:top0|-28}}
+	{{#vardefine:left1|2}}
+	{{#vardefine:top1|-24}}
+}}
+{{#ifexpr:{{{count|}}} round 0 > 1000 and {{{count|}}} round 0 < 10000|
+	{{#vardefine:size0|1000}}
+	{{#vardefine:size1|9999}}
+	{{#vardefine:left0|5}}
+	{{#vardefine:top0|-27}}
+	{{#vardefine:left1|3}}
+	{{#vardefine:top1|-24}}|
+}}
+
+<span style=
+	"
+	position:absolute;
+	left:{{#expr:{{{x-axis|0}}}-50/2 round 0}}px;
+	top:{{#expr:{{{y-axis|0}}}-50/2 round 0}}px;
+	width:50px;
+	height:50px;
+	">
+	{{#if:{{{item|}}}|[[File:{{{item|}}}{{!}}50px|{{!}}link={{{link}}}]]|{{{item|[[File:Improvement_Material_004_inventory.png{{!}}50px{{!}}link={{{link|}}}]]}}}}}
+	<span style=
+	"
+		position:relative;
+		left:{{#var:left0}}px;
+		top:{{#var:top0}}px;
+	">
+	[[File:Item_count_{{#var:size0|1}}-{{#var:size1|99}}.png|link={{{link}}}]]
+			<span style=
+			"
+				font-size:14px;
+				font-weight:800;
+				position:relative;
+				left:{{#var:left1}}px;
+				top:{{#var:top1}}px;
+			">
+			{{{count|99}}}
+			</span>
+	</span>
+</span>
+
+{{clear}}
+</includeonly>
+
+<noinclude>
+{{Documentation}}
+</noinclude>

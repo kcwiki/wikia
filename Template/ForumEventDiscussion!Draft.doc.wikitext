@@ -1,0 +1,34 @@
+== Purpose ==
+
+To simplify the deployment of event specific forum threads either prior or during the event time. For each and every event map there is and that requires some form of centralised way of keeping track this template was made to address those specific niche.
+
+== Usage ==
+<pre>{{ForumEventDiscussion/Draft
+| Eventseason = Fall 2016 Event
+| Eventmap = E-1
+| ViewSpreadsheet = https://docs.google.com/spreadsheets/d/1SybHvKEJFjjKkzNKp2DeQUpCaW6sVkI4Q4Pg9LXnuQ8/edit?usp=sharing
+| ReportSpreadsheet = https://goo.gl/forms/XvqznWI1C3LjM5G82
+}}
+</pre>
+
+== Parameters ==
+
+=== Eventseason ===
+Sets the parameter as being a page that is accessible within the wiki.
+
+Defaults to [[Fall 2016 Event]] if not set.
+
+=== Eventmap ===
+Sets the parameter as the actual map within the event page as a literal link. Usually works in combination with Eventseason above.
+
+Defaults to "E-1" and without Eventseason parameter set the full link would become [[Fall 2016 Event/E-1]].
+
+=== ViewSpreadsheet ===
+Sets the link for the Google spreadsheets used to provide a potentially combined collaborative effort on fleet configuration.
+
+Defaults to "https://docs.google.com/spreadsheets/d/1SybHvKEJFjjKkzNKp2DeQUpCaW6sVkI4Q4Pg9LXnuQ8/edit?usp=sharing" which is from [[Fall 2016 Event]]
+
+=== ReportSpreadsheet ===
+Sets the link for the Google forms used to provide a potentially combined collaborative effort on fleet configuration.
+
+Defaults to "https://goo.gl/forms/XvqznWI1C3LjM5G82" which is from [[Fall 2016 Event]]

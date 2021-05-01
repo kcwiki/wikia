@@ -1,0 +1,122 @@
+__NOTOC__
+=={{Anchor|1-3}}World 1-3: 製油所地帯沿岸 Coastal Refinery Zone==
+{{Sortieworld
+| map = {{World1-3}}
+| difficulty = ☆ ☆
+| item = {{Fuel}}
+| exp = 80
+| code = 海上護衛作戦 (Maritime Convoy Tactics)
+| text = 製油所地帯沿岸部の海上輸送ラインを防衛せよ！
+
+Protect the supply lines from our coastal refineries!
+}}
+===Stage Guide===
+{{MapBranchingTable
+|title = 1-3 Branching Rules
+|id = 1-3
+|0 -> A,B/storm = * Random
+
+|B/storm -> C/resource = * 30% chance
+|B/storm -> E = * 70% chance
+
+|C/resource -> F = * Fixed route
+
+|D/resource -> G,C/resource = * Random
+}}
+The route from D to C is one-way only (you can not move from C to D). All compass spins on this stage are random. B to C is 30%, B to E is 70% (according to Japanese wiki [[http://wikiwiki.jp/kancolle/?%C4%C3%BC%E9%C9%DC%B3%A4%B0%E8#area3]]). Keep trying if you're getting detoured to the maelstrom. Do note that F has heavy cruisers and the boss node has a battleship.
+
+===Nodes and Enemy Encounters===
+<div class="mw-customtoggle-1-3-enemy wikia-menu-button">Show/Hide Nodes and Enemy Encounters</div>
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-1-3-enemy"
+!Area
+!Pattern
+! width="500px" |Encountered vessels
+!Formation
+|-
+| colspan="1" rowspan="3" style="text-align: center;" |A<br />敵前衛艦隊
+| style="text-align: center;" |Pattern 1
+|[[File:CL Ho Class.png|Light Cruiser Ho Class|link=Enemy_vessel#Light_Cruisers]] [[File:DD Ha Class.png|Destroyer Ha Class|link=Enemy_vessel#Destroyers]] [[File:DD Ha Class.png|Destroyer Ha Class|link=Enemy_vessel#Destroyers]]
+| style="text-align: center;" rowspan="3" |{{Template:LineAhead}}
+|-
+| style="text-align: center;" |Pattern 2
+|[[File:CL Ho Class.png|Light Cruiser Ho Class|link=Enemy_vessel#Light_Cruisers]] [[File:DD I Class.png|Destroyer I Class|link=Enemy_vessel#Destroyers]] [[File:DD I Class.png|Destroyer I Class|link=Enemy_vessel#Destroyers]]
+|-
+| style="text-align: center;" |Pattern 3
+|[[File:CL He Class.png|Light Cruiser He Class|link=Enemy_vessel#Light_Cruisers]] [[File:DD Ha Class.png|Destroyer Ha Class|link=Enemy_vessel#Destroyers]] [[File:DD Ro Class.jpg|Destroyer Ro Class|link=Enemy_vessel#Destroyers]] [[File:DD Ro Class.jpg|Destroyer Ro Class|link=Enemy_vessel#Destroyers]]
+|-
+| style="text-align: center;" |B
+| colspan="3" style="text-align: center;" |Maelstrom: {{Template:Ammo}} -8 -10 -14 -15 -20
+|-
+| style="text-align: center;" |C
+| colspan="3" style="text-align: center;" |{{Template:Fuel}} + 10 15 30
+|-
+| style="text-align: center;" |D
+| colspan="3" style="text-align: center;" |{{Template:Fuel}} + 10 15 25 30
+|-
+| rowspan="2" style="text-align: center;" |E<br />敵前衛艦隊
+| style="text-align: center;" |Pattern 1
+|[[File:CL Ho Class.png|Light Cruiser Ho Class|link=Enemy_vessel#Light_Cruisers]] [[File:DD Ha Class.png|Destroyer Ha Class|link=Enemy_vessel#Destroyers]] [[File:DD Ha Class.png|Destroyer Ha Class|link=Enemy_vessel#Destroyers]]
+| style="text-align: center;" rowspan="2" |{{Template:LineAhead}}
+|-
+| style="text-align: center;" |Pattern 2
+|[[File:CL He Class.png|Light Cruiser He Class|link=Enemy_vessel#Light_Cruisers]] [[File:DD Ha Class.png|Destroyer Ha Class|link=Enemy_vessel#Destroyers]] [[File:DD Ro Class.jpg|Destroyer Ro Class|link=Enemy_vessel#Destroyers]] [[File:DD Ro Class.jpg|Destroyer Ro Class|link=Enemy_vessel#Destroyers]]
+|-
+| rowspan="3" style="text-align: center;" |F<br />敵支援艦隊
+| style="text-align: center;" |Pattern 1
+|[[File:CA Ri Class.png|Heavy Cruiser Ri Class|link=Enemy_vessel#Heavy_Cruisers]] [[File:DD I Class.png|Destroyer I Class|link=Enemy_vessel#Destroyers]] [[File:DD I Class.png|Destroyer I Class|link=Enemy_vessel#Destroyers]] [[File:DD I Class.png|Destroyer I Class|link=Enemy_vessel#Destroyers]]
+| style="text-align: center;" |{{Template:LineAhead}}
+|-
+| style="text-align: center;" |Pattern 2
+|[[File:CA Ri Class.png|Heavy Cruiser Ri Class|link=Enemy_vessel#Heavy_Cruisers]] [[File:CA Ri Class.png|Heavy Cruiser Ri Class|link=Enemy_vessel#Heavy_Cruisers]] [[File:DD Ro Class.jpg|Destroyer Ro Class|link=Enemy_vessel#Destroyers]] [[File:DD Ro Class.jpg|Destroyer Ro Class|link=Enemy_vessel#Destroyers]]
+| rowspan="2" style="text-align: center;" |{{Template:DoubleLine}}
+|-
+| style="text-align: center;" |Pattern 3
+|[[File:CA Ri Class.png|Heavy Cruiser Ri Class|link=Enemy_vessel#Heavy_Cruisers]] [[File:CT Chi Class.png|Torpedo Cruiser Chi Class|link=Enemy_vessel#Light (Torpedo) Cruisers]] [[File:DD Ro Class.jpg|Destroyer Ro Class|link=Enemy_vessel#Destroyers]] [[File:DD Ro Class.jpg|Destroyer Ro Class|link=Enemy_vessel#Destroyers]]
+|-
+| style="text-align: center;" |'''<span class="wikicolor" style="color:Red">G<br />敵主力艦隊</span>'''
+| style="text-align: center;" |Pattern 1
+|[[File:BB Ru Class.png|Battleship Ru Class|link=Enemy_vessel#Battleships]] [[File:CT Chi Class.png|Torpedo Cruiser Chi Class|link=Enemy_vessel#Light (Torpedo) Cruisers]] [[File:CL He Class.png|Light Cruiser He Class|link=Enemy_vessel#Light_Cruisers]] [[File:DD I Class.png|Destroyer I Class|link=Enemy_vessel#Destroyers]] [[File:DD I Class.png|Destroyer I Class|link=Enemy_vessel#Destroyers]]
+| style="text-align:center;white-space:nowrap;" |{{Template:LineAhead}}{{Template:DoubleLine}}
+|}
+
+===Drops===
+
+<div class="mw-customtoggle-1-3-drop wikia-menu-button">Show/Hide Drops</div>
+
+
+{| class="mw-collapsible mw-collapsed wikitable" id="mw-customcollapsible-1-3-drop"
+!Node
+!Destroyers
+!Light Cruisers
+!Heavy Cruisers
+!Seaplane Tender
+!Aircraft Carrier
+|-
+| style="text-align:center;" |A
+| style="text-align:center;" |{{ShipLinkTmp|Shirayuki}}, {{ShipLinkTmp|Hatsuyuki}}, {{ShipLinkTmp|Miyuki}}, {{ShipLinkTmp|Isonami}}, {{ShipLinkTmp|Ayanami}}, {{ShipLinkTmp|Shikinami}}, {{ShipLinkTmp|Mutsuki}}, {{ShipLinkTmp|Kisaragi}}, {{ShipLinkTmp|Satsuki}}, {{ShipLinkTmp|Fumizuki}}, {{ShipLinkTmp|Nagatsuki}}, {{ShipLinkTmp|Kikuzuki}}, {{ShipLinkTmp|Mikazuki}}, {{ShipLinkTmp|Mochizuki}}, {{ShipLinkTmp|Oboro}}, {{ShipLinkTmp|Akebono}}, {{ShipLinkTmp|Akatsuki}}, {{ShipLinkTmp|Hibiki}}, {{ShipLinkTmp|Ikazuchi}}, {{ShipLinkTmp|Inazuma}}, {{ShipLinkTmp|Hatsuharu}}, {{ShipLinkTmp|Nenohi}}, {{ShipLinkTmp|Wakaba}}, {{ShipLinkTmp|Hatsushimo}}, {{ShipLinkTmp|Shiratsuyu}}, {{ShipLinkTmp|Shigure}}, {{ShipLinkTmp|Murasame}}, {{ShipLinkTmp|Yuudachi}}, {{ShipLinkTmp|Suzukaze}}, {{ShipLinkTmp|Ooshio}}, {{ShipLinkTmp|Michishio}}, {{ShipLinkTmp|Arashio}}, {{ShipLinkTmp|Arare}}, {{ShipLinkTmp|Kasumi}}, {{ShipLinkTmp|Shiranui}}, {{ShipLinkTmp|Kuroshio}}
+| style="text-align:center;" |{{ShipLinkTmp|Sendai}}, {{ShipLinkTmp|Jintsuu}}, {{ShipLinkTmp|Naka}}, {{ShipLinkTmp|Nagara}}, {{ShipLinkTmp|Isuzu}}, {{ShipLinkTmp|Natori}}, {{ShipLinkTmp|Yura}}, {{ShipLinkTmp|Tama}}, {{ShipLinkTmp|Kiso}}
+| style="text-align:center;" |{{ShipLinkTmp|Aoba}}
+| style="text-align:center;" |{{ShipLinkTmp|Chitose}}, {{ShipLinkTmp|Chiyoda}}
+| style="text-align:center;" |{{ShipLinkTmp|Houshou}}
+|-
+| style="text-align:center;" |E
+| style="text-align:center;" |{{ShipLinkTmp|Hatsuyuki}}, {{ShipLinkTmp|Isonami}}, {{ShipLinkTmp|Shikinami}}, {{ShipLinkTmp|Mutsuki}}, {{ShipLinkTmp|Kisaragi}}, {{ShipLinkTmp|Satsuki}}, {{ShipLinkTmp|Fumizuki}}, {{ShipLinkTmp|Nagatsuki}}, {{ShipLinkTmp|Kikuzuki}}, {{ShipLinkTmp|Mikazuki}}, {{ShipLinkTmp|Mochizuki}}, {{ShipLinkTmp|Oboro}}, {{ShipLinkTmp|Akebono}}, {{ShipLinkTmp|Ushio}}, {{ShipLinkTmp|Akatsuki}}, {{ShipLinkTmp|Hibiki}}, {{ShipLinkTmp|Ikazuchi}}, {{ShipLinkTmp|Inazuma}}, {{ShipLinkTmp|Hatsuharu}}, {{ShipLinkTmp|Wakaba}}, {{ShipLinkTmp|Hatsushimo}}, {{ShipLinkTmp|Shiratsuyu}}, {{ShipLinkTmp|Shigure}}, {{ShipLinkTmp|Murasame}}, {{ShipLinkTmp|Yuudachi}}, {{ShipLinkTmp|Suzukaze}}, {{ShipLinkTmp|Ooshio}}, {{ShipLinkTmp|Michishio}}, {{ShipLinkTmp|Arashio}}, {{ShipLinkTmp|Arare}}, {{ShipLinkTmp|Shiranui}}, {{ShipLinkTmp|Kuroshio}}
+| style="text-align:center;" |{{ShipLinkTmp|Sendai}}, {{ShipLinkTmp|Jintsuu}}, {{ShipLinkTmp|Naka}}, {{ShipLinkTmp|Nagara}}, {{ShipLinkTmp|Isuzu}}, {{ShipLinkTmp|Natori}}, {{ShipLinkTmp|Yura}}, {{ShipLinkTmp|Tama}}, {{ShipLinkTmp|Kiso}}
+| style="text-align:center;" | -
+| style="text-align:center;" |{{ShipLinkTmp|Chitose}}, {{ShipLinkTmp|Chiyoda}}
+| style="text-align:center;" | -
+|-
+| style="text-align:center;" |F
+| style="text-align:center;" |{{ShipLinkTmp|Shirayuki}}, {{ShipLinkTmp|Hatsuyuki}}, {{ShipLinkTmp|Miyuki}}, {{ShipLinkTmp|Isonami}}, {{ShipLinkTmp|Shikinami}}, {{ShipLinkTmp|Mutsuki}}, {{ShipLinkTmp|Kisaragi}}, {{ShipLinkTmp|Satsuki}}, {{ShipLinkTmp|Fumizuki}}, {{ShipLinkTmp|Nagatsuki}}, {{ShipLinkTmp|Kikuzuki}}, {{ShipLinkTmp|Mikazuki}}, {{ShipLinkTmp|Mochizuki}}, {{ShipLinkTmp|Oboro}}, {{ShipLinkTmp|Akebono}}, {{ShipLinkTmp|Akatsuki}}, {{ShipLinkTmp|Hibiki}}, {{ShipLinkTmp|Ikazuchi}}, {{ShipLinkTmp|Inazuma}}, {{ShipLinkTmp|Hatsuharu}}, {{ShipLinkTmp|Nenohi}}, {{ShipLinkTmp|Wakaba}}, {{ShipLinkTmp|Hatsushimo}}, {{ShipLinkTmp|Shiratsuyu}}, {{ShipLinkTmp|Shigure}}, {{ShipLinkTmp|Murasame}}, {{ShipLinkTmp|Yuudachi}}, {{ShipLinkTmp|Suzukaze}}, {{ShipLinkTmp|Ooshio}}, {{ShipLinkTmp|Michishio}}, {{ShipLinkTmp|Arashio}}, {{ShipLinkTmp|Arare}}, {{ShipLinkTmp|Kasumi}}, {{ShipLinkTmp|Shiranui}}, {{ShipLinkTmp|Kuroshio}}
+| style="text-align:center;" |{{ShipLinkTmp|Sendai}}, {{ShipLinkTmp|Jintsuu}}, {{ShipLinkTmp|Naka}}, {{ShipLinkTmp|Nagara}}, {{ShipLinkTmp|Isuzu}}, {{ShipLinkTmp|Natori}}, {{ShipLinkTmp|Yura}}, {{ShipLinkTmp|Tama}}, {{ShipLinkTmp|Kiso}}
+| style="text-align:center;" | -
+| style="text-align:center;" |{{ShipLinkTmp|Chitose}}, {{ShipLinkTmp|Chiyoda}}
+| style="text-align:center;" |{{ShipLinkTmp|Akagi}}
+|-
+| style="text-align:center;" |'''<span class="wikicolor" style="color:Red">G</span>'''
+| style="text-align:center;" |{{ShipLinkTmp|Fubuki}}, {{ShipLinkTmp|Shirayuki}}, {{ShipLinkTmp|Miyuki}}, {{ShipLinkTmp|Murakumo}}, {{ShipLinkTmp|Isonami}}, {{ShipLinkTmp|Ayanami}}, {{ShipLinkTmp|Shikinami}}, {{ShipLinkTmp|Kisaragi}}, {{ShipLinkTmp|Kikuzuki}}, {{ShipLinkTmp|Mikazuki}}, {{ShipLinkTmp|Mochizuki}}, {{ShipLinkTmp|Oboro}}, {{ShipLinkTmp|Sazanami}}, {{ShipLinkTmp|Ushio}}, {{ShipLinkTmp|Hibiki}}, {{ShipLinkTmp|Ikazuchi}}, {{ShipLinkTmp|Inazuma}}, {{ShipLinkTmp|Hatsuharu}}, {{ShipLinkTmp|Nenohi}}, {{ShipLinkTmp|Wakaba}}, {{ShipLinkTmp|Hatsushimo}}, {{ShipLinkTmp|Shiratsuyu}}, {{ShipLinkTmp|Shigure}}, {{ShipLinkTmp|Murasame}}, {{ShipLinkTmp|Yuudachi}}, {{ShipLinkTmp|Samidare}}, {{ShipLinkTmp|Suzukaze}}, {{ShipLinkTmp|Ooshio}}, {{ShipLinkTmp|Arare}}, {{ShipLinkTmp|Shiranui}}, {{ShipLinkTmp|Kuroshio}}
+| style="text-align:center;" |{{ShipLinkTmp|Sendai}}, {{ShipLinkTmp|Jintsuu}}, {{ShipLinkTmp|Naka}}, {{ShipLinkTmp|Yuubari}}, {{ShipLinkTmp|Nagara}}, {{ShipLinkTmp|Isuzu}}, {{ShipLinkTmp|Natori}}, {{ShipLinkTmp|Yura}}, {{ShipLinkTmp|Kuma}}, {{ShipLinkTmp|Tama}}, {{ShipLinkTmp|Kitakami}}, {{ShipLinkTmp|Kiso}}, {{ShipLinkTmp|Tenryuu}}, {{ShipLinkTmp|Tatsuta}}
+| style="text-align:center;" |{{ShipLinkTmp|Aoba}}, {{ShipLinkTmp|Kinugasa}}, {{ShipLinkTmp|Furutaka}}, {{ShipLinkTmp|Kako}}
+| style="text-align:center;" |{{ShipLinkTmp|Chitose}}, {{ShipLinkTmp|Chiyoda}}
+| style="text-align:center;" |{{ShipLinkTmp|Houshou}}
+|}

@@ -1,0 +1,213 @@
+{{Event/MapPageHeader
+
+}}
+{{Event/MapInfo
+|en = Ozawa Carrier Task Force, Sortie All Out! [1st Battle of Cape Engaño]
+|jp = 小沢機動部隊 全力出撃!【第一次エンガノ岬沖海戦】
+|tag = E3
+|romaji = Ozawa kidō-butai Zenryoku syutsugeki! [Dai-ichiji Engano-misaki oki kaisen]
+|mechanics = Combined Fleet@Combined Fleet, Abyssal Combined Fleet@Abyssal Combined Fleet, Striking Force@Striking_Force, LoS Check@Events/Mechanics#LoS_Check,  Land Base Aerial Support@Land Base Aerial Support, Ship Locking@Events/Mechanics#Ship_Locking
+|hp_casual = 1750
+|hp_easy = 1750
+|hp_medium = 1750
+|hp_hard = 2100
+|show_kills = true
+|kills_casual = 5
+|kills_easy = 5
+|kills_medium = 5
+|kills_hard = 6
+|reward_casual_1 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_casual_1_x = 2
+|reward_casual_2 = {{EquipmentCardKai|Blueprint|size=50px}}
+|reward_casual_2_x = 1
+|reward_easy_1 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_easy_3_x = 2
+|reward_easy_4 = {{EquipmentCardKai|Blueprint|size=50px}}
+|reward_easy_4_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_medium_3_x = 2
+|reward_medium_4 = {{EquipmentCardKai|Blueprint|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = {{EquipmentCardKai|Prototype Flight Deck Catapult|size=50px}}
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Action Report|size=50px}}
+|reward_hard_1_x = 1
+|reward_hard_2 = {{EquipmentCardKai|New Model Aerial Armament Material|size=50px}}
+|reward_hard_2_x = 2
+|reward_hard_3 = {{EquipmentCardKai|Underway Replenishment|size=50px}}
+|reward_hard_3_x = 3
+|reward_hard_4 = {{EquipmentCardKai|Blueprint|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = {{EquipmentCardKai|Prototype Flight Deck Catapult|size=50px}}
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Type 4 Fighter Hayate|size=50px}}
+|reward_hard_6_x = 1
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules Starting Points
+|0 -> 1 = 
+* Single Fleet
+* Strike Force
+|0 -> 2 =
+* Carrier Task Force
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules Part 1
+|A -> B = * Do not meet the requirements to go to D.
+|A -> D = 
+* Meet one of the following requirements:
+** All members of the Troop Transport Unit are present.
+** All members of the Shima Fleet Escort Unit are present.
+** Difficulty is set to Casual.
+
+|B -> C = 
+* Do not meet the requirements to go to D.
+|B -> D = 
+* Fleet contains no CA (CAV unconfirmed)
+
+|F -> E = 
+* Random routing if you do not meet the requirements to go to G.
+|F -> G = 
+* Meet one of the following requirements:
+** Amount of ships in the fleet ≦ 3
+}}
+{{MapBranchingTable
+|title = E-3 Branching Rules Part 2
+|L/empty -> J = 
+* Meet all of the following requirements:
+** Amount of Ozawa Fleet members ≧ 3/4/5 on Easy/Medium/Hard
+** Amount of CV(B) ≦ 2
+|L/empty -> M = 
+* Do not meet the requirements to go to J.
+
+|J -> I = 
+* Do not meet the requirements to go to either K or N.
+|J -> K = 
+* Meet all of the following requirements:
+** Do not meet the requirements to go to N.
+** Amount of CV(B) ≦ 2
+** Amount of (F)BB(V) + CV(B) ≦ 4
+** Fleet contains no SS(V)
+** Amount of Ozawa Fleet members ≧ ?/?/5? on Easy/Medium/Hard
+|J -> N = 
+* Meet all of the following requirements:
+** The shortcut must be unlocked.
+** Amount of CV(B) ≦ 2
+** Amount of (F)BB(V) + CV(B) ≦ 4
+** Fleet contains no SS(V)
+** Amount of Ozawa Fleet members ≧ 3/3/8? on Easy/Medium/Hard
+
+|N -> O = 
+* Meet all of the following requirements:
+** Fast Fleet
+** Amount of Ozawa Fleet members ≧ 4/6/8 on Easy/Medium/Hard
+|N -> Q = 
+* Do not meet the requirements to go to O.
+
+|O -> R = 
+* Fail the LoS check.
+|O -> S = 
+* Pass the LoS check.
+
+|P -> O = 
+* Do not meet the requirement to go to S.
+|P -> S = 
+* Amount of Ozawa Fleet members ≧ 3/4/6 on Easy/Medium/Hard
+
+|Q -> P = 
+* Fail to meet the requirements to go to S, but pass the LoS check.
+|Q -> S = 
+* Meet all of the following requirements:
+** Amount of Ozawa Fleet members ≧ 4/6/8 on Easy/Medium/Hard
+** Escort Fleet contains no battleships
+** Amount of (F)BB(V) + CV(B) ≦ 4
+** Pass the LoS check.
+|Q -> T = 
+* Fail the LoS check.
+}}
+===Historical Fleet: Battle of Cape Engaño===
+====Shō-Ichi-Gō Troop Transport Unit====
+* CA: {{ShipLink|Aoba}}
+* CL: {{ShipLink|Kinu Kai Ni|text=Kinu}}
+* DD: {{ShipLink|Uranami}}
+
+====The Second Striking Force (Shima Fleet) Escort Unit====
+* DD: {{ShipLink|Hatsuharu Kai Ni|text=Hatsuharu}}, {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}}, {{ShipLink|Wakaba Kai|text=Wakaba}}
+
+====The Northern Force (Ozawa Fleet)====
+The Northern Force led by Jisaburō Ozawa during the Battle of Leyte Gulf. Members of this fleet will gain a post-cap modifier of 115% on nodes N, S and U.
+* CV(B): {{ShipLink|Zuikaku Kai Ni A|text=Zuikaku}}
+* CVL: {{ShipLink|Chitose A|Chitose Carrier Kai Ni|text=Chitose}}, {{ShipLink|Chiyoda A|Chiyoda Carrier Kai Ni|text=Chiyoda}}, {{ShipLink|Zuihou Kai|text=Zuihou}}
+* BBV: {{ShipLink|Hyuuga Kai|text=Hyuuga}}, {{ShipLink|Ise Kai|text=Ise}}
+* CL: {{ShipLink|Isuzu Kai Ni|text=Isuzu}}, {{ShipLink|Ooyodo Kai|text=Ooyodo}}, {{ShipLink|Tama Kai|text=Tama}}
+* DD: {{ShipLink|Akizuki}}, {{ShipLink|Hatsuzuki}}
+
+{{clear}}
+
+==Phases==
+*Unlocking Secret Shortcut Route between nodes {{Event/Route|J|orange}} and {{Event/Route|N|red}} '''(OPTIONAL)'''
+*Defeating the {{ShipLink|Aircraft Carrier Princess}}
+
+===Secret Shortcut Unlock===
+[[File:【KanColle】 Winter 2018 Event E-3 Opening Hidden Shortcut|thumb|right|300 px]]
+*A secret shortcut exists between {{Event/Route|J|orange}} and {{Event/Route|N|red}}.
+**Opening this shortcut allows you to skip node K.
+*You must achieve the following 3 conditions to open this shortcut:
+**'''Reach Node''' {{Event/Route|H|lightblue}}
+***Easiest way to do this is to use maximum 3 [[List of submarines by upgraded maximum stats/Sortable|Submarine]] equipped with either one {{Turbine}}{{EquipmentLink|Improved Kanhon Type Turbine|text=Turbine}} (On its [[Reinforcement Expansion]] applied Slot if possible) and 1 or 2 {{Turbine}}{{EquipmentLink|New Model High Temperature High Pressure Boiler|text=Boiler}}, or outright equipped with {{EquipmentLink|Emergency Repair Personnel}}.
+***Route: {{Event/Route|A|red|B|red|D|orange|F|red|G|orange|H|lightblue}}
+****The only threat in this part is node {{Event/Route|B|red}} with {{ShipLink|Light Cruiser Tsu-Class/Elite|Light Cruiser Tsu-class}} and Enemy Destroyers with Anti-Submarine Equipment.
+****You are recommended to send 1 LBAS attack towards Node {{Event/Route|B|red}} with All-Bombers to get rid of the threats.
+****All other nodes will consist of Submarine Node and Air Raid Nodes, which cannot do anything towards the Submarine.
+****Because of the above,''' '''it's okay to continue<span style="color:red">''' even if one of your submarines becomes heavily damaged on node B'''</span>.
+***If you cannot use a Submarine due to lacking one, you must use a Fleet consisting of 1 CL 1 CA 4 DD.
+***Route: {{Event/Route|A|red|B|red|C|red|D|orange|F|red|G|orange|H|lightblue}} '''(?)'''
+****Using {{ShipLink|Kinu/Kai Ni|text=Kinu}}, {{ShipLink|Aoba}}, and {{ShipLink|Uranami}} in the fleet will skip {{Event/Route|B|red}} and {{Event/Route|C|red}},<br />leading to {{Event/Route|A|red|D|orange|F|red|G|orange|H|lightblue}}.
+**'''Reach Node''' {{Event/Route|S|red}}
+***This node can be reached easily while you attempt a Boss Kill Run (See the next information about the Boss Kill Phase for Fleet and Routing Information).
+**'''Obtain Air Superiority''' (<span style="color:green">'''航空優勢! '''</span>) via LBAS Air Defense from an Enemy Air Raid Attack.
+***Required in <span style="color:red"> '''HARD-MODE ONLY!'''</span>
+
+===Defeat the Aircraft Carrier Princess===
+*Recommended Fleets [[Combat/Combined Fleet|Carrier Task Force]]:
+**2 CV(B) 2 CVL 2 BBV + 1 CL 2 DD 2 CA(V) 1 CLT
+**1 CV(B) 3 CVL 2 BBV + 1 CL 2 DD 2 CA(V) 1 CLT
+***Please note that if you are doing Normal(?)/Hard mode, you cannot form a Combined Fleet with Ships which have Yellow Tag from E-2.
+*Route: {{Event/Route|L|lightblue|J|orange|N|red|Q|orange|S|red|U|red}}
+**The Route will be {{Event/Route|L|lightblue|J|orange|K|orange|N|red|Q|orange|S|red|U|red}} if you haven't applied the Shortcut yet.
+***You will have to go through this Route the first time you are trying to reach the Boss either way to have the Shortcut opened.
+*You must meet the minimum amount of Historicals to skip Node {{Event/Route|P|red}}
+**Required Number of Ozawa Fleet Historicals for shortest route:
+***Easy: 4
+***Medium: 6
+***Hard: 8
+*Required Air Power: 627+ for Hard Mode
+====Special Notes====
+*As displayed below, LBAS requires range of 8 to reach the Boss.
+**To send Fighters into the Boss Node, you will require {{EquipmentLink|PBY-5A Catalina}} or {{EquipmentLink|Type 2 Large Flying Boat}} to increase your range (Please be advised about the Range of your Fighters, as Short-Range Fighters will not reach the Boss Node even with the Two Equipment stated above).
+*As stated above, due to the extremely high Air Power Requirement for this Map, you will most likely be needed to make your CVL only equipped with 1 Bomber and 3 Fighter, while your CV(B) may have to deal with the same setup in case you do not have a large quantity of Fighters with high Air Power.
+**If even with 2 CV(B) and 2 CVL you cannot gain the required Air Power, you are recommended to either use {{ShipLink|Ise/Kai|text=Ise}} and/or {{ShipLink|Hyuuga/Kai|text=Hyuuga}} to use 1 {{Seaplane Fighter}} Seaplane Fighter each, though this will disable them from using {{RedAmmo}} AP Shells (Unless you give up use of [[Artillery Spotting]] instead by removing your Seaplane, but that is not recommended at all).
+*The Anti-Air capabilities of the Enemies in this Map are very high. Please be advised that your Bombers' [[Aircraft Proficiency]] will have go down to 0 in many occasions (even in high capacity slot such as {{ShipLink|Zuikaku/Kai Ni A}}'s 1st Equipment Slot).
+**This may also cause CV(L/B) to become disabled from attacking, or lose the ability to use CV Cut-In Attack if Either of Dive/Torpedo Bomber goes down to 0.
+**This also means that you should refrain from trying to use any {{Seaplane}} {{EquipmentLink|Zuiun|Prototype Seiran|Zuiun (634 Air Group)|Zuiun Model 12|text=Seaplane Bomber}} on any BBV or CAV you bring to this map.
+*As you are going through several nodes which consist of Powerful Enemy Carriers, you are highly recommended to bring 1-2 Anti-Air Cut-In Capable Ships (Ex. {{ShipLink|Akizuki}} and/or {{ShipLink|Hatsuzuki}}, who are also part of the Historicals for this Map)
+
+==Map progression==
+{{#tag:gallery|
+Winter_2018_Event_E-3_Map p1.png{{!}}Map before unlocking the shortcut from J to N.
+Winter_2018_Event_E-3_Map.png{{!}}Full map after unlocking the shortcut from J to N.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+==LBAS Flight Range==
+[[File:Winter_2018_Event_E3_flight_range.png|500px|center]]
+
+{{Event/MapPageFooter}}

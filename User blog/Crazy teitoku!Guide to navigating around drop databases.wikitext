@@ -1,0 +1,553 @@
+<tabber>Preface=
+
+This guide was intended to give a brief and simple step-by-step on how to navigate around the select few non-English based "drop databases". It is somewhat ideally suited to those who are unfamiliar with navigating around but it is not intended to be a concise and definitive guide. Since this blog was created and maintained (for a bit) around the time when no other automated drop databases exist let alone automated drop databases that has English language available, this blog focuses mainly on those non-English drop databases.
+
+Those of you who are either unfamiliar with the terminologies or have read this blog entry before, I suggest you to check the FAQ tab which contains new and updated information. 
+
+Without further ado, I shall start showing the basics of drop databases as well as getting familiar with it!
+
+|-|FAQ=
+{| style="width:85%;" cellpadding="10"
+|-
+|
+{| style="width:100%; background:#bce2e8; text-align:center;" class="mw-collapsible"
+|- 
+| <div id="top">'''Question and Answer contents'''</div>
+|- 
+| style="text-align:left"| '''1'''. [[#Q1|So exactly what are "drop database"?]]
+|-
+| style="text-align:left"| '''2'''. [[#Q2|What relation does this have with event maps for instance or with certain chances of obtaining a specific equipment?]]
+|-
+| style="text-align:left"| '''3'''. [[#Q3|What are the differences between an "automated drop database" and a regular drop database?]]
+|-
+| style="text-align:left"| '''4'''. [[#Q4|How do you read all these characters and be able to make sense of it all?]]
+|-
+| style="text-align:left"| '''5'''. [[#Q5|Are there (automated) drop databases that are written in English? I don't want to go through the hassle of a language barrier.]]
+|-
+| style="text-align:left"| '''6'''. [[#Q6|What is with kancolle-db.net, why is it "decomissioned"?]]
+|-
+| style="text-align:left"| '''7'''. [[#Q7|What are sample size(s) and what does that have to do with anything? Why isn't x, y, z ship reported to drop in areas a, b, c when I clearly can see it dropping there?]]
+|-
+| style="text-align:left"| '''8'''. [[#Q8|How do I help out with having my report sent out? What are the risks? Are there anything else I should be aware of when having my reports sent out?]]
+|}
+|}
+
+<div id="Q1">'''So exactly what are "drop database"?'''</div>
+A drop database is essentially a database that collects drops simply speaking. However, you may ask, "What is defined as a drop?". A drop in this game is usually a reward that is offered without any information implied from developers. These usually are for virtually and any ships that appears in maps such as (but are not limited to): 1-1, 2-3, 3-2, 4-3, 5-4, etc. However, in stating so it is also possible that depending on these drop databases they may also include other information that they are also collecting. Not all drop databases contain the exact same information as you will find out later on.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q2">'''What relation does this have with event maps for instance or with certain chances of obtaining a specific equipment?'''</div>
+Again, you will find out later on in this guide with the various drop databases being mentioned. The relation between the event maps for instance with drop database usually gives some form of measurement/indication of a drop and the chances are given the likelihood case of it.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q3">'''What are the differences between an "automated drop database" and a regular drop database?'''</div>
+A regular drop database such as [https://dropcolle.com DropColle] requires one to manually submit their reports by hand. Though some drop databases may require authorisation to one's twitter account (case in point DropColle is one of them) for automating reporting also to one's twitter account. These authorisation mechanisms can also be seen as a way to verify one's claims on their reports. Despite the fact that it requires user intervention (to manually report such information), it potentially lacks other detailed information that may otherwise be available from automated drop databases. Examples of these includes (but again are not limited to): enemy fleet compositions, equipment drops from [[Development]], etc.
+
+Automated drop database are database that accepts information sent by one's viewer. Viewers like (but are not limited to): [[User_blog_comment:Dragonjet/KC3%E6%94%B9|KC3 Kai]] and [https://github.com/poooi/poi Poi viewer] offers the capability for one to have their reports automatically sent to the database. These requires little user intervention unlike a regular drop database and potentially provides a more detailed information in regards to the reports. 
+
+Privacy critics may argue that having one's reports sent without one's discretion and from a viewer will argue that the reports contains other potentially confidential data about that particular user. In the case of the now defunct kcvdb.jp, it also collected user's payment history for instance which causes a grave concern for those involved. However, most viewers as well as automated drop databases these days does not collect such information but will still collect details like the player's name, player ID, etc mainly for verification purposes. Furthermore on KC3 Kai, report submission to these automated drop databases are not enabled by default.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q4">'''How do you read all these characters and be able to make sense of it all?'''</div>
+Whilst the shortest and somewhat the most easiest answer would be to use Google Translate, however there are drawbacks. Ideally, what should be using are tools such as Rikaikun, Rikaichan, etc. Even more ideally is the needless to say part; learn Japanese (or Chinese in the case of Poi DB)! Again this guide is intended to simplify the need to understand every bit of the drop database and how they work, however it is not intended to be a complete and concise guide to the drop database. Just as a book written 10 years ago would have topics that were more relevant at the time, it is only gradually that over time these topics would probably not be as relevant as it were.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q5">'''Are there (automated) drop databases that are written in English? I don't want to go through the hassle of a language barrier.'''</div>
+There are a few (automated) drop databases that have English available but unfortunately most of these drop databases does not have enough sample size(s) in comparison to [http://db.kcwiki.moe/drop/ Poi DB] in which Poi DB itself has a large community of Chinese KC players along with their own Poi viewer that works hand in hand with their databases. Some of the (automated) drop databases providing English includes (but are not limited to):
+* http://swaytwig.com/opendb/
+* http://kckai.cybersnets.com/
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q6">'''What is with kancolle-db.net, why is it "decomissioned"?'''</div>
+According to about518 (owner of what was kancolle-db.net) has written on their twitter that they've shut down kancolle-db.net:
+{{Tweet
+|poster = [https://twitter.com/about518 about518]
+|link = https://twitter.com/about518/status/958339823852404740
+|JP = 誰にも言ってませんが、明日で艦これデータベースは終了です
+|EN = I didn't tell anyone but, tomorrow is the end to Kancolle Database
+}}
+kancolle-db.net was an automated drop database that had a lot of historical data on the drops as well as providing [[Development|crafting]] results based on the flagship (by name and not hull type) used. The loss of kancolle-db.net meant the loss of all the historical drop information that it has accrued along with specific viewers and tools that only submitted information to them. Apart from KC3 Kai there were [https://github.com/andanteyk/ElectronicObserver/ ElectronicObserver] and [https://github.com/nekopanda/logbook Nekopanda's fork and expanded version of logbook].
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q7">'''What are sample size(s) and what does that have to do with anything? Why isn't x, y, z ship reported to drop in areas a, b, c when I clearly can see it dropping there?'''</div>
+Sample sizes (especially for automated drop databases) are a way to prove there is a satisfiable amount of said reports to justify having it displayed. These sample sizes are heavily dependant on user's reports. A low sample size can also mean very high success ratio (a potentially false positive) if of all the sorties, very few have visited that node and/or there is [[Fall_2015_Event/E-4#Prinz_Eugen_Farming|only one specific enemy fleet combination that triggers potential chance of having a specific ship to drop]].
+
+Whilst you may have seen a specific ship to drop but it has not been reported on the automated drop databases, this may take some time for the reports to appear.
+
+In either case, it is highly advisable for you to consider about having your drops submitted to automated drop databases. Without user agreeing to have their reports submitted to any external sites, these automated drop databases potentially will lack enough sample sizes and which in turn affects lots of things including the enemy patterns that are used on a few wiki.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q8">'''How do I help out with having my report sent out? What are the risks? Are there anything else I should be aware of when having my reports sent out?'''</div>
+It is best to head over to the tab labelled "Submitting reports to database" and in the first tab (aptly named "FAQ"). Remember, your contributions to having reports automatically sent out to automated drop databases greatly helps out many things in return.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+|-|Databases=
+{{#tag:tabber|Poi Database=
+[[File:Poi-db1.png|thumb]]
+First you need to head over to http://db.kcwiki.moe/drop/ as this will give you the page discussing the drops. In the first screenshot, you need to click on the world followed by the map within the world to see the drops. For event maps, you need to click on the names where it usually has things like exclamation marks or other punctuation marks.
+
+The buttons on the top with all the world names should be clicked first and the images of the maps (after you have selected the appropriate world) will be refreshed towards the lower part of that pane.
+
+Hint: Regular world maps such as world 1 to world 6 goes by their usual numbering conventions, e.g. 1-1, 2-3, 3-2, 4-3, 5-4, etc. For event maps the first set of digit is doubled as opposed to single digit, i.e. 1-1 → 32-1. Usually the event world starts with number 3X and increases until 3X is filled out. Summer 2015 event has event-map pattern beginning with 31-1 and goes up to 31-7 which respectively is E-1 → E-7.
+
+[[File:Poi-db2.png|thumb]]
+Once you have selected a map from a certain event. you will be presented in a page that may look similar to this next screenshot. For most parts this is very self-explanatory.
+
+*Node letters obviously correlates to the node letters as usually indicated on the map.
+*Battle ranks are as explained with "SAB" selected will show all the drop reports for the ranks "S", "A" and "B". "SA" shows drop reports for only ranks "S" and "A", etc.
+*Difficulty are as indicated: "甲" is hard, "乙" is normal/medium, "丙" is easy.
+
+You generally do not need to worry too much about the buttons on top of ship names as such because they're for other uses. The names of the ships are in simplified Chinese, which somewhat closely resembles to Japanese's kanji but are ''not'' completely the same.
+
+[[File:Poi-db3.png|thumb]]
+In this image, upon clicking the "+" button it will show you the enemy patterns as well as their formation and their particular drop rates, etc.
+{{clear}}
+
+{{!}}-{{!}}MyFleetGirls=
+<!--
+{{Warning
+|title = Notice
+|message = As of 19th of July 2018, it has been noted on [http://ponkotuy.hatenablog.jp/entry/2018/07/19/022409 ponkotuy's blog (Japanese only)] author of myfleet.moe's website has been officially decommissioned.}}
+-->
+[[File:MyFleetgirls-1.png|thumb]]
+[[File:MyFleetGirls-2.png|thumb]]
+[[File:MyFleetGirls-3.png|thumb]]
+[[File:MyFleetGirls-4.png|thumb]]
+Visit https://myfleet.moe/entire/sta/drop_stage#event you will need to click on the words "イベント海域はこちら" if you want to see the drop reports for events.
+<br><br><br><br><br>
+Once you have click on the words "イベント海域はこちら", selected a map that you wish to see the reported drops, click on the words "艦娘ドロップ" for that map.
+<br><br><br><br><br>
+In the next screenshot, you will be presented with a visual representation of the selected map along with the map nodes in each individual grey/gray box. Click on the one that interests you and on the visual representation of the map you will see that you have selected that node.
+<br><br><br><br>
+In the last screenshot you will see for the selected node, the various options to filter the results of reported drops as well as a fancy way of visually representing the list of ships which appears to have been reported from the most to least followed by their ship class/hull classifications. You may instead wish to refer to the information below that fancy "interact-able" table for the list of ships reported.
+{{clear}}
+
+{{!}}-{{!}}kancolle-db.net (decomissioned)=
+{{Warning
+|title = Notice
+|message = As of 16th of February, it has been noted on [https://github.com/KC3Kai/KC3Kai/issues/2459 KC3 Kai's github page] that the author of kancolle-db.net has officially decommissioned the website.<br><br> [http://web.archive.org Wayback Machine] has [http://web.archive.org/web/*/http://kancolle-db.net/ archives] of the said website. Navigation links are broken but some of which may still be able to be salvaged:
+* [http://web.archive.org/web/*/http://kancolle-db.net/ship/* for specific ship drop information as well as recipe results from construction]
+* [http://web.archive.org/web/*/http://kancolle-db.net/item/* for specific item information as well as recipe results from development]
+* [http://web.archive.org/web/*/http://kancolle-db.net/area/* for ship drops based on specific areas]
+* [http://web.archive.org/web/*/http://kancolle-db.net/useitem/* for specific useitem (currently only hishimochi and sanma has information)]}}
+[[File:Kancolle-db 1.png|thumb]]
+[[File:Kancolle-db 2.png|thumb]]
+<s>Visit http://kancolle-db.net . In the first image, you may see a similar resembling screenshot. For the names of the event maps, they are placed somewhere in the middle of the page as indicated in the screenshot. To navigate around the site, you need to click on the menus on the left.</s>
+
+<s>For the list of event names (in Japanese), it is best to refer to [[Events|this page]].</s>
+<br><br><br>
+<s>In the latter screenshot you can see how the information is laid out. In this particular case the following screenshot is for [[Spring 2016 Event]].</s>
+
+<s>For more information on how to use kancolle-db, a ''somewhat'' more thorough guide is available on [http://himeuta.org/showthread.php?5906-Guide-Everything-You-Need-to-Know-About-Kancolle-db Himeuta].</s>
+{{clear}}
+}}
+
+|-|Submitting reports to database=
+{{#tag:tabber|FAQ=
+{{{!}} style="width:85%;" cellpadding="10"
+{{!}}-
+{{!}}
+{{{!}} style="width:100%; background:#bce2e8; text-align:center;" class="mw-collapsible"
+{{!}}- 
+{{!}} <div id="top">'''Question and Answer contents'''</div>
+{{!}}- 
+{{!}} style="text-align:left"{{!}} '''1'''. [[#Q1|Why should I contribute my reports to automated drop databases?]]
+{{!}}-
+{{!}} style="text-align:left"{{!}} '''2'''. [[#Q2|What are the risks with having my reports sent to automated drop databases?]]
+{{!}}-
+{{!}} style="text-align:left"{{!}} '''3'''. [[#Q3|You're lying to me, when accepting my reports to be automatically submitted there are other information that is sent to the database!]]
+{{!}}-
+{{!}} style="text-align:left"{{!}} '''4'''. [[#Q4|Is there an official (automated) drop database by KC developers, or are sponsored/endorsed by them? Why doesn't KC provide their own drop database?]]
+{{!}}-
+{{!}} style="text-align:left"{{!}} '''5'''. [[#Q5|Are these (automated) drop databases operated by the same people? Do they share their reports with each other?]]
+{{!}}-
+{{!}} style="text-align:left"{{!}} '''6'''. [[#Q6|If I choose to have only one drop database to have my reports submitted to, will that information be shared/relayed with other drop databases?]]
+{{!}}-
+{{!}} style="text-align:left"{{!}} '''7'''. [[#Q7|Why do all these drop databases vary in UI design and the features they offer?]]
+{{!}}-
+{{!}} style="text-align:left"{{!}} '''8'''. [[#Q8|If I use x, y, z viewer/tool, does my report automatically get sent to drop database?]]
+{{!}}-
+{{!}} style="text-align:left"{{!}} '''9'''. [[#Q9|Are there any other merits in having my report be submitted automatically other than contributing "for the greater good"?]]
+{{!}}}
+{{!}}}
+
+<div id="Q1">'''Why should I contribute my reports to automated drop databases?'''</div>
+Having your reports sent to automated drop databases helps in turn other players who are looking for specific drop(s) and/or contributing their reports to the same database. All these in turn helps out other websites (external to automated drop database themselves) to provide accurate data swiftly. Think of it this way, it is like taking a poll/survey in order for one to build [[wikipedia:Empirical_evidence|empirical evidence]] to back a finding based on the results of the poll/survey. However in this case with automated drop databases, you don't need to manually fill in the poll/survey yourself. You do however, with certain viewers/tools, need to set up the report sending functionality in order to have your report sent out automatically. This is usually an one-off set up.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q2">'''What are the risks with having my reports sent to automated drop databases?'''</div>
+In most cases, the risks are minimal. Apart from your player ID, the name of your account (not your DMM email address for instance, just your KC in-game name), your HQ level, etc are pretty much the only data that is deemed confidential. Some automated drop databases may also log which viewer/tool you were using but this is to usually help troubleshoot reports that are otherwise abnormal (in contrast to other viewers).
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q3">'''You're lying to me, when accepting my reports to be automatically submitted there are other information that is sent to the database!</div>
+In the case of the now defunct kcvdb.jp, yes, your DMM payment details and such would have been leaked to that database. However, in most cases this is usually the result of a poorly made viewer/tool in which it sends out all sorts of unnecessary information that is otherwise confidential. However, kcvdb.jp is now a defunct website, their members have already disbanded and there should be no viewers/tools that would send one's report to the dead website. As well, the likes of kcvdb.jp has eroded the trust of victims who had been reporting all sorts of information. This is somewhat an isolated case considering that kcvdb.jp is not well known outside of Japanese, Chinese, Korean KC communities. Most of whom may not be fully aware of the backstory with kcvdb.jp before it became a rogue entity. At any rate that is best left to those keen to check out the Misc tab.
+
+The automated drop databases that I mention are set to either ignore any reports that are not related to drops (such as payment options, the choice of one's furniture, etc) or specifically "listens" information sent to specific [[Servers|servers]] - any other IP addresses otherwise are omitted from the report hence payment details wouldn't be sent to that particular database. For those paranoid, yes there are plenty of alternatives, you could just forgo using viewer/tool when it comes to setting up/making in-game purchases and/or disable them temporarily. Personally that is what I do when it comes to making in-game payments and re-enable them again when I want to play KC normally (and not make any in-game purchases). Viewers/tools that can be set up to "listen" to specific set of IP addresses (via proxy, proxy chain, etc) can also be set up to only listen packets sent to KC servers. For more information you may want to check out [[User_blog:Crazy_teitoku/★MyFleetGirls_-_Overview|this blog entry]] under the tab named "Installation and setting up" step number 7 (where it mentions about using SwitchyOmega chrome extension).
+
+As with the issue on your IP address also being visible to the automated drop databases, yes if you are that paranoid your IP address is visible to them as well but it is virtually no different to manually submitting your reports to a non-automated drop database (such as DropColle) or even going through the likes of DMM website (which prohibits non-Japanese IP addresses from accessing services such as netgames and that includes Kancolle). Of course, to go that far of being extremely paranoid you can always look into VPN (especially non public/free based services) for all your privacy needs. The controversy over KC being ''technically'' forbidden from non-Japanese IP addresses is really another topic and worthy of a separate blog entry on its own. For most of us, there is really no need to be excessively paranoid and the report submission are not enabled by default for KC3 Kai. KC3 Kai has a policy of opt-in basis for those who really want to have their reports submitted. So no need to fret over it if you are that paranoid and are using KC3 Kai.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q4">'''Is there an official (automated) drop database by KC developers, or are sponsored/endorsed by them? Why doesn't KC provide their own drop database?'''</div>
+There is no official (automated) drop database by KC developers, and none of the drop databases mentioned in this blog entry are sponsored/endorsed/operated by them. 
+
+As for the reason why KC doesn't provide their own drop database is a trivial question of game developers encouraging gamers to develop their own ways/strategies. It would be great if KC did provide such information (as their sample size would include every KC gamer) but there has never been such a case. Case in point is {{ShipLink|Musashi}}'s drop rate:
+{{Tweet
+|poster = [https://twitter.com/KanColle_STAFF KanColle_STAFF]
+|link = https://twitter.com/KanColle_STAFF/status/945965050119856129
+|JP = 06▼戦艦「武蔵」大型艦建造【建造率】期間限定上昇開始！ 大和型戦艦二番艦「武蔵」の建造率が期間限定で上昇します。
+* 同艦を保有していない提督は、特に大幅に上昇します。
+* 四資源の投入レシピ構造は変わりません。
+* 同上昇は新春も大丈夫。十分に資源のある場合のみ挑戦ください。
+|EN = 06▼Battleship "Musashi"'s LSC drop rate increased for limited time!
+* For those admirals who haven't obtained their Musashi, there is a bigger luck from increased drop rates. (In other words, those who haven't got Musashi ever will have increased chances of getting their very first Musashi as opposed to those who already have Musashi).
+* The four resources recipe has not changed. (Means that whatever resources that seemed to give one a bigger chance in getting Musashi from all those drop database reports will still be effective).
+* This probably increase will be around for new year as well. Make sure to gamble responsibly.
+}}
+Note how in the second bullet point they mentioned that the recipe (along with the four resources, obviously fuel, steel, ammo, bauxite) has not changed. If they were that keen/evident, they would have said the exact numbers (for recipe) needed to obtain Musashi.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q5">'''Are these (automated) drop databases operated by the same people? Do they share their reports with each other?'''</div>
+No, they are not operated by the same people. Poi DB for instance is operated and maintained by [https://github.com/poooi/poi developers of Poi viewer] (as well as the respective database), swaytwig OpenDB is operated and maintained by [https://twitter.com/wolfgangkurzdev wolfgangkurzdev], MyFleetGirls is operated and maintained by [https://twitter.com/ponkotuy ponkotuy], decommissioned kancolle-db.net was operated and maintained by [https://twitter.com/about512 about512]. So you can clearly see they are owned by individual users, entities.
+
+As for sharing reports, that is highly unlikely considering that unless one collaborates with another via exchanging database dumps and sorting out hordes of data (not to mention duplicate reports, etc). It is safe to presume that report sharing between these are unlikely.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q6">'''If I choose to have only one drop database to have my reports submitted to, will that information be shared/relayed with other drop databases?'''</div>
+No, the drop databases are operated virtually independently, you may wish to refer to the former question (above) for more information in regards to having your information shared/relayed with only one drop database.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q7">'''Why do all these drop databases vary in UI design and the features they offer?'''</div>
+This is mainly because they are operated by individuals (with the exception of Poi DB which potentially includes more than one maintainer/developer). 
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q8">'''If I use x, y, z viewer/tool, does my report automatically get sent to drop database?'''</div>
+I only know that KC3 Kai is opt-in basis - data submission is disabled by default and requires one to check the checkboxes under Settings in order to have their data submitted. Nekopanda's logbook as well as Electronic Observer did/does have setting to submit reports to the now defunct kancolle-db.net but that is not enabled by default and because of the way kancolle-db.net operated it required extra steps. If you are keen to read up on what extra steps one needed to have their reports sent to the now decommissioned site there is a tab for that.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+<div id="Q9">'''Are there any other merits in having my report be submitted automatically other than contributing "for the greater good"?'''</div>
+Other than submitting to MyFleetGirls, no there are no other merits. Again, at least for KC3 Kai the report submission are set by default as an opt-in basis which means they are not enabled by default. You can choose to not have your reports submitted automatically but by refusing so means that you shouldn't be complaining about drop databases lacking certain information or wikis lacking specific drop information, etc.
+
+The case with MyFleetGirls is very different, other than having drops submitted the whole website works kind of like an online tool with one's profile being publicly visible. It behaves similar to how some viewers work (by having details such as your fleet, equipment, crafting, LSC, etc results). As well, the way to set up MyFleetGirls is vastly different from having your reports being set up to be automatically delivered to automated drop databases. Again, for those keen on reading up on how MyFleetGirls works and such there is [[User_blog:Crazy_teitoku/★MyFleetGirls_-_Overview|this blog entry]] which virtually covers everything.
+<div style="text-align:right">[[#top|back to top]]</div>
+
+{{!}}-{{!}}Poi Database=
+= [http://db.kcwiki.moe/drop/ Poi Database] =
+== KC3 Kai ==
+{{Warning
+|title = Notice
+|message = The changes does not apply immediately. To apply changes immediately (such as provide reports to databases) , you will need to close your current game session with Kancolle (if you are already in) and re-open the game again.
+}}
+# Go into "KC3改 settings" once you clicked on the KC3 Kai icon button from within Chrome.
+# Once a new tab is opened with the KC3 Kai settings, scroll down to section titled, "Send data to poi-statistics (http://db.kcwiki.moe/)" 
+# Check the box that says "Enable this feature" within that section. 
+
+{{!}}-{{!}}MyFleetGirls=
+= [http://myfleet.moe MyFleetGirls] =
+<!--
+{{Warning
+|title = Notice
+|message = As of 19th of July 2018, it has been noted on [http://ponkotuy.hatenablog.jp/entry/2018/07/19/022409 ponkotuy's blog (Japanese only)] author of myfleet.moe's website has been officially decommissioned.}}
+-->
+''You may wish tor refer to [[User_blog:Crazy_teitoku/★MyFleetGirls_-_Overview|this blog entry]] on how to create (and therefore contribute reports) an account.''
+
+{{!}}-{{!}}kancolle-db.net (decomissioned)=
+= [http://kancolle-db.net kancolle-db.net] =
+{{Warning
+|title = Notice
+|message = As of 16th of February, it has been noted on [https://github.com/KC3Kai/KC3Kai/issues/2459 KC3 Kai's github page] that the author of kancolle-db.net has officially decommissioned the website.}}
+[[File:Kancolle-db.png|thumb]]
+<s>'' The majority of the information is already made available on [http://himeuta.org/showthread.php?5906-Guide-Everything-You-Need-to-Know-About-Kancolle-db Himeuta], you may wish to search for the words "Getting a Key" on a better guide on how to obtain a key from kancolle-db.net which is required before you can actually submit reports to kancolle-db.net''</s>
+{{clear}}
+== KC3 Kai ==
+{{Warning
+|title = Notice
+|message = <s>The changes does not apply immediately. To apply changes immediately (such as provide reports to databases) , you will need to close your current game session with Kancolle (if you are already in) and re-open the game again.</s>
+}}
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:center; margin:15px auto 20px;">
+<s>''You must first obtain a key from kancolle-db.net as mentioned above.''</div></s>
+# <s>Go into "KC3改 settings" once you clicked on the KC3 Kai icon button from within Chrome.</s>
+# <s>Once a new tab is opened with the KC3 Kai settings, scroll down to section titled, "Send data to Kancolle DB (http://kancolle-db.net/login.php)" </s>
+# <s>Paste your (Access) key as you obtained from kancolle-db.net.</s>
+# <s>Check the box that says "Enable this feature" within that section. </s>
+}}
+|-|Misc=
+
+For those of you looking into the kcdb.jp incident I have moved the contents of that into a [[User:Crazy_teitoku/Old_kcdb_jp_info|separate page]]. What I will provide in lieu is:
+* A link to the videos detailing the whole incident (albeit in Japanese): http://www.nicovideo.jp/mylist/56526434
+* A partially translated (most probably based on those videos) by an anonymous person. If you are the author of the following translation, please contact me via replying to my blog entry.
+
+{{talkquote|text=Kancolle Kensho Bu Part 1-3 summaries:<br>
+<br>
+Members of the club:<br>
+* Noisy (Leader)<br>
+* Biikame (Researcher)<br>
+* Fate (Kancolle DB administrator)<br>
+* Marlowe (Public Relations)<br>
+* Nanjou Tadashi (Freelance writer)<br>
+* Yo- (?)<br>
+<br>
+I had been ignoring this whole thing ever got tired of Noisy BS some time ago. I looked into it and from how I understood this is what happened:<br>
+<br>
+(timing is spring event this year)<br>
+* A source within kenshou-bu, later to be confirmed as https://twitter.com/nanjyo_tadashi claims the reason why the quality of KC (6-4, event fuckups) is because Tanaka Kensuke is no longer within the devteam and a new Mr A is leading the team
+* → kenshou-bu people believe this and create a change.org petition with the goal of trying to pressure Mr A out of the dev team
+* → shortly after petition is created nanjyo_tadashi claims that there are going to be changes within KC dev team and that the petition no longer serves any purpose → petition withdrawn
+* Shortly after or during this it is found out that the information leaked by nanjyo_tadashi has been leaked out to an outsider
+* → nanjyo_tadashi claims leaking this info to an outsider will weaken his own trust with his sources also translating into monetary loss for him
+* → Two people have spoken about this information to an outsider: Noisy and Biikame. Noisy says "sorry" and is forgiven. Rest of the kenshou-bu members here lead by Noisy force or try to force Biikame into signing a contract that makes him pay 1 million yen if the person who he spoke about the leak leaks the information
+* → the information is leaked and it turns into big infight with kenshou-bu and Biikame
+* during this infighting lots of information about the untrustworthiness of kenshou-bu spreads out, including the possibility of kenshou-bu obtaining user payment data through their client
+* at some point DMM gets involved and requests the termination of kenshou-bu because of various violations
+* This request strictly prohibits sharing the request to any third parties→Noisy still manages to share it to outsiders
+* conversations about kenshou-bu member interactions leak (vid related) and it's found out that kenshou-bu lead by Noisy used very Yakuza like methods to try and blackmail Biikame
+* Sometime after this nanjyo_tadashi comes out and confesses that he made everything up and that Tanaka Kensuke is still leading KC devteam. Basically everything happened because he was BS'ing all along
+<br>
+May {{Ordinal|3}} - Kancolle Spring Event starts. However, gimmick increasing damage against boss was not working properly. Not a single clear even after 23 hours have passed.<br>
+May {{Ordinal|4}} - Kancolle Staff announces bug and fixes it with an emergency maintenance<br>
+Kancolle Kensho is a group that "researches" various aspects of the game and announces them on Twitter. However, this is done with a dedicated browser and database using tools.<br>
+Kancolle is played on dedicated browser → Pulled data is sent to DB → Accumulated information is researched<br>
+[Noisy - Kancolle Kensho's Leader. Created database, created dedicated browser, gathered Researchers and formed Kancolle Kensho]<br>
+May {{Ordinal|5}} - Kancolle Kensho announces a bug that a third U-511 and I-401 won't drop if you owned 2 or more copies of either<br>
+May {{Ordinal|6}} - Kancolle Staff announces that said bug is confirmed and fixed. Kancolle Kensho's recognition and voice increases.<br>
+May {{Ordinal|7}} - Kankolle Kensho's followers have rised to 20,000<br>
+May {{Ordinal|8}} - Kancolle Kensho makes an announcement regarding E6's gimmick, which involves getting a S victory in E6's AGL nodes and having defeated E5's boss after the maintenance. Spreads information that needing to defeat E5's boss is odd and most likely a bug as there are cases where defeating E5's boss doesn't activate the gimmick.<br>
+May {{Ordinal|10}} - Kancolle Staff that in order to activate the gimmick, getting a S in E6's AGL nodes or E5's I node is necessary. Kancolle Kensho makes no corrections or apologies on their twitter account.<br>
+'''Noisy:''' To be honest, I believe I'm in a position where I can instigate Admirals who've incurred a loss due to bugs to ask for a refund. The only reason I don't is because I like Kancolle.<br>
+Many Admirals have already cleared the event now that the gimmick's requirement have been affirmed<br>
+May {{Ordinal|11}} - Images on Kancolle Kensho's Twitter have been removed by copyright holder<br>
+Noisy phones DMM and receives response that it has been removed on Kancolle Staff's request.<br>
+This marks the end of the prologue<br>
+<br>
+May {{Ordinal|24}} - '''Noisy:''' Despite there being a fatal bug that made the event unclearable until the emergency maintenance, it's unreasonable that there has been no reimbursements for RTAers and other pioneers. I'm planning on starting a petition requesting refunds for the money spent during that time.<br>
+May {{Ordinal|27}} - Petition by Noisy and Biikame begins, however this is listed as a personal action and has no relation with Kancolle Kensho<br>
+[Biikame - Kancolle Kensho member. Joined as a representative of Researchers, manager of Research Wiki and NND's Research Circle community at that time.]<br>
+~100 signatures were gathered in 7 hours, however there were quite a few criticisms regarding it as well<br>
+May {{Ordinal|28}} - The petition is taken down for now as there were many unclear details. Petition is rewritten from scratch with Biikame in charge.<br>
+May {{Ordinal|29}} - Draft of second petition is revealed. However, the part involving requesting a refund has been removed.<br>
+May {{Ordinal|31}} - Biikame announces that petition is discontinued, as notoriety was spreading to Kancolle Kenshou despite being unrelated. Biikame announces that he's leaving Kancolle Kenshou<br>
+June {{Ordinal|1}} - Other Researchers CC, Orical, Manaka is my Waifu leave as well. This was supposed to mark the end of the entire incident, however...<br>
+June {{Ordinal|2}} - On Research Circle's notices Biikame writes that "As I'm being threatened by Kancolle Kenshou, I Biikame am stopping all activity involving Research Circle and Research Wiki". At the same time, Biikame's Twitter account is deleted.<br>
+Why is he being threatened despite the petition having nothing to do with Kancolle Kenshou? Why did he suddenly delete his Twitter account? Biikame disappears leaving many mysteries behind.<br>
+<br>
+Noisy explains the situation.<br>
+Even before the petition Biikame was leaking information to a third party. At worst this may even lead to monetary loss.<br>
+Kenshou-bu asks Biikame to sign a non-disclosure agreement, but Biikame ran off in the middle of the conversation and posted that he's being threatened on his community.<br>
+<br>
+New mysteries surface.<br>
+What is this 'monetary loss'? What relation does it have with the information Biikame leaked? What were the contents of the threat? What were the details of the contract Noisy was trying to get Biikame to sign? A 'contract' that would be received as a threat and make someone try to disappear?<br>
+'''[Fate - Database creator]:''' I'll leave it to you to decide who to believe in. I'll just say that I'm disappointed in Biikame.<br>
+'''[Yama - RTA support]:''' (To Biikame) Amazing, you're sure saying things to suit your purpose<br>
+'''[Marou - PR/Announcer]:''' I'll say this first, what Biikame did was the worst betrayal. Most believe that he's monitoring Noisy, but the truth is the exact opposite. Biikame is the one who went out of control.<br>
+'''[Koshian - Hoppo Alpha's Creator]:''' Even if you hate Bii-shi, please don't hate B-cups<br>
+Noisy apologizes regarding the petitions. What he says is more or less the same as what Biikame said, but he adds that there were plans to calculate how much users spent using the Database. What was supposed to explain the situation did nothing but deepen the mystery further.<br>
+However...<br>
+<br>
+'''Yo-:''' I'm keeping silent, but I'll have you pay for any inexpediency that happens<br>
+'''Yo-:''' I know everything.<br>
+'''Yo-:''' I'll reveal everything if there are too many lies.<br>
+'''Yo-:''' This is the final warning. Shut up.<br>
+'''Yo-:''' Why do I know? I was in the middle of a phone call with Biikame when he was threatened.<br>
+'''Yo-:''' I'm the one who the information was leaked to. The ones who leaked information were Biikame and Noisy. The reason behind the leak and the contents of the leak itself is a secret. Notice that the only one Kenshou-buu is condemning is Biikame<br>
+'''Yo-:''' Regarding the petition, I used Biikame and Noisy in order to create an uproar<br>
+'''Yo-:''' If antis flame at Kenshou-bu the issue will naturally grow larger and the staff would be forced to face this problem.<br>
+Yo- posts screenshot of Skype logs with him requesting Biikame and Noisy to start the petition<br>
+'''Yo-:''' They've already received warnings from DMM, so they have to make this incident happen no matter what, even if they'll get flamed<br>
+<br>
+To summarize:<br>
+Information was leaked to Yo-<br>
+The one who leaked information was Noisy and Biikame<br>
+The one who requested Noisy and Biikame to start the petition was Yo-<br>
+Kenshou-bu has received some sort of warning from DMM<br>
+<br>
+'''Yo-:''' Finally... My thoughts regarding this incident. Don't have anything to do with Kenshou-bu. Even if it's indirectly through a friend. And to Noisy and the rest of Kenshou-bu, don't have anything to do with us anymore, if you don't I'll just disappear with this information.<br>
+<br>
+June {{Ordinal|2}} - A new manager for the Research Circle Biikame managed was decided<br>
+June {{Ordinal|3}} - He receives a message from Biikame stating "For everyone's personal safety I'd recommend you stop sending data to the database". When asking for confirmation, he received a reply stating "The database has received a protest requesting dismissal from DMM. As a result there is fear that the information sent to the database would be leaked to DMM, there isn't anyone left in Kenshou-bu who can stop it."<br>
+There was 10k users reported back during the Spring Event. Could there possibly be a mass ban for all of them?<br>
+<br>
+While the persons related were apologizing and exposing each other, volunteers were researching how the research database actually works<br>
+[ktgohan - Engineer. Throughly investigated 浦賀船渠ノ航跡 incident.]<br>
+According to him, Kancolle's API all have an Access Token but some browsers do not delete it completely, which could even lead to accounts getting stolen.<br>
+Someone points out that they should stop data should stop being sent to the database until it's safety can be confirmed.<br>
+'''Marou:''' It's open source, are you an idiot?<br>
+'''ktgohan:''' I'm saying this after having read the code. Kenshou-bu's side claims that Access Tokens aren't collected, but the truth is that the one who's sending data has to mask their API Token. There's no way to know what the receiving side does and whether they go through the process to mask it.<br>
+'''Marou:''' Read the receiving side's source as well<br>
+'''ktgohan:''' Where is that code? And there is no way to confirm whether it's actually running<br>
+'''Marou:''' You haven't read the code right? Come back after you have<br>
+'''ktgohan:''' github.com/KancolleVerifi... I've been reading this. The data sent is simply written into Azure Table Storage, there isn't any defensive measures concerning authentication tokens.<br>
+'''ktgohan:''' I'll ask again, are there any other public released codes from Kenshou-bu's side?<br>
+Marou remained silent after that<br>
+<br>
+'''Yo-:''' I wasn't planning on saying anything more, but Marou ignored my warning<br>
+'''Yo-:''' The information source is Nanjou<br>
+[Nanjou Tadashi - Freelance writer who took part in Battleship Girl, Chinjufu Seikatsu no Susume, Muv-Luv Alternative Integral Works. Suspected to have received leaks from Kancolle Staff as he figured out solutions to '13 Fall and '14 Summer's events early on]<br>
+<br>
+Marou gives explanations to questions.<br>
+Biikame and Noisy started petition unrelated to Kenshou-bu → Opposition from members as they discovered plans to calculate money spent using the database and information leaks → Petition stopped, Biikame leaves → Request Biikame to ask Yo- not to leak information any further → Yo- tries to get inside information through Biikame → Kenshou-bu asks Biikame to suppress Yo- → Yo refuses to answer negotiations → Biikame disappears<br>
+[Kenshou-bu Surveillance - Watched over this incident since May {{Ordinal|12}} before it came to light]<br>
+Kenshou-bu Surveillance sends an open letter to Marou regarding his explanations<br>
+Marou remains silent<br>
+<br>
+June {{Ordinal|4}} - Noisy once again apologizes regarding the petition and links a PDF answering questions<br>
+Regarding the information leak. When Noisy began the petition, he heard from Biikame that he told Yo- everything, he thought that this meant everything concerning the petition.<br>
+Regarding the 'threat'. Noisy requests Biikame to ask Yo- not to leak information, Yo- asks for inside information as a condition, Kenshou-bu refuses and tries to negotiate through Biikame, Biikame disappears in the middle of the conversation.<br>
+<br>
+Tweet that when they asked DMM again about images getting removed on May {{Ordinal|30}} they received a reply saying that it was removed on DMM's decision and not Kancolle Staff's.<br>
+According to Noisy. Received a mail from DMM on May {{Ordinal|27}} asking them not to publish false information → Ask what they meant by false information → Reply on 30th saying images getting removed was DMM's instruction<br>
+<br>
+The email DMM sent is provided by someone and posted by Kenshou-bu Surveillance<br>
+DMM confirms a violation to their terms of service and sends Noisy a warning. Access in an unauthorized manner, publishing their response to inquiries without authorization and publishing false, incorrect or misleading information.<br>
+And despite being forbidden from revealing it to a third party without authorization, he immediately reveals it in their group's Skype.<br>
+Noisy only mentioned the warning regarding false information and kept the other two a secret, only revealing what worked to his benefit.<br>
+The credibility of Surveillance's post was suspicious as the information provider was a secret, but 15 minutes later Kenshou-bu's system engineer reported Surveillance to DMM for revealing the email to a third party without authorization<br>
+In the following exchange between Noisy and Surveillance, Noisy himself confirms that the email is authentic<br>
+<br>
+June {{Ordinal|7}} - Andante, Type 74 Electric Observer's creator, and kanahiron, Kancolle List Maker's creator, leave<br>
+June {{Ordinal|10}} - Marou finally replies to ktgohan. "Ah, sorry, that source is still the old version, tehe". He apologizes for his lack of knowledge regarding the database but does not answer anything.<br>
+The research database is running on a source different from what is open to public.<br>
+Fate announces that the database is stopped temporarily for maintenance<br>
+<br>
+June {{Ordinal|18}} - Database's maintenance finishes and restarts service, completely ignoring DMM's warning.<br>
+June {{Ordinal|19}} - Biikame, who deleted his account and disappeared under Kenshou-bu's threat, returns<br>
+'''Biikame:''' Kenshou-bu's database has already received a dismissal warning from DMM, yet despite this they still continue using it. This causes harm not just to Kenshou-bu, but the entire Kancolle cluster. As such, I, Biikame, request it's immediate dismissal.<br>
+<br>
+What Marou said about him taking data is a lie.<br>
+Monetary loss refers to the monetary loss resulting from Nanjou's loss of credence due to information leaking to outsiders.<br>
+He received a warning regarding the database's dismissal, but the only one who can do that is Fate, the server's manager.<br>
+Kenshou-bu had been receiving information regarding personnel from Nanjou for quite a while. On May {{Ordinal|28}} they received information from Nanjou that things have changed for the better which is what led to the end of the first petition.<br>
+Biikame posts a Skype chat log dated May {{Ordinal|30}} showing that Kenshou-bu had understood that the "Access in an unauthorized manner" was referring to the database<br>
+The threat was done over chat. Those present were Noisy, Koshian, Fate, Marou, Yama and Nanjou. Biikame was told to sign a contract, Biikame deleted his Twitter before it was sent.<br>
+Skype chat logs dated June {{Ordinal|1}} showing the 'threat' scene was posted. Biikame couldn't stop Yo- from leaking information further, and is asked to sign a contract reimbursing any monetary loss that may stem from it. It's mentioned that Noisy also leaked information to Yo-, but that's looked over with just a single apology and he joins in the ganking. In the end Biikame can't come to an agreement with Yo- and escapes, which leads to the notice saying he was threatened.<br>
+Kenshou-bu threatened to push all the responsibilities onto him if he didn't sign the contract. This could cause dire problems to Researchers and his community, which is why he deleted his account.<br>
+<br>
+Biikame posts a PDF dating the entire incident chronologically<br>
+May {{Ordinal|22}} - Yo- approaches Biikame saying the users voices are necessary in order for the administration to change, Biikame responds with a part of Nanjou's information. Yo- proposes a petition and suggests asking for Noisy's assistance. Biikame tells Noisy that he told Yo- a part of Nanjou's information, Noisy gives consent. Yo- asks if he can tell cooperators Nanjou's information, Noisy gives consent. Noisy explains the petition to other members and that it's unrelated to Kenshou-bu.<br>
+May {{Ordinal|27}} - First petition completed. Yo- thinks of the contents, Biikame writes them down and Noisy is in charge. Noisy receives warning from DMM to cease Kenshou-bu's activities. Noisy shares warning with Kenshou-bu and Yo-. Noisy says he intends to continue Kenshou-bu, Yo- tells Noisy that they have to make use of the petition to have the staff for forget about everything.<br>
+May {{Ordinal|28}} - Receive information from Nanjou that administration has changed for the better. First petition stopped.<br>
+May {{Ordinal|29}} - Biikame focuses on second petition and announces that he's planning on leaving because of DMM's warning<br>
+May {{Ordinal|30}} - New information from Nanjou, second petition halted.<br>
+May {{Ordinal|31}} - Biikame leaves<br>
+June {{Ordinal|1}} - Noisy claims he hasn't heard that Biikame told Yo- Nanjou's information and that Yo- is mad, which leads to the threat<br>
+However<br>
+<br>
+June {{Ordinal|21}}<br>
+'''Noisy:''' There are several lies in Biikame's statements. If he agrees I can upload chat logs and voice files as evidence.<br>
+'''Biikame:''' If you desist the database and break up Kenshou-bu then I'll agree.<br>
+'''Noisy:''' If I cannot prove that you have lied then I'll break up Kenshou-bu.<br>
+'''Biikame:''' What are these lies you're referring to specifically?<br>
+'''Noisy(16:55):''' Point 1. Biikame said that Yo- did not ask for Kenshou-bu's information, but Biikame had stated multiple times that Yo- said that "If you don't want me to say anything hand over your information". Point 2. Biikame claims that he was threatened to sign the contract, but that is false. Biikame had agreed to sign the contract, he did not refuse even once. The two points above.<br>
+'''Biikame(17:27):''' Just for confirmation. Am I correct to believe that you'll desist the database and break up Kenshou-bu if you can't prove that the above two points are lies?<br>
+'''Noisy(23:44):''' If I can't prove that Point 1 and 2 are false, I'll desist the database and break up Kenshou-bu. If you have no objections, I'll upload the voice file and chat logs and make them public. If you have anything to add I'll wait until 24:00.<br>
+'''Biikame(23:46~55):''' I have no objections to the terms above, but there are several additional points I'd like to confirm. The time to prove that they are lies is until June {{Ordinal|22}} 23:59. If it cannot be proven then you have until June {{Ordinal|23}} 23:59 to desist the database and break up Kenshou-bu. In addition, this includes the removal of all data obtained including those in the other members' local memory and that a similar organization will not be set up by the involved members in the future. Do you have any objections?<br>
+Noisy doesn't respond and posts a PDF including the chat log and voice files at 24:00<br>
+'''Noisy:''' I'd like to assert the following '3' points.<br>
+<br>
+Skype logs dated June {{Ordinal|1}} regarding Point 1<br>
+Yo- agreed not to speak of information that would point to Nanjou, but asked that they'd allow him to consider whether to speak about the rest.<br>
+Noisy asks that he promises not to speak of it.<br>
+Yo- requested that in return to limiting it to those who cooperated he wished to tell them the outcome of the entire affair.<br>
+Noisy requests Biikame do his best to not let Yo- leak the information any further.<br>
+Biikame fails to convince Yo- and asks Noisy to apologize to Yo-, Biikame tells Yo- that Noisy apologized to him.<br>
+Noisy suspects that Biikame is plotting with Yo- in order to escape blame and Yo- being mad was just an act.<br>
+Noisy explains the situation to other members.<br>
+Noisy's assertion is that "Yo- asking for Kenshou-bu's information is a fact."<br>
+<br>
+Voice files between Noisy, Biikame and Nanjou dated June {{Ordinal|1}} regarding Point 2<br>
+08:00~<br>
+'''Nanjou:''' The whole thing between Noisy, Biikame and Yo- doesn't really have anything to do with me<br>
+'''Nanjou:''' I don't understand<br>
+'''Nanjou:''' Well, if revealing everything is your stance<br>
+'''Biikame:''' Yo-'s you mean<br>
+'''Nanjou:''' Ah, Yo's stance, revealing everything<br>
+'''Biikame:''' Yes<br>
+'''Nanjou:''' Well, then I have to say I'll be taking corresponding measures<br>
+'''Biikame:''' Yes, I understand<br>
+'''Nanjou:''' I have no idea what I'll do<br>
+'''Biikame:''' I understand, I've understood<br>
+14:30~<br>
+'''Noisy:''' Well, then all that's left is who'll take responsibility<br>
+'''Biikame:''' You mean I will? Yes<br>
+'''Noisy:''' Can you write it down on contract? Not to leak information and what should we do regarding Yo-<br>
+'''Noisy:''' I'll have to make something regarding that<br>
+'''Noisy:''' And Yo-, you can tell him this, but I'm not apologizing<br>
+'''Noisy:''' I'm taking back my previous apology and say it was Biikame's instruction. Ah, what I'm going to say now is just an example<br>
+'''Noisy:''' For example, if Yo- is furious because of that and does something, then the responsibility would be on Biikame's shoulders<br>
+'''Noisy:''' Please be aware of that<br>
+'''Biikame:''' Yes, I understand, I'm aware, yes.<br>
+'''Noisy:''' As such, we must make a painful decision, really<br>
+'''Biikame:''' Yes<br>
+'''Noisy:''' Biikame should also do his best to stop Yo-<br>
+'''Biikame:''' Well, regarding that... I feel the same. I really wish he'll stop.<br>
+'''Biikame:''' But if it gets to that... Well, I'll try my best<br>
+'''Noisy:''' At the moment, there may be a monetary loss if the information leaks<br>
+'''Noisy:''' In that case, as you know, I have a lawyer on my side<br>
+'''Noisy:''' As such, I'm already taking issuing a lawsuit into consideration<br>
+'''Noisy:''' I think it's unforgivable<br>
+'''Biikame:''' I understand<br>
+'''Noisy:''' Yeah, well, I'd like the target to include Yo-, but since it's the net... So you know<br>
+'''Noisy:''' I'll have you sign the contract and write down your address. I have no way to confirm whether it's real<br>
+'''Noisy:''' You don't have to hand it to me, but promise that you'll submit it to Nanjou.<br>
+'''Biikame:''' I understand...<br>
+23:00~<br>
+'''Biikame:''' Well, finally I guess I'll go try convince Yo- again<br>
+'''Noisy:''' Please do so<br>
+'''Biikame:''' It'll take a bit of time. Do you mind if I go take some time to try and persuade him?<br>
+'''Noisy:''' Should we?<br>
+'''Nanjou:''' Ah, Biikame, I understand that it's relatively stressful mentally to sign a contract like this<br>
+'''Nanjou:''' If you can settle it, if you can settle this issue, if you can suppress Yo-<br>
+'''Nanjou:''' Then it's fine even if you don't sign this contract. Ah it's fine even if you don't sign it<br>
+'''Fate:''' Rather, you'll sign it once, and we'll promise to scrap it afterwards<br>
+'''Biikame:''' I understand<br>
+'''Fate:''' That is, if it's settled completely<br>
+'''Noisy:''' If, later on, that is, in the future<br>
+'''Noisy:''' This time's contract's that. That is, the fine... We'll be imposing one<br>
+'''Noisy:''' We wish to impose a corresponding cost if there are any issues<br>
+'''Noisy:''' I'm the one saying this, but it'll be a good idea to confirm what's written<br>
+'''Noisy:''' Well, this is really just an example, but you may have to pay one million yen<br>
+'''Noisy:''' We'll be including something like that. Is that alright?<br>
+'''Nanjou:''' Eh, is this addressing me? Or Biikame?<br>
+'''Noisy:''' Well, both sides I guess. This is a contract between the two of you.<br>
+'''Marou:''' Well, it'll at least cover the costs if you end up cut off by Kadokawa<br>
+'''Noisy:''' Yeah, a guarantee in case of an employment loss, that'll probably be what it'll be written as<br>
+'''Nanjou:''' Eh, sorry, this is directed towards Noisy, Biikame and everyone<br>
+'''Nanjou:''' Regarding this... I think signing a contract like this is heavily stressful mentally to Biikame<br>
+'''Nanjou:''' It'll extremely maybe work out, well, for now let's have Noisy prepare the contract<br>
+'''Nanjou:''' And well that sign, we'll leave it until after Biikame has tried convincing Yo-<br>
+'''Noisy:''' I understand, if that's what Nanjou says. I'll just prepare it for now<br>
+'''Nanjou:''' This may be an exaggeration, this may be an exaggeration, if you can't settle the matter I'll just use whatever means it'll take<br>
+'''Noisy:''' I understand. Well, I deeply wish it won't come to a point where this contract has to be signed.<br>
+'''Noisy:''' The contents would be, well, let's just say I haven't written or said anything like a one million yen fine<br>
+'''Noisy:''' The contents would be something confirmed and agreed on by Biikame<br>
+'''Biikame:''' I understand<br>
+Which leads to the Skype chat mentioned on >>15632191 and the threat notice<br>
+<br>
+Point 1 is just Yo- asking to disclose information he knows to cooperators and does not involve additional information regarding Kenshou-bu. The conspiracy is entirely inside Noisy's head<br>
+Point 2 can be clearly seen as a lynch and a situation where Biikame cannot refuse<br>
+Biikame states that "This does not prove that what I've said is a lie"<br>
+June {{Ordinal|23}} - Biikame requests the database's desist and the Kenshou-bu's break up as the two points have not been proven to be a lie<br>
+In response, Noisy states that Nanjou tried to settle matters peacefully when Biikame left, signing the contract was unnecessary if he can persuade Yo-, currently Nanjou is hospitalized due to mental fatigue and coronary heart disease, Noisy has been given charge over Nanjou's Twitter, Skype and DM accounts, Biikame threatened to send chat logs to DMM and Kadokawa if he didn't help convince Noisy to desist the server and break up on June {{Ordinal|21}}, Noisy stops the database temporarily as he considers it's usage dangerous at this rate, that he's cutting off all relations with Biikame and adamant on taking action against Biikame upon Nanjou's recovery<br>
+Biikame states that he had already made his claims before Noisy cut off relations, Noisy doesn't respond<br>
+Noisy only stopped the database temporarily and did not hold his end of the promise<br>
+<br>
+Kenshou-bu Surveillance had been negotiating through various channels and received a request from one of the related parties asking Kenshou-bu members to stop spreading information any further and that there'll be some sort of report at the beginning of next week<br>
+June {{Ordinal|27}} - Nanjou finally appears publicly, apologizes on Twitter and explains everything<br>
+# How Nanjou joined Kenshou-bu. He was originally an acquaintance of Noisy's and was asked to assist in research concerning historical facts. The truth is that he hasn't been working on Kancolle related jobs for over two years and doesn't actually have many chances to inquire about internal affairs. Pleased by the other members' expectations, he made up a bunch of stories around '16 Spring's event.
+# Regarding the stories he made up in Kenshou-bu's chat. "The changing of the person in charge of Kancolle's administration is the cause of the drop in the recent event's quality, there has been another change in personnel in response to this and as such the administration should change for the better from here on." This is a complete lie, and because he didn't want his lying to spread outside, he told Biikame that he'll request compensation.
+# Regarding Noisy having charge over Nanjou's accounts. Nanjou has been hospitalized from June {{Ordinal|6}} to June {{Ordinal|18}} due to coronary heart disease. He received the message from Biikame on June {{Ordinal|21}} and asked Noisy to publicize it with his account
+# He once again apologizes
+# Finally, he states that he's stopping all commercial and doujin activities indefinitely
+<br>
+June {{Ordinal|27}} - ktgohan tracks down Nanjou and makes an appointment with him in the real world. He confirms that the apology is authentic and that Nanjou is in no condition to talk extendedly<br>
+Biikame apologizes to Nanjou for pressuring him<br>
+With this, the incident between Biikame and Nanjou has been settled.<br>
+However, Noisy remains silent regarding this matter and Kenshou-bu continues operation.<br>
+This marks the end of Chapter 1<br>
+<br>
+Next Episode Preview:<br>
+Biikame takes action towards Kenshou-bu's destruction<br>
+The true state of affairs inside Kenshou-bu is continuously exposed<br>
+However, Kenshou-bu continues resistance<br>
+It was then that Biikame receives a lawsuit involving 1.1 million<br>
+Voices hoping for Kenshou-bu's destruction gather<br>
+The true battle engulfing even DMM begins}}
+</tabber>

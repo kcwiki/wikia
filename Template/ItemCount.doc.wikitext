@@ -1,0 +1,145 @@
+<tabber>
+Description=
+==Purpose==
+: Create a template for rendering inventory items along with their counts as an overlay.
+: Used as a founding base for creating complex templates that will be used on [[Shop]] pages.
+==Positioning arguments==
+:<code><nowiki>x-axis</nowiki></code>, <code><nowiki>y-axis</nowiki></code>
+:*Top-left most pixel is the origin
+:*Measured in pixel, input without px unit
+:*'''Images are scaled down to 700px width-wise to fit the screen. If you're using the full size image to make those coordinate, you're off by miles.'''
+:*'''If the positioning arguments are not defined or are arbitrary inputs may result in the image being either partially visible or fully invisible.'''
+:* Previewing pages incorporating this template and defining a number that is beyond two digits long (e.g. 101 or 1030) may result in the text out of alignment. This is a [[wikipedia:Software bug#Severity|visual defect/bug]] and thus, '''may not''' affect the rendering of the item/s on the page.
+==Item arguments==
+:<code>count = </code>
+:* Counts of the item.
+==='''Note''': ===
+:* Count cannot be less than or equal to 0.
+:* Count cannot be more than or equal to 10000.
+:* Count cannot have decimal places. Should they have decimal places they will be rounded to the nearest whole number.
+:* Count can only accept numbers. Inputting characters that are not numbers may result in count being zero (0).
+:* Count defaults to "99" if this variable is not specified.
+<br><br>
+:<code>item = </code>
+:* Filename of the item to have counts appended to it.
+==='''Note''':===
+:* Examples of <code>item = </code> could be something like <code><nowiki>item = Improvement_Material_004_inventory.png</nowiki></code>
+:* For inventory items, they can only have a maximum size of 50px to be appended in the [[mw:Help:Images#Syntax|image syntax]]. This is now mandated on the template level.
+:* Overall image sizes that are not equal to exactly 50px are forced to be rendered as 50px. Images larger than 50px will be scaled down to 50px. Images smaller than 50px should also be scaled up to 50px.
+:* Item defaults to "<code>Improvement_Material_004_inventory.png</code>" if this variable is not specified.
+<br><br>
+:<code>link = </code>
+:* A link for the image.
+==='''Note''':===
+:* See [[mw:Help:Images#Altering_the_default_link_target|here]] for explanation on link parameter.
+:* Defaults to nothing if not specified which results to a link to image description.
+==Additional Notes==
+: This templates uses the following [[mw:Extension:Variables|variables]] internally for <code>count = </code> calculation.
+:* <code><nowiki>{{#var:size0}}</nowiki></code> and <code><nowiki>{{#var:size1}}</nowiki></code> for the size of the circle to place over the image.
+:* <code><nowiki>{{#var:left0}}</nowiki></code> and <code><nowiki>{{#var:top0}}</nowiki></code> for the placement of the circle based on the chosen size required.
+:* <code><nowiki>{{#var:left1}}</nowiki></code> and <code><nowiki>{{#var:top1}}</nowiki></code> for the placement of the text over the image.
+
+: A copy of this template with debugging information is available under [[Template:ItemCount/Debug|/Debug]]. This template should '''not''' be used for general purposes.
+|-|1-99=
+Input:
+<pre>{{Template:ItemCount
+| x-axis = 30
+| y-axis = 300
+| count = 99
+| item = Improvement_Material_004_inventory.png
+}}</pre>
+
+Result:
+{{Template:ItemCount
+| x-axis = 30
+| y-axis = 300
+| count = 99
+| item = Improvement_Material_004_inventory.png
+}}
+----
+'''Debug variant:'''<br><br>
+This template should '''not''' be used for general purposes.<br>
+Input:
+<pre>{{Template:ItemCount/Debug
+| x-axis = 30
+| y-axis = 700
+| count = 99
+| item = Improvement_Material_004_inventory.png
+}}</pre>
+
+Result:
+{{Template:ItemCount/Debug
+| x-axis = 30
+| y-axis = 700
+| count = 99
+| item = Improvement_Material_004_inventory.png
+}}
+|-|100-999=
+Input:
+<pre>{{Template:ItemCount
+| x-axis = 30
+| y-axis = 300
+| count = 999
+| item = Improvement_Material_004_inventory.png
+}}</pre>
+
+Result:
+{{Template:ItemCount
+| x-axis = 30
+| y-axis = 300
+| count = 999
+| item = Improvement_Material_004_inventory.png
+}}
+----
+'''Debug variant:'''<br><br>
+This template should '''not''' be used for general purposes.<br>
+Input:
+<pre>{{Template:ItemCount/Debug
+| x-axis = 30
+| y-axis = 700
+| count = 999
+| item = Improvement_Material_004_inventory.png
+}}</pre>
+
+Result:
+{{Template:ItemCount/Debug
+| x-axis = 30
+| y-axis = 700
+| count = 999
+| item = Improvement_Material_004_inventory.png
+}}
+|-|1000-9999=
+Input:
+<pre>{{Template:ItemCount
+| x-axis = 30
+| y-axis = 300
+| count = 3000
+| item = Improvement_Material_004_inventory.png
+}}</pre>
+
+Result:
+{{Template:ItemCount
+| x-axis = 30
+| y-axis = 300
+| count = 3000
+| item = Improvement_Material_004_inventory.png
+}}
+----
+'''Debug variant:'''<br><br>
+This template should '''not''' be used for general purposes.<br>
+Input:
+<pre>{{Template:ItemCount/Debug
+| x-axis = 30
+| y-axis = 700
+| count = 3000
+| item = Improvement_Material_004_inventory.png
+}}</pre>
+
+Result:
+{{Template:ItemCount/Debug
+| x-axis = 30
+| y-axis = 700
+| count = 3000
+| item = Improvement_Material_004_inventory.png
+}}
+</tabber>

@@ -1,0 +1,530 @@
+This will be a detailed blog post where, using damage calculations, ship and weapon stats, I'll try to determine efficient combinations to deal more damage. Most of the information are taken from the other pages in the wiki and will depend on the correctness of those information.
+
+==Battleships - The Big Guns==
+Which guns do you equip on a battleships? How many? What about other equipment? (this analysis will ignore accuracy for now)
+
+Battleships according to firepower stat, final remodels only:
+
+{| class="wikitable"
+|-
+!Name
+!Firepower
+!Notes
+|-
+|Yamato
+|139
+|expensive
+|-
+|Musashi
+|139
+|expensive
+|-
+|Kirishima
+|104
+|fast
+|-
+|Nagato
+|99
+|
+|-
+|Mutsu
+|99
+|
+|-
+|Fusou
+|99
+|aviation battleship
+|-
+|Bismarck
+|99
+|fast, can equip torpedoes
+|-
+|Kongou
+|98
+|fast
+|-
+|Hiei
+|98
+|fast
+|-
+|Yamashiro
+|98
+|aviation battleship
+|-
+|Haruna
+|98
+|fast
+|-
+|Ise
+|79
+|aviation battleship
+|-
+|Hyuuga
+|79
+|aviation battleship
+|}
+Large Caliber Guns according to firepower stat:
+{| class="wikitable"
+|-
+!Name
+!Firepower
+!Accuracy
+!Notes
+|-
+|46cm Triple Gun Mount
+| +26
+|
+| very long range, fit for Yamato class?
+|-
+|Prototype 46cm Twin Gun Mount
+| +23
+| +1
+|very long range
+|-
+|Prototype 41cm Triple Gun Mount
+| +22
+| +2
+|
+|-
+|41cm Twin Gun Mount
+| +20
+|
+|fit for Nagato-class? Fusou Kai-2?
+|-
+|35.6cm Twin Gun Mount ★max
+| +19
+| +?
+|assumed +4 bonus
+|-
+|Prototype 35.6cm Triple Gun Mount
+| +18
+| +2
+|
+|-
+|38cm Twin Gun Mount Kai
+| +17
+| +3
+| fit for Bismarck?
+|-
+|38cm Twin Gun Mount
+| +16
+| +1
+| fit for Bismarck?
+|-
+|35.6cm Twin Gun Mount (Dazzle)
+| +15
+| +1
+|
+|-
+|35.6cm Twin Gun Mount
+| +15
+|
+|fit for Kongou-class? Ise-class? Fusou-class?
+|}
+===Is my ship's firepower enough?===
+
+Damage formula for daytime shelling:
+*Damage = ([base attack power * pre-cap modifiers] * post-cap modifiers - enemy armor reduction) * ammo modifier
+*Base Attack Power = ship firepower +5
+*Pre-cap modifiers are:
+**Formation modifier:
+***Line Ahead: 100%
+***Double Line: 80%
+***Diamond: 70%
+***Echelon and Line Abreast: 60%
+**Engagement modifier:
+***T-Advantage: 120%
+***Parallel: 100%
+***Head On: 80%
+***T-Disadvantage: 60%
+**Ship health modifier
+***Green or Yellow - 100%
+***Orange - 70%
+***Red - 40%
+*attack power cap for daytime shelling is 150
+*attack power calculation when going over cap is:
+**post cap attack power = 150 + √(pre-cap attack power - 150)
+Because of the way the attack power cap works, attack power above 151 will only result in a marginal increase in damage and is not very efficient. Example: 200 attack power becomes 157, only +6 more than 151.
+
+Ship firepower required to reach the 151 attack power with different formations and engagements, assuming light damage or less:
+
+{| class="wikitable"
+|-
+|
+!T-advan
+!Parallel
+!Head-on
+!T-disad
+|-
+!Line Ahead
+| style="text-align:center;"|'''121'''
+| style="text-align:center;"|'''146'''
+| style="text-align:center;"|'''184'''
+| style="text-align:center;"|247
+|-
+!Double Line
+| style="text-align:center;"|'''153'''
+| style="text-align:center;"|'''184'''
+| style="text-align:center;"|231
+| style="text-align:center;"|310
+|-
+!Diamond
+| style="text-align:center;"|'''175'''
+| style="text-align:center;"|211
+| style="text-align:center;"|265
+| style="text-align:center;"|355
+|-
+!Line Abreast
+| style="text-align:center;"|205
+| style="text-align:center;"|247
+| style="text-align:center;"|310
+| style="text-align:center;"|415
+|}
+Reasonable firepower values in '''bold'''. We can say that reaching the attack power cap is easiest using Line Ahead and equipping Saiun to prevent T-disadvantage. With that setup, '''184 firepower''' is enough to reach the cap in all engagements. '''146 firepower''' for line ahead and at least parallel engagement. Other situations may call on using Double Line, Diamond or not equipping Saiun, in these situations, reaching the attack power cap will be too difficult.
+===Which equipment set-up?===
+
+Damage formula continued:
+*post-cap modifiers are:
+**Critical: 150%
+***no confirmed factors have been found for critical so we can't do anything about it
+**Artillery Spotting Shooting:
+***Main Gun/Main Gun: 150%
+***Main Gun/AP Shell: 130%
+***Main Gun/Radar: 120%
+***Main Gun/Secondary: 110%
+***Double Attack: 120%*2
+The most desirable Artillery Spotting special attack is Double Attack, this requires Main Gun/Main Gun/Seaplane. In cases where one strong attack is preferable to two attacks, there is the Main Gun/Main Gun cut-in, which requires Main Gun/Main Gun/AP Shell/Seaplane. The least desirable is a normal attack which does 100% damage only. This section assumes getting Air Superiority to allow for Artillery Spotting.
+
+Because of this, the most <u>recommended battleship equipment</u> setup are:
+*'''Main Gun/Main Gun/Seaplane/Radar''': double attack and accuracy bonus (radar can be switched to something else)
+*'''Main Gun/Main Gun/Seaplane/AP Shell''': double attack and cut-in. less normal attacks.
+and a third more uncommon setup is:
+*Main Gun/Main Gun/Main Gun/Seaplane: double attack and more firepower.
+
+The first two for all battleships. The triple gun setup if night battle is not a priority, or if on a high luck battleship like Haruna (41 luck), Nagato (32), Ise-class (30) or modernized with Maruyu.
+
+Sample Equipment Setups: (minimum equipment to reach the attack power cap)
+*for the 146 firepower soft cap. (100% with line ahead & parallel)
+**Kirishima with 46cm/41cm/Seaplane/Radar = 150 FP
+**Kirishima with 41cm/35.6cm/Seaplane/Type 91 AP Shell = 147 FP
+**Nagato with 46cm/46cm/Seaplane/Radar = 151 FP
+**Nagato with 41cm/41cm/Seaplane/Type 91 Shell = 147 FP
+**Haruna with 46cm/46cm/Seaplane/Radar = 148 FP
+**Haruna with 46cm/41cm/Seaplane/Type 91 Shell = 150 FP
+**Haruna with 41cm/36.6cm/35.6cm/Seaplane = 146 FP
+**Ise with 46cm/46cm/35.6cm/Seaplane = 146 FP
+**Yamato with any two guns will go over the cap.
+*for the 184 firepower soft cap. (80% with (line ahead & head-on) or (double line & parallel))
+**Yamato with 46cm/41cm/Seaplane/Radar = 185 FP
+**Yamato with 46cm/46cm/Seaplane/Type 91 Shell = 187 FP
+**Kirishima with 46cm/46cm/46cm/seaplane = 182 FP
+**All other ships can go 46cm/46cm/Seaplane/Type 91 Shell and get around 159 firepower.
+*higher firepower soft caps
+**Yamato with 46cm/46cm/Seaplane/Type 91 Shell = 199 FP
+
+Only craftable guns and AP shell were included in the sample setups. Prototype guns, 38cm and Type 1 shells were not included due to their rarity. Please note that for the above sample setups, weapon fit and overweight system was ignored because there isn't enough data to add it to accuracy calculation. As such, these setups may have reduced accuracy.
+
+Here we see that the while 146 firepower can easily be achieved by all battleships, 184 is for Yamato-class only. When there is an 80% modifier, all non-Yamato battleships will benefit from more firepower. 
+===How much damage will I deal?===
+
+Damage formula continued:
+*enemy armor reduction is:
+**random number between armor*2/3 and armor*4/3
+Due to this, when going against high armor enemies, it may be more beneficial to have cut-in rather than double attack. Thus, we must compare 120%*2 against 150%. here are some sample enemies and the expected average damage dealt to them with different post-cap attack power, assuming no ammo penalty.
+*120 for 150 firepower and 80% modifier
+*150 for soft cap
+
+{| class="wikitable"
+|-
+!rowspan="2" |Name
+!rowspan="2" |Armor
+!colspan=3 | 120 Attack Power
+!colspan=3 | 150 Attack Power
+|-
+!Single
+!Double
+!Cut-in
+!Single
+!Double
+!Cut-in
+|-
+! style="text-align:left;"|DD I
+|5
+|115
+|'''278'''
+|175
+|145
+|'''350'''
+|220
+|-
+! style="text-align:left;"|DD NI Late Model
+|29
+|91
+|'''230'''
+|151
+|121
+|'''302'''
+|196
+|-
+! style="text-align:left;"|CL TSU Elite
+|68
+|52
+|'''152'''
+|112
+|82
+|'''224'''
+|157
+|-
+! style="text-align:left;"|CA NE Elite
+|89
+|31
+|'''110'''
+|91
+|61
+|'''182'''
+|136
+|-
+! style="text-align:left;"|BB RU Flagship
+|99
+|21
+|'''90'''
+|'''81'''
+|51
+|'''162'''
+|126
+|-
+! style="text-align:left;"|CV WO Kai Flagship
+|120
+|scratch
+|48
+|'''60'''
+|30
+|'''120'''
+|'''106'''
+|-
+! style="text-align:left;"|BBV RE Elite
+|130
+|scratch
+|28
+|'''50'''
+|20
+|100
+|'''96'''
+|-
+! style="text-align:left;"|Battleship Princess
+|160
+|scratch
+|scratch
+|20
+|scratch
+|42
+|'''66'''
+|}
+Preliminary testing has shown AP shell damage bonus to high armor enemies to be +10~15, this is not included in above table. In '''bold''' are the preferred attack modes against those enemies. Criticals were not considered in the computation.
+
+While proc rate for artillery spotting is not yet fully understood, assuming 50-50 split for double attack, and 33-33-33 split for mixed double attack and cut-in setup, average damage with the mixed setup is greater when enemy armor >70. (computation not shown) As generally, battleships are deployed against high-armor low-evasion enemies, '''it would be best to equip AP shell instead of Radar'''. This assumes other ships in the fleet can deal with high-evasion low-armor enemies, and have LoS equipment.
+
+
+==Torpedo Cruisers, Heavy Cruisers, Light Cruisers, Destroyers - Night Battle Experts==
+While most enemies can be sunk with shelling from battleships, some high-armor high-HP enemies (such as Battleship Princess) will require entering night battle where even more damage can be dealt. The main differences are:
+*engagement and formation modifiers do not apply
+*attack power = firepower + torpedo
+*damage cap is 300
+Because battleships (with the exception of Bismarck drei) have 0 torpedo stat, while at night their attacks remain strong, other ship classes can deal higher damage than them.
+
+Some ships ranked by combined base firepower and base torpedo stat:
+
+{| class="wikitable"
+|-
+!Name
+!Class
+!Fire
+!Torp
+!Night
+!Luck
+!Notes
+|-
+!Kitakami
+|CLT
+|63
+|139
+!202
+|'''30'''
+|can equip Ko-hyoteki
+|-
+!Ooi
+|CLT
+|63
+|139
+!202
+|13
+|can equip Ko-hyoteki
+|-
+!Kiso
+|CLT
+|64
+|110
+!174
+|13
+|can equip Ko-hyoteki
+|-
+!Haguro
+|CA
+|84
+|84
+!168
+|19
+|
+|-
+!Myoukou
+|CA
+|80
+|88
+!168
+|'''32'''
+|
+|-
+!Jintsuu
+|CL
+|70
+|98
+!168
+|13
+|
+|-
+!Yuudachi
+|DD
+|73
+|93
+!166
+|20
+|
+|-
+!Chikuma
+|CAV
+|77
+|83
+!160
+|15
+|can equip SCAMP
+|-
+!Tone
+|CAV
+|77
+|82
+!159
+|14
+|can equip SCAMP
+|-
+!Prinz Eugen
+|CA
+|75
+|84
+!159
+|'''40'''
+|
+|-
+!Nagara
+|CL
+|69
+|89
+!158
+|12
+|
+|-
+!Shimakaze
+|DD
+|59
+|99
+!158
+|12
+|
+|-
+!Ayanami
+|DD
+|70
+|87
+!157
+|'''40'''
+|
+|-
+!Yukikaze
+|DD
+|59
+|89
+!148
+|'''60'''
+|highest base luck
+|-
+!Shigure
+|DD
+|57
+|84
+!141
+|'''50'''
+|
+|-
+!Yamato
+|BB
+|139
+|0
+!139
+|13
+|expensive
+|-
+!Bismarck
+|BB
+|99
+|36
+!135
+|22
+|can equip torpedoes
+|-
+!NAME
+|
+|
+|
+!
+|
+|
+|-
+!NAME
+|
+|
+|
+!
+|
+|
+|-
+!NAME
+|
+|
+|
+!
+|
+|
+|-
+!NAME
+|
+|
+|
+!
+|
+|
+|}
+Here are some equipment that increases either firepower or topedo of the above ships:
+
+
+
+
+
+
+
+
+
+
+
+
+
+TO DO: aircraft carriers, heavy cruisers, night battle, support expedition
+[[Category:Blog posts]]

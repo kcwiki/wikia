@@ -1,0 +1,71 @@
+Hihi~
+
+This time I'm sharing some tips in the form of browser tweaks/extensions for boosting productivities.  Some of you may already be aware of the methodologies but still I hope that some people will find this article useful for their daily TTK duties.
+
+Note that although these tips were aimed at Google Chrome users, they may also work on Chrome based browsers like Opera.  Additional extensions may be required.
+==Searching Shipgirls, Equipments, Bookmarks From The Address Bar==
+===Why would I want it?===
+Half way through reading an article, don't you sometimes get the urge to look up certain equipments/shipgirls or some external sites for cross comparisons?
+
+What do you normally do?  I used to visit KanColle wiki's front page, click on Ship List then Ctrl+F and type in the first few characters of the girl I wanna look up.  This may be trivial most of the time but when you're half way through reading something and you need info quick, a simple lookup like that could be cumbersome.
+
+Another way is to perform a Search by clicking on the magnifying glass icon at the top.  That works great most of the time, but if you're reading an article outside of wikia it may not be that handy afterall.  That's where this article comes in.
+===How do it work?===
+Most browsers comes with options for customising the Search Engines.  Most people treat search engines as a webpage you visit to type something for looking up, but the action can be performed right in your browser's Address Bar.
+
+The concept is very simple and you can find lots of articles by googling something like "search bookmarks chrome" but I'm gonna explain some specific tweaks just for KanColle.
+===Walk me through it!===
+<span style="font-weight:normal;">Since most KanColle players use Google Chrome, I will explain how to add shortcuts to perform Search function in the Address Bar as opposed to navigating through pages to find what you want.</span>
+
+First, '''right-click''' on the Address Bar and click '''Edit search engines...'''
+
+On top you'll see a list of familiar names, leave those alone.  The bottom half is... wait a sec, sites that you've visited in the past?!
+
+Don't freak out, just scroll to the bottom of the list and we'll add the stuff and be done in no time :)
+
+You'll see 3 boxes at the bottom of the list: Add a new search engine, Keyword and URL.  Enter in this boxes:<gallery type="slideshow">
+Search01.png|Right-Click on the Address Bar
+Search01a.png|Enter Name, Keyword and Link as instructed. Click Done.
+Search02.png|The Address Bar turns into site-specific search engine whenever you type Wikia in the Address Bar!
+Search04.png|Search result of the word "Akashi" using this method
+</gallery>
+*1st Box: Enter the name of this Search function.  I call mine '''KanColle Wikia'''.
+*2nd Box: Enter the keyword for calling up this Search function.  Choose something short and easy to remember, I call mine '''wikia'''.
+*3rd Box: Enter the URL string of the Search function.  For this wiki, enter '''http://kancolle.wikia.com/wiki/Special:Search?query=%s'''
+
+Click Done when you finish.  Now to try it out, say if we wanna look up '''Akashi''':
+*Type '''wikia''' (or whatever Keyword you set earlier) in the Address Bar and hit '''Space'''.  You'll notice that the Address Bar changes colour and is waiting for your search term.
+*Type '''Akashi''' and hit Enter.  You'll find Akashi at the top of the search result on KanColle wiki.
+This may feel awkward at first, but it's 1000 times easier to use once you get used to it :)
+
+The only drawback is when you can't remember the name of the item/girls you wanna search for.  Oh well, there's still the "traditional way" to fall back on lol
+===What else can it do?===
+Well, if you're like me who bookmarks a lot but don't have time to manage them, it can be quite a chore to find the correct site when pressed for time.  We can add the Chrome Bookmarks into the search using the same method!
+*'''Right-click''' the Address Bar then click '''Edit Search Engines...'''
+*1st Box (Name): Chrome Bookmarks
+*2nd Box (Keyword): b (or whatever short and easy to remember)
+*3rd Box (URL): '''chrome://bookmarks/?#q=%s'''
+[[File:Search03.png|thumb|Bookmark search by typing "b, Space, poi"]]​And you're done!  Now you can hit "b, Space, Poi" for example to bring up the bookmark for Poi Database (if you have it bookmarked)
+
+You can apply the same principle to other sites too.  Simply visit the site and perform a test search (eg "apple"), copy the URL of the result page and replace the string behind (and including) "apple" with %s and add it to our customised search function.  Test them out, it's quite simple to use :)
+
+'''Important Tips''': A lot of sites are saved in their native titles (ie non-english) and you may wanna add english strings to the end of names when saving bookmarks for future lookups.
+==Chrome Extensions==
+Next I'd like to share 2 Chrome Extensions which I frequently use.
+===Layout Manager===
+[https://chrome.google.com/webstore/detail/layout-manager/nldhhcppalplgopagbhfehfmpmpefkim?utm_source=chrome-app-launcher-info-dialog Layout Manager] saves the positions/dimensions of open windows so that you don't have to manually adjust them each time.
+
+When I play KanColle I open 2 windows: 1 long block (KanColle + side-docked KC3 info pane) and 1 half-screen for KC3 Strategy Room.  Obviously the browser will only remember 1 of the two setups under normal circumstances.
+
+With Layout Manager you can save the configurations and never bother with manual adjustments again.  The only drawback is that it only offers a single save state at the moment as opposed to multiple recall-able profiles.
+===Bulk URL Opener===
+[http://melanto.com/apps/bulk-url-opener/ Bulk URL Opener] opens a list of websites at a single click.  This is handy if you have a list of pages that you wanna open every day (eg Wikia Front Page, Quests, Akashi, etc).
+
+Although some browsers allow users to specify a list of sites to open at start, I personally don't want that - I may not want them everytime I start the browser (eg I just wanna do a quick lookup).
+==="Download Chrome Extension" (Opera)===
+For those wanna install Chrome extensions on Opera browser, check out [https://addons.opera.com/en/extensions/details/download-chrome-extension-9/ Download Chrome Extension" for Opera.  Once installed you can add almost any chrome extensions into Opera by visiting chrome appstore.
+
+(And that's how I play KanColle with KC3 lol)
+==Thoughts?==
+I hope these tips come in handy for someone.  Do you have a tip to share?
+[[Category:Blog posts]]

@@ -1,0 +1,219 @@
+{{Event/MapPageHeader}}
+{{Event/MapInfo
+|en = Pursuit! The 2nd Strike Unit
+|jp = 追撃！第二遊撃部隊
+|tag = E5
+|tag2 = E2
+|romaji = Tsuigeki! Dai-Ni Yūgeki butai
+|mechanics = Striking Force@Striking_Force, Abyssal Combined Fleet@Abyssal Combined Fleet, Land Base Aerial Support@Land Base Aerial Support, LoS Check@Events/Mechanics#LoS_Check, Ship Locking@Events/Mechanics#Ship_Locking, Unlockable Nodes@Events/Mechanics#Node_specific_details,
+|no_hp = true
+|hp_casual = 1050 HP + 2100 HP + 1170 HP
+|hp_easy = 1050 HP + 2100 HP + 1170 HP
+|hp_medium = 1050 HP + 2100 HP + 1360 HP
+|hp_hard = 1050 HP + 2100 HP + 1560 HP
+|show_kills = true
+|kills_all = 3 + 3 + 4
+|kills_casual = ?
+|kills_easy = ?
+|kills_medium = ?
+|kills_hard = ?
+|reward_casual_1 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_casual_1_x = 1
+|reward_casual_2 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_casual_2_x = 1
+|reward_easy_1 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|SK Radar|size=50px}}
+|reward_easy_2_x = 1
+|reward_easy_3 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_easy_3_x = 1
+|reward_medium_1 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_medium_1_x = 1
+|reward_medium_2 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Shiden Kai 4|size=50px}}
+|reward_medium_3_x = 1
+|reward_medium_4 = {{EquipmentCardKai|SK Radar|size=50px}}
+|reward_medium_4_x = 1
+|reward_medium_5 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_medium_5_x = 1
+|reward_hard_1 = {{EquipmentCardKai|Emergency Repair Goddess|size=50px}}
+|reward_hard_1_x = 2
+|reward_hard_2 = [[File:Reinforcement Expansion.png{{!}}50px{{!}}link=Reinforcement Expansion]]
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Shiden Kai 4|size=50px}}
+|reward_hard_3_x = 1
+|reward_hard_4 = {{EquipmentCardKai|SK + SG Radar|size=50px}}
+|reward_hard_4_x = 1
+|reward_hard_5 = [[File:Medal.png{{!}}50px{{!}}link=Medal]]
+|reward_hard_5_x = 1
+}}
+{{MapBranchingTable
+|title = E-6 Branching Rules
+|order = 0,H,O,P,R,N,L,Q
+|0 -> 1 = * Do not meet the requirement to start at 2.
+|0 -> 2 = * Everyone in the fleet has the Kurita shiplock tag (Green).
+
+|H -> G = * Pass the LoS check.
+|H -> M/empty = * Fail the LoS check.
+
+|O -> K = 
+* Meet one of the following requirements:
+** Fleet started at point 2.
+** Amount of DD ≦ 1 '''AND''' do not meet the requirement to go to P.
+|O -> M/empty = 
+* Slow Fleet (Overrides all other branching rules)
+|O -> P = 
+* Meet all of the following requirements:
+** Amount of DD ≧ 2 during the 1st Phase
+** Fleet contains AV after the 1st Phase
+** Fast Fleet
+** Fleet started at point 1.
+|O -> R = 
+* Meet all of the following requirements:
+** Amount of DD ≧ 2 (Easy/Medium/Hard)
+** Fast Fleet
+** Fleet started at point 1.
+** Fleet contains no AV
+** Node R is unlocked.
+** Do not meet the requirements to go to P.
+
+|P -> U = * Pass the LoS check.
+|P -> S/empty = * Fail the LoS check.
+
+|R -> T/empty = * Fail the LoS check.
+|R -> W = * Pass the LoS check.
+
+|N/empty -> L, O = * Active branching
+
+|L -> E/empty = * Fail the LoS check.
+|L -> I = * Pass the LoS check, but fail to meet the requirements to go to Q.
+|L -> Q = 
+* Meet all of the following requirements:
+** Pass the LoS check.
+** Amount of DD ≧ 2
+** Node Q is unlocked.
+
+|Q -> T/empty = * Fail the LoS check.
+|Q -> V = * Pass the LoS check.
+}}
+===Historical Fleet: The 2nd Strike Unit===
+The same fleet that has participated in Operation Ta-gō Kai (E-5). The what-if scenario historical fleet if the Kurita fleet successfully defeated the Leyte Gulf Landing Forces and succeeded in synchronizing the movements with Shima. Members of this fleet will gain a post-cap modifier of 120% on all boss nodes.
+* CA: {{ShipLink|Ashigara Kai Ni|text=Ashigara}}, {{ShipLink|Nachi Kai Ni|text=Nachi}}
+* CL: {{ShipLink|Kinu Kai Ni|text=Kinu}}
+* DD: {{ShipLink|Akebono Kai|text=Akebono}}, {{ShipLink|Asashimo}}, {{ShipLink|Hatsuharu Kai Ni|text=Hatsuharu}}, {{ShipLink|Hatsushimo Kai Ni|text=Hatsushimo}}, {{ShipLink|Kasumi Kai Ni|text=Kasumi}}, {{ShipLink|Naganami Kai Ni|text=Naganami}}, {{ShipLink|Okinami}}, {{ShipLink|Shimakaze}}, {{ShipLink|Ushio Kai Ni|text=Ushio}}, {{ShipLink|Uranami}}, {{ShipLink|Wakaba}}
+* DE: {{ShipLink|Shimushu}}
+
+==Map Guide==
+The map has 3 boss gauges and 4-ish phases. Single fleets must be used; 3rd fleet strike forces is recommended. Other limitations are as followed:
+*Slow battleships BB(V) and aircraft carriers CV(L/B) cannot be sortied to this map.
+*Three LBAS bases are available.
+**All three bosses require a range of 6 to reach (no correlation).
+*Friend Fleets will assist you only on the 1st and 3rd Boss.
+*There are two starting points for 3 bosses.
+**1st and 3rd bosses are reached from Starting Point 1
+**2nd boss is reached from Starting Point 2
+
+===Ship-tag rules===
+There are two tags for this map: Green (Kurita) and Purple (Shima) tag. First and foremost, '''any untagged ship you send to this map receives the PURPLE tag'''. Your starting location depends on your ship-tag and difficulty. There are two starting points: 1 (top) and 2 (bottom)
+*'''For Hard and Medium''' (ship-lock applies)
+**You are '''NOT''' allowed to mix purple and green tags. It MUST be solely purple or green.
+***If All Purple: You will start at Starting Point 1
+***If All Green: You will start at Starting Point 2
+*'''For Easy and Casual''' (ship-lock DOES NOT apply)
+**You are allowed to mix purple and green (also grey and blue) tags BUT ONLY for Starting Point 1!
+***If All Purple, Mixed, or untagged: Starting Point 1
+***If All Green: Starting Point 2
+**Therefore, you MUST receive the Green tag from either E-2 or E-4 if you want to use that ship for starting point 2. The easiest way to apply green tag is to sortie those ships to E-2 using 1st fleet. Single fleet goes north and will be given green tag.
+*To Put it as simple as possible
+**'''E-6 requires ALL-GREEN TAGs for starting in Start Point 2 on ALL DIFFICULTIES. Ship-lock still exists for above Easy'''
+
+==Phases==
+There are technically 4 phases.
+#Sink {{ShipLink|Seaplane Tender Princess II|text=Seaplane Tender Princess}} at node {{Event/Route|U|red}} with a Shima Strike Force.
+#Unlock the Second Boss; use Kurita Strike Force and:
+#*'''Casual''': do NOTHING! Already unlocked!
+#*'''Easy''': Reach Node I
+#*'''Medium''': S-rank Node I and reach Node K
+#*'''Hard''': S-rank Node I and A+-rank Node K
+#Sink {{ShipLink|Battleship Princess Kai|text=Battleship Princess Kai}} at node {{Event/Route|V|red}} with a Kurita Strike Force.
+#Unlock the Third Boss by obtaining (needs further confirmation):
+#*'''Casual/Easy''': NOTHING! Already unlocked!
+#*'''Medium/Hard''': Obtain 1 (Medium) or 3 (Hard) Air superiority (AS) from LBAS Air Raid; damage taken is irrelevant.
+#**Using single submarine with Purple tag allows you to start at Point 1 for efficiency.
+#Sink {{ShipLink|Aircraft Carrier Water Demon|text=Aircraft Carrier Water Demon}} at node {{Event/Route|W|red}} with a Shima Strike Force.
+===First Boss: {{ShipLink|Seaplane Tender Princess II|text=Seaplane Tender Princess}}===
+Proceed tenderly, this phase requires patience.
+*'''PURPLE-TAGGED SHIPS ONLY''' (does not apply to Easy/Casual, see 'Map Guide')
+*'''Composition:''' 0-2 FBB / 2-4 DD / 0-2 CA(V) / 0-2 XX
+*'''Route:'''{{Event/Route|1|black|A|lightblue|B|lightblue|C|orange|D|lightblue|H|red|G|red|O|red|P|orange|U|red}}
+*Friend fleets appears during the night battle.
+*Historical Shima Fleet members have special post-cap modifiers at the boss. Bringing Ashigara and/or Nachi is recommended.
+*Two destroyers are required to route to the boss from O node; therefore, use your Strike Force Command Facility (SFCF) carefully.
+*You may have to rely on AI (Air Incapability) Setup as the boss has high fighter power.
+*A Submarine (SS) can be used to help absorb damages, especially at node O and boss. If you reach the boss node, she can force the entire enemy's fleet (11/12 at final) to attack her
+**The Submarine '''MUST BE FAST'''. You are required to equip both Turbine ({{EquipmentLink|Improved Kanhon Type Turbine}}) and at least one Boiler ({{EquipmentLink|Enhanced Kanhon Type Boiler}} or {{EquipmentLink|New Model High Temperature High Pressure Boiler}}
+*CLT can be used although the maximum number is unsure.
+*Harder difficulties may need to bring 1 OASW to help with the Sub node. So-class Flagship has high [[Combat/Accuracy_and_Evasion#Torpedo_Attacks|innate torpedo accuracy]] that allows them to hit you even in Echelon formation; combined with high torpedo stat, this hurts.
+**On the other hand, if possible, one LBAS with Toukai can be dedicated to sinking those submarines. Vanguard formation should be used to increase evasion.
+
+===Second Boss: {{ShipLink|Battleship Princess Kai|text=Battleship Princess Kai}}===
+Battling this boss will not be easy, but the path to her is smoother. Using both line-ahead and node support is recommended. The main damage of all 3 nodes are from their closing torpedo more than their shelling; it is best to eliminate them before that.
+*'''For Unlocking''' (see above):
+**'''Composition:''' 0-2 FBB / 0-2 DD / 0-2 CA(V) / 0-3 XX
+***If you start from Point 2, anything is fine.
+***Fleet must consist of Green-tagged ships ONLY!
+**'''Route 1:'''{{Event/Route|2|black|F|lightblue|J|red|N|lightblue|O|red|K|red}}
+***There are carriers in this path. Consider Seaplane fighters and AACI
+**'''Route 2:'''{{Event/Route|2|black|F|lightblue|J|red|N|lightblue|L|red|I|red}}
+***There are no carriers in this path. Full Bomber LBAS is possible.
+**'''Route 3:'''{{Event/Route|1|black|A|lightblue|B|lightblue|C|orange|D|lightblue|H|red|G|red|O|red|K|red}}
+***For people who wanted to use their Purple-tagged or Mix-tagged fleets. Anything is fine as long as you '''have less than 2 DD'''
+*'''For Boss''':
+**'''GREEN-TAGGED SHIPS ONLY!''' (Applies to '''ALL''' difficulty)
+**'''Composition:''' 1-2 FBB / 2-4 DD / 0-2 CA(V) / 1 XX
+**{{Event/Route|2|black|F|lightblue|J|red|N|lightblue|L|red|Q|red|V|red}}
+*Your 2 DDs must survive till node Q because node L is where the 2 DD routing occurs.
+*At least 1 fBB is recommended to provide enough shelling power to finish the battle before closing torpedo.
+*Unlike Phase 1 and 3, submarine in phase 2 is not recommended as it won't support much at boss (BB Hime can still hit you) nor at pre-boss (only opening and closing torpedo).
+*Most nodes lack any air power, so bringing one italian FBB ({{ShipLink|Roma Kai}} or {{ShipLink|Italia}}) or CA(V) can grant air supremacy.
+**On Hard, a carrier joins for the boss's final formation. Bringing several seaplane fighters to achieve Air Superiority is recommended.
+*CLT can be used although the maximum number is unsure.
+
+===Third Boss: {{ShipLink|Aircraft Carrier Water Demon|text=Aircraft Carrier Water Demon}}===
+*'''PURPLE-TAGGED SHIPS ONLY!''' (does not apply to Easy/Casual, see 'Map Guide')
+Watering her gauge requires persistence.
+*'''For Unlocking Boss''', (see above)
+*'''Composition:''' 2-3 FBB / 0-1 CA / 0-1 CAV / 2 DD / 0-1 XX
+*'''Route:'''{{Event/Route|1|black|A|lightblue|B|lightblue|C|orange|D|lightblue|H|red|G|red|O|red|R|orange|W|red}}
+*Two destroyers are required to route to the boss from O node; therefore, use your Strike Force Command Facility (SFCF) carefully.
+*Friend fleets appears during the night battle.
+*Historical Shima Fleet members have special post-cap modifiers at the boss. Bringing Ashigara and/or Nachi is recommended.
+*On Easy and above, a {{ShipLink|Battleship Princess}} will appear in the boss fleet during the final kill.
+*Sending land bases to the boss node is recommended due to the special damage modifiers on Battleship Princesses land base bombers received.
+*Double attacks and Artillery Spotting setups on everyone are recommended. The CAV may need to Seaplane Fighter mule especially on harder difficulties. Italian FBBs may be considered here in order to bring in more Air Power.
+*Same as the First Boss, the submarine can be used for absorbing damage albeit less effective due to the boss being harder to kill and having one less ship weakens you.
+**The Submarine '''MUST BE FAST'''. You are required to equip both Turbine ({{EquipmentLink|Improved Kanhon Type Turbine}}) and at least one Boiler ({{EquipmentLink|Enhanced Kanhon Type Boiler}} or {{EquipmentLink|New Model High Temperature High Pressure Boiler}}
+*CLT can be used although the maximum number is unsure.
+
+===Boss Farming===
+*{{ShipLink|Tashkent|text=Ташкент}} only drops at the third boss (A or S rank). Because increasing map difficulty resets all gauges, farming prior to clearing is difficult.
+*In addition, after clearing the map enemy raids on player land bases will not occur, making post-clear farming more viable.
+
+==[[Friend Fleet]]==
+The following friend fleets can appear in this map.
+
+{{:Friend Fleet/Winter 2018/E-6}}
+
+==Map Progression==
+{{#tag:gallery|
+Winter 2018 Event E-6 Map p1.png{{!}}Map during HP phase at node U.
+Winter 2018 Event E-6 Map p2.png{{!}}Map during HP phase at node V.
+Winter 2018 Event E-6 Map.png{{!}}Full map during HP phase at node W.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=200
+}}
+
+==LBAS Flight Range==
+[[File:Winter_2018_Event_E6 LBAS_Flight_Range.png|500px|center]]
+
+{{Event/MapPageFooter}}

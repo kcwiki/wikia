@@ -1,0 +1,403 @@
+'''>> This is a ''BACK UP'' for the page Artillery Spotting.  >> [http://kancolle.wikia.com/wiki/Artillery_Spotting Redirect to the page]'''
+
+'''>> This is a ''BACK UP'' for the page Artillery Spotting.  >> [http://kancolle.wikia.com/wiki/Artillery_Spotting Redirect to the page]'''
+{{Under Construction
+|Desc   = under construction, therefore the content below are subject to change
+|Page Adopted   = Homuhomu123
+}}
+
+== Introduction: ==
+This page studies the trigger rates & effectiveness of Artillery Spotting (弾着観測射撃), based on preliminary in-game testing. An optimal use of Artillery Spotting could considerably improve your fleet's daytime combat performances.
+
+In brief, Artillery Spotting ''(aka. Day Battle Special Attacks) ''consists of two types of attack: Cut-In '''[CI] '''& Double Attack '''[DA]'''. When activated, the attacking ship receives a damage output ([http://kancolle.wikia.com/wiki/Combat#Post-Cap_Modifiers post-cap]) & accuracy bonus. You need to achieve at least Air superiority (AS) during aerial combat, and at least 1 [http://kancolle.wikia.com/wiki/List_of_Seaplanes_by_stats seaplane] equipped on the ship. The remaining plane count can't be 0. More details could be found on the page [http://kancolle.wikia.com/wiki/Combat#Day_Battle_Special_Attacks_.28Artillery_Spotting.29 Game Mechanics -> Artillery Spotting] .
+
+
+
+== Typical Set Ups for Artillery Spotting: ==
+All the typical set ups are listed below, click [http://kancolle.wikia.com/wiki/Combat#Common_Setups here] to see more possible combinations. Notice that any other combination will NOT change their attack modes or trigger rates. The damage modifiers are all applied post-cap (150). 
+==== Double Attack ====
+* {{RedGunMedium}}{{RedGunMedium}}{{Seaplane}} ....................2 x [http://kancolle.wikia.com/wiki/List_of_Main_Guns_by_stats Main] + Seaplane..........................................(basic setup)
+* {{RedGunMedium}}{{RedGunMedium}}{{Seaplane}}{{Seaplane}}............2 x Main + Seaplane + '''Seaplane'''
+* {{RedGunMedium}}{{RedGunMedium}}{{Seaplane}}{{Radar}}............2 x Main + Seaplane + '''[http://kancolle.wikia.com/wiki/List_of_Radars_by_stats Radar]'''        
+
+''>> DA Damage: 120% x 2. More powerful for ships with higher activation chances & shelling accuracy. Double attack = An extra chance to hit or crit the target.''        
+
+''>> Set up #2 and #3 gives ~10% extra trigger chances on DA.''        
+
+==== Cut-In ====
+* {{RedGunMedium}}{{YellowGun}}{{Seaplane}}..........................1 x Main + [http://kancolle.wikia.com/wiki/List_of_Secondary_Guns_by_stats Sec] + Seaplane....................................(basic setup)
+* {{RedGunMedium}}{{YellowGun}}{{Seaplane}}{{Radar}}.................1 x Main + Sec + Seaplane +''' Radar'''.......................(highest CI chance)
+* {{RedGunHeavy}}{{YellowGun}}{{Seaplane}}{{RedAmmo}}.................1 x Main + Sec + Seaplane + '''[http://kancolle.wikia.com/wiki/List_of_Shells_by_stats AP shell]'''
+''>> CI Damage: 110% / 120% / 130%. Works well for ships with high firepower while giving more chances for Artillery Spotting.''
+
+''>> Set up #2 triggers either radar CI (120%).or secondary gun CI (110%).''
+
+''>>Set up #3 triggers either AP shell CI (130%) or secondary gun CI (110%). Highest base trigger chances, less dependent on FLoS.''
+
+==== Hybrid (DA+CI) ====
+* {{RedGunMedium}}{{RedGunMedium}}{{YellowGun}}{{Seaplane}}......................2 x Main + '''Sec''' + [http://kancolle.wikia.com/wiki/List_of_Seaplanes_by_stats Seaplane] 
+* {{RedGunHeavy}}{{RedGunHeavy}}{{RedAmmo}}{{Seaplane}}......................2 x Main + '''AP shell''' + Seaplane..........................(most powerful)
+''>> CI Damage: 110% / 150%. DA Damage 120% x 2. Both gives the highest base trigger chances (more dependent on FLoS).''
+
+''>> Set up #1 triggers either DA (120% x 2) or secondary gun CI (110%).''
+
+''>> Set up #2 triggers either CI (130%) or DA (120% x 2).''
+
+
+
+== The Trigger Chance of Artillery Spotting: (Beta ver.) ==
+Possible factors are listed below, followed by their '''''estimated''''' effects from experiments. These are best fit values from experiments, ''might ''be different from the actual ones, but they do give good estimates on the activation rates. To see how effects from each factor were evaluated, you may consult [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project Mid-Term Report on the ASTRE Project].  
+
+The first 5 factors are assumed to have more solid basis:  
+# '''<u>Being the flagship / </u>'''旗艦  (+15% on both rates)  
+# '''<u>Radar & type / </u>'''電探  (+30% CI chance, +10% DA chance, maximum)  
+# '''<u>Air control state (AS. AS+) / </u>'''制空権の状態  (-12% on both if only Air Superiority (AS) is achieved)
+# '''<u>Fleet total LoS (FLoS) / </u>'''艦隊合計索敵値  (+5~10% trigger chance per 100 additional FLoS, depending on the setup)
+# <u>'''LoS stat on Seaplane / '''</u>水上機の索敵補正値  (minimal effects)
+The following factors have negligible effects on the trigger rates:
+*'''Type / number of caliber guns''' / 砲種 / 砲の数 (to be further evaluated)
+* '''Health state / 損傷 '''([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Preliminary_Study_on_the_Health_State_Modifier_(DA) Negligible effect] on DA chance; Currently no test on CI chance)
+The following factors ''might'' have an effect on the trigger rates:
+# '''Fatigue / 疲労度'''  (No effect ?) 
+# '''Level / レベル '''(Inconclusive ?)
+# '''Formation / 陣形'''
+
+<br> 
+
+=== Detailed Explanation: ===
+1. Before we start, let's assume a ''standard situation'', in which '''''Fleet total LoS = 300,''''' test ships are ''beyond minor damage(小破未満) and morale condition = 49''. Fleet formation'' Line Ahead'', and ''Air Supremacy (AS+)'' is achieved. Based on preliminary test results from [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Translation_on_Kuubowokyuu%27s_Exp%27ts_on_the_Trigger_Rates_of_Artillery_Spotting 艦これ-チラ裏検証] & [http://kancolle.wikia.com/wiki/User:Homuhomu123#-_Homu_Test:_Trigger_Rates_of_Artillery_Spotting_.2F_.E3.83.9B.E3.83.A0.E3.83.86.E3.82.B9.E3.83.88.EF.BC.9A.E5.BC.BE.E7.9D.80.E8.A6.B3.E6.B8.AC.E5.B0.84.E6.92.83.E3.81.AB.E3.81.A4.E3.81.84.E3.81.A6 Homu Test], we may come up with the following hypothesis: 
+
+- BB(V) / CA(V) equipped with 2 x Main + 1 Seaplane has '''DA rate ~ 50% '''
+
+- BB(V) / CA(V) equipped with ''1 x Main + Secondary'' ''+ Seaplane'' has '''''CI rate ~ 50%'''''
+
+
+
+2. As '''fleet total LoS''' increases from 300 -> 400, the trigger rates increase slightly: ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#Fleet_total_LoS_.28FLoS.29 source])
+
+- BB(V):  DA rate + 8%, per 100 additional FLoS    
+
+- CA(V):  DA rate + 6%, per 100 additional FLoS  ~ ?
+
+- BB(V) & CA(V):  Cut-In chance + 10%, per 100 additional FLoS
+
+
+
+3. If an '''additional seaplane''' is added onto the 4th slot: ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#.5BDA.5D_3 source])
+
+- DA rate +6% 
+
+- CI rate +0%  ~ ?  
+
+
+
+4. If we use a '''radar''' on the 4th slot''',''' and compare it with the standard situation: ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#Fourth_Slot_Equipment_.28Radar.2C_AP_Shell_or_Extra_Seaplane.29 source])
+
+- DA rate rises by 3% ~ 10%
+
+- CI rate rises by ~30%.
+
+===== - List of Radars with Estimated Artillery Spotting Rate Modifier =====
+{| class="article-table" style="width: 500px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |
+! scope="col" |
+''CI chance bonus Estimate''
+! scope="col" |
+''LoS stat''
+! scope="col" |
+DA chance bonus Estimate
+! scope="col" |
+Accuracy stat
+|-
+|[http://kancolle.wikia.com/wiki/Type_22_Surface_RADAR No.22 (S) Surface]
+|''+26%''
+|''+5''
+|<nowiki>+3%</nowiki>
+|<nowiki>+3</nowiki>
+|-
+|[http://kancolle.wikia.com/wiki/Type_33_Surface_RADAR No.33 (S) Surface]
+|
+|''+7''
+|<nowiki>+3%</nowiki>
+|<nowiki>+5</nowiki>
+|-
+|[http://kancolle.wikia.com/wiki/Type_22_Surface_RADAR_Kai_4 No.22 (S) Surface Kai4]
+|
+|''+5''
+|
+|<nowiki>+8</nowiki>
+|-
+
+|'''[http://kancolle.wikia.com/wiki/Type_32_Surface_RADAR No.32 (L) Surface]'''
+|'''''+30%'''''
+|'''''+10'''''
+|'''+10%'''
+|'''+8'''
+|-
+|[http://kancolle.wikia.com/wiki/FuMO25_Radar FuMO25 (L) Radar]
+|''+26% ''
+|''+9''
+|<nowiki>+6%</nowiki>
+|<nowiki>+10</nowiki>
+|-
+|[http://kancolle.wikia.com/wiki/Type_14_Air_RADAR No.14 (L) Air Radar]
+|''+30%''
+|''+5''
+|<nowiki>+3%</nowiki>
+|<nowiki>+4</nowiki>
+|-
+|[http://kancolle.wikia.com/wiki/Type_21_Air_RADAR No.21 (L) Air Radar]
+|''+22%  ''
+|''+4''
+|
+|<nowiki>+2</nowiki>
+|}
+
+
+
+5. Different seaplane scouts ''may'' vary slightly in their DA chance bonus: ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#Type_of_Seaplane source]) 
+
+- '''Type 0 Observation Plane''' & '''Prototype Seiran''' ''(+ 6 LoS)'' give slightly higher bonus ?
+
+- Night Scout ''(+ 3 LoS)'' provides slightly less bonus ?
+
+- Negligible effect on CI chance. 
+
+===== - List of Seaplanes with Estimated DA Rate Modifier (Rough estimates) =====
+{| class="article-table" style="width: 500px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |
+! scope="col" |
+LoS stat
+! scope="col" |
+DA chance bonus Estimate
+! scope="col" |
+Accuracy stat
+|-
+|[http://kancolle.wikia.com/wiki/Type_98_Recon_Seaplane_(Night_Scout) Night Scout]
+|'''+3'''
+|'''-2%  '''
+|<nowiki>+1</nowiki>
+|-
+|[http://kancolle.wikia.com/wiki/Type_0_Recon_Seaplane Type 0 Recon]
+|'''+5'''
+|'''+0% '''
+|<nowiki>+1</nowiki>
+|-
+|[http://kancolle.wikia.com/wiki/Zuiun_(Auspicious_Clouds) Zuiun]
+|'''+6'''
+|
+|<nowiki>+1</nowiki>
+|-
+|[http://kancolle.wikia.com/wiki/Type_0_Observation_Seaplane Type 0 Observation]
+|'''+6'''
+|'''+2%  '''
+|<nowiki>+2</nowiki>
+|-
+|[http://kancolle.wikia.com/wiki/Prototype_Seiran Prototype Seiran]
+|'''+6'''
+|'''+2%  '''
+|<nowiki>+1</nowiki>
+|}
+
+
+
+6. For BB(V)s, radars could be replaced by '''AP Shells''' for a cut-in setup (Main + Sec / AP / Seaplane), which gives ~20% trigger chance bonus on CI ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#.5BCI.5D_3 source]). However, you could also use a''' <u>hybrid set up</u>''' (2*Main + AP  or  2*Main + Sec.Gun). In the standard situation, the combined Artillery Spotting chance is around '''70%'''. 
+
+- AP shell hybrid setup:                                   ''CI = ~40% & ''DA = ~30%
+
+- Secondary gun hybrid setup:                          ''CI = ~50% & ''DA = ~20%.  ?
+
+- For hybrid setup, every 100 additional LoS <u>''will only increase CI chances by 5%.''</u>'' ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#.5BHYBRID.5D source])''
+
+- Replacing Type 0 Recon by ''<u>Type 0 Observation Seaplane</u>'' will increase DA rate by ''3%. ? ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#.5BHYBRID.5D_4 source])'' 
+
+
+
+7. If Air Superiority [AS] rather than '''Air Supremacy [AS+]''', then both rates fall significantly: ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#Air_Control_State_.28AS_vs._AS.2B.29 source])
+
+- Both CI & DA chance falls by at least 12%
+
+- In the case of a hybrid setup, CI chance falls by 11% while DA rate -7%. ?
+
+- If you're using the hybrid setup, it's more recommended to achieve Air Supremacy (AS+) for your fleet.
+
+
+
+8. The '''flagship''' has a significantly higher chance (+15%) of triggering Artillery Spotting: ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Mid-Term_Report_on_the_ASTRE_Project#Flagship_Status source]) 
+
+- In the case of a hybrid setup, CI chance +7.5% while DA rate +7.5%. ?
+
+===<nowiki/>===
+[[File:-チラ裏検証-.jpg|none|thumb|800x800px]]
+
+Image source: [http://kankoregouchin.blog.fc2.com/blog-entry-23.html 艦これ-チラ裏検証-]
+. 
+
+Explanation: Blue = DA, Yellow = CI, Brown = Single attacks.
+# ''TOP LEFT: Trigger rates for flagship (outer) & companion ship (inner) with hybrid setup''
+# ''TOP RIGHT: The plotting of artillery spotting rate versus fleet total LoS (flagship status &/or equipment bonus NOT excluded) ''
+# ''BOTTOM LEFT: Flagship & her companion ships with DA basic setup.''
+# ''BOTTOM RIGHT: Flagship & her companion ships with CI basic setup. ''
+
+
+
+== Artillery Spotting Trigger Rate Estimate: (Beta ver.) ==
+NOTE: As mentioned before, these calculation only serves as rough estimates on your ship's artillery spotting chances. More credible tests (#ATK > 170 for p > 80%, while #ATK > 256 for p < 60%, minimun) are required to come up with a better formula. Deviations from actual test results are supposed to be less than 5%, otherwise reworking on the formula should be considered. This does not include effects from HP status(小破・中破), and undetermined factors like formation & special ships / maps, etc. The estimates on which the true probability is closer to 50% will be less accurate.
+
+Here's an example calculation in chart format, with sign convention:
+{| class="article-table" style="width: 500px;" border="0" cellpadding="1" cellspacing="1"
+|-
+! scope="col" |
+Base Rate 
+! scope="col" |
+Flagship Status
+! scope="col" |
+Air Superiority (AS) Penalty
+! scope="col" |
+Radar Modifier
+! scope="col" |
+Fleet LoS Modifier
+! scope="col" |
+Seaplane Modifier
+|-
+|50%
+|
+<nowiki>+15%</nowiki>
+|
+<nowiki>-12%</nowiki>
+|
+[+30%]
+|
+(+10%)
+|
+<0%>
+|}
+==== Sample Calculation for DA: ====
+1)  Fuso Kai, AS+, FLoS = 300, equipped with 2 main, #32 radar & Zuiun. will have a:
+* DA chance of ...
+* 50%''(Base)'' + 10%''[Radar Modifier] ''+ 0%''(LoS Modifier) +1%<Seaplane>'' = '''61%'''
+
+
+2)  Prinz Eugen Kai, AS+, FLoS = 300, equipped with 2 main, FuMO32 & Ar196 will have a:
+* DA chance of ...
+* 50%''(Base)''+ 8%''[Radar Modifier]''+ 0%''(LoS Modifier)'' +1''%<Seaplane> ''= '''59%'''<nowiki/>'''<nowiki/>'''
+
+
+3)  Chikuma Kai, AS+, FLoS = 400, equipped with 2 main, #22 radar & Type 0 Observation will have a:
+* DA chance of ...
+* 50%''(Base)''+ 3%''[Radar Modifier]''+ 6%''(LoS Modifier) ''+2''%<Seaplane> ''= '''61%'''
+
+
+4)  Haruna Kai, {flagship}, AS+, FLoS = 300, equipped with 2 main, #22 radar & Type 0 Recon will have a:
+* DA chance of ...
+* 50%''(Base)''+ 15%''{Flagship Modifier}'' + 3%''[Radar Modifier]''+ 0%''(LoS Modifier) ''= '''68%'''
+
+
+5)  Mutsu Kai, {flagship}, '''AS''', FLoS = 300, equipped with 2 main guns, #22 radar & Type 0 Recon will have a:
+* DA chance of ...
+* 50%''(BB Base)''+ 15%''{Flagship Modifier} - 12%(Air Superiority)'' + 3%''[Radar Modifier]''+ 0%''(LoS Modifier)''= '''56%'''
+
+
+
+==== Sample Calculation for CI: ====
+1)  Fuso Kai, AS+, FLoS = 300, equipped with 1 main + 1 sec, #22 Surface radar & seaplane will have a:
+* CI chance of ... 
+* 50%''(<s>BB</s> Base)''+ 26%''[Radar Modifier]''+ 0%''(LoS Modifier) ''= '''76%'''
+
+
+2)  Atago Kai, AS+, FLoS = 300, equipped with 1 main + 1 sec, FuMO25 radar & seaplane will have a:
+* CI chance of ...
+* 50%''(<s>CA</s> Base)''+ 26%''[Radar Modifier]''+ 0%''(LoS Modifier) ''= '''76%'''
+
+
+3)  Mutsu Kai, AS+, FLoS = 400, equipped with 1 main + sec, AP shell & seaplane will have a:
+* CI chance of ...
+* 50%''(<s>BB</s> Base)''+ 20%''[AP Shell Modifier]''+ 10%''(LoS Modifier) ''= '''80%'''
+
+
+4)  Kumano Kai, AS+, FLoS = 400, equipped with 1 main + 1sec, #32 Surface radar & seaplane will have a:
+* CI chance of ...
+* 50%''(<s>CA</s> Base)''+ 30%''[Radar Modifier]''+ 10%''(LoS Modifier)''= '''90%'''
+
+
+
+==== Sample Calculation for Hybrid Setup: ====
+1)  Mutsu Kai, AS+, FLoS = 400, Type 0 Recon, AP shell setup:
+* Total artillery spotting rate = 70%''(BASE)'' + 5%''(LoS Modifier)'' = '''75%'''.
+** CI% = 40%''(AP BASE)'' + 5%''(LoS Modifier)'' = '''''45%'''''
+** DA% = 30%''(AP BASE) = '''30%'''''
+
+
+2)  Kongou Kai Ni, AS+, FLoS = 400, Type 0 Obsv., AP shell setup:
+* Total artillery spotting rate = 70%''(BASE) ''+ 5%''(LoS Modifier) + 3%<Type 0 Obsv.> ''= '''78%'''
+** CI% = 40%''(AP BASE) ''+ 5%(LoS Modifier) ='' '''45%'''''
+** DA% = 30%''(AP BASE) + 3%(Obsv.Seaplane) = '''33%'''''
+
+
+3) Nagato Kai, '''AS''', FLoS = 400, Type 0 Obsv., AP shell setup:
+* Total artillery spotting rate = 70%''(BASE) - ''18%''(Air Superiority)''+ 5%''(LoS Modifier) + 3%<Type 0 Obsv.> ''= '''60%'''
+** CI% = 45%''(AP BASE) - ''11%''(Air Superiority)''+ 5%(LoS) = '''''34%'''''
+** DA% = 30%''(AP BASE) - ''7%''(Air Superiority)+ 3%(Obsv.Seaplane) = '''26%'''''
+
+
+
+== Effectiveness of Artillery Spotting ==
+=== DA: ===
+- Lower activation rate compared to daytime CI.  
+
+- If each attack is counted separately, DA increases shelling accuracy ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Preliminary_Study_on_the_Effects_of_Leveling_%26_FLoS_Difference#Do_Double_Attacks_Increase_Your_Shelling_Accuracy_.3F source], scratches are not counted). 
+
+- More dependent on accuracy if you wish to maximize the damage output ('''120% post-cap''' x 2 hits)
+
+- <u>For CA(V) using DA setup + radar</u>: ({{RedGunMedium}}{{RedGunMedium}}{{Seaplane}}{{Radar}}) 
+* If head-on, T-disadvantage, DA would usually be a double-scratch on the enemy with heavy armor (unless critical).
+- <u>For BB(V) using DA setup + radar</u>: ({{RedGunHeavy}}{{RedGunHeavy}}{{Seaplane}}{{Radar}}) 
+* If high activation rate guaranteed (eg. flagship, FLoS >500), DA is recommended for enemy weaker than [http://kancolle.wikia.com/wiki/Battleship_Ru-Class Ru-Class Battleships]. ([http://kancolle.wikia.com/wiki/User_blog:Nainodel/All_About_Firepower#How_much_damage_will_I_deal.3F source]) 
+* In another word, if either attack could wreck the enemy, preferably using DA due to higher chance of hitting the target.
+* '''''AP shells''''' are accessible to BB(V), but provides a lower base DA chance (more Cut-In expected).
+* When facing '''extremely''' tough enemies at the boss node (eg. [http://kancolle.wikia.com/wiki/Battleship_Princess Battle Princess], [http://kancolle.wikia.com/wiki/Battleship_Water_Demon Water Demon]), DA is preferred for non-Yamato class battleships. After 3 pre-boss battles, their attack powers could barely hit 160 (see "remaining ammo modifier"). Even if they do, the resulting damage after armor reduction would be very small numbers. In this case, DA will be a '''double scratch''' on the target, causing ~10% of the target's current HP as damage. For [http://kancolle.wikia.com/wiki/Battleship_Water_Demon Water Demon], it will be 40+ damage per hit.
+
+
+=== CI: ===
+- Activate frequently during daytime battle (w/ radar), more reliable trigger-rate-wisely.
+
+- It gives accuracy boost. ([http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Evaluation_of_Radar_Modifiers_on_Cut-In_Chance#.5B_Exp.27t_H_.5D source 1], [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Evaluation_of_Radar_Modifiers_on_Cut-In_Chance#.5B_Exp.27t_J_.5D_2 2])
+
+- <u>For CA(V) using CI setup + radar</u>: ({{RedGunMedium}}{{YellowGun}}{{Seaplane}}{{Radar}}) 
+* Maximum damage is '''''120% post cap''''',''''' '''''when radar CI is triggered.
+* Despite the highest activation rate, it provides a chance (~33%) to trigger secondary gun CI, which has only '''110%''' damage modifier post-cap. This will be awkward when facing heavy armor enemies.
+* Therefore, not recommended against ships stronger than CA.
+* If you're confident with your firepower, avoiding overkill on weak enemies, and/or pursuing higher activation rate, CI + radar is usually a good choice. For example, to prevent ships from stealing MVP.
+- <u>For BB(V) using AP shell</u>:
+* '''''130% post-cap''' damage for CI setup + AP. (''{{RedGunHeavy}}{{YellowGun}}{{RedAmmo}}{{Seaplane}}'')''
+* '''150% post-cap, '''for AP shell hybrid setup. ({{RedGunHeavy}}{{RedGunHeavy}}{{RedAmmo}}{{Seaplane}})
+* Trigger rates are less volatile with respect to the changes in FLoS, but more penalized when Air Supremacy (AS+) is not achieved.
+*  Preliminary study shows AP shell provide 10+ additional firepower against enemies with heavy armor. Therefore, this setup is quite recommended when dealing with [http://kancolle.wikia.com/wiki/Battleship_Ru-Class Ru-Class Battleships] and above.
+*  When facing '''extremely '''tough enemies at the boss node (eg. [http://kancolle.wikia.com/wiki/Battleship_Princess Battle Princess], [http://kancolle.wikia.com/wiki/Battleship_Water_Demon Water Demon]), cut-ins would usually result in scratchy damage (see "remaining ammo modifier"), while DA could do it twice. In this case, the AP shell hybrid setup is only recommended for '''Yamato''' class battleships.
+
+
+=== General: ===
+- Artillery Spotting (DA & CI) cannot miss, but may scratch the target due to weak shelling power and/or low accuracy. Scratching will inflict ~10% of the target's '''''current HP''''' as damage.    
+
+- In-depth study on the effectiveness of BB(V) using AP hybrid setup: [http://kancolle.wikia.com/wiki/User_blog:Nainodel/All_About_Firepower#How_much_damage_will_I_deal.3F Comparative study on DA vs CI with sample enemies] ''(by Nainodel)''.    
+
+- Preliminary test results [[http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Shelling_Accuracy_Test_Results_(Source_to_be_cited)#II_-_The_Overweight_Penalty_on_FBB Source 1]][[http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Shelling_Accuracy_Test_Results_(Source_to_be_cited)#III_-_The_Overweight_Penalty_on_BB_.28cont.27d.29 2]] shows the '''overweight penalty''' ''(eg. using too many 46cm on FBB)'' will somehow lower shelling accuracy from single attacks. It is suspected that this would affect Artillery Spotting, too. Nevertheless, the penalty could be largely offset by either leveling (married ships), high morale ([http://kankoreshuukai.blog.jp/archives/2474494.html as high as possible]), or using a fit gun for the BB ''(eg. 35.6cm on Kongou Class)''. Accuracy bonus from equipment are also helpful in countering the penalty.     
+
+
+
+== Practical Use in Game & Suggestions ==
+# '''Level up your ships & [http://kancolle.wikia.com/wiki/Marriage marry them].''' Ship levels affect their individual LoS stat, and a high FLoS would guarantee your ships to DA/CI frequently in battles. Also, if we assume a linear LoS growth, lv150 ships would have 50% more LoS than lv99 ships. It means if your central fleet is at lv99, they'd probably have FLoS ~400 (+8% DA/CI chance). When they're leveled up to lv150, you'll have FLoS ~600 (+24% DA/CI chance).
+# Since fatigue doesn't seem to penalize the trigger rates while DA / CI boosts shelling accuracy, you could use it to counter fatigue. For example, '''[http://kancolle.wikia.com/wiki/Tutorial:_Leveling leveling] your ships at 3-2a with red faces.''' This method could drastically speed up your leveling, but less resource friendly (more buckets & repair cost).
+# If ELoS ([http://kancolle.wikia.com/wiki/Line_of_Sight effective LoS]) is prioritized, you wish to have more seaplane bombers, and/or you don't have good radars, '''''equip an extra seaplane on your 4th slot''''' is usually a good choice.
+
+
+
+== Uncertainty ==
+*  In [http://kancolle.wikia.com/wiki/User_blog:Homuhomu123/Translation_on_Kuubowokyuu%27s_Exp%27ts_on_the_Trigger_Rates_of_Artillery_Spotting K-Test], if we compare no.7.8.9 versus no.15, we could see as FLoS increased from ~250 to 356, DA chance from Takao Class CAs didn't change at all. According to the FLoS calibration method, this gives an error of 8.5%, which is way above our tolerance. Is that a coincidence or something?
+[[Category:Game Mechanics]]
+[[Category:Calculation]]
+[[Category:Blog Post]]
+[[Category:Back Up]]
+[[Category:Blog posts]]

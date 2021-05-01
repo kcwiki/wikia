@@ -1,0 +1,8 @@
+<includeonly>|- {{#if:{{{add|}}}||id="{{trim|{{{1}}}}}"}}
+{{#if:{{{add|}}}||{{!}}rowspan="{{{rows|1}}}" align="center"{{!}}[[{{trim|{{{1}}}}}]]}}
+|align="center"|{{Audio|file={{trim|{{{1}}}}} {{{season|{{PAGENAME}}}}}{{#if:{{{line|}}}| {{{line}}}|}}.ogg}}
+|{{SpanJa|{{{ja|}}}}}
+|{{{en|}}}
+{{#if:{{{note|}}}|{{!}}rowspan="{{{note_rows|1}}}"{{!}}{{#if:{{{from|}}}|From [[Seasonal/{{{from}}}|{{{from}}}]]<br/>|}}{{{note}}}|}}</includeonly><noinclude>
+See [[Template:SeasonalTable]].
+</noinclude>

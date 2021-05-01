@@ -1,0 +1,111 @@
+== {{#if:{{{thread|}}}|[[Partials/Updates/2016_October_5th/Content|Content]]|[[Thread:487129|5th October]]}} ==
+{{#if:{{{thread|}}}||''For a full debriefing on the game update (including developer tweets), you may wish to refer to [[Partials/Updates/2016_October_5th|this link]].''}}
+
+=== New Limited-time CG ===
+{{SeasonalGallery|slideshow=true|Akagi/Oyakodon|Akitsushima/Oyakodon|Akigumo/Katsudon|Akebono/Udon|Mizuho/Oyakodon|Roma/Oyakodon}}
+* [[Akebono]] receives [[wikipedia:Udon|Udon]].
+* [[Mizuho]] receives [[wikipedia:Gyūdon|Gyūdon]].
+* [[Akigumo]] receives [[wikipedia:Katsudon|Katsudon]]
+* The following girls receives [[wikipedia:Oyakodon|Oyakodon]] (as part of collaboration with [http://www.nakau.co.jp Nakau]):
+** [[Akagi]]
+** [[Akitsushima]]
+** [[Roma]]
+{{clear}}
+
+=== [[Quests]] ===
+New Quests total of 4<br />
+{| class="wikitable"
+! JP Name
+! EN Name
+! Quest Description/Reward
+|-
+|飛行場設営の準備を実施せよ！
+|Prepare to setup the Land Base
+|[[6-3]] boss S win give you one [[Construction Corps]]
+|-
+|中部海域「基地航空隊」展開！
+|Launch the [[LBAS]] to the Central Ocean Area
+|scrap 2 drums, and system will eat 1200 {{fuel}} , 3000 {{bauxite}} and a [[Construction Corps]]
+|-
+|夜間突入！敵上陸部隊を叩け！
+|Enter Night Battle! Attack the Enemy Land Base
+|[[5-3]] boss A win give you one [[Construction Corps]]
+|-
+|夜の海を照らす「灯り」を入手せよ！
+|Obtain the Searchlight that brightens the Dark Sea
+|[[2-1]] boss S win
+|}
+※The quest progression for the first 3 quests is triggered by completing the quest "New Mikawa Fleet Sortie to the Solomons"([[Quests|B41]]) and "Bolster the Capability for Amphibious Assault Operations!" ([[Quests|B62]]).
+
+{{QuestList|
+{{Quest
+|ID = B80
+|Title_JP = 飛行場設営の準備を実施せよ！
+|Title_EN = Prepare for the Construction of the Land Base!
+|Requirements = Sortie to [[6-3|World 6-3]] and obtain an S-rank at the boss
+|Rewards_RSC = 0 / 0 / 0 / 0
+|Rewards_Items = [[File:Construction_Corps_Item.png|30px|link=Construction_Corps]][[Construction Corps]] X 1
+|Note = Requires: [[Quests#B41|B41]], [[Quests#B62|B62]]
+}}
+{{Quest
+|ID = B81
+|Title_JP = 夜間突入！敵上陸部隊を叩け！
+|Title_EN = Rush into Night Battle! Attack the Enemy Landing Forces!
+|Requirements = Sortie to [[5-3|World 5-3]] and obtain at least an A-rank at the boss
+|Rewards_RSC = 0 / 0 / 0 / 0
+|Rewards_Items = [[File:Construction_Corps_Item.png|30px|link=Construction_Corps]][[Construction Corps]] X 1
+|Note = Requires: [[Quests#B80|B80]], others(?)
+}}
+{{Quest
+|ID = B82
+|Title_JP = 夜の海を照らす「灯り」を入手せよ！
+|Title_EN = Obtain the Searchlight that brightens the Dark Sea!
+|Requirements = Sortie to [[2-1|World 2-1]] and obtain an S-rank at the boss
+|Rewards_RSC = 100 / 100 / 0 / 0
+|Rewards_Items = [[File:Searchlight.png|30px|link=Searchlight]][[Searchlight]] X 1<br>[[File:Combat Ration 145 Full.png|30px|link=Combat Ration]] X 1
+|Note = Requires: ???
+}}
+}}
+
+=== [[Land Base Aerial Support]] ===
+[[File:Construction Corps.png|right]]
+[[File:LBAS_quest_done.jpg|right|300px]]
+* [[Land Base Aerial Support]] is now available in both [[6-4]] as well as [[6-5]].
+* To use the [[LBAS]] in World [[6-4]] and [[6-5]], you must acquire the "[[Construction Fairy|Construction Corps]]" either through the [[Quests]] or through [[Shop|Akashi's item shop]].
+* World [[6-4]]:
+** Allows 1 [[LBAS]] 
+** Does not have any Enemy Air Raids against your [[LBAS]] (So they will be in perfect condition to attack the designated node(s)).
+* World [[6-5]]:
+** Allows 2 [[LBAS]].
+** Will have at least 1 Enemy Air Raid happening against your [[LBAS]]. Once you clear the Map Gauge however it will no longer happen (until next reset).
+* New [[Music|BGMs]] for [[LBAS]]:
+** Land Base Aerial Support ※ BGM shows up in set up.
+** Wings of the Sea Eagles ※ BGM for World 6-5.
+{{clear}}
+
+=== [[6-5|6-5 <nowiki>【Extra Operation】KW環礁沖海域 KW Atoll Sea</nowiki>]] ===
+[[File:6-5 Map.png|right|300px]]
+* The new map, named "Interception of the Carrier Task Force" requires certain requirements to be met to clear the map.
+* Boss pattern vary according to gauge.
+{{clear}}
+
+=== [[Akashi's Improvement Arsenal]] ===
+* [[38.1cm Mk.I Twin Gun Mount]] can now be upgraded to [[38.1cm Mk.I/N Twin Gun Mount Kai]]
+* [[38.1cm Mk.I/N Twin Gun Mount Kai]] is now upgradeable.
+{| style="width:100%"
+|-
+| valign="top" | {{ImprovementTableKai|38.1cm Mk.I Twin Gun Mount}}
+| valign="top" | <gallery type="slideshow" widths="300" hideaddbutton="true">
+38.1cm_Mk.I_Twin_Gun_Mount_190_Card.png
+38.1cm_Mk.I_Twin_Gun_Mount_190_Character.png
+38.1cm_Mk.I_Twin_Gun_Mount_190_Equipment.png
+38.1cm_Mk.I_Twin_Gun_Mount_190_Full.png
+</gallery>
+|}
+{{clear}}
+
+=== UI/Misc. ===
+* EO maps add gauge to sortie screen:
+** [[Type 1 Land-based Attack Aircraft Model 22A]] display fix.
+** [[LBAS]] "rest mode" bauxite cost cut to half or below original consumption.
+* Maximum ship slots are now 310 and equipment 40+ increase.

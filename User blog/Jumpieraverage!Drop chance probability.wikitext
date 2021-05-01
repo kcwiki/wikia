@@ -1,0 +1,61 @@
+==Jumpier's Guide - Drop Chance Probability / Runs==
+<p style="font-weight:normal;margin-bottom:1em;color:rgb(0,0,0);font-size:16px;line-height:26px;">
+</p>
+
+<p style="font-weight:normal;margin-bottom:1em;color:rgb(0,0,0);font-size:16px;line-height:26px;"><gallery type="slider">
+Prinz get.png
+Akizukireward.jpg
+Mizuho GET Node D .jpg
+</gallery></p>
+
+<p style="font-weight:normal;margin-bottom:1em;color:rgb(0,0,0);font-size:16px;line-height:26px;">(This is my first guide, so there may be some errors with formatting - can't get rid of the </li>) </p>
+
+<p style="font-weight:normal;margin-bottom:1em;color:rgb(0,0,0);font-size:16px;line-height:26px;">This is a guide to find out how approximately how many runs are required to get your desired ship drop. All it takes is a simple formula, which calculates the relative amount of times (typically S ranks) on nodes to almost guarantee your ship. It's a common question in the community of<span style="font-weight:normal;"> </span>'''when'''<span style="font-weight:normal;"> you will eventually get rare event ships </span><span style="font-weight:normal;">such as Prinz and Kashima, so this article tries to answer that specific question in particular. This guide was loosely adapted from Engadget.com's article. </span></p>
+
+<p style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;">The expression below calculates the percentage (%) that you will get a drop given a certain quantity of runs. The input x represents <u>drop chance (%) </u><span style="font-weight:normal;">, while input y represents </span><u style="font-style:inherit;font-weight:inherit;">number of runs</u><span style="font-weight:normal;"> respectively. </span></p>
+
+<p style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;text-align:center;">'''1 - ( ( 1 - x ) ^ y ) '''</p>
+
+<p style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;">Here's an example. According to poi statistics, Prinz Eugen's chances of dropping on Summer E2 2016 Boss Node is approximately 1.729% (roughly) on medium difficulty. By subbing in this into the X value and number of runs as Y, you can find out the chances that you will have within a number certain number of sorties to a specific node. </p>
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|Number of runs 
+! scope="col"|Possibility of drop (%) 
+|-
+|10
+|<span style="color:rgb(86,88,92);font-family:"GuardianTextSans",sans-serif;font-size:15px;font-weight:normal;line-height:20px;text-align:-webkit-center;">16.54187</span>
+|-
+|20
+|<span style="color:rgb(86,88,92);font-family:"GuardianTextSans",sans-serif;font-size:15px;font-weight:normal;line-height:20px;text-align:-webkit-center;">30.34740 </span>
+|-
+|40
+|<span style="color:rgb(86,88,92);font-family:"GuardianTextSans",sans-serif;font-size:15px;font-weight:normal;line-height:20px;text-align:-webkit-center;">51.48515</span>
+|-
+|80
+|<span style="color:rgb(86,88,92);font-family:"GuardianTextSans",sans-serif;font-size:15px;font-weight:normal;line-height:20px;text-align:-webkit-center;">76.46310</span>
+|-
+|120
+|<span style="color:rgb(86,88,92);font-family:"GuardianTextSans",sans-serif;font-size:15px;font-weight:normal;line-height:20px;text-align:-webkit-center;">88.58111</span>
+|-
+|200
+|<span style="color:rgb(86,88,92);font-family:"GuardianTextSans",sans-serif;font-size:15px;font-weight:normal;line-height:20px;text-align:-webkit-center;">97.31235 </span>
+|-
+|390
+|<span style="color:rgb(86,88,92);font-family:"GuardianTextSans",sans-serif;font-size:15px;font-weight:normal;line-height:20px;text-align:-webkit-center;">99.91345 </span>
+|}
+<p style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;">'''''As seen above, a number of things can be taken into consideration.'''''</p>
+
+
+<li style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;"><span style="font-weight:normal;">The first thing i would like to talk about is the possbility of the drop over time. If you haven't noticed, the ratio of drop percentage to the number of runs rapidly increases as No. of runs increases. This means that it is '''easier and more likely''' to get the ship within the first 50 or so sorties, than say 120+ sorties. In a sense the probability of a drop represents the gradient inside an exponential decay curve, '''where chances will still rise, but a slower rate as time goes on.'''</span></li></li></li>
+<li style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;">Increasing the number of runs will ALWAYS increase your possibilty of the drop.</li></li></li>
+
+<li style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;"><span style="font-weight:normal;">No matter how hard you try, '''it is impossible to achieve a 100% drop rate'''. Even an infinite number of runs will not guarantee you the ship. However, reaching a 99.99999...% rate will almost guarantee you a drop, unless RNG sama hates you. </span></li></li></li>
+
+<li style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;"><span style="font-weight:normal;">'''Your chance on each attempt is still the same'''. No matter how many times you do it, the percentage for each attempt is identical. This formula shows the chances of you getting a drop within a certain number of runs, not your chances of getting a drop within one run, which stays constant.</span></li><p style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;"><span style="font-weight:normal;">Although these numbers may in</span><span style="font-weight:normal;">tially seem a bit depressing and scary, you need to remember that your chances of getting a drop doesn't strictly lie within an 80% range for example. Having simply 40 sorties (in the case of Prinz) provides a decent rate of 50%, which means on a broader view, you have a good chance of getting her. I would not personally aim to accomplish any number of sorties that exceeds the 60% mark, because 60% almost certainly provides you the drop (unless you are unlucky 20%).</span></p>
+
+<p style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;"><span style="font-weight:normal;">To get drop rates at certain nodes i would advise using Poi statistics.</span><span style="font-weight:normal;">Below i've also </span><span style="font-weight:normal;">provided a link which has a drop chance probability calculator for convenience. Both this and the following article cover similar points (as this article was adapted) </span><span style="font-weight:normal;"> </span><span style="font-weight:normal;">but feel free to read their article if you are interested. (The calculator is at the bottom) </span></p>
+
+<p style="font-weight:normal;color:rgb(0,0,0);font-size:16px;line-height:26px;">https://www.engadget.com/2010/01/13/drop-chance-probability/</p>
+</li>
+</li>
+[[Category:Blog posts]]

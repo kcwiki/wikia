@@ -1,0 +1,1270 @@
+HiHi!
+
+I will try to share some tips regarding [[LBAS]] operation this time. As usual, this article was written with newer TTK in mind, so the maths have been kept to a minimum.
+
+For savings regarding plane improvements, see [http://kancolle.wikia.com/wiki/User_blog:TenkouKuugen/Small_Savings_For_Improving_Type_0_Fighter_Model_21/52 my other blog post].
+
+
+==Intro==
+
+Very often during events, I notice some TTK using copy-pasted [[LBAS]] setup without giving thoughts to the situation at hand. It's not surprisingly to hear complaints like, "my LBAS did NOTHING!" or "I'm bleeding bauxite like crazy halp!"
+
+Although this is still a game of RNG, a TTK should ask whether he/she has given their fairies the best chance to succeed, or was he/she just trying to get a lucky shot and be done with it.
+
+In this article I will share some of my experience with LBAS management.  Hopefully it will make your (and your fairy's) life easier in the next hunt :)
+
+[[File:Ryuusei_fairy_CFiRtR0UgAA-0X_.jpg|thumb|centre|320px]]
+
+{{Clear}}
+
+
+==Terminology==
+
+To avoid confusion, during the course of this article the following terms will be used unless specified otherwise:
+*Each plane slot in the base will be referred to as "slot" or "squadron"
+*Each landbase (4 slots) will be a "base"
+*Each LBAS pass will be a "pass" or "wave" or "strike"
+*"Sending a base" meaning concentrating both waves of a base to the same node
+*eAA: effective/equivalent AA value. This is the AA value including contributions from extra stats (Anti-bomber, Interception etc).
+*eFP: effective/equivalent FP value. This is the fighter power including contributions from extra stats, in a LBAS (18-plane) slot.
+
+
+==The Basics==
+
+First I'm going to assume that you are familiar with the concept of [[Aerial Combat]], ie how much Fighter Power (FP) is required for AP/AS/AS+ and what it means in terms of plane shotdown etc. Don't worry if you're not, have a quick read and try to understand the Aerial Combat Stages plus the Fighter Combat table. You can revisit the maths in the future as you gain more understanding.
+
+[[LBAS]] pretty much follows the same rule of [[Aerial Combat]], with a few notable exceptions. For example:
+*[http://kancolle.wikia.com/wiki/LBAS#Fighter_Power_Calculations Fighter Power] is calculated differently (to accomodate Sortie vs Defense Mode)
+*Planes in the land base have [http://kancolle.wikia.com/wiki/LBAS#Morale morale] just like kanmusu
+*LBAS operation is limited by a map specific [http://kancolle.wikia.com/wiki/LBAS#Distance_Calculations range]
+*It [http://kancolle.wikia.com/wiki/LBAS#Cost costs] Fuel/Ammo to sortie in addition to refueling
+*Recon planes give bonus modifier for Base Defense
+*Interceptors and Army Fighters are better for Base Defense
+*When concentrating both waves to the same node, only the losses from the 2nd wave is counted
+
+The first 3 items should be straight forward, just open the relevant pages when you need to look something up. I have also included a few [http://kancolle.wikia.com/wiki/User_blog:TenkouKuugen/LBAS_-_Take_Care_of_Your_Fairies#Quick_Reference_Tables FP tables] towards the end of this article for quick references.
+
+Now onto the often overlooked...
+
+[[File:Akagi_Kaga_Fairy_Class_anime-girls-akagi-kancolle-kaga-classroom-children-1080P-wallpaper.jpg|thumb|centre|320px]]
+
+
+===LBAS Sortie Cost===
+
+A lot of TTK overlook the LBAS sortie cost (or just didn't know that it existed!).  It is a "hidden" cost (probably for resupplying the planes) in addition to replacing lost planes. I met a TTK who was farming E4-Q of Spring 2017 with the help of LBAS, he was shocked to learn that LBAS costs rsc up-front! Can't really blame him, since the cost is deducted silently when sortie starts and there's no animation indicators =.=
+
+Here's a table of simplified cost associated with fully-supplied LBAS Sortie, plus a few common scenarios. The actual formula is listed in the [[LBAS]] page for those interested.
+
+{|class="wikitable"
+! LBAS Sortie Cost
+! [[File:Fuel.png|30px|link=]]
+! [[File:Ammunition.png|30px|link=]]
+|- align="center"
+| Land Based Bombers
+| 27
+| 12
+|- align="center"
+| Regular Planes
+| 18
+| 11
+|- align="center"
+| Regular Scout Planes (eg Saiun)
+| 4
+| 3
+|- align="center"
+| Taitei/Catalina
+| 12
+| 4
+|}
+
+{|class="wikitable"
+! Common Scenarios
+! [[File:Fuel.png|30px|link=]]
+! [[File:Ammunition.png|30px|link=]]
+! Comments
+|- align="center"
+| 3 Fighters + 1 LBA Bomber
+| 81
+| 45
+|
+|- align="center"
+| 2 Fighters + 2 LBA Bombers
+| 90
+| 46
+|
+|- align="center"
+| 1 Fighter + 3 LBA Bombers
+| 99
+| 47
+|
+|- align="center"
+| 4 LBA Bombers
+| 108
+| 48
+| Re-training cost
+|- align="center"
+| Taitei + 1 Fighter + 2 LBA Bombers
+| 84
+| 39
+| Long Range Bombing Escort
+|- align="center"
+| Taitei + 2 Fighters + 1 LBA Bomber
+| 75
+| 38
+| Long Range Bombing Escort
+|}
+
+Now you know where those missing fuel/ammo's gone :)
+
+Note that there is '''no up-front cost for Base Defense''', so don't let your base take a pounding if situation allows!
+
+[[File:Fairy_Ryuusei_Kai_ca981cbe.jpg|thumb|centre|320px]]
+
+
+===Base Defense with Recon===
+
+While it is true that recons give a base defense modifier (R) based on its LOS, it's important to note that not all recons are the equal:
+*A 9+ LOS water plane (eg max★ [http://kancolle.wikia.com/wiki/Type_0_Observation_Seaplane zero obs]) gives 16% bonus
+*A 9+ LOS carrier recon (eg [[Saiun]]) gives 30% bonus
+
+So use Saiun for base defense whenever possible.
+
+Next thing to consider is that since Saiun takes up 1 slot (1 less fighter in base), it is not always better to put it in. The question is, when?
+
+When to use a Saiun:
+*When you have less than 4 Interceptors
+*Using 3 planes of very different performance
+
+When NOT to use a Saiun:
+*When you have 4 of the same/very similar planes and cannot afford Interceptors
+*When you have to give up an Interceptor for Saiun
+
+Assuming a TTK's got 4 Reppuu, each slot is capable of X fighter power:
+*4 Reppuu gives 4X fighter power.
+*3 Reppuu + 1 Saiun gives 3X*1.3 = 3.9X fighter power
+
+ie the Saiun actually hurts in this case. In most other cases you'd want a Saiun though.
+
+[[File:Zuiun_fairy.jpg|thumb|right|250px]]
+This is of course a generalisation using simple maths. You're encouraged to play around with one of the available air power calculators to work out a scenario that suits you best:
+*http://kancollecalc.web.fc2.com/air_supremacy.html
+*http://aircalc.net/
+*If you can't read Japanese, see [http://kancolle.wikia.com/wiki/User_blog:TenkouKuugen/Air_Power_Calculator_For_Non-Moonrune-Readers this blog] for more information on how to use, or try setting up the Event/World 6 LBAS and read from your viewer.
+
+
+===Interceptors are Better For Base Defense===
+
+Interceptors (局地戦闘機) are planes designed specifically to climb fast, in order to gain an altitude advantage over incoming enemy aircrafts. In KC there's currently 3 such aircrafts available ([[Raiden]], [[Shiden Model 11]], [[Shiden Model 21 Shiden Kai]]), designated with a [[File:Interceptor Fighter Icon.png]] icon.
+
+Army Fighters (those with a [[File:Interceptor Fighter Icon 2.png]] icon) such as Hayabusa are also loosely called "Interceptors" by a lot of players. For the purpose of this article, I'll call both "Interceptors."
+
+[[File:2017-Fall_E3H-TP_Base-Defense.png|thumb|320px|E3H Base Defense of Autumn 2017. The theoretical shotdown for AS is 0-80%, but 416/428=97% (woot)... turns out it was the Interceptors to the rescue!]]
+
+Each Anti-Bomber [[File:Icon Hit.png]] stats on an Interceptor contributes to 2eAA during Base Defense, while the Interception [[File:Icon Evasion.png]] stat contributes to 1eAA. That's what gives Interceptors exceptional performance during the Defense mode... but there's more!
+
+We have some idea that Interceptors do better at Base Defense, but a question pops up from time to time: what's the difference between the two icons?
+
+I heard of a rumour when I first started playing KC, that "Interceptors [[File:Interceptor Fighter Icon.png]] have 10% proportional shotdown vs Base Raid, while Army Fighters [[File:Interceptor Fighter Icon 2.png]] have 7%." I was reluctant to mention this because I have not seen any evidence supporting the claim - till just a few days ago, someone finally found some old forgotten test data<ref>https://docs.google.com/spreadsheets/d/110lZIj8mN2Bx_Fv_FLuDVca_4tfRXhfx0ROCdOjKu3w/edit#gid=0</ref>. There's element of truth in the claim!
+
+There's renewed speculation that the "extra shotdowns" may be proportional to the Anti-Bomber stats and hopefully we can gain better understanding with new tests etc. The take home message for new TTK will be "'''Interceptors shoots down more!'''" and one should "'''Prioritise Interceptors when it comes to Base Defense!'''"
+
+Try packing 1 base full of Interceptors if you can, then fill other bases with carrier-based fighters + saiun.
+
+Once again, base defense will be discussed in more details later.
+
+
+===Concentrating LBAS Attacks===
+
+This is another mechanic often overlooked by newer TTKs. Each air base has 2 attack passes and '''when both passes are focused on the same node, only losses from the 2nd pass is counted'''.
+
+You may doubt the mechanics because of stories like "but I lost proficiencies despite losing only 1-2 planes?!" While the story may be true, it's a separate head-scratching matter.
+
+[[File:Zuikaku_fairy_DDP084uUQAE-T8w.jpg|thumb|right|320px]]
+Without digging too deep, this is one way to make it easier to remember: when concentrating a base on a single node, the enemies can only shoot paintball at your 1st pass (while you shoot real bullets at them kek). No matter how many hits you take in the 1st pass, no planes are lost; however if you take too many hits, you'll be labeled as noob anyway (loss of proficiency) :P
+
+Why is it programmed like this? Hey don't ask me, go poke Tanaka xD
+
+This is however a very important mechanic that every TTK should take advantage of. It will be explained in more details later.
+
+
+==LBAS Setup (Sortie Mode)==
+
+In this section I will go over a few things to consider when setting up your land base. As always, I will explain the consideration that went into a choice. Try to understand why a decision is made rather than simply copying it, so that you can adapt them to your own need.
+
+
+===General Rules (TL;DR)===
+
+My personal preferences goes something along these lines:
+*Have the highest fighter power (FP) in the 1st base.
+*Have the highest bombing power (BP) in the last base.
+*If recon/fighter/bombers all present in the same base, the slot order from top to bottom will be Recon-Fighter-Bomber.
+*Aim for AP in most situation.
+
+These will be explained in details later. But before we go any further, let's have a look at how LBAS operates.
+
+
+===How LBAS Operates===
+
+I remember seeing a post during Spring 2017: a TTK sent 3 LBAS to the boss node but got slaughtered. He was wondering why the '''combined''' fighter power (FP) of all 3 bases, enough to achieve AS+ at the boss node, only got AI/AD in the end.
+
+Well there may be a lot to improve in his case but the most obvious problem here is the keyword: '''combined'''. That is not how LBAS operates in Sortie mode... (would've been close if it was Base Defense mode, more on this later)
+
+When LBAS engages the enemy, each pass is equivalent to a fleet lauching 4 squadrons of planes. The usual Aerial Combat takes place and the FP/AA at the beginning of each pass determines fighter/bomber losses for each side. If a base concentrates both waves on the same node, same thing happens except there is no loss for your 1st pass (while the enemy suffers full damage).
+
+<div class="mw-collapsible mw-collapsed" style="width:100%">Click the Expand button for an example iteration.
+
+<div class="mw-collapsible-content">
+In this example, the 1st, 2nd & 3rd base will be called LBAS1, LBAS2 & LBAS3 respectively.
+
+Consider the following setup:
+
+{|class="wikitable"
+!
+! Effective Fighter Power (eFP)
+|-align="center"
+| style="background-color:#A3E3ED" | '''LBAS1'''
+|180
+|-align="center"
+| style="background-color:#A3E3ED" | '''LBAS2'''
+|170
+|-align="center"
+| style="background-color:#A3E3ED" | '''LBAS3'''
+|160
+|-align="center"
+| style="background-color:#FF66FF" | '''Enemy Fleet'''
+|300
+|}
+
+All 3 LBAS were sent to concentrate on the same node. While aircraft shot down is subject to RNG, we will take arbitary value within the bound of theoretical limitations for the ease of presentation.
+
+{|class="wikitable" style="width:100%"
+!
+! style="background-color:#A3E3ED" | LBAS1 eFP
+! style="background-color:#FF66FF" | Enemy eFP
+|- align="center"
+| '''LBAS1 (1st pass)''' - Starting eFP
+| 180
+| 300
+|- align="center"
+| Air Control Status
+| colspan='2' style="color:red" | '''AD'''
+|- align="center"
+| eFP Loss (due to Shot Down)
+| -25
+| -30
+|- align="center"
+| Remaining eFP
+| 155
+| 270
+|- align="center"
+| colspan='3' |
+|- align="center"
+| '''LBAS1 (2nd pass)''' - Starting eFP
+| style="background-color:yellow" | 180
+| 270
+|- align="center"
+| Air Control Status
+| colspan='2' | '''AP'''
+|- align="center"
+| eFP Loss (due to Shot Down)
+| -20
+| -45
+|- align="center"
+| Remaining eFP
+| 160
+| 225
+|- align="center"
+| colspan='3' |
+|- align="center"
+| '''LBAS2 (1st pass)''' - Starting eFP
+| 170
+| 225
+|- align="center"
+| Air Control Status
+| colspan='2' | '''AP'''
+|- align="center"
+| eFP Loss (due to Shot Down)
+| -20
+| -35
+|- align="center"
+| Remaining eFP
+| 150
+| 190
+|- align="center"
+| colspan='3' |
+|- align="center"
+| '''LBAS2 (2nd pass)''' - Starting eFP
+| style="background-color:yellow" | 170
+| 190
+|- align="center"
+| Air Control Status
+| colspan='2' | '''AP'''
+|- align="center"
+| eFP Loss (due to Shot Down)
+| -20
+| -30
+|- align="center"
+| Remaining eFP
+| 150
+| 160
+|- align="center"
+| colspan='3' |
+|- align="center"
+| '''LBAS3 (1st pass)''' - Starting eFP
+| 160
+| 160
+|- align="center"
+| Air Control Status
+| colspan='2' | '''AP'''
+|- align="center"
+| eFP Loss (due to Shot Down)
+| -20
+| -25
+|- align="center"
+| Remaining eFP
+| 140
+| 135
+|- align="center"
+| colspan='3' |
+|- align="center"
+| '''LBAS3 (2nd pass)''' - Starting eFP
+| style="background-color:yellow" | 160
+| 135
+|- align="center"
+| Air Control Status
+| colspan='2' | '''AP'''
+|- align="center"
+| eFP Loss (due to Shot Down)
+| -20
+| -20
+|- align="center"
+| Remaining eFP
+| 140
+| 115
+|- align="center"
+| colspan='3' |
+|}
+
+Note now the 2nd wave starts at full eFP (no loss registered).
+</div>For our unfortunate friend, each of his bases were under-manned so they suffered heavy losses instead of achieving AS+ at the boss node.</div>
+
+It is clear that each base must be planned individually so that the desired FP can be achieved at the target node, rather than following some generic advice like "2 fighters + 2 bombers" and leave your fairy's fate to the RNG alone.
+
+With that out of the way, let's look at the rationale behind each recommendations.
+
+
+===Highest Fighter Power in the 1st Base===
+
+When sortieing multiple bases, the 1st Base attacks first, followed by the 2nd, then the 3rd Base. Combined with the fact that the 1st pass of a concentrated attack takes no physical damage, it makes sense to maximise the FP in the 1st base and to reduce enemy FP as much as possible.
+
+A weakened enemy fleet translates to less FP for the subsequent bases, ie more bombers for them.
+
+If things were setup the other way round (ie more FP for Base#3 and all bombers in Base#1) then you can imagine your bombers take heavy pounding from not only enemy AA, but also enemy fighters; fairies parachuting everywhere and set adrift in little gum boats... *shrugs*
+
+Don't be a kuso TTK complaining about your LBAS did nothing at all in this case; they've been ordered into a suicide mission =.=
+
+
+===Highest Bombing Power in the Last Base===
+
+Following the same train of thought, since the 1st base will take the worst pounding from the enemies, it makes sense to save the best bombers for the last base.
+
+If things go according to the plan, enemy FP would've been heavily reduced by the time the last base engages (less fighter requried); also, a few enemy ships may have been sunk in previous waves, ie less AA against your bombers!
+
+A base full of the best bombers with minimum escort can totally wreck havoc on weakened enemies, as opposed to going up against a swarm of fighters.
+
+I think there's no need to iterate what happens if the order is switched, right? =.=
+
+
+===Orders Matter===
+
+If you've read the [[LBAS]] page you'll probably notice that the enemy Raid can damage your planes in base plus loss of resources. The number of planes lost during Base Raid depends on damage taken and it happens from the 1st slot down.
+
+Personally I've never seen plane lost beyond the 2nd slot, so the damage happens to slot #1 most of the time. For this reason I always consider the order of planes in a base.
+
+"If recon/fighter/bombers all present in the same base, the slot order from top to bottom will be Recon-Fighter-Bomber."
+
+There is no doubt that if a Recon is in base, it should be used to tank the air raid damage before anything else. I have yet to come across a raid that wipes all my recons but even if it happens, no one knows if that prevents the range extension effect or not. Imo it's safe to assume that it'll never happen till proven by photo report.
+
+Things get a bit more complicated when only Fighter+Bombers are in base. Imo there's no right or wrong answer, just what one tries to achieve and whether the setup can help reaching that goal. Let's have a look...
+
+In most situation, I think about doing damage to the enemy fleet, ie sinking ships. If the objective is to sink ships, then it's probably more important to preserve the bombers and let the fighters tank the damage.
+
+In very rare situation, say if the objective is to wipe out enemy Fighters and my base is slightly short of FP, I might move the cheapest bomber to the top to tank for the fighter. I'll only do this if 4 fighters is overkill while 3 fighter is a bit too short. (Actually this may change now that [http://kancolle.wikia.com/wiki/Bomb-carrying_Type_1_Fighter_Hayabusa_Model_III_Kai_(55th_Squadron) Hayabusa Fighter-Bomber] is in game. Fighter-bombers don't benefit that much from proficiency gain so they're perfect tankers in this case)
+
+
+===Aim For AP===
+
+Ah yes, the million dollar question: "so how much FP is enough?" Once again the answer depends on the objectives.
+
+Before I do any calculations (using one of the calculators linked above) I like to first think about how my fleet will perform '''without''' the help of LBAS:
+*Can my fleet achieve AS/+?
+*Are there any enemies weak against certain attack?
+*Are there enemy tanker likely to absorb the said attack? (coughDysoncough)
+*Can my fleet finish the full health boss 6v1 in yasen? If yes, how many more enemies can I take on?
+*Which enemy is likely to taiha my ships (and prevent them from contributing in yasen)?
+*Is the boss extra vulnerable to bombing?
+
+Considering a list like that gives me an idea of how to use my LBAS:
+*Fighter sweep so my fleet can carry more bombers? (FP focused)
+*Garbage disposal to give better chance in yasen? (Bombing focused)
+*VIP snipe? CV Hime and Dyson are known to be weak to bombing from time to time. Taking them out during the day greatly increases yasen success. (Well some bosses are weak against bombing and it's always pleasant to see the gauge explode before formation is declared kek)
+
+It's not hard to imagine what to prioritise for extreme cases (ie bomber/fighter spam), so let's stick with a "need to do everything" scenario for a moment; scenario like this requires more thought and planning.
+
+I then look at my LBAS and see how many fighters are needed per base to maintain AP (and hopefully easy AS/+ for the fleet aerial combat phase). Maintaining AP means 0-60% enemy plane shot down '''per pass''' and less allied plane loss in the end. It is certainly an attractive setup for the 1st Base.
+
+Note that the shot down is RNG based so there will be good rolls and bad rolls. Our goal is to have good result most of the time while minimising bad experiences. (You can always do a few test runs and look at the LBAS record for a feel)
+
+If too many fighters are required in LBAS I may go back to adjust my fleet for more carrier-based bombers, use LBAS for pre-boss nodes or even consider suicide missions in rare cases (and bear the proficiency loss, rip fairies ;w;)
+
+[[File:Fairy_Zero_page-33955.jpg|thumb|centre|320px]]
+
+
+==More On Base Defense==
+
+Frankly, base defense mechanisms are still not fully understood. Various mechanisms are still being investigated (big shoutout for [http://kancolle.wikia.com/wiki/User:SpFire @SpFire]) but in this blog, I will briefly discuss what I know (plus how I think it works based on what I've seen) and let you make your own decision.
+
+
+===How Base Defense Works===
+
+Different from LBAS Sortie mode, base Defense scenarios behaves more similarly to how fleet aerial combat phase, ie:
+*Fighter Power of '''all''' bases are combined when determining air control state.
+Recall the [http://kancolle.wikia.com/wiki/Combat/Aerial_Combat#Fighter_Combat Aerial Combat table]: you may shoot down 0-100% enemy planes by achieving AS+, 0-80% for AS, 0-60% for AP and so on. LBAS Defense follows similar rules, while letting the [https://kancolle.wikia.com/wiki/Land_Base_Aerial_Support#Enemy_Raid_2 Interception/Anti-bomber stats of the planes to have more influence].
+
+Having said that, LBAS has its own "rules" even in Defense mode. Noticeably:
+*Interceptors shoots down more
+*LBAS Slot position seems to affect the outcome of battle<ref>https://twitter.com/HMS_ArkRoyal_KC/status/969768057513172992</ref>
+*Packing 1 base full of interceptors works better than spreading them.
+
+These topics are worth discussing further and will be covered below.
+
+
+===Interceptors Shoot Down More===
+
+As previously discussed, interceptors are observed to out perform carrier based fighters when it comes to base defense. Prelim tests<ref>https://docs.google.com/spreadsheets/d/e/2PACX-1vTMbuz83POR4VWB5Tnpi26IWQfwuVkI0PBWJH-cNRdMO_iFe5uVm4J2iE7uDsPgiUAadqZB-J41hWEZ/pubhtml?gid=1964370884&single=true</ref><ref>https://docs.google.com/spreadsheets/d/e/2PACX-1vTMbuz83POR4VWB5Tnpi26IWQfwuVkI0PBWJH-cNRdMO_iFe5uVm4J2iE7uDsPgiUAadqZB-J41hWEZ/pubhtml?gid=253831648&single=true</ref><ref>https://docs.google.com/spreadsheets/d/e/2PACX-1vTMbuz83POR4VWB5Tnpi26IWQfwuVkI0PBWJH-cNRdMO_iFe5uVm4J2iE7uDsPgiUAadqZB-J41hWEZ/pubhtml?gid=1871325324&single=true</ref> suggests that the anti-bomber stats play an important role in determining this "shot down bonus" for each interceptor.
+
+The [https://kancolle.wikia.com/wiki/Land_Base_Aerial_Support#Enemy_Raid_2 newly proposed formula] can be found on the LBAS page for those interested. For our average folks, once again the take home message is "'''Interceptors are better. Look for the anti-bomb stat.'''"
+
+
+===LBAS Slot Position Matters===
+
+[https://twitter.com/HMS_ArkRoyal_KC/status/969768057513172992 This study] suggests that where you put your interceptors can actually make a difference when it comes to base defense performance! The results are kind of easy to understand:
+*Each LBAS slot seems to respond to the enemy raider's plane slot, ie LBAS Slot#1 will fight Abyssal Raider Slot#1, Slot#2 vs Slot#2 etc. Having powerful interceptors in a particular slot often completely wipes out the raider's corresponding slot.
+*This effect is observed across all bases, ie Slot#2 of LBAS1/2/3 will all "attack" raider's Slot#2.
+*Just remember that what we discussed above are '''bonus'''; Air Control State still determines the "base" shotdown %, so don't ignore it ;)
+
+Typical abyssal raiders use a Fighter-TorpedoBomber-DiveBomber setup, ie one should prioritise Slot#2/3 for best efficiency. It's a good idea however to check enemy compo for each event, since Tanaka likes shuffling stuff and you don't wanna get trolled. If the new enemy has bombers on Slot 2/3/4, then prioritise LBAS Slot#2/3/4 and so on. You get the idea.
+
+What to do with that "not so important" Slot#1 you ask? Well keep in mind that we're talking about "bonus" here, which is a good thing only when you've done due diligence. If you have 4 interceptors, put the best into Slot#2/3 (where-ever the abyssal raider's best bombers are hiding) while filling Slot#1/4 with ok interceptors. If you have less than 4 Interceptors then well, Saiun is still a good option for boosting FP (don't throw the Air Control State out of the window yet =.=).
+
+
+===Pack 1 Base Full of Interceptors===
+
+This is not mandatory, as the test demonstrates that our interceptor fairies will respond to the abyssal raider's slot accordingly, no matter which base they're assigned. However there're several advantages for packing 1 base instead of spreading:
+*It's easy to visualise, ie harder to mess up. Hey we TTKs are humans afterall :)
+*Most TTKs only have a handful of Interceptors. Unless you're swimming in monster Interceptors, it's way easier to manage 1 base and check if the best Interceptors are in place or not. Those running short can even utilise Saiun bonus to get FP boost.
+*Most importantly, only the best Interceptor of each slot position will contribute to the bonus. ie if you have [[Type 1 Fighter Hayabusa Model II]] in LBAS#1 Slot#2 and [[Raiden]] in LBAS#2 Slot#2, expect less bonus shotdown compared to shifting [[Raiden]] to Slot#3.
+*Finally, swapping planes in 1 single base is usually cheaper to manage than messing up multiple bases (unless you don't plan to sortie them anymore, don't forget that Interceptors have rather short Range).
+
+[[File:Fairy_plane_takoyaki_65519364_p23.png|thumb|centre|320px|When your base is undefended...]]
+
+
+==Case Study==
+
+Here it is perhaps easier to visualise using real examples.
+
+
+===Event Boss Fight===
+
+Let's look at a Boss Showdown, say [http://kancolle.wikia.com/wiki/Spring_2017_Event/E-5 Spring 2017] E5H Boss Node.
+[[File:Spring_2017_E5H-T_LD.png|thumb|centre|640px]]
+
+122/275/549 FP required for LD, if one goes with STF then there's no doubt that the fighter mules in the fleet aren't gonna do significant damage; the LBAS will need to wipe out as many enemies as possible while it isn't so important to reduce enemy FP. BBs will have to output enough damage during the day while the escort practice dodge-balls till yasen.
+
+...or at least that was the plan. Those troll subs at B-node made me switch to CTF for LD and all of a sudden things got interesting: I can use 4 carriers! Let's nuke the crap out of the boss and leave the FP control to the LBAS :D
+
+As usual, I start by visiting the [http://kancollecalc.web.fc2.com/air_supremacy.html calculator] and fill my 1st base with fighters for AP. Bit less FP for my 2nd base, and best bombers in my 3rd base and here's what I got:
+
+[[File:2017-Spring-E5H-LBAS-Plan.png|thumb|centre|640px|Air Power calculation for each LBAS. The bar with kanji reads (left-to-right) AI-AD-AP-AS-AS+ respectively]]
+
+Seems very likely to achieve AP with 2 fighters + 2 bombers in Base#1 and 1 fighter + 3 bombers in the other 2 bases. Note that the FP for Base #2 & #3 are slightly below AP threshold, but bear in mind that the enemy FP would've been chipped down by 2 waves of Base#1 attack, ie less FP requirement for AP.
+
+I also tried dropping 1 fighter for Base#1 but the FP was way to low to gaurantee AP, therefore I went with this setup. I then proceed to fill the bases accordingly and load up my carriers with lots of bombers.
+[[File:2017-Spring-E5H-LBAS-Loadout.png|thumb|centre|640px]]
+[[File:2017-Spring-E5H-Compo_(CTF).png|thumb|centre|640px]]
+
+Note how Base#1 has the highest FP, while the last Base has the best bomber setup; also for each base, fighters are leading the way (tanking for air raid losses) as we discussed earlier. All 3 bases aiming for AP.
+
+Also note that the fleep FP is only ~400. This is taking into consideration that the 3 lbas would sufficiently reduce enemy fleet FP for AS+ at boss node.
+
+Time to take it for a test run and make adjustment if necessary...
+[[File:2017-Spring-E5H-LD_02-Engagement.png|thumb|centre|640px|KC3 confirms AS+ at boss node... wait, is that a Day kill?!]]
+[[File:2017-Spring-E5H-LD_03-Day_Shelling.png|thumb|centre|640px|Damn right :D]]
+
+[http://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=https://vignette.wikia.nocookie.net/kancolle/images/9/93/%E7%A8%B2%E8%8D%B7_23725_2017-Spring-E5H-T_LD.png Full Replay Here]
+
+Granted there's a lot of RNG involved for this 1-try-LD, planning ahead maximised the chance for it to happen. Had I gone with bombers-first-fighters-last things would've been very different for sure =.=
+
+
+===Event Boss Fight 2===
+
+Let's look at something fresh: [http://kancolle.wikia.com/wiki/Fall_2017_Event Autumn 2017] E4 Hard LD against the [[Night Strait Princesses]].
+
+[[File:2017-Fall_E4H-Phase-3_HP1_Boss-LD.png|thumb|centre|640px]]
+
+Only 43/85/189/378 FP to achieve AD/AP/AS/+
+
+The only trouble is: no CV(B/L) allowed!
+
+Popular meta for this map is 2BB(V) 1CA(V) 2DD 2XX (7-ship fleet). One could carry seaplane fighters (spf) on BBV, but artillery spotting with AP-shell is too valuable to give up vs a boss of 272 armour =.=
+
+Muling the CAV with spf is another option, but with all those yasen nodes on the way it'll be quite a waste not to have double-attack at night.
+
+I decided to go from the North and take the longer route. Although there're more battles to fight, there're only 2 nodes that can reduce my FP on the way to Boss. With the help of LBAS I should have little trouble securing AS/+ and artillery spotting.
+
+[[File:2017-Fall_E4H-Phase-3_HP1_LBAS-calc.png|thumb|centre|640px|1 Army Fighter + 3 Bombers each, AP against Boss' initial FP value]]
+
+[[File:2017-Fall_E4H-Phase-3_HP1_Loadout.png|thumb|centre|640px|Zuiun variety on BBVs, Kyoufu-kai on Mogami]]
+
+[[File:2017-Fall_E4H-Phase-3_HP1-03.png|thumb|centre|640px|Achieves AS at Boss node.  Fusou's artillery spotting finished off Night Strait Hime as planned]]
+
+[http://kc3kai.github.io/kancolle-replay/battleplayer.html?fromImg=https://vignette.wikia.nocookie.net/kancolle/images/c/c3/%E7%A8%B2%E8%8D%B7_38009_2017-Fall-E4H-HP1-LD.png Full Replay Here]
+
+Don't you love it when your plan works the 1st time you try? :D
+
+
+===Base Defense===
+
+This seems to crawl back at us from behind, when we're most unprepared *gasps*
+
+During [http://kancolle.wikia.com/wiki/Fall_2017_Event Autumn 2017] Event, 1 perfect Base Defense is required to unlock part-3 of E3H. E4H requires 2 perfect Base Defense in total just to open the door to the boss node =.=
+
+Only 2 Bases are available for E3, so I packed the bases with strongest Interceptors and filled the gap with Saiun.
+
+[[File:2017-Fall_E3H-TP_Base-Defense_Calc.png|thumb|centre|640px|FP calculation for E3H Base Defense.  Note that I did not ditch an Interceptor for Saiun in LBAS#2]]
+[[File:2017-Fall_E3H-TP_Base-Defense.png|thumb|centre|640px|The result - 93% shotdown, 13% over the theoretical cap 0.0]]
+[[File:2017-Fall_E4H-Phase-2_Base-Defense.png|thumb|centre|640px|E4H - Was even easier with 3 bases - Perfecto!]]
+
+[[File:Takoyaki_and_fairy_by_kitsuneno_denpachi_87e451fee0d7b0374057994787bf2d36.jpg|thumb|centre|320px]]
+
+
+==Savings From Not Swapping Often==
+
+The use of LBAS is restricted at the beginning of Events nowadays. The air bases are unlocked one by one as the player progress through the event, while the last map usually presents all 3 bases at the player's disposal.
+
+This leads to one commonly seen problem: the bases may be filled from #1 to #3 according to the need of previous maps, instead of the present!
+
+Since most people know that it costs resources to put planes into an air base, a lot of TTK leave the already-filled bases untouched and follow a cookie-cutter recipe of "X fighters + Y bombers" to fill in the newly acquired bases.
+
+This practice is of course hardly ideal, because the player will have little control over the order and power balance across the bases. I suspect that when armed with good understanding of how LBAS works, most TTK will not send their best bombers to tank in the 1st wave while having the best fighters eating bento in the 3rd; at least I hope you will not make that choice having read this far!
+
+While it is very difficult to achieve desired order/setup without re-shuffling a single plane, the aim of this section is to help you do it as efficiently as possible.
+
+===The Idea===
+
+When it comes to saving resources, you want the layout of each base to look as closely to what you need on the last map as possible. The less often you swap the planes, the less "transaction fee" you must pay.
+
+In order to do that, ideally you should wait till information for all maps are available then plan out the LBAS using calculators. This is not always possible (and by no means compulsory) should you choose to front line or by other factors (eg Time Pressure).
+
+I'll re-list what I consider ideal practice when it comes to LBAS setup:
+*Have the highest fighter power (FP) in the 1st base.
+*Have the highest bombing power (BP) in the last base.
+*If recon/fighter/bombers all present in the same base, the slot order from top to bottom will be Recon-Fighter-Bomber.
+*Aim for AP in most situation.
+
+Once again this is just a guide. It's important to constantly assess the situation and adapt as you see fit.
+
+With a little tweak of interpretation, the said list can become a resource saving guide when new bases are acquired:
+*'''Leave as many fighters in the 1st base if possible (don't pull them out unless needed elsewhere).'''
+*'''When bombers are needed, add them to the 3rd (or 2nd) base if possible.'''
+
+The other 2 bullet points should be trivial and easily manageable during any stage of the event. Just remember that when planes are re-ordered within the base (by dragging), it will be marked as "occupied" and unavailable for transfer till cool down wears off (12-min nominal).
+
+Add/remove planes if needed, but try to stick to the tips above as humanly as possible. Let's look at a few examples:
+
+===Example 1===
+
+Say on E2 (1 base allowed) you have 3-Fighters 1-Bomber in Base #1.
+
+On E3 (2 bases allowed) you noticed that the enemy FP is weak and you can afford 2-Fighter 2-Bombers in Base #1 and 1-Fighter 3-Bombers in Base #2.
+
+This should be a no brainer: remove 1 fighter and put 2 bombers into Base #1. Fill Base #2 as desired.
+
+Note that even if you could get away with 1-Fighter 3-Bombers in both bases (but run the risk of AD if unlucky), I would recommend leaving 2-Fighters in Base #1 not only for insurance (but also to save cost later).
+
+Whatever you choose in this scenario does not have a big impact, since only 1 plane slot is at stake. Now let's spice things up a bit.
+
+===Example 2===
+
+Once again on E2 (1 base allowed) you have 3-Fighters 1-Bomber in Base #1.
+
+However on E3 (1 base Sortie + 1 base Defend) you can only sortie 1 base. Now what do you do?
+
+I would recommend checking the LBAS restriction for the last map of the Event: if all 3 bases are allowed to Sortie, then I would swap out the Base #1 Bomber for a recon/interceptor, drag the recon/interceptor to slot #1 and set the base on defense. Fill Base #2 as desired.
+
+However, if the last map is a 2+1 (2 base Sortie + 1 base for Defense), I will fill the 2nd base with recon + interceptors while trying to keep as many fighters in Base #1 as possible.
+
+===Example 3===
+
+Let's take the previous example one step further. Consider this LBAS requirement:
+
+*E2: 1 Base Sortie
+*E3: 1 Base Sortie + 1 Base Defense
+*E4: 2 Base Sortie
+*Last Map: 3 Base Sortie
+
+Oh dear... I'd cringe if I see this list. Say for E2 the same arrangements were deployed (3-Fighters 1-Bomber), how would you setup up the LBAS for E3-E5?
+
+Think about this one for a bit, then compare with my response.
+
+<div class="mw-collapsible mw-collapsed" data-expandtext="Expand to see my response" style="width:100%">
+E3: I would pull out the bomber and put a recon/interceptor into Base #1 and it for Defense. Fill Base #2 as desired.
+
+E4: Replace Base #1 recon with a Bomber. Check how likely to achieve AS. Can Base #2 get away with less fighters? If not, try to maintain 2-Fighters in Base #2. (2-Fighters 2-Bombers are the most flexible compo when it comes to map change. Only need to change 1 plane to achieve desired effect in most cases)
+
+Last Map: Fill Base #3 as desired and adjust the other 2 to suit.
+
+How did you do? Is your response similar to mine? There is no right or wrong answer, it's more important to plan things based on what's needed and what you got on hand.
+
+The point of the whole exercise is to get you thinking and to raise awareness that the base can be planned ahead and maybe save a penny here and there.
+
+Some of you might have noticed this scenario in the previous example. If so, kudos to you! :)
+
+If you're keen, try working out what to do if E5 (in a 7 map event) is a 2+1 (oh the cringe =.=)
+
+[[File:Fairy_Zero_Type-52_6e23a67110d3e9c6ca4c1390c84ee2c9af8b70d11454230165.jpg|thumb|centre|320px]]
+</div>
+
+
+==Resources==
+
+===Quick Reference Tables===
+
+Comparison of notable aircrafts are presented below with various sorting and LBAS mode of operation (Sortie vs Base Defense). Kanji names have also been included to help non-moonrune readers who wants to utilise airpower calculators.
+
+Make sure that the correct table is used (Sortie vs Base Defense) as the FP performance of aircrafts may vary.
+
+'''Disclaimer: These data are for my own reference and may contain errors, use at your own risk!'''
+
+Abbreviations:
+*'''FP''': Fighter Power
+*'''eAA''' (Sortie): Equivalent AA value in Sortie Mode. [eAA (Sortie) = Displayed AA value + 1.5*Intercept value + Improvements].
+*'''eAA''' (Defense): Equivalent AA value in Base Defense Mode. [eAA (Defense) = Displayed AA value + Intercept value + 2*Anti-Bomber value + Improvements].
+*'''eFP''': Effective Fighter Power, assuming max-slot (18 planes) and max-proficiency. In the case of Base Defense mode, bonus from recon planes were not included.
+
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%"
+! colspan="5" style="background-color: #A3E3ED;" |List of Notable Fighters/Interceptors Sorted by FP (Sortie Mode)
+|-
+! Plane
+! Kanji Name
+! Combat Radius
+! eAA
+! eFP
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model II (64th Squadron)]]
+| 一式戦 隼II型(64戦隊)
+| 7
+| 18.5
+| 103
+|- align="center"
+| [[Shiden Kai (343 Air Group) 301st Fighter Squadron]]
+| 紫電改(三四三空) 戦闘301
+| 4
+| 17
+| 97
+|- align="center"
+| [[Spitfire Mk.IX (Skilled)]]
+| Spitfire Mk.IX(熟練)
+| 4
+| 16
+| 93
+|- align="center"
+| [[Type 3 Fighter Hien (244th Air Combat Group)]]
+| 三式戦 飛燕(飛行第244戦隊)
+| 4
+| 15
+| 89
+|- align="center"
+| [[Type 0 Fighter Model 53 (Iwamoto Squadron)]]★max
+| 零式艦戦53型(岩本隊)★max
+| 6
+| 14
+| 84
+|- align="center"
+| [[Type 3 Fighter Hien Model 1D]]
+| 三式戦 飛燕一型丁
+| 4
+| 13.5
+| 82
+|- align="center"
+| [[Shiden Model 21 Shiden Kai]]
+| 紫電二一型 紫電改
+| 4
+| 13.5
+| 82
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A]]★max
+| 一式戦 隼III型甲 ★max
+| 6
+| 13.5
+| 82
+|- align="center"
+| [[Reppuu (601 Air Group)]]★max
+| 烈風(六〇一空)★max
+| 5
+| 13
+| 80
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A (54th Squadron)]]
+| 一式戦 隼III型甲(54戦隊)
+| 7
+| 12.5
+| 78
+|- align="center"
+| [[Zero Fighter Model 52C (w/ Iwai Flight)]]★max
+| 零戦52型丙(付岩井小隊)★max
+| 6
+| 12
+| 76
+|- align="center"
+| [[Reppuu Model 11]]
+| 烈風改
+| 5
+| 12
+| 76
+|- align="center"
+| [[Spitfire Mk.V]]
+| Spitfire Mk.V
+| 5
+| 12
+| 76
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A]]
+| 一式戦 隼III型甲
+| 6
+| 11.5
+| 74
+|- align="center"
+| [[Type 4 Fighter Hayate]]
+| 四式戦 疾風
+| 5
+| 11.5
+| 74
+|- align="center"
+| [[Type 0 Fighter Model 52 (Skilled)]]★max
+| 零式艦戦52型(熟練)★max
+| 6
+| 11
+| 72
+|- align="center"
+| [[Reppuu (601 Air Group)]]
+| 烈風(六〇一空)
+| 5
+| 11
+| 72
+|- align="center"
+| [[Type 0 Fighter Model 21 (Skilled)]]★max
+| 零式艦戦21型(熟練)★max
+| 7
+| 10
+| 67
+|- align="center"
+| [[Reppuu]]
+| 烈風
+| 5
+| 10
+| 67
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model II]]
+| 一式戦 隼II型
+| 6
+| 9
+| 63
+|- align="center"
+| [[Type 0 Fighter Model 52 (Skilled)]]
+| 零式艦戦52型(熟練)
+| 6
+| 9
+| 63
+|- align="center"
+| [[Zero Fighter Model 52C (601 Air Group)]]
+| 零戦52型丙(六〇一空)
+| 6
+| 9
+| 63
+|- align="center"
+| [[Spitfire Mk.I]]
+| Spitfire Mk.I
+| 4
+| 8.5
+| 62
+|- align="center"
+| [[Type 0 Fighter Model 21 (Skilled)]]
+| 零式艦戦21型(熟練)
+| 7
+| 8
+| 59
+|- align="center"
+| [[Type 0 Fighter Model 52]]
+| 零式艦戦52型
+| 6
+| 6
+| 50
+|- align="center"
+| [[Type 0 Fighter Model 21]]
+| 零式艦戦21型
+| 7
+| 5
+| 46
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%"
+! colspan="5" style="background-color: #A3E3ED;" |List of Notable Fighters/Interceptors Sorted by Range (Sortie Mode)
+|-
+! Plane
+! Kanji Name
+! Combat Radius
+! eAA
+! eFP
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model II (64th Squadron)]]
+| 一式戦 隼II型(64戦隊)
+| 7
+| 18.5
+| 103
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A (54th Squadron)]]
+| 一式戦 隼III型甲(54戦隊)
+| 7
+| 12.5
+| 78
+|- align="center"
+| [[Type 0 Fighter Model 21 (Skilled)]]★max
+| 零式艦戦21型(熟練)★max
+| 7
+| 10
+| 67
+|- align="center"
+| [[Type 0 Fighter Model 21 (Skilled)]]
+| 零式艦戦21型(熟練)
+| 7
+| 8
+| 59
+|- align="center"
+| [[Type 0 Fighter Model 21]]
+| 零式艦戦21型
+| 7
+| 5
+| 46
+|- align="center"
+| [[Type 0 Fighter Model 53 (Iwamoto Squadron)]]★max
+| 零式艦戦53型(岩本隊)★max
+| 6
+| 14
+| 84
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A]]★max
+| 一式戦 隼III型甲 ★max
+| 6
+| 13.5
+| 82
+|- align="center"
+| [[Zero Fighter Model 52C (w/ Iwai Flight)]]★max
+| 零戦52型丙(付岩井小隊)★max
+| 6
+| 12
+| 76
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A]]
+| 一式戦 隼III型甲
+| 6
+| 11.5
+| 74
+|- align="center"
+| [[Type 0 Fighter Model 52 (Skilled)]]★max
+| 零式艦戦52型(熟練)★max
+| 6
+| 11
+| 72
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model II]]
+| 一式戦 隼II型
+| 6
+| 9
+| 63
+|- align="center"
+| [[Type 0 Fighter Model 52 (Skilled)]]
+| 零式艦戦52型(熟練)
+| 6
+| 9
+| 63
+|- align="center"
+| [[Zero Fighter Model 52C (601 Air Group)]]
+| 零戦52型丙(六〇一空)
+| 6
+| 9
+| 63
+|- align="center"
+| [[Type 0 Fighter Model 52]]
+| 零式艦戦52型
+| 6
+| 6
+| 50
+|- align="center"
+| [[Reppuu (601 Air Group)]]★max
+| 烈風(六〇一空)★max
+| 5
+| 13
+| 80
+|- align="center"
+| [[Reppuu Model 11]]
+| 烈風改
+| 5
+| 12
+| 76
+|- align="center"
+| [[Spitfire Mk.V]]
+| Spitfire Mk.V
+| 5
+| 12
+| 76
+|- align="center"
+| [[Type 4 Fighter Hayate]]
+| 四式戦 疾風
+| 5
+| 11.5
+| 74
+|- align="center"
+| [[Reppuu (601 Air Group)]]
+| 烈風(六〇一空)
+| 5
+| 11
+| 72
+|- align="center"
+| [[Reppuu]]
+| 烈風
+| 5
+| 10
+| 67
+|- align="center"
+| [[Shiden Kai (343 Air Group) 301st Fighter Squadron]]
+| 紫電改(三四三空) 戦闘301
+| 4
+| 17
+| 97
+|- align="center"
+| [[Spitfire Mk.IX (Skilled)]]
+| Spitfire Mk.IX(熟練)
+| 4
+| 16
+| 93
+|- align="center"
+| [[Type 3 Fighter Hien (244th Air Combat Group)]]
+| 三式戦 飛燕(飛行第244戦隊)
+| 4
+| 15
+| 89
+|- align="center"
+| [[Type 3 Fighter Hien Model 1D]]
+| 三式戦 飛燕一型丁
+| 4
+| 13.5
+| 82
+|- align="center"
+| [[Shiden Model 21 Shiden Kai]]
+| 紫電二一型 紫電改
+| 4
+| 13.5
+| 82
+|- align="center"
+| [[Spitfire Mk.I]]
+| Spitfire Mk.I
+| 4
+| 8.5
+| 62
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%"
+! colspan="5" style="background-color: #CCFF00;" |List of Short Range Fighters/Interceptors Sorted by FP (Sortie Mode)
+|-
+! Plane
+! Kanji Name
+! Combat Radius
+! eAA
+! eFP
+|- align="center"
+| [[Shinden Kai]]
+| 震電改
+| 2
+| 15
+| 89
+|- align="center"
+| [[Type 3 Fighter Hien]]
+| 三式戦 飛燕
+| 3
+| 12.5
+| 78
+|- align="center"
+| [[Shiden Model 11]]★max
+| 紫電一一型 ★max
+| 3
+| 11.5
+| 74
+|- align="center"
+| [[Shiden Model 11]]
+| 紫電一一型
+| 3
+| 9.5
+| 65
+|- align="center"
+| [[Raiden]]
+| 雷電
+| 2
+| 9
+| 63
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%"
+! colspan="5" style="background-color: #FFCC33;" |List of Notable Bombers/FB Sorted by FP (Sortie Mode)
+|-
+! Plane
+! Kanji Name
+! Combat Radius
+! eAA
+! eFP
+|- align="center"
+| [[Zero Fighter Model 62 (Fighter-bomber / Iwai Squadron)]]★max
+| 零戦62型(爆戦/岩井隊)★max
+| 5
+| 9.5
+| 40
+|- align="center"
+| [[F4U-1D]]
+| F4U-1D
+| 6
+| 7
+| 29
+|- align="center"
+| [[Bomb-carrying Type 1 Fighter Hayabusa Model III Kai (55th Squadron)]]
+| 爆装一式戦 隼III型改(55戦隊)
+| 5
+| 6
+| 25
+|- align="center"
+| [[Type 1 Land-based Attack Aircraft Model 34]]
+| 一式陸攻 三四型
+| 8
+| 4
+| 16
+|- align="center"
+| [[Type 1 Land-based Attack Aircraft Model 22A]]
+| 一式陸攻 二二型甲
+| 10
+| 3
+| 12
+|- align="center"
+| [[Type 1 Land-based Attack Aircraft]]
+| 一式陸攻
+| 9
+| 2
+| 8
+|}
+
+{| class="wikitable mw-collapsible mw-collapsed" style="width:100%"
+! colspan="4" style="background-color: #FF66FF;" |List of Notable Fighters/Interceptors Sorted by FP (Base Defense)
+|-
+! Plane
+! Kanji Name
+! eAA
+! eFP
+|- align="center"
+| [[Type 3 Fighter Hien (244th Air Combat Group)]]
+| 三式戦 飛燕(飛行第244戦隊)
+| 19
+| 106
+|- align="center"
+| [[Shiden Kai (343 Air Group) 301st Fighter Squadron]]
+| 紫電改(三四三空) 戦闘301
+| 19
+| 106
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model II (64th Squadron)]]
+| 一式戦 隼II型(64戦隊)
+| 18
+| 101
+|- align="center"
+| [[Raiden]]
+| 雷電
+| 18
+| 101
+|- align="center"
+| [[Spitfire Mk.IX (Skilled)]]
+| Spitfire Mk.IX(熟練)
+| 18
+| 101
+|- align="center"
+| [[Spitfire Mk.V]]
+| Spitfire Mk.V
+| 17
+| 97
+|- align="center"
+| [[Type 3 Fighter Hien Model 1D]]
+| 三式戦 飛燕一型丁
+| 16
+| 93
+|- align="center"
+| [[Shinden Kai]]
+| 震電改
+| 15
+| 89
+|- align="center"
+| [[Type 0 Fighter Model 53 (Iwamoto Squadron)]]★max
+| 零式艦戦53型(岩本隊)★max
+| 14
+| 84
+|- align="center"
+| [[Shiden Model 21 Shiden Kai]]
+| 紫電二一型 紫電改
+| 14
+| 84
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A]]★max
+| 一式戦 隼III型甲 ★max
+| 14
+| 84
+|- align="center"
+| [[Type 3 Fighter Hien]]
+| 三式戦 飛燕
+| 13
+| 80
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A (54th Squadron)]]
+| 一式戦 隼III型甲(54戦隊)
+| 13
+| 80
+|- align="center"
+| [[Reppuu (601 Air Group)]]★max
+| 烈風(六〇一空)★max
+| 13
+| 80
+|- align="center"
+| [[Type 4 Fighter Hayate]]
+| 四式戦 疾風
+| 13
+| 80
+|- align="center"
+| [[Shiden Model 11]]★max
+| 紫電一一型 ★max
+| 13
+| 80
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model III A]]
+| 一式戦 隼III型甲
+| 12
+| 76
+|- align="center"
+| [[Reppuu Model 11]]
+| 烈風改
+| 12
+| 76
+|- align="center"
+| [[Spitfire Mk.I]]
+| Spitfire Mk.I
+| 12
+| 76
+|- align="center"
+| [[Zero Fighter Model 52C (w/ Iwai Flight)]]★max
+| 零戦52型丙(付岩井小隊)★max
+| 12
+| 76
+|- align="center"
+| [[Reppuu (601 Air Group)]]
+| 烈風(六〇一空)
+| 11
+| 72
+|- align="center"
+| [[Type 0 Fighter Model 52 (Skilled)]]★max
+| 零式艦戦52型(熟練)★max
+| 11
+| 72
+|- align="center"
+| [[Shiden Model 11]]
+| 紫電一一型
+| 11
+| 72
+|- align="center"
+| [[Reppuu]]
+| 烈風
+| 10
+| 67
+|- align="center"
+| [[Type 0 Fighter Model 21 (Skilled)]]★max
+| 零式艦戦21型(熟練)★max
+| 10
+| 67
+|- align="center"
+| [[Type 0 Fighter Model 52 (Skilled)]]
+| 零式艦戦52型(熟練)
+| 9
+| 63
+|- align="center"
+| [[Zero Fighter Model 52C (601 Air Group)]]
+| 零戦52型丙(六〇一空)
+| 9
+| 63
+|- align="center"
+| [[Shiden Kai 2]]
+| 紫電改二
+| 9
+| 63
+|- align="center"
+| [[Type 1 Fighter Hayabusa Model II]]
+| 一式戦 隼II型
+| 8
+| 59
+|- align="center"
+| [[Type 0 Fighter Model 21 (Skilled)]]
+| 零式艦戦21型(熟練)
+| 8
+| 59
+|- align="center"
+| [[Type 0 Fighter Model 52]]
+| 零式艦戦52型
+| 6
+| 50
+|- align="center"
+| [[Type 0 Fighter Model 21]]
+| 零式艦戦21型
+| 5
+| 46
+|}
+
+Adapted from: [http://wikiwiki.jp/kancolle/?%B4%F0%C3%CF%B9%D2%B6%F5%C2%E2#b45bcc26 wikiwiki] (Special thanks to [http://kancolle.wikia.com/wiki/User:WashBoard17 @WashBoard17])
+
+
+===Air Power Calculators===
+
+*http://kancollecalc.web.fc2.com/air_supremacy.html (see [http://kancolle.wikia.com/wiki/User_blog:TenkouKuugen/Air_Power_Calculator_For_Non-Moonrune-Readers this blog] for more information if you can't read Japanese)
+*http://aircalc.net/
+
+[[File:Jet_fairy_Ri-chan_Wo-chan.png|thumb|centre|320px]]
+
+
+===Related Article===
+[http://kancolle.wikia.com/wiki/User_blog:TenkouKuugen/Small_Savings_For_Improving_Type_0_Fighter_Model_21/52 Small Savings For Improving Type 0 Fighter Model 21/52]
+
+狐野ヲタケ、(@wotake_fox) draws a lot of plane+fairy fanarts.  Follow him on twitter if you wanna get more :)
+
+
+==Remarks==
+
+I hope this article helps you get the thinking process going. A mission planned by yourself is far more flexible than a cookie-cutter build copied from somewhere else (and more rewarding of course).
+
+Take care of your fairies and they'll bring you victories you desire. Don't throw them in danger needlessly... 
+[[File:Kaga_and_fairies_CdHWOEXVAAACVy7.jpg|frame|centre|Kaga: "I take pride in training and getting better with you everyday. 
+ Thank you..." #FairyLifeMatters]]
+
+
+==Citation==
+<references />
+[[Category:Blog posts]]

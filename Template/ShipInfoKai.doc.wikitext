@@ -1,0 +1,34 @@
+This template uses ship data modules to display an infobox for the requested ship.
+
+==Example==
+ <nowiki>{{ShipInfoKai|name=Ooyodo|model=Kai|float=left}}</nowiki>
+ <nowiki>{{ShipInfoKai|U-511|float=left}}</nowiki>
+ <nowiki>{{ShipInfoKai|Choukai/Kai Ni|float=left}}</nowiki>
+
+becomes
+{{ShipInfoKai|name=Ooyodo|model=Kai|float=left}}
+{{ShipInfoKai|U-511|float=left}}
+{{ShipInfoKai|Choukai/Kai Ni|float=left}}
+{{clr}}
+
+==Parameters==
+The following are the parameters that can be passed.
+
+===[1]===
+
+The ''key'' of the ship, which consists of: The name of the ship, followed by a slash (/), optionally followed by the suffix of the ship.
+
+This method is included as a shortcut and for convenience. ''name'' and ''model'' will take precedence over this.
+
+===name===
+The name of the ship, without any suffixes.
+
+===model===
+The model of the ship, ie. the suffix. For example, Kai or Kai Ni.
+
+To specify the base model you can omit model or leave model empty.
+
+===float===
+Set to ''left'' or ''right'' to float the infobox.
+
+<includeonly>[[Category:Templates that use ship data modules|{{PAGENAME}}]][[Category:Templates that use equipment data modules|{{PAGENAME}}]]</includeonly><noinclude>[[Category:Template documentation|{{PAGENAME}}]]</noinclude>

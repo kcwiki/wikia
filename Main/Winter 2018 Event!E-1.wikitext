@@ -1,0 +1,167 @@
+{{Warning|Please do not use your Nishimura Fleet Members in this Map, as they are required for a hidden mechanic for clearing E-2 and E-4. This applies to '''ALL DIFFICULTIES'''.}}
+{{clear}}
+{{Event/MapPageHeader
+<!--|thread = -->
+}}
+{{Event/MapInfo
+|en = Battle Stations! Perform Thorough Patrols of the Route Ahead! [Battle of the Palawan Passage Route Patrols]
+|jp = 作戦開始 前路哨戒を厳とせよ！「パラワン水道前路哨戒戦」
+|romaji = Sakusen kaishi Zenro-shōkai o gen to seyo! 「Parawan-suidō zenro-shōkai-sen」
+|tag = E1
+|mechanics = Striking Force@Striking_Force, LoS Check@Events/Mechanics#LoS_Check,  Land Base Aerial Support@Land Base Aerial Support, Ship Locking@Events/Mechanics#Ship_Locking, Unlockable Nodes@Events/Mechanics#Node_specific_details
+<!--
+|transport = true
+-->
+|hp_all = 
+|hp_casual = 708
+|hp_easy = 708
+|hp_medium = 985
+|hp_hard = 1500
+
+|show_kills = true
+|kills_all = 
+|kills_casual = 4
+|kills_easy = 4
+|kills_medium = 5.5
+|kills_hard = 5.5
+
+|reward_all = 
+
+|reward_casual_1 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_casual_1_x = 1
+|reward_casual_2 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_casual_2_x = 2
+
+|reward_easy_1 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_easy_1_x = 1
+|reward_easy_2 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_easy_2_x = 2
+|reward_easy_4 = [[File:New Model Gun Mount Improvement Material Icon.png{{!}}50px{{!}}link=New Model Gun Mount Improvement Material]]
+|reward_easy_4_x = 1
+|reward_easy_5 = [[File:Blueprint 058 inventory.png{{!}}50px{{!}}Blueprint{{!}}link=Medal]]
+|reward_easy_5_x = 1
+
+|reward_medium_1 = [[File:Food supply ship irako.png{{!}}50px{{!}}Irako{{!}}link=Fatigue]]
+|reward_medium_1_x = 3
+|reward_medium_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_medium_2_x = 1
+|reward_medium_3 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_medium_3_x = 2
+|reward_medium_4 = [[File:New Model Gun Mount Improvement Material Icon.png{{!}}50px{{!}}link=New Model Gun Mount Improvement Material]]
+|reward_medium_4_x = 1
+|reward_medium_5 = [[File:Blueprint 058 inventory.png{{!}}50px{{!}}Blueprint{{!}}link=Medal]]
+|reward_medium_5_x = 1
+
+|reward_hard_1 = [[File:Food supply ship irako.png{{!}}50px{{!}}Irako{{!}}link=Fatigue]]
+|reward_hard_1_x = 3
+|reward_hard_2 = [[File:Furniture fairy.png{{!}}50px{{!}}link=Furniture fairy]]
+|reward_hard_2_x = 1
+|reward_hard_3 = {{EquipmentCardKai|Combat Ration|size=50px}}
+|reward_hard_3_x = 2
+|reward_hard_4 = [[File:New Model Gun Mount Improvement Material Icon.png{{!}}50px{{!}}link=New Model Gun Mount Improvement Material]]
+|reward_hard_4_x = 1
+|reward_hard_5 = [[File:Blueprint 058 inventory.png{{!}}50px{{!}}Blueprint{{!}}link=Medal]]
+|reward_hard_5_x = 1
+|reward_hard_6 = {{EquipmentCardKai|Prototype Toukai|size=50px}}
+|reward_hard_6_x = 1
+
+}}
+{{MapBranchingTable
+|title = E-1 Branching Rules
+|1 -> A = * Do not meet the requirements to go to D.
+|1 -> D/empty = 
+* Meet all of the following requirements:
+** Amount of (F)BB(V) ≦ 1
+** Fleet must contain a CL
+** Fleet contains no AV
+** Fleet contains no AS (Taigei)
+** Amount of DD + DE ≧ 2
+
+|B -> C/empty = 
+* Fail the LoS check.
+|B -> E/empty = 
+* Pass the LoS check.
+
+|D -> E/empty,G = * Active Branching
+
+|E/empty -> F, H = * Active Branching
+
+|G -> J = 
+* Do not meet the requirements to go to K.
+|G -> K = 
+* Meet all of the following requirements:
+** Fleet contains no battleships.
+** Amount of DD ≧ 3
+
+|I -> O = * Pass the LoS check of 48 Cn3 F33.
+|I -> L/empty = * Fail the LoS check.
+
+|J -> M/empty = 
+* Fail the LoS check.
+|J -> K = 
+* * Pass the LoS check of 48 Cn3 F33.
+
+|K -> M/empty = 
+* Fail the LoS check.
+|K -> N = 
+* * Pass the LoS check of 48 Cn3 F33.
+}}
+
+==Map Guide==
+*'''This map does not allow the use of CV(B) or SS(V). CVLs are fine, however.'''
+
+*'''NOTE''': It is possible to sortie either the first or the third fleet in this map making using a [[Striking Force]] (fleet consisting of 7 ships) an option especially at higher difficulties.
+*'''LBAS''': Only one [[Land Base Aerial Support]] is available for sortie.
+** 4+ range is required in order to reach the boss node O.
+*This map is divided in 2 phases:
+** Phase 1: Unlock the Boss node O by A-ranking certain nodes.
+** Phase 2: Defeat the {{ShipLink|New Submarine Princess Flagship}}
+
+{{clear}}
+===Phase 1 Unlocking the Boss Node O===
+[[File:【KanColle】Winter 2018 Event E-1 Opening Hidden Boss Node|thumb|right|300 px]]
+When first entering the map, the boss node O will be missing (see map below).  Achieving A or S ranks on specific nodes are required to make the boss appear. 
+'''Requirements'''
+*'''Casual''': A+ rank nodes F and K
+*'''Easy''': A+ rank nodes F and K
+*'''Medium''': A+ rank nodes F, N and K
+*'''Hard''': A+ rank nodes B, F, N and K
+
+
+* '''Node B'''
+**Route:{{Event/Route|A|red|B|red}}
+**Any fleet without a CL or less than 2 DD/DE will go this route, this means that sortieing less than 6 ships to preserve resources is possible.
+**Node A and node B have only fleets composed of submarines so (O)ASW setup on your ships is highly recommended.
+* '''Node F'''
+**Route:{{Event/Route|D|blue|E|blue|F|red}}
+**Recommended fleet composition: 1CL 2DD/DE 0-1BB(V) 3-2XX
+**This node has a mixed fleet featuring a surface fleet with 1 submarine, sending the LBAS filled with ASW capable aircrafts can easily wipe out the submarine before shelling phase leaving your fleet the job of taking care of the rest, alternatively it is possible to ignore the submarine all together and just stick to A rank by only sinking the surface enemies.
+* '''Nodes K & N'''
+**Route:{{Event/Route|D|blue|G|red|K|red|N|red}}
+***Recommended fleet composition: 1CL 3DD 2XX (no battleships allowed)
+**Node G has submarines so bringing some (O)ASW is recommended.
+**Bringing a battleship will force the fleet to go through an extra submarine node J.
+**There is a LoS check from K to N, currently estimated at 48 LoS using the F33 Cn3 formula (Hard mode).
+***Equiping some seaplanes and radars on your ships in order to meet the LoS requirements is recommended.
+**'''NOTE''': For Easy and Casual modes, ONLY beating node K is necessary, meaning that fighting node N is not required.
+After fulfilling all the requirements, the boss node O will appear on the map and it will be possible to move to phase 2.
+
+===Phase 2 Defeat the Boss===
+*The Boss is {{ShipLink|New Submarine Princess/Flagship|text=New Submarine Princess}}. It is recommended to bring OASW capable ships like DDs or CLs.
+*Route: {{Event/Route|D|blue|E|blue|H|red|I|red|O|red}}
+**1CL 2DD/DE 0-1BB(V) 3-2XX
+*If you have difficulties sinking the Boss node flagship due to the lack of ASW, bringing a battleship in order to have a second shelling phase is recommended.
+*Sending the LBAS filled with planes capable of performing ASW strikes against submarines (must have 7+{{ASW}} stat) like the {{EquipmentLink|Prototype Toukai}} is recommended to make sinking the boss considerably easier.
+
+{{clear}}
+== Map progression ==
+{{#tag:gallery|
+Winter_2018_Event_E-1_Map p1.png{{!}}Map before unlocking the boss node O.
+Winter_2018_Event_E-1_Map.png{{!}}Full map after unlocking the boss node O.
+|spacing=small|bordercolor=transparent|captionalign=center|hideaddbutton=true|widths=300}}
+{{clear}}
+
+==LBAS Flight Range==
+[[File:Winter_2018_Event_E1_flight_range.png|500px|center]]
+
+{{Event/MapPageFooter}}

@@ -1,0 +1,45 @@
+{{Map/Header}}
+{{Map/Info
+|en = Eastern Orel Bay
+|jp = 東部オリョール海
+|romaji = Tōbu Oryōru-kai
+|exp_hq = 90
+|exp_hq_boss = 1180
+|strategy_name = Orel Patrol
+|strategy_name_ja = オリョール哨戒
+|strategy_info = Advance into and patrol Orel Bay. Eliminate enemy trade raiders; defend our maritime transport lines!
+<br>*Original:我が方り海上輸送
+|strategy_info_ja =  オリョール海に進出、同海域を哨戒。敵通商破壊艦隊を排除、*我が方の海上輸送ラインの防衛に努めよ！
+}}
+{{MapBranchingTable
+|id = 2-3
+|0 -> A, B, C/empty =
+*Go to C if fleet contains only SS(V) and AS
+* Random between A & B otherwise.
+|C/empty -> D/resource, F =
+* Random routing
+|D/resource -> F,G/resource=
+*Go to G if fleet contains AV and DD+DE ≥ 2
+*Otherwise, random routing (The more (F)BB(V) and CV(L) you have in the fleet, the higher chance you will go to node F)
+|F -> H/resource, J, G/resource = 
+* Random between J & G if the fleet contains any AV, CV(B/L) or CL (Higher chance for J)
+* Random between H, J, and G otherwise.
+|G/resource -> I/resource, K =
+*Go to K if fleet contains any (F)BB(V) or CV(L/B) '''and''' CL+DD+DE ≤ 1
+*Otherwise, random routing
+|J -> L/empty, M, N = 
+*Go to L if (F)BB(V) + CV(L/B) = 6
+*Meet '''ANY''' of the following to go to N
+**Fleet contains CL and DD ≥ 4
+**Fleet contains CL and CA = 5
+*Random between M and N if fleet contains only SS(V)
+*Random between L, M and N if fleet contains any SS(V)
+*Otherwise, random between L and N, but the heavier the fleet (as in more BB or CV(L)), the more likely you will go to L
+}}
+
+===Recommendations===
+*'''1 XX 1 CL 4 DD''' or '''1 CL 5 CA''' are the only two comps that guarantees the boss routing. Otherwise, any other fleets should be able to reach the boss node most of the times as long as CL+DD ≥ 4
+**Bring at least one AV, CV(B/L) or CL to avoid chance of off-routing from {{Event/Route|F|Red}} to {{Event/Route|H|Green}}.
+**Bringing more heavy ships ((F)BB(V)/CV(L/B)) will reduce the chances of reaching the boss.
+
+{{Map/Footer}}

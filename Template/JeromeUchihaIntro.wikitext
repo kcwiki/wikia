@@ -1,0 +1,81 @@
+<infobox>
+  <title source="title1">
+    <default>{{PAGENAME}}</default>
+  </title>
+  <image source="image1">
+    <caption source="caption1"/>
+  </image>
+  <group>
+    <header>Debut</header>
+    <data source="ign">
+      <label>IGN</label>
+    </data>
+    <data source="id">
+      <label>ID</label>
+    </data>
+  </group>
+  <group>
+    <header>Personal</header>
+    <data source="real_name">
+      <label>Real Name</label>
+    </data>
+    <data source="birthdate">
+      <label>Birthdate</label>
+    </data>
+    <data source="age">
+      <label>Age</label>
+    </data>
+    <data source="gender">
+      <label>Gender</label>
+    </data>
+    <data source="status">
+      <label>Status</label>
+    </data>
+    <data source="height">
+      <label>Height</label>
+    </data>
+    <data source="weight">
+      <label>Weight</label>
+    </data>
+    <data source="affliations">
+      <label>Affliations</label>
+    </data>
+  </group>
+  <group>
+    <header>Ranking</header>
+    <data source="fleet_position">
+      <label>Fleet Position</label>
+    </data>
+    <data source="level">
+      <label>Level</label>
+    </data>
+  </group>
+  <group>
+    <header>Vision</header>
+    <data source="motto">
+      <label>Motto</label>
+    </data>
+  </group>
+</infobox>
+<noinclude>
+Example usage:<pre>
+{{JeromeUchihaIntro
+|title1=Example
+|image1=Example
+|caption1=Example
+|ign=Example
+|id=Example
+|real_name=Example
+|birthdate=Example
+|age=Example
+|gender=Example
+|status=Example
+|height=Example
+|weight=Example
+|affliations=Example
+|fleet_position=Example
+|level=Example
+|motto=Example
+}}
+</pre>
+</noinclude>

@@ -1,0 +1,248 @@
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;">
+{| width="100%"
+|'''Map Editing Notes'''
+|-
+|
+* <span style="color:#f00;">Use '''[[:w:c:c:Help:Classic_editor|<span style="color:#f00;">SOURCE EDITOR</span>]]''' for editing the maps</span>. It is advisable to change your [[Special:Preferences#mw-prefsection-editing|editing preference]] to source editor.
+* <span style="color:#f00;">'''DO NOT''' edit HTML tag containers, wiki-text sectioning, and its spacing.</span> Only edit '''TEXT contents and VALUES'''. 
+* For Ship Drop markup, please check [[Thread:295964]] for what ship should be considered rare and should be marked as red.
+* For ships confirmed to drop at certain difficulty and above, use (Difficulty +) label. If the label is absent, '''DO NOT''' include it in your edit. State where you got the info from in the edit summary.
+|}
+</div>
+<!-- Embedded code: Navigation box TEST FLOAT PANE-->
+<div style="width:96%; border:2px solid #aa5; background:#ffc; text-align:left; margin:15px auto 20px;position:fixed;bottom:25px;right:45px;width:280px;overflow:hidden;z-index:2">
+;Local float pane in E-7
+:Countdown to the next armor reset
+</div>
+<!-- End of embedded code -->
+
+===E-7 Boss Special Mechanism===
+<div style="width:90%; border:2px solid darkblue; background:lightblue; text-align:left; margin:15px auto 20px;padding:5px;">
+;Special note!
+:According to August 13th's tweets by game staff, there exist ways to make the E-7 boss weaker (see E-7 section in the page), but the effect will reset everyday at 00:00 JST. However there are nothing visible to indicate the weakening.
+
+:The effect reportedly do not activate during the first two day of the event, however it is not validated (It have been suspected that the weakening effect is actually increase critical hit effect of friendly ship but there are not enough evident to conclude it is really the nature of the weakening effect)
+
+:At Aug29 00:00 JST (Aug28 15:00 UTC or 08:00 PDT), '''''Rabaul server''''''s weakening effect remain unresetted over day change due to server instability in the previous day. (So that If one in Rabaul server weakened the boss at 28th, they would not need to do that again in 29th)</div>
+
+<!---<span style="font-size:16px; font-weight:bold; color:#f00;">
+<span data-options="no-leading-zeros" data-end="toggle" data-toggle=".countdownCompleteSept6" class="countdown" style="display:none;"><span class="countdowndate">September 6 2015 15:00:00 +0000</span></span>
+<span class="countdownCompleteSept6" style="display:none;">September 6 weakening effect reset</span> --->
+
+===<span style="display:none;">E-7</span>===
+
+<div style="margin:-44px 0px 0px -5px;">
+{{EventMap3
+|expanded = true
+|map = E-7
+|name = Operation FS|japanese = FS作戦
+|map_image = Summer_2015_E7_Map.png
+|map_banner = Summer_2015_E7_Banner.png
+|report_fleet = Thread:292558
+|report_enemy = Thread:292557
+|info = 
+* Boss Gauge: '''2000 HP'''
+* The boss is an Akizuki-type Anti-Air Destroyer with EXTREMELY high armor values. Cut In setups are recommended on ships with high luck, but DA setups work fine on ships that support it well (Bismarck/Jintsuu/CAs)
+* '''It is possible to acquire a damage boost!'''
+**According to wikiwiki, it's thought to be, specifically, a critical damage increase above the normal 1.5x (highest credibility) 
+**'''ONLY applies to the AD Hime by S RANKING certain nodes:'''
+***K & C -> Both unconfirmed, some think they are not useful
+***'''Y & X nodes are recommended at least ONCE while accumulating additional kills (adding up to 3 to 5 in total per node) seems to help.'''
+*Be reminded that this 'map mechanic' resets '''once''' per day at midnight(12:00AM) JST. (see countdown timer on sections above)
+* This mechanic ''appears to'' persist even when difficulty settings are changed.
+|boss_easy_kills = 8
+|boss_medium_kills = 8
+|boss_hard_kills = 8
+|boss_easy_basic = [[File:DD Anti Air Princess 628 Battle.jpg|Air Defense Princess|link=Air Defense Princess]]
+|boss_medium_basic = [[File:DD Anti Air Princess 628 Battle.jpg|Air Defense Princess|link=Air Defense Princess]]
+|boss_hard_basic = [[File:DD Anti Air Princess 628 Battle.jpg|Air Defense Princess|link=Air Defense Princess]]
+|boss_easy_final = [[File:DD Anti Air Princess 628 Battle.jpg|Air Defense Princess|link=Air Defense Princess]]
+|boss_medium_final = [[File:DD Anti Air Princess 628 Battle.jpg|Air Defense Princess|link=Air Defense Princess]]
+|boss_hard_final = [[File:DD Anti Air Princess 628 Battle.jpg|Air Defense Princess|link=Air Defense Princess]]
+|rewards_easy =
+*[[File:DD_Teruzuki_422_Battle.jpg|120px]]  [[Teruzuki]]
+*[[File:Medal.png|50px]] [[Medal]]
+|rewards_medium =
+*[[File:DD_Teruzuki_422_Battle.jpg|120px]]  [[Teruzuki]]
+*[[File:Reinforcement Expansion.png|50px]] [[Reinforcement Expansion|Reinforcement Expansion]] x1
+*[[File:Combat Provisions.png|50px]] [[Combat Provisions]] x2
+*[[File:Medal.png|50px]] [[Medal]] x2
+|rewards_hard =
+*[[File:DD_Teruzuki_422_Battle.jpg|120px]]  [[Teruzuki]]
+* [[File:First-Class Medal.png|50px]][http://kancolle.wikia.com/wiki/Medal#First_Class_Medal First Class Medal]
+*[[File:Reinforcement Expansion.png|50px]] [[Reinforcement Expansion|Reinforcement Expansion]] x2
+*[[File:Combat Provisions.png|50px]] [[Combat Provisions]] x3
+*[[File:Medal.png|50px]] [[Medal]] x2
+|branching = 
+*Start to E node: 
+**Carrier Task Fleet has 75% chance to go to E
+**Surface Task Fleet has 25% chance to go to E
+*Start to B node:
+**Carrier Task Fleet has 25% chance to go to B
+**Surface Task Force has 75% chance to go to B
+**Either style of fleet with Akitsumaru will always go to B
+* Having a FBB in your 2nd fleet has a small chance to dead end route to A from B.
+*Having 1 or more CLT or SS will always go Start->B->A
+* D node: With Akitsumaru D->H. Otherwise random.
+**Akitsushima is reported to give D->H as well.
+* At J: 
+**Carrier Task Fleet with:
+***3CV has good chance to go either Y or M
+***2CV 1CVL will generally go M but still has small chance to go Y.
+***1CV 2CVL will generally go to M with a small chance to go to L. (May branch to Y with 2FBB in second fleet)
+***4 or fewer (F)BB(V)+CV across the 1st and 2nd fleet will generally go to M with a small chance to go to L. Will never go to Y.
+**Surface Task Fleet generally goes L but has chance to go Y.
+|tips = 
+* Node B, F and I are sub nodes.
+* Node K is air battle node. 
+* G & H are choice nodes.
+*Carrier Task Force is recommended for the better routing when taking on the boss.
+*Surface Task Force is favoured to clear nodes X and Y due to routing but with Akitsumaru you can choose either Surface Task Force or Carrier Task Force.
+*Use of Torpedo Cut In on high luck ships is recommend for the final kill of the boss.
+**For Hard mode, use of a high luck CA (ie: [[Prinz Eugen]] or [[Myoukou]] with torpedo cut in set up and a [[Skilled Lookouts]] is recommended.
+*Surface Task Force might be better for the survivability of you fleet for the last kill if your second fleet's ships are low leveled. However you will be fighting with the compass for the 25% chance to go from Start->E.
+*As last resort consider using [[Reinforcement Expansion]] to give your cut in ships a [[Emergency Repair Goddess]] which has a chance of bring them back to full health for the boss night battle.
+
+|boss_node = Z
+|drop_B = 
+* '''DD''': 
+* '''CL''': 
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_C = 
+* '''DD''': 
+* '''CL''': 
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_E = 
+* '''DD''': [[Akatsuki]], [[Shirayuki]], [[Murakumo]], [[Hibiki]]
+* '''CL''': [[Kitakami]], [[Sendai]]
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_F = 
+* '''DD''': 
+* '''CL''': 
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_G = 
+* '''DD''': 
+* '''CL''': 
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_I = 
+* '''DD''': 
+* '''CL''': 
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_J = 
+* '''DD''': [[Shikinami]], [[Isonami]], [[Hibiki]], [[Kagerou]], [[Ayanami]], [[Miyuki]]
+* '''CL''': [[Isuzu]], [[Kiso]], [[Nagara]], [[Tama]], [[Kuma]]
+* '''CA''': [[Kako]]
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_K = 
+* '''DD''': 
+* '''CL''': 
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_L = 
+* '''DD''': 
+* '''CL''': 
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_M = 
+* '''DD''': [[Yukikaze]], [[Ayanami]], [[Kuroshio]], [[Inazuma]]
+* '''CL''': [[Isuzu]], [[Kuma]], [[Sendai]], [[Kitakami]], [[Naka]]
+* '''CA''': [[Aoba]], [[Ashigara]], [[Chikuma]]
+* '''AV''': 
+* '''CVL''': [[Shouhou]], [[Ryuujou]]
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': [[Chitose]]
+|drop_X =
+* '''DD''': 
+* '''CL''': 
+* '''CA''': 
+* '''AV''': 
+* '''CVL''': 
+* '''CV''':
+* '''BB''': 
+* '''SS''': 
+* '''Auxiliary''': 
+|drop_Y =
+* '''DD''': [[Yukikaze]], [[Kazagumo|'''<span style="color:red">Kazagumo</span>''']], [[Yuugumo]], [[Akigumo]]
+* '''CL''': 
+* '''CA''':  [[Atago]]
+* '''AV''': 
+* '''CVL''': [[Hiyou]]
+* '''CV''':
+* '''BB''': 
+* '''SS''': [[I-401|'''<span 
+style="color:red">I-401</span>''']], [[Maruyu|'''<span 
+style="color:red">Maruyu</span>''']]
+* '''Auxiliary''': 
+|drop_Z =
+* '''DD''':  [[Kazagumo|'''<span style="color:red">Kazagumo</span>''']], [[Maikaze]], [[Akigumo]], [[Yuugumo]], [[Naganami]], [[Hatsukaze]]
+* '''CL''': [[Yuubari]], [[Kinu]], [[Abukuma]], [[Yura]], [[Kitakami]]
+* '''CA''':  [[Mikuma|'''<span 
+style="color:red">Mikuma</span>''']], [[Kinugasa]], [[Atago]], [[Takao]], [[Mogami]]
+* '''AV''': 
+* '''CVL''': 
+* '''CV''': [[Zuikaku|'''<span 
+style="color:red">Zuikaku</span>''']]
+* '''BB''': [[Kirishima]], [[Kongou]], [[Hyuuga]]
+* '''SS''':  [[Maruyu|'''<span 
+style="color:red">Maruyu</span>''']], [[I-401|'''<span 
+style="color:red">I-401</span>''']]
+* '''Auxiliary''': 
+}}
+
+<!--Please, DO NOT EDIT HERE. START.-->
+</div>
+<!--Please, DO NOT EDIT HERE. FINISH.-->
+[[Category:Old sandboxes]]

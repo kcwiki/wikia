@@ -1,0 +1,115 @@
+<includeonly>{{#vardefine:colspan|{{#expr:9 + {{#if:{{{show_data_hit_rate|}}}|1|0}} + {{#if:{{{show_data_hit_rate_ci|}}}|1|0}} + {{#if:{{{show_data_crit_rate|}}}|1|0}} + {{#if:{{{show_hit_rate|}}}|1|0}} + {{#if:{{{show_crit_rate|}}}|1|0}} + {{#if:{{{show_hit_rate_difference|}}}|1|0}} + {{#if:{{{show_crit_rate_difference|}}}|1|0}} + {{#if:{{{show_accuracy_value|}}}|1|0}} + {{#if:{{{show_fit|}}}|1|0}}}}}}{| class="wikitable typography-xl-optout" style="text-align:center"
+!Ship
+!Level
+!Morale
+!{{Hit}}
+!{{Luck}}
+!Target
+!CL0
+!CL1
+!CL2{{#if:{{{show_data_hit_rate|}}}|!!Data<br>hit rate}}{{#if:{{{show_data_hit_rate_ci|}}}|!!CI}}{{#if:{{{show_data_crit_rate|}}}|!!Data<br>crit rate}}{{#if:{{{show_hit_rate|}}}|!!Hit rate}}{{#if:{{{show_crit_rate|}}}|!!Crit rate}}{{#if:{{{show_hit_rate_difference|}}}|!!Hit rate<br>difference}}{{#if:{{{show_crit_rate_difference|}}}|!!Crit rate<br>difference}}{{#if:{{{show_accuracy_value|}}}|!!Accuracy<br>value}}{{#if:{{{show_fit|}}}|!!Fit}}
+|-
+{{Calc|format=table|debug={{{debug|}}}
+|!{{{ship}}}
+|!_equipment ~ {{#if:{{{accuracy|}}}|nil|{{{equipment|nil}}}}}
+|!_level ~ {{{level|1}}}
+|!_luck ~ {{{luck|nil}}}
+|!_morale ~ {{{morale|49}}}
+|!_accuracy ~ {{{accuracy|nil}}}
+|!_fit ~ {{{fit|nil}}}
+|!!{{{target}}}
+|!cl0 ~ {{{cl0|0}}}
+|!cl1 ~ {{{cl1|0}}}
+|!cl2 ~ {{{cl2|0}}}
+|?card
+|?level
+|?format_morale
+|?accuracy
+|?luck
+|??card
+|?cl0
+|?cl1
+|?cl2
+|{{#if:{{{show_data_hit_rate|}}}|?FitData.hit|_}}
+|{{#if:{{{show_data_hit_rate_ci|}}}|?FitData.error|_}}
+|{{#if:{{{show_data_crit_rate|}}}|?FitData.crit|_}}
+|{{#if:{{{show_hit_rate|}}}|?hit_rate|_}}
+|{{#if:{{{show_crit_rate|}}}|?critical_hit_rate|_}}
+|{{#if:{{{show_hit_rate_difference|}}}|?FitData.difference|_}}
+|{{#if:{{{show_crit_rate_difference|}}}|?FitData.critical_difference|_}}
+|{{#if:{{{show_accuracy_value|}}}|?FitData.accuracy_value|_}}
+|{{#if:{{{show_fit|}}}|?FitData.fit|_}}
+}}
+|-
+!Equipment
+|colspan="{{#var:colspan}}" style="text-align:left"|{{#if:{{{equipment|}}}|{{{equipment}}}|Unarmed}}
+{{#if:{{{notes|}}}|{{!}}-
+!Notes
+{{!}}colspan="{{#var:colspan}}"{{!}}{{{notes}}}}}
+|}</includeonly><noinclude>
+==Parameters==
+Attacker configuration parameters:
+* '''ship''': attacker ship, <code><name>[/<suffix>]</code>. Required.
+** '''equipment''', if any, only used for accuracy, not fit. Defaults to unarmed.
+** '''level'''. Defaults to 1.
+** '''luck'''. Defaults to ship's initial luck.
+** '''morale'''. Defaults to 49.
+** '''accuracy''', set to ignore '''equipment''' and give manual equipment accuracy. Disabled by default.
+** '''fit''', manual equipment fit. Disabled by default.
+Target configuration parameters:
+* '''target''': target ship, <code><name>[/<suffix>]</code>. Required.
+Data configuration parameters, at least one is required to be > 0:
+* '''cl0''': number of misses in the sample. Defaults to 0.
+* '''cl1''': number of normal hits in the sample. Defaults to 0.
+* '''cl2''': number of critical hits in the sample. Defaults to 0.
+Table configuration parameters, optional, all disabled by default:
+* '''show_data_hit_rate''': show data hit rate.
+* '''show_data_hit_rate_ci''': show data hit rate 95% CI.
+* '''show_data_crit_rate''': show data critical hit rate.
+* '''show_hit_rate''': show theoretical hit rate.
+* '''show_crit_rate''': show theoretical critical hit rate.
+* '''show_hit_rate_difference''': show difference between data and theoretical hit rates.
+* '''show_crit_rate_difference''': show difference between data and theoretical critical hit rates.
+* '''show_accuracy_value''': show pre fit accuracy value, i.e. not floored.
+* '''show_fit''': show theoretically estimated fit bonus.
+Misc parameters:
+* '''notes''': use to add additional notes.
+==Example==
+Finding [[41cm Triple Gun Mount Kai]] fit bonus on [[Nagato Kai Ni]].
+<pre>
+{{FitData/Sandbox
+|ship = Nagato/Kai Ni
+|equipment = 41cm Triple Gun Mount Kai, 41cm Triple Gun Mount Kai, Type 13 Air Radar Kai
+|level = 99
+|morale = 25
+|target = Destroyer Ro-Class
+|cl0 = 56
+|cl1 = 807
+|cl2 = 137
+|show_data_hit_rate = true
+|show_data_hit_rate_ci = true
+|show_hit_rate = true
+|show_hit_rate_difference = true
+|show_fit = true
+}}
+</pre>
+{{FitData/Sandbox
+|debug = true
+|ship = Nagato/Kai Ni
+|equipment = 41cm Triple Gun Mount Kai, 41cm Triple Gun Mount Kai, Type 13 Air Radar Kai
+|level = 99
+|morale = 25
+|target = Destroyer Ro-Class
+|cl0 = 56
+|cl1 = 807
+|cl2 = 137
+|show_data_hit_rate = true
+|show_data_hit_rate_ci = true
+|show_hit_rate = true
+|show_hit_rate_difference = true
+|show_fit = true
+}}
+<div style="display:none">
+colspan = {{#var:colspan}}
+</div>
+</noinclude>

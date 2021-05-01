@@ -1,0 +1,168 @@
+http://i.imgur.com/Uoro87d.png
+
+For details of data collection see image.  It comes from japanese discussion site shirataba and chinese discussion site ptt
+
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 700px; height: 500px;"
+|-
+! scope="col"|AACI API Type
+! scope="col"|
+Equipment
+! scope="col"|
+Estimated
+
+Shot Down
+
+for each slot
+! scope="col"|Activate Rate
+! scope="col"|
+Tested
+
+Equipment
+|-
+|API 1: Akizuki only
+|
+HA Gunx2
+
++ Radar
+|7
+|65-70%
+|
+10cmDirector x 2 + 13 Radar
+
+10cmDirector+10cmHA + 13 Radar
+
+12.7latex2 + 13 Radar
+
+10cmHA + 13 Radar
+|-
+|API 2: Akizuki only
+|HA Gun + Radar
+|6
+|56%
+|10cm + 13 Radar
+|-
+|API 3: Akizuki only
+|HA Gun  x2
+|4
+|57-66%
+|
+10cmDirector x3
+
+10cm x2 + 94AAD
+|-
+|API 4
+|
+Large Gun + Sanshiki
+
++ AA Director + AA Radar
+|6
+|
+|
+|-
+|API 5
+|
+HAgun with Director x 2
+
++ AA Radar
+|4
+|58-67%
+|
+10cmDir x2 + 14Radar + 94AAD
+
+10cmDir + 14Radar + seaplane
+
+10cmDir + 14Radarx2
+
+10cmDir x2 + 14Radar
+
+10cmDir x2 + 13Radar
+|-
+|API 6
+|
+Large Gun + Sanshiki
+
++ AA Director
+|4
+|47%
+|35.6cm + 41cm + Sanshiki + 94AAD
+|-
+|API 7
+|
+HA gun + Director
+
++ AA Radar
+|3
+|44-48%
+|
+12.7late x2 + 14Radar + 94AAD
+
+8cmHA+ 91AAD + 14 Radar
+|-
+|API 8
+|
+HAgun with drector
+
++ AA Radar
+|4
+|52%
+|10cmDir + 10cmHA+ 14Radar + plane
+|-
+|API 9
+|HAgun + AA director
+|2
+|34-43%
+|
+8cmHA + 91AAD
+
+10cmHAx2+94AAD
+
+10cmHAx2+91AAD
+|-
+|API 10 Maya only
+|
+HAgun+25mm
+
+concentrated AA + AA radar
+|8
+|60%
+|20.3cmTyp3+ 12.7cmDirector + 25mmConAA + Fumo
+|-
+|API 11 Maya only
+|
+HAgun+25mm 
+
+concentrated AA
+|6
+|56%
+|20.3cmTyp3 + 12.7cmDir + 25cmConAA + Seaplane
+|-
+|API 12
+|
+25mm concentrated AA
+
++ AA MG + AA Radar
+|3
+|
+|
+|}
+Rules:
+
+HA gun combined with AA director (10cm+Director, 12.7cm+Director) counts as either HA gun or HA_with_Director, but not AA director
+
+Activation priority:
+
+Single ship:  API 1 > 2,3,5,8    API4>6, API5>8, API7>9 API 10>8,9,11,12  API11 > 9
+
+Multiple ship in one fleet:  Higher Api value have trigger priority
+
+Example:
+
+You have a maya with API10, a mitsuki with API9 and Akizuki with API1 in a fleet.
+
+In air phase, you first roll for API10, if fail then roll API9.  That that fails, you roll for API1.
+
+---
+
+Practical applications:  Do not fit a low strength AACI (eg. API9) to go with Akizuki
+[[Category:Blog posts]]

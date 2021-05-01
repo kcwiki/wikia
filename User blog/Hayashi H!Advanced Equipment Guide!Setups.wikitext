@@ -1,0 +1,1321 @@
+<tabber>
+Aircraft=
+
+Due to the number of combinations of maps, squadron types and carriers used, it is pointless to list the precise setups for any given combination.
+
+However, the following general principles apply:
+#Only use [[Skilled Carrier-based Aircraft Maintenance Personnel|SCAMP]] when you sortie at least 2 carriers with plane slots of 3 or below. Otherwise, [[Skilled Carrier-based Aircraft Maintenance Personnel|SCAMP]] belongs in CAVs, particularly {{ShipBattleCard|Tone/Kai Ni}}{{ShipBattleCard|Chikuma/Kai Ni}}.
+#Against targets with AACI, do not load any bombers of any type on any slot smaller than 20.
+#Against targets without AACI, do not load any bombers of any type on any slot smaller than (number of nodes *3).
+#Zuiuns and their variants of seaplane bombers should not be loaded on any slot smaller than (number of nodes *3) if you possess air superiority.
+#Zuiuns and their variants of seaplane bombers should not be loaded on any slot smaller than (number of nodes *4) if you do not possess air superiority.
+#Zuiuns and their variants of seaplane bombers should not be used at all if an AACI user is present.
+#Do not load more than one [[Saiun]] in a fleet, and if using one, always load it in the smallest slot (unless using [[Skilled Carrier-based Aircraft Maintenance Personnel|SCAMP]], in which case it takes the second smallest slot).
+#For 3-2A grinding specifically, {{ShipBattleCard|Hayasui/Kai|flagship=true}} may load torpedo bombers in the two largest slots and a [[Skilled Carrier-based Aircraft Maintenance Personnel|SCAMP]] in the third. Using this in most other maps may not guarantee the squadrons are not wiped out.
+#AACIs are flat numbers which lead to equal losses in all slots per AACI regardless of the size of the slot the squadrons are loaded in. In contrast, the number of planes lost to fleet AA and enemy fighters is a fraction of the total size of the squadron. If AACI is involved, increasing bomber slot size will lead to only very slightly more aircraft lost; the % of aircraft lost as a fraction of the total number launched drops as the slot size increases, so sortieing bombers in larger slots insures against a carrier having all bombers wiped and being unable to participate in shelling at all. If it is not involved, increasing bomber numbers will lead to a proportional increase in aircraft lost, so there is an incentive to load them in smaller slots to reduce bauxite costs.
+#The first slot of all carriers has an additional +20% critdmg when a >> bomber squadron is equipped, while all other slots have a +10% critdmg bonus. Thus as far as possible all first slots should contain bombers after the above conditions are met. Additionally, torpedo bombers should be clustered on the same carriers in order to give those 'attack carriers' the highest possible critdmg% multiplier. The remaining 'air superiority carriers' should carry only as many bombers as they need to achieve firepower cap, in the smallest slot size allowable that can guarantee the squadron does not get wiped out.
+#The non-bomb non-torpedo non-AA stat bonuses of squadrons do not scale with slot size, so squadrons used to add these stat bonuses should generally be loaded in the smallest slots that fit the above, while those adding bomb/torpedo/AA stats should be loaded in the larger slots. However, the rule below this may occasionally override this one.
+#If all the above are fulfilled, use http://aircalc.net/ to load the minimum number of fighters that leads to Air Superiority(Green)/Supremacy(Blue). As a general guide, setups based on initial strike for the purpose of minimising damage taken will aim for Air Superiority to bring more bombers, whereas setups used to enable Artillery Spotting on a large number of CLs, CAs or BBs will aim for Air Supremacy, as the latter leads to a greater Artillery Spotting rate than mere Air Superiority. Setups used against AACI users in aerial nodes will always aim for Air Superiority in order to pack as many bombers as possible to sink the AACI user before the second airstrike phase in the aerial nodes.
+#After the fighter slots are decided based on the above, change the bomber type allocation only (swapping [[Tenzan Model 12 (Tomonaga Squadron)|Tenzan Tomonaga]] for [[Ryuusei Kai]] for instance) between carriers if there are cases where some ships fail to get daytime FP cap (150) or headon daytime FP cap (188) while others have too much. For instance, 4 carriers with 175 FP is not as efficient as 2 carriers with 150 and 2 carriers with 188 even though the latter has a lower total FP, as in the first case a head-on engagement form will produce 2 FP capped carriers capable of clearing a boss, while in the second it may be the case that all 4 are incapable of sinking the target.
+#When yasen nodes are involved, aim for the minimum number of carriers possible to increase the chance of clearing the node with minimal damage taken. Where possible use 'air superiority carrier' type setups on carriers with the highest possible evasion stat to ensure they can reach the final nodes without being chuuhaed or worse in a yasen node.
+
+|-|ASW=
+
+{{#tag:tabber|Pure ASW=
+
+{{{!}} border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+{{!}}-
+{{!}}3-slot DD/CL
+{{!}}{{EquipmentCardKai|Type 4 Passive Sonar|size=160px}}
+{{!}}{{EquipmentCardKai|Type 4 Passive Sonar|size=160px}}
+{{!}}{{EquipmentCardKai|Type 3 Depth Charge Projector|size=160px}}
+{{!}}'''Locked'''
+{{!}}-
+{{!}}{{ShipBattleCard|Ooyodo/Kai}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 3 Active Sonar|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 3 Active Sonar|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 3 Active Sonar|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 3 Depth Charge Projector|size=160px}}
+{{!}}-
+{{!}}{{ShipBattleCard|Yuubari/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Katori/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kashima/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Junyou/Kai Ni}}Pure ASW maps only
+{{!}}{{EquipmentCardKai|Type 97 Torpedo Bomber (931 Air Group)|size=160px}}>>
+{{!}}{{EquipmentCardKai|Ka Type Observation Autogyro|size=160px}}
+{{!}}{{EquipmentCardKai|Ka Type Observation Autogyro|size=160px}}
+{{!}}{{EquipmentCardKai|Saiun|size=160px}}>>
+{{!}}-
+{{!}}{{ShipBattleCard|Ise/Kai}}Pure ASW maps only
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Ka Type Observation Autogyro|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Ka Type Observation Autogyro|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Ka Type Observation Autogyro|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Ka Type Observation Autogyro|size=160px}}
+{{!}}-
+{{!}}{{ShipBattleCard|Hyuuga/Kai}}Pure ASW maps only
+{{!}}-
+{{!}}{{ShipBattleCard|Akitsushima/Kai}}
+{{!}}{{EquipmentCardKai|Type 4 Passive Sonar|size=160px}}
+{{!}}{{EquipmentCardKai|Type 3 Depth Charge Projector|size=160px}}
+{{!}}{{EquipmentCardKai|Prototype Seiran|size=160px}}>>
+{{!}}'''Locked'''
+{{!}}}
+In maps that contain anything other than submarines, ASW should be done by preferably nothing but CLs and DDs (though CAVs have a ASW hybrid role in 4-5 centre route due to its final boss being an installation).
+
+{{!}}-{{!}}ASW+nDA=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}3-slot DD/CL
+{{!}}{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}
+{{!}}{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}
+{{!}}{{EquipmentCardKai|Type 4 Passive Sonar|size=160px}}
+{{!}}'''Locked'''
+{{!}}Use DD if possible instead of CL as opportunity cost is lower
+{{!}}-
+{{!}}{{ShipBattleCard|Ooyodo/Kai}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 4 Passive Sonar|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 3 Depth Charge Projector|size=160px}}
+{{!}}rowspan="4"{{!}}
+{{!}}-
+{{!}}{{ShipBattleCard|Yuubari/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Katori/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kashima/Kai}}
+{{!}}}
+
+{{!}}-{{!}}ASW+dDA+nDA=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Ooyodo/Kai}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 4 Passive Sonar|size=160px}}
+{{!}}rowspan="3"{{!}}Katori's and Kashima's firepower are low; as far as possible leave this role to Ooyodo.
+{{!}}-
+{{!}}{{ShipBattleCard|Katori/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kashima/Kai}}
+{{!}}}
+}}
+
+|-|AACI=
+
+{{#tag:tabber|AACI+nDA=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+!scope="col"{{!}}Ships
+!scope="col"{{!}}Slot 1
+!scope="col"{{!}}Slot 2
+!scope="col"{{!}}Slot 3
+!scope="col"{{!}}Slot 4
+!scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Maya/Kai Ni}}
+{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|90mm Single High-angle Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|25mm Triple Autocannon Mount (Concentrated Deployment)|size=160px}}
+{{!}}{{EquipmentCardKai|FuMO25 Radar|size=160px}}
+{{!}}API 10 HCR AACI (8 planes/slot). Strongest AACI.
+{{!}}-
+{{!}}{{ShipBattleCard|Akizuki/Kai}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 13 Air Radar Kai|size=160px}}
+{{!}}rowspan="3"{{!}}'''Locked'''
+{{!}}rowspan="2"{{!}}API 1 HHR AACI (7 planes/slot).
+{{!}}-
+{{!}}{{ShipBattleCard|Teruzuki/Kai}}
+{{!}}-
+{{!}}Any other DD when Akizuki-classes are NOT in the fleet
+{{!}}API 5 BBR AACI (4 planes/slot). Will override the API 1 HHR AACI of Akizuki-classes.
+{{!}}-
+{{!}}{{ShipBattleCard|Isuzu/Kai Ni}}
+{{!}}{{EquipmentCardKai|90mm Single High-angle Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|90mm Single High-angle Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|FuMO25 Radar|size=160px}}
+{{!}}'''Locked'''
+{{!}}API 5 BBR AACI (4 planes/slot). Will override the API 1 HHR AACI of Akizuki-classes.
+{{!}}-
+{{!}}{{ShipBattleCard|Isuzu/Kai Ni}}
+{{!}}{{EquipmentCardKai|10.5cm Twin Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|10.5cm Twin Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|3.7cm FlaK M42|size=160px}}
+{{!}}'''Locked'''
+{{!}}API 15 HG AACI (3 planes/slot). Will override the API 1 HHR AACI of Akizuki-classes. Do not use if you possess any gun with internal AAFD.
+{{!}}-
+{{!}}{{ShipBattleCard|Kasumi/Kai Ni B}}
+{{!}}{{EquipmentCardKai|12.7cm Twin High-angle Gun Mount (Late Model)|size=160px}}
+{{!}}{{EquipmentCardKai|12.7cm Twin High-angle Gun Mount (Late Model)|size=160px}}
+{{!}}{{EquipmentCardKai|3.7cm FlaK M42|size=160px}}
+{{!}}'''Locked'''
+{{!}}API 17 HG AACI (3 planes/slot). Will override the API 1 HHR AACI of Akizuki-classes. Do not use if you possess any gun with internal AAFD.
+{{!}}}
+
+{{!}}-{{!}}ASW+AACI=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ship
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Satsuki/Kai Ni}}
+{{!}}{{EquipmentCardKai|Type 4 Passive Sonar|size=160px}}
+{{!}}{{EquipmentCardKai|Type 3 Depth Charge Projector|size=160px}}
+{{!}}{{EquipmentCardKai|25mm Triple Autocannon Mount (Concentrated Deployment)|size=160px}}
+{{!}}API 18 C AACI (2 planes/slot). Will override ALL OTHER AACI.
+{{!}}}
+Do not use this setup unless BOTH AACI and ASW are needed (or you possess zero AAFD/guns with an AAFD) as her 'special' AACI is weaker than all other AACIs in spite of overwriting all of them. Do not use this setup if any other AACI user is present.
+
+{{!}}-{{!}}AACI+nMCI=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Base Cut-in Rate
+! scope="col"{{!}}Flagship Cut-in Rate
+! scope="col"{{!}}AA Stat
+! scope="col"{{!}}Day Shell
+! scope="col"{{!}}Day Torpedo
+! scope="col"{{!}}Yasen Damage
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Hatsushimo/Kai Ni}}+16 luck
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}9★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}4★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 13 Air Radar Kai|size=160px}}
+{{!}}69%
+{{!}}82.0%
+{{!}}108
+{{!}}61
+{{!}}103
+{{!}}200 x2 nMCI
+{{!}}API 8 BR AACI (4 planes/slot). Will override the API 1 HHR AACI of Akizuki-classes.
+{{!}}-
+{{!}}{{ShipBattleCard|Ushio/Kai Ni}}+32 luck
+{{!}}66.9%
+{{!}}79.4%
+{{!}}103
+{{!}}61
+{{!}}99
+{{!}}195 x2 nMCI
+{{!}}API 8 BR AACI (4 planes/slot). Will override the API 1 HHR AACI of Akizuki-classes.
+{{!}}}
+Do not use this setup if {{ShipBattleCard|Akizuki/Kai}}{{ShipBattleCard|Teruzuki/Kai}} is present as it will override the Akizuki-class API 1 HHR AACI with an inferior API 8 BR AACI. See Night Battle Cut-in section below for more details on cut-in calculations. As a relative reference, {{ShipBattleCard|Yuudachi/Kai Ni}} does 213 x2 damage in her double attack configuration.
+}}
+
+|-|Initial Strike=
+
+{{#tag:tabber|IAS+ITS=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Mizuho/Kai}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Prototype Seiran|size=160px}}>>
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Prototype Seiran|size=160px}}>>
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Kouhyouteki|size=160px}}
+{{!}}rowspan="3"{{!}}Only to be used against weak targets incapable of using AACI.
+{{!}}-
+{{!}}{{ShipBattleCard|Chitose/A}}
+{{!}}-
+{{!}}{{ShipBattleCard|Chiyoda/A}}
+{{!}}}
+
+{{!}}-{{!}}ITS=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Day Shell
+! scope="col"{{!}}Day Torpedo
+! scope="col"{{!}}Yasen Damage
+{{!}}-
+{{!}}{{ShipBattleCard|Mizuho/Kai}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Kouhyouteki|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Kouhyouteki|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Kouhyouteki|size=160px}}
+{{!}}50
+{{!}}rowspan="3"{{!}}113 w/ ITS
+{{!}}153
+{{!}}-
+{{!}}{{ShipBattleCard|Chitose/A}}
+{{!}}rowspan="2"{{!}}34
+{{!}}rowspan="2"{{!}}137
+{{!}}-
+{{!}}{{ShipBattleCard|Chitose/A}}
+{{!}}}
+Use only in cases where the AVs will not enter night battle, and are used only for their pre-emptive torpedo. Particularly viable when used in the escort fleet of a Surface Task Force.
+
+{{!}}-{{!}}nDA+ITS=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Day Shell
+! scope="col"{{!}}Day Torpedo
+! scope="col"{{!}}Yasen Damage
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Kiso/Kai Ni}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}9★
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}9★
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Kouhyouteki|size=160px}}
+{{!}}91
+{{!}}127 w/ ITS
+{{!}}249 x2
+{{!}}rowspan="3"{{!}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kitakami/Kai Ni}}
+{{!}}rowspan="2"{{!}}90
+{{!}}rowspan="2"{{!}}>150 w/ ITS
+{{!}}rowspan="2"{{!}}283 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Ooi/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Mizuho/Kai}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Kouhyouteki|size=160px}}
+{{!}}64
+{{!}}rowspan="3"{{!}}89 w/ ITS
+{{!}}171 x2 nDA
+{{!}}rowspan="3"{{!}}Use in presence of AACIs where Zuiuns are likely to be shot down.
+{{!}}-
+{{!}}{{ShipBattleCard|Chitose/A}}
+{{!}}rowspan="2"{{!}}48
+{{!}}rowspan="2"{{!}}152 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Chiyoda/A}}
+{{!}}}
+{{ShipBattleCard|Kiso/Kai Ni}} uses this setup against fleets where all targets except the boss are CAs or weaker. Otherwise she uses the torpedo cut-in setup and eschews day shelling firepower. Since the yasen damage is only 17 lower than the mixed cut-in setup but the difference in trigger rate can be as high as 35%, the accuracy of these attacks is higher and the day shelling firepower is greater by 14, it is recommended that {{ShipBattleCard|Kitakami/Kai Ni}} use this setup almost all the time unless facing the rare case when the full 300 damage is required on a target, where the mixed cut-in setup will be optimal. Because {{ShipBattleCard|Ooi/Kai Ni}} has a low maximum luck of only 49, her maximum cut-in rate is 71.1% in flagship position - too low to be reliable, so she should always use this setup.
+}}
+
+|-|Night CI=
+
+As far as possible, ships with the flagship symbol should be in flagship position to take advantage of the +12.5% cutin rate. Fleet position does not affect night double attack, but attacks proceed in fleet order. If yasen is likely to happen, you want carriers in your last slots; if it is not likely to happen, you want your carriers in your first slots so that they can shell earlier in the 2nd day shelling phase to avoid being chuuhaed or worse before they get to attack.
+
+Add 5% to the base cut-in rates below if a [[Star Shell]] or [[Searchlight]] is mounted on another ship and it activates. Add 20% to the base cut-in rates if the ship is chuuhaed. If the sum is 100% or more, the cut-in will never fail (unlike yasen DAs, which have a small chance of failure). The 'base cut-in rate' numbers below only factor in the effects of [[Searchlight]] included in the setup itself and assumes that the luck value of the ships has been modernised to the luck cap for that cut-in type as stated under the ship icon. For example, if {{ShipBattleCard|Yuudachi/Kai Ni}} is sortied in a non-flagship position and chuuhaed with both [[Searchlight]] and [[Star Shell]] active from other ships, her cut-in rate will be 64.8%+20%+5%+5% = 94.8%, while if {{ShipBattleCard|Myoukou/Kai Ni|Flagship=true}} is sortied in a flagship position in good health with a [[Star Shell]] active from other ships in addition to her own [[Searchlight]], her cut-in rate will be 75.1%+5%+5% = 85.1%.
+
+If the flagship symbol is not attached to a ship, it means the activation rate is high enough to exceed 100% if the ship in question is chuuhaed. Consider sortieing a ship that needs the flagship cut-in rate buff more as a flagship. An exceptional case is builds which include Searchlights, which should be in flagship position as the Searchlight draws aggro, and you'll want them to fire before they get chuuhaed/taihaed - and the over-100% chuuha effect is unlikely to occur as flagships are fired at less often in the day.
+
+Finally, [[Searchlight]] effects do not stack and it already activates at a 100% rate as long as its carrier has more than 1 HP. For this cause, if you are using more than one of the below setups that include a [[Searchlight]] in the same fleet, equip [[Searchlight]] on the flagship only and replace all other instances with [[Skilled Lookouts]], [[Star Shell]] or auxiliary equipment. Please note that [[Skilled Lookouts]] are suspected to have no effect on formula luck-capped ships at the moment - if the ship is already at the luck cap, do NOT equip [[Skilled Lookouts]] as it will have no effect. [[Skilled Lookouts]] may be useful if a ship's maximum luck is lower than 50 (for gun cut-ins), 60 (for torpedo cut-ins) or 70 (for mixed cut-ins), as it would be impossible for those ships to ever reach the maximum cut-in rates without additional help.
+
+Further upgrading may increase numbers beyond the values stated.
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|Ships
+! scope="col"|Slot 1
+! scope="col"|Slot 2
+! scope="col"|Slot 3
+! scope="col"|Slot 4
+! scope="col"|Base Cut-in Rate
+! scope="col"|Flagship Cut-in Rate
+! scope="col"|Day Shell
+! scope="col"|Day Torpedo
+! scope="col"|Yasen Damage
+! scope="col"|Notes
+|-
+|{{ShipBattleCard|I-168/Kai|flagship=true}}+39 luck '''max'''
+| rowspan="6"|{{EquipmentCardKai|Prototype FaT Type 95 Oxygen Torpedo Kai|size=160px}}
+| rowspan="6"|{{EquipmentCardKai|Prototype FaT Type 95 Oxygen Torpedo Kai|size=160px}}
+| rowspan="6"|'''Locked'''
+| rowspan="6"|'''Locked'''
+|58.6%
+|71.1%
+| rowspan="6"|N/A
+|102 w/ ITS
+|162 x2 nTCI
+| rowspan="6"|
+|-
+|{{ShipBattleCard|Ro-500|flagship=true}}+16 luck
+|64.8%
+|77.3%
+|102 w/ ITS
+|165 x2 nTCI
+|-
+|{{ShipBattleCard|I-58/Kai|flagship=true}}+8 luck
+|63.7%
+|76.2%
+|117 w/ ITS
+|186 x2 nTCI
+|-
+|{{ShipBattleCard|I-8/Kai|flagship=true}}+32 luck
+|63.2%
+|75.7%
+|117 w/ ITS
+|189 x2 nTCI
+|-
+|{{ShipBattleCard|I-401/Kai|flagship=true}}+39 luck '''max'''
+|64.3%
+|76.8%
+|113 w/ ITS
+|190 x2 nTCI
+|-
+|{{ShipBattleCard|I-19/Kai|flagship=true}}+40 luck
+|60.9%
+|73.4%
+|122 w/ ITS
+|193 x2 nTCI
+|-
+|{{ShipBattleCard|Hatsushimo/Kai Ni|Flagship=true}}+8 luck
+| rowspan="6"|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}6★
+| rowspan="6"|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}6★
+| rowspan="6"|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}5★
+| rowspan="6"|'''Locked'''
+|64.8%
+|77.3%
+|55
+|133
+|265 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Shigure/Kai Ni|flagship=true}}+8 luck
+|63.7%
+|76.2%
+|62
+|133
+|276 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Yukikaze/Kai|flagship=true}}
+|64.8%
+|77.3%
+|64
+|138
+|286 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Akatsuki/Kai Ni|Flagship=true}}+40 luck
+|62.0%
+|74.5%
+|65
+|139
+|289 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Ayanami/Kai Ni|flagship=true}}+16 luck
+|62.6%
+|75.1%
+|75
+|136
+|300 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Shimakaze/Kai|flagship=true}}+47 luck '''max'''
+|64.3%
+|76.8%
+|64
+|148
+|>300 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Yuudachi/Kai Ni|flagship=true}}+39 luck '''max'''
+|{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=160px}}MAX★
+|{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=160px}}MAX★
+|{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=160px}}9★
+|'''Locked'''
+|64.3%
+|76.8%
+|78
+|133
+|298 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Yuudachi/Kai Ni|flagship=true}}+39 luck '''max'''
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}9★
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}9★
+|{{EquipmentCardKai|Searchlight|size=160px}}MAX★
+|'''Locked'''
+|69.3%
+|81.8%
+|81
+|129
+|298 x2 nTCI
+|Draws aggro, lower evasion
+|-
+|{{ShipBattleCard|Katori/Kai|flagship=true}}+32 luck
+|rowspan=2|{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}9★
+|rowspan=2|{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}9★
+|rowspan=2|{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}9★
+|rowspan=2|{{EquipmentCardKai|Ro.43 Reconnaissance Seaplane|size=160px}}>>
+|48.0%
+|60.5%
+|66 x2 dDA
+|45
+|202 x1 MGCI
+|rowspan=2|Max-viability build for anti-surface CT in PvP
+|-
+|{{ShipBattleCard|Kashima/Kai|flagship=true}}+24 luck
+|46.9%
+|59.4%
+|67 x2 dDA
+|44
+|202 x1 nMGCI
+|-
+|{{ShipBattleCard|Abukuma/Kai Ni|flagship=true}}+40 luck
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}5★
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}4★
+|{{EquipmentCardKai|Kouhyouteki|size=160px}}
+|'''Locked'''
+|64.8%
+|77.3%
+|61
+|140 w/ ITS
+|285 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Kiso/Kai Ni|flagship=true}}+48 luck
+|{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=160px}}9★
+|{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=160px}}9★
+|{{EquipmentCardKai|Kouhyouteki|size=160px}}
+|'''Locked'''
+|64.8%
+|77.3%
+|69
+|150 w/ ITS
+|>300 x2 nTCI
+|
+|-
+|{{ShipBattleCard|Kitakami/Kai Ni}}+40 luck
+|{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=160px}}9★
+|{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}9★
+|{{EquipmentCardKai|Kouhyouteki|size=160px}}
+|'''Locked'''
+|70%
+|82.5%
+|76
+|>150 w/ ITS
+|>300 x2 nMCI
+|
+|-
+|{{ShipBattleCard|Myoukou/Kai Ni|Flagship=true}}+24 luck
+|{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=160px}}4★
+|{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=160px}}5★
+|{{EquipmentCardKai|61cm Triple (Oxygen) Torpedo Mount|size=160px}}4★
+|{{EquipmentCardKai|Searchlight|size=160px}}★
+|62.6%
+|75.1%
+|97
+|114
+|300 x2 nTCI
+|Draws aggro, lower evasion
+|-
+|{{ShipBattleCard|Prinz Eugen/Kai|Flagship=true}}+16 luck
+|{{EquipmentCardKai|SKC34 20.3cm Twin Gun Mount|size=160px}}
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}5★
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}4★
+|{{EquipmentCardKai|Searchlight|size=160px}}9★
+|62.6%
+|75.1%
+|93
+|119
+|300 x2 nTCI
+|Draws aggro, lower evasion
+|-
+|{{ShipBattleCard|Haruna/Kai Ni|flagship=true}}+8 luck
+|{{EquipmentCardKai|38cm Twin Gun Mount|size=160px}}7★
+|{{EquipmentCardKai|38cm Twin Gun Mount|size=160px}}7★
+|{{EquipmentCardKai|35.6cm Twin Gun Mount|size=160px}}3★
+|{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+|49.5%
+|62.0%
+|>150 x2 dDA
+|N/A
+|300 x1 nMGCI
+|
+|-
+|{{ShipBattleCard|Bismarck/drei}}+48 luck
+|{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}9★
+|{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}9★
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}4★
+|{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+|70.0%
+|82.5%
+|147 x2 dDA
+|55
+|245 x2 nMCI
+|
+|-
+|{{ShipBattleCard|Bismarck/drei|flagship=true}}+24 luck
+|{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}★
+|{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}★
+|{{EquipmentCardKai|35.6cm Twin Gun Mount|size=160px}}
+|{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+|48.0%
+|60.5%
+|>150 x2 dDA
+|41
+|>300 x1 nMGCI
+|
+|-
+|{{ShipBattleCard|Bismarck/drei|flagship=true}}+40 luck
+|{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}MAX★
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}6★
+|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}6★
+|{{EquipmentCardKai|Type 96 150cm Searchlight|size=160px}}9★
+|69.8%
+|82.3%
+|128
+|70
+|280 x2 nTCI
+|Draws major aggro, greatly lowers evasion. Not recommended unless tanking for other ships is really important.
+|}
+Contrary to common belief, Torpedo cut-in setups are inefficient on {{ShipBattleCard|Kitakami/Kai Ni}}, as the [[Kouhyouteki]] alone already puts her above an effective torpedo stat of 150 in the day - so any further addition has little to no effect on the torpedo attacks while she is at shouha or above health. At night, her base stats alone will already break the night damage cap if a torpedo cut-in is used. so additional stats from the torpedoes are wasted a second time, while their day firepower remains a lot weaker than it could have been. Even without using any Maruyu or upgrading any equipment piece, a readily available{{EquipmentCardKai|Kouhyouteki|size=40px}}{{EquipmentCardKai|15.5cm Triple Gun Mount|size=40px}}{{EquipmentCardKai|61cm Quadruple (Oxygen) Torpedo Mount|size=40px}} setup already shells for more damage in the day, torpedo-attacks for the same damage in the day and has a cut-in rate equal to dual torpedoes at night with the same damage, except all the aforementioned attacks are more accurate than a dual torpedo build. However, due to the very small gain this mixed cut-in setup has over a double attack setup in spite of a very high luck requirement, the Double Attack setup is recommended for the majority of cases.
+
+The only case when you'll want her to use the Torpedo cut-in setup is when you're assuming that she will be in chuuha state, or that the day battle will take place in head-on formation (though in this event the night battle potential is still wasted). In chuuha, the torpedo cut-in form will deal 254x2 damage (lower than full health double-attack, so if this level of damage was useful one could have gone double attack to begin with), while the day torpedo attack will be at 128 damage (opening torpedo only as chuuha ships don't fire a closing torpedo). This particular problem is ingrained deeply enough to deserve its own paragraph.
+
+|-|nDA=
+
+{| border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+|-
+! scope="col"|Ships
+! scope="col"|Slot 1
+! scope="col"|Slot 2
+! scope="col"|Slot 3
+! scope="col"|Slot 4
+! scope="col"|Notes
+|-
+|Non-Akizuki-class DD
+|{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}
+|{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}
+|{{EquipmentCardKai|Type 22 Surface Radar Kai 4|size=160px}}
+|'''Locked'''
+|If Night Cut-in users are present in the fleet {{EquipmentCardKai|Star Shell|size=40px}} may be used instead of Radar.
+|-
+|{{ShipBattleCard|Tenryuu/Kai}}
+| rowspan="2"|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+| rowspan="2"|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+| rowspan="2"|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}
+| rowspan="2"|'''Locked'''
+| rowspan="2"|If Tenryuu-classes not remodelled for lower consumption, mount only 2 guns.
+|-
+|{{ShipBattleCard|Tatsuta/Kai}}
+|-
+|{{ShipBattleCard|Taigei}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|'''Locked'''
+|
+|-
+|{{ShipBattleCard|Yuubari/Kai}}
+| rowspan="3"|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+| rowspan="3"|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+| rowspan="3"|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+| rowspan="3"|{{EquipmentCardKai|61cm Quintuple (Oxygen) Torpedo Mount|size=160px}}
+| rowspan="3"|
+|-
+|{{ShipBattleCard|Katori/Kai}}
+|-
+|{{ShipBattleCard|Kashima/Kai}}
+|-
+|{{ShipBattleCard|Akashi/Kai}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|
+|-
+|{{ShipBattleCard|Akitsu Maru/Kai}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|{{EquipmentCardKai|OTO 152mm Triple Rapid Fire Gun Mount|size=160px}}
+|{{EquipmentCardKai|Type 0 Fighter Model 53 (Iwamoto Squadron)|size=160px}}>>
+|'''Locked'''
+|
+|}
+
+|-|Artillery Spotting=
+
+{{#tag:tabber|CL dDA+nDA=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}3-slot CL except Abukuma Kai Ni, Isuzu Kai Ni, Tenryuu class, Agano class
+{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}{{EquipmentCardKai|Ro.43 Reconnaissance Seaplane|size=160px}}
+{{!}}'''Locked'''
+{{!}}
+{{!}}-
+{{!}}{{ShipBattleCard|Yahagi/Kai}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Ro.43 Reconnaissance Seaplane|size=160px}}>>
+{{!}}rowspan="4"{{!}}'''Locked'''
+{{!}}rowspan="4"{{!}}
+{{!}}-
+{{!}}{{ShipBattleCard|Agano/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Noshiro/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Sakawa/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Ooyodo/Kai}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Ro.43 Reconnaissance Seaplane|size=160px}}>>
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=160px}}
+{{!}}rowspan="3"{{!}}Ooyodo often used with this to counteract maelstroms in a fleet absent CAs.
+{{!}}-
+{{!}}{{ShipBattleCard|Katori/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kashima/Kai}}
+{{!}}}
+The lowest firepower cruiser in the fleet with a seaplane slot size greater than 1 will use a [[Type 98 Reconnaissance Seaplane (Night Recon)]] instead of [[Ro.43 Reconnaissance Seaplane]] if yasen is expected and at least Air Superiority is achieved.
+
+{{!}}-{{!}}CA/V dDA+nDA=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Furutaka/Kai Ni}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}4★
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=160px}}4★
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=160px}}
+{{!}}rowspan="3"{{!}}Replace {{EquipmentCardKai|Type 32 Surface Radar|size=40px}} with {{EquipmentCardKai|Type 3 Shell|size=40px}} when fighting installation targets.
+{{!}}-
+{{!}}{{ShipBattleCard|Atago/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Takao/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kako/Kai Ni}}
+{{!}}rowspan="7"{{!}}{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=160px}}4★
+{{!}}rowspan="7"{{!}}{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=160px}}4★
+{{!}}rowspan="7"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="7"{{!}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=160px}}
+{{!}}rowspan="7"{{!}}Replace {{EquipmentCardKai|Type 32 Surface Radar|size=40px}} with {{EquipmentCardKai|Type 3 Shell|size=40px}} when fighting installation targets.
+{{!}}-
+{{!}}{{ShipBattleCard|Kinugasa/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Choukai/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Myoukou/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Haguro/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Nachi/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Ashigara/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Aoba/Kai}}
+{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}9★
+{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}9★
+{{!}}{{EquipmentCardKai|Ro.43 Reconnaissance Seaplane|size=160px}}>>
+{{!}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=160px}}
+{{!}}Replace {{EquipmentCardKai|Type 32 Surface Radar|size=40px}} with {{EquipmentCardKai|Type 3 Shell|size=40px}} when fighting installation targets.
+{{!}}-
+{{!}}{{ShipBattleCard|Mogami/Kai}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}6★
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}7★
+{{!}}rowspan="4"{{!}}Replace {{EquipmentCardKai|Type 32 Surface Radar Kai|size=40px}} with {{EquipmentCardKai|Type 3 Shell|size=40px}} when fighting installation targets or {{EquipmentCardKai|Drum Canister (Transport Use)|size=40px}} for branching. Replace {{EquipmentCardKai|Type 0 Observation Seaplane|size=40px}} with {{EquipmentCardKai|Zuiun Model 12|size=40px}} for Air Superiority or {{EquipmentCardKai|Prototype Seiran|size=40px}} for IAS/ASW.
+{{!}}-
+{{!}}{{ShipBattleCard|Suzuya/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kumano/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Mikuma/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Tone/Kai Ni}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}4★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|20.3cm (No.2) Twin Gun Mount|size=160px}}4★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Skilled Carrier-based Aircraft Maintenance Personnel|size=160px}}
+{{!}}rowspan="2"{{!}}Replace {{EquipmentCardKai|Skilled Carrier-based Aircraft Maintenance Personnel|size=40px}} with {{EquipmentCardKai|Type 3 Shell|size=40px}} when fighting installation targets or {{EquipmentCardKai|Drum Canister (Transport Use)|size=40px}} for branching. Replace {{EquipmentCardKai|Type 0 Observation Seaplane|size=40px}} with {{EquipmentCardKai|Zuiun Model 12|size=40px}} for Air Superiority or {{EquipmentCardKai|Prototype Seiran|size=40px}} for IAS/ASW.
+{{!}}-
+{{!}}{{ShipBattleCard|Chikuma/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Prinz Eugen/Kai}}
+{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}6★
+{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}7★
+{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=160px}}
+{{!}}Replace {{EquipmentCardKai|Type 32 Surface Radar Kai|size=40px}} with {{EquipmentCardKai|Type 3 Shell|size=40px}} when fighting installation targets.
+{{!}}-
+{{!}}{{ShipBattleCard|Zara/Kai}}
+{{!}}{{EquipmentCardKai|203mm/53 Twin Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|203mm/53 Twin Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|Ro.43 Reconnaissance Seaplane|size=160px}}>>
+{{!}}{{EquipmentCardKai|Type 32 Surface Radar Kai|size=160px}}
+{{!}}Replace {{EquipmentCardKai|Type 32 Surface Radar Kai|size=40px}} with {{EquipmentCardKai|Type 3 Shell|size=40px}} when fighting installation targets. Replace {{EquipmentCardKai|Ro.43 Reconnaissance Seaplane|size=40px}} with {{EquipmentCardKai|Prototype Seiran|size=40px}} when using it as an Air Supremacy tool in a 0 AS requirement map. Usage of Zara outside Combined Fleet is inadvisable due to her low base Torpedo.
+{{!}}}
+Replace the seaplane with [[Anti-torpedo Bulge (Medium)]] or [[Enhanced Kanhon Type Boiler]] if Air Superiority cannot be obtained, only yasen nodes are involved, or both.
+
+In particular, as 100 firepower is converted by a [[Type 3 Shell]] yasen double attack into 300 firepower cap at night against installation targets, these setups are used to bring the ships as close to the 100 firepower value as possible. Any excess firepower is generally better placed into accuracy instead.
+
+The lowest firepower cruiser in the fleet with a seaplane slot size greater than 1 will use a [[Type 98 Reconnaissance Seaplane (Night Recon)]] instead of [[Type 0 Observation Seaplane]] if yasen is expected and at least Air Superiority is achieved.
+
+{{!}}-{{!}}BB APCI/dDA+nDA=
+
+Further upgrading may increase numbers beyond the values stated.
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Parallel Day Shell
+! scope="col"{{!}}Head-on Day Shell
+! scope="col"{{!}}Non-installation Yasen Damage
+{{!}}-
+{{!}}{{ShipBattleCard|Haruna/Kai Ni}}
+{{!}}{{EquipmentCardKai|38cm Twin Gun Mount|size=160px}}7★
+{{!}}{{EquipmentCardKai|38cm Twin Gun Mount|size=160px}}7★
+{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}5★
+{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}>150 x2 dDA & APCI
+{{!}}120 x2 dDA & APCI
+{{!}}171 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Kongou/Kai Ni}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|35.6cm Twin Gun Mount|size=160px}}4★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Prototype 35.6cm Triple Gun Mount|size=160px}}4★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="2"{{!}}>150 x2 dDA & APCI
+{{!}}rowspan="2"{{!}}120 x2 dDA & APCI
+{{!}}rowspan="2"{{!}}172 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Hiei/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kirishima/Kai Ni}}
+{{!}}{{EquipmentCardKai|35.6 Twin Gun Mount (Dazzle Camouflage)|size=160px}}
+{{!}}{{EquipmentCardKai|35.6 Twin Gun Mount (Dazzle Camouflage)|size=160px}}
+{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}9★
+{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}150 x2 dDA & APCI
+{{!}}120 x2 dDA & APCI
+{{!}}174 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Bismarck/drei}}
+{{!}}{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}★
+{{!}}{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}★
+{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}4★
+{{!}}{{EquipmentCardKai|Ar196 Kai|size=160px}}>>
+{{!}}>150 x2 dDA & APCI
+{{!}}120 x2 dDA & APCI
+{{!}}217 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Roma/Kai}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|381mm/50 Triple Gun Mount|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|381mm/50 Triple Gun Mount Kai|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}>150 x2 dDA & APCI
+{{!}}127 x2 dDA & APCI
+{{!}}184 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Littorio/Kai}}
+{{!}}>150 x2 dDA & APCI
+{{!}}124 x2 dDA & APCI
+{{!}}181 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Yamato/Kai}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|41cm Twin Gun Mount|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|41cm Twin Gun Mount|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="2"{{!}}>150 x2/ dDA & APCI
+{{!}}rowspan="2"{{!}}>150 x2/ dDA & APCI
+{{!}}rowspan="2"{{!}}224 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Musashi/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Yamato/Kai}}Yasen-focus
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Prototype 51cm Twin Gun Mount|size=160px}}MAX★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Prototype 51cm Twin Gun Mount|size=160px}}MAX★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 1 Armor Piercing Shell|size=160px}}8★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="2"{{!}}>150 x2 dDA & APCI
+{{!}}rowspan="2"{{!}}>150 x2 dDA & APCI
+{{!}}rowspan="2"{{!}}260 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Musashi/Kai}}Yasen-focus
+{{!}}-
+{{!}}{{ShipBattleCard|Nagato/Kai}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|41cm Twin Gun Mount|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|41cm Twin Gun Mount|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="2"{{!}}>150 x2 dDA & APCI
+{{!}}rowspan="2"{{!}}121 x2 dDA & APCI
+{{!}}rowspan="2"{{!}}176 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Mutsu/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Nagato/Kai}}Head-on focus
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Prototype 51cm Twin Gun Mount|size=160px}}MAX★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Prototype 51cm Twin Gun Mount|size=160px}}MAX★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 1 Armor Piercing Shell|size=160px}}8★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="2"{{!}}>150 x2 dDA & APCI
+{{!}}rowspan="2"{{!}}148 x2 dDA & APCI
+{{!}}rowspan="2"{{!}}212 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Mutsu/Kai}}Head-on focus
+{{!}}-
+{{!}}{{ShipBattleCard|Fusou/Kai Ni}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|41cm Twin Gun Mount|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|41cm Twin Gun Mount|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Prototype Seiran|size=160px}}>>
+{{!}}>150 x2 dDA & APCI
+{{!}}121 x2 dDA & APCI
+{{!}}176 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Yamashiro/Kai Ni}}
+{{!}}>150 x2 dDA & APCI
+{{!}}120 x2 dDA & APCI
+{{!}}175 x2 nDA
+{{!}}}
+'''Do NOT use {{ShipBattleCard|Fusou/Kai}}{{ShipBattleCard|Yamashiro/Kai}}{{ShipBattleCard|Ise/Kai}}{{ShipBattleCard|Hyuuga/Kai}} for normal sorties unless you are forced to by insufficient depth, or shiplocks. They are all incapable of reaching the daytime firepower cap in a non-overweight dual gun + AP + ObsPlane optimal setup, and are better used in Support Shelling or Pure ASW.'''
+
+Replace the [[Zuiun Model 12]] on the Fusou Kai Ni classes if they are being sortied in a map with high enemy AA, as having no seaplanes left means they will not be able to do any Artillery Spotting attacks. Conversely, if AA is limited, their Zuiun Model 12's initial attacks and air power contribution make them some of the strongest possible offensive battleships to bring in day battle in exchange for increased resource costs relative to Kongou-classes - even stronger than the more expensive Nagato, Bismarck or Vittorio-Veneto classes as firepower capping limits all of their shelling potential to the same level.
+
+{{!}}-{{!}}BB T3 dDA/nDA=
+
+The usage of a [[Type 3 Shell]] prevents BBs from also carrying [[Type 91 Armor Piercing Shell|T91 AP Shells]] or [[Type 1 Armor Piercing Shell|T1 AP Shells]], which changes the loadouts somewhat. The firepower value to aim for is 143, as a chuuha BB performing a Type 3 Shell DA on an installation target deals x*0.7*1.2*2.5 damage, which is 300 when x is 143. If it is possible to reach yasen against the final installation target without any ships going beyond shouha, battleships offer no additional advantage over heavy cruisers, and so CAs should be sortied instead if BBs are not required for some role in day battle.
+
+Slow BB setups will not be elaborated as they have so much excess firepower that twin 41cm will always lead to firepower cap against installations, and they cannot even be used in combined fleet maps for this purpose. For the additional evasion bonus from a fast fleet, since the cap is reachable even in chuuha state with fast battleships alone, slow battleships should never be sortied against an installation target as an end-boss.
+
+To reduce dual-upgrading and gun-swapping nightmares, the gun setups used here will be identical to that in the earlier section, with the only difference that the same guns here may be upgraded to a significantly greater level as there is more to gain in both day and night battle.
+
+Further upgrading may increase numbers beyond the values stated.
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Parallel Day Shell
+! scope="col"{{!}}Head-on Day Shell
+! scope="col"{{!}}Chuuha Anti-installation Yasen Damage
+! scope="col"{{!}}Non-installation Yasen Damage
+{{!}}-
+{{!}}{{ShipBattleCard|Haruna/Kai Ni}}
+{{!}}{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}9★
+{{!}}{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}9★
+{{!}}{{EquipmentCardKai|Type 3 Shell|size=160px}}
+{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}144 x2 dDA
+{{!}}115 x2 dDA
+{{!}}285 x2 T3nDA
+{{!}}163 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Kongou/Kai Ni}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|35.6cm Twin Gun Mount|size=160px}}4★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Prototype 35.6cm Triple Gun Mount|size=160px}}4★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 3 Shell|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="2"{{!}}142 x2 dDA
+{{!}}rowspan="2"{{!}}113 x2 dDA
+{{!}}rowspan="2"{{!}}287 x2 T3nDA
+{{!}}rowspan="2"{{!}}164 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Hiei/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kirishima/Kai Ni}}
+{{!}}{{EquipmentCardKai|35.6 Twin Gun Mount (Dazzle Camouflage)|size=160px}}
+{{!}}{{EquipmentCardKai|35.6 Twin Gun Mount (Dazzle Camouflage)|size=160px}}
+{{!}}{{EquipmentCardKai|Type 3 Shell|size=160px}}
+{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}139 x2 dDA
+{{!}}111 x2 dDA
+{{!}}281 x2 T3nDA
+{{!}}160 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Bismarck/drei}}
+{{!}}{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}9★
+{{!}}{{EquipmentCardKai|38cm Twin Gun Mount Kai|size=160px}}9★
+{{!}}{{EquipmentCardKai|Type 3 Shell|size=160px}}
+{{!}}{{EquipmentCardKai|Ar196 Kai|size=160px}}>>
+{{!}}147 x2 dDA
+{{!}}117 x2 dDA
+{{!}}291 x2 T3nDA
+{{!}}210 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Roma/Kai}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|381mm/50 Triple Gun Mount|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|381mm/50 Triple Gun Mount Kai|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 3 Shell|size=160px}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}>150 x2 dDA
+{{!}}120 x2 dDA
+{{!}}>300 x2 T3nDA
+{{!}}175 x2 nDA
+{{!}}-
+{{!}}{{ShipBattleCard|Littorio/Kai}}
+{{!}}148 x2 dDA
+{{!}}118 x2 dDA
+{{!}}300 x2 T3nDA
+{{!}}171 x2 nDA
+{{!}}}
+It should be apparent from these numbers that {{ShipBattleCard|Roma/Kai}}{{ShipBattleCard|Littorio/Kai}} are more suitable for sorties against installation targets, whereas all other Fast Battleships are more suitable for sorties against non-installation targets. In particular, fights against targets with extremely high armor values should be done with {{ShipBattleCard|Bismarck/drei}} if double attack alone is sufficient, and {{ShipBattleCard|Haruna/Kai Ni}} in her cut-in setup if necessary. Against the highest difficulty levels, if ship locking allows for this type of allocation, one should attempt to allocate the FBBs according to this logic in order for the highest possible clear rates.
+}}
+
+|-|Combined Fleet=
+
+Note that the Main Fleet of the Combined Fleet cannot ever breach the firepower cap of 150 as it cannot enter night battle. For this reason given the usual armour values of Installation bosses, a general statement that can be made is that [[Type 3 Shell]] should NOT be equipped on the Main Fleet as it will result in a reduced chance of doing scratch damage, and little or no chance of doing significant damage on installations, while sacrificing a slot that would improve the Fleet's ability to deal with non-Installation targets in the sortie.
+
+{{#tag:tabber|BB APCI/dDA=
+
+As Combined Fleet Formation IV (Attack) has a firepower multiplier of 1.1x, some Battleships are capable of reaching nearly damage cap in Head-on engagement form where they cannot in normal single fleets. Here are their builds:
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Parallel Day Shell
+! scope="col"{{!}}Head-on Day Shell
+{{!}}-
+{{!}}{{ShipBattleCard|Nagato/Kai}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Prototype 41cm Triple Gun Mount|size=160px}}MAX★
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Prototype 41cm Triple Gun Mount|size=160px}}9★
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}MAX★
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}rowspan="3"{{!}}>150 x2 dDA & APCI
+{{!}}rowspan="3"{{!}}148 x2 dDA & APCI
+{{!}}-
+{{!}}{{ShipBattleCard|Mutsu/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Fusou/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Yamashiro/Kai Ni}}
+{{!}}>150 x2 dDA & APCI
+{{!}}147 x2 dDA & APCI
+{{!}}-
+{{!}}{{ShipBattleCard|Roma/Kai}}
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|381mm/50 Triple Gun Mount Kai|size=160px}}MAX★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|381mm/50 Triple Gun Mount Kai|size=160px}}9★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 91 Armor Piercing Shell|size=160px}}MAX★
+{{!}}rowspan="2"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}>150 x2 dDA & APCI
+{{!}}>150 x2 dDA & APCI
+{{!}}-
+{{!}}{{ShipBattleCard|Littorio/Kai}}
+{{!}}>150 x2 dDA & APCI
+{{!}}149 x2 dDA & APCI
+{{!}}}
+As far as possible do not use any Battleships other than the above 4 and the two Yamato-classes in the Main Fleet of a Combined fleet, as the others will not reach Head-on firepower cap. Kongou-classes are better used in single fleets where the Fast speed matters somewhat more, and Bismarck is better used as the flagship of a Combined Fleet's Escort Fleet, where she has flagship boosts to both day DA and night CI chances in the Mixed CI configuration.
+
+{{!}}-{{!}}CA dDA=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+{{!}}-
+{{!}}{{ShipBattleCard|Furutaka/Kai Ni}}
+{{!}}rowspan="8"{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}
+{{!}}rowspan="8"{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}
+{{!}}rowspan="8"{{!}}{{EquipmentCardKai|20.3cm (No.3) Twin Gun Mount|size=160px}}
+{{!}}rowspan="8"{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}-
+{{!}}{{ShipBattleCard|Kako/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kinugasa/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Nachi/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Myoukou/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Ashigara/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Haguro/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Choukai/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Zara/Kai}}
+{{!}}{{EquipmentCardKai|203mm/53 Twin Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|203mm/53 Twin Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|203mm/53 Twin Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}-
+{{!}}{{ShipBattleCard|Maya/Kai Ni}}
+{{!}}{{EquipmentCardKai|90mm Single High-angle Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|90mm Single High-angle Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|25mm Triple Autocannon Mount (Concentrated Deployment)|size=160px}}
+{{!}}{{EquipmentCardKai|FuMO25 Radar|size=160px}}
+{{!}}}
+With the exception of Maya, the above are ranked in ascending order of desirability. Zara's fit bonus with her guns is currently unknown, but is a relatively high value, making her likely more accurate than any other CA, and the fact that her torpedo stat is horrendous makes her a good fit for this role, given that the Main Fleet NEVER uses torpedoes, and she is extremely non-viable in any normal fleet that will enter night battle. 
+
+Maya's build is very slightly modified - the need of the 20.3cm calibre for a night battle fit bonus is erased by the fact that the Main Fleet will not enter night battle, and the fact that the effective AA of ships in the Main Fleet are reduced to 80% makes amplifying her effective AA stat important to increase the reliability of her AACI.
+
+The third gun can be replaced with [[Type 32 Surface Radar Kai]] should accuracy or double attack rate be more important than raising base damage, but the point of doing this is that since the Main Fleet has no Night Battle, there is no loss of Night Double attack to consider, and since it has a 1.1x Firepower mod in Formation IV, any increase in firepower is 10% more effective than it usually is, making amplifying firepower generally better than the game is balanced to be in this narrow case.
+}}
+
+|-|Special=
+
+{{#tag:tabber|Wurfgerät 42=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ship
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Day Attack
+! scope="col"{{!}}Night Attack
+{{!}}-
+{{!}}High FP DD
+{{!}}{{EquipmentCardKai|WG42 (Wurfgerät 42)|size=160px}}
+{{!}}{{EquipmentCardKai|WG42 (Wurfgerät 42)|size=160px}}
+{{!}}{{EquipmentCardKai|WG42 (Wurfgerät 42)|size=160px}}
+{{!}}'''Locked'''
+{{!}}colspan=2{{!}}Single attack at +225 Firepower
+{{!}}-
+{{!}}High FP DD
+{{!}}{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}
+{{!}}{{EquipmentCardKai|10cm Twin High-angle Gun Mount + Anti-Aircraft Fire Director|size=160px}}
+{{!}}{{EquipmentCardKai|WG42 (Wurfgerät 42)|size=160px}}
+{{!}}'''Locked'''
+{{!}}Single attack at +75 Firepower
+{{!}}Double attack at +75 Firepower
+{{!}}-
+{{!}}{{ShipBattleCard|Ooyodo/Kai}}
+{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}{{EquipmentCardKai|15.2cm Twin Gun Mount Kai|size=160px}}
+{{!}}{{EquipmentCardKai|Type 0 Observation Seaplane|size=160px}}>>
+{{!}}{{EquipmentCardKai|WG42 (Wurfgerät 42)|size=160px}}
+{{!}}Single attack at +75 Firepower
+{{!}}Double attack at +75 Firepower
+{{!}}}
+This is a special piece of equipment obtained only from {{ShipBattleCard|U-511}} and used specifically to deal with installation bosses, which adds 75 FP against installations and base 1 FP. At armor values typical of installation bosses, this 76 FP addition on its own is insufficient to deal critical damage without a critical hit. If only one is in the inventory its best use will be on a DD located as far down in the fleet order as possible, so it does the final hits against the installation boss - and it may result in a kill; early in the fleet order the damage of a single [[WG42 (Wurfgerät 42)]] is probably less than the damage of double scratch attacks against high-HP installation bosses. If multiple [[WG42 (Wurfgerät 42)]] are acquired the situation changes: for instance, {{ShipBattleCard|Yuudachi/Kai Ni}} with the above build will deal a single attack against the installation boss with the damage value of 301. The above attack effects in the table apply only to attacks against installations - for instance, Ooyodo will still Double Attack non-installation targets in both day and night with no firepower bonus, and the DDs will have single attacks with no firepower bonus in the day against non-installation targets, and double attacks with no firepower bonus in the day against non-installation targets.
+
+Contrary to semi-common belief, the [[WG42 (Wurfgerät 42)|Wurfgerät 42]] is not, in fact, useless.
+
+{{!}}-{{!}}Support Shelling Expedition=
+
+As this is the most effective support expedition type, only builds tailored for this support type are listed. To use this feature, fill a fleet with EXACTLY 2 DD + 2 BB(V) + 2 CV(L) and send it on a special Support Expedition. Expeditions 33 and 34 apply to World 5 maps ONLY, and will activate on Day Battle ONLY. Events will come with a pair of their own special support expeditions, which will apply to Event maps ONLY, and will activate on Day Battle ONLY. The 15 minute variant adds support at a 50-80% rate for all non-boss nodes, while the 30 minute variant adds support to the boss node ONLY at a 80-100% activation rate. The higher activation number applies to FS-sparkled support expeditions while the lower applies to FS-nonsparkled support expeditions. However, players are strongly advised to sparkle all ships, not just the flagship as the [http://wikiwiki.jp/kancolle/?%BB%D9%B1%E7%B4%CF%C2%E2 accuracy of the shelling will increase significantly when all ships are sparkling relative to when only the flagship is sparkling, even though it leads to no further increase in activation rate.]
+
+Note that according to the best data available at present, upgrades imparted through [[Akashi's Improvement Arsenal]] do NOT confer any bonuses to these support expeditions, and so the most effective equipment have the highest base stats, not the highest post-upgrade stats.
+
+[https://docs.google.com/spreadsheets/d/1UmFm33JfsBwc2JUtPybmbTDQ0ZFK0T0LUr-9jDjm4zo/edit#gid=666720600 According to this source linked by AbsoluteLuck], overweight penalties do not actually apply to support expeditions at all in spite of multiple claims to the contrary (with no direct proof like this). This guide version incorporates this information in the build recommendations where V2.0 didn't.
+
+Finally, given that as of this point, all other passive bonuses such as Artillery Spotting, overweight/fit mechanics and Akashi upgrade level have no effect, while bonuses that directly modify base stats such as Firepower or Accuracy are confirmed to have an effect, the following recommendations make the further assumption that the [[Expedition]] page is wrong twice - and that AP shells do not apply their anti-armored damage bonus or heavy gun-AP shell accuracy bonus, based on the usual internally-consistent behaviour of programmers - and the lack of this on any Japanese source. If anyone has a source of '''a test with sufficient statistical power''' to disprove this, please link it below and I will add builds with APs that specifically target armoured ships. Because that paragraph in the linked Wiki page has already been proven wrong once, its other claims cannot be trusted either at this stage without proof.
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ships
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Fusou/Kai}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|46cm Triple Gun Mount|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Prototype 41cm Triple Gun Mount|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Prototype 35.6cm Triple Gun Mount|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}rowspan="4"{{!}}
+{{!}}-
+{{!}}{{ShipBattleCard|Yamashiro/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Ise/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Hyuuga/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kongou/Kai Ni}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|46cm Triple Gun Mount|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|41cm Twin Gun Mount|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|15m Duplex Rangefinder + Type 21 Radar Kai Ni|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}rowspan="3"{{!}}Kirishima is capable of damage cap with two T32SR.
+{{!}}-
+{{!}}{{ShipBattleCard|Hiei/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Kirishima/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Haruna/Kai Ni}}
+{{!}}{{EquipmentCardKai|46cm Triple Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|46cm Triple Gun Mount|size=160px}}
+{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}Greater gun requirement than her sisters to achieve damage cap.
+{{!}}-
+{{!}}{{ShipBattleCard|Zuikaku/Kai}}
+{{!}}rowspan="6"{{!}}{{EquipmentCardKai|Suisei Model 12A|size=160px}}
+{{!}}rowspan="6"{{!}}{{EquipmentCardKai|Suisei Model 12A|size=160px}}
+{{!}}rowspan="6"{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}rowspan="6"{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}rowspan="6"{{!}}
+{{!}}-
+{{!}}{{ShipBattleCard|Shoukaku/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Junyou/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Ryuujou/Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Chitose/Carrier Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Chiyoda/Carrier Kai Ni}}
+{{!}}-
+{{!}}{{ShipBattleCard|Ryuuhou/Kai}}
+{{!}}{{EquipmentCardKai|Suisei (Egusa Squadron)|size=160px}}
+{{!}}{{EquipmentCardKai|Suisei (601 Air Group)|size=160px}}
+{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}Lowest resource cost, but Suisei 601/Egusa are rare.
+{{!}}-
+{{!}}{{ShipBattleCard|Hiyou/Kai}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Suisei Model 12A|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Suisei Model 12A|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Suisei Model 12A|size=160px}}
+{{!}}rowspan="4"{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}rowspan="4"{{!}}
+{{!}}-
+{{!}}{{ShipBattleCard|Junyou/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Shouhou/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Zuihou/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Unryuu/Kai}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Suisei (601 Air Group)|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}rowspan="3"{{!}}{{EquipmentCardKai|Type 32 Surface Radar|size=160px}}
+{{!}}rowspan="3"{{!}}Highest accuracy, but Suisei 601 are rare.
+{{!}}-
+{{!}}{{ShipBattleCard|Katsuragi/Kai}}
+{{!}}-
+{{!}}{{ShipBattleCard|Amagi/Kai}}
+{{!}}-
+{{!}}High FP DD
+{{!}}{{EquipmentCardKai|Type 22 Surface Radar Kai 4|size=160px}}
+{{!}}{{EquipmentCardKai|Type 22 Surface Radar Kai 4|size=160px}}
+{{!}}{{EquipmentCardKai|Type 22 Surface Radar Kai 4|size=160px}}
+{{!}}
+{{!}}
+{{!}}}
+All other carriers and battleships should not be used for support shelling as they will not be resource-efficient. This includes {{ShipBattleCard|Fusou/Kai Ni}}{{ShipBattleCard|Yamashiro/Kai Ni}} - only their kai forms are efficient in this role; once remodelled to their final form, your support BBs will be exclusively from the Ise-class and Kongou-class. Also, an alternate build used by some is to place three radars on destroyers - which will have higher accuracy (on a low base) at the cost of lower damage (on a low base), while some others use three guns for higher damage at the cost of lower accuracy. I left the variant that would require the least equipment swapping.
+
+Since there is only ever a requirement for 4 battleships if support shelling is used for both boss and node support, the cheapest way to achieve this would be to use the 46-41-T32SR-15mDRT21RK2 build on [[Kongou]] (Hiei is better suited to active sorties as her HP is an odd number and she has slightly greater armour), 46-41-T32SR-T32SR build on [[Kirishima]], and the 46-p41-p35.6-T32 build on both [[Ise]] and [[Hyuuga]]. Use of [[Haruna]] requires one more 46cm, which can cost some resources to craft. In this event, the Proto-35.6 recommended for [[Hiei]] in the earlier section will be replaced by the fully upgraded 35.6cm normally used on [[Kongou]].
+
+Note that while not carrying a gun at all is suspected to subtract accuracy by 6% in normal sorties, this mechanic is not known to be active in Support Shelling as most active effects appear to be disabled.
+
+{{!}}-{{!}}Tanking=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ship
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Notes
+{{!}}-
+{{!}}{{ShipBattleCard|Verniy}}
+{{!}}{{EquipmentCardKai|Anti-torpedo Bulge (Medium)|size=160px}}
+{{!}}{{EquipmentCardKai|Anti-torpedo Bulge (Medium)|size=160px}}
+{{!}}{{EquipmentCardKai|Anti-torpedo Bulge (Medium)|size=160px}}
+{{!}}83 Evasion, 78 Armour.
+{{!}}-
+{{!}}{{ShipBattleCard|Maruyu/Kai}}
+{{!}}{{EquipmentCardKai|New Model High Temperature High Pressure Boiler|size=160px}}
+{{!}}'''Locked'''
+{{!}}'''Locked'''
+{{!}}42 Evasion, 11 Armour.
+{{!}}}
+Maruyu's build is used for tanking anti-submarine attacks from targets that can attack submarines. Verniy's build is used to keep her intact until the boss node for maps that require DDs for branching, but which don't really need the DD to do much by the way of damage.
+
+{{!}}-{{!}}Auxiliary Repairs=
+
+{{{!}}border="0" cellpadding="1" cellspacing="1" class="article-table" style="width: 500px;"
+{{!}}-
+! scope="col"{{!}}Ship
+! scope="col"{{!}}Slot 1
+! scope="col"{{!}}Slot 2
+! scope="col"{{!}}Slot 3
+! scope="col"{{!}}Slot 4
+{{!}}-
+{{!}}{{ShipBattleCard|Akashi/Kai}}
+{{!}}{{EquipmentCardKai|Ship Repair Facility|size=160px}}
+{{!}}{{EquipmentCardKai|Ship Repair Facility|size=160px}}
+{{!}}{{EquipmentCardKai|Ship Repair Facility|size=160px}}
+{{!}}{{EquipmentCardKai|Ship Repair Facility|size=160px}}
+{{!}}}
+{{ShipBattleCard|Akashi/Kai}} uses as many [[Ship Repair Facility|Ship Repair Facilities]] as are in the inventory that will fit in her slots and will repair herself and the ship in slot 2 by default when set as the flagship, plus one ship slot per [[Ship Repair Facility]] equipped up to a total of 6 shipslots with four of them equipped.
+
+She takes at least 20 minutes to repair all ships by at least 1 HP. Above 20 minutes, she repairs as much HP as the repair docks would in the same amount of time, rounded down, when she is interrupted (by returning to the HQ screen). If the fleet composition is changed, the timer is reset with zero HP repaired.
+
+It is possible to get her to repair ships faster than the docks would if the ship takes more than 20 minutes per HP in the docks, and the Admiral interrupts her every 20 minutes.
+
+'''ONLY SHIPS AT LIGHT DAMAGE OR LESS WILL BE REPAIRED BY {{ShipBattleCard|Akashi/Kai}}'''
+}}
+
+</tabber>
+[[Category:Blog posts]]

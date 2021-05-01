@@ -1,0 +1,69 @@
+{{Warning
+|title = Outdated Content
+|message = The contents of this blog post is outdated and generally does not apply to the current state or the API or involved systems. I do not intend to further study the game mechanisms.
+}}
+
+{{Warning
+|title = DISCLAIMER
+|message = This post is just a study on the game's current API security and possibility of bots. It '''does not '''encourage using a bot if it exists, neither developing one. This is purely for study of how the game works, and possibly contribute to avoiding similar exploits. This is similar to white-hacking, looking for solutions, and where abuse or misuse is never intended.
+}}
+
+===<span style="color:#c33;">Introduction</span>===
+
+I have mentioned once before in my history here on the wiki, that botting '''might '''be possible.
+
+Ideally, what could bots possibly do for this game?
+*'''Expendition '''- they can possibly handle ships returning from expedition, resupply them, and resend to the same expedition.
+*'''Sorties '''- they can possibly run the sortie for you, sending to a map, automatically hitting compass-chan, selecting formations, skipping animations, receiveing rewards.
+*'''Quests '''- they can possibly do your dailies for you automatically. Craft an requipment, build a ship, resupply 15 times, etc, and automatically getting the rewards for you.
+
+How are these possible? This is the point of this post, to sudy how it might be possible and what things could possibly be improved on the current system.
+
+===<span style="color:#c33;">Where to start</span>===
+Of course, everything revolves around the API. Most the required API commands only require your '''api_token'''. And yes, that '''api_token '''is contained your API link.
+
+Basically, the point is for a specific script to automatically use the '''api_token '''to send "'''requests'''" to the server. These requests, which we can also call API commands, are simple, and are really just request.
+
+Basically, for example, using the api_token, you '''request '''your admiral info from the server. And yes, with correct token, parameters, and execution, the server '''replies '''to your '''request''', and we officially call this a '''response'''. So now you have your admiral info.
+
+At first this r'''equest-response mechanism''' seems easy and simple. Yes it is simple, but look at the power in your hands at this point. The three bullet points I mentioned in the intro becomes totally possible.
+*'''Expedition '''- with a good timer, you can request from the server if expedition of fleet #2 is already done, and it will reply with yes, and give you all rewards. Then request the server to resupply the fleet. Then request the server to send them back to the expedition.
+*'''Sortie '''- request thre server map info of 2-3. Request the server to send your fleet#1. request the server to advance. request the server to start battle with this specific formation. Request the server battle results, Request the server to advance, repeat steps.
+*'''Quests '''- since there are predefined quests, examples could be:
+*#Request the server to change flagship into Kongo. Request the server to craft 10/300/250/10. Request the server the list of quests. Request the server to complete the daily craft quest and reward you.
+*#Request the server to '''hokyu/charge''' (resupply) applicable ships one by one, separate fuel and ammo, to complete 15 total resupplies. Request list of quests. Requests to complete quest.
+===<span style="color:#c33;">Developer Suggestions</span>===
+One suggestion could be similar to Facebook's signed request. On this way, there is a '''salt '''that '''only the server and the client knows''', and the client encrypts the '''json_encoded request object '''with a salt. The request object should preferrably contain timestamp. The result of this encryption, we can call it '''digest'''.
+
+We still send the original raw request object, but together with it, is the digest.
+
+Example:
+*Client needs to request a resupply of fleet#1. The parameters it needs are: ship IDs (e.g. "4,7,21,33") and resupply type (1=fuel, 2=ammo, 3=both). So there are two.
+*What the client should do is encrypt this, e.g.:
+**MyDigest = hash_hmac('sha256', '{shipid:"4,7,21,33",type;"3"}', 'salt_salt_salt');
+*then, when the client wants to send it to the server:
+**call('hokyu_charge', {shipid:"4,7,21,33", type:"3", digest:MyDigest});
+
+This way, even if the hackers know the API call name such as '''hokyu/charge''', they can never "imitate" an API call made by the client. This is because all '''real '''client requests are together with a digest, that can oly be generated with a salt... a salt that only the server and flash client knows.
+*Then the server receives this and decrypts it:
+**YourDigest = hash_hmac('sha256', '{shipid:"4,7,21,33",type;"3"}', 'salt_salt_salt');
+**if ( YourDigest != apicall.digest ){ print "its a trap!"; }
+''All of the codes are pseudo-code  and does not follow any language.''
+===<span style="color:#c33;">Current Defensive Mechanisms</span>===
+Recently, one of the most important API calls, '''api_port/port''' required an additional parameter, kind of like a port number, and its a complex number you cannot find anywhere else. (Port number '''is not''' the computer port :80 or :3128, the word "port" here means a '''ship '''port, the naval yard.). This also changes everytime you call it, unlike the mentioned "token-only" calls which are easy. So on this specific call, there is a wall.
+
+'''api_port/port''' gets most of your info, your admiral data, your fleet compositions, and all your ships in your deck. This call is also required before you try to check and handle any completed expeditions, possibly, there are other calls require this as well. This makes it one of the most important API calls.
+
+===<span style="color:#c33;">Foreign Attacks?</span>===
+Calling an API outside of the game client '''is not an "attack" '''which we see the [https://twitter.com/KanColle_STAFF staff  tweet]sometimes. The slow speed by the affected servers would mean its a possible DoS attack (Denial of Service, which fills the servers with too much requests to handle). Where in API calls made outside the game client is just as light as the original game calls themselves.
+
+As I see it, these foreign attacks they mentioned are probably some guy somewhere also trying API stuff who got accidentally himself into an endless loop that does API calls while testing his code. or probably a bad placement of callbacks which recurses API calls.
+
+===<span style="color:#c33;">A Bot in Existence</span>===
+Yes, I have '''tested '''it out on my alt account (which I use mostly for doing API things like these). Currently, it only resends fleets to expeditions.
+
+If this is doable, then the other items could also be doable. Although,''' I do not have any intention in going further to test these'''. I'm in the border or abandoning this study as well. Although it is useful for people, it's just too much of a cheating now, unlike the current tools we have such as [https://github.com/Zharay/KanColleViewer KCV], [http://kancolle.himeuta.net/forums/showthread.php?289-Mod-KanColle-Flash-Client-amp-Keyboard-Shortcut-Program LogBook] and [[User blog:Dragonjet/KanCo! Tools|KanCoT!]], which only simplifies things, but never abuses the mechanics.
+
+===<span style="color:#c33;">Conclusion</span>===
+The recent '''api_port/port''' defensive mechanism by the developers is a great first step to preventing synthetic API calls. To further the security, encryption salt would be a way to go.
+[[Category:Blog posts]]
